@@ -30,7 +30,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **datasetType**: 'file' | 'tabular' (Required, WriteOnly): Specifies dataset type.
+* **datasetType**: 'file' | 'tabular' | string (Required, WriteOnly): Specifies dataset type.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity) (ReadOnly): Identity for the resource.
 * **location**: string (ReadOnly): Specifies the location of the resource.
@@ -57,7 +57,7 @@
 * **clientSecret**: string (WriteOnly): The service principal's secret.
 * **containerName**: string (WriteOnly): The name of the azure blob container.
 * **databaseName**: string (WriteOnly): The database name.
-* **dataStoreType**: 'adls' | 'adls-gen2' | 'blob' | 'dbfs' | 'file' | 'mysqldb' | 'psqldb' | 'sqldb' (Required, WriteOnly): Specifies datastore type.
+* **dataStoreType**: 'adls' | 'adls-gen2' | 'blob' | 'dbfs' | 'file' | 'mysqldb' | 'psqldb' | 'sqldb' | string (Required, WriteOnly): Specifies datastore type.
 * **description**: string (WriteOnly): The description of the datastore.
 * **endpoint**: string (WriteOnly): The endpoint of the server.
 * **enforceSSL**: bool (WriteOnly): This sets the ssl value of the server. Defaults to true if not set.
@@ -208,7 +208,7 @@
 * **keyVault**: string: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections in the workspace.
 * **privateLinkCount**: int (ReadOnly): Count of private connections in the workspace
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
 * **serviceProvisionedResourceGroup**: string (ReadOnly): The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
 * **sharedPrivateLinkResources**: [SharedPrivateLinkResource](#sharedprivatelinkresource)[]: The list of shared private link resources in this workspace.
 * **storageAccount**: string: ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
@@ -217,7 +217,7 @@
 ## EncryptionProperty
 ### Properties
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required)
-* **status**: 'Disabled' | 'Enabled' (Required): Indicates whether or not the encryption is enabled for the workspace.
+* **status**: 'Disabled' | 'Enabled' | string (Required): Indicates whether or not the encryption is enabled for the workspace.
 
 ## KeyVaultProperties
 ### Properties
@@ -240,7 +240,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
 
 ## PrivateEndpoint
 ### Properties
@@ -250,7 +250,7 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout': The private endpoint connection status.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string: The private endpoint connection status.
 
 ## Sku
 ### Properties
@@ -272,7 +272,7 @@
 * **groupId**: string: The private link resource group id.
 * **privateLinkResourceId**: string: The resource id that private link links to.
 * **requestMessage**: string: Request message.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout': The private endpoint connection status.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string: The private endpoint connection status.
 
 ## ResourceTags
 ### Properties
@@ -289,7 +289,7 @@
 * **isAttachedCompute**: bool (ReadOnly): Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
 * **modifiedOn**: string (ReadOnly): The date and time when the compute was last modified.
 * **provisioningErrors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Errors during provisioning
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
 * **resourceId**: string: ARM resource id of the underlying compute
 ### AKS
 #### Properties
@@ -362,7 +362,7 @@
 * **cert**: string: Cert data
 * **cname**: string: CNAME of the cert
 * **key**: string: Key data
-* **status**: 'Disabled' | 'Enabled': Enable or disable ssl for scoring
+* **status**: 'Disabled' | 'Enabled' | string: Enable or disable ssl for scoring
 
 ## SystemService
 ### Properties
@@ -372,17 +372,17 @@
 
 ## AmlComputeProperties
 ### Properties
-* **allocationState**: 'Resizing' | 'Steady' (ReadOnly): Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
+* **allocationState**: 'Resizing' | 'Steady' | string (ReadOnly): Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
 * **allocationStateTransitionTime**: string (ReadOnly): The time at which the compute entered its current allocation state.
 * **currentNodeCount**: int (ReadOnly): The number of compute nodes currently assigned to the compute.
 * **errors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Collection of errors encountered by various compute nodes during node setup.
 * **nodeStateCounts**: [NodeStateCounts](#nodestatecounts) (ReadOnly): Counts of various compute node states on the amlCompute.
-* **remoteLoginPortPublicAccess**: 'Disabled' | 'Enabled' | 'NotSpecified': State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
+* **remoteLoginPortPublicAccess**: 'Disabled' | 'Enabled' | 'NotSpecified' | string: State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
 * **scaleSettings**: [ScaleSettings](#scalesettings): scale settings for AML Compute
 * **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
 * **targetNodeCount**: int (ReadOnly): The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
 * **userAccountCredentials**: [UserAccountCredentials](#useraccountcredentials): Settings for user account that gets created on each on the nodes of a compute.
-* **vmPriority**: 'Dedicated' | 'LowPriority': Virtual Machine priority
+* **vmPriority**: 'Dedicated' | 'LowPriority' | string: Virtual Machine priority
 * **vmSize**: string: Virtual Machine Size
 
 ## NodeStateCounts
@@ -445,13 +445,13 @@
 
 ## DatasetCreateRequestParameters
 ### Properties
-* **header**: 'all_files_have_same_headers' | 'combine_all_files_headers' | 'no_headers' | 'only_first_file_has_headers' (WriteOnly): Header type.
+* **header**: 'all_files_have_same_headers' | 'combine_all_files_headers' | 'no_headers' | 'only_first_file_has_headers' | string (WriteOnly): Header type.
 * **includePath**: bool (WriteOnly): Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.
 * **partitionFormat**: string (WriteOnly): The partition information of each path will be extracted into columns based on the specified format. Format part '{column_name}' creates string column, and '{column_name:yyyy/MM/dd/HH/mm/ss}' creates datetime column, where 'yyyy', 'MM', 'dd', 'HH', 'mm' and 'ss' are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path '../USA/2019/01/01/data.parquet' where the partition is by country/region and time, partition_format='/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv' creates a string column 'CountryOrRegion' with the value 'USA' and a datetime column 'PartitionDate' with the value '2019-01-01
 * **path**: [DatasetCreateRequestParametersPath](#datasetcreaterequestparameterspath) (WriteOnly)
 * **query**: [DatasetCreateRequestParametersQuery](#datasetcreaterequestparametersquery) (WriteOnly)
 * **separator**: string (WriteOnly): The separator used to split columns for 'delimited_files' sourceType.
-* **sourceType**: 'delimited_files' | 'json_lines_files' | 'parquet_files' (WriteOnly): Data source type.
+* **sourceType**: 'delimited_files' | 'json_lines_files' | 'parquet_files' | string (WriteOnly): Data source type.
 
 ## DatasetCreateRequestParametersPath
 ### Properties
@@ -599,7 +599,7 @@
 * **azureStorageSection**: [AzureStorageSection](#azurestoragesection) (ReadOnly): Data specific to azure storage.
 * **createdBy**: [UserInfo](#userinfo) (ReadOnly): User who created.
 * **createdTime**: string (ReadOnly): The date and time when the datastore was created.
-* **dataStoreType**: 'AzureBlob' | 'AzureDataLake' | 'AzureDataLakeGen2' | 'AzureFile' | 'AzureMySql' | 'AzurePostgreSql' | 'AzureSqlDatabase' | 'DBFS' (ReadOnly): The datastore type.
+* **dataStoreType**: 'AzureBlob' | 'AzureDataLake' | 'AzureDataLakeGen2' | 'AzureFile' | 'AzureMySql' | 'AzurePostgreSql' | 'AzureSqlDatabase' | 'DBFS' | string (ReadOnly): The datastore type.
 * **description**: string (ReadOnly): Description of the datastore.
 * **glusterFsSection**: [GlusterFsSection](#glusterfssection) (ReadOnly): Data specific to GlusterFS.
 * **hasBeenValidated**: bool (ReadOnly): A read only property that denotes whether the service datastore has been validated with credentials.
@@ -615,11 +615,11 @@
 * **certificate**: string (ReadOnly): The content of the certificate used for authentication.
 * **clientId**: string (ReadOnly): The Client ID/Application ID
 * **clientSecret**: string (ReadOnly): The client secret.
-* **credentialType**: 'None' | 'ServicePrincipal' (ReadOnly): The Azure Data Lake credential type.
+* **credentialType**: 'None' | 'ServicePrincipal' | string (ReadOnly): The Azure Data Lake credential type.
 * **isCertAuth**: bool (ReadOnly): Is it using certificate to authenticate. If false then use client secret.
 * **resourceGroup**: string (ReadOnly): Resource Group.
 * **resourceUri**: string (ReadOnly): The resource the service principal/app has access to.
-* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' (ReadOnly): Indicates which identity to use to authenticate service data access to customer's storage.
+* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | string (ReadOnly): Indicates which identity to use to authenticate service data access to customer's storage.
 * **storeName**: string (ReadOnly): The Azure Data Lake store name.
 * **subscriptionId**: string (ReadOnly): Subscription ID.
 * **tenantId**: string (ReadOnly): The ID of the tenant the service principal/app belongs to.
@@ -631,7 +631,7 @@
 * **certificate**: string (ReadOnly): The content of the certificate used for authentication.
 * **clientId**: string (ReadOnly): The Client ID/Application ID
 * **clientSecret**: string (ReadOnly): The client secret.
-* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' (ReadOnly): Sql Authentication type.
+* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' | string (ReadOnly): Sql Authentication type.
 * **databaseName**: string (ReadOnly): The Azure SQL database name.
 * **endpoint**: string (ReadOnly): The server host endpoint.
 * **isCertAuth**: bool (ReadOnly): Is it using certificate to authenticate. If false then use client secret.
@@ -639,7 +639,7 @@
 * **resourceGroup**: string (ReadOnly): Resource Group.
 * **resourceUri**: string (ReadOnly): The resource the service principal/app has access to.
 * **serverName**: string (ReadOnly): The Azure SQL server name.
-* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' (ReadOnly): Indicates which identity to use to authenticate service data access to customer's storage.
+* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | string (ReadOnly): Indicates which identity to use to authenticate service data access to customer's storage.
 * **subscriptionId**: string (ReadOnly): Subscription ID.
 * **tenantId**: string (ReadOnly): The ID of the tenant the service principal/app belongs to.
 * **thumbprint**: string (ReadOnly): The thumbprint of the certificate above.
@@ -652,7 +652,7 @@
 * **certificate**: string (ReadOnly): The content of the certificate used for authentication.
 * **clientId**: string (ReadOnly): The Client ID/Application ID
 * **clientSecret**: string (ReadOnly): The client secret.
-* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' (ReadOnly): Sql Authentication type.
+* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' | string (ReadOnly): Sql Authentication type.
 * **databaseName**: string (ReadOnly): The Azure SQL database name.
 * **enableSsl**: bool (ReadOnly): Indicates SSL requirement of Azure Postgresql server.
 * **endpoint**: string (ReadOnly): The server host endpoint.
@@ -661,7 +661,7 @@
 * **resourceGroup**: string (ReadOnly): Resource Group.
 * **resourceUri**: string (ReadOnly): The resource the service principal/app has access to.
 * **serverName**: string (ReadOnly): The Azure SQL server name.
-* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' (ReadOnly): Indicates which identity to use to authenticate service data access to customer's storage.
+* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | string (ReadOnly): Indicates which identity to use to authenticate service data access to customer's storage.
 * **subscriptionId**: string (ReadOnly): Subscription ID.
 * **tenantId**: string (ReadOnly): The ID of the tenant the service principal/app belongs to.
 * **thumbprint**: string (ReadOnly): The thumbprint of the certificate above.
@@ -674,7 +674,7 @@
 * **certificate**: string (ReadOnly): The content of the certificate used for authentication.
 * **clientId**: string (ReadOnly): The Client ID/Application ID
 * **clientSecret**: string (ReadOnly): The client secret.
-* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' (ReadOnly): Sql Authentication type.
+* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' | string (ReadOnly): Sql Authentication type.
 * **databaseName**: string (ReadOnly): The Azure SQL database name.
 * **endpoint**: string (ReadOnly): The server host endpoint.
 * **isCertAuth**: bool (ReadOnly): Is it using certificate to authenticate. If false then use client secret.
@@ -682,7 +682,7 @@
 * **resourceGroup**: string (ReadOnly): Resource Group.
 * **resourceUri**: string (ReadOnly): The resource the service principal/app has access to.
 * **serverName**: string (ReadOnly): The Azure SQL server name.
-* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' (ReadOnly): Indicates which identity to use to authenticate service data access to customer's storage.
+* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | string (ReadOnly): Indicates which identity to use to authenticate service data access to customer's storage.
 * **subscriptionId**: string (ReadOnly): Subscription ID.
 * **tenantId**: string (ReadOnly): The ID of the tenant the service principal/app belongs to.
 * **thumbprint**: string (ReadOnly): The thumbprint of the certificate above.
@@ -698,13 +698,13 @@
 * **clientCredentials**: [ClientCredentials](#clientcredentials) (ReadOnly): Service principal credential when credential type is "AzureStorageCredentialTypes.ClientCredentials".
 * **containerName**: string (ReadOnly): The storage container name.
 * **credential**: string (ReadOnly): The credential.
-* **credentialType**: 'AccountKey' | 'ClientCredentials' | 'None' | 'Sas' (ReadOnly): The credential type.
+* **credentialType**: 'AccountKey' | 'ClientCredentials' | 'None' | 'Sas' | string (ReadOnly): The credential type.
 * **endpoint**: string (ReadOnly): The host of the container.
 * **isSas**: bool (ReadOnly): Indicate if we are using SAS token or Account Key (Deprecated).
 * **protocol**: string (ReadOnly): The protocol to use. Defaults to https.
 * **resourceGroup**: string (ReadOnly): Resource Group.
 * **sasToken**: string (ReadOnly): SAS Token for the container (Deprecated).
-* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' (ReadOnly): Indicates which identity to use to authenticate service data access to customer's storage.
+* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | string (ReadOnly): Indicates which identity to use to authenticate service data access to customer's storage.
 * **subscriptionId**: string (ReadOnly): Subscription ID.
 
 ## ClientCredentials
@@ -716,7 +716,7 @@
 * **isCertAuth**: bool (ReadOnly): Is it using certificate to authenticate. If false then use client secret.
 * **resourceGroup**: string (ReadOnly): Resource Group.
 * **resourceUri**: string (ReadOnly): The resource the service principal/app has access to.
-* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' (ReadOnly): Indicates which identity to use to authenticate service data access to customer's storage.
+* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | string (ReadOnly): Indicates which identity to use to authenticate service data access to customer's storage.
 * **subscriptionId**: string (ReadOnly): Subscription ID.
 * **tenantId**: string (ReadOnly): The ID of the tenant the service principal/app belongs to.
 * **thumbprint**: string (ReadOnly): The thumbprint of the certificate above.
@@ -730,7 +730,7 @@
 ### Properties
 * **linkedId**: string (ReadOnly): LinkedId id.
 * **linkedResourceName**: string (ReadOnly): Linked resource name.
-* **origin**: 'Synapse' (ReadOnly): Datastore origin
+* **origin**: 'Synapse' | string (ReadOnly): Datastore origin
 
 ## DatastoreTags
 ### Properties
@@ -987,14 +987,14 @@ The path specified gets used to call the user script.
 
 ## AmlComputeNodesInformation
 ### Properties
-* **computeType**: 'AKS' | 'AmlCompute' | 'DataFactory' | 'DataLakeAnalytics' | 'Databricks' | 'HDInsight' | 'VirtualMachine' (ReadOnly): The type of compute
+* **computeType**: 'AKS' | 'AmlCompute' | 'DataFactory' | 'DataLakeAnalytics' | 'Databricks' | 'HDInsight' | 'VirtualMachine' | string (ReadOnly): The type of compute
 * **nextLink**: string (ReadOnly): The continuation token.
 * **nodes**: [AmlComputeNodeInformation](#amlcomputenodeinformation)[] (ReadOnly): The collection of returned AmlCompute nodes details.
 
 ## AmlComputeNodeInformation
 ### Properties
 * **nodeId**: string (ReadOnly): ID of the compute node.
-* **nodeState**: 'idle' | 'leaving' | 'preempted' | 'preparing' | 'running' | 'unusable' (ReadOnly): State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.
+* **nodeState**: 'idle' | 'leaving' | 'preempted' | 'preparing' | 'running' | 'unusable' | string (ReadOnly): State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.
 * **port**: int (ReadOnly): SSH port number of the node.
 * **privateIpAddress**: string (ReadOnly): Private IP address of the compute node.
 * **publicIpAddress**: string (ReadOnly): Public IP address of the compute node.

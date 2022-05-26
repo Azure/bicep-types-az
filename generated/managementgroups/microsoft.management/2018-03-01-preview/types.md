@@ -32,7 +32,7 @@
 * **id**: string (ReadOnly): The fully qualified ID for the child resource (management group or subscription).  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
 * **name**: string (ReadOnly): The name of the child entity.
 * **roles**: string[] (ReadOnly): The roles definitions associated with the management group.
-* **type**: '/providers/Microsoft.Management/managementGroups' | '/subscriptions' (ReadOnly): The type of child resource.
+* **type**: '/providers/Microsoft.Management/managementGroups' | '/subscriptions' | string (ReadOnly): The type of child resource.
 
 ## CreateManagementGroupDetails
 ### Properties

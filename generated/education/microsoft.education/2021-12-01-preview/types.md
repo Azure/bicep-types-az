@@ -29,7 +29,7 @@
 * **expirationDate**: string (Required): Default expiration date for each student in this lab
 * **invitationCode**: string (ReadOnly): invitation code for redeemable lab
 * **maxStudentCount**: int (ReadOnly): the total number of students that can be accepted to the lab.
-* **status**: 'Active' | 'Deleted' (ReadOnly): The status of this lab
+* **status**: 'Active' | 'Deleted' | string (ReadOnly): The status of this lab
 * **totalAllocatedBudget**: [Amount](#amount) (ReadOnly): The amount.
 * **totalBudget**: [Amount](#amount) (ReadOnly): The amount.
 
@@ -42,10 +42,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## StudentProperties
 ### Properties
@@ -55,8 +55,8 @@
 * **expirationDate**: string (Required): Date this student is set to expire from the lab.
 * **firstName**: string (Required): First Name
 * **lastName**: string (Required): Last Name
-* **role**: 'Admin' | 'Student' (Required): Student Role
-* **status**: 'Active' | 'Deleted' | 'Disabled' | 'Expired' | 'Pending' (ReadOnly): Student Lab Status
+* **role**: 'Admin' | 'Student' | string (Required): Student Role
+* **status**: 'Active' | 'Deleted' | 'Disabled' | 'Expired' | 'Pending' | string (ReadOnly): Student Lab Status
 * **subscriptionAlias**: string: Subscription alias
 * **subscriptionId**: string (ReadOnly): Subscription Id
 * **subscriptionInviteLastSentDate**: string: subscription invite last sent date

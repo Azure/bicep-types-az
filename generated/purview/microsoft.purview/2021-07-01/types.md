@@ -32,7 +32,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): Service principal object Id
 * **tenantId**: string (ReadOnly): Tenant Id
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': Identity Type
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string: Identity Type
 * **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): User Assigned Identities
 
 ## IdentityUserAssignedIdentities
@@ -56,8 +56,8 @@
 * **managedResourceGroupName**: string: Gets or sets the managed resource group name
 * **managedResources**: [AccountPropertiesManagedResources](#accountpropertiesmanagedresources) (ReadOnly): Gets the resource identifiers of the managed resources.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Gets the private endpoint connections information.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'SoftDeleted' | 'SoftDeleting' | 'Succeeded' | 'Unknown' (ReadOnly): Gets or sets the state of the provisioning.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'NotSpecified': Gets or sets the public network access.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'SoftDeleted' | 'SoftDeleting' | 'Succeeded' | 'Unknown' | string (ReadOnly): Gets or sets the state of the provisioning.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'NotSpecified' | string: Gets or sets the public network access.
 
 ## CloudConnectors
 ### Properties
@@ -97,21 +97,21 @@ Configured in AWS to allow use of the role arn used for scanning
 ### Properties
 * **actionsRequired**: string: The required actions.
 * **description**: string: The description.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Unknown': The status.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Unknown' | string: The status.
 
 ## AccountSku
 ### Properties
 * **capacity**: int: Gets or sets the sku capacity.
-* **name**: 'Standard': Gets or sets the sku name.
+* **name**: 'Standard' | string: Gets or sets the sku name.
 
 ## TrackedResourceSystemData
 ### Properties
 * **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
 * **createdBy**: string (ReadOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 * **lastModifiedAt**: string (ReadOnly): The timestamp of the last modification the resource (UTC).
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties

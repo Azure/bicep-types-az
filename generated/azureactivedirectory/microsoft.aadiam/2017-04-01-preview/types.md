@@ -20,7 +20,7 @@
 
 ## LogSettings
 ### Properties
-* **category**: 'AuditLogs' | 'SignInLogs': Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
+* **category**: 'AuditLogs' | 'SignInLogs' | string: Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
 * **enabled**: bool (Required): A value indicating whether this log is enabled.
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Specifies the retention policy for the log.
 

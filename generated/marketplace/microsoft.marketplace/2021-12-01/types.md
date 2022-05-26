@@ -68,7 +68,7 @@
 
 ## PrivateStoreProperties
 ### Properties
-* **availability**: 'disabled' | 'enabled': Indicates private store availability
+* **availability**: 'disabled' | 'enabled' | string: Indicates private store availability
 * **branding**: [PrivateStorePropertiesBranding](#privatestorepropertiesbranding): Gets or sets list of branding characteristics
 * **collectionIds**: string[] (ReadOnly): Gets list of associated collection ids
 * **eTag**: string: Identifier for purposes of race condition
@@ -98,14 +98,14 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC)
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that creates/modifies resources
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that creates/modifies resources
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
 
 ## AdminRequestApprovalProperties
 ### Properties
-* **adminAction**: 'Approved' | 'Rejected': Gets or sets admin action
+* **adminAction**: 'Approved' | 'Rejected' | string: Gets or sets admin action
 * **administrator**: string: Gets or sets admin details
 * **approvedPlans**: string[]: Gets or sets Approved plans ids, empty in case of rejected
 * **collectionIds**: string[]: Gets or sets list of associated collection ids
@@ -160,7 +160,7 @@
 
 ## Plan
 ### Properties
-* **accessibility**: 'PrivateSubscriptionOnLevel' | 'PrivateTenantOnLevel' | 'Public' | 'Unknown': Plan accessibility
+* **accessibility**: 'PrivateSubscriptionOnLevel' | 'PrivateTenantOnLevel' | 'Public' | 'Unknown' | string: Plan accessibility
 * **altStackReference**: string (ReadOnly): Alternative stack type
 * **planDisplayName**: string (ReadOnly): Friendly name for the plan for display in the marketplace
 * **planId**: string (ReadOnly): Text identifier for this plan
@@ -181,7 +181,7 @@
 * **justification**: string: Gets or sets user's justification for the plan's request
 * **planId**: string: Gets or sets Plan Id
 * **requestDate**: any (ReadOnly): Anything
-* **status**: 'Approved' | 'None' | 'Pending' | 'Rejected' (ReadOnly): Gets the plan status
+* **status**: 'Approved' | 'None' | 'Pending' | 'Rejected' | string (ReadOnly): Gets the plan status
 * **subscriptionId**: string: Gets or sets the subscription id that the user is requesting to add the plan to
 * **subscriptionName**: string: Gets or sets the subscription name that the user is requesting to add the plan to
 

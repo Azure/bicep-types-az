@@ -54,10 +54,10 @@
 ## ContactProfileLink
 ### Properties
 * **channels**: [ContactProfileLinkChannel](#contactprofilelinkchannel)[] (Required): Contact Profile Link Channel
-* **direction**: 'downlink' | 'uplink' (Required): Direction (uplink or downlink)
+* **direction**: 'downlink' | 'uplink' | string (Required): Direction (uplink or downlink)
 * **eirpdBW**: int: Effective Isotropic Radiated Power (EIRP) in dBW.
 * **gainOverTemperature**: int: Gain To Noise Temperature in db/K.
-* **polarization**: 'LHCP' | 'RHCP' | 'dualRhcpLhcp' | 'linearHorizontal' | 'linearVertical' (Required): polarization. eg (RHCP, LHCP)
+* **polarization**: 'LHCP' | 'RHCP' | 'dualRhcpLhcp' | 'linearHorizontal' | 'linearVertical' | string (Required): polarization. eg (RHCP, LHCP)
 
 ## ContactProfileLinkChannel
 ### Properties
@@ -74,16 +74,16 @@
 * **endPointName**: string (Required): Name of an end point.
 * **ipAddress**: string (Required): IP Address.
 * **port**: string (Required): TCP port to listen on to receive data.
-* **protocol**: 'TCP' | 'UDP' (Required): Protocol either UDP or TCP.
+* **protocol**: 'TCP' | 'UDP' | string (Required): Protocol either UDP or TCP.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -104,8 +104,8 @@
 ### Properties
 * **bandwidthMHz**: int (Required): Bandwidth in MHz
 * **centerFrequencyMHz**: int (Required): Center Frequency in MHz
-* **direction**: 'downlink' | 'uplink' (Required): Direction (uplink or downlink)
-* **polarization**: 'LHCP' | 'RHCP' | 'dualRhcpLhcp' | 'linearHorizontal' | 'linearVertical' (Required): polarization. eg (RHCP, LHCP)
+* **direction**: 'downlink' | 'uplink' | string (Required): Direction (uplink or downlink)
+* **polarization**: 'LHCP' | 'RHCP' | 'dualRhcpLhcp' | 'linearHorizontal' | 'linearVertical' | string (Required): polarization. eg (RHCP, LHCP)
 
 ## TrackedResourceTags
 ### Properties

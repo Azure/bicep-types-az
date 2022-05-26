@@ -7,7 +7,7 @@
 * **etag**: [MyWorkbookResourceEtag](#myworkbookresourceetag): Resource etag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [MyWorkbookManagedIdentity](#myworkbookmanagedidentity): Customer Managed Identity
-* **kind**: 'shared' | 'user': The kind of workbook. Choices are user and shared.
+* **kind**: 'shared' | 'user' | string: The kind of workbook. Choices are user and shared.
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MyWorkbookProperties](#myworkbookproperties): Properties that contain a private workbook.
@@ -21,7 +21,7 @@
 * **etag**: [ResourceEtag](#resourceetag): Resource etag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [WorkbookManagedIdentity](#workbookmanagedidentity): Customer Managed Identity
-* **kind**: 'shared' | 'user': The kind of workbook. Choices are user and shared.
+* **kind**: 'shared' | 'user' | string: The kind of workbook. Choices are user and shared.
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkbookProperties](#workbookproperties): Properties that contain a workbook.
@@ -35,7 +35,7 @@
 
 ## MyWorkbookManagedIdentity
 ### Properties
-* **type**: 'None' | 'UserAssigned': The identity type.
+* **type**: 'None' | 'UserAssigned' | string: The identity type.
 * **userAssignedIdentities**: [MyWorkbookUserAssignedIdentities](#myworkbookuserassignedidentities): Customer Managed Identity
 
 ## MyWorkbookUserAssignedIdentities
@@ -67,7 +67,7 @@
 
 ## WorkbookManagedIdentity
 ### Properties
-* **type**: 'None' | 'UserAssigned': The identity type.
+* **type**: 'None' | 'UserAssigned' | string: The identity type.
 * **userAssignedIdentities**: [WorkbookUserAssignedIdentities](#workbookuserassignedidentities): Customer Managed Identity
 
 ## WorkbookUserAssignedIdentities

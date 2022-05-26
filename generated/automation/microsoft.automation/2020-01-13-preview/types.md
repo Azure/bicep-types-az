@@ -192,7 +192,7 @@
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of Automation operations supported by the Automation resource provider.
 * **publicNetworkAccess**: bool: Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
 * **sku**: [Sku](#sku): The account SKU.
-* **state**: 'Ok' | 'Suspended' | 'Unavailable' (ReadOnly): Gets status of account.
+* **state**: 'Ok' | 'Suspended' | 'Unavailable' | string (ReadOnly): Gets status of account.
 
 ## EncryptionProperties
 ### Properties
@@ -237,7 +237,7 @@
 ### Properties
 * **capacity**: int: Gets or sets the SKU capacity.
 * **family**: string: Gets or sets the SKU family.
-* **name**: 'Basic' | 'Free' (Required): Gets or sets the SKU name of the account.
+* **name**: 'Basic' | 'Free' | string (Required): Gets or sets the SKU name of the account.
 
 ## AutomationAccountCreateOrUpdateParametersTags
 ### Properties
@@ -265,11 +265,11 @@
 * **lastModifiedTime**: string (ReadOnly): Gets the last modified time of the job.
 * **lastStatusModifiedTime**: string (ReadOnly): Gets the last status modified time of the job.
 * **parameters**: [DscCompilationJobCreatePropertiesParameters](#dsccompilationjobcreatepropertiesparameters): Gets or sets the parameters of the job.
-* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly): The provisioning state of the resource.
+* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' | string (ReadOnly): The provisioning state of the resource.
 * **runOn**: string (ReadOnly): Gets or sets the runOn which specifies the group name where the job is to be executed.
 * **startedBy**: string (ReadOnly): Gets the compilation job started by.
 * **startTime**: string (ReadOnly): Gets the start time of the job.
-* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly): Gets or sets the status of the job.
+* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' | string (ReadOnly): Gets or sets the status of the job.
 * **statusDetails**: string (ReadOnly): Gets or sets the status details of the job.
 
 ## DscConfigurationAssociationProperty
@@ -398,7 +398,7 @@
 ## ContentSource
 ### Properties
 * **hash**: [ContentHash](#contenthash) (WriteOnly): Definition of the runbook property type.
-* **type**: 'embeddedContent' | 'uri' (WriteOnly): Gets or sets the content source type.
+* **type**: 'embeddedContent' | 'uri' | string (WriteOnly): Gets or sets the content source type.
 * **value**: string (WriteOnly): Gets or sets the value of the content. This is based on the content source type.
 * **version**: string (WriteOnly): Gets or sets the version of the content.
 
@@ -433,7 +433,7 @@
 * **description**: string: Gets or sets the description of the schedule.
 * **expiryTime**: string: Gets or sets the end time of the schedule.
 * **expiryTimeOffsetMinutes**: int (ReadOnly): Gets or sets the expiry time's offset in minutes.
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'OneTime' | 'Week' (Required): Gets or sets the frequency of the schedule.
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'OneTime' | 'Week' | string (Required): Gets or sets the frequency of the schedule.
 * **interval**: any: Anything
 * **isEnabled**: bool (ReadOnly): Gets or sets a value indicating whether this schedule is enabled.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
@@ -451,7 +451,7 @@
 
 ## AdvancedScheduleMonthlyOccurrence
 ### Properties
-* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string: Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
 * **occurrence**: int: Occurrence of the week within the month. Must be between 1 and 5
 
 ## SourceControlCreateOrUpdateProperties
@@ -465,13 +465,13 @@
 * **publishRunbook**: bool: The auto publish of the source control. Default is true.
 * **repoUrl**: string: The repo url of the source control.
 * **securityToken**: [SourceControlSecurityTokenProperties](#sourcecontrolsecuritytokenproperties) (WriteOnly)
-* **sourceType**: 'GitHub' | 'VsoGit' | 'VsoTfvc': The source type. Must be one of VsoGit, VsoTfvc, GitHub.
+* **sourceType**: 'GitHub' | 'VsoGit' | 'VsoTfvc' | string: The source type. Must be one of VsoGit, VsoTfvc, GitHub.
 
 ## SourceControlSecurityTokenProperties
 ### Properties
 * **accessToken**: string (WriteOnly): The access token.
 * **refreshToken**: string (WriteOnly): The refresh token.
-* **tokenType**: 'Oauth' | 'PersonalAccessToken' (WriteOnly): The token type. Must be either PersonalAccessToken or Oauth.
+* **tokenType**: 'Oauth' | 'PersonalAccessToken' | string (WriteOnly): The token type. Must be either PersonalAccessToken or Oauth.
 
 ## SourceControlSyncJobCreateProperties
 ### Properties
@@ -479,10 +479,10 @@
 * **creationTime**: string (ReadOnly): The creation time of the job.
 * **endTime**: string (ReadOnly): The end time of the job.
 * **exception**: string (ReadOnly): The exceptions that occurred while running the sync job.
-* **provisioningState**: 'Completed' | 'Failed' | 'Running' (ReadOnly): The provisioning state of the job.
+* **provisioningState**: 'Completed' | 'Failed' | 'Running' | string (ReadOnly): The provisioning state of the job.
 * **sourceControlSyncJobId**: string (ReadOnly): The source control sync job id.
 * **startTime**: string (ReadOnly): The start time of the job.
-* **syncType**: 'FullSync' | 'PartialSync' (ReadOnly): The sync type.
+* **syncType**: 'FullSync' | 'PartialSync' | string (ReadOnly): The sync type.
 
 ## VariableCreateOrUpdateProperties
 ### Properties
@@ -520,7 +520,7 @@
 
 ## Key
 ### Properties
-* **KeyName**: 'Primary' | 'Secondary' (ReadOnly): Automation key name.
-* **Permissions**: 'Full' | 'Read' (ReadOnly): Automation key permissions.
+* **KeyName**: 'Primary' | 'Secondary' | string (ReadOnly): Automation key name.
+* **Permissions**: 'Full' | 'Read' | string (ReadOnly): Automation key permissions.
 * **Value**: string (ReadOnly): Value of the Automation Key used for registration.
 

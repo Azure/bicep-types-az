@@ -40,7 +40,7 @@
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The ETag of the data source.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'ApplicationInsights' | 'AzureActivityLog' | 'AzureAuditLog' | 'ChangeTrackingContentLocation' | 'ChangeTrackingCustomPath' | 'ChangeTrackingDataTypeConfiguration' | 'ChangeTrackingDefaultRegistry' | 'ChangeTrackingLinuxPath' | 'ChangeTrackingPath' | 'ChangeTrackingRegistry' | 'ChangeTrackingServices' | 'CustomLog' | 'CustomLogCollection' | 'DnsAnalytics' | 'GenericDataSource' | 'IISLogs' | 'ImportComputerGroup' | 'Itsm' | 'LinuxChangeTrackingPath' | 'LinuxPerformanceCollection' | 'LinuxPerformanceObject' | 'LinuxSyslog' | 'LinuxSyslogCollection' | 'NetworkMonitoring' | 'Office365' | 'SecurityCenterSecurityWindowsBaselineConfiguration' | 'SecurityEventCollectionConfiguration' | 'SecurityInsightsSecurityEventCollectionConfiguration' | 'SecurityWindowsBaselineConfiguration' | 'SqlDataClassification' | 'WindowsEvent' | 'WindowsPerformanceCounter' | 'WindowsTelemetry' (Required): The kind of the DataSource.
+* **kind**: 'ApplicationInsights' | 'AzureActivityLog' | 'AzureAuditLog' | 'ChangeTrackingContentLocation' | 'ChangeTrackingCustomPath' | 'ChangeTrackingDataTypeConfiguration' | 'ChangeTrackingDefaultRegistry' | 'ChangeTrackingLinuxPath' | 'ChangeTrackingPath' | 'ChangeTrackingRegistry' | 'ChangeTrackingServices' | 'CustomLog' | 'CustomLogCollection' | 'DnsAnalytics' | 'GenericDataSource' | 'IISLogs' | 'ImportComputerGroup' | 'Itsm' | 'LinuxChangeTrackingPath' | 'LinuxPerformanceCollection' | 'LinuxPerformanceObject' | 'LinuxSyslog' | 'LinuxSyslogCollection' | 'NetworkMonitoring' | 'Office365' | 'SecurityCenterSecurityWindowsBaselineConfiguration' | 'SecurityEventCollectionConfiguration' | 'SecurityInsightsSecurityEventCollectionConfiguration' | 'SecurityWindowsBaselineConfiguration' | 'SqlDataClassification' | 'WindowsEvent' | 'WindowsPerformanceCounter' | 'WindowsTelemetry' | string (Required): The kind of the DataSource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: any (Required): Any object
 * **tags**: [DataSourceTags](#datasourcetags): Resource tags.
@@ -97,7 +97,7 @@
 * **clusterId**: string (ReadOnly): The ID associated with the cluster.
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): The key vault properties.
 * **nextLink**: string: The link used to get the next page of recommendations.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the cluster.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the cluster.
 
 ## KeyVaultProperties
 ### Properties
@@ -108,7 +108,7 @@
 ## ClusterSku
 ### Properties
 * **capacity**: int: The capacity value
-* **name**: 'CapacityReservation': The name of the SKU.
+* **name**: 'CapacityReservation' | string: The name of the SKU.
 
 ## TrackedResourceTags
 ### Properties
@@ -119,9 +119,9 @@
 ### Properties
 * **customerId**: string (ReadOnly): This is a read-only property. Represents the ID associated with the workspace.
 * **privateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly): List of linked private link scope resources.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating': The provisioning state of the workspace.
-* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled': The network access type for operating on the Log Analytics Workspace. By default it is Enabled
-* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled': The network access type for operating on the Log Analytics Workspace. By default it is Enabled
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' | string: The provisioning state of the workspace.
+* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled' | string: The network access type for operating on the Log Analytics Workspace. By default it is Enabled
+* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled' | string: The network access type for operating on the Log Analytics Workspace. By default it is Enabled
 * **retentionInDays**: int: The workspace data retention in days. -1 means Unlimited retention for the Unlimited Sku. 730 days is the maximum allowed for all other Skus.
 * **sku**: [WorkspaceSku](#workspacesku): The SKU (tier) of a workspace.
 * **workspaceCapping**: [WorkspaceCapping](#workspacecapping): The daily volume cap for ingestion.
@@ -136,12 +136,12 @@
 * **capacityReservationLevel**: int: The capacity reservation level for this workspace, when CapacityReservation sku is selected.
 * **lastSkuUpdate**: string (ReadOnly): The last time when the sku was updated.
 * **maxCapacityReservationLevel**: int (ReadOnly): The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.
-* **name**: 'CapacityReservation' | 'Free' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' (Required): The name of the SKU.
+* **name**: 'CapacityReservation' | 'Free' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' | string (Required): The name of the SKU.
 
 ## WorkspaceCapping
 ### Properties
 * **dailyQuotaGb**: int: The workspace daily quota for ingestion. -1 means unlimited.
-* **dataIngestionStatus**: 'ApproachingQuota' | 'ForceOff' | 'ForceOn' | 'OverQuota' | 'RespectQuota' | 'SubscriptionSuspended' (ReadOnly): The status of data ingestion for this workspace.
+* **dataIngestionStatus**: 'ApproachingQuota' | 'ForceOff' | 'ForceOn' | 'OverQuota' | 'RespectQuota' | 'SubscriptionSuspended' | string (ReadOnly): The status of data ingestion for this workspace.
 * **quotaNextResetTime**: string (ReadOnly): The time when the quota will be rest.
 
 ## TrackedResourceTags
@@ -162,7 +162,7 @@
 ### Properties
 * **metaData**: [DestinationMetaData](#destinationmetadata): Destination meta data.
 * **resourceId**: string (Required): The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
-* **type**: 'EventHub' | 'StorageAccount' (ReadOnly): The type of the destination resource
+* **type**: 'EventHub' | 'StorageAccount' | string (ReadOnly): The type of the destination resource
 
 ## DestinationMetaData
 ### Properties
@@ -175,7 +175,7 @@
 
 ## LinkedServiceProperties
 ### Properties
-* **provisioningState**: 'Deleting' | 'ProvisioningAccount' | 'Succeeded' | 'Updating': The provisioning state of the linked service.
+* **provisioningState**: 'Deleting' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' | string: The provisioning state of the linked service.
 * **resourceId**: string: The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require read access
 * **writeAccessResourceId**: string: The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require write access
 
@@ -214,7 +214,7 @@
 ## StorageInsightStatus
 ### Properties
 * **description**: string: Description of the state of the storage insight.
-* **state**: 'ERROR' | 'OK' (Required): The state of the storage insight connection to the workspace
+* **state**: 'ERROR' | 'OK' | string (Required): The state of the storage insight connection to the workspace
 
 ## StorageAccount
 ### Properties

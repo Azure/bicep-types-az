@@ -75,16 +75,16 @@
 ### Properties
 * **principalId**: string (ReadOnly): The identity ID.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned' | 'UserAssigned': Identity type
+* **type**: 'SystemAssigned' | 'UserAssigned' | string: Identity type
 
 ## MonitorProperties
 ### Properties
 * **datadogOrganizationProperties**: [DatadogOrganizationProperties](#datadogorganizationproperties): Datadog organization properties
-* **liftrResourceCategory**: 'MonitorLogs' | 'Unknown' (ReadOnly)
+* **liftrResourceCategory**: 'MonitorLogs' | 'Unknown' | string (ReadOnly)
 * **liftrResourcePreference**: int (ReadOnly): The priority of the resource.
-* **marketplaceSubscriptionStatus**: 'Active' | 'Provisioning' | 'Suspended' | 'Unsubscribed' (ReadOnly): Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
-* **monitoringStatus**: 'Disabled' | 'Enabled': Flag specifying if the resource monitoring is enabled or disabled.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly)
+* **marketplaceSubscriptionStatus**: 'Active' | 'Provisioning' | 'Suspended' | 'Unsubscribed' | string (ReadOnly): Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
+* **monitoringStatus**: 'Disabled' | 'Enabled' | string: Flag specifying if the resource monitoring is enabled or disabled.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly)
 * **userInfo**: [UserInfo](#userinfo): User info
 
 ## DatadogOrganizationProperties
@@ -116,15 +116,15 @@
 ## DatadogSingleSignOnProperties
 ### Properties
 * **enterpriseAppId**: string: The Id of the Enterprise App used for Single sign-on.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly)
-* **singleSignOnState**: 'Disable' | 'Enable' | 'Existing' | 'Initial': Various states of the SSO resource
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly)
+* **singleSignOnState**: 'Disable' | 'Enable' | 'Existing' | 'Initial' | string: Various states of the SSO resource
 * **singleSignOnUrl**: string (ReadOnly): The login URL specific to this Datadog Organization.
 
 ## MonitoringTagRulesProperties
 ### Properties
 * **logRules**: [LogRules](#logrules): Set of rules for sending logs for the Monitor resource.
 * **metricRules**: [MetricRules](#metricrules): Set of rules for sending metrics for the Monitor resource.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly)
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly)
 
 ## LogRules
 ### Properties
@@ -135,7 +135,7 @@
 
 ## FilteringTag
 ### Properties
-* **action**: 'Exclude' | 'Include': Valid actions for a filtering tag. Exclusion takes priority over inclusion.
+* **action**: 'Exclude' | 'Include' | string: Valid actions for a filtering tag. Exclusion takes priority over inclusion.
 * **name**: string: The name (also known as the key) of the tag.
 * **value**: string: The value of the tag.
 

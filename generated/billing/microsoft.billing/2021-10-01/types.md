@@ -11,7 +11,7 @@
 
 ## BillingSubscriptionAliasProperties
 ### Properties
-* **autoRenew**: 'Off' | 'On': Indicates whether auto renewal is turned on or off for a subscription.
+* **autoRenew**: 'Off' | 'On' | string: Indicates whether auto renewal is turned on or off for a subscription.
 * **beneficiaryTenantId**: string: The provisioning tenant of the subscription.
 * **billingFrequency**: string: The billing frequency of the subscription in the ISO8601 format. Example: P1M, P3M, P1Y
 * **billingPolicies**: [BillingSubscriptionPropertiesBillingPolicies](#billingsubscriptionpropertiesbillingpolicies) (ReadOnly): Dictionary of billing policies associated with the subscription.
@@ -42,7 +42,7 @@
 * **reseller**: [Reseller](#reseller) (ReadOnly): Details of the reseller.
 * **skuDescription**: string (ReadOnly): The SKU description of the product for which the subscription is purchased. This field is only available for Microsoft Customer Agreement billing accounts.
 * **skuId**: string: The SKU ID of the product for which the subscription is purchased. This field is only available for Microsoft Customer Agreement billing accounts.
-* **status**: 'Active' | 'AutoRenew' | 'Cancelled' | 'Deleted' | 'Disabled' | 'Expired' | 'Expiring' | 'Suspended' | 'Unknown' | 'Warned' (ReadOnly): The status of the subscription. This field is not available for Enterprise Agreement billing accounts.
+* **status**: 'Active' | 'AutoRenew' | 'Cancelled' | 'Deleted' | 'Disabled' | 'Expired' | 'Expiring' | 'Suspended' | 'Unknown' | 'Warned' | string (ReadOnly): The status of the subscription. This field is not available for Enterprise Agreement billing accounts.
 * **subscriptionId**: string (ReadOnly): The ID of the usage-based subscription. This field is only available for usage-based subscriptions of Microsoft Customer Agreement billing accounts.
 * **suspensionReasons**: string[] (ReadOnly): The suspension reason for the subscription. This field is not available for Enterprise Agreement billing accounts.
 * **termDuration**: string: The duration for which you can use the subscription. Example P1Y and P1M
@@ -57,7 +57,7 @@
 ## EnrollmentAccountSubscriptionDetails
 ### Properties
 * **enrollmentAccountStartDate**: string (ReadOnly): The enrollment Account and the subscription association start date. This field is available only for the Enterprise Agreement billing accounts.
-* **subscriptionEnrollmentAccountStatus**: 'Active' | 'Cancelled' | 'Deleted' | 'Expired' | 'TransferredOut' | 'Transferring' (ReadOnly): The current enrollment account status of the subscription. This field is available only for the Enterprise Agreement billing accounts.
+* **subscriptionEnrollmentAccountStatus**: 'Active' | 'Cancelled' | 'Deleted' | 'Expired' | 'TransferredOut' | 'Transferring' | string (ReadOnly): The current enrollment account status of the subscription. This field is available only for the Enterprise Agreement billing accounts.
 
 ## Amount
 ### Properties

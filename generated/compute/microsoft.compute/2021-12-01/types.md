@@ -66,7 +66,7 @@
 ## ExtendedLocation
 ### Properties
 * **name**: string: The name of the extended location.
-* **type**: 'EdgeZone': The type of extendedLocation.
+* **type**: 'EdgeZone' | string: The type of extendedLocation.
 
 ## DiskAccessProperties
 ### Properties
@@ -85,7 +85,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
 
 ## PrivateEndpoint
 ### Properties
@@ -95,7 +95,7 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected': The private endpoint connection status.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
 
 ## ResourceTags
 ### Properties
@@ -106,13 +106,13 @@
 ### Properties
 * **principalId**: string (ReadOnly): The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity
 * **tenantId**: string (ReadOnly): The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity
-* **type**: 'None' | 'SystemAssigned': The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.
+* **type**: 'None' | 'SystemAssigned' | string: The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.
 
 ## EncryptionSetProperties
 ### Properties
 * **activeKey**: [KeyForDiskEncryptionSet](#keyfordiskencryptionset): Key Vault Key Url to be used for server side encryption of Managed Disks and Snapshots
 * **autoKeyRotationError**: [ApiError](#apierror) (ReadOnly): Api error.
-* **encryptionType**: 'ConfidentialVmEncryptedWithCustomerKey' | 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys': The type of key used to encrypt the data of the disk.
+* **encryptionType**: 'ConfidentialVmEncryptedWithCustomerKey' | 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys' | string: The type of key used to encrypt the data of the disk.
 * **lastKeyRotationTimestamp**: string (ReadOnly): The time when the active key of this disk encryption set was updated.
 * **previousKeys**: [KeyForDiskEncryptionSet](#keyfordiskencryptionset)[] (ReadOnly): A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.
 * **provisioningState**: string (ReadOnly): The disk encryption set provisioning state.
@@ -156,7 +156,7 @@
 * **burstingEnabled**: bool: Set to true to enable bursting beyond the provisioned performance target of the disk. Bursting is disabled by default. Does not apply to Ultra disks.
 * **completionPercent**: int: Percentage complete for the background copy when a resource is created via the CopyStart operation.
 * **creationData**: [CreationData](#creationdata) (Required): Data used when creating a disk.
-* **dataAccessAuthMode**: 'AzureActiveDirectory' | 'None': Additional authentication requirements when exporting or uploading to a disk or snapshot.
+* **dataAccessAuthMode**: 'AzureActiveDirectory' | 'None' | string: Additional authentication requirements when exporting or uploading to a disk or snapshot.
 * **diskAccessId**: string: ARM id of the DiskAccess resource for using private endpoints on disks.
 * **diskIOPSReadOnly**: int: The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.
 * **diskIOPSReadWrite**: int: The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.
@@ -164,16 +164,16 @@
 * **diskMBpsReadWrite**: int: The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
 * **diskSizeBytes**: int (ReadOnly): The size of the disk in bytes. This field is read only.
 * **diskSizeGB**: int: If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
-* **diskState**: 'ActiveSAS' | 'ActiveSASFrozen' | 'ActiveUpload' | 'Attached' | 'Frozen' | 'ReadyToUpload' | 'Reserved' | 'Unattached' (ReadOnly): This enumerates the possible state of the disk.
+* **diskState**: 'ActiveSAS' | 'ActiveSASFrozen' | 'ActiveUpload' | 'Attached' | 'Frozen' | 'ReadyToUpload' | 'Reserved' | 'Unattached' | string (ReadOnly): This enumerates the possible state of the disk.
 * **encryption**: [Encryption](#encryption): Encryption at rest settings for disk or snapshot
 * **encryptionSettingsCollection**: [EncryptionSettingsCollection](#encryptionsettingscollection): Encryption settings for disk or snapshot
-* **hyperVGeneration**: 'V1' | 'V2': The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+* **hyperVGeneration**: 'V1' | 'V2' | string: The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
 * **maxShares**: int: The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
-* **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll': Policy for accessing the disk via network.
+* **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll' | string: Policy for accessing the disk via network.
 * **osType**: 'Linux' | 'Windows': The Operating System type.
 * **propertyUpdatesInProgress**: [PropertyUpdatesInProgress](#propertyupdatesinprogress) (ReadOnly): Properties of the disk for which update is pending.
 * **provisioningState**: string (ReadOnly): The disk provisioning state.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Policy for controlling export on the disk.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Policy for controlling export on the disk.
 * **purchasePlan**: [PurchasePlan](#purchaseplan): Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
 * **securityProfile**: [DiskSecurityProfile](#disksecurityprofile): Contains the security related information for the resource.
 * **shareInfo**: [ShareInfoElement](#shareinfoelement)[] (ReadOnly): Details of the list of all VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
@@ -185,7 +185,7 @@
 
 ## CreationData
 ### Properties
-* **createOption**: 'Attach' | 'Copy' | 'CopyStart' | 'Empty' | 'FromImage' | 'Import' | 'ImportSecure' | 'Restore' | 'Upload' | 'UploadPreparedSecure' (Required): This enumerates the possible sources of a disk's creation.
+* **createOption**: 'Attach' | 'Copy' | 'CopyStart' | 'Empty' | 'FromImage' | 'Import' | 'ImportSecure' | 'Restore' | 'Upload' | 'UploadPreparedSecure' | string (Required): This enumerates the possible sources of a disk's creation.
 * **galleryImageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
 * **imageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
 * **logicalSectorSize**: int: Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.
@@ -204,7 +204,7 @@
 ## Encryption
 ### Properties
 * **diskEncryptionSetId**: string: ResourceId of the disk encryption set to use for enabling encryption at rest.
-* **type**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys' | 'EncryptionAtRestWithPlatformKey': The type of key used to encrypt the data of the disk.
+* **type**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys' | 'EncryptionAtRestWithPlatformKey' | string: The type of key used to encrypt the data of the disk.
 
 ## EncryptionSettingsCollection
 ### Properties
@@ -241,7 +241,7 @@
 ## DiskSecurityProfile
 ### Properties
 * **secureVMDiskEncryptionSetId**: string: ResourceId of the disk encryption set associated to Confidential VM supported disk encrypted with customer managed key
-* **securityType**: 'ConfidentialVM_DiskEncryptedWithCustomerKey' | 'ConfidentialVM_DiskEncryptedWithPlatformKey' | 'ConfidentialVM_VMGuestStateOnlyEncryptedWithPlatformKey' | 'TrustedLaunch': Specifies the SecurityType of the VM. Applicable for OS disks only.
+* **securityType**: 'ConfidentialVM_DiskEncryptedWithCustomerKey' | 'ConfidentialVM_DiskEncryptedWithPlatformKey' | 'ConfidentialVM_VMGuestStateOnlyEncryptedWithPlatformKey' | 'TrustedLaunch' | string: Specifies the SecurityType of the VM. Applicable for OS disks only.
 
 ## ShareInfoElement
 ### Properties
@@ -250,11 +250,11 @@
 ## SupportedCapabilities
 ### Properties
 * **acceleratedNetwork**: bool: True if the image from which the OS disk is created supports accelerated networking.
-* **architecture**: 'Arm64' | 'x64': CPU architecture supported by an OS disk.
+* **architecture**: 'Arm64' | 'x64' | string: CPU architecture supported by an OS disk.
 
 ## DiskSku
 ### Properties
-* **name**: 'Premium_LRS' | 'Premium_ZRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'Standard_LRS' | 'UltraSSD_LRS': The sku name.
+* **name**: 'Premium_LRS' | 'Premium_ZRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'Standard_LRS' | 'UltraSSD_LRS' | string: The sku name.
 * **tier**: string (ReadOnly): The sku tier.
 
 ## ResourceTags
@@ -266,19 +266,19 @@
 ### Properties
 * **completionPercent**: int: Percentage complete for the background copy when a resource is created via the CopyStart operation.
 * **creationData**: [CreationData](#creationdata) (Required): Data used when creating a disk.
-* **dataAccessAuthMode**: 'AzureActiveDirectory' | 'None': Additional authentication requirements when exporting or uploading to a disk or snapshot.
+* **dataAccessAuthMode**: 'AzureActiveDirectory' | 'None' | string: Additional authentication requirements when exporting or uploading to a disk or snapshot.
 * **diskAccessId**: string: ARM id of the DiskAccess resource for using private endpoints on disks.
 * **diskSizeBytes**: int (ReadOnly): The size of the disk in bytes. This field is read only.
 * **diskSizeGB**: int: If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
-* **diskState**: 'ActiveSAS' | 'ActiveSASFrozen' | 'ActiveUpload' | 'Attached' | 'Frozen' | 'ReadyToUpload' | 'Reserved' | 'Unattached' (ReadOnly): This enumerates the possible state of the disk.
+* **diskState**: 'ActiveSAS' | 'ActiveSASFrozen' | 'ActiveUpload' | 'Attached' | 'Frozen' | 'ReadyToUpload' | 'Reserved' | 'Unattached' | string (ReadOnly): This enumerates the possible state of the disk.
 * **encryption**: [Encryption](#encryption): Encryption at rest settings for disk or snapshot
 * **encryptionSettingsCollection**: [EncryptionSettingsCollection](#encryptionsettingscollection): Encryption settings for disk or snapshot
-* **hyperVGeneration**: 'V1' | 'V2': The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+* **hyperVGeneration**: 'V1' | 'V2' | string: The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
 * **incremental**: bool: Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.
-* **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll': Policy for accessing the disk via network.
+* **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll' | string: Policy for accessing the disk via network.
 * **osType**: 'Linux' | 'Windows': The Operating System type.
 * **provisioningState**: string (ReadOnly): The disk provisioning state.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Policy for controlling export on the disk.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Policy for controlling export on the disk.
 * **purchasePlan**: [PurchasePlan](#purchaseplan): Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
 * **securityProfile**: [DiskSecurityProfile](#disksecurityprofile): Contains the security related information for the resource.
 * **supportedCapabilities**: [SupportedCapabilities](#supportedcapabilities): List of supported capabilities persisted on the disk resource for VM use.
@@ -288,7 +288,7 @@
 
 ## SnapshotSku
 ### Properties
-* **name**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS': The sku name.
+* **name**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: The sku name.
 * **tier**: string (ReadOnly): The sku tier.
 
 ## ResourceTags

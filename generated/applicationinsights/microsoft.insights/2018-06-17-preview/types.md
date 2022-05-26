@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2018-06-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'shared' | 'user': The kind of workbook. Choices are user and shared.
+* **kind**: 'shared' | 'user' | string: The kind of workbook. Choices are user and shared.
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkbookProperties](#workbookproperties): Properties that contain a workbook.

@@ -25,16 +25,16 @@
 ## AccountProperties
 ### Properties
 * **accountId**: string (ReadOnly): The account's data-plane ID
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): Gets the status of the account at the time the operation was called
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Gets the status of the account at the time the operation was called
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -45,7 +45,7 @@
 ### Properties
 * **dataPoolId**: string (ReadOnly): The Data Pool's data-plane ID
 * **locations**: [DataPoolLocation](#datapoollocation)[]: Gets or sets the collection of locations where Data Pool resources should be created
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): Gets the status of the account at the time the operation was called
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Gets the status of the account at the time the operation was called
 * **tags**: [Tags](#tags): Resource tags
 
 ## DataPoolLocation
@@ -64,7 +64,7 @@
 
 ## StorageSku
 ### Properties
-* **name**: 'Premium_LRS' | 'Premium_ZRS' | 'Standard_GRS' | 'Standard_Gzrs' | 'Standard_LRS' | 'Standard_Ragrs' | 'Standard_Ragzrs' | 'Standard_ZRS' (Required): The SKU name
+* **name**: 'Premium_LRS' | 'Premium_ZRS' | 'Standard_GRS' | 'Standard_Gzrs' | 'Standard_LRS' | 'Standard_Ragrs' | 'Standard_Ragzrs' | 'Standard_ZRS' | string (Required): The SKU name
 
 ## Tags
 ### Properties

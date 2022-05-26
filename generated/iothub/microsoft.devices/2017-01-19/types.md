@@ -41,7 +41,7 @@
 * **comments**: string: Comments.
 * **enableFileUploadNotifications**: bool: If True, file upload notifications are enabled.
 * **eventHubEndpoints**: [IotHubPropertiesEventHubEndpoints](#iothubpropertieseventhubendpoints): The Event Hub-compatible endpoint properties. The possible keys to this dictionary are events and operationsMonitoringEvents. Both of these keys have to be present in the dictionary while making create or update calls for the IoT hub.
-* **features**: 'DeviceManagement' | 'None': The capabilities and features enabled for the IoT hub.
+* **features**: 'DeviceManagement' | 'None' | string: The capabilities and features enabled for the IoT hub.
 * **hostName**: string (ReadOnly): The name of the host.
 * **ipFilterRules**: [IpFilterRule](#ipfilterrule)[]: The IP filter rules.
 * **messagingEndpoints**: [IotHubPropertiesMessagingEndpoints](#iothubpropertiesmessagingendpoints): The messaging endpoint properties for the file upload notification queue.
@@ -106,7 +106,7 @@
 ## OperationsMonitoringPropertiesEvents
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: 'Error' | 'Error, Information' | 'Information' | 'None'
+* **Additional Properties Type**: 'Error' | 'Error, Information' | 'Information' | 'None' | string
 
 ## RoutingProperties
 ### Properties
@@ -146,7 +146,7 @@
 * **condition**: string: The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
 * **endpointNames**: string[] (Required): The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
 * **isEnabled**: bool (Required): Used to specify whether the fallback route is enabled or not.
-* **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'TwinChangeEvents' (Required): The source that the routing rule is to be applied to, such as DeviceMessages.
+* **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'TwinChangeEvents' | string (Required): The source that the routing rule is to be applied to, such as DeviceMessages.
 
 ## RouteProperties
 ### Properties
@@ -154,7 +154,7 @@
 * **endpointNames**: string[] (Required): The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.
 * **isEnabled**: bool (Required): Used to specify whether a route is enabled.
 * **name**: string (Required): The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters,  and must be unique.
-* **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'TwinChangeEvents' (Required): The source that the routing rule is to be applied to, such as DeviceMessages.
+* **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'TwinChangeEvents' | string (Required): The source that the routing rule is to be applied to, such as DeviceMessages.
 
 ## IotHubPropertiesStorageEndpoints
 ### Properties
@@ -170,7 +170,7 @@
 ## IotHubSkuInfo
 ### Properties
 * **capacity**: int (Required): The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
-* **name**: 'F1' | 'S1' | 'S2' | 'S3' (Required): The name of the SKU.
+* **name**: 'F1' | 'S1' | 'S2' | 'S3' | string (Required): The name of the SKU.
 * **tier**: 'Free' | 'Standard' (ReadOnly): The billing tier for the IoT hub.
 
 ## ResourceTags

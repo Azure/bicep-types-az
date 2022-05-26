@@ -47,8 +47,8 @@
 * **dns**: string (ReadOnly): Gets the dns endpoint of the blockchain member.
 * **firewallRules**: [FirewallRule](#firewallrule)[]: Gets or sets firewall rules
 * **password**: string: Sets the basic auth password of the blockchain member.
-* **protocol**: 'Corda' | 'NotSpecified' | 'Parity' | 'Quorum': Gets or sets the blockchain protocol.
-* **provisioningState**: 'Deleting' | 'Failed' | 'NotSpecified' | 'Stale' | 'Succeeded' | 'Updating' (ReadOnly): Gets or sets the blockchain member provision state.
+* **protocol**: 'Corda' | 'NotSpecified' | 'Parity' | 'Quorum' | string: Gets or sets the blockchain protocol.
+* **provisioningState**: 'Deleting' | 'Failed' | 'NotSpecified' | 'Stale' | 'Succeeded' | 'Updating' | string (ReadOnly): Gets or sets the blockchain member provision state.
 * **publicKey**: string (ReadOnly): Gets the public key of the blockchain member (default transaction node).
 * **rootContractAddress**: string (ReadOnly): Gets the Ethereum root contract address of the blockchain.
 * **userName**: string (ReadOnly): Gets the auth user name of the blockchain member.
@@ -79,7 +79,7 @@
 * **dns**: string (ReadOnly): Gets or sets the transaction node dns endpoint.
 * **firewallRules**: [FirewallRule](#firewallrule)[]: Gets or sets the firewall rules.
 * **password**: string: Sets the transaction node dns endpoint basic auth password.
-* **provisioningState**: 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly): Gets or sets the blockchain member provision state.
+* **provisioningState**: 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Gets or sets the blockchain member provision state.
 * **publicKey**: string (ReadOnly): Gets or sets the transaction node public key.
 * **userName**: string (ReadOnly): Gets or sets the transaction node dns endpoint basic auth user name.
 
@@ -103,5 +103,5 @@
 ## Consortium
 ### Properties
 * **name**: string (ReadOnly): Gets or sets the blockchain member name.
-* **protocol**: 'Corda' | 'NotSpecified' | 'Parity' | 'Quorum' (ReadOnly): Gets or sets the blockchain protocol.
+* **protocol**: 'Corda' | 'NotSpecified' | 'Parity' | 'Quorum' | string (ReadOnly): Gets or sets the blockchain protocol.
 

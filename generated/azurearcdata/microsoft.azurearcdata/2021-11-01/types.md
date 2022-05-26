@@ -42,7 +42,7 @@
 ## ExtendedLocation
 ### Properties
 * **name**: string: The name of the extended location.
-* **type**: 'CustomLocation': The type of extendedLocation.
+* **type**: 'CustomLocation' | string: The type of extendedLocation.
 
 ## DataControllerProperties
 ### Properties
@@ -93,10 +93,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -113,7 +113,7 @@
 * **extensionId**: string: If a CustomLocation is provided, this contains the ARM id of the extension the custom location belongs to.
 * **k8sRaw**: [SqlManagedInstanceK8SRaw](#sqlmanagedinstancek8sraw): The raw kubernetes information.
 * **lastUploadedDate**: string: Last uploaded date from Kubernetes cluster. Defaults to current date time
-* **licenseType**: 'BasePrice' | 'DisasterRecovery' | 'LicenseIncluded': The license type to apply for this managed instance.
+* **licenseType**: 'BasePrice' | 'DisasterRecovery' | 'LicenseIncluded' | string: The license type to apply for this managed instance.
 * **provisioningState**: string (ReadOnly)
 * **startTime**: string: The instance start time
 
@@ -164,7 +164,7 @@
 * **capacity**: int
 * **dev**: bool: Whether dev/test is enabled. When the dev field is set to true, the resource is used for dev/test purpose.
 * **family**: string
-* **name**: 'vCore' (Required): The name of the SKU.
+* **name**: 'vCore' | string (Required): The name of the SKU.
 * **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
 * **tier**: 'BusinessCritical' | 'GeneralPurpose': The pricing tier for the instance.
 
@@ -175,23 +175,23 @@
 
 ## SqlServerInstanceProperties
 ### Properties
-* **azureDefenderStatus**: 'Protected' | 'Unknown' | 'Unprotected': Status of Azure Defender.
+* **azureDefenderStatus**: 'Protected' | 'Unknown' | 'Unprotected' | string: Status of Azure Defender.
 * **azureDefenderStatusLastUpdated**: string: Timestamp of last Azure Defender status update.
 * **collation**: string: SQL Server collation.
 * **containerResourceId**: string (Required): ARM Resource id of the container resource (Azure Arc for Servers).
 * **createTime**: string (ReadOnly): The time when the resource was created.
 * **currentVersion**: string: SQL Server current version.
-* **edition**: 'Developer' | 'Enterprise' | 'Evaluation' | 'Express' | 'Standard' | 'Web': SQL Server edition.
+* **edition**: 'Developer' | 'Enterprise' | 'Evaluation' | 'Express' | 'Standard' | 'Web' | string: SQL Server edition.
 * **instanceName**: string: SQL Server instance name.
-* **licenseType**: 'Free' | 'HADR' | 'Paid' | 'Undefined': SQL Server license type.
+* **licenseType**: 'Free' | 'HADR' | 'Paid' | 'Undefined' | string: SQL Server license type.
 * **patchLevel**: string: SQL Server update level.
 * **productId**: string: SQL Server product ID.
 * **provisioningState**: string (ReadOnly)
-* **status**: 'Connected' | 'Disconnected' | 'Unknown' (Required): The cloud connectivity status.
+* **status**: 'Connected' | 'Disconnected' | 'Unknown' | string (Required): The cloud connectivity status.
 * **tcpDynamicPorts**: string: Dynamic TCP ports used by SQL Server.
 * **tcpStaticPorts**: string: Static TCP ports used by SQL Server.
 * **vCore**: string: The number of logical processors used by the SQL Server instance.
-* **version**: 'SQL Server 2016' | 'SQL Server 2017' | 'SQL Server 2019': SQL Server version.
+* **version**: 'SQL Server 2016' | 'SQL Server 2017' | 'SQL Server 2019' | string: SQL Server version.
 
 ## TrackedResourceTags
 ### Properties

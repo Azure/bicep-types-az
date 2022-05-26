@@ -577,6 +577,10 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       enumTypes.push(stringLiteralType);
     }
 
+    if (combinedSchema.type === SchemaType.Choice) {
+      enumTypes.push(factory.lookupBuiltInType(BuiltInTypeKind.String));
+    }
+
     if (enumTypes.length === 1) {
       return enumTypes[0];
     }

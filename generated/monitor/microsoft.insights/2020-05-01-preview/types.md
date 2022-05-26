@@ -49,16 +49,16 @@
 * **dimensions**: [Dimension](#dimension)[]: List of Dimensions conditions
 * **failingPeriods**: [ConditionFailingPeriods](#conditionfailingperiods): The minimum number of violations required within the selected lookback time window required to raise an alert.
 * **metricMeasureColumn**: string: The column containing the metric measure number.
-* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): The criteria operator.
+* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string (Required): The criteria operator.
 * **query**: string: Log query alert
 * **resourceIdColumn**: string: The column containing the resource id. The content of the column must be a uri formatted as resource id
 * **threshold**: int (Required): the criteria threshold value that activates the alert.
-* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required): Aggregation type
+* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' | string (Required): Aggregation type
 
 ## Dimension
 ### Properties
 * **name**: string (Required): Name of the dimension
-* **operator**: 'Exclude' | 'Include' (Required): Operator for dimension values
+* **operator**: 'Exclude' | 'Include' | string (Required): Operator for dimension values
 * **values**: string[] (Required): List of dimension values
 
 ## ConditionFailingPeriods

@@ -58,7 +58,7 @@
 ### Properties
 * **principalId**: string: Azure Active Directory principal ID associated with this Identity.
 * **tenantId**: string: ID of the Azure Active Directory.
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required): Type of the Managed Service Identity.
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string (Required): Type of the Managed Service Identity.
 
 ## AssignmentProperties
 ### Properties
@@ -67,13 +67,13 @@
 * **displayName**: string: One-liner string explain this resource.
 * **locks**: [AssignmentLockSettings](#assignmentlocksettings): Defines how Blueprint-managed resources will be locked.
 * **parameters**: [ParameterValueCollection](#parametervaluecollection) (Required): A dictionary for parameters and their corresponding values.
-* **provisioningState**: 'canceled' | 'cancelling' | 'creating' | 'deleting' | 'deploying' | 'failed' | 'locking' | 'succeeded' | 'validating' | 'waiting' (ReadOnly): State of the assignment.
+* **provisioningState**: 'canceled' | 'cancelling' | 'creating' | 'deleting' | 'deploying' | 'failed' | 'locking' | 'succeeded' | 'validating' | 'waiting' | string (ReadOnly): State of the assignment.
 * **resourceGroups**: [ResourceGroupValueCollection](#resourcegroupvaluecollection) (Required): A dictionary which maps resource group placeholders to the resource groups which will be created.
 * **status**: [AssignmentStatus](#assignmentstatus) (ReadOnly): The status of Blueprint assignment. This field is readonly.
 
 ## AssignmentLockSettings
 ### Properties
-* **mode**: 'AllResources' | 'None': Lock mode.
+* **mode**: 'AllResources' | 'None' | string: Lock mode.
 
 ## ParameterValueCollection
 ### Properties
@@ -107,7 +107,7 @@
 * **parameters**: [ParameterDefinitionCollection](#parameterdefinitioncollection): A dictionary hold parameter name and it's metadata.
 * **resourceGroups**: [ResourceGroupDefinitionCollection](#resourcegroupdefinitioncollection): A dictionary which maps resource group placeholders to the resource groups which will be created.
 * **status**: [BlueprintStatus](#blueprintstatus) (ReadOnly): The status of the blueprint. This field is readonly.
-* **targetScope**: 'managementGroup' | 'subscription': The scope where this Blueprint can be applied.
+* **targetScope**: 'managementGroup' | 'subscription' | string: The scope where this Blueprint can be applied.
 * **versions**: any: Any object
 
 ## ParameterDefinitionCollection
@@ -120,7 +120,7 @@
 * **allowedValues**: any[]: Array of allowed values for this parameter.
 * **defaultValue**: any: Anything
 * **metadata**: [ParameterDefinitionMetadata](#parameterdefinitionmetadata): User-friendly properties for this parameter.
-* **type**: 'array' | 'bool' | 'int' | 'object' | 'secureObject' | 'secureString' | 'string' (Required): Allowed data types for Azure Resource Manager template parameters.
+* **type**: 'array' | 'bool' | 'int' | 'object' | 'secureObject' | 'secureString' | 'string' | string (Required): Allowed data types for Azure Resource Manager template parameters.
 
 ## ParameterDefinitionMetadata
 ### Properties
@@ -191,7 +191,7 @@
 * **parameters**: [ParameterDefinitionCollection](#parameterdefinitioncollection) (ReadOnly): A dictionary hold parameter name and it's metadata.
 * **resourceGroups**: [ResourceGroupDefinitionCollection](#resourcegroupdefinitioncollection) (ReadOnly): A dictionary which maps resource group placeholders to the resource groups which will be created.
 * **status**: [BlueprintStatus](#blueprintstatus) (ReadOnly): The status of the blueprint. This field is readonly.
-* **targetScope**: 'managementGroup' | 'subscription' (ReadOnly): The scope where this Blueprint can be applied.
+* **targetScope**: 'managementGroup' | 'subscription' | string (ReadOnly): The scope where this Blueprint can be applied.
 
 ## ParameterDefinitionCollection
 ### Properties

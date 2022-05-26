@@ -39,7 +39,7 @@
 
 ## ShippingAddress
 ### Properties
-* **addressType**: 'Commercial' | 'None' | 'Residential': Type of address.
+* **addressType**: 'Commercial' | 'None' | 'Residential' | string: Type of address.
 * **city**: string: Name of the City.
 * **companyName**: string: Name of the company.
 * **country**: string (Required): Name of the Country.
@@ -54,10 +54,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -79,27 +79,27 @@
 ## OrderItemDetails
 ### Properties
 * **cancellationReason**: string (ReadOnly): Cancellation reason.
-* **cancellationStatus**: 'Cancellable' | 'CancellableWithFee' | 'NotCancellable' (ReadOnly): Describes whether the order item is cancellable or not.
+* **cancellationStatus**: 'Cancellable' | 'CancellableWithFee' | 'NotCancellable' | string (ReadOnly): Describes whether the order item is cancellable or not.
 * **currentStage**: [StageDetails](#stagedetails) (ReadOnly): Resource stage details.
-* **deletionStatus**: 'Allowed' | 'NotAllowed' (ReadOnly): Describes whether the order item is deletable or not.
+* **deletionStatus**: 'Allowed' | 'NotAllowed' | string (ReadOnly): Describes whether the order item is deletable or not.
 * **error**: [ErrorDetail](#errordetail) (ReadOnly): The error detail.
 * **forwardShippingDetails**: [ForwardShippingDetails](#forwardshippingdetails) (ReadOnly): Forward shipment details.
 * **managementRpDetails**: [ResourceProviderDetails](#resourceproviderdetails) (ReadOnly): Management RP details
 * **managementRpDetailsList**: [ResourceProviderDetails](#resourceproviderdetails)[] (ReadOnly): List of parent RP details supported for configuration.
 * **notificationEmailList**: string[]: Additional notification email list
 * **orderItemStageHistory**: [StageDetails](#stagedetails)[] (ReadOnly): Order item status history
-* **orderItemType**: 'Purchase' | 'Rental' (Required): Order item type.
+* **orderItemType**: 'Purchase' | 'Rental' | string (Required): Order item type.
 * **preferences**: [Preferences](#preferences): Preferences related to the order
 * **productDetails**: [ProductDetails](#productdetails) (Required): Represents product details
 * **returnReason**: string (ReadOnly): Return reason.
-* **returnStatus**: 'NotReturnable' | 'Returnable' | 'ReturnableWithFee' (ReadOnly): Describes whether the order item is returnable or not.
+* **returnStatus**: 'NotReturnable' | 'Returnable' | 'ReturnableWithFee' | string (ReadOnly): Describes whether the order item is returnable or not.
 * **reverseShippingDetails**: [ReverseShippingDetails](#reverseshippingdetails) (ReadOnly): Reverse shipment details.
 
 ## StageDetails
 ### Properties
 * **displayName**: string (ReadOnly): Display name of the resource stage.
-* **stageName**: 'Cancelled' | 'Confirmed' | 'Delivered' | 'InReview' | 'InUse' | 'Placed' | 'ReadyToShip' | 'ReturnCompleted' | 'ReturnInitiated' | 'ReturnPickedUp' | 'ReturnedToMicrosoft' | 'Shipped' (ReadOnly): Stage name
-* **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' (ReadOnly): Stage status.
+* **stageName**: 'Cancelled' | 'Confirmed' | 'Delivered' | 'InReview' | 'InUse' | 'Placed' | 'ReadyToShip' | 'ReturnCompleted' | 'ReturnInitiated' | 'ReturnPickedUp' | 'ReturnedToMicrosoft' | 'Shipped' | string (ReadOnly): Stage name
+* **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' | string (ReadOnly): Stage status.
 * **startTime**: string (ReadOnly): Stage start time
 
 ## ErrorDetail
@@ -135,7 +135,7 @@
 
 ## EncryptionPreferences
 ### Properties
-* **doubleEncryptionStatus**: 'Disabled' | 'Enabled': Double encryption status as entered by the customer. It is compulsory to give this parameter if the 'Deny' or 'Disabled' policy is configured.
+* **doubleEncryptionStatus**: 'Disabled' | 'Enabled' | string: Double encryption status as entered by the customer. It is compulsory to give this parameter if the 'Deny' or 'Disabled' policy is configured.
 
 ## ManagementResourcePreferences
 ### Properties
@@ -144,11 +144,11 @@
 ## NotificationPreference
 ### Properties
 * **sendNotification**: bool (Required): Notification is required or not.
-* **stageName**: 'Delivered' | 'Shipped' (Required): Name of the stage.
+* **stageName**: 'Delivered' | 'Shipped' | string (Required): Name of the stage.
 
 ## TransportPreferences
 ### Properties
-* **preferredShipmentType**: 'CustomerManaged' | 'MicrosoftManaged' (Required): Indicates Shipment Logistics type that the customer preferred.
+* **preferredShipmentType**: 'CustomerManaged' | 'MicrosoftManaged' | string (Required): Indicates Shipment Logistics type that the customer preferred.
 
 ## ProductDetails
 ### Properties
@@ -156,7 +156,7 @@
 * **deviceDetails**: [DeviceDetails](#devicedetails)[] (ReadOnly): list of device details
 * **displayInfo**: [DisplayInfo](#displayinfo): Describes product display information
 * **hierarchyInformation**: [HierarchyInformation](#hierarchyinformation) (Required): Holds details about product hierarchy information
-* **productDoubleEncryptionStatus**: 'Disabled' | 'Enabled' (ReadOnly): Double encryption status as entered by the customer. It is compulsory to give this parameter if the 'Deny' or 'Disabled' policy is configured.
+* **productDoubleEncryptionStatus**: 'Disabled' | 'Enabled' | string (ReadOnly): Double encryption status as entered by the customer. It is compulsory to give this parameter if the 'Deny' or 'Disabled' policy is configured.
 
 ## DeviceDetails
 ### Properties

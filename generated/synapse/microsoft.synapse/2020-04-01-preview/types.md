@@ -31,8 +31,8 @@
 * **collation**: string: The collation of the database.
 * **databaseGuid**: string (ReadOnly): The Guid of the database.
 * **dataRetention**: [SqlDatabaseDataRetention](#sqldatabasedataretention): Sql database data retention.
-* **status**: 'AutoClosed' | 'Copying' | 'Creating' | 'Disabled' | 'EmergencyMode' | 'Inaccessible' | 'Offline' | 'OfflineChangingDwPerformanceTiers' | 'OfflineSecondary' | 'Online' | 'OnlineChangingDwPerformanceTiers' | 'Paused' | 'Pausing' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Resuming' | 'Scaling' | 'Shutdown' | 'Standby' | 'Suspect' (ReadOnly): The status of the database.
-* **storageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone': The storage redundancy of the database.
+* **status**: 'AutoClosed' | 'Copying' | 'Creating' | 'Disabled' | 'EmergencyMode' | 'Inaccessible' | 'Offline' | 'OfflineChangingDwPerformanceTiers' | 'OfflineSecondary' | 'Online' | 'OnlineChangingDwPerformanceTiers' | 'Paused' | 'Pausing' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Resuming' | 'Scaling' | 'Shutdown' | 'Standby' | 'Suspect' | string (ReadOnly): The status of the database.
+* **storageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone' | string: The storage redundancy of the database.
 
 ## SqlDatabaseDataRetention
 ### Properties
@@ -43,10 +43,10 @@
 ### Properties
 * **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
 * **createdBy**: string (ReadOnly): A string identifier for the identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource: <User|Application|ManagedIdentity|Key>
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource: <User|Application|ManagedIdentity|Key>
 * **lastModifiedAt**: string (ReadOnly): The timestamp of last modification (UTC).
 * **lastModifiedBy**: string (ReadOnly): A string identifier for the identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that last modified the resource: <User|Application|ManagedIdentity|Key>
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that last modified the resource: <User|Application|ManagedIdentity|Key>
 
 ## TrackedResourceTags
 ### Properties
@@ -61,7 +61,7 @@
 * **maxServiceObjectiveName**: string: The max service level objective name of the sql pool.
 * **requestedServiceObjectiveName**: string (ReadOnly): The requested service level objective name of the sql pool.
 * **sqlPoolGuid**: string (ReadOnly): The Guid of the sql pool.
-* **status**: 'Creating' | 'Dropping' | 'Error' | 'Inaccessible' | 'Invisible' | 'Offline' | 'Online' | 'Paused' | 'Pausing' | 'Resuming' | 'Scaling' | 'Unknown' (ReadOnly): The status of the sql pool.
+* **status**: 'Creating' | 'Dropping' | 'Error' | 'Inaccessible' | 'Invisible' | 'Offline' | 'Online' | 'Paused' | 'Pausing' | 'Resuming' | 'Scaling' | 'Unknown' | string (ReadOnly): The status of the sql pool.
 
 ## SkuV3
 ### Properties

@@ -99,7 +99,7 @@
 * **excludeFromLatest**: bool: Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).
 * **galleryImageId**: string (Required): Resource Id of the Shared Image Gallery image
 * **replicationRegions**: string[] (Required): A list of regions that the image will be replicated to
-* **storageAccountType**: 'Standard_LRS' | 'Standard_ZRS': Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).
+* **storageAccountType**: 'Standard_LRS' | 'Standard_ZRS' | string: Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).
 * **type**: 'SharedImage' (Required): Type of distribution.
 
 ### ImageTemplateVhdDistributor
@@ -123,7 +123,7 @@
 ## ProvisioningError
 ### Properties
 * **message**: string: Verbose error message about the provisioning failure
-* **provisioningErrorCode**: 'BadCustomizerType' | 'BadDistributeType' | 'BadManagedImageSource' | 'BadPIRSource' | 'BadSharedImageDistribute' | 'BadSharedImageVersionSource' | 'BadSourceType' | 'NoCustomizerScript' | 'Other' | 'ServerError' | 'UnsupportedCustomizerType': Error code of the provisioning failure
+* **provisioningErrorCode**: 'BadCustomizerType' | 'BadDistributeType' | 'BadManagedImageSource' | 'BadPIRSource' | 'BadSharedImageDistribute' | 'BadSharedImageVersionSource' | 'BadSourceType' | 'NoCustomizerScript' | 'Other' | 'ServerError' | 'UnsupportedCustomizerType' | string: Error code of the provisioning failure
 
 ## ImageTemplateSource
 * **Discriminator**: type

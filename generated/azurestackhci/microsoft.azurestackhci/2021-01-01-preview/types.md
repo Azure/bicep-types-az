@@ -41,10 +41,10 @@
 * **cloudManagementEndpoint**: string: Endpoint configured for management from the Azure portal
 * **lastBillingTimestamp**: string (ReadOnly): Most recent billing meter timestamp.
 * **lastSyncTimestamp**: string (ReadOnly): Most recent cluster sync timestamp.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state of the ArcSetting proxy resource.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state of the ArcSetting proxy resource.
 * **registrationTimestamp**: string (ReadOnly): First cluster sync timestamp.
 * **reportedProperties**: [ClusterReportedProperties](#clusterreportedproperties) (ReadOnly): Properties reported by cluster agent.
-* **status**: 'ConnectedRecently' | 'Disconnected' | 'Error' | 'NotConnectedRecently' | 'NotYetRegistered' (ReadOnly): Status of the cluster agent.
+* **status**: 'ConnectedRecently' | 'Disconnected' | 'Error' | 'NotConnectedRecently' | 'NotYetRegistered' | string (ReadOnly): Status of the cluster agent.
 * **trialDaysRemaining**: int (ReadOnly): Number of days remaining in the trial period.
 
 ## ClusterReportedProperties
@@ -71,10 +71,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -83,23 +83,23 @@
 
 ## ArcSettingProperties
 ### Properties
-* **aggregateState**: 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Succeeded' | 'Updating' (ReadOnly): Aggregate state of Arc agent across the nodes in this HCI cluster.
+* **aggregateState**: 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Succeeded' | 'Updating' | string (ReadOnly): Aggregate state of Arc agent across the nodes in this HCI cluster.
 * **arcInstanceResourceGroup**: string (ReadOnly): The resource group that hosts the Arc agents, ie. Hybrid Compute Machine resources.
 * **perNodeDetails**: [PerNodeState](#pernodestate)[] (ReadOnly): State of Arc agent in each of the nodes.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state of the ArcSetting proxy resource.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state of the ArcSetting proxy resource.
 
 ## PerNodeState
 ### Properties
 * **arcInstance**: string (ReadOnly): Fully qualified resource ID for the Arc agent of this node.
 * **name**: string (ReadOnly): Name of the Node in HCI Cluster
-* **state**: 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'Disconnected' | 'Error' | 'Failed' | 'Moving' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly): State of Arc agent in this node.
+* **state**: 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'Disconnected' | 'Error' | 'Failed' | 'Moving' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): State of Arc agent in this node.
 
 ## ExtensionProperties
 ### Properties
-* **aggregateState**: 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Succeeded' | 'Updating' (ReadOnly): Aggregate state of Arc Extensions across the nodes in this HCI cluster.
+* **aggregateState**: 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Succeeded' | 'Updating' | string (ReadOnly): Aggregate state of Arc Extensions across the nodes in this HCI cluster.
 * **extensionParameters**: [ExtensionParameters](#extensionparameters): Describes the properties of a Machine Extension. This object mirrors the definition in HybridCompute.
 * **perNodeExtensionDetails**: [PerNodeExtensionState](#pernodeextensionstate)[] (ReadOnly): State of Arc Extension in each of the nodes.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state of the ArcSetting proxy resource.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state of the ArcSetting proxy resource.
 
 ## ExtensionParameters
 ### Properties
@@ -115,5 +115,5 @@
 ### Properties
 * **extension**: string (ReadOnly): Fully qualified resource ID for the particular Arc Extension on this node.
 * **name**: string (ReadOnly): Name of the node in HCI Cluster.
-* **state**: 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'Disconnected' | 'Error' | 'Failed' | 'Moving' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly): State of Arc Extension in this node.
+* **state**: 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'Disconnected' | 'Error' | 'Failed' | 'Moving' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): State of Arc Extension in this node.
 

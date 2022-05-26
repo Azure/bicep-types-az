@@ -339,7 +339,7 @@
 ### Properties
 * **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
 * **referenceName**: string (Required): Reference LinkedService name.
-* **type**: 'LinkedServiceReference' (Required): Linked service reference type.
+* **type**: 'LinkedServiceReference' | string (Required): Linked service reference type.
 
 ## ParameterValueSpecification
 ### Properties
@@ -354,7 +354,7 @@
 ## ParameterSpecification
 ### Properties
 * **defaultValue**: any: Any object
-* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'Object' | 'SecureString' | 'String' (Required): Parameter type.
+* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'Object' | 'SecureString' | 'String' | string (Required): Parameter type.
 
 ## AmazonS3DatasetTypeProperties
 ### Properties
@@ -375,17 +375,17 @@
 
 ### DatasetDeflateCompression
 #### Properties
-* **level**: 'Fastest' | 'Optimal': All available compression levels.
+* **level**: 'Fastest' | 'Optimal' | string: All available compression levels.
 * **type**: 'Deflate' (Required): Type of dataset compression.
 
 ### DatasetGZipCompression
 #### Properties
-* **level**: 'Fastest' | 'Optimal': All available compression levels.
+* **level**: 'Fastest' | 'Optimal' | string: All available compression levels.
 * **type**: 'GZip' (Required): Type of dataset compression.
 
 ### DatasetZipDeflateCompression
 #### Properties
-* **level**: 'Fastest' | 'Optimal': All available compression levels.
+* **level**: 'Fastest' | 'Optimal' | string: All available compression levels.
 * **type**: 'ZipDeflate' (Required): Type of dataset compression.
 
 
@@ -505,7 +505,7 @@
 * **description**: string: Integration runtime description.
 ### ManagedIntegrationRuntime
 #### Properties
-* **state**: 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The state of integration runtime.
+* **state**: 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): The state of integration runtime.
 * **type**: 'Managed' (Required): Type of integration runtime.
 * **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required): Managed integration runtime type properties.
 
@@ -542,8 +542,8 @@
 * **catalogInfo**: [IntegrationRuntimeSsisCatalogInfo](#integrationruntimessiscataloginfo): Catalog information for managed dedicated integration runtime.
 * **customSetupScriptProperties**: [IntegrationRuntimeCustomSetupScriptProperties](#integrationruntimecustomsetupscriptproperties): Custom setup script properties for a managed dedicated integration runtime.
 * **dataProxyProperties**: [IntegrationRuntimeDataProxyProperties](#integrationruntimedataproxyproperties): Data proxy properties for a managed dedicated integration runtime.
-* **edition**: 'Enterprise' | 'Standard': The edition for the SSIS Integration Runtime
-* **licenseType**: 'BasePrice' | 'LicenseIncluded': License type for bringing your own license scenario.
+* **edition**: 'Enterprise' | 'Standard' | string: The edition for the SSIS Integration Runtime
+* **licenseType**: 'BasePrice' | 'LicenseIncluded' | string: License type for bringing your own license scenario.
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -575,7 +575,7 @@
 ## EntityReference
 ### Properties
 * **referenceName**: string: The name of this referenced entity.
-* **type**: 'IntegrationRuntimeReference' | 'LinkedServiceReference': The type of this referenced entity.
+* **type**: 'IntegrationRuntimeReference' | 'LinkedServiceReference' | string: The type of this referenced entity.
 
 ## LinkedIntegrationRuntimeTypeProperties
 ### Properties
@@ -959,7 +959,7 @@
 ### Properties
 * **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
 * **referenceName**: string (Required): Reference integration runtime name.
-* **type**: 'IntegrationRuntimeReference' (Required): Type of integration runtime.
+* **type**: 'IntegrationRuntimeReference' | string (Required): Type of integration runtime.
 
 ## ParameterValueSpecification
 ### Properties
@@ -1146,7 +1146,7 @@
 
 ## Db2LinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Basic': AuthenticationType to be used for connection.
+* **authenticationType**: 'Basic' | string: AuthenticationType to be used for connection.
 * **database**: any (Required): Any object
 * **encryptedCredential**: any: Any object
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
@@ -1160,8 +1160,8 @@
 
 ## DynamicsLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Ifd' | 'Office365' (Required): The authentication type to connect to Dynamics server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario. Type: string (or Expression with resultType string).
-* **deploymentType**: 'OnPremisesWithIfd' | 'Online' (Required): The deployment type of the Dynamics instance. 'Online' for Dynamics Online and 'OnPremisesWithIfd' for Dynamics on-premises with Ifd. Type: string (or Expression with resultType string).
+* **authenticationType**: 'Ifd' | 'Office365' | string (Required): The authentication type to connect to Dynamics server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario. Type: string (or Expression with resultType string).
+* **deploymentType**: 'OnPremisesWithIfd' | 'Online' | string (Required): The deployment type of the Dynamics instance. 'Online' for Dynamics Online and 'OnPremisesWithIfd' for Dynamics on-premises with Ifd. Type: string (or Expression with resultType string).
 * **encryptedCredential**: any: Any object
 * **hostName**: any: Any object
 * **organizationName**: any: Any object
@@ -1189,7 +1189,7 @@
 
 ## FtpServerLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Anonymous' | 'Basic': The authentication type to be used to connect to the FTP server.
+* **authenticationType**: 'Anonymous' | 'Basic' | string: The authentication type to be used to connect to the FTP server.
 * **enableServerCertificateValidation**: any: Any object
 * **enableSsl**: any: Any object
 * **encryptedCredential**: any: Any object
@@ -1201,7 +1201,7 @@
 ## GoogleBigQueryLinkedServiceTypeProperties
 ### Properties
 * **additionalProjects**: any: Any object
-* **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication' (Required): The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
+* **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication' | string (Required): The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
 * **clientId**: [SecretBase](#secretbase): The base definition of a secret type.
 * **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
 * **email**: any: Any object
@@ -1222,7 +1222,7 @@
 ### Properties
 * **allowHostNameCNMismatch**: any: Any object
 * **allowSelfSignedServerCert**: any: Any object
-* **authenticationType**: 'Anonymous' | 'Basic' (Required): The authentication mechanism to use to connect to the HBase server.
+* **authenticationType**: 'Anonymous' | 'Basic' | string (Required): The authentication mechanism to use to connect to the HBase server.
 * **enableSsl**: any: Any object
 * **encryptedCredential**: any: Any object
 * **host**: any (Required): Any object
@@ -1286,16 +1286,16 @@
 ### Properties
 * **allowHostNameCNMismatch**: any: Any object
 * **allowSelfSignedServerCert**: any: Any object
-* **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' (Required): The authentication method used to access the Hive server.
+* **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' | string (Required): The authentication method used to access the Hive server.
 * **enableSsl**: any: Any object
 * **encryptedCredential**: any: Any object
 * **host**: any (Required): Any object
 * **httpPath**: any: Any object
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
 * **port**: any: Any object
-* **serverType**: 'HiveServer1' | 'HiveServer2' | 'HiveThriftServer': The type of Hive server.
+* **serverType**: 'HiveServer1' | 'HiveServer2' | 'HiveThriftServer' | string: The type of Hive server.
 * **serviceDiscoveryMode**: any: Any object
-* **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL': The transport protocol to use in the Thrift layer.
+* **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL' | string: The transport protocol to use in the Thrift layer.
 * **trustedCertPath**: any: Any object
 * **useNativeQuery**: any: Any object
 * **username**: any: Any object
@@ -1304,7 +1304,7 @@
 
 ## HttpLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Anonymous' | 'Basic' | 'ClientCertificate' | 'Digest' | 'Windows': The authentication type to be used to connect to the HTTP server.
+* **authenticationType**: 'Anonymous' | 'Basic' | 'ClientCertificate' | 'Digest' | 'Windows' | string: The authentication type to be used to connect to the HTTP server.
 * **certThumbprint**: any: Any object
 * **embeddedCertData**: any: Any object
 * **enableServerCertificateValidation**: any: Any object
@@ -1328,7 +1328,7 @@
 ### Properties
 * **allowHostNameCNMismatch**: any: Any object
 * **allowSelfSignedServerCert**: any: Any object
-* **authenticationType**: 'Anonymous' | 'SASLUsername' | 'UsernameAndPassword' (Required): The authentication type to use.
+* **authenticationType**: 'Anonymous' | 'SASLUsername' | 'UsernameAndPassword' | string (Required): The authentication type to use.
 * **enableSsl**: any: Any object
 * **encryptedCredential**: any: Any object
 * **host**: any (Required): Any object
@@ -1376,7 +1376,7 @@
 ## MongoDbLinkedServiceTypeProperties
 ### Properties
 * **allowSelfSignedServerCert**: any: Any object
-* **authenticationType**: 'Anonymous' | 'Basic': The authentication type to be used to connect to the MongoDB database.
+* **authenticationType**: 'Anonymous' | 'Basic' | string: The authentication type to be used to connect to the MongoDB database.
 * **authSource**: any: Any object
 * **databaseName**: any (Required): Any object
 * **enableSsl**: any: Any object
@@ -1398,7 +1398,7 @@
 
 ## ODataLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Anonymous' | 'Basic': Type of authentication used to connect to the OData service.
+* **authenticationType**: 'Anonymous' | 'Basic' | string: Type of authentication used to connect to the OData service.
 * **encryptedCredential**: any: Any object
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
 * **url**: any (Required): Any object
@@ -1432,7 +1432,7 @@
 ### Properties
 * **allowHostNameCNMismatch**: any: Any object
 * **allowSelfSignedServerCert**: any: Any object
-* **authenticationType**: 'Anonymous' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' (Required): The authentication mechanism used to connect to the Phoenix server.
+* **authenticationType**: 'Anonymous' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' | string (Required): The authentication mechanism used to connect to the Phoenix server.
 * **enableSsl**: any: Any object
 * **encryptedCredential**: any: Any object
 * **host**: any (Required): Any object
@@ -1452,7 +1452,7 @@
 ### Properties
 * **allowHostNameCNMismatch**: any: Any object
 * **allowSelfSignedServerCert**: any: Any object
-* **authenticationType**: 'Anonymous' | 'LDAP' (Required): The authentication mechanism used to connect to the Presto server.
+* **authenticationType**: 'Anonymous' | 'LDAP' | string (Required): The authentication mechanism used to connect to the Presto server.
 * **catalog**: any (Required): Any object
 * **enableSsl**: any: Any object
 * **encryptedCredential**: any: Any object
@@ -1528,7 +1528,7 @@
 
 ## SapHanaLinkedServiceProperties
 ### Properties
-* **authenticationType**: 'Basic' | 'Windows': The authentication type to be used to connect to the SAP HANA server.
+* **authenticationType**: 'Basic' | 'Windows' | string: The authentication type to be used to connect to the SAP HANA server.
 * **encryptedCredential**: any: Any object
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
 * **server**: any (Required): Any object
@@ -1536,7 +1536,7 @@
 
 ## ServiceNowLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Basic' | 'OAuth2' (Required): The authentication type to use.
+* **authenticationType**: 'Basic' | 'OAuth2' | string (Required): The authentication type to use.
 * **clientId**: any: Any object
 * **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
 * **encryptedCredential**: any: Any object
@@ -1549,7 +1549,7 @@
 
 ## SftpServerLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Basic' | 'SshPublicKey': The authentication type to be used to connect to the FTP server.
+* **authenticationType**: 'Basic' | 'SshPublicKey' | string: The authentication type to be used to connect to the FTP server.
 * **encryptedCredential**: any: Any object
 * **host**: any (Required): Any object
 * **hostKeyFingerprint**: any: Any object
@@ -1574,15 +1574,15 @@
 ### Properties
 * **allowHostNameCNMismatch**: any: Any object
 * **allowSelfSignedServerCert**: any: Any object
-* **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' (Required): The authentication method used to access the Spark server.
+* **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' | string (Required): The authentication method used to access the Spark server.
 * **enableSsl**: any: Any object
 * **encryptedCredential**: any: Any object
 * **host**: any (Required): Any object
 * **httpPath**: any: Any object
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
 * **port**: any (Required): Any object
-* **serverType**: 'SharkServer' | 'SharkServer2' | 'SparkThriftServer': The type of Spark server.
-* **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL': The transport protocol to use in the Thrift layer.
+* **serverType**: 'SharkServer' | 'SharkServer2' | 'SparkThriftServer' | string: The type of Spark server.
+* **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL' | string: The transport protocol to use in the Thrift layer.
 * **trustedCertPath**: any: Any object
 * **username**: any: Any object
 * **useSystemTrustStore**: any: Any object
@@ -1607,7 +1607,7 @@
 
 ## SybaseLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Basic' | 'Windows': AuthenticationType to be used for connection.
+* **authenticationType**: 'Basic' | 'Windows' | string: AuthenticationType to be used for connection.
 * **database**: any (Required): Any object
 * **encryptedCredential**: any: Any object
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
@@ -1617,7 +1617,7 @@
 
 ## TeradataLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Basic' | 'Windows': AuthenticationType to be used for connection.
+* **authenticationType**: 'Basic' | 'Windows' | string: AuthenticationType to be used for connection.
 * **encryptedCredential**: any: Any object
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
 * **server**: any (Required): Any object
@@ -1800,7 +1800,7 @@
 ## ActivityDependency
 ### Properties
 * **activity**: string (Required): Activity name.
-* **dependencyConditions**: 'Completed' | 'Failed' | 'Skipped' | 'Succeeded'[] (Required): Match-Condition for the dependency.
+* **dependencyConditions**: 'Completed' | 'Failed' | 'Skipped' | 'Succeeded' | string[] (Required): Match-Condition for the dependency.
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -1840,7 +1840,7 @@
 ### Properties
 * **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
 * **referenceName**: string (Required): Reference dataset name.
-* **type**: 'DatasetReference' (Required): Dataset reference type.
+* **type**: 'DatasetReference' | string (Required): Dataset reference type.
 
 ## ParameterValueSpecification
 ### Properties
@@ -1948,7 +1948,7 @@
 ### Properties
 * **name**: string: Reference name.
 * **referenceName**: string (Required): Reference pipeline name.
-* **type**: 'PipelineReference' (Required): Pipeline reference type.
+* **type**: 'PipelineReference' | string (Required): Pipeline reference type.
 
 ## ExecuteSsisPackageActivityTypeProperties
 ### Properties
@@ -1974,7 +1974,7 @@
 ## SsisLogLocation
 ### Properties
 * **logPath**: any (Required): Any object
-* **type**: 'File' (Required): The type of SSIS log location.
+* **type**: 'File' | string (Required): The type of SSIS log location.
 * **typeProperties**: [SsisLogLocationTypeProperties](#ssisloglocationtypeproperties) (Required): SSIS package execution log location properties.
 
 ## SsisLogLocationTypeProperties
@@ -2005,7 +2005,7 @@
 ## SsisPackageLocation
 ### Properties
 * **packagePath**: any (Required): Any object
-* **type**: 'File' | 'SSISDB': The type of SSIS package location.
+* **type**: 'File' | 'SSISDB' | string: The type of SSIS package location.
 * **typeProperties**: [SsisPackageLocationTypeProperties](#ssispackagelocationtypeproperties): SSIS package location properties.
 
 ## SsisPackageLocationTypeProperties
@@ -2051,7 +2051,7 @@
 
 ## Expression
 ### Properties
-* **type**: 'Expression' (Required): Expression type.
+* **type**: 'Expression' | string (Required): Expression type.
 * **value**: string (Required): Expression value.
 
 ## ForEachActivityTypeProperties
@@ -2070,7 +2070,7 @@
 ### Properties
 * **arguments**: any[]: User specified arguments to HDInsightActivity.
 * **defines**: [HDInsightHiveActivityTypePropertiesDefines](#hdinsighthiveactivitytypepropertiesdefines): Allows user to specify defines for Hive job request.
-* **getDebugInfo**: 'Always' | 'Failure' | 'None': The HDInsightActivityDebugInfoOption settings to use.
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
 * **scriptLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **scriptPath**: any: Any object
 * **storageLinkedServices**: [LinkedServiceReference](#linkedservicereference)[]: Storage linked service references.
@@ -2085,7 +2085,7 @@
 * **arguments**: any[]: User specified arguments to HDInsightActivity.
 * **className**: any (Required): Any object
 * **defines**: [HDInsightMapReduceActivityTypePropertiesDefines](#hdinsightmapreduceactivitytypepropertiesdefines): Allows user to specify defines for the MapReduce job request.
-* **getDebugInfo**: 'Always' | 'Failure' | 'None': The HDInsightActivityDebugInfoOption settings to use.
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
 * **jarFilePath**: any (Required): Any object
 * **jarLibs**: any[]: Jar libs.
 * **jarLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
@@ -2100,7 +2100,7 @@
 ### Properties
 * **arguments**: any[]: User specified arguments to HDInsightActivity.
 * **defines**: [HDInsightPigActivityTypePropertiesDefines](#hdinsightpigactivitytypepropertiesdefines): Allows user to specify defines for Pig job request.
-* **getDebugInfo**: 'Always' | 'Failure' | 'None': The HDInsightActivityDebugInfoOption settings to use.
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
 * **scriptLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **scriptPath**: any: Any object
 * **storageLinkedServices**: [LinkedServiceReference](#linkedservicereference)[]: Storage linked service references.
@@ -2115,7 +2115,7 @@
 * **arguments**: any[]: The user-specified arguments to HDInsightSparkActivity.
 * **className**: string: The application's Java/Spark main class.
 * **entryFilePath**: any (Required): Any object
-* **getDebugInfo**: 'Always' | 'Failure' | 'None': The HDInsightActivityDebugInfoOption settings to use.
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
 * **proxyUser**: any: Any object
 * **rootPath**: any (Required): Any object
 * **sparkConfig**: [HDInsightSparkActivityTypePropertiesSparkConfig](#hdinsightsparkactivitytypepropertiessparkconfig): Spark configuration property.
@@ -2134,7 +2134,7 @@
 * **defines**: [HDInsightStreamingActivityTypePropertiesDefines](#hdinsightstreamingactivitytypepropertiesdefines): Allows user to specify defines for streaming job request.
 * **fileLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **filePaths**: any[] (Required): Paths to streaming job files. Can be directories.
-* **getDebugInfo**: 'Always' | 'Failure' | 'None': The HDInsightActivityDebugInfoOption settings to use.
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
 * **input**: any (Required): Any object
 * **mapper**: any (Required): Any object
 * **output**: any (Required): Any object
@@ -2170,7 +2170,7 @@
 
 ## StoredProcedureParameter
 ### Properties
-* **type**: 'Boolean' | 'Date' | 'Decimal' | 'Guid' | 'Int' | 'Int64' | 'String': Stored procedure parameter type.
+* **type**: 'Boolean' | 'Date' | 'Decimal' | 'Guid' | 'Int' | 'Int64' | 'String' | string: Stored procedure parameter type.
 * **value**: any (Required): Any object
 
 ## UntilActivityTypeProperties
@@ -2191,7 +2191,7 @@
 * **disableCertValidation**: bool: When set to true, Certificate validation will be disabled.
 * **headers**: any: Any object
 * **linkedServices**: [LinkedServiceReference](#linkedservicereference)[]: List of linked services passed to web endpoint.
-* **method**: 'DELETE' | 'GET' | 'POST' | 'PUT' (Required): The list of HTTP methods supported by a WebActivity.
+* **method**: 'DELETE' | 'GET' | 'POST' | 'PUT' | string (Required): The list of HTTP methods supported by a WebActivity.
 * **url**: any (Required): Any object
 
 ## WebActivityAuthentication
@@ -2212,7 +2212,7 @@
 
 ### Base Properties
 * **description**: string: Trigger description.
-* **runtimeState**: 'Disabled' | 'Started' | 'Stopped' (ReadOnly): Enumerates possible state of Triggers.
+* **runtimeState**: 'Disabled' | 'Started' | 'Stopped' | string (ReadOnly): Enumerates possible state of Triggers.
 ### MultiplePipelineTrigger
 #### Properties
 * **pipelines**: [TriggerPipelineReference](#triggerpipelinereference)[]: Pipelines that need to be started.

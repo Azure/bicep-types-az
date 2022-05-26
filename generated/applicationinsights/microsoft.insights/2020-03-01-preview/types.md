@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'ServiceProfiler' (Required, DeployTimeConstant): The resource name
+* **name**: 'ServiceProfiler' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [LinkedStorageAccountsProperties](#linkedstorageaccountsproperties): An Application Insights component linked storage account
 * **type**: 'microsoft.insights/components/linkedStorageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 

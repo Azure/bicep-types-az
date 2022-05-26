@@ -11,7 +11,7 @@
 
 ## SubscriptionFeatureRegistrationProperties
 ### Properties
-* **approvalType**: 'ApprovalRequired' | 'AutoApproval' | 'NotSpecified' (ReadOnly): The feature approval type.
+* **approvalType**: 'ApprovalRequired' | 'AutoApproval' | 'NotSpecified' | string (ReadOnly): The feature approval type.
 * **authorizationProfile**: [AuthorizationProfile](#authorizationprofile): Authorization Profile
 * **description**: string: The feature description.
 * **displayName**: string (ReadOnly): The featureDisplayName.
@@ -22,7 +22,7 @@
 * **registrationDate**: string (ReadOnly): The feature registration date.
 * **releaseDate**: string (ReadOnly): The feature release date.
 * **shouldFeatureDisplayInPortal**: bool: Indicates whether feature should be displayed in Portal.
-* **state**: 'NotRegistered' | 'NotSpecified' | 'Pending' | 'Registered' | 'Registering' | 'Unregistered' | 'Unregistering': The state.
+* **state**: 'NotRegistered' | 'NotSpecified' | 'Pending' | 'Registered' | 'Registering' | 'Unregistered' | 'Unregistering' | string: The state.
 * **subscriptionId**: string (ReadOnly): The subscriptionId.
 * **tenantId**: string (ReadOnly): The tenantId.
 

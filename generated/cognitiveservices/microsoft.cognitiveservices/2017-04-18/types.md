@@ -60,8 +60,8 @@
 * **isMigrated**: bool (ReadOnly): If the resource is migrated from an existing key.
 * **networkAcls**: [NetworkRuleSet](#networkruleset): A set of rules governing the network accessibility.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: The private endpoint connection associated with the Cognitive Services account.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'ResolvingDNS' | 'Succeeded' (ReadOnly): Gets the status of the cognitive services account at the time the operation was called.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'ResolvingDNS' | 'Succeeded' | string (ReadOnly): Gets the status of the cognitive services account at the time the operation was called.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
 * **skuChangeInfo**: [CognitiveServicesAccountSkuChangeInfo](#cognitiveservicesaccountskuchangeinfo) (ReadOnly): Sku change info of account.
 * **userOwnedStorage**: [UserOwnedStorage](#userownedstorage)[]: The storage accounts for this resource.
 
@@ -85,7 +85,7 @@
 
 ## Encryption
 ### Properties
-* **keySource**: 'Microsoft.CognitiveServices' | 'Microsoft.KeyVault': Enumerates the possible value of keySource for Encryption
+* **keySource**: 'Microsoft.CognitiveServices' | 'Microsoft.KeyVault' | string: Enumerates the possible value of keySource for Encryption
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): Properties to configure keyVault Properties
 
 ## KeyVaultProperties
@@ -96,7 +96,7 @@
 
 ## NetworkRuleSet
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny': The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
+* **defaultAction**: 'Allow' | 'Deny' | string: The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
 * **ipRules**: [IpRule](#iprule)[]: The list of IP address rules.
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: The list of virtual network rules.
 
@@ -133,7 +133,7 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': The private endpoint connection status.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
 
 ## CognitiveServicesAccountSkuChangeInfo
 ### Properties
@@ -148,7 +148,7 @@
 ## Sku
 ### Properties
 * **name**: string (Required): The name of SKU.
-* **tier**: 'Enterprise' | 'Free' | 'Premium' | 'Standard' (ReadOnly): Gets the sku tier. This is based on the SKU name.
+* **tier**: 'Enterprise' | 'Free' | 'Premium' | 'Standard' | string (ReadOnly): Gets the sku tier. This is based on the SKU name.
 
 ## CognitiveServicesAccountTags
 ### Properties

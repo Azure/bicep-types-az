@@ -43,15 +43,15 @@
 ### Properties
 * **principalId**: string (ReadOnly): The identity ID.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned': Managed Identity types.
+* **type**: 'SystemAssigned' | string: Managed Identity types.
 
 ## MonitorProperties
 ### Properties
 * **elasticProperties**: [ElasticProperties](#elasticproperties): Elastic Resource Properties.
-* **liftrResourceCategory**: 'MonitorLogs' | 'Unknown' (ReadOnly)
+* **liftrResourceCategory**: 'MonitorLogs' | 'Unknown' | string (ReadOnly)
 * **liftrResourcePreference**: int (ReadOnly): The priority of the resource.
-* **monitoringStatus**: 'Disabled' | 'Enabled': Flag specifying if the resource monitoring is enabled or disabled.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating': Provisioning state of Elastic resource.
+* **monitoringStatus**: 'Disabled' | 'Enabled' | string: Flag specifying if the resource monitoring is enabled or disabled.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string: Provisioning state of Elastic resource.
 * **userInfo**: [UserInfo](#userinfo) (WriteOnly): User Information to be passed to partners.
 
 ## ElasticProperties
@@ -99,10 +99,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## ElasticMonitorResourceTags
 ### Properties
@@ -112,7 +112,7 @@
 ## MonitoringTagRulesProperties
 ### Properties
 * **logRules**: [LogRules](#logrules): Set of rules for sending logs for the Monitor resource.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating': Provisioning state of Elastic resource.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string: Provisioning state of Elastic resource.
 
 ## LogRules
 ### Properties
@@ -123,7 +123,7 @@
 
 ## FilteringTag
 ### Properties
-* **action**: 'Exclude' | 'Include': Valid actions for a filtering tag. Exclusion takes priority over inclusion.
+* **action**: 'Exclude' | 'Include' | string: Valid actions for a filtering tag. Exclusion takes priority over inclusion.
 * **name**: string: The name (also known as the key) of the tag.
 * **value**: string: The value of the tag.
 
@@ -131,7 +131,7 @@
 ### Properties
 * **diskCapacity**: string (ReadOnly): Disk capacity of the elasticsearch in Elastic cloud deployment.
 * **memoryCapacity**: string (ReadOnly): RAM capacity of the elasticsearch in Elastic cloud deployment.
-* **status**: 'Healthy' | 'Unhealthy' (ReadOnly): Flag specifying if the Elastic deployment status is healthy or not.
+* **status**: 'Healthy' | 'Unhealthy' | string (ReadOnly): Flag specifying if the Elastic deployment status is healthy or not.
 * **version**: string (ReadOnly): Version of the elasticsearch in Elastic cloud deployment.
 
 ## MonitoredResourceListResponse
@@ -143,7 +143,7 @@
 ### Properties
 * **id**: string (ReadOnly): The ARM id of the resource.
 * **reasonForLogsStatus**: string (ReadOnly): Reason for why the resource is sending logs (or why it is not sending).
-* **sendingLogs**: 'False' | 'True' (ReadOnly): Flag indicating the status of the resource for sending logs operation to Elastic.
+* **sendingLogs**: 'False' | 'True' | string (ReadOnly): Flag indicating the status of the resource for sending logs operation to Elastic.
 
 ## VMHostListResponse
 ### Properties

@@ -212,7 +212,7 @@
 ## IntegrationAccountProperties
 ### Properties
 * **integrationServiceEnvironment**: [ResourceReference](#resourcereference): The resource reference.
-* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended': The workflow state.
+* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended' | string: The workflow state.
 
 ## ResourceReference
 ### Properties
@@ -222,7 +222,7 @@
 
 ## IntegrationAccountSku
 ### Properties
-* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Standard' (Required): The integration account sku name.
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Standard' | string (Required): The integration account sku name.
 
 ## ResourceTags
 ### Properties
@@ -292,7 +292,7 @@
 ### Properties
 * **dispositionNotificationTo**: string: The disposition notification to header value.
 * **mdnText**: string: The MDN text.
-* **micHashingAlgorithm**: 'MD5' | 'None' | 'NotSpecified' | 'SHA1' | 'SHA2256' | 'SHA2384' | 'SHA2512' (Required): The signing or hashing algorithm.
+* **micHashingAlgorithm**: 'MD5' | 'None' | 'NotSpecified' | 'SHA1' | 'SHA2256' | 'SHA2384' | 'SHA2512' | string (Required): The signing or hashing algorithm.
 * **needMDN**: bool (Required): The value indicating whether to send or request a MDN.
 * **receiptDeliveryUrl**: string: The receipt delivery URL.
 * **sendInboundMDNToMessageBox**: bool (Required): The value indicating whether to send inbound MDN to message box.
@@ -326,11 +326,11 @@
 * **checkCertificateRevocationListOnSend**: bool (Required): The value indicating whether to check for certificate revocation list on send.
 * **checkDuplicateMessage**: bool (Required): The value indicating whether to check for duplicate message.
 * **compressMessage**: bool (Required): The value indicating whether the message has to be compressed.
-* **encryptionAlgorithm**: 'AES128' | 'AES192' | 'AES256' | 'DES3' | 'None' | 'NotSpecified' | 'RC2' (Required): The encryption algorithm.
+* **encryptionAlgorithm**: 'AES128' | 'AES192' | 'AES256' | 'DES3' | 'None' | 'NotSpecified' | 'RC2' | string (Required): The encryption algorithm.
 * **encryptMessage**: bool (Required): The value indicating whether the message has to be encrypted.
 * **interchangeDuplicatesValidityDays**: int (Required): The number of days to look back for duplicate interchange.
 * **overrideMessageProperties**: bool (Required): The value indicating whether to override incoming message properties with those in agreement.
-* **signingAlgorithm**: 'Default' | 'NotSpecified' | 'SHA1' | 'SHA2256' | 'SHA2384' | 'SHA2512': The signing or hashing algorithm.
+* **signingAlgorithm**: 'Default' | 'NotSpecified' | 'SHA1' | 'SHA2256' | 'SHA2384' | 'SHA2512' | string: The signing or hashing algorithm.
 * **signMessage**: bool (Required): The value indicating whether the message has to be signed.
 
 ## BusinessIdentity
@@ -457,7 +457,7 @@
 ## EdifactFramingSettings
 ### Properties
 * **characterEncoding**: string: The character encoding.
-* **characterSet**: 'KECA' | 'NotSpecified' | 'UNOA' | 'UNOB' | 'UNOC' | 'UNOD' | 'UNOE' | 'UNOF' | 'UNOG' | 'UNOH' | 'UNOI' | 'UNOJ' | 'UNOK' | 'UNOX' | 'UNOY' (Required): The edifact character set.
+* **characterSet**: 'KECA' | 'NotSpecified' | 'UNOA' | 'UNOB' | 'UNOC' | 'UNOD' | 'UNOE' | 'UNOF' | 'UNOG' | 'UNOH' | 'UNOI' | 'UNOJ' | 'UNOK' | 'UNOX' | 'UNOY' | string (Required): The edifact character set.
 * **componentSeparator**: int (Required): The component separator.
 * **dataElementSeparator**: int (Required): The data element separator.
 * **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified' (Required): The edifact decimal indicator.
@@ -470,7 +470,7 @@
 
 ## EdifactMessageFilter
 ### Properties
-* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified' (Required): The message filter type.
+* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified' | string (Required): The message filter type.
 
 ## EdifactMessageIdentifier
 ### Properties
@@ -499,7 +499,7 @@
 * **allowLeadingAndTrailingSpacesAndZeroes**: bool (Required): The value indicating whether to allow leading and trailing spaces and zeroes.
 * **enforceCharacterSet**: bool (Required): The value indicating whether to validate character Set.
 * **messageId**: string (Required): The message id on which the validation settings has to be applied.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required): The trailing separator policy.
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' | string (Required): The trailing separator policy.
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool (Required): The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateEDITypes**: bool (Required): The value indicating whether to validate EDI types.
 * **validateXSDTypes**: bool (Required): The value indicating whether to validate XSD types.
@@ -511,7 +511,7 @@
 * **checkDuplicateInterchangeControlNumber**: bool (Required): The value indicating whether to check for duplicate interchange control number.
 * **checkDuplicateTransactionSetControlNumber**: bool (Required): The value indicating whether to check for duplicate transaction set control number.
 * **interchangeControlNumberValidityDays**: int (Required): The validity period of interchange control number.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required): The trailing separator policy.
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' | string (Required): The trailing separator policy.
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool (Required): The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateCharacterSet**: bool (Required): The value indicating whether to validate character set in the message.
 * **validateEDITypes**: bool (Required): The value indicating whether to Whether to validate EDI types.
@@ -563,7 +563,7 @@
 
 ## X12EnvelopeOverride
 ### Properties
-* **dateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD' (Required): The x12 date format.
+* **dateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD' | string (Required): The x12 date format.
 * **functionalIdentifierCode**: string: The functional identifier code.
 * **headerVersion**: string (Required): The header version.
 * **messageId**: string (Required): The message id on which this envelope settings has to be applied.
@@ -572,7 +572,7 @@
 * **responsibleAgencyCode**: string (Required): The responsible agency code.
 * **senderApplicationId**: string (Required): The sender application id.
 * **targetNamespace**: string (Required): The target namespace on which this envelope settings has to be applied.
-* **timeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified' (Required): The x12 time format.
+* **timeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified' | string (Required): The x12 time format.
 
 ## X12EnvelopeSettings
 ### Properties
@@ -583,8 +583,8 @@
 * **groupControlNumberLowerBound**: int (Required): The group control number lower bound.
 * **groupControlNumberUpperBound**: int (Required): The group control number upper bound.
 * **groupHeaderAgencyCode**: string (Required): The group header agency code.
-* **groupHeaderDateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD' (Required): The x12 date format.
-* **groupHeaderTimeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified' (Required): The x12 time format.
+* **groupHeaderDateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD' | string (Required): The x12 date format.
+* **groupHeaderTimeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified' | string (Required): The x12 time format.
 * **groupHeaderVersion**: string (Required): The group header version.
 * **interchangeControlNumberLowerBound**: int (Required): The interchange  control number lower bound.
 * **interchangeControlNumberUpperBound**: int (Required): The interchange  control number upper bound.
@@ -598,12 +598,12 @@
 * **transactionSetControlNumberPrefix**: string: The transaction set control number prefix.
 * **transactionSetControlNumberSuffix**: string: The transaction set control number suffix.
 * **transactionSetControlNumberUpperBound**: int (Required): The transaction set control number upper bound.
-* **usageIndicator**: 'Information' | 'NotSpecified' | 'Production' | 'Test' (Required): The usage indicator.
+* **usageIndicator**: 'Information' | 'NotSpecified' | 'Production' | 'Test' | string (Required): The usage indicator.
 * **useControlStandardsIdAsRepetitionCharacter**: bool (Required): The value indicating whether to use control standards id as repetition character.
 
 ## X12FramingSettings
 ### Properties
-* **characterSet**: 'Basic' | 'Extended' | 'NotSpecified' | 'UTF8' (Required): The X12 character set.
+* **characterSet**: 'Basic' | 'Extended' | 'NotSpecified' | 'UTF8' | string (Required): The X12 character set.
 * **componentSeparator**: int (Required): The component separator.
 * **dataElementSeparator**: int (Required): The data element separator.
 * **replaceCharacter**: int (Required): The replacement character.
@@ -613,7 +613,7 @@
 
 ## X12MessageFilter
 ### Properties
-* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified' (Required): The message filter type.
+* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified' | string (Required): The message filter type.
 
 ## X12MessageIdentifier
 ### Properties
@@ -646,7 +646,7 @@
 ### Properties
 * **allowLeadingAndTrailingSpacesAndZeroes**: bool (Required): The value indicating whether to allow leading and trailing spaces and zeroes.
 * **messageId**: string (Required): The message id on which the validation settings has to be applied.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required): The trailing separator policy.
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' | string (Required): The trailing separator policy.
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool (Required): The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateCharacterSet**: bool (Required): The value indicating whether to validate character Set.
 * **validateEDITypes**: bool (Required): The value indicating whether to validate EDI types.
@@ -659,7 +659,7 @@
 * **checkDuplicateInterchangeControlNumber**: bool (Required): The value indicating whether to check for duplicate interchange control number.
 * **checkDuplicateTransactionSetControlNumber**: bool (Required): The value indicating whether to check for duplicate transaction set control number.
 * **interchangeControlNumberValidityDays**: int (Required): The validity period of interchange control number.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required): The trailing separator policy.
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' | string (Required): The trailing separator policy.
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool (Required): The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateCharacterSet**: bool (Required): The value indicating whether to validate character set in the message.
 * **validateEDITypes**: bool (Required): The value indicating whether to Whether to validate EDI types.
@@ -730,7 +730,7 @@
 ## WorkflowTriggerRecurrence
 ### Properties
 * **endTime**: string: The end time.
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'NotSpecified' | 'Second' | 'Week' | 'Year': The recurrence frequency.
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'NotSpecified' | 'Second' | 'Week' | 'Year' | string: The recurrence frequency.
 * **interval**: int: The interval.
 * **schedule**: [RecurrenceSchedule](#recurrenceschedule): The recurrence schedule.
 * **startTime**: string: The start time.
@@ -786,7 +786,7 @@
 * **contentLink**: [ContentLink](#contentlink) (ReadOnly): The content link.
 * **contentType**: string: The content type.
 * **createdTime**: string (ReadOnly): The created time.
-* **mapType**: 'Liquid' | 'NotSpecified' | 'Xslt' | 'Xslt20' | 'Xslt30' (Required): The map type.
+* **mapType**: 'Liquid' | 'NotSpecified' | 'Xslt' | 'Xslt20' | 'Xslt30' | string (Required): The map type.
 * **metadata**: any: Any object
 * **parametersSchema**: [IntegrationAccountMapPropertiesParametersSchema](#integrationaccountmappropertiesparametersschema): The parameters schema of integration account map.
 
@@ -805,7 +805,7 @@
 * **content**: [PartnerContent](#partnercontent) (Required): The integration account partner content.
 * **createdTime**: string (ReadOnly): The created time.
 * **metadata**: any: Any object
-* **partnerType**: 'B2B' | 'NotSpecified' (Required): The partner type.
+* **partnerType**: 'B2B' | 'NotSpecified' | string (Required): The partner type.
 
 ## PartnerContent
 ### Properties
@@ -830,7 +830,7 @@
 * **documentName**: string: The document name.
 * **fileName**: string: The file name.
 * **metadata**: any: Any object
-* **schemaType**: 'NotSpecified' | 'Xml' (Required): The schema type.
+* **schemaType**: 'NotSpecified' | 'Xml' | string (Required): The schema type.
 * **targetNamespace**: string: The target namespace of the schema.
 
 ## ResourceTags
@@ -853,7 +853,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): Principal Id of managed service identity.
 * **tenantId**: string (ReadOnly): Tenant of managed service identity.
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required): Type of managed service identity. The type 'SystemAssigned' includes an implicitly created identity. The type 'None' will remove any identities from the resource.
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string (Required): Type of managed service identity. The type 'SystemAssigned' includes an implicitly created identity. The type 'None' will remove any identities from the resource.
 * **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities): The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
 
 ## ManagedServiceIdentityUserAssignedIdentities
@@ -872,8 +872,8 @@
 * **endpointsConfiguration**: [FlowEndpointsConfiguration](#flowendpointsconfiguration): The endpoints configuration.
 * **integrationServiceEnvironmentId**: string: Gets the tracking id.
 * **networkConfiguration**: [NetworkConfiguration](#networkconfiguration): The network configuration.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting': The workflow provisioning state.
-* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended': The workflow state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' | string: The workflow provisioning state.
+* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended' | string: The workflow state.
 
 ## IntegrationServiceEnvironmenEncryptionConfiguration
 ### Properties
@@ -907,12 +907,12 @@
 
 ## IntegrationServiceEnvironmentAccessEndpoint
 ### Properties
-* **type**: 'External' | 'Internal' | 'NotSpecified': The integration service environment access endpoint type.
+* **type**: 'External' | 'Internal' | 'NotSpecified' | string: The integration service environment access endpoint type.
 
 ## IntegrationServiceEnvironmentSku
 ### Properties
 * **capacity**: int: The sku capacity.
-* **name**: 'Developer' | 'NotSpecified' | 'Premium': The integration service environment sku name.
+* **name**: 'Developer' | 'NotSpecified' | 'Premium' | string: The integration service environment sku name.
 
 ## ResourceTags
 ### Properties
@@ -925,7 +925,7 @@
 * **apiDefinitionUrl**: string (ReadOnly): The API definition.
 * **backendService**: [ApiResourceBackendService](#apiresourcebackendservice) (ReadOnly): The API backend service.
 * **capabilities**: string[] (ReadOnly): The capabilities.
-* **category**: 'Enterprise' | 'NotSpecified' | 'Premium' | 'Standard' (ReadOnly): The Api tier.
+* **category**: 'Enterprise' | 'NotSpecified' | 'Premium' | 'Standard' | string (ReadOnly): The Api tier.
 * **connectionParameters**: [ApiResourcePropertiesConnectionParameters](#apiresourcepropertiesconnectionparameters) (ReadOnly): The connection parameters.
 * **deploymentParameters**: [IntegrationServiceEnvironmentManagedApiDeploymentParameters](#integrationserviceenvironmentmanagedapideploymentparameters): The integration service environment managed api deployment parameters.
 * **generalInformation**: [ApiResourceGeneralInformation](#apiresourcegeneralinformation) (ReadOnly): The API general information.
@@ -933,7 +933,7 @@
 * **metadata**: [ApiResourceMetadata](#apiresourcemetadata) (ReadOnly): The api resource metadata.
 * **name**: string (ReadOnly): The name
 * **policies**: [ApiResourcePolicies](#apiresourcepolicies) (ReadOnly): The API resource policies.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' (ReadOnly): The workflow provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' | string (ReadOnly): The workflow provisioning state.
 * **runtimeUrls**: string[] (ReadOnly): The runtime urls.
 
 ## ApiResourceDefinitions
@@ -961,19 +961,19 @@
 * **iconUrl**: string: The icon url.
 * **releaseTag**: string: The release tag.
 * **termsOfUseUrl**: string: The terms of use url.
-* **tier**: 'Enterprise' | 'NotSpecified' | 'Premium' | 'Standard': The Api tier.
+* **tier**: 'Enterprise' | 'NotSpecified' | 'Premium' | 'Standard' | string: The Api tier.
 
 ## ApiResourceMetadata
 ### Properties
-* **ApiType**: 'NotSpecified' | 'Rest' | 'Soap'
+* **ApiType**: 'NotSpecified' | 'Rest' | 'Soap' | string
 * **brandColor**: string: The brand color.
 * **connectionType**: string: The connection type.
 * **deploymentParameters**: [ApiDeploymentParameterMetadataSet](#apideploymentparametermetadataset): The API deployment parameters metadata.
 * **hideKey**: string: The hide key.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting': The workflow provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' | string: The workflow provisioning state.
 * **source**: string: The source.
 * **tags**: [ApiResourceMetadataTags](#apiresourcemetadatatags): The tags.
-* **wsdlImportMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest': The WSDL import method.
+* **wsdlImportMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest' | string: The WSDL import method.
 * **wsdlService**: [WsdlService](#wsdlservice): The WSDL service.
 
 ## ApiDeploymentParameterMetadataSet
@@ -987,7 +987,7 @@
 * **displayName**: string: The display name.
 * **isRequired**: bool: Indicates whether its required.
 * **type**: string: The type.
-* **visibility**: 'Default' | 'Internal' | 'NotSpecified': The Api deployment parameter visibility.
+* **visibility**: 'Default' | 'Internal' | 'NotSpecified' | string: The Api deployment parameter visibility.
 
 ## ApiResourceMetadataTags
 ### Properties
@@ -1020,9 +1020,9 @@
 * **integrationAccount**: [ResourceReference](#resourcereference): The resource reference.
 * **integrationServiceEnvironment**: [ResourceReference](#resourcereference): The resource reference.
 * **parameters**: [WorkflowPropertiesParameters](#workflowpropertiesparameters): The parameters.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' (ReadOnly): The workflow provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' | string (ReadOnly): The workflow provisioning state.
 * **sku**: [Sku](#sku) (ReadOnly): The sku type.
-* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended': The workflow state.
+* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended' | string: The workflow state.
 * **version**: string (ReadOnly): Gets the version.
 
 ## FlowAccessControlConfiguration
@@ -1053,7 +1053,7 @@
 ## OpenAuthenticationAccessPolicy
 ### Properties
 * **claims**: [OpenAuthenticationPolicyClaim](#openauthenticationpolicyclaim)[]: The access policy claims.
-* **type**: 'AAD': Open authentication policy provider type.
+* **type**: 'AAD' | string: Open authentication policy provider type.
 
 ## OpenAuthenticationPolicyClaim
 ### Properties
@@ -1069,12 +1069,12 @@
 ### Properties
 * **description**: string: The description.
 * **metadata**: any: Any object
-* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String': The parameter type.
+* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String' | string: The parameter type.
 * **value**: any: Any object
 
 ## Sku
 ### Properties
-* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard' (Required): The sku name.
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard' | string (Required): The sku name.
 * **plan**: [ResourceReference](#resourcereference): The resource reference.
 
 ## ResourceTags
@@ -1084,7 +1084,7 @@
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly): The key type.
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly): The key type.
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## WorkflowTriggerCallbackUrl
@@ -1115,7 +1115,7 @@
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly): The key type.
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly): The key type.
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## WorkflowTriggerCallbackUrl
@@ -1129,7 +1129,7 @@
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly): The key type.
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly): The key type.
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## CallbackUrl
@@ -1147,7 +1147,7 @@
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly): The key type.
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly): The key type.
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## WorkflowTriggerCallbackUrl
@@ -1161,7 +1161,7 @@
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly): The key type.
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly): The key type.
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## WorkflowTriggerCallbackUrl
@@ -1175,7 +1175,7 @@
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly): The key type.
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly): The key type.
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## WorkflowTriggerCallbackUrl
@@ -1189,7 +1189,7 @@
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly): The key type.
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly): The key type.
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## WorkflowTriggerCallbackUrl

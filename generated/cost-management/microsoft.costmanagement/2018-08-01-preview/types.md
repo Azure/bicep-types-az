@@ -32,7 +32,7 @@
 * **modifiedOn**: string (ReadOnly): Connector last modified datetime
 * **providerAccountId**: string (ReadOnly): Connector providerAccountId (determined from credentials)
 * **reportId**: string: Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
-* **status**: 'active' | 'error' | 'suspended': Connector status
+* **status**: 'active' | 'error' | 'suspended' | string: Connector status
 
 ## ConnectorCollectionInfo
 ### Properties
@@ -56,22 +56,22 @@
 ### Properties
 * **definition**: [ReportDefinition](#reportdefinition) (Required): The definition of a report.
 * **deliveryInfo**: [ReportDeliveryInfo](#reportdeliveryinfo) (Required): The delivery information associated with a report.
-* **format**: 'Csv': The format of the report being delivered.
+* **format**: 'Csv' | string: The format of the report being delivered.
 * **schedule**: [ReportSchedule](#reportschedule): The schedule associated with a report.
 
 ## ReportDefinition
 ### Properties
 * **dataset**: [ReportDataset](#reportdataset): The definition of data present in the report.
-* **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+* **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | string (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided.
 * **timePeriod**: [ReportTimePeriod](#reporttimeperiod): The start and end date for pulling data for the report.
-* **type**: 'Usage' (Required): The type of the report.
+* **type**: 'Usage' | string (Required): The type of the report.
 
 ## ReportDataset
 ### Properties
 * **aggregation**: [ReportDatasetAggregation](#reportdatasetaggregation): Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
 * **configuration**: [ReportDatasetConfiguration](#reportdatasetconfiguration): The configuration of dataset in the report.
 * **filter**: [ReportFilter](#reportfilter): The filter expression to be used in the report.
-* **granularity**: 'Daily' | 'Hourly': The granularity of rows in the report.
+* **granularity**: 'Daily' | 'Hourly' | string: The granularity of rows in the report.
 * **grouping**: [ReportGrouping](#reportgrouping)[]: Array of group by expression to use in the report. Report can have up to 2 group by clauses.
 
 ## ReportDatasetAggregation
@@ -81,7 +81,7 @@
 
 ## ReportAggregation
 ### Properties
-* **function**: 'Sum' (Required): The name of the aggregation function to use.
+* **function**: 'Sum' | string (Required): The name of the aggregation function to use.
 * **name**: string (Required): The name of the column to aggregate.
 
 ## ReportDatasetConfiguration
@@ -99,13 +99,13 @@
 ## ReportComparisonExpression
 ### Properties
 * **name**: string (Required): The name of the column to use in comparison.
-* **operator**: 'In' (Required): The operator to use for comparison.
+* **operator**: 'In' | string (Required): The operator to use for comparison.
 * **values**: string[] (Required): Array of values to use for comparison
 
 ## ReportGrouping
 ### Properties
 * **name**: string (Required): The name of the column to group.
-* **type**: 'Dimension' | 'Tag' (Required): The type of the column in the report.
+* **type**: 'Dimension' | 'Tag' | string (Required): The type of the column in the report.
 
 ## ReportTimePeriod
 ### Properties
@@ -124,9 +124,9 @@
 
 ## ReportSchedule
 ### Properties
-* **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' (Required): The schedule recurrence.
+* **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' | string (Required): The schedule recurrence.
 * **recurrencePeriod**: [ReportRecurrencePeriod](#reportrecurrenceperiod): The start and end date for recurrence schedule.
-* **status**: 'Active' | 'Inactive': The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.
+* **status**: 'Active' | 'Inactive' | string: The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.
 
 ## ReportRecurrencePeriod
 ### Properties

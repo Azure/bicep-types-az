@@ -22,29 +22,29 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned': The identity type.
+* **type**: 'None' | 'SystemAssigned' | string: The identity type.
 
 ## ApplianceProperties
 ### Properties
-* **distro**: 'AKSEdge': Represents a supported Fabric/Infra. (AKSEdge etc...).
+* **distro**: 'AKSEdge' | string: Represents a supported Fabric/Infra. (AKSEdge etc...).
 * **infrastructureConfig**: [AppliancePropertiesInfrastructureConfig](#appliancepropertiesinfrastructureconfig): Contains infrastructure information about the Appliance
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
 * **publicKey**: string: Certificates pair used to download MSI certificate from HIS
-* **status**: 'Connected' | 'Running' | 'Validating' | 'WaitingForHeartbeat' (ReadOnly): Appliance’s health and state of connection to on-prem
+* **status**: 'Connected' | 'Running' | 'Validating' | 'WaitingForHeartbeat' | string (ReadOnly): Appliance’s health and state of connection to on-prem
 * **version**: string (ReadOnly): Version of the Appliance
 
 ## AppliancePropertiesInfrastructureConfig
 ### Properties
-* **provider**: 'HCI' | 'SCVMM' | 'VMWare': Information about the connected appliance.
+* **provider**: 'HCI' | 'SCVMM' | 'VMWare' | string: Information about the connected appliance.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -65,6 +65,6 @@
 
 ## ApplianceCredentialKubeconfig
 ### Properties
-* **name**: 'clusterUser' (ReadOnly): Name which contains the role of the kubeconfig.
+* **name**: 'clusterUser' | string (ReadOnly): Name which contains the role of the kubeconfig.
 * **value**: string (ReadOnly): Contains the kubeconfig value.
 

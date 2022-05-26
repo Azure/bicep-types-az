@@ -68,8 +68,8 @@
 
 ### Base Properties
 * **networkFunctions**: [SubResource](#subresource)[] (ReadOnly): The list of network functions deployed on the device.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
-* **status**: 'Deleted' | 'NotRegistered' | 'Registered' | 'Unknown' (ReadOnly): The current device status.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
+* **status**: 'Deleted' | 'NotRegistered' | 'Registered' | 'Unknown' | string (ReadOnly): The current device status.
 ### AzureStackEdgeFormat
 #### Properties
 * **azureStackEdge**: [SubResource](#subresource) (Required): Reference to another sub resource.
@@ -88,10 +88,10 @@
 ## VendorNetworkFunctionPropertiesFormat
 ### Properties
 * **networkFunctionVendorConfigurations**: [NetworkFunctionVendorConfiguration](#networkfunctionvendorconfiguration)[]: An array of network function vendor configurations.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
 * **skuName**: string (ReadOnly): The name of the sku.
-* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown' (ReadOnly): Sku type.
-* **vendorProvisioningState**: 'Deprovisioned' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | 'Unknown' | 'UserDataValidationFailed': The current vendor provisioning state.
+* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown' | string (ReadOnly): Sku type.
+* **vendorProvisioningState**: 'Deprovisioned' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | 'Unknown' | 'UserDataValidationFailed' | string: The current vendor provisioning state.
 
 ## NetworkFunctionVendorConfiguration
 ### Properties
@@ -105,15 +105,15 @@
 * **ipConfigurations**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration)[]: A list of IP configurations of the network interface.
 * **macAddress**: string: The MAC address of the network interface.
 * **networkInterfaceName**: string: The name of the network interface.
-* **vmSwitchType**: 'Lan' | 'Management' | 'Unknown' | 'Wan': The type of the VM switch.
+* **vmSwitchType**: 'Lan' | 'Management' | 'Unknown' | 'Wan' | string: The type of the VM switch.
 
 ## NetworkInterfaceIPConfiguration
 ### Properties
 * **dnsServers**: string[]: The list of DNS servers IP addresses.
 * **gateway**: string: The value of the gateway.
 * **ipAddress**: string: The value of the IP address.
-* **ipAllocationMethod**: 'Dynamic' | 'Static' | 'Unknown': IP address allocation method.
-* **ipVersion**: 'IPv4' | 'Unknown': IP address version.
+* **ipAllocationMethod**: 'Dynamic' | 'Static' | 'Unknown' | string: IP address allocation method.
+* **ipVersion**: 'IPv4' | 'Unknown' | string: IP address version.
 * **subnet**: string: The value of the subnet.
 
 ## OsProfile
@@ -142,12 +142,12 @@
 * **managedApplication**: [SubResource](#subresource) (ReadOnly): Reference to another sub resource.
 * **managedApplicationParameters**: any: Any object
 * **networkFunctionUserConfigurations**: [NetworkFunctionUserConfiguration](#networkfunctionuserconfiguration)[]: The network function configurations from the user.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
 * **serviceKey**: string (ReadOnly): The service key for the network function resource.
 * **skuName**: string: The sku name for the network function.
-* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown' (ReadOnly): Sku type.
+* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown' | string (ReadOnly): Sku type.
 * **vendorName**: string: The vendor name for the network function.
-* **vendorProvisioningState**: 'Deprovisioned' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | 'Unknown' | 'UserDataValidationFailed' (ReadOnly): The current vendor provisioning state.
+* **vendorProvisioningState**: 'Deprovisioned' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | 'Unknown' | 'UserDataValidationFailed' | string (ReadOnly): The current vendor provisioning state.
 
 ## NetworkFunctionUserConfiguration
 ### Properties
@@ -167,18 +167,18 @@
 
 ## VendorPropertiesFormat
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
 * **skus**: [SubResource](#subresource)[] (ReadOnly): A list of IDs of the vendor skus offered by the vendor.
 
 ## VendorSkuPropertiesFormat
 ### Properties
-* **deploymentMode**: 'Azure' | 'PrivateEdgeZone' | 'Unknown': The sku deployment mode.
+* **deploymentMode**: 'Azure' | 'PrivateEdgeZone' | 'Unknown' | string: The sku deployment mode.
 * **managedApplicationParameters**: any: Any object
 * **managedApplicationTemplate**: any: Any object
 * **networkFunctionTemplate**: [NetworkFunctionTemplate](#networkfunctiontemplate): The network function template.
 * **preview**: bool: Indicates if the vendor sku is in preview mode.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
-* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown': Sku type.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
+* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown' | string: Sku type.
 
 ## NetworkFunctionTemplate
 ### Properties
@@ -190,11 +190,11 @@
 * **networkInterfaces**: [NetworkInterface](#networkinterface)[]: The network interface configurations.
 * **osProfile**: [OsProfile](#osprofile): Specifies the operating system settings for the role instance.
 * **roleName**: string: The name of the network function role.
-* **roleType**: 'Unknown' | 'VirtualMachine': Role type.
+* **roleType**: 'Unknown' | 'VirtualMachine' | string: Role type.
 * **storageProfile**: [StorageProfile](#storageprofile): Specifies the storage settings for the virtual machine disks.
 * **userDataParameters**: any: Any object
 * **userDataTemplate**: any: Any object
-* **virtualMachineSize**: 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D1_v2' | 'Standard_D2_v2' | 'Standard_D3_v2' | 'Standard_D4_v2' | 'Standard_D5_v2' | 'Standard_DS11_v2' | 'Standard_DS12_v2' | 'Standard_DS13_v2' | 'Standard_DS1_v2' | 'Standard_DS2_v2' | 'Standard_DS3_v2' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_F1' | 'Standard_F16' | 'Standard_F16s' | 'Standard_F1s' | 'Standard_F2' | 'Standard_F2s' | 'Standard_F4' | 'Standard_F4s' | 'Standard_F8' | 'Standard_F8s' | 'Unknown': The size of the virtual machine.
+* **virtualMachineSize**: 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D1_v2' | 'Standard_D2_v2' | 'Standard_D3_v2' | 'Standard_D4_v2' | 'Standard_D5_v2' | 'Standard_DS11_v2' | 'Standard_DS12_v2' | 'Standard_DS13_v2' | 'Standard_DS1_v2' | 'Standard_DS2_v2' | 'Standard_DS3_v2' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_F1' | 'Standard_F16' | 'Standard_F16s' | 'Standard_F1s' | 'Standard_F2' | 'Standard_F2s' | 'Standard_F4' | 'Standard_F4s' | 'Standard_F8' | 'Standard_F8s' | 'Unknown' | string: The size of the virtual machine.
 
 ## CustomProfile
 ### Properties
@@ -208,7 +208,7 @@
 
 ## DataDisk
 ### Properties
-* **createOption**: 'Empty' | 'Unknown': Specifies how the virtual machine should be created.
+* **createOption**: 'Empty' | 'Unknown' | string: Specifies how the virtual machine should be created.
 * **diskSizeGB**: int: Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.
 * **name**: string: The name of data disk.
 
@@ -224,7 +224,7 @@
 ### Properties
 * **diskSizeGB**: int: Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.
 * **name**: string: The VHD name.
-* **osType**: 'Linux' | 'Unknown' | 'Windows': The OS type.
+* **osType**: 'Linux' | 'Unknown' | 'Windows' | string: The OS type.
 * **vhd**: [VirtualHardDisk](#virtualharddisk): Describes the uri of a disk.
 
 ## VirtualHardDisk

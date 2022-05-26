@@ -19,8 +19,8 @@
 
 ## AzureSku
 ### Properties
-* **name**: 'S1' (Required): SKU name
-* **tier**: 'Standard' (Required): SKU tier
+* **name**: 'S1' | string (Required): SKU name
+* **tier**: 'Standard' | string (Required): SKU tier
 
 ## CreateWorkspaceCollectionRequestTags
 ### Properties

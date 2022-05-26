@@ -31,7 +31,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 * **hostName**: string (ReadOnly): FQDN of the SignalR service instance. Format: xxx.service.signalr.net
 * **hostNamePrefix**: string: Prefix for the hostName of the SignalR service. Retained for future use.
 The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **publicPort**: int (ReadOnly): The publicly accessible port of the SignalR service which is designed for browser/client side usage.
 * **serverPort**: int (ReadOnly): The publicly accessible port of the SignalR service which is designed for customer server side usage.
 * **version**: string (ReadOnly): Version of the SignalR resource. Probably you need the same or higher version of client SDKs.
@@ -42,7 +42,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
 
 ## SignalRFeature
 ### Properties
-* **flag**: 'EnableConnectivityLogs' | 'ServiceMode' (Required): FeatureFlags is the supported features of Azure SignalR service.
+* **flag**: 'EnableConnectivityLogs' | 'ServiceMode' | string (Required): FeatureFlags is the supported features of Azure SignalR service.
 - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
 - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.
 * **properties**: [SignalRFeatureProperties](#signalrfeatureproperties): Optional properties related to this feature.
@@ -65,7 +65,7 @@ If present, following values are allowed:
 
 Allowed values: Standard_S1, Free_F1
 * **size**: string: Optional string. For future use.
-* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': Optional tier of this particular SKU. 'Standard' or 'Free'. 
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard' | string: Optional tier of this particular SKU. 'Standard' or 'Free'. 
 
 `Basic` is deprecated, use `Standard` instead.
 

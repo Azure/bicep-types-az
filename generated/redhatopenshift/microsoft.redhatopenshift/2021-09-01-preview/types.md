@@ -30,7 +30,7 @@
 * **ingressProfiles**: [IngressProfile](#ingressprofile)[]: The cluster ingress profiles.
 * **masterProfile**: [MasterProfile](#masterprofile): MasterProfile represents a master profile.
 * **networkProfile**: [NetworkProfile](#networkprofile): NetworkProfile represents a network profile.
-* **provisioningState**: 'AdminUpdating' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': ProvisioningState represents a provisioning state.
+* **provisioningState**: 'AdminUpdating' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ProvisioningState represents a provisioning state.
 * **servicePrincipalProfile**: [ServicePrincipalProfile](#serviceprincipalprofile): ServicePrincipalProfile represents a service principal profile.
 * **workerProfiles**: [WorkerProfile](#workerprofile)[]: The cluster worker profiles.
 
@@ -38,7 +38,7 @@
 ### Properties
 * **ip**: string: The IP of the cluster API server.
 * **url**: string: The URL to access the cluster API server.
-* **visibility**: 'Private' | 'Public': Visibility represents visibility.
+* **visibility**: 'Private' | 'Public' | string: Visibility represents visibility.
 
 ## ClusterProfile
 ### Properties
@@ -55,20 +55,20 @@
 ### Properties
 * **ip**: string: The IP of the ingress.
 * **name**: string: The ingress profile name.
-* **visibility**: 'Private' | 'Public': Visibility represents visibility.
+* **visibility**: 'Private' | 'Public' | string: Visibility represents visibility.
 
 ## MasterProfile
 ### Properties
 * **diskEncryptionSetId**: string: The resource ID of an associated DiskEncryptionSet, if applicable.
-* **encryptionAtHost**: 'Disabled' | 'Enabled': EncryptionAtHost represents encryption at host state
+* **encryptionAtHost**: 'Disabled' | 'Enabled' | string: EncryptionAtHost represents encryption at host state
 * **subnetId**: string: The Azure resource ID of the master subnet.
-* **vmSize**: 'Standard_D16as_v4' | 'Standard_D16s_v3' | 'Standard_D2s_v3' | 'Standard_D32as_v4' | 'Standard_D32s_v3' | 'Standard_D4as_v4' | 'Standard_D4s_v3' | 'Standard_D8as_v4' | 'Standard_D8s_v3' | 'Standard_E16s_v3' | 'Standard_E32s_v3' | 'Standard_E4s_v3' | 'Standard_E64i_v3' | 'Standard_E64is_v3' | 'Standard_E8s_v3' | 'Standard_F16s_v2' | 'Standard_F32s_v2' | 'Standard_F4s_v2' | 'Standard_F72s_v2' | 'Standard_F8s_v2' | 'Standard_G5' | 'Standard_GS5' | 'Standard_M128ms': VMSize represents a VM size.
+* **vmSize**: 'Standard_D16as_v4' | 'Standard_D16s_v3' | 'Standard_D2s_v3' | 'Standard_D32as_v4' | 'Standard_D32s_v3' | 'Standard_D4as_v4' | 'Standard_D4s_v3' | 'Standard_D8as_v4' | 'Standard_D8s_v3' | 'Standard_E16s_v3' | 'Standard_E32s_v3' | 'Standard_E4s_v3' | 'Standard_E64i_v3' | 'Standard_E64is_v3' | 'Standard_E8s_v3' | 'Standard_F16s_v2' | 'Standard_F32s_v2' | 'Standard_F4s_v2' | 'Standard_F72s_v2' | 'Standard_F8s_v2' | 'Standard_G5' | 'Standard_GS5' | 'Standard_M128ms' | string: VMSize represents a VM size.
 
 ## NetworkProfile
 ### Properties
 * **podCidr**: string: The CIDR used for OpenShift/Kubernetes Pods.
 * **serviceCidr**: string: The CIDR used for OpenShift/Kubernetes Services.
-* **softwareDefinedNetwork**: 'OVNKubernetes' | 'OpenShiftSDN': SoftwareDefinedNetwork constants.
+* **softwareDefinedNetwork**: 'OVNKubernetes' | 'OpenShiftSDN' | string: SoftwareDefinedNetwork constants.
 
 ## ServicePrincipalProfile
 ### Properties
@@ -80,19 +80,19 @@
 * **count**: int: The number of worker VMs.
 * **diskEncryptionSetId**: string: The resource ID of an associated DiskEncryptionSet, if applicable.
 * **diskSizeGB**: int: The disk size of the worker VMs.
-* **encryptionAtHost**: 'Disabled' | 'Enabled': EncryptionAtHost represents encryption at host state
+* **encryptionAtHost**: 'Disabled' | 'Enabled' | string: EncryptionAtHost represents encryption at host state
 * **name**: string: The worker profile name.
 * **subnetId**: string: The Azure resource ID of the worker subnet.
-* **vmSize**: 'Standard_D16as_v4' | 'Standard_D16s_v3' | 'Standard_D2s_v3' | 'Standard_D32as_v4' | 'Standard_D32s_v3' | 'Standard_D4as_v4' | 'Standard_D4s_v3' | 'Standard_D8as_v4' | 'Standard_D8s_v3' | 'Standard_E16s_v3' | 'Standard_E32s_v3' | 'Standard_E4s_v3' | 'Standard_E64i_v3' | 'Standard_E64is_v3' | 'Standard_E8s_v3' | 'Standard_F16s_v2' | 'Standard_F32s_v2' | 'Standard_F4s_v2' | 'Standard_F72s_v2' | 'Standard_F8s_v2' | 'Standard_G5' | 'Standard_GS5' | 'Standard_M128ms': VMSize represents a VM size.
+* **vmSize**: 'Standard_D16as_v4' | 'Standard_D16s_v3' | 'Standard_D2s_v3' | 'Standard_D32as_v4' | 'Standard_D32s_v3' | 'Standard_D4as_v4' | 'Standard_D4s_v3' | 'Standard_D8as_v4' | 'Standard_D8s_v3' | 'Standard_E16s_v3' | 'Standard_E32s_v3' | 'Standard_E4s_v3' | 'Standard_E64i_v3' | 'Standard_E64is_v3' | 'Standard_E8s_v3' | 'Standard_F16s_v2' | 'Standard_F32s_v2' | 'Standard_F4s_v2' | 'Standard_F72s_v2' | 'Standard_F8s_v2' | 'Standard_G5' | 'Standard_GS5' | 'Standard_M128ms' | string: VMSize represents a VM size.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties

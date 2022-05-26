@@ -97,7 +97,7 @@
 ## ScaleRuleMetricDimension
 ### Properties
 * **DimensionName**: string (Required): Name of the dimension.
-* **Operator**: 'Equals' | 'NotEquals' (Required): the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values
+* **Operator**: 'Equals' | 'NotEquals' | string (Required): the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values
 * **Values**: string[] (Required): list of dimension values. For example: ["App1","App2"].
 
 ## ScaleAction

@@ -34,7 +34,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity
 * **tenantId**: string (ReadOnly): The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity
-* **type**: 'None' | 'SystemAssigned': The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported.
+* **type**: 'None' | 'SystemAssigned' | string: The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported.
 
 ## DigitalTwinsProperties
 ### Properties
@@ -42,8 +42,8 @@
 * **hostName**: string (ReadOnly): Api endpoint to work with DigitalTwinsInstance.
 * **lastUpdatedTime**: string (ReadOnly): Time when DigitalTwinsInstance was updated.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: Array of PrivateEndpointConnection
-* **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Updating' | 'Warning' (ReadOnly): The provisioning state.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Public network access for the DigitalTwinsInstance.
+* **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Updating' | 'Warning' | string (ReadOnly): The provisioning state.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Public network access for the DigitalTwinsInstance.
 
 ## PrivateEndpointConnection
 ### Properties
@@ -57,7 +57,7 @@
 * **groupIds**: string[]: The list of group ids for the private endpoint connection.
 * **privateEndpoint**: [ConnectionPropertiesPrivateEndpoint](#connectionpropertiesprivateendpoint)
 * **privateLinkServiceConnectionState**: [ConnectionPropertiesPrivateLinkServiceConnectionState](#connectionpropertiesprivatelinkserviceconnectionstate)
-* **provisioningState**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly): The provisioning state.
+* **provisioningState**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (ReadOnly): The provisioning state.
 
 ## ConnectionPropertiesPrivateEndpoint
 ### Properties
@@ -67,7 +67,7 @@
 ### Properties
 * **actionsRequired**: string: Actions required for a private endpoint connection.
 * **description**: string (Required): The description for the current state of a private endpoint connection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (Required): The status of a private endpoint connection.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (Required): The status of a private endpoint connection.
 
 ## DigitalTwinsResourceTags
 ### Properties
@@ -78,11 +78,11 @@
 * **Discriminator**: endpointType
 
 ### Base Properties
-* **authenticationType**: 'IdentityBased' | 'KeyBased': Specifies the authentication type being used for connecting to the endpoint.
+* **authenticationType**: 'IdentityBased' | 'KeyBased' | string: Specifies the authentication type being used for connecting to the endpoint.
 * **createdTime**: string (ReadOnly): Time when the Endpoint was added to DigitalTwinsInstance.
 * **deadLetterSecret**: string: Dead letter storage secret for key-based authentication. Will be obfuscated during read.
 * **deadLetterUri**: string: Dead letter storage URL for identity-based authentication.
-* **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Disabled' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Warning' (ReadOnly): The provisioning state.
+* **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Disabled' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Warning' | string (ReadOnly): The provisioning state.
 ### EventGrid
 #### Properties
 * **accessKey1**: string (Required): EventGrid secondary accesskey. Will be obfuscated during read.

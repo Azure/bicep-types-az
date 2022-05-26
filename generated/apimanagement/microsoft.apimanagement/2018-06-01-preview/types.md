@@ -83,7 +83,7 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'policy' (Required, DeployTimeConstant): The resource name
+* **name**: 'policy' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [PolicyContractProperties](#policycontractproperties): Policy contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/apis/operations/policies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -101,7 +101,7 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'policy' (Required, DeployTimeConstant): The resource name
+* **name**: 'policy' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [PolicyContractProperties](#policycontractproperties): Policy contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/apis/policies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -208,7 +208,7 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'aad' | 'aadB2C' | 'facebook' | 'google' | 'microsoft' | 'twitter' (Required, DeployTimeConstant): The resource name
+* **name**: 'aad' | 'aadB2C' | 'facebook' | 'google' | 'microsoft' | 'twitter' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [IdentityProviderContractProperties](#identityprovidercontractproperties): The external Identity Providers like Facebook, Google, Microsoft, Twitter or Azure Active Directory which can be used to enable access to the API Management service developer portal for all users.
 * **type**: 'Microsoft.ApiManagement/service/identityProviders' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -226,7 +226,7 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'AccountClosedPublisher' | 'BCC' | 'NewApplicationNotificationMessage' | 'NewIssuePublisherNotificationMessage' | 'PurchasePublisherNotificationMessage' | 'QuotaLimitApproachingPublisherNotificationMessage' | 'RequestPublisherNotificationMessage' (Required, DeployTimeConstant): The resource name
+* **name**: 'AccountClosedPublisher' | 'BCC' | 'NewApplicationNotificationMessage' | 'NewIssuePublisherNotificationMessage' | 'PurchasePublisherNotificationMessage' | 'QuotaLimitApproachingPublisherNotificationMessage' | 'RequestPublisherNotificationMessage' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [NotificationContractProperties](#notificationcontractproperties) (ReadOnly): Notification Contract properties.
 * **type**: 'Microsoft.ApiManagement/service/notifications' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -260,7 +260,7 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'policy' (Required, DeployTimeConstant): The resource name
+* **name**: 'policy' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [PolicyContractProperties](#policycontractproperties): Policy contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/policies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -324,7 +324,7 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'policy' (Required, DeployTimeConstant): The resource name
+* **name**: 'policy' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [PolicyContractProperties](#policycontractproperties): Policy contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/products/policies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -369,7 +369,7 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'accountClosedDeveloper' | 'applicationApprovedNotificationMessage' | 'confirmSignUpIdentityDefault' | 'emailChangeIdentityDefault' | 'inviteUserNotificationMessage' | 'newCommentNotificationMessage' | 'newDeveloperNotificationMessage' | 'newIssueNotificationMessage' | 'passwordResetByAdminNotificationMessage' | 'passwordResetIdentityDefault' | 'purchaseDeveloperNotificationMessage' | 'quotaLimitApproachingDeveloperNotificationMessage' | 'rejectDeveloperNotificationMessage' | 'requestDeveloperNotificationMessage' (Required, DeployTimeConstant): The resource name
+* **name**: 'accountClosedDeveloper' | 'applicationApprovedNotificationMessage' | 'confirmSignUpIdentityDefault' | 'emailChangeIdentityDefault' | 'inviteUserNotificationMessage' | 'newCommentNotificationMessage' | 'newDeveloperNotificationMessage' | 'newIssueNotificationMessage' | 'passwordResetByAdminNotificationMessage' | 'passwordResetIdentityDefault' | 'purchaseDeveloperNotificationMessage' | 'quotaLimitApproachingDeveloperNotificationMessage' | 'rejectDeveloperNotificationMessage' | 'requestDeveloperNotificationMessage' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [EmailTemplateUpdateParameterProperties](#emailtemplateupdateparameterproperties): Email Template Update Contract properties.
 * **type**: 'Microsoft.ApiManagement/service/templates' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -386,7 +386,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the identity.
 * **tenantId**: string (ReadOnly): The client tenant id of the identity.
-* **type**: 'SystemAssigned' (Required): The identity type. Currently the only supported type is 'SystemAssigned'.
+* **type**: 'SystemAssigned' | string (Required): The identity type. Currently the only supported type is 'SystemAssigned'.
 
 ## ApiManagementServiceProperties
 ### Properties
@@ -408,7 +408,7 @@
 * **scmUrl**: string (ReadOnly): SCM endpoint URL of the API Management service.
 * **targetProvisioningState**: string (ReadOnly): The provisioning state of the API Management service, which is targeted by the long running operation started on the service.
 * **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Configuration of a virtual network to which API Management service is deployed.
-* **virtualNetworkType**: 'External' | 'Internal' | 'None': The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.
+* **virtualNetworkType**: 'External' | 'Internal' | 'None' | string: The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.
 
 ## AdditionalLocation
 ### Properties
@@ -422,7 +422,7 @@
 ## ApiManagementServiceSkuProperties
 ### Properties
 * **capacity**: int: Capacity of the SKU (number of deployed units of the SKU). The default value is 1.
-* **name**: 'Basic' | 'Consumption' | 'Developer' | 'Premium' | 'Standard' (Required): Name of the Sku.
+* **name**: 'Basic' | 'Consumption' | 'Developer' | 'Premium' | 'Standard' | string (Required): Name of the Sku.
 
 ## VirtualNetworkConfiguration
 ### Properties
@@ -435,7 +435,7 @@
 * **certificate**: [CertificateInformation](#certificateinformation): SSL certificate information.
 * **certificatePassword**: string: Certificate Password.
 * **encodedCertificate**: string: Base64 Encoded certificate.
-* **storeName**: 'CertificateAuthority' | 'Root' (Required): The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.
+* **storeName**: 'CertificateAuthority' | 'Root' | string (Required): The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.
 
 ## CertificateInformation
 ### Properties
@@ -469,14 +469,14 @@
 * **description**: string: Description of API Version Set.
 * **displayName**: string (Required): Name of API Version Set
 * **versionHeaderName**: string: Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
-* **versioningScheme**: 'Header' | 'Query' | 'Segment' (Required): An value that determines where the API Version identifier will be located in a HTTP request.
+* **versioningScheme**: 'Header' | 'Query' | 'Segment' | string (Required): An value that determines where the API Version identifier will be located in a HTTP request.
 * **versionQueryName**: string: Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
 
 ## ApiCreateOrUpdateProperties
 ### Properties
 * **apiRevision**: string (WriteOnly): Describes the Revision of the Api. If no value is provided, default revision 1 is created
 * **apiRevisionDescription**: string (WriteOnly): Description of the Api Revision.
-* **apiType**: 'http' | 'soap' (WriteOnly): Type of Api to create. 
+* **apiType**: 'http' | 'soap' | string (WriteOnly): Type of Api to create. 
  * `http` creates a SOAP to REST API 
  * `soap` creates a SOAP pass-through API .
 * **apiVersion**: string (WriteOnly): Indicates the Version identifier of the API if the API is versioned
@@ -484,7 +484,7 @@
 * **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails) (WriteOnly): An API Version Set contains the common configuration for a set of API Versions relating
 * **apiVersionSetId**: string (WriteOnly): A resource identifier for the related ApiVersionSet.
 * **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (WriteOnly): API Authentication Settings.
-* **contentFormat**: 'openapi' | 'openapi+json' | 'openapi-link' | 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' (WriteOnly): Format of the Content in which the API is getting imported.
+* **contentFormat**: 'openapi' | 'openapi+json' | 'openapi-link' | 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' | string (WriteOnly): Format of the Content in which the API is getting imported.
 * **contentValue**: string (WriteOnly): Content value when Importing an API.
 * **description**: string (WriteOnly): Description of the API. May include HTML formatting tags.
 * **displayName**: string (WriteOnly): API name.
@@ -495,7 +495,7 @@
 * **serviceUrl**: string (WriteOnly): Absolute URL of the backend service implementing this API.
 * **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (WriteOnly): Subscription key parameter names details.
 * **subscriptionRequired**: bool (WriteOnly): Specifies whether an API or Product subscription is required for accessing the API.
-* **type**: 'http' | 'soap' (WriteOnly): Type of API.
+* **type**: 'http' | 'soap' | string (WriteOnly): Type of API.
 * **wsdlSelector**: [ApiCreateOrUpdatePropertiesWsdlSelector](#apicreateorupdatepropertieswsdlselector) (WriteOnly): Criteria to limit import of WSDL to a subset of the document.
 
 ## ApiVersionSetContractDetails
@@ -503,7 +503,7 @@
 * **description**: string (WriteOnly): Description of API Version Set.
 * **id**: string (WriteOnly): Identifier for existing API Version Set. Omit this value to create a new Version Set.
 * **versionHeaderName**: string (WriteOnly): Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
-* **versioningScheme**: 'Header' | 'Query' | 'Segment' (WriteOnly): An value that determines where the API Version identifier will be located in a HTTP request.
+* **versioningScheme**: 'Header' | 'Query' | 'Segment' | string (WriteOnly): An value that determines where the API Version identifier will be located in a HTTP request.
 * **versionQueryName**: string (WriteOnly): Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
 
 ## AuthenticationSettingsContract
@@ -519,7 +519,7 @@
 
 ## OpenIdAuthenticationSettingsContract
 ### Properties
-* **bearerTokenSendingMethods**: 'authorizationHeader' | 'query'[] (WriteOnly): How to send token to the server.
+* **bearerTokenSendingMethods**: 'authorizationHeader' | 'query' | string[] (WriteOnly): How to send token to the server.
 * **openidProviderId**: string (WriteOnly): OAuth authorization server identifier.
 
 ## SubscriptionKeyParameterNamesContract
@@ -534,7 +534,7 @@
 
 ## DiagnosticContractProperties
 ### Properties
-* **alwaysLog**: 'allErrors': Specifies for what type of messages sampling settings should not apply.
+* **alwaysLog**: 'allErrors' | string: Specifies for what type of messages sampling settings should not apply.
 * **backend**: [PipelineDiagnosticSettings](#pipelinediagnosticsettings): Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
 * **enableHttpCorrelationHeaders**: bool: Whether to process Correlation Headers coming to Api Management Service. Only applicable to Application Insights diagnostics. Default is true.
 * **frontend**: [PipelineDiagnosticSettings](#pipelinediagnosticsettings): Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
@@ -558,14 +558,14 @@
 ## SamplingSettings
 ### Properties
 * **percentage**: int: Rate of sampling for fixed-rate sampling.
-* **samplingType**: 'fixed': Sampling type.
+* **samplingType**: 'fixed' | string: Sampling type.
 
 ## IssueContractProperties
 ### Properties
 * **apiId**: string: A resource identifier for the API the issue was created for.
 * **createdDate**: string: Date and time when the issue was created.
 * **description**: string (Required): Text describing the issue.
-* **state**: 'closed' | 'open' | 'proposed' | 'removed' | 'resolved': Status of the issue.
+* **state**: 'closed' | 'open' | 'proposed' | 'removed' | 'resolved' | string: Status of the issue.
 * **title**: string (Required): The issue title.
 * **userId**: string (Required): A resource identifier for the user created the issue.
 
@@ -625,7 +625,7 @@
 
 ## PolicyContractProperties
 ### Properties
-* **contentFormat**: 'rawxml' | 'rawxml-link' | 'xml' | 'xml-link': Format of the policyContent.
+* **contentFormat**: 'rawxml' | 'rawxml-link' | 'xml' | 'xml-link' | string: Format of the policyContent.
 * **policyContent**: string (Required): Json escaped Xml Encoded contents of the Policy.
 
 ## TagContractProperties
@@ -659,15 +659,15 @@
 ### Properties
 * **authorizationEndpoint**: string (Required): OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.
 * **authorizationMethods**: 'DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'PATCH' | 'POST' | 'PUT' | 'TRACE'[]: HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.
-* **bearerTokenSendingMethods**: 'authorizationHeader' | 'query'[]: Specifies the mechanism by which access token is passed to the API.
-* **clientAuthenticationMethod**: 'Basic' | 'Body'[]: Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.
+* **bearerTokenSendingMethods**: 'authorizationHeader' | 'query' | string[]: Specifies the mechanism by which access token is passed to the API.
+* **clientAuthenticationMethod**: 'Basic' | 'Body' | string[]: Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.
 * **clientId**: string (Required): Client or app id registered with this authorization server.
 * **clientRegistrationEndpoint**: string (Required): Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.
 * **clientSecret**: string: Client or app secret registered with this authorization server.
 * **defaultScope**: string: Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.
 * **description**: string: Description of the authorization server. Can contain HTML formatting tags.
 * **displayName**: string (Required): User-friendly authorization server name.
-* **grantTypes**: 'authorizationCode' | 'clientCredentials' | 'implicit' | 'resourceOwnerPassword'[] (Required): Form of an authorization grant, which the client uses to request the access token.
+* **grantTypes**: 'authorizationCode' | 'clientCredentials' | 'implicit' | 'resourceOwnerPassword' | string[] (Required): Form of an authorization grant, which the client uses to request the access token.
 * **resourceOwnerPassword**: string: Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
 * **resourceOwnerUsername**: string: Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
 * **supportState**: bool: If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.
@@ -684,7 +684,7 @@
 * **credentials**: [BackendCredentialsContract](#backendcredentialscontract): Details of the Credentials used to connect to Backend.
 * **description**: string: Backend Description.
 * **properties**: [BackendProperties](#backendproperties): Properties specific to the Backend Type.
-* **protocol**: 'http' | 'soap' (Required): Backend communication protocol.
+* **protocol**: 'http' | 'soap' | string (Required): Backend communication protocol.
 * **proxy**: [BackendProxyContract](#backendproxycontract): Details of the Backend WebProxy Server to use in the Request to Backend.
 * **resourceId**: string: Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
 * **title**: string: Backend Title.
@@ -773,7 +773,7 @@
 * **profileEditingPolicyName**: string: Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.
 * **signinPolicyName**: string: Signin Policy Name. Only applies to AAD B2C Identity Provider.
 * **signupPolicyName**: string: Signup Policy Name. Only applies to AAD B2C Identity Provider.
-* **type**: 'aad' | 'aadB2C' | 'facebook' | 'google' | 'microsoft' | 'twitter'
+* **type**: 'aad' | 'aadB2C' | 'facebook' | 'google' | 'microsoft' | 'twitter' | string
 
 ## LoggerContractProperties
 ### Properties
@@ -781,7 +781,7 @@
 Instrumentation key for applicationInsights logger.
 * **description**: string: Logger description.
 * **isBuffered**: bool: Whether records are buffered in the logger before publishing. Default is assumed to be true.
-* **loggerType**: 'applicationInsights' | 'azureEventHub' (Required): Logger type.
+* **loggerType**: 'applicationInsights' | 'azureEventHub' | string (Required): Logger type.
 * **resourceId**: string: Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).
 
 ## LoggerContractPropertiesCredentials
@@ -888,7 +888,7 @@ Instrumentation key for applicationInsights logger.
 
 ## UserCreateParameterProperties
 ### Properties
-* **confirmation**: 'invite' | 'signup' (WriteOnly): Determines the type of confirmation e-mail that will be sent to the newly created user.
+* **confirmation**: 'invite' | 'signup' | string (WriteOnly): Determines the type of confirmation e-mail that will be sent to the newly created user.
 * **email**: string (Required): Email address. Must not be empty and must be unique within the service instance.
 * **firstName**: string (Required): First name.
 * **groups**: [GroupContractProperties](#groupcontractproperties)[] (ReadOnly): Collection of groups user is part of.
@@ -897,7 +897,7 @@ Instrumentation key for applicationInsights logger.
 * **note**: string: Optional note about a user set by the administrator.
 * **password**: string (WriteOnly): User Password. If no value is provided, a default password is generated.
 * **registrationDate**: string (ReadOnly): Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-* **state**: 'active' | 'blocked' | 'deleted' | 'pending': Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
+* **state**: 'active' | 'blocked' | 'deleted' | 'pending' | string: Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
 
 ## GroupContractProperties
 ### Properties

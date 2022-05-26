@@ -43,7 +43,7 @@
 * **osProfile**: [MachinePropertiesOsProfile](#machinepropertiesosprofile): Specifies the operating system settings for the hybrid machine.
 * **osVersion**: string (ReadOnly): The version of Operating System running on the hybrid machine.
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
-* **status**: 'Connected' | 'Disconnected' | 'Error' (ReadOnly): The status of the hybrid machine agent.
+* **status**: 'Connected' | 'Disconnected' | 'Error' | string (ReadOnly): The status of the hybrid machine agent.
 * **vmId**: string: Specifies the hybrid machine unique ID.
 
 ## ErrorDetail
@@ -64,7 +64,7 @@
 ### Properties
 * **code**: string: The status code.
 * **displayStatus**: string: The short localizable label for the status.
-* **level**: 'Error' | 'Info' | 'Warning': The level code.
+* **level**: 'Error' | 'Info' | 'Warning' | string: The level code.
 * **message**: string: The detailed status message, including for alerts and error messages.
 * **time**: string: The time of the status.
 

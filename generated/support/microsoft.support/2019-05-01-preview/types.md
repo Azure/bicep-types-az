@@ -34,7 +34,7 @@
 * **serviceDisplayName**: string (ReadOnly): Localized name of Azure service.
 * **serviceId**: string (Required): This is the resource id of the Azure service resource associated with the support ticket.
 * **serviceLevelAgreement**: [ServiceLevelAgreement](#servicelevelagreement): Service Level Agreement details for a support ticket.
-* **severity**: 'critical' | 'minimal' | 'moderate' (Required): A value that indicates the urgency of the case, which in turn determines the response time according to the service level agreement of the technical support plan you have with Azure.
+* **severity**: 'critical' | 'minimal' | 'moderate' | string (Required): A value that indicates the urgency of the case, which in turn determines the response time according to the service level agreement of the technical support plan you have with Azure.
 * **status**: string (ReadOnly): Status of the support ticket.
 * **supportEngineer**: [SupportEngineer](#supportengineer): Support engineer information.
 * **supportPlanType**: string (ReadOnly): Support plan type associated with the support ticket.
@@ -49,7 +49,7 @@
 * **firstName**: string (Required): First name.
 * **lastName**: string (Required): Last name.
 * **phoneNumber**: string: Phone number. This is required if preferred contact method is phone.
-* **preferredContactMethod**: 'email' | 'phone' (Required): Preferred contact method.
+* **preferredContactMethod**: 'email' | 'phone' | string (Required): Preferred contact method.
 * **preferredSupportLanguage**: string (Required): Preferred language of support from Azure. Support languages vary based on the severity you choose for your support ticket. Learn more at <a  target='_blank' href='https://azure.microsoft.com/support/plans/response/'>Azure Severity and responsiveness</a>. Use the standard language-country code. Valid values are 'en-us' for English, 'zh-hans' for Chinese, 'es-es' for Spanish, 'fr-fr' for French, 'ja-jp' for Japanese, 'ko-kr' for Korean, 'ru-ru' for Russian, 'pt-br' for Portuguese, 'it-it' for Italian, 'zh-tw' for Chinese and 'de-de' for German.
 * **preferredTimeZone**: string (Required): Time zone of the user. This is the name of the time zone from <a  target='_blank' href='https://support.microsoft.com/en-us/help/973627/microsoft-time-zone-index-values'>Microsoft Time Zone Index Values</a>.
 * **primaryEmailAddress**: string (Required): Primary email address.
@@ -82,8 +82,8 @@
 ## CommunicationDetailsProperties
 ### Properties
 * **body**: string (Required): Body of the communication
-* **communicationDirection**: 'inbound' | 'outbound' (ReadOnly): Direction of communication
-* **communicationType**: 'phone' | 'web' (ReadOnly): Communication type
+* **communicationDirection**: 'inbound' | 'outbound' | string (ReadOnly): Direction of communication
+* **communicationType**: 'phone' | 'web' | string (ReadOnly): Communication type
 * **createdDate**: string (ReadOnly): Time in UTC (ISO 8601 format) when the communication was created.
 * **sender**: string: Email address of the sender
 * **subject**: string (Required): Subject of the communication

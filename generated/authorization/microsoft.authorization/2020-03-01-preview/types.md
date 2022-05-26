@@ -18,7 +18,7 @@
 * **createdOn**: string (ReadOnly): Time it was created
 * **delegatedManagedIdentityResourceId**: string: Id of the delegated managed identity resource
 * **principalId**: string (Required): The principal ID.
-* **principalType**: 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User': The principal type of the assigned principal ID.
+* **principalType**: 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User' | string: The principal type of the assigned principal ID.
 * **roleDefinitionId**: string (Required): The role definition ID.
 * **scope**: string: The role assignment scope.
 * **updatedBy**: string (ReadOnly): Id of the user who updated the assignment

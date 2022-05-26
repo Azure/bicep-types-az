@@ -95,7 +95,7 @@
 * **serverRootCACertificate**: string: When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.
 * **site**: string: The Active Directory site the service will limit Domain Controller discovery to
 * **smbServerName**: string: NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
-* **status**: 'Created' | 'Deleted' | 'Error' | 'InUse' | 'Updating' (ReadOnly): Status of the Active Directory
+* **status**: 'Created' | 'Deleted' | 'Error' | 'InUse' | 'Updating' | string (ReadOnly): Status of the Active Directory
 * **statusDetails**: string (ReadOnly): Any details in regards to the Status of the Active Directory
 * **username**: string: Username of Active Directory domain administrator
 
@@ -131,8 +131,8 @@
 ### Properties
 * **poolId**: string (ReadOnly): UUID v4 used to identify the Pool
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **qosType**: 'Auto' | 'Manual': The qos type of the pool
-* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' (Required): The service level of the file system
+* **qosType**: 'Auto' | 'Manual' | string: The qos type of the pool
+* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' | string (Required): The service level of the file system
 * **size**: int (Required): Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
 * **totalThroughputMibps**: int (ReadOnly): Total throughput of pool in Mibps
 * **utilizedThroughputMibps**: int (ReadOnly): Utilized throughput of pool in Mibps
@@ -155,8 +155,8 @@
 * **mountTargets**: [MountTargetProperties](#mounttargetproperties)[] (ReadOnly): List of mount targets
 * **protocolTypes**: string[]: Set of protocol types, default NFSv3, CIFS for SMB protocol
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **securityStyle**: 'ntfs' | 'unix': The security style of volume, default unix, ntfs for dual protocol or CIFS protocol
-* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra': The service level of the file system
+* **securityStyle**: 'ntfs' | 'unix' | string: The security style of volume, default unix, ntfs for dual protocol or CIFS protocol
+* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' | string: The service level of the file system
 * **snapshotDirectoryVisible**: bool: If enabled (true) the volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots (default to true).
 * **snapshotId**: string: UUID v4 or resource identifier used to identify the Snapshot.
 * **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
@@ -179,11 +179,11 @@
 
 ## ReplicationObject
 ### Properties
-* **endpointType**: 'dst' | 'src': Indicates whether the local volume is the source or destination for the Volume Replication
+* **endpointType**: 'dst' | 'src' | string: Indicates whether the local volume is the source or destination for the Volume Replication
 * **remoteVolumeRegion**: string: The remote region for the other end of the Volume Replication.
 * **remoteVolumeResourceId**: string (Required): The resource ID of the remote volume.
 * **replicationId**: string: Id
-* **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' (Required): Schedule
+* **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' | string (Required): Schedule
 
 ## VolumeSnapshotProperties
 ### Properties
@@ -225,7 +225,7 @@
 ## BackupProperties
 ### Properties
 * **backupId**: string (ReadOnly): UUID v4 used to identify the Backup
-* **backupType**: 'Manual' | 'Scheduled' (ReadOnly): Type of backup Manual or Scheduled
+* **backupType**: 'Manual' | 'Scheduled' | string (ReadOnly): Type of backup Manual or Scheduled
 * **creationDate**: string (ReadOnly): The creation date of the backup
 * **label**: string: Label for backup
 * **provisioningState**: string (ReadOnly): Azure lifecycle management

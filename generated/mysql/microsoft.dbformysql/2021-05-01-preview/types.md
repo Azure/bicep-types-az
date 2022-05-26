@@ -46,30 +46,30 @@
 * **administratorLoginPassword**: string (WriteOnly): The password of the administrator login (required for server creation).
 * **availabilityZone**: string: availability Zone information of the server.
 * **backup**: [Backup](#backup): Storage Profile properties of a server
-* **createMode**: 'Default' | 'GeoRestore' | 'PointInTimeRestore' | 'Replica' (WriteOnly): The mode to create a new MySQL server.
+* **createMode**: 'Default' | 'GeoRestore' | 'PointInTimeRestore' | 'Replica' | string (WriteOnly): The mode to create a new MySQL server.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
 * **highAvailability**: [HighAvailability](#highavailability): Network related properties of a server
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window of a server.
 * **network**: [Network](#network): Network related properties of a server
 * **replicaCapacity**: int (ReadOnly): The maximum number of replicas that a primary server can have.
-* **replicationRole**: 'None' | 'Replica' | 'Source': The replication role.
+* **replicationRole**: 'None' | 'Replica' | 'Source' | string: The replication role.
 * **restorePointInTime**: string (WriteOnly): Restore point creation time (ISO8601 format), specifying the time to restore from.
 * **sourceServerResourceId**: string: The source MySQL server id.
-* **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' (ReadOnly): The state of a server.
+* **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): The state of a server.
 * **storage**: [Storage](#storage): Storage Profile properties of a server
-* **version**: '5.7' | '8.0.21': The version of a server.
+* **version**: '5.7' | '8.0.21' | string: The version of a server.
 
 ## Backup
 ### Properties
 * **backupRetentionDays**: int: Backup retention days for the server.
 * **earliestRestoreDate**: string (ReadOnly): Earliest restore point creation time (ISO8601 format)
-* **geoRedundantBackup**: 'Disabled' | 'Enabled': Enum to indicate whether value is 'Enabled' or 'Disabled'
+* **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: Enum to indicate whether value is 'Enabled' or 'Disabled'
 
 ## HighAvailability
 ### Properties
-* **mode**: 'Disabled' | 'Enabled' | 'SameZone' | 'ZoneRedundant': High availability mode for a server.
+* **mode**: 'Disabled' | 'Enabled' | 'SameZone' | 'ZoneRedundant' | string: High availability mode for a server.
 * **standbyAvailabilityZone**: string: Availability zone of the standby server.
-* **state**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' (ReadOnly): The state of server high availability.
+* **state**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | string (ReadOnly): The state of server high availability.
 
 ## MaintenanceWindow
 ### Properties
@@ -82,11 +82,11 @@
 ### Properties
 * **delegatedSubnetResourceId**: string: Delegated subnet resource id used to setup vnet for a server.
 * **privateDnsZoneResourceId**: string: Private DNS zone resource id.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly): Enum to indicate whether value is 'Enabled' or 'Disabled'
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string (ReadOnly): Enum to indicate whether value is 'Enabled' or 'Disabled'
 
 ## Storage
 ### Properties
-* **autoGrow**: 'Disabled' | 'Enabled': Enum to indicate whether value is 'Enabled' or 'Disabled'
+* **autoGrow**: 'Disabled' | 'Enabled' | string: Enum to indicate whether value is 'Enabled' or 'Disabled'
 * **iops**: int: Storage IOPS for a server.
 * **storageSizeGB**: int: Max storage size allowed for a server.
 * **storageSku**: string (ReadOnly): The sku name of the server storage.
@@ -94,16 +94,16 @@
 ## Sku
 ### Properties
 * **name**: string (Required): The name of the sku, e.g. Standard_D32s_v3.
-* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' (Required): The tier of the particular SKU, e.g. GeneralPurpose.
+* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' | string (Required): The tier of the particular SKU, e.g. GeneralPurpose.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties

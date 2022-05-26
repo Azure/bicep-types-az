@@ -15,7 +15,7 @@
 ### Properties
 * **createdDate**: string (ReadOnly): Created date
 * **lastUpdatedDate**: string (ReadOnly): Last updated date
-* **provisioningState**: 'Cancelled' | 'Failed' | 'Succeeded' (ReadOnly): Represent the current state of the Reservation.
+* **provisioningState**: 'Cancelled' | 'Failed' | 'Succeeded' | string (ReadOnly): Represent the current state of the Reservation.
 
 ## Sku
 ### Properties

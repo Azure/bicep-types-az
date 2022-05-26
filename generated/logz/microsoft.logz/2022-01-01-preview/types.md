@@ -109,17 +109,17 @@
 ### Properties
 * **principalId**: string (ReadOnly): The identity ID.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned' | 'UserAssigned'
+* **type**: 'SystemAssigned' | 'UserAssigned' | string
 
 ## MonitorProperties
 ### Properties
-* **liftrResourceCategory**: 'MonitorLogs' | 'Unknown' (ReadOnly)
+* **liftrResourceCategory**: 'MonitorLogs' | 'Unknown' | string (ReadOnly)
 * **liftrResourcePreference**: int (ReadOnly): The priority of the resource.
 * **logzOrganizationProperties**: [LogzOrganizationProperties](#logzorganizationproperties)
-* **marketplaceSubscriptionStatus**: 'Active' | 'Suspended': Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
-* **monitoringStatus**: 'Disabled' | 'Enabled': Flag specifying if the resource monitoring is enabled or disabled.
+* **marketplaceSubscriptionStatus**: 'Active' | 'Suspended' | string: Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
+* **monitoringStatus**: 'Disabled' | 'Enabled' | string: Flag specifying if the resource monitoring is enabled or disabled.
 * **planData**: [PlanData](#plandata)
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly): Flag specifying if the resource provisioning state as tracked by ARM.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Flag specifying if the resource provisioning state as tracked by ARM.
 * **userInfo**: [UserInfo](#userinfo)
 
 ## LogzOrganizationProperties
@@ -147,10 +147,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## LogzMonitorResourceTags
 ### Properties
@@ -165,7 +165,7 @@
 ## MonitoringTagRulesProperties
 ### Properties
 * **logRules**: [LogRules](#logrules): Set of rules for sending logs for the Monitor resource.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly): Flag specifying if the resource provisioning state as tracked by ARM.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Flag specifying if the resource provisioning state as tracked by ARM.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 
 ## LogRules
@@ -177,7 +177,7 @@
 
 ## FilteringTag
 ### Properties
-* **action**: 'Exclude' | 'Include': Valid actions for a filtering tag. Exclusion takes priority over inclusion.
+* **action**: 'Exclude' | 'Include' | string: Valid actions for a filtering tag. Exclusion takes priority over inclusion.
 * **name**: string: The name (also known as the key) of the tag.
 * **value**: string: The value of the tag.
 
@@ -189,7 +189,7 @@
 ## MetricsTagRulesProperties
 ### Properties
 * **metricRules**: [MetricRules](#metricrules)[]: Array of MetricRules
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly): Flag specifying if the resource provisioning state as tracked by ARM.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Flag specifying if the resource provisioning state as tracked by ARM.
 * **sendMetrics**: bool: Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 
@@ -201,8 +201,8 @@
 ## LogzSingleSignOnProperties
 ### Properties
 * **enterpriseAppId**: string: The Id of the Enterprise App used for Single sign-on.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly): Flag specifying if the resource provisioning state as tracked by ARM.
-* **singleSignOnState**: 'Disable' | 'Enable' | 'Existing' | 'Initial': Various states of the SSO resource
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Flag specifying if the resource provisioning state as tracked by ARM.
+* **singleSignOnState**: 'Disable' | 'Enable' | 'Existing' | 'Initial' | string: Various states of the SSO resource
 * **singleSignOnUrl**: string: The login URL specific to this Logz Organization.
 
 ## MonitoredResourceListResponse
@@ -235,7 +235,7 @@
 
 ## UserRoleResponse
 ### Properties
-* **role**: 'Admin' | 'None' | 'User' (ReadOnly): User roles on configured in Logz.io account.
+* **role**: 'Admin' | 'None' | 'User' | string (ReadOnly): User roles on configured in Logz.io account.
 
 ## VMResourcesListResponse
 ### Properties

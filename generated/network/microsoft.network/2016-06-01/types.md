@@ -202,7 +202,7 @@
 * **frontendPorts**: [ApplicationGatewayFrontendPort](#applicationgatewayfrontendport)[]: Frontend ports of application gateway resource
 * **gatewayIPConfigurations**: [ApplicationGatewayIPConfiguration](#applicationgatewayipconfiguration)[]: Subnets of application gateway resource
 * **httpListeners**: [ApplicationGatewayHttpListener](#applicationgatewayhttplistener)[]: HTTP listeners of application gateway resource
-* **operationalState**: 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Operational state of application gateway resource
+* **operationalState**: 'Running' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): Operational state of application gateway resource
 * **probes**: [ApplicationGatewayProbe](#applicationgatewayprobe)[]: Probes of application gateway resource
 * **provisioningState**: string: Provisioning state of the ApplicationGateway resource Updating/Deleting/Failed
 * **requestRoutingRules**: [ApplicationGatewayRequestRoutingRule](#applicationgatewayrequestroutingrule)[]: Request routing rules of application gateway resource
@@ -256,8 +256,8 @@
 * **loadBalancerInboundNatRules**: [InboundNatRule](#inboundnatrule)[]: Gets or sets list of references of LoadBalancerInboundNatRules
 * **primary**: bool: Gets whether this is a primary customer address on the NIC
 * **privateIPAddress**: string
-* **privateIPAddressVersion**: 'IPv4' | 'IPv6': Gets or sets PrivateIP address version (IPv4/IPv6)
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static': PrivateIP allocation method (Static/Dynamic)
+* **privateIPAddressVersion**: 'IPv4' | 'IPv6' | string: Gets or sets PrivateIP address version (IPv4/IPv6)
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: PrivateIP allocation method (Static/Dynamic)
 * **provisioningState**: string
 * **publicIPAddress**: [PublicIPAddress](#publicipaddress): PublicIPAddress resource
 * **subnet**: [Subnet](#subnet): Subnet in a VirtualNetwork resource
@@ -295,7 +295,7 @@
 * **frontendIPConfiguration**: [SubResource](#subresource)
 * **frontendPort**: int: Gets or sets the port for the external endpoint. You can specify any port number you choose, but the port numbers specified for each role in the service must be unique. Possible values range between 1 and 65535, inclusive
 * **idleTimeoutInMinutes**: int: Gets or sets the timeout for the Tcp idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to Tcp
-* **protocol**: 'Tcp' | 'Udp': Gets or sets the transport protocol for the external endpoint. Possible values are Udp or Tcp
+* **protocol**: 'Tcp' | 'Udp' | string: Gets or sets the transport protocol for the external endpoint. Possible values are Udp or Tcp
 * **provisioningState**: string: Gets provisioning state of the PublicIP resource Updating/Deleting/Failed
 
 ## PublicIPAddress
@@ -315,8 +315,8 @@
 * **ipAddress**: string
 * **ipConfiguration**: [IPConfiguration](#ipconfiguration) (ReadOnly): IPConfiguration
 * **provisioningState**: string: Gets provisioning state of the PublicIP resource Updating/Deleting/Failed
-* **publicIPAddressVersion**: 'IPv4' | 'IPv6': Gets or sets PrivateIP address version (IPv4/IPv6)
-* **publicIPAllocationMethod**: 'Dynamic' | 'Static': PrivateIP allocation method (Static/Dynamic)
+* **publicIPAddressVersion**: 'IPv4' | 'IPv6' | string: Gets or sets PrivateIP address version (IPv4/IPv6)
+* **publicIPAllocationMethod**: 'Dynamic' | 'Static' | string: PrivateIP allocation method (Static/Dynamic)
 * **resourceGuid**: string: Gets or sets resource guid property of the PublicIP resource
 
 ## PublicIPAddressDnsSettings
@@ -335,7 +335,7 @@
 ## IPConfigurationPropertiesFormat
 ### Properties
 * **privateIPAddress**: string: Gets or sets the privateIPAddress of the IP Configuration
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static': PrivateIP allocation method (Static/Dynamic)
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: PrivateIP allocation method (Static/Dynamic)
 * **provisioningState**: string: Gets provisioning state of the PublicIP resource Updating/Deleting/Failed
 * **publicIPAddress**: [PublicIPAddress](#publicipaddress): PublicIPAddress resource
 * **subnet**: [Subnet](#subnet): Subnet in a VirtualNetwork resource
@@ -384,13 +384,13 @@
 
 ## SecurityRulePropertiesFormat
 ### Properties
-* **access**: 'Allow' | 'Deny' (Required): Gets or sets network traffic is allowed or denied. Possible values are 'Allow' and 'Deny'
+* **access**: 'Allow' | 'Deny' | string (Required): Gets or sets network traffic is allowed or denied. Possible values are 'Allow' and 'Deny'
 * **description**: string: Gets or sets a description for this rule. Restricted to 140 chars.
 * **destinationAddressPrefix**: string (Required): Gets or sets destination address prefix. CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used.
 * **destinationPortRange**: string: Gets or sets Destination Port or Range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
-* **direction**: 'Inbound' | 'Outbound' (Required): Gets or sets the direction of the rule.InBound or Outbound. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
+* **direction**: 'Inbound' | 'Outbound' | string (Required): Gets or sets the direction of the rule.InBound or Outbound. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
 * **priority**: int: Gets or sets the priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
-* **protocol**: '*' | 'Tcp' | 'Udp' (Required): Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*).
+* **protocol**: '*' | 'Tcp' | 'Udp' | string (Required): Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*).
 * **provisioningState**: string: Gets provisioning state of the PublicIP resource Updating/Deleting/Failed
 * **sourceAddressPrefix**: string (Required): Gets or sets source address prefix. CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
 * **sourcePortRange**: string: Gets or sets Source Port or Range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
@@ -475,7 +475,7 @@
 ### Properties
 * **addressPrefix**: string: Gets or sets the destination CIDR to which the route applies.
 * **nextHopIpAddress**: string: Gets or sets the IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
-* **nextHopType**: 'Internet' | 'None' | 'VirtualAppliance' | 'VirtualNetworkGateway' | 'VnetLocal' (Required): Gets or sets the type of Azure hop the packet should be sent to.
+* **nextHopType**: 'Internet' | 'None' | 'VirtualAppliance' | 'VirtualNetworkGateway' | 'VnetLocal' | string (Required): Gets or sets the type of Azure hop the packet should be sent to.
 * **provisioningState**: string: Gets provisioning state of the resource Updating/Deleting/Failed
 
 ## ResourceTags
@@ -498,10 +498,10 @@
 ## ApplicationGatewayBackendHttpSettingsPropertiesFormat
 ### Properties
 * **authenticationCertificates**: [SubResource](#subresource)[]: Array of references to Application Gateway Authentication Certificates
-* **cookieBasedAffinity**: 'Disabled' | 'Enabled': Cookie affinity
+* **cookieBasedAffinity**: 'Disabled' | 'Enabled' | string: Cookie affinity
 * **port**: int: Port
 * **probe**: [SubResource](#subresource)
-* **protocol**: 'Http' | 'Https': Protocol
+* **protocol**: 'Http' | 'Https' | string: Protocol
 * **provisioningState**: string: Provisioning state of the backend http settings resource Updating/Deleting/Failed
 * **requestTimeout**: int: Request timeout
 
@@ -515,7 +515,7 @@
 ## ApplicationGatewayFrontendIPConfigurationPropertiesFormat
 ### Properties
 * **privateIPAddress**: string: PrivateIPAddress of the Network Interface IP Configuration
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static': PrivateIP allocation method (Static/Dynamic)
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: PrivateIP allocation method (Static/Dynamic)
 * **provisioningState**: string: Provisioning state of the PublicIP resource Updating/Deleting/Failed
 * **publicIPAddress**: [SubResource](#subresource)
 * **subnet**: [SubResource](#subresource)
@@ -556,7 +556,7 @@
 * **frontendIPConfiguration**: [SubResource](#subresource)
 * **frontendPort**: [SubResource](#subresource)
 * **hostName**: string: Host name of http listener
-* **protocol**: 'Http' | 'Https': Protocol
+* **protocol**: 'Http' | 'Https' | string: Protocol
 * **provisioningState**: string: Provisioning state of the http listener resource Updating/Deleting/Failed
 * **requireServerNameIndication**: bool: RequireServerNameIndication of http listener
 * **sslCertificate**: [SubResource](#subresource)
@@ -573,7 +573,7 @@
 * **host**: string: Host to send probe to
 * **interval**: int: Probing interval in seconds
 * **path**: string: Relative path of probe
-* **protocol**: 'Http' | 'Https': Protocol
+* **protocol**: 'Http' | 'Https' | string: Protocol
 * **provisioningState**: string: Provisioning state of the backend http settings resource Updating/Deleting/Failed
 * **timeout**: int: Probing timeout in seconds
 * **unhealthyThreshold**: int: Probing unhealthy threshold
@@ -591,14 +591,14 @@
 * **backendHttpSettings**: [SubResource](#subresource)
 * **httpListener**: [SubResource](#subresource)
 * **provisioningState**: string: Provisioning state of the request routing rule resource Updating/Deleting/Failed
-* **ruleType**: 'Basic' | 'PathBasedRouting': Rule type
+* **ruleType**: 'Basic' | 'PathBasedRouting' | string: Rule type
 * **urlPathMap**: [SubResource](#subresource)
 
 ## ApplicationGatewaySku
 ### Properties
 * **capacity**: int: Capacity (instance count) of application gateway
-* **name**: 'Standard_Large' | 'Standard_Medium' | 'Standard_Small': Name of application gateway SKU
-* **tier**: 'Standard': Tier of application gateway
+* **name**: 'Standard_Large' | 'Standard_Medium' | 'Standard_Small' | string: Name of application gateway SKU
+* **tier**: 'Standard' | string: Tier of application gateway
 
 ## ApplicationGatewaySslCertificate
 ### Properties
@@ -616,7 +616,7 @@
 
 ## ApplicationGatewaySslPolicy
 ### Properties
-* **disabledSslProtocols**: 'TLSv1_0' | 'TLSv1_1' | 'TLSv1_2'[]: SSL protocols to be disabled on Application Gateway
+* **disabledSslProtocols**: 'TLSv1_0' | 'TLSv1_1' | 'TLSv1_2' | string[]: SSL protocols to be disabled on Application Gateway
 
 ## ApplicationGatewayUrlPathMap
 ### Properties
@@ -654,8 +654,8 @@
 ## VirtualNetworkGatewayConnectionPropertiesFormat
 ### Properties
 * **authorizationKey**: string: The authorizationKey.
-* **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown': Virtual network Gateway connection status
-* **connectionType**: 'ExpressRoute' | 'IPsec' | 'VPNClient' | 'Vnet2Vnet': Gateway connection type IPsec/Dedicated/VpnClient/Vnet2Vnet
+* **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown' | string: Virtual network Gateway connection status
+* **connectionType**: 'ExpressRoute' | 'IPsec' | 'VPNClient' | 'Vnet2Vnet' | string: Gateway connection type IPsec/Dedicated/VpnClient/Vnet2Vnet
 * **egressBytesTransferred**: int: The Egress Bytes Transferred in this connection
 * **enableBgp**: bool: EnableBgp Flag
 * **ingressBytesTransferred**: int: The Ingress Bytes Transferred in this connection
@@ -717,13 +717,13 @@
 * **bgpSettings**: [BgpSettings](#bgpsettings)
 * **enableBgp**: bool: EnableBgp Flag
 * **gatewayDefaultSite**: [SubResource](#subresource)
-* **gatewayType**: 'ExpressRoute' | 'Vpn': The type of this virtual network gateway.
+* **gatewayType**: 'ExpressRoute' | 'Vpn' | string: The type of this virtual network gateway.
 * **ipConfigurations**: [VirtualNetworkGatewayIPConfiguration](#virtualnetworkgatewayipconfiguration)[]: IpConfigurations for Virtual network gateway.
 * **provisioningState**: string: Gets provisioning state of the VirtualNetworkGateway resource Updating/Deleting/Failed
 * **resourceGuid**: string: Gets or sets resource guid property of the VirtualNetworkGateway resource
 * **sku**: [VirtualNetworkGatewaySku](#virtualnetworkgatewaysku): VirtualNetworkGatewaySku details
 * **vpnClientConfiguration**: [VpnClientConfiguration](#vpnclientconfiguration): VpnClientConfiguration for P2S client
-* **vpnType**: 'PolicyBased' | 'RouteBased': The type of this virtual network gateway.
+* **vpnType**: 'PolicyBased' | 'RouteBased' | string: The type of this virtual network gateway.
 
 ## VirtualNetworkGatewayIPConfiguration
 ### Properties
@@ -734,7 +734,7 @@
 
 ## VirtualNetworkGatewayIPConfigurationPropertiesFormat
 ### Properties
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static': PrivateIP allocation method (Static/Dynamic)
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: PrivateIP allocation method (Static/Dynamic)
 * **provisioningState**: string: Gets provisioning state of the PublicIP resource Updating/Deleting/Failed
 * **publicIPAddress**: [SubResource](#subresource)
 * **subnet**: [SubResource](#subresource)
@@ -742,8 +742,8 @@
 ## VirtualNetworkGatewaySku
 ### Properties
 * **capacity**: int: The capacity
-* **name**: 'Basic' | 'HighPerformance' | 'Standard' | 'UltraPerformance': Gateway sku name -Basic/HighPerformance/Standard/UltraPerformance
-* **tier**: 'Basic' | 'HighPerformance' | 'Standard' | 'UltraPerformance': Gateway sku tier -Basic/HighPerformance/Standard/UltraPerformance
+* **name**: 'Basic' | 'HighPerformance' | 'Standard' | 'UltraPerformance' | string: Gateway sku name -Basic/HighPerformance/Standard/UltraPerformance
+* **tier**: 'Basic' | 'HighPerformance' | 'Standard' | 'UltraPerformance' | string: Gateway sku tier -Basic/HighPerformance/Standard/UltraPerformance
 
 ## VpnClientConfiguration
 ### Properties
@@ -796,7 +796,7 @@
 * **serviceKey**: string: Gets or sets ServiceKey
 * **serviceProviderNotes**: string: Gets or sets ServiceProviderNotes
 * **serviceProviderProperties**: [ExpressRouteCircuitServiceProviderProperties](#expressroutecircuitserviceproviderproperties): Contains ServiceProviderProperties in an ExpressRouteCircuit
-* **serviceProviderProvisioningState**: 'Deprovisioning' | 'NotProvisioned' | 'Provisioned' | 'Provisioning': Gets or sets ServiceProviderProvisioningState state of the resource
+* **serviceProviderProvisioningState**: 'Deprovisioning' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | string: Gets or sets ServiceProviderProvisioningState state of the resource
 
 ## ExpressRouteCircuitAuthorization
 ### Properties
@@ -808,7 +808,7 @@
 ## AuthorizationPropertiesFormat
 ### Properties
 * **authorizationKey**: string: Gets or sets the authorization key
-* **authorizationUseStatus**: 'Available' | 'InUse': Gets or sets AuthorizationUseStatus
+* **authorizationUseStatus**: 'Available' | 'InUse' | string: Gets or sets AuthorizationUseStatus
 * **provisioningState**: string: Gets provisioning state of the PublicIP resource Updating/Deleting/Failed
 
 ## ExpressRouteCircuitPeering
@@ -825,21 +825,21 @@
 * **lastModifiedBy**: string: Gets whether the provider or the customer last modified the peering
 * **microsoftPeeringConfig**: [ExpressRouteCircuitPeeringConfig](#expressroutecircuitpeeringconfig): Specifies the peering config
 * **peerASN**: int: Gets or sets the peer ASN
-* **peeringType**: 'AzurePrivatePeering' | 'AzurePublicPeering' | 'MicrosoftPeering': Gets or sets PeeringType
+* **peeringType**: 'AzurePrivatePeering' | 'AzurePublicPeering' | 'MicrosoftPeering' | string: Gets or sets PeeringType
 * **primaryAzurePort**: string: Gets or sets the primary port
 * **primaryPeerAddressPrefix**: string: Gets or sets the primary address prefix
 * **provisioningState**: string: Gets provisioning state of the PublicIP resource Updating/Deleting/Failed
 * **secondaryAzurePort**: string: Gets or sets the secondary port
 * **secondaryPeerAddressPrefix**: string: Gets or sets the secondary address prefix
 * **sharedKey**: string: Gets or sets the shared key
-* **state**: 'Disabled' | 'Enabled': Gets or sets state of Peering
+* **state**: 'Disabled' | 'Enabled' | string: Gets or sets state of Peering
 * **stats**: [ExpressRouteCircuitStats](#expressroutecircuitstats): Contains Stats associated with the peering
 * **vlanId**: int: Gets or sets the vlan id
 
 ## ExpressRouteCircuitPeeringConfig
 ### Properties
 * **advertisedPublicPrefixes**: string[]: Gets or sets the reference of AdvertisedPublicPrefixes
-* **advertisedPublicPrefixesState**: 'Configured' | 'Configuring' | 'NotConfigured' | 'ValidationNeeded': Gets or sets AdvertisedPublicPrefixState of the Peering resource
+* **advertisedPublicPrefixesState**: 'Configured' | 'Configuring' | 'NotConfigured' | 'ValidationNeeded' | string: Gets or sets AdvertisedPublicPrefixState of the Peering resource
 * **customerASN**: int: Gets or Sets CustomerAsn of the peering.
 * **routingRegistryName**: string: Gets or Sets RoutingRegistryName of the config.
 
@@ -858,9 +858,9 @@
 
 ## ExpressRouteCircuitSku
 ### Properties
-* **family**: 'MeteredData' | 'UnlimitedData': Gets or sets family of the sku.
+* **family**: 'MeteredData' | 'UnlimitedData' | string: Gets or sets family of the sku.
 * **name**: string: Gets or sets name of the sku.
-* **tier**: 'Premium' | 'Standard': Gets or sets tier of the sku.
+* **tier**: 'Premium' | 'Standard' | string: Gets or sets tier of the sku.
 
 ## ResourceTags
 ### Properties
@@ -893,7 +893,7 @@
 * **loadBalancingRules**: [SubResource](#subresource)[] (ReadOnly): Gets Load Balancing rules URIs that use this frontend IP
 * **outboundNatRules**: [SubResource](#subresource)[] (ReadOnly): Read only. Outbound rules URIs that use this frontend IP
 * **privateIPAddress**: string: Gets or sets the privateIPAddress of the IP Configuration
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static': PrivateIP allocation method (Static/Dynamic)
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: PrivateIP allocation method (Static/Dynamic)
 * **provisioningState**: string: Gets provisioning state of the PublicIP resource Updating/Deleting/Failed
 * **publicIPAddress**: [PublicIPAddress](#publicipaddress): PublicIPAddress resource
 * **subnet**: [Subnet](#subnet): Subnet in a VirtualNetwork resource
@@ -911,7 +911,7 @@
 * **frontendIPConfiguration**: [SubResource](#subresource)
 * **frontendPortRangeEnd**: int (Required): Gets or sets the ending port range for the NAT pool. You can specify any port number you choose, but the port numbers specified for each role in the service must be unique. Possible values range between 1 and 65535, inclusive
 * **frontendPortRangeStart**: int (Required): Gets or sets the starting port range for the NAT pool. You can specify any port number you choose, but the port numbers specified for each role in the service must be unique. Possible values range between 1 and 65535, inclusive
-* **protocol**: 'Tcp' | 'Udp' (Required): Gets or sets the transport protocol for the external endpoint. Possible values are Udp or Tcp
+* **protocol**: 'Tcp' | 'Udp' | string (Required): Gets or sets the transport protocol for the external endpoint. Possible values are Udp or Tcp
 * **provisioningState**: string: Gets provisioning state of the PublicIP resource Updating/Deleting/Failed
 
 ## LoadBalancingRule
@@ -929,9 +929,9 @@
 * **frontendIPConfiguration**: [SubResource](#subresource)
 * **frontendPort**: int (Required): Gets or sets the port for the external endpoint. You can specify any port number you choose, but the port numbers specified for each role in the service must be unique. Possible values range between 1 and 65535, inclusive
 * **idleTimeoutInMinutes**: int: Gets or sets the timeout for the Tcp idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to Tcp
-* **loadDistribution**: 'Default' | 'SourceIP' | 'SourceIPProtocol': Gets or sets the load distribution policy for this rule
+* **loadDistribution**: 'Default' | 'SourceIP' | 'SourceIPProtocol' | string: Gets or sets the load distribution policy for this rule
 * **probe**: [SubResource](#subresource)
-* **protocol**: 'Tcp' | 'Udp' (Required): Gets or sets the transport protocol for the external endpoint. Possible values are Udp or Tcp
+* **protocol**: 'Tcp' | 'Udp' | string (Required): Gets or sets the transport protocol for the external endpoint. Possible values are Udp or Tcp
 * **provisioningState**: string: Gets provisioning state of the PublicIP resource Updating/Deleting/Failed
 
 ## OutboundNatRule
@@ -961,7 +961,7 @@
 * **loadBalancingRules**: [SubResource](#subresource)[] (ReadOnly): Gets Load balancer rules that use this probe
 * **numberOfProbes**: int: Gets or sets the number of probes where if no response, will result in stopping further traffic from being delivered to the endpoint. This values allows endpoints to be taken out of rotation faster or slower than the typical times used in Azure.
 * **port**: int (Required): Gets or sets Port for communicating the probe. Possible values range from 1 to 65535, inclusive.
-* **protocol**: 'Http' | 'Tcp' (Required): Gets or sets the protocol of the end point. Possible values are http or Tcp. If Tcp is specified, a received ACK is required for the probe to be successful. If http is specified,a 200 OK response from the specifies URI is required for the probe to be successful
+* **protocol**: 'Http' | 'Tcp' | string (Required): Gets or sets the protocol of the end point. Possible values are http or Tcp. If Tcp is specified, a received ACK is required for the probe to be successful. If http is specified,a 200 OK response from the specifies URI is required for the probe to be successful
 * **provisioningState**: string: Gets provisioning state of the PublicIP resource Updating/Deleting/Failed
 * **requestPath**: string: Gets or sets the URI used for requesting health status from the VM. Path is required if a protocol is set to http. Otherwise, it is not allowed. There is no default value
 
@@ -1025,7 +1025,7 @@
 * **allowForwardedTraffic**: bool: Gets or sets whether the forwarded traffic from the VMs in the remote virtual network will be allowed/disallowed
 * **allowGatewayTransit**: bool: Gets or sets if gatewayLinks can be used in remote virtual network’s link to this virtual network
 * **allowVirtualNetworkAccess**: bool: Gets or sets whether the VMs in the linked virtual network space would be able to access all the VMs in local Virtual network space
-* **peeringState**: 'Connected' | 'Disconnected' | 'Initiated': Gets the status of the virtual network peering
+* **peeringState**: 'Connected' | 'Disconnected' | 'Initiated' | string: Gets the status of the virtual network peering
 * **provisioningState**: string: Gets provisioning state of the resource
 * **remoteVirtualNetwork**: [SubResource](#subresource)
 * **useRemoteGateways**: bool: Gets or sets if remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only 1 peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.

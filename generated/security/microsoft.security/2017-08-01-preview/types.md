@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'current' (Required, DeployTimeConstant): The resource name
+* **name**: 'current' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [AdvancedThreatProtectionProperties](#advancedthreatprotectionproperties): The Advanced Threat Protection settings.
 * **type**: 'Microsoft.Security/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -32,7 +32,7 @@
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'custom' | 'effective' (Required, DeployTimeConstant): The resource name
+* **name**: 'custom' | 'effective' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [InformationProtectionPolicyProperties](#informationprotectionpolicyproperties): describes properties of an information protection policy.
 * **type**: 'Microsoft.Security/informationProtectionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -72,7 +72,7 @@
 ### Base Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'MCAS' | 'WDATP' (Required, DeployTimeConstant): The resource name
+* **name**: 'MCAS' | 'WDATP' | string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Security/settings' (ReadOnly, DeployTimeConstant): The resource type
 ### DataExportSetting
 #### Properties
@@ -95,7 +95,7 @@
 
 ## AutoProvisioningSettingProperties
 ### Properties
-* **autoProvision**: 'Off' | 'On' (Required): Describes what kind of security agent provisioning action to take
+* **autoProvision**: 'Off' | 'On' | string (Required): Describes what kind of security agent provisioning action to take
 
 ## DeviceSecurityGroupProperties
 ### Properties
@@ -112,7 +112,7 @@
 * **description**: string (ReadOnly): The description of the custom alert.
 * **displayName**: string (ReadOnly): The display name of the custom alert.
 * **isEnabled**: bool (Required): Status of the custom alert.
-* **valueType**: 'IpCidr' | 'String' (ReadOnly): The value type of the items in the list.
+* **valueType**: 'IpCidr' | 'String' | string (ReadOnly): The value type of the items in the list.
 ### ConnectionToIpNotAllowed
 #### Properties
 * **ruleType**: 'ConnectionToIpNotAllowed' (Required): The type of the custom alert rule.
@@ -133,7 +133,7 @@
 * **displayName**: string (ReadOnly): The display name of the custom alert.
 * **isEnabled**: bool (Required): Status of the custom alert.
 * **ruleType**: string (Required): The type of the custom alert rule.
-* **valueType**: 'IpCidr' | 'String' (ReadOnly): The value type of the items in the list.
+* **valueType**: 'IpCidr' | 'String' | string (ReadOnly): The value type of the items in the list.
 
 ## ThresholdCustomAlertRule
 * **Discriminator**: ruleType
@@ -329,20 +329,20 @@
 ## IoTSecuritySolutionProperties
 ### Properties
 * **autoDiscoveredResources**: string[] (ReadOnly): List of resources that were automatically discovered as relevant to the security solution.
-* **disabledDataSources**: 'TwinData'[]: Disabled data sources. Disabling these data sources compromises the system.
+* **disabledDataSources**: 'TwinData' | string[]: Disabled data sources. Disabling these data sources compromises the system.
 * **displayName**: string (Required): Resource display name.
-* **export**: 'RawEvents'[]: List of additional export to workspace data options
+* **export**: 'RawEvents' | string[]: List of additional export to workspace data options
 * **iotHubs**: string[] (Required): IoT Hub resource IDs
 * **recommendationsConfiguration**: [RecommendationConfigurationProperties](#recommendationconfigurationproperties)[]: List of recommendation configuration
-* **status**: 'Disabled' | 'Enabled': Security solution status
+* **status**: 'Disabled' | 'Enabled' | string: Security solution status
 * **userDefinedResources**: [UserDefinedResourcesProperties](#userdefinedresourcesproperties): Properties of the solution's user defined resources.
 * **workspace**: string (Required): Workspace resource ID
 
 ## RecommendationConfigurationProperties
 ### Properties
 * **name**: string (ReadOnly)
-* **recommendationType**: 'IoT_ACRAuthentication' | 'IoT_AgentSendsUnutilizedMessages' | 'IoT_Baseline' | 'IoT_EdgeHubMemOptimize' | 'IoT_EdgeLoggingOptions' | 'IoT_IPFilter_DenyAll' | 'IoT_IPFilter_PermissiveRule' | 'IoT_InconsistentModuleSettings' | 'IoT_InstallAgent' | 'IoT_OpenPorts' | 'IoT_PermissiveFirewallPolicy' | 'IoT_PermissiveInputFirewallRules' | 'IoT_PermissiveOutputFirewallRules' | 'IoT_PrivilegedDockerOptions' | 'IoT_SharedCredentials' | 'IoT_VulnerableTLSCipherSuite' (Required): The recommendation type.
-* **status**: 'Disabled' | 'Enabled' (Required): Recommendation status. The recommendation is not generated when the status is disabled
+* **recommendationType**: 'IoT_ACRAuthentication' | 'IoT_AgentSendsUnutilizedMessages' | 'IoT_Baseline' | 'IoT_EdgeHubMemOptimize' | 'IoT_EdgeLoggingOptions' | 'IoT_IPFilter_DenyAll' | 'IoT_IPFilter_PermissiveRule' | 'IoT_InconsistentModuleSettings' | 'IoT_InstallAgent' | 'IoT_OpenPorts' | 'IoT_PermissiveFirewallPolicy' | 'IoT_PermissiveInputFirewallRules' | 'IoT_PermissiveOutputFirewallRules' | 'IoT_PrivilegedDockerOptions' | 'IoT_SharedCredentials' | 'IoT_VulnerableTLSCipherSuite' | string (Required): The recommendation type.
+* **status**: 'Disabled' | 'Enabled' | string (Required): Recommendation status. The recommendation is not generated when the status is disabled
 
 ## UserDefinedResourcesProperties
 ### Properties
@@ -356,12 +356,12 @@
 
 ## PricingProperties
 ### Properties
-* **pricingTier**: 'Free' | 'Standard' (Required): Pricing tier type
+* **pricingTier**: 'Free' | 'Standard' | string (Required): Pricing tier type
 
 ## SecurityContactProperties
 ### Properties
-* **alertNotifications**: 'Off' | 'On' (Required): Whether to send security alerts notifications to the security contact
-* **alertsToAdmins**: 'Off' | 'On' (Required): Whether to send security alerts notifications to subscription admins
+* **alertNotifications**: 'Off' | 'On' | string (Required): Whether to send security alerts notifications to the security contact
+* **alertsToAdmins**: 'Off' | 'On' | string (Required): Whether to send security alerts notifications to subscription admins
 * **email**: string (Required): The email of this security contact
 * **phone**: string: The phone number of this security contact
 

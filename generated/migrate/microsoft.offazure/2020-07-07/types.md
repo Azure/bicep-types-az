@@ -105,10 +105,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## HyperVSiteTags
 ### Properties
@@ -157,7 +157,7 @@
 * **allowMultipleSites**: bool: Value indicating whether multiple sites per site type are allowed.
 * **customerStorageAccountArmId**: string: Gets or sets a value for customer storage account ARM id.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Gets the private endpoint connections.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'NotSpecified': Gets or sets the state of public network access.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'NotSpecified' | string: Gets or sets the state of public network access.
 * **sites**: string[]: List of sites that are a part of Master Site.
 
 ## PrivateEndpointConnection
@@ -173,7 +173,7 @@
 ### Properties
 * **privateEndpoint**: [ResourceId](#resourceid) (ReadOnly)
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate)
-* **provisioningState**: 'Accepted' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly)
+* **provisioningState**: 'Accepted' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly)
 
 ## ResourceId
 ### Properties
@@ -183,7 +183,7 @@
 ### Properties
 * **actionsRequired**: string
 * **description**: string
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string
 
 ## VMwareSiteTags
 ### Properties

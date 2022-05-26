@@ -39,7 +39,7 @@
 * **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for server creation).
 * **availabilityZone**: string: availability zone information of the server.
 * **backup**: [Backup](#backup): Backup properties of a server
-* **createMode**: 'Create' | 'Default' | 'PointInTimeRestore' | 'Update' (WriteOnly): The mode to create a new PostgreSQL server.
+* **createMode**: 'Create' | 'Default' | 'PointInTimeRestore' | 'Update' | string (WriteOnly): The mode to create a new PostgreSQL server.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
 * **highAvailability**: [HighAvailability](#highavailability): High availability properties of a server
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window properties of a server.
@@ -47,21 +47,21 @@
 * **network**: [Network](#network): Network properties of a server
 * **pointInTimeUTC**: string (WriteOnly): Restore point creation time (ISO8601 format), specifying the time to restore from. It's required when 'createMode' is 'PointInTimeRestore'.
 * **sourceServerResourceId**: string (WriteOnly): The source server resource ID to restore from. It's required when 'createMode' is 'PointInTimeRestore'.
-* **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' (ReadOnly): A state of a server that is visible to user.
+* **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): A state of a server that is visible to user.
 * **storage**: [Storage](#storage): Storage properties of a server
-* **version**: '11' | '12' | '13': The version of a server.
+* **version**: '11' | '12' | '13' | string: The version of a server.
 
 ## Backup
 ### Properties
 * **backupRetentionDays**: int: Backup retention days for the server.
 * **earliestRestoreDate**: string (ReadOnly): The earliest restore point time (ISO8601 format) for server.
-* **geoRedundantBackup**: 'Disabled' | 'Enabled': A value indicating whether Geo-Redundant backup is enabled on the server.
+* **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: A value indicating whether Geo-Redundant backup is enabled on the server.
 
 ## HighAvailability
 ### Properties
-* **mode**: 'Disabled' | 'ZoneRedundant': The HA mode for the server.
+* **mode**: 'Disabled' | 'ZoneRedundant' | string: The HA mode for the server.
 * **standbyAvailabilityZone**: string: availability zone information of the standby.
-* **state**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' (ReadOnly): A state of a HA server that is visible to user.
+* **state**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' | string (ReadOnly): A state of a HA server that is visible to user.
 
 ## MaintenanceWindow
 ### Properties
@@ -74,7 +74,7 @@
 ### Properties
 * **delegatedSubnetResourceId**: string: delegated subnet arm resource id.
 * **privateDnsZoneArmResourceId**: string: private dns zone arm resource id.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly): public network access is enabled or not
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string (ReadOnly): public network access is enabled or not
 
 ## Storage
 ### Properties
@@ -83,16 +83,16 @@
 ## Sku
 ### Properties
 * **name**: string (Required): The name of the sku, typically, tier + family + cores, e.g. Standard_D4s_v3.
-* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' (Required): The tier of the particular SKU, e.g. Burstable.
+* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' | string (Required): The tier of the particular SKU, e.g. Burstable.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -102,7 +102,7 @@
 ## ConfigurationProperties
 ### Properties
 * **allowedValues**: string (ReadOnly): Allowed values of the configuration.
-* **dataType**: 'Boolean' | 'Enumeration' | 'Integer' | 'Numeric' (ReadOnly): Data type of the configuration.
+* **dataType**: 'Boolean' | 'Enumeration' | 'Integer' | 'Numeric' | string (ReadOnly): Data type of the configuration.
 * **defaultValue**: string (ReadOnly): Default value of the configuration.
 * **description**: string (ReadOnly): Description of the configuration.
 * **documentationLink**: string (ReadOnly): Configuration documentation link.

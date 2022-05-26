@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2015-11-06' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'GlobalDocumentDB' | 'MongoDB' | 'Parse': Indicates the type of database account. This can only be set at database account creation.
+* **kind**: 'GlobalDocumentDB' | 'MongoDB' | 'Parse' | string: Indicates the type of database account. This can only be set at database account creation.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseAccountCreateUpdateProperties](#databaseaccountcreateupdateproperties) (Required): Properties to create and update Azure Cosmos DB database accounts.
@@ -179,7 +179,7 @@
 ## DatabaseAccountCreateUpdateProperties
 ### Properties
 * **capabilities**: [Capability](#capability)[]: List of Cosmos DB capabilities for the account
-* **connectorOffer**: 'Small': The cassandra connector offer type for the Cosmos DB C* database account.
+* **connectorOffer**: 'Small' | string: The cassandra connector offer type for the Cosmos DB C* database account.
 * **consistencyPolicy**: [ConsistencyPolicy](#consistencypolicy): The consistency policy for the Cosmos DB database account.
 * **databaseAccountOfferType**: 'Standard' (Required): The offer type for the Cosmos DB database account.
 * **documentEndpoint**: string (ReadOnly): The connection endpoint for the Cosmos DB database account.
@@ -335,14 +335,14 @@
 ### Properties
 * **conflictResolutionPath**: string (WriteOnly): The conflict resolution path in the case of LastWriterWins mode.
 * **conflictResolutionProcedure**: string (WriteOnly): The procedure to resolve conflicts in the case of custom mode.
-* **mode**: 'Custom' | 'LastWriterWins' (WriteOnly): Indicates the conflict resolution mode.
+* **mode**: 'Custom' | 'LastWriterWins' | string (WriteOnly): Indicates the conflict resolution mode.
 
 ## IndexingPolicy
 ### Properties
 * **automatic**: bool (WriteOnly): Indicates if the indexing policy is automatic
 * **excludedPaths**: [ExcludedPath](#excludedpath)[] (WriteOnly): List of paths to exclude from indexing
 * **includedPaths**: [IncludedPath](#includedpath)[] (WriteOnly): List of paths to include in the indexing
-* **indexingMode**: 'Consistent' | 'Lazy' | 'None' (WriteOnly): Indicates the indexing mode.
+* **indexingMode**: 'Consistent' | 'Lazy' | 'None' | string (WriteOnly): Indicates the indexing mode.
 
 ## ExcludedPath
 ### Properties
@@ -355,8 +355,8 @@
 
 ## Indexes
 ### Properties
-* **dataType**: 'LineString' | 'MultiPolygon' | 'Number' | 'Point' | 'Polygon' | 'String' (WriteOnly): The datatype for which the indexing behavior is applied to.
-* **kind**: 'Hash' | 'Range' | 'Spatial' (WriteOnly): Indicates the type of index.
+* **dataType**: 'LineString' | 'MultiPolygon' | 'Number' | 'Point' | 'Polygon' | 'String' | string (WriteOnly): The datatype for which the indexing behavior is applied to.
+* **kind**: 'Hash' | 'Range' | 'Spatial' | string (WriteOnly): Indicates the type of index.
 * **precision**: int (WriteOnly): The precision of the index. -1 is maximum precision.
 
 ## CreateUpdateOptions
@@ -366,7 +366,7 @@
 
 ## ContainerPartitionKey
 ### Properties
-* **kind**: 'Hash' | 'Range' (WriteOnly): Indicates the kind of algorithm used for partitioning
+* **kind**: 'Hash' | 'Range' | string (WriteOnly): Indicates the kind of algorithm used for partitioning
 * **paths**: string[] (WriteOnly): List of paths using which data within the container can be partitioned
 
 ## SqlContainerResource

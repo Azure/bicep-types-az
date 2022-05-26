@@ -37,7 +37,7 @@
 ## MaintenanceConfigurationProperties
 ### Properties
 * **extensionProperties**: [MaintenanceConfigurationPropertiesExtensionProperties](#maintenanceconfigurationpropertiesextensionproperties): Gets or sets extensionProperties of the maintenanceConfiguration. This is for future use only and would be a set of key value pairs for additional information e.g. whether to follow SDP etc.
-* **maintenanceScope**: 'All' | 'Host' | 'InResource' | 'Resource': Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
+* **maintenanceScope**: 'All' | 'Host' | 'InResource' | 'Resource' | string: Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
 * **namespace**: string: Gets or sets namespace of the resource e.g. Microsoft.Maintenance or Microsoft.Sql
 
 ## MaintenanceConfigurationPropertiesExtensionProperties

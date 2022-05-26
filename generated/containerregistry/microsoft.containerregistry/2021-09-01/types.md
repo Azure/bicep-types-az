@@ -86,19 +86,19 @@ dictionary key references will be ARM resource ids in the form:
 * **dataEndpointHostNames**: string[] (ReadOnly): List of host names that will serve data when dataEndpointEnabled is true.
 * **encryption**: [EncryptionProperty](#encryptionproperty)
 * **loginServer**: string (ReadOnly): The URL that can be used to log into the container registry.
-* **networkRuleBypassOptions**: 'AzureServices' | 'None': Whether to allow trusted Azure services to access a network restricted registry.
+* **networkRuleBypassOptions**: 'AzureServices' | 'None' | string: Whether to allow trusted Azure services to access a network restricted registry.
 * **networkRuleSet**: [NetworkRuleSet](#networkruleset): The network rule set for a container registry.
 * **policies**: [Policies](#policies): The policies for a container registry.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections for a container registry.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of private endpoint connection resource.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public network access is allowed for the container registry.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of private endpoint connection resource.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public network access is allowed for the container registry.
 * **status**: [Status](#status) (ReadOnly): The status of an Azure resource at the time the operation was called.
-* **zoneRedundancy**: 'Disabled' | 'Enabled': Whether or not zone redundancy is enabled for this container registry
+* **zoneRedundancy**: 'Disabled' | 'Enabled' | string: Whether or not zone redundancy is enabled for this container registry
 
 ## EncryptionProperty
 ### Properties
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
-* **status**: 'disabled' | 'enabled': Indicates whether or not the encryption is enabled for container registry.
+* **status**: 'disabled' | 'enabled' | string: Indicates whether or not the encryption is enabled for container registry.
 
 ## KeyVaultProperties
 ### Properties
@@ -110,12 +110,12 @@ dictionary key references will be ARM resource ids in the form:
 
 ## NetworkRuleSet
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny' (Required): The default action of allow or deny when no other rules match.
+* **defaultAction**: 'Allow' | 'Deny' | string (Required): The default action of allow or deny when no other rules match.
 * **ipRules**: [IPRule](#iprule)[]: The IP ACL rules.
 
 ## IPRule
 ### Properties
-* **action**: 'Allow': The action of IP ACL rule.
+* **action**: 'Allow' | string: The action of IP ACL rule.
 * **value**: string (Required): Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
 
 ## Policies
@@ -127,22 +127,22 @@ dictionary key references will be ARM resource ids in the form:
 
 ## ExportPolicy
 ### Properties
-* **status**: 'disabled' | 'enabled': The value that indicates whether the policy is enabled or not.
+* **status**: 'disabled' | 'enabled' | string: The value that indicates whether the policy is enabled or not.
 
 ## QuarantinePolicy
 ### Properties
-* **status**: 'disabled' | 'enabled': The value that indicates whether the policy is enabled or not.
+* **status**: 'disabled' | 'enabled' | string: The value that indicates whether the policy is enabled or not.
 
 ## RetentionPolicy
 ### Properties
 * **days**: int: The number of days to retain an untagged manifest after which it gets purged.
 * **lastUpdatedTime**: string (ReadOnly): The timestamp when the policy was last updated.
-* **status**: 'disabled' | 'enabled': The value that indicates whether the policy is enabled or not.
+* **status**: 'disabled' | 'enabled' | string: The value that indicates whether the policy is enabled or not.
 
 ## TrustPolicy
 ### Properties
-* **status**: 'disabled' | 'enabled': The value that indicates whether the policy is enabled or not.
-* **type**: 'Notary': The type of trust policy.
+* **status**: 'disabled' | 'enabled' | string: The value that indicates whether the policy is enabled or not.
+* **type**: 'Notary' | string: The type of trust policy.
 
 ## PrivateEndpointConnection
 ### Properties
@@ -156,7 +156,7 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): The state of a private link service connection.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of private endpoint connection resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of private endpoint connection resource.
 
 ## PrivateEndpoint
 ### Properties
@@ -164,18 +164,18 @@ dictionary key references will be ARM resource ids in the form:
 
 ## PrivateLinkServiceConnectionState
 ### Properties
-* **actionsRequired**: 'None' | 'Recreate': A message indicating if changes on the service provider require any updates on the consumer.
+* **actionsRequired**: 'None' | 'Recreate' | string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The description for connection status. For example if connection is rejected it can indicate reason for rejection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': The private link service connection status.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: The private link service connection status.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource modification (UTC).
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## Status
 ### Properties
@@ -185,8 +185,8 @@ dictionary key references will be ARM resource ids in the form:
 
 ## Sku
 ### Properties
-* **name**: 'Basic' | 'Classic' | 'Premium' | 'Standard' (Required): The SKU name of the container registry. Required for registry creation.
-* **tier**: 'Basic' | 'Classic' | 'Premium' | 'Standard' (ReadOnly): The SKU tier based on the SKU name.
+* **name**: 'Basic' | 'Classic' | 'Premium' | 'Standard' | string (Required): The SKU name of the container registry. Required for registry creation.
+* **tier**: 'Basic' | 'Classic' | 'Premium' | 'Standard' | string (ReadOnly): The SKU tier based on the SKU name.
 
 ## ResourceTags
 ### Properties
@@ -195,10 +195,10 @@ dictionary key references will be ARM resource ids in the form:
 
 ## ReplicationProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of private endpoint connection resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of private endpoint connection resource.
 * **regionEndpointEnabled**: bool: Specifies whether the replication's regional endpoint is enabled. Requests will not be routed to a replication whose regional endpoint is disabled, however its data will continue to be synced with other replications.
 * **status**: [Status](#status) (ReadOnly): The status of an Azure resource at the time the operation was called.
-* **zoneRedundancy**: 'Disabled' | 'Enabled': Whether or not zone redundancy is enabled for this container registry
+* **zoneRedundancy**: 'Disabled' | 'Enabled' | string: Whether or not zone redundancy is enabled for this container registry
 
 ## ResourceTags
 ### Properties
@@ -207,12 +207,12 @@ dictionary key references will be ARM resource ids in the form:
 
 ## WebhookPropertiesCreateParameters
 ### Properties
-* **actions**: 'chart_delete' | 'chart_push' | 'delete' | 'push' | 'quarantine'[] (Required): The list of actions that trigger the webhook to post notifications.
+* **actions**: 'chart_delete' | 'chart_push' | 'delete' | 'push' | 'quarantine' | string[] (Required): The list of actions that trigger the webhook to post notifications.
 * **customHeaders**: [WebhookPropertiesCreateParametersCustomHeaders](#webhookpropertiescreateparameterscustomheaders) (WriteOnly): Custom headers that will be added to the webhook notifications.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of private endpoint connection resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of private endpoint connection resource.
 * **scope**: string: The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means all events.
 * **serviceUri**: string (Required, WriteOnly): The service URI for the webhook to post notifications.
-* **status**: 'disabled' | 'enabled': The status of the webhook at the time the operation was called.
+* **status**: 'disabled' | 'enabled' | string: The status of the webhook at the time the operation was called.
 
 ## WebhookPropertiesCreateParametersCustomHeaders
 ### Properties

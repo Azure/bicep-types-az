@@ -48,7 +48,7 @@
 * **extensionType**: string: Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.
 * **installedVersion**: string (ReadOnly): Installed version of the extension.
 * **packageUri**: string (ReadOnly): Uri of the Helm package
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
 * **releaseTrain**: string: ReleaseTrain this extension participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.
 * **scope**: [Scope](#scope): Scope of the extension. It can be either Cluster or Namespace; but not both.
 * **statuses**: [ExtensionStatus](#extensionstatus)[]: Status from this extension.
@@ -105,7 +105,7 @@
 ### Properties
 * **code**: string: Status code provided by the Extension
 * **displayStatus**: string: Short description of status of the extension.
-* **level**: 'Error' | 'Information' | 'Warning': Level of the status.
+* **level**: 'Error' | 'Information' | 'Warning' | string: Level of the status.
 * **message**: string: Detailed message of the status from the Extension.
 * **time**: string: DateLiteral (per ISO8601) noting the time of installation status.
 
@@ -113,24 +113,24 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## FluxConfigurationProperties
 ### Properties
 * **bucket**: [BucketDefinition](#bucketdefinition): Parameters to reconcile to the GitRepository source kind type.
-* **complianceState**: 'Compliant' | 'Non-Compliant' | 'Pending' | 'Suspended' | 'Unknown' (ReadOnly): Compliance state of the cluster object.
+* **complianceState**: 'Compliant' | 'Non-Compliant' | 'Pending' | 'Suspended' | 'Unknown' | string (ReadOnly): Compliance state of the cluster object.
 * **configurationProtectedSettings**: [FluxConfigurationPropertiesConfigurationProtectedSettings](#fluxconfigurationpropertiesconfigurationprotectedsettings): Key-value pairs of protected configuration settings for the configuration
 * **errorMessage**: string (ReadOnly): Error message returned to the user in the case of provisioning failure.
 * **gitRepository**: [GitRepositoryDefinition](#gitrepositorydefinition): Parameters to reconcile to the GitRepository source kind type.
 * **kustomizations**: [FluxConfigurationPropertiesKustomizations](#fluxconfigurationpropertieskustomizations): Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
 * **namespace**: string: The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
 * **repositoryPublicKey**: string (ReadOnly): Public Key associated with this fluxConfiguration (either generated within the cluster or provided by the user).
-* **scope**: 'cluster' | 'namespace': Scope at which the configuration will be installed.
-* **sourceKind**: 'Bucket' | 'GitRepository': Source Kind to pull the configuration data from.
+* **scope**: 'cluster' | 'namespace' | string: Scope at which the configuration will be installed.
+* **sourceKind**: 'Bucket' | 'GitRepository' | string: Source Kind to pull the configuration data from.
 * **sourceSyncedCommitId**: string (ReadOnly): Branch and/or SHA of the source commit synced with the cluster.
 * **sourceUpdatedAt**: string (ReadOnly): Datetime the fluxConfiguration synced its source on the cluster.
 * **statuses**: [ObjectStatusDefinition](#objectstatusdefinition)[] (ReadOnly): Statuses of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects provisioned by the fluxConfiguration.
@@ -189,7 +189,7 @@
 ## ObjectStatusDefinition
 ### Properties
 * **appliedBy**: [ObjectReferenceDefinition](#objectreferencedefinition): Object reference to a Kubernetes object on a cluster
-* **complianceState**: 'Compliant' | 'Non-Compliant' | 'Pending' | 'Suspended' | 'Unknown': Compliance state of the cluster object.
+* **complianceState**: 'Compliant' | 'Non-Compliant' | 'Pending' | 'Suspended' | 'Unknown' | string: Compliance state of the cluster object.
 * **helmReleaseProperties**: [HelmReleasePropertiesDefinition](#helmreleasepropertiesdefinition): Properties for HelmRelease objects
 * **kind**: string: Kind of the applied object
 * **name**: string: Name of the applied object
@@ -226,19 +226,19 @@
 * **operatorInstanceName**: string: Instance name of the operator - identifying the specific configuration.
 * **operatorNamespace**: string: The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
 * **operatorParams**: string: Any Parameters for the Operator instance in string format.
-* **operatorScope**: 'cluster' | 'namespace': Scope at which the operator will be installed.
-* **operatorType**: 'Flux': Type of the operator
-* **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly): The provisioning state of the resource provider.
+* **operatorScope**: 'cluster' | 'namespace' | string: Scope at which the operator will be installed.
+* **operatorType**: 'Flux' | string: Type of the operator
+* **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioning state of the resource provider.
 * **repositoryPublicKey**: string (ReadOnly): Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).
 * **repositoryUrl**: string: Url of the SourceControl Repository.
 * **sshKnownHostsContents**: string: Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances
 
 ## ComplianceStatus
 ### Properties
-* **complianceState**: 'Compliant' | 'Failed' | 'Installed' | 'Noncompliant' | 'Pending' (ReadOnly): The compliance state of the configuration.
+* **complianceState**: 'Compliant' | 'Failed' | 'Installed' | 'Noncompliant' | 'Pending' | string (ReadOnly): The compliance state of the configuration.
 * **lastConfigApplied**: string: Datetime the configuration was last applied.
 * **message**: string: Message from when the configuration was applied.
-* **messageLevel**: 'Error' | 'Information' | 'Warning': Level of the message.
+* **messageLevel**: 'Error' | 'Information' | 'Warning' | string: Level of the message.
 
 ## ConfigurationProtectedSettings
 ### Properties

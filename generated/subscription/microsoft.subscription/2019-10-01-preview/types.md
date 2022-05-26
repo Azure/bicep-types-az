@@ -13,7 +13,7 @@
 ### Properties
 * **billingScope**: string (Required, WriteOnly): Determines whether subscription is fieldLed, partnerLed or LegacyEA
 * **displayName**: string (Required, WriteOnly): The friendly name of the subscription.
-* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly): The provisioning state of the resource.
+* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the resource.
 * **subscriptionId**: string: This parameter can be used to create alias for existing subscription Id
-* **workload**: 'DevTest' | 'Production' (Required, WriteOnly): The workload type of the subscription. It can be either Production or DevTest.
+* **workload**: 'DevTest' | 'Production' | string (Required, WriteOnly): The workload type of the subscription. It can be either Production or DevTest.
 

@@ -42,22 +42,22 @@
 
 ## BackupVault
 ### Properties
-* **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the BackupVault resource
+* **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the BackupVault resource
 * **storageSettings**: [StorageSetting](#storagesetting)[] (Required): Storage Settings
 
 ## StorageSetting
 ### Properties
-* **datastoreType**: 'ArchiveStore' | 'SnapshotStore' | 'VaultStore': Gets or sets the type of the datastore.
-* **type**: 'GeoRedundant' | 'LocallyRedundant': Gets or sets the type.
+* **datastoreType**: 'ArchiveStore' | 'SnapshotStore' | 'VaultStore' | string: Gets or sets the type of the datastore.
+* **type**: 'GeoRedundant' | 'LocallyRedundant' | string: Gets or sets the type.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## DppTrackedResourceTags
 ### Properties
@@ -66,7 +66,7 @@
 
 ## BackupInstance
 ### Properties
-* **currentProtectionState**: 'BackupSchedulesSuspended' | 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'Invalid' | 'NotProtected' | 'ProtectionConfigured' | 'ProtectionError' | 'ProtectionStopped' | 'RetentionSchedulesSuspended' | 'SoftDeleted' | 'SoftDeleting' | 'UpdatingProtection' (ReadOnly): Specifies the current protection state of the resource
+* **currentProtectionState**: 'BackupSchedulesSuspended' | 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'Invalid' | 'NotProtected' | 'ProtectionConfigured' | 'ProtectionError' | 'ProtectionStopped' | 'RetentionSchedulesSuspended' | 'SoftDeleted' | 'SoftDeleting' | 'UpdatingProtection' | string (ReadOnly): Specifies the current protection state of the resource
 * **datasourceAuthCredentials**: [AuthCredentials](#authcredentials): Base class for different types of authentication credentials.
 * **dataSourceInfo**: [Datasource](#datasource) (Required): Datasource to be backed up
 * **dataSourceSetInfo**: [DatasourceSet](#datasourceset): DatasourceSet details of datasource to be backed up
@@ -89,7 +89,7 @@
 
 ## SecretStoreResource
 ### Properties
-* **secretStoreType**: 'AzureKeyVault' | 'Invalid' (Required): Gets or sets the type of secret store
+* **secretStoreType**: 'AzureKeyVault' | 'Invalid' | string (Required): Gets or sets the type of secret store
 * **uri**: string: Uri to get to the resource
 
 ## Datasource
@@ -126,7 +126,7 @@
 * **Discriminator**: objectType
 
 ### Base Properties
-* **dataStoreType**: 'ArchiveStore' | 'OperationalStore' | 'VaultStore' (Required): type of datastore; Operational/Vault/Archive
+* **dataStoreType**: 'ArchiveStore' | 'OperationalStore' | 'VaultStore' | string (Required): type of datastore; Operational/Vault/Archive
 ### AzureOperationalStoreParameters
 #### Properties
 * **objectType**: 'AzureOperationalStoreParameters' (Required): Type of the specific object - used for deserializing
@@ -164,7 +164,7 @@
 ## ProtectionStatusDetails
 ### Properties
 * **errorDetails**: [UserFacingError](#userfacingerror): Error object used by layers that have access to localized content, and propagate that to user
-* **status**: 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'ProtectionConfigured' | 'ProtectionStopped' | 'SoftDeleted' | 'SoftDeleting': Specifies the protection status of the resource
+* **status**: 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'ProtectionConfigured' | 'ProtectionStopped' | 'SoftDeleted' | 'SoftDeleting' | string: Specifies the protection status of the resource
 
 ## BaseBackupPolicy
 * **Discriminator**: objectType
@@ -208,7 +208,7 @@
 
 ## DataStoreInfoBase
 ### Properties
-* **dataStoreType**: 'ArchiveStore' | 'OperationalStore' | 'VaultStore' (Required): type of datastore; Operational/Vault/Archive
+* **dataStoreType**: 'ArchiveStore' | 'OperationalStore' | 'VaultStore' | string (Required): type of datastore; Operational/Vault/Archive
 * **objectType**: string (Required): Type of Datasource object, used to initialize the right inherited type
 
 ## TriggerContext
@@ -254,14 +254,14 @@
 ### Base Properties
 ### ScheduleBasedBackupCriteria
 #### Properties
-* **absoluteCriteria**: 'AllBackup' | 'FirstOfDay' | 'FirstOfMonth' | 'FirstOfWeek' | 'FirstOfYear'[]: it contains absolute values like "AllBackup" / "FirstOfDay" / "FirstOfWeek" / "FirstOfMonth"
+* **absoluteCriteria**: 'AllBackup' | 'FirstOfDay' | 'FirstOfMonth' | 'FirstOfWeek' | 'FirstOfYear' | string[]: it contains absolute values like "AllBackup" / "FirstOfDay" / "FirstOfWeek" / "FirstOfMonth"
 and should be part of AbsoluteMarker enum
 * **daysOfMonth**: [Day](#day)[]: This is day of the month from 1 to 28 other wise last of month
-* **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: It should be Sunday/Monday/T..../Saturday
-* **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September'[]: It should be January/February/....../December
+* **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[]: It should be Sunday/Monday/T..../Saturday
+* **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September' | string[]: It should be January/February/....../December
 * **objectType**: 'ScheduleBasedBackupCriteria' (Required): Type of the specific object - used for deserializing
 * **scheduleTimes**: string[]: List of schedule times for backup
-* **weeksOfTheMonth**: 'First' | 'Fourth' | 'Last' | 'Second' | 'Third'[]: It should be First/Second/Third/Fourth/Last
+* **weeksOfTheMonth**: 'First' | 'Fourth' | 'Last' | 'Second' | 'Third' | string[]: It should be First/Second/Third/Fourth/Last
 
 
 ## Day

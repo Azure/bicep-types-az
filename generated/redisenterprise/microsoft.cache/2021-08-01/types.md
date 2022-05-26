@@ -39,11 +39,11 @@
 ## ClusterProperties
 ### Properties
 * **hostName**: string (ReadOnly): DNS name of the cluster endpoint
-* **minimumTlsVersion**: '1.0' | '1.1' | '1.2': The minimum TLS version for the cluster to support, e.g. '1.2'
+* **minimumTlsVersion**: '1.0' | '1.1' | '1.2' | string: The minimum TLS version for the cluster to support, e.g. '1.2'
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections associated with the specified RedisEnterprise cluster
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Current provisioning status
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Current provisioning status
 * **redisVersion**: string (ReadOnly): Version of redis the cluster supports, e.g. '6'
-* **resourceState**: 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleting' | 'DisableFailed' | 'Disabled' | 'Disabling' | 'EnableFailed' | 'Enabling' | 'Running' | 'UpdateFailed' | 'Updating' (ReadOnly): Current resource status
+* **resourceState**: 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleting' | 'DisableFailed' | 'Disabled' | 'Disabling' | 'EnableFailed' | 'Enabling' | 'Running' | 'UpdateFailed' | 'Updating' | string (ReadOnly): Current resource status
 
 ## PrivateEndpointConnection
 ### Properties
@@ -56,7 +56,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
 
 ## PrivateEndpoint
 ### Properties
@@ -66,12 +66,12 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected': The private endpoint connection status.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
 
 ## Sku
 ### Properties
 * **capacity**: int: The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.
-* **name**: 'EnterpriseFlash_F1500' | 'EnterpriseFlash_F300' | 'EnterpriseFlash_F700' | 'Enterprise_E10' | 'Enterprise_E100' | 'Enterprise_E20' | 'Enterprise_E50' (Required): The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.)
+* **name**: 'EnterpriseFlash_F1500' | 'EnterpriseFlash_F300' | 'EnterpriseFlash_F700' | 'Enterprise_E10' | 'Enterprise_E100' | 'Enterprise_E20' | 'Enterprise_E50' | string (Required): The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.)
 
 ## TrackedResourceTags
 ### Properties
@@ -80,14 +80,14 @@
 
 ## DatabaseProperties
 ### Properties
-* **clientProtocol**: 'Encrypted' | 'Plaintext': Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
-* **clusteringPolicy**: 'EnterpriseCluster' | 'OSSCluster': Clustering policy - default is OSSCluster. Specified at create time.
-* **evictionPolicy**: 'AllKeysLFU' | 'AllKeysLRU' | 'AllKeysRandom' | 'NoEviction' | 'VolatileLFU' | 'VolatileLRU' | 'VolatileRandom' | 'VolatileTTL': Redis eviction policy - default is VolatileLRU
+* **clientProtocol**: 'Encrypted' | 'Plaintext' | string: Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
+* **clusteringPolicy**: 'EnterpriseCluster' | 'OSSCluster' | string: Clustering policy - default is OSSCluster. Specified at create time.
+* **evictionPolicy**: 'AllKeysLFU' | 'AllKeysLRU' | 'AllKeysRandom' | 'NoEviction' | 'VolatileLFU' | 'VolatileLRU' | 'VolatileRandom' | 'VolatileTTL' | string: Redis eviction policy - default is VolatileLRU
 * **modules**: [Module](#module)[]: Optional set of redis modules to enable in this database - modules can only be added at creation time.
 * **persistence**: [Persistence](#persistence): Persistence-related configuration for the RedisEnterprise database
 * **port**: int: TCP port of the database endpoint. Specified at create time. Defaults to an available port.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Current provisioning status
-* **resourceState**: 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleting' | 'DisableFailed' | 'Disabled' | 'Disabling' | 'EnableFailed' | 'Enabling' | 'Running' | 'UpdateFailed' | 'Updating' (ReadOnly): Current resource status
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Current provisioning status
+* **resourceState**: 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleting' | 'DisableFailed' | 'Disabled' | 'Disabling' | 'EnableFailed' | 'Enabling' | 'Running' | 'UpdateFailed' | 'Updating' | string (ReadOnly): Current resource status
 
 ## Module
 ### Properties
@@ -98,9 +98,9 @@
 ## Persistence
 ### Properties
 * **aofEnabled**: bool: Sets whether AOF is enabled.
-* **aofFrequency**: '1s' | 'always': Sets the frequency at which data is written to disk.
+* **aofFrequency**: '1s' | 'always' | string: Sets the frequency at which data is written to disk.
 * **rdbEnabled**: bool: Sets whether RDB is enabled.
-* **rdbFrequency**: '12h' | '1h' | '6h': Sets the frequency at which a snapshot of the database is created.
+* **rdbFrequency**: '12h' | '1h' | '6h' | string: Sets the frequency at which a snapshot of the database is created.
 
 ## AccessKeys
 ### Properties

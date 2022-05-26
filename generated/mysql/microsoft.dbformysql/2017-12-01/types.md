@@ -54,7 +54,7 @@
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'Default' (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Properties of a security alert policy.
 * **type**: 'Microsoft.DBforMySQL/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -71,7 +71,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The Azure Active Directory principal id.
 * **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
-* **type**: 'SystemAssigned': The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
+* **type**: 'SystemAssigned' | string: The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
 
 ## ServerPropertiesForCreate
 * **Discriminator**: createMode
@@ -81,17 +81,17 @@
 * **byokEnforcement**: string (ReadOnly): Status showing whether the server data encryption is enabled with customer-managed keys.
 * **earliestRestoreDate**: string (ReadOnly): Earliest restore point creation time (ISO8601 format)
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
-* **infrastructureEncryption**: 'Disabled' | 'Enabled': Add a second layer of encryption for your data using new encryption algorithm which gives additional data protection. Value is optional but if passed in, must be 'Disabled' or 'Enabled'.
+* **infrastructureEncryption**: 'Disabled' | 'Enabled' | string: Add a second layer of encryption for your data using new encryption algorithm which gives additional data protection. Value is optional but if passed in, must be 'Disabled' or 'Enabled'.
 * **masterServerId**: string (ReadOnly): The master server id of a replica server.
-* **minimalTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2' | 'TLSEnforcementDisabled': Enforce a minimal Tls version for the server.
+* **minimalTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2' | 'TLSEnforcementDisabled' | string: Enforce a minimal Tls version for the server.
 * **privateEndpointConnections**: [ServerPrivateEndpointConnection](#serverprivateendpointconnection)[] (ReadOnly): List of private endpoint connections on a server
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
 * **replicaCapacity**: int (ReadOnly): The maximum number of replicas that a master server can have.
 * **replicationRole**: string (ReadOnly): The replication role of the server.
 * **sslEnforcement**: 'Disabled' | 'Enabled': Enable ssl enforcement or not when connect to server.
 * **storageProfile**: [StorageProfile](#storageprofile): Storage Profile properties of a server
-* **userVisibleState**: 'Disabled' | 'Dropping' | 'Inaccessible' | 'Ready' (ReadOnly): A state of a server that is visible to user.
-* **version**: '5.6' | '5.7' | '8.0': The version of a server.
+* **userVisibleState**: 'Disabled' | 'Dropping' | 'Inaccessible' | 'Ready' | string (ReadOnly): A state of a server that is visible to user.
+* **version**: '5.6' | '5.7' | '8.0' | string: The version of a server.
 ### ServerPropertiesForDefaultCreate
 #### Properties
 * **administratorLogin**: string (Required, WriteOnly): The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation). The login name is required when updating password.
@@ -124,7 +124,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty) (ReadOnly)
 * **privateLinkServiceConnectionState**: [ServerPrivateLinkServiceConnectionStateProperty](#serverprivatelinkserviceconnectionstateproperty) (ReadOnly)
-* **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' (ReadOnly): State of the private endpoint connection.
+* **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' | string (ReadOnly): State of the private endpoint connection.
 
 ## PrivateEndpointProperty
 ### Properties
@@ -132,15 +132,15 @@
 
 ## ServerPrivateLinkServiceConnectionStateProperty
 ### Properties
-* **actionsRequired**: 'None' (ReadOnly): The actions required for private link service connection.
+* **actionsRequired**: 'None' | string (ReadOnly): The actions required for private link service connection.
 * **description**: string (ReadOnly): The private link service connection description.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly): The private link service connection status.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (ReadOnly): The private link service connection status.
 
 ## StorageProfile
 ### Properties
 * **backupRetentionDays**: int: Backup retention days for the server.
-* **geoRedundantBackup**: 'Disabled' | 'Enabled': Enable Geo-redundant or not for server backup.
-* **storageAutogrow**: 'Disabled' | 'Enabled': Enable Storage Auto Grow.
+* **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: Enable Geo-redundant or not for server backup.
+* **storageAutogrow**: 'Disabled' | 'Enabled' | string: Enable Storage Auto Grow.
 * **storageMB**: int: Max storage allowed for a server.
 
 ## Sku
@@ -149,7 +149,7 @@
 * **family**: string: The family of hardware.
 * **name**: string (Required): The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
 * **size**: string: The size code, to be interpreted by resource as appropriate.
-* **tier**: 'Basic' | 'GeneralPurpose' | 'MemoryOptimized': The tier of the particular SKU, e.g. Basic.
+* **tier**: 'Basic' | 'GeneralPurpose' | 'MemoryOptimized' | string: The tier of the particular SKU, e.g. Basic.
 
 ## ServerForCreateTags
 ### Properties
@@ -195,6 +195,6 @@
 ## VirtualNetworkRuleProperties
 ### Properties
 * **ignoreMissingVnetServiceEndpoint**: bool: Create firewall rule before the virtual network has vnet service endpoint enabled.
-* **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly): Virtual Network Rule State
+* **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' | string (ReadOnly): Virtual Network Rule State
 * **virtualNetworkSubnetId**: string (Required): The ARM resource id of the virtual network subnet.
 

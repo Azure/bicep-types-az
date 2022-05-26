@@ -33,7 +33,7 @@
 ## Sku
 ### Properties
 * **name**: string (Required): The SKU name of the container registry. Required for registry creation. Allowed value: Basic.
-* **tier**: 'Basic' (ReadOnly): The SKU tier based on the SKU name.
+* **tier**: 'Basic' | string (ReadOnly): The SKU tier based on the SKU name.
 
 ## RegistryCreateParametersTags
 ### Properties

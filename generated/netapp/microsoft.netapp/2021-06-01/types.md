@@ -106,7 +106,7 @@
 * **serverRootCACertificate**: string: When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.
 * **site**: string: The Active Directory site the service will limit Domain Controller discovery to
 * **smbServerName**: string: NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
-* **status**: 'Created' | 'Deleted' | 'Error' | 'InUse' | 'Updating' (ReadOnly): Status of the Active Directory
+* **status**: 'Created' | 'Deleted' | 'Error' | 'InUse' | 'Updating' | string (ReadOnly): Status of the Active Directory
 * **statusDetails**: string (ReadOnly): Any details in regards to the Status of the Active Directory
 * **username**: string: Username of Active Directory domain administrator
 
@@ -118,10 +118,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## ResourceTags
 ### Properties
@@ -154,11 +154,11 @@
 ## PoolProperties
 ### Properties
 * **coolAccess**: bool: If enabled (true) the pool can contain cool Access enabled volumes.
-* **encryptionType**: 'Double' | 'Single': Encryption type of the capacity pool, set encryption type for data at rest for this pool and all volumes in it. This value can only be set when creating new pool.
+* **encryptionType**: 'Double' | 'Single' | string: Encryption type of the capacity pool, set encryption type for data at rest for this pool and all volumes in it. This value can only be set when creating new pool.
 * **poolId**: string (ReadOnly): UUID v4 used to identify the Pool
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **qosType**: 'Auto' | 'Manual': The qos type of the pool
-* **serviceLevel**: 'Premium' | 'Standard' | 'StandardZRS' | 'Ultra' (Required): The service level of the file system
+* **qosType**: 'Auto' | 'Manual' | string: The qos type of the pool
+* **serviceLevel**: 'Premium' | 'Standard' | 'StandardZRS' | 'Ultra' | string (Required): The service level of the file system
 * **size**: int (Required): Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
 * **totalThroughputMibps**: int (ReadOnly): Total throughput of pool in Mibps
 * **utilizedThroughputMibps**: int (ReadOnly): Utilized throughput of pool in Mibps
@@ -170,7 +170,7 @@
 
 ## VolumeProperties
 ### Properties
-* **avsDataStore**: 'Disabled' | 'Enabled': Specifies whether the volume is enabled for Azure VMware Solution (AVS) datastore purpose
+* **avsDataStore**: 'Disabled' | 'Enabled' | string: Specifies whether the volume is enabled for Azure VMware Solution (AVS) datastore purpose
 * **backupId**: string: UUID v4 or resource identifier used to identify the Backup.
 * **baremetalTenantId**: string (ReadOnly): Unique Baremetal Tenant Identifier.
 * **cloneProgress**: int (ReadOnly): When a volume is being restored from another volume's snapshot, will show the percentage completion of this cloning process. When this value is empty/null there is no cloning process currently happening on this volume. This value will update every 5 minutes during cloning.
@@ -188,17 +188,17 @@
 * **kerberosEnabled**: bool: Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later
 * **ldapEnabled**: bool: Specifies whether LDAP is enabled or not for a given NFS volume.
 * **mountTargets**: [MountTargetProperties](#mounttargetproperties)[] (ReadOnly): List of mount targets
-* **networkFeatures**: 'Basic' | 'Standard': Basic network, or Standard features available to the volume.
+* **networkFeatures**: 'Basic' | 'Standard' | string: Basic network, or Standard features available to the volume.
 * **networkSiblingSetId**: string (ReadOnly): Network Sibling Set ID for the the group of volumes sharing networking resources.
 * **protocolTypes**: string[]: Set of protocol types, default NFSv3, CIFS for SMB protocol
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **securityStyle**: 'ntfs' | 'unix': The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol
-* **serviceLevel**: 'Premium' | 'Standard' | 'StandardZRS' | 'Ultra': The service level of the file system
+* **securityStyle**: 'ntfs' | 'unix' | string: The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol
+* **serviceLevel**: 'Premium' | 'Standard' | 'StandardZRS' | 'Ultra' | string: The service level of the file system
 * **smbContinuouslyAvailable**: bool: Enables continuously available share property for smb volume. Only applicable for SMB volume
 * **smbEncryption**: bool: Enables encryption for in-flight smb3 data. Only applicable for SMB/DualProtocol volume. To be used with swagger version 2020-08-01 or later
 * **snapshotDirectoryVisible**: bool: If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).
 * **snapshotId**: string: UUID v4 or resource identifier used to identify the Snapshot.
-* **storageToNetworkProximity**: 'Default' | 'T1' | 'T2' (ReadOnly): Provides storage to network proximity information for the volume.
+* **storageToNetworkProximity**: 'Default' | 'T1' | 'T2' | string (ReadOnly): Provides storage to network proximity information for the volume.
 * **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
 * **throughputMibps**: int: Maximum throughput in Mibps that can be achieved by this volume and this will be accepted as input only for manual qosType volume
 * **unixPermissions**: string: UNIX permissions for NFS volume accepted in octal 4 digit format. First digit selects the set user ID(4), set group ID (2) and sticky (1) attributes. Second digit selects permission for the owner of the file: read (4), write (2) and execute (1). Third selects permissions for other users in the same group. the fourth for other users not in the group. 0755 - gives read/write/execute permissions to owner and read/execute to group and other users.
@@ -220,11 +220,11 @@
 
 ## ReplicationObject
 ### Properties
-* **endpointType**: 'dst' | 'src': Indicates whether the local volume is the source or destination for the Volume Replication
+* **endpointType**: 'dst' | 'src' | string: Indicates whether the local volume is the source or destination for the Volume Replication
 * **remoteVolumeRegion**: string: The remote region for the other end of the Volume Replication.
 * **remoteVolumeResourceId**: string (Required): The resource ID of the remote volume.
 * **replicationId**: string: Id
-* **replicationSchedule**: '_10minutely' | 'daily' | 'hourly': Schedule
+* **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' | string: Schedule
 
 ## VolumeSnapshotProperties
 ### Properties
@@ -237,7 +237,7 @@
 ## ExportPolicyRule
 ### Properties
 * **allowedClients**: string: Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names
-* **chownMode**: 'Restricted' | 'Unrestricted': This parameter specifies who is authorized to change the ownership of a file. restricted - Only root user can change the ownership of the file. unrestricted - Non-root users can change ownership of files that they own.
+* **chownMode**: 'Restricted' | 'Unrestricted' | string: This parameter specifies who is authorized to change the ownership of a file. restricted - Only root user can change the ownership of the file. unrestricted - Non-root users can change ownership of files that they own.
 * **cifs**: bool: Allows CIFS protocol
 * **hasRootAccess**: bool: Has root access to volume
 * **kerberos5iReadOnly**: bool: Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later
@@ -267,7 +267,7 @@
 ## BackupProperties
 ### Properties
 * **backupId**: string (ReadOnly): UUID v4 used to identify the Backup
-* **backupType**: 'Manual' | 'Scheduled' (ReadOnly): Type of backup Manual or Scheduled
+* **backupType**: 'Manual' | 'Scheduled' | string (ReadOnly): Type of backup Manual or Scheduled
 * **creationDate**: string (ReadOnly): The creation date of the backup
 * **failureReason**: string (ReadOnly): Failure reason
 * **label**: string: Label for backup

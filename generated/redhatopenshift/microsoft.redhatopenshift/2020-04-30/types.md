@@ -24,7 +24,7 @@
 * **ingressProfiles**: [IngressProfile](#ingressprofile)[]: The cluster ingress profiles.
 * **masterProfile**: [MasterProfile](#masterprofile): MasterProfile represents a master profile.
 * **networkProfile**: [NetworkProfile](#networkprofile): NetworkProfile represents a network profile.
-* **provisioningState**: 'AdminUpdating' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': ProvisioningState represents a provisioning state.
+* **provisioningState**: 'AdminUpdating' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ProvisioningState represents a provisioning state.
 * **servicePrincipalProfile**: [ServicePrincipalProfile](#serviceprincipalprofile): ServicePrincipalProfile represents a service principal profile.
 * **workerProfiles**: [WorkerProfile](#workerprofile)[]: The cluster worker profiles.
 
@@ -32,7 +32,7 @@
 ### Properties
 * **ip**: string: The IP of the cluster API server (immutable).
 * **url**: string: The URL to access the cluster API server (immutable).
-* **visibility**: 'Private' | 'Public': Visibility represents visibility.
+* **visibility**: 'Private' | 'Public' | string: Visibility represents visibility.
 
 ## ClusterProfile
 ### Properties
@@ -49,12 +49,12 @@
 ### Properties
 * **ip**: string: The IP of the ingress (immutable).
 * **name**: string: The ingress profile name.  Must be "default" (immutable).
-* **visibility**: 'Private' | 'Public': Visibility represents visibility.
+* **visibility**: 'Private' | 'Public' | string: Visibility represents visibility.
 
 ## MasterProfile
 ### Properties
 * **subnetId**: string: The Azure resource ID of the master subnet (immutable).
-* **vmSize**: 'Standard_D2s_v3' | 'Standard_D4s_v3' | 'Standard_D8s_v3': VMSize represents a VM size.
+* **vmSize**: 'Standard_D2s_v3' | 'Standard_D4s_v3' | 'Standard_D8s_v3' | string: VMSize represents a VM size.
 
 ## NetworkProfile
 ### Properties
@@ -72,7 +72,7 @@
 * **diskSizeGB**: int: The disk size of the worker VMs.  Must be 128 or greater (immutable).
 * **name**: string: The worker profile name.  Must be "worker" (immutable).
 * **subnetId**: string: The Azure resource ID of the worker subnet (immutable).
-* **vmSize**: 'Standard_D2s_v3' | 'Standard_D4s_v3' | 'Standard_D8s_v3': VMSize represents a VM size.
+* **vmSize**: 'Standard_D2s_v3' | 'Standard_D4s_v3' | 'Standard_D8s_v3' | string: VMSize represents a VM size.
 
 ## TrackedResourceTags
 ### Properties

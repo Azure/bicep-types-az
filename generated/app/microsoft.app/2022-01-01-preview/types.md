@@ -91,7 +91,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
 ## UserAssignedIdentities
@@ -112,14 +112,14 @@
 * **latestRevisionName**: string (ReadOnly): Name of the latest revision of the Container App.
 * **managedEnvironmentId**: string: Resource ID of the Container App's environment.
 * **outboundIPAddresses**: string[] (ReadOnly): Outbound IP Addresses for container app.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Provisioning state of the Container App.
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the Container App.
 * **template**: [Template](#template): Container App versioned application definition.
 Defines the desired state of an immutable revision.
 Any changes to this section Will result in a new revision being created
 
 ## Configuration
 ### Properties
-* **activeRevisionsMode**: 'multiple' | 'single': ActiveRevisionsMode controls how active revisions are handled for the Container app:
+* **activeRevisionsMode**: 'multiple' | 'single' | string: ActiveRevisionsMode controls how active revisions are handled for the Container app:
 <list><item>Multiple: multiple revisions can be active. If no value if provided, this is the default</item><item>Single: Only one revision can be active at a time. Revision weights can not be used in this mode</item></list>
 * **dapr**: [Dapr](#dapr): Container App Dapr configuration.
 * **ingress**: [Ingress](#ingress): Container App Ingress configuration.
@@ -130,7 +130,7 @@ Any changes to this section Will result in a new revision being created
 ### Properties
 * **appId**: string: Dapr application identifier
 * **appPort**: int: Tells Dapr which port your application is listening on
-* **appProtocol**: 'grpc' | 'http': Tells Dapr which protocol your application is using. Valid options are http and grpc. Default is http
+* **appProtocol**: 'grpc' | 'http' | string: Tells Dapr which protocol your application is using. Valid options are http and grpc. Default is http
 * **enabled**: bool: Boolean indicating if the Dapr side car is enabled
 
 ## Ingress
@@ -141,11 +141,11 @@ Any changes to this section Will result in a new revision being created
 * **fqdn**: string (ReadOnly): Hostname.
 * **targetPort**: int: Target Port in containers for traffic from ingress
 * **traffic**: [TrafficWeight](#trafficweight)[]: Traffic weights for app's revisions
-* **transport**: 'auto' | 'http' | 'http2': Ingress transport protocol
+* **transport**: 'auto' | 'http' | 'http2' | string: Ingress transport protocol
 
 ## CustomDomain
 ### Properties
-* **bindingType**: 'Disabled' | 'SniEnabled': Custom Domain binding type.
+* **bindingType**: 'Disabled' | 'SniEnabled' | string: Custom Domain binding type.
 * **certificateId**: string (Required): Resource Id of the Certificate to be bound to this hostname. Must exist in the Managed Environment.
 * **name**: string (Required): Hostname.
 
@@ -200,7 +200,7 @@ Any changes to this section Will result in a new revision being created
 * **tcpSocket**: [ContainerAppProbeTcpSocket](#containerappprobetcpsocket): TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported.
 * **terminationGracePeriodSeconds**: int: Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is an alpha field and requires enabling ProbeTerminationGracePeriod feature gate. Maximum value is 3600 seconds (1 hour)
 * **timeoutSeconds**: int: Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 240.
-* **type**: 'liveness' | 'readiness' | 'startup': The type of probe.
+* **type**: 'liveness' | 'readiness' | 'startup' | string: The type of probe.
 
 ## ContainerAppProbeHttpGet
 ### Properties
@@ -281,16 +281,16 @@ eg: azure-servicebus, redis etc.
 ### Properties
 * **name**: string: Volume name.
 * **storageName**: string: Name of storage resource. No need to provide for EmptyDir.
-* **storageType**: 'AzureFile' | 'EmptyDir': Storage type for the volume. If not provided, use EmptyDir.
+* **storageType**: 'AzureFile' | 'EmptyDir' | string: Storage type for the volume. If not provided, use EmptyDir.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -536,7 +536,7 @@ The setting in this value can control the behavior of certain features in the Au
 ### Properties
 * **branch**: string: The branch which will trigger the auto deployment
 * **githubActionConfiguration**: [GithubActionConfiguration](#githubactionconfiguration): Configuration properties that define the mutable settings of a Container App SourceControl
-* **operationState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Current provisioning State of the operation
+* **operationState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Current provisioning State of the operation
 * **repoUrl**: string: The repo url which will be integrated to ContainerApp.
 
 ## GithubActionConfiguration
@@ -568,7 +568,7 @@ The setting in this value can control the behavior of certain features in the Au
 * **daprAIInstrumentationKey**: string: Azure Monitor instrumentation key used by Dapr to export Service to Service communication telemetry
 * **defaultDomain**: string (ReadOnly): Default Domain Name for the cluster
 * **deploymentErrors**: string (ReadOnly): Any errors that occurred during deployment or deployment validation
-* **provisioningState**: 'Canceled' | 'Failed' | 'InfrastructureSetupComplete' | 'InfrastructureSetupInProgress' | 'InitializationInProgress' | 'ScheduledForDelete' | 'Succeeded' | 'UpgradeFailed' | 'UpgradeRequested' | 'Waiting' (ReadOnly): Provisioning state of the Environment.
+* **provisioningState**: 'Canceled' | 'Failed' | 'InfrastructureSetupComplete' | 'InfrastructureSetupInProgress' | 'InitializationInProgress' | 'ScheduledForDelete' | 'Succeeded' | 'UpgradeFailed' | 'UpgradeRequested' | 'Waiting' | string (ReadOnly): Provisioning state of the Environment.
 * **staticIp**: string (ReadOnly): Static IP of the Environment
 * **vnetConfiguration**: [VnetConfiguration](#vnetconfiguration): Configuration properties for apps environment to join a Virtual Network
 
@@ -602,7 +602,7 @@ The setting in this value can control the behavior of certain features in the Au
 * **issueDate**: string (ReadOnly): Certificate issue Date.
 * **issuer**: string (ReadOnly): Certificate issuer.
 * **password**: string (WriteOnly): Certificate password.
-* **provisioningState**: 'Canceled' | 'DeleteFailed' | 'Failed' | 'Pending' | 'Succeeded' (ReadOnly): Provisioning state of the certificate.
+* **provisioningState**: 'Canceled' | 'DeleteFailed' | 'Failed' | 'Pending' | 'Succeeded' | string (ReadOnly): Provisioning state of the certificate.
 * **publicKeyHash**: string (ReadOnly): Public key hash.
 * **subjectName**: string (ReadOnly): Subject name of the certificate.
 * **thumbprint**: string (ReadOnly): Certificate thumbprint.
@@ -636,7 +636,7 @@ The setting in this value can control the behavior of certain features in the Au
 
 ## AzureFileProperties
 ### Properties
-* **accessMode**: 'ReadOnly' | 'ReadWrite': Access mode for storage
+* **accessMode**: 'ReadOnly' | 'ReadWrite' | string: Access mode for storage
 * **accountKey**: string: Storage account key for azure file.
 * **accountName**: string: Storage account name for azure file.
 * **shareName**: string: Azure file share name.

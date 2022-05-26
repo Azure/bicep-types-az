@@ -27,7 +27,7 @@
 ## ManagedServiceIdentity
 ### Properties
 * **tenantId**: string (ReadOnly): ID of the Azure Active Directory.
-* **type**: 'UserAssigned': Type of the managed identity.
+* **type**: 'UserAssigned' | string: Type of the managed identity.
 * **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities): The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
 
 ## ManagedServiceIdentityUserAssignedIdentities
@@ -44,10 +44,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## DeploymentScriptTags
 ### Properties
@@ -58,13 +58,13 @@
 ### Properties
 * **arguments**: string: Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2'
 * **azCliVersion**: string (Required): Azure CLI module version to be used.
-* **cleanupPreference**: 'Always' | 'OnExpiration' | 'OnSuccess': The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
+* **cleanupPreference**: 'Always' | 'OnExpiration' | 'OnSuccess' | string: The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
 * **containerSettings**: [ContainerConfiguration](#containerconfiguration): Settings to customize ACI container instance.
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: The environment variables to pass over to the script.
 * **forceUpdateTag**: string: Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
 * **outputs**: [DeploymentScriptPropertiesBaseOutputs](#deploymentscriptpropertiesbaseoutputs) (ReadOnly): List of script outputs.
 * **primaryScriptUri**: string: Uri for the script. This is the entry point for the external script.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Failed' | 'ProvisioningResources' | 'Running' | 'Succeeded' (ReadOnly): State of the script execution. This only appears in the response.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Failed' | 'ProvisioningResources' | 'Running' | 'Succeeded' | string (ReadOnly): State of the script execution. This only appears in the response.
 * **retentionInterval**: string (Required): Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
 * **scriptContent**: string: Script body.
 * **status**: [ScriptStatus](#scriptstatus) (ReadOnly): Generic object modeling results of script execution.
@@ -118,13 +118,13 @@
 ### Properties
 * **arguments**: string: Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2'
 * **azPowerShellVersion**: string (Required): Azure PowerShell module version to be used.
-* **cleanupPreference**: 'Always' | 'OnExpiration' | 'OnSuccess': The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
+* **cleanupPreference**: 'Always' | 'OnExpiration' | 'OnSuccess' | string: The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
 * **containerSettings**: [ContainerConfiguration](#containerconfiguration): Settings to customize ACI container instance.
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: The environment variables to pass over to the script.
 * **forceUpdateTag**: string: Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
 * **outputs**: [DeploymentScriptPropertiesBaseOutputs](#deploymentscriptpropertiesbaseoutputs) (ReadOnly): List of script outputs.
 * **primaryScriptUri**: string: Uri for the script. This is the entry point for the external script.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Failed' | 'ProvisioningResources' | 'Running' | 'Succeeded' (ReadOnly): State of the script execution. This only appears in the response.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Failed' | 'ProvisioningResources' | 'Running' | 'Succeeded' | string (ReadOnly): State of the script execution. This only appears in the response.
 * **retentionInterval**: string (Required): Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
 * **scriptContent**: string: Script body.
 * **status**: [ScriptStatus](#scriptstatus) (ReadOnly): Generic object modeling results of script execution.

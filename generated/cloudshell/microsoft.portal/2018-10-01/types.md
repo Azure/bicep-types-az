@@ -38,21 +38,21 @@
 
 ## ConsoleCreateProperties
 ### Properties
-* **osType**: 'Linux' | 'Windows' (Required): The operating system type of the cloud shell.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Failed' | 'NotSpecified' | 'Pending' | 'Repairing' | 'Succeeded' | 'Updating': Provisioning state of the console.
+* **osType**: 'Linux' | 'Windows' | string (Required): The operating system type of the cloud shell.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Failed' | 'NotSpecified' | 'Pending' | 'Repairing' | 'Succeeded' | 'Updating' | string: Provisioning state of the console.
 * **uri**: string: Uri of the console.
 
 ## ConsoleProperties
 ### Properties
-* **osType**: 'Linux' | 'Windows' (ReadOnly): The operating system type of the cloud shell.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Failed' | 'NotSpecified' | 'Pending' | 'Repairing' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the console.
+* **osType**: 'Linux' | 'Windows' | string (ReadOnly): The operating system type of the cloud shell.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Failed' | 'NotSpecified' | 'Pending' | 'Repairing' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the console.
 * **uri**: string (ReadOnly): Uri of the console.
 
 ## UserProperties
 ### Properties
 * **preferredLocation**: string (Required): The preferred location of the cloud shell.
-* **preferredOsType**: 'Linux' | 'Windows' (Required): The operating system type of the cloud shell.
-* **preferredShellType**: 'bash' | 'powershell' | 'pwsh' (Required): The shell type of the cloud shell.
+* **preferredOsType**: 'Linux' | 'Windows' | string (Required): The operating system type of the cloud shell.
+* **preferredShellType**: 'bash' | 'powershell' | 'pwsh' | string (Required): The shell type of the cloud shell.
 * **storageProfile**: [StorageProfile](#storageprofile) (Required): The storage profile of the user settings.
 * **terminalSettings**: [TerminalSettings](#terminalsettings) (Required): Settings for terminal appearance.
 
@@ -64,6 +64,6 @@
 
 ## TerminalSettings
 ### Properties
-* **fontSize**: 'Large' | 'Medium' | 'NotSpecified' | 'Small': Size of terminal font.
-* **fontStyle**: 'Courier' | 'Monospace' | 'NotSpecified': Style of terminal font.
+* **fontSize**: 'Large' | 'Medium' | 'NotSpecified' | 'Small' | string: Size of terminal font.
+* **fontStyle**: 'Courier' | 'Monospace' | 'NotSpecified' | string: Style of terminal font.
 

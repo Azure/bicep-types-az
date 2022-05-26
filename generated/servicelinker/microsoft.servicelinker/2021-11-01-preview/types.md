@@ -18,7 +18,7 @@
 ## LinkerProperties
 ### Properties
 * **authInfo**: [AuthInfoBase](#authinfobase): The authentication info
-* **clientType**: 'django' | 'dotnet' | 'go' | 'java' | 'nodejs' | 'none' | 'php' | 'python' | 'ruby' | 'springBoot': The application client type
+* **clientType**: 'django' | 'dotnet' | 'go' | 'java' | 'nodejs' | 'none' | 'php' | 'python' | 'ruby' | 'springBoot' | string: The application client type
 * **provisioningState**: string (ReadOnly): The provisioning state.
 * **secretStore**: [SecretStore](#secretstore): An option to store secret value in secure place
 * **targetId**: string: The resource Id of target service.
@@ -65,16 +65,16 @@
 
 ## VNetSolution
 ### Properties
-* **type**: 'privateLink' | 'serviceEndpoint': Type of VNet solution.
+* **type**: 'privateLink' | 'serviceEndpoint' | string: Type of VNet solution.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## SourceConfigurationResult
 ### Properties

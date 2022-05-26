@@ -49,7 +49,7 @@
 ## TestBaseAccountResourceProperties
 ### Properties
 * **accessLevel**: string (ReadOnly): The access level of the Test Base Account.
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
 * **sku**: [TestBaseAccountSKU](#testbaseaccountsku) (Required): Describes a Test Base Account SKU.
 
 ## TestBaseAccountSKU
@@ -58,7 +58,7 @@
 * **locations**: string[]: The locations that the SKU is available.
 * **name**: string (Required): The name of the SKU. This is typically a letter + number code, such as B0 or S0.
 * **resourceType**: string: The type of resource the SKU applies to.
-* **tier**: 'Standard' (Required): The tier of this particular SKU.
+* **tier**: 'Standard' | string (Required): The tier of this particular SKU.
 
 ## TestBaseAccountSKUCapability
 ### Properties
@@ -69,10 +69,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## Tags
 ### Properties
@@ -116,11 +116,11 @@
 * **flightingRing**: string (Required): The flighting ring for feature update.
 * **isEnabled**: bool (ReadOnly): Flag showing that whether the package is enabled. It doesn't schedule test for package which is not enabled.
 * **lastModifiedTime**: string (ReadOnly): The UTC timestamp when the package was last modified.
-* **packageStatus**: 'Deleted' | 'Error' | 'PreValidationCheckPass' | 'Ready' | 'Registered' | 'Unknown' | 'ValidatingPackage' | 'ValidationLongerThanUsual' | 'VerifyingPackage' (ReadOnly): The status of the package.
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+* **packageStatus**: 'Deleted' | 'Error' | 'PreValidationCheckPass' | 'Ready' | 'Registered' | 'Unknown' | 'ValidatingPackage' | 'ValidationLongerThanUsual' | 'VerifyingPackage' | string (ReadOnly): The status of the package.
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
 * **targetOSList**: [TargetOSInfo](#targetosinfo)[] (Required): Specifies the target OSs of specific OS Update types.
 * **tests**: [Test](#test)[] (Required): The detailed test information.
-* **testTypes**: 'FunctionalTest' | 'OutOfBoxTest'[] (ReadOnly): OOB, functional or both. Mapped to the data in 'tests' property.
+* **testTypes**: 'FunctionalTest' | 'OutOfBoxTest' | string[] (ReadOnly): OOB, functional or both. Mapped to the data in 'tests' property.
 * **validationResults**: [PackageValidationResult](#packagevalidationresult)[] (ReadOnly): The validation results. There's validation on package when it's created or updated.
 * **version**: string (Required): Application version
 
@@ -133,16 +133,16 @@
 ### Properties
 * **commands**: [Command](#command)[] (Required): The commands used in the test.
 * **isActive**: bool: Indicates if this test is active.It doesn't schedule test for not active Test.
-* **testType**: 'FunctionalTest' | 'OutOfBoxTest' (Required): The test type.
-* **validationRunStatus**: 'Failed' | 'Passed' | 'Pending' | 'Unknown' (ReadOnly): The status of the validation run of the package.
+* **testType**: 'FunctionalTest' | 'OutOfBoxTest' | string (Required): The test type.
+* **validationRunStatus**: 'Failed' | 'Passed' | 'Pending' | 'Unknown' | string (ReadOnly): The status of the validation run of the package.
 
 ## Command
 ### Properties
-* **action**: 'Close' | 'Custom' | 'Install' | 'Launch' | 'Uninstall' (Required): The action of the command.
+* **action**: 'Close' | 'Custom' | 'Install' | 'Launch' | 'Uninstall' | string (Required): The action of the command.
 * **alwaysRun**: bool: Specifies whether to run the command even if a previous command is failed.
 * **applyUpdateBefore**: bool: Specifies whether to apply update before the command.
 * **content**: string (Required): The content of the command. The content depends on source type.
-* **contentType**: 'File' | 'Inline' | 'Path' (Required): The type of command content.
+* **contentType**: 'File' | 'Inline' | 'Path' | string (Required): The type of command content.
 * **maxRunTime**: int: Specifies the max run time of the command.
 * **name**: string (Required): The name of the command.
 * **restartAfter**: bool: Specifies whether to restart the VM after the command executed.

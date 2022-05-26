@@ -45,7 +45,7 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'Default' (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Properties of a security alert policy.
 * **type**: 'Microsoft.DBforMariaDB/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -62,7 +62,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The Azure Active Directory principal id.
 * **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
-* **type**: 'SystemAssigned' (ReadOnly): The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
+* **type**: 'SystemAssigned' | string (ReadOnly): The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
 
 ## ServerPropertiesForCreate
 * **Discriminator**: createMode
@@ -72,13 +72,13 @@
 * **earliestRestoreDate**: string (ReadOnly): Earliest restore point creation time (ISO8601 format)
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
 * **masterServerId**: string (ReadOnly): The master server id of a replica server.
-* **minimalTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2' | 'TLSEnforcementDisabled': Enforce a minimal Tls version for the server.
+* **minimalTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2' | 'TLSEnforcementDisabled' | string: Enforce a minimal Tls version for the server.
 * **replicaCapacity**: int (ReadOnly): The maximum number of replicas that a master server can have.
 * **replicationRole**: string (ReadOnly): The replication role of the server.
 * **sslEnforcement**: 'Disabled' | 'Enabled': Enable ssl enforcement or not when connect to server.
 * **storageProfile**: [StorageProfile](#storageprofile): Storage Profile properties of a server
-* **userVisibleState**: 'Disabled' | 'Dropping' | 'Ready' (ReadOnly): A state of a server that is visible to user.
-* **version**: '10.2' | '10.3': The version of a server.
+* **userVisibleState**: 'Disabled' | 'Dropping' | 'Ready' | string (ReadOnly): A state of a server that is visible to user.
+* **version**: '10.2' | '10.3' | string: The version of a server.
 ### ServerPropertiesForDefaultCreate
 #### Properties
 * **administratorLogin**: string (Required, WriteOnly): The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
@@ -105,8 +105,8 @@
 ## StorageProfile
 ### Properties
 * **backupRetentionDays**: int: Backup retention days for the server.
-* **geoRedundantBackup**: 'Disabled' | 'Enabled': Enable Geo-redundant or not for server backup.
-* **storageAutogrow**: 'Disabled' | 'Enabled': Enable Storage Auto Grow.
+* **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: Enable Geo-redundant or not for server backup.
+* **storageAutogrow**: 'Disabled' | 'Enabled' | string: Enable Storage Auto Grow.
 * **storageMB**: int: Max storage allowed for a server.
 
 ## Sku
@@ -115,7 +115,7 @@
 * **family**: string: The family of hardware.
 * **name**: string (Required): The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
 * **size**: string: The size code, to be interpreted by resource as appropriate.
-* **tier**: 'Basic' | 'GeneralPurpose' | 'MemoryOptimized': The tier of the particular SKU, e.g. Basic.
+* **tier**: 'Basic' | 'GeneralPurpose' | 'MemoryOptimized' | string: The tier of the particular SKU, e.g. Basic.
 
 ## ServerForCreateTags
 ### Properties
@@ -154,6 +154,6 @@
 ## VirtualNetworkRuleProperties
 ### Properties
 * **ignoreMissingVnetServiceEndpoint**: bool: Create firewall rule before the virtual network has vnet service endpoint enabled.
-* **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly): Virtual Network Rule State
+* **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' | string (ReadOnly): Virtual Network Rule State
 * **virtualNetworkSubnetId**: string (Required): The ARM resource id of the virtual network subnet.
 

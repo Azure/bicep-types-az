@@ -187,10 +187,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## ClusterTags
 ### Properties
@@ -203,7 +203,7 @@
 * **inventoryItemId**: string: Gets or sets the inventory Item ID for the datastore.
 * **moName**: string (ReadOnly): Gets or sets the vCenter Managed Object name for the datastore.
 * **moRefId**: string: Gets or sets the vCenter MoRef (Managed Object Reference) ID for the datastore.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' (ReadOnly): The current deployment state of resource.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The current deployment state of resource.
 * **statuses**: [ResourceStatus](#resourcestatus)[] (ReadOnly): The resource status information.
 * **uuid**: string (ReadOnly): Gets or sets a unique identifier for this resource.
 * **vCenterId**: string: Gets or sets the ARM Id of the vCenter resource in which this datastore resides.
@@ -316,7 +316,7 @@ This property is used in relative allocation between resource consumers.
 * **inventoryType**: 'VirtualMachine' (Required): They inventory type.
 * **ipAddresses**: string[]: Gets or sets the nic ip addresses.
 * **osName**: string: Gets or sets os name.
-* **osType**: 'Linux' | 'Other' | 'Windows': Defines the different types of VM guest operating systems.
+* **osType**: 'Linux' | 'Other' | 'Windows' | string: Defines the different types of VM guest operating systems.
 * **powerState**: string (ReadOnly): Gets the power state of the virtual machine.
 * **resourcePool**: [InventoryItemDetails](#inventoryitemdetails): Defines the resource properties.
 * **smbiosUuid**: string: Gets or sets the SMBIOS UUID of the vm.
@@ -333,7 +333,7 @@ This property is used in relative allocation between resource consumers.
 Defaults to 1 if unspecified.
 * **numCPUs**: int: Gets or sets the number of vCPUs for the template.
 * **osName**: string: Gets or sets os name.
-* **osType**: 'Linux' | 'Other' | 'Windows': Defines the different types of VM guest operating systems.
+* **osType**: 'Linux' | 'Other' | 'Windows' | string: Defines the different types of VM guest operating systems.
 
 ### VirtualNetworkInventoryItem
 #### Properties
@@ -349,12 +349,12 @@ Defaults to 1 if unspecified.
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of managed service identity.
 * **tenantId**: string (ReadOnly): The tenant of managed service identity.
-* **type**: 'None' | 'SystemAssigned' (Required): The type of managed service identity.
+* **type**: 'None' | 'SystemAssigned' | string (Required): The type of managed service identity.
 
 ## VirtualMachineProperties
 ### Properties
 * **customResourceName**: string (ReadOnly): Gets the name of the corresponding resource in Kubernetes.
-* **firmwareType**: 'bios' | 'efi': Firmware type
+* **firmwareType**: 'bios' | 'efi' | string: Firmware type
 * **folderPath**: string (ReadOnly): Gets or sets the folder path of the vm.
 * **guestAgentProfile**: [GuestAgentProfile](#guestagentprofile): Defines the resource properties.
 * **hardwareProfile**: [HardwareProfile](#hardwareprofile): Defines the resource properties.
@@ -382,7 +382,7 @@ deploy.
 * **agentVersion**: string (ReadOnly): The hybrid machine agent full version.
 * **errorDetails**: [ErrorDetail](#errordetail)[] (ReadOnly): Details about the error state.
 * **lastStatusChange**: string (ReadOnly): The time of the last status change.
-* **status**: 'Connected' | 'Disconnected' | 'Error' (ReadOnly): The status of the hybrid machine agent.
+* **status**: 'Connected' | 'Disconnected' | 'Error' | string (ReadOnly): The status of the hybrid machine agent.
 * **vmUuid**: string (ReadOnly): Specifies the VM's unique SMBIOS ID.
 
 ## ErrorDetail
@@ -417,12 +417,12 @@ deploy.
 * **networkMoName**: string (ReadOnly): Gets or sets the name of the virtual network in vCenter that the nic is connected to.
 * **networkMoRefId**: string (ReadOnly): Gets or sets the vCenter MoRef (Managed Object Reference) ID of the virtual network
 that the nic is connected to.
-* **nicType**: 'e1000' | 'e1000e' | 'pcnet32' | 'vmxnet' | 'vmxnet2' | 'vmxnet3': NIC type
-* **powerOnBoot**: 'disabled' | 'enabled': Defines the options for power on boot.
+* **nicType**: 'e1000' | 'e1000e' | 'pcnet32' | 'vmxnet' | 'vmxnet2' | 'vmxnet3' | string: NIC type
+* **powerOnBoot**: 'disabled' | 'enabled' | string: Defines the options for power on boot.
 
 ## NicIPSettings
 ### Properties
-* **allocationMethod**: 'dynamic' | 'linklayer' | 'other' | 'random' | 'static' | 'unset': IP address allocation method.
+* **allocationMethod**: 'dynamic' | 'linklayer' | 'other' | 'random' | 'static' | 'unset' | string: IP address allocation method.
 * **dnsServers**: string[]: Gets or sets the dns servers.
 * **gateway**: string[]: Gets or sets the gateway.
 * **ipAddress**: string: Gets or sets the ip address for the nic.
@@ -443,7 +443,7 @@ that the nic is connected to.
 * **adminUsername**: string: Gets or sets administrator username.
 * **computerName**: string: Gets or sets computer name.
 * **osName**: string (ReadOnly): Gets or sets os name.
-* **osType**: 'Linux' | 'Other' | 'Windows': Defines the different types of VM guest operating systems.
+* **osType**: 'Linux' | 'Other' | 'Windows' | string: Defines the different types of VM guest operating systems.
 * **toolsRunningStatus**: string (ReadOnly): Gets or sets the current running status of VMware Tools running in the guest operating system.
 * **toolsVersion**: string (ReadOnly): Gets or sets the current version of VMware Tools.
 * **toolsVersionStatus**: string (ReadOnly): Gets or sets the current version status of VMware Tools installed in the guest operating system.
@@ -465,10 +465,10 @@ that the nic is connected to.
 * **controllerKey**: int: Gets or sets the controller id.
 * **deviceKey**: int: Gets or sets the device key value.
 * **deviceName**: string: Gets or sets the device name.
-* **diskMode**: 'independent_nonpersistent' | 'independent_persistent' | 'persistent': Defines the different types of disk modes.
+* **diskMode**: 'independent_nonpersistent' | 'independent_persistent' | 'persistent' | string: Defines the different types of disk modes.
 * **diskObjectId**: string (ReadOnly): Gets or sets the disk object id.
 * **diskSizeGB**: int: Gets or sets the disk total size.
-* **diskType**: 'flat' | 'pmem' | 'rawphysical' | 'rawvirtual' | 'sesparse' | 'sparse' | 'unknown': Defines the different types of disks.
+* **diskType**: 'flat' | 'pmem' | 'rawphysical' | 'rawvirtual' | 'sesparse' | 'sparse' | 'unknown' | string: Defines the different types of disks.
 * **label**: string (ReadOnly): Gets or sets the label of the virtual disk in vCenter.
 * **name**: string: Gets or sets the name of the virtual disk.
 * **unitNumber**: int: Gets or sets the unit number of the disk on the controller.
@@ -478,8 +478,8 @@ that the nic is connected to.
 * **busNumber**: int: Gets or sets the bus number of the controller.
 * **controllerKey**: int: Gets or sets the key of the controller.
 * **scsiCtlrUnitNumber**: int: Gets or sets the SCSI controller unit number.
-* **sharing**: 'noSharing' | 'physicalSharing' | 'virtualSharing': Defines the sharing mode for sharing the SCSI bus.
-* **type**: 'buslogic' | 'lsilogic' | 'lsilogicsas' | 'pvscsi': Defines the different types of SCSI controllers.
+* **sharing**: 'noSharing' | 'physicalSharing' | 'virtualSharing' | string: Defines the sharing mode for sharing the SCSI bus.
+* **type**: 'buslogic' | 'lsilogic' | 'lsilogicsas' | 'pvscsi' | string: Defines the different types of SCSI controllers.
 
 ## VirtualMachineTags
 ### Properties
@@ -509,7 +509,7 @@ that the nic is connected to.
 ### Properties
 * **code**: string (ReadOnly): The status code.
 * **displayStatus**: string (ReadOnly): The short localizable label for the status.
-* **level**: 'Error' | 'Info' | 'Warning' (ReadOnly): The level code.
+* **level**: 'Error' | 'Info' | 'Warning' | string (ReadOnly): The level code.
 * **message**: string (ReadOnly): The detailed status message, including for alerts and error messages.
 * **time**: string (ReadOnly): The time of the status.
 
@@ -523,7 +523,7 @@ that the nic is connected to.
 * **credentials**: [GuestCredential](#guestcredential): Username / Password Credentials to connect to guest.
 * **customResourceName**: string (ReadOnly): Gets the name of the corresponding resource in Kubernetes.
 * **httpProxyConfig**: [HttpProxyConfiguration](#httpproxyconfiguration): HTTP Proxy configuration for the VM.
-* **provisioningAction**: 'install' | 'repair' | 'uninstall': Defines the different types of operations for guest agent.
+* **provisioningAction**: 'install' | 'repair' | 'uninstall' | string: Defines the different types of operations for guest agent.
 * **provisioningState**: string (ReadOnly): Gets or sets the provisioning state.
 * **status**: string (ReadOnly): Gets or sets the guest agent status.
 * **statuses**: [ResourceStatus](#resourcestatus)[] (ReadOnly): The resource status information.
@@ -549,7 +549,7 @@ that the nic is connected to.
 ### Properties
 * **customResourceName**: string (ReadOnly): Gets the name of the corresponding resource in Kubernetes.
 * **disks**: [VirtualDisk](#virtualdisk)[] (ReadOnly): Gets or sets the disks the template.
-* **firmwareType**: 'bios' | 'efi' (ReadOnly): Firmware type
+* **firmwareType**: 'bios' | 'efi' | string (ReadOnly): Firmware type
 * **folderPath**: string (ReadOnly): Gets or sets the folder path of the template.
 * **inventoryItemId**: string: Gets or sets the inventory Item ID for the virtual machine template.
 * **memorySizeMB**: int (ReadOnly): Gets or sets memory size in MBs for the template.
@@ -561,7 +561,7 @@ template.
 Defaults to 1 if unspecified.
 * **numCPUs**: int (ReadOnly): Gets or sets the number of vCPUs for the template.
 * **osName**: string (ReadOnly): Gets or sets os name.
-* **osType**: 'Linux' | 'Other' | 'Windows' (ReadOnly): Defines the different types of VM guest operating systems.
+* **osType**: 'Linux' | 'Other' | 'Windows' | string (ReadOnly): Defines the different types of VM guest operating systems.
 * **provisioningState**: string (ReadOnly): Gets or sets the provisioning state.
 * **statuses**: [ResourceStatus](#resourcestatus)[] (ReadOnly): The resource status information.
 * **toolsVersion**: string (ReadOnly): Gets or sets the current version of VMware Tools.

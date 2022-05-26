@@ -25,7 +25,7 @@
 
 ## PutAliasRequestProperties
 ### Properties
-* **acceptOwnershipState**: 'Completed' | 'Expired' | 'Pending' (ReadOnly): The accept ownership state of the resource.
+* **acceptOwnershipState**: 'Completed' | 'Expired' | 'Pending' | string (ReadOnly): The accept ownership state of the resource.
 * **acceptOwnershipUrl**: string (ReadOnly): Url to accept ownership of the subscription.
 * **additionalProperties**: [PutAliasRequestAdditionalProperties](#putaliasrequestadditionalproperties) (WriteOnly): Put subscription additional properties.
 * **billingScope**: string: Billing scope of the subscription.
@@ -35,12 +35,12 @@ For Legacy EA - /billingAccounts/{billingAccountName}/enrollmentAccounts/{enroll
 * **createdTime**: string (ReadOnly): Created Time
 * **displayName**: string: The friendly name of the subscription.
 * **managementGroupId**: string (ReadOnly): The Management Group Id.
-* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly): The provisioning state of the resource.
+* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the resource.
 * **resellerId**: string: Reseller Id
 * **subscriptionId**: string: This parameter can be used to create alias for existing subscription Id
 * **subscriptionOwnerId**: string (ReadOnly): Owner Id of the subscription
 * **tags**: [SubscriptionAliasResponsePropertiesTags](#subscriptionaliasresponsepropertiestags) (ReadOnly): Tags for the subscription
-* **workload**: 'DevTest' | 'Production': The workload type of the subscription. It can be either Production or DevTest.
+* **workload**: 'DevTest' | 'Production' | string: The workload type of the subscription. It can be either Production or DevTest.
 
 ## PutAliasRequestAdditionalProperties
 ### Properties
@@ -63,10 +63,10 @@ For Legacy EA - /billingAccounts/{billingAccountName}/enrollmentAccounts/{enroll
 ### Properties
 * **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
 * **createdBy**: string (ReadOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 * **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 
 ## TenantPolicy
 ### Properties

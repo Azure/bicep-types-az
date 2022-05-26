@@ -28,7 +28,7 @@
 * **apiVersion**: '2021-03-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [OrchestratorIdentity](#orchestratoridentity)
-* **kind**: 'Kubernetes' (Required): The kind of workbook. Choices are user and shared.
+* **kind**: 'Kubernetes' | string (Required): The kind of workbook. Choices are user and shared.
 * **location**: string: Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [OrchestratorResourceProperties](#orchestratorresourceproperties): Properties of orchestrator
@@ -40,7 +40,7 @@
 * **dncAppId**: string (ReadOnly): dnc application id should be used by customer to authenticate with dnc gateway.
 * **dncEndpoint**: string (ReadOnly): dnc endpoint url that customers can use to connect to
 * **dncTenantId**: string (ReadOnly): tenant id of dnc application id
-* **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The current state of dnc controller resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The current state of dnc controller resource.
 * **resourceGuid**: string (ReadOnly): Resource guid.
 
 ## ControllerResourceTags
@@ -51,7 +51,7 @@
 ## DelegatedSubnetProperties
 ### Properties
 * **controllerDetails**: [ControllerDetails](#controllerdetails): controller details
-* **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The current state of dnc delegated subnet resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The current state of dnc delegated subnet resource.
 * **resourceGuid**: string (ReadOnly): Resource guid.
 * **subnetDetails**: [SubnetDetails](#subnetdetails): Properties of orchestrator
 
@@ -82,7 +82,7 @@
 * **orchestratorAppId**: string: AAD ID used with apiserver
 * **orchestratorTenantId**: string: TenantID of server App ID
 * **privateLinkResourceId**: string: private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified
-* **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The current state of orchestratorInstance resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The current state of orchestratorInstance resource.
 * **resourceGuid**: string (ReadOnly): Resource guid.
 
 ## OrchestratorResourceTags

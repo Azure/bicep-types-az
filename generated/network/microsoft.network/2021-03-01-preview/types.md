@@ -16,7 +16,7 @@
 ### Properties
 * **description**: string: A description of the network security perimeter.
 * **displayName**: string: A friendly name for the network security perimeter.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
 
 ## ResourceTags
 ### Properties
