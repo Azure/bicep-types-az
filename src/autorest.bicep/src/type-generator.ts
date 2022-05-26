@@ -187,8 +187,6 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
         continue;
       }
 
-      // Functions only have one possible HTTP operation from which they may be returned, so pass the same response schema as both the GET and PUT response
-      // schemata to ensure the `OnlyReturnedOn(Read|Write)` flags are not applied.
       const response = parseType(undefined, action.responseSchema);
       if (!response) {
         continue;
@@ -230,14 +228,13 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     return factory.addType(new ObjectType(definitionName, properties, additionalProperties));
   }
 
-  function combineAndThrowIfNull<TSchema extends Schema>(...schemata: Array<TSchema | undefined>) {
-    for (const schema of schemata) {
-      if (schema) {
-        return schema;
-      }
+  function combineAndThrowIfNull<TSchema extends Schema>(putSchema: TSchema | undefined, getSchema: TSchema | undefined) {
+    const output = putSchema ?? getSchema;
+    if (!output) {
+      throw 'Unable to find PUT or GET type';
     }
 
-    throw 'Unable to find PUT or GET type';
+    return output;
   }
 
   function getSchemaProperties(schema: ObjectSchema, includeBaseProperties: boolean): Dictionary<Property> {
@@ -369,6 +366,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
 
     const writable = mutability.includes('create') || mutability.includes('update');
     const readable = mutability.includes('read');
+
     if (writable && !readable) {
       return ObjectPropertyFlags.WriteOnly;
     }
