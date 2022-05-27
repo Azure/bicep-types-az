@@ -12,6 +12,15 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/instancePools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups@2018-06-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription, ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ManagedInstanceLongTermRetentionBackupProperties](#managedinstancelongtermretentionbackupproperties) (ReadOnly): Properties of a long term retention backup
+* **type**: 'Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/managedInstances@2018-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -45,6 +54,15 @@
 * **properties**: [BaseLongTermRetentionPolicyProperties](#baselongtermretentionpolicyproperties): Properties of a long term retention policy
 * **type**: 'Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/managedInstances/databases/restoreDetails@2018-06-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
+* **properties**: [ManagedDatabaseRestoreDetailsProperties](#manageddatabaserestoredetailsproperties) (ReadOnly): The managed database's restore details properties.
+* **type**: 'Microsoft.Sql/managedInstances/databases/restoreDetails' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels@2018-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -53,6 +71,15 @@
 * **name**: 'current' (Required, DeployTimeConstant): The resource name
 * **properties**: [SensitivityLabelProperties](#sensitivitylabelproperties): Properties of a sensitivity label.
 * **type**: 'Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/managedInstances/operations@2018-06-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ManagedInstanceOperationProperties](#managedinstanceoperationproperties) (ReadOnly): The properties of a managed instance operation.
+* **type**: 'Microsoft.Sql/managedInstances/operations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/vulnerabilityAssessments@2018-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -90,6 +117,15 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of a private endpoint connection.
 * **type**: 'Microsoft.Sql/servers/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/servers/privateLinkResources@2018-06-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **type**: 'Microsoft.Sql/servers/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/servers/vulnerabilityAssessments@2018-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -117,6 +153,15 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ManagedInstanceLongTermRetentionBackupProperties
+### Properties
+* **backupExpirationTime**: string (ReadOnly): The time the long term retention backup will expire.
+* **backupTime**: string (ReadOnly): The time the backup was taken
+* **databaseDeletionTime**: string (ReadOnly): The delete time of the database
+* **databaseName**: string (ReadOnly): The name of the database the backup belong to
+* **managedInstanceCreateTime**: string (ReadOnly): The create time of the instance.
+* **managedInstanceName**: string (ReadOnly): The managed instance that the backup database belongs to.
 
 ## ResourceIdentity
 ### Properties
@@ -191,6 +236,19 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 * **weekOfYear**: int: The week of year to take the yearly backup in an ISO 8601 format.
 * **yearlyRetention**: string: The yearly retention policy for an LTR backup in an ISO 8601 format.
 
+## ManagedDatabaseRestoreDetailsProperties
+### Properties
+* **blockReason**: string (ReadOnly): The reason why restore is in Blocked state.
+* **currentRestoringFileName**: string (ReadOnly): Current restoring file name.
+* **lastRestoredFileName**: string (ReadOnly): Last restored file name.
+* **lastRestoredFileTime**: string (ReadOnly): Last restored file time.
+* **lastUploadedFileName**: string (ReadOnly): Last uploaded file name.
+* **lastUploadedFileTime**: string (ReadOnly): Last uploaded file time.
+* **numberOfFilesDetected**: int (ReadOnly): Number of files detected.
+* **percentCompleted**: int (ReadOnly): Percent completed.
+* **status**: string (ReadOnly): Restore status.
+* **unrestorableFiles**: string[] (ReadOnly): List of unrestorable files.
+
 ## SensitivityLabelProperties
 ### Properties
 * **informationType**: string: The information type.
@@ -199,6 +257,48 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 * **labelId**: string: The label ID.
 * **labelName**: string: The label name.
 * **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None'
+
+## ManagedInstanceOperationProperties
+### Properties
+* **description**: string (ReadOnly): The operation description.
+* **errorCode**: int (ReadOnly): The operation error code.
+* **errorDescription**: string (ReadOnly): The operation error description.
+* **errorSeverity**: int (ReadOnly): The operation error severity.
+* **estimatedCompletionTime**: string (ReadOnly): The estimated completion time of the operation.
+* **isCancellable**: bool (ReadOnly): Whether the operation can be cancelled.
+* **isUserError**: bool (ReadOnly): Whether or not the error is a user error.
+* **managedInstanceName**: string (ReadOnly): The name of the managed instance the operation is being performed on.
+* **operation**: string (ReadOnly): The name of operation.
+* **operationFriendlyName**: string (ReadOnly): The friendly name of operation.
+* **operationParameters**: [ManagedInstanceOperationParametersPair](#managedinstanceoperationparameterspair) (ReadOnly): The parameters of a managed instance operation.
+* **operationSteps**: [ManagedInstanceOperationSteps](#managedinstanceoperationsteps) (ReadOnly): The steps of a managed instance operation.
+* **percentComplete**: int (ReadOnly): The percentage of the operation completed.
+* **startTime**: string (ReadOnly): The operation start time.
+* **state**: 'CancelInProgress' | 'Cancelled' | 'Failed' | 'InProgress' | 'Pending' | 'Succeeded' | string (ReadOnly): The operation state.
+
+## ManagedInstanceOperationParametersPair
+### Properties
+* **currentParameters**: [UpsertManagedServerOperationParameters](#upsertmanagedserveroperationparameters) (ReadOnly)
+* **requestedParameters**: [UpsertManagedServerOperationParameters](#upsertmanagedserveroperationparameters) (ReadOnly)
+
+## UpsertManagedServerOperationParameters
+### Properties
+* **family**: string (ReadOnly)
+* **storageSizeInGB**: int (ReadOnly)
+* **tier**: string (ReadOnly)
+* **vCores**: int (ReadOnly)
+
+## ManagedInstanceOperationSteps
+### Properties
+* **currentStep**: int (ReadOnly): The number of current operation steps.
+* **stepsList**: [UpsertManagedServerOperationStep](#upsertmanagedserveroperationstep)[] (ReadOnly): The operation steps list.
+* **totalSteps**: string (ReadOnly): The total number of operation steps.
+
+## UpsertManagedServerOperationStep
+### Properties
+* **name**: string (ReadOnly)
+* **order**: int (ReadOnly)
+* **status**: 'Canceled' | 'Completed' | 'Failed' | 'InProgress' | 'NotStarted' | 'SlowedDown' | string (ReadOnly)
 
 ## ManagedInstanceVulnerabilityAssessmentProperties
 ### Properties
@@ -246,6 +346,11 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 * **actionsRequired**: string (ReadOnly): The actions required for private link service connection.
 * **description**: string (Required): The private link service connection description.
 * **status**: string (Required): The private link service connection status.
+
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
 
 ## ServerVulnerabilityAssessmentProperties
 ### Properties

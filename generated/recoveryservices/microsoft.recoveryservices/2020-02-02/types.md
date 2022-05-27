@@ -14,7 +14,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/certificates@2020-02-02
+## Resource Microsoft.RecoveryServices/vaults/certificates@2020-02-02 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-02-02' (ReadOnly, DeployTimeConstant): The resource api version
@@ -32,6 +32,20 @@
 * **name**: 'vaultExtendedInfo' (Required, DeployTimeConstant): The resource name
 * **properties**: [VaultExtendedInfo](#vaultextendedinfo): Vault extended information.
 * **type**: 'Microsoft.RecoveryServices/vaults/extendedInformation' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.RecoveryServices/vaults/operationResults@2020-02-02 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-02-02' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): Optional ETag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [IdentityData](#identitydata) (ReadOnly): Identity for the resource.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VaultProperties](#vaultproperties) (ReadOnly): Properties of the vault.
+* **sku**: [Sku](#sku) (ReadOnly): Identifies the unique system identifier for each Azure resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.RecoveryServices/vaults/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## IdentityData
 ### Properties
@@ -118,8 +132,14 @@
 
 ## RawCertificateData
 ### Properties
-* **authType**: 'AAD' | 'ACS' | 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid' | string: Specifies the authentication type.
 * **certificate**: any: The base64 encoded certificate raw data string
+* **friendlyName**: string (ReadOnly): Certificate friendly name.
+* **issuer**: string (ReadOnly): Certificate issuer.
+* **resourceId**: int (ReadOnly): Resource ID of the vault.
+* **subject**: string (ReadOnly): Certificate Subject Name.
+* **thumbprint**: string (ReadOnly): Certificate thumbprint.
+* **validFrom**: string (ReadOnly): Certificate Validity start Date time.
+* **validTo**: string (ReadOnly): Certificate Validity End Date time.
 
 ## VaultExtendedInfo
 ### Properties
@@ -127,4 +147,9 @@
 * **encryptionKey**: string: Encryption key.
 * **encryptionKeyThumbprint**: string: Encryption key thumbprint.
 * **integrityKey**: string: Integrity key.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

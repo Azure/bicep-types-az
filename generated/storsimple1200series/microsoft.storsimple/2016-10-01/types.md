@@ -21,11 +21,11 @@
 * **properties**: [AccessControlRecordProperties](#accesscontrolrecordproperties) (Required): Properties of access control record
 * **type**: 'Microsoft.StorSimple/managers/accessControlRecords' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/certificates@2016-10-01
+## Resource Microsoft.StorSimple/managers/certificates@2016-10-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **contractVersion**: 'InvalidVersion' | 'V2011_09' | 'V2012_02' | 'V2012_05' | 'V2012_12' | 'V2013_04' | 'V2013_10' | 'V2013_11' | 'V2014_04' | 'V2014_06' | 'V2014_07' | 'V2014_09' | 'V2014_10' | 'V2014_12' | 'V2015_01' | 'V2015_02' | 'V2015_04' | 'V2015_05' | 'V2015_06' | 'V2015_07' | 'V2015_08' | 'V2015_10' | 'V2015_12' | 'V2016_01' | 'V2016_02' | 'V2016_04' | 'V2016_05' | 'V2016_07' | 'V2016_08' (ReadOnly): Gets ContractVersion
+* **contractVersion**: 'InvalidVersion' | 'V2011_09' | 'V2012_02' | 'V2012_05' | 'V2012_12' | 'V2013_04' | 'V2013_10' | 'V2013_11' | 'V2014_04' | 'V2014_06' | 'V2014_07' | 'V2014_09' | 'V2014_10' | 'V2014_12' | 'V2015_01' | 'V2015_02' | 'V2015_04' | 'V2015_05' | 'V2015_06' | 'V2015_07' | 'V2015_08' | 'V2015_10' | 'V2015_12' | 'V2016_01' | 'V2016_02' | 'V2016_04' | 'V2016_05' | 'V2016_07' | 'V2016_08' (ReadOnly, WriteOnly): Gets ContractVersion
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RawCertificateData](#rawcertificatedata) (Required): Raw Certificate Data From IDM
@@ -147,8 +147,20 @@
 
 ## RawCertificateData
 ### Properties
+* **aadAuthority**: string (ReadOnly): AAD tenant authority
+* **aadTenantId**: string (ReadOnly): AAD tenant Id
 * **authType**: 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid': Specify the Authentication type
+* **azureManagementEndpointAudience**: string (ReadOnly): Azure Management Endpoint Audience
 * **certificate**: string (Required): Gets or sets the base64 encoded certificate raw data string
+* **friendlyName**: string (ReadOnly): Certificate friendly name
+* **issuer**: string (ReadOnly): Certificate issuer
+* **resourceId**: int (ReadOnly): Gets or Sets the ResourceId
+* **servicePrincipalClientId**: string (ReadOnly): AAD service principal clientId
+* **servicePrincipalObjectId**: string (ReadOnly): AAD service principal ObjectId
+* **subject**: string (ReadOnly): Certificate Subject Name
+* **thumbprint**: string (ReadOnly): Certificate thumbprint
+* **validFrom**: string (ReadOnly): Certificate Validity start Date time
+* **validTo**: string (ReadOnly): Certificate Validity End Date time
 
 ## AlertSettingsProperties
 ### Properties

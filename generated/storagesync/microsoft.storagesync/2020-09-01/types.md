@@ -62,6 +62,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.StorageSync/storageSyncServices/workflows@2020-09-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkflowProperties](#workflowproperties) (ReadOnly): Workflow Properties object.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.StorageSync/storageSyncServices/workflows' (ReadOnly, DeployTimeConstant): The resource type
+
 ## StorageSyncServiceCreateParametersProperties
 ### Properties
 * **incomingTrafficPolicy**: 'AllowAllTraffic' | 'AllowVirtualNetworksOnly' | string: Type of the Incoming Traffic Policy
@@ -314,4 +324,15 @@
 * **errorCode**: int (ReadOnly): Error code (HResult)
 * **persistentCount**: int (ReadOnly): Count of persistent files not syncing with the specified error code
 * **transientCount**: int (ReadOnly): Count of transient files not syncing with the specified error code
+
+## WorkflowProperties
+### Properties
+* **commandName**: string (ReadOnly): workflow command name.
+* **createdTimestamp**: string (ReadOnly): workflow created timestamp.
+* **lastOperationId**: string (ReadOnly): workflow last operation identifier.
+* **lastStatusTimestamp**: string (ReadOnly): workflow last status timestamp.
+* **lastStepName**: string (ReadOnly): last step name
+* **operation**: 'cancel' | 'do' | 'undo' | string (ReadOnly): Type of the Operation Direction
+* **status**: 'aborted' | 'active' | 'expired' | 'failed' | 'succeeded' | string (ReadOnly): Type of the Workflow Status
+* **steps**: string (ReadOnly): workflow steps
 

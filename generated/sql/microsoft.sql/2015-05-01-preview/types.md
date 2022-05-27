@@ -1,5 +1,14 @@
 # Microsoft.Sql @ 2015-05-01-preview
 
+## Resource Microsoft.Sql/locations/usages@2015-05-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SubscriptionUsageProperties](#subscriptionusageproperties) (ReadOnly): Properties of a subscription usage.
+* **type**: 'Microsoft.Sql/locations/usages' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/managedInstances@2015-05-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -26,6 +35,39 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/servers/advisors@2015-05-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Resource kind.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AdvisorProperties](#advisorproperties) (ReadOnly): Properties for a Database, Server or Elastic Pool Advisor.
+* **type**: 'Microsoft.Sql/servers/advisors' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/databases/advisors@2015-05-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Resource kind.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AdvisorProperties](#advisorproperties) (ReadOnly): Properties for a Database, Server or Elastic Pool Advisor.
+* **type**: 'Microsoft.Sql/servers/databases/advisors' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/databases/advisors/recommendedActions@2015-05-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Resource kind.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecommendedActionProperties](#recommendedactionproperties) (ReadOnly): Properties for a Database, Server or Elastic Pool Recommended Action.
+* **type**: 'Microsoft.Sql/servers/databases/advisors/recommendedActions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/servers/databases/auditingSettings@2015-05-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -35,6 +77,15 @@
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseBlobAuditingPolicyProperties](#databaseblobauditingpolicyproperties): Properties of a database blob auditing policy.
 * **type**: 'Microsoft.Sql/servers/databases/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/databases/automaticTuning@2015-05-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'current' (Required, DeployTimeConstant): The resource name
+* **properties**: [DatabaseAutomaticTuningProperties](#databaseautomatictuningproperties) (ReadOnly): Database-level Automatic Tuning properties.
+* **type**: 'Microsoft.Sql/servers/databases/automaticTuning' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/syncGroups@2015-05-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -114,6 +165,24 @@
 * **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Properties of a virtual network rule.
 * **type**: 'Microsoft.Sql/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/virtualClusters@2015-05-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VirtualClusterProperties](#virtualclusterproperties) (ReadOnly): The properties of a virtual cluster.
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.Sql/virtualClusters' (ReadOnly, DeployTimeConstant): The resource type
+
+## SubscriptionUsageProperties
+### Properties
+* **currentValue**: int (ReadOnly): Current value of the metric.
+* **displayName**: string (ReadOnly): User-readable name of the metric.
+* **limit**: int (ReadOnly): Boundary value of the metric.
+* **unit**: string (ReadOnly): Unit of the metric.
+
 ## ResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The Azure Active Directory principal id.
@@ -177,6 +246,87 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## AdvisorProperties
+### Properties
+* **advisorStatus**: 'GA' | 'LimitedPublicPreview' | 'PrivatePreview' | 'PublicPreview' (ReadOnly): Gets the status of availability of this advisor to customers. Possible values are 'GA', 'PublicPreview', 'LimitedPublicPreview' and 'PrivatePreview'.
+* **autoExecuteStatus**: 'Default' | 'Disabled' | 'Enabled' (ReadOnly): Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'
+* **autoExecuteStatusInheritedFrom**: 'Database' | 'Default' | 'ElasticPool' | 'Server' | 'Subscription' (ReadOnly): Gets the resource from which current value of auto-execute status is inherited. Auto-execute status can be set on (and inherited from) different levels in the resource hierarchy. Possible values are 'Subscription', 'Server', 'ElasticPool', 'Database' and 'Default' (when status is not explicitly set on any level).
+* **lastChecked**: string (ReadOnly): Gets the time when the current resource was analyzed for recommendations by this advisor.
+* **recommendationsStatus**: string (ReadOnly): Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, 'Ok' (Recommendations available),LowActivity (not enough workload to analyze), 'DbSeemsTuned' (Database is doing well), etc.
+* **recommendedActions**: [RecommendedAction](#recommendedaction)[] (ReadOnly): Gets the recommended actions for this advisor.
+
+## RecommendedAction
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **kind**: string (ReadOnly): Resource kind.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [RecommendedActionProperties](#recommendedactionproperties) (ReadOnly): Properties for a Database, Server or Elastic Pool Recommended Action.
+* **type**: string (ReadOnly): Resource type.
+
+## RecommendedActionProperties
+### Properties
+* **details**: [RecommendedActionPropertiesDetails](#recommendedactionpropertiesdetails) (ReadOnly): Gets additional details specific to this recommended action.
+* **errorDetails**: [RecommendedActionErrorInfo](#recommendedactionerrorinfo) (ReadOnly): Contains error information for an Azure SQL Database, Server or Elastic Pool Recommended Action.
+* **estimatedImpact**: [RecommendedActionImpactRecord](#recommendedactionimpactrecord)[] (ReadOnly): Gets the estimated impact info for this recommended action e.g., Estimated CPU gain, Estimated Disk Space change
+* **executeActionDuration**: string (ReadOnly): Gets the time taken for applying this recommended action on user resource. e.g., time taken for index creation
+* **executeActionInitiatedBy**: 'System' | 'User' (ReadOnly): Gets if approval for applying this recommended action was given by user/system.
+* **executeActionInitiatedTime**: string (ReadOnly): Gets the time when this recommended action was approved for execution.
+* **executeActionStartTime**: string (ReadOnly): Gets the time when system started applying this recommended action on the user resource. e.g., index creation start time
+* **implementationDetails**: [RecommendedActionImplementationInfo](#recommendedactionimplementationinfo) (ReadOnly): Contains information for manual implementation for an Azure SQL Database, Server or Elastic Pool Recommended Action.
+* **isArchivedAction**: bool (ReadOnly): Gets if this recommended action was suggested some time ago but user chose to ignore this and system added a new recommended action again.
+* **isExecutableAction**: bool (ReadOnly): Gets if this recommended action is actionable by user
+* **isRevertableAction**: bool (ReadOnly): Gets if changes applied by this recommended action can be reverted by user
+* **lastRefresh**: string (ReadOnly): Gets time when this recommended action was last refreshed.
+* **linkedObjects**: string[] (ReadOnly): Gets the linked objects, if any.
+* **observedImpact**: [RecommendedActionImpactRecord](#recommendedactionimpactrecord)[] (ReadOnly): Gets the observed/actual impact info for this recommended action e.g., Actual CPU gain, Actual Disk Space change
+* **recommendationReason**: string (ReadOnly): Gets the reason for recommending this action. e.g., DuplicateIndex
+* **revertActionDuration**: string (ReadOnly): Gets the time taken for reverting changes of this recommended action on user resource. e.g., time taken for dropping the created index.
+* **revertActionInitiatedBy**: 'System' | 'User' (ReadOnly): Gets if approval for applying this recommended action was given by user/system.
+* **revertActionInitiatedTime**: string (ReadOnly): Gets the time when this recommended action was approved for revert.
+* **revertActionStartTime**: string (ReadOnly): Gets the time when system started reverting changes of this recommended action on user resource. e.g., time when index drop is executed.
+* **score**: int (ReadOnly): Gets the impact of this recommended action. Possible values are 1 - Low impact, 2 - Medium Impact and 3 - High Impact
+* **state**: [RecommendedActionStateInfo](#recommendedactionstateinfo) (ReadOnly): Contains information of current state for an Azure SQL Database, Server or Elastic Pool Recommended Action.
+* **timeSeries**: [RecommendedActionMetricInfo](#recommendedactionmetricinfo)[] (ReadOnly): Gets the time series info of metrics for this recommended action e.g., CPU consumption time series
+* **validSince**: string (ReadOnly): Gets the time since when this recommended action is valid.
+
+## RecommendedActionPropertiesDetails
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## RecommendedActionErrorInfo
+### Properties
+* **errorCode**: string (ReadOnly): Gets the reason why the recommended action was put to error state. e.g., DatabaseHasQdsOff, IndexAlreadyExists
+* **isRetryable**: 'No' | 'Yes' (ReadOnly): Gets whether the error could be ignored and recommended action could be retried. Possible values are: Yes/No
+
+## RecommendedActionImpactRecord
+### Properties
+* **absoluteValue**: int (ReadOnly): Gets the absolute value of this dimension if applicable. e.g., Number of Queries affected
+* **changeValueAbsolute**: int (ReadOnly): Gets the absolute change in the value of this dimension. e.g., Absolute Disk space change in Megabytes
+* **changeValueRelative**: int (ReadOnly): Gets the relative change in the value of this dimension. e.g., Relative Disk space change in Percentage
+* **dimensionName**: string (ReadOnly): Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
+* **unit**: string (ReadOnly): Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
+
+## RecommendedActionImplementationInfo
+### Properties
+* **method**: 'AzurePowerShell' | 'TSql' (ReadOnly): Gets the method in which this recommended action can be manually implemented. e.g., TSql, AzurePowerShell.
+* **script**: string (ReadOnly): Gets the manual implementation script. e.g., T-SQL script that could be executed on the database.
+
+## RecommendedActionStateInfo
+### Properties
+* **actionInitiatedBy**: 'System' | 'User' (ReadOnly): Gets if approval for applying this recommended action was given by user/system.
+* **currentValue**: 'Active' | 'Error' | 'Executing' | 'Expired' | 'Ignored' | 'Monitoring' | 'Pending' | 'PendingRevert' | 'Resolved' | 'RevertCancelled' | 'Reverted' | 'Reverting' | 'Success' | 'Verifying' | string (ReadOnly): Current state the recommended action is in. Some commonly used states are: Active      -> recommended action is active and no action has been taken yet. Pending     -> recommended action is approved for and is awaiting execution. Executing   -> recommended action is being applied on the user database. Verifying   -> recommended action was applied and is being verified of its usefulness by the system. Success     -> recommended action was applied and improvement found during verification. Pending Revert  -> verification found little or no improvement so recommended action is queued for revert or user has manually reverted. Reverting   -> changes made while applying recommended action are being reverted on the user database. Reverted    -> successfully reverted the changes made by recommended action on user database. Ignored     -> user explicitly ignored/discarded the recommended action.
+* **lastModified**: string (ReadOnly): Gets the time when the state was last modified
+
+## RecommendedActionMetricInfo
+### Properties
+* **metricName**: string (ReadOnly): Gets the name of the metric. e.g., CPU, Number of Queries.
+* **startTime**: string (ReadOnly): Gets the start time of time interval given by this MetricInfo.
+* **timeGrain**: string (ReadOnly): Gets the duration of time interval for the value given by this MetricInfo. e.g., PT1H (1 hour)
+* **unit**: string (ReadOnly): Gets the unit in which metric is measured. e.g., DTU, Frequency
+* **value**: int (ReadOnly): Gets the value of the metric in the time interval given by this MetricInfo.
 
 ## DatabaseBlobAuditingPolicyProperties
 ### Properties
@@ -261,6 +411,24 @@ Prerequisites for using managed identity authentication:
 For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
 * **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
+
+## DatabaseAutomaticTuningProperties
+### Properties
+* **actualState**: 'Auto' | 'Custom' | 'Inherit' | 'Unspecified' (ReadOnly): Automatic tuning desired state.
+* **desiredState**: 'Auto' | 'Custom' | 'Inherit' | 'Unspecified' (ReadOnly): Automatic tuning desired state.
+* **options**: [DatabaseAutomaticTuningPropertiesOptions](#databaseautomatictuningpropertiesoptions) (ReadOnly): Automatic tuning options definition.
+
+## DatabaseAutomaticTuningPropertiesOptions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [AutomaticTuningOptions](#automatictuningoptions)
+
+## AutomaticTuningOptions
+### Properties
+* **actualState**: 'Off' | 'On' (ReadOnly): Automatic tuning option actual state.
+* **desiredState**: 'Default' | 'Off' | 'On' (ReadOnly): Automatic tuning option desired state.
+* **reasonCode**: int (ReadOnly): Reason code if desired and actual state are different.
+* **reasonDesc**: 'AutoConfigured' | 'Default' | 'Disabled' | 'InheritedFromServer' | 'NotSupported' | 'QueryStoreOff' | 'QueryStoreReadOnly' (ReadOnly): Reason description if desired and actual state are different.
 
 ## SyncGroupProperties
 ### Properties
@@ -366,4 +534,15 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **ignoreMissingVnetServiceEndpoint**: bool: Create firewall rule before the virtual network has vnet service endpoint enabled.
 * **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' | string (ReadOnly): Virtual Network Rule State
 * **virtualNetworkSubnetId**: string (Required): The ARM resource id of the virtual network subnet.
+
+## VirtualClusterProperties
+### Properties
+* **childResources**: string[] (ReadOnly): List of resources in this virtual cluster.
+* **family**: string (ReadOnly): If the service has different generations of hardware, for the same SKU, then that can be captured here.
+* **subnetId**: string (ReadOnly): Subnet resource ID for the virtual cluster.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

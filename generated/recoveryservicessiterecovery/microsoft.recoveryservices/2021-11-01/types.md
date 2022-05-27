@@ -10,6 +10,16 @@
 * **properties**: [ConfigureAlertRequestProperties](#configurealertrequestproperties): Properties of a configure alert request.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationAlertSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.RecoveryServices/vaults/replicationEvents@2021-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [EventProperties](#eventproperties) (ReadOnly): The properties of a monitoring event.
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationEvents' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics@2021-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -19,6 +29,26 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [FabricCreationInputProperties](#fabriccreationinputproperties): Properties of site details provided during the time of site creation.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationLogicalNetworks@2021-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [LogicalNetworkProperties](#logicalnetworkproperties) (ReadOnly): Logical Network Properties.
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationLogicalNetworks' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks@2021-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NetworkProperties](#networkproperties) (ReadOnly): Network Properties.
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks/replicationNetworkMappings@2021-11-01
 * **Valid Scope(s)**: ResourceGroup
@@ -50,6 +80,26 @@
 * **properties**: [EnableMigrationInputProperties](#enablemigrationinputproperties) (Required): Enable migration input properties.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems/migrationRecoveryPoints@2021-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [MigrationRecoveryPointProperties](#migrationrecoverypointproperties) (ReadOnly): Migration item recovery point properties.
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems/migrationRecoveryPoints' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectableItems@2021-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProtectableItemProperties](#protectableitemproperties) (ReadOnly): Replication protected item custom data details.
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectableItems' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems@2021-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -59,6 +109,16 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EnableProtectionInputProperties](#enableprotectioninputproperties): Enable protection input properties.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems/recoveryPoints@2021-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecoveryPointProperties](#recoverypointproperties) (ReadOnly): Recovery point properties.
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems/recoveryPoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings@2021-11-01
 * **Valid Scope(s)**: ResourceGroup
@@ -80,6 +140,16 @@
 * **properties**: [AddRecoveryServicesProviderInputProperties](#addrecoveryservicesproviderinputproperties) (Required): The properties of an add provider request.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications@2021-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [StorageClassificationProperties](#storageclassificationproperties) (ReadOnly): Storage object properties.
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications/replicationStorageClassificationMappings@2021-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -99,6 +169,16 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AddVCenterRequestProperties](#addvcenterrequestproperties): The properties of an add vCenter request.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationvCenters' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.RecoveryServices/vaults/replicationJobs@2021-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [JobProperties](#jobproperties) (ReadOnly): Job custom data details.
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationJobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationPolicies@2021-11-01
 * **Valid Scope(s)**: ResourceGroup
@@ -145,6 +225,151 @@
 * **customEmailAddresses**: string[]: The custom email address for sending emails.
 * **locale**: string: The locale for the email notification.
 * **sendToOwners**: string: A value indicating whether to send email to subscription administrator.
+
+## EventProperties
+### Properties
+* **affectedObjectCorrelationId**: string (ReadOnly): The affected object correlationId for the event.
+* **affectedObjectFriendlyName**: string (ReadOnly): The friendly name of the source of the event on which it is raised (for example, VM, VMM etc).
+* **description**: string (ReadOnly): The event name.
+* **eventCode**: string (ReadOnly): The Id of the monitoring event.
+* **eventSpecificDetails**: [EventSpecificDetails](#eventspecificdetails) (ReadOnly): Model class for event specific details for an event.
+* **eventType**: string (ReadOnly): The type of the event. for example: VM Health, Server Health, Job Failure etc.
+* **fabricId**: string (ReadOnly): The ARM ID of the fabric.
+* **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): The list of errors / warnings capturing details associated with the issue(s).
+* **providerSpecificDetails**: [EventProviderSpecificDetails](#eventproviderspecificdetails) (ReadOnly): Model class for provider specific details for an event.
+* **severity**: string (ReadOnly): The severity of the event.
+* **timeOfOccurrence**: string (ReadOnly): The time of occurrence of the event.
+
+## EventSpecificDetails
+* **Discriminator**: instanceType
+
+### Base Properties
+### JobStatusEventDetails
+#### Properties
+* **affectedObjectType**: string (ReadOnly): AffectedObjectType for the event.
+* **instanceType**: 'JobStatus' (Required): Gets the class type. Overridden in derived classes.
+* **jobFriendlyName**: string (ReadOnly): JobName for the Event.
+* **jobId**: string (ReadOnly): Job arm id for the event.
+* **jobStatus**: string (ReadOnly): JobStatus for the Event.
+
+
+## HealthError
+### Properties
+* **creationTimeUtc**: string (ReadOnly): Error creation time (UTC).
+* **customerResolvability**: 'Allowed' | 'NotAllowed' | string (ReadOnly): Value indicating whether the health error is customer resolvable.
+* **entityId**: string (ReadOnly): ID of the entity.
+* **errorCategory**: string (ReadOnly): Category of error.
+* **errorCode**: string (ReadOnly): Error code.
+* **errorId**: string (ReadOnly): The health error unique id.
+* **errorLevel**: string (ReadOnly): Level of error.
+* **errorMessage**: string (ReadOnly): Error message.
+* **errorSource**: string (ReadOnly): Source of error.
+* **errorType**: string (ReadOnly): Type of error.
+* **innerHealthErrors**: [InnerHealthError](#innerhealtherror)[] (ReadOnly): The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.
+* **possibleCauses**: string (ReadOnly): Possible causes of error.
+* **recommendedAction**: string (ReadOnly): Recommended action to resolve error.
+* **recoveryProviderErrorMessage**: string (ReadOnly): DRA error message.
+* **summaryMessage**: string (ReadOnly): Summary message of the entity.
+
+## InnerHealthError
+### Properties
+* **creationTimeUtc**: string (ReadOnly): Error creation time (UTC).
+* **customerResolvability**: 'Allowed' | 'NotAllowed' | string (ReadOnly): Value indicating whether the health error is customer resolvable.
+* **entityId**: string (ReadOnly): ID of the entity.
+* **errorCategory**: string (ReadOnly): Category of error.
+* **errorCode**: string (ReadOnly): Error code.
+* **errorId**: string (ReadOnly): The health error unique id.
+* **errorLevel**: string (ReadOnly): Level of error.
+* **errorMessage**: string (ReadOnly): Error message.
+* **errorSource**: string (ReadOnly): Source of error.
+* **errorType**: string (ReadOnly): Type of error.
+* **possibleCauses**: string (ReadOnly): Possible causes of error.
+* **recommendedAction**: string (ReadOnly): Recommended action to resolve error.
+* **recoveryProviderErrorMessage**: string (ReadOnly): DRA error message.
+* **summaryMessage**: string (ReadOnly): Summary message of the entity.
+
+## EventProviderSpecificDetails
+* **Discriminator**: instanceType
+
+### Base Properties
+### A2AEventDetails
+#### Properties
+* **fabricLocation**: string (ReadOnly): The fabric location.
+* **fabricName**: string (ReadOnly): Fabric arm name.
+* **fabricObjectId**: string (ReadOnly): The azure vm arm id.
+* **instanceType**: 'A2A' (Required): Gets the class type. Overridden in derived classes.
+* **protectedItemName**: string (ReadOnly): The protected item arm name.
+* **remoteFabricLocation**: string (ReadOnly): Remote fabric location.
+* **remoteFabricName**: string (ReadOnly): Remote fabric arm name.
+
+### HyperVReplica2012EventDetails
+#### Properties
+* **containerName**: string (ReadOnly): The container friendly name.
+* **fabricName**: string (ReadOnly): The fabric friendly name.
+* **instanceType**: 'HyperVReplica2012' (Required): Gets the class type. Overridden in derived classes.
+* **remoteContainerName**: string (ReadOnly): The remote container name.
+* **remoteFabricName**: string (ReadOnly): The remote fabric name.
+
+### HyperVReplica2012R2EventDetails
+#### Properties
+* **containerName**: string (ReadOnly): The container friendly name.
+* **fabricName**: string (ReadOnly): The fabric friendly name.
+* **instanceType**: 'HyperVReplica2012R2' (Required): Gets the class type. Overridden in derived classes.
+* **remoteContainerName**: string (ReadOnly): The remote container name.
+* **remoteFabricName**: string (ReadOnly): The remote fabric name.
+
+### HyperVReplicaAzureEventDetails
+#### Properties
+* **containerName**: string (ReadOnly): The container friendly name.
+* **fabricName**: string (ReadOnly): The fabric friendly name.
+* **instanceType**: 'HyperVReplicaAzure' (Required): Gets the class type. Overridden in derived classes.
+* **remoteContainerName**: string (ReadOnly): The remote container name.
+
+### HyperVReplicaBaseEventDetails
+#### Properties
+* **containerName**: string (ReadOnly): The container friendly name.
+* **fabricName**: string (ReadOnly): The fabric friendly name.
+* **instanceType**: 'HyperVReplicaBaseEventDetails' (Required): Gets the class type. Overridden in derived classes.
+* **remoteContainerName**: string (ReadOnly): The remote container name.
+* **remoteFabricName**: string (ReadOnly): The remote fabric name.
+
+### InMageAzureV2EventDetails
+#### Properties
+* **category**: string (ReadOnly): InMage Event Category.
+* **component**: string (ReadOnly): InMage Event Component.
+* **correctiveAction**: string (ReadOnly): Corrective Action string for the event.
+* **details**: string (ReadOnly): InMage Event Details.
+* **eventType**: string (ReadOnly): InMage Event type. Takes one of the values of InMageDataContract.InMageMonitoringEventType.
+* **instanceType**: 'InMageAzureV2' (Required): Gets the class type. Overridden in derived classes.
+* **siteName**: string (ReadOnly): VMware Site name.
+* **summary**: string (ReadOnly): InMage Event Summary.
+
+### InMageRcmEventDetails
+#### Properties
+* **applianceName**: string (ReadOnly): The appliance name.
+* **componentDisplayName**: string (ReadOnly): The component display name.
+* **fabricName**: string (ReadOnly): The fabric name.
+* **instanceType**: 'InMageRcm' (Required): Gets the class type. Overridden in derived classes.
+* **jobId**: string (ReadOnly): The job Id.
+* **latestAgentVersion**: string (ReadOnly): The latest agent version.
+* **protectedItemName**: string (ReadOnly): The protected item name.
+* **serverType**: string (ReadOnly): The server type.
+* **vmName**: string (ReadOnly): The protected item name.
+
+### InMageRcmFailbackEventDetails
+#### Properties
+* **applianceName**: string (ReadOnly): The appliance name.
+* **componentDisplayName**: string (ReadOnly): The component display name.
+* **instanceType**: 'InMageRcmFailback' (Required): Gets the class type. Overridden in derived classes.
+* **protectedItemName**: string (ReadOnly): The protected item name.
+* **serverType**: string (ReadOnly): The server type.
+* **vmName**: string (ReadOnly): The protected item name.
+
+### VMwareCbtEventDetails
+#### Properties
+* **instanceType**: 'VMwareCbt' (Required): Gets the class type. Overridden in derived classes.
+* **migrationItemName**: string (ReadOnly): The migration item name.
+
 
 ## FabricCreationInputProperties
 ### Properties
@@ -285,41 +510,6 @@
 * **name**: string (ReadOnly): The DRA name.
 * **reverseProtectedItemCount**: int (ReadOnly): The count of protected items which are protected in reverse direction.
 * **version**: string (ReadOnly): The version.
-
-## HealthError
-### Properties
-* **creationTimeUtc**: string (ReadOnly): Error creation time (UTC).
-* **customerResolvability**: 'Allowed' | 'NotAllowed' | string (ReadOnly): Value indicating whether the health error is customer resolvable.
-* **entityId**: string (ReadOnly): ID of the entity.
-* **errorCategory**: string (ReadOnly): Category of error.
-* **errorCode**: string (ReadOnly): Error code.
-* **errorId**: string (ReadOnly): The health error unique id.
-* **errorLevel**: string (ReadOnly): Level of error.
-* **errorMessage**: string (ReadOnly): Error message.
-* **errorSource**: string (ReadOnly): Source of error.
-* **errorType**: string (ReadOnly): Type of error.
-* **innerHealthErrors**: [InnerHealthError](#innerhealtherror)[] (ReadOnly): The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.
-* **possibleCauses**: string (ReadOnly): Possible causes of error.
-* **recommendedAction**: string (ReadOnly): Recommended action to resolve error.
-* **recoveryProviderErrorMessage**: string (ReadOnly): DRA error message.
-* **summaryMessage**: string (ReadOnly): Summary message of the entity.
-
-## InnerHealthError
-### Properties
-* **creationTimeUtc**: string (ReadOnly): Error creation time (UTC).
-* **customerResolvability**: 'Allowed' | 'NotAllowed' | string (ReadOnly): Value indicating whether the health error is customer resolvable.
-* **entityId**: string (ReadOnly): ID of the entity.
-* **errorCategory**: string (ReadOnly): Category of error.
-* **errorCode**: string (ReadOnly): Error code.
-* **errorId**: string (ReadOnly): The health error unique id.
-* **errorLevel**: string (ReadOnly): Level of error.
-* **errorMessage**: string (ReadOnly): Error message.
-* **errorSource**: string (ReadOnly): Source of error.
-* **errorType**: string (ReadOnly): Type of error.
-* **possibleCauses**: string (ReadOnly): Possible causes of error.
-* **recommendedAction**: string (ReadOnly): Recommended action to resolve error.
-* **recoveryProviderErrorMessage**: string (ReadOnly): DRA error message.
-* **summaryMessage**: string (ReadOnly): Summary message of the entity.
 
 ## MarsAgentDetails
 ### Properties
@@ -551,6 +741,26 @@
 * **kekCertThumbprint**: string (ReadOnly): The key encryption key certificate thumbprint.
 * **kekState**: string (ReadOnly): The key encryption key state for the Vmm.
 
+## LogicalNetworkProperties
+### Properties
+* **friendlyName**: string (ReadOnly): The Friendly Name.
+* **logicalNetworkDefinitionsStatus**: string (ReadOnly): A value indicating whether logical network definitions are isolated.
+* **logicalNetworkUsage**: string (ReadOnly): A value indicating whether logical network is used as private test network by test failover.
+* **networkVirtualizationStatus**: string (ReadOnly): A value indicating whether Network Virtualization is enabled for the logical network.
+
+## NetworkProperties
+### Properties
+* **fabricType**: string (ReadOnly): The Fabric Type.
+* **friendlyName**: string (ReadOnly): The Friendly Name.
+* **networkType**: string (ReadOnly): The Network Type.
+* **subnets**: [Subnet](#subnet)[] (ReadOnly): The List of subnets.
+
+## Subnet
+### Properties
+* **addressList**: string[] (ReadOnly): The list of addresses for the subnet.
+* **friendlyName**: string (ReadOnly): The subnet friendly name.
+* **name**: string (ReadOnly): The subnet name.
+
 ## CreateNetworkMappingInputProperties
 ### Properties
 * **fabricSpecificDetails**: [FabricSpecificCreateNetworkMappingInput](#fabricspecificcreatenetworkmappinginput) (WriteOnly): Input details specific to fabrics during Network Mapping.
@@ -759,6 +969,62 @@
 * **targetIPAddressType**: 'Dynamic' | 'Static' | string (ReadOnly): The source IP address type.
 * **targetNicName**: string (ReadOnly): Target NIC name.
 * **targetSubnetName**: string (ReadOnly): Target subnet name.
+
+## MigrationRecoveryPointProperties
+### Properties
+* **recoveryPointTime**: string (ReadOnly): The recovery point time.
+* **recoveryPointType**: 'ApplicationConsistent' | 'CrashConsistent' | 'NotSpecified' | string (ReadOnly): The recovery point type.
+
+## ProtectableItemProperties
+### Properties
+* **customDetails**: [ConfigurationSettings](#configurationsettings) (ReadOnly): Replication provider specific settings.
+* **friendlyName**: string (ReadOnly): The name.
+* **protectionReadinessErrors**: string[] (ReadOnly): The Current protection readiness errors.
+* **protectionStatus**: string (ReadOnly): The protection status.
+* **recoveryServicesProviderId**: string (ReadOnly): The recovery provider ARM Id.
+* **replicationProtectedItemId**: string (ReadOnly): The ARM resource of protected items.
+* **supportedReplicationProviders**: string[] (ReadOnly): The list of replication providers supported for the protectable item.
+
+## ConfigurationSettings
+* **Discriminator**: instanceType
+
+### Base Properties
+### ReplicationGroupDetails
+#### Properties
+* **instanceType**: 'ReplicationGroupDetails' (Required): Gets the class type. Overridden in derived classes.
+
+### VmmVirtualMachineDetails
+#### Properties
+* **instanceType**: 'VmmVirtualMachine' (Required): Gets the class type. Overridden in derived classes.
+
+### VMwareVirtualMachineDetails
+#### Properties
+* **agentGeneratedId**: string (ReadOnly): The ID generated by the InMage agent after it gets installed on guest. This is the ID to be used during InMage CreateProtection.
+* **agentInstalled**: string (ReadOnly): The value indicating if InMage scout agent is installed on guest.
+* **agentVersion**: string (ReadOnly): The agent version.
+* **discoveryType**: string (ReadOnly): A value indicating the discovery type of the machine. Value can be vCenter or physical.
+* **diskDetails**: [InMageDiskDetails](#inmagediskdetails)[] (ReadOnly): The disk details.
+* **instanceType**: 'VMwareVirtualMachine' (Required): Gets the class type. Overridden in derived classes.
+* **ipAddress**: string (ReadOnly): The IP address.
+* **osType**: string (ReadOnly): The OsType installed on VM.
+* **poweredOn**: string (ReadOnly): The value indicating whether VM is powered on.
+* **validationErrors**: [HealthError](#healtherror)[] (ReadOnly): The validation errors.
+* **vCenterInfrastructureId**: string (ReadOnly): The VCenter infrastructure Id.
+
+
+## InMageDiskDetails
+### Properties
+* **diskConfiguration**: string (ReadOnly): Whether disk is dynamic disk or basic disk.
+* **diskId**: string (ReadOnly): The disk Id.
+* **diskName**: string (ReadOnly): The disk name.
+* **diskSizeInMB**: string (ReadOnly): The disk size in MB.
+* **diskType**: string (ReadOnly): Whether disk is system disk or data disk.
+* **volumeList**: [DiskVolumeDetails](#diskvolumedetails)[] (ReadOnly): Volumes of the disk.
+
+## DiskVolumeDetails
+### Properties
+* **label**: string (ReadOnly): The volume label.
+* **name**: string (ReadOnly): The volume name.
 
 ## EnableProtectionInputProperties
 ### Properties
@@ -1744,6 +2010,33 @@
 * **networkName**: string (ReadOnly): The network name.
 * **sourceIpAddress**: string (ReadOnly): The IP address.
 
+## RecoveryPointProperties
+### Properties
+* **providerSpecificDetails**: [ProviderSpecificRecoveryPointDetails](#providerspecificrecoverypointdetails) (ReadOnly): Replication provider specific recovery point details.
+* **recoveryPointTime**: string (ReadOnly): The recovery point time.
+* **recoveryPointType**: string (ReadOnly): The recovery point type: ApplicationConsistent, CrashConsistent.
+
+## ProviderSpecificRecoveryPointDetails
+* **Discriminator**: instanceType
+
+### Base Properties
+### A2ARecoveryPointDetails
+#### Properties
+* **disks**: string[] (ReadOnly): List of disk ids representing a recovery point.
+* **instanceType**: 'A2A' (Required): Gets the provider type.
+* **recoveryPointSyncType**: 'MultiVmSyncRecoveryPoint' | 'PerVmRecoveryPoint' | string (ReadOnly): A value indicating whether the recovery point is multi VM consistent.
+
+### InMageAzureV2RecoveryPointDetails
+#### Properties
+* **instanceType**: 'InMageAzureV2' (Required): Gets the provider type.
+* **isMultiVmSyncPoint**: string (ReadOnly): A value indicating whether the recovery point is multi VM consistent.
+
+### InMageRcmRecoveryPointDetails
+#### Properties
+* **instanceType**: 'InMageRcm' (Required): Gets the provider type.
+* **isMultiVmSyncPoint**: string (ReadOnly): A value indicating whether the recovery point is multi VM consistent.
+
+
 ## CreateProtectionContainerMappingInputProperties
 ### Properties
 * **health**: string (ReadOnly): Health of pairing.
@@ -1836,6 +2129,10 @@
 * **resourceAccessIdentityInput**: [IdentityProviderInput](#identityproviderinput) (Required, WriteOnly): Identity provider input.
 * **serverVersion**: string (ReadOnly): The fabric provider.
 
+## StorageClassificationProperties
+### Properties
+* **friendlyName**: string (ReadOnly): Friendly name of the Storage classification.
+
 ## StorageMappingInputProperties
 ### Properties
 * **targetStorageClassificationId**: string: The ID of the storage object.
@@ -1853,6 +2150,194 @@
 * **port**: string: The port number for discovery.
 * **processServerId**: string: The process server Id from where the discovery is orchestrated.
 * **runAsAccountId**: string: The account Id which has privileges to discover the vCenter.
+
+## JobProperties
+### Properties
+* **activityId**: string (ReadOnly): The activity id.
+* **allowedActions**: string[] (ReadOnly): The Allowed action the job.
+* **customDetails**: [JobDetails](#jobdetails) (ReadOnly): Job details based on specific job type.
+* **endTime**: string (ReadOnly): The end time.
+* **errors**: [JobErrorDetails](#joberrordetails)[] (ReadOnly): The errors.
+* **friendlyName**: string (ReadOnly): The DisplayName.
+* **scenarioName**: string (ReadOnly): The ScenarioName.
+* **startTime**: string (ReadOnly): The start time.
+* **state**: string (ReadOnly): The status of the Job. It is one of these values - NotStarted, InProgress, Succeeded, Failed, Cancelled, Suspended or Other.
+* **stateDescription**: string (ReadOnly): The description of the state of the Job. For e.g. - For Succeeded state, description can be Completed, PartiallySucceeded, CompletedWithInformation or Skipped.
+* **targetInstanceType**: string (ReadOnly): The type of the affected object which is of Microsoft.Azure.SiteRecovery.V2015_11_10.AffectedObjectType class.
+* **targetObjectId**: string (ReadOnly): The affected Object Id.
+* **targetObjectName**: string (ReadOnly): The name of the affected object.
+* **tasks**: [ASRTask](#asrtask)[] (ReadOnly): The tasks.
+
+## JobDetails
+* **Discriminator**: instanceType
+
+### Base Properties
+* **affectedObjectDetails**: [JobDetailsAffectedObjectDetails](#jobdetailsaffectedobjectdetails) (ReadOnly): The affected object properties like source server, source cloud, target server, target cloud etc. based on the workflow object details.
+### AsrJobDetails
+#### Properties
+* **instanceType**: 'AsrJobDetails' (Required): Gets the type of job details (see JobDetailsTypes enum for possible values).
+
+### ExportJobDetails
+#### Properties
+* **blobUri**: string (ReadOnly): BlobUri of the exported jobs.
+* **instanceType**: 'ExportJobDetails' (Required): Gets the type of job details (see JobDetailsTypes enum for possible values).
+* **sasToken**: string (ReadOnly): The sas token to access blob.
+
+### FailoverJobDetails
+#### Properties
+* **instanceType**: 'FailoverJobDetails' (Required): Gets the type of job details (see JobDetailsTypes enum for possible values).
+* **protectedItemDetails**: [FailoverReplicationProtectedItemDetails](#failoverreplicationprotecteditemdetails)[] (ReadOnly): The test VM details.
+
+### SwitchProtectionJobDetails
+#### Properties
+* **instanceType**: 'SwitchProtectionJobDetails' (Required): Gets the type of job details (see JobDetailsTypes enum for possible values).
+* **newReplicationProtectedItemId**: string (ReadOnly): ARM Id of the new replication protected item.
+
+### TestFailoverJobDetails
+#### Properties
+* **comments**: string (ReadOnly): The test failover comments.
+* **instanceType**: 'TestFailoverJobDetails' (Required): Gets the type of job details (see JobDetailsTypes enum for possible values).
+* **networkFriendlyName**: string (ReadOnly): The test network friendly name.
+* **networkName**: string (ReadOnly): The test network name.
+* **networkType**: string (ReadOnly): The test network type (see TestFailoverInput enum for possible values).
+* **protectedItemDetails**: [FailoverReplicationProtectedItemDetails](#failoverreplicationprotecteditemdetails)[] (ReadOnly): The test VM details.
+* **testFailoverStatus**: string (ReadOnly): The test failover status.
+
+
+## JobDetailsAffectedObjectDetails
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## FailoverReplicationProtectedItemDetails
+### Properties
+* **friendlyName**: string (ReadOnly): The friendly name.
+* **name**: string (ReadOnly): The name.
+* **networkConnectionStatus**: string (ReadOnly): The network connection status.
+* **networkFriendlyName**: string (ReadOnly): The network friendly name.
+* **recoveryPointId**: string (ReadOnly): The recovery point Id.
+* **recoveryPointTime**: string (ReadOnly): The recovery point time.
+* **subnet**: string (ReadOnly): The network subnet.
+* **testVmFriendlyName**: string (ReadOnly): The test Vm friendly name.
+* **testVmName**: string (ReadOnly): The test Vm name.
+
+## JobErrorDetails
+### Properties
+* **creationTime**: string (ReadOnly): The creation time of job error.
+* **errorLevel**: string (ReadOnly): Error level of error.
+* **providerErrorDetails**: [ProviderError](#providererror) (ReadOnly): This class contains the error details per object.
+* **serviceErrorDetails**: [ServiceError](#serviceerror) (ReadOnly): ASR error model.
+* **taskId**: string (ReadOnly): The Id of the task.
+
+## ProviderError
+### Properties
+* **errorCode**: int (ReadOnly): The Error code.
+* **errorId**: string (ReadOnly): The Provider error Id.
+* **errorMessage**: string (ReadOnly): The Error message.
+* **possibleCauses**: string (ReadOnly): The possible causes for the error.
+* **recommendedAction**: string (ReadOnly): The recommended action to resolve the error.
+
+## ServiceError
+### Properties
+* **activityId**: string (ReadOnly): Activity Id.
+* **code**: string (ReadOnly): Error code.
+* **message**: string (ReadOnly): Error message.
+* **possibleCauses**: string (ReadOnly): Possible causes of error.
+* **recommendedAction**: string (ReadOnly): Recommended action to resolve error.
+
+## ASRTask
+### Properties
+* **allowedActions**: string[] (ReadOnly): The state/actions applicable on this task.
+* **customDetails**: [TaskTypeDetails](#tasktypedetails) (ReadOnly): Task details based on specific task type.
+* **endTime**: string (ReadOnly): The end time.
+* **errors**: [JobErrorDetails](#joberrordetails)[] (ReadOnly): The task error details.
+* **friendlyName**: string (ReadOnly): The name.
+* **groupTaskCustomDetails**: [GroupTaskDetails](#grouptaskdetails) (ReadOnly): This class represents the group task details when parent child relationship exists in the drill down.
+* **name**: string (ReadOnly): The unique Task name.
+* **startTime**: string (ReadOnly): The start time.
+* **state**: string (ReadOnly): The State. It is one of these values - NotStarted, InProgress, Succeeded, Failed, Cancelled, Suspended or Other.
+* **stateDescription**: string (ReadOnly): The description of the task state. For example - For Succeeded state, description can be Completed, PartiallySucceeded, CompletedWithInformation or Skipped.
+* **taskId**: string (ReadOnly): The Id.
+* **taskType**: string (ReadOnly): The type of task. Details in CustomDetails property depend on this type.
+
+## TaskTypeDetails
+* **Discriminator**: instanceType
+
+### Base Properties
+### AutomationRunbookTaskDetails
+#### Properties
+* **accountName**: string (ReadOnly): The automation account name of the runbook.
+* **cloudServiceName**: string (ReadOnly): The cloud service of the automation runbook account.
+* **instanceType**: 'AutomationRunbookTaskDetails' (Required): The type of task details.
+* **isPrimarySideScript**: bool (ReadOnly): A value indicating whether it is a primary side script or not.
+* **jobId**: string (ReadOnly): The job Id of the runbook execution.
+* **jobOutput**: string (ReadOnly): The execution output of the runbook.
+* **name**: string (ReadOnly): The recovery plan task name.
+* **runbookId**: string (ReadOnly): The runbook Id.
+* **runbookName**: string (ReadOnly): The runbook name.
+* **subscriptionId**: string (ReadOnly): The subscription Id of the automation runbook account.
+
+### ConsistencyCheckTaskDetails
+#### Properties
+* **instanceType**: 'ConsistencyCheckTaskDetails' (Required): The type of task details.
+* **vmDetails**: [InconsistentVmDetails](#inconsistentvmdetails)[] (ReadOnly): The list of inconsistent Vm details.
+
+### FabricReplicationGroupTaskDetails
+#### Properties
+* **instanceType**: 'FabricReplicationGroupTaskDetails' (Required): The type of task details.
+* **skippedReason**: string (ReadOnly): The skipped reason.
+* **skippedReasonString**: string (ReadOnly): The skipped reason string.
+
+### ManualActionTaskDetails
+#### Properties
+* **instanceType**: 'ManualActionTaskDetails' (Required): The type of task details.
+* **instructions**: string (ReadOnly): The instructions.
+* **name**: string (ReadOnly): The name.
+* **observation**: string (ReadOnly): The observation.
+
+### ScriptActionTaskDetails
+#### Properties
+* **instanceType**: 'ScriptActionTaskDetails' (Required): The type of task details.
+* **isPrimarySideScript**: bool (ReadOnly): A value indicating whether it is a primary side script or not.
+* **name**: string (ReadOnly): The name.
+* **output**: string (ReadOnly): The output.
+* **path**: string (ReadOnly): The path.
+
+### VirtualMachineTaskDetails
+#### Properties
+* **instanceType**: 'VirtualMachineTaskDetails' (Required): The type of task details.
+* **skippedReason**: string (ReadOnly): The skipped reason.
+* **skippedReasonString**: string (ReadOnly): The skipped reason string.
+
+### VmNicUpdatesTaskDetails
+#### Properties
+* **instanceType**: 'VmNicUpdatesTaskDetails' (Required): The type of task details.
+* **name**: string (ReadOnly): Name of the Nic.
+* **nicId**: string (ReadOnly): Nic Id.
+* **vmId**: string (ReadOnly): Virtual machine Id.
+
+
+## InconsistentVmDetails
+### Properties
+* **cloudName**: string (ReadOnly): The Cloud name.
+* **details**: string[] (ReadOnly): The list of details regarding state of the Protected Entity in SRS and On prem.
+* **errorIds**: string[] (ReadOnly): The list of error ids.
+* **vmName**: string (ReadOnly): The Vm name.
+
+## GroupTaskDetails
+* **Discriminator**: instanceType
+
+### Base Properties
+* **childTasks**: [ASRTask](#asrtask)[] (ReadOnly): The child tasks.
+### InlineWorkflowTaskDetails
+#### Properties
+* **instanceType**: 'InlineWorkflowTaskDetails' (Required): The type of task details.
+* **workflowIds**: string[] (ReadOnly): The list of child workflow ids.
+
+### RecoveryPlanShutdownGroupTaskDetails
+#### Properties
+* **instanceType**: 'RecoveryPlanShutdownGroupTaskDetails' (Required): The type of task details.
+
 
 ## CreatePolicyInputProperties
 ### Properties

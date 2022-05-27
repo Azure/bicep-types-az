@@ -54,6 +54,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.LabServices/labs/users' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.LabServices/labs/virtualMachines@2021-11-15-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties) (ReadOnly): Virtual machine resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.LabServices/labs/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
+
 ## LabPlanProperties
 ### Properties
 * **allowedRegions**: string[]: The allowed regions for the lab creator to use when creating labs using this lab plan.
@@ -227,4 +237,22 @@
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Locked' | 'Succeeded' | 'Updating' (ReadOnly): Resource provisioning state.
 * **registrationState**: 'NotRegistered' | 'Registered' (ReadOnly): The user lab registration state.
 * **totalUsage**: string (ReadOnly): How long the user has used their virtual machines in this lab.
+
+## VirtualMachineProperties
+### Properties
+* **claimedByUserId**: string (ReadOnly): The lab user ID (not the PUID!) of who claimed the virtual machine.
+* **connectionProfile**: [VirtualMachineConnectionProfile](#virtualmachineconnectionprofile) (ReadOnly): The connection information for the virtual machine
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Locked' | 'Succeeded' | 'Updating' (ReadOnly): Resource provisioning state.
+* **state**: 'Redeploying' | 'Reimaging' | 'ResettingPassword' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The state of a virtual machine.
+* **vmType**: 'Template' | 'User' (ReadOnly): The type of the lab virtual machine.
+
+## VirtualMachineConnectionProfile
+### Properties
+* **adminUsername**: string (ReadOnly): The username used to log on to the virtual machine as admin.
+* **nonAdminUsername**: string (ReadOnly): The username used to log on to the virtual machine as non-admin, if one exists.
+* **privateIpAddress**: string (ReadOnly): The private IP address of the virtual machine.
+* **rdpAuthority**: string (ReadOnly): Port and host name separated by semicolon for connecting via RDP protocol to the virtual machine.
+* **rdpInBrowserUrl**: string (ReadOnly): A URL.
+* **sshAuthority**: string (ReadOnly): Port and host name separated by semicolon for connecting via SSH protocol to the virtual machine.
+* **sshInBrowserUrl**: string (ReadOnly): A URL.
 

@@ -1,5 +1,17 @@
 # Microsoft.RecoveryServices @ 2016-12-01
 
+## Resource Microsoft.RecoveryServices/vaults/backupEngines@2016-12-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): Optional ETag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [BackupEngineBase](#backupenginebase) (ReadOnly): The base backup engine class. All workload specific backup engines derive from this class.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.RecoveryServices/vaults/backupEngines' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers@2016-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -12,6 +24,18 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/operationResults@2016-12-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): Optional ETag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProtectionContainer](#protectioncontainer) (ReadOnly): Base class for container with backup items. Containers with specific workloads are derived from this class.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/operationResults' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.RecoveryServices/vaults/backupstorageconfig@2016-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -23,6 +47,47 @@
 * **properties**: [BackupResourceConfig](#backupresourceconfig): The resource storage details.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupstorageconfig' (ReadOnly, DeployTimeConstant): The resource type
+
+## BackupEngineBase
+* **Discriminator**: backupEngineType
+
+### Base Properties
+* **azureBackupAgentVersion**: string (ReadOnly): Backup agent version
+* **backupEngineId**: string (ReadOnly): ID of the backup engine.
+* **backupEngineState**: string (ReadOnly): Status of the backup engine with the Recovery Services Vault. = {Active/Deleting/DeleteFailed}
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string (ReadOnly): Type of backup management for the backup engine.
+* **canReRegister**: bool (ReadOnly): Flag indicating if the backup engine be registered, once already registered.
+* **dpmVersion**: string (ReadOnly): Backup engine version
+* **extendedInfo**: [BackupEngineExtendedInfo](#backupengineextendedinfo) (ReadOnly): Additional information on backup engine.
+* **friendlyName**: string (ReadOnly): Friendly name of the backup engine.
+* **healthStatus**: string (ReadOnly): Backup status of the backup engine.
+* **isAzureBackupAgentUpgradeAvailable**: bool (ReadOnly): To check if backup agent upgrade available
+* **isDpmUpgradeAvailable**: bool (ReadOnly): To check if backup engine upgrade available
+* **registrationStatus**: string (ReadOnly): Registration status of the backup engine with the Recovery Services Vault.
+### AzureBackupServerEngine
+#### Properties
+* **backupEngineType**: 'AzureBackupServerEngine' (Required): Type of the backup engine.
+
+### DpmBackupEngine
+#### Properties
+* **backupEngineType**: 'DpmBackupEngine' (Required): Type of the backup engine.
+
+
+## BackupEngineExtendedInfo
+### Properties
+* **availableDiskSpace**: int (ReadOnly): Disk space currently available in the backup engine.
+* **azureProtectedInstances**: int (ReadOnly): Protected instances in the backup engine.
+* **databaseName**: string (ReadOnly): Database name of backup engine.
+* **diskCount**: int (ReadOnly): Number of disks in the backup engine.
+* **protectedItemsCount**: int (ReadOnly): Number of protected items in the backup engine.
+* **protectedServersCount**: int (ReadOnly): Number of protected servers in the backup engine.
+* **refreshedAt**: string (ReadOnly): Last refresh time in the backup engine.
+* **usedDiskSpace**: int (ReadOnly): Disk space used in the backup engine.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ProtectionContainer
 * **Discriminator**: containerType
@@ -141,6 +206,11 @@ Backup is VMAppContainer
 * **message**: string: Health Message
 * **recommendations**: string[]: Health Recommended Actions
 * **title**: string: Health Title
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

@@ -13,6 +13,15 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DBforPostgreSQL/flexibleServers/advisors@2021-06-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: any (ReadOnly): Any object
+* **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/advisors' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DBforPostgreSQL/flexibleServers/configurations@2021-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -32,6 +41,15 @@
 * **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a server firewall rule.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DBforPostgreSQL/flexibleServers/queryTexts@2021-06-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [QueryTextProperties](#querytextproperties) (ReadOnly): The properties of a query text.
+* **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/queryTexts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ServerProperties
 ### Properties
@@ -117,4 +135,9 @@
 ### Properties
 * **endIpAddress**: string (Required): The end IP address of the server firewall rule. Must be IPv4 format.
 * **startIpAddress**: string (Required): The start IP address of the server firewall rule. Must be IPv4 format.
+
+## QueryTextProperties
+### Properties
+* **queryId**: string (ReadOnly): Query identifier unique to the server.
+* **queryText**: string (ReadOnly): Query text.
 

@@ -51,6 +51,26 @@
 * **properties**: [PoolProperties](#poolproperties): Pool properties.
 * **type**: 'Microsoft.Batch/batchAccounts/pools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Batch/batchAccounts/privateEndpointConnections@2020-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Private endpoint connection properties.
+* **type**: 'Microsoft.Batch/batchAccounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Batch/batchAccounts/privateLinkResources@2020-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Private link resource properties.
+* **type**: 'Microsoft.Batch/batchAccounts/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listKeys (Microsoft.Batch/batchAccounts@2020-03-01)
 * **Resource**: Microsoft.Batch/batchAccounts
 * **ApiVersion**: 2020-03-01
@@ -439,6 +459,12 @@
 ## WindowsUserConfiguration
 ### Properties
 * **loginMode**: 'Batch' | 'Interactive': Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.
+
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The group id is used to establish the private link connection.
+* **requiredMembers**: string[] (ReadOnly): The list of required members that are used to establish the private link connection.
+* **requiredZoneNames**: string[] (ReadOnly): The list of required zone names for the private DNS resource name
 
 ## BatchAccountKeys
 ### Properties

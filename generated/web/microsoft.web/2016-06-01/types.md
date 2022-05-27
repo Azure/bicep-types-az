@@ -36,6 +36,30 @@
 * **tags**: [TagsDictionary](#tagsdictionary): Resource tags
 * **type**: 'Microsoft.Web/customApis' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Web/locations/connectionGatewayInstallations@2016-06-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Resource ETag
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ConnectionGatewayInstallationDefinitionProperties](#connectiongatewayinstallationdefinitionproperties) (ReadOnly)
+* **tags**: [TagsDictionary](#tagsdictionary) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Web/locations/connectionGatewayInstallations' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/locations/managedApis@2016-06-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Resource ETag
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ApiResourceProperties](#apiresourceproperties) (ReadOnly): API resource properties
+* **tags**: [TagsDictionary](#tagsdictionary) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Web/locations/managedApis' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listConsentLinks (Microsoft.Web/connections@2016-06-01)
 * **Resource**: Microsoft.Web/connections
 * **ApiVersion**: 2016-06-01
@@ -147,7 +171,7 @@
 ## CustomApiPropertiesDefinition
 ### Properties
 * **apiDefinitions**: [ApiResourceDefinitions](#apiresourcedefinitions): API Definitions
-* **apiType**: 'NotSpecified' | 'Rest' | 'Soap': The API type
+* **apiType**: 'NotSpecified' | 'Rest' | 'Soap' | string: The API type
 * **backendService**: [ApiResourceBackendService](#apiresourcebackendservice): The API backend service
 * **brandColor**: string: Brand color
 * **capabilities**: string[]: The custom API capabilities
@@ -202,7 +226,7 @@
 ## WsdlDefinition
 ### Properties
 * **content**: string: The WSDL content
-* **importMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest': The WSDL import method
+* **importMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest' | string: The WSDL import method
 * **service**: [WsdlService](#wsdlservice): The service with name and endpoint names
 * **url**: string: The WSDL URL
 
@@ -210,6 +234,74 @@
 ### Properties
 * **endpointQualifiedNames**: string[]: List of the endpoints' qualified names
 * **qualifiedName**: string (Required): The service's qualified name
+
+## TagsDictionary
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ConnectionGatewayInstallationDefinitionProperties
+### Properties
+* **backendUri**: string (ReadOnly): The URI of the backend
+* **connectionGateway**: [ConnectionGatewayReference](#connectiongatewayreference) (ReadOnly): The gateway installation reference
+* **contactInformation**: string[] (ReadOnly): The gateway admin
+* **description**: string (ReadOnly): The gateway description
+* **displayName**: string (ReadOnly): The gateway display name
+* **machineName**: string (ReadOnly): The machine name of the gateway
+* **status**: any (ReadOnly): Any object
+
+## TagsDictionary
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ApiResourceProperties
+### Properties
+* **apiDefinitions**: [ApiResourceDefinitions](#apiresourcedefinitions) (ReadOnly): API Definitions
+* **apiDefinitionUrl**: string (ReadOnly): URL where the swagger can be downloaded from
+* **backendService**: [ApiResourceBackendService](#apiresourcebackendservice) (ReadOnly): The API backend service
+* **capabilities**: string[] (ReadOnly): The managed API capabilities
+* **connectionParameters**: [ApiResourcePropertiesConnectionParameters](#apiresourcepropertiesconnectionparameters) (ReadOnly): Connection parameters
+* **generalInformation**: [ApiResourceGeneralInformation](#apiresourcegeneralinformation) (ReadOnly): General information about the API
+* **metadata**: [ApiResourceMetadata](#apiresourcemetadata) (ReadOnly)
+* **name**: string (ReadOnly)
+* **policies**: [ApiResourcePolicies](#apiresourcepolicies) (ReadOnly): Describes the API policies either as embedded content or as a link to uploaded content
+* **runtimeUrls**: string[] (ReadOnly): Runtime URLs
+* **swagger**: any (ReadOnly): Any object
+
+## ApiResourcePropertiesConnectionParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ConnectionParameter](#connectionparameter)
+
+## ApiResourceGeneralInformation
+### Properties
+* **description**: string (ReadOnly): The API description
+* **displayName**: string (ReadOnly): Display name
+* **iconUrl**: string (ReadOnly): The icon URL
+* **releaseTag**: string (ReadOnly): Release tag
+* **termsOfUseUrl**: string (ReadOnly): URL to the Terms of Use
+
+## ApiResourceMetadata
+### Properties
+* **apiType**: 'NotSpecified' | 'Rest' | 'Soap' | string (ReadOnly): The API type
+* **brandColor**: string (ReadOnly): Brand color
+* **connectionType**: string (ReadOnly): The connection type
+* **hideKey**: string (ReadOnly): Hide key
+* **source**: string (ReadOnly): The source
+* **tags**: [TagsDictionary](#tagsdictionary) (ReadOnly): Resource tags
+* **wsdlImportMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest' | string (ReadOnly): The WSDL import method
+* **wsdlService**: [WsdlService](#wsdlservice) (ReadOnly): The service with name and endpoint names
+
+## TagsDictionary
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ApiResourcePolicies
+### Properties
+* **content**: string (ReadOnly): API level policies as XML
+* **contentLink**: string (ReadOnly): Link to the JSON of the policies
 
 ## TagsDictionary
 ### Properties
@@ -236,12 +328,12 @@
 * **displayName**: string (ReadOnly): Display name of the parameter in the connection provider's OAuth settings
 * **firstPartyLoginUri**: string (ReadOnly): URI for first party login
 * **link**: string (ReadOnly): URI for the consent link
-* **status**: 'Authenticated' | 'Error' | 'Unauthenticated' (ReadOnly): Status of the link
+* **status**: 'Authenticated' | 'Error' | 'Unauthenticated' | string (ReadOnly): Status of the link
 
 ## WsdlDefinition
 ### Properties
 * **content**: string: The WSDL content
-* **importMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest': The WSDL import method
+* **importMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest' | string: The WSDL import method
 * **service**: [WsdlService](#wsdlservice): The service with name and endpoint names
 * **url**: string: The WSDL URL
 

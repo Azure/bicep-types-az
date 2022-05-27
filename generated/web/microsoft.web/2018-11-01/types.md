@@ -25,7 +25,17 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/sites' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Web/sites/config@2018-11-01
+## Resource Microsoft.Web/sites/backups@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [BackupItemProperties](#backupitemproperties) (ReadOnly): BackupItem resource specific properties
+* **type**: 'Microsoft.Web/sites/backups' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/config@2018-11-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: name
 
@@ -123,6 +133,26 @@ This is valid for all deployment slots in an app.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 
+## Resource Microsoft.Web/sites/config/snapshots@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SiteConfig](#siteconfig) (ReadOnly): Configuration of an App Service app.
+* **type**: 'Microsoft.Web/sites/config/snapshots' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/continuouswebjobs@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ContinuousWebJobProperties](#continuouswebjobproperties) (ReadOnly): ContinuousWebJob resource specific properties
+* **type**: 'Microsoft.Web/sites/continuouswebjobs' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Web/sites/deployments@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -203,6 +233,46 @@ This is valid for all deployment slots in an app.
 * **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
 * **type**: 'Microsoft.Web/sites/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Web/sites/instances/processes@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProcessInfoProperties](#processinfoproperties) (ReadOnly): ProcessInfo resource specific properties
+* **type**: 'Microsoft.Web/sites/instances/processes' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/instances/processes/modules@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProcessModuleInfoProperties](#processmoduleinfoproperties) (ReadOnly): ProcessModuleInfo resource specific properties
+* **type**: 'Microsoft.Web/sites/instances/processes/modules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/instances/processes/threads@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProcessThreadInfoProperties](#processthreadinfoproperties) (ReadOnly): ProcessThreadInfo resource specific properties
+* **type**: 'Microsoft.Web/sites/instances/processes/threads' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/migratemysql@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: 'status' (Required, DeployTimeConstant): The resource name
+* **properties**: [MigrateMySqlStatusProperties](#migratemysqlstatusproperties) (ReadOnly): MigrateMySqlStatus resource specific properties
+* **type**: 'Microsoft.Web/sites/migratemysql' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Web/sites/networkConfig@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -212,6 +282,16 @@ This is valid for all deployment slots in an app.
 * **name**: 'virtualNetwork' (Required, DeployTimeConstant): The resource name
 * **properties**: [SwiftVirtualNetworkProperties](#swiftvirtualnetworkproperties): SwiftVirtualNetwork resource specific properties
 * **type**: 'Microsoft.Web/sites/networkConfig' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/networkFeatures@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NetworkFeaturesProperties](#networkfeaturesproperties) (ReadOnly): NetworkFeatures resource specific properties
+* **type**: 'Microsoft.Web/sites/networkFeatures' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/premieraddons@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
@@ -234,6 +314,36 @@ This is valid for all deployment slots in an app.
 * **name**: 'virtualNetworks' (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateAccessProperties](#privateaccessproperties): PrivateAccess resource specific properties
 * **type**: 'Microsoft.Web/sites/privateAccess' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/processes@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProcessInfoProperties](#processinfoproperties) (ReadOnly): ProcessInfo resource specific properties
+* **type**: 'Microsoft.Web/sites/processes' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/processes/modules@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProcessModuleInfoProperties](#processmoduleinfoproperties) (ReadOnly): ProcessModuleInfo resource specific properties
+* **type**: 'Microsoft.Web/sites/processes/modules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/processes/threads@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProcessThreadInfoProperties](#processthreadinfoproperties) (ReadOnly): ProcessThreadInfo resource specific properties
+* **type**: 'Microsoft.Web/sites/processes/threads' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/publicCertificates@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
@@ -268,7 +378,17 @@ This is valid for all deployment slots in an app.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/sites/slots' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Web/sites/slots/config@2018-11-01
+## Resource Microsoft.Web/sites/slots/backups@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [BackupItemProperties](#backupitemproperties) (ReadOnly): BackupItem resource specific properties
+* **type**: 'Microsoft.Web/sites/slots/backups' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/slots/config@2018-11-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: name
 
@@ -355,6 +475,26 @@ This is valid for all deployment slots in an app.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 
+## Resource Microsoft.Web/sites/slots/config/snapshots@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SiteConfig](#siteconfig) (ReadOnly): Configuration of an App Service app.
+* **type**: 'Microsoft.Web/sites/slots/config/snapshots' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/slots/continuouswebjobs@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ContinuousWebJobProperties](#continuouswebjobproperties) (ReadOnly): ContinuousWebJob resource specific properties
+* **type**: 'Microsoft.Web/sites/slots/continuouswebjobs' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Web/sites/slots/deployments@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -435,6 +575,46 @@ This is valid for all deployment slots in an app.
 * **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
 * **type**: 'Microsoft.Web/sites/slots/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Web/sites/slots/instances/processes@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProcessInfoProperties](#processinfoproperties) (ReadOnly): ProcessInfo resource specific properties
+* **type**: 'Microsoft.Web/sites/slots/instances/processes' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/slots/instances/processes/modules@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProcessModuleInfoProperties](#processmoduleinfoproperties) (ReadOnly): ProcessModuleInfo resource specific properties
+* **type**: 'Microsoft.Web/sites/slots/instances/processes/modules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/slots/instances/processes/threads@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProcessThreadInfoProperties](#processthreadinfoproperties) (ReadOnly): ProcessThreadInfo resource specific properties
+* **type**: 'Microsoft.Web/sites/slots/instances/processes/threads' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/slots/migratemysql@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: 'status' (Required, DeployTimeConstant): The resource name
+* **properties**: [MigrateMySqlStatusProperties](#migratemysqlstatusproperties) (ReadOnly): MigrateMySqlStatus resource specific properties
+* **type**: 'Microsoft.Web/sites/slots/migratemysql' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Web/sites/slots/networkConfig@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -444,6 +624,16 @@ This is valid for all deployment slots in an app.
 * **name**: 'virtualNetwork' (Required, DeployTimeConstant): The resource name
 * **properties**: [SwiftVirtualNetworkProperties](#swiftvirtualnetworkproperties): SwiftVirtualNetwork resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/networkConfig' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/slots/networkFeatures@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NetworkFeaturesProperties](#networkfeaturesproperties) (ReadOnly): NetworkFeatures resource specific properties
+* **type**: 'Microsoft.Web/sites/slots/networkFeatures' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/premieraddons@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
@@ -466,6 +656,36 @@ This is valid for all deployment slots in an app.
 * **name**: 'virtualNetworks' (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateAccessProperties](#privateaccessproperties): PrivateAccess resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/privateAccess' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/slots/processes@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProcessInfoProperties](#processinfoproperties) (ReadOnly): ProcessInfo resource specific properties
+* **type**: 'Microsoft.Web/sites/slots/processes' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/slots/processes/modules@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProcessModuleInfoProperties](#processmoduleinfoproperties) (ReadOnly): ProcessModuleInfo resource specific properties
+* **type**: 'Microsoft.Web/sites/slots/processes/modules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/slots/processes/threads@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProcessThreadInfoProperties](#processthreadinfoproperties) (ReadOnly): ProcessThreadInfo resource specific properties
+* **type**: 'Microsoft.Web/sites/slots/processes/threads' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/publicCertificates@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
@@ -497,6 +717,26 @@ This is valid for all deployment slots in an app.
 * **properties**: [SiteSourceControlProperties](#sitesourcecontrolproperties): SiteSourceControl resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Web/sites/slots/triggeredwebjobs@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TriggeredWebJobProperties](#triggeredwebjobproperties) (ReadOnly): TriggeredWebJob resource specific properties
+* **type**: 'Microsoft.Web/sites/slots/triggeredwebjobs' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/slots/triggeredwebjobs/history@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TriggeredJobHistoryProperties](#triggeredjobhistoryproperties) (ReadOnly): TriggeredJobHistory resource specific properties
+* **type**: 'Microsoft.Web/sites/slots/triggeredwebjobs/history' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Web/sites/slots/virtualNetworkConnections@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -517,6 +757,16 @@ This is valid for all deployment slots in an app.
 * **properties**: [VnetGatewayProperties](#vnetgatewayproperties): VnetGateway resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Web/sites/slots/webjobs@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WebJobProperties](#webjobproperties) (ReadOnly): WebJob resource specific properties
+* **type**: 'Microsoft.Web/sites/slots/webjobs' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Web/sites/sourcecontrols@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -526,6 +776,26 @@ This is valid for all deployment slots in an app.
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
 * **properties**: [SiteSourceControlProperties](#sitesourcecontrolproperties): SiteSourceControl resource specific properties
 * **type**: 'Microsoft.Web/sites/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/triggeredwebjobs@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TriggeredWebJobProperties](#triggeredwebjobproperties) (ReadOnly): TriggeredWebJob resource specific properties
+* **type**: 'Microsoft.Web/sites/triggeredwebjobs' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/triggeredwebjobs/history@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TriggeredJobHistoryProperties](#triggeredjobhistoryproperties) (ReadOnly): TriggeredJobHistory resource specific properties
+* **type**: 'Microsoft.Web/sites/triggeredwebjobs/history' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/virtualNetworkConnections@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
@@ -546,6 +816,16 @@ This is valid for all deployment slots in an app.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VnetGatewayProperties](#vnetgatewayproperties): VnetGateway resource specific properties
 * **type**: 'Microsoft.Web/sites/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/webjobs@2018-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WebJobProperties](#webjobproperties) (ReadOnly): WebJob resource specific properties
+* **type**: 'Microsoft.Web/sites/webjobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function list (Microsoft.Web/sites/backups@2018-11-01)
 * **Resource**: Microsoft.Web/sites/backups
@@ -636,7 +916,7 @@ This is valid for all deployment slots in an app.
 ### Properties
 * **principalId**: string (ReadOnly): Principal Id of managed service identity.
 * **tenantId**: string (ReadOnly): Tenant of managed service identity.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': Type of managed service identity.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string: Type of managed service identity.
 * **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities): The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
 
 ## ManagedServiceIdentityUserAssignedIdentities
@@ -747,7 +1027,7 @@ together to use the same snapshot.
 * **detailedErrorLoggingEnabled**: bool: <code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.
 * **documentRoot**: string: Document root.
 * **experiments**: [Experiments](#experiments): Routing rules in production experiments.
-* **ftpsState**: 'AllAllowed' | 'Disabled' | 'FtpsOnly': State of FTP / FTPS service
+* **ftpsState**: 'AllAllowed' | 'Disabled' | 'FtpsOnly' | string: State of FTP / FTPS service
 * **handlerMappings**: [HandlerMapping](#handlermapping)[]: Handler mappings.
 * **http20Enabled**: bool: Http20Enabled: configures a web site to allow clients to connect over http2.0
 * **httpLoggingEnabled**: bool: <code>true</code> if HTTP logging is enabled; otherwise, <code>false</code>.
@@ -763,7 +1043,7 @@ together to use the same snapshot.
 * **machineKey**: [SiteMachineKey](#sitemachinekey) (ReadOnly): MachineKey of an app.
 * **managedPipelineMode**: 'Classic' | 'Integrated': Managed pipeline mode.
 * **managedServiceIdentityId**: int: Managed Service Identity Id
-* **minTlsVersion**: '1.0' | '1.1' | '1.2': MinTlsVersion: configures the minimum version of TLS required for SSL requests
+* **minTlsVersion**: '1.0' | '1.1' | '1.2' | string: MinTlsVersion: configures the minimum version of TLS required for SSL requests
 * **netFrameworkVersion**: string: .NET Framework version.
 * **nodeVersion**: string: Version of Node.js.
 * **numberOfWorkers**: int: Number of workers.
@@ -779,7 +1059,7 @@ together to use the same snapshot.
 This setting only applies to the Consumption Plan
 * **scmIpSecurityRestrictions**: [IpSecurityRestriction](#ipsecurityrestriction)[]: IP security restrictions for scm.
 * **scmIpSecurityRestrictionsUseMain**: bool: IP security restrictions for scm to use main.
-* **scmType**: 'BitbucketGit' | 'BitbucketHg' | 'CodePlexGit' | 'CodePlexHg' | 'Dropbox' | 'ExternalGit' | 'ExternalHg' | 'GitHub' | 'LocalGit' | 'None' | 'OneDrive' | 'Tfs' | 'VSO': SCM type.
+* **scmType**: 'BitbucketGit' | 'BitbucketHg' | 'CodePlexGit' | 'CodePlexHg' | 'Dropbox' | 'ExternalGit' | 'ExternalHg' | 'GitHub' | 'LocalGit' | 'None' | 'OneDrive' | 'Tfs' | 'VSO' | string: SCM type.
 * **tracingOptions**: string: Tracing options.
 * **use32BitWorkerProcess**: bool: <code>true</code> to use 32-bit worker process; otherwise, <code>false</code>.
 * **virtualApplications**: [VirtualApplication](#virtualapplication)[]: Virtual applications.
@@ -963,6 +1243,31 @@ Validation should be performed at the PushRequestHandler.
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## BackupItemProperties
+### Properties
+* **blobName**: string (ReadOnly): Name of the blob which contains data for this backup.
+* **correlationId**: string (ReadOnly): Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.
+* **created**: string (ReadOnly): Timestamp of the backup creation.
+* **databases**: [DatabaseBackupSetting](#databasebackupsetting)[] (ReadOnly): List of databases included in the backup.
+* **finishedTimeStamp**: string (ReadOnly): Timestamp when this backup finished.
+* **id**: int (ReadOnly): Id of the backup.
+* **lastRestoreTimeStamp**: string (ReadOnly): Timestamp of a last restore operation which used this backup.
+* **log**: string (ReadOnly): Details regarding this backup. Might contain an error message.
+* **name**: string (ReadOnly): Name of this backup.
+* **scheduled**: bool (ReadOnly): True if this backup has been created due to a schedule being triggered.
+* **sizeInBytes**: int (ReadOnly): Size of the backup in bytes.
+* **status**: 'Created' | 'DeleteFailed' | 'DeleteInProgress' | 'Deleted' | 'Failed' | 'InProgress' | 'PartiallySucceeded' | 'Skipped' | 'Succeeded' | 'TimedOut' (ReadOnly): Backup status.
+* **storageAccountUrl**: string (ReadOnly): SAS URL for the storage account container which contains this backup.
+* **websiteSizeInBytes**: int (ReadOnly): Size of the original web app which has been backed up.
+
+## DatabaseBackupSetting
+### Properties
+* **connectionString**: string: Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
+* **connectionStringName**: string: Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
+This is used during restore with overwrite connection strings options.
+* **databaseType**: 'LocalMySql' | 'MySql' | 'PostgreSql' | 'SqlAzure' | string (Required): Database type (e.g. SqlAzure / MySql).
+* **name**: string
+
 ## StringDictionaryProperties
 ### Properties
 ### Additional Properties
@@ -1060,14 +1365,6 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **retentionPeriodInDays**: int (Required): After how many days backups should be deleted.
 * **startTime**: string: When the schedule should start working.
 
-## DatabaseBackupSetting
-### Properties
-* **connectionString**: string: Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
-* **connectionStringName**: string: Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
-This is used during restore with overwrite connection strings options.
-* **databaseType**: 'LocalMySql' | 'MySql' | 'PostgreSql' | 'SqlAzure' (Required): Database type (e.g. SqlAzure / MySql).
-* **name**: string
-
 ## ConnectionStringDictionaryProperties
 ### Properties
 ### Additional Properties
@@ -1145,6 +1442,24 @@ Value can range between 25 and 100.
 * **appSettingNames**: string[]: List of application settings names.
 * **azureStorageConfigNames**: string[]: List of external Azure storage account identifiers.
 * **connectionStringNames**: string[]: List of connection string names.
+
+## ContinuousWebJobProperties
+### Properties
+* **detailed_status**: string (ReadOnly): Detailed status.
+* **error**: string (ReadOnly): Error information.
+* **extra_info_url**: string (ReadOnly): Extra Info URL.
+* **log_url**: string (ReadOnly): Log URL.
+* **run_command**: string (ReadOnly): Run command.
+* **settings**: [ContinuousWebJobPropertiesSettings](#continuouswebjobpropertiessettings) (ReadOnly): Job settings.
+* **status**: 'Initializing' | 'PendingRestart' | 'Running' | 'Starting' | 'Stopped' (ReadOnly): Job status.
+* **url**: string (ReadOnly): Job URL.
+* **using_sdk**: bool (ReadOnly): Using SDK?
+* **web_job_type**: 'Continuous' | 'Triggered' (ReadOnly): Job type.
+
+## ContinuousWebJobPropertiesSettings
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## DeploymentProperties
 ### Properties
@@ -1237,10 +1552,167 @@ normally, use the POST /listKeys API instead.
 * **serviceBusNamespace**: string: The name of the Service Bus namespace.
 * **serviceBusSuffix**: string: The suffix for the service bus endpoint. By default this is .servicebus.windows.net
 
+## ProcessInfoProperties
+### Properties
+* **children**: string[] (ReadOnly): Child process list.
+* **command_line**: string (ReadOnly): Command line.
+* **deployment_name**: string (ReadOnly): Deployment name.
+* **description**: string (ReadOnly): Description of process.
+* **environment_variables**: [ProcessInfoPropertiesEnvironmentVariables](#processinfopropertiesenvironmentvariables) (ReadOnly): List of environment variables.
+* **file_name**: string (ReadOnly): File name of this process.
+* **handle_count**: int (ReadOnly): Handle count.
+* **href**: string (ReadOnly): HRef URI.
+* **identifier**: int (ReadOnly): ARM Identifier for deployment.
+* **iis_profile_timeout_in_seconds**: int (ReadOnly): IIS Profile timeout (seconds).
+* **is_iis_profile_running**: bool (ReadOnly): Is the IIS Profile running?
+* **is_profile_running**: bool (ReadOnly): Is profile running?
+* **is_scm_site**: bool (ReadOnly): Is this the SCM site?
+* **is_webjob**: bool (ReadOnly): Is this a Web Job?
+* **minidump**: string (ReadOnly): Minidump URI.
+* **module_count**: int (ReadOnly): Module count.
+* **modules**: [ProcessModuleInfo](#processmoduleinfo)[] (ReadOnly): List of modules.
+* **non_paged_system_memory**: int (ReadOnly): Non-paged system memory.
+* **open_file_handles**: string[] (ReadOnly): List of open files.
+* **paged_memory**: int (ReadOnly): Paged memory.
+* **paged_system_memory**: int (ReadOnly): Paged system memory.
+* **parent**: string (ReadOnly): Parent process.
+* **peak_paged_memory**: int (ReadOnly): Peak paged memory.
+* **peak_virtual_memory**: int (ReadOnly): Peak virtual memory usage.
+* **peak_working_set**: int (ReadOnly): Peak working set.
+* **private_memory**: int (ReadOnly): Private memory size.
+* **privileged_cpu_time**: string (ReadOnly): Privileged CPU time.
+* **start_time**: string (ReadOnly): Start time.
+* **thread_count**: int (ReadOnly): Thread count.
+* **threads**: [ProcessThreadInfo](#processthreadinfo)[] (ReadOnly): Thread list.
+* **time_stamp**: string (ReadOnly): Time stamp.
+* **total_cpu_time**: string (ReadOnly): Total CPU time.
+* **user_cpu_time**: string (ReadOnly): User CPU time.
+* **user_name**: string (ReadOnly): User name.
+* **virtual_memory**: int (ReadOnly): Virtual memory size.
+* **working_set**: int (ReadOnly): Working set.
+
+## ProcessInfoPropertiesEnvironmentVariables
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ProcessModuleInfo
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [ProcessModuleInfoProperties](#processmoduleinfoproperties) (ReadOnly): ProcessModuleInfo resource specific properties
+* **type**: string (ReadOnly): Resource type.
+
+## ProcessModuleInfoProperties
+### Properties
+* **base_address**: string (ReadOnly): Base address. Used as module identifier in ARM resource URI.
+* **file_description**: string (ReadOnly): File description.
+* **file_name**: string (ReadOnly): File name.
+* **file_path**: string (ReadOnly): File path.
+* **file_version**: string (ReadOnly): File version.
+* **href**: string (ReadOnly): HRef URI.
+* **is_debug**: bool (ReadOnly): Is debug?
+* **language**: string (ReadOnly): Module language (locale).
+* **module_memory_size**: int (ReadOnly): Module memory size.
+* **product**: string (ReadOnly): Product name.
+* **product_version**: string (ReadOnly): Product version.
+
+## ProcessThreadInfo
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [ProcessThreadInfoProperties](#processthreadinfoproperties) (ReadOnly): ProcessThreadInfo resource specific properties
+* **type**: string (ReadOnly): Resource type.
+
+## ProcessThreadInfoProperties
+### Properties
+* **base_priority**: int (ReadOnly): Base priority.
+* **current_priority**: int (ReadOnly): Current thread priority.
+* **href**: string (ReadOnly): HRef URI.
+* **identifier**: int (ReadOnly): Site extension ID.
+* **priority_level**: string (ReadOnly): Thread priority level.
+* **priviledged_processor_time**: string (ReadOnly): Privileged processor time.
+* **process**: string (ReadOnly): Process URI.
+* **start_address**: string (ReadOnly): Start address.
+* **start_time**: string (ReadOnly): Start time.
+* **state**: string (ReadOnly): Thread state.
+* **total_processor_time**: string (ReadOnly): Total processor time.
+* **user_processor_time**: string (ReadOnly): User processor time.
+* **wait_reason**: string (ReadOnly): Wait reason.
+
+## MigrateMySqlStatusProperties
+### Properties
+* **localMySqlEnabled**: bool (ReadOnly): True if the web app has in app MySql enabled
+* **migrationOperationStatus**: 'Created' | 'Failed' | 'InProgress' | 'Succeeded' | 'TimedOut' (ReadOnly): The current status of the operation.
+* **operationId**: string (ReadOnly): Operation ID for the migration task.
+
 ## SwiftVirtualNetworkProperties
 ### Properties
 * **subnetResourceId**: string: The Virtual Network subnet's resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
 * **swiftSupported**: bool: A flag that specifies if the scale unit this Web App is on supports Swift integration.
+
+## NetworkFeaturesProperties
+### Properties
+* **hybridConnections**: [RelayServiceConnectionEntity](#relayserviceconnectionentity)[] (ReadOnly): The Hybrid Connections summary view.
+* **hybridConnectionsV2**: [HybridConnection](#hybridconnection)[] (ReadOnly): The Hybrid Connection V2 (Service Bus) view.
+* **virtualNetworkConnection**: [VnetInfo](#vnetinfo) (ReadOnly): Virtual Network information contract.
+* **virtualNetworkName**: string (ReadOnly): The Virtual Network name.
+
+## RelayServiceConnectionEntity
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [RelayServiceConnectionEntityProperties](#relayserviceconnectionentityproperties) (ReadOnly): RelayServiceConnectionEntity resource specific properties
+* **type**: string (ReadOnly): Resource type.
+
+## HybridConnection
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [HybridConnectionProperties](#hybridconnectionproperties) (ReadOnly): HybridConnection resource specific properties
+* **type**: string (ReadOnly): Resource type.
+
+## VnetInfo
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [VnetInfoProperties](#vnetinfoproperties) (ReadOnly): VnetInfo resource specific properties
+* **type**: string (ReadOnly): Resource type.
+
+## VnetInfoProperties
+### Properties
+* **certBlob**: string: A certificate file (.cer) blob containing the public key of the private key used to authenticate a 
+Point-To-Site VPN connection.
+* **certThumbprint**: string (ReadOnly): The client certificate thumbprint.
+* **dnsServers**: string: DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.
+* **isSwift**: bool: Flag that is used to denote if this is VNET injection
+* **resyncRequired**: bool (ReadOnly): <code>true</code> if a resync is required; otherwise, <code>false</code>.
+* **routes**: [VnetRoute](#vnetroute)[] (ReadOnly): The routes that this Virtual Network connection uses.
+* **vnetResourceId**: string: The Virtual Network's resource ID.
+
+## VnetRoute
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string: Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [VnetRouteProperties](#vnetrouteproperties): VnetRoute resource specific properties
+* **type**: string (ReadOnly): Resource type.
+
+## VnetRouteProperties
+### Properties
+* **endAddress**: string: The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
+* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC' | string: The type of route this is:
+DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
+INHERITED - Routes inherited from the real Virtual Network routes
+STATIC - Static route set on the app only
+
+These values will be used for syncing an app's routes with those from a Virtual Network.
+* **startAddress**: string: The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
 
 ## PremierAddOnProperties
 ### Properties
@@ -1339,40 +1811,69 @@ normally, use the POST /listKeys API instead.
 * **isMercurial**: bool: <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
 * **repoUrl**: string: Repository or source control URL.
 
-## VnetInfoProperties
+## TriggeredWebJobProperties
 ### Properties
-* **certBlob**: string: A certificate file (.cer) blob containing the public key of the private key used to authenticate a 
-Point-To-Site VPN connection.
-* **certThumbprint**: string (ReadOnly): The client certificate thumbprint.
-* **dnsServers**: string: DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.
-* **isSwift**: bool: Flag that is used to denote if this is VNET injection
-* **resyncRequired**: bool (ReadOnly): <code>true</code> if a resync is required; otherwise, <code>false</code>.
-* **routes**: [VnetRoute](#vnetroute)[] (ReadOnly): The routes that this Virtual Network connection uses.
-* **vnetResourceId**: string: The Virtual Network's resource ID.
+* **error**: string (ReadOnly): Error information.
+* **extra_info_url**: string (ReadOnly): Extra Info URL.
+* **history_url**: string (ReadOnly): History URL.
+* **latest_run**: [TriggeredJobRun](#triggeredjobrun) (ReadOnly): Triggered Web Job Run Information.
+* **run_command**: string (ReadOnly): Run command.
+* **scheduler_logs_url**: string (ReadOnly): Scheduler Logs URL.
+* **settings**: [TriggeredWebJobPropertiesSettings](#triggeredwebjobpropertiessettings) (ReadOnly): Job settings.
+* **url**: string (ReadOnly): Job URL.
+* **using_sdk**: bool (ReadOnly): Using SDK?
+* **web_job_type**: 'Continuous' | 'Triggered' (ReadOnly): Job type.
 
-## VnetRoute
+## TriggeredJobRun
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
+* **kind**: string (ReadOnly): Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [VnetRouteProperties](#vnetrouteproperties): VnetRoute resource specific properties
+* **properties**: [TriggeredJobRunProperties](#triggeredjobrunproperties) (ReadOnly): TriggeredJobRun resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## VnetRouteProperties
+## TriggeredJobRunProperties
 ### Properties
-* **endAddress**: string: The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
-* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC': The type of route this is:
-DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
-INHERITED - Routes inherited from the real Virtual Network routes
-STATIC - Static route set on the app only
+* **duration**: string (ReadOnly): Job duration.
+* **end_time**: string (ReadOnly): End time.
+* **error_url**: string (ReadOnly): Error URL.
+* **job_name**: string (ReadOnly): Job name.
+* **output_url**: string (ReadOnly): Output URL.
+* **start_time**: string (ReadOnly): Start time.
+* **status**: 'Error' | 'Failed' | 'Success' (ReadOnly): Job status.
+* **trigger**: string (ReadOnly): Job trigger.
+* **url**: string (ReadOnly): Job URL.
+* **web_job_id**: string (ReadOnly): Job ID.
+* **web_job_name**: string (ReadOnly): Job name.
 
-These values will be used for syncing an app's routes with those from a Virtual Network.
-* **startAddress**: string: The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
+## TriggeredWebJobPropertiesSettings
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## TriggeredJobHistoryProperties
+### Properties
+* **runs**: [TriggeredJobRun](#triggeredjobrun)[] (ReadOnly): List of triggered web job runs.
 
 ## VnetGatewayProperties
 ### Properties
 * **vnetName**: string: The Virtual Network name.
 * **vpnPackageUri**: string (Required, WriteOnly): The URI where the VPN package can be downloaded.
+
+## WebJobProperties
+### Properties
+* **error**: string (ReadOnly): Error information.
+* **extra_info_url**: string (ReadOnly): Extra Info URL.
+* **run_command**: string (ReadOnly): Run command.
+* **settings**: [WebJobPropertiesSettings](#webjobpropertiessettings) (ReadOnly): Job settings.
+* **url**: string (ReadOnly): Job URL.
+* **using_sdk**: bool (ReadOnly): Using SDK?
+* **web_job_type**: 'Continuous' | 'Triggered' (ReadOnly): Job type.
+
+## WebJobPropertiesSettings
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## BackupRequest
 ### Properties
@@ -1389,23 +1890,6 @@ These values will be used for syncing an app's routes with those from a Virtual 
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [BackupItemProperties](#backupitemproperties) (ReadOnly): BackupItem resource specific properties
 * **type**: string (ReadOnly): Resource type.
-
-## BackupItemProperties
-### Properties
-* **blobName**: string (ReadOnly): Name of the blob which contains data for this backup.
-* **correlationId**: string (ReadOnly): Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.
-* **created**: string (ReadOnly): Timestamp of the backup creation.
-* **databases**: [DatabaseBackupSetting](#databasebackupsetting)[] (ReadOnly): List of databases included in the backup.
-* **finishedTimeStamp**: string (ReadOnly): Timestamp when this backup finished.
-* **id**: int (ReadOnly): Id of the backup.
-* **lastRestoreTimeStamp**: string (ReadOnly): Timestamp of a last restore operation which used this backup.
-* **log**: string (ReadOnly): Details regarding this backup. Might contain an error message.
-* **name**: string (ReadOnly): Name of this backup.
-* **scheduled**: bool (ReadOnly): True if this backup has been created due to a schedule being triggered.
-* **sizeInBytes**: int (ReadOnly): Size of the backup in bytes.
-* **status**: 'Created' | 'DeleteFailed' | 'DeleteInProgress' | 'Deleted' | 'Failed' | 'InProgress' | 'PartiallySucceeded' | 'Skipped' | 'Succeeded' | 'TimedOut' (ReadOnly): Backup status.
-* **storageAccountUrl**: string (ReadOnly): SAS URL for the storage account container which contains this backup.
-* **websiteSizeInBytes**: int (ReadOnly): Size of the original web app which has been backed up.
 
 ## StringDictionary
 ### Properties

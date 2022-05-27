@@ -42,12 +42,13 @@
 * **properties**: [DiagnosticContractProperties](#diagnosticcontractproperties): Diagnostic Entity Properties
 * **type**: 'Microsoft.ApiManagement/service/apis/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/apis/diagnostics/loggers@2017-03-01
+## Resource Microsoft.ApiManagement/service/apis/diagnostics/loggers@2017-03-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [LoggerContractProperties](#loggercontractproperties) (ReadOnly): The Logger entity in API Management represents an event sink that you can use to log API Management events. Currently the Logger entity supports logging API Management events to Azure Event Hubs.
 * **type**: 'Microsoft.ApiManagement/service/apis/diagnostics/loggers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/issues@2017-03-01
@@ -185,12 +186,13 @@
 * **properties**: [DiagnosticContractProperties](#diagnosticcontractproperties): Diagnostic Entity Properties
 * **type**: 'Microsoft.ApiManagement/service/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/diagnostics/loggers@2017-03-01
+## Resource Microsoft.ApiManagement/service/diagnostics/loggers@2017-03-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [LoggerContractProperties](#loggercontractproperties) (ReadOnly): The Logger entity in API Management represents an event sink that you can use to log API Management events. Currently the Logger entity supports logging API Management events to Azure Event Hubs.
 * **type**: 'Microsoft.ApiManagement/service/diagnostics/loggers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/groups@2017-03-01
@@ -202,12 +204,13 @@
 * **properties**: [GroupCreateParametersProperties](#groupcreateparametersproperties): Parameters supplied to the Create Group operation.
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/groups/users@2017-03-01
+## Resource Microsoft.ApiManagement/service/groups/users@2017-03-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [UserContractProperties](#usercontractproperties) (ReadOnly): User profile.
 * **type**: 'Microsoft.ApiManagement/service/groups/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/identityProviders@2017-03-01
@@ -237,20 +240,22 @@
 * **properties**: [NotificationContractProperties](#notificationcontractproperties) (ReadOnly): Notification Contract properties.
 * **type**: 'Microsoft.ApiManagement/service/notifications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/notifications/recipientEmails@2017-03-01
+## Resource Microsoft.ApiManagement/service/notifications/recipientEmails@2017-03-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecipientEmailContractProperties](#recipientemailcontractproperties) (ReadOnly): Recipient Email Contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/notifications/recipientEmails' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/notifications/recipientUsers@2017-03-01
+## Resource Microsoft.ApiManagement/service/notifications/recipientUsers@2017-03-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecipientUsersContractProperties](#recipientuserscontractproperties) (ReadOnly): Recipient User Contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/notifications/recipientUsers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/openidConnectProviders@2017-03-01
@@ -310,20 +315,22 @@
 * **properties**: [ProductContractProperties](#productcontractproperties): Product profile.
 * **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/products/apis@2017-03-01
+## Resource Microsoft.ApiManagement/service/products/apis@2017-03-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ApiContractProperties](#apicontractproperties) (ReadOnly): Api Entity Properties
 * **type**: 'Microsoft.ApiManagement/service/products/apis' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/products/groups@2017-03-01
+## Resource Microsoft.ApiManagement/service/products/groups@2017-03-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [GroupContractProperties](#groupcontractproperties) (ReadOnly): Group contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/products/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/policies@2017-03-01
@@ -527,6 +534,37 @@
 ### Properties
 * **enabled**: bool (Required): Indicates whether a diagnostic should receive data or not.
 
+## LoggerContractProperties
+### Properties
+* **credentials**: [LoggerContractPropertiesCredentials](#loggercontractpropertiescredentials) (ReadOnly): The name and SendRule connection string of the event hub for azureEventHub logger.
+Instrumentation key for applicationInsights logger.
+* **description**: string (ReadOnly): Logger description.
+* **isBuffered**: bool (ReadOnly): Whether records are buffered in the logger before publishing. Default is assumed to be true.
+* **loggerType**: 'applicationInsights' | 'azureEventHub' | string (ReadOnly): Logger type.
+* **sampling**: [LoggerSamplingContract](#loggersamplingcontract) (ReadOnly): Sampling settings contract.
+
+## LoggerContractPropertiesCredentials
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## LoggerSamplingContract
+### Properties
+* **properties**: [LoggerSamplingProperties](#loggersamplingproperties) (ReadOnly): Sampling settings for an ApplicationInsights logger.
+
+## LoggerSamplingProperties
+### Properties
+* **evaluationInterval**: string (ReadOnly): Rate re-evaluation interval in ISO8601 format.
+* **initialPercentage**: int (ReadOnly): Initial sampling rate.
+* **maxPercentage**: int (ReadOnly): Maximum allowed rate of sampling.
+* **maxTelemetryItemsPerSecond**: int (ReadOnly): Target rate of telemetry items per second.
+* **minPercentage**: int (ReadOnly): Minimum allowed rate of sampling.
+* **movingAverageRatio**: int (ReadOnly): Moving average ration assigned to most recent value.
+* **percentage**: int (ReadOnly): Rate of sampling for fixed-rate sampling.
+* **percentageDecreaseTimeout**: string (ReadOnly): Duration in ISO8601 format after which it's allowed to lower the sampling rate.
+* **percentageIncreaseTimeout**: string (ReadOnly): Duration in ISO8601 format after which it's allowed to increase the sampling rate.
+* **samplingType**: 'adaptive' | 'fixed' | string (ReadOnly): Sampling type.
+
 ## IssueContractProperties
 ### Properties
 * **apiId**: string: A resource identifier for the API the issue was created for.
@@ -723,6 +761,37 @@
 * **externalId**: string: Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory aad://<tenant>.onmicrosoft.com/groups/<group object id>; otherwise the value is null.
 * **type**: 'custom' | 'external' | 'system': Group type.
 
+## UserContractProperties
+### Properties
+* **email**: string (ReadOnly): Email address.
+* **firstName**: string (ReadOnly): First name.
+* **groups**: [GroupContract](#groupcontract)[] (ReadOnly): Collection of groups user is part of.
+* **identities**: [UserIdentityContract](#useridentitycontract)[] (ReadOnly): Collection of user identities.
+* **lastName**: string (ReadOnly): Last name.
+* **note**: string (ReadOnly): Optional note about a user set by the administrator.
+* **registrationDate**: string (ReadOnly): Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+* **state**: 'active' | 'blocked' | 'deleted' | 'pending' | string (ReadOnly): Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
+
+## GroupContract
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [GroupContractProperties](#groupcontractproperties) (ReadOnly): Group contract Properties.
+* **type**: string (ReadOnly): Resource type for API Management resource.
+
+## GroupContractProperties
+### Properties
+* **builtIn**: bool (ReadOnly): true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
+* **description**: string (ReadOnly): Group description. Can contain HTML formatting tags.
+* **displayName**: string (ReadOnly): Group name.
+* **externalId**: string (ReadOnly): For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory aad://<tenant>.onmicrosoft.com/groups/<group object id>; otherwise the value is null.
+* **type**: 'custom' | 'external' | 'system' (ReadOnly): Group type.
+
+## UserIdentityContract
+### Properties
+* **id**: string (ReadOnly): Identifier value within provider.
+* **provider**: string (ReadOnly): Identity provider name.
+
 ## IdentityProviderContractProperties
 ### Properties
 * **allowedTenants**: string[]: List of Allowed Tenants when configuring Azure Active Directory login.
@@ -734,37 +803,6 @@
 * **signupPolicyName**: string: Signup Policy Name. Only applies to AAD B2C Identity Provider.
 * **type**: 'aad' | 'aadB2C' | 'facebook' | 'google' | 'microsoft' | 'twitter' | string: Identity Provider Type identifier.
 
-## LoggerContractProperties
-### Properties
-* **credentials**: [LoggerContractPropertiesCredentials](#loggercontractpropertiescredentials) (Required): The name and SendRule connection string of the event hub for azureEventHub logger.
-Instrumentation key for applicationInsights logger.
-* **description**: string: Logger description.
-* **isBuffered**: bool: Whether records are buffered in the logger before publishing. Default is assumed to be true.
-* **loggerType**: 'applicationInsights' | 'azureEventHub' | string (Required): Logger type.
-* **sampling**: [LoggerSamplingContract](#loggersamplingcontract): Sampling settings contract.
-
-## LoggerContractPropertiesCredentials
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## LoggerSamplingContract
-### Properties
-* **properties**: [LoggerSamplingProperties](#loggersamplingproperties): Sampling settings for an ApplicationInsights logger.
-
-## LoggerSamplingProperties
-### Properties
-* **evaluationInterval**: string: Rate re-evaluation interval in ISO8601 format.
-* **initialPercentage**: int: Initial sampling rate.
-* **maxPercentage**: int: Maximum allowed rate of sampling.
-* **maxTelemetryItemsPerSecond**: int: Target rate of telemetry items per second.
-* **minPercentage**: int: Minimum allowed rate of sampling.
-* **movingAverageRatio**: int: Moving average ration assigned to most recent value.
-* **percentage**: int: Rate of sampling for fixed-rate sampling.
-* **percentageDecreaseTimeout**: string: Duration in ISO8601 format after which it's allowed to lower the sampling rate.
-* **percentageIncreaseTimeout**: string: Duration in ISO8601 format after which it's allowed to increase the sampling rate.
-* **samplingType**: 'adaptive' | 'fixed' | string: Sampling type.
-
 ## NotificationContractProperties
 ### Properties
 * **description**: string (ReadOnly): Description of the Notification.
@@ -775,6 +813,14 @@ Instrumentation key for applicationInsights logger.
 ### Properties
 * **emails**: string[] (ReadOnly): List of Emails subscribed for the notification.
 * **users**: string[] (ReadOnly): List of Users subscribed for the notification.
+
+## RecipientEmailContractProperties
+### Properties
+* **email**: string (ReadOnly): User Email subscribed to notification.
+
+## RecipientUsersContractProperties
+### Properties
+* **userId**: string (ReadOnly): API Management UserId subscribed to notification.
 
 ## OpenidConnectProviderContractProperties
 ### Properties
@@ -823,6 +869,23 @@ Instrumentation key for applicationInsights logger.
 * **subscriptionRequired**: bool: Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as "protected" and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as "open" and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it's value is assumed to be true.
 * **subscriptionsLimit**: int: Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of true.
 * **terms**: string: Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
+
+## ApiContractProperties
+### Properties
+* **apiRevision**: string (ReadOnly): Describes the Revision of the Api. If no value is provided, default revision 1 is created
+* **apiVersion**: string (ReadOnly): Indicates the Version identifier of the API if the API is versioned
+* **apiVersionSet**: [ApiVersionSetContract](#apiversionsetcontract) (ReadOnly): Api Version Set Contract details.
+* **apiVersionSetId**: string (ReadOnly): A resource identifier for the related ApiVersionSet.
+* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (ReadOnly): API Authentication Settings.
+* **description**: string (ReadOnly): Description of the API. May include HTML formatting tags.
+* **displayName**: string (ReadOnly): API name.
+* **isCurrent**: bool (ReadOnly): Indicates if API revision is current api revision.
+* **isOnline**: bool (ReadOnly): Indicates if API revision is accessible via the gateway.
+* **path**: string (ReadOnly): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
+* **protocols**: 'http' | 'https'[] (ReadOnly): Describes on which protocols the operations in this API can be invoked.
+* **serviceUrl**: string (ReadOnly): Absolute URL of the backend service implementing this API.
+* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (ReadOnly): Subscription key parameter names details.
+* **type**: 'http' | 'soap' | string (ReadOnly): Type of API.
 
 ## PropertyContractProperties
 ### Properties
@@ -873,24 +936,4 @@ Instrumentation key for applicationInsights logger.
 * **password**: string (WriteOnly): User Password. If no value is provided, a default password is generated.
 * **registrationDate**: string (ReadOnly): Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **state**: 'active' | 'blocked' | 'deleted' | 'pending' | string: Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
-
-## GroupContract
-### Properties
-* **id**: string (ReadOnly): Resource ID.
-* **name**: string (ReadOnly): Resource name.
-* **properties**: [GroupContractProperties](#groupcontractproperties) (ReadOnly): Group contract Properties.
-* **type**: string (ReadOnly): Resource type for API Management resource.
-
-## GroupContractProperties
-### Properties
-* **builtIn**: bool (ReadOnly): true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
-* **description**: string (ReadOnly): Group description. Can contain HTML formatting tags.
-* **displayName**: string (ReadOnly): Group name.
-* **externalId**: string (ReadOnly): For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory aad://<tenant>.onmicrosoft.com/groups/<group object id>; otherwise the value is null.
-* **type**: 'custom' | 'external' | 'system' (ReadOnly): Group type.
-
-## UserIdentityContract
-### Properties
-* **id**: string: Identifier value within provider.
-* **provider**: string: Identity provider name.
 

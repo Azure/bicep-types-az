@@ -30,6 +30,21 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Insights/workbooks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Insights/workbooks/revisions@2021-03-08 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: [ResourceEtag](#resourceetag) (ReadOnly): Resource etag
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [WorkbookManagedIdentity](#workbookmanagedidentity) (ReadOnly): Customer Managed Identity
+* **kind**: 'shared' | 'user' | string (ReadOnly): The kind of workbook. Choices are user and shared.
+* **location**: string (ReadOnly): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkbookProperties](#workbookproperties) (ReadOnly): Properties that contain a workbook.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Insights/workbooks/revisions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## MyWorkbookResourceEtag
 ### Properties
 ### Additional Properties
@@ -100,6 +115,16 @@
 * **timeModified**: string (ReadOnly): Date and time in UTC of the last modification that was made to this workbook definition.
 * **userId**: string (ReadOnly): Unique user id of the specific user that owns this workbook.
 * **version**: string: Workbook version
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceEtag
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

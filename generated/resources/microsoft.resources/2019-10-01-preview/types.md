@@ -24,6 +24,15 @@
 * **properties**: [AzurePowerShellScriptProperties](#azurepowershellscriptproperties) (Required): Properties of the Azure PowerShell script object.
 
 
+## Resource Microsoft.Resources/deploymentScripts/logs@2019-10-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [LogProperties](#logproperties) (ReadOnly): Script log properties.
+* **type**: 'Microsoft.Resources/deploymentScripts/logs' (ReadOnly, DeployTimeConstant): The resource type
+
 ## ManagedServiceIdentity
 ### Properties
 * **tenantId**: string (ReadOnly): ID of the Azure Active Directory.
@@ -136,4 +145,8 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## LogProperties
+### Properties
+* **log**: string (ReadOnly): Script execution logs in text format.
 

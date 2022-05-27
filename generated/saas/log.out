@@ -5,5 +5,5 @@ https://aka.ms/autorest
 info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.4)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
-info    | Autorest completed in 1.92s. 0 files generated.
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
+info    | Autorest completed in 1.53s. 0 files generated.

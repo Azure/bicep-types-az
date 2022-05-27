@@ -1,5 +1,14 @@
 # Microsoft.Network @ 2018-03-01
 
+## Resource Microsoft.Network/trafficManagerGeographicHierarchies@2018-03-01 (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [GeographicHierarchyProperties](#geographichierarchyproperties) (ReadOnly): Class representing the properties of the Geographic hierarchy used with the Geographic traffic routing method.
+* **type**: 'Microsoft.Network/trafficManagerGeographicHierarchies' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Network/trafficmanagerprofiles@2018-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -10,6 +19,25 @@
 * **properties**: [ProfileProperties](#profileproperties): Class representing the Traffic Manager profile properties.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/trafficmanagerprofiles' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Network/trafficmanagerprofiles/heatMaps@2018-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
+* **properties**: [HeatMapProperties](#heatmapproperties) (ReadOnly): Class representing a Traffic Manager HeatMap properties.
+* **type**: 'Microsoft.Network/trafficmanagerprofiles/heatMaps' (ReadOnly, DeployTimeConstant): The resource type
+
+## GeographicHierarchyProperties
+### Properties
+* **geographicHierarchy**: [Region](#region) (ReadOnly): Class representing a region in the Geographic hierarchy used with the Geographic traffic routing method.
+
+## Region
+### Properties
+* **code**: string (ReadOnly): The code of the region
+* **name**: string (ReadOnly): The name of the region
+* **regions**: [Region](#region)[] (ReadOnly): The list of Regions grouped under this Region in the Geographic Hierarchy.
 
 ## ProfileProperties
 ### Properties
@@ -77,4 +105,29 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## HeatMapProperties
+### Properties
+* **endpoints**: [HeatMapEndpoint](#heatmapendpoint)[] (ReadOnly): The endpoints used in this HeatMap calculation.
+* **endTime**: string (ReadOnly): The ending of the time window for this HeatMap, exclusive.
+* **startTime**: string (ReadOnly): The beginning of the time window for this HeatMap, inclusive.
+* **trafficFlows**: [TrafficFlow](#trafficflow)[] (ReadOnly): The traffic flows produced in this HeatMap calculation.
+
+## HeatMapEndpoint
+### Properties
+* **endpointId**: int (ReadOnly): A number uniquely identifying this endpoint in query experiences.
+* **resourceId**: string (ReadOnly): The ARM Resource ID of this Traffic Manager endpoint.
+
+## TrafficFlow
+### Properties
+* **latitude**: int (ReadOnly): The approximate latitude that these queries originated from.
+* **longitude**: int (ReadOnly): The approximate longitude that these queries originated from.
+* **queryExperiences**: [QueryExperience](#queryexperience)[] (ReadOnly): The query experiences produced in this HeatMap calculation.
+* **sourceIp**: string (ReadOnly): The IP address that this query experience originated from.
+
+## QueryExperience
+### Properties
+* **endpointId**: int (ReadOnly): The id of the endpoint from the 'endpoints' array which these queries were routed to.
+* **latency**: int (ReadOnly): The latency experienced by queries originating from this location.
+* **queryCount**: int (ReadOnly): The number of queries originating from this location.
 

@@ -111,6 +111,15 @@
 * **tags**: [DscNodeConfigurationCreateOrUpdateParametersTags](#dscnodeconfigurationcreateorupdateparameterstags) (WriteOnly): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Automation/automationAccounts/nodes@2019-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DscNodeProperties](#dscnodeproperties) (ReadOnly): The properties of a DscNode
+* **type**: 'Microsoft.Automation/automationAccounts/nodes' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Automation/automationAccounts/python2Packages@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -463,6 +472,28 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DscNodeProperties
+### Properties
+* **accountId**: string (ReadOnly): Gets or sets the account id of the node.
+* **etag**: string (ReadOnly): Gets or sets the etag of the resource.
+* **extensionHandler**: [DscNodeExtensionHandlerAssociationProperty](#dscnodeextensionhandlerassociationproperty)[] (ReadOnly): Gets or sets the list of extensionHandler properties for a Node.
+* **ip**: string (ReadOnly): Gets or sets the ip of the node.
+* **lastSeen**: string (ReadOnly): Gets or sets the last seen time of the node.
+* **nodeConfiguration**: [DscNodeConfigurationAssociationProperty](#dscnodeconfigurationassociationproperty) (ReadOnly): The dsc node configuration property associated with the entity.
+* **nodeId**: string (ReadOnly): Gets or sets the node id.
+* **registrationTime**: string (ReadOnly): Gets or sets the registration time of the node.
+* **status**: string (ReadOnly): Gets or sets the status of the node.
+* **totalCount**: int (ReadOnly): Gets the total number of records matching filter criteria.
+
+## DscNodeExtensionHandlerAssociationProperty
+### Properties
+* **name**: string (ReadOnly): Gets or sets the name of the extension handler.
+* **version**: string (ReadOnly): Gets or sets the version of the extension handler.
+
+## DscNodeConfigurationAssociationProperty
+### Properties
+* **name**: string (ReadOnly): Gets or sets the name of the dsc node configuration.
 
 ## PythonPackageCreateProperties
 ### Properties

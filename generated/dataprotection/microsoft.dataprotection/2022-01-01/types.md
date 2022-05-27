@@ -24,6 +24,36 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupInstances' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DataProtection/backupVaults/backupInstances/operationResults@2022-01-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [BackupInstance](#backupinstance) (ReadOnly): Backup Instance
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.DataProtection/backupVaults/backupInstances/operationResults' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints@2022-01-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AzureBackupRecoveryPoint](#azurebackuprecoverypoint) (ReadOnly): Azure backup recoveryPoint
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DataProtection/backupVaults/backupJobs@2022-01-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AzureBackupJob](#azurebackupjob) (ReadOnly): AzureBackup Job Class
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.DataProtection/backupVaults/backupJobs' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DataProtection/backupVaults/backupPolicies@2022-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -33,6 +63,20 @@
 * **properties**: [BaseBackupPolicy](#basebackuppolicy): BackupPolicy base
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DataProtection/backupVaults/operationResults@2022-01-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): Optional ETag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [DppIdentityDetails](#dppidentitydetails) (ReadOnly): Identity details
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [BackupVault](#backupvault) (ReadOnly): Backup Vault
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [DppTrackedResourceTags](#dpptrackedresourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.DataProtection/backupVaults/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataProtection/resourceGuards@2022-01-01
 * **Valid Scope(s)**: ResourceGroup
@@ -192,6 +236,102 @@
 * **errorDetails**: [UserFacingError](#userfacingerror): Error object used by layers that have access to localized content, and propagate that to user
 * **status**: 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'ProtectionConfigured' | 'ProtectionStopped' | 'SoftDeleted' | 'SoftDeleting' | string: Specifies the protection status of the resource
 
+## AzureBackupRecoveryPoint
+* **Discriminator**: objectType
+
+### Base Properties
+### AzureBackupDiscreteRecoveryPoint
+#### Properties
+* **friendlyName**: string (ReadOnly)
+* **objectType**: 'AzureBackupDiscreteRecoveryPoint' (Required)
+* **policyName**: string (ReadOnly)
+* **policyVersion**: string (ReadOnly)
+* **recoveryPointDataStoresDetails**: [RecoveryPointDataStoreDetails](#recoverypointdatastoredetails)[] (ReadOnly): Array of RecoveryPointDataStoreDetails
+* **recoveryPointId**: string (ReadOnly)
+* **recoveryPointTime**: string (ReadOnly)
+* **recoveryPointType**: string (ReadOnly)
+* **retentionTagName**: string (ReadOnly)
+* **retentionTagVersion**: string (ReadOnly)
+
+
+## RecoveryPointDataStoreDetails
+### Properties
+* **creationTime**: string (ReadOnly)
+* **expiryTime**: string (ReadOnly)
+* **id**: string (ReadOnly)
+* **metaData**: string (ReadOnly)
+* **rehydrationExpiryTime**: string (ReadOnly)
+* **rehydrationStatus**: 'COMPLETED' | 'CREATE_IN_PROGRESS' | 'DELETED' | 'DELETE_IN_PROGRESS' | 'FAILED' | string (ReadOnly)
+* **state**: string (ReadOnly)
+* **type**: string (ReadOnly)
+* **visible**: bool (ReadOnly)
+
+## AzureBackupJob
+### Properties
+* **activityID**: string (ReadOnly): Job Activity Id
+* **backupInstanceFriendlyName**: string (ReadOnly): Name of the Backup Instance
+* **backupInstanceId**: string (ReadOnly): ARM ID of the Backup Instance
+* **dataSourceId**: string (ReadOnly): ARM ID of the DataSource
+* **dataSourceLocation**: string (ReadOnly): Location of the DataSource
+* **dataSourceName**: string (ReadOnly): User Friendly Name of the DataSource
+* **dataSourceSetName**: string (ReadOnly): Data Source Set Name of the DataSource
+* **dataSourceType**: string (ReadOnly): Type of DataSource
+* **destinationDataStoreName**: string (ReadOnly)
+* **duration**: string (ReadOnly): Total run time of the job. ISO 8601 format.
+* **endTime**: string (ReadOnly): EndTime of the job(in UTC)
+* **errorDetails**: [UserFacingError](#userfacingerror)[] (ReadOnly): A List, detailing the errors related to the job
+* **etag**: string (ReadOnly)
+* **extendedInfo**: [JobExtendedInfo](#jobextendedinfo) (ReadOnly): Extended Information about the job
+* **isUserTriggered**: bool (ReadOnly): Indicated that whether the job is adhoc(true) or scheduled(false)
+* **operation**: string (ReadOnly): It indicates the type of Job i.e. Backup:full/log/diff ;Restore:ALR/OLR; Tiering:Backup/Archive ; Management:ConfigureProtection/UnConfigure
+* **operationCategory**: string (ReadOnly): It indicates the type of Job i.e. Backup/Restore/Tiering/Management
+* **policyId**: string (ReadOnly): ARM ID of the policy
+* **policyName**: string (ReadOnly): Name of the policy
+* **progressEnabled**: bool (ReadOnly): Indicated whether progress is enabled for the job
+* **progressUrl**: string (ReadOnly): Url which contains job's progress
+* **restoreType**: string (ReadOnly): It indicates the sub type of operation i.e. in case of Restore it can be ALR/OLR
+* **sourceDataStoreName**: string (ReadOnly)
+* **sourceResourceGroup**: string (ReadOnly): Resource Group Name of the Datasource
+* **sourceSubscriptionID**: string (ReadOnly): SubscriptionId corresponding to the DataSource
+* **startTime**: string (ReadOnly): StartTime of the job(in UTC)
+* **status**: string (ReadOnly): Status of the job like InProgress/Success/Failed/Cancelled/SuccessWithWarning
+* **subscriptionId**: string (ReadOnly): Subscription Id of the corresponding backup vault
+* **supportedActions**: string[] (ReadOnly): List of supported actions
+* **vaultName**: string (ReadOnly): Name of the vault
+
+## JobExtendedInfo
+### Properties
+* **additionalDetails**: [JobExtendedInfoAdditionalDetails](#jobextendedinfoadditionaldetails) (ReadOnly): Job's Additional Details
+* **backupInstanceState**: string (ReadOnly): State of the Backup Instance
+* **dataTransferredInBytes**: int (ReadOnly): Number of bytes transferred
+* **recoveryDestination**: string (ReadOnly): Destination where restore is done
+* **sourceRecoverPoint**: [RestoreJobRecoveryPointDetails](#restorejobrecoverypointdetails) (ReadOnly)
+* **subTasks**: [JobSubTask](#jobsubtask)[] (ReadOnly): List of Sub Tasks of the job
+* **targetRecoverPoint**: [RestoreJobRecoveryPointDetails](#restorejobrecoverypointdetails) (ReadOnly)
+
+## JobExtendedInfoAdditionalDetails
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RestoreJobRecoveryPointDetails
+### Properties
+* **recoveryPointID**: string (ReadOnly)
+* **recoveryPointTime**: string (ReadOnly)
+
+## JobSubTask
+### Properties
+* **additionalDetails**: [JobSubTaskAdditionalDetails](#jobsubtaskadditionaldetails) (ReadOnly): Additional details of Sub Tasks
+* **taskId**: int (ReadOnly): Task Id of the Sub Task
+* **taskName**: string (ReadOnly): Name of the Sub Task
+* **taskProgress**: string (ReadOnly): Progress of the Sub Task
+* **taskStatus**: string (ReadOnly): Status of the Sub Task
+
+## JobSubTaskAdditionalDetails
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## BaseBackupPolicy
 * **Discriminator**: objectType
 
@@ -334,6 +474,11 @@ and should be part of AbsoluteMarker enum
 #### Properties
 * **objectType**: 'ImmediateCopyOption' (Required): Type of the specific object - used for deserializing
 
+
+## DppTrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceGuard
 ### Properties

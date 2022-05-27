@@ -12,6 +12,16 @@
 * **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.NetApp/netAppAccounts/accountBackups@2021-04-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [BackupProperties](#backupproperties) (ReadOnly): Backup properties
+* **type**: 'Microsoft.NetApp/netAppAccounts/accountBackups' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.NetApp/netAppAccounts/backupPolicies@2021-04-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -121,6 +131,18 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## BackupProperties
+### Properties
+* **backupId**: string (ReadOnly): UUID v4 used to identify the Backup
+* **backupType**: 'Manual' | 'Scheduled' | string (ReadOnly): Type of backup Manual or Scheduled
+* **creationDate**: string (ReadOnly): The creation date of the backup
+* **failureReason**: string (ReadOnly): Failure reason
+* **label**: string: Label for backup
+* **provisioningState**: string (ReadOnly): Azure lifecycle management
+* **size**: int (ReadOnly): Size of backup
+* **useExistingSnapshot**: bool: Manual backup an already existing snapshot. This will always be false for scheduled backups and true/false for manual backups
+* **volumeName**: string (ReadOnly): Volume name
 
 ## BackupPolicyProperties
 ### Properties
@@ -246,18 +268,6 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## BackupProperties
-### Properties
-* **backupId**: string (ReadOnly): UUID v4 used to identify the Backup
-* **backupType**: 'Manual' | 'Scheduled' | string (ReadOnly): Type of backup Manual or Scheduled
-* **creationDate**: string (ReadOnly): The creation date of the backup
-* **failureReason**: string (ReadOnly): Failure reason
-* **label**: string: Label for backup
-* **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **size**: int (ReadOnly): Size of backup
-* **useExistingSnapshot**: bool: Manual backup an already existing snapshot. This will always be false for scheduled backups and true/false for manual backups
-* **volumeName**: string (ReadOnly): Volume name
 
 ## SnapshotProperties
 ### Properties

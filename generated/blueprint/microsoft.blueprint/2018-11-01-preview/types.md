@@ -11,6 +11,15 @@
 * **properties**: [AssignmentProperties](#assignmentproperties) (Required): Detailed properties for a blueprint assignment.
 * **type**: 'Microsoft.Blueprint/blueprintAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Blueprint/blueprintAssignments/assignmentOperations@2018-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AssignmentOperationProperties](#assignmentoperationproperties) (ReadOnly): Properties of AssignmentOperation.
+* **type**: 'Microsoft.Blueprint/blueprintAssignments/assignmentOperations' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Blueprint/blueprints@2018-11-01-preview
 * **Valid Scope(s)**: Unknown
 ### Properties
@@ -53,6 +62,31 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PublishedBlueprintProperties](#publishedblueprintproperties) (Required): Schema for published blueprint definition properties.
 * **type**: 'Microsoft.Blueprint/blueprints/versions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Blueprint/blueprints/versions/artifacts@2018-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: Unknown
+* **Discriminator**: kind
+
+### Base Properties
+* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.Blueprint/blueprints/versions/artifacts' (ReadOnly, DeployTimeConstant): The resource type
+### PolicyAssignmentArtifact
+#### Properties
+* **kind**: 'policyAssignment' (Required): Specifies the kind of blueprint artifact.
+* **properties**: [PolicyAssignmentArtifactProperties](#policyassignmentartifactproperties) (ReadOnly): Properties of a Policy assignment blueprint artifact.
+
+### RoleAssignmentArtifact
+#### Properties
+* **kind**: 'roleAssignment' (Required): Specifies the kind of blueprint artifact.
+* **properties**: [RoleAssignmentArtifactProperties](#roleassignmentartifactproperties) (ReadOnly): Properties of a Role assignment blueprint artifact.
+
+### TemplateArtifact
+#### Properties
+* **kind**: 'template' (Required): Specifies the kind of blueprint artifact.
+* **properties**: [TemplateArtifactProperties](#templateartifactproperties) (ReadOnly): Properties of a Resource Manager template blueprint artifact.
+
 
 ## ManagedServiceIdentity
 ### Properties
@@ -124,6 +158,47 @@
 * **lastModified**: string (ReadOnly): Last modified time of this blueprint definition.
 * **managedResources**: string[] (ReadOnly): List of resources that were created by the blueprint assignment.
 * **timeCreated**: string (ReadOnly): Creation time of this blueprint definition.
+
+## AssignmentOperationProperties
+### Properties
+* **assignmentState**: string (ReadOnly): State of this blueprint assignment operation.
+* **blueprintVersion**: string (ReadOnly): The published version of the blueprint definition used for the blueprint assignment operation.
+* **deployments**: [AssignmentDeploymentJob](#assignmentdeploymentjob)[] (ReadOnly): List of jobs in this blueprint assignment operation.
+* **timeCreated**: string (ReadOnly): Create time of this blueprint assignment operation.
+* **timeFinished**: string (ReadOnly): Finish time of the overall underlying deployments.
+* **timeStarted**: string (ReadOnly): Start time of the underlying deployment.
+
+## AssignmentDeploymentJob
+### Properties
+* **action**: string (ReadOnly): Name of the action performed in this job.
+* **history**: [AssignmentDeploymentJobResult](#assignmentdeploymentjobresult)[] (ReadOnly): Result of this deployment job for each retry.
+* **jobId**: string (ReadOnly): Id of this job.
+* **jobState**: string (ReadOnly): State of this job.
+* **kind**: string (ReadOnly): Kind of job.
+* **requestUri**: string (ReadOnly): Reference to deployment job resource id.
+* **result**: [AssignmentDeploymentJobResult](#assignmentdeploymentjobresult) (ReadOnly): Result of each individual deployment in a blueprint assignment.
+
+## AssignmentDeploymentJobResult
+### Properties
+* **error**: [AzureResourceManagerError](#azureresourcemanagererror) (ReadOnly): Error code and message
+* **resources**: [AssignmentJobCreatedResource](#assignmentjobcreatedresource)[] (ReadOnly): Resources created as result of the deployment job.
+
+## AzureResourceManagerError
+### Properties
+* **code**: string (ReadOnly): Error code.
+* **message**: string (ReadOnly): Error message.
+
+## AssignmentJobCreatedResource
+### Properties
+* **id**: string (ReadOnly): String Id used to locate any resource on Azure.
+* **name**: string (ReadOnly): Name of this resource.
+* **properties**: [AssignmentJobCreatedResourceProperties](#assignmentjobcreatedresourceproperties) (ReadOnly): Additional properties in a dictionary.
+* **type**: string (ReadOnly): Type of this resource.
+
+## AssignmentJobCreatedResourceProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## BlueprintProperties
 ### Properties

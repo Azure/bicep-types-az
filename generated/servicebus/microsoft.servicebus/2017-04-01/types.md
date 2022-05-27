@@ -30,6 +30,15 @@
 * **properties**: [ArmDisasterRecoveryProperties](#armdisasterrecoveryproperties): Properties required to the Create Or Update Alias(Disaster Recovery configurations)
 * **type**: 'Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/AuthorizationRules@2017-04-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SBAuthorizationRuleProperties](#sbauthorizationruleproperties) (ReadOnly): AuthorizationRule properties.
+* **type**: 'Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.ServiceBus/namespaces/migrationConfigurations@2017-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties

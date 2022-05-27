@@ -10,8 +10,18 @@
 * **properties**: [ConnectorProperties](#connectorproperties): The properties of a Connector
 * **type**: 'Microsoft.CostManagement/cloudConnectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CostManagement/externalSubscriptions@2019-03-01-preview
-* **Valid Scope(s)**: ManagementGroup
+## Resource Microsoft.CostManagement/externalBillingAccounts@2019-03-01-preview (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): ExternalBillingAccount kind (eg aws)
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ExternalBillingAccountProperties](#externalbillingaccountproperties) (ReadOnly): The properties of a ExternalBillingAccount
+* **type**: 'Microsoft.CostManagement/externalBillingAccounts' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.CostManagement/externalSubscriptions@2019-03-01-preview (WriteOnly)
+* **Valid Scope(s)**: Tenant, ManagementGroup
 ### Properties
 * **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -58,6 +68,13 @@
 * **errorInnerMessage**: string (ReadOnly): External Provider error message
 * **errorMessage**: string (ReadOnly): Detailed error message
 * **errorStartTime**: string (ReadOnly): Time the error started occurring (Last time error occurred in lastChecked)
+
+## ExternalBillingAccountProperties
+### Properties
+* **collectionInfo**: [ConnectorCollectionInfo](#connectorcollectioninfo) (ReadOnly): Collection and ingestion information
+* **connectorId**: string (ReadOnly): Underlying ConnectorId
+* **displayName**: string (ReadOnly): ExternalBillingAccount DisplayName
+* **providerBillingAccountId**: string (ReadOnly): Provider BillingAccountId (eg AWS Consolidated Account number)
 
 ## ShowbackRuleProperties
 * **Discriminator**: ruleType

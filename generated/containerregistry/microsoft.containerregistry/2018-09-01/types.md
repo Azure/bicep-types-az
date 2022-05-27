@@ -1,5 +1,14 @@
 # Microsoft.ContainerRegistry @ 2018-09-01
 
+## Resource Microsoft.ContainerRegistry/registries/runs@2018-09-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-09-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RunProperties](#runproperties) (ReadOnly): The properties for a run.
+* **type**: 'Microsoft.ContainerRegistry/registries/runs' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.ContainerRegistry/registries/tasks@2018-09-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -26,6 +35,60 @@
 * **ApiVersion**: 2018-09-01
 * **Output**: [RunGetLogResult](#rungetlogresult)
 
+## RunProperties
+### Properties
+* **agentConfiguration**: [AgentProperties](#agentproperties) (ReadOnly): The properties that determine the run agent configuration.
+* **createTime**: string (ReadOnly): The time the run was scheduled.
+* **customRegistries**: string[] (ReadOnly): The list of custom registries that were logged in during this run.
+* **finishTime**: string (ReadOnly): The time the run finished.
+* **imageUpdateTrigger**: [ImageUpdateTrigger](#imageupdatetrigger) (ReadOnly): The image update trigger that caused a build.
+* **isArchiveEnabled**: bool (ReadOnly): The value that indicates whether archiving is enabled or not.
+* **lastUpdatedTime**: string (ReadOnly): The last updated time for the run.
+* **outputImages**: [ImageDescriptor](#imagedescriptor)[] (ReadOnly): The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.
+* **platform**: [PlatformProperties](#platformproperties) (ReadOnly): The platform properties against which the run has to happen.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of a run.
+* **runErrorMessage**: string (ReadOnly): The error message received from backend systems after the run is scheduled.
+* **runId**: string (ReadOnly): The unique identifier for the run.
+* **runType**: 'AutoBuild' | 'AutoRun' | 'QuickBuild' | 'QuickRun' | string (ReadOnly): The type of run.
+* **sourceRegistryAuth**: string (ReadOnly): The scope of the credentials that were used to login to the source registry during this run.
+* **sourceTrigger**: [SourceTriggerDescriptor](#sourcetriggerdescriptor) (ReadOnly): The source trigger that caused a run.
+* **startTime**: string (ReadOnly): The time the run started.
+* **status**: 'Canceled' | 'Error' | 'Failed' | 'Queued' | 'Running' | 'Started' | 'Succeeded' | 'Timeout' | string (ReadOnly): The current status of the run.
+* **task**: string (ReadOnly): The task against which run was scheduled.
+
+## AgentProperties
+### Properties
+* **cpu**: int: The CPU configuration in terms of number of cores required for the run.
+
+## ImageUpdateTrigger
+### Properties
+* **id**: string (ReadOnly): The unique ID of the trigger.
+* **images**: [ImageDescriptor](#imagedescriptor)[] (ReadOnly): The list of image updates that caused the build.
+* **timestamp**: string (ReadOnly): The timestamp when the image update happened.
+
+## ImageDescriptor
+### Properties
+* **digest**: string (ReadOnly): The sha256-based digest of the image manifest.
+* **registry**: string (ReadOnly): The registry login server.
+* **repository**: string (ReadOnly): The repository name.
+* **tag**: string (ReadOnly): The tag name.
+
+## PlatformProperties
+### Properties
+* **architecture**: 'amd64' | 'arm' | 'x86' | string: The OS architecture.
+* **os**: 'Linux' | 'Windows' | string (Required): The operating system type required for the run.
+* **variant**: 'v6' | 'v7' | 'v8' | string: Variant of the CPU.
+
+## SourceTriggerDescriptor
+### Properties
+* **branchName**: string (ReadOnly): The branch name in the repository.
+* **commitId**: string (ReadOnly): The unique ID that identifies a commit.
+* **eventType**: string (ReadOnly): The event type of the trigger.
+* **id**: string (ReadOnly): The unique ID of the trigger.
+* **providerType**: string (ReadOnly): The source control provider type.
+* **pullRequestId**: string (ReadOnly): The unique ID that identifies pull request.
+* **repositoryUrl**: string (ReadOnly): The repository URL.
+
 ## TaskProperties
 ### Properties
 * **agentConfiguration**: [AgentProperties](#agentproperties): The properties that determine the run agent configuration.
@@ -37,10 +100,6 @@
 * **step**: [TaskStepProperties](#taskstepproperties) (Required): Base properties for any task step.
 * **timeout**: int: Run timeout in seconds.
 * **trigger**: [TriggerProperties](#triggerproperties): The properties of a trigger.
-
-## AgentProperties
-### Properties
-* **cpu**: int: The CPU configuration in terms of number of cores required for the run.
 
 ## Credentials
 ### Properties
@@ -72,12 +131,6 @@ used as is without any modification.
 * **loginMode**: 'Default' | 'None' | string: The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
 the source registry during the run.
-
-## PlatformProperties
-### Properties
-* **architecture**: 'amd64' | 'arm' | 'x86' | string: The OS architecture.
-* **os**: 'Linux' | 'Windows' | string (Required): The operating system type required for the run.
-* **variant**: 'v6' | 'v7' | 'v8' | string: Variant of the CPU.
 
 ## TaskStepProperties
 * **Discriminator**: type

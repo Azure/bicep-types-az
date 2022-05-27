@@ -23,6 +23,28 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/images' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Compute/locations/publishers/artifacttypes/offers/skus/versions@2017-12-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The supported Azure location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VirtualMachineImageProperties](#virtualmachineimageproperties) (ReadOnly): Describes the properties of a Virtual Machine Image.
+* **tags**: [VirtualMachineImageResourceTags](#virtualmachineimageresourcetags) (ReadOnly): Specifies the tags that are assigned to the virtual machine. For more information about using tags, see [Using tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags.md).
+* **type**: 'Microsoft.Compute/locations/publishers/artifacttypes/offers/skus/versions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Compute/locations/publishers/artifacttypes/types/versions@2017-12-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VirtualMachineExtensionImageProperties](#virtualmachineextensionimageproperties) (ReadOnly): Describes the properties of a Virtual Machine Extension Image.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Compute/locations/publishers/artifacttypes/types/versions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Compute/virtualMachines@2017-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -72,6 +94,17 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualMachineScaleSetExtensionProperties](#virtualmachinescalesetextensionproperties): Describes the properties of a Virtual Machine Scale Set Extension.
 * **type**: 'Microsoft.Compute/virtualMachineScaleSets/extensions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Compute/virtualMachineScaleSets/rollingUpgrades@2017-12-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location
+* **name**: 'latest' (Required, DeployTimeConstant): The resource name
+* **properties**: [RollingUpgradeStatusInfoProperties](#rollingupgradestatusinfoproperties) (ReadOnly): The status of the latest virtual machine scale set rolling upgrade.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Compute/virtualMachineScaleSets/rollingUpgrades' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2017-12-01
 * **Valid Scope(s)**: ResourceGroup
@@ -150,6 +183,44 @@
 * **osType**: 'Linux' | 'Windows' (Required): The operating system of the osDiskImage.
 * **snapshot**: [SubResource](#subresource)
 * **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | string: Specifies the storage account type for the managed disk. Possible values are: Standard_LRS or Premium_LRS.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## VirtualMachineImageProperties
+### Properties
+* **dataDiskImages**: [DataDiskImage](#datadiskimage)[] (ReadOnly): Array of DataDiskImage
+* **osDiskImage**: [OSDiskImage](#osdiskimage) (ReadOnly): Contains the os disk image information.
+* **plan**: [PurchasePlan](#purchaseplan) (ReadOnly): Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
+
+## DataDiskImage
+### Properties
+* **lun**: int (ReadOnly): Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+
+## OSDiskImage
+### Properties
+* **operatingSystem**: 'Linux' | 'Windows' (ReadOnly): The operating system of the osDiskImage.
+
+## PurchasePlan
+### Properties
+* **name**: string (ReadOnly): The plan ID.
+* **product**: string (ReadOnly): Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
+* **publisher**: string (ReadOnly): The publisher ID.
+
+## VirtualMachineImageResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## VirtualMachineExtensionImageProperties
+### Properties
+* **computeRole**: string (ReadOnly): The type of role (IaaS or PaaS) this extension supports.
+* **handlerSchema**: string (ReadOnly): The schema defined by publisher, where extension consumers should provide settings in a matching schema.
+* **operatingSystem**: string (ReadOnly): The operating system this extension supports.
+* **supportsMultipleExtensions**: bool (ReadOnly): Whether the handler can support multiple extensions.
+* **vmScaleSetEnabled**: bool (ReadOnly): Whether the extension can be used on xRP VMScaleSets. By default existing extensions are usable on scalesets, but there might be cases where a publisher wants to explicitly indicate the extension is only enabled for CRP VMs but not VMSS.
 
 ## ResourceTags
 ### Properties
@@ -589,6 +660,51 @@
 * **osType**: 'Linux' | 'Windows': The operating system of the osDiskImage.
 * **vhdContainers**: string[]: Specifies the container urls that are used to store operating system disks for the scale set.
 * **writeAcceleratorEnabled**: bool: Specifies whether writeAccelerator should be enabled or disabled on the disk.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RollingUpgradeStatusInfoProperties
+### Properties
+* **error**: [ApiError](#apierror) (ReadOnly): Api error.
+* **policy**: [RollingUpgradePolicy](#rollingupgradepolicy) (ReadOnly): The configuration parameters used while performing a rolling upgrade.
+* **progress**: [RollingUpgradeProgressInfo](#rollingupgradeprogressinfo) (ReadOnly): Information about the number of virtual machine instances in each upgrade state.
+* **runningStatus**: [RollingUpgradeRunningStatus](#rollingupgraderunningstatus) (ReadOnly): Information about the current running state of the overall upgrade.
+
+## ApiError
+### Properties
+* **code**: string (ReadOnly): The error code.
+* **details**: [ApiErrorBase](#apierrorbase)[] (ReadOnly): The Api error details
+* **innererror**: [InnerError](#innererror) (ReadOnly): Inner error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The target of the particular error.
+
+## ApiErrorBase
+### Properties
+* **code**: string (ReadOnly): The error code.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The target of the particular error.
+
+## InnerError
+### Properties
+* **errordetail**: string (ReadOnly): The internal error message or exception dump.
+* **exceptiontype**: string (ReadOnly): The exception type.
+
+## RollingUpgradeProgressInfo
+### Properties
+* **failedInstanceCount**: int (ReadOnly): The number of instances that have failed to be upgraded successfully.
+* **inProgressInstanceCount**: int (ReadOnly): The number of instances that are currently being upgraded.
+* **pendingInstanceCount**: int (ReadOnly): The number of instances that have not yet begun to be upgraded.
+* **successfulInstanceCount**: int (ReadOnly): The number of instances that have been successfully upgraded.
+
+## RollingUpgradeRunningStatus
+### Properties
+* **code**: 'Cancelled' | 'Completed' | 'Faulted' | 'RollingForward' (ReadOnly): Code indicating the current status of the upgrade.
+* **lastAction**: 'Cancel' | 'Start' (ReadOnly): The last action performed on the rolling upgrade.
+* **lastActionTime**: string (ReadOnly): Last action time of the upgrade.
+* **startTime**: string (ReadOnly): Start time of the upgrade.
 
 ## ResourceTags
 ### Properties

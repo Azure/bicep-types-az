@@ -1,5 +1,25 @@
 # Microsoft.Network @ 2021-08-01
 
+## Resource Microsoft.Network/applicationGatewayAvailableSslOptions@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [ApplicationGatewayAvailableSslOptionsPropertiesFormat](#applicationgatewayavailablessloptionspropertiesformat) (ReadOnly): Properties of ApplicationGatewayAvailableSslOptions.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.Network/applicationGatewayAvailableSslOptions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Network/applicationGatewayAvailableSslOptions/predefinedPolicies@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ApplicationGatewaySslPredefinedPolicyPropertiesFormat](#applicationgatewaysslpredefinedpolicypropertiesformat) (ReadOnly): Properties of ApplicationGatewaySslPredefinedPolicy.
+* **type**: 'Microsoft.Network/applicationGatewayAvailableSslOptions/predefinedPolicies' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Network/applicationGateways@2021-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -179,6 +199,16 @@
 * **properties**: [ExpressRouteCircuitConnectionPropertiesFormat](#expressroutecircuitconnectionpropertiesformat): Properties of the express route circuit connection.
 * **type**: 'Microsoft.Network/expressRouteCircuits/peerings/connections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Network/expressRouteCircuits/peerings/peerConnections@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PeerExpressRouteCircuitConnectionPropertiesFormat](#peerexpressroutecircuitconnectionpropertiesformat) (ReadOnly): Properties of the peer express route circuit connection.
+* **type**: 'Microsoft.Network/expressRouteCircuits/peerings/peerConnections' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Network/expressRouteCrossConnections@2021-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -244,6 +274,27 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExpressRoutePortAuthorizationPropertiesFormat](#expressrouteportauthorizationpropertiesformat): Properties of ExpressRoutePort Authorization.
 * **type**: 'Microsoft.Network/expressRoutePorts/authorizations' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Network/ExpressRoutePorts/links@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ExpressRouteLinkPropertiesFormat](#expressroutelinkpropertiesformat) (ReadOnly): Properties specific to ExpressRouteLink resources.
+* **type**: 'Microsoft.Network/ExpressRoutePorts/links' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Network/ExpressRoutePortsLocations@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ExpressRoutePortsLocationPropertiesFormat](#expressrouteportslocationpropertiesformat) (ReadOnly): Properties specific to ExpressRoutePorts peering location resources.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.Network/ExpressRoutePortsLocations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/firewallPolicies@2021-08-01
 * **Valid Scope(s)**: ResourceGroup
@@ -325,6 +376,17 @@
 * **properties**: [BackendAddressPoolPropertiesFormat](#backendaddresspoolpropertiesformat): Properties of the backend address pool.
 * **type**: 'Microsoft.Network/loadBalancers/backendAddressPools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Network/loadBalancers/frontendIPConfigurations@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [FrontendIPConfigurationPropertiesFormat](#frontendipconfigurationpropertiesformat) (ReadOnly): Properties of Frontend IP Configuration of the load balancer.
+* **type**: 'Microsoft.Network/loadBalancers/frontendIPConfigurations' (ReadOnly, DeployTimeConstant): The resource type
+* **zones**: string[] (ReadOnly): A list of availability zones denoting the IP allocated for the resource needs to come from.
+
 ## Resource Microsoft.Network/loadBalancers/inboundNatRules@2021-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -334,6 +396,36 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [InboundNatRulePropertiesFormat](#inboundnatrulepropertiesformat): Properties of the inbound NAT rule.
 * **type**: 'Microsoft.Network/loadBalancers/inboundNatRules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Network/loadBalancers/loadBalancingRules@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [LoadBalancingRulePropertiesFormat](#loadbalancingrulepropertiesformat) (ReadOnly): Properties of the load balancer.
+* **type**: 'Microsoft.Network/loadBalancers/loadBalancingRules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Network/loadBalancers/outboundRules@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [OutboundRulePropertiesFormat](#outboundrulepropertiesformat) (ReadOnly): Outbound rule of the load balancer.
+* **type**: 'Microsoft.Network/loadBalancers/outboundRules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Network/loadBalancers/probes@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProbePropertiesFormat](#probepropertiesformat) (ReadOnly): Load balancer probe resource.
+* **type**: 'Microsoft.Network/loadBalancers/probes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/localNetworkGateways@2021-08-01
 * **Valid Scope(s)**: ResourceGroup
@@ -374,6 +466,16 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkInterfaces' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Network/networkInterfaces/ipConfigurations@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NetworkInterfaceIPConfigurationPropertiesFormat](#networkinterfaceipconfigurationpropertiesformat) (ReadOnly): Properties of IP configuration.
+* **type**: 'Microsoft.Network/networkInterfaces/ipConfigurations' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Network/networkInterfaces/tapConfigurations@2021-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -408,6 +510,16 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkSecurityGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Network/networkSecurityGroups/defaultSecurityRules@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SecurityRulePropertiesFormat](#securityrulepropertiesformat) (ReadOnly): Security rule resource.
+* **type**: 'Microsoft.Network/networkSecurityGroups/defaultSecurityRules' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Network/networkSecurityGroups/securityRules@2021-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -431,7 +543,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkVirtualAppliances' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkVirtualAppliances/inboundSecurityRules@2021-08-01
+## Resource Microsoft.Network/networkVirtualAppliances/inboundSecurityRules@2021-08-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -450,6 +562,18 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualApplianceSiteProperties](#virtualappliancesiteproperties): Properties of the rule group.
 * **type**: 'Microsoft.Network/networkVirtualAppliances/virtualApplianceSites' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Network/networkVirtualApplianceSkus@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NetworkVirtualApplianceSkuPropertiesFormat](#networkvirtualapplianceskupropertiesformat) (ReadOnly): Properties specific to NetworkVirtualApplianceSkus.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.Network/networkVirtualApplianceSkus' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkWatchers@2021-08-01
 * **Valid Scope(s)**: ResourceGroup
@@ -872,6 +996,16 @@
 * **properties**: [VpnConnectionProperties](#vpnconnectionproperties): Parameters for VpnConnection.
 * **type**: 'Microsoft.Network/vpnGateways/vpnConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Network/vpnGateways/vpnConnections/vpnLinkConnections@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VpnSiteLinkConnectionProperties](#vpnsitelinkconnectionproperties) (ReadOnly): Parameters for VpnConnection.
+* **type**: 'Microsoft.Network/vpnGateways/vpnConnections/vpnLinkConnections' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Network/vpnServerConfigurations@2021-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -906,6 +1040,16 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/vpnSites' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Network/vpnSites/vpnSiteLinks@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VpnSiteLinkProperties](#vpnsitelinkproperties) (ReadOnly): Parameters for VpnSite.
+* **type**: 'Microsoft.Network/vpnSites/vpnSiteLinks' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listIdpsFilterOptions (Microsoft.Network/firewallPolicies@2021-08-01)
 * **Resource**: Microsoft.Network/firewallPolicies
 * **ApiVersion**: 2021-08-01
@@ -917,6 +1061,27 @@
 * **ApiVersion**: 2021-08-01
 * **Input**: [IdpsQueryObject](#idpsqueryobject)
 * **Output**: [QueryResults](#queryresults)
+
+## ApplicationGatewayAvailableSslOptionsPropertiesFormat
+### Properties
+* **availableCipherSuites**: 'TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_128_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_128_CBC_SHA256' | 'TLS_DHE_DSS_WITH_AES_256_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_256_CBC_SHA256' | 'TLS_DHE_RSA_WITH_AES_128_CBC_SHA' | 'TLS_DHE_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_DHE_RSA_WITH_AES_256_CBC_SHA' | 'TLS_DHE_RSA_WITH_AES_256_GCM_SHA384' | 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA' | 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256' | 'TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256' | 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA' | 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384' | 'TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384' | 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA' | 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256' | 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA' | 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384' | 'TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384' | 'TLS_RSA_WITH_3DES_EDE_CBC_SHA' | 'TLS_RSA_WITH_AES_128_CBC_SHA' | 'TLS_RSA_WITH_AES_128_CBC_SHA256' | 'TLS_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_RSA_WITH_AES_256_CBC_SHA' | 'TLS_RSA_WITH_AES_256_CBC_SHA256' | 'TLS_RSA_WITH_AES_256_GCM_SHA384' | string[] (ReadOnly): List of available Ssl cipher suites.
+* **availableProtocols**: 'TLSv1_0' | 'TLSv1_1' | 'TLSv1_2' | string[] (ReadOnly): List of available Ssl protocols.
+* **defaultPolicy**: 'AppGwSslPolicy20150501' | 'AppGwSslPolicy20170401' | 'AppGwSslPolicy20170401S' | string (ReadOnly): Ssl predefined policy name enums.
+* **predefinedPolicies**: [SubResource](#subresource)[] (ReadOnly): List of available Ssl predefined policy.
+
+## SubResource
+### Properties
+* **id**: string: Resource ID.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ApplicationGatewaySslPredefinedPolicyPropertiesFormat
+### Properties
+* **cipherSuites**: 'TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_128_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_128_CBC_SHA256' | 'TLS_DHE_DSS_WITH_AES_256_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_256_CBC_SHA256' | 'TLS_DHE_RSA_WITH_AES_128_CBC_SHA' | 'TLS_DHE_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_DHE_RSA_WITH_AES_256_CBC_SHA' | 'TLS_DHE_RSA_WITH_AES_256_GCM_SHA384' | 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA' | 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256' | 'TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256' | 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA' | 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384' | 'TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384' | 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA' | 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256' | 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA' | 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384' | 'TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384' | 'TLS_RSA_WITH_3DES_EDE_CBC_SHA' | 'TLS_RSA_WITH_AES_128_CBC_SHA' | 'TLS_RSA_WITH_AES_128_CBC_SHA256' | 'TLS_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_RSA_WITH_AES_256_CBC_SHA' | 'TLS_RSA_WITH_AES_256_CBC_SHA256' | 'TLS_RSA_WITH_AES_256_GCM_SHA384' | string[] (ReadOnly): Ssl cipher suites to be enabled in the specified order for application gateway.
+* **minProtocolVersion**: 'TLSv1_0' | 'TLSv1_1' | 'TLSv1_2' | string (ReadOnly): Ssl protocol enums.
 
 ## ManagedServiceIdentity
 ### Properties
@@ -1054,10 +1219,6 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## SubResource
-### Properties
-* **id**: string: Resource ID.
 
 ## BackendAddressPool
 ### Properties
@@ -3180,6 +3341,23 @@
 * **circuitResourceUri**: string (ReadOnly): The reference to the ExpressRoute circuit resource using the authorization.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
 
+## ExpressRoutePortsLocationPropertiesFormat
+### Properties
+* **address**: string (ReadOnly): Address of peering location.
+* **availableBandwidths**: [ExpressRoutePortsLocationBandwidths](#expressrouteportslocationbandwidths)[] (ReadOnly): The inventory of available ExpressRoutePort bandwidths.
+* **contact**: string (ReadOnly): Contact details of peering locations.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
+
+## ExpressRoutePortsLocationBandwidths
+### Properties
+* **offerName**: string (ReadOnly): Bandwidth descriptive name.
+* **valueInGbps**: int (ReadOnly): Bandwidth value in Gbps.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## FirewallPolicyPropertiesFormat
 ### Properties
 * **basePolicy**: [SubResource](#subresource): Reference to another subresource.
@@ -3645,6 +3823,22 @@
 * **allow**: bool: Flag to control breakout of o365 allow category.
 * **default**: bool: Flag to control breakout of o365 default category.
 * **optimize**: bool: Flag to control breakout of o365 optimize category.
+
+## NetworkVirtualApplianceSkuPropertiesFormat
+### Properties
+* **availableScaleUnits**: [NetworkVirtualApplianceSkuInstances](#networkvirtualapplianceskuinstances)[] (ReadOnly): The list of scale units available.
+* **availableVersions**: string[] (ReadOnly): Available Network Virtual Appliance versions.
+* **vendor**: string (ReadOnly): Network Virtual Appliance Sku vendor.
+
+## NetworkVirtualApplianceSkuInstances
+### Properties
+* **instanceCount**: int (ReadOnly): Instance Count.
+* **scaleUnit**: string (ReadOnly): Scale Unit.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## NetworkWatcherPropertiesFormat
 ### Properties

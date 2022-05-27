@@ -1,5 +1,29 @@
 # Microsoft.Resources @ 2022-02-01
 
+## Resource Microsoft.Resources/builtInTemplateSpecs@2022-02-01 (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The location of the Template Spec. It cannot be changed after Template Spec creation. It must be one of the supported Azure locations.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TemplateSpecProperties](#templatespecproperties) (ReadOnly): Template Spec properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TemplateSpecTags](#templatespectags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.Resources/builtInTemplateSpecs' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Resources/builtInTemplateSpecs/versions@2022-02-01 (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The location of the Template Spec Version. It must match the location of the parent Template Spec.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TemplateSpecVersionProperties](#templatespecversionproperties) (ReadOnly): Template Spec Version properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TemplateSpecVersionTags](#templatespecversiontags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.Resources/builtInTemplateSpecs/versions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Resources/templateSpecs@2022-02-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -68,6 +92,16 @@
 ### Properties
 * **path**: string (Required): A filesystem safe relative path of the artifact.
 * **template**: any (Required): Any object
+
+## TemplateSpecVersionTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TemplateSpecTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TemplateSpecVersionTags
 ### Properties

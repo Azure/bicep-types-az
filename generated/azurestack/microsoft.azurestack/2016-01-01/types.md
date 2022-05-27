@@ -12,6 +12,15 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.AzureStack/registrations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.AzureStack/registrations/products@2016-01-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProductNestedProperties](#productnestedproperties) (ReadOnly): Properties portion of the product resource.
+* **type**: 'Microsoft.AzureStack/registrations/products' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listDetails (Microsoft.AzureStack/registrations/products@2016-01-01)
 * **Resource**: Microsoft.AzureStack/registrations/products
 * **ApiVersion**: 2016-01-01
@@ -28,6 +37,51 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ProductNestedProperties
+### Properties
+* **billingPartNumber**: string (ReadOnly): The part number used for billing purposes.
+* **compatibility**: [Compatibility](#compatibility) (ReadOnly): Product compatibility
+* **description**: string (ReadOnly): The description of the product.
+* **displayName**: string (ReadOnly): The display name of the product.
+* **galleryItemIdentity**: string (ReadOnly): The identifier of the gallery item corresponding to the product.
+* **iconUris**: [IconUris](#iconuris) (ReadOnly): Links to product icons.
+* **legalTerms**: string (ReadOnly): The legal terms.
+* **links**: [ProductLink](#productlink)[] (ReadOnly): Additional links available for this product.
+* **offer**: string (ReadOnly): The offer representing the product.
+* **offerVersion**: string (ReadOnly): The version of the product offer.
+* **payloadLength**: int (ReadOnly): The length of product content.
+* **privacyPolicy**: string (ReadOnly): The privacy policy.
+* **productKind**: string (ReadOnly): The kind of the product (virtualMachine or virtualMachineExtension)
+* **productProperties**: [ProductProperties](#productproperties) (ReadOnly): Additional properties of the product
+* **publisherDisplayName**: string (ReadOnly): The user-friendly name of the product publisher.
+* **publisherIdentifier**: string (ReadOnly): Publisher identifier.
+* **sku**: string (ReadOnly): The product SKU.
+* **vmExtensionType**: string (ReadOnly): The type of the Virtual Machine Extension.
+
+## Compatibility
+### Properties
+* **description**: string (ReadOnly): Full error message if any compatibility issues are found
+* **isCompatible**: bool (ReadOnly): Tells if product is compatible with current device
+* **issues**: 'ADFSIdentitySystemRequired' | 'AzureADIdentitySystemRequired' | 'CapacityBillingModelRequired' | 'ConnectionToAzureRequired' | 'ConnectionToInternetRequired' | 'DevelopmentBillingModelRequired' | 'DisconnectedEnvironmentRequired' | 'HigherDeviceVersionRequired' | 'LowerDeviceVersionRequired' | 'PayAsYouGoBillingModelRequired' | string[] (ReadOnly): List of all issues found
+* **message**: string (ReadOnly): Short error message if any compatibility issues are found
+
+## IconUris
+### Properties
+* **hero**: string (ReadOnly): URI to hero icon.
+* **large**: string (ReadOnly): URI to large icon.
+* **medium**: string (ReadOnly): URI to medium icon.
+* **small**: string (ReadOnly): URI to small icon.
+* **wide**: string (ReadOnly): URI to wide icon.
+
+## ProductLink
+### Properties
+* **displayName**: string (ReadOnly): The description of the link.
+* **uri**: string (ReadOnly): The URI corresponding to the link.
+
+## ProductProperties
+### Properties
+* **version**: string (ReadOnly): The version.
 
 ## ExtendedProduct
 ### Properties

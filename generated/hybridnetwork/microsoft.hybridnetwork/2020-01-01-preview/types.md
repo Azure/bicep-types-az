@@ -20,6 +20,15 @@
 * **properties**: [VendorNetworkFunctionPropertiesFormat](#vendornetworkfunctionpropertiesformat): Vendor network function properties.
 * **type**: 'Microsoft.HybridNetwork/locations/vendors/networkFunctions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances@2020-01-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RoleInstanceProperties](#roleinstanceproperties) (ReadOnly): The role instance properties of the network function.
+* **type**: 'Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.HybridNetwork/networkFunctions@2020-01-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -135,6 +144,10 @@
 ### Properties
 * **keyData**: string: SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
 * **path**: string: Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys
+
+## RoleInstanceProperties
+### Properties
+* **operationalState**: 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Unknown' | string (ReadOnly): The operational state of the role instance.
 
 ## NetworkFunctionPropertiesFormat
 ### Properties

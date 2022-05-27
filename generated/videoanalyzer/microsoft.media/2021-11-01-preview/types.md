@@ -1,5 +1,18 @@
 # Microsoft.Media @ 2021-11-01-preview
 
+## Resource Microsoft.Media/locations/videoAnalyzerOperationResults@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [VideoAnalyzerIdentity](#videoanalyzeridentity) (ReadOnly): The managed identity for the Video Analyzer resource.
+* **location**: string (ReadOnly): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VideoAnalyzerProperties](#videoanalyzerproperties) (ReadOnly): The properties of the Video Analyzer account.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.Media/locations/videoAnalyzerOperationResults' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Media/videoAnalyzers@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -74,6 +87,26 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Media/videoAnalyzers/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Media/videoAnalyzers/privateEndpointConnections/operationResults@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Properties of the PrivateEndpointConnectProperties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.Media/videoAnalyzers/privateEndpointConnections/operationResults' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Media/videoAnalyzers/privateLinkResources@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.Media/videoAnalyzers/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Media/videoAnalyzers/videos@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -197,6 +230,11 @@
 * **id**: string (Required): The ID of the storage account resource. Video Analyzer relies on tables, queues, and blobs. The primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage).
 * **identity**: [ResourceIdentity](#resourceidentity): The user assigned managed identity to use when accessing a resource.
 * **status**: string (ReadOnly): The current status of the storage account mapping.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties
@@ -465,6 +503,12 @@
 ### Properties
 * **name**: 'Batch_S1' | 'Live_S1' | string (Required): The SKU name.
 * **tier**: 'Standard' | string (ReadOnly): The SKU tier.
+
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
+* **requiredZoneNames**: string[] (ReadOnly): The private link resource Private link DNS zone name.
 
 ## VideoProperties
 ### Properties

@@ -12,6 +12,15 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/instancePools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/locations/deletedServers@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DeletedServerProperties](#deletedserverproperties) (ReadOnly): The properties of a deleted server.
+* **type**: 'Microsoft.Sql/locations/deletedServers' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/locations/instanceFailoverGroups@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -21,6 +30,24 @@
 * **properties**: [InstanceFailoverGroupProperties](#instancefailovergroupproperties): Properties of a instance failover group.
 * **type**: 'Microsoft.Sql/locations/instanceFailoverGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription, ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ManagedInstanceLongTermRetentionBackupProperties](#managedinstancelongtermretentionbackupproperties) (ReadOnly): Properties of a long term retention backup
+* **type**: 'Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription, ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [LongTermRetentionBackupProperties](#longtermretentionbackupproperties) (ReadOnly): Properties of a long term retention backup
+* **type**: 'Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/locations/serverTrustGroups@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -29,6 +56,24 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerTrustGroupProperties](#servertrustgroupproperties): Properties of a server trust group.
 * **type**: 'Microsoft.Sql/locations/serverTrustGroups' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/locations/timeZones@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TimeZoneProperties](#timezoneproperties) (ReadOnly): The properties of a time zone.
+* **type**: 'Microsoft.Sql/locations/timeZones' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/locations/usages@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SubscriptionUsageProperties](#subscriptionusageproperties) (ReadOnly): Properties of a subscription usage.
+* **type**: 'Microsoft.Sql/locations/usages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -90,6 +135,50 @@
 * **properties**: [ManagedBackupShortTermRetentionPolicyProperties](#managedbackupshorttermretentionpolicyproperties): Properties of a short term retention policy
 * **type**: 'Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/managedInstances/databases/queries@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [QueryProperties](#queryproperties) (ReadOnly): Properties of a database query.
+* **type**: 'Microsoft.Sql/managedInstances/databases/queries' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/managedInstances/databases/restoreDetails@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
+* **properties**: [ManagedDatabaseRestoreDetailsProperties](#manageddatabaserestoredetailsproperties) (ReadOnly): The managed database's restore details properties.
+* **type**: 'Microsoft.Sql/managedInstances/databases/restoreDetails' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/managedInstances/databases/schemas@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.Sql/managedInstances/databases/schemas' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/managedInstances/databases/schemas/tables@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DatabaseTableProperties](#databasetableproperties) (ReadOnly): Database table properties.
+* **type**: 'Microsoft.Sql/managedInstances/databases/schemas/tables' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/managedInstances/databases/schemas/tables/columns@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DatabaseColumnProperties](#databasecolumnproperties) (ReadOnly): Database column properties.
+* **type**: 'Microsoft.Sql/managedInstances/databases/schemas/tables/columns' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -136,6 +225,15 @@
 * **properties**: [DatabaseVulnerabilityAssessmentRuleBaselineProperties](#databasevulnerabilityassessmentrulebaselineproperties): Properties of a database Vulnerability Assessment rule baseline.
 * **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VulnerabilityAssessmentScanRecordProperties](#vulnerabilityassessmentscanrecordproperties) (ReadOnly): Properties of a vulnerability assessment scan record.
+* **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/managedInstances/distributedAvailabilityGroups@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -165,6 +263,15 @@
 * **properties**: [ManagedInstanceEncryptionProtectorProperties](#managedinstanceencryptionprotectorproperties): Properties for an encryption protector execution.
 * **type**: 'Microsoft.Sql/managedInstances/encryptionProtector' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/managedInstances/endpointCertificates@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [EndpointCertificateProperties](#endpointcertificateproperties) (ReadOnly): The properties of an endpoint certificate.
+* **type**: 'Microsoft.Sql/managedInstances/endpointCertificates' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/managedInstances/keys@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -175,6 +282,15 @@
 * **properties**: [ManagedInstanceKeyProperties](#managedinstancekeyproperties): Properties for a key execution.
 * **type**: 'Microsoft.Sql/managedInstances/keys' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/managedInstances/operations@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ManagedInstanceOperationProperties](#managedinstanceoperationproperties) (ReadOnly): The properties of a managed instance operation.
+* **type**: 'Microsoft.Sql/managedInstances/operations' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/managedInstances/privateEndpointConnections@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -183,6 +299,35 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstancePrivateEndpointConnectionProperties](#managedinstanceprivateendpointconnectionproperties): Properties of a private endpoint connection.
 * **type**: 'Microsoft.Sql/managedInstances/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/managedInstances/privateLinkResources@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ManagedInstancePrivateLinkProperties](#managedinstanceprivatelinkproperties) (ReadOnly): Properties of a private link resource.
+* **type**: 'Microsoft.Sql/managedInstances/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/managedInstances/recoverableDatabases@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecoverableManagedDatabaseProperties](#recoverablemanageddatabaseproperties) (ReadOnly): The recoverable managed database's properties.
+* **type**: 'Microsoft.Sql/managedInstances/recoverableDatabases' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/managedInstances/restorableDroppedDatabases@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RestorableDroppedManagedDatabaseProperties](#restorabledroppedmanageddatabaseproperties) (ReadOnly): The restorable dropped managed database's properties.
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.Sql/managedInstances/restorableDroppedDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/restorableDroppedDatabases/backupShortTermRetentionPolicies@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -262,6 +407,17 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Sql/servers/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/servers/advisors@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Resource kind.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AdvisorProperties](#advisorproperties) (ReadOnly): Properties for a Database, Server or Elastic Pool Advisor.
+* **type**: 'Microsoft.Sql/servers/advisors' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/servers/auditingSettings@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -270,6 +426,15 @@
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerBlobAuditingPolicyProperties](#serverblobauditingpolicyproperties): Properties of a server blob auditing policy.
 * **type**: 'Microsoft.Sql/servers/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/automaticTuning@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'current' (Required, DeployTimeConstant): The resource name
+* **properties**: [AutomaticTuningServerProperties](#automatictuningserverproperties) (ReadOnly): Server-level Automatic Tuning properties.
+* **type**: 'Microsoft.Sql/servers/automaticTuning' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/azureADOnlyAuthentications@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -316,6 +481,28 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Sql/servers/databases/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/servers/databases/advisors@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Resource kind.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AdvisorProperties](#advisorproperties) (ReadOnly): Properties for a Database, Server or Elastic Pool Advisor.
+* **type**: 'Microsoft.Sql/servers/databases/advisors' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/databases/advisors/recommendedActions@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Resource kind.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecommendedActionProperties](#recommendedactionproperties) (ReadOnly): Properties for a Database, Server or Elastic Pool Recommended Action.
+* **type**: 'Microsoft.Sql/servers/databases/advisors/recommendedActions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/servers/databases/auditingSettings@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -325,6 +512,15 @@
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseBlobAuditingPolicyProperties](#databaseblobauditingpolicyproperties): Properties of a database blob auditing policy.
 * **type**: 'Microsoft.Sql/servers/databases/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/databases/automaticTuning@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'current' (Required, DeployTimeConstant): The resource name
+* **properties**: [DatabaseAutomaticTuningProperties](#databaseautomatictuningproperties) (ReadOnly): Database-level Automatic Tuning properties.
+* **type**: 'Microsoft.Sql/servers/databases/automaticTuning' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -344,6 +540,15 @@
 * **properties**: [BackupShortTermRetentionPolicyProperties](#backupshorttermretentionpolicyproperties): Properties of a short term retention policy
 * **type**: 'Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/servers/databases/dataWarehouseUserActivities@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'current' | string (Required, DeployTimeConstant): The resource name
+* **properties**: [DataWarehouseUserActivitiesProperties](#datawarehouseuseractivitiesproperties) (ReadOnly): User activities of a data warehouse. This currently includes the count of running or suspended queries. For more information, please view the sys.dm_pdw_exec_requests dynamic management view (DMV).
+* **type**: 'Microsoft.Sql/servers/databases/dataWarehouseUserActivities' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/servers/databases/extendedAuditingSettings@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -359,7 +564,7 @@
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabaseExtensionsProperties](#databaseextensionsproperties) (WriteOnly): Contains the database information after a successful Import, Export, or PolybaseImport
+* **properties**: [DatabaseExtensionsProperties](#databaseextensionsproperties): Contains the database information after a successful Import, Export, or PolybaseImport
 * **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/ledgerDigestUploads@2021-11-01-preview
@@ -371,6 +576,15 @@
 * **properties**: [LedgerDigestUploadsProperties](#ledgerdigestuploadsproperties): The properties of a database ledger digest upload settings.
 * **type**: 'Microsoft.Sql/servers/databases/ledgerDigestUploads' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/servers/databases/maintenanceWindowOptions@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'current' (Required, DeployTimeConstant): The resource name
+* **properties**: [MaintenanceWindowOptionsProperties](#maintenancewindowoptionsproperties) (ReadOnly): Maintenance window options properties.
+* **type**: 'Microsoft.Sql/servers/databases/maintenanceWindowOptions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/servers/databases/maintenanceWindows@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -379,6 +593,51 @@
 * **name**: 'current' (Required, DeployTimeConstant): The resource name
 * **properties**: [MaintenanceWindowsProperties](#maintenancewindowsproperties): Maintenance windows resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/maintenanceWindows' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/databases/replicationLinks@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ReplicationLinkProperties](#replicationlinkproperties) (ReadOnly): Properties of a replication link.
+* **type**: 'Microsoft.Sql/servers/databases/replicationLinks' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/databases/restorePoints@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RestorePointProperties](#restorepointproperties) (ReadOnly): Properties of a database restore point
+* **type**: 'Microsoft.Sql/servers/databases/restorePoints' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/databases/schemas@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.Sql/servers/databases/schemas' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/databases/schemas/tables@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DatabaseTableProperties](#databasetableproperties) (ReadOnly): Database table properties.
+* **type**: 'Microsoft.Sql/servers/databases/schemas/tables' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/databases/schemas/tables/columns@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DatabaseColumnProperties](#databasecolumnproperties) (ReadOnly): Database column properties.
+* **type**: 'Microsoft.Sql/servers/databases/schemas/tables/columns' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -445,6 +704,15 @@
 * **name**: 'default' | 'master' (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseVulnerabilityAssessmentRuleBaselineProperties](#databasevulnerabilityassessmentrulebaselineproperties): Properties of a database Vulnerability Assessment rule baseline.
 * **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VulnerabilityAssessmentScanRecordProperties](#vulnerabilityassessmentscanrecordproperties) (ReadOnly): Properties of a vulnerability assessment scan record.
+* **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/workloadGroups@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -584,6 +852,24 @@
 * **properties**: [JobExecutionProperties](#jobexecutionproperties) (ReadOnly): Properties for an Azure SQL Database Elastic job execution.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/executions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/servers/jobAgents/jobs/executions/steps@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [JobExecutionProperties](#jobexecutionproperties) (ReadOnly): Properties for an Azure SQL Database Elastic job execution.
+* **type**: 'Microsoft.Sql/servers/jobAgents/jobs/executions/steps' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/jobAgents/jobs/executions/steps/targets@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [JobExecutionProperties](#jobexecutionproperties) (ReadOnly): Properties for an Azure SQL Database Elastic job execution.
+* **type**: 'Microsoft.Sql/servers/jobAgents/jobs/executions/steps/targets' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/servers/jobAgents/jobs/steps@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -592,6 +878,23 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [JobStepProperties](#jobstepproperties): Properties of a job step.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/steps' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/jobAgents/jobs/versions@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: int (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.Sql/servers/jobAgents/jobs/versions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/jobAgents/jobs/versions/steps@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [JobStepProperties](#jobstepproperties) (ReadOnly): Properties of a job step.
+* **type**: 'Microsoft.Sql/servers/jobAgents/jobs/versions/steps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents/targetGroups@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -631,6 +934,27 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of a private endpoint connection.
 * **type**: 'Microsoft.Sql/servers/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/servers/privateLinkResources@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **type**: 'Microsoft.Sql/servers/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/restorableDroppedDatabases@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RestorableDroppedDatabaseProperties](#restorabledroppeddatabaseproperties) (ReadOnly): The restorable dropped database's properties.
+* **sku**: [Sku](#sku) (ReadOnly): An ARM Resource SKU.
+* **tags**: [RestorableDroppedDatabaseTags](#restorabledroppeddatabasetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.Sql/servers/restorableDroppedDatabases' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/servers/securityAlertPolicies@2021-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -668,6 +992,17 @@
 * **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties): Properties of a server Vulnerability Assessment.
 * **type**: 'Microsoft.Sql/servers/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/virtualClusters@2021-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VirtualClusterProperties](#virtualclusterproperties) (ReadOnly): The properties of a virtual cluster.
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.Sql/virtualClusters' (ReadOnly, DeployTimeConstant): The resource type
+
 ## InstancePoolProperties
 ### Properties
 * **licenseType**: 'BasePrice' | 'LicenseIncluded' | string (Required): The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).
@@ -686,6 +1021,13 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DeletedServerProperties
+### Properties
+* **deletionTime**: string (ReadOnly): The deletion time of the deleted server.
+* **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
+* **originalId**: string (ReadOnly): The original ID of the server before deletion.
+* **version**: string (ReadOnly): The version of the deleted server.
 
 ## InstanceFailoverGroupProperties
 ### Properties
@@ -715,6 +1057,27 @@
 * **failoverPolicy**: 'Automatic' | 'Manual' | string (Required): Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
 * **failoverWithDataLossGracePeriodMinutes**: int: Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
 
+## ManagedInstanceLongTermRetentionBackupProperties
+### Properties
+* **backupExpirationTime**: string (ReadOnly): The time the long term retention backup will expire.
+* **backupStorageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone' | string (ReadOnly): The storage account type used to store backups for this database.
+* **backupTime**: string (ReadOnly): The time the backup was taken
+* **databaseDeletionTime**: string (ReadOnly): The delete time of the database
+* **databaseName**: string (ReadOnly): The name of the database the backup belong to
+* **managedInstanceCreateTime**: string (ReadOnly): The create time of the instance.
+* **managedInstanceName**: string (ReadOnly): The managed instance that the backup database belongs to.
+
+## LongTermRetentionBackupProperties
+### Properties
+* **backupExpirationTime**: string (ReadOnly): The time the long term retention backup will expire.
+* **backupStorageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone' | string (ReadOnly): The storage account type used to store backups for this database.
+* **backupTime**: string (ReadOnly): The time the backup was taken
+* **databaseDeletionTime**: string (ReadOnly): The delete time of the database
+* **databaseName**: string (ReadOnly): The name of the database the backup belong to
+* **requestedBackupStorageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone' | string (ReadOnly): The storage account type used to store backups for this database.
+* **serverCreateTime**: string (ReadOnly): The create time of the server.
+* **serverName**: string (ReadOnly): The server name that the backup database belong to.
+
 ## ServerTrustGroupProperties
 ### Properties
 * **groupMembers**: [ServerInfo](#serverinfo)[] (Required): Group members information for the server trust group.
@@ -723,6 +1086,18 @@
 ## ServerInfo
 ### Properties
 * **serverId**: string (Required): Server Id.
+
+## TimeZoneProperties
+### Properties
+* **displayName**: string (ReadOnly): The time zone display name
+* **timeZoneId**: string (ReadOnly): The time zone id
+
+## SubscriptionUsageProperties
+### Properties
+* **currentValue**: int (ReadOnly): Current value of the metric.
+* **displayName**: string (ReadOnly): User-readable name of the metric.
+* **limit**: int (ReadOnly): Boundary value of the metric.
+* **unit**: string (ReadOnly): Unit of the metric.
 
 ## ResourceIdentity
 ### Properties
@@ -871,6 +1246,35 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 ### Properties
 * **retentionDays**: int: The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
 
+## QueryProperties
+### Properties
+* **queryText**: string (ReadOnly): Query text.
+
+## ManagedDatabaseRestoreDetailsProperties
+### Properties
+* **blockReason**: string (ReadOnly): The reason why restore is in Blocked state.
+* **currentRestoringFileName**: string (ReadOnly): Current restoring file name.
+* **lastRestoredFileName**: string (ReadOnly): Last restored file name.
+* **lastRestoredFileTime**: string (ReadOnly): Last restored file time.
+* **lastUploadedFileName**: string (ReadOnly): Last uploaded file name.
+* **lastUploadedFileTime**: string (ReadOnly): Last uploaded file time.
+* **numberOfFilesDetected**: int (ReadOnly): Number of files detected.
+* **percentCompleted**: int (ReadOnly): Percent completed.
+* **status**: string (ReadOnly): Restore status.
+* **unrestorableFiles**: string[] (ReadOnly): List of unrestorable files.
+
+## DatabaseTableProperties
+### Properties
+* **memoryOptimized**: bool (ReadOnly): Whether or not the table is memory optimized.
+* **temporalType**: 'HistoryTable' | 'NonTemporalTable' | 'SystemVersionedTemporalTable' | string (ReadOnly): The table temporal type.
+
+## DatabaseColumnProperties
+### Properties
+* **columnType**: 'bigint' | 'binary' | 'bit' | 'char' | 'date' | 'datetime' | 'datetime2' | 'datetimeoffset' | 'decimal' | 'float' | 'geography' | 'geometry' | 'hierarchyid' | 'image' | 'int' | 'money' | 'nchar' | 'ntext' | 'numeric' | 'nvarchar' | 'real' | 'smalldatetime' | 'smallint' | 'smallmoney' | 'sql_variant' | 'sysname' | 'text' | 'time' | 'timestamp' | 'tinyint' | 'uniqueidentifier' | 'varbinary' | 'varchar' | 'xml' | string (ReadOnly): The column data type.
+* **isComputed**: bool (ReadOnly): Whether or not the column is computed.
+* **memoryOptimized**: bool (ReadOnly): Whether or not the column belongs to a memory optimized table.
+* **temporalType**: 'HistoryTable' | 'NonTemporalTable' | 'SystemVersionedTemporalTable' | string (ReadOnly): The table temporal type.
+
 ## SensitivityLabelProperties
 ### Properties
 * **columnName**: string (ReadOnly): The column name.
@@ -919,6 +1323,22 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 ### Properties
 * **result**: string[] (Required): The rule baseline result
 
+## VulnerabilityAssessmentScanRecordProperties
+### Properties
+* **endTime**: string (ReadOnly): The scan end time (UTC).
+* **errors**: [VulnerabilityAssessmentScanError](#vulnerabilityassessmentscanerror)[] (ReadOnly): The scan errors.
+* **numberOfFailedSecurityChecks**: int (ReadOnly): The number of failed security checks.
+* **scanId**: string (ReadOnly): The scan ID.
+* **startTime**: string (ReadOnly): The scan start time (UTC).
+* **state**: 'Failed' | 'FailedToRun' | 'InProgress' | 'Passed' | string (ReadOnly): The scan status.
+* **storageContainerPath**: string (ReadOnly): The scan results storage container path.
+* **triggerType**: 'OnDemand' | 'Recurring' | string (ReadOnly): The scan trigger type.
+
+## VulnerabilityAssessmentScanError
+### Properties
+* **code**: string (ReadOnly): The error code.
+* **message**: string (ReadOnly): The error message.
+
 ## DistributedAvailabilityGroupProperties
 ### Properties
 * **distributedAvailabilityGroupId**: string (ReadOnly): The distributed availability group id
@@ -944,6 +1364,10 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 * **thumbprint**: string (ReadOnly): Thumbprint of the server key.
 * **uri**: string (ReadOnly): The URI of the server key.
 
+## EndpointCertificateProperties
+### Properties
+* **publicBlob**: string (ReadOnly): The certificate public blob
+
 ## ManagedInstanceKeyProperties
 ### Properties
 * **autoRotationEnabled**: bool (ReadOnly): Key auto rotation opt-in flag. Either true or false.
@@ -951,6 +1375,73 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 * **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' | string (Required, WriteOnly): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
 * **thumbprint**: string (ReadOnly): Thumbprint of the key.
 * **uri**: string (WriteOnly): The URI of the key. If the ServerKeyType is AzureKeyVault, then the URI is required.
+
+## ManagedInstanceOperationProperties
+### Properties
+* **description**: string (ReadOnly): The operation description.
+* **errorCode**: int (ReadOnly): The operation error code.
+* **errorDescription**: string (ReadOnly): The operation error description.
+* **errorSeverity**: int (ReadOnly): The operation error severity.
+* **estimatedCompletionTime**: string (ReadOnly): The estimated completion time of the operation.
+* **isCancellable**: bool (ReadOnly): Whether the operation can be cancelled.
+* **isUserError**: bool (ReadOnly): Whether or not the error is a user error.
+* **managedInstanceName**: string (ReadOnly): The name of the managed instance the operation is being performed on.
+* **operation**: string (ReadOnly): The name of operation.
+* **operationFriendlyName**: string (ReadOnly): The friendly name of operation.
+* **operationParameters**: [ManagedInstanceOperationParametersPair](#managedinstanceoperationparameterspair) (ReadOnly): The parameters of a managed instance operation.
+* **operationSteps**: [ManagedInstanceOperationSteps](#managedinstanceoperationsteps) (ReadOnly): The steps of a managed instance operation.
+* **percentComplete**: int (ReadOnly): The percentage of the operation completed.
+* **startTime**: string (ReadOnly): The operation start time.
+* **state**: 'CancelInProgress' | 'Cancelled' | 'Failed' | 'InProgress' | 'Pending' | 'Succeeded' | string (ReadOnly): The operation state.
+
+## ManagedInstanceOperationParametersPair
+### Properties
+* **currentParameters**: [UpsertManagedServerOperationParameters](#upsertmanagedserveroperationparameters) (ReadOnly)
+* **requestedParameters**: [UpsertManagedServerOperationParameters](#upsertmanagedserveroperationparameters) (ReadOnly)
+
+## UpsertManagedServerOperationParameters
+### Properties
+* **family**: string (ReadOnly)
+* **storageSizeInGB**: int (ReadOnly)
+* **tier**: string (ReadOnly)
+* **vCores**: int (ReadOnly)
+
+## ManagedInstanceOperationSteps
+### Properties
+* **currentStep**: int (ReadOnly): The number of current operation steps.
+* **stepsList**: [UpsertManagedServerOperationStepWithEstimatesAndDuration](#upsertmanagedserveroperationstepwithestimatesandduration)[] (ReadOnly): The operation steps list.
+* **totalSteps**: string (ReadOnly): The total number of operation steps.
+
+## UpsertManagedServerOperationStepWithEstimatesAndDuration
+### Properties
+* **name**: string (ReadOnly)
+* **order**: int (ReadOnly)
+* **status**: 'Canceled' | 'Completed' | 'Failed' | 'InProgress' | 'NotStarted' | 'SlowedDown' | string (ReadOnly)
+* **stepEndTime**: string (ReadOnly)
+* **stepStartTime**: string (ReadOnly)
+* **timeElapsed**: string (ReadOnly)
+
+## ManagedInstancePrivateLinkProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
+* **requiredZoneNames**: string[] (ReadOnly): The private link resource required zone names.
+
+## RecoverableManagedDatabaseProperties
+### Properties
+* **lastAvailableBackupDate**: string (ReadOnly): The last available backup date.
+
+## RestorableDroppedManagedDatabaseProperties
+### Properties
+* **creationDate**: string (ReadOnly): The creation date of the database (ISO8601 format).
+* **databaseName**: string (ReadOnly): The name of the database.
+* **deletionDate**: string (ReadOnly): The deletion date of the database (ISO8601 format).
+* **earliestRestoreDate**: string (ReadOnly): The earliest restore date of the database (ISO8601 format).
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## SecurityAlertsPolicyProperties
 ### Properties
@@ -1055,6 +1546,87 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 * **creationTime**: string (ReadOnly): Specifies the UTC creation time of the policy.
 * **state**: 'Disabled' | 'Enabled' | 'New' (Required): Specifies the state of the Advanced Threat Protection, whether it is enabled or disabled or a state has not been applied yet on the specific database or server.
 
+## AdvisorProperties
+### Properties
+* **advisorStatus**: 'GA' | 'LimitedPublicPreview' | 'PrivatePreview' | 'PublicPreview' (ReadOnly): Gets the status of availability of this advisor to customers. Possible values are 'GA', 'PublicPreview', 'LimitedPublicPreview' and 'PrivatePreview'.
+* **autoExecuteStatus**: 'Default' | 'Disabled' | 'Enabled' (ReadOnly): Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'
+* **autoExecuteStatusInheritedFrom**: 'Database' | 'Default' | 'ElasticPool' | 'Server' | 'Subscription' (ReadOnly): Gets the resource from which current value of auto-execute status is inherited. Auto-execute status can be set on (and inherited from) different levels in the resource hierarchy. Possible values are 'Subscription', 'Server', 'ElasticPool', 'Database' and 'Default' (when status is not explicitly set on any level).
+* **lastChecked**: string (ReadOnly): Gets the time when the current resource was analyzed for recommendations by this advisor.
+* **recommendationsStatus**: string (ReadOnly): Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, 'Ok' (Recommendations available),LowActivity (not enough workload to analyze), 'DbSeemsTuned' (Database is doing well), etc.
+* **recommendedActions**: [RecommendedAction](#recommendedaction)[] (ReadOnly): Gets the recommended actions for this advisor.
+
+## RecommendedAction
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **kind**: string (ReadOnly): Resource kind.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [RecommendedActionProperties](#recommendedactionproperties) (ReadOnly): Properties for a Database, Server or Elastic Pool Recommended Action.
+* **type**: string (ReadOnly): Resource type.
+
+## RecommendedActionProperties
+### Properties
+* **details**: [RecommendedActionPropertiesDetails](#recommendedactionpropertiesdetails) (ReadOnly): Gets additional details specific to this recommended action.
+* **errorDetails**: [RecommendedActionErrorInfo](#recommendedactionerrorinfo) (ReadOnly): Contains error information for an Azure SQL Database, Server or Elastic Pool Recommended Action.
+* **estimatedImpact**: [RecommendedActionImpactRecord](#recommendedactionimpactrecord)[] (ReadOnly): Gets the estimated impact info for this recommended action e.g., Estimated CPU gain, Estimated Disk Space change
+* **executeActionDuration**: string (ReadOnly): Gets the time taken for applying this recommended action on user resource. e.g., time taken for index creation
+* **executeActionInitiatedBy**: 'System' | 'User' (ReadOnly): Gets if approval for applying this recommended action was given by user/system.
+* **executeActionInitiatedTime**: string (ReadOnly): Gets the time when this recommended action was approved for execution.
+* **executeActionStartTime**: string (ReadOnly): Gets the time when system started applying this recommended action on the user resource. e.g., index creation start time
+* **implementationDetails**: [RecommendedActionImplementationInfo](#recommendedactionimplementationinfo) (ReadOnly): Contains information for manual implementation for an Azure SQL Database, Server or Elastic Pool Recommended Action.
+* **isArchivedAction**: bool (ReadOnly): Gets if this recommended action was suggested some time ago but user chose to ignore this and system added a new recommended action again.
+* **isExecutableAction**: bool (ReadOnly): Gets if this recommended action is actionable by user
+* **isRevertableAction**: bool (ReadOnly): Gets if changes applied by this recommended action can be reverted by user
+* **lastRefresh**: string (ReadOnly): Gets time when this recommended action was last refreshed.
+* **linkedObjects**: string[] (ReadOnly): Gets the linked objects, if any.
+* **observedImpact**: [RecommendedActionImpactRecord](#recommendedactionimpactrecord)[] (ReadOnly): Gets the observed/actual impact info for this recommended action e.g., Actual CPU gain, Actual Disk Space change
+* **recommendationReason**: string (ReadOnly): Gets the reason for recommending this action. e.g., DuplicateIndex
+* **revertActionDuration**: string (ReadOnly): Gets the time taken for reverting changes of this recommended action on user resource. e.g., time taken for dropping the created index.
+* **revertActionInitiatedBy**: 'System' | 'User' (ReadOnly): Gets if approval for applying this recommended action was given by user/system.
+* **revertActionInitiatedTime**: string (ReadOnly): Gets the time when this recommended action was approved for revert.
+* **revertActionStartTime**: string (ReadOnly): Gets the time when system started reverting changes of this recommended action on user resource. e.g., time when index drop is executed.
+* **score**: int (ReadOnly): Gets the impact of this recommended action. Possible values are 1 - Low impact, 2 - Medium Impact and 3 - High Impact
+* **state**: [RecommendedActionStateInfo](#recommendedactionstateinfo) (ReadOnly): Contains information of current state for an Azure SQL Database, Server or Elastic Pool Recommended Action.
+* **timeSeries**: [RecommendedActionMetricInfo](#recommendedactionmetricinfo)[] (ReadOnly): Gets the time series info of metrics for this recommended action e.g., CPU consumption time series
+* **validSince**: string (ReadOnly): Gets the time since when this recommended action is valid.
+
+## RecommendedActionPropertiesDetails
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## RecommendedActionErrorInfo
+### Properties
+* **errorCode**: string (ReadOnly): Gets the reason why the recommended action was put to error state. e.g., DatabaseHasQdsOff, IndexAlreadyExists
+* **isRetryable**: 'No' | 'Yes' (ReadOnly): Gets whether the error could be ignored and recommended action could be retried. Possible values are: Yes/No
+
+## RecommendedActionImpactRecord
+### Properties
+* **absoluteValue**: int (ReadOnly): Gets the absolute value of this dimension if applicable. e.g., Number of Queries affected
+* **changeValueAbsolute**: int (ReadOnly): Gets the absolute change in the value of this dimension. e.g., Absolute Disk space change in Megabytes
+* **changeValueRelative**: int (ReadOnly): Gets the relative change in the value of this dimension. e.g., Relative Disk space change in Percentage
+* **dimensionName**: string (ReadOnly): Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
+* **unit**: string (ReadOnly): Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
+
+## RecommendedActionImplementationInfo
+### Properties
+* **method**: 'AzurePowerShell' | 'TSql' (ReadOnly): Gets the method in which this recommended action can be manually implemented. e.g., TSql, AzurePowerShell.
+* **script**: string (ReadOnly): Gets the manual implementation script. e.g., T-SQL script that could be executed on the database.
+
+## RecommendedActionStateInfo
+### Properties
+* **actionInitiatedBy**: 'System' | 'User' (ReadOnly): Gets if approval for applying this recommended action was given by user/system.
+* **currentValue**: 'Active' | 'Error' | 'Executing' | 'Expired' | 'Ignored' | 'Monitoring' | 'Pending' | 'PendingRevert' | 'Resolved' | 'RevertCancelled' | 'Reverted' | 'Reverting' | 'Success' | 'Verifying' | string (ReadOnly): Current state the recommended action is in. Some commonly used states are: Active      -> recommended action is active and no action has been taken yet. Pending     -> recommended action is approved for and is awaiting execution. Executing   -> recommended action is being applied on the user database. Verifying   -> recommended action was applied and is being verified of its usefulness by the system. Success     -> recommended action was applied and improvement found during verification. Pending Revert  -> verification found little or no improvement so recommended action is queued for revert or user has manually reverted. Reverting   -> changes made while applying recommended action are being reverted on the user database. Reverted    -> successfully reverted the changes made by recommended action on user database. Ignored     -> user explicitly ignored/discarded the recommended action.
+* **lastModified**: string (ReadOnly): Gets the time when the state was last modified
+
+## RecommendedActionMetricInfo
+### Properties
+* **metricName**: string (ReadOnly): Gets the name of the metric. e.g., CPU, Number of Queries.
+* **startTime**: string (ReadOnly): Gets the start time of time interval given by this MetricInfo.
+* **timeGrain**: string (ReadOnly): Gets the duration of time interval for the value given by this MetricInfo. e.g., PT1H (1 hour)
+* **unit**: string (ReadOnly): Gets the unit in which metric is measured. e.g., DTU, Frequency
+* **value**: int (ReadOnly): Gets the value of the metric in the time interval given by this MetricInfo.
+
 ## ServerBlobAuditingPolicyProperties
 ### Properties
 * **auditActionsAndGroups**: string[]: Specifies the Actions-Groups and Actions to audit.
@@ -1153,6 +1725,24 @@ Prerequisites for using managed identity authentication:
 For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
 * **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
+
+## AutomaticTuningServerProperties
+### Properties
+* **actualState**: 'Auto' | 'Custom' | 'Unspecified' (ReadOnly): Automatic tuning desired state.
+* **desiredState**: 'Auto' | 'Custom' | 'Unspecified' (ReadOnly): Automatic tuning desired state.
+* **options**: [AutomaticTuningServerPropertiesOptions](#automatictuningserverpropertiesoptions) (ReadOnly): Automatic tuning options definition.
+
+## AutomaticTuningServerPropertiesOptions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [AutomaticTuningServerOptions](#automatictuningserveroptions)
+
+## AutomaticTuningServerOptions
+### Properties
+* **actualState**: 'Off' | 'On' (ReadOnly): Automatic tuning option actual state.
+* **desiredState**: 'Default' | 'Off' | 'On' (ReadOnly): Automatic tuning option desired state.
+* **reasonCode**: int (ReadOnly): Reason code if desired and actual state are different.
+* **reasonDesc**: 'AutoConfigured' | 'Default' | 'Disabled' (ReadOnly): Reason description if desired and actual state are different.
 
 ## AzureADOnlyAuthProperties
 ### Properties
@@ -1342,10 +1932,32 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
 
+## DatabaseAutomaticTuningProperties
+### Properties
+* **actualState**: 'Auto' | 'Custom' | 'Inherit' | 'Unspecified' (ReadOnly): Automatic tuning desired state.
+* **desiredState**: 'Auto' | 'Custom' | 'Inherit' | 'Unspecified' (ReadOnly): Automatic tuning desired state.
+* **options**: [DatabaseAutomaticTuningPropertiesOptions](#databaseautomatictuningpropertiesoptions) (ReadOnly): Automatic tuning options definition.
+
+## DatabaseAutomaticTuningPropertiesOptions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [AutomaticTuningOptions](#automatictuningoptions)
+
+## AutomaticTuningOptions
+### Properties
+* **actualState**: 'Off' | 'On' (ReadOnly): Automatic tuning option actual state.
+* **desiredState**: 'Default' | 'Off' | 'On' (ReadOnly): Automatic tuning option desired state.
+* **reasonCode**: int (ReadOnly): Reason code if desired and actual state are different.
+* **reasonDesc**: 'AutoConfigured' | 'Default' | 'Disabled' | 'InheritedFromServer' | 'NotSupported' | 'QueryStoreOff' | 'QueryStoreReadOnly' (ReadOnly): Reason description if desired and actual state are different.
+
 ## BackupShortTermRetentionPolicyProperties
 ### Properties
 * **diffBackupIntervalInHours**: int: The differential backup interval in hours. This is how many interval hours between each differential backup will be supported. This is only applicable to live databases but not dropped databases.
 * **retentionDays**: int: The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
+
+## DataWarehouseUserActivitiesProperties
+### Properties
+* **activeQueriesCount**: int (ReadOnly): Count of running and suspended queries.
 
 ## ExtendedDatabaseBlobAuditingPolicyProperties
 ### Properties
@@ -1442,11 +2054,21 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **administratorLogin**: string (WriteOnly): Administrator login name.
 * **administratorLoginPassword**: string (WriteOnly): Administrator login password.
 * **authenticationType**: string (WriteOnly): Authentication type: SQL authentication or AD password.
+* **blobUri**: string (ReadOnly): Blob URI.
 * **databaseEdition**: string (WriteOnly): Database edition for the newly created database in the case of an import operation.
+* **databaseName**: string (ReadOnly): Database name.
+* **errorMessage**: string (ReadOnly): Error message.
+* **lastModifiedTime**: string (ReadOnly): Last modified time.
 * **maxSizeBytes**: string (WriteOnly): Database max size in bytes for the newly created database in the case of an import operation.
 * **networkIsolation**: [NetworkIsolationSettings](#networkisolationsettings) (WriteOnly): Contains the ARM resources for which to create private endpoint connection.
 * **operationMode**: 'Export' | 'Import' | 'PolybaseImport' | string (Required, WriteOnly): Operation mode of the operation: Import, Export, or PolybaseImport.
+* **privateEndpointConnections**: [PrivateEndpointConnectionRequestStatus](#privateendpointconnectionrequeststatus)[] (ReadOnly): Gets the status of private endpoints associated with this request.
+* **queuedTime**: string (ReadOnly): Queued time.
+* **requestId**: string (ReadOnly): Request Id.
+* **requestType**: string (ReadOnly): Request type.
+* **serverName**: string (ReadOnly): Server name.
 * **serviceObjectiveName**: string (WriteOnly): Database service level objective for the newly created database in the case of an import operation.
+* **status**: string (ReadOnly): Operation status.
 * **storageKey**: string (Required, WriteOnly): Storage key for the storage account.
 * **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' | string (Required, WriteOnly): Storage key type: StorageAccessKey or SharedAccessKey.
 * **storageUri**: string (Required, WriteOnly): Storage Uri for the storage account.
@@ -1456,20 +2078,57 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **sqlServerResourceId**: string (WriteOnly): The resource id for the SQL server which is the target of this request. If set, private endpoint connection will be created for the SQL server. Must match server which is target of the operation.
 * **storageAccountResourceId**: string (WriteOnly): The resource id for the storage account used to store BACPAC file. If set, private endpoint connection will be created for the storage account. Must match storage account used for StorageUri parameter.
 
+## PrivateEndpointConnectionRequestStatus
+### Properties
+* **privateEndpointConnectionName**: string (ReadOnly): The connection name for the private endpoint.
+* **privateLinkServiceId**: string (ReadOnly): Resource id for which the private endpoint is created.
+* **status**: string (ReadOnly): Status of this private endpoint connection.
+
 ## LedgerDigestUploadsProperties
 ### Properties
 * **digestStorageEndpoint**: string: The digest storage endpoint, which must be either an Azure blob storage endpoint or an URI for Azure Confidential Ledger.
 * **state**: 'Disabled' | 'Enabled' (ReadOnly): Specifies the state of ledger digest upload.
 
-## MaintenanceWindowsProperties
+## MaintenanceWindowOptionsProperties
 ### Properties
-* **timeRanges**: [MaintenanceWindowTimeRange](#maintenancewindowtimerange)[]: Array of MaintenanceWindowTimeRange
+* **allowMultipleMaintenanceWindowsPerCycle**: bool (ReadOnly): Whether we allow multiple maintenance windows per cycle.
+* **defaultDurationInMinutes**: int (ReadOnly): Default duration for maintenance window.
+* **isEnabled**: bool (ReadOnly): Whether maintenance windows are enabled for the database.
+* **maintenanceWindowCycles**: [MaintenanceWindowTimeRange](#maintenancewindowtimerange)[] (ReadOnly): Available maintenance cycles e.g. {Saturday, 0, 48*60}, {Wednesday, 0, 24*60}.
+* **minCycles**: int (ReadOnly): Minimum number of maintenance windows cycles to be set on the database.
+* **minDurationInMinutes**: int (ReadOnly): Minimum duration of maintenance window.
+* **timeGranularityInMinutes**: int (ReadOnly): Time granularity in minutes for maintenance windows.
 
 ## MaintenanceWindowTimeRange
 ### Properties
 * **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string: Day of maintenance window.
 * **duration**: string: Duration of maintenance window in minutes.
 * **startTime**: string: Start time minutes offset from 12am.
+
+## MaintenanceWindowsProperties
+### Properties
+* **timeRanges**: [MaintenanceWindowTimeRange](#maintenancewindowtimerange)[]: Array of MaintenanceWindowTimeRange
+
+## ReplicationLinkProperties
+### Properties
+* **isTerminationAllowed**: bool (ReadOnly): Whether the user is currently allowed to terminate the link.
+* **linkType**: 'GEO' | 'NAMED' | string (ReadOnly): Link type (GEO, NAMED).
+* **partnerDatabase**: string (ReadOnly): Resource partner database.
+* **partnerLocation**: string (ReadOnly): Resource partner location.
+* **partnerRole**: 'Copy' | 'NonReadableSecondary' | 'Primary' | 'Secondary' | 'Source' (ReadOnly): Local replication role.
+* **partnerServer**: string (ReadOnly): Resource partner server.
+* **percentComplete**: int (ReadOnly): Seeding completion percentage for the link.
+* **replicationMode**: string (ReadOnly): Replication mode.
+* **replicationState**: 'CATCH_UP' | 'PENDING' | 'SEEDING' | 'SUSPENDED' | string (ReadOnly): Replication state (PENDING, SEEDING, CATCHUP, SUSPENDED).
+* **role**: 'Copy' | 'NonReadableSecondary' | 'Primary' | 'Secondary' | 'Source' (ReadOnly): Local replication role.
+* **startTime**: string (ReadOnly): Time at which the link was created.
+
+## RestorePointProperties
+### Properties
+* **earliestRestoreDate**: string (ReadOnly): The earliest time to which this database can be restored
+* **restorePointCreationDate**: string (ReadOnly): The time the backup was taken
+* **restorePointLabel**: string (ReadOnly): The label of restore point for backup request by user
+* **restorePointType**: 'CONTINUOUS' | 'DISCRETE' (ReadOnly): The type of restore point
 
 ## SyncGroupProperties
 ### Properties
@@ -1847,6 +2506,26 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **provisioningState**: string (ReadOnly): The state of the outbound rule.
 
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
+* **requiredZoneNames**: string[] (ReadOnly): The private link resource required zone names.
+
+## RestorableDroppedDatabaseProperties
+### Properties
+* **backupStorageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone' | string (ReadOnly): The storage account type used to store backups for this database.
+* **creationDate**: string (ReadOnly): The creation date of the database (ISO8601 format).
+* **databaseName**: string (ReadOnly): The name of the database.
+* **deletionDate**: string (ReadOnly): The deletion date of the database (ISO8601 format).
+* **earliestRestoreDate**: string (ReadOnly): The earliest restore date of the database (ISO8601 format).
+* **maxSizeBytes**: int (ReadOnly): The max size of the database expressed in bytes.
+
+## RestorableDroppedDatabaseTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## SyncAgentProperties
 ### Properties
 * **expiryTime**: string (ReadOnly): Expiration time of the sync agent version.
@@ -1869,4 +2548,16 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the storage account for vulnerability assessment scan results. If 'StorageContainerSasKey' isn't specified, storageAccountAccessKey is required. Applies only if the storage account is not behind a Vnet or a firewall
 * **storageContainerPath**: string (Required, WriteOnly): A blob storage container path to hold the scan results (e.g. https://myStorage.blob.core.windows.net/VaScans/).
 * **storageContainerSasKey**: string (WriteOnly): A shared access signature (SAS Key) that has write access to the blob container specified in 'storageContainerPath' parameter. If 'storageAccountAccessKey' isn't specified, StorageContainerSasKey is required. Applies only if the storage account is not behind a Vnet or a firewall
+
+## VirtualClusterProperties
+### Properties
+* **childResources**: string[] (ReadOnly): List of resources in this virtual cluster.
+* **family**: string (ReadOnly): If the service has different generations of hardware, for the same SKU, then that can be captured here.
+* **maintenanceConfigurationId**: string (ReadOnly): Specifies maintenance configuration id to apply to this virtual cluster.
+* **subnetId**: string (ReadOnly): Subnet resource ID for the virtual cluster.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

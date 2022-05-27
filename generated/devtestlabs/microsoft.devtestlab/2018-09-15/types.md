@@ -22,6 +22,28 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/artifactsources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DevTestLab/labs/artifactsources/armtemplates@2018-09-15 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ArmTemplateProperties](#armtemplateproperties) (ReadOnly): Properties of an Azure Resource Manager template.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The tags of the resource.
+* **type**: 'Microsoft.DevTestLab/labs/artifactsources/armtemplates' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DevTestLab/labs/artifactsources/artifacts@2018-09-15 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ArtifactProperties](#artifactproperties) (ReadOnly): Properties of an artifact.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The tags of the resource.
+* **type**: 'Microsoft.DevTestLab/labs/artifactsources/artifacts' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DevTestLab/labs/costs@2018-09-15
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -292,6 +314,43 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **status**: 'Disabled' | 'Enabled' | string: Indicates if the artifact source is enabled (values: Enabled, Disabled).
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 * **uri**: string: The artifact source's URI.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ArmTemplateProperties
+### Properties
+* **contents**: any (ReadOnly): Any object
+* **createdDate**: string (ReadOnly): The creation date of the armTemplate.
+* **description**: string (ReadOnly): The description of the ARM template.
+* **displayName**: string (ReadOnly): The display name of the ARM template.
+* **enabled**: bool (ReadOnly): Whether or not ARM template is enabled for use by lab user.
+* **icon**: string (ReadOnly): The URI to the icon of the ARM template.
+* **parametersValueFilesInfo**: [ParametersValueFileInfo](#parametersvaluefileinfo)[] (ReadOnly): File name and parameter values information from all azuredeploy.*.parameters.json for the ARM template.
+* **publisher**: string (ReadOnly): The publisher of the ARM template.
+
+## ParametersValueFileInfo
+### Properties
+* **fileName**: string (ReadOnly): File name.
+* **parametersValueInfo**: any (ReadOnly): Any object
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ArtifactProperties
+### Properties
+* **createdDate**: string (ReadOnly): The artifact's creation date.
+* **description**: string (ReadOnly): The artifact's description.
+* **filePath**: string (ReadOnly): The file path to the artifact.
+* **icon**: string (ReadOnly): The URI to the artifact icon.
+* **parameters**: any (ReadOnly): Any object
+* **publisher**: string (ReadOnly): The artifact's publisher.
+* **targetOsType**: string (ReadOnly): The artifact's target OS.
+* **title**: string (ReadOnly): The artifact's title.
 
 ## ResourceTags
 ### Properties

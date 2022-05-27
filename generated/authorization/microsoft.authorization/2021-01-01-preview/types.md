@@ -1,5 +1,14 @@
 # Microsoft.Authorization @ 2021-01-01-preview
 
+## Resource Microsoft.Authorization/roleAssignmentApprovals@2021-01-01-preview (ReadOnly)
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RoleAssignmentApprovalProperties](#roleassignmentapprovalproperties) (ReadOnly): Role Assignment Approval properties.
+* **type**: 'Microsoft.Authorization/roleAssignmentApprovals' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Authorization/roleAssignmentApprovals/stages@2021-01-01-preview
 * **Valid Scope(s)**: Unknown
 ### Properties
@@ -15,6 +24,17 @@
 * **reviewResult**: 'Approve' | 'Deny' | 'NotReviewed' | string (WriteOnly): The decision on the approval stage. This value is initially set to NotReviewed. Approvers can take action of Approve/Deny
 * **status**: 'Completed' | 'Completing' | 'Escalated' | 'Escalating' | 'Expired' | 'InProgress' | 'Initializing' | 'NotStarted' | string (ReadOnly, WriteOnly): This read-only field specifies the status of an approval.
 * **type**: 'Microsoft.Authorization/roleAssignmentApprovals/stages' (ReadOnly, DeployTimeConstant): The resource type
+
+## RoleAssignmentApprovalProperties
+### Properties
+* **stages**: [RoleAssignmentApprovalStep](#roleassignmentapprovalstep)[] (ReadOnly): This is the collection of stages returned when one does an expand on it.
+
+## RoleAssignmentApprovalStep
+### Properties
+* **id**: string (ReadOnly): The role assignment approval stage id.
+* **name**: string (ReadOnly): The role assignment approval stage name.
+* **properties**: [RoleAssignmentApprovalStepProperties](#roleassignmentapprovalstepproperties) (ReadOnly): Approval Step.
+* **type**: string (ReadOnly): The resource type.
 
 ## RoleAssignmentApprovalStepProperties
 ### Properties

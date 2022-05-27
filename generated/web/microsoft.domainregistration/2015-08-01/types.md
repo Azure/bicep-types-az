@@ -12,6 +12,30 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.DomainRegistration/domains' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DomainRegistration/domains/operationresults@2015-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DomainProperties](#domainproperties) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.DomainRegistration/domains/operationresults' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DomainRegistration/topLevelDomains@2015-08-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TopLevelDomainProperties](#topleveldomainproperties) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.DomainRegistration/topLevelDomains' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listAgreements (Microsoft.DomainRegistration/topLevelDomains@2015-08-01)
 * **Resource**: Microsoft.DomainRegistration/topLevelDomains
 * **ApiVersion**: 2015-08-01
@@ -27,7 +51,7 @@
 * **contactRegistrant**: [Contact](#contact): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information will be made publicly available through the Whois directories as per ICANN requirements.
 * **contactTech**: [Contact](#contact): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information will be made publicly available through the Whois directories as per ICANN requirements.
 * **createdTime**: string: Domain creation timestamp
-* **domainNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive'[]: Reasons why domain is not renewable
+* **domainNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive' | string[]: Reasons why domain is not renewable
 * **expirationTime**: string: Domain expiration timestamp
 * **lastRenewedTime**: string: Timestamp when the domain was renewed last time
 * **managedHostNames**: [HostName](#hostname)[]: All hostnames derived from the domain and assigned to Azure resources
@@ -72,6 +96,21 @@
 * **hostNameType**: 'Managed' | 'Verified': Type of the hostname
 * **name**: string: Name of the hostname
 * **siteNames**: string[]: List of sites the hostname is assigned to. This list will have more than one site only if the hostname is pointing to a Traffic Manager
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TopLevelDomainProperties
+### Properties
+* **name**: string (ReadOnly): Name of the top level domain
+* **privacy**: bool (ReadOnly): If true then the top level domain supports domain privacy
 
 ## ResourceTags
 ### Properties

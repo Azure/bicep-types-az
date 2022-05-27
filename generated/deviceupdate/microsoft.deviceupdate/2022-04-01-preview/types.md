@@ -48,6 +48,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DeviceUpdate/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DeviceUpdate/accounts/privateLinkResources@2022-04-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [GroupInformationProperties](#groupinformationproperties) (ReadOnly): The properties for a group information object
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.DeviceUpdate/accounts/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## ManagedServiceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
@@ -190,4 +200,11 @@
 ## PrivateLinkServiceProxyRemotePrivateEndpointConnection
 ### Properties
 * **id**: string (ReadOnly): Remote private endpoint connection ID.
+
+## GroupInformationProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of private link group ID.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
+* **requiredZoneNames**: string[] (ReadOnly): The private link resource Private link DNS zone name.
 

@@ -51,7 +51,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 info    | Processing batch task - {"tag":"microsoft.resources-2022-05-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -102,10 +102,10 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.resources-2022-03-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -156,10 +156,10 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 0ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2020-09-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -210,7 +210,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2020-09-01/dataPolicyManifests.json:123:5
@@ -269,7 +269,7 @@ warning | PreCheck/SchemaMissingType | The schema 'AliasPath' with an undefined 
 warning | PreCheck/SchemaMissingType | The schema 'AliasPattern' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'Alias' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
+warning | Skipping path '/{policyassignmentid}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -278,7 +278,8 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 15ms
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2021-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -329,7 +330,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2021-06-01/policyAssignments.json:697:5
@@ -368,7 +369,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinition' with an 
 warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2021-06-01/policySetDefinitions.json:660:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
+warning | Skipping path '/{policyassignmentid}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -377,7 +378,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2020-07-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -428,7 +429,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/preview/2020-07-01-preview/policyExemptions.json:378:5
@@ -491,7 +492,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2020-05-01/privateLinks.json:596:5
@@ -517,7 +518,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (7 d
   - properties.additionalInfo: {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:149","description":"The error additional info.","readOnly":true} => <none>
   - properties.error: <none> => {"description":"The error object.","$ref":"#/components/schemas/schemas:225"}
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.resources-2021-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -568,7 +569,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2021-04-01/resources.json:4480:5
@@ -711,15 +712,15 @@ warning | PreCheck/SchemaMissingType | The schema 'ProviderPermissionListResult'
 warning | PreCheck/SchemaMissingType | The schema 'ExpressionEvaluationOptions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2021-04-01/resources.json:6588:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/{resourceprovidernamespace}/{parentresourcepath}/{resourcetype}/{resourcename}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/{resourceid}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}/tagvalues/{tagvalue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2017-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -770,7 +771,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ManagementLockOwner' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2017-04-01/locks.json:1045:5
@@ -785,7 +786,7 @@ warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an un
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2017-04-01/locks.json:1158:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.solutions-2020-08-21-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -836,7 +837,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:1300:5
@@ -917,12 +918,12 @@ warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an un
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2349:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/{applicationId}': Unable to locate "/providers/" segment
+warning | Skipping path '/{applicationid}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 11ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.resources-2021-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -973,7 +974,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PairedRegion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2021-01-01/subscriptions.json:283:5
@@ -1157,15 +1158,15 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (7 d
   - properties.additionalInfo: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:646","description":"The error additional info.","readOnly":true}
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'OperationListResult' -> 'OperationListResultAutoGenerated'
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/{resourceprovidernamespace}/{parentresourcepath}/{resourcetype}/{resourcename}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/{resourceid}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}/tagvalues/{tagvalue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.resources-2020-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1216,7 +1217,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentScriptListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2020-10-01/deploymentScripts.json:814:5
@@ -1363,17 +1364,17 @@ warning | PreCheck/SchemaMissingType | The schema 'ExpressionEvaluationOptions' 
 warning | PreCheck/SchemaMissingType | The schema 'ZoneMapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2020-10-01/resources.json:6302:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/{resourceprovidernamespace}/{parentresourcepath}/{resourcetype}/{resourcename}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/{resourceid}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}/tagvalues/{tagvalue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 11ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-10-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1424,7 +1425,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentScriptListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/preview/2019-10-01-preview/deploymentScripts.json:810:5
@@ -1436,7 +1437,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.features-2021-07-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1487,10 +1488,10 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.features-2015-12-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1541,7 +1542,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'FeatureProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Features/stable/2015-12-01/features.json:276:5
@@ -1605,7 +1606,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ManagementLockOwner' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2016-09-01/locks.json:943:5
@@ -1620,7 +1621,7 @@ warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an un
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2016-09-01/locks.json:1056:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2015-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1671,7 +1672,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ManagementLockProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2015-01-01/locks.json:597:5
@@ -1731,7 +1732,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2020-03-01/policyAssignments.json:580:5
@@ -1770,7 +1771,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinition' with an 
 warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2020-03-01/policySetDefinitions.json:649:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
+warning | Skipping path '/{policyassignmentid}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -1779,7 +1780,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2019-09-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1830,7 +1831,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2019-09-01/policyAssignments.json:586:5
@@ -1869,7 +1870,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinition' with an 
 warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2019-09-01/policySetDefinitions.json:631:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
+warning | Skipping path '/{policyassignmentid}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -1878,7 +1879,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2019-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1929,7 +1930,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2019-06-01/policyAssignments.json:538:5
@@ -1956,7 +1957,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinition' with an 
 warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2019-06-01/policySetDefinitions.json:566:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
+warning | Skipping path '/{policyassignmentid}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -2016,7 +2017,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2019-01-01/policyAssignments.json:535:5
@@ -2043,7 +2044,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinition' with an 
 warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2019-01-01/policySetDefinitions.json:566:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
+warning | Skipping path '/{policyassignmentid}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -2052,7 +2053,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2018-05-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -2103,7 +2104,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2018-05-01/policyAssignments.json:535:5
@@ -2130,7 +2131,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinition' with an 
 warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2018-05-01/policySetDefinitions.json:566:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
+warning | Skipping path '/{policyassignmentid}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -2139,7 +2140,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2018-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -2190,7 +2191,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2018-03-01/policyAssignments.json:523:5
@@ -2215,7 +2216,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinition' with an 
 warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2018-03-01/policySetDefinitions.json:566:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
+warning | Skipping path '/{policyassignmentid}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -2275,7 +2276,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/preview/2017-06-01-preview/policyAssignments.json:487:5
@@ -2294,7 +2295,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinition' with an 
 warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/preview/2017-06-01-preview/policySetDefinitions.json:548:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
+warning | Skipping path '/{policyassignmentid}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -2351,7 +2352,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2016-12-01/policyDefinitions.json:353:5
@@ -2366,12 +2367,12 @@ warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignment' with an und
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2016-12-01/policyAssignments.json:467:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
+warning | Skipping path '/{policyassignmentid}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.resources-2022-02-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -2422,7 +2423,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -2481,7 +2482,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'TemplateSpecsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2021-05-01/templateSpecs.json:618:5
@@ -2546,7 +2547,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'TemplateSpecsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/preview/2021-03-01-preview/templateSpecs.json:618:5
@@ -2611,7 +2612,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'TemplateSpecsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/preview/2019-06-01-preview/templateSpecs.json:614:5
@@ -2622,7 +2623,7 @@ warning | PreCheck/SchemaMissingType | The schema 'TemplateSpecsError' with an u
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2016-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -2673,7 +2674,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2016-04-01/policy.json:551:5
@@ -2688,9 +2689,9 @@ warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignment' with an und
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2016-04-01/policy.json:657:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
+warning | Skipping path '/{policyassignmentid}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2015-10-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -2741,7 +2742,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/preview/2015-10-01-preview/policy.json:551:5
@@ -2756,9 +2757,9 @@ warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignment' with an und
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/preview/2015-10-01-preview/policy.json:657:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
+warning | Skipping path '/{policyassignmentid}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 0ms
 info    | Processing batch task - {"tag":"microsoft.resources-2020-08-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -2809,7 +2810,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2020-08-01/resources.json:4367:5
@@ -2948,15 +2949,15 @@ warning | PreCheck/SchemaMissingType | The schema 'Tags' with an undefined type 
 warning | PreCheck/SchemaMissingType | The schema 'ZoneMapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2020-08-01/resources.json:6238:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/{resourceprovidernamespace}/{parentresourcepath}/{resourcetype}/{resourcename}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/{resourceid}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}/tagvalues/{tagvalue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.resources-2020-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -3007,7 +3008,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2020-06-01/resources.json:4357:5
@@ -3144,10 +3145,10 @@ warning | PreCheck/SchemaMissingType | The schema 'ExpressionEvaluationOptions' 
 warning | PreCheck/SchemaMissingType | The schema 'ZoneMapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2020-06-01/resources.json:6207:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/{resourceprovidernamespace}/{parentresourcepath}/{resourcetype}/{resourcename}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/{resourceid}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}/tagvalues/{tagvalue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -3203,7 +3204,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-10-01/resources.json:4318:5
@@ -3334,10 +3335,10 @@ warning | PreCheck/SchemaMissingType | The schema 'Tags' with an undefined type 
 warning | PreCheck/SchemaMissingType | The schema 'ZoneMapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-10-01/resources.json:5992:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/{resourceprovidernamespace}/{parentresourcepath}/{resourcetype}/{resourcename}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/{resourceid}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}/tagvalues/{tagvalue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -3393,7 +3394,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-08-01/resources.json:4019:5
@@ -3516,15 +3517,15 @@ warning | PreCheck/SchemaMissingType | The schema 'WhatIfOperationResult' with a
 warning | PreCheck/SchemaMissingType | The schema 'ZoneMapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-08-01/resources.json:5399:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/{resourceprovidernamespace}/{parentresourcepath}/{resourcetype}/{resourcename}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/{resourceid}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}/tagvalues/{tagvalue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-07-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -3575,7 +3576,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-07-01/resources.json:4019:5
@@ -3696,15 +3697,15 @@ warning | PreCheck/SchemaMissingType | The schema 'WhatIfOperationResult' with a
 warning | PreCheck/SchemaMissingType | The schema 'ZoneMapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-07-01/resources.json:5382:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/{resourceprovidernamespace}/{parentresourcepath}/{resourcetype}/{resourcename}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/{resourceid}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}/tagvalues/{tagvalue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-05-10"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -3755,7 +3756,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-05-10/resources.json:2724:5
@@ -3864,15 +3865,15 @@ warning | PreCheck/SchemaMissingType | The schema 'TemplateHashResult' with an u
 warning | PreCheck/SchemaMissingType | The schema 'ZoneMapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-05-10/resources.json:3908:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/{resourceprovidernamespace}/{parentresourcepath}/{resourcetype}/{resourcename}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/{resourceid}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}/tagvalues/{tagvalue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-05-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -3923,7 +3924,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-05-01/resources.json:2648:5
@@ -4032,15 +4033,15 @@ warning | PreCheck/SchemaMissingType | The schema 'TemplateHashResult' with an u
 warning | PreCheck/SchemaMissingType | The schema 'ZoneMapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-05-01/resources.json:3832:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/{resourceprovidernamespace}/{parentresourcepath}/{resourcetype}/{resourcename}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/{resourceid}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}/tagvalues/{tagvalue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -4091,7 +4092,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-03-01/resources.json:2429:5
@@ -4200,10 +4201,10 @@ warning | PreCheck/SchemaMissingType | The schema 'TemplateHashResult' with an u
 warning | PreCheck/SchemaMissingType | The schema 'ZoneMapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-03-01/resources.json:3600:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/{resourceprovidernamespace}/{parentresourcepath}/{resourcetype}/{resourcename}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/{resourceid}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}/tagvalues/{tagvalue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -4259,7 +4260,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2018-05-01/resources.json:2421:5
@@ -4368,15 +4369,15 @@ warning | PreCheck/SchemaMissingType | The schema 'TemplateHashResult' with an u
 warning | PreCheck/SchemaMissingType | The schema 'ZoneMapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2018-05-01/resources.json:3583:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/{resourceprovidernamespace}/{parentresourcepath}/{resourcetype}/{resourcename}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/{resourceid}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}/tagvalues/{tagvalue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.resources-2018-02-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -4427,7 +4428,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2018-02-01/resources.json:1988:5
@@ -4532,15 +4533,15 @@ warning | PreCheck/SchemaMissingType | The schema 'TemplateHashResult' with an u
 warning | PreCheck/SchemaMissingType | The schema 'ZoneMapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2018-02-01/resources.json:3067:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/{resourceprovidernamespace}/{parentresourcepath}/{resourcetype}/{resourcename}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/{resourceid}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}/tagvalues/{tagvalue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.resources-2017-05-10"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -4591,7 +4592,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2017-05-10/resources.json:1980:5
@@ -4694,10 +4695,10 @@ warning | PreCheck/SchemaMissingType | The schema 'ZoneMapping' with an undefine
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'DeploymentOperationProperties-statusMessage' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2017-05-10/resources.json#/components/schemas/DeploymentOperationProperties-statusMessage
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/{resourceprovidernamespace}/{parentresourcepath}/{resourcetype}/{resourcename}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/{resourceid}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}/tagvalues/{tagvalue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -4753,7 +4754,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2016-09-01/resources.json:1931:5
@@ -4866,16 +4867,16 @@ warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an 
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'DeploymentOperationProperties-statusMessage' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2016-09-01/resources.json#/components/schemas/DeploymentOperationProperties-statusMessage
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping path '/{linkId}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/{resourceprovidernamespace}/{parentresourcepath}/{resourcetype}/{resourcename}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/{resourceid}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}/tagvalues/{tagvalue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}': Unable to locate "/providers/" segment
+warning | Skipping path '/{linkid}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.resources-2016-07-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -4926,7 +4927,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2016-07-01/resources.json:1682:5
@@ -5027,14 +5028,14 @@ warning | PreCheck/SchemaMissingType | The schema 'ZoneMapping' with an undefine
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'DeploymentOperationProperties-statusMessage' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2016-07-01/resources.json#/components/schemas/DeploymentOperationProperties-statusMessage
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/{resourceprovidernamespace}/{parentresourcepath}/{resourcetype}/{resourcename}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}/tagvalues/{tagvalue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.resources-2016-02-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -5085,7 +5086,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2016-02-01/resources.json:1683:5
@@ -5184,14 +5185,14 @@ warning | PreCheck/SchemaMissingType | The schema 'TemplateHashResult' with an u
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'DeploymentOperationProperties-statusMessage' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2016-02-01/resources.json#/components/schemas/DeploymentOperationProperties-statusMessage
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/{resourceprovidernamespace}/{parentresourcepath}/{resourcetype}/{resourcename}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}/tagvalues/{tagvalue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.resources-2015-11-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -5242,7 +5243,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2015-11-01/resources.json:2128:5
@@ -5375,16 +5376,16 @@ warning | Modeler/MissingType | The schema 'DeploymentOperationProperties-status
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2015-11-01/resources.json#/components/schemas/DeploymentOperationProperties-statusMessage
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated2'
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/{resourceprovidernamespace}/{parentresourcepath}/{resourcetype}/{resourcename}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}/tagvalues/{tagvalue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionid}/tagnames/{tagname}': Unable to locate "/providers/" segment
+warning | Skipping path '/{policyassignmentid}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.resources-2020-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -5435,7 +5436,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PairedRegion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2020-01-01/subscriptions.json:273:5
@@ -5475,7 +5476,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (3 d
   - properties.error.description: "The error details." => "The error object."
   - title: <none> => "Error response"
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
-info    | autorest.bicep took 0ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-11-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -5526,7 +5527,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PairedRegion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-11-01/subscriptions.json:268:5
@@ -5617,7 +5618,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Location' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-06-01/subscriptions.json:263:5
@@ -5704,7 +5705,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Location' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2018-06-01/subscriptions.json:253:5
@@ -5789,7 +5790,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Location' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2016-06-01/subscriptions.json:253:5
@@ -5874,7 +5875,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:1291:5
@@ -5974,12 +5975,12 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation-display' 
   - properties.description: <none> => {"$ref":"#/components/schemas/schemas:239","description":"The short, localized friendly description of the operation; suitable for tool tips and detailed views.","readOnly":true}
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Operation' -> 'OperationAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'OperationDisplay' -> 'OperationDisplayAutoGenerated'
-warning | Skipping path '/{applicationId}': Unable to locate "/providers/" segment
+warning | Skipping path '/{applicationid}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.solutions-2018-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -6030,7 +6031,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:1004:5
@@ -6069,12 +6070,12 @@ warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an un
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:1517:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/{applicationId}': Unable to locate "/providers/" segment
+warning | Skipping path '/{applicationid}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.solutions-2017-09-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -6125,7 +6126,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Solutions/stable/2017-09-01/managedapplications.json:875:5
@@ -6160,13 +6161,13 @@ warning | PreCheck/SchemaMissingType | The schema 'ApplicationArtifact' with an 
 warning | PreCheck/SchemaMissingType | The schema 'ApplicationProviderAuthorization' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Solutions/stable/2017-09-01/managedapplications.json:1326:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/{applicationId}': Unable to locate "/providers/" segment
-warning | Skipping path '/{applicationDefinitionId}': Unable to locate "/providers/" segment
+warning | Skipping path '/{applicationid}': Unable to locate "/providers/" segment
+warning | Skipping path '/{applicationdefinitionid}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.solutions-2016-09-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -6217,7 +6218,7 @@ warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Appliance' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Solutions/preview/2016-09-01-preview/managedapplications.json:900:5
@@ -6256,9 +6257,9 @@ warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an un
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Solutions/preview/2016-09-01-preview/managedapplications.json:1398:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/{applianceId}': Unable to locate "/providers/" segment
-warning | Skipping path '/{applianceDefinitionId}': Unable to locate "/providers/" segment
+warning | Skipping path '/{applianceid}': Unable to locate "/providers/" segment
+warning | Skipping path '/{appliancedefinitionid}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
-info    | Autorest completed in 168.44s. 94 files generated.
+info    | autorest.bicep took 2ms
+info    | Autorest completed in 122.08s. 98 files generated.

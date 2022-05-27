@@ -28,6 +28,22 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.CognitiveServices/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.CognitiveServices/locations/resourceGroups/deletedAccounts@2021-04-30 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-04-30' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Resource Etag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [Identity](#identity) (ReadOnly): Identity for the resource.
+* **kind**: string (ReadOnly): The kind (type) of cognitive service account.
+* **location**: string (ReadOnly): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AccountProperties](#accountproperties) (ReadOnly): Properties of Cognitive Services account.
+* **sku**: [Sku](#sku) (ReadOnly): The resource model definition representing SKU
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [AccountTags](#accounttags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.CognitiveServices/locations/resourceGroups/deletedAccounts' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listKeys (Microsoft.CognitiveServices/accounts@2021-04-30)
 * **Resource**: Microsoft.CognitiveServices/accounts
 * **ApiVersion**: 2021-04-30
@@ -208,6 +224,11 @@
 * **name**: string (Required): The name of the SKU. Ex - P3. It is typically a letter+number code
 * **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
 * **tier**: 'Basic' | 'Enterprise' | 'Free' | 'Premium' | 'Standard' | string: This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
+
+## AccountTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## AccountTags
 ### Properties
