@@ -11190,24 +11190,35 @@
 * [2017-11-15](timeseriesinsights/microsoft.timeseriesinsights/2017-11-15/types.md#resource-microsofttimeseriesinsightsenvironments2017-11-15)
 * [2018-08-15-preview](timeseriesinsights/microsoft.timeseriesinsights/2018-08-15-preview/types.md#resource-microsofttimeseriesinsightsenvironments2018-08-15-preview)
 * [2020-05-15](timeseriesinsights/microsoft.timeseriesinsights/2020-05-15/types.md#resource-microsofttimeseriesinsightsenvironments2020-05-15)
+* [2021-03-31-preview](timeseriesinsights/microsoft.timeseriesinsights/2021-03-31-preview/types.md#resource-microsofttimeseriesinsightsenvironments2021-03-31-preview)
+* [2021-06-30-preview](timeseriesinsights/microsoft.timeseriesinsights/2021-06-30-preview/types.md#resource-microsofttimeseriesinsightsenvironments2021-06-30-preview)
 
 ### microsoft.timeseriesinsights/environments/accesspolicies
 * [2017-02-28-preview](timeseriesinsights/microsoft.timeseriesinsights/2017-02-28-preview/types.md#resource-microsofttimeseriesinsightsenvironmentsaccesspolicies2017-02-28-preview)
 * [2017-11-15](timeseriesinsights/microsoft.timeseriesinsights/2017-11-15/types.md#resource-microsofttimeseriesinsightsenvironmentsaccesspolicies2017-11-15)
 * [2018-08-15-preview](timeseriesinsights/microsoft.timeseriesinsights/2018-08-15-preview/types.md#resource-microsofttimeseriesinsightsenvironmentsaccesspolicies2018-08-15-preview)
 * [2020-05-15](timeseriesinsights/microsoft.timeseriesinsights/2020-05-15/types.md#resource-microsofttimeseriesinsightsenvironmentsaccesspolicies2020-05-15)
+* [2021-03-31-preview](timeseriesinsights/microsoft.timeseriesinsights/2021-03-31-preview/types.md#resource-microsofttimeseriesinsightsenvironmentsaccesspolicies2021-03-31-preview)
+* [2021-06-30-preview](timeseriesinsights/microsoft.timeseriesinsights/2021-06-30-preview/types.md#resource-microsofttimeseriesinsightsenvironmentsaccesspolicies2021-06-30-preview)
 
 ### microsoft.timeseriesinsights/environments/eventsources
 * [2017-02-28-preview](timeseriesinsights/microsoft.timeseriesinsights/2017-02-28-preview/types.md#resource-microsofttimeseriesinsightsenvironmentseventsources2017-02-28-preview)
 * [2017-11-15](timeseriesinsights/microsoft.timeseriesinsights/2017-11-15/types.md#resource-microsofttimeseriesinsightsenvironmentseventsources2017-11-15)
 * [2018-08-15-preview](timeseriesinsights/microsoft.timeseriesinsights/2018-08-15-preview/types.md#resource-microsofttimeseriesinsightsenvironmentseventsources2018-08-15-preview)
 * [2020-05-15](timeseriesinsights/microsoft.timeseriesinsights/2020-05-15/types.md#resource-microsofttimeseriesinsightsenvironmentseventsources2020-05-15)
+* [2021-03-31-preview](timeseriesinsights/microsoft.timeseriesinsights/2021-03-31-preview/types.md#resource-microsofttimeseriesinsightsenvironmentseventsources2021-03-31-preview)
+* [2021-06-30-preview](timeseriesinsights/microsoft.timeseriesinsights/2021-06-30-preview/types.md#resource-microsofttimeseriesinsightsenvironmentseventsources2021-06-30-preview)
+
+### microsoft.timeseriesinsights/environments/privateendpointconnections
+* [2021-03-31-preview](timeseriesinsights/microsoft.timeseriesinsights/2021-03-31-preview/types.md#resource-microsofttimeseriesinsightsenvironmentsprivateendpointconnections2021-03-31-preview)
 
 ### microsoft.timeseriesinsights/environments/referencedatasets
 * [2017-02-28-preview](timeseriesinsights/microsoft.timeseriesinsights/2017-02-28-preview/types.md#resource-microsofttimeseriesinsightsenvironmentsreferencedatasets2017-02-28-preview)
 * [2017-11-15](timeseriesinsights/microsoft.timeseriesinsights/2017-11-15/types.md#resource-microsofttimeseriesinsightsenvironmentsreferencedatasets2017-11-15)
 * [2018-08-15-preview](timeseriesinsights/microsoft.timeseriesinsights/2018-08-15-preview/types.md#resource-microsofttimeseriesinsightsenvironmentsreferencedatasets2018-08-15-preview)
 * [2020-05-15](timeseriesinsights/microsoft.timeseriesinsights/2020-05-15/types.md#resource-microsofttimeseriesinsightsenvironmentsreferencedatasets2020-05-15)
+* [2021-03-31-preview](timeseriesinsights/microsoft.timeseriesinsights/2021-03-31-preview/types.md#resource-microsofttimeseriesinsightsenvironmentsreferencedatasets2021-03-31-preview)
+* [2021-06-30-preview](timeseriesinsights/microsoft.timeseriesinsights/2021-06-30-preview/types.md#resource-microsofttimeseriesinsightsenvironmentsreferencedatasets2021-06-30-preview)
 
 ## microsoft.videoindexer
 ### microsoft.videoindexer/accounts
