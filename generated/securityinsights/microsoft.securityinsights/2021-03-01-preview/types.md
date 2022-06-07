@@ -276,10 +276,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## FusionAlertRuleProperties
 ### Properties
@@ -288,8 +288,8 @@
 * **displayName**: string (ReadOnly): The display name for alerts created by this alert rule.
 * **enabled**: bool (Required): Determines whether this alert rule is enabled or disabled.
 * **lastModifiedUtc**: string (ReadOnly): The last time that this alert has been modified.
-* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (ReadOnly): The severity of the alert
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation'[] (ReadOnly): The tactics of the alert rule
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (ReadOnly): The severity of the alert
+* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string[] (ReadOnly): The tactics of the alert rule
 
 ## MicrosoftSecurityIncidentCreationAlertRuleProperties
 ### Properties
@@ -300,8 +300,8 @@
 * **displayNamesFilter**: string[]: the alerts' displayNames on which the cases will be generated
 * **enabled**: bool (Required): Determines whether this alert rule is enabled or disabled.
 * **lastModifiedUtc**: string (ReadOnly): The last time that this alert has been modified.
-* **productFilter**: 'Azure Active Directory Identity Protection' | 'Azure Advanced Threat Protection' | 'Azure Security Center for IoT' | 'Azure Security Center' | 'Microsoft Cloud App Security' | 'Microsoft Defender Advanced Threat Protection' | 'Office 365 Advanced Threat Protection' (Required): The alerts' productName on which the cases will be generated
-* **severitiesFilter**: 'High' | 'Informational' | 'Low' | 'Medium'[]: the alerts' severities on which the cases will be generated
+* **productFilter**: 'Azure Active Directory Identity Protection' | 'Azure Advanced Threat Protection' | 'Azure Security Center for IoT' | 'Azure Security Center' | 'Microsoft Cloud App Security' | 'Microsoft Defender Advanced Threat Protection' | 'Office 365 Advanced Threat Protection' | string (Required): The alerts' productName on which the cases will be generated
+* **severitiesFilter**: 'High' | 'Informational' | 'Low' | 'Medium' | string[]: the alerts' severities on which the cases will be generated
 
 ## MLBehaviorAnalyticsAlertRuleProperties
 ### Properties
@@ -310,8 +310,8 @@
 * **displayName**: string (ReadOnly): The display name for alerts created by this alert rule.
 * **enabled**: bool (Required): Determines whether this alert rule is enabled or disabled.
 * **lastModifiedUtc**: string (ReadOnly): The last time that this alert rule has been modified.
-* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (ReadOnly): The severity of the alert
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation'[] (ReadOnly): The tactics of the alert rule
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (ReadOnly): The severity of the alert
+* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string[] (ReadOnly): The tactics of the alert rule
 
 ## ScheduledAlertRuleProperties
 ### Properties
@@ -328,10 +328,10 @@
 * **query**: string: The query that creates alerts for this rule.
 * **queryFrequency**: string: The frequency (in ISO 8601 duration format) for this alert rule to run.
 * **queryPeriod**: string: The period (in ISO 8601 duration format) that this alert rule looks at.
-* **severity**: 'High' | 'Informational' | 'Low' | 'Medium': The severity of the alert
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string: The severity of the alert
 * **suppressionDuration**: string (Required): The suppression (in ISO 8601 duration format) to wait since last time this alert rule been triggered.
 * **suppressionEnabled**: bool (Required): Determines whether the suppression for this alert rule is enabled or disabled.
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation'[]: The tactics of the alert rule
+* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string[]: The tactics of the alert rule
 * **triggerOperator**: 'Equal' | 'GreaterThan' | 'LessThan' | 'NotEqual': The operation against the threshold that triggers alert rule.
 * **triggerThreshold**: int: The threshold triggers this alert rule.
 
@@ -349,7 +349,7 @@
 
 ## EntityMapping
 ### Properties
-* **entityType**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'IP' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityGroup' | 'SubmissionMail' | 'URL': The V3 type of the mapped entity
+* **entityType**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'IP' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityGroup' | 'SubmissionMail' | 'URL' | string: The V3 type of the mapped entity
 * **fieldMappings**: [FieldMapping](#fieldmapping)[]: array of field mappings for the given entity mapping
 
 ## FieldMapping
@@ -359,7 +359,7 @@
 
 ## EventGroupingSettings
 ### Properties
-* **aggregationKind**: 'AlertPerResult' | 'SingleAlert': The event grouping aggregation kinds
+* **aggregationKind**: 'AlertPerResult' | 'SingleAlert' | string: The event grouping aggregation kinds
 
 ## IncidentConfiguration
 ### Properties
@@ -369,11 +369,11 @@
 ## GroupingConfiguration
 ### Properties
 * **enabled**: bool (Required): Grouping enabled
-* **groupByAlertDetails**: 'DisplayName' | 'Severity'[]: A list of alert details to group by (when matchingMethod is Selected)
+* **groupByAlertDetails**: 'DisplayName' | 'Severity' | string[]: A list of alert details to group by (when matchingMethod is Selected)
 * **groupByCustomDetails**: string[]: A list of custom details keys to group by (when matchingMethod is Selected). Only keys defined in the current alert rule may be used.
-* **groupByEntities**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'IP' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityGroup' | 'SubmissionMail' | 'URL'[]: A list of entity types to group by (when matchingMethod is Selected). Only entities defined in the current alert rule may be used.
+* **groupByEntities**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'IP' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityGroup' | 'SubmissionMail' | 'URL' | string[]: A list of entity types to group by (when matchingMethod is Selected). Only entities defined in the current alert rule may be used.
 * **lookbackDuration**: string (Required): Limit the group to alerts created within the lookback duration (in ISO 8601 duration format)
-* **matchingMethod**: 'AllEntities' | 'AnyAlert' | 'Selected' (Required): Grouping matching method. When method is Selected at least one of groupByEntities, groupByAlertDetails, groupByCustomDetails must be provided and not empty.
+* **matchingMethod**: 'AllEntities' | 'AnyAlert' | 'Selected' | string (Required): Grouping matching method. When method is Selected at least one of groupByEntities, groupByAlertDetails, groupByCustomDetails must be provided and not empty.
 * **reopenClosedIncident**: bool (Required): Re-open closed matching incidents
 
 ## ThreatIntelligenceAlertRuleProperties
@@ -383,8 +383,8 @@
 * **displayName**: string (ReadOnly): The display name for alerts created by this alert rule.
 * **enabled**: bool (Required): Determines whether this alert rule is enabled or disabled.
 * **lastModifiedUtc**: string (ReadOnly): The last time that this alert has been modified.
-* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (ReadOnly): The severity of the alert
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation'[] (ReadOnly): The tactics of the alert rule
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (ReadOnly): The severity of the alert
+* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string[] (ReadOnly): The tactics of the alert rule
 
 ## ActionRequestProperties
 ### Properties
@@ -403,7 +403,7 @@
 
 ## AwsCloudTrailDataConnectorDataTypesLogs
 ### Properties
-* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## AADDataConnectorProperties
 ### Properties
@@ -416,7 +416,7 @@
 
 ## DataConnectorDataTypeCommon
 ### Properties
-* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## AatpDataConnectorProperties
 ### Properties
@@ -439,7 +439,7 @@
 
 ## Dynamics365DataConnectorDataTypesDynamics365CdsActivities
 ### Properties
-* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## CodelessParameters
 ### Properties
@@ -467,7 +467,7 @@
 
 ## CodelessUiConnectorConfigPropertiesConnectivityCriteriaItem
 ### Properties
-* **type**: 'IsConnectedQuery': type of connectivity
+* **type**: 'IsConnectedQuery' | string: type of connectivity
 * **value**: string[]: Queries for checking connectivity
 
 ## CodelessUiConnectorConfigPropertiesDataTypesItem
@@ -490,7 +490,7 @@
 ## InstructionStepsInstructionsItem
 ### Properties
 * **parameters**: any: Any object
-* **type**: 'CopyableLabel' | 'InfoMessage' | 'InstructionStepsGroup' (Required): The kind of the setting
+* **type**: 'CopyableLabel' | 'InfoMessage' | 'InstructionStepsGroup' | string (Required): The kind of the setting
 
 ## Permissions
 ### Properties
@@ -505,10 +505,10 @@
 ## PermissionsResourceProviderItem
 ### Properties
 * **permissionsDisplayText**: string: Permission description text
-* **provider**: 'Microsoft.Authorization/policyAssignments' | 'Microsoft.OperationalInsights/solutions' | 'Microsoft.OperationalInsights/workspaces' | 'Microsoft.OperationalInsights/workspaces/datasources' | 'Microsoft.OperationalInsights/workspaces/sharedKeys' | 'microsoft.aadiam/diagnosticSettings': Provider name
+* **provider**: 'Microsoft.Authorization/policyAssignments' | 'Microsoft.OperationalInsights/solutions' | 'Microsoft.OperationalInsights/workspaces' | 'Microsoft.OperationalInsights/workspaces/datasources' | 'Microsoft.OperationalInsights/workspaces/sharedKeys' | 'microsoft.aadiam/diagnosticSettings' | string: Provider name
 * **providerDisplayName**: string: Permission provider display name
 * **requiredPermissions**: [RequiredPermissions](#requiredpermissions): Required permissions for the connector
-* **scope**: 'ResourceGroup' | 'Subscription' | 'Workspace': Permission provider scope
+* **scope**: 'ResourceGroup' | 'Subscription' | 'Workspace' | string: Permission provider scope
 
 ## RequiredPermissions
 ### Properties
@@ -550,12 +550,12 @@
 ## MstiDataConnectorDataTypesBingSafetyPhishingURL
 ### Properties
 * **lookbackPeriod**: string (Required): lookback period
-* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## MstiDataConnectorDataTypesMicrosoftEmergingThreatFeed
 ### Properties
 * **lookbackPeriod**: string (Required): lookback period
-* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## MTPDataConnectorProperties
 ### Properties
@@ -568,7 +568,7 @@
 
 ## MTPDataConnectorDataTypesIncidents
 ### Properties
-* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## OfficeDataConnectorProperties
 ### Properties
@@ -583,15 +583,15 @@
 
 ## OfficeDataConnectorDataTypesExchange
 ### Properties
-* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## OfficeDataConnectorDataTypesSharePoint
 ### Properties
-* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## OfficeDataConnectorDataTypesTeams
 ### Properties
-* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## OfficeATPDataConnectorProperties
 ### Properties
@@ -610,7 +610,7 @@
 
 ## TIDataConnectorDataTypesIndicators
 ### Properties
-* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## TiTaxiiDataConnectorProperties
 ### Properties
@@ -618,7 +618,7 @@
 * **dataTypes**: [TiTaxiiDataConnectorDataTypes](#titaxiidataconnectordatatypes) (Required): The available data types for Threat Intelligence TAXII data connector.
 * **friendlyName**: string: The friendly name for the TAXII server.
 * **password**: string: The password for the TAXII server.
-* **pollingFrequency**: 'OnceADay' | 'OnceAMinute' | 'OnceAnHour' (Required): The polling frequency for the TAXII server.
+* **pollingFrequency**: 'OnceADay' | 'OnceAMinute' | 'OnceAnHour' | string (Required): The polling frequency for the TAXII server.
 * **taxiiLookbackPeriod**: string: The lookback period for the TAXII server.
 * **taxiiServer**: string: The API root for the TAXII server.
 * **tenantId**: string (Required): The tenant id to connect to, and get the data from.
@@ -631,7 +631,7 @@
 
 ## TiTaxiiDataConnectorDataTypesTaxiiClient
 ### Properties
-* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
 ## ActivityEntityQueriesProperties
 ### Properties
@@ -640,7 +640,7 @@
 * **description**: string: The entity query description
 * **enabled**: bool: Determines whether this activity is enabled or disabled.
 * **entitiesFilter**: [ActivityEntityQueriesPropertiesEntitiesFilter](#activityentityqueriespropertiesentitiesfilter): The query applied only to entities matching to all filters
-* **inputEntityType**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'HuntingBookmark' | 'IP' | 'IoTDevice' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'URL': The type of the entity
+* **inputEntityType**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'HuntingBookmark' | 'IP' | 'IoTDevice' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'URL' | string: The type of the entity
 * **lastModifiedTimeUtc**: string (ReadOnly): The last time the activity was updated
 * **queryDefinitions**: [ActivityEntityQueriesPropertiesQueryDefinitions](#activityentityqueriespropertiesquerydefinitions): The Activity query definitions
 * **requiredInputFieldsSets**: string[][]: List of the fields of the source entity that are required to run the query
@@ -660,17 +660,17 @@
 ### Properties
 * **dataSources**: string[] (ReadOnly): List of the data sources that are required to run the query
 * **displayName**: string (ReadOnly): The query display name
-* **inputEntityType**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'HuntingBookmark' | 'IP' | 'IoTDevice' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'URL' (ReadOnly): The type of the entity
+* **inputEntityType**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'HuntingBookmark' | 'IP' | 'IoTDevice' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'URL' | string (ReadOnly): The type of the entity
 * **inputFields**: string[] (ReadOnly): List of the fields of the source entity that are required to run the query
-* **outputEntityTypes**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'HuntingBookmark' | 'IP' | 'IoTDevice' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'URL'[] (ReadOnly): List of the desired output types to be constructed from the result
+* **outputEntityTypes**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'HuntingBookmark' | 'IP' | 'IoTDevice' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'URL' | string[] (ReadOnly): List of the desired output types to be constructed from the result
 * **queryTemplate**: string (ReadOnly): The template query string to be parsed and formatted
 
 ## IncidentProperties
 ### Properties
 * **additionalData**: [IncidentAdditionalData](#incidentadditionaldata) (ReadOnly): Incident additional data property bag.
-* **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined': The reason the incident was closed
+* **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined' | string: The reason the incident was closed
 * **classificationComment**: string: Describes the reason the incident was closed
-* **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected': The classification reason the incident was closed with
+* **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected' | string: The classification reason the incident was closed with
 * **createdTimeUtc**: string (ReadOnly): The time the incident was created
 * **description**: string: The description of the incident
 * **firstActivityTimeUtc**: string: The time of the first activity in the incident
@@ -683,8 +683,8 @@
 * **providerIncidentId**: string: The incident ID assigned by the incident provider
 * **providerName**: string: The name of the source provider that generated the incident
 * **relatedAnalyticRuleIds**: string[] (ReadOnly): List of resource ids of Analytic rules related to the incident
-* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (Required): The severity of the incident
-* **status**: 'Active' | 'Closed' | 'New' (Required): The status of the incident
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (Required): The severity of the incident
+* **status**: 'Active' | 'Closed' | 'New' | string (Required): The status of the incident
 * **teamInformation**: [TeamInformation](#teaminformation): Describes team information
 * **title**: string (Required): The title of the incident
 
@@ -694,19 +694,19 @@
 * **alertsCount**: int (ReadOnly): The number of alerts in the incident
 * **bookmarksCount**: int (ReadOnly): The number of bookmarks in the incident
 * **commentsCount**: int (ReadOnly): The number of comments in the incident
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation'[] (ReadOnly): The tactics associated with incident
+* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string[] (ReadOnly): The tactics associated with incident
 
 ## IncidentLabel
 ### Properties
 * **labelName**: string (Required): The name of the label
-* **labelType**: 'System' | 'User' (ReadOnly): The type of the label
+* **labelType**: 'System' | 'User' | string (ReadOnly): The type of the label
 
 ## IncidentOwnerInfo
 ### Properties
 * **assignedTo**: string: The name of the user the incident is assigned to.
 * **email**: string: The email of the user the incident is assigned to.
 * **objectId**: string: The object id of the user the incident is assigned to.
-* **ownerType**: 'Group' | 'Unknown' | 'User' (ReadOnly): The type of the owner the incident is assigned to.
+* **ownerType**: 'Group' | 'Unknown' | 'User' | string (ReadOnly): The type of the owner the incident is assigned to.
 * **userPrincipalName**: string: The user principal name of the user the incident is assigned to.
 
 ## TeamInformation
@@ -745,7 +745,7 @@
 * **contentId**: string: Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Can be optionally set for user created content to define dependencies.  If an active content item is made from a template, both will have the same contentId.
 * **dependencies**: [MetadataDependencies](#metadatadependencies): Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex dependencies.
 * **firstPublishDate**: string: first publish date of solution content item
-* **kind**: 'AnalyticsRule' | 'AnalyticsRuleTemplate' | 'DataConnector' | 'DataType' | 'HuntingQuery' | 'InvestigationQuery' | 'Parser' | 'Playbook' | 'PlaybookTemplate' | 'Solution' | 'Watchlist' | 'WatchlistTemplate' | 'Workbook' | 'WorkbookTemplate' (Required): The kind of content the metadata is for.
+* **kind**: 'AnalyticsRule' | 'AnalyticsRuleTemplate' | 'DataConnector' | 'DataType' | 'HuntingQuery' | 'InvestigationQuery' | 'Parser' | 'Playbook' | 'PlaybookTemplate' | 'Solution' | 'Watchlist' | 'WatchlistTemplate' | 'Workbook' | 'WorkbookTemplate' | string (Required): The kind of content the metadata is for.
 * **lastPublishDate**: string: last publish date of solution content item
 * **parentId**: string (Required): Full parent resource ID of the content item the metadata is for.  This is the full resource ID including the scope (subscription and resource group)
 * **providers**: string[]: Providers for the solution content item
@@ -768,14 +768,14 @@
 ### Properties
 * **contentId**: string: Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Can be optionally set for user created content to define dependencies.  If an active content item is made from a template, both will have the same contentId.
 * **criteria**: [MetadataDependencies](#metadatadependencies)[]: This is the list of dependencies we must fulfill, according to the AND/OR operator
-* **kind**: 'AnalyticsRule' | 'AnalyticsRuleTemplate' | 'DataConnector' | 'DataType' | 'HuntingQuery' | 'InvestigationQuery' | 'Parser' | 'Playbook' | 'PlaybookTemplate' | 'Solution' | 'Watchlist' | 'WatchlistTemplate' | 'Workbook' | 'WorkbookTemplate': The kind of content the metadata is for.
+* **kind**: 'AnalyticsRule' | 'AnalyticsRuleTemplate' | 'DataConnector' | 'DataType' | 'HuntingQuery' | 'InvestigationQuery' | 'Parser' | 'Playbook' | 'PlaybookTemplate' | 'Solution' | 'Watchlist' | 'WatchlistTemplate' | 'Workbook' | 'WorkbookTemplate' | string: The kind of content the metadata is for.
 * **name**: string: Name of the content item
-* **operator**: 'AND' | 'OR': Operator used for list of dependencies in criteria array.
+* **operator**: 'AND' | 'OR' | string: Operator used for list of dependencies in criteria array.
 * **version**: string: Version of the content.  Default and recommended format is numeric (e.g. 1, 1.0, 1.0.0, 1.0.0.0), following ARM template best practices.  Can also be any string, but then we cannot guarantee any version checks
 
 ## MetadataSource
 ### Properties
-* **kind**: 'Community' | 'LocalWorkspace' | 'Solution' | 'SourceRepository' (Required): Source type of the content
+* **kind**: 'Community' | 'LocalWorkspace' | 'Solution' | 'SourceRepository' | string (Required): Source type of the content
 * **name**: string: Name of the content source.  The repo name, solution name, LA workspace name etc.
 * **sourceId**: string: ID of the content source.  The solution ID, workspace ID, etc
 
@@ -784,7 +784,7 @@
 * **email**: string: Email of support contact
 * **link**: string: Link for support help, like to support page to open a ticket etc.
 * **name**: string: Name of the support contact. Company or person.
-* **tier**: 'Community' | 'Microsoft' | 'Partner' (Required): Type of support for content item
+* **tier**: 'Community' | 'Microsoft' | 'Partner' | string (Required): Type of support for content item
 
 ## SentinelOnboardingStateProperties
 ### Properties
@@ -804,16 +804,16 @@
 
 ## UebaProperties
 ### Properties
-* **dataSources**: 'AuditLogs' | 'AzureActivity' | 'SecurityEvent' | 'SigninLogs'[]: The relevant data sources that enriched by ueba
+* **dataSources**: 'AuditLogs' | 'AzureActivity' | 'SecurityEvent' | 'SigninLogs' | string[]: The relevant data sources that enriched by ueba
 
 ## SourceControlProperties
 ### Properties
-* **contentTypes**: 'AnalyticRule' | 'Workbook'[] (Required): Array of source control content types.
+* **contentTypes**: 'AnalyticRule' | 'Workbook' | string[] (Required): Array of source control content types.
 * **description**: string: A description of the source control
 * **displayName**: string (Required): The display name of the source control
 * **id**: string: The id (a Guid) of the source control
 * **repository**: [Repository](#repository) (Required): metadata of a repository.
-* **repoType**: 'DevOps' | 'Github' (Required): The type of repository.
+* **repoType**: 'DevOps' | 'Github' | string (Required): The type of repository.
 
 ## Repository
 ### Properties
@@ -825,7 +825,7 @@
 
 ## ContentPathMap
 ### Properties
-* **contentType**: 'AnalyticRule' | 'Workbook': The content type of a source control path.
+* **contentType**: 'AnalyticRule' | 'Workbook' | string: The content type of a source control path.
 * **path**: string: The path to the content.
 
 ## WatchlistProperties
@@ -842,7 +842,7 @@
 * **numberOfLinesToSkip**: int: The number of lines in a csv/tsv content to skip before the header
 * **provider**: string (Required): The provider of the watchlist
 * **rawContent**: string: The raw content that represents to watchlist items to create. In case of csv/tsv content type, it's the content of the file that will parsed by the endpoint
-* **source**: 'Local file' | 'Remote storage' (Required): The source of the watchlist
+* **source**: 'Local file' | 'Remote storage' | string (Required): The source of the watchlist
 * **tenantId**: string: The tenantId where the watchlist belongs to
 * **updated**: string: The last time the watchlist was updated
 * **updatedBy**: [UserInfo](#userinfo): User information that made some action

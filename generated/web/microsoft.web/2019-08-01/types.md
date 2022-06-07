@@ -1028,7 +1028,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 ## VnetRouteProperties
 ### Properties
 * **endAddress**: string: The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
-* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC': The type of route this is:
+* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC' | string: The type of route this is:
 DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
 INHERITED - Routes inherited from the real Virtual Network routes
 STATIC - Static route set on the app only
@@ -1147,7 +1147,7 @@ together to use the same snapshot.
 * **detailedErrorLoggingEnabled**: bool: <code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.
 * **documentRoot**: string: Document root.
 * **experiments**: [Experiments](#experiments): Routing rules in production experiments.
-* **ftpsState**: 'AllAllowed' | 'Disabled' | 'FtpsOnly': State of FTP / FTPS service
+* **ftpsState**: 'AllAllowed' | 'Disabled' | 'FtpsOnly' | string: State of FTP / FTPS service
 * **handlerMappings**: [HandlerMapping](#handlermapping)[]: Handler mappings.
 * **healthCheckPath**: string: Health check path
 * **http20Enabled**: bool: Http20Enabled: configures a web site to allow clients to connect over http2.0
@@ -1164,7 +1164,7 @@ together to use the same snapshot.
 * **machineKey**: [SiteMachineKey](#sitemachinekey) (ReadOnly): MachineKey of an app.
 * **managedPipelineMode**: 'Classic' | 'Integrated': Managed pipeline mode.
 * **managedServiceIdentityId**: int: Managed Service Identity Id
-* **minTlsVersion**: '1.0' | '1.1' | '1.2': MinTlsVersion: configures the minimum version of TLS required for SSL requests
+* **minTlsVersion**: '1.0' | '1.1' | '1.2' | string: MinTlsVersion: configures the minimum version of TLS required for SSL requests
 * **netFrameworkVersion**: string: .NET Framework version.
 * **nodeVersion**: string: Version of Node.js.
 * **numberOfWorkers**: int: Number of workers.
@@ -1181,7 +1181,7 @@ This setting only applies to the Consumption and Elastic Plans
 * **requestTracingExpirationTime**: string: Request tracing expiration time.
 * **scmIpSecurityRestrictions**: [IpSecurityRestriction](#ipsecurityrestriction)[]: IP security restrictions for scm.
 * **scmIpSecurityRestrictionsUseMain**: bool: IP security restrictions for scm to use main.
-* **scmType**: 'BitbucketGit' | 'BitbucketHg' | 'CodePlexGit' | 'CodePlexHg' | 'Dropbox' | 'ExternalGit' | 'ExternalHg' | 'GitHub' | 'LocalGit' | 'None' | 'OneDrive' | 'Tfs' | 'VSO' | 'VSTSRM': SCM type.
+* **scmType**: 'BitbucketGit' | 'BitbucketHg' | 'CodePlexGit' | 'CodePlexHg' | 'Dropbox' | 'ExternalGit' | 'ExternalHg' | 'GitHub' | 'LocalGit' | 'None' | 'OneDrive' | 'Tfs' | 'VSO' | 'VSTSRM' | string: SCM type.
 * **tracingOptions**: string: Tracing options.
 * **use32BitWorkerProcess**: bool: <code>true</code> to use 32-bit worker process; otherwise, <code>false</code>.
 * **virtualApplications**: [VirtualApplication](#virtualapplication)[]: Virtual applications.
@@ -1465,7 +1465,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **connectionString**: string: Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
 * **connectionStringName**: string: Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
 This is used during restore with overwrite connection strings options.
-* **databaseType**: 'LocalMySql' | 'MySql' | 'PostgreSql' | 'SqlAzure' (Required): Database type (e.g. SqlAzure / MySql).
+* **databaseType**: 'LocalMySql' | 'MySql' | 'PostgreSql' | 'SqlAzure' | string (Required): Database type (e.g. SqlAzure / MySql).
 * **name**: string
 
 ## ConnectionStringDictionaryProperties

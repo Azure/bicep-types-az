@@ -27,7 +27,7 @@
 * **contactRegistrant**: [Contact](#contact): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information will be made publicly available through the Whois directories as per ICANN requirements.
 * **contactTech**: [Contact](#contact): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information will be made publicly available through the Whois directories as per ICANN requirements.
 * **createdTime**: string: Domain creation timestamp
-* **domainNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive'[]: Reasons why domain is not renewable
+* **domainNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive' | string[]: Reasons why domain is not renewable
 * **expirationTime**: string: Domain expiration timestamp
 * **lastRenewedTime**: string: Timestamp when the domain was renewed last time
 * **managedHostNames**: [HostName](#hostname)[]: All hostnames derived from the domain and assigned to Azure resources

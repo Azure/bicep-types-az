@@ -1058,14 +1058,14 @@ This is valid for all deployment slots in an app.
 * **kubeEnvironmentId**: string: Resource ID of the Container App's KubeEnvironment.
 * **latestRevisionFqdn**: string (ReadOnly): Fully Qualified Domain Name of the latest revision of the Container App.
 * **latestRevisionName**: string (ReadOnly): Name of the latest revision of the Container App.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Provisioning state of the Container App.
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the Container App.
 * **template**: [Template](#template): Container App versioned application definition.
 Defines the desired state of an immutable revision.
 Any changes to this section Will result in a new revision being created
 
 ## Configuration
 ### Properties
-* **activeRevisionsMode**: 'multiple' | 'single': ActiveRevisionsMode controls how active revisions are handled for the Container app:
+* **activeRevisionsMode**: 'multiple' | 'single' | string: ActiveRevisionsMode controls how active revisions are handled for the Container app:
 <list><item>Multiple: multiple revisions can be active. If no value if provided, this is the default</item><item>Single: Only one revision can be active at a time. Revision weights can not be used in this mode</item></list>
 * **ingress**: [Ingress](#ingress): Container App Ingress configuration.
 * **registries**: [RegistryCredentials](#registrycredentials)[]: Collection of private container registry credentials for containers used by the Container app
@@ -1078,7 +1078,7 @@ Any changes to this section Will result in a new revision being created
 * **fqdn**: string (ReadOnly): Hostname.
 * **targetPort**: int: Target Port in containers for traffic from ingress
 * **traffic**: [TrafficWeight](#trafficweight)[]: Array of TrafficWeight
-* **transport**: 'auto' | 'http' | 'http2': Ingress transport protocol
+* **transport**: 'auto' | 'http' | 'http2' | string: Ingress transport protocol
 
 ## TrafficWeight
 ### Properties
@@ -1202,7 +1202,7 @@ eg: azure-servicebus, redis etc.
 * **dnsSuffix**: string: DNS suffix of the App Service Environment.
 * **frontEndScaleFactor**: int: Scale factor for front-ends.
 * **hasLinuxWorkers**: bool (ReadOnly): Flag that displays whether an ASE has linux workers or not
-* **internalLoadBalancingMode**: 'None' | 'Publishing' | 'Web' | 'Web, Publishing': Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
+* **internalLoadBalancingMode**: 'None' | 'Publishing' | 'Web' | 'Web, Publishing' | string: Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
 * **ipsslAddressCount**: int: Number of IP SSL addresses reserved for the App Service Environment.
 * **maximumNumberOfMachines**: int (ReadOnly): Maximum number of VMs in the App Service Environment.
 * **multiRoleCount**: int (ReadOnly): Number of front-end instances.
@@ -1400,7 +1400,7 @@ If <code>false</code>, this App Service Plan will not perform availability zone 
 ## VnetRouteProperties
 ### Properties
 * **endAddress**: string (WriteOnly): The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
-* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC' (WriteOnly): The type of route this is:
+* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC' | string (WriteOnly): The type of route this is:
 DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
 INHERITED - Routes inherited from the real Virtual Network routes
 STATIC - Static route set on the app only
@@ -1529,7 +1529,7 @@ together to use the same snapshot.
 * **detailedErrorLoggingEnabled**: bool: <code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.
 * **documentRoot**: string: Document root.
 * **experiments**: [Experiments](#experiments): Routing rules in production experiments.
-* **ftpsState**: 'AllAllowed' | 'Disabled' | 'FtpsOnly': State of FTP / FTPS service
+* **ftpsState**: 'AllAllowed' | 'Disabled' | 'FtpsOnly' | string: State of FTP / FTPS service
 * **functionAppScaleLimit**: int: Maximum number of workers that a site can scale out to.
 This setting only applies to the Consumption and Elastic Premium Plans
 * **functionsRuntimeScaleMonitoringEnabled**: bool: Gets or sets a value indicating whether functions runtime scale monitoring is enabled. When enabled,
@@ -1554,7 +1554,7 @@ runtime to get scale status.
 * **managedServiceIdentityId**: int: Managed Service Identity Id
 * **minimumElasticInstanceCount**: int: Number of minimum instance count for a site
 This setting only applies to the Elastic Plans
-* **minTlsVersion**: '1.0' | '1.1' | '1.2': MinTlsVersion: configures the minimum version of TLS required for SSL requests
+* **minTlsVersion**: '1.0' | '1.1' | '1.2' | string: MinTlsVersion: configures the minimum version of TLS required for SSL requests
 * **netFrameworkVersion**: string: .NET Framework version.
 * **nodeVersion**: string: Version of Node.js.
 * **numberOfWorkers**: int: Number of workers.
@@ -1572,8 +1572,8 @@ This setting only applies to the Consumption and Elastic Plans
 * **requestTracingExpirationTime**: string: Request tracing expiration time.
 * **scmIpSecurityRestrictions**: [IpSecurityRestriction](#ipsecurityrestriction)[]: IP security restrictions for scm.
 * **scmIpSecurityRestrictionsUseMain**: bool: IP security restrictions for scm to use main.
-* **scmMinTlsVersion**: '1.0' | '1.1' | '1.2': MinTlsVersion: configures the minimum version of TLS required for SSL requests
-* **scmType**: 'BitbucketGit' | 'BitbucketHg' | 'CodePlexGit' | 'CodePlexHg' | 'Dropbox' | 'ExternalGit' | 'ExternalHg' | 'GitHub' | 'LocalGit' | 'None' | 'OneDrive' | 'Tfs' | 'VSO' | 'VSTSRM': SCM type.
+* **scmMinTlsVersion**: '1.0' | '1.1' | '1.2' | string: MinTlsVersion: configures the minimum version of TLS required for SSL requests
+* **scmType**: 'BitbucketGit' | 'BitbucketHg' | 'CodePlexGit' | 'CodePlexHg' | 'Dropbox' | 'ExternalGit' | 'ExternalHg' | 'GitHub' | 'LocalGit' | 'None' | 'OneDrive' | 'Tfs' | 'VSO' | 'VSTSRM' | string: SCM type.
 * **tracingOptions**: string: Tracing options.
 * **use32BitWorkerProcess**: bool: <code>true</code> to use 32-bit worker process; otherwise, <code>false</code>.
 * **virtualApplications**: [VirtualApplication](#virtualapplication)[]: Virtual applications.
@@ -1728,7 +1728,7 @@ SubnetMask property must not be specified.
 * **priority**: int: Priority of IP restriction rule.
 * **subnetMask**: string: Subnet mask for the range of IP addresses the restriction is valid for.
 * **subnetTrafficTag**: int: (internal) Subnet traffic tag
-* **tag**: 'Default' | 'ServiceTag' | 'XffProxy': Defines what this IP filter will be used for. This is to support IP filtering on proxies.
+* **tag**: 'Default' | 'ServiceTag' | 'XffProxy' | string: Defines what this IP filter will be used for. This is to support IP filtering on proxies.
 * **vnetSubnetResourceId**: string: Virtual network resource id
 * **vnetTrafficTag**: int: (internal) Vnet traffic tag
 
@@ -2184,7 +2184,7 @@ The setting in this value can control the behavior of certain features in the Au
 * **connectionString**: string: Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
 * **connectionStringName**: string: Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
 This is used during restore with overwrite connection strings options.
-* **databaseType**: 'LocalMySql' | 'MySql' | 'PostgreSql' | 'SqlAzure' (Required): Database type (e.g. SqlAzure / MySql).
+* **databaseType**: 'LocalMySql' | 'MySql' | 'PostgreSql' | 'SqlAzure' | string (Required): Database type (e.g. SqlAzure / MySql).
 * **name**: string
 
 ## ConnectionStringDictionaryProperties
@@ -2517,7 +2517,7 @@ Point-To-Site VPN connection.
 * **contentDistributionEndpoint**: string (ReadOnly): The content distribution endpoint for the static site.
 * **customDomains**: string[] (ReadOnly): The custom domains associated with this static site.
 * **defaultHostname**: string (ReadOnly): The default autogenerated hostname for the static site.
-* **enterpriseGradeCdnStatus**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': State indicating the status of the enterprise grade CDN serving traffic to the static web app.
+* **enterpriseGradeCdnStatus**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string: State indicating the status of the enterprise grade CDN serving traffic to the static web app.
 * **keyVaultReferenceIdentity**: string (ReadOnly): Identity to use for Key Vault Reference authentication.
 * **privateEndpointConnections**: [ResponseMessageEnvelopeRemotePrivateEndpointConnection](#responsemessageenveloperemoteprivateendpointconnection)[] (ReadOnly): Private endpoint connections
 * **provider**: string: The provider that submitted the last deployment to the primary environment of the static site.
@@ -2652,7 +2652,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 * **createdOn**: string (ReadOnly): The date and time on which the custom domain was created for the static site.
 * **domainName**: string (ReadOnly): The domain name for the static site custom domain.
 * **errorMessage**: string (ReadOnly)
-* **status**: 'Adding' | 'Deleting' | 'Failed' | 'Ready' | 'RetrievingValidationToken' | 'Validating' (ReadOnly): The status of the custom domain
+* **status**: 'Adding' | 'Deleting' | 'Failed' | 'Ready' | 'RetrievingValidationToken' | 'Validating' | string (ReadOnly): The status of the custom domain
 * **validationMethod**: string (WriteOnly): Validation method for adding a custom domain
 * **validationToken**: string (ReadOnly): The TXT record validation token
 
