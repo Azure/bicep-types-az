@@ -60,7 +60,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       }
     }
 
-    if (putSchema?.discriminator || getSchema?.discriminator) {
+    if (putSchema?.discriminator) {
       const discriminatedObjectType = factory.lookupType(resourceDefinition) as DiscriminatedObjectType;
 
       handlePolymorphicType(discriminatedObjectType, putSchema, getSchema);
