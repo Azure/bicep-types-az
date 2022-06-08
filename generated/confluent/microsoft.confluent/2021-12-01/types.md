@@ -1,6 +1,6 @@
 # Microsoft.Confluent @ 2021-12-01
 
-## Resource Microsoft.Confluent/agreements@2021-12-01
+## Resource Microsoft.Confluent/agreements@2021-12-01 (WriteOnly)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version

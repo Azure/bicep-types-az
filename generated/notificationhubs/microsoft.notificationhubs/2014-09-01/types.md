@@ -11,7 +11,7 @@
 * **tags**: [NamespaceCreateOrUpdateParametersTags](#namespacecreateorupdateparameterstags): Gets or sets Namespace tags.
 * **type**: 'Microsoft.NotificationHubs/namespaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NotificationHubs/namespaces/AuthorizationRules@2014-09-01
+## Resource Microsoft.NotificationHubs/namespaces/AuthorizationRules@2014-09-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -19,6 +19,7 @@
 * **location**: string: Gets or sets Namespace data center location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required): SharedAccessAuthorizationRule properties.
+* **tags**: [SharedAccessAuthorizationRuleResourceTags](#sharedaccessauthorizationruleresourcetags) (ReadOnly): Gets or sets tags of the Namespace AuthorizationRules.
 * **type**: 'Microsoft.NotificationHubs/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NotificationHubs/namespaces/notificationHubs@2014-09-01
@@ -32,7 +33,7 @@
 * **tags**: [NotificationHubCreateOrUpdateParametersTags](#notificationhubcreateorupdateparameterstags): Gets or sets NotificationHub tags.
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules@2014-09-01
+## Resource Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules@2014-09-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -40,6 +41,7 @@
 * **location**: string: Gets or sets Namespace data center location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required): SharedAccessAuthorizationRule properties.
+* **tags**: [SharedAccessAuthorizationRuleResourceTags](#sharedaccessauthorizationruleresourcetags) (ReadOnly): Gets or sets tags of the Namespace AuthorizationRules.
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.NotificationHubs/namespaces/AuthorizationRules@2014-09-01)
@@ -159,6 +161,16 @@
 * **revision**: int: The revision number for the rule.
 * **rights**: 'Listen' | 'Manage' | 'Send'[]: The rights associated with the rule.
 * **secondaryKey**: string: The secondary key that was used.
+
+## SharedAccessAuthorizationRuleResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SharedAccessAuthorizationRuleResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## WnsCredential
 ### Properties

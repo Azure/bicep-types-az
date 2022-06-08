@@ -47,6 +47,15 @@
 * **properties**: [ServerEndpointProperties](#serverendpointproperties): ServerEndpoint Properties object.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.StorageSync/storageSyncServices/workflows@2017-06-05-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-06-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkflowProperties](#workflowproperties) (ReadOnly): Workflow Properties object.
+* **type**: 'Microsoft.StorageSync/storageSyncServices/workflows' (ReadOnly, DeployTimeConstant): The resource type
+
 ## CloudEndpointProperties
 ### Properties
 * **backupEnabled**: bool (ReadOnly): Backup Enabled
@@ -107,4 +116,12 @@
 ### Properties
 * **syncGroupStatus**: string (ReadOnly): Sync group status
 * **uniqueId**: string: Unique Id
+
+## WorkflowProperties
+### Properties
+* **lastOperationId**: string (ReadOnly): workflow last operation identifier.
+* **lastStepName**: string (ReadOnly): last step name
+* **operation**: 'cancel' | 'do' | 'undo' | string (ReadOnly): Type of the Operation Direction
+* **status**: 'aborted' | 'active' | 'expired' | 'failed' | 'succeeded' | string (ReadOnly): Type of the Workflow Status
+* **steps**: string (ReadOnly): workflow steps
 

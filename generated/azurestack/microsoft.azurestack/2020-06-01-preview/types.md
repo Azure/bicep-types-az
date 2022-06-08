@@ -1,5 +1,15 @@
 # Microsoft.AzureStack @ 2020-06-01-preview
 
+## Resource Microsoft.AzureStack/cloudManifestFiles@2020-06-01-preview (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2020-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): The entity tag used for optimistic concurrency when modifying the resource.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [CloudManifestFileProperties](#cloudmanifestfileproperties) (ReadOnly): Cloud specific manifest JSON properties.
+* **type**: 'Microsoft.AzureStack/cloudManifestFiles' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.AzureStack/linkedSubscriptions@2020-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -39,10 +49,44 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AzureStack/registrations/customerSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.AzureStack/registrations/products@2020-06-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): The entity tag used for optimistic concurrency when modifying the resource.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProductNestedProperties](#productnestedproperties) (ReadOnly): Properties portion of the product resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.AzureStack/registrations/products' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listDetails (Microsoft.AzureStack/registrations/products@2020-06-01-preview)
 * **Resource**: Microsoft.AzureStack/registrations/products
 * **ApiVersion**: 2020-06-01-preview
 * **Output**: [ExtendedProduct](#extendedproduct)
+
+## CloudManifestFileDeploymentData
+### Properties
+* **customCloudVerificationKey**: string (ReadOnly): Signing verification public key.
+* **customEnvironmentEndpoints**: [CloudManifestFileEnvironmentEndpoints](#cloudmanifestfileenvironmentendpoints) (ReadOnly): Cloud specific environment endpoints for AzureStack deployment.
+* **externalDsmsCertificates**: string (ReadOnly): Dsms external certificates.
+
+## CloudManifestFileEnvironmentEndpoints
+### Properties
+* **customCloudArmEndpoint**: string (ReadOnly): ARM endpoint.
+* **externalDsmsEndpoint**: string (ReadOnly): Dsms endpoint.
+
+## CloudManifestFileProperties
+### Properties
+* **deploymentData**: [CloudManifestFileDeploymentData](#cloudmanifestfiledeploymentdata) (ReadOnly): Cloud specific manifest data for AzureStack deployment.
+* **signature**: string (ReadOnly): Signature of the cloud specific manifest data.
+
+## Compatibility
+### Properties
+* **description**: string (ReadOnly): Full error message if any compatibility issues are found
+* **isCompatible**: bool (ReadOnly): Tells if product is compatible with current device
+* **issues**: 'ADFSIdentitySystemRequired' | 'AzureADIdentitySystemRequired' | 'CapacityBillingModelRequired' | 'ConnectionToAzureRequired' | 'ConnectionToInternetRequired' | 'DevelopmentBillingModelRequired' | 'DisconnectedEnvironmentRequired' | 'HigherDeviceVersionRequired' | 'LowerDeviceVersionRequired' | 'PayAsYouGoBillingModelRequired' | string[] (ReadOnly): List of all issues found
+* **message**: string (ReadOnly): Short error message if any compatibility issues are found
 
 ## CustomerSubscriptionProperties
 ### Properties
@@ -71,6 +115,14 @@
 * **vmOsType**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): Operating system type (Windows or Linux).
 * **vmScaleSetEnabled**: bool (ReadOnly): Indicates if virtual machine Scale Set is enabled in the specified product.
 
+## IconUris
+### Properties
+* **hero**: string (ReadOnly): URI to hero icon.
+* **large**: string (ReadOnly): URI to large icon.
+* **medium**: string (ReadOnly): URI to medium icon.
+* **small**: string (ReadOnly): URI to small icon.
+* **wide**: string (ReadOnly): URI to wide icon.
+
 ## LinkedSubscriptionParameterProperties
 ### Properties
 * **deviceConnectionStatus**: string (ReadOnly): The status of the remote management connection of the Azure Stack device.
@@ -85,6 +137,36 @@
 ### Properties
 * **operatingSystem**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): Operating system type (Windows or Linux).
 * **sourceBlobSasUri**: string (ReadOnly): SAS key for source blob.
+
+## ProductLink
+### Properties
+* **displayName**: string (ReadOnly): The description of the link.
+* **uri**: string (ReadOnly): The URI corresponding to the link.
+
+## ProductNestedProperties
+### Properties
+* **billingPartNumber**: string (ReadOnly): The part number used for billing purposes.
+* **compatibility**: [Compatibility](#compatibility) (ReadOnly): Product compatibility
+* **description**: string (ReadOnly): The description of the product.
+* **displayName**: string (ReadOnly): The display name of the product.
+* **galleryItemIdentity**: string (ReadOnly): The identifier of the gallery item corresponding to the product.
+* **iconUris**: [IconUris](#iconuris) (ReadOnly): Links to product icons.
+* **legalTerms**: string (ReadOnly): The legal terms.
+* **links**: [ProductLink](#productlink)[] (ReadOnly): Additional links available for this product.
+* **offer**: string (ReadOnly): The offer representing the product.
+* **offerVersion**: string (ReadOnly): The version of the product offer.
+* **payloadLength**: int (ReadOnly): The length of product content.
+* **privacyPolicy**: string (ReadOnly): The privacy policy.
+* **productKind**: string (ReadOnly): The kind of the product (virtualMachine or virtualMachineExtension)
+* **productProperties**: [ProductProperties](#productproperties) (ReadOnly): Additional properties of the product
+* **publisherDisplayName**: string (ReadOnly): The user-friendly name of the product publisher.
+* **publisherIdentifier**: string (ReadOnly): Publisher identifier.
+* **sku**: string (ReadOnly): The product SKU.
+* **vmExtensionType**: string (ReadOnly): The type of the Virtual Machine Extension.
+
+## ProductProperties
+### Properties
+* **version**: string (ReadOnly): The version.
 
 ## RegistrationParameterProperties
 ### Properties

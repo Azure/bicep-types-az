@@ -1,14 +1,6 @@
 # Microsoft.Maintenance @ 2018-06-01-preview
 
-## Resource Microsoft.Maintenance/applyUpdates@2018-06-01-preview
-* **Valid Scope(s)**: Extension
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.Maintenance/applyUpdates' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Maintenance/configurationAssignments@2018-06-01-preview
+## Resource Microsoft.Maintenance/configurationAssignments@2018-06-01-preview (WriteOnly)
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

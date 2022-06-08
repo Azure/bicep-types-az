@@ -13,6 +13,17 @@
 * **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.NetApp/netAppAccounts/accountBackups@2021-04-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [BackupProperties](#backupproperties) (ReadOnly): Backup properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.NetApp/netAppAccounts/accountBackups' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.NetApp/netAppAccounts/backupPolicies@2021-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties

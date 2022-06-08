@@ -121,7 +121,7 @@
 * **properties**: [DataMaskingPolicyProperties](#datamaskingpolicyproperties): The properties of a database data masking policy.
 * **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/dataMaskingPolicies/rules@2014-04-01
+## Resource Microsoft.Sql/servers/databases/dataMaskingPolicies/rules@2014-04-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -138,7 +138,7 @@
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'import' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [ImportExtensionProperties](#importextensionproperties) (WriteOnly): Represents the properties for an import operation
+* **properties**: [ImportExtensionProperties](#importextensionproperties): Represents the properties for an import operation
 * **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/geoBackupPolicies@2014-04-01
@@ -152,6 +152,16 @@
 * **properties**: [GeoBackupPolicyProperties](#geobackuppolicyproperties) (Required): The properties of the geo backup policy.
 * **type**: 'Microsoft.Sql/servers/databases/geoBackupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/servers/databases/replicationLinks@2014-04-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Location of the server that contains this firewall rule.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ReplicationLinkProperties](#replicationlinkproperties) (ReadOnly): Represents the properties of a database replication link.
+* **type**: 'Microsoft.Sql/servers/databases/replicationLinks' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/servers/databases/securityAlertPolicies@2014-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -162,6 +172,15 @@
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseSecurityAlertPolicyProperties](#databasesecurityalertpolicyproperties): Properties for a database Threat Detection policy.
 * **type**: 'Microsoft.Sql/servers/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/databases/serviceTierAdvisors@2014-04-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServiceTierAdvisorProperties](#servicetieradvisorproperties) (ReadOnly): Represents the properties of a Service Tier Advisor.
+* **type**: 'Microsoft.Sql/servers/databases/serviceTierAdvisors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/transparentDataEncryption@2014-04-01
 * **Valid Scope(s)**: ResourceGroup
@@ -195,6 +214,18 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/elasticPools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/servers/elasticPools/databases@2014-04-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of database.  This is metadata used for the Azure portal experience.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DatabaseProperties](#databaseproperties) (ReadOnly): Represents the properties of a database.
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.Sql/servers/elasticPools/databases' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/servers/firewallRules@2014-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -206,12 +237,71 @@
 * **properties**: [FirewallRuleProperties](#firewallruleproperties): Represents the properties of a server firewall rule.
 * **type**: 'Microsoft.Sql/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/servers/recommendedElasticPools@2014-04-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecommendedElasticPoolPropertiesAutoGenerated](#recommendedelasticpoolpropertiesautogenerated) (ReadOnly): Represents the properties of a recommended elastic pool.
+* **type**: 'Microsoft.Sql/servers/recommendedElasticPools' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/recommendedElasticPools/databases@2014-04-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of database.  This is metadata used for the Azure portal experience.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DatabaseProperties](#databaseproperties) (ReadOnly): Represents the properties of a database.
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.Sql/servers/recommendedElasticPools/databases' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/recoverableDatabases@2014-04-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecoverableDatabaseProperties](#recoverabledatabaseproperties) (ReadOnly): The properties of a recoverable database
+* **type**: 'Microsoft.Sql/servers/recoverableDatabases' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/restorableDroppedDatabases@2014-04-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RestorableDroppedDatabaseProperties](#restorabledroppeddatabaseproperties) (ReadOnly): The properties of a restorable dropped database
+* **type**: 'Microsoft.Sql/servers/restorableDroppedDatabases' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/serviceObjectives@2014-04-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServiceObjectiveProperties](#serviceobjectiveproperties) (ReadOnly): Represents the properties of a database service objective.
+* **type**: 'Microsoft.Sql/servers/serviceObjectives' (ReadOnly, DeployTimeConstant): The resource type
+
 ## AdvisorProperties
 ### Properties
 * **advisorStatus**: 'GA' | 'LimitedPublicPreview' | 'PrivatePreview' | 'PublicPreview' (ReadOnly): Gets the status of availability of this advisor to customers. Possible values are 'GA', 'PublicPreview', 'LimitedPublicPreview' and 'PrivatePreview'.
 * **autoExecuteValue**: 'Default' | 'Disabled' | 'Enabled' (Required): Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'
 * **lastChecked**: string (ReadOnly): Gets the time when the current resource was analyzed for recommendations by this advisor.
 * **recommendationsStatus**: string (ReadOnly): Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, 'Ok' (Recommendations available), LowActivity (not enough workload to analyze), 'DbSeemsTuned' (Database is doing well), etc.
+
+## Database
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **kind**: string (ReadOnly): Kind of database.  This is metadata used for the Azure portal experience.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [DatabaseProperties](#databaseproperties) (ReadOnly): Represents the properties of a database.
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
+* **type**: string (ReadOnly): Resource type.
 
 ## DatabaseConnectionPolicyProperties
 ### Properties
@@ -364,7 +454,16 @@ The list of SKUs may vary by region and support offer. To determine the service 
 * **administratorLogin**: string (Required, WriteOnly): The name of the SQL administrator.
 * **administratorLoginPassword**: string (Required, WriteOnly): The password of the SQL administrator.
 * **authenticationType**: 'ADPassword' | 'SQL' (WriteOnly): The authentication type.
+* **blobUri**: string (ReadOnly): The blob uri.
+* **databaseName**: string (ReadOnly): The name of the database.
+* **errorMessage**: string (ReadOnly): The error message returned from the server.
+* **lastModifiedTime**: string (ReadOnly): The operation status last modified time.
 * **operationMode**: 'Import' (Required, WriteOnly): The type of import operation being performed. This is always Import.
+* **queuedTime**: string (ReadOnly): The operation queued time.
+* **requestId**: string (ReadOnly): The request type of the operation.
+* **requestType**: string (ReadOnly): The request type of the operation.
+* **serverName**: string (ReadOnly): The name of the server.
+* **status**: string (ReadOnly): The status message returned from the server.
 * **storageKey**: string (Required, WriteOnly): The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?."
 * **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required, WriteOnly): The type of the storage key to use.
 * **storageUri**: string (Required, WriteOnly): The storage uri to use.
@@ -375,6 +474,26 @@ The list of SKUs may vary by region and support offer. To determine the service 
 * **changeValueRelative**: int (ReadOnly): The relative impact to dimension (null if not applicable)
 * **name**: string (ReadOnly): The name of the impact dimension.
 * **unit**: string (ReadOnly): The unit in which estimated impact to dimension is measured.
+
+## RecommendedElasticPoolMetric
+### Properties
+* **dateTime**: string (ReadOnly): The time of metric (ISO8601 format).
+* **dtu**: int (ReadOnly): Gets or sets the DTUs (Database Transaction Units). See https://azure.microsoft.com/documentation/articles/sql-database-what-is-a-dtu/
+* **sizeGB**: int (ReadOnly): Gets or sets size in gigabytes.
+
+## RecommendedElasticPoolPropertiesAutoGenerated
+### Properties
+* **databaseDtuMax**: int (ReadOnly): The maximum DTU for the database.
+* **databaseDtuMin**: int (ReadOnly): The minimum DTU for the database.
+* **databaseEdition**: 'Basic' | 'BusinessCritical' | 'GeneralPurpose' | 'Premium' | 'Standard' | string (ReadOnly): The edition of the recommended elastic pool. The ElasticPoolEdition enumeration contains all the valid editions.
+* **databases**: [Database](#database)[] (ReadOnly): The list of databases in this pool. Expanded property
+* **dtu**: int (ReadOnly): The DTU for the recommended elastic pool.
+* **maxObservedDtu**: int (ReadOnly): Gets maximum observed DTU.
+* **maxObservedStorageMB**: int (ReadOnly): Gets maximum observed storage in megabytes.
+* **metrics**: [RecommendedElasticPoolMetric](#recommendedelasticpoolmetric)[] (ReadOnly): The list of databases housed in the server. Expanded property
+* **observationPeriodEnd**: string (ReadOnly): The observation period start (ISO8601 format).
+* **observationPeriodStart**: string (ReadOnly): The observation period start (ISO8601 format).
+* **storageMB**: int (ReadOnly): Gets storage size in megabytes.
 
 ## RecommendedIndex
 ### Properties
@@ -397,6 +516,37 @@ The list of SKUs may vary by region and support offer. To determine the service 
 * **schema**: string (ReadOnly): The schema where table to build index over resides
 * **state**: 'Active' | 'Blocked' | 'Executing' | 'Expired' | 'Ignored' | 'Pending Revert' | 'Pending' | 'Reverted' | 'Reverting' | 'Success' | 'Verifying' (ReadOnly): The current recommendation state.
 * **table**: string (ReadOnly): The table on which to build index.
+
+## RecoverableDatabaseProperties
+### Properties
+* **edition**: string (ReadOnly): The edition of the database
+* **elasticPoolName**: string (ReadOnly): The elastic pool name of the database
+* **lastAvailableBackupDate**: string (ReadOnly): The last available backup date of the database (ISO8601 format)
+* **serviceLevelObjective**: string (ReadOnly): The service level objective name of the database
+
+## ReplicationLinkProperties
+### Properties
+* **isTerminationAllowed**: bool (ReadOnly): Legacy value indicating whether termination is allowed.  Currently always returns true.
+* **partnerDatabase**: string (ReadOnly): The name of the partner database.
+* **partnerLocation**: string (ReadOnly): The Azure Region of the partner database.
+* **partnerRole**: 'Copy' | 'NonReadableSecondary' | 'Primary' | 'Secondary' | 'Source' (ReadOnly): The role of the database in the replication link.
+* **partnerServer**: string (ReadOnly): The name of the server hosting the partner database.
+* **percentComplete**: int (ReadOnly): The percentage of seeding complete for the replication link.
+* **replicationMode**: string (ReadOnly): Replication mode of this replication link.
+* **replicationState**: 'CATCH_UP' | 'PENDING' | 'SEEDING' | 'SUSPENDED' | string (ReadOnly): The replication state for the replication link.
+* **role**: 'Copy' | 'NonReadableSecondary' | 'Primary' | 'Secondary' | 'Source' (ReadOnly): The role of the database in the replication link.
+* **startTime**: string (ReadOnly): The start time for the replication link.
+
+## RestorableDroppedDatabaseProperties
+### Properties
+* **creationDate**: string (ReadOnly): The creation date of the database (ISO8601 format)
+* **databaseName**: string (ReadOnly): The name of the database
+* **deletionDate**: string (ReadOnly): The deletion date of the database (ISO8601 format)
+* **earliestRestoreDate**: string (ReadOnly): The earliest restore date of the database (ISO8601 format)
+* **edition**: string (ReadOnly): The edition of the database
+* **elasticPoolName**: string (ReadOnly): The elastic pool name of the database
+* **maxSizeBytes**: string (ReadOnly): The max size in bytes of the database
+* **serviceLevelObjective**: string (ReadOnly): The service level objective name of the database
 
 ## ServerAdministratorProperties
 ### Properties
@@ -438,6 +588,14 @@ The list of SKUs may vary by region and support offer. To determine the service 
 * **storageAccountSubscriptionId**: string: The table storage subscription Id.
 * **storageTableEndpoint**: string: The storage table endpoint.
 
+## ServiceObjectiveProperties
+### Properties
+* **description**: string (ReadOnly): The description for the service level objective.
+* **enabled**: bool (ReadOnly): Gets whether the service level objective is enabled.
+* **isDefault**: bool (ReadOnly): Gets whether the service level objective is the default service objective.
+* **isSystem**: bool (ReadOnly): Gets whether the service level objective is a system service objective.
+* **serviceObjectiveName**: string (ReadOnly): The name for the service objective.
+
 ## ServiceTierAdvisor
 ### Properties
 * **id**: string (ReadOnly): Resource ID.
@@ -472,6 +630,21 @@ The list of SKUs may vary by region and support offer. To determine the service 
 * **inRangeTimeRatio**: int (ReadOnly): Gets or sets inRangeTimeRatio for SLO usage metric.
 * **serviceLevelObjective**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L' | string (ReadOnly): The serviceLevelObjective for SLO usage metric.
 * **serviceLevelObjectiveId**: string (ReadOnly): The serviceLevelObjectiveId for SLO usage metric.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

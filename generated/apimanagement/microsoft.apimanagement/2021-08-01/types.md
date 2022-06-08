@@ -1,5 +1,15 @@
 # Microsoft.ApiManagement @ 2021-08-01
 
+## Resource Microsoft.ApiManagement/locations/deletedservices@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): API Management Service Master Location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DeletedServiceContractProperties](#deletedservicecontractproperties) (ReadOnly)
+* **type**: 'Microsoft.ApiManagement/locations/deletedservices' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.ApiManagement/service@2021-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -216,7 +226,7 @@
 * **properties**: [GatewayContractProperties](#gatewaycontractproperties): Properties of the Gateway contract.
 * **type**: 'Microsoft.ApiManagement/service/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/gateways/apis@2021-08-01
+## Resource Microsoft.ApiManagement/service/gateways/apis@2021-08-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -252,12 +262,13 @@
 * **properties**: [GroupCreateParametersProperties](#groupcreateparametersproperties): Parameters supplied to the Create Group operation.
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/groups/users@2021-08-01
+## Resource Microsoft.ApiManagement/service/groups/users@2021-08-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [UserContractProperties](#usercontractproperties) (ReadOnly): User profile.
 * **type**: 'Microsoft.ApiManagement/service/groups/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/identityProviders@2021-08-01
@@ -268,6 +279,15 @@
 * **name**: 'aad' | 'aadB2C' | 'facebook' | 'google' | 'microsoft' | 'twitter' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [IdentityProviderCreateContractProperties](#identityprovidercreatecontractproperties): The external Identity Providers like Facebook, Google, Microsoft, Twitter or Azure Active Directory which can be used to enable access to the API Management service developer portal for all users.
 * **type**: 'Microsoft.ApiManagement/service/identityProviders' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ApiManagement/service/issues@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [IssueContractProperties](#issuecontractproperties) (ReadOnly): Issue contract Properties.
+* **type**: 'Microsoft.ApiManagement/service/issues' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/loggers@2021-08-01
 * **Valid Scope(s)**: ResourceGroup
@@ -296,20 +316,22 @@
 * **properties**: [NotificationContractProperties](#notificationcontractproperties) (ReadOnly): Notification Contract properties.
 * **type**: 'Microsoft.ApiManagement/service/notifications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/notifications/recipientEmails@2021-08-01
+## Resource Microsoft.ApiManagement/service/notifications/recipientEmails@2021-08-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecipientEmailContractProperties](#recipientemailcontractproperties) (ReadOnly): Recipient Email Contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/notifications/recipientEmails' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/notifications/recipientUsers@2021-08-01
+## Resource Microsoft.ApiManagement/service/notifications/recipientUsers@2021-08-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecipientUsersContractProperties](#recipientuserscontractproperties) (ReadOnly): Recipient User Contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/notifications/recipientUsers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/openidConnectProviders@2021-08-01
@@ -378,6 +400,15 @@
 * **properties**: [PrivateEndpointConnectionRequestProperties](#privateendpointconnectionrequestproperties): The connection state of the private endpoint connection.
 * **type**: 'Microsoft.ApiManagement/service/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.ApiManagement/service/privateLinkResources@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **type**: 'Microsoft.ApiManagement/service/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.ApiManagement/service/products@2021-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -387,20 +418,22 @@
 * **properties**: [ProductContractProperties](#productcontractproperties): Product profile.
 * **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/products/apis@2021-08-01
+## Resource Microsoft.ApiManagement/service/products/apis@2021-08-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ApiContractProperties](#apicontractproperties) (ReadOnly): API Entity Properties
 * **type**: 'Microsoft.ApiManagement/service/products/apis' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/products/groups@2021-08-01
+## Resource Microsoft.ApiManagement/service/products/groups@2021-08-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [GroupContractProperties](#groupcontractproperties) (ReadOnly): Group contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/products/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/policies@2021-08-01
@@ -429,6 +462,15 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GlobalSchemaContractProperties](#globalschemacontractproperties): Schema create or update contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/schemas' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ApiManagement/service/settings@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'public' | string (Required, DeployTimeConstant): The resource name
+* **properties**: [TenantSettingsContractProperties](#tenantsettingscontractproperties) (ReadOnly): Tenant access information contract of the API Management service.
+* **type**: 'Microsoft.ApiManagement/service/settings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/subscriptions@2021-08-01
 * **Valid Scope(s)**: ResourceGroup
@@ -474,6 +516,15 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [UserCreateParameterProperties](#usercreateparameterproperties): Parameters supplied to the Create User operation.
 * **type**: 'Microsoft.ApiManagement/service/users' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ApiManagement/service/users/subscriptions@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SubscriptionContractProperties](#subscriptioncontractproperties) (ReadOnly): Subscription details.
+* **type**: 'Microsoft.ApiManagement/service/users/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.ApiManagement/service/gateways@2021-08-01)
 * **Resource**: Microsoft.ApiManagement/service/gateways
@@ -549,6 +600,30 @@
 * **email**: string (WriteOnly): The email address of the contact person/organization. MUST be in the format of an email address
 * **name**: string (WriteOnly): The identifying name of the contact person/organization
 * **url**: string (WriteOnly): The URL pointing to the contact information. MUST be in the format of a URL
+
+## ApiContractProperties
+### Properties
+* **apiRevision**: string (ReadOnly): Describes the revision of the API. If no value is provided, default revision 1 is created
+* **apiRevisionDescription**: string (ReadOnly): Description of the API Revision.
+* **apiVersion**: string (ReadOnly): Indicates the version identifier of the API if the API is versioned
+* **apiVersionDescription**: string (ReadOnly): Description of the API Version.
+* **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails) (ReadOnly): An API Version Set contains the common configuration for a set of API Versions relating
+* **apiVersionSetId**: string (ReadOnly): A resource identifier for the related ApiVersionSet.
+* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (ReadOnly): API Authentication Settings.
+* **contact**: [ApiContactInformation](#apicontactinformation) (ReadOnly): API contact information
+* **description**: string (ReadOnly): Description of the API. May include HTML formatting tags.
+* **displayName**: string (ReadOnly): API name. Must be 1 to 300 characters long.
+* **isCurrent**: bool (ReadOnly): Indicates if API revision is current api revision.
+* **isOnline**: bool (ReadOnly): Indicates if API revision is accessible via the gateway.
+* **license**: [ApiLicenseInformation](#apilicenseinformation) (ReadOnly): API license information
+* **path**: string (ReadOnly): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
+* **protocols**: 'http' | 'https' | 'ws' | 'wss' | string[] (ReadOnly): Describes on which protocols the operations in this API can be invoked.
+* **serviceUrl**: string (ReadOnly): Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
+* **sourceApiId**: string (ReadOnly): API identifier of the source API.
+* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (ReadOnly): Subscription key parameter names details.
+* **subscriptionRequired**: bool (ReadOnly): Specifies whether an API or Product subscription is required for accessing the API.
+* **termsOfServiceUrl**: string (ReadOnly): A URL to the Terms of Service for the API. MUST be in the format of a URL.
+* **type**: 'graphql' | 'http' | 'soap' | 'websocket' | string (ReadOnly): Type of API.
 
 ## ApiCreateOrUpdateProperties
 ### Properties
@@ -691,7 +766,28 @@ dictionary key references will be ARM resource ids in the form:
 
 ## AssociationContractProperties
 ### Properties
-* **provisioningState**: 'created': Provisioning state.
+* **apiRevision**: string (ReadOnly): Describes the revision of the API. If no value is provided, default revision 1 is created
+* **apiRevisionDescription**: string (ReadOnly): Description of the API Revision.
+* **apiVersion**: string (ReadOnly): Indicates the version identifier of the API if the API is versioned
+* **apiVersionDescription**: string (ReadOnly): Description of the API Version.
+* **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails) (ReadOnly): An API Version Set contains the common configuration for a set of API Versions relating
+* **apiVersionSetId**: string (ReadOnly): A resource identifier for the related ApiVersionSet.
+* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (ReadOnly): API Authentication Settings.
+* **contact**: [ApiContactInformation](#apicontactinformation) (ReadOnly): API contact information
+* **description**: string (ReadOnly): Description of the API. May include HTML formatting tags.
+* **displayName**: string (ReadOnly): API name. Must be 1 to 300 characters long.
+* **isCurrent**: bool (ReadOnly): Indicates if API revision is current api revision.
+* **isOnline**: bool (ReadOnly): Indicates if API revision is accessible via the gateway.
+* **license**: [ApiLicenseInformation](#apilicenseinformation) (ReadOnly): API license information
+* **path**: string (ReadOnly): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
+* **protocols**: 'http' | 'https' | 'ws' | 'wss' | string[] (ReadOnly): Describes on which protocols the operations in this API can be invoked.
+* **provisioningState**: 'created' (WriteOnly): Provisioning state.
+* **serviceUrl**: string (ReadOnly): Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
+* **sourceApiId**: string (ReadOnly): API identifier of the source API.
+* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (ReadOnly): Subscription key parameter names details.
+* **subscriptionRequired**: bool (ReadOnly): Specifies whether an API or Product subscription is required for accessing the API.
+* **termsOfServiceUrl**: string (ReadOnly): A URL to the Terms of Service for the API. MUST be in the format of a URL.
+* **type**: 'graphql' | 'http' | 'soap' | 'websocket' | string (ReadOnly): Type of API.
 
 ## AuthenticationSettingsContract
 ### Properties
@@ -845,6 +941,12 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **mode**: 'Hide' | 'Mask' | string: Data masking mode.
 * **value**: string: The name of an entity to mask (e.g. a name of a header or a query parameter).
+
+## DeletedServiceContractProperties
+### Properties
+* **deletionDate**: string (ReadOnly): UTC Timestamp when the service was soft-deleted. The date conforms to the following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard.
+* **scheduledPurgeDate**: string (ReadOnly): UTC Date and Time when the service will be automatically purged. The date conforms to the following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard.
+* **serviceId**: string (ReadOnly): Fully-qualified API Management Service Resource ID
 
 ## DiagnosticContractProperties
 ### Properties
@@ -1131,6 +1233,12 @@ Instrumentation key for applicationInsights logger.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
 * **provisioningState**: string (ReadOnly): The provisioning state of the private endpoint connection resource.
 
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
+* **requiredZoneNames**: string[] (ReadOnly): The private link resource Private link DNS zone name.
+
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
@@ -1147,10 +1255,18 @@ Instrumentation key for applicationInsights logger.
 * **subscriptionsLimit**: int: Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false.
 * **terms**: string: Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
 
+## RecipientEmailContractProperties
+### Properties
+* **email**: string (ReadOnly): User Email subscribed to notification.
+
 ## RecipientsContractProperties
 ### Properties
 * **emails**: string[] (ReadOnly): List of Emails subscribed for the notification.
 * **users**: string[] (ReadOnly): List of Users subscribed for the notification.
+
+## RecipientUsersContractProperties
+### Properties
+* **userId**: string (ReadOnly): API Management UserId subscribed to notification.
 
 ## RegistrationDelegationSettingsProperties
 ### Properties
@@ -1208,6 +1324,22 @@ Instrumentation key for applicationInsights logger.
 * **definitions**: any: Any object
 * **value**: string: Json escaped string defining the document representing the Schema. Used for schemas other than Swagger/OpenAPI.
 
+## SubscriptionContractProperties
+### Properties
+* **allowTracing**: bool (ReadOnly): Determines whether tracing is enabled
+* **createdDate**: string (ReadOnly): Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+* **displayName**: string (ReadOnly): The name of the subscription, or null if the subscription has no name.
+* **endDate**: string (ReadOnly): Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+* **expirationDate**: string (ReadOnly): Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+* **notificationDate**: string (ReadOnly): Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+* **ownerId**: string (ReadOnly): The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{userId} where {userId} is a user identifier.
+* **primaryKey**: string (ReadOnly): Subscription primary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+* **scope**: string (ReadOnly): Scope like /products/{productId} or /apis or /apis/{apiId}.
+* **secondaryKey**: string (ReadOnly): Subscription secondary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+* **startDate**: string (ReadOnly): Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+* **state**: 'active' | 'cancelled' | 'expired' | 'rejected' | 'submitted' | 'suspended' (ReadOnly): Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
+* **stateComment**: string (ReadOnly): Optional subscription comment added by an administrator when the state is changed to the 'rejected'.
+
 ## SubscriptionCreateParameterProperties
 ### Properties
 * **allowTracing**: bool: Determines whether tracing can be enabled
@@ -1259,6 +1391,15 @@ Instrumentation key for applicationInsights logger.
 * **externalDocsUrl**: string: Absolute URL of external resources describing the tag.
 * **tagId**: string (ReadOnly): Identifier of the tag in the form of /tags/{tagId}
 
+## TenantSettingsContractProperties
+### Properties
+* **settings**: [TenantSettingsContractPropertiesSettings](#tenantsettingscontractpropertiessettings) (ReadOnly): Tenant settings
+
+## TenantSettingsContractPropertiesSettings
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## TermsOfServiceProperties
 ### Properties
 * **consentRequired**: bool: Ask user for consent to the terms of service.
@@ -1269,6 +1410,17 @@ Instrumentation key for applicationInsights logger.
 ### Properties
 * **name**: string (Required): body parameter name.
 * **value**: string (Required): body parameter value.
+
+## UserContractProperties
+### Properties
+* **email**: string (ReadOnly): Email address.
+* **firstName**: string (ReadOnly): First name.
+* **groups**: [GroupContractProperties](#groupcontractproperties)[] (ReadOnly): Collection of groups user is part of.
+* **identities**: [UserIdentityContract](#useridentitycontract)[] (ReadOnly): Collection of user identities.
+* **lastName**: string (ReadOnly): Last name.
+* **note**: string (ReadOnly): Optional note about a user set by the administrator.
+* **registrationDate**: string (ReadOnly): Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+* **state**: 'active' | 'blocked' | 'deleted' | 'pending' | string (ReadOnly): Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
 
 ## UserCreateParameterProperties
 ### Properties
@@ -1286,8 +1438,8 @@ Instrumentation key for applicationInsights logger.
 
 ## UserIdentityContract
 ### Properties
-* **id**: string: Identifier value within provider.
-* **provider**: string: Identity provider name.
+* **id**: string (ReadOnly): Identifier value within provider.
+* **provider**: string (ReadOnly): Identity provider name.
 
 ## UserIdentityProperties
 ### Properties

@@ -1,14 +1,6 @@
 # Microsoft.Maintenance @ 2020-07-01-preview
 
-## Resource Microsoft.Maintenance/applyUpdates@2020-07-01-preview
-* **Valid Scope(s)**: Extension
-### Properties
-* **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.Maintenance/applyUpdates' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Maintenance/configurationAssignments@2020-07-01-preview
+## Resource Microsoft.Maintenance/configurationAssignments@2020-07-01-preview (WriteOnly)
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -29,6 +21,17 @@
 * **tags**: [MaintenanceConfigurationTags](#maintenanceconfigurationtags): Gets or sets tags of the resource
 * **type**: 'Microsoft.Maintenance/maintenanceConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Maintenance/publicMaintenanceConfigurations@2020-07-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Gets or sets location of the resource
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [MaintenanceConfigurationProperties](#maintenanceconfigurationproperties) (ReadOnly): Properties for maintenance configuration
+* **tags**: [MaintenanceConfigurationTags](#maintenanceconfigurationtags) (ReadOnly): Gets or sets tags of the resource
+* **type**: 'Microsoft.Maintenance/publicMaintenanceConfigurations' (ReadOnly, DeployTimeConstant): The resource type
+
 ## ConfigurationAssignmentProperties
 ### Properties
 * **maintenanceConfigurationId**: string: The maintenance configuration Id
@@ -43,6 +46,11 @@
 * **visibility**: 'Custom' | 'Public' | string: Gets or sets the visibility of the configuration
 
 ## MaintenanceConfigurationPropertiesExtensionProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## MaintenanceConfigurationTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

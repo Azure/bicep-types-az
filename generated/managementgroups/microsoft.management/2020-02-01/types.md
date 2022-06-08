@@ -18,7 +18,7 @@
 * **properties**: [CreateOrUpdateSettingsProperties](#createorupdatesettingsproperties): The properties of the request to create or update Management Group settings
 * **type**: 'Microsoft.Management/managementGroups/settings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Management/managementGroups/subscriptions@2020-02-01
+## Resource Microsoft.Management/managementGroups/subscriptions@2020-02-01 (WriteOnly)
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2020-02-01' (ReadOnly, DeployTimeConstant): The resource api version

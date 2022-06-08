@@ -47,6 +47,15 @@
 * **properties**: [ServerEndpointCreateParametersProperties](#serverendpointcreateparametersproperties): ServerEndpoint Properties object.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.StorageSync/storageSyncServices/workflows@2019-10-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkflowProperties](#workflowproperties) (ReadOnly): Workflow Properties object.
+* **type**: 'Microsoft.StorageSync/storageSyncServices/workflows' (ReadOnly, DeployTimeConstant): The resource type
+
 ## CloudEndpointCreateParametersProperties
 ### Properties
 * **azureFileShareName**: string: Azure file share name
@@ -205,4 +214,12 @@
 * **lastSyncTimestamp**: string (ReadOnly): Last sync timestamp
 * **persistentFilesNotSyncingCount**: int (ReadOnly): Count of persistent files not syncing.
 * **transientFilesNotSyncingCount**: int (ReadOnly): Count of transient files not syncing.
+
+## WorkflowProperties
+### Properties
+* **lastOperationId**: string (ReadOnly): workflow last operation identifier.
+* **lastStepName**: string (ReadOnly): last step name
+* **operation**: 'cancel' | 'do' | 'undo' | string (ReadOnly): Type of the Operation Direction
+* **status**: 'aborted' | 'active' | 'expired' | 'failed' | 'succeeded' | string (ReadOnly): Type of the Workflow Status
+* **steps**: string (ReadOnly): workflow steps
 

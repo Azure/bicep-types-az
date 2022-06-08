@@ -122,6 +122,106 @@
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/workflows' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Logic/workflows/runs@2016-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkflowRunProperties](#workflowrunproperties) (ReadOnly): The workflow run properties.
+* **type**: 'Microsoft.Logic/workflows/runs' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Logic/workflows/runs/actions@2016-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkflowRunActionProperties](#workflowrunactionproperties) (ReadOnly): The workflow run action properties.
+* **type**: 'Microsoft.Logic/workflows/runs/actions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Logic/workflows/runs/actions/repetitions@2016-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkflowRunActionRepetitionProperties](#workflowrunactionrepetitionproperties) (ReadOnly): The workflow run action repetition properties definition.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The resource tags.
+* **type**: 'Microsoft.Logic/workflows/runs/actions/repetitions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Logic/workflows/runs/actions/repetitions/requestHistories@2016-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RequestHistoryProperties](#requesthistoryproperties) (ReadOnly): The request history.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The resource tags.
+* **type**: 'Microsoft.Logic/workflows/runs/actions/repetitions/requestHistories' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Logic/workflows/runs/actions/requestHistories@2016-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RequestHistoryProperties](#requesthistoryproperties) (ReadOnly): The request history.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The resource tags.
+* **type**: 'Microsoft.Logic/workflows/runs/actions/requestHistories' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Logic/workflows/runs/actions/scopeRepetitions@2016-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkflowRunActionRepetitionProperties](#workflowrunactionrepetitionproperties) (ReadOnly): The workflow run action repetition properties definition.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The resource tags.
+* **type**: 'Microsoft.Logic/workflows/runs/actions/scopeRepetitions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Logic/workflows/runs/operations@2016-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkflowRunProperties](#workflowrunproperties) (ReadOnly): The workflow run properties.
+* **type**: 'Microsoft.Logic/workflows/runs/operations' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Logic/workflows/triggers@2016-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkflowTriggerProperties](#workflowtriggerproperties) (ReadOnly): The workflow trigger properties.
+* **type**: 'Microsoft.Logic/workflows/triggers' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Logic/workflows/triggers/histories@2016-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkflowTriggerHistoryProperties](#workflowtriggerhistoryproperties) (ReadOnly): The workflow trigger history properties.
+* **type**: 'Microsoft.Logic/workflows/triggers/histories' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Logic/workflows/versions@2016-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkflowVersionProperties](#workflowversionproperties) (ReadOnly): The workflow version properties.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The resource tags.
+* **type**: 'Microsoft.Logic/workflows/versions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listCallbackUrl (Microsoft.Logic/workflows@2016-06-01)
 * **Resource**: Microsoft.Logic/workflows
 * **ApiVersion**: 2016-06-01
@@ -346,6 +446,10 @@
 * **metadata**: any: Any object
 * **uri**: string: The content link URI.
 
+## Correlation
+### Properties
+* **clientTrackingId**: string (ReadOnly): The client tracking id.
+
 ## EdifactAcknowledgementSettings
 ### Properties
 * **acknowledgementControlNumberLowerBound**: int (Required): The acknowledgement control number lower bound.
@@ -524,6 +628,15 @@
 * **validateCharacterSet**: bool (Required): The value indicating whether to validate character set in the message.
 * **validateEdiTypes**: bool (Required): The value indicating whether to Whether to validate EDI types.
 * **validateXsdTypes**: bool (Required): The value indicating whether to Whether to validate XSD types.
+
+## ErrorProperties
+### Properties
+* **code**: string (ReadOnly): Error code.
+* **message**: string (ReadOnly): Error message indicating why the operation failed.
+
+## ErrorResponse
+### Properties
+* **error**: [ErrorProperties](#errorproperties) (ReadOnly): Error properties indicate why the Logic service was not able to process the incoming request. The reason is provided in the error message.
 
 ## Expression
 ### Properties
@@ -723,6 +836,24 @@
 * **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'
 * **occurrence**: int: The occurrence.
 
+## RepetitionIndex
+### Properties
+* **itemIndex**: int (ReadOnly): The index.
+* **scopeName**: string (ReadOnly): The scope.
+
+## Request
+### Properties
+* **headers**: any (ReadOnly): Any object
+* **method**: string (ReadOnly): The HTTP method used for the request.
+* **uri**: string (ReadOnly): The destination for the request.
+
+## RequestHistoryProperties
+### Properties
+* **endTime**: string (ReadOnly): The time the request ended.
+* **request**: [Request](#request) (ReadOnly): A request.
+* **response**: [Response](#response) (ReadOnly): A response.
+* **startTime**: string (ReadOnly): The time the request started.
+
 ## ResourceReference
 ### Properties
 * **id**: string (ReadOnly): The resource id.
@@ -784,6 +915,46 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Response
+### Properties
+* **bodyLink**: [ContentLink](#contentlink) (ReadOnly): The content link.
+* **headers**: any (ReadOnly): Any object
+* **statusCode**: int (ReadOnly): The status code of the response.
+
+## RetryHistory
+### Properties
+* **clientRequestId**: string (ReadOnly): Gets the client request Id.
+* **code**: string (ReadOnly): Gets the status code.
+* **endTime**: string (ReadOnly): Gets the end time.
+* **error**: [ErrorResponse](#errorresponse) (ReadOnly): Error response indicates Logic service is not able to process the incoming request. The error property contains the error details.
+* **serviceRequestId**: string (ReadOnly): Gets the service request Id.
+* **startTime**: string (ReadOnly): Gets the start time.
+
 ## RosettaNetPipAcknowledgmentOfReceiptSettings
 ### Properties
 * **isNonRepudiationRequired**: bool (Required): The non-repudiation is required or not.
@@ -822,10 +993,24 @@
 * **service**: string (Required): The service name.
 * **serviceClassification**: string (Required): The service classification name.
 
+## RunActionCorrelation
+### Properties
+* **actionTrackingId**: string (ReadOnly): The action tracking identifier.
+* **clientKeywords**: string[] (ReadOnly): The client keywords.
+* **clientTrackingId**: string (ReadOnly): The client tracking identifier.
+
 ## Sku
 ### Properties
 * **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard' (Required): The sku name.
 * **plan**: [ResourceReference](#resourcereference): The resource reference.
+
+## WorkflowOutputParameter
+### Properties
+* **description**: string (ReadOnly): The description.
+* **error**: any (ReadOnly): Any object
+* **metadata**: any (ReadOnly): Any object
+* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String' (ReadOnly)
+* **value**: any (ReadOnly): Any object
 
 ## WorkflowParameter
 ### Properties
@@ -852,14 +1037,74 @@
 ### Additional Properties
 * **Additional Properties Type**: [WorkflowParameter](#workflowparameter)
 
-## WorkflowTriggerCallbackUrl
+## WorkflowRunActionProperties
 ### Properties
-* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
-* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
-* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
-* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
+* **code**: string (ReadOnly): Gets the code.
+* **correlation**: [Correlation](#correlation) (ReadOnly): The correlation property.
+* **endTime**: string (ReadOnly): Gets the end time.
+* **error**: any (ReadOnly): Any object
+* **inputsLink**: [ContentLink](#contentlink) (ReadOnly): The content link.
+* **outputsLink**: [ContentLink](#contentlink) (ReadOnly): The content link.
+* **retryHistory**: [RetryHistory](#retryhistory)[] (ReadOnly): Gets the retry histories.
+* **startTime**: string (ReadOnly): Gets the start time.
+* **status**: 'Aborted' | 'Cancelled' | 'Failed' | 'Faulted' | 'Ignored' | 'NotSpecified' | 'Paused' | 'Running' | 'Skipped' | 'Succeeded' | 'Suspended' | 'TimedOut' | 'Waiting' (ReadOnly)
+* **trackedProperties**: any (ReadOnly): Any object
+* **trackingId**: string (ReadOnly): Gets the tracking id.
+
+## WorkflowRunActionRepetitionProperties
+### Properties
+* **code**: string (ReadOnly): The workflow scope repetition code.
+* **correlation**: [RunActionCorrelation](#runactioncorrelation) (ReadOnly): The workflow run action correlation properties.
+* **endTime**: string (ReadOnly): The end time of the workflow scope repetition.
+* **error**: any (ReadOnly): Anything
+* **inputs**: any (ReadOnly): Any object
+* **inputsLink**: [ContentLink](#contentlink) (ReadOnly): The content link.
+* **iterationCount**: int (ReadOnly)
+* **outputs**: any (ReadOnly): Any object
+* **outputsLink**: [ContentLink](#contentlink) (ReadOnly): The content link.
+* **repetitionIndexes**: [RepetitionIndex](#repetitionindex)[] (ReadOnly): The repetition indexes.
+* **retryHistory**: [RetryHistory](#retryhistory)[] (ReadOnly): Gets the retry histories.
+* **startTime**: string (ReadOnly): The start time of the workflow scope repetition.
+* **status**: 'Aborted' | 'Cancelled' | 'Failed' | 'Faulted' | 'Ignored' | 'NotSpecified' | 'Paused' | 'Running' | 'Skipped' | 'Succeeded' | 'Suspended' | 'TimedOut' | 'Waiting' (ReadOnly)
+* **trackedProperties**: any (ReadOnly): Any object
+* **trackingId**: string (ReadOnly): Gets the tracking id.
+
+## WorkflowRunProperties
+### Properties
+* **code**: string (ReadOnly): Gets the code.
+* **correlation**: [Correlation](#correlation) (ReadOnly): The correlation property.
+* **correlationId**: string (ReadOnly): Gets the correlation id.
+* **endTime**: string (ReadOnly): Gets the end time.
+* **error**: any (ReadOnly): Any object
+* **outputs**: [WorkflowRunPropertiesOutputs](#workflowrunpropertiesoutputs) (ReadOnly): Gets the outputs.
+* **response**: [WorkflowRunTrigger](#workflowruntrigger) (ReadOnly): The workflow run trigger.
+* **startTime**: string (ReadOnly): Gets the start time.
+* **status**: 'Aborted' | 'Cancelled' | 'Failed' | 'Faulted' | 'Ignored' | 'NotSpecified' | 'Paused' | 'Running' | 'Skipped' | 'Succeeded' | 'Suspended' | 'TimedOut' | 'Waiting' (ReadOnly)
+* **trigger**: [WorkflowRunTrigger](#workflowruntrigger) (ReadOnly): The workflow run trigger.
+* **waitEndTime**: string (ReadOnly): Gets the wait end time.
+* **workflow**: [ResourceReference](#resourcereference) (ReadOnly): The resource reference.
+
+## WorkflowRunPropertiesOutputs
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [WorkflowOutputParameter](#workflowoutputparameter)
+
+## WorkflowRunTrigger
+### Properties
+* **code**: string (ReadOnly): Gets the code.
+* **correlation**: [Correlation](#correlation) (ReadOnly): The correlation property.
+* **endTime**: string (ReadOnly): Gets the end time.
+* **error**: any (ReadOnly): Any object
+* **inputs**: any (ReadOnly): Any object
+* **inputsLink**: [ContentLink](#contentlink) (ReadOnly): The content link.
+* **name**: string (ReadOnly): Gets the name.
+* **outputs**: any (ReadOnly): Any object
+* **outputsLink**: [ContentLink](#contentlink) (ReadOnly): The content link.
+* **scheduledTime**: string (ReadOnly): Gets the scheduled time.
+* **startTime**: string (ReadOnly): Gets the start time.
+* **status**: 'Aborted' | 'Cancelled' | 'Failed' | 'Faulted' | 'Ignored' | 'NotSpecified' | 'Paused' | 'Running' | 'Skipped' | 'Succeeded' | 'Suspended' | 'TimedOut' | 'Waiting' (ReadOnly)
+* **trackedProperties**: any (ReadOnly): Any object
+* **trackingId**: string (ReadOnly): Gets the tracking id.
 
 ## WorkflowTriggerCallbackUrl
 ### Properties
@@ -923,6 +1168,29 @@
 * **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
 * **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
 * **value**: string (ReadOnly): Gets the workflow trigger callback URL.
+
+## WorkflowTriggerCallbackUrl
+### Properties
+* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
+* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
+* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
+* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
+* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
+* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
+
+## WorkflowTriggerHistoryProperties
+### Properties
+* **code**: string (ReadOnly): Gets the code.
+* **correlation**: [Correlation](#correlation) (ReadOnly): The correlation property.
+* **endTime**: string (ReadOnly): Gets the end time.
+* **error**: any (ReadOnly): Any object
+* **fired**: bool (ReadOnly): Gets a value indicating whether trigger was fired.
+* **inputsLink**: [ContentLink](#contentlink) (ReadOnly): The content link.
+* **outputsLink**: [ContentLink](#contentlink) (ReadOnly): The content link.
+* **run**: [ResourceReference](#resourcereference) (ReadOnly): The resource reference.
+* **startTime**: string (ReadOnly): Gets the start time.
+* **status**: 'Aborted' | 'Cancelled' | 'Failed' | 'Faulted' | 'Ignored' | 'NotSpecified' | 'Paused' | 'Running' | 'Skipped' | 'Succeeded' | 'Suspended' | 'TimedOut' | 'Waiting' (ReadOnly)
+* **trackingId**: string (ReadOnly): Gets the tracking id.
 
 ## WorkflowTriggerListCallbackUrlQueries
 ### Properties
@@ -932,6 +1200,18 @@
 * **sp**: string (ReadOnly): The SAS permissions.
 * **sv**: string (ReadOnly): The SAS version.
 
+## WorkflowTriggerProperties
+### Properties
+* **changedTime**: string (ReadOnly): Gets the changed time.
+* **createdTime**: string (ReadOnly): Gets the created time.
+* **lastExecutionTime**: string (ReadOnly): Gets the last execution time.
+* **nextExecutionTime**: string (ReadOnly): Gets the next execution time.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'NotSpecified' | 'Ready' | 'Registered' | 'Registering' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' (ReadOnly)
+* **recurrence**: [WorkflowTriggerRecurrence](#workflowtriggerrecurrence) (ReadOnly): The workflow trigger recurrence.
+* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended' (ReadOnly)
+* **status**: 'Aborted' | 'Cancelled' | 'Failed' | 'Faulted' | 'Ignored' | 'NotSpecified' | 'Paused' | 'Running' | 'Skipped' | 'Succeeded' | 'Suspended' | 'TimedOut' | 'Waiting' (ReadOnly)
+* **workflow**: [ResourceReference](#resourcereference) (ReadOnly): The resource reference.
+
 ## WorkflowTriggerRecurrence
 ### Properties
 * **endTime**: string: The end time.
@@ -940,6 +1220,23 @@
 * **schedule**: [RecurrenceSchedule](#recurrenceschedule): The recurrence schedule.
 * **startTime**: string: The start time.
 * **timeZone**: string: The time zone.
+
+## WorkflowVersionProperties
+### Properties
+* **accessEndpoint**: string (ReadOnly): Gets the access endpoint.
+* **changedTime**: string (ReadOnly): Gets the changed time.
+* **createdTime**: string (ReadOnly): Gets the created time.
+* **definition**: any (ReadOnly): Any object
+* **integrationAccount**: [ResourceReference](#resourcereference) (ReadOnly): The resource reference.
+* **parameters**: [WorkflowVersionPropertiesParameters](#workflowversionpropertiesparameters) (ReadOnly): The parameters.
+* **sku**: [Sku](#sku) (ReadOnly): The sku type.
+* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended' (ReadOnly)
+* **version**: string (ReadOnly): Gets the version.
+
+## WorkflowVersionPropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [WorkflowParameter](#workflowparameter)
 
 ## X12AcknowledgementSettings
 ### Properties

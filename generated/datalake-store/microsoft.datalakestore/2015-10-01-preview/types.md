@@ -1,6 +1,6 @@
 # Microsoft.DataLakeStore @ 2015-10-01-preview
 
-## Resource Microsoft.DataLakeStore/accounts@2015-10-01-preview
+## Resource Microsoft.DataLakeStore/accounts@2015-10-01-preview (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [DataLakeStoreAccountTags](#datalakestoreaccounttags): the value of custom properties.
 * **type**: 'Microsoft.DataLakeStore/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataLakeStore/accounts/firewallRules@2015-10-01-preview
+## Resource Microsoft.DataLakeStore/accounts/firewallRules@2015-10-01-preview (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

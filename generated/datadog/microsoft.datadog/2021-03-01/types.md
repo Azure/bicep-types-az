@@ -1,6 +1,6 @@
 # Microsoft.Datadog @ 2021-03-01
 
-## Resource Microsoft.Datadog/agreements@2021-03-01
+## Resource Microsoft.Datadog/agreements@2021-03-01 (WriteOnly)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version

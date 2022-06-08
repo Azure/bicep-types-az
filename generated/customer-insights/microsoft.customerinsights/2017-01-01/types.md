@@ -110,6 +110,15 @@
 * **properties**: [View](#view): The view in Customer 360 web application.
 * **type**: 'Microsoft.CustomerInsights/hubs/views' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.CustomerInsights/hubs/widgetTypes@2017-01-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WidgetType](#widgettype) (ReadOnly): Definition of WidgetType.
+* **type**: 'Microsoft.CustomerInsights/hubs/widgetTypes' (ReadOnly, DeployTimeConstant): The resource type
+
 ## AssignmentPrincipal
 ### Properties
 * **principalId**: string (Required): The principal id being assigned to.
@@ -613,6 +622,23 @@
 * **viewName**: string (ReadOnly): Name of the view.
 
 ## ViewDisplayName
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## WidgetType
+### Properties
+* **changed**: string (ReadOnly): Date time when widget type was last modified.
+* **created**: string (ReadOnly): Date time when widget type was created.
+* **definition**: string (ReadOnly): Definition for widget type.
+* **description**: string (ReadOnly): Description for widget type.
+* **displayName**: [WidgetTypeDisplayName](#widgettypedisplayname) (ReadOnly): Localized display name for the widget type.
+* **imageUrl**: string (ReadOnly): The image URL.
+* **tenantId**: string (ReadOnly): The hub name.
+* **widgetTypeName**: string (ReadOnly): Name of the widget type.
+* **widgetVersion**: string (ReadOnly): The widget version.
+
+## WidgetTypeDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

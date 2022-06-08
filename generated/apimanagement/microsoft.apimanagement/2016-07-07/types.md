@@ -101,7 +101,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/groups/users@2016-07-07
+## Resource Microsoft.ApiManagement/service/groups/users@2016-07-07 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
@@ -157,7 +157,7 @@
 * **terms**: string: Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
 * **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/products/apis@2016-07-07
+## Resource Microsoft.ApiManagement/service/products/apis@2016-07-07 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
@@ -165,7 +165,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/products/apis' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/products/groups@2016-07-07
+## Resource Microsoft.ApiManagement/service/products/groups@2016-07-07 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version

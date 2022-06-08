@@ -18,6 +18,15 @@
 * **properties**: [AutoProvisioningSettingProperties](#autoprovisioningsettingproperties): describes properties of an auto provisioning setting
 * **type**: 'Microsoft.Security/autoProvisioningSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Security/compliances@2017-08-01-preview (ReadOnly)
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ComplianceProperties](#complianceproperties) (ReadOnly): The Compliance score (percentage) of a Subscription is a sum of all Resources' Compliances under the given Subscription. A Resource Compliance is defined as the compliant ('healthy') Policy Definitions out of all Policy Definitions applicable to a given resource.
+* **type**: 'Microsoft.Security/compliances' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Security/deviceSecurityGroups@2017-08-01-preview
 * **Valid Scope(s)**: Unknown
 ### Properties
@@ -46,6 +55,35 @@
 * **properties**: [IoTSecuritySolutionProperties](#iotsecuritysolutionproperties): Security Solution setting data
 * **tags**: [TagsResourceTags](#tagsresourcetags): Resource tags
 * **type**: 'Microsoft.Security/iotSecuritySolutions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Security/iotSecuritySolutions/analyticsModels@2017-08-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [IoTSecuritySolutionAnalyticsModelProperties](#iotsecuritysolutionanalyticsmodelproperties) (ReadOnly): Security Analytics of a security solution properties
+* **type**: 'Microsoft.Security/iotSecuritySolutions/analyticsModels' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedAlerts@2017-08-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [IoTSecurityAggregatedAlertProperties](#iotsecurityaggregatedalertproperties) (ReadOnly): Security Solution Aggregated Alert data
+* **tags**: [TagsResourceTags](#tagsresourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedAlerts' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedRecommendations@2017-08-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [IoTSecurityAggregatedRecommendationProperties](#iotsecurityaggregatedrecommendationproperties) (ReadOnly): Security Solution Recommendation Information
+* **tags**: [TagsResourceTags](#tagsresourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedRecommendations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/pricings@2017-08-01-preview
 * **Valid Scope(s)**: Subscription, ResourceGroup
@@ -119,6 +157,17 @@
 ### Properties
 * **autoProvision**: 'Off' | 'On' | string (Required): Describes what kind of security agent provisioning action to take
 
+## ComplianceProperties
+### Properties
+* **assessmentResult**: [ComplianceSegment](#compliancesegment)[] (ReadOnly): An array of segment, which is the actually the compliance assessment.
+* **assessmentTimestampUtcDate**: string (ReadOnly): The timestamp when the Compliance calculation was conducted.
+* **resourceCount**: int (ReadOnly): The resource count of the given subscription for which the Compliance calculation was conducted (needed for Management Group Compliance calculation).
+
+## ComplianceSegment
+### Properties
+* **percentage**: int (ReadOnly): The size (%) of the segment.
+* **segmentType**: string (ReadOnly): The segment type, e.g. compliant, non-compliance, insufficient coverage, N/A, etc.
+
 ## DataExportSettingProperties
 ### Properties
 * **enabled**: bool (Required): Is the data export setting is enabled
@@ -173,6 +222,80 @@
 * **order**: int: The order of the information type.
 * **recommendedLabelId**: string: The recommended label id to be associated with this information type.
 
+## IoTSecurityAggregatedAlertProperties
+### Properties
+* **actionTaken**: string (ReadOnly): The action that was taken as a response to the alert (Active, Blocked etc.)
+* **aggregatedDateUtc**: string (ReadOnly): The date the incidents were detected by the vendor
+* **alertDisplayName**: string (ReadOnly): Display name of the alert type
+* **alertType**: string (ReadOnly): Name of the alert type
+* **count**: int (ReadOnly): Occurrence number of the alert within the aggregated date
+* **description**: string (ReadOnly): Description of the incident and what it means
+* **effectedResourceType**: string (ReadOnly): Azure resource ID of the resource that got the alerts
+* **logAnalyticsQuery**: string (ReadOnly): query in log analytics to get the list of affected devices/alerts
+* **remediationSteps**: string (ReadOnly): Recommended steps for remediation
+* **reportedSeverity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (ReadOnly): Estimated severity of this alert
+* **systemSource**: string (ReadOnly): The type of the alerted resource (Azure, Non-Azure)
+* **vendorName**: string (ReadOnly): Name of the vendor that discovered the incident
+
+## IoTSecurityAggregatedRecommendationProperties
+### Properties
+* **description**: string (ReadOnly): Description of the incident and what it means
+* **detectedBy**: string (ReadOnly): Name of the vendor that discovered the issue
+* **healthyDevices**: int (ReadOnly): the number of the healthy devices within the solution
+* **logAnalyticsQuery**: string (ReadOnly): query in log analytics to get the list of affected devices/alerts
+* **recommendationDisplayName**: string (ReadOnly): Display name of the recommendation type.
+* **recommendationName**: string (ReadOnly): Name of the recommendation
+* **recommendationTypeId**: string (ReadOnly): The recommendation-type GUID.
+* **remediationSteps**: string (ReadOnly): Recommended steps for remediation
+* **reportedSeverity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (ReadOnly): Estimated severity of this alert
+* **unhealthyDeviceCount**: int (ReadOnly): the number of the unhealthy devices within the solution
+
+## IoTSecurityAlertedDevice
+### Properties
+* **alertsCount**: int (ReadOnly): the number of alerts raised for this device
+* **deviceId**: string (ReadOnly): Name of the alert type
+
+## IoTSecurityAlertedDevicesList
+### Properties
+* **nextLink**: string (ReadOnly): The URI to fetch the next page.
+* **value**: [IoTSecurityAlertedDevice](#iotsecurityalerteddevice)[] (ReadOnly): List of aggregated alerts data
+
+## IoTSecurityDeviceAlert
+### Properties
+* **alertDisplayName**: string (ReadOnly): Display name of the alert
+* **alertsCount**: int (ReadOnly): the number of alerts raised for this alert type
+* **reportedSeverity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (ReadOnly): Estimated severity of this alert
+
+## IoTSecurityDeviceAlertsList
+### Properties
+* **nextLink**: string (ReadOnly): The URI to fetch the next page.
+* **value**: [IoTSecurityDeviceAlert](#iotsecuritydevicealert)[] (ReadOnly): List of top alerts data
+
+## IoTSecurityDeviceRecommendation
+### Properties
+* **devicesCount**: int (ReadOnly): the number of device with this recommendation
+* **recommendationDisplayName**: string (ReadOnly): Display name of the recommendation
+* **reportedSeverity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (ReadOnly): Estimated severity of this alert
+
+## IoTSecurityDeviceRecommendationsList
+### Properties
+* **nextLink**: string (ReadOnly): The URI to fetch the next page.
+* **value**: [IoTSecurityDeviceRecommendation](#iotsecuritydevicerecommendation)[] (ReadOnly): List of aggregated recommendation data
+
+## IoTSecuritySolutionAnalyticsModelProperties
+### Properties
+* **devicesMetrics**: [IoTSecuritySolutionAnalyticsModelPropertiesDevicesMetricsItem](#iotsecuritysolutionanalyticsmodelpropertiesdevicesmetricsitem)[] (ReadOnly): The list of devices metrics by the aggregated date.
+* **metrics**: [IoTSeverityMetrics](#iotseveritymetrics) (ReadOnly): Severity metrics
+* **mostPrevalentDeviceAlerts**: [IoTSecurityDeviceAlertsList](#iotsecuritydevicealertslist) (ReadOnly): List of alerts with the count of raised alerts
+* **mostPrevalentDeviceRecommendations**: [IoTSecurityDeviceRecommendationsList](#iotsecuritydevicerecommendationslist) (ReadOnly): List of recommendations with the count of devices
+* **topAlertedDevices**: [IoTSecurityAlertedDevicesList](#iotsecurityalerteddeviceslist) (ReadOnly): List of devices with the count of raised alerts
+* **unhealthyDeviceCount**: int (ReadOnly): number of unhealthy devices
+
+## IoTSecuritySolutionAnalyticsModelPropertiesDevicesMetricsItem
+### Properties
+* **date**: string (ReadOnly): the date of the metrics
+* **devicesMetrics**: [IoTSeverityMetrics](#iotseveritymetrics) (ReadOnly): Severity metrics
+
 ## IoTSecuritySolutionProperties
 ### Properties
 * **autoDiscoveredResources**: string[] (ReadOnly): List of resources that were automatically discovered as relevant to the security solution.
@@ -184,6 +307,12 @@
 * **status**: 'Disabled' | 'Enabled' | string: Security solution status
 * **userDefinedResources**: [UserDefinedResourcesProperties](#userdefinedresourcesproperties): Properties of the solution's user defined resources.
 * **workspace**: string (Required): Workspace resource ID
+
+## IoTSeverityMetrics
+### Properties
+* **high**: int (ReadOnly): count of high severity items
+* **low**: int (ReadOnly): count of low severity items
+* **medium**: int (ReadOnly): count of medium severity items
 
 ## PricingProperties
 ### Properties
@@ -209,6 +338,16 @@
 * **enabled**: bool: Indicates whether the label is enabled or not.
 * **order**: int: The order of the sensitivity label.
 * **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None': The rank of the sensitivity label.
+
+## TagsResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TagsResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TagsResourceTags
 ### Properties

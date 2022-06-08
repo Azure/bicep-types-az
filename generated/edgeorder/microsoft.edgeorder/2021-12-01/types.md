@@ -12,6 +12,16 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.EdgeOrder/addresses' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.EdgeOrder/locations/orders@2021-12-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [OrderProperties](#orderproperties) (ReadOnly): Represents order details.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.EdgeOrder/locations/orders' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.EdgeOrder/orderItems@2021-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -119,6 +129,12 @@
 * **orderId**: string (Required): Id of the order to which order item belongs to
 * **orderItemDetails**: [OrderItemDetails](#orderitemdetails) (Required): Order item details
 * **startTime**: string (ReadOnly): Start time of order item
+
+## OrderProperties
+### Properties
+* **currentStage**: [StageDetails](#stagedetails) (ReadOnly): Resource stage details.
+* **orderItemIds**: string[] (ReadOnly): List of order item ARM Ids which are part of an order.
+* **orderStageHistory**: [StageDetails](#stagedetails)[] (ReadOnly): Order status history.
 
 ## Preferences
 ### Properties

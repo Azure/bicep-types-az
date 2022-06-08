@@ -42,12 +42,13 @@
 * **properties**: [DiagnosticContractProperties](#diagnosticcontractproperties): Diagnostic Entity Properties
 * **type**: 'Microsoft.ApiManagement/service/apis/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/apis/diagnostics/loggers@2018-01-01
+## Resource Microsoft.ApiManagement/service/apis/diagnostics/loggers@2018-01-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [LoggerContractProperties](#loggercontractproperties) (ReadOnly): The Logger entity in API Management represents an event sink that you can use to log API Management events. Currently the Logger entity supports logging API Management events to Azure Event Hubs.
 * **type**: 'Microsoft.ApiManagement/service/apis/diagnostics/loggers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/issues@2018-01-01
@@ -185,12 +186,13 @@
 * **properties**: [DiagnosticContractProperties](#diagnosticcontractproperties): Diagnostic Entity Properties
 * **type**: 'Microsoft.ApiManagement/service/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/diagnostics/loggers@2018-01-01
+## Resource Microsoft.ApiManagement/service/diagnostics/loggers@2018-01-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [LoggerContractProperties](#loggercontractproperties) (ReadOnly): The Logger entity in API Management represents an event sink that you can use to log API Management events. Currently the Logger entity supports logging API Management events to Azure Event Hubs.
 * **type**: 'Microsoft.ApiManagement/service/diagnostics/loggers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/groups@2018-01-01
@@ -202,12 +204,13 @@
 * **properties**: [GroupCreateParametersProperties](#groupcreateparametersproperties): Parameters supplied to the Create Group operation.
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/groups/users@2018-01-01
+## Resource Microsoft.ApiManagement/service/groups/users@2018-01-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [UserContractProperties](#usercontractproperties) (ReadOnly): User profile.
 * **type**: 'Microsoft.ApiManagement/service/groups/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/identityProviders@2018-01-01
@@ -237,20 +240,22 @@
 * **properties**: [NotificationContractProperties](#notificationcontractproperties) (ReadOnly): Notification Contract properties.
 * **type**: 'Microsoft.ApiManagement/service/notifications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/notifications/recipientEmails@2018-01-01
+## Resource Microsoft.ApiManagement/service/notifications/recipientEmails@2018-01-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecipientEmailContractProperties](#recipientemailcontractproperties) (ReadOnly): Recipient Email Contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/notifications/recipientEmails' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/notifications/recipientUsers@2018-01-01
+## Resource Microsoft.ApiManagement/service/notifications/recipientUsers@2018-01-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecipientUsersContractProperties](#recipientuserscontractproperties) (ReadOnly): Recipient User Contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/notifications/recipientUsers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/openidConnectProviders@2018-01-01
@@ -310,20 +315,22 @@
 * **properties**: [ProductContractProperties](#productcontractproperties): Product profile.
 * **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/products/apis@2018-01-01
+## Resource Microsoft.ApiManagement/service/products/apis@2018-01-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ApiContractProperties](#apicontractproperties) (ReadOnly): Api Entity Properties
 * **type**: 'Microsoft.ApiManagement/service/products/apis' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/products/groups@2018-01-01
+## Resource Microsoft.ApiManagement/service/products/groups@2018-01-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [GroupContractProperties](#groupcontractproperties) (ReadOnly): Group contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/products/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/policies@2018-01-01
@@ -397,6 +404,25 @@
 * **publicIPAddresses**: string[] (ReadOnly): Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 * **sku**: [ApiManagementServiceSkuProperties](#apimanagementserviceskuproperties) (Required): API Management service resource SKU properties.
 * **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Configuration of a virtual network to which API Management service is deployed.
+
+## ApiContractProperties
+### Properties
+* **apiRevision**: string (ReadOnly): Describes the Revision of the Api. If no value is provided, default revision 1 is created
+* **apiRevisionDescription**: string (ReadOnly): Description of the Api Revision.
+* **apiVersion**: string (ReadOnly): Indicates the Version identifier of the API if the API is versioned
+* **apiVersionDescription**: string (ReadOnly): Description of the Api Version.
+* **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails) (ReadOnly): An API Version Set contains the common configuration for a set of API Versions relating
+* **apiVersionSetId**: string (ReadOnly): A resource identifier for the related ApiVersionSet.
+* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (ReadOnly): API Authentication Settings.
+* **description**: string (ReadOnly): Description of the API. May include HTML formatting tags.
+* **displayName**: string (ReadOnly): API name.
+* **isCurrent**: bool (ReadOnly): Indicates if API revision is current api revision.
+* **isOnline**: bool (ReadOnly): Indicates if API revision is accessible via the gateway.
+* **path**: string (ReadOnly): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
+* **protocols**: 'http' | 'https'[] (ReadOnly): Describes on which protocols the operations in this API can be invoked.
+* **serviceUrl**: string (ReadOnly): Absolute URL of the backend service implementing this API.
+* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (ReadOnly): Subscription key parameter names details.
+* **type**: 'http' | 'soap' | string (ReadOnly): Type of API.
 
 ## ApiCreateOrUpdateProperties
 ### Properties
@@ -677,11 +703,11 @@
 
 ## LoggerContractProperties
 ### Properties
-* **credentials**: [LoggerContractPropertiesCredentials](#loggercontractpropertiescredentials) (Required): The name and SendRule connection string of the event hub for azureEventHub logger.
+* **credentials**: [LoggerContractPropertiesCredentials](#loggercontractpropertiescredentials) (ReadOnly): The name and SendRule connection string of the event hub for azureEventHub logger.
 Instrumentation key for applicationInsights logger.
-* **description**: string: Logger description.
-* **isBuffered**: bool: Whether records are buffered in the logger before publishing. Default is assumed to be true.
-* **loggerType**: 'applicationInsights' | 'azureEventHub' | string (Required): Logger type.
+* **description**: string (ReadOnly): Logger description.
+* **isBuffered**: bool (ReadOnly): Whether records are buffered in the logger before publishing. Default is assumed to be true.
+* **loggerType**: 'applicationInsights' | 'azureEventHub' | string (ReadOnly): Logger type.
 
 ## LoggerContractPropertiesCredentials
 ### Properties
@@ -770,10 +796,18 @@ Instrumentation key for applicationInsights logger.
 * **tags**: string[]: Optional tags that when provided can be used to filter the property list.
 * **value**: string (Required): Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
 
+## RecipientEmailContractProperties
+### Properties
+* **email**: string (ReadOnly): User Email subscribed to notification.
+
 ## RecipientsContractProperties
 ### Properties
 * **emails**: string[] (ReadOnly): List of Emails subscribed for the notification.
 * **users**: string[] (ReadOnly): List of Users subscribed for the notification.
+
+## RecipientUsersContractProperties
+### Properties
+* **userId**: string (ReadOnly): API Management UserId subscribed to notification.
 
 ## RegistrationDelegationSettingsProperties
 ### Properties
@@ -856,6 +890,17 @@ Instrumentation key for applicationInsights logger.
 * **name**: string (Required): body parameter name.
 * **value**: string (Required): body parameter value.
 
+## UserContractProperties
+### Properties
+* **email**: string (ReadOnly): Email address.
+* **firstName**: string (ReadOnly): First name.
+* **groups**: [GroupContractProperties](#groupcontractproperties)[] (ReadOnly): Collection of groups user is part of.
+* **identities**: [UserIdentityContract](#useridentitycontract)[] (ReadOnly): Collection of user identities.
+* **lastName**: string (ReadOnly): Last name.
+* **note**: string (ReadOnly): Optional note about a user set by the administrator.
+* **registrationDate**: string (ReadOnly): Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+* **state**: 'active' | 'blocked' | 'deleted' | 'pending' | string (ReadOnly): Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
+
 ## UserCreateParameterProperties
 ### Properties
 * **confirmation**: 'invite' | 'signup' | string (WriteOnly): Determines the type of confirmation e-mail that will be sent to the newly created user.
@@ -871,8 +916,8 @@ Instrumentation key for applicationInsights logger.
 
 ## UserIdentityContract
 ### Properties
-* **id**: string: Identifier value within provider.
-* **provider**: string: Identity provider name.
+* **id**: string (ReadOnly): Identifier value within provider.
+* **provider**: string (ReadOnly): Identity provider name.
 
 ## VirtualNetworkConfiguration
 ### Properties

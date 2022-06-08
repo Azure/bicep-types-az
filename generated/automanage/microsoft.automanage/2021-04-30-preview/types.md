@@ -1,5 +1,25 @@
 # Microsoft.Automanage @ 2021-04-30-preview
 
+## Resource Microsoft.Automanage/bestPractices@2021-04-30-preview (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2021-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ConfigurationProfileProperties](#configurationprofileproperties) (ReadOnly): Automanage configuration profile properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.Automanage/bestPractices' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Automanage/bestPractices/versions@2021-04-30-preview (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2021-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ConfigurationProfileProperties](#configurationprofileproperties) (ReadOnly): Automanage configuration profile properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.Automanage/bestPractices/versions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Automanage/configurationProfileAssignments@2021-04-30-preview
 * **Valid Scope(s)**: Extension
 ### Properties
@@ -9,6 +29,16 @@
 * **properties**: [ConfigurationProfileAssignmentProperties](#configurationprofileassignmentproperties): Automanage configuration profile assignment properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Automanage/configurationProfileAssignments' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Automanage/configurationProfileAssignments/reports@2021-04-30-preview (ReadOnly)
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2021-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AssignmentReportProperties](#assignmentreportproperties) (ReadOnly): Data related to the report detail.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.Automanage/configurationProfileAssignments/reports' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automanage/configurationProfiles@2021-04-30-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -34,6 +64,29 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Automanage/configurationProfiles/versions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Automanage/servicePrincipals@2021-04-30-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [ServicePrincipalProperties](#serviceprincipalproperties) (ReadOnly): The Service Principal properties for the subscription.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.Automanage/servicePrincipals' (ReadOnly, DeployTimeConstant): The resource type
+
+## AssignmentReportProperties
+### Properties
+* **configurationProfile**: string (ReadOnly): The configurationProfile linked to the assignment.
+* **duration**: string (ReadOnly): Duration of the configuration profile assignment processing.
+* **endTime**: string (ReadOnly): End time of the configuration profile assignment processing.
+* **error**: [ErrorDetail](#errordetail) (ReadOnly): The error detail.
+* **lastModifiedTime**: string (ReadOnly): Last modified time of the configuration profile assignment processing.
+* **reportFormatVersion**: string (ReadOnly): Version of the report format
+* **resources**: [ReportResource](#reportresource)[] (ReadOnly): List of resources processed by the configuration profile assignment.
+* **startTime**: string (ReadOnly): Start time of the configuration profile assignment processing.
+* **status**: string (ReadOnly): The status of the configuration profile assignment.
+* **type**: string (ReadOnly): Type of the configuration profile assignment processing (Initial/Consistency).
+
 ## ConfigurationProfileAssignmentProfileOverrides
 ### Properties
 ### Additional Properties
@@ -50,6 +103,32 @@
 ### Properties
 * **configuration**: any: Any object
 * **overrides**: any[]: The custom overrides for configuration profile
+
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): Any object
+* **type**: string (ReadOnly): The additional info type.
+
+## ErrorDetail
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
+
+## ReportResource
+### Properties
+* **error**: [ErrorDetail](#errordetail) (ReadOnly): The error detail.
+* **id**: string (ReadOnly): ARM id of the resource.
+* **name**: string (ReadOnly): Name of the resource.
+* **status**: string (ReadOnly): Status of the resource.
+* **type**: string (ReadOnly): Type of the resource.
+
+## ServicePrincipalProperties
+### Properties
+* **authorizationSet**: bool (ReadOnly): Returns the contributor RBAC Role exist or not for the Service Principal Id.
+* **servicePrincipalId**: string (ReadOnly): The Service Principal Id for the subscription.
 
 ## SystemData
 ### Properties

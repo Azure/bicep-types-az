@@ -38,6 +38,32 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.SecurityInsights/alertRuleTemplates@2021-10-01 (ReadOnly)
+* **Valid Scope(s)**: Extension
+* **Discriminator**: kind
+
+### Base Properties
+* **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.SecurityInsights/alertRuleTemplates' (ReadOnly, DeployTimeConstant): The resource type
+### FusionAlertRuleTemplate
+#### Properties
+* **kind**: 'Fusion' (Required): The alert rule kind
+* **properties**: [FusionAlertRuleTemplateProperties](#fusionalertruletemplateproperties) (ReadOnly): Represents Fusion alert rule template properties
+
+### MicrosoftSecurityIncidentCreationAlertRuleTemplate
+#### Properties
+* **kind**: 'MicrosoftSecurityIncidentCreation' (Required): The alert rule kind
+* **properties**: [MicrosoftSecurityIncidentCreationAlertRuleTemplateProperties](#microsoftsecurityincidentcreationalertruletemplateproperties) (ReadOnly): MicrosoftSecurityIncidentCreation rule template properties
+
+### ScheduledAlertRuleTemplate
+#### Properties
+* **kind**: 'Scheduled' (Required): The alert rule kind
+* **properties**: [ScheduledAlertRuleTemplateProperties](#scheduledalertruletemplateproperties) (ReadOnly): Scheduled alert rule template properties
+
+
 ## Resource Microsoft.SecurityInsights/automationRules@2021-10-01
 * **Valid Scope(s)**: Extension
 ### Properties
@@ -212,6 +238,11 @@
 * **alertSeverityColumnName**: string: the column name to take the alert severity from
 * **alertTacticsColumnName**: string: the column name to take the alert tactics from
 
+## AlertRuleTemplateDataSource
+### Properties
+* **connectorId**: string (ReadOnly): The connector id that provides the following data types
+* **dataTypes**: string[] (ReadOnly): The data types used by the alert rule template
+
 ## AlertsDataTypeOfDataConnector
 ### Properties
 * **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Common field for data type in data connectors.
@@ -341,6 +372,18 @@
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (ReadOnly): The severity of the alert
 * **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string[] (ReadOnly): The tactics of the alert rule
 
+## FusionAlertRuleTemplateProperties
+### Properties
+* **alertRulesCreatedByTemplateCount**: int (ReadOnly): the number of alert rules that were created by this template
+* **createdDateUTC**: string (ReadOnly): The time that this alert rule template has been added.
+* **description**: string (ReadOnly): The description of the alert rule template.
+* **displayName**: string (ReadOnly): The display name for alert rule template.
+* **lastUpdatedDateUTC**: string (ReadOnly): The time that this alert rule template was last updated.
+* **requiredDataConnectors**: [AlertRuleTemplateDataSource](#alertruletemplatedatasource)[] (ReadOnly): The required data connectors for this template
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (ReadOnly): The severity of the alert
+* **status**: 'Available' | 'Installed' | 'NotAvailable' | string (ReadOnly): The alert rule template status.
+* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string[] (ReadOnly): The tactics of the alert rule template
+
 ## GroupingConfiguration
 ### Properties
 * **enabled**: bool (Required): Grouping enabled
@@ -455,6 +498,20 @@
 * **productFilter**: 'Azure Active Directory Identity Protection' | 'Azure Advanced Threat Protection' | 'Azure Security Center for IoT' | 'Azure Security Center' | 'Microsoft Cloud App Security' | string (Required): The alerts' productName on which the cases will be generated
 * **severitiesFilter**: 'High' | 'Informational' | 'Low' | 'Medium' | string[]: the alerts' severities on which the cases will be generated
 
+## MicrosoftSecurityIncidentCreationAlertRuleTemplateProperties
+### Properties
+* **alertRulesCreatedByTemplateCount**: int (ReadOnly): the number of alert rules that were created by this template
+* **createdDateUTC**: string (ReadOnly): The time that this alert rule template has been added.
+* **description**: string (ReadOnly): The description of the alert rule template.
+* **displayName**: string (ReadOnly): The display name for alert rule template.
+* **displayNamesExcludeFilter**: string[] (ReadOnly): the alerts' displayNames on which the cases will not be generated
+* **displayNamesFilter**: string[] (ReadOnly): the alerts' displayNames on which the cases will be generated
+* **lastUpdatedDateUTC**: string (ReadOnly): The time that this alert rule template was last updated.
+* **productFilter**: 'Azure Active Directory Identity Protection' | 'Azure Advanced Threat Protection' | 'Azure Security Center for IoT' | 'Azure Security Center' | 'Microsoft Cloud App Security' | string (ReadOnly): The alerts' productName on which the cases will be generated
+* **requiredDataConnectors**: [AlertRuleTemplateDataSource](#alertruletemplatedatasource)[] (ReadOnly): The required data connectors for this template
+* **severitiesFilter**: 'High' | 'Informational' | 'Low' | 'Medium' | string[] (ReadOnly): the alerts' severities on which the cases will be generated
+* **status**: 'Available' | 'Installed' | 'NotAvailable' | string (ReadOnly): The alert rule template status.
+
 ## OfficeDataConnectorDataTypes
 ### Properties
 * **exchange**: [OfficeDataConnectorDataTypesExchange](#officedataconnectordatatypesexchange): Exchange data type connection.
@@ -517,6 +574,33 @@
 * **templateVersion**: string: The version of the alert rule template used to create this rule - in format <a.b.c>, where all are numbers, for example 0 <1.0.2>
 * **triggerOperator**: 'Equal' | 'GreaterThan' | 'LessThan' | 'NotEqual': The operation against the threshold that triggers alert rule.
 * **triggerThreshold**: int: The threshold triggers this alert rule.
+
+## ScheduledAlertRuleTemplateProperties
+### Properties
+* **alertDetailsOverride**: [AlertDetailsOverride](#alertdetailsoverride) (ReadOnly): Settings for how to dynamically override alert static details
+* **alertRulesCreatedByTemplateCount**: int (ReadOnly): the number of alert rules that were created by this template
+* **createdDateUTC**: string (ReadOnly): The time that this alert rule template has been added.
+* **customDetails**: [ScheduledAlertRuleTemplatePropertiesCustomDetails](#scheduledalertruletemplatepropertiescustomdetails) (ReadOnly): Dictionary of string key-value pairs of columns to be attached to the alert
+* **description**: string (ReadOnly): The description of the alert rule template.
+* **displayName**: string (ReadOnly): The display name for alert rule template.
+* **entityMappings**: [EntityMapping](#entitymapping)[] (ReadOnly): List of entity mappings of the alert rule
+* **eventGroupingSettings**: [EventGroupingSettings](#eventgroupingsettings) (ReadOnly): Event grouping settings property bag.
+* **lastUpdatedDateUTC**: string (ReadOnly): The time that this alert rule template was last updated.
+* **query**: string (ReadOnly): The query that creates alerts for this rule.
+* **queryFrequency**: string (ReadOnly): The frequency (in ISO 8601 duration format) for this alert rule to run.
+* **queryPeriod**: string (ReadOnly): The period (in ISO 8601 duration format) that this alert rule looks at.
+* **requiredDataConnectors**: [AlertRuleTemplateDataSource](#alertruletemplatedatasource)[] (ReadOnly): The required data connectors for this template
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (ReadOnly): The severity of the alert
+* **status**: 'Available' | 'Installed' | 'NotAvailable' | string (ReadOnly): The alert rule template status.
+* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string[] (ReadOnly): The tactics of the alert rule template
+* **triggerOperator**: 'Equal' | 'GreaterThan' | 'LessThan' | 'NotEqual' (ReadOnly): The operation against the threshold that triggers alert rule.
+* **triggerThreshold**: int (ReadOnly): The threshold triggers this alert rule.
+* **version**: string (ReadOnly): The version of this template - in format <a.b.c>, where all are numbers. For example <1.0.2>.
+
+## ScheduledAlertRuleTemplatePropertiesCustomDetails
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## SentinelOnboardingStateProperties
 ### Properties

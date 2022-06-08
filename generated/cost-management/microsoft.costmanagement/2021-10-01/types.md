@@ -1,5 +1,15 @@
 # Microsoft.CostManagement @ 2021-10-01
 
+## Resource Microsoft.CostManagement/alerts@2021-10-01 (ReadOnly)
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AlertProperties](#alertproperties) (ReadOnly): Alert properties.
+* **type**: 'Microsoft.CostManagement/alerts' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.CostManagement/exports@2021-10-01
 * **Valid Scope(s)**: Unknown
 ### Properties
@@ -19,6 +29,51 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ViewProperties](#viewproperties): The properties of the view.
 * **type**: 'Microsoft.CostManagement/views' (ReadOnly, DeployTimeConstant): The resource type
+
+## AlertProperties
+### Properties
+* **closeTime**: string (ReadOnly): dateTime in which alert was closed
+* **costEntityId**: string (ReadOnly): related budget
+* **creationTime**: string (ReadOnly): dateTime in which alert was created
+* **definition**: [AlertPropertiesDefinition](#alertpropertiesdefinition) (ReadOnly): defines the type of alert
+* **description**: string (ReadOnly): Alert description
+* **details**: [AlertPropertiesDetails](#alertpropertiesdetails) (ReadOnly): Alert details
+* **modificationTime**: string (ReadOnly): dateTime in which alert was last modified
+* **source**: 'Preset' | 'User' | string (ReadOnly): Source of alert
+* **status**: 'Active' | 'Dismissed' | 'None' | 'Overridden' | 'Resolved' | string (ReadOnly): alert status
+* **statusModificationTime**: string (ReadOnly): dateTime in which the alert status was last modified
+* **statusModificationUserName**: string (ReadOnly): User who last modified the alert
+
+## AlertPropertiesDefinition
+### Properties
+* **category**: 'Billing' | 'Cost' | 'System' | 'Usage' | string (ReadOnly): Alert category
+* **criteria**: 'CostThresholdExceeded' | 'CreditThresholdApproaching' | 'CreditThresholdReached' | 'CrossCloudCollectionError' | 'CrossCloudNewDataAvailable' | 'ForecastCostThresholdExceeded' | 'ForecastUsageThresholdExceeded' | 'GeneralThresholdError' | 'InvoiceDueDateApproaching' | 'InvoiceDueDateReached' | 'MultiCurrency' | 'QuotaThresholdApproaching' | 'QuotaThresholdReached' | 'UsageThresholdExceeded' | string (ReadOnly): Criteria that triggered alert
+* **type**: 'Budget' | 'BudgetForecast' | 'Credit' | 'General' | 'Invoice' | 'Quota' | 'xCloud' | string (ReadOnly): type of alert
+
+## AlertPropertiesDetails
+### Properties
+* **amount**: int (ReadOnly): budget threshold amount
+* **companyName**: string (ReadOnly): company name
+* **contactEmails**: string[] (ReadOnly): list of emails to contact
+* **contactGroups**: string[] (ReadOnly): list of action groups to broadcast to
+* **contactRoles**: string[] (ReadOnly): list of contact roles
+* **currentSpend**: int (ReadOnly): current spend
+* **departmentName**: string (ReadOnly): department name
+* **enrollmentEndDate**: string (ReadOnly): datetime of enrollmentEndDate
+* **enrollmentNumber**: string (ReadOnly): enrollment number
+* **enrollmentStartDate**: string (ReadOnly): datetime of enrollmentStartDate
+* **invoicingThreshold**: int (ReadOnly): invoicing threshold
+* **meterFilter**: any[] (ReadOnly): array of meters to filter by
+* **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' | 'LessThan' | 'LessThanOrEqualTo' | 'None' | string (ReadOnly): operator used to compare currentSpend with amount
+* **overridingAlert**: string (ReadOnly): overriding alert
+* **periodStartDate**: string (ReadOnly): datetime of periodStartDate
+* **resourceFilter**: any[] (ReadOnly): array of resources to filter by
+* **resourceGroupFilter**: any[] (ReadOnly): array of resourceGroups to filter by
+* **tagFilter**: any (ReadOnly): Any object
+* **threshold**: int (ReadOnly): notification threshold percentage as a decimal which activated this alert
+* **timeGrainType**: 'Annually' | 'BillingAnnual' | 'BillingMonth' | 'BillingQuarter' | 'Monthly' | 'None' | 'Quarterly' | string (ReadOnly): Type of timegrain cadence
+* **triggeredBy**: string (ReadOnly): notificationId that triggered this alert
+* **unit**: string (ReadOnly): unit of currency being used
 
 ## CommonExportProperties
 ### Properties

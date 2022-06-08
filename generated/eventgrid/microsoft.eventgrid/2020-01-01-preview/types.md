@@ -40,6 +40,15 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.EventGrid/topicTypes@2020-01-01-preview (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TopicTypeProperties](#topictypeproperties) (ReadOnly): Properties of a topic type.
+* **type**: 'Microsoft.EventGrid/topicTypes' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listKeys (Microsoft.EventGrid/domains@2020-01-01-preview)
 * **Resource**: Microsoft.EventGrid/domains
 * **ApiVersion**: 2020-01-01-preview
@@ -293,6 +302,15 @@ along with a default value to be used, and at least one of these two properties 
 ### Properties
 * **key1**: string (ReadOnly): Shared access key1 for the topic.
 * **key2**: string (ReadOnly): Shared access key2 for the topic.
+
+## TopicTypeProperties
+### Properties
+* **description**: string (ReadOnly): Description of the topic type.
+* **displayName**: string (ReadOnly): Display Name for the topic type.
+* **provider**: string (ReadOnly): Namespace of the provider of the topic type.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the topic type
+* **resourceRegionType**: 'GlobalResource' | 'RegionalResource' | string (ReadOnly): Region type of the resource.
+* **supportedLocations**: string[] (ReadOnly): List of locations supported by this topic type.
 
 ## TrackedResourceTags
 ### Properties
