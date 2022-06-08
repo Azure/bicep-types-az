@@ -13,6 +13,31 @@
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The zones for the container group.
 
+## AzureFileVolume
+### Properties
+* **readOnly**: bool: The flag indicating whether the Azure File shared mounted as a volume is read-only.
+* **shareName**: string (Required): The name of the Azure File share to be mounted as a volume.
+* **storageAccountKey**: string: The storage account access key used to access the Azure File share.
+* **storageAccountName**: string (Required): The name of the storage account that contains the Azure File share.
+
+## Components10Wh5UdSchemasContainergroupidentityPropertiesUserassignedidentitiesAdditionalproperties
+### Properties
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+
+## Container
+### Properties
+* **name**: string (Required): The user-provided name of the container instance.
+* **properties**: [ContainerProperties](#containerproperties) (Required): The container instance properties.
+
+## ContainerExec
+### Properties
+* **command**: string[]: The commands to execute within the container.
+
+## ContainerGroupDiagnostics
+### Properties
+* **logAnalytics**: [LogAnalytics](#loganalytics): Container group log analytics information.
+
 ## ContainerGroupIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the container group identity. This property will only be provided for a system assigned identity.
@@ -24,11 +49,6 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [Components10Wh5UdSchemasContainergroupidentityPropertiesUserassignedidentitiesAdditionalproperties](#components10wh5udschemascontainergroupidentitypropertiesuserassignedidentitiesadditionalproperties)
-
-## Components10Wh5UdSchemasContainergroupidentityPropertiesUserassignedidentitiesAdditionalproperties
-### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
 
 ## ContainerGroupProperties
 ### Properties
@@ -50,10 +70,37 @@
 * **subnetIds**: [ContainerGroupSubnetId](#containergroupsubnetid)[]: The subnet resource IDs for a container group.
 * **volumes**: [Volume](#volume)[]: The list of volumes that can be mounted by containers in this container group.
 
-## Container
+## ContainerGroupPropertiesInstanceView
 ### Properties
-* **name**: string (Required): The user-provided name of the container instance.
-* **properties**: [ContainerProperties](#containerproperties) (Required): The container instance properties.
+* **events**: [Event](#event)[] (ReadOnly): The events of this container group.
+* **state**: string (ReadOnly): The state of the container group. Only valid in response.
+
+## ContainerGroupSubnetId
+### Properties
+* **id**: string (Required): Resource ID of virtual network and subnet.
+* **name**: string: Friendly name for the subnet.
+
+## ContainerHttpGet
+### Properties
+* **httpHeaders**: [HttpHeader](#httpheader)[]: The HTTP headers.
+* **path**: string: The path to probe.
+* **port**: int (Required): The port number to probe.
+* **scheme**: 'http' | 'https' | string: The scheme.
+
+## ContainerPort
+### Properties
+* **port**: int (Required): The port number exposed within the container group.
+* **protocol**: 'TCP' | 'UDP' | string: The protocol associated with the port.
+
+## ContainerProbe
+### Properties
+* **exec**: [ContainerExec](#containerexec): The container execution command, for liveness or readiness probe
+* **failureThreshold**: int: The failure threshold.
+* **httpGet**: [ContainerHttpGet](#containerhttpget): The container Http Get settings, for liveness or readiness probe
+* **initialDelaySeconds**: int: The initial delay seconds.
+* **periodSeconds**: int: The period seconds.
+* **successThreshold**: int: The success threshold.
+* **timeoutSeconds**: int: The timeout seconds.
 
 ## ContainerProperties
 ### Properties
@@ -66,12 +113,6 @@
 * **readinessProbe**: [ContainerProbe](#containerprobe): The container probe, for liveness or readiness
 * **resources**: [ResourceRequirements](#resourcerequirements) (Required): The resource requirements.
 * **volumeMounts**: [VolumeMount](#volumemount)[]: The volume mounts available to the container instance.
-
-## EnvironmentVariable
-### Properties
-* **name**: string (Required): The name of the environment variable.
-* **secureValue**: string: The value of the secure environment variable.
-* **value**: string: The value of the environment variable.
 
 ## ContainerPropertiesInstanceView
 ### Properties
@@ -88,91 +129,6 @@
 * **startTime**: string (ReadOnly): The date-time when the container instance state started.
 * **state**: string (ReadOnly): The state of the container instance.
 
-## Event
-### Properties
-* **count**: int (ReadOnly): The count of the event.
-* **firstTimestamp**: string (ReadOnly): The date-time of the earliest logged event.
-* **lastTimestamp**: string (ReadOnly): The date-time of the latest logged event.
-* **message**: string (ReadOnly): The event message.
-* **name**: string (ReadOnly): The event name.
-* **type**: string (ReadOnly): The event type.
-
-## ContainerProbe
-### Properties
-* **exec**: [ContainerExec](#containerexec): The container execution command, for liveness or readiness probe
-* **failureThreshold**: int: The failure threshold.
-* **httpGet**: [ContainerHttpGet](#containerhttpget): The container Http Get settings, for liveness or readiness probe
-* **initialDelaySeconds**: int: The initial delay seconds.
-* **periodSeconds**: int: The period seconds.
-* **successThreshold**: int: The success threshold.
-* **timeoutSeconds**: int: The timeout seconds.
-
-## ContainerExec
-### Properties
-* **command**: string[]: The commands to execute within the container.
-
-## ContainerHttpGet
-### Properties
-* **httpHeaders**: [HttpHeader](#httpheader)[]: The HTTP headers.
-* **path**: string: The path to probe.
-* **port**: int (Required): The port number to probe.
-* **scheme**: 'http' | 'https' | string: The scheme.
-
-## HttpHeader
-### Properties
-* **name**: string: The header name.
-* **value**: string: The header value.
-
-## ContainerPort
-### Properties
-* **port**: int (Required): The port number exposed within the container group.
-* **protocol**: 'TCP' | 'UDP' | string: The protocol associated with the port.
-
-## ResourceRequirements
-### Properties
-* **limits**: [ResourceLimits](#resourcelimits): The resource limits.
-* **requests**: [ResourceRequests](#resourcerequests) (Required): The resource requests.
-
-## ResourceLimits
-### Properties
-* **cpu**: int: The CPU limit of this container instance.
-* **gpu**: [GpuResource](#gpuresource): The GPU resource.
-* **memoryInGB**: int: The memory limit in GB of this container instance.
-
-## GpuResource
-### Properties
-* **count**: int (Required): The count of the GPU resource.
-* **sku**: 'K80' | 'P100' | 'V100' | string (Required): The SKU of the GPU resource.
-
-## ResourceRequests
-### Properties
-* **cpu**: int (Required): The CPU request of this container instance.
-* **gpu**: [GpuResource](#gpuresource): The GPU resource.
-* **memoryInGB**: int (Required): The memory request in GB of this container instance.
-
-## VolumeMount
-### Properties
-* **mountPath**: string (Required): The path within the container where the volume should be mounted. Must not contain colon (:).
-* **name**: string (Required): The name of the volume mount.
-* **readOnly**: bool: The flag indicating whether the volume mount is read-only.
-
-## ContainerGroupDiagnostics
-### Properties
-* **logAnalytics**: [LogAnalytics](#loganalytics): Container group log analytics information.
-
-## LogAnalytics
-### Properties
-* **logType**: 'ContainerInsights' | 'ContainerInstanceLogs' | string: The log type to be used.
-* **metadata**: [LogAnalyticsMetadata](#loganalyticsmetadata): Metadata for log analytics.
-* **workspaceId**: string (Required): The workspace id for log analytics
-* **workspaceKey**: string (Required): The workspace key for log analytics
-* **workspaceResourceId**: string: The workspace resource id for log analytics
-
-## LogAnalyticsMetadata
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## DnsConfiguration
 ### Properties
 * **nameServers**: string[] (Required): The DNS servers for the container group.
@@ -184,6 +140,37 @@
 * **keyName**: string (Required): The encryption key name.
 * **keyVersion**: string (Required): The encryption key version.
 * **vaultBaseUrl**: string (Required): The keyvault base url.
+
+## EnvironmentVariable
+### Properties
+* **name**: string (Required): The name of the environment variable.
+* **secureValue**: string: The value of the secure environment variable.
+* **value**: string: The value of the environment variable.
+
+## Event
+### Properties
+* **count**: int (ReadOnly): The count of the event.
+* **firstTimestamp**: string (ReadOnly): The date-time of the earliest logged event.
+* **lastTimestamp**: string (ReadOnly): The date-time of the latest logged event.
+* **message**: string (ReadOnly): The event message.
+* **name**: string (ReadOnly): The event name.
+* **type**: string (ReadOnly): The event type.
+
+## GitRepoVolume
+### Properties
+* **directory**: string: Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
+* **repository**: string (Required): Repository URL
+* **revision**: string: Commit hash for the specified revision.
+
+## GpuResource
+### Properties
+* **count**: int (Required): The count of the GPU resource.
+* **sku**: 'K80' | 'P100' | 'V100' | string (Required): The SKU of the GPU resource.
+
+## HttpHeader
+### Properties
+* **name**: string: The header name.
+* **value**: string: The header value.
 
 ## ImageRegistryCredential
 ### Properties
@@ -213,11 +200,6 @@
 * **previousState**: [ContainerState](#containerstate) (ReadOnly): The container instance state.
 * **restartCount**: int (ReadOnly): The number of times that the init container has been restarted.
 
-## ContainerGroupPropertiesInstanceView
-### Properties
-* **events**: [Event](#event)[] (ReadOnly): The events of this container group.
-* **state**: string (ReadOnly): The state of the container group. Only valid in response.
-
 ## IpAddress
 ### Properties
 * **dnsNameLabel**: string: The Dns name label for the IP.
@@ -227,15 +209,50 @@
 * **ports**: [Port](#port)[] (Required): The list of ports exposed on the container group.
 * **type**: 'Private' | 'Public' | string (Required): Specifies if the IP is exposed to the public internet or private VNET.
 
+## LogAnalytics
+### Properties
+* **logType**: 'ContainerInsights' | 'ContainerInstanceLogs' | string: The log type to be used.
+* **metadata**: [LogAnalyticsMetadata](#loganalyticsmetadata): Metadata for log analytics.
+* **workspaceId**: string (Required): The workspace id for log analytics
+* **workspaceKey**: string (Required): The workspace key for log analytics
+* **workspaceResourceId**: string: The workspace resource id for log analytics
+
+## LogAnalyticsMetadata
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Port
 ### Properties
 * **port**: int (Required): The port number.
 * **protocol**: 'TCP' | 'UDP' | string: The protocol associated with the port.
 
-## ContainerGroupSubnetId
+## ResourceLimits
 ### Properties
-* **id**: string (Required): Resource ID of virtual network and subnet.
-* **name**: string: Friendly name for the subnet.
+* **cpu**: int: The CPU limit of this container instance.
+* **gpu**: [GpuResource](#gpuresource): The GPU resource.
+* **memoryInGB**: int: The memory limit in GB of this container instance.
+
+## ResourceRequests
+### Properties
+* **cpu**: int (Required): The CPU request of this container instance.
+* **gpu**: [GpuResource](#gpuresource): The GPU resource.
+* **memoryInGB**: int (Required): The memory request in GB of this container instance.
+
+## ResourceRequirements
+### Properties
+* **limits**: [ResourceLimits](#resourcelimits): The resource limits.
+* **requests**: [ResourceRequests](#resourcerequests) (Required): The resource requests.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SecretVolume
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Volume
 ### Properties
@@ -245,26 +262,9 @@
 * **name**: string (Required): The name of the volume.
 * **secret**: [SecretVolume](#secretvolume): The secret volume.
 
-## AzureFileVolume
+## VolumeMount
 ### Properties
-* **readOnly**: bool: The flag indicating whether the Azure File shared mounted as a volume is read-only.
-* **shareName**: string (Required): The name of the Azure File share to be mounted as a volume.
-* **storageAccountKey**: string: The storage account access key used to access the Azure File share.
-* **storageAccountName**: string (Required): The name of the storage account that contains the Azure File share.
-
-## GitRepoVolume
-### Properties
-* **directory**: string: Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
-* **repository**: string (Required): Repository URL
-* **revision**: string: Commit hash for the specified revision.
-
-## SecretVolume
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **mountPath**: string (Required): The path within the container where the volume should be mounted. Must not contain colon (:).
+* **name**: string (Required): The name of the volume mount.
+* **readOnly**: bool: The flag indicating whether the volume mount is read-only.
 

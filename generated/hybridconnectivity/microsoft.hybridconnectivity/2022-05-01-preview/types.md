@@ -21,32 +21,15 @@
 * **Input**: [ManagedProxyRequest](#managedproxyrequest)
 * **Output**: [ManagedProxyResource](#managedproxyresource)
 
+## EndpointAccessResource
+### Properties
+* **relay**: [RelayNamespaceAccessProperties](#relaynamespaceaccessproperties) (ReadOnly): Azure relay hybrid connection access properties
+
 ## EndpointProperties
 ### Properties
 * **provisioningState**: string (ReadOnly): The resource provisioning state.
 * **resourceId**: string: The resource Id of the connectivity endpoint (optional).
 * **type**: 'custom' | 'default' | string (Required): The type of endpoint.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## EndpointAccessResource
-### Properties
-* **relay**: [RelayNamespaceAccessProperties](#relaynamespaceaccessproperties) (ReadOnly): Azure relay hybrid connection access properties
-
-## RelayNamespaceAccessProperties
-### Properties
-* **accessKey**: string (ReadOnly): Access key for hybrid connection.
-* **expiresOn**: int (ReadOnly): The expiration of access key in unix time.
-* **hybridConnectionName**: string (ReadOnly): Azure Relay hybrid connection name for the resource.
-* **namespaceName**: string (ReadOnly): The namespace name.
-* **namespaceNameSuffix**: string (ReadOnly): The suffix domain name of relay namespace.
 
 ## ManagedProxyRequest
 ### Properties
@@ -57,4 +40,21 @@
 ### Properties
 * **expiresOn**: int (ReadOnly): The expiration time of short lived proxy name in unix epoch.
 * **proxy**: string (ReadOnly): The short lived proxy name.
+
+## RelayNamespaceAccessProperties
+### Properties
+* **accessKey**: string (ReadOnly): Access key for hybrid connection.
+* **expiresOn**: int (ReadOnly): The expiration of access key in unix time.
+* **hybridConnectionName**: string (ReadOnly): Azure Relay hybrid connection name for the resource.
+* **namespaceName**: string (ReadOnly): The namespace name.
+* **namespaceNameSuffix**: string (ReadOnly): The suffix domain name of relay namespace.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 

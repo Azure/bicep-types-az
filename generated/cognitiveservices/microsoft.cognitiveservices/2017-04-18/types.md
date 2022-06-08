@@ -31,22 +31,23 @@
 * **ApiVersion**: 2017-04-18
 * **Output**: [CognitiveServicesAccountKeys](#cognitiveservicesaccountkeys)
 
-## Identity
+## CognitiveServicesAccountApiProperties
 ### Properties
-* **principalId**: string (ReadOnly): Principal Id of managed service identity.
-* **tenantId**: string (ReadOnly): Tenant of managed service identity.
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': Type of managed service identity.
-* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
+* **aadClientId**: string: (Metrics Advisor Only) The Azure AD Client Id (Application Id).
+* **aadTenantId**: string: (Metrics Advisor Only) The Azure AD Tenant Id.
+* **eventHubConnectionString**: string: (Personalization Only) The flag to enable statistics of Bing Search.
+* **qnaAzureSearchEndpointId**: string: (QnAMaker Only) The Azure Search endpoint id of QnAMaker.
+* **qnaAzureSearchEndpointKey**: string: (QnAMaker Only) The Azure Search endpoint key of QnAMaker.
+* **qnaRuntimeEndpoint**: string: (QnAMaker Only) The runtime endpoint of QnAMaker.
+* **statisticsEnabled**: bool: (Bing Search Only) The flag to enable statistics of Bing Search.
+* **storageAccountConnectionString**: string: (Personalization Only) The storage account connection string.
+* **superUser**: string: (Metrics Advisor Only) The super user of Metrics Advisor.
+* **websiteName**: string: (Metrics Advisor Only) The website name of Metrics Advisor.
 
-## IdentityUserAssignedIdentities
+## CognitiveServicesAccountKeys
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
-
-## UserAssignedIdentity
-### Properties
-* **clientId**: string: Client App Id associated with this identity.
-* **principalId**: string: Azure Active Directory principal ID associated with this Identity.
+* **key1**: string (ReadOnly): Gets the value of key 1.
+* **key2**: string (ReadOnly): Gets the value of key 2.
 
 ## CognitiveServicesAccountProperties
 ### Properties
@@ -65,28 +66,37 @@
 * **skuChangeInfo**: [CognitiveServicesAccountSkuChangeInfo](#cognitiveservicesaccountskuchangeinfo) (ReadOnly): Sku change info of account.
 * **userOwnedStorage**: [UserOwnedStorage](#userownedstorage)[]: The storage accounts for this resource.
 
-## CognitiveServicesAccountApiProperties
+## CognitiveServicesAccountSkuChangeInfo
 ### Properties
-* **aadClientId**: string: (Metrics Advisor Only) The Azure AD Client Id (Application Id).
-* **aadTenantId**: string: (Metrics Advisor Only) The Azure AD Tenant Id.
-* **eventHubConnectionString**: string: (Personalization Only) The flag to enable statistics of Bing Search.
-* **qnaAzureSearchEndpointId**: string: (QnAMaker Only) The Azure Search endpoint id of QnAMaker.
-* **qnaAzureSearchEndpointKey**: string: (QnAMaker Only) The Azure Search endpoint key of QnAMaker.
-* **qnaRuntimeEndpoint**: string: (QnAMaker Only) The runtime endpoint of QnAMaker.
-* **statisticsEnabled**: bool: (Bing Search Only) The flag to enable statistics of Bing Search.
-* **storageAccountConnectionString**: string: (Personalization Only) The storage account connection string.
-* **superUser**: string: (Metrics Advisor Only) The super user of Metrics Advisor.
-* **websiteName**: string: (Metrics Advisor Only) The website name of Metrics Advisor.
+* **countOfDowngrades**: int (ReadOnly): Gets the count of downgrades.
+* **countOfUpgradesAfterDowngrades**: int (ReadOnly): Gets the count of upgrades after downgrades.
+* **lastChangeDate**: string (ReadOnly): Gets the last change date.
 
-## SkuCapability
+## CognitiveServicesAccountTags
 ### Properties
-* **name**: string: The name of the SkuCapability.
-* **value**: string: The value of the SkuCapability.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Encryption
 ### Properties
 * **keySource**: 'Microsoft.CognitiveServices' | 'Microsoft.KeyVault' | string: Enumerates the possible value of keySource for Encryption
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): Properties to configure keyVault Properties
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly): Principal Id of managed service identity.
+* **tenantId**: string (ReadOnly): Tenant of managed service identity.
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': Type of managed service identity.
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
+
+## IdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## IpRule
+### Properties
+* **value**: string (Required): An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).
 
 ## KeyVaultProperties
 ### Properties
@@ -100,15 +110,9 @@
 * **ipRules**: [IpRule](#iprule)[]: The list of IP address rules.
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: The list of virtual network rules.
 
-## IpRule
+## PrivateEndpoint
 ### Properties
-* **value**: string (Required): An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).
-
-## VirtualNetworkRule
-### Properties
-* **id**: string (Required): Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.
-* **ignoreMissingVnetServiceEndpoint**: bool: Ignore missing vnet service endpoint or not.
-* **state**: string: Gets the state of virtual network rule.
+* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
 
 ## PrivateEndpointConnection
 ### Properties
@@ -125,38 +129,34 @@
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
 
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
-
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
 
-## CognitiveServicesAccountSkuChangeInfo
-### Properties
-* **countOfDowngrades**: int (ReadOnly): Gets the count of downgrades.
-* **countOfUpgradesAfterDowngrades**: int (ReadOnly): Gets the count of upgrades after downgrades.
-* **lastChangeDate**: string (ReadOnly): Gets the last change date.
-
-## UserOwnedStorage
-### Properties
-* **resourceId**: string: Full resource id of a Microsoft.Storage resource.
-
 ## Sku
 ### Properties
 * **name**: string (Required): The name of SKU.
 * **tier**: 'Enterprise' | 'Free' | 'Premium' | 'Standard' | string (ReadOnly): Gets the sku tier. This is based on the SKU name.
 
-## CognitiveServicesAccountTags
+## SkuCapability
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **name**: string: The name of the SkuCapability.
+* **value**: string: The value of the SkuCapability.
 
-## CognitiveServicesAccountKeys
+## UserAssignedIdentity
 ### Properties
-* **key1**: string (ReadOnly): Gets the value of key 1.
-* **key2**: string (ReadOnly): Gets the value of key 2.
+* **clientId**: string: Client App Id associated with this identity.
+* **principalId**: string: Azure Active Directory principal ID associated with this Identity.
+
+## UserOwnedStorage
+### Properties
+* **resourceId**: string: Full resource id of a Microsoft.Storage resource.
+
+## VirtualNetworkRule
+### Properties
+* **id**: string (Required): Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.
+* **ignoreMissingVnetServiceEndpoint**: bool: Ignore missing vnet service endpoint or not.
+* **state**: string: Gets the state of virtual network rule.
 

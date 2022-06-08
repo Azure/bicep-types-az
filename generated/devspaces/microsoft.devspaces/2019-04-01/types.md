@@ -18,6 +18,14 @@
 * **Input**: [ListConnectionDetailsParameters](#listconnectiondetailsparameters)
 * **Output**: [ControllerConnectionDetailsList](#controllerconnectiondetailslist)
 
+## ControllerConnectionDetails
+### Properties
+* **orchestratorSpecificConnectionDetails**: [OrchestratorSpecificConnectionDetails](#orchestratorspecificconnectiondetails) (ReadOnly): Base class for types that supply values used to connect to container orchestrators
+
+## ControllerConnectionDetailsList
+### Properties
+* **connectionDetailsList**: [ControllerConnectionDetails](#controllerconnectiondetails)[] (ReadOnly): List of Azure Dev Spaces Controller connection details.
+
 ## ControllerProperties
 ### Properties
 * **dataPlaneFqdn**: string (ReadOnly): DNS name for accessing DataPlane services
@@ -27,27 +35,9 @@
 * **targetContainerHostCredentialsBase64**: string (Required, WriteOnly): Credentials of the target container host (base64).
 * **targetContainerHostResourceId**: string (Required): Resource ID of the target container host
 
-## Sku
-### Properties
-* **name**: 'S1' | string (Required): The name of the SKU for Azure Dev Spaces Controller.
-* **tier**: 'Standard' | string: The tier of the SKU for Azure Dev Spaces Controller.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ListConnectionDetailsParameters
 ### Properties
 * **targetContainerHostResourceId**: string (Required, WriteOnly): Resource ID of the target container host mapped to the Azure Dev Spaces Controller.
-
-## ControllerConnectionDetailsList
-### Properties
-* **connectionDetailsList**: [ControllerConnectionDetails](#controllerconnectiondetails)[] (ReadOnly): List of Azure Dev Spaces Controller connection details.
-
-## ControllerConnectionDetails
-### Properties
-* **orchestratorSpecificConnectionDetails**: [OrchestratorSpecificConnectionDetails](#orchestratorspecificconnectiondetails) (ReadOnly): Base class for types that supply values used to connect to container orchestrators
 
 ## OrchestratorSpecificConnectionDetails
 * **Discriminator**: instanceType
@@ -58,4 +48,14 @@
 * **instanceType**: 'Kubernetes' (Required): Gets the Instance type.
 * **kubeConfig**: string (ReadOnly): Gets the kubeconfig for the cluster.
 
+
+## Sku
+### Properties
+* **name**: 'S1' | string (Required): The name of the SKU for Azure Dev Spaces Controller.
+* **tier**: 'Standard' | string: The tier of the SKU for Azure Dev Spaces Controller.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

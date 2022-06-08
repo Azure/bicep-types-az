@@ -10,22 +10,6 @@
 * **systemData**: [SystemData](#systemdata): Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
 * **type**: 'Microsoft.KubernetesConfiguration/sourceControlConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## SourceControlConfigurationProperties
-### Properties
-* **complianceStatus**: [ComplianceStatus](#compliancestatus) (ReadOnly): Compliance Status details
-* **configurationProtectedSettings**: [ConfigurationProtectedSettings](#configurationprotectedsettings): Name-value pairs of protected configuration settings for the configuration
-* **enableHelmOperator**: bool: Option to enable Helm Operator for this git configuration.
-* **helmOperatorProperties**: [HelmOperatorProperties](#helmoperatorproperties): Properties for Helm operator.
-* **operatorInstanceName**: string: Instance name of the operator - identifying the specific configuration.
-* **operatorNamespace**: string: The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
-* **operatorParams**: string: Any Parameters for the Operator instance in string format.
-* **operatorScope**: 'cluster' | 'namespace' | string: Scope at which the operator will be installed.
-* **operatorType**: 'Flux' | string: Type of the operator
-* **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioning state of the resource provider.
-* **repositoryPublicKey**: string (ReadOnly): Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).
-* **repositoryUrl**: string: Url of the SourceControl Repository.
-* **sshKnownHostsContents**: string: Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances
-
 ## ComplianceStatus
 ### Properties
 * **complianceState**: 'Compliant' | 'Failed' | 'Installed' | 'Noncompliant' | 'Pending' | string (ReadOnly): The compliance state of the configuration.
@@ -42,6 +26,22 @@
 ### Properties
 * **chartValues**: string: Values override for the operator Helm chart.
 * **chartVersion**: string: Version of the operator Helm chart.
+
+## SourceControlConfigurationProperties
+### Properties
+* **complianceStatus**: [ComplianceStatus](#compliancestatus) (ReadOnly): Compliance Status details
+* **configurationProtectedSettings**: [ConfigurationProtectedSettings](#configurationprotectedsettings): Name-value pairs of protected configuration settings for the configuration
+* **enableHelmOperator**: bool: Option to enable Helm Operator for this git configuration.
+* **helmOperatorProperties**: [HelmOperatorProperties](#helmoperatorproperties): Properties for Helm operator.
+* **operatorInstanceName**: string: Instance name of the operator - identifying the specific configuration.
+* **operatorNamespace**: string: The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
+* **operatorParams**: string: Any Parameters for the Operator instance in string format.
+* **operatorScope**: 'cluster' | 'namespace' | string: Scope at which the operator will be installed.
+* **operatorType**: 'Flux' | string: Type of the operator
+* **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioning state of the resource provider.
+* **repositoryPublicKey**: string (ReadOnly): Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).
+* **repositoryUrl**: string: Url of the SourceControl Repository.
+* **sshKnownHostsContents**: string: Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances
 
 ## SystemData
 ### Properties

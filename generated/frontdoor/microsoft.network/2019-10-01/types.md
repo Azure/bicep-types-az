@@ -12,19 +12,6 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/FrontDoorWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## WebApplicationFirewallPolicyProperties
-### Properties
-* **customRules**: [CustomRuleList](#customrulelist): Defines contents of custom rules
-* **frontendEndpointLinks**: [FrontendEndpointLink](#frontendendpointlink)[] (ReadOnly): Describes Frontend Endpoints associated with this Web Application Firewall policy.
-* **managedRules**: [ManagedRuleSetList](#managedrulesetlist): Defines the list of managed rule sets for the policy.
-* **policySettings**: [PolicySettings](#policysettings): Defines top-level WebApplicationFirewallPolicy configuration settings.
-* **provisioningState**: string (ReadOnly): Provisioning state of the policy.
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the policy.
-
-## CustomRuleList
-### Properties
-* **rules**: [CustomRule](#customrule)[]: List of rules
-
 ## CustomRule
 ### Properties
 * **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' | string (Required): Defines the action to take on rule match.
@@ -36,29 +23,13 @@
 * **rateLimitThreshold**: int: Number of allowed requests per client within the time window.
 * **ruleType**: 'MatchRule' | 'RateLimitRule' | string (Required): Describes type of rule.
 
-## MatchCondition
+## CustomRuleList
 ### Properties
-* **matchValue**: string[] (Required): List of possible match values.
-* **matchVariable**: 'Cookies' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestHeader' | 'RequestMethod' | 'RequestUri' | 'SocketAddr' | string (Required): Request variable to compare with.
-* **negateCondition**: bool: Describes if the result of this condition should be negated.
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Comparison type to use for matching with the variable value.
-* **selector**: string: Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms.
+* **rules**: [CustomRule](#customrule)[]: List of rules
 
 ## FrontendEndpointLink
 ### Properties
 * **id**: string: Resource ID.
-
-## ManagedRuleSetList
-### Properties
-* **managedRuleSets**: [ManagedRuleSet](#managedruleset)[]: List of rule sets.
-
-## ManagedRuleSet
-### Properties
-* **exclusions**: [ManagedRuleExclusion](#managedruleexclusion)[]: Describes the exclusions that are applied to all rules in the set.
-* **ruleGroupOverrides**: [ManagedRuleGroupOverride](#managedrulegroupoverride)[]: Defines the rule group overrides to apply to the rule set.
-* **ruleSetType**: string (Required): Defines the rule set type to use.
-* **ruleSetVersion**: string (Required): Defines the version of the rule set to use.
 
 ## ManagedRuleExclusion
 ### Properties
@@ -79,6 +50,26 @@
 * **exclusions**: [ManagedRuleExclusion](#managedruleexclusion)[]: Describes the exclusions that are applied to this specific rule.
 * **ruleId**: string (Required): Identifier for the managed rule.
 
+## ManagedRuleSet
+### Properties
+* **exclusions**: [ManagedRuleExclusion](#managedruleexclusion)[]: Describes the exclusions that are applied to all rules in the set.
+* **ruleGroupOverrides**: [ManagedRuleGroupOverride](#managedrulegroupoverride)[]: Defines the rule group overrides to apply to the rule set.
+* **ruleSetType**: string (Required): Defines the rule set type to use.
+* **ruleSetVersion**: string (Required): Defines the version of the rule set to use.
+
+## ManagedRuleSetList
+### Properties
+* **managedRuleSets**: [ManagedRuleSet](#managedruleset)[]: List of rule sets.
+
+## MatchCondition
+### Properties
+* **matchValue**: string[] (Required): List of possible match values.
+* **matchVariable**: 'Cookies' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestHeader' | 'RequestMethod' | 'RequestUri' | 'SocketAddr' | string (Required): Request variable to compare with.
+* **negateCondition**: bool: Describes if the result of this condition should be negated.
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Comparison type to use for matching with the variable value.
+* **selector**: string: Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms.
+
 ## PolicySettings
 ### Properties
 * **customBlockResponseBody**: string: If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
@@ -91,4 +82,13 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## WebApplicationFirewallPolicyProperties
+### Properties
+* **customRules**: [CustomRuleList](#customrulelist): Defines contents of custom rules
+* **frontendEndpointLinks**: [FrontendEndpointLink](#frontendendpointlink)[] (ReadOnly): Describes Frontend Endpoints associated with this Web Application Firewall policy.
+* **managedRules**: [ManagedRuleSetList](#managedrulesetlist): Defines the list of managed rule sets for the policy.
+* **policySettings**: [PolicySettings](#policysettings): Defines top-level WebApplicationFirewallPolicy configuration settings.
+* **provisioningState**: string (ReadOnly): Provisioning state of the policy.
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the policy.
 

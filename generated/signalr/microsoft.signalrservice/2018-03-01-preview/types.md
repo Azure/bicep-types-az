@@ -18,6 +18,15 @@ The geo region of a resource never changes after it is created.
 * **ApiVersion**: 2018-03-01-preview
 * **Output**: [SignalRKeys](#signalrkeys)
 
+## ResourceSku
+### Properties
+* **capacity**: int: Optional, integer. If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not 
+possible for the resource this may be omitted.
+* **family**: string: Optional, string. If the service has different generations of hardware, for the same SKU, then that can be captured here.
+* **name**: string (Required): The name of the SKU. This is typically a letter + number code, such as A0 or P3.  Required (if sku is specified)
+* **size**: string: Optional, string. When the name field is the combination of tier and some other value, this would be the standalone code.
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard' | string: Optional tier of this particular SKU. `Basic` is deprecated, use `Standard` instead for Basic tier
+
 ## SignalRCreateOrUpdateProperties
 ### Properties
 * **externalIP**: string (ReadOnly): The publicly accessible IP of the SignalR service.
@@ -29,24 +38,15 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
 * **serverPort**: int (ReadOnly): The publicly accessibly port of the SignalR service which is designed for customer server side usage.
 * **version**: string (ReadOnly): Version of the SignalR resource. Probably you need the same or higher version of client SDKs.
 
-## ResourceSku
-### Properties
-* **capacity**: int: Optional, integer. If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not 
-possible for the resource this may be omitted.
-* **family**: string: Optional, string. If the service has different generations of hardware, for the same SKU, then that can be captured here.
-* **name**: string (Required): The name of the SKU. This is typically a letter + number code, such as A0 or P3.  Required (if sku is specified)
-* **size**: string: Optional, string. When the name field is the combination of tier and some other value, this would be the standalone code.
-* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard' | string: Optional tier of this particular SKU. `Basic` is deprecated, use `Standard` instead for Basic tier
-
-## SignalRUpdateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## SignalRKeys
 ### Properties
 * **primaryConnectionString**: string (ReadOnly): SignalR connection string constructed via the primaryKey
 * **primaryKey**: string (ReadOnly): The primary access key.
 * **secondaryConnectionString**: string (ReadOnly): SignalR connection string constructed via the secondaryKey
 * **secondaryKey**: string (ReadOnly): The secondary access key.
+
+## SignalRUpdateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

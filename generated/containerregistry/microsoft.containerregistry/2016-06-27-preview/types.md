@@ -18,13 +18,13 @@
 * **loginServer**: string (ReadOnly): The URL that can be used to log into the container registry.
 * **storageAccount**: [StorageAccountProperties](#storageaccountproperties) (Required): The properties of a storage account for a container registry.
 
-## StorageAccountProperties
-### Properties
-* **accessKey**: string (Required): The access key to the storage account.
-* **name**: string (Required): The name of the storage account.
-
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## StorageAccountProperties
+### Properties
+* **accessKey**: string (Required): The access key to the storage account.
+* **name**: string (Required): The name of the storage account.
 

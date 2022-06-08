@@ -12,15 +12,6 @@
 * **tags**: [ManagedResourceTags](#managedresourcetags): Resource tags
 * **type**: 'Microsoft.AlertsManagement/actionRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## AlertProcessingRuleProperties
-### Properties
-* **actions**: [Action](#action)[] (Required): Actions to be applied.
-* **conditions**: [Condition](#condition)[]: Conditions in alert instance to be matched for a given alert processing rule. Default value is all. Multiple values could be provided with comma separation.
-* **description**: string: Description of alert processing rule.
-* **enabled**: bool: Indicates if the given alert processing rule is enabled or disabled.
-* **schedule**: [Schedule](#schedule): Scheduling configuration for a given alert processing rule.
-* **scopes**: string[] (Required): List of ARM IDs which will be the target of the given alert processing rule.
-
 ## Action
 * **Discriminator**: actionType
 
@@ -35,18 +26,25 @@
 * **actionType**: 'RemoveAllActionGroups' (Required): Action that should be applied.
 
 
+## AlertProcessingRuleProperties
+### Properties
+* **actions**: [Action](#action)[] (Required): Actions to be applied.
+* **conditions**: [Condition](#condition)[]: Conditions in alert instance to be matched for a given alert processing rule. Default value is all. Multiple values could be provided with comma separation.
+* **description**: string: Description of alert processing rule.
+* **enabled**: bool: Indicates if the given alert processing rule is enabled or disabled.
+* **schedule**: [Schedule](#schedule): Scheduling configuration for a given alert processing rule.
+* **scopes**: string[] (Required): List of ARM IDs which will be the target of the given alert processing rule.
+
 ## Condition
 ### Properties
 * **field**: 'AlertContext' | 'AlertRuleId' | 'AlertRuleName' | 'Description' | 'MonitorCondition' | 'MonitorService' | 'Severity' | 'SignalType' | 'TargetResource' | 'TargetResourceGroup' | 'TargetResourceType' | string: Field for a given condition.
 * **operator**: 'Contains' | 'DoesNotContain' | 'Equals' | 'NotEquals' | string: Operator for a given condition.
 * **values**: string[]: List of values to match for a given condition.
 
-## Schedule
+## ManagedResourceTags
 ### Properties
-* **effectiveFrom**: string: Scheduling effective from time. Date-Time in ISO-8601 format without timezone suffix.
-* **effectiveUntil**: string: Scheduling effective until time. Date-Time in ISO-8601 format without timezone suffix.
-* **recurrences**: [Recurrence](#recurrence)[]: List of recurrences.
-* **timeZone**: string: Scheduling time zone.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Recurrence
 * **Discriminator**: recurrenceType
@@ -69,6 +67,13 @@
 * **recurrenceType**: 'Weekly' (Required): Specifies when the recurrence should be applied.
 
 
+## Schedule
+### Properties
+* **effectiveFrom**: string: Scheduling effective from time. Date-Time in ISO-8601 format without timezone suffix.
+* **effectiveUntil**: string: Scheduling effective until time. Date-Time in ISO-8601 format without timezone suffix.
+* **recurrences**: [Recurrence](#recurrence)[]: List of recurrences.
+* **timeZone**: string: Scheduling time zone.
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -77,9 +82,4 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## ManagedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

@@ -58,22 +58,76 @@
 * **ApiVersion**: 2021-06-01
 * **Output**: [BatchAccountKeys](#batchaccountkeys)
 
-## BatchAccountIdentity
+## ApplicationPackageProperties
 ### Properties
-* **principalId**: string (ReadOnly): The principal id of the Batch account. This property will only be provided for a system assigned identity.
-* **tenantId**: string (ReadOnly): The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required): The type of identity used for the Batch account.
-* **userAssignedIdentities**: [BatchAccountIdentityUserAssignedIdentities](#batchaccountidentityuserassignedidentities): The list of user identities associated with the Batch account.
+* **format**: string (ReadOnly): The format of the application package, if the package is active.
+* **lastActivationTime**: string (ReadOnly): The time at which the package was last activated, if the package is active.
+* **state**: 'Active' | 'Pending' (ReadOnly): The current state of the application package.
+* **storageUrl**: string (ReadOnly): The URL for the application package in Azure Storage.
+* **storageUrlExpiry**: string (ReadOnly): The UTC time at which the Azure Storage URL will expire.
 
-## BatchAccountIdentityUserAssignedIdentities
+## ApplicationPackageReference
+### Properties
+* **id**: string (Required): The ID of the application package to install. This must be inside the same batch account as the pool. This can either be a reference to a specific version or the default version if one exists.
+* **version**: string: If this is omitted, and no default version is specified for this application, the request fails with the error code InvalidApplicationPackageReferences. If you are calling the REST API directly, the HTTP status code is 409.
+
+## ApplicationProperties
+### Properties
+* **allowUpdates**: bool: A value indicating whether packages within the application may be overwritten using the same version string.
+* **defaultVersion**: string: The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
+* **displayName**: string: The display name for the application.
+
+## AutoScaleRun
+### Properties
+* **error**: [AutoScaleRunError](#autoscalerunerror): An error that occurred when autoscaling a pool.
+* **evaluationTime**: string (Required): The time at which the autoscale formula was last evaluated.
+* **results**: string: Each variable value is returned in the form $variable=value, and variables are separated by semicolons.
+
+## AutoScaleRunError
+### Properties
+* **code**: string (Required): An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+* **details**: [AutoScaleRunError](#autoscalerunerror)[]: Additional details about the error.
+* **message**: string (Required): A message describing the error, intended to be suitable for display in a user interface.
+
+## AutoScaleSettings
+### Properties
+* **evaluationInterval**: string: If omitted, the default value is 15 minutes (PT15M).
+* **formula**: string (Required): A formula for the desired number of compute nodes in the pool.
+
+## AutoStorageBaseProperties
+### Properties
+* **authenticationMode**: 'BatchAccountManagedIdentity' | 'StorageKeys': The authentication mode which the Batch service will use to manage the auto-storage account.
+* **lastKeySync**: string (ReadOnly): The UTC time at which storage keys were last synchronized with the Batch account.
+* **nodeIdentityReference**: [ComputeNodeIdentityReference](#computenodeidentityreference): The reference to a user assigned identity associated with the Batch pool which a compute node will use.
+* **storageAccountId**: string (Required): The resource ID of the storage account to be used for auto-storage account.
+
+## AutoUserSpecification
+### Properties
+* **elevationLevel**: 'Admin' | 'NonAdmin': The elevation level of the user.
+* **scope**: 'Pool' | 'Task': The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.
+
+## AzureBlobFileSystemConfiguration
+### Properties
+* **accountKey**: string: This property is mutually exclusive with both sasKey and identity; exactly one must be specified.
+* **accountName**: string (Required): The Azure Storage Account name.
+* **blobfuseOptions**: string: These are 'net use' options in Windows and 'mount' options in Linux.
+* **containerName**: string (Required): The Azure Blob Storage Container name.
+* **identityReference**: [ComputeNodeIdentityReference](#computenodeidentityreference): The reference to a user assigned identity associated with the Batch pool which a compute node will use.
+* **relativeMountPath**: string (Required): All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+* **sasKey**: string: This property is mutually exclusive with both accountKey and identity; exactly one must be specified.
+
+## AzureFileShareConfiguration
+### Properties
+* **accountKey**: string (Required): The Azure Storage account key.
+* **accountName**: string (Required): The Azure Storage account name.
+* **azureFileUrl**: string (Required): This is of the form 'https://{account}.file.core.windows.net/'.
+* **mountOptions**: string: These are 'net use' options in Windows and 'mount' options in Linux.
+* **relativeMountPath**: string (Required): All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+
+## BatchAccountCreateParametersTags
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentities](#userassignedidentities)
-
-## UserAssignedIdentities
-### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+* **Additional Properties Type**: string
 
 ## BatchAccountCreateProperties
 ### Properties
@@ -93,82 +147,33 @@
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Succeeded' (ReadOnly): The provisioned state of the resource
 * **publicNetworkAccess**: 'Disabled' | 'Enabled': The network access type for operating on the resources in the Batch account.
 
-## AutoStorageBaseProperties
+## BatchAccountIdentity
 ### Properties
-* **authenticationMode**: 'BatchAccountManagedIdentity' | 'StorageKeys': The authentication mode which the Batch service will use to manage the auto-storage account.
-* **lastKeySync**: string (ReadOnly): The UTC time at which storage keys were last synchronized with the Batch account.
-* **nodeIdentityReference**: [ComputeNodeIdentityReference](#computenodeidentityreference): The reference to a user assigned identity associated with the Batch pool which a compute node will use.
-* **storageAccountId**: string (Required): The resource ID of the storage account to be used for auto-storage account.
+* **principalId**: string (ReadOnly): The principal id of the Batch account. This property will only be provided for a system assigned identity.
+* **tenantId**: string (ReadOnly): The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required): The type of identity used for the Batch account.
+* **userAssignedIdentities**: [BatchAccountIdentityUserAssignedIdentities](#batchaccountidentityuserassignedidentities): The list of user identities associated with the Batch account.
 
-## ComputeNodeIdentityReference
-### Properties
-* **resourceId**: string: The ARM resource id of the user assigned identity.
-
-## VirtualMachineFamilyCoreQuota
-### Properties
-* **coreQuota**: int (ReadOnly): The core quota for the VM family for the Batch account.
-* **name**: string (ReadOnly): The Virtual Machine family name.
-
-## EncryptionProperties
-### Properties
-* **keySource**: 'Microsoft.Batch' | 'Microsoft.KeyVault': Type of the key source.
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): KeyVault configuration when using an encryption KeySource of Microsoft.KeyVault.
-
-## KeyVaultProperties
-### Properties
-* **keyIdentifier**: string: Full path to the versioned secret. Example https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053. To be usable the following prerequisites must be met:
-
- The Batch Account has a System Assigned identity
- The account identity has been granted Key/Get, Key/Unwrap and Key/Wrap permissions
- The KeyVault has soft-delete and purge protection enabled
-
-## KeyVaultReference
-### Properties
-* **id**: string (Required): The resource ID of the Azure key vault associated with the Batch account.
-* **url**: string (Required): The URL of the Azure key vault associated with the Batch account.
-
-## PrivateEndpointConnection
-### Properties
-* **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
-* **id**: string (ReadOnly): The ID of the resource.
-* **name**: string (ReadOnly): The name of the resource.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Private endpoint connection properties.
-* **type**: string (ReadOnly): The type of the resource.
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The private endpoint of the private endpoint connection.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly): The private link service connection state of the private endpoint connection
-* **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the private endpoint connection.
-
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly): The ARM resource identifier of the private endpoint. This is of the form /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/privateEndpoints/{privateEndpoint}.
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionRequired**: string (ReadOnly): Action required on the private connection state
-* **description**: string (ReadOnly): Description of the private Connection state
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly): The status of the Batch private endpoint connection
-
-## BatchAccountCreateParametersTags
+## BatchAccountIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: string
+* **Additional Properties Type**: [UserAssignedIdentities](#userassignedidentities)
 
-## ApplicationProperties
+## BatchAccountKeys
 ### Properties
-* **allowUpdates**: bool: A value indicating whether packages within the application may be overwritten using the same version string.
-* **defaultVersion**: string: The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
-* **displayName**: string: The display name for the application.
+* **accountName**: string (ReadOnly): The Batch account name.
+* **primary**: string (ReadOnly): The primary key associated with the account.
+* **secondary**: string (ReadOnly): The secondary key associated with the account.
 
-## ApplicationPackageProperties
+## BatchPoolIdentity
 ### Properties
-* **format**: string (ReadOnly): The format of the application package, if the package is active.
-* **lastActivationTime**: string (ReadOnly): The time at which the package was last activated, if the package is active.
-* **state**: 'Active' | 'Pending' (ReadOnly): The current state of the application package.
-* **storageUrl**: string (ReadOnly): The URL for the application package in Azure Storage.
-* **storageUrlExpiry**: string (ReadOnly): The UTC time at which the Azure Storage URL will expire.
+* **type**: 'None' | 'UserAssigned' (Required): The type of identity used for the Batch Pool.
+* **userAssignedIdentities**: [BatchPoolIdentityUserAssignedIdentities](#batchpoolidentityuserassignedidentities): The list of user identities associated with the Batch pool.
+
+## BatchPoolIdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentities](#userassignedidentities)
 
 ## CertificateCreateOrUpdateProperties
 ### Properties
@@ -184,6 +189,50 @@
 * **thumbprint**: string: This must match the thumbprint from the name.
 * **thumbprintAlgorithm**: string: This must match the first portion of the certificate name. Currently required to be 'SHA1'.
 
+## CertificateReference
+### Properties
+* **id**: string (Required): The fully qualified ID of the certificate to install on the pool. This must be inside the same batch account as the pool.
+* **storeLocation**: 'CurrentUser' | 'LocalMachine': The default value is currentUser. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
+* **storeName**: string: This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). Common store names include: My, Root, CA, Trust, Disallowed, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, but any custom store name can also be used. The default value is My.
+* **visibility**: 'RemoteUser' | 'StartTask' | 'Task'[]: Which user accounts on the compute node should have access to the private data of the certificate.
+
+## CifsMountConfiguration
+### Properties
+* **mountOptions**: string: These are 'net use' options in Windows and 'mount' options in Linux.
+* **password**: string (Required): The password to use for authentication against the CIFS file system.
+* **relativeMountPath**: string (Required): All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+* **source**: string (Required): The URI of the file system to mount.
+* **username**: string (Required): The user to use for authentication against the CIFS file system.
+
+## CloudServiceConfiguration
+### Properties
+* **osFamily**: string (Required): Possible values are: 2 - OS Family 2, equivalent to Windows Server 2008 R2 SP1. 3 - OS Family 3, equivalent to Windows Server 2012. 4 - OS Family 4, equivalent to Windows Server 2012 R2. 5 - OS Family 5, equivalent to Windows Server 2016. 6 - OS Family 6, equivalent to Windows Server 2019. For more information, see Azure Guest OS Releases (https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases).
+* **osVersion**: string: The default value is * which specifies the latest operating system version for the specified OS family.
+
+## ComputeNodeIdentityReference
+### Properties
+* **resourceId**: string: The ARM resource id of the user assigned identity.
+
+## ContainerConfiguration
+### Properties
+* **containerImageNames**: string[]: This is the full image reference, as would be specified to "docker pull". An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
+* **containerRegistries**: [ContainerRegistry](#containerregistry)[]: If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.
+* **type**: 'DockerCompatible' (Required): The container technology to be used.
+
+## ContainerRegistry
+### Properties
+* **identityReference**: [ComputeNodeIdentityReference](#computenodeidentityreference): The reference to a user assigned identity associated with the Batch pool which a compute node will use.
+* **password**: string: The password to log into the registry server.
+* **registryServer**: string: If omitted, the default is "docker.io".
+* **username**: string: The user name to log into the registry server.
+
+## DataDisk
+### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite': The type of caching to enable for the disk.
+* **diskSizeGB**: int (Required): The initial disk size in GB when creating new data disk.
+* **lun**: int (Required): The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.
+* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS': The storage account type for use in creating data disks.
+
 ## DeleteCertificateError
 ### Properties
 * **code**: string (ReadOnly): An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
@@ -191,15 +240,114 @@
 * **message**: string (ReadOnly): A message describing the error, intended to be suitable for display in a user interface.
 * **target**: string (ReadOnly): The target of the particular error. For example, the name of the property in error.
 
-## BatchPoolIdentity
+## DeploymentConfiguration
 ### Properties
-* **type**: 'None' | 'UserAssigned' (Required): The type of identity used for the Batch Pool.
-* **userAssignedIdentities**: [BatchPoolIdentityUserAssignedIdentities](#batchpoolidentityuserassignedidentities): The list of user identities associated with the Batch pool.
+* **cloudServiceConfiguration**: [CloudServiceConfiguration](#cloudserviceconfiguration): The configuration for nodes in a pool based on the Azure Cloud Services platform.
+* **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration): The configuration for compute nodes in a pool based on the Azure Virtual Machines infrastructure.
 
-## BatchPoolIdentityUserAssignedIdentities
+## DiffDiskSettings
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentities](#userassignedidentities)
+* **placement**: 'CacheDisk': This property can be used by user in the request to choose which location the operating system should be in. e.g., cache disk space for Ephemeral OS disk provisioning. For more information on Ephemeral OS disk size requirements, please refer to Ephemeral OS disk size requirements for Windows VMs at https://docs.microsoft.com/en-us/azure/virtual-machines/windows/ephemeral-os-disks#size-requirements and Linux VMs at https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ephemeral-os-disks#size-requirements
+
+## DiskEncryptionConfiguration
+### Properties
+* **targets**: 'OsDisk' | 'TemporaryDisk'[]: On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.
+
+## EncryptionProperties
+### Properties
+* **keySource**: 'Microsoft.Batch' | 'Microsoft.KeyVault': Type of the key source.
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): KeyVault configuration when using an encryption KeySource of Microsoft.KeyVault.
+
+## EnvironmentSetting
+### Properties
+* **name**: string (Required): The name of the environment variable.
+* **value**: string: The value of the environment variable.
+
+## FixedScaleSettings
+### Properties
+* **nodeDeallocationOption**: 'Requeue' | 'RetainedData' | 'TaskCompletion' | 'Terminate': Determines what to do with a node and its running task(s) after it has been selected for deallocation.
+* **resizeTimeout**: string: The default value is 15 minutes. Timeout values use ISO 8601 format. For example, use PT10M for 10 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service rejects the request with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
+* **targetDedicatedNodes**: int: At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
+* **targetLowPriorityNodes**: int: At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
+
+## ImageReference
+### Properties
+* **id**: string: This property is mutually exclusive with other properties. The Shared Image Gallery image must have replicas in the same region as the Azure Batch account. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
+* **offer**: string: For example, UbuntuServer or WindowsServer.
+* **publisher**: string: For example, Canonical or MicrosoftWindowsServer.
+* **sku**: string: For example, 18.04-LTS or 2019-Datacenter.
+* **version**: string: A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
+
+## InboundNatPool
+### Properties
+* **backendPort**: int (Required): This must be unique within a Batch pool. Acceptable values are between 1 and 65535 except for 22, 3389, 29876 and 29877 as these are reserved. If any reserved values are provided the request fails with HTTP status code 400.
+* **frontendPortRangeEnd**: int (Required): Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved by the Batch service. All ranges within a pool must be distinct and cannot overlap. If any reserved or overlapping values are provided the request fails with HTTP status code 400.
+* **frontendPortRangeStart**: int (Required): Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved. All ranges within a pool must be distinct and cannot overlap. If any reserved or overlapping values are provided the request fails with HTTP status code 400.
+* **name**: string (Required): The name must be unique within a Batch pool, can contain letters, numbers, underscores, periods, and hyphens. Names must start with a letter or number, must end with a letter, number, or underscore, and cannot exceed 77 characters.  If any invalid values are provided the request fails with HTTP status code 400.
+* **networkSecurityGroupRules**: [NetworkSecurityGroupRule](#networksecuritygrouprule)[]: The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.
+* **protocol**: 'TCP' | 'UDP' (Required): The protocol of the endpoint.
+
+## KeyVaultProperties
+### Properties
+* **keyIdentifier**: string: Full path to the versioned secret. Example https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053. To be usable the following prerequisites must be met:
+
+ The Batch Account has a System Assigned identity
+ The account identity has been granted Key/Get, Key/Unwrap and Key/Wrap permissions
+ The KeyVault has soft-delete and purge protection enabled
+
+## KeyVaultReference
+### Properties
+* **id**: string (Required): The resource ID of the Azure key vault associated with the Batch account.
+* **url**: string (Required): The URL of the Azure key vault associated with the Batch account.
+
+## LinuxUserConfiguration
+### Properties
+* **gid**: int: The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the gid.
+* **sshPrivateKey**: string: The private key must not be password protected. The private key is used to automatically configure asymmetric-key based authentication for SSH between nodes in a Linux pool when the pool's enableInterNodeCommunication property is true (it is ignored if enableInterNodeCommunication is false). It does this by placing the key pair into the user's .ssh directory. If not specified, password-less SSH is not configured between nodes (no modification of the user's .ssh directory is done).
+* **uid**: int: The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the uid.
+
+## MetadataItem
+### Properties
+* **name**: string (Required): The name of the metadata item.
+* **value**: string (Required): The value of the metadata item.
+
+## MountConfiguration
+### Properties
+* **azureBlobFileSystemConfiguration**: [AzureBlobFileSystemConfiguration](#azureblobfilesystemconfiguration): Information used to connect to an Azure Storage Container using Blobfuse.
+* **azureFileShareConfiguration**: [AzureFileShareConfiguration](#azurefileshareconfiguration): Information used to connect to an Azure Fileshare.
+* **cifsMountConfiguration**: [CifsMountConfiguration](#cifsmountconfiguration): Information used to connect to a CIFS file system.
+* **nfsMountConfiguration**: [NFSMountConfiguration](#nfsmountconfiguration): Information used to connect to an NFS file system.
+
+## NetworkConfiguration
+### Properties
+* **endpointConfiguration**: [PoolEndpointConfiguration](#poolendpointconfiguration): The endpoint configuration for a pool.
+* **publicIPAddressConfiguration**: [PublicIPAddressConfiguration](#publicipaddressconfiguration): The public IP Address configuration of the networking configuration of a Pool.
+* **subnetId**: string: The virtual network must be in the same region and subscription as the Azure Batch account. The specified subnet should have enough free IP addresses to accommodate the number of nodes in the pool. If the subnet doesn't have enough free IP addresses, the pool will partially allocate compute nodes and a resize error will occur. The 'MicrosoftAzureBatch' service principal must have the 'Classic Virtual Machine Contributor' Role-Based Access Control (RBAC) role for the specified VNet. The specified subnet must allow communication from the Azure Batch service to be able to schedule tasks on the compute nodes. This can be verified by checking if the specified VNet has any associated Network Security Groups (NSG). If communication to the compute nodes in the specified subnet is denied by an NSG, then the Batch service will set the state of the compute nodes to unusable. If the specified VNet has any associated Network Security Groups (NSG), then a few reserved system ports must be enabled for inbound communication. For pools created with a virtual machine configuration, enable ports 29876 and 29877, as well as port 22 for Linux and port 3389 for Windows. For pools created with a cloud service configuration, enable ports 10100, 20100, and 30100. Also enable outbound connections to Azure Storage on port 443. For cloudServiceConfiguration pools, only 'classic' VNETs are supported. For more details see: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
+
+## NetworkSecurityGroupRule
+### Properties
+* **access**: 'Allow' | 'Deny' (Required): The action that should be taken for a specified IP address, subnet range or tag.
+* **priority**: int (Required): Priorities within a pool must be unique and are evaluated in order of priority. The lower the number the higher the priority. For example, rules could be specified with order numbers of 150, 250, and 350. The rule with the order number of 150 takes precedence over the rule that has an order of 250. Allowed priorities are 150 to 4096. If any reserved or duplicate values are provided the request fails with HTTP status code 400.
+* **sourceAddressPrefix**: string (Required): Valid values are a single IP address (i.e. 10.10.10.10), IP subnet (i.e. 192.168.1.0/24), default tag, or * (for all addresses).  If any other values are provided the request fails with HTTP status code 400.
+* **sourcePortRanges**: string[]: Valid values are '*' (for all ports 0 - 65535) or arrays of ports or port ranges (i.e. 100-200). The ports should in the range of 0 to 65535 and the port ranges or ports can't overlap. If any other values are provided the request fails with HTTP status code 400. Default value will be *.
+
+## NFSMountConfiguration
+### Properties
+* **mountOptions**: string: These are 'net use' options in Windows and 'mount' options in Linux.
+* **relativeMountPath**: string (Required): All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+* **source**: string (Required): The URI of the file system to mount.
+
+## NodePlacementConfiguration
+### Properties
+* **policy**: 'Regional' | 'Zonal': The default value is regional.
+
+## OSDisk
+### Properties
+* **ephemeralOSDiskSettings**: [DiffDiskSettings](#diffdisksettings): Specifies the ephemeral Disk Settings for the operating system disk used by the virtual machine.
+
+## PoolEndpointConfiguration
+### Properties
+* **inboundNatPools**: [InboundNatPool](#inboundnatpool)[] (Required): The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.
 
 ## PoolProperties
 ### Properties
@@ -229,189 +377,40 @@
 * **userAccounts**: [UserAccount](#useraccount)[]: The list of user accounts to be created on each node in the pool.
 * **vmSize**: string: For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/). Batch supports all Cloud Services VM sizes except ExtraSmall. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) or Sizes for Virtual Machines (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).
 
-## ApplicationPackageReference
+## PrivateEndpoint
 ### Properties
-* **id**: string (Required): The ID of the application package to install. This must be inside the same batch account as the pool. This can either be a reference to a specific version or the default version if one exists.
-* **version**: string: If this is omitted, and no default version is specified for this application, the request fails with the error code InvalidApplicationPackageReferences. If you are calling the REST API directly, the HTTP status code is 409.
+* **id**: string (ReadOnly): The ARM resource identifier of the private endpoint. This is of the form /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/privateEndpoints/{privateEndpoint}.
 
-## AutoScaleRun
+## PrivateEndpointConnection
 ### Properties
-* **error**: [AutoScaleRunError](#autoscalerunerror): An error that occurred when autoscaling a pool.
-* **evaluationTime**: string (Required): The time at which the autoscale formula was last evaluated.
-* **results**: string: Each variable value is returned in the form $variable=value, and variables are separated by semicolons.
+* **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
+* **id**: string (ReadOnly): The ID of the resource.
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Private endpoint connection properties.
+* **type**: string (ReadOnly): The type of the resource.
 
-## AutoScaleRunError
+## PrivateEndpointConnectionProperties
 ### Properties
-* **code**: string (Required): An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
-* **details**: [AutoScaleRunError](#autoscalerunerror)[]: Additional details about the error.
-* **message**: string (Required): A message describing the error, intended to be suitable for display in a user interface.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The private endpoint of the private endpoint connection.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly): The private link service connection state of the private endpoint connection
+* **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the private endpoint connection.
 
-## CertificateReference
+## PrivateLinkServiceConnectionState
 ### Properties
-* **id**: string (Required): The fully qualified ID of the certificate to install on the pool. This must be inside the same batch account as the pool.
-* **storeLocation**: 'CurrentUser' | 'LocalMachine': The default value is currentUser. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
-* **storeName**: string: This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). Common store names include: My, Root, CA, Trust, Disallowed, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, but any custom store name can also be used. The default value is My.
-* **visibility**: 'RemoteUser' | 'StartTask' | 'Task'[]: Which user accounts on the compute node should have access to the private data of the certificate.
-
-## DeploymentConfiguration
-### Properties
-* **cloudServiceConfiguration**: [CloudServiceConfiguration](#cloudserviceconfiguration): The configuration for nodes in a pool based on the Azure Cloud Services platform.
-* **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration): The configuration for compute nodes in a pool based on the Azure Virtual Machines infrastructure.
-
-## CloudServiceConfiguration
-### Properties
-* **osFamily**: string (Required): Possible values are: 2 - OS Family 2, equivalent to Windows Server 2008 R2 SP1. 3 - OS Family 3, equivalent to Windows Server 2012. 4 - OS Family 4, equivalent to Windows Server 2012 R2. 5 - OS Family 5, equivalent to Windows Server 2016. 6 - OS Family 6, equivalent to Windows Server 2019. For more information, see Azure Guest OS Releases (https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases).
-* **osVersion**: string: The default value is * which specifies the latest operating system version for the specified OS family.
-
-## VirtualMachineConfiguration
-### Properties
-* **containerConfiguration**: [ContainerConfiguration](#containerconfiguration): The configuration for container-enabled pools.
-* **dataDisks**: [DataDisk](#datadisk)[]: This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.
-* **diskEncryptionConfiguration**: [DiskEncryptionConfiguration](#diskencryptionconfiguration): The disk encryption configuration applied on compute nodes in the pool. Disk encryption configuration is not supported on Linux pool created with Virtual Machine Image or Shared Image Gallery Image.
-* **extensions**: [VMExtension](#vmextension)[]: If specified, the extensions mentioned in this configuration will be installed on each node.
-* **imageReference**: [ImageReference](#imagereference) (Required): A reference to an Azure Virtual Machines Marketplace image or the Azure Image resource of a custom Virtual Machine. To get the list of all imageReferences verified by Azure Batch, see the 'List supported node agent SKUs' operation.
-* **licenseType**: string: This only applies to images that contain the Windows operating system, and should only be used when you hold valid on-premises licenses for the nodes which will be deployed. If omitted, no on-premises licensing discount is applied. Values are:
-
- Windows_Server - The on-premises license is for Windows Server.
- Windows_Client - The on-premises license is for Windows Client.
-* **nodeAgentSkuId**: string (Required): The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the 'List supported node agent SKUs' operation.
-* **nodePlacementConfiguration**: [NodePlacementConfiguration](#nodeplacementconfiguration): Allocation configuration used by Batch Service to provision the nodes.
-* **osDisk**: [OSDisk](#osdisk): Settings for the operating system disk of the virtual machine.
-* **windowsConfiguration**: [WindowsConfiguration](#windowsconfiguration): Windows operating system settings to apply to the virtual machine.
-
-## ContainerConfiguration
-### Properties
-* **containerImageNames**: string[]: This is the full image reference, as would be specified to "docker pull". An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
-* **containerRegistries**: [ContainerRegistry](#containerregistry)[]: If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.
-* **type**: 'DockerCompatible' (Required): The container technology to be used.
-
-## ContainerRegistry
-### Properties
-* **identityReference**: [ComputeNodeIdentityReference](#computenodeidentityreference): The reference to a user assigned identity associated with the Batch pool which a compute node will use.
-* **password**: string: The password to log into the registry server.
-* **registryServer**: string: If omitted, the default is "docker.io".
-* **username**: string: The user name to log into the registry server.
-
-## DataDisk
-### Properties
-* **caching**: 'None' | 'ReadOnly' | 'ReadWrite': The type of caching to enable for the disk.
-* **diskSizeGB**: int (Required): The initial disk size in GB when creating new data disk.
-* **lun**: int (Required): The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.
-* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS': The storage account type for use in creating data disks.
-
-## DiskEncryptionConfiguration
-### Properties
-* **targets**: 'OsDisk' | 'TemporaryDisk'[]: On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.
-
-## VMExtension
-### Properties
-* **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-* **name**: string (Required): The name of the virtual machine extension.
-* **protectedSettings**: any: Any object
-* **provisionAfterExtensions**: string[]: Collection of extension names after which this extension needs to be provisioned.
-* **publisher**: string (Required): The name of the extension handler publisher.
-* **settings**: any: Any object
-* **type**: string (Required): The type of the extensions.
-* **typeHandlerVersion**: string: The version of script handler.
-
-## ImageReference
-### Properties
-* **id**: string: This property is mutually exclusive with other properties. The Shared Image Gallery image must have replicas in the same region as the Azure Batch account. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
-* **offer**: string: For example, UbuntuServer or WindowsServer.
-* **publisher**: string: For example, Canonical or MicrosoftWindowsServer.
-* **sku**: string: For example, 18.04-LTS or 2019-Datacenter.
-* **version**: string: A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
-
-## NodePlacementConfiguration
-### Properties
-* **policy**: 'Regional' | 'Zonal': The default value is regional.
-
-## OSDisk
-### Properties
-* **ephemeralOSDiskSettings**: [DiffDiskSettings](#diffdisksettings): Specifies the ephemeral Disk Settings for the operating system disk used by the virtual machine.
-
-## DiffDiskSettings
-### Properties
-* **placement**: 'CacheDisk': This property can be used by user in the request to choose which location the operating system should be in. e.g., cache disk space for Ephemeral OS disk provisioning. For more information on Ephemeral OS disk size requirements, please refer to Ephemeral OS disk size requirements for Windows VMs at https://docs.microsoft.com/en-us/azure/virtual-machines/windows/ephemeral-os-disks#size-requirements and Linux VMs at https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ephemeral-os-disks#size-requirements
-
-## WindowsConfiguration
-### Properties
-* **enableAutomaticUpdates**: bool: If omitted, the default value is true.
-
-## MetadataItem
-### Properties
-* **name**: string (Required): The name of the metadata item.
-* **value**: string (Required): The value of the metadata item.
-
-## MountConfiguration
-### Properties
-* **azureBlobFileSystemConfiguration**: [AzureBlobFileSystemConfiguration](#azureblobfilesystemconfiguration): Information used to connect to an Azure Storage Container using Blobfuse.
-* **azureFileShareConfiguration**: [AzureFileShareConfiguration](#azurefileshareconfiguration): Information used to connect to an Azure Fileshare.
-* **cifsMountConfiguration**: [CifsMountConfiguration](#cifsmountconfiguration): Information used to connect to a CIFS file system.
-* **nfsMountConfiguration**: [NFSMountConfiguration](#nfsmountconfiguration): Information used to connect to an NFS file system.
-
-## AzureBlobFileSystemConfiguration
-### Properties
-* **accountKey**: string: This property is mutually exclusive with both sasKey and identity; exactly one must be specified.
-* **accountName**: string (Required): The Azure Storage Account name.
-* **blobfuseOptions**: string: These are 'net use' options in Windows and 'mount' options in Linux.
-* **containerName**: string (Required): The Azure Blob Storage Container name.
-* **identityReference**: [ComputeNodeIdentityReference](#computenodeidentityreference): The reference to a user assigned identity associated with the Batch pool which a compute node will use.
-* **relativeMountPath**: string (Required): All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
-* **sasKey**: string: This property is mutually exclusive with both accountKey and identity; exactly one must be specified.
-
-## AzureFileShareConfiguration
-### Properties
-* **accountKey**: string (Required): The Azure Storage account key.
-* **accountName**: string (Required): The Azure Storage account name.
-* **azureFileUrl**: string (Required): This is of the form 'https://{account}.file.core.windows.net/'.
-* **mountOptions**: string: These are 'net use' options in Windows and 'mount' options in Linux.
-* **relativeMountPath**: string (Required): All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
-
-## CifsMountConfiguration
-### Properties
-* **mountOptions**: string: These are 'net use' options in Windows and 'mount' options in Linux.
-* **password**: string (Required): The password to use for authentication against the CIFS file system.
-* **relativeMountPath**: string (Required): All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
-* **source**: string (Required): The URI of the file system to mount.
-* **username**: string (Required): The user to use for authentication against the CIFS file system.
-
-## NFSMountConfiguration
-### Properties
-* **mountOptions**: string: These are 'net use' options in Windows and 'mount' options in Linux.
-* **relativeMountPath**: string (Required): All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
-* **source**: string (Required): The URI of the file system to mount.
-
-## NetworkConfiguration
-### Properties
-* **endpointConfiguration**: [PoolEndpointConfiguration](#poolendpointconfiguration): The endpoint configuration for a pool.
-* **publicIPAddressConfiguration**: [PublicIPAddressConfiguration](#publicipaddressconfiguration): The public IP Address configuration of the networking configuration of a Pool.
-* **subnetId**: string: The virtual network must be in the same region and subscription as the Azure Batch account. The specified subnet should have enough free IP addresses to accommodate the number of nodes in the pool. If the subnet doesn't have enough free IP addresses, the pool will partially allocate compute nodes and a resize error will occur. The 'MicrosoftAzureBatch' service principal must have the 'Classic Virtual Machine Contributor' Role-Based Access Control (RBAC) role for the specified VNet. The specified subnet must allow communication from the Azure Batch service to be able to schedule tasks on the compute nodes. This can be verified by checking if the specified VNet has any associated Network Security Groups (NSG). If communication to the compute nodes in the specified subnet is denied by an NSG, then the Batch service will set the state of the compute nodes to unusable. If the specified VNet has any associated Network Security Groups (NSG), then a few reserved system ports must be enabled for inbound communication. For pools created with a virtual machine configuration, enable ports 29876 and 29877, as well as port 22 for Linux and port 3389 for Windows. For pools created with a cloud service configuration, enable ports 10100, 20100, and 30100. Also enable outbound connections to Azure Storage on port 443. For cloudServiceConfiguration pools, only 'classic' VNETs are supported. For more details see: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
-
-## PoolEndpointConfiguration
-### Properties
-* **inboundNatPools**: [InboundNatPool](#inboundnatpool)[] (Required): The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.
-
-## InboundNatPool
-### Properties
-* **backendPort**: int (Required): This must be unique within a Batch pool. Acceptable values are between 1 and 65535 except for 22, 3389, 29876 and 29877 as these are reserved. If any reserved values are provided the request fails with HTTP status code 400.
-* **frontendPortRangeEnd**: int (Required): Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved by the Batch service. All ranges within a pool must be distinct and cannot overlap. If any reserved or overlapping values are provided the request fails with HTTP status code 400.
-* **frontendPortRangeStart**: int (Required): Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved. All ranges within a pool must be distinct and cannot overlap. If any reserved or overlapping values are provided the request fails with HTTP status code 400.
-* **name**: string (Required): The name must be unique within a Batch pool, can contain letters, numbers, underscores, periods, and hyphens. Names must start with a letter or number, must end with a letter, number, or underscore, and cannot exceed 77 characters.  If any invalid values are provided the request fails with HTTP status code 400.
-* **networkSecurityGroupRules**: [NetworkSecurityGroupRule](#networksecuritygrouprule)[]: The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.
-* **protocol**: 'TCP' | 'UDP' (Required): The protocol of the endpoint.
-
-## NetworkSecurityGroupRule
-### Properties
-* **access**: 'Allow' | 'Deny' (Required): The action that should be taken for a specified IP address, subnet range or tag.
-* **priority**: int (Required): Priorities within a pool must be unique and are evaluated in order of priority. The lower the number the higher the priority. For example, rules could be specified with order numbers of 150, 250, and 350. The rule with the order number of 150 takes precedence over the rule that has an order of 250. Allowed priorities are 150 to 4096. If any reserved or duplicate values are provided the request fails with HTTP status code 400.
-* **sourceAddressPrefix**: string (Required): Valid values are a single IP address (i.e. 10.10.10.10), IP subnet (i.e. 192.168.1.0/24), default tag, or * (for all addresses).  If any other values are provided the request fails with HTTP status code 400.
-* **sourcePortRanges**: string[]: Valid values are '*' (for all ports 0 - 65535) or arrays of ports or port ranges (i.e. 100-200). The ports should in the range of 0 to 65535 and the port ranges or ports can't overlap. If any other values are provided the request fails with HTTP status code 400. Default value will be *.
+* **actionRequired**: string (ReadOnly): Action required on the private connection state
+* **description**: string (ReadOnly): Description of the private Connection state
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly): The status of the Batch private endpoint connection
 
 ## PublicIPAddressConfiguration
 ### Properties
 * **ipAddressIds**: string[]: The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.
 * **provision**: 'BatchManaged' | 'NoPublicIPAddresses' | 'UserManaged': The provisioning type for Public IP Addresses for the Batch Pool.
+
+## ResizeError
+### Properties
+* **code**: string (Required): An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+* **details**: [ResizeError](#resizeerror)[]: Additional details about the error.
+* **message**: string (Required): A message describing the error, intended to be suitable for display in a user interface.
 
 ## ResizeOperationStatus
 ### Properties
@@ -422,28 +421,20 @@
 * **targetDedicatedNodes**: int: The desired number of dedicated compute nodes in the pool.
 * **targetLowPriorityNodes**: int: The desired number of low-priority compute nodes in the pool.
 
-## ResizeError
+## ResourceFile
 ### Properties
-* **code**: string (Required): An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
-* **details**: [ResizeError](#resizeerror)[]: Additional details about the error.
-* **message**: string (Required): A message describing the error, intended to be suitable for display in a user interface.
+* **autoStorageContainerName**: string: The autoStorageContainerName, storageContainerUrl and httpUrl properties are mutually exclusive and one of them must be specified.
+* **blobPrefix**: string: The property is valid only when autoStorageContainerName or storageContainerUrl is used. This prefix can be a partial filename or a subdirectory. If a prefix is not specified, all the files in the container will be downloaded.
+* **fileMode**: string: This property applies only to files being downloaded to Linux compute nodes. It will be ignored if it is specified for a resourceFile which will be downloaded to a Windows node. If this property is not specified for a Linux node, then a default value of 0770 is applied to the file.
+* **filePath**: string: If the httpUrl property is specified, the filePath is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the autoStorageContainerName or storageContainerUrl property is specified, filePath is optional and is the directory to download the files to. In the case where filePath is used as a directory, any directory structure already associated with the input data will be retained in full and appended to the specified filePath directory. The specified relative path cannot break out of the task's working directory (for example by using '..').
+* **httpUrl**: string: The autoStorageContainerName, storageContainerUrl and httpUrl properties are mutually exclusive and one of them must be specified. If the URL points to Azure Blob Storage, it must be readable from compute nodes. There are three ways to get such a URL for a blob in Azure storage: include a Shared Access Signature (SAS) granting read permissions on the blob, use a managed identity with read permission, or set the ACL for the blob or its container to allow public access.
+* **identityReference**: [ComputeNodeIdentityReference](#computenodeidentityreference): The reference to a user assigned identity associated with the Batch pool which a compute node will use.
+* **storageContainerUrl**: string: The autoStorageContainerName, storageContainerUrl and httpUrl properties are mutually exclusive and one of them must be specified. This URL must be readable and listable from compute nodes. There are three ways to get such a URL for a container in Azure storage: include a Shared Access Signature (SAS) granting read and list permissions on the container, use a managed identity with read and list permissions, or set the ACL for the container to allow public access.
 
 ## ScaleSettings
 ### Properties
 * **autoScale**: [AutoScaleSettings](#autoscalesettings): AutoScale settings for the pool.
 * **fixedScale**: [FixedScaleSettings](#fixedscalesettings): Fixed scale settings for the pool.
-
-## AutoScaleSettings
-### Properties
-* **evaluationInterval**: string: If omitted, the default value is 15 minutes (PT15M).
-* **formula**: string (Required): A formula for the desired number of compute nodes in the pool.
-
-## FixedScaleSettings
-### Properties
-* **nodeDeallocationOption**: 'Requeue' | 'RetainedData' | 'TaskCompletion' | 'Terminate': Determines what to do with a node and its running task(s) after it has been selected for deallocation.
-* **resizeTimeout**: string: The default value is 15 minutes. Timeout values use ISO 8601 format. For example, use PT10M for 10 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service rejects the request with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
-* **targetDedicatedNodes**: int: At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
-* **targetLowPriorityNodes**: int: At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
 
 ## StartTask
 ### Properties
@@ -462,31 +453,6 @@
 * **registry**: [ContainerRegistry](#containerregistry): A private container registry.
 * **workingDirectory**: 'ContainerImageDefault' | 'TaskWorkingDirectory': A flag to indicate where the container task working directory is. The default is 'taskWorkingDirectory'.
 
-## EnvironmentSetting
-### Properties
-* **name**: string (Required): The name of the environment variable.
-* **value**: string: The value of the environment variable.
-
-## ResourceFile
-### Properties
-* **autoStorageContainerName**: string: The autoStorageContainerName, storageContainerUrl and httpUrl properties are mutually exclusive and one of them must be specified.
-* **blobPrefix**: string: The property is valid only when autoStorageContainerName or storageContainerUrl is used. This prefix can be a partial filename or a subdirectory. If a prefix is not specified, all the files in the container will be downloaded.
-* **fileMode**: string: This property applies only to files being downloaded to Linux compute nodes. It will be ignored if it is specified for a resourceFile which will be downloaded to a Windows node. If this property is not specified for a Linux node, then a default value of 0770 is applied to the file.
-* **filePath**: string: If the httpUrl property is specified, the filePath is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the autoStorageContainerName or storageContainerUrl property is specified, filePath is optional and is the directory to download the files to. In the case where filePath is used as a directory, any directory structure already associated with the input data will be retained in full and appended to the specified filePath directory. The specified relative path cannot break out of the task's working directory (for example by using '..').
-* **httpUrl**: string: The autoStorageContainerName, storageContainerUrl and httpUrl properties are mutually exclusive and one of them must be specified. If the URL points to Azure Blob Storage, it must be readable from compute nodes. There are three ways to get such a URL for a blob in Azure storage: include a Shared Access Signature (SAS) granting read permissions on the blob, use a managed identity with read permission, or set the ACL for the blob or its container to allow public access.
-* **identityReference**: [ComputeNodeIdentityReference](#computenodeidentityreference): The reference to a user assigned identity associated with the Batch pool which a compute node will use.
-* **storageContainerUrl**: string: The autoStorageContainerName, storageContainerUrl and httpUrl properties are mutually exclusive and one of them must be specified. This URL must be readable and listable from compute nodes. There are three ways to get such a URL for a container in Azure storage: include a Shared Access Signature (SAS) granting read and list permissions on the container, use a managed identity with read and list permissions, or set the ACL for the container to allow public access.
-
-## UserIdentity
-### Properties
-* **autoUser**: [AutoUserSpecification](#autouserspecification): Specifies the parameters for the auto user that runs a task on the Batch service.
-* **userName**: string: The userName and autoUser properties are mutually exclusive; you must specify one but not both.
-
-## AutoUserSpecification
-### Properties
-* **elevationLevel**: 'Admin' | 'NonAdmin': The elevation level of the user.
-* **scope**: 'Pool' | 'Task': The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.
-
 ## TaskSchedulingPolicy
 ### Properties
 * **nodeFillType**: 'Pack' | 'Spread' (Required): How tasks should be distributed across compute nodes.
@@ -499,19 +465,53 @@
 * **password**: string (Required): The password for the user account.
 * **windowsUserConfiguration**: [WindowsUserConfiguration](#windowsuserconfiguration): Properties used to create a user account on a Windows node.
 
-## LinuxUserConfiguration
+## UserAssignedIdentities
 ### Properties
-* **gid**: int: The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the gid.
-* **sshPrivateKey**: string: The private key must not be password protected. The private key is used to automatically configure asymmetric-key based authentication for SSH between nodes in a Linux pool when the pool's enableInterNodeCommunication property is true (it is ignored if enableInterNodeCommunication is false). It does this by placing the key pair into the user's .ssh directory. If not specified, password-less SSH is not configured between nodes (no modification of the user's .ssh directory is done).
-* **uid**: int: The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the uid.
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+
+## UserIdentity
+### Properties
+* **autoUser**: [AutoUserSpecification](#autouserspecification): Specifies the parameters for the auto user that runs a task on the Batch service.
+* **userName**: string: The userName and autoUser properties are mutually exclusive; you must specify one but not both.
+
+## VirtualMachineConfiguration
+### Properties
+* **containerConfiguration**: [ContainerConfiguration](#containerconfiguration): The configuration for container-enabled pools.
+* **dataDisks**: [DataDisk](#datadisk)[]: This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.
+* **diskEncryptionConfiguration**: [DiskEncryptionConfiguration](#diskencryptionconfiguration): The disk encryption configuration applied on compute nodes in the pool. Disk encryption configuration is not supported on Linux pool created with Virtual Machine Image or Shared Image Gallery Image.
+* **extensions**: [VMExtension](#vmextension)[]: If specified, the extensions mentioned in this configuration will be installed on each node.
+* **imageReference**: [ImageReference](#imagereference) (Required): A reference to an Azure Virtual Machines Marketplace image or the Azure Image resource of a custom Virtual Machine. To get the list of all imageReferences verified by Azure Batch, see the 'List supported node agent SKUs' operation.
+* **licenseType**: string: This only applies to images that contain the Windows operating system, and should only be used when you hold valid on-premises licenses for the nodes which will be deployed. If omitted, no on-premises licensing discount is applied. Values are:
+
+ Windows_Server - The on-premises license is for Windows Server.
+ Windows_Client - The on-premises license is for Windows Client.
+* **nodeAgentSkuId**: string (Required): The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the 'List supported node agent SKUs' operation.
+* **nodePlacementConfiguration**: [NodePlacementConfiguration](#nodeplacementconfiguration): Allocation configuration used by Batch Service to provision the nodes.
+* **osDisk**: [OSDisk](#osdisk): Settings for the operating system disk of the virtual machine.
+* **windowsConfiguration**: [WindowsConfiguration](#windowsconfiguration): Windows operating system settings to apply to the virtual machine.
+
+## VirtualMachineFamilyCoreQuota
+### Properties
+* **coreQuota**: int (ReadOnly): The core quota for the VM family for the Batch account.
+* **name**: string (ReadOnly): The Virtual Machine family name.
+
+## VMExtension
+### Properties
+* **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+* **name**: string (Required): The name of the virtual machine extension.
+* **protectedSettings**: any: Any object
+* **provisionAfterExtensions**: string[]: Collection of extension names after which this extension needs to be provisioned.
+* **publisher**: string (Required): The name of the extension handler publisher.
+* **settings**: any: Any object
+* **type**: string (Required): The type of the extensions.
+* **typeHandlerVersion**: string: The version of script handler.
+
+## WindowsConfiguration
+### Properties
+* **enableAutomaticUpdates**: bool: If omitted, the default value is true.
 
 ## WindowsUserConfiguration
 ### Properties
 * **loginMode**: 'Batch' | 'Interactive': Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.
-
-## BatchAccountKeys
-### Properties
-* **accountName**: string (ReadOnly): The Batch account name.
-* **primary**: string (ReadOnly): The primary key associated with the account.
-* **secondary**: string (ReadOnly): The secondary key associated with the account.
 

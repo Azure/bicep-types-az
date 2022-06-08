@@ -104,6 +104,23 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/privateDnsZones/virtualNetworkLinks' (ReadOnly, DeployTimeConstant): The resource type
 
+## AaaaRecord
+### Properties
+* **ipv6Address**: string: The IPv6 address of this AAAA record.
+
+## ARecord
+### Properties
+* **ipv4Address**: string: The IPv4 address of this A record.
+
+## CnameRecord
+### Properties
+* **cname**: string: The canonical name for this CNAME record.
+
+## MxRecord
+### Properties
+* **exchange**: string: The domain name of the mail host for this MX record.
+* **preference**: int: The preference value for this MX record.
+
 ## PrivateZoneProperties
 ### Properties
 * **maxNumberOfRecordSets**: int (ReadOnly): The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
@@ -114,10 +131,9 @@
 * **numberOfVirtualNetworkLinksWithRegistration**: int (ReadOnly): The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
 
-## TrackedResourceTags
+## PtrRecord
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **ptrdname**: string: The PTR target domain name for this PTR record.
 
 ## RecordSetProperties
 ### Properties
@@ -134,31 +150,10 @@
 * **ttl**: int: The TTL (time-to-live) of the records in the record set.
 * **txtRecords**: [TxtRecord](#txtrecord)[]: The list of TXT records in the record set.
 
-## AaaaRecord
-### Properties
-* **ipv6Address**: string: The IPv6 address of this AAAA record.
-
-## ARecord
-### Properties
-* **ipv4Address**: string: The IPv4 address of this A record.
-
-## CnameRecord
-### Properties
-* **cname**: string: The canonical name for this CNAME record.
-
 ## RecordSetPropertiesMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## MxRecord
-### Properties
-* **exchange**: string: The domain name of the mail host for this MX record.
-* **preference**: int: The preference value for this MX record.
-
-## PtrRecord
-### Properties
-* **ptrdname**: string: The PTR target domain name for this PTR record.
 
 ## SoaRecord
 ### Properties
@@ -177,6 +172,20 @@
 * **target**: string: The target domain name for this SRV record.
 * **weight**: int: The weight value for this SRV record.
 
+## SubResource
+### Properties
+* **id**: string: Resource ID.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## TxtRecord
 ### Properties
 * **value**: string[]: The text value of this TXT record.
@@ -187,13 +196,4 @@
 * **registrationEnabled**: bool: Is auto-registration of virtual machine records in the virtual network in the Private DNS zone enabled?
 * **virtualNetwork**: [SubResource](#subresource): Reference to another subresource.
 * **virtualNetworkLinkState**: 'Completed' | 'InProgress' | string (ReadOnly): The status of the virtual network link to the Private DNS zone. Possible values are 'InProgress' and 'Done'. This is a read-only property and any attempt to set this value will be ignored.
-
-## SubResource
-### Properties
-* **id**: string: Resource ID.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

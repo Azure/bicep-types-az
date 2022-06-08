@@ -18,6 +18,21 @@
 * **Input**: [AuthenticationDetails](#authenticationdetails)
 * **Output**: [CredentialResults](#credentialresults)
 
+## AuthenticationDetails
+### Properties
+* **authenticationMethod**: 'Token' | string (Required, WriteOnly): The mode of client authentication.
+* **value**: [AuthenticationDetailsValue](#authenticationdetailsvalue) (Required, WriteOnly): Authentication token value.
+
+## AuthenticationDetailsValue
+### Properties
+* **token**: string (WriteOnly): Authentication token.
+
+## ConnectedClusterAADProfile
+### Properties
+* **clientAppId**: string (Required): The client app id configured on target K8 cluster
+* **serverAppId**: string (Required): The server app id to access AD server
+* **tenantId**: string (Required): The aad tenant id which is configured on target K8s cluster
+
 ## ConnectedClusterIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of connected cluster identity. This property will only be provided for a system assigned identity.
@@ -40,25 +55,10 @@
 * **totalCoreCount**: int (ReadOnly): Number of CPU cores present in the connected cluster resource
 * **totalNodeCount**: int (ReadOnly): Number of nodes present in the connected cluster resource
 
-## ConnectedClusterAADProfile
+## CredentialResult
 ### Properties
-* **clientAppId**: string (Required): The client app id configured on target K8 cluster
-* **serverAppId**: string (Required): The server app id to access AD server
-* **tenantId**: string (Required): The aad tenant id which is configured on target K8s cluster
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## AuthenticationDetails
-### Properties
-* **authenticationMethod**: 'Token' | string (Required, WriteOnly): The mode of client authentication.
-* **value**: [AuthenticationDetailsValue](#authenticationdetailsvalue) (Required, WriteOnly): Authentication token value.
-
-## AuthenticationDetailsValue
-### Properties
-* **token**: string (WriteOnly): Authentication token.
+* **name**: string (ReadOnly): The name of the credential.
+* **value**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
 
 ## CredentialResults
 ### Properties
@@ -72,8 +72,8 @@
 * **relay**: string (ReadOnly): Name of the relay.
 * **token**: string (ReadOnly): Sender access token
 
-## CredentialResult
+## TrackedResourceTags
 ### Properties
-* **name**: string (ReadOnly): The name of the credential.
-* **value**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
+### Additional Properties
+* **Additional Properties Type**: string
 

@@ -21,11 +21,22 @@
 * **ApiVersion**: 2020-05-01
 * **Output**: [AccountKeys](#accountkeys)
 
+## AccountKeys
+### Properties
+* **primaryKey**: string (ReadOnly): value of primary key.
+* **secondaryKey**: string (ReadOnly): value of secondary key.
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
 * **type**: 'SystemAssigned': The identity type.
+
+## MixedRealityAccountProperties
+### Properties
+* **accountDomain**: string (ReadOnly): Correspond domain name of certain Spatial Anchors Account
+* **accountId**: string (ReadOnly): unique id of certain account.
+* **storageAccountName**: string: The name of the storage account associated with this accountId
 
 ## Sku
 ### Properties
@@ -34,12 +45,6 @@
 * **name**: string (Required): The name of the SKU. Ex - P3. It is typically a letter+number code
 * **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
 * **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
-
-## MixedRealityAccountProperties
-### Properties
-* **accountDomain**: string (ReadOnly): Correspond domain name of certain Spatial Anchors Account
-* **accountId**: string (ReadOnly): unique id of certain account.
-* **storageAccountName**: string: The name of the storage account associated with this accountId
 
 ## SystemData
 ### Properties
@@ -54,9 +59,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## AccountKeys
-### Properties
-* **primaryKey**: string (ReadOnly): value of primary key.
-* **secondaryKey**: string (ReadOnly): value of secondary key.
 

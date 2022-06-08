@@ -15,16 +15,6 @@
 * **ApiVersion**: 2022-01-01-preview
 * **Output**: [SourceConfigurationResult](#sourceconfigurationresult)
 
-## LinkerProperties
-### Properties
-* **authInfo**: [AuthInfoBase](#authinfobase): The authentication info
-* **clientType**: 'django' | 'dotnet' | 'go' | 'java' | 'nodejs' | 'none' | 'php' | 'python' | 'ruby' | 'springBoot' | string: The application client type
-* **provisioningState**: string (ReadOnly): The provisioning state.
-* **scope**: string: connection scope in source service.
-* **secretStore**: [SecretStore](#secretstore): An option to store secret value in secure place
-* **targetService**: [TargetServiceBase](#targetservicebase): The target service properties
-* **vNetSolution**: [VNetSolution](#vnetsolution): The VNet solution for linker
-
 ## AuthInfoBase
 * **Discriminator**: authType
 
@@ -60,6 +50,26 @@
 * **subscriptionId**: string: Subscription id for userAssignedIdentity.
 
 
+## AzureResourcePropertiesBase
+* **Discriminator**: type
+
+### Base Properties
+### AzureKeyVaultProperties
+#### Properties
+* **connectAsKubernetesCsiDriver**: bool: True if connect via Kubernetes CSI Driver.
+* **type**: 'KeyVault' (Required): The azure resource type.
+
+
+## LinkerProperties
+### Properties
+* **authInfo**: [AuthInfoBase](#authinfobase): The authentication info
+* **clientType**: 'django' | 'dotnet' | 'go' | 'java' | 'nodejs' | 'none' | 'php' | 'python' | 'ruby' | 'springBoot' | string: The application client type
+* **provisioningState**: string (ReadOnly): The provisioning state.
+* **scope**: string: connection scope in source service.
+* **secretStore**: [SecretStore](#secretstore): An option to store secret value in secure place
+* **targetService**: [TargetServiceBase](#targetservicebase): The target service properties
+* **vNetSolution**: [VNetSolution](#vnetsolution): The VNet solution for linker
+
 ## SecretInfoBase
 * **Discriminator**: secretType
 
@@ -85,6 +95,24 @@
 ### Properties
 * **keyVaultId**: string: The key vault id to store secret
 
+## SourceConfiguration
+### Properties
+* **name**: string (ReadOnly): The name of setting.
+* **value**: string (ReadOnly): The value of setting
+
+## SourceConfigurationResult
+### Properties
+* **configurations**: [SourceConfiguration](#sourceconfiguration)[] (ReadOnly): The configuration properties for source resource.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+
 ## TargetServiceBase
 * **Discriminator**: type
 
@@ -106,35 +134,7 @@
 * **type**: 'ConfluentSchemaRegistry' (Required): The target service type.
 
 
-## AzureResourcePropertiesBase
-* **Discriminator**: type
-
-### Base Properties
-### AzureKeyVaultProperties
-#### Properties
-* **connectAsKubernetesCsiDriver**: bool: True if connect via Kubernetes CSI Driver.
-* **type**: 'KeyVault' (Required): The azure resource type.
-
-
 ## VNetSolution
 ### Properties
 * **type**: 'privateLink' | 'serviceEndpoint' | string: Type of VNet solution.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## SourceConfigurationResult
-### Properties
-* **configurations**: [SourceConfiguration](#sourceconfiguration)[] (ReadOnly): The configuration properties for source resource.
-
-## SourceConfiguration
-### Properties
-* **name**: string (ReadOnly): The name of setting.
-* **value**: string (ReadOnly): The value of setting
 

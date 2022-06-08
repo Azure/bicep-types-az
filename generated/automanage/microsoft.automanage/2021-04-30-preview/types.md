@@ -34,6 +34,11 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Automanage/configurationProfiles/versions' (ReadOnly, DeployTimeConstant): The resource type
 
+## ConfigurationProfileAssignmentProfileOverrides
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
 ## ConfigurationProfileAssignmentProperties
 ### Properties
 * **configurationProfile**: string: The Automanage configurationProfile ARM Resource URI.
@@ -41,10 +46,10 @@
 * **status**: string (ReadOnly): The status of onboarding, which only appears in the response.
 * **targetId**: string: The target VM resource URI
 
-## ConfigurationProfileAssignmentProfileOverrides
+## ConfigurationProfileProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: any
+* **configuration**: any: Any object
+* **overrides**: any[]: The custom overrides for configuration profile
 
 ## SystemData
 ### Properties
@@ -54,11 +59,6 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## ConfigurationProfileProperties
-### Properties
-* **configuration**: any: Any object
-* **overrides**: any[]: The custom overrides for configuration profile
 
 ## TrackedResourceTags
 ### Properties

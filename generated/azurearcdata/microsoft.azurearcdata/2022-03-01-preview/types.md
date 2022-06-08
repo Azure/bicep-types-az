@@ -63,10 +63,58 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureArcData/sqlServerInstances' (ReadOnly, DeployTimeConstant): The resource type
 
-## ExtendedLocation
+## ActiveDirectoryConnectorDNSDetails
 ### Properties
-* **name**: string: The name of the extended location.
-* **type**: 'CustomLocation' | string: The type of extendedLocation.
+* **domainName**: string: DNS domain name for which DNS lookups should be forwarded to the Active Directory DNS servers.
+* **nameserverIPAddresses**: string[] (Required): List of Active Directory DNS server IP addresses.
+* **preferK8sDnsForPtrLookups**: bool: Flag indicating whether to prefer Kubernetes DNS server response over AD DNS server response for IP address lookups.
+* **replicas**: int: Replica count for DNS proxy service. Default value is 1.
+
+## ActiveDirectoryConnectorDomainDetails
+### Properties
+* **domainControllers**: [ActiveDirectoryDomainControllers](#activedirectorydomaincontrollers) (Required): Details about the Active Directory domain controllers associated with this AD connector instance
+* **netbiosDomainName**: string: NETBIOS name of the Active Directory domain.
+* **ouDistinguishedName**: string: The distinguished name of the Active Directory Organizational Unit.
+* **realm**: string (Required): Name (uppercase) of the Active Directory domain that this AD connector will be associated with.
+* **serviceAccountProvisioning**: 'automatic' | 'manual' | string: The service account provisioning mode for this Active Directory connector.
+
+## ActiveDirectoryConnectorProperties
+### Properties
+* **domainServiceAccountLoginInformation**: [BasicLoginInformation](#basiclogininformation): Username and password for basic login authentication.
+* **provisioningState**: string (ReadOnly): The provisioning state of the Active Directory connector resource.
+* **spec**: [ActiveDirectoryConnectorSpec](#activedirectoryconnectorspec) (Required): The specifications of the AD Kubernetes resource.
+* **status**: [ActiveDirectoryConnectorStatus](#activedirectoryconnectorstatus): The status of the Kubernetes custom resource.
+
+## ActiveDirectoryConnectorSpec
+### Properties
+* **activeDirectory**: [ActiveDirectoryConnectorDomainDetails](#activedirectoryconnectordomaindetails) (Required): Active Directory domain details
+* **dns**: [ActiveDirectoryConnectorDNSDetails](#activedirectoryconnectordnsdetails) (Required): DNS server details
+
+## ActiveDirectoryConnectorStatus
+### Properties
+* **lastUpdateTime**: string: The time that the custom resource was last updated.
+* **observedGeneration**: int: The version of the replicaSet associated with the AD connector custom resource.
+* **state**: string: The state of the AD connector custom resource.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ActiveDirectoryDomainController
+### Properties
+* **hostname**: string (Required): Fully-qualified domain name of a domain controller in the AD domain.
+
+## ActiveDirectoryDomainControllers
+### Properties
+* **primaryDomainController**: [ActiveDirectoryDomainController](#activedirectorydomaincontroller): Information about a domain controller in the AD domain.
+* **secondaryDomainControllers**: [ActiveDirectoryDomainController](#activedirectorydomaincontroller)[]: Information about the secondary domain controllers in the AD domain.
+
+## ActiveDirectoryInformation
+### Properties
+* **keytabInformation**: [KeytabInformation](#keytabinformation): Keytab used for authenticate with Active Directory.
+
+## BasicLoginInformation
+### Properties
+* **password**: string (WriteOnly): Login password.
+* **username**: string: Login username.
 
 ## DataControllerProperties
 ### Properties
@@ -84,10 +132,43 @@
 * **uploadServicePrincipal**: [UploadServicePrincipal](#uploadserviceprincipal): Service principal for uploading billing, metrics and logs.
 * **uploadWatermark**: [UploadWatermark](#uploadwatermark): Properties on upload watermark.  Mostly timestamp for each upload data type
 
-## BasicLoginInformation
+## ExtendedLocation
 ### Properties
-* **password**: string (WriteOnly): Login password.
-* **username**: string: Login username.
+* **name**: string: The name of the extended location.
+* **type**: 'CustomLocation' | string: The type of extendedLocation.
+
+## K8SResourceRequirements
+### Properties
+* **limits**: [K8SResourceRequirementsLimits](#k8sresourcerequirementslimits): Limits for a kubernetes resource type (e.g 'cpu', 'memory'). The 'cpu' request must be less than or equal to 'cpu' limit. Default 'cpu' is 2, minimum is 1. Default 'memory' is '4Gi', minimum is '2Gi. If sku.tier is GeneralPurpose, maximum 'cpu' is 24 and maximum 'memory' is '128Gi'.
+* **requests**: [K8SResourceRequirementsRequests](#k8sresourcerequirementsrequests): Requests for a kubernetes resource type (e.g 'cpu', 'memory'). The 'cpu' request must be less than or equal to 'cpu' limit. Default 'cpu' is 2, minimum is 1. Default 'memory' is '4Gi', minimum is '2Gi. If sku.tier is GeneralPurpose, maximum 'cpu' is 24 and maximum 'memory' is '128Gi'.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## K8SResourceRequirementsLimits
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## K8SResourceRequirementsRequests
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## K8SScheduling
+### Properties
+* **default**: [K8SSchedulingOptions](#k8sschedulingoptions): The kubernetes scheduling options. It describes restrictions used to help Kubernetes select appropriate nodes to host the database service
+### Additional Properties
+* **Additional Properties Type**: any
+
+## K8SSchedulingOptions
+### Properties
+* **resources**: [K8SResourceRequirements](#k8sresourcerequirements): The kubernetes resource limits and requests used to restrict or reserve resource usage.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## KeytabInformation
+### Properties
+* **keytab**: string (WriteOnly): A base64-encoded keytab.
 
 ## LogAnalyticsWorkspaceConfig
 ### Properties
@@ -99,77 +180,6 @@
 * **id**: string (Required): A globally unique ID identifying the associated Kubernetes cluster
 * **publicSigningKey**: string (Required): Certificate that contains the Kubernetes cluster public key used to verify signing
 * **signingCertificateThumbprint**: string: Unique thumbprint returned to customer to verify the certificate being uploaded
-
-## UploadServicePrincipal
-### Properties
-* **authority**: string: Authority for the service principal. Example: https://login.microsoftonline.com/
-* **clientId**: string: Client ID of the service principal for uploading data.
-* **clientSecret**: string (WriteOnly): Secret of the service principal
-* **tenantId**: string: Tenant ID of the service principal.
-
-## UploadWatermark
-### Properties
-* **logs**: string: Last uploaded date for logs from kubernetes cluster. Defaults to current date time
-* **metrics**: string: Last uploaded date for metrics from kubernetes cluster. Defaults to current date time
-* **usages**: string: Last uploaded date for usages from kubernetes cluster. Defaults to current date time
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ActiveDirectoryConnectorProperties
-### Properties
-* **domainServiceAccountLoginInformation**: [BasicLoginInformation](#basiclogininformation): Username and password for basic login authentication.
-* **provisioningState**: string (ReadOnly): The provisioning state of the Active Directory connector resource.
-* **spec**: [ActiveDirectoryConnectorSpec](#activedirectoryconnectorspec) (Required): The specifications of the AD Kubernetes resource.
-* **status**: [ActiveDirectoryConnectorStatus](#activedirectoryconnectorstatus): The status of the Kubernetes custom resource.
-
-## ActiveDirectoryConnectorSpec
-### Properties
-* **activeDirectory**: [ActiveDirectoryConnectorDomainDetails](#activedirectoryconnectordomaindetails) (Required): Active Directory domain details
-* **dns**: [ActiveDirectoryConnectorDNSDetails](#activedirectoryconnectordnsdetails) (Required): DNS server details
-
-## ActiveDirectoryConnectorDomainDetails
-### Properties
-* **domainControllers**: [ActiveDirectoryDomainControllers](#activedirectorydomaincontrollers) (Required): Details about the Active Directory domain controllers associated with this AD connector instance
-* **netbiosDomainName**: string: NETBIOS name of the Active Directory domain.
-* **ouDistinguishedName**: string: The distinguished name of the Active Directory Organizational Unit.
-* **realm**: string (Required): Name (uppercase) of the Active Directory domain that this AD connector will be associated with.
-* **serviceAccountProvisioning**: 'automatic' | 'manual' | string: The service account provisioning mode for this Active Directory connector.
-
-## ActiveDirectoryDomainControllers
-### Properties
-* **primaryDomainController**: [ActiveDirectoryDomainController](#activedirectorydomaincontroller): Information about a domain controller in the AD domain.
-* **secondaryDomainControllers**: [ActiveDirectoryDomainController](#activedirectorydomaincontroller)[]: Information about the secondary domain controllers in the AD domain.
-
-## ActiveDirectoryDomainController
-### Properties
-* **hostname**: string (Required): Fully-qualified domain name of a domain controller in the AD domain.
-
-## ActiveDirectoryConnectorDNSDetails
-### Properties
-* **domainName**: string: DNS domain name for which DNS lookups should be forwarded to the Active Directory DNS servers.
-* **nameserverIPAddresses**: string[] (Required): List of Active Directory DNS server IP addresses.
-* **preferK8sDnsForPtrLookups**: bool: Flag indicating whether to prefer Kubernetes DNS server response over AD DNS server response for IP address lookups.
-* **replicas**: int: Replica count for DNS proxy service. Default value is 1.
-
-## ActiveDirectoryConnectorStatus
-### Properties
-* **lastUpdateTime**: string: The time that the custom resource was last updated.
-* **observedGeneration**: int: The version of the replicaSet associated with the AD connector custom resource.
-* **state**: string: The state of the AD connector custom resource.
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## PostgresInstanceProperties
 ### Properties
@@ -189,10 +199,18 @@
 * **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
 * **tier**: 'Hyperscale': This field is required to be implemented by the Resource Provider if the service has more than one tier.
 
-## TrackedResourceTags
+## SqlManagedInstanceK8SRaw
 ### Properties
+* **spec**: [SqlManagedInstanceK8SSpec](#sqlmanagedinstancek8sspec): The kubernetes spec information.
 ### Additional Properties
-* **Additional Properties Type**: string
+* **Additional Properties Type**: any
+
+## SqlManagedInstanceK8SSpec
+### Properties
+* **replicas**: int: This option specifies the number of SQL Managed Instance replicas that will be deployed in your Kubernetes cluster for high availability purposes. If sku.tier is BusinessCritical, allowed values are '2' or '3' with default of '3'. If sku.tier is GeneralPurpose, replicas must be '1'.
+* **scheduling**: [K8SScheduling](#k8sscheduling): The kubernetes scheduling information.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## SqlManagedInstanceProperties
 ### Properties
@@ -209,56 +227,6 @@
 * **provisioningState**: string (ReadOnly): The provisioning state of the Arc-enabled SQL Managed Instance resource.
 * **startTime**: string: The instance start time
 
-## ActiveDirectoryInformation
-### Properties
-* **keytabInformation**: [KeytabInformation](#keytabinformation): Keytab used for authenticate with Active Directory.
-
-## KeytabInformation
-### Properties
-* **keytab**: string (WriteOnly): A base64-encoded keytab.
-
-## SqlManagedInstanceK8SRaw
-### Properties
-* **spec**: [SqlManagedInstanceK8SSpec](#sqlmanagedinstancek8sspec): The kubernetes spec information.
-### Additional Properties
-* **Additional Properties Type**: any
-
-## SqlManagedInstanceK8SSpec
-### Properties
-* **replicas**: int: This option specifies the number of SQL Managed Instance replicas that will be deployed in your Kubernetes cluster for high availability purposes. If sku.tier is BusinessCritical, allowed values are '2' or '3' with default of '3'. If sku.tier is GeneralPurpose, replicas must be '1'.
-* **scheduling**: [K8SScheduling](#k8sscheduling): The kubernetes scheduling information.
-### Additional Properties
-* **Additional Properties Type**: any
-
-## K8SScheduling
-### Properties
-* **default**: [K8SSchedulingOptions](#k8sschedulingoptions): The kubernetes scheduling options. It describes restrictions used to help Kubernetes select appropriate nodes to host the database service
-### Additional Properties
-* **Additional Properties Type**: any
-
-## K8SSchedulingOptions
-### Properties
-* **resources**: [K8SResourceRequirements](#k8sresourcerequirements): The kubernetes resource limits and requests used to restrict or reserve resource usage.
-### Additional Properties
-* **Additional Properties Type**: any
-
-## K8SResourceRequirements
-### Properties
-* **limits**: [K8SResourceRequirementsLimits](#k8sresourcerequirementslimits): Limits for a kubernetes resource type (e.g 'cpu', 'memory'). The 'cpu' request must be less than or equal to 'cpu' limit. Default 'cpu' is 2, minimum is 1. Default 'memory' is '4Gi', minimum is '2Gi. If sku.tier is GeneralPurpose, maximum 'cpu' is 24 and maximum 'memory' is '128Gi'.
-* **requests**: [K8SResourceRequirementsRequests](#k8sresourcerequirementsrequests): Requests for a kubernetes resource type (e.g 'cpu', 'memory'). The 'cpu' request must be less than or equal to 'cpu' limit. Default 'cpu' is 2, minimum is 1. Default 'memory' is '4Gi', minimum is '2Gi. If sku.tier is GeneralPurpose, maximum 'cpu' is 24 and maximum 'memory' is '128Gi'.
-### Additional Properties
-* **Additional Properties Type**: any
-
-## K8SResourceRequirementsLimits
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## K8SResourceRequirementsRequests
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## SqlManagedInstanceSku
 ### Properties
 * **capacity**: int: The SKU capacity
@@ -267,11 +235,6 @@
 * **name**: 'vCore' (Required): The name of the SKU.
 * **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
 * **tier**: 'BusinessCritical' | 'GeneralPurpose': The pricing tier for the instance.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## SqlServerInstanceProperties
 ### Properties
@@ -294,8 +257,45 @@
 * **vCore**: string: The number of logical processors used by the SQL Server instance.
 * **version**: 'SQL Server 2012' | 'SQL Server 2014' | 'SQL Server 2016' | 'SQL Server 2017' | 'SQL Server 2019' | 'SQL Server 2022' | 'Unknown' | string: SQL Server version.
 
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## UploadServicePrincipal
+### Properties
+* **authority**: string: Authority for the service principal. Example: https://login.microsoftonline.com/
+* **clientId**: string: Client ID of the service principal for uploading data.
+* **clientSecret**: string (WriteOnly): Secret of the service principal
+* **tenantId**: string: Tenant ID of the service principal.
+
+## UploadWatermark
+### Properties
+* **logs**: string: Last uploaded date for logs from kubernetes cluster. Defaults to current date time
+* **metrics**: string: Last uploaded date for metrics from kubernetes cluster. Defaults to current date time
+* **usages**: string: Last uploaded date for usages from kubernetes cluster. Defaults to current date time
 

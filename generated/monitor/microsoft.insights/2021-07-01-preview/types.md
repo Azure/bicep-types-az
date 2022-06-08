@@ -31,12 +31,6 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Insights/privateLinkScopes/scopedResources' (ReadOnly, DeployTimeConstant): The resource type
 
-## AzureMonitorPrivateLinkScopeProperties
-### Properties
-* **accessModeSettings**: [AccessModeSettings](#accessmodesettings) (Required): Properties that define the scope private link mode settings.
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections.
-* **provisioningState**: string (ReadOnly): Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.
-
 ## AccessModeSettings
 ### Properties
 * **exclusions**: [AccessModeSettingsExclusion](#accessmodesettingsexclusion)[]: List of exclusions that override the default access mode settings for specific private endpoint connections.
@@ -48,6 +42,16 @@
 * **ingestionAccessMode**: 'Open' | 'PrivateOnly' | string: Access mode types.
 * **privateEndpointConnectionName**: string: The private endpoint connection name associated to the private endpoint on which we want to apply the specific access mode settings.
 * **queryAccessMode**: 'Open' | 'PrivateOnly' | string: Access mode types.
+
+## AzureMonitorPrivateLinkScopeProperties
+### Properties
+* **accessModeSettings**: [AccessModeSettings](#accessmodesettings) (Required): Properties that define the scope private link mode settings.
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections.
+* **provisioningState**: string (ReadOnly): Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
 
 ## PrivateEndpointConnection
 ### Properties
@@ -62,15 +66,16 @@
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
 
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
-
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
+
+## ScopedResourceProperties
+### Properties
+* **linkedResourceId**: string: The resource id of the scoped Azure monitor resource.
+* **provisioningState**: string (ReadOnly): State of the private endpoint connection.
 
 ## SystemData
 ### Properties
@@ -85,9 +90,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## ScopedResourceProperties
-### Properties
-* **linkedResourceId**: string: The resource id of the scoped Azure monitor resource.
-* **provisioningState**: string (ReadOnly): State of the private endpoint connection.
 

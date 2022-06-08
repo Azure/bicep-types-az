@@ -35,6 +35,16 @@
 * **ApiVersion**: 2016-04-01
 * **Output**: [RedisAccessKeys](#redisaccesskeys)
 
+## RedisAccessKeys
+### Properties
+* **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
+* **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
+
+## RedisAccessKeys
+### Properties
+* **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
+* **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
+
 ## RedisCreateProperties
 ### Properties
 * **accessKeys**: [RedisAccessKeys](#redisaccesskeys) (ReadOnly): Redis cache access keys.
@@ -51,21 +61,15 @@
 * **subnetId**: string: The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1
 * **tenantSettings**: [RedisPropertiesTenantSettings](#redispropertiestenantsettings): tenantSettings
 
-## RedisAccessKeys
+## RedisFirewallRuleProperties
 ### Properties
-* **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
-* **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
+* **endIP**: string (Required): highest IP address included in the range
+* **startIP**: string (Required): lowest IP address included in the range
 
 ## RedisPropertiesRedisConfiguration
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Sku
-### Properties
-* **capacity**: int (Required): The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).
-* **family**: 'C' | 'P' | string (Required): The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).
-* **name**: 'Basic' | 'Premium' | 'Standard' | string (Required): The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)
 
 ## RedisPropertiesTenantSettings
 ### Properties
@@ -77,11 +81,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## RedisFirewallRuleProperties
-### Properties
-* **endIP**: string (Required): highest IP address included in the range
-* **startIP**: string (Required): lowest IP address included in the range
-
 ## ScheduleEntries
 ### Properties
 * **scheduleEntries**: [ScheduleEntry](#scheduleentry)[] (Required): List of patch schedules for a Redis cache.
@@ -92,8 +91,9 @@
 * **maintenanceWindow**: string: ISO8601 timespan specifying how much time cache patching can take.
 * **startHourUtc**: int (Required): Start hour after which cache patching can start.
 
-## RedisAccessKeys
+## Sku
 ### Properties
-* **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
-* **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
+* **capacity**: int (Required): The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).
+* **family**: 'C' | 'P' | string (Required): The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).
+* **name**: 'Basic' | 'Premium' | 'Standard' | string (Required): The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)
 

@@ -17,6 +17,13 @@
 * **ApiVersion**: 2020-08-20
 * **Output**: [CommunicationServiceKeys](#communicationservicekeys)
 
+## CommunicationServiceKeys
+### Properties
+* **primaryConnectionString**: string (ReadOnly): CommunicationService connection string constructed via the primaryKey
+* **primaryKey**: string (ReadOnly): The primary access key.
+* **secondaryConnectionString**: string (ReadOnly): CommunicationService connection string constructed via the secondaryKey
+* **secondaryKey**: string (ReadOnly): The secondary access key.
+
 ## CommunicationServiceProperties
 ### Properties
 * **dataLocation**: string (Required): The location where the communication service stores its data at rest.
@@ -39,11 +46,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## CommunicationServiceKeys
-### Properties
-* **primaryConnectionString**: string (ReadOnly): CommunicationService connection string constructed via the primaryKey
-* **primaryKey**: string (ReadOnly): The primary access key.
-* **secondaryConnectionString**: string (ReadOnly): CommunicationService connection string constructed via the secondaryKey
-* **secondaryKey**: string (ReadOnly): The secondary access key.
 

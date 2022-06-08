@@ -24,12 +24,6 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.IoTCentral/iotApps/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## SystemAssignedServiceIdentity
-### Properties
-* **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **tenantId**: string (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' | string (Required): Type of managed service identity (either system assigned, or none).
-
 ## AppProperties
 ### Properties
 * **applicationId**: string (ReadOnly): The ID of the application.
@@ -42,6 +36,15 @@
 * **subdomain**: string: The subdomain of the application.
 * **template**: string: The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
 
+## AppSkuInfo
+### Properties
+* **name**: 'ST0' | 'ST1' | 'ST2' | string (Required): The name of the SKU.
+
+## NetworkRuleSetIpRule
+### Properties
+* **filterName**: string: The readable name of the IP rule.
+* **ipMask**: string: The CIDR block defining the IP range.
+
 ## NetworkRuleSets
 ### Properties
 * **applyToDevices**: bool: Whether these rules apply for device connectivity to IoT Hub and Device Provisioning service associated with this application.
@@ -49,10 +52,9 @@
 * **defaultAction**: 'Allow' | 'Deny' | string: Whether to allow or deny network traffic.
 * **ipRules**: [NetworkRuleSetIpRule](#networkrulesetiprule)[]: List of IP rules.
 
-## NetworkRuleSetIpRule
+## PrivateEndpoint
 ### Properties
-* **filterName**: string: The readable name of the IP rule.
-* **ipMask**: string: The CIDR block defining the IP range.
+* **id**: string (ReadOnly): The ARM identifier for private endpoint.
 
 ## PrivateEndpointConnection
 ### Properties
@@ -69,15 +71,17 @@
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
 
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly): The ARM identifier for private endpoint.
-
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
+
+## SystemAssignedServiceIdentity
+### Properties
+* **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **tenantId**: string (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **type**: 'None' | 'SystemAssigned' | string (Required): Type of managed service identity (either system assigned, or none).
 
 ## SystemData
 ### Properties
@@ -87,10 +91,6 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## AppSkuInfo
-### Properties
-* **name**: 'ST0' | 'ST1' | 'ST2' | string (Required): The name of the SKU.
 
 ## TrackedResourceTags
 ### Properties

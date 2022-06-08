@@ -20,6 +20,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/tokens' (ReadOnly, DeployTimeConstant): The resource type
 
+## ActiveDirectoryObject
+### Properties
+* **objectId**: string: The user/group/application object ID for Active Directory Object that will be used for authenticating the token of a container registry.
+* **tenantId**: string: The tenant ID of user/group/application object Active Directory Object that will be used for authenticating the token of a container registry.
+
 ## ScopeMapProperties
 ### Properties
 * **actions**: string[] (Required): The list of scoped permissions for registry artifacts.
@@ -39,25 +44,6 @@ repositories/repository-name/metadata/write
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
-## TokenProperties
-### Properties
-* **creationDate**: string (ReadOnly): The creation date of scope map.
-* **credentials**: [TokenCredentialsProperties](#tokencredentialsproperties): The properties of the credentials that can be used for authenticating the token.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
-* **scopeMapId**: string: The resource ID of the scope map to which the token will be associated with.
-* **status**: 'disabled' | 'enabled' | string: The status of the token example enabled or disabled.
-
-## TokenCredentialsProperties
-### Properties
-* **activeDirectoryObject**: [ActiveDirectoryObject](#activedirectoryobject): The Active Directory Object that will be used for authenticating the token of a container registry.
-* **certificates**: [TokenCertificate](#tokencertificate)[]: Array of TokenCertificate
-* **passwords**: [TokenPassword](#tokenpassword)[]: Array of TokenPassword
-
-## ActiveDirectoryObject
-### Properties
-* **objectId**: string: The user/group/application object ID for Active Directory Object that will be used for authenticating the token of a container registry.
-* **tenantId**: string: The tenant ID of user/group/application object Active Directory Object that will be used for authenticating the token of a container registry.
-
 ## TokenCertificate
 ### Properties
 * **encodedPemCertificate**: string: Base 64 encoded string of the public certificate1 in PEM format that will be used for authenticating the token.
@@ -65,10 +51,24 @@ repositories/repository-name/metadata/write
 * **name**: 'certificate1' | 'certificate2' | string
 * **thumbprint**: string: The thumbprint of the certificate.
 
+## TokenCredentialsProperties
+### Properties
+* **activeDirectoryObject**: [ActiveDirectoryObject](#activedirectoryobject): The Active Directory Object that will be used for authenticating the token of a container registry.
+* **certificates**: [TokenCertificate](#tokencertificate)[]: Array of TokenCertificate
+* **passwords**: [TokenPassword](#tokenpassword)[]: Array of TokenPassword
+
 ## TokenPassword
 ### Properties
 * **creationTime**: string: The creation datetime of the password.
 * **expiry**: string: The expiry datetime of the password.
 * **name**: 'password1' | 'password2' | string: The password name "password1" or "password2"
 * **value**: string (ReadOnly): The password value.
+
+## TokenProperties
+### Properties
+* **creationDate**: string (ReadOnly): The creation date of scope map.
+* **credentials**: [TokenCredentialsProperties](#tokencredentialsproperties): The properties of the credentials that can be used for authenticating the token.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
+* **scopeMapId**: string: The resource ID of the scope map to which the token will be associated with.
+* **status**: 'disabled' | 'enabled' | string: The status of the token example enabled or disabled.
 

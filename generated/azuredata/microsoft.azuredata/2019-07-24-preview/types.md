@@ -21,6 +21,14 @@
 * **properties**: [SqlServerProperties](#sqlserverproperties): The SQL server properties.
 * **type**: 'Microsoft.AzureData/sqlServerRegistrations/sqlServers' (ReadOnly, DeployTimeConstant): The resource type
 
+## SqlServerProperties
+### Properties
+* **cores**: int: Cores of the Sql Server.
+* **edition**: string: Sql Server Edition.
+* **propertyBag**: string: Sql Server Json Property Bag.
+* **registrationID**: string: ID for Parent Sql Server Registration.
+* **version**: string: Version of the Sql Server.
+
 ## SqlServerRegistrationProperties
 ### Properties
 * **propertyBag**: string: Optional Properties as JSON string
@@ -40,12 +48,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## SqlServerProperties
-### Properties
-* **cores**: int: Cores of the Sql Server.
-* **edition**: string: Sql Server Edition.
-* **propertyBag**: string: Sql Server Json Property Bag.
-* **registrationID**: string: ID for Parent Sql Server Registration.
-* **version**: string: Version of the Sql Server.
 

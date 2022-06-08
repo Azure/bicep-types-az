@@ -34,6 +34,26 @@
 * **tags**: [WebtestsResourceTags](#webtestsresourcetags): Resource tags
 * **type**: 'Microsoft.Insights/webtests' (ReadOnly, DeployTimeConstant): The resource type
 
+## ApplicationInsightsComponentProactiveDetectionConfigurationProperties
+### Properties
+* **CustomEmails**: string[]: Custom email addresses for this rule notifications
+* **Enabled**: bool: A flag that indicates whether this rule is enabled by the user
+* **LastUpdatedTime**: string (ReadOnly): The last time this rule was updated
+* **Name**: string (ReadOnly): The rule name
+* **RuleDefinitions**: [ApplicationInsightsComponentProactiveDetectionConfigurationPropertiesRuleDefinitions](#applicationinsightscomponentproactivedetectionconfigurationpropertiesruledefinitions): Static definitions of the ProactiveDetection configuration rule (same values for all components).
+* **SendEmailsToSubscriptionOwners**: bool: A flag that indicated whether notifications on this rule should be sent to subscription owners
+
+## ApplicationInsightsComponentProactiveDetectionConfigurationPropertiesRuleDefinitions
+### Properties
+* **Description**: string: The rule description
+* **DisplayName**: string: The rule name as it is displayed in UI
+* **HelpUrl**: string: URL which displays additional info about the proactive detection rule
+* **IsEnabledByDefault**: bool: A flag indicating whether the rule is enabled by default
+* **IsHidden**: bool: A flag indicating whether the rule is hidden (from the UI)
+* **IsInPreview**: bool: A flag indicating whether the rule is in preview
+* **Name**: string: The rule name
+* **SupportsEmailNotifications**: bool: A flag indicating whether email notifications are supported for detections for this rule
+
 ## ApplicationInsightsComponentProperties
 ### Properties
 * **AppId**: string (ReadOnly): Application Insights Unique ID for your Application.
@@ -57,35 +77,24 @@
 * **SamplingPercentage**: int: Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.
 * **TenantId**: string (ReadOnly): Azure Tenant Id.
 
-## PrivateLinkScopedResource
-### Properties
-* **ResourceId**: string: The full resource Id of the private link scope resource.
-* **ScopeId**: string: The private link scope unique Identifier.
-
 ## ComponentsResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ApplicationInsightsComponentProactiveDetectionConfigurationProperties
+## HeaderField
 ### Properties
-* **CustomEmails**: string[]: Custom email addresses for this rule notifications
-* **Enabled**: bool: A flag that indicates whether this rule is enabled by the user
-* **LastUpdatedTime**: string (ReadOnly): The last time this rule was updated
-* **Name**: string (ReadOnly): The rule name
-* **RuleDefinitions**: [ApplicationInsightsComponentProactiveDetectionConfigurationPropertiesRuleDefinitions](#applicationinsightscomponentproactivedetectionconfigurationpropertiesruledefinitions): Static definitions of the ProactiveDetection configuration rule (same values for all components).
-* **SendEmailsToSubscriptionOwners**: bool: A flag that indicated whether notifications on this rule should be sent to subscription owners
+* **key**: string: The name of the header.
+* **value**: string: The value of the header.
 
-## ApplicationInsightsComponentProactiveDetectionConfigurationPropertiesRuleDefinitions
+## PrivateLinkScopedResource
 ### Properties
-* **Description**: string: The rule description
-* **DisplayName**: string: The rule name as it is displayed in UI
-* **HelpUrl**: string: URL which displays additional info about the proactive detection rule
-* **IsEnabledByDefault**: bool: A flag indicating whether the rule is enabled by default
-* **IsHidden**: bool: A flag indicating whether the rule is hidden (from the UI)
-* **IsInPreview**: bool: A flag indicating whether the rule is in preview
-* **Name**: string: The rule name
-* **SupportsEmailNotifications**: bool: A flag indicating whether email notifications are supported for detections for this rule
+* **ResourceId**: string: The full resource Id of the private link scope resource.
+* **ScopeId**: string: The private link scope unique Identifier.
+
+## WebTestGeolocation
+### Properties
+* **Id**: string: Location ID for the WebTest to run from.
 
 ## WebTestProperties
 ### Properties
@@ -107,10 +116,6 @@
 ### Properties
 * **WebTest**: string: The XML specification of a WebTest to run against an application.
 
-## WebTestGeolocation
-### Properties
-* **Id**: string: Location ID for the WebTest to run from.
-
 ## WebTestPropertiesRequest
 ### Properties
 * **FollowRedirects**: bool: Follow redirects for this web test.
@@ -119,11 +124,6 @@
 * **ParseDependentRequests**: bool: Parse Dependent request for this WebTest.
 * **RequestBody**: string: Base64 encoded string body to send with this web test.
 * **RequestUrl**: string: Url location to test.
-
-## HeaderField
-### Properties
-* **key**: string: The name of the header.
-* **value**: string: The value of the header.
 
 ## WebTestPropertiesValidationRules
 ### Properties

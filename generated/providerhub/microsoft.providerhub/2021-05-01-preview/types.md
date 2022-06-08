@@ -90,6 +90,187 @@
 * **properties**: [SkuResourceProperties](#skuresourceproperties)
 * **type**: 'Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/skus' (ReadOnly, DeployTimeConstant): The resource type
 
+## AuthorizationActionMapping
+### Properties
+* **desired**: string
+* **original**: string
+
+## CustomRolloutProperties
+### Properties
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' | string
+* **specification**: [CustomRolloutPropertiesSpecification](#customrolloutpropertiesspecification) (Required)
+* **status**: [CustomRolloutPropertiesStatus](#customrolloutpropertiesstatus)
+
+## CustomRolloutPropertiesSpecification
+### Properties
+* **canary**: [CustomRolloutSpecificationCanary](#customrolloutspecificationcanary) (Required)
+* **providerRegistration**: [CustomRolloutSpecificationProviderRegistration](#customrolloutspecificationproviderregistration)
+* **resourceTypeRegistrations**: [ResourceTypeRegistration](#resourcetyperegistration)[]: Array of ResourceTypeRegistration
+
+## CustomRolloutPropertiesStatus
+### Properties
+* **completedRegions**: string[]: Array of CustomRolloutStatusCompletedRegionsItem
+* **failedOrSkippedRegions**: [CustomRolloutStatusFailedOrSkippedRegions](#customrolloutstatusfailedorskippedregions): Dictionary of <ExtendedErrorInfo>
+
+## CustomRolloutSpecificationCanary
+### Properties
+* **regions**: string[]: Array of TrafficRegionsItem
+
+## CustomRolloutSpecificationProviderRegistration
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ProviderRegistrationProperties](#providerregistrationproperties)
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## CustomRolloutStatusFailedOrSkippedRegions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ExtendedErrorInfo](#extendederrorinfo)
+
+## DefaultRolloutProperties
+### Properties
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' | string
+* **specification**: [DefaultRolloutPropertiesSpecification](#defaultrolloutpropertiesspecification)
+* **status**: [DefaultRolloutPropertiesStatus](#defaultrolloutpropertiesstatus)
+
+## DefaultRolloutPropertiesSpecification
+### Properties
+* **canary**: [DefaultRolloutSpecificationCanary](#defaultrolloutspecificationcanary)
+* **expeditedRollout**: [DefaultRolloutSpecificationExpeditedRollout](#defaultrolloutspecificationexpeditedrollout)
+* **highTraffic**: [DefaultRolloutSpecificationHighTraffic](#defaultrolloutspecificationhightraffic)
+* **lowTraffic**: [DefaultRolloutSpecificationLowTraffic](#defaultrolloutspecificationlowtraffic)
+* **mediumTraffic**: [DefaultRolloutSpecificationMediumTraffic](#defaultrolloutspecificationmediumtraffic)
+* **providerRegistration**: [DefaultRolloutSpecificationProviderRegistration](#defaultrolloutspecificationproviderregistration)
+* **resourceTypeRegistrations**: [ResourceTypeRegistration](#resourcetyperegistration)[]: Array of ResourceTypeRegistration
+* **restOfTheWorldGroupOne**: [DefaultRolloutSpecificationRestOfTheWorldGroupOne](#defaultrolloutspecificationrestoftheworldgroupone)
+* **restOfTheWorldGroupTwo**: [DefaultRolloutSpecificationRestOfTheWorldGroupTwo](#defaultrolloutspecificationrestoftheworldgrouptwo)
+
+## DefaultRolloutPropertiesStatus
+### Properties
+* **completedRegions**: string[]: Array of RolloutStatusBaseCompletedRegionsItem
+* **failedOrSkippedRegions**: [RolloutStatusBaseFailedOrSkippedRegions](#rolloutstatusbasefailedorskippedregions): Dictionary of <ExtendedErrorInfo>
+* **nextTrafficRegion**: 'Canary' | 'HighTraffic' | 'LowTraffic' | 'MediumTraffic' | 'None' | 'NotSpecified' | 'RestOfTheWorldGroupOne' | 'RestOfTheWorldGroupTwo' | string
+* **nextTrafficRegionScheduledTime**: string
+* **subscriptionReregistrationResult**: 'ConditionalUpdate' | 'Failed' | 'ForcedUpdate' | 'NotApplicable' | string
+
+## DefaultRolloutSpecificationCanary
+### Properties
+* **regions**: string[]: Array of CanaryTrafficRegionRolloutConfigurationRegionsItem
+* **skipRegions**: string[]: Array of CanaryTrafficRegionRolloutConfigurationSkipRegionsItem
+
+## DefaultRolloutSpecificationExpeditedRollout
+### Properties
+* **enabled**: bool: Indicates whether expedited rollout is enabled/disabled
+
+## DefaultRolloutSpecificationHighTraffic
+### Properties
+* **regions**: string[]: Array of TrafficRegionsItem
+* **waitDuration**: string
+
+## DefaultRolloutSpecificationLowTraffic
+### Properties
+* **regions**: string[]: Array of TrafficRegionsItem
+* **waitDuration**: string
+
+## DefaultRolloutSpecificationMediumTraffic
+### Properties
+* **regions**: string[]: Array of TrafficRegionsItem
+* **waitDuration**: string
+
+## DefaultRolloutSpecificationProviderRegistration
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ProviderRegistrationProperties](#providerregistrationproperties)
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## DefaultRolloutSpecificationRestOfTheWorldGroupOne
+### Properties
+* **regions**: string[]: Array of TrafficRegionsItem
+* **waitDuration**: string
+
+## DefaultRolloutSpecificationRestOfTheWorldGroupTwo
+### Properties
+* **regions**: string[]: Array of TrafficRegionsItem
+* **waitDuration**: string
+
+## ExtendedErrorInfo
+### Properties
+* **additionalInfo**: [TypedErrorInfo](#typederrorinfo)[]: Array of TypedErrorInfo
+* **code**: string
+* **details**: [ExtendedErrorInfo](#extendederrorinfo)[]: Array of ExtendedErrorInfo
+* **message**: string
+* **target**: string
+
+## ExtendedLocationOptions
+### Properties
+* **supportedPolicy**: string
+* **type**: string
+
+## LightHouseAuthorization
+### Properties
+* **principalId**: string (Required)
+* **roleDefinitionId**: string (Required)
+
+## LinkedAccessCheck
+### Properties
+* **actionName**: string
+* **linkedAction**: string
+* **linkedActionVerb**: string
+* **linkedProperty**: string
+* **linkedType**: string
+
+## LoggingRule
+### Properties
+* **action**: string (Required)
+* **detailLevel**: 'Body' | 'None' | string (Required)
+* **direction**: 'None' | 'Request' | 'Response' | string (Required)
+* **hiddenPropertyPaths**: [LoggingRuleHiddenPropertyPaths](#loggingrulehiddenpropertypaths)
+
+## LoggingRuleHiddenPropertyPaths
+### Properties
+* **hiddenPathsOnRequest**: string[]: Array of LoggingHiddenPropertyPathHiddenPathsOnRequestItem
+* **hiddenPathsOnResponse**: string[]: Array of LoggingHiddenPropertyPathHiddenPathsOnResponseItem
+
+## NotificationEndpoint
+### Properties
+* **locations**: string[]: Array of NotificationEndpointLocationsItem
+* **notificationDestination**: string
+
+## NotificationRegistrationProperties
+### Properties
+* **includedEvents**: string[]: Array of NotificationRegistrationPropertiesIncludedEventsItem
+* **messageScope**: 'NotSpecified' | 'RegisteredSubscriptions' | string
+* **notificationEndpoints**: [NotificationEndpoint](#notificationendpoint)[]: Array of NotificationEndpoint
+* **notificationMode**: 'EventHub' | 'NotSpecified' | 'WebHook' | string
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' | string
+
+## OperationsDefinition
+### Properties
+* **actionType**: 'Internal' | 'NotSpecified' | string (WriteOnly)
+* **display**: [OperationsDefinitionDisplay](#operationsdefinitiondisplay) (Required, WriteOnly): Display information of the operation.
+* **isDataAction**: bool (WriteOnly): Indicates whether the operation applies to data-plane.
+* **name**: string (Required, WriteOnly): Name of the operation.
+* **origin**: 'NotSpecified' | 'System' | 'User' | string (WriteOnly)
+* **properties**: any (WriteOnly): Anything
+
+## OperationsDefinitionDisplay
+### Properties
+* **description**: string (Required, WriteOnly)
+* **operation**: string (Required, WriteOnly)
+* **provider**: string (Required, WriteOnly)
+* **resource**: string (Required, WriteOnly)
+
+## ProviderHubMetadataProviderAuthentication
+### Properties
+* **allowedAudiences**: string[] (Required): Array of ResourceProviderAuthenticationAllowedAudiencesItem
+
+## ProviderHubMetadataThirdPartyProviderAuthorization
+### Properties
+* **authorizations**: [LightHouseAuthorization](#lighthouseauthorization)[]: Array of LightHouseAuthorization
+* **managedByTenantId**: string
+
 ## ProviderRegistrationProperties
 ### Properties
 * **capabilities**: [ResourceProviderCapabilities](#resourceprovidercapabilities)[]: Array of ResourceProviderCapabilities
@@ -105,6 +286,22 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' | string
 * **requestHeaderOptions**: [ResourceProviderManifestPropertiesRequestHeaderOptions](#resourceprovidermanifestpropertiesrequestheaderoptions)
 * **requiredFeatures**: string[]: Array of ResourceProviderManifestPropertiesRequiredFeaturesItem
+
+## ProviderRegistrationPropertiesProviderHubMetadata
+### Properties
+* **providerAuthentication**: [ProviderHubMetadataProviderAuthentication](#providerhubmetadataproviderauthentication)
+* **providerAuthorizations**: [ResourceProviderAuthorization](#resourceproviderauthorization)[]: Array of ResourceProviderAuthorization
+* **thirdPartyProviderAuthorization**: [ProviderHubMetadataThirdPartyProviderAuthorization](#providerhubmetadatathirdpartyproviderauthorization)
+
+## ResourceConcurrencyControlOption
+### Properties
+* **policy**: 'NotSpecified' | 'SynchronizeBeginExtension' | string
+
+## ResourceProviderAuthorization
+### Properties
+* **applicationId**: string
+* **managedByRoleDefinitionId**: string
+* **roleDefinitionId**: string
 
 ## ResourceProviderCapabilities
 ### Properties
@@ -127,67 +324,38 @@
 * **schemaOwners**: string[]: Array of ResourceProviderManagementSchemaOwnersItem
 * **serviceTreeInfos**: [ServiceTreeInfo](#servicetreeinfo)[]: Array of ServiceTreeInfo
 
-## ServiceTreeInfo
-### Properties
-* **componentId**: string
-* **serviceId**: string
-
 ## ResourceProviderManifestPropertiesProviderAuthentication
 ### Properties
 * **allowedAudiences**: string[] (Required): Array of ResourceProviderAuthenticationAllowedAudiencesItem
-
-## ResourceProviderAuthorization
-### Properties
-* **applicationId**: string
-* **managedByRoleDefinitionId**: string
-* **roleDefinitionId**: string
-
-## ProviderRegistrationPropertiesProviderHubMetadata
-### Properties
-* **providerAuthentication**: [ProviderHubMetadataProviderAuthentication](#providerhubmetadataproviderauthentication)
-* **providerAuthorizations**: [ResourceProviderAuthorization](#resourceproviderauthorization)[]: Array of ResourceProviderAuthorization
-* **thirdPartyProviderAuthorization**: [ProviderHubMetadataThirdPartyProviderAuthorization](#providerhubmetadatathirdpartyproviderauthorization)
-
-## ProviderHubMetadataProviderAuthentication
-### Properties
-* **allowedAudiences**: string[] (Required): Array of ResourceProviderAuthenticationAllowedAudiencesItem
-
-## ProviderHubMetadataThirdPartyProviderAuthorization
-### Properties
-* **authorizations**: [LightHouseAuthorization](#lighthouseauthorization)[]: Array of LightHouseAuthorization
-* **managedByTenantId**: string
-
-## LightHouseAuthorization
-### Properties
-* **principalId**: string (Required)
-* **roleDefinitionId**: string (Required)
 
 ## ResourceProviderManifestPropertiesRequestHeaderOptions
 ### Properties
 * **optInHeaders**: 'ClientGroupMembership' | 'NotSpecified' | 'SignedAuxiliaryTokens' | 'SignedUserToken' | 'UnboundedClientGroupMembership' | string
 
-## CustomRolloutProperties
+## ResourceTypeEndpoint
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' | string
-* **specification**: [CustomRolloutPropertiesSpecification](#customrolloutpropertiesspecification) (Required)
-* **status**: [CustomRolloutPropertiesStatus](#customrolloutpropertiesstatus)
+* **apiVersions**: string[]: Array of ResourceTypeEndpointApiVersionsItem
+* **enabled**: bool
+* **extensions**: [ResourceTypeExtension](#resourcetypeextension)[]: Array of ResourceTypeExtension
+* **featuresRule**: [ResourceTypeEndpointFeaturesRule](#resourcetypeendpointfeaturesrule)
+* **locations**: string[]: Array of ResourceTypeEndpointLocationsItem
+* **requiredFeatures**: string[]: Array of ResourceTypeEndpointRequiredFeaturesItem
+* **timeout**: string
 
-## CustomRolloutPropertiesSpecification
+## ResourceTypeEndpointFeaturesRule
 ### Properties
-* **canary**: [CustomRolloutSpecificationCanary](#customrolloutspecificationcanary) (Required)
-* **providerRegistration**: [CustomRolloutSpecificationProviderRegistration](#customrolloutspecificationproviderregistration)
-* **resourceTypeRegistrations**: [ResourceTypeRegistration](#resourcetyperegistration)[]: Array of ResourceTypeRegistration
+* **requiredFeaturesPolicy**: 'All' | 'Any' | string (Required)
 
-## CustomRolloutSpecificationCanary
+## ResourceTypeExtension
 ### Properties
-* **regions**: string[]: Array of TrafficRegionsItem
+* **endpointUri**: string
+* **extensionCategories**: 'NotSpecified' | 'ResourceCreationBegin' | 'ResourceCreationCompleted' | 'ResourceCreationValidate' | 'ResourceDeletionBegin' | 'ResourceDeletionCompleted' | 'ResourceDeletionValidate' | 'ResourceMoveBegin' | 'ResourceMoveCompleted' | 'ResourcePatchBegin' | 'ResourcePatchCompleted' | 'ResourcePatchValidate' | 'ResourcePostAction' | 'ResourceReadBegin' | 'ResourceReadValidate' | 'SubscriptionLifecycleNotification' | string[]: Array of ExtensionCategory
+* **timeout**: string
 
-## CustomRolloutSpecificationProviderRegistration
+## ResourceTypeExtensionOptionsResourceCreationBegin
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-* **name**: string (ReadOnly): The name of the resource
-* **properties**: [ProviderRegistrationProperties](#providerregistrationproperties)
-* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+* **request**: 'DoNotMergeExistingReadOnlyAndSecretProperties' | 'IncludeInternalMetadata' | 'NotSpecified' | string[]: Array of ExtensionOptionType
+* **response**: 'DoNotMergeExistingReadOnlyAndSecretProperties' | 'IncludeInternalMetadata' | 'NotSpecified' | string[]: Array of ExtensionOptionType
 
 ## ResourceTypeRegistration
 ### Properties
@@ -231,49 +399,14 @@
 * **templateDeploymentOptions**: [ResourceTypeRegistrationPropertiesTemplateDeploymentOptions](#resourcetyperegistrationpropertiestemplatedeploymentoptions)
 * **throttlingRules**: [ThrottlingRule](#throttlingrule)[]: Array of ThrottlingRule
 
-## AuthorizationActionMapping
-### Properties
-* **desired**: string
-* **original**: string
-
 ## ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecifications
 ### Properties
 * **enableDefaultValidation**: bool
 * **resourceTypesWithCustomValidation**: string[]: Array of CheckNameAvailabilitySpecificationsResourceTypesWithCustomValidationItem
 
-## ResourceTypeEndpoint
-### Properties
-* **apiVersions**: string[]: Array of ResourceTypeEndpointApiVersionsItem
-* **enabled**: bool
-* **extensions**: [ResourceTypeExtension](#resourcetypeextension)[]: Array of ResourceTypeExtension
-* **featuresRule**: [ResourceTypeEndpointFeaturesRule](#resourcetypeendpointfeaturesrule)
-* **locations**: string[]: Array of ResourceTypeEndpointLocationsItem
-* **requiredFeatures**: string[]: Array of ResourceTypeEndpointRequiredFeaturesItem
-* **timeout**: string
-
-## ResourceTypeExtension
-### Properties
-* **endpointUri**: string
-* **extensionCategories**: 'NotSpecified' | 'ResourceCreationBegin' | 'ResourceCreationCompleted' | 'ResourceCreationValidate' | 'ResourceDeletionBegin' | 'ResourceDeletionCompleted' | 'ResourceDeletionValidate' | 'ResourceMoveBegin' | 'ResourceMoveCompleted' | 'ResourcePatchBegin' | 'ResourcePatchCompleted' | 'ResourcePatchValidate' | 'ResourcePostAction' | 'ResourceReadBegin' | 'ResourceReadValidate' | 'SubscriptionLifecycleNotification' | string[]: Array of ExtensionCategory
-* **timeout**: string
-
-## ResourceTypeEndpointFeaturesRule
-### Properties
-* **requiredFeaturesPolicy**: 'All' | 'Any' | string (Required)
-
-## ExtendedLocationOptions
-### Properties
-* **supportedPolicy**: string
-* **type**: string
-
 ## ResourceTypeRegistrationPropertiesExtensionOptions
 ### Properties
 * **resourceCreationBegin**: [ResourceTypeExtensionOptionsResourceCreationBegin](#resourcetypeextensionoptionsresourcecreationbegin)
-
-## ResourceTypeExtensionOptionsResourceCreationBegin
-### Properties
-* **request**: 'DoNotMergeExistingReadOnlyAndSecretProperties' | 'IncludeInternalMetadata' | 'NotSpecified' | string[]: Array of ExtensionOptionType
-* **response**: 'DoNotMergeExistingReadOnlyAndSecretProperties' | 'IncludeInternalMetadata' | 'NotSpecified' | string[]: Array of ExtensionOptionType
 
 ## ResourceTypeRegistrationPropertiesFeaturesRule
 ### Properties
@@ -283,26 +416,6 @@
 ### Properties
 * **applicationId**: string
 * **type**: 'Actor' | 'DelegatedResourceIdentity' | 'NotSpecified' | 'SystemAssigned' | 'UserAssigned' | string
-
-## LinkedAccessCheck
-### Properties
-* **actionName**: string
-* **linkedAction**: string
-* **linkedActionVerb**: string
-* **linkedProperty**: string
-* **linkedType**: string
-
-## LoggingRule
-### Properties
-* **action**: string (Required)
-* **detailLevel**: 'Body' | 'None' | string (Required)
-* **direction**: 'None' | 'Request' | 'Response' | string (Required)
-* **hiddenPropertyPaths**: [LoggingRuleHiddenPropertyPaths](#loggingrulehiddenpropertypaths)
-
-## LoggingRuleHiddenPropertyPaths
-### Properties
-* **hiddenPathsOnRequest**: string[]: Array of LoggingHiddenPropertyPathHiddenPathsOnRequestItem
-* **hiddenPathsOnResponse**: string[]: Array of LoggingHiddenPropertyPathHiddenPathsOnResponseItem
 
 ## ResourceTypeRegistrationPropertiesManagement
 ### Properties
@@ -324,10 +437,6 @@
 ### Additional Properties
 * **Additional Properties Type**: [ResourceConcurrencyControlOption](#resourceconcurrencycontroloption)
 
-## ResourceConcurrencyControlOption
-### Properties
-* **policy**: 'NotSpecified' | 'SynchronizeBeginExtension' | string
-
 ## ResourceTypeRegistrationPropertiesResourceGraphConfiguration
 ### Properties
 * **apiVersion**: string
@@ -344,161 +453,39 @@
 * **softDeleteTTL**: string
 * **subscriptionStateOverrideActions**: [SubscriptionStateOverrideAction](#subscriptionstateoverrideaction)[]: Array of SubscriptionStateOverrideAction
 
-## SubscriptionStateOverrideAction
-### Properties
-* **action**: 'BillingCancellation' | 'DeleteAllResources' | 'NoOp' | 'NotDefined' | 'SoftDeleteAllResources' | 'UndoSoftDelete' | string (Required)
-* **state**: 'Deleted' | 'Registered' | 'Suspended' | 'SuspendedToDeleted' | 'SuspendedToRegistered' | 'SuspendedToUnregistered' | 'SuspendedToWarned' | 'Unregistered' | 'Warned' | 'WarnedToDeleted' | 'WarnedToRegistered' | 'WarnedToSuspended' | 'WarnedToUnregistered' | string (Required)
-
-## SubscriptionStateRule
-### Properties
-* **allowedActions**: string[]: Array of SubscriptionStateRuleAllowedActionsItem
-* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'NotDefined' | 'PastDue' | 'Warned' | string
-
-## SwaggerSpecification
-### Properties
-* **apiVersions**: string[]: Array of SwaggerSpecificationApiVersionsItem
-* **swaggerSpecFolderUri**: string
-
 ## ResourceTypeRegistrationPropertiesTemplateDeploymentOptions
 ### Properties
 * **preflightOptions**: 'ContinueDeploymentOnFailure' | 'DefaultValidationOnly' | 'None' | string[]: Array of PreflightOption
 * **preflightSupported**: bool
-
-## ThrottlingRule
-### Properties
-* **action**: string (Required)
-* **metrics**: [ThrottlingMetric](#throttlingmetric)[] (Required): Array of ThrottlingMetric
-* **requiredFeatures**: string[]: Array of ThrottlingRuleRequiredFeaturesItem
-
-## ThrottlingMetric
-### Properties
-* **interval**: string
-* **limit**: int (Required)
-* **type**: 'NotSpecified' | 'NumberOfRequests' | 'NumberOfResources' | string (Required)
-
-## CustomRolloutPropertiesStatus
-### Properties
-* **completedRegions**: string[]: Array of CustomRolloutStatusCompletedRegionsItem
-* **failedOrSkippedRegions**: [CustomRolloutStatusFailedOrSkippedRegions](#customrolloutstatusfailedorskippedregions): Dictionary of <ExtendedErrorInfo>
-
-## CustomRolloutStatusFailedOrSkippedRegions
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [ExtendedErrorInfo](#extendederrorinfo)
-
-## ExtendedErrorInfo
-### Properties
-* **additionalInfo**: [TypedErrorInfo](#typederrorinfo)[]: Array of TypedErrorInfo
-* **code**: string
-* **details**: [ExtendedErrorInfo](#extendederrorinfo)[]: Array of ExtendedErrorInfo
-* **message**: string
-* **target**: string
-
-## TypedErrorInfo
-### Properties
-* **info**: any (ReadOnly): Any object
-* **type**: string (Required)
-
-## DefaultRolloutProperties
-### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' | string
-* **specification**: [DefaultRolloutPropertiesSpecification](#defaultrolloutpropertiesspecification)
-* **status**: [DefaultRolloutPropertiesStatus](#defaultrolloutpropertiesstatus)
-
-## DefaultRolloutPropertiesSpecification
-### Properties
-* **canary**: [DefaultRolloutSpecificationCanary](#defaultrolloutspecificationcanary)
-* **expeditedRollout**: [DefaultRolloutSpecificationExpeditedRollout](#defaultrolloutspecificationexpeditedrollout)
-* **highTraffic**: [DefaultRolloutSpecificationHighTraffic](#defaultrolloutspecificationhightraffic)
-* **lowTraffic**: [DefaultRolloutSpecificationLowTraffic](#defaultrolloutspecificationlowtraffic)
-* **mediumTraffic**: [DefaultRolloutSpecificationMediumTraffic](#defaultrolloutspecificationmediumtraffic)
-* **providerRegistration**: [DefaultRolloutSpecificationProviderRegistration](#defaultrolloutspecificationproviderregistration)
-* **resourceTypeRegistrations**: [ResourceTypeRegistration](#resourcetyperegistration)[]: Array of ResourceTypeRegistration
-* **restOfTheWorldGroupOne**: [DefaultRolloutSpecificationRestOfTheWorldGroupOne](#defaultrolloutspecificationrestoftheworldgroupone)
-* **restOfTheWorldGroupTwo**: [DefaultRolloutSpecificationRestOfTheWorldGroupTwo](#defaultrolloutspecificationrestoftheworldgrouptwo)
-
-## DefaultRolloutSpecificationCanary
-### Properties
-* **regions**: string[]: Array of CanaryTrafficRegionRolloutConfigurationRegionsItem
-* **skipRegions**: string[]: Array of CanaryTrafficRegionRolloutConfigurationSkipRegionsItem
-
-## DefaultRolloutSpecificationExpeditedRollout
-### Properties
-* **enabled**: bool: Indicates whether expedited rollout is enabled/disabled
-
-## DefaultRolloutSpecificationHighTraffic
-### Properties
-* **regions**: string[]: Array of TrafficRegionsItem
-* **waitDuration**: string
-
-## DefaultRolloutSpecificationLowTraffic
-### Properties
-* **regions**: string[]: Array of TrafficRegionsItem
-* **waitDuration**: string
-
-## DefaultRolloutSpecificationMediumTraffic
-### Properties
-* **regions**: string[]: Array of TrafficRegionsItem
-* **waitDuration**: string
-
-## DefaultRolloutSpecificationProviderRegistration
-### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-* **name**: string (ReadOnly): The name of the resource
-* **properties**: [ProviderRegistrationProperties](#providerregistrationproperties)
-* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-
-## DefaultRolloutSpecificationRestOfTheWorldGroupOne
-### Properties
-* **regions**: string[]: Array of TrafficRegionsItem
-* **waitDuration**: string
-
-## DefaultRolloutSpecificationRestOfTheWorldGroupTwo
-### Properties
-* **regions**: string[]: Array of TrafficRegionsItem
-* **waitDuration**: string
-
-## DefaultRolloutPropertiesStatus
-### Properties
-* **completedRegions**: string[]: Array of RolloutStatusBaseCompletedRegionsItem
-* **failedOrSkippedRegions**: [RolloutStatusBaseFailedOrSkippedRegions](#rolloutstatusbasefailedorskippedregions): Dictionary of <ExtendedErrorInfo>
-* **nextTrafficRegion**: 'Canary' | 'HighTraffic' | 'LowTraffic' | 'MediumTraffic' | 'None' | 'NotSpecified' | 'RestOfTheWorldGroupOne' | 'RestOfTheWorldGroupTwo' | string
-* **nextTrafficRegionScheduledTime**: string
-* **subscriptionReregistrationResult**: 'ConditionalUpdate' | 'Failed' | 'ForcedUpdate' | 'NotApplicable' | string
 
 ## RolloutStatusBaseFailedOrSkippedRegions
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ExtendedErrorInfo](#extendederrorinfo)
 
-## NotificationRegistrationProperties
+## ServiceTreeInfo
 ### Properties
-* **includedEvents**: string[]: Array of NotificationRegistrationPropertiesIncludedEventsItem
-* **messageScope**: 'NotSpecified' | 'RegisteredSubscriptions' | string
-* **notificationEndpoints**: [NotificationEndpoint](#notificationendpoint)[]: Array of NotificationEndpoint
-* **notificationMode**: 'EventHub' | 'NotSpecified' | 'WebHook' | string
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' | string
+* **componentId**: string
+* **serviceId**: string
 
-## NotificationEndpoint
+## SkuCapability
 ### Properties
-* **locations**: string[]: Array of NotificationEndpointLocationsItem
-* **notificationDestination**: string
+* **name**: string (Required)
+* **value**: string (Required)
 
-## OperationsDefinition
+## SkuCost
 ### Properties
-* **actionType**: 'Internal' | 'NotSpecified' | string (WriteOnly)
-* **display**: [OperationsDefinitionDisplay](#operationsdefinitiondisplay) (Required, WriteOnly): Display information of the operation.
-* **isDataAction**: bool (WriteOnly): Indicates whether the operation applies to data-plane.
-* **name**: string (Required, WriteOnly): Name of the operation.
-* **origin**: 'NotSpecified' | 'System' | 'User' | string (WriteOnly)
-* **properties**: any (WriteOnly): Anything
+* **extendedUnit**: string
+* **meterId**: string (Required)
+* **quantity**: int
 
-## OperationsDefinitionDisplay
+## SkuLocationInfo
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **extendedLocations**: string[]: Array of SkuLocationInfoExtendedLocationsItem
+* **location**: string (Required)
+* **type**: 'ArcZone' | 'EdgeZone' | 'NotSpecified' | string
+* **zoneDetails**: [SkuZoneDetail](#skuzonedetail)[]: Array of SkuZoneDetail
+* **zones**: string[]: Array of SkuLocationInfoZonesItem
 
 ## SkuResourceProperties
 ### Properties
@@ -520,11 +507,6 @@
 * **size**: string
 * **tier**: string
 
-## SkuCapability
-### Properties
-* **name**: string (Required)
-* **value**: string (Required)
-
 ## SkuSettingCapacity
 ### Properties
 * **default**: int
@@ -532,22 +514,40 @@
 * **minimum**: int (Required)
 * **scaleType**: 'Automatic' | 'Manual' | 'None' | string
 
-## SkuCost
-### Properties
-* **extendedUnit**: string
-* **meterId**: string (Required)
-* **quantity**: int
-
-## SkuLocationInfo
-### Properties
-* **extendedLocations**: string[]: Array of SkuLocationInfoExtendedLocationsItem
-* **location**: string (Required)
-* **type**: 'ArcZone' | 'EdgeZone' | 'NotSpecified' | string
-* **zoneDetails**: [SkuZoneDetail](#skuzonedetail)[]: Array of SkuZoneDetail
-* **zones**: string[]: Array of SkuLocationInfoZonesItem
-
 ## SkuZoneDetail
 ### Properties
 * **capabilities**: [SkuCapability](#skucapability)[]: Array of SkuCapability
 * **name**: string[]: Array of SkuZoneDetailNameItem
+
+## SubscriptionStateOverrideAction
+### Properties
+* **action**: 'BillingCancellation' | 'DeleteAllResources' | 'NoOp' | 'NotDefined' | 'SoftDeleteAllResources' | 'UndoSoftDelete' | string (Required)
+* **state**: 'Deleted' | 'Registered' | 'Suspended' | 'SuspendedToDeleted' | 'SuspendedToRegistered' | 'SuspendedToUnregistered' | 'SuspendedToWarned' | 'Unregistered' | 'Warned' | 'WarnedToDeleted' | 'WarnedToRegistered' | 'WarnedToSuspended' | 'WarnedToUnregistered' | string (Required)
+
+## SubscriptionStateRule
+### Properties
+* **allowedActions**: string[]: Array of SubscriptionStateRuleAllowedActionsItem
+* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'NotDefined' | 'PastDue' | 'Warned' | string
+
+## SwaggerSpecification
+### Properties
+* **apiVersions**: string[]: Array of SwaggerSpecificationApiVersionsItem
+* **swaggerSpecFolderUri**: string
+
+## ThrottlingMetric
+### Properties
+* **interval**: string
+* **limit**: int (Required)
+* **type**: 'NotSpecified' | 'NumberOfRequests' | 'NumberOfResources' | string (Required)
+
+## ThrottlingRule
+### Properties
+* **action**: string (Required)
+* **metrics**: [ThrottlingMetric](#throttlingmetric)[] (Required): Array of ThrottlingMetric
+* **requiredFeatures**: string[]: Array of ThrottlingRuleRequiredFeaturesItem
+
+## TypedErrorInfo
+### Properties
+* **info**: any (ReadOnly): Any object
+* **type**: string (Required)
 

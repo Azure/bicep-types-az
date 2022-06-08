@@ -22,12 +22,6 @@
 * **properties**: [FirewallRuleProperties](#firewallruleproperties): Data Lake Store firewall rule properties information
 * **type**: 'Microsoft.DataLakeStore/accounts/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## EncryptionIdentity
-### Properties
-* **principalId**: string (ReadOnly): The principal identifier associated with the encryption.
-* **tenantId**: string (ReadOnly): The tenant identifier associated with the encryption.
-* **type**: 'SystemAssigned': The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
-
 ## DataLakeStoreAccountProperties
 ### Properties
 * **creationTime**: string (ReadOnly): the account creation time.
@@ -40,24 +34,30 @@
 * **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Patching' | 'Resuming' | 'Running' | 'Succeeded' | 'Suspending' (ReadOnly): the status of the Data Lake Store account while being provisioned.
 * **state**: 'active' | 'suspended' (ReadOnly): the status of the Data Lake Store account after provisioning has completed.
 
+## DataLakeStoreAccountTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## EncryptionConfig
 ### Properties
 * **keyVaultMetaInfo**: [KeyVaultMetaInfo](#keyvaultmetainfo)
 * **type**: 'ServiceManaged' | 'UserManaged': The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.
+
+## EncryptionIdentity
+### Properties
+* **principalId**: string (ReadOnly): The principal identifier associated with the encryption.
+* **tenantId**: string (ReadOnly): The tenant identifier associated with the encryption.
+* **type**: 'SystemAssigned': The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
+
+## FirewallRuleProperties
+### Properties
+* **endIpAddress**: string: the end IP address for the firewall rule.
+* **startIpAddress**: string: the start IP address for the firewall rule.
 
 ## KeyVaultMetaInfo
 ### Properties
 * **encryptionKeyName**: string: The name of the user managed encryption key.
 * **encryptionKeyVersion**: string: The version of the user managed encryption key.
 * **keyVaultResourceId**: string: The resource identifier for the user managed Key Vault being used to encrypt.
-
-## DataLakeStoreAccountTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## FirewallRuleProperties
-### Properties
-* **endIpAddress**: string: the end IP address for the firewall rule.
-* **startIpAddress**: string: the start IP address for the firewall rule.
 

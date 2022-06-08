@@ -40,7 +40,7 @@ warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2021-12-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -80,7 +80,7 @@ warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/preview/2021-12-01-preview/apimanagement.json:38:5
@@ -747,7 +747,7 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipiente
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 62ms
+info    | autorest.bicep took 47ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2021-08-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -787,7 +787,7 @@ warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/stable/2021-08-01/apimanagement.json:38:5
@@ -1441,7 +1441,7 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipiente
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 38ms
+info    | autorest.bicep took 43ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2021-04-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -1481,7 +1481,7 @@ warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/preview/2021-04-01-preview/apimanagement.json:38:5
@@ -2133,7 +2133,7 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipiente
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 34ms
+info    | autorest.bicep took 39ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2021-01-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -2173,7 +2173,7 @@ warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/preview/2021-01-01-preview/apimanagement.json:38:5
@@ -2817,7 +2817,7 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 34ms
+info    | autorest.bicep took 25ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2020-12-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -2857,7 +2857,7 @@ warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/stable/2020-12-01/apimanagement.json:38:5
@@ -3497,7 +3497,7 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 31ms
+info    | autorest.bicep took 41ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2020-06-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -3537,7 +3537,7 @@ warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/preview/2020-06-01-preview/apimanagement.json:38:5
@@ -4173,7 +4173,7 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 34ms
+info    | autorest.bicep took 49ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2019-12-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -4213,7 +4213,7 @@ warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/stable/2019-12-01/apimanagement.json:38:5
@@ -4778,7 +4778,7 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 28ms
+info    | autorest.bicep took 32ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2019-12-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -4818,7 +4818,7 @@ warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/preview/2019-12-01-preview/apimanagement.json:38:5
@@ -5366,7 +5366,7 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 24ms
+info    | autorest.bicep took 27ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2019-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -5406,7 +5406,7 @@ warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/stable/2019-01-01/apimanagement.json:38:5
@@ -5910,7 +5910,7 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 16ms
+info    | autorest.bicep took 20ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2018-06-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -5950,7 +5950,7 @@ warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/preview/2018-06-01-preview/apimanagement.json:38:5
@@ -6450,7 +6450,7 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 22ms
+info    | autorest.bicep took 18ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2018-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -6490,7 +6490,7 @@ warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/stable/2018-01-01/apimanagement.json:387:5
@@ -7014,7 +7014,7 @@ warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/stable/2017-03-01/apimanagement.json:352:5
@@ -7480,7 +7480,7 @@ info    | Resource type microsoft.apimanagement/service/products/groups under pa
 info    | Resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}' has no body defined.
-info    | autorest.bicep took 14ms
+info    | autorest.bicep took 16ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2016-10-10"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -7520,7 +7520,7 @@ warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/stable/2016-10-10/apimanagement.json:122:5
@@ -7802,7 +7802,7 @@ warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OAuth2AuthenticationSettingsContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/stable/2016-07-07/apimanagement.json:4956:5
@@ -7989,5 +7989,5 @@ warning | Unrecognized property type: byte-array. Returning 'any'.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{uid}' has no body defined.
-info    | autorest.bicep took 11ms
-info    | Autorest completed in 238.21s. 28 files generated.
+info    | autorest.bicep took 8ms
+info    | Autorest completed in 228.04s. 28 files generated.

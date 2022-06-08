@@ -175,171 +175,28 @@
 * **ApiVersion**: 2020-05-01-preview
 * **Output**: [AmlComputeNodesInformation](#amlcomputenodesinformation)
 
-## Identity
+## ACIServiceCreateRequestDataCollection
 ### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned': The identity type.
-* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): dictionary containing all the user assigned identities, with resourceId of the UAI as key.
+* **eventHubEnabled**: bool (WriteOnly): Option for enabling/disabling Event Hub.
+* **storageEnabled**: bool (WriteOnly): Option for enabling/disabling storage.
 
-## UserAssignedIdentities
+## ACIServiceCreateRequestEncryptionProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+* **keyName**: string (Required, WriteOnly): Encryption Key name
+* **keyVersion**: string (Required, WriteOnly): Encryption Key Version
+* **vaultBaseUrl**: string (Required, WriteOnly): vault base Url
 
-## UserAssignedIdentity
+## ACIServiceCreateRequestVnetConfiguration
 ### Properties
-* **clientId**: string (ReadOnly): The clientId(aka appId) of the user assigned identity.
-* **principalId**: string (ReadOnly): The principal ID of the user assigned identity.
-* **tenantId**: string (ReadOnly): The tenant ID of the user assigned identity.
+* **subnetName**: string (WriteOnly): The name of the virtual network subnet.
+* **vnetName**: string (WriteOnly): The name of the virtual network.
 
-## WorkspaceProperties
+## AksNetworkingConfiguration
 ### Properties
-* **allowPublicAccessWhenBehindVnet**: bool: The flag to indicate whether to allow public access when behind VNet.
-* **applicationInsights**: string: ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
-* **containerRegistry**: string: ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
-* **creationTime**: string (ReadOnly): The creation time of the machine learning workspace in ISO8601 format.
-* **description**: string: The description of this workspace.
-* **discoveryUrl**: string: Url for the discovery service to identify regional endpoints for machine learning experimentation services
-* **encryption**: [EncryptionProperty](#encryptionproperty)
-* **friendlyName**: string: The friendly name for this workspace. This name in mutable
-* **hbiWorkspace**: bool: The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
-* **imageBuildCompute**: string: The compute name for image build
-* **keyVault**: string: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections in the workspace.
-* **privateLinkCount**: int (ReadOnly): Count of private connections in the workspace
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
-* **serviceProvisionedResourceGroup**: string (ReadOnly): The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
-* **sharedPrivateLinkResources**: [SharedPrivateLinkResource](#sharedprivatelinkresource)[]: The list of shared private link resources in this workspace.
-* **storageAccount**: string: ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
-* **workspaceId**: string (ReadOnly): The immutable id associated with this workspace.
-
-## EncryptionProperty
-### Properties
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required)
-* **status**: 'Disabled' | 'Enabled' | string (Required): Indicates whether or not the encryption is enabled for the workspace.
-
-## KeyVaultProperties
-### Properties
-* **identityClientId**: string: For future use - The client id of the identity which will be used to access key vault.
-* **keyIdentifier**: string (Required): Key vault uri to access the encryption key.
-* **keyVaultArmId**: string (Required): The ArmId of the keyVault where the customer owned encryption key is present.
-
-## PrivateEndpointConnection
-### Properties
-* **id**: string (ReadOnly): Specifies the resource ID.
-* **identity**: [Identity](#identity): Identity for the resource.
-* **location**: string: Specifies the location of the resource.
-* **name**: string (ReadOnly): Specifies the name of the resource.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
-* **sku**: [Sku](#sku): Sku of the resource
-* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
-* **type**: string (ReadOnly): Specifies the type of the resource.
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
-
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
-* **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string: The private endpoint connection status.
-
-## Sku
-### Properties
-* **name**: string: Name of the sku
-* **tier**: string: Tier of the sku like Basic or Enterprise
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## SharedPrivateLinkResource
-### Properties
-* **name**: string: Unique name of the private link.
-* **properties**: [SharedPrivateLinkResourceProperty](#sharedprivatelinkresourceproperty): Properties of a shared private link resource.
-
-## SharedPrivateLinkResourceProperty
-### Properties
-* **groupId**: string: The private link resource group id.
-* **privateLinkResourceId**: string: The resource id that private link links to.
-* **requestMessage**: string: Request message.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string: The private endpoint connection status.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Compute
-* **Discriminator**: computeType
-
-### Base Properties
-* **computeLocation**: string: Location for the underlying compute
-* **createdOn**: string (ReadOnly): The date and time when the compute was created.
-* **description**: string: The description of the Machine Learning compute.
-* **isAttachedCompute**: bool (ReadOnly): Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
-* **modifiedOn**: string (ReadOnly): The date and time when the compute was last modified.
-* **provisioningErrors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Errors during provisioning
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
-* **resourceId**: string: ARM resource id of the underlying compute
-### AKS
-#### Properties
-* **computeType**: 'AKS' (Required): The type of compute
-* **properties**: [AKSProperties](#aksproperties): AKS properties
-
-### AmlCompute
-#### Properties
-* **computeType**: 'AmlCompute' (Required): The type of compute
-* **properties**: [AmlComputeProperties](#amlcomputeproperties): AML Compute properties
-
-### Databricks
-#### Properties
-* **computeType**: 'Databricks' (Required): The type of compute
-* **properties**: [DatabricksProperties](#databricksproperties)
-
-### DataFactory
-#### Properties
-* **computeType**: 'DataFactory' (Required): The type of compute
-
-### DataLakeAnalytics
-#### Properties
-* **computeType**: 'DataLakeAnalytics' (Required): The type of compute
-* **properties**: [DataLakeAnalyticsProperties](#datalakeanalyticsproperties)
-
-### HDInsight
-#### Properties
-* **computeType**: 'HDInsight' (Required): The type of compute
-* **properties**: [HDInsightProperties](#hdinsightproperties)
-
-### VirtualMachine
-#### Properties
-* **computeType**: 'VirtualMachine' (Required): The type of compute
-* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
-
-
-## MachineLearningServiceError
-### Properties
-* **error**: [ErrorResponse](#errorresponse) (ReadOnly): Error response information.
-
-## ErrorResponse
-### Properties
-* **code**: string (ReadOnly): Error code.
-* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): An array of error detail objects.
-* **message**: string (ReadOnly): Error message.
-
-## ErrorDetail
-### Properties
-* **code**: string (Required): Error code.
-* **message**: string (Required): Error message.
+* **dnsServiceIP**: string: An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+* **dockerBridgeCidr**: string: A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+* **serviceCidr**: string: A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+* **subnetId**: string: Virtual network subnet resource ID the compute nodes belong to
 
 ## AKSProperties
 ### Properties
@@ -350,25 +207,41 @@
 * **sslConfiguration**: [SslConfiguration](#sslconfiguration): The ssl configuration for scoring
 * **systemServices**: [SystemService](#systemservice)[] (ReadOnly): System services
 
-## AksNetworkingConfiguration
+## AKSServiceCreateRequestAutoScaler
 ### Properties
-* **dnsServiceIP**: string: An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
-* **dockerBridgeCidr**: string: A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
-* **serviceCidr**: string: A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
-* **subnetId**: string: Virtual network subnet resource ID the compute nodes belong to
+* **autoscaleEnabled**: bool (WriteOnly): Option to enable/disable auto scaling.
+* **maxReplicas**: int (WriteOnly): The maximum number of replicas in the cluster.
+* **minReplicas**: int (WriteOnly): The minimum number of replicas to scale down to.
+* **refreshPeriodInSeconds**: int (WriteOnly): The amount of seconds to wait between auto scale updates.
+* **targetUtilization**: int (WriteOnly): The target utilization percentage to use for determining whether to scale the cluster.
 
-## SslConfiguration
+## AKSServiceCreateRequestDataCollection
 ### Properties
-* **cert**: string: Cert data
-* **cname**: string: CNAME of the cert
-* **key**: string: Key data
-* **status**: 'Disabled' | 'Enabled' | string: Enable or disable ssl for scoring
+* **eventHubEnabled**: bool (WriteOnly): Option for enabling/disabling Event Hub.
+* **storageEnabled**: bool (WriteOnly): Option for enabling/disabling storage.
 
-## SystemService
+## AKSServiceCreateRequestLivenessProbeRequirements
 ### Properties
-* **publicIpAddress**: string (ReadOnly): Public IP address
-* **systemServiceType**: string (ReadOnly): The type of this system service.
-* **version**: string (ReadOnly): The version for this type.
+* **failureThreshold**: int (WriteOnly): The number of failures to allow before returning an unhealthy status.
+* **initialDelaySeconds**: int (WriteOnly): The delay before the first probe in seconds.
+* **periodSeconds**: int (WriteOnly): The length of time between probes in seconds.
+* **successThreshold**: int (WriteOnly): The number of successful probes before returning a healthy status.
+* **timeoutSeconds**: int (WriteOnly): The probe timeout in seconds.
+
+## AmlComputeNodeInformation
+### Properties
+* **nodeId**: string (ReadOnly): ID of the compute node.
+* **nodeState**: 'idle' | 'leaving' | 'preempted' | 'preparing' | 'running' | 'unusable' | string (ReadOnly): State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.
+* **port**: int (ReadOnly): SSH port number of the node.
+* **privateIpAddress**: string (ReadOnly): Private IP address of the compute node.
+* **publicIpAddress**: string (ReadOnly): Public IP address of the compute node.
+* **runId**: string (ReadOnly): ID of the Experiment running on the node, if any else null.
+
+## AmlComputeNodesInformation
+### Properties
+* **computeType**: 'AKS' | 'AmlCompute' | 'DataFactory' | 'DataLakeAnalytics' | 'Databricks' | 'HDInsight' | 'VirtualMachine' | string (ReadOnly): The type of compute
+* **nextLink**: string (ReadOnly): The continuation token.
+* **nodes**: [AmlComputeNodeInformation](#amlcomputenodeinformation)[] (ReadOnly): The collection of returned AmlCompute nodes details.
 
 ## AmlComputeProperties
 ### Properties
@@ -384,230 +257,6 @@
 * **userAccountCredentials**: [UserAccountCredentials](#useraccountcredentials): Settings for user account that gets created on each on the nodes of a compute.
 * **vmPriority**: 'Dedicated' | 'LowPriority' | string: Virtual Machine priority
 * **vmSize**: string: Virtual Machine Size
-
-## NodeStateCounts
-### Properties
-* **idleNodeCount**: int (ReadOnly): Number of compute nodes in idle state.
-* **leavingNodeCount**: int (ReadOnly): Number of compute nodes which are leaving the amlCompute.
-* **preemptedNodeCount**: int (ReadOnly): Number of compute nodes which are in preempted state.
-* **preparingNodeCount**: int (ReadOnly): Number of compute nodes which are being prepared.
-* **runningNodeCount**: int (ReadOnly): Number of compute nodes which are running jobs.
-* **unusableNodeCount**: int (ReadOnly): Number of compute nodes which are in unusable state.
-
-## ScaleSettings
-### Properties
-* **maxNodeCount**: int (Required): Max number of nodes to use
-* **minNodeCount**: int: Min number of nodes to use
-* **nodeIdleTimeBeforeScaleDown**: string: Node Idle Time before scaling down amlCompute
-
-## ResourceId
-### Properties
-* **id**: string (Required): The ID of the resource
-
-## UserAccountCredentials
-### Properties
-* **adminUserName**: string (Required): Name of the administrator user account which can be used to SSH to nodes.
-* **adminUserPassword**: string: Password of the administrator user account.
-* **adminUserSshPublicKey**: string: SSH public key of the administrator user account.
-
-## DatabricksProperties
-### Properties
-* **databricksAccessToken**: string: Databricks access token
-
-## DataLakeAnalyticsProperties
-### Properties
-* **dataLakeStoreAccountName**: string: DataLake Store Account Name
-
-## HDInsightProperties
-### Properties
-* **address**: string: Public IP address of the master node of the cluster.
-* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
-* **sshPort**: int: Port open for ssh connections on the master node of the cluster.
-
-## VirtualMachineSshCredentials
-### Properties
-* **password**: string: Password of admin account
-* **privateKeyData**: string: Private key data
-* **publicKeyData**: string: Public key data
-* **username**: string: Username of admin account
-
-## VirtualMachineProperties
-### Properties
-* **address**: string: Public IP address of the virtual machine.
-* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
-* **sshPort**: int: Port open for ssh connections.
-* **virtualMachineSize**: string: Virtual Machine size
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## DatasetCreateRequestParameters
-### Properties
-* **header**: 'all_files_have_same_headers' | 'combine_all_files_headers' | 'no_headers' | 'only_first_file_has_headers' | string (WriteOnly): Header type.
-* **includePath**: bool (WriteOnly): Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.
-* **partitionFormat**: string (WriteOnly): The partition information of each path will be extracted into columns based on the specified format. Format part '{column_name}' creates string column, and '{column_name:yyyy/MM/dd/HH/mm/ss}' creates datetime column, where 'yyyy', 'MM', 'dd', 'HH', 'mm' and 'ss' are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path '../USA/2019/01/01/data.parquet' where the partition is by country/region and time, partition_format='/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv' creates a string column 'CountryOrRegion' with the value 'USA' and a datetime column 'PartitionDate' with the value '2019-01-01
-* **path**: [DatasetCreateRequestParametersPath](#datasetcreaterequestparameterspath) (WriteOnly)
-* **query**: [DatasetCreateRequestParametersQuery](#datasetcreaterequestparametersquery) (WriteOnly)
-* **separator**: string (WriteOnly): The separator used to split columns for 'delimited_files' sourceType.
-* **sourceType**: 'delimited_files' | 'json_lines_files' | 'parquet_files' | string (WriteOnly): Data source type.
-
-## DatasetCreateRequestParametersPath
-### Properties
-* **dataPath**: [DatasetCreateRequestParametersPathDataPath](#datasetcreaterequestparameterspathdatapath) (WriteOnly)
-* **httpUrl**: string (WriteOnly): The Http URL.
-
-## DatasetCreateRequestParametersPathDataPath
-### Properties
-* **datastoreName**: string (WriteOnly): The datastore name.
-* **relativePath**: string (WriteOnly): Path within the datastore.
-
-## DatasetCreateRequestParametersQuery
-### Properties
-* **datastoreName**: string (WriteOnly): The SQL/PostgreSQL/MySQL datastore name.
-* **query**: string (WriteOnly): SQL Quey.
-
-## Dataset
-### Properties
-* **createdTime**: string (ReadOnly): The dataset creation time (UTC).
-* **datasetId**: string (ReadOnly): Unique Dataset identifier.
-* **datasetState**: [DatasetState](#datasetstate) (ReadOnly): Dataset state
-* **datasetType**: string (ReadOnly): Dataset Type.
-* **defaultCompute**: string (ReadOnly): Name of the default compute to be used for any Dataset actions (such as Profile, Write).
-* **description**: string (ReadOnly): Description about this dataset version.
-* **etag**: string (ReadOnly): eTag description
-* **isVisible**: bool (ReadOnly): Flag to hide Dataset in UI
-* **latest**: [DatasetLatest](#datasetlatest) (ReadOnly): Last created Dataset definition.
-* **modifiedTime**: string (ReadOnly): The dataset last modified time (UTC).
-* **name**: string (ReadOnly): Unique dataset name
-* **tags**: [DatasetTags](#datasettags) (ReadOnly): Tags for this dataset version.
-
-## DatasetState
-### Properties
-* **deprecatedBy**: [DatasetStateDeprecatedBy](#datasetstatedeprecatedby) (ReadOnly): Reference to better Dataset or a Definition
-* **etag**: string (ReadOnly): eTag description
-* **state**: string (ReadOnly): Dataset state
-
-## DatasetStateDeprecatedBy
-### Properties
-* **datasetId**: string (ReadOnly): Unique Dataset identifier.
-* **definitionVersion**: string (ReadOnly): Definition Version
-
-## DatasetLatest
-### Properties
-* **createdBy**: [UserInfo](#userinfo) (ReadOnly): User who created.
-* **createdTime**: string (ReadOnly): The dataset creation time (UTC).
-* **dataflow**: string (ReadOnly): Dataflow Json
-* **dataPath**: [DatasetLatestDataPath](#datasetlatestdatapath) (ReadOnly): Datastore and reference to location of data such as relativePath, Sql Query and etc.
-* **datasetDefinitionState**: [DatasetState](#datasetstate) (ReadOnly): Dataset state
-* **datasetId**: string (ReadOnly): Unique Dataset identifier.
-* **description**: string (ReadOnly): Description about the dataset.
-* **etag**: string (ReadOnly): eTag description
-* **fileType**: string (ReadOnly): Dataset FileType, specified by user.
-* **modifiedTime**: string (ReadOnly): The dataset last modified time (UTC).
-* **notes**: string (ReadOnly): Summary of Definition changes.
-* **partitionFormatInPath**: bool (ReadOnly): Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.
-* **properties**: [DatasetLatestProperties](#datasetlatestproperties) (ReadOnly): Properties stores information like name of time series column for time series dataset.
-* **savedDatasetId**: string (ReadOnly): Indicates the saved dataset this definition is mapping to, populated on Get.
-* **tags**: [DatasetLatestTags](#datasetlatesttags) (ReadOnly): Tags associated with the dataset.
-* **telemetryInfo**: [DatasetLatestTelemetryInfo](#datasetlatesttelemetryinfo) (ReadOnly): Telemetry information about the dataset including information like which service the dataset was created from.
-* **useDescriptionTagsFromDefinition**: bool (ReadOnly): Whether to use description and tags from the definition level as opposed to dataset level (old behavior).
-* **versionId**: string (ReadOnly): An identifier uniquely identifies a definition change.
-
-## UserInfo
-### Properties
-* **userAltSecId**: string (ReadOnly): A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid
-* **userIdp**: string (ReadOnly): A user identity provider. Eg live.com
-* **userIss**: string (ReadOnly): The issuer which issued the token for this user.
-* **userName**: string (ReadOnly): A user's full name or a service principal's app ID.
-* **userObjectId**: string (ReadOnly): A user or service principal's object ID..
-* **userPuId**: string (ReadOnly): A user or service principal's PuID.
-* **userTenantId**: string (ReadOnly): A user or service principal's tenant ID.
-
-## DatasetLatestDataPath
-### Properties
-* **additionalProperties**: [DatasetLatestDataPathAdditionalProperties](#datasetlatestdatapathadditionalproperties) (ReadOnly): Additional Properties.
-* **azureFilePath**: string (ReadOnly): Azure path for Azure Blob or File
-* **datastoreName**: string (ReadOnly): Data store Name
-* **httpUrl**: string (ReadOnly): HTTP URL.
-* **partitionFormat**: string (ReadOnly): Specify the partition format of path. Defaults to None.
-* **partitionFormatIgnoreError**: bool (ReadOnly): Whether or not to ignore unmatched path.
-* **paths**: string[] (ReadOnly): List of files expanded from a file GLOB specified
-* **relativePath**: string (ReadOnly): Relative path in the data store
-* **sqlDataPath**: [DatasetLatestDataPathSqlDataPath](#datasetlatestdatapathsqldatapath) (ReadOnly): Sql Query/Table/Stored Procedure details.
-
-## DatasetLatestDataPathAdditionalProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## DatasetLatestDataPathSqlDataPath
-### Properties
-* **queryTimeout**: int (ReadOnly): SQL query timeout. Unit in seconds.
-* **sqlQuery**: string (ReadOnly): SQL query
-* **sqlStoredProcedureName**: string (ReadOnly): SQL storedProcedure name
-* **sqlTableName**: string (ReadOnly): SQL table name
-
-## DatasetLatestProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## DatasetLatestTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## DatasetLatestTelemetryInfo
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## DatasetTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## DatasetCreateRequestRegistration
-### Properties
-* **description**: string (WriteOnly): The description for the dataset.
-* **name**: string (WriteOnly): The name of the dataset.
-* **tags**: [DatasetCreateRequestRegistrationTags](#datasetcreaterequestregistrationtags) (WriteOnly): Tags associated with the dataset.
-
-## DatasetCreateRequestRegistrationTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## DatasetCreateRequestTimeSeries
-### Properties
-* **coarseGrainTimestamp**: string (WriteOnly): Column name to be used as CoarseGrainTimestamp. Can only be used if 'fineGrainTimestamp' is specified and cannot be same as 'fineGrainTimestamp'.
-* **fineGrainTimestamp**: string (WriteOnly): Column name to be used as FineGrainTimestamp
-
-## Datastore
-### Properties
-* **azureDataLakeSection**: [AzureDataLakeSection](#azuredatalakesection) (ReadOnly): Data Specific to azure data lake.
-* **azureMySqlSection**: [AzureMySqlSection](#azuremysqlsection) (ReadOnly): Data specific to azure MySQL.
-* **azurePostgreSqlSection**: [AzurePostgreSqlSection](#azurepostgresqlsection) (ReadOnly): Data specific to azure PostgreSQL.
-* **azureSqlDatabaseSection**: [AzureSqlDatabaseSection](#azuresqldatabasesection) (ReadOnly): Data specific to azure SQL database.
-* **azureStorageSection**: [AzureStorageSection](#azurestoragesection) (ReadOnly): Data specific to azure storage.
-* **createdBy**: [UserInfo](#userinfo) (ReadOnly): User who created.
-* **createdTime**: string (ReadOnly): The date and time when the datastore was created.
-* **dataStoreType**: 'AzureBlob' | 'AzureDataLake' | 'AzureDataLakeGen2' | 'AzureFile' | 'AzureMySql' | 'AzurePostgreSql' | 'AzureSqlDatabase' | 'DBFS' | string (ReadOnly): The datastore type.
-* **description**: string (ReadOnly): Description of the datastore.
-* **glusterFsSection**: [GlusterFsSection](#glusterfssection) (ReadOnly): Data specific to GlusterFS.
-* **hasBeenValidated**: bool (ReadOnly): A read only property that denotes whether the service datastore has been validated with credentials.
-* **linkedInfo**: [LinkedInfo](#linkedinfo) (ReadOnly): Info about origin if it is linked.
-* **modifiedBy**: [UserInfo](#userinfo) (ReadOnly): User who created.
-* **modifiedTime**: string (ReadOnly): The date and time when the datastore was last modified.
-* **name**: string (ReadOnly): Name of the datastore.
-* **tags**: [DatastoreTags](#datastoretags) (ReadOnly): Tags for this datastore.
 
 ## AzureDataLakeSection
 ### Properties
@@ -721,36 +370,81 @@
 * **tenantId**: string (ReadOnly): The ID of the tenant the service principal/app belongs to.
 * **thumbprint**: string (ReadOnly): The thumbprint of the certificate above.
 
-## GlusterFsSection
-### Properties
-* **serverAddress**: string (ReadOnly): The server address of one of the servers that hosts the GlusterFS. Can be either the IP address or server name.
-* **volumeName**: string (ReadOnly): The name of the created GlusterFS volume.
+## Compute
+* **Discriminator**: computeType
 
-## LinkedInfo
-### Properties
-* **linkedId**: string (ReadOnly): LinkedId id.
-* **linkedResourceName**: string (ReadOnly): Linked resource name.
-* **origin**: 'Synapse' | string (ReadOnly): Datastore origin
+### Base Properties
+* **computeLocation**: string: Location for the underlying compute
+* **createdOn**: string (ReadOnly): The date and time when the compute was created.
+* **description**: string: The description of the Machine Learning compute.
+* **isAttachedCompute**: bool (ReadOnly): Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
+* **modifiedOn**: string (ReadOnly): The date and time when the compute was last modified.
+* **provisioningErrors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Errors during provisioning
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
+* **resourceId**: string: ARM resource id of the underlying compute
+### AKS
+#### Properties
+* **computeType**: 'AKS' (Required): The type of compute
+* **properties**: [AKSProperties](#aksproperties): AKS properties
 
-## DatastoreTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+### AmlCompute
+#### Properties
+* **computeType**: 'AmlCompute' (Required): The type of compute
+* **properties**: [AmlComputeProperties](#amlcomputeproperties): AML Compute properties
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+### Databricks
+#### Properties
+* **computeType**: 'Databricks' (Required): The type of compute
+* **properties**: [DatabricksProperties](#databricksproperties)
 
-## LinkedWorkspaceProps
-### Properties
-* **linkedWorkspaceResourceId**: string: ResourceId of the link target of the linked workspace.
-* **userAssignedIdentityResourceId**: string: ResourceId of the user assigned identity for the linked workspace.
+### DataFactory
+#### Properties
+* **computeType**: 'DataFactory' (Required): The type of compute
 
-## ResourceTags
+### DataLakeAnalytics
+#### Properties
+* **computeType**: 'DataLakeAnalytics' (Required): The type of compute
+* **properties**: [DataLakeAnalyticsProperties](#datalakeanalyticsproperties)
+
+### HDInsight
+#### Properties
+* **computeType**: 'HDInsight' (Required): The type of compute
+* **properties**: [HDInsightProperties](#hdinsightproperties)
+
+### VirtualMachine
+#### Properties
+* **computeType**: 'VirtualMachine' (Required): The type of compute
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
+
+
+## ComputeSecrets
+* **Discriminator**: computeType
+
+### Base Properties
+### AksComputeSecrets
+#### Properties
+* **adminKubeConfig**: string (ReadOnly): Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
+* **computeType**: 'AKS' (Required): The type of compute
+* **imagePullSecretName**: string (ReadOnly): Image registry pull secret.
+* **userKubeConfig**: string (ReadOnly): Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
+
+### DatabricksComputeSecrets
+#### Properties
+* **computeType**: 'Databricks' (Required): The type of compute
+* **databricksAccessToken**: string (ReadOnly): access token for databricks account.
+
+### VirtualMachineSecrets
+#### Properties
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials) (ReadOnly): Admin credentials for virtual machine
+* **computeType**: 'VirtualMachine' (Required): The type of compute
+
+
+## ContainerResourceRequirements
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **cpu**: int (WriteOnly): The number of CPU cores on the container.
+* **fpga**: int (WriteOnly): The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.
+* **gpu**: int (WriteOnly): The number of GPU cores in the container.
+* **memoryInGB**: int (WriteOnly): The amount of memory on the container in GB.
 
 ## CreateServiceRequestEnvironmentImageRequest
 ### Properties
@@ -761,12 +455,194 @@
 * **modelIds**: string[] (WriteOnly): The list of model Ids.
 * **models**: [Model](#model)[] (WriteOnly): The list of models.
 
-## ImageAsset
+## CreateServiceRequestKeys
 ### Properties
-* **id**: string (WriteOnly): The Asset Id.
-* **mimeType**: string (WriteOnly): The mime type.
-* **unpack**: bool (WriteOnly): Whether the Asset is unpacked.
-* **url**: string (WriteOnly): The Url of the Asset.
+* **primaryKey**: string (WriteOnly): The primary key.
+* **secondaryKey**: string (WriteOnly): The secondary key.
+
+## CreateServiceRequestKvTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## CreateServiceRequestProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DatabricksProperties
+### Properties
+* **databricksAccessToken**: string: Databricks access token
+
+## DataLakeAnalyticsProperties
+### Properties
+* **dataLakeStoreAccountName**: string: DataLake Store Account Name
+
+## Dataset
+### Properties
+* **createdTime**: string (ReadOnly): The dataset creation time (UTC).
+* **datasetId**: string (ReadOnly): Unique Dataset identifier.
+* **datasetState**: [DatasetState](#datasetstate) (ReadOnly): Dataset state
+* **datasetType**: string (ReadOnly): Dataset Type.
+* **defaultCompute**: string (ReadOnly): Name of the default compute to be used for any Dataset actions (such as Profile, Write).
+* **description**: string (ReadOnly): Description about this dataset version.
+* **etag**: string (ReadOnly): eTag description
+* **isVisible**: bool (ReadOnly): Flag to hide Dataset in UI
+* **latest**: [DatasetLatest](#datasetlatest) (ReadOnly): Last created Dataset definition.
+* **modifiedTime**: string (ReadOnly): The dataset last modified time (UTC).
+* **name**: string (ReadOnly): Unique dataset name
+* **tags**: [DatasetTags](#datasettags) (ReadOnly): Tags for this dataset version.
+
+## DatasetCreateRequestParameters
+### Properties
+* **header**: 'all_files_have_same_headers' | 'combine_all_files_headers' | 'no_headers' | 'only_first_file_has_headers' | string (WriteOnly): Header type.
+* **includePath**: bool (WriteOnly): Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.
+* **partitionFormat**: string (WriteOnly): The partition information of each path will be extracted into columns based on the specified format. Format part '{column_name}' creates string column, and '{column_name:yyyy/MM/dd/HH/mm/ss}' creates datetime column, where 'yyyy', 'MM', 'dd', 'HH', 'mm' and 'ss' are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path '../USA/2019/01/01/data.parquet' where the partition is by country/region and time, partition_format='/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv' creates a string column 'CountryOrRegion' with the value 'USA' and a datetime column 'PartitionDate' with the value '2019-01-01
+* **path**: [DatasetCreateRequestParametersPath](#datasetcreaterequestparameterspath) (WriteOnly)
+* **query**: [DatasetCreateRequestParametersQuery](#datasetcreaterequestparametersquery) (WriteOnly)
+* **separator**: string (WriteOnly): The separator used to split columns for 'delimited_files' sourceType.
+* **sourceType**: 'delimited_files' | 'json_lines_files' | 'parquet_files' | string (WriteOnly): Data source type.
+
+## DatasetCreateRequestParametersPath
+### Properties
+* **dataPath**: [DatasetCreateRequestParametersPathDataPath](#datasetcreaterequestparameterspathdatapath) (WriteOnly)
+* **httpUrl**: string (WriteOnly): The Http URL.
+
+## DatasetCreateRequestParametersPathDataPath
+### Properties
+* **datastoreName**: string (WriteOnly): The datastore name.
+* **relativePath**: string (WriteOnly): Path within the datastore.
+
+## DatasetCreateRequestParametersQuery
+### Properties
+* **datastoreName**: string (WriteOnly): The SQL/PostgreSQL/MySQL datastore name.
+* **query**: string (WriteOnly): SQL Quey.
+
+## DatasetCreateRequestRegistration
+### Properties
+* **description**: string (WriteOnly): The description for the dataset.
+* **name**: string (WriteOnly): The name of the dataset.
+* **tags**: [DatasetCreateRequestRegistrationTags](#datasetcreaterequestregistrationtags) (WriteOnly): Tags associated with the dataset.
+
+## DatasetCreateRequestRegistrationTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DatasetCreateRequestTimeSeries
+### Properties
+* **coarseGrainTimestamp**: string (WriteOnly): Column name to be used as CoarseGrainTimestamp. Can only be used if 'fineGrainTimestamp' is specified and cannot be same as 'fineGrainTimestamp'.
+* **fineGrainTimestamp**: string (WriteOnly): Column name to be used as FineGrainTimestamp
+
+## DatasetLatest
+### Properties
+* **createdBy**: [UserInfo](#userinfo) (ReadOnly): User who created.
+* **createdTime**: string (ReadOnly): The dataset creation time (UTC).
+* **dataflow**: string (ReadOnly): Dataflow Json
+* **dataPath**: [DatasetLatestDataPath](#datasetlatestdatapath) (ReadOnly): Datastore and reference to location of data such as relativePath, Sql Query and etc.
+* **datasetDefinitionState**: [DatasetState](#datasetstate) (ReadOnly): Dataset state
+* **datasetId**: string (ReadOnly): Unique Dataset identifier.
+* **description**: string (ReadOnly): Description about the dataset.
+* **etag**: string (ReadOnly): eTag description
+* **fileType**: string (ReadOnly): Dataset FileType, specified by user.
+* **modifiedTime**: string (ReadOnly): The dataset last modified time (UTC).
+* **notes**: string (ReadOnly): Summary of Definition changes.
+* **partitionFormatInPath**: bool (ReadOnly): Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.
+* **properties**: [DatasetLatestProperties](#datasetlatestproperties) (ReadOnly): Properties stores information like name of time series column for time series dataset.
+* **savedDatasetId**: string (ReadOnly): Indicates the saved dataset this definition is mapping to, populated on Get.
+* **tags**: [DatasetLatestTags](#datasetlatesttags) (ReadOnly): Tags associated with the dataset.
+* **telemetryInfo**: [DatasetLatestTelemetryInfo](#datasetlatesttelemetryinfo) (ReadOnly): Telemetry information about the dataset including information like which service the dataset was created from.
+* **useDescriptionTagsFromDefinition**: bool (ReadOnly): Whether to use description and tags from the definition level as opposed to dataset level (old behavior).
+* **versionId**: string (ReadOnly): An identifier uniquely identifies a definition change.
+
+## DatasetLatestDataPath
+### Properties
+* **additionalProperties**: [DatasetLatestDataPathAdditionalProperties](#datasetlatestdatapathadditionalproperties) (ReadOnly): Additional Properties.
+* **azureFilePath**: string (ReadOnly): Azure path for Azure Blob or File
+* **datastoreName**: string (ReadOnly): Data store Name
+* **httpUrl**: string (ReadOnly): HTTP URL.
+* **partitionFormat**: string (ReadOnly): Specify the partition format of path. Defaults to None.
+* **partitionFormatIgnoreError**: bool (ReadOnly): Whether or not to ignore unmatched path.
+* **paths**: string[] (ReadOnly): List of files expanded from a file GLOB specified
+* **relativePath**: string (ReadOnly): Relative path in the data store
+* **sqlDataPath**: [DatasetLatestDataPathSqlDataPath](#datasetlatestdatapathsqldatapath) (ReadOnly): Sql Query/Table/Stored Procedure details.
+
+## DatasetLatestDataPathAdditionalProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DatasetLatestDataPathSqlDataPath
+### Properties
+* **queryTimeout**: int (ReadOnly): SQL query timeout. Unit in seconds.
+* **sqlQuery**: string (ReadOnly): SQL query
+* **sqlStoredProcedureName**: string (ReadOnly): SQL storedProcedure name
+* **sqlTableName**: string (ReadOnly): SQL table name
+
+## DatasetLatestProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DatasetLatestTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DatasetLatestTelemetryInfo
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DatasetReference
+### Properties
+* **id**: string (WriteOnly): The id of the dataset reference.
+* **name**: string (WriteOnly): The name of the dataset reference.
+
+## DatasetState
+### Properties
+* **deprecatedBy**: [DatasetStateDeprecatedBy](#datasetstatedeprecatedby) (ReadOnly): Reference to better Dataset or a Definition
+* **etag**: string (ReadOnly): eTag description
+* **state**: string (ReadOnly): Dataset state
+
+## DatasetStateDeprecatedBy
+### Properties
+* **datasetId**: string (ReadOnly): Unique Dataset identifier.
+* **definitionVersion**: string (ReadOnly): Definition Version
+
+## DatasetTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Datastore
+### Properties
+* **azureDataLakeSection**: [AzureDataLakeSection](#azuredatalakesection) (ReadOnly): Data Specific to azure data lake.
+* **azureMySqlSection**: [AzureMySqlSection](#azuremysqlsection) (ReadOnly): Data specific to azure MySQL.
+* **azurePostgreSqlSection**: [AzurePostgreSqlSection](#azurepostgresqlsection) (ReadOnly): Data specific to azure PostgreSQL.
+* **azureSqlDatabaseSection**: [AzureSqlDatabaseSection](#azuresqldatabasesection) (ReadOnly): Data specific to azure SQL database.
+* **azureStorageSection**: [AzureStorageSection](#azurestoragesection) (ReadOnly): Data specific to azure storage.
+* **createdBy**: [UserInfo](#userinfo) (ReadOnly): User who created.
+* **createdTime**: string (ReadOnly): The date and time when the datastore was created.
+* **dataStoreType**: 'AzureBlob' | 'AzureDataLake' | 'AzureDataLakeGen2' | 'AzureFile' | 'AzureMySql' | 'AzurePostgreSql' | 'AzureSqlDatabase' | 'DBFS' | string (ReadOnly): The datastore type.
+* **description**: string (ReadOnly): Description of the datastore.
+* **glusterFsSection**: [GlusterFsSection](#glusterfssection) (ReadOnly): Data specific to GlusterFS.
+* **hasBeenValidated**: bool (ReadOnly): A read only property that denotes whether the service datastore has been validated with credentials.
+* **linkedInfo**: [LinkedInfo](#linkedinfo) (ReadOnly): Info about origin if it is linked.
+* **modifiedBy**: [UserInfo](#userinfo) (ReadOnly): User who created.
+* **modifiedTime**: string (ReadOnly): The date and time when the datastore was last modified.
+* **name**: string (ReadOnly): Name of the datastore.
+* **tags**: [DatastoreTags](#datastoretags) (ReadOnly): Tags for this datastore.
+
+## DatastoreTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## EncryptionProperty
+### Properties
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required)
+* **status**: 'Disabled' | 'Enabled' | string (Required): Indicates whether or not the encryption is enabled for the workspace.
 
 ## EnvironmentImageRequestEnvironment
 ### Properties
@@ -779,68 +655,74 @@
 * **spark**: [ModelEnvironmentDefinitionSpark](#modelenvironmentdefinitionspark) (WriteOnly): The configuration for a Spark environment.
 * **version**: string (WriteOnly): The environment version.
 
-## ModelEnvironmentDefinitionDocker
-### Properties
-* **baseDockerfile**: string (WriteOnly): Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
-* **baseImage**: string (WriteOnly): Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
-* **baseImageRegistry**: [ModelDockerSectionBaseImageRegistry](#modeldockersectionbaseimageregistry) (WriteOnly): Image registry that contains the base image.
-
-## ModelDockerSectionBaseImageRegistry
-### Properties
-* **address**: string (WriteOnly)
-* **password**: string (WriteOnly)
-* **username**: string (WriteOnly)
-
-## ModelEnvironmentDefinitionEnvironmentVariables
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ModelEnvironmentDefinitionPython
-### Properties
-* **baseCondaEnvironment**: string (WriteOnly)
-* **condaDependencies**: any (WriteOnly): Any object
-* **interpreterPath**: string (WriteOnly): The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
-* **userManagedDependencies**: bool (WriteOnly): True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
-
-## ModelEnvironmentDefinitionR
-### Properties
-* **bioConductorPackages**: string[] (WriteOnly): The packages from Bioconductor.
-* **cranPackages**: [RCranPackage](#rcranpackage)[] (WriteOnly): The CRAN packages to use.
-* **customUrlPackages**: string[] (WriteOnly): The packages from custom urls.
-* **gitHubPackages**: [RGitHubPackage](#rgithubpackage)[] (WriteOnly): The packages directly from GitHub.
-* **rscriptPath**: string (WriteOnly): The Rscript path to use if an environment build is not required.
-The path specified gets used to call the user script.
-* **rVersion**: string (WriteOnly): The version of R to be installed
-* **snapshotDate**: string (WriteOnly): Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. "2019-04-17"
-* **userManaged**: bool (WriteOnly): Indicates whether the environment is managed by user or by AzureML.
-
-## RCranPackage
-### Properties
-* **name**: string (WriteOnly): The package name.
-* **repository**: string (WriteOnly): The repository name.
-
-## RGitHubPackage
-### Properties
-* **authToken**: string (WriteOnly): Personal access token to install from a private repo
-* **repository**: string (WriteOnly): Repository address in the format username/repo[/subdir][@ref|#pull].
-
-## ModelEnvironmentDefinitionSpark
-### Properties
-* **packages**: [SparkMavenPackage](#sparkmavenpackage)[] (WriteOnly): The Spark packages to use.
-* **precachePackages**: bool (WriteOnly): Whether to precache the packages.
-* **repositories**: string[] (WriteOnly): The list of spark repositories.
-
-## SparkMavenPackage
-### Properties
-* **artifact**: string (WriteOnly)
-* **group**: string (WriteOnly)
-* **version**: string (WriteOnly)
-
 ## EnvironmentImageRequestEnvironmentReference
 ### Properties
 * **name**: string (WriteOnly): Name of the environment.
 * **version**: string (WriteOnly): Version of the environment.
+
+## ErrorDetail
+### Properties
+* **code**: string (Required): Error code.
+* **message**: string (Required): Error message.
+
+## ErrorResponse
+### Properties
+* **code**: string (ReadOnly): Error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): An array of error detail objects.
+* **message**: string (ReadOnly): Error message.
+
+## GlusterFsSection
+### Properties
+* **serverAddress**: string (ReadOnly): The server address of one of the servers that hosts the GlusterFS. Can be either the IP address or server name.
+* **volumeName**: string (ReadOnly): The name of the created GlusterFS volume.
+
+## HDInsightProperties
+### Properties
+* **address**: string: Public IP address of the master node of the cluster.
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
+* **sshPort**: int: Port open for ssh connections on the master node of the cluster.
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned': The identity type.
+* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): dictionary containing all the user assigned identities, with resourceId of the UAI as key.
+
+## ImageAsset
+### Properties
+* **id**: string (WriteOnly): The Asset Id.
+* **mimeType**: string (WriteOnly): The mime type.
+* **unpack**: bool (WriteOnly): Whether the Asset is unpacked.
+* **url**: string (WriteOnly): The Url of the Asset.
+
+## KeyVaultProperties
+### Properties
+* **identityClientId**: string: For future use - The client id of the identity which will be used to access key vault.
+* **keyIdentifier**: string (Required): Key vault uri to access the encryption key.
+* **keyVaultArmId**: string (Required): The ArmId of the keyVault where the customer owned encryption key is present.
+
+## LinkedInfo
+### Properties
+* **linkedId**: string (ReadOnly): LinkedId id.
+* **linkedResourceName**: string (ReadOnly): Linked resource name.
+* **origin**: 'Synapse' | string (ReadOnly): Datastore origin
+
+## LinkedWorkspaceProps
+### Properties
+* **linkedWorkspaceResourceId**: string: ResourceId of the link target of the linked workspace.
+* **userAssignedIdentityResourceId**: string: ResourceId of the user assigned identity for the linked workspace.
+
+## ListWorkspaceKeysResult
+### Properties
+* **appInsightsInstrumentationKey**: string (ReadOnly)
+* **containerRegistryCredentials**: [RegistryListCredentialsResult](#registrylistcredentialsresult) (ReadOnly)
+* **userStorageKey**: string (ReadOnly)
+* **userStorageResourceId**: string (ReadOnly)
+
+## MachineLearningServiceError
+### Properties
+* **error**: [ErrorResponse](#errorresponse) (ReadOnly): Error response information.
 
 ## Model
 ### Properties
@@ -866,10 +748,47 @@ The path specified gets used to call the user script.
 * **url**: string (Required, WriteOnly): The URL of the Model. Usually a SAS URL.
 * **version**: int (WriteOnly): The Model version assigned by Model Management Service.
 
-## DatasetReference
+## ModelDockerSectionBaseImageRegistry
 ### Properties
-* **id**: string (WriteOnly): The id of the dataset reference.
-* **name**: string (WriteOnly): The name of the dataset reference.
+* **address**: string (WriteOnly)
+* **password**: string (WriteOnly)
+* **username**: string (WriteOnly)
+
+## ModelEnvironmentDefinitionDocker
+### Properties
+* **baseDockerfile**: string (WriteOnly): Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
+* **baseImage**: string (WriteOnly): Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
+* **baseImageRegistry**: [ModelDockerSectionBaseImageRegistry](#modeldockersectionbaseimageregistry) (WriteOnly): Image registry that contains the base image.
+
+## ModelEnvironmentDefinitionEnvironmentVariables
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ModelEnvironmentDefinitionPython
+### Properties
+* **baseCondaEnvironment**: string (WriteOnly)
+* **condaDependencies**: any (WriteOnly): Any object
+* **interpreterPath**: string (WriteOnly): The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
+* **userManagedDependencies**: bool (WriteOnly): True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
+
+## ModelEnvironmentDefinitionR
+### Properties
+* **bioConductorPackages**: string[] (WriteOnly): The packages from Bioconductor.
+* **cranPackages**: [RCranPackage](#rcranpackage)[] (WriteOnly): The CRAN packages to use.
+* **customUrlPackages**: string[] (WriteOnly): The packages from custom urls.
+* **gitHubPackages**: [RGitHubPackage](#rgithubpackage)[] (WriteOnly): The packages directly from GitHub.
+* **rscriptPath**: string (WriteOnly): The Rscript path to use if an environment build is not required.
+The path specified gets used to call the user script.
+* **rVersion**: string (WriteOnly): The version of R to be installed
+* **snapshotDate**: string (WriteOnly): Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. "2019-04-17"
+* **userManaged**: bool (WriteOnly): Indicates whether the environment is managed by user or by AzureML.
+
+## ModelEnvironmentDefinitionSpark
+### Properties
+* **packages**: [SparkMavenPackage](#sparkmavenpackage)[] (WriteOnly): The Spark packages to use.
+* **precachePackages**: bool (WriteOnly): Whether to precache the packages.
+* **repositories**: string[] (WriteOnly): The list of spark repositories.
 
 ## ModelKvTags
 ### Properties
@@ -881,24 +800,63 @@ The path specified gets used to call the user script.
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ContainerResourceRequirements
+## NodeStateCounts
 ### Properties
-* **cpu**: int (WriteOnly): The number of CPU cores on the container.
-* **fpga**: int (WriteOnly): The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.
-* **gpu**: int (WriteOnly): The number of GPU cores in the container.
-* **memoryInGB**: int (WriteOnly): The amount of memory on the container in GB.
+* **idleNodeCount**: int (ReadOnly): Number of compute nodes in idle state.
+* **leavingNodeCount**: int (ReadOnly): Number of compute nodes which are leaving the amlCompute.
+* **preemptedNodeCount**: int (ReadOnly): Number of compute nodes which are in preempted state.
+* **preparingNodeCount**: int (ReadOnly): Number of compute nodes which are being prepared.
+* **runningNodeCount**: int (ReadOnly): Number of compute nodes which are running jobs.
+* **unusableNodeCount**: int (ReadOnly): Number of compute nodes which are in unusable state.
 
-## CreateServiceRequestKeys
+## Password
 ### Properties
-* **primaryKey**: string (WriteOnly): The primary key.
-* **secondaryKey**: string (WriteOnly): The secondary key.
+* **name**: string (ReadOnly)
+* **value**: string (ReadOnly)
 
-## CreateServiceRequestKvTags
+## PrivateEndpoint
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
 
-## CreateServiceRequestProperties
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly): Specifies the resource ID.
+* **identity**: [Identity](#identity): Identity for the resource.
+* **location**: string: Specifies the location of the resource.
+* **name**: string (ReadOnly): Specifies the name of the resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **sku**: [Sku](#sku): Sku of the resource
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
+* **type**: string (ReadOnly): Specifies the type of the resource.
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
+* **description**: string: The reason for approval/rejection of the connection.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string: The private endpoint connection status.
+
+## RCranPackage
+### Properties
+* **name**: string (WriteOnly): The package name.
+* **repository**: string (WriteOnly): The repository name.
+
+## RegistryListCredentialsResult
+### Properties
+* **location**: string (ReadOnly)
+* **passwords**: [Password](#password)[] (ReadOnly): Array of Password
+* **username**: string (ReadOnly)
+
+## ResourceId
+### Properties
+* **id**: string (Required): The ID of the resource
+
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -908,95 +866,137 @@ The path specified gets used to call the user script.
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ACIServiceCreateRequestDataCollection
+## ResourceTags
 ### Properties
-* **eventHubEnabled**: bool (WriteOnly): Option for enabling/disabling Event Hub.
-* **storageEnabled**: bool (WriteOnly): Option for enabling/disabling storage.
+### Additional Properties
+* **Additional Properties Type**: string
 
-## ACIServiceCreateRequestEncryptionProperties
+## ResourceTags
 ### Properties
-* **keyName**: string (Required, WriteOnly): Encryption Key name
-* **keyVersion**: string (Required, WriteOnly): Encryption Key Version
-* **vaultBaseUrl**: string (Required, WriteOnly): vault base Url
+### Additional Properties
+* **Additional Properties Type**: string
 
-## ACIServiceCreateRequestVnetConfiguration
+## ResourceTags
 ### Properties
-* **subnetName**: string (WriteOnly): The name of the virtual network subnet.
-* **vnetName**: string (WriteOnly): The name of the virtual network.
+### Additional Properties
+* **Additional Properties Type**: string
 
-## AKSServiceCreateRequestAutoScaler
+## ResourceTags
 ### Properties
-* **autoscaleEnabled**: bool (WriteOnly): Option to enable/disable auto scaling.
-* **maxReplicas**: int (WriteOnly): The maximum number of replicas in the cluster.
-* **minReplicas**: int (WriteOnly): The minimum number of replicas to scale down to.
-* **refreshPeriodInSeconds**: int (WriteOnly): The amount of seconds to wait between auto scale updates.
-* **targetUtilization**: int (WriteOnly): The target utilization percentage to use for determining whether to scale the cluster.
+### Additional Properties
+* **Additional Properties Type**: string
 
-## AKSServiceCreateRequestDataCollection
+## ResourceTags
 ### Properties
-* **eventHubEnabled**: bool (WriteOnly): Option for enabling/disabling Event Hub.
-* **storageEnabled**: bool (WriteOnly): Option for enabling/disabling storage.
+### Additional Properties
+* **Additional Properties Type**: string
 
-## AKSServiceCreateRequestLivenessProbeRequirements
+## RGitHubPackage
 ### Properties
-* **failureThreshold**: int (WriteOnly): The number of failures to allow before returning an unhealthy status.
-* **initialDelaySeconds**: int (WriteOnly): The delay before the first probe in seconds.
-* **periodSeconds**: int (WriteOnly): The length of time between probes in seconds.
-* **successThreshold**: int (WriteOnly): The number of successful probes before returning a healthy status.
-* **timeoutSeconds**: int (WriteOnly): The probe timeout in seconds.
+* **authToken**: string (WriteOnly): Personal access token to install from a private repo
+* **repository**: string (WriteOnly): Repository address in the format username/repo[/subdir][@ref|#pull].
 
-## ListWorkspaceKeysResult
+## ScaleSettings
 ### Properties
-* **appInsightsInstrumentationKey**: string (ReadOnly)
-* **containerRegistryCredentials**: [RegistryListCredentialsResult](#registrylistcredentialsresult) (ReadOnly)
-* **userStorageKey**: string (ReadOnly)
-* **userStorageResourceId**: string (ReadOnly)
+* **maxNodeCount**: int (Required): Max number of nodes to use
+* **minNodeCount**: int: Min number of nodes to use
+* **nodeIdleTimeBeforeScaleDown**: string: Node Idle Time before scaling down amlCompute
 
-## RegistryListCredentialsResult
+## SharedPrivateLinkResource
 ### Properties
-* **location**: string (ReadOnly)
-* **passwords**: [Password](#password)[] (ReadOnly): Array of Password
-* **username**: string (ReadOnly)
+* **name**: string: Unique name of the private link.
+* **properties**: [SharedPrivateLinkResourceProperty](#sharedprivatelinkresourceproperty): Properties of a shared private link resource.
 
-## Password
+## SharedPrivateLinkResourceProperty
 ### Properties
-* **name**: string (ReadOnly)
-* **value**: string (ReadOnly)
+* **groupId**: string: The private link resource group id.
+* **privateLinkResourceId**: string: The resource id that private link links to.
+* **requestMessage**: string: Request message.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string: The private endpoint connection status.
 
-## ComputeSecrets
-* **Discriminator**: computeType
-
-### Base Properties
-### AksComputeSecrets
-#### Properties
-* **adminKubeConfig**: string (ReadOnly): Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
-* **computeType**: 'AKS' (Required): The type of compute
-* **imagePullSecretName**: string (ReadOnly): Image registry pull secret.
-* **userKubeConfig**: string (ReadOnly): Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
-
-### DatabricksComputeSecrets
-#### Properties
-* **computeType**: 'Databricks' (Required): The type of compute
-* **databricksAccessToken**: string (ReadOnly): access token for databricks account.
-
-### VirtualMachineSecrets
-#### Properties
-* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials) (ReadOnly): Admin credentials for virtual machine
-* **computeType**: 'VirtualMachine' (Required): The type of compute
-
-
-## AmlComputeNodesInformation
+## Sku
 ### Properties
-* **computeType**: 'AKS' | 'AmlCompute' | 'DataFactory' | 'DataLakeAnalytics' | 'Databricks' | 'HDInsight' | 'VirtualMachine' | string (ReadOnly): The type of compute
-* **nextLink**: string (ReadOnly): The continuation token.
-* **nodes**: [AmlComputeNodeInformation](#amlcomputenodeinformation)[] (ReadOnly): The collection of returned AmlCompute nodes details.
+* **name**: string: Name of the sku
+* **tier**: string: Tier of the sku like Basic or Enterprise
 
-## AmlComputeNodeInformation
+## SparkMavenPackage
 ### Properties
-* **nodeId**: string (ReadOnly): ID of the compute node.
-* **nodeState**: 'idle' | 'leaving' | 'preempted' | 'preparing' | 'running' | 'unusable' | string (ReadOnly): State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.
-* **port**: int (ReadOnly): SSH port number of the node.
-* **privateIpAddress**: string (ReadOnly): Private IP address of the compute node.
-* **publicIpAddress**: string (ReadOnly): Public IP address of the compute node.
-* **runId**: string (ReadOnly): ID of the Experiment running on the node, if any else null.
+* **artifact**: string (WriteOnly)
+* **group**: string (WriteOnly)
+* **version**: string (WriteOnly)
+
+## SslConfiguration
+### Properties
+* **cert**: string: Cert data
+* **cname**: string: CNAME of the cert
+* **key**: string: Key data
+* **status**: 'Disabled' | 'Enabled' | string: Enable or disable ssl for scoring
+
+## SystemService
+### Properties
+* **publicIpAddress**: string (ReadOnly): Public IP address
+* **systemServiceType**: string (ReadOnly): The type of this system service.
+* **version**: string (ReadOnly): The version for this type.
+
+## UserAccountCredentials
+### Properties
+* **adminUserName**: string (Required): Name of the administrator user account which can be used to SSH to nodes.
+* **adminUserPassword**: string: Password of the administrator user account.
+* **adminUserSshPublicKey**: string: SSH public key of the administrator user account.
+
+## UserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## UserAssignedIdentity
+### Properties
+* **clientId**: string (ReadOnly): The clientId(aka appId) of the user assigned identity.
+* **principalId**: string (ReadOnly): The principal ID of the user assigned identity.
+* **tenantId**: string (ReadOnly): The tenant ID of the user assigned identity.
+
+## UserInfo
+### Properties
+* **userAltSecId**: string (ReadOnly): A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid
+* **userIdp**: string (ReadOnly): A user identity provider. Eg live.com
+* **userIss**: string (ReadOnly): The issuer which issued the token for this user.
+* **userName**: string (ReadOnly): A user's full name or a service principal's app ID.
+* **userObjectId**: string (ReadOnly): A user or service principal's object ID..
+* **userPuId**: string (ReadOnly): A user or service principal's PuID.
+* **userTenantId**: string (ReadOnly): A user or service principal's tenant ID.
+
+## VirtualMachineProperties
+### Properties
+* **address**: string: Public IP address of the virtual machine.
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
+* **sshPort**: int: Port open for ssh connections.
+* **virtualMachineSize**: string: Virtual Machine size
+
+## VirtualMachineSshCredentials
+### Properties
+* **password**: string: Password of admin account
+* **privateKeyData**: string: Private key data
+* **publicKeyData**: string: Public key data
+* **username**: string: Username of admin account
+
+## WorkspaceProperties
+### Properties
+* **allowPublicAccessWhenBehindVnet**: bool: The flag to indicate whether to allow public access when behind VNet.
+* **applicationInsights**: string: ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
+* **containerRegistry**: string: ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
+* **creationTime**: string (ReadOnly): The creation time of the machine learning workspace in ISO8601 format.
+* **description**: string: The description of this workspace.
+* **discoveryUrl**: string: Url for the discovery service to identify regional endpoints for machine learning experimentation services
+* **encryption**: [EncryptionProperty](#encryptionproperty)
+* **friendlyName**: string: The friendly name for this workspace. This name in mutable
+* **hbiWorkspace**: bool: The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
+* **imageBuildCompute**: string: The compute name for image build
+* **keyVault**: string: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections in the workspace.
+* **privateLinkCount**: int (ReadOnly): Count of private connections in the workspace
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
+* **serviceProvisionedResourceGroup**: string (ReadOnly): The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
+* **sharedPrivateLinkResources**: [SharedPrivateLinkResource](#sharedprivatelinkresource)[]: The list of shared private link resources in this workspace.
+* **storageAccount**: string: ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
+* **workspaceId**: string (ReadOnly): The immutable id associated with this workspace.
 

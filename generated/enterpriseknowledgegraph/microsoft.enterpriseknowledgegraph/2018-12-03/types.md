@@ -18,12 +18,12 @@
 * **metadata**: any: Any object
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string: The state of EnterpriseKnowledgeGraph provisioning
 
-## Sku
-### Properties
-* **name**: 'F0' | 'S1' | string (Required): The name of SKU.
-
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Sku
+### Properties
+* **name**: 'F0' | 'S1' | string (Required): The name of SKU.
 

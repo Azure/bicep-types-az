@@ -18,6 +18,11 @@
 * **properties**: [RoleDefinitionProperties](#roledefinitionproperties): Role definition properties.
 * **type**: 'Microsoft.Authorization/roleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Permission
+### Properties
+* **actions**: string[]: Allowed actions.
+* **notActions**: string[]: Denied actions.
+
 ## RoleAssignmentProperties
 ### Properties
 * **principalId**: string (Required): The principal ID assigned to the role. This maps to the ID inside the Active Directory. It can point to a user, service principal, or security group.
@@ -31,9 +36,4 @@
 * **permissions**: [Permission](#permission)[]: Role definition permissions.
 * **roleName**: string: The role name.
 * **type**: string: The role type.
-
-## Permission
-### Properties
-* **actions**: string[]: Allowed actions.
-* **notActions**: string[]: Denied actions.
 

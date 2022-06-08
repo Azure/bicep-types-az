@@ -13,20 +13,6 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Insights/scheduledQueryRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## LogSearchRule
-### Properties
-* **action**: [Action](#action) (Required): Action descriptor.
-* **autoMitigate**: bool: The flag that indicates whether the alert should be automatically resolved or not. The default is false.
-* **createdWithApiVersion**: string (ReadOnly): The api-version used when creating this alert rule
-* **description**: string: The description of the Log Search rule.
-* **displayName**: string: The display name of the alert rule
-* **enabled**: 'false' | 'true' | string: The flag which indicates whether the Log Search rule is enabled. Value should be true or false
-* **isLegacyLogAnalyticsRule**: bool (ReadOnly): True if alert rule is legacy Log Analytic rule
-* **lastUpdatedTime**: string (ReadOnly): Last time the rule was updated in IS08601 format.
-* **provisioningState**: 'Canceled' | 'Deploying' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the scheduled query rule
-* **schedule**: [Schedule](#schedule): Defines how often to run the search and the time interval.
-* **source**: [Source](#source) (Required): Specifies the log search query.
-
 ## Action
 * **Discriminator**: odata.type
 
@@ -51,19 +37,6 @@
 * **customWebhookPayload**: string: Custom payload to be sent for all webhook URI in Azure action group
 * **emailSubject**: string: Custom subject override for all email ids in Azure action group
 
-## TriggerCondition
-### Properties
-* **metricTrigger**: [LogMetricTrigger](#logmetrictrigger): A log metrics trigger descriptor.
-* **threshold**: int (Required): Result or count threshold based on which rule should be triggered.
-* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string (Required): Result Condition Evaluation criteria.
-
-## LogMetricTrigger
-### Properties
-* **metricColumn**: string: Evaluation of metric on a particular column
-* **metricTriggerType**: 'Consecutive' | 'Total' | string: Metric Trigger Evaluation Type
-* **threshold**: int: The threshold of the metric trigger.
-* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string: Result Condition Evaluation criteria.
-
 ## Criteria
 ### Properties
 * **dimensions**: [Dimension](#dimension)[]: List of Dimensions for creating metric
@@ -74,6 +47,32 @@
 * **name**: string (Required): Name of the dimension
 * **operator**: 'Include' | string (Required): Operator for dimension values
 * **values**: string[] (Required): List of dimension values
+
+## LogMetricTrigger
+### Properties
+* **metricColumn**: string: Evaluation of metric on a particular column
+* **metricTriggerType**: 'Consecutive' | 'Total' | string: Metric Trigger Evaluation Type
+* **threshold**: int: The threshold of the metric trigger.
+* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string: Result Condition Evaluation criteria.
+
+## LogSearchRule
+### Properties
+* **action**: [Action](#action) (Required): Action descriptor.
+* **autoMitigate**: bool: The flag that indicates whether the alert should be automatically resolved or not. The default is false.
+* **createdWithApiVersion**: string (ReadOnly): The api-version used when creating this alert rule
+* **description**: string: The description of the Log Search rule.
+* **displayName**: string: The display name of the alert rule
+* **enabled**: 'false' | 'true' | string: The flag which indicates whether the Log Search rule is enabled. Value should be true or false
+* **isLegacyLogAnalyticsRule**: bool (ReadOnly): True if alert rule is legacy Log Analytic rule
+* **lastUpdatedTime**: string (ReadOnly): Last time the rule was updated in IS08601 format.
+* **provisioningState**: 'Canceled' | 'Deploying' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the scheduled query rule
+* **schedule**: [Schedule](#schedule): Defines how often to run the search and the time interval.
+* **source**: [Source](#source) (Required): Specifies the log search query.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Schedule
 ### Properties
@@ -87,8 +86,9 @@
 * **query**: string: Log search query. Required for action type - AlertingAction
 * **queryType**: 'ResultCount' | string: Set value to 'ResultAccount'
 
-## ResourceTags
+## TriggerCondition
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **metricTrigger**: [LogMetricTrigger](#logmetrictrigger): A log metrics trigger descriptor.
+* **threshold**: int (Required): Result or count threshold based on which rule should be triggered.
+* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string (Required): Result Condition Evaluation criteria.
 

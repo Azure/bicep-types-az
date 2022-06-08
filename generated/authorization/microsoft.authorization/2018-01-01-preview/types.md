@@ -18,6 +18,13 @@
 * **properties**: [RoleDefinitionProperties](#roledefinitionproperties): Role definition properties.
 * **type**: 'Microsoft.Authorization/roleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Permission
+### Properties
+* **actions**: string[]: Allowed actions.
+* **dataActions**: string[]: Allowed Data actions.
+* **notActions**: string[]: Denied actions.
+* **notDataActions**: string[]: Denied Data actions.
+
 ## RoleAssignmentProperties
 ### Properties
 * **canDelegate**: bool: The delegation flag used for creating a role assignment
@@ -32,11 +39,4 @@
 * **permissions**: [Permission](#permission)[]: Role definition permissions.
 * **roleName**: string: The role name.
 * **type**: string: The role type.
-
-## Permission
-### Properties
-* **actions**: string[]: Allowed actions.
-* **dataActions**: string[]: Allowed Data actions.
-* **notActions**: string[]: Denied actions.
-* **notDataActions**: string[]: Denied Data actions.
 

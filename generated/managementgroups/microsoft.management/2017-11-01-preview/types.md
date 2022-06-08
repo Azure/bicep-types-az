@@ -19,13 +19,6 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Management/managementGroups/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
-## ManagementGroupProperties
-### Properties
-* **children**: [ManagementGroupChildInfo](#managementgroupchildinfo)[] (ReadOnly): The list of children.
-* **details**: [ManagementGroupDetails](#managementgroupdetails) (ReadOnly): The details of a management group.
-* **displayName**: string (ReadOnly): The friendly name of the management group.
-* **tenantId**: string (ReadOnly): The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
-
 ## ManagementGroupChildInfo
 ### Properties
 * **childId**: string (ReadOnly): The fully qualified ID for the child resource (management group or subscription).  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
@@ -39,6 +32,13 @@
 * **updatedBy**: string (ReadOnly): The identity of the principal or process that updated the object.
 * **updatedTime**: string (ReadOnly): The date and time when this object was last updated.
 * **version**: int (ReadOnly): The version number of the object.
+
+## ManagementGroupProperties
+### Properties
+* **children**: [ManagementGroupChildInfo](#managementgroupchildinfo)[] (ReadOnly): The list of children.
+* **details**: [ManagementGroupDetails](#managementgroupdetails) (ReadOnly): The details of a management group.
+* **displayName**: string (ReadOnly): The friendly name of the management group.
+* **tenantId**: string (ReadOnly): The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
 
 ## ParentGroupInfo
 ### Properties

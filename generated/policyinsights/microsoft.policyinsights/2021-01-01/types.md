@@ -10,6 +10,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.PolicyInsights/attestations' (ReadOnly, DeployTimeConstant): The resource type
 
+## AttestationEvidence
+### Properties
+* **description**: string: The description for this piece of evidence.
+* **sourceUri**: string: The URI location of the evidence.
+
 ## AttestationProperties
 ### Properties
 * **comments**: string: Comments describing why this attestation was created.
@@ -21,11 +26,6 @@
 * **policyAssignmentId**: string (Required): The resource ID of the policy assignment that the attestation is setting the state for.
 * **policyDefinitionReferenceId**: string: The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.
 * **provisioningState**: string (ReadOnly): The status of the attestation.
-
-## AttestationEvidence
-### Properties
-* **description**: string: The description for this piece of evidence.
-* **sourceUri**: string: The URI location of the evidence.
 
 ## SystemData
 ### Properties

@@ -16,18 +16,6 @@
 * **ApiVersion**: 2020-04-30
 * **Output**: [OpenShiftClusterCredentials](#openshiftclustercredentials)
 
-## OpenShiftClusterProperties
-### Properties
-* **apiserverProfile**: [APIServerProfile](#apiserverprofile): APIServerProfile represents an API server profile.
-* **clusterProfile**: [ClusterProfile](#clusterprofile): ClusterProfile represents a cluster profile.
-* **consoleProfile**: [ConsoleProfile](#consoleprofile): ConsoleProfile represents a console profile.
-* **ingressProfiles**: [IngressProfile](#ingressprofile)[]: The cluster ingress profiles.
-* **masterProfile**: [MasterProfile](#masterprofile): MasterProfile represents a master profile.
-* **networkProfile**: [NetworkProfile](#networkprofile): NetworkProfile represents a network profile.
-* **provisioningState**: 'AdminUpdating' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ProvisioningState represents a provisioning state.
-* **servicePrincipalProfile**: [ServicePrincipalProfile](#serviceprincipalprofile): ServicePrincipalProfile represents a service principal profile.
-* **workerProfiles**: [WorkerProfile](#workerprofile)[]: The cluster worker profiles.
-
 ## APIServerProfile
 ### Properties
 * **ip**: string: The IP of the cluster API server (immutable).
@@ -61,10 +49,32 @@
 * **podCidr**: string: The CIDR used for OpenShift/Kubernetes Pods (immutable).
 * **serviceCidr**: string: The CIDR used for OpenShift/Kubernetes Services (immutable).
 
+## OpenShiftClusterCredentials
+### Properties
+* **kubeadminPassword**: string (ReadOnly): The password for the kubeadmin user
+* **kubeadminUsername**: string (ReadOnly): The username for the kubeadmin user
+
+## OpenShiftClusterProperties
+### Properties
+* **apiserverProfile**: [APIServerProfile](#apiserverprofile): APIServerProfile represents an API server profile.
+* **clusterProfile**: [ClusterProfile](#clusterprofile): ClusterProfile represents a cluster profile.
+* **consoleProfile**: [ConsoleProfile](#consoleprofile): ConsoleProfile represents a console profile.
+* **ingressProfiles**: [IngressProfile](#ingressprofile)[]: The cluster ingress profiles.
+* **masterProfile**: [MasterProfile](#masterprofile): MasterProfile represents a master profile.
+* **networkProfile**: [NetworkProfile](#networkprofile): NetworkProfile represents a network profile.
+* **provisioningState**: 'AdminUpdating' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ProvisioningState represents a provisioning state.
+* **servicePrincipalProfile**: [ServicePrincipalProfile](#serviceprincipalprofile): ServicePrincipalProfile represents a service principal profile.
+* **workerProfiles**: [WorkerProfile](#workerprofile)[]: The cluster worker profiles.
+
 ## ServicePrincipalProfile
 ### Properties
 * **clientId**: string: The client ID used for the cluster (immutable).
 * **clientSecret**: string: The client secret used for the cluster (immutable).
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## WorkerProfile
 ### Properties
@@ -73,14 +83,4 @@
 * **name**: string: The worker profile name.  Must be "worker" (immutable).
 * **subnetId**: string: The Azure resource ID of the worker subnet (immutable).
 * **vmSize**: 'Standard_D2s_v3' | 'Standard_D4s_v3' | 'Standard_D8s_v3' | string: VMSize represents a VM size.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## OpenShiftClusterCredentials
-### Properties
-* **kubeadminPassword**: string (ReadOnly): The password for the kubeadmin user
-* **kubeadminUsername**: string (ReadOnly): The username for the kubeadmin user
 

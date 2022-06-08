@@ -23,11 +23,30 @@
 * **ApiVersion**: 2015-08-19
 * **Output**: [ListQueryKeysResult](#listquerykeysresult)
 
+## AdminKeyResult
+### Properties
+* **primaryKey**: string (ReadOnly): The primary admin API key of the Search service.
+* **secondaryKey**: string (ReadOnly): The secondary admin API key of the Search service.
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
 * **type**: 'None' | 'SystemAssigned' (Required): The identity type.
+
+## ListQueryKeysResult
+### Properties
+* **value**: [QueryKey](#querykey)[] (ReadOnly): The query keys for the Azure Cognitive Search service.
+
+## QueryKey
+### Properties
+* **key**: string (ReadOnly): The value of the query API key.
+* **name**: string (ReadOnly): The name of the query API key; may be empty.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## SearchServiceProperties
 ### Properties
@@ -41,23 +60,4 @@
 ## Sku
 ### Properties
 * **name**: 'basic' | 'free' | 'standard' | 'standard2' | 'standard3' | 'storage_optimized_l1' | 'storage_optimized_l2': The SKU of the Search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to 3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard, but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12 replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity'). 'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per partition, up to 12 partitions.'
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## AdminKeyResult
-### Properties
-* **primaryKey**: string (ReadOnly): The primary admin API key of the Search service.
-* **secondaryKey**: string (ReadOnly): The secondary admin API key of the Search service.
-
-## ListQueryKeysResult
-### Properties
-* **value**: [QueryKey](#querykey)[] (ReadOnly): The query keys for the Azure Cognitive Search service.
-
-## QueryKey
-### Properties
-* **key**: string (ReadOnly): The value of the query API key.
-* **name**: string (ReadOnly): The name of the query API key; may be empty.
 

@@ -48,6 +48,12 @@
 * **ApiVersion**: 2019-01-21
 * **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
 
+## AzureSku
+### Properties
+* **capacity**: int: The number of instances of the cluster.
+* **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_L16s' | 'Standard_L4s' | 'Standard_L8s' | string (Required): SKU name.
+* **tier**: 'Basic' | 'Standard' | string (Required): SKU tier.
+
 ## ClusterProperties
 ### Properties
 * **dataIngestionUri**: string (ReadOnly): The cluster data ingestion URI.
@@ -56,20 +62,18 @@
 * **trustedExternalTenants**: [TrustedExternalTenant](#trustedexternaltenant)[]: The cluster's external tenants.
 * **uri**: string (ReadOnly): The cluster URI.
 
-## TrustedExternalTenant
+## DatabasePrincipal
 ### Properties
-* **value**: string: GUID representing an external tenant.
+* **appId**: string (ReadOnly): Application id - relevant only for application principal type.
+* **email**: string (ReadOnly): Database principal email if exists.
+* **fqn**: string (ReadOnly): Database principal fully qualified name.
+* **name**: string (ReadOnly): Database principal name.
+* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewers' | 'User' | 'Viewer' | string (ReadOnly): Database principal role.
+* **type**: 'App' | 'Group' | 'User' | string (ReadOnly): Database principal type.
 
-## AzureSku
+## DatabasePrincipalListResult
 ### Properties
-* **capacity**: int: The number of instances of the cluster.
-* **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_L16s' | 'Standard_L4s' | 'Standard_L8s' | string (Required): SKU name.
-* **tier**: 'Basic' | 'Standard' | string (Required): SKU tier.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **value**: [DatabasePrincipal](#databaseprincipal)[] (ReadOnly): The list of Kusto database principals.
 
 ## DatabaseProperties
 ### Properties
@@ -99,16 +103,12 @@
 * **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
 * **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
 
-## DatabasePrincipalListResult
+## TrackedResourceTags
 ### Properties
-* **value**: [DatabasePrincipal](#databaseprincipal)[] (ReadOnly): The list of Kusto database principals.
+### Additional Properties
+* **Additional Properties Type**: string
 
-## DatabasePrincipal
+## TrustedExternalTenant
 ### Properties
-* **appId**: string (ReadOnly): Application id - relevant only for application principal type.
-* **email**: string (ReadOnly): Database principal email if exists.
-* **fqn**: string (ReadOnly): Database principal fully qualified name.
-* **name**: string (ReadOnly): Database principal name.
-* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewers' | 'User' | 'Viewer' | string (ReadOnly): Database principal role.
-* **type**: 'App' | 'Group' | 'User' | string (ReadOnly): Database principal type.
+* **value**: string: GUID representing an external tenant.
 

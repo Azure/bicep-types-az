@@ -11,6 +11,11 @@
 * **tags**: [AttestationServiceCreationParamsTags](#attestationservicecreationparamstags): The tags that will be assigned to the attestation service instance.
 * **type**: 'Microsoft.Attestation/attestationProviders' (ReadOnly, DeployTimeConstant): The resource type
 
+## AttestationServiceCreationParamsTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## AttestationServiceCreationSpecificParams
 ### Properties
 * **attestationPolicy**: string (WriteOnly): Name of attestation policy.
@@ -18,14 +23,6 @@
 * **policySigningCertificates**: [JsonWebKeySet](#jsonwebkeyset) (WriteOnly)
 * **status**: 'Error' | 'NotReady' | 'Ready' | string (ReadOnly): Status of attestation service.
 * **trustModel**: string (ReadOnly): Trust model for the attestation service instance.
-
-## JsonWebKeySet
-### Properties
-* **keys**: [JsonWebKey](#jsonwebkey)[] (WriteOnly): The value of the "keys" parameter is an array of JWK values.  By
-default, the order of the JWK values within the array does not imply
-an order of preference among them, although applications of JWK Sets
-can choose to assign a meaning to the order for their purposes, if
-desired.
 
 ## JsonWebKey
 ### Properties
@@ -72,8 +69,11 @@ The PKIX certificate containing the key value MUST be the first
 certificate.
 * **y**: string (WriteOnly): Y coordinate for the Elliptic Curve point
 
-## AttestationServiceCreationParamsTags
+## JsonWebKeySet
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **keys**: [JsonWebKey](#jsonwebkey)[] (WriteOnly): The value of the "keys" parameter is an array of JWK values.  By
+default, the order of the JWK values within the array does not imply
+an order of preference among them, although applications of JWK Sets
+can choose to assign a meaning to the order for their purposes, if
+desired.
 

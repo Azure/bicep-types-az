@@ -28,15 +28,15 @@
 * **serverMonitorMode**: int: The server monitor mode for AS server
 * **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' | string (ReadOnly): The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.
 
-## ServerAdministrators
-### Properties
-* **members**: string[]: An array of administrator user identities.
-
 ## GatewayDetails
 ### Properties
 * **dmtsClusterUri**: string (ReadOnly): Uri of the DMTS cluster.
 * **gatewayObjectId**: string (ReadOnly): Gateway object id from in the DMTS cluster for the gateway resource.
 * **gatewayResourceId**: string: Gateway resource to be associated with the server.
+
+## GatewayListStatusLive
+### Properties
+* **status**: '0' (ReadOnly): Live message of list gateway. Status: 0 - Live
 
 ## ResourceSku
 ### Properties
@@ -48,7 +48,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## GatewayListStatusLive
+## ServerAdministrators
 ### Properties
-* **status**: '0' (ReadOnly): Live message of list gateway. Status: 0 - Live
+* **members**: string[]: An array of administrator user identities.
 

@@ -34,19 +34,24 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant): The resource type
 
-## ProfileProperties
+## CustomDomainPropertiesParameters
 ### Properties
-* **provisioningState**: string (ReadOnly): Provisioning status of the profile.
-* **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | string (ReadOnly): Resource status of the profile.
+* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' | string (ReadOnly): Provisioning state of Custom Https of the custom domain.
+* **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
+* **provisioningState**: string (ReadOnly): Provisioning status of the custom domain.
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' | string (ReadOnly): Resource status of the custom domain.
+* **validationData**: string (ReadOnly): Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
 
-## Sku
+## DeepCreatedOrigin
 ### Properties
-* **name**: 'Custom_Verizon' | 'Premium_Verizon' | 'Standard_Akamai' | 'Standard_ChinaCdn' | 'Standard_Verizon' | string: Name of the pricing tier.
+* **name**: string (Required): Origin name
+* **properties**: [DeepCreatedOriginProperties](#deepcreatedoriginproperties): Properties of origin Properties of the origin created on the CDN endpoint.
 
-## ResourceTags
+## DeepCreatedOriginProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **hostName**: string (Required): The address of the origin. It can be a domain names, IPv4 address, or IPv6 address.
+* **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535
+* **httpsPort**: int: The value of the HTTPS port. Must be between 1 and 65535
 
 ## EndpointProperties
 ### Properties
@@ -70,32 +75,27 @@
 * **countryCodes**: string[] (Required): Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
 * **relativePath**: string (Required): Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.)
 
-## DeepCreatedOrigin
+## ProfileProperties
 ### Properties
-* **name**: string (Required): Origin name
-* **properties**: [DeepCreatedOriginProperties](#deepcreatedoriginproperties): Properties of origin Properties of the origin created on the CDN endpoint.
-
-## DeepCreatedOriginProperties
-### Properties
-* **hostName**: string (Required): The address of the origin. It can be a domain names, IPv4 address, or IPv6 address.
-* **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535
-* **httpsPort**: int: The value of the HTTPS port. Must be between 1 and 65535
+* **provisioningState**: string (ReadOnly): Provisioning status of the profile.
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | string (ReadOnly): Resource status of the profile.
 
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## CustomDomainPropertiesParameters
+## ResourceTags
 ### Properties
-* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' | string (ReadOnly): Provisioning state of Custom Https of the custom domain.
-* **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
-* **provisioningState**: string (ReadOnly): Provisioning status of the custom domain.
-* **resourceState**: 'Active' | 'Creating' | 'Deleting' | string (ReadOnly): Resource status of the custom domain.
-* **validationData**: string (ReadOnly): Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Sku
+### Properties
+* **name**: 'Custom_Verizon' | 'Premium_Verizon' | 'Standard_Akamai' | 'Standard_ChinaCdn' | 'Standard_Verizon' | string: Name of the pricing tier.
 

@@ -17,15 +17,6 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Management/managementGroups/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
-## CreateManagementGroupProperties
-### Properties
-* **children**: [CreateManagementGroupChildInfo](#createmanagementgroupchildinfo)[] (ReadOnly): The list of children.
-* **details**: [CreateManagementGroupDetails](#createmanagementgroupdetails): The details of a management group used during creation.
-* **displayName**: string: The friendly name of the management group. If no value is passed then this  field will be set to the groupId.
-* **path**: [ManagementGroupPathElement](#managementgrouppathelement)[] (ReadOnly): The hierarchial path from the root group to the current group.
-* **roles**: string[] (ReadOnly): The roles definitions associated with the management group.
-* **tenantId**: string (ReadOnly): The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
-
 ## CreateManagementGroupChildInfo
 ### Properties
 * **children**: [CreateManagementGroupChildInfo](#createmanagementgroupchildinfo)[] (ReadOnly): The list of children.
@@ -41,6 +32,15 @@
 * **updatedBy**: string (ReadOnly): The identity of the principal or process that updated the object.
 * **updatedTime**: string (ReadOnly): The date and time when this object was last updated.
 * **version**: int (ReadOnly): The version number of the object.
+
+## CreateManagementGroupProperties
+### Properties
+* **children**: [CreateManagementGroupChildInfo](#createmanagementgroupchildinfo)[] (ReadOnly): The list of children.
+* **details**: [CreateManagementGroupDetails](#createmanagementgroupdetails): The details of a management group used during creation.
+* **displayName**: string: The friendly name of the management group. If no value is passed then this  field will be set to the groupId.
+* **path**: [ManagementGroupPathElement](#managementgrouppathelement)[] (ReadOnly): The hierarchial path from the root group to the current group.
+* **roles**: string[] (ReadOnly): The roles definitions associated with the management group.
+* **tenantId**: string (ReadOnly): The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
 
 ## CreateParentGroupInfo
 ### Properties

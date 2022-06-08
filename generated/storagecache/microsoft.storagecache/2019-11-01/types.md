@@ -21,6 +21,11 @@
 * **properties**: [StorageTargetProperties](#storagetargetproperties): Properties of the Storage Target.
 * **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant): The resource type
 
+## CacheHealth
+### Properties
+* **state**: 'Degraded' | 'Down' | 'Flushing' | 'Healthy' | 'Stopped' | 'Stopping' | 'Transitioning' | 'Unknown' | 'Upgrading' | string: List of Cache health states.
+* **statusDescription**: string: Describes explanation of state.
+
 ## CacheProperties
 ### Properties
 * **cacheSizeGB**: int: The size of this Cache, in GB.
@@ -30,10 +35,9 @@
 * **subnet**: string: A fully qualified URL.
 * **upgradeStatus**: [CacheUpgradeStatus](#cacheupgradestatus): Properties describing the software upgrade state of the Cache.
 
-## CacheHealth
+## CacheSku
 ### Properties
-* **state**: 'Degraded' | 'Down' | 'Flushing' | 'Healthy' | 'Stopped' | 'Stopping' | 'Transitioning' | 'Unknown' | 'Upgrading' | string: List of Cache health states.
-* **statusDescription**: string: Describes explanation of state.
+* **name**: string: SKU name for this Cache.
 
 ## CacheUpgradeStatus
 ### Properties
@@ -42,19 +46,6 @@
 * **firmwareUpdateStatus**: 'available' | 'unavailable' | string (ReadOnly): True if there is a firmware update ready to install on this Cache. The firmware will automatically be installed after firmwareUpdateDeadline if not triggered earlier via the upgrade operation.
 * **lastFirmwareUpdate**: string (ReadOnly): Time of the last successful firmware update.
 * **pendingFirmwareVersion**: string (ReadOnly): When firmwareUpdateAvailable is true, this field holds the version string for the update.
-
-## CacheSku
-### Properties
-* **name**: string: SKU name for this Cache.
-
-## StorageTargetProperties
-### Properties
-* **clfs**: [ClfsTarget](#clfstarget): Storage container for use as a CLFS Storage Target.
-* **junctions**: [NamespaceJunction](#namespacejunction)[]: List of Cache namespace junctions to target for namespace associations.
-* **nfs3**: [Nfs3Target](#nfs3target): An NFSv3 mount point for use as a Storage Target.
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
-* **targetType**: 'clfs' | 'nfs3' | 'unknown' | string: Type of the Storage Target.
-* **unknown**: [UnknownTarget](#unknowntarget): Storage container for use as an Unknown Storage Target.
 
 ## ClfsTarget
 ### Properties
@@ -71,12 +62,21 @@
 * **target**: string: IP address or host name of an NFSv3 host (e.g., 10.0.44.44).
 * **usageModel**: string: Identifies the primary usage model to be used for this Storage Target. Get choices from .../usageModels
 
-## UnknownTarget
+## StorageTargetProperties
 ### Properties
-* **unknownMap**: [UnknownProperties](#unknownproperties): Properties of an unknown type of Storage Target.
+* **clfs**: [ClfsTarget](#clfstarget): Storage container for use as a CLFS Storage Target.
+* **junctions**: [NamespaceJunction](#namespacejunction)[]: List of Cache namespace junctions to target for namespace associations.
+* **nfs3**: [Nfs3Target](#nfs3target): An NFSv3 mount point for use as a Storage Target.
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+* **targetType**: 'clfs' | 'nfs3' | 'unknown' | string: Type of the Storage Target.
+* **unknown**: [UnknownTarget](#unknowntarget): Storage container for use as an Unknown Storage Target.
 
 ## UnknownProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UnknownTarget
+### Properties
+* **unknownMap**: [UnknownProperties](#unknownproperties): Properties of an unknown type of Storage Target.
 

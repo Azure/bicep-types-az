@@ -54,120 +54,57 @@
 * **ApiVersion**: 2020-04-01
 * **Output**: [AmlComputeNodesInformation](#amlcomputenodesinformation)
 
-## Identity
+## AksNetworkingConfiguration
 ### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' (Required): The identity type.
-* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **dnsServiceIP**: string: An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+* **dockerBridgeCidr**: string: A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+* **serviceCidr**: string: A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+* **subnetId**: string: Virtual network subnet resource ID the compute nodes belong to
 
-## IdentityUserAssignedIdentities
+## AKSProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: [ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties](#componentssgqdofschemasidentitypropertiesuserassignedidentitiesadditionalproperties)
+* **agentCount**: int: Number of agents
+* **agentVMSize**: string: Agent virtual machine size
+* **aksNetworkingConfiguration**: [AksNetworkingConfiguration](#aksnetworkingconfiguration): Advance configuration for AKS networking
+* **clusterFqdn**: string: Cluster full qualified domain name
+* **clusterPurpose**: 'DenseProd' | 'DevTest' | 'FastProd' | string
+* **sslConfiguration**: [SslConfiguration](#sslconfiguration): The ssl configuration for scoring
+* **systemServices**: [SystemService](#systemservice)[] (ReadOnly): System services
+
+## AmlComputeNodeInformation
+### Properties
+* **nodeId**: string (ReadOnly): ID of the compute node.
+* **nodeState**: 'idle' | 'leaving' | 'preempted' | 'preparing' | 'running' | 'unusable' | string (ReadOnly): State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.
+* **port**: int (ReadOnly): SSH port number of the node.
+* **privateIpAddress**: string (ReadOnly): Private IP address of the compute node.
+* **publicIpAddress**: string (ReadOnly): Public IP address of the compute node.
+* **runId**: string (ReadOnly): ID of the Experiment running on the node, if any else null.
+
+## AmlComputeNodesInformation
+### Properties
+* **computeType**: 'AKS' | 'AmlCompute' | 'DataFactory' | 'DataLakeAnalytics' | 'Databricks' | 'HDInsight' | 'VirtualMachine' | string (ReadOnly): The type of compute
+* **nextLink**: string (ReadOnly): The continuation token.
+* **nodes**: [AmlComputeNodeInformation](#amlcomputenodeinformation)[] (ReadOnly): The collection of returned AmlCompute nodes details.
+
+## AmlComputeProperties
+### Properties
+* **allocationState**: 'Resizing' | 'Steady' | string (ReadOnly): Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
+* **allocationStateTransitionTime**: string (ReadOnly): The time at which the compute entered its current allocation state.
+* **currentNodeCount**: int (ReadOnly): The number of compute nodes currently assigned to the compute.
+* **errors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Collection of errors encountered by various compute nodes during node setup.
+* **nodeStateCounts**: [NodeStateCounts](#nodestatecounts) (ReadOnly): Counts of various compute node states on the amlCompute.
+* **remoteLoginPortPublicAccess**: 'Disabled' | 'Enabled' | 'NotSpecified' | string: State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
+* **scaleSettings**: [ScaleSettings](#scalesettings): scale settings for AML Compute
+* **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
+* **targetNodeCount**: int (ReadOnly): The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
+* **userAccountCredentials**: [UserAccountCredentials](#useraccountcredentials): Settings for user account that gets created on each on the nodes of a compute.
+* **vmPriority**: 'Dedicated' | 'LowPriority' | string: Virtual Machine priority
+* **vmSize**: string: Virtual Machine Size
 
 ## ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
 * **clientId**: string (ReadOnly): The client id of user assigned identity.
 * **principalId**: string (ReadOnly): The principal id of user assigned identity.
-
-## WorkspaceProperties
-### Properties
-* **allowPublicAccessWhenBehindVnet**: bool: The flag to indicate whether to allow public access when behind VNet.
-* **applicationInsights**: string: ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
-* **containerRegistry**: string: ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
-* **creationTime**: string (ReadOnly): The creation time of the machine learning workspace in ISO8601 format.
-* **description**: string: The description of this workspace.
-* **discoveryUrl**: string: Url for the discovery service to identify regional endpoints for machine learning experimentation services
-* **encryption**: [EncryptionProperty](#encryptionproperty)
-* **friendlyName**: string: The friendly name for this workspace. This name in mutable
-* **hbiWorkspace**: bool: The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
-* **imageBuildCompute**: string: The compute name for image build
-* **keyVault**: string: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
-* **notebookInfo**: [NotebookResourceInfo](#notebookresourceinfo) (ReadOnly)
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections in the workspace.
-* **privateLinkCount**: int (ReadOnly): Count of private connections in the workspace
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
-* **serviceProvisionedResourceGroup**: string (ReadOnly): The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
-* **sharedPrivateLinkResources**: [SharedPrivateLinkResource](#sharedprivatelinkresource)[]: The list of shared private link resources in this workspace.
-* **storageAccount**: string: ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
-* **workspaceId**: string (ReadOnly): The immutable id associated with this workspace.
-
-## EncryptionProperty
-### Properties
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required)
-* **status**: 'Disabled' | 'Enabled' | string (Required): Indicates whether or not the encryption is enabled for the workspace.
-
-## KeyVaultProperties
-### Properties
-* **identityClientId**: string: For future use - The client id of the identity which will be used to access key vault.
-* **keyIdentifier**: string (Required): Key vault uri to access the encryption key.
-* **keyVaultArmId**: string (Required): The ArmId of the keyVault where the customer owned encryption key is present.
-
-## NotebookResourceInfo
-### Properties
-* **fqdn**: string
-* **notebookPreparationError**: [NotebookPreparationError](#notebookpreparationerror)
-* **resourceId**: string: the data plane resourceId that used to initialize notebook component
-
-## NotebookPreparationError
-### Properties
-* **errorMessage**: string
-* **statusCode**: int
-
-## PrivateEndpointConnection
-### Properties
-* **id**: string (ReadOnly): Specifies the resource ID.
-* **identity**: [Identity](#identity): Identity for the resource.
-* **location**: string: Specifies the location of the resource.
-* **name**: string (ReadOnly): Specifies the name of the resource.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
-* **sku**: [Sku](#sku): Sku of the resource
-* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
-* **type**: string (ReadOnly): Specifies the type of the resource.
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
-
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
-* **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string: The private endpoint connection status.
-
-## Sku
-### Properties
-* **name**: string: Name of the sku
-* **tier**: string: Tier of the sku like Basic or Enterprise
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## SharedPrivateLinkResource
-### Properties
-* **name**: string: Unique name of the private link.
-* **properties**: [SharedPrivateLinkResourceProperty](#sharedprivatelinkresourceproperty): Properties of a shared private link resource.
-
-## SharedPrivateLinkResourceProperty
-### Properties
-* **groupId**: string: The private link resource group id.
-* **privateLinkResourceId**: string: The resource id that private link links to.
-* **requestMessage**: string: Request message.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string: The private endpoint connection status.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## Compute
 * **Discriminator**: computeType
@@ -216,155 +153,6 @@
 * **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 
 
-## MachineLearningServiceError
-### Properties
-* **error**: [ErrorResponse](#errorresponse) (ReadOnly): Error response information.
-
-## ErrorResponse
-### Properties
-* **code**: string (ReadOnly): Error code.
-* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): An array of error detail objects.
-* **message**: string (ReadOnly): Error message.
-
-## ErrorDetail
-### Properties
-* **code**: string (Required): Error code.
-* **message**: string (Required): Error message.
-
-## AKSProperties
-### Properties
-* **agentCount**: int: Number of agents
-* **agentVMSize**: string: Agent virtual machine size
-* **aksNetworkingConfiguration**: [AksNetworkingConfiguration](#aksnetworkingconfiguration): Advance configuration for AKS networking
-* **clusterFqdn**: string: Cluster full qualified domain name
-* **clusterPurpose**: 'DenseProd' | 'DevTest' | 'FastProd' | string
-* **sslConfiguration**: [SslConfiguration](#sslconfiguration): The ssl configuration for scoring
-* **systemServices**: [SystemService](#systemservice)[] (ReadOnly): System services
-
-## AksNetworkingConfiguration
-### Properties
-* **dnsServiceIP**: string: An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
-* **dockerBridgeCidr**: string: A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
-* **serviceCidr**: string: A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
-* **subnetId**: string: Virtual network subnet resource ID the compute nodes belong to
-
-## SslConfiguration
-### Properties
-* **cert**: string: Cert data
-* **cname**: string: CNAME of the cert
-* **key**: string: Key data
-* **leafDomainLabel**: string: The leaf domain label name
-* **overwriteExistingDomain**: bool: Boolean value for overwriting the domain
-* **status**: 'Auto' | 'Disabled' | 'Enabled' | string: Enable or disable ssl for scoring
-
-## SystemService
-### Properties
-* **publicIpAddress**: string (ReadOnly): Public IP address
-* **systemServiceType**: string (ReadOnly): The type of this system service.
-* **version**: string (ReadOnly): The version for this type.
-
-## AmlComputeProperties
-### Properties
-* **allocationState**: 'Resizing' | 'Steady' | string (ReadOnly): Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
-* **allocationStateTransitionTime**: string (ReadOnly): The time at which the compute entered its current allocation state.
-* **currentNodeCount**: int (ReadOnly): The number of compute nodes currently assigned to the compute.
-* **errors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Collection of errors encountered by various compute nodes during node setup.
-* **nodeStateCounts**: [NodeStateCounts](#nodestatecounts) (ReadOnly): Counts of various compute node states on the amlCompute.
-* **remoteLoginPortPublicAccess**: 'Disabled' | 'Enabled' | 'NotSpecified' | string: State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
-* **scaleSettings**: [ScaleSettings](#scalesettings): scale settings for AML Compute
-* **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
-* **targetNodeCount**: int (ReadOnly): The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
-* **userAccountCredentials**: [UserAccountCredentials](#useraccountcredentials): Settings for user account that gets created on each on the nodes of a compute.
-* **vmPriority**: 'Dedicated' | 'LowPriority' | string: Virtual Machine priority
-* **vmSize**: string: Virtual Machine Size
-
-## NodeStateCounts
-### Properties
-* **idleNodeCount**: int (ReadOnly): Number of compute nodes in idle state.
-* **leavingNodeCount**: int (ReadOnly): Number of compute nodes which are leaving the amlCompute.
-* **preemptedNodeCount**: int (ReadOnly): Number of compute nodes which are in preempted state.
-* **preparingNodeCount**: int (ReadOnly): Number of compute nodes which are being prepared.
-* **runningNodeCount**: int (ReadOnly): Number of compute nodes which are running jobs.
-* **unusableNodeCount**: int (ReadOnly): Number of compute nodes which are in unusable state.
-
-## ScaleSettings
-### Properties
-* **maxNodeCount**: int (Required): Max number of nodes to use
-* **minNodeCount**: int: Min number of nodes to use
-* **nodeIdleTimeBeforeScaleDown**: string: Node Idle Time before scaling down amlCompute
-
-## ResourceId
-### Properties
-* **id**: string (Required): The ID of the resource
-
-## UserAccountCredentials
-### Properties
-* **adminUserName**: string (Required): Name of the administrator user account which can be used to SSH to nodes.
-* **adminUserPassword**: string: Password of the administrator user account.
-* **adminUserSshPublicKey**: string: SSH public key of the administrator user account.
-
-## DatabricksProperties
-### Properties
-* **databricksAccessToken**: string: Databricks access token
-
-## DataLakeAnalyticsProperties
-### Properties
-* **dataLakeStoreAccountName**: string: DataLake Store Account Name
-
-## HDInsightProperties
-### Properties
-* **address**: string: Public IP address of the master node of the cluster.
-* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
-* **sshPort**: int: Port open for ssh connections on the master node of the cluster.
-
-## VirtualMachineSshCredentials
-### Properties
-* **password**: string: Password of admin account
-* **privateKeyData**: string: Private key data
-* **publicKeyData**: string: Public key data
-* **username**: string: Username of admin account
-
-## VirtualMachineProperties
-### Properties
-* **address**: string: Public IP address of the virtual machine.
-* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
-* **sshPort**: int: Port open for ssh connections.
-* **virtualMachineSize**: string: Virtual Machine size
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ListWorkspaceKeysResult
-### Properties
-* **appInsightsInstrumentationKey**: string (ReadOnly)
-* **containerRegistryCredentials**: [RegistryListCredentialsResult](#registrylistcredentialsresult) (ReadOnly)
-* **notebookAccessKeys**: [NotebookListCredentialsResult](#notebooklistcredentialsresult) (ReadOnly)
-* **userStorageKey**: string (ReadOnly)
-* **userStorageResourceId**: string (ReadOnly)
-
-## RegistryListCredentialsResult
-### Properties
-* **location**: string (ReadOnly)
-* **passwords**: [Password](#password)[] (ReadOnly): Array of Password
-* **username**: string (ReadOnly)
-
-## Password
-### Properties
-* **name**: string (ReadOnly)
-* **value**: string (ReadOnly)
-
-## NotebookListCredentialsResult
-### Properties
-* **primaryAccessKey**: string (ReadOnly)
-* **secondaryAccessKey**: string (ReadOnly)
-
 ## ComputeSecrets
 * **Discriminator**: computeType
 
@@ -387,18 +175,230 @@
 * **computeType**: 'VirtualMachine' (Required): The type of compute
 
 
-## AmlComputeNodesInformation
+## DatabricksProperties
 ### Properties
-* **computeType**: 'AKS' | 'AmlCompute' | 'DataFactory' | 'DataLakeAnalytics' | 'Databricks' | 'HDInsight' | 'VirtualMachine' | string (ReadOnly): The type of compute
-* **nextLink**: string (ReadOnly): The continuation token.
-* **nodes**: [AmlComputeNodeInformation](#amlcomputenodeinformation)[] (ReadOnly): The collection of returned AmlCompute nodes details.
+* **databricksAccessToken**: string: Databricks access token
 
-## AmlComputeNodeInformation
+## DataLakeAnalyticsProperties
 ### Properties
-* **nodeId**: string (ReadOnly): ID of the compute node.
-* **nodeState**: 'idle' | 'leaving' | 'preempted' | 'preparing' | 'running' | 'unusable' | string (ReadOnly): State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.
-* **port**: int (ReadOnly): SSH port number of the node.
-* **privateIpAddress**: string (ReadOnly): Private IP address of the compute node.
-* **publicIpAddress**: string (ReadOnly): Public IP address of the compute node.
-* **runId**: string (ReadOnly): ID of the Experiment running on the node, if any else null.
+* **dataLakeStoreAccountName**: string: DataLake Store Account Name
+
+## EncryptionProperty
+### Properties
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required)
+* **status**: 'Disabled' | 'Enabled' | string (Required): Indicates whether or not the encryption is enabled for the workspace.
+
+## ErrorDetail
+### Properties
+* **code**: string (Required): Error code.
+* **message**: string (Required): Error message.
+
+## ErrorResponse
+### Properties
+* **code**: string (ReadOnly): Error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): An array of error detail objects.
+* **message**: string (ReadOnly): Error message.
+
+## HDInsightProperties
+### Properties
+* **address**: string: Public IP address of the master node of the cluster.
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
+* **sshPort**: int: Port open for ssh connections on the master node of the cluster.
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' (Required): The identity type.
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+
+## IdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties](#componentssgqdofschemasidentitypropertiesuserassignedidentitiesadditionalproperties)
+
+## KeyVaultProperties
+### Properties
+* **identityClientId**: string: For future use - The client id of the identity which will be used to access key vault.
+* **keyIdentifier**: string (Required): Key vault uri to access the encryption key.
+* **keyVaultArmId**: string (Required): The ArmId of the keyVault where the customer owned encryption key is present.
+
+## ListWorkspaceKeysResult
+### Properties
+* **appInsightsInstrumentationKey**: string (ReadOnly)
+* **containerRegistryCredentials**: [RegistryListCredentialsResult](#registrylistcredentialsresult) (ReadOnly)
+* **notebookAccessKeys**: [NotebookListCredentialsResult](#notebooklistcredentialsresult) (ReadOnly)
+* **userStorageKey**: string (ReadOnly)
+* **userStorageResourceId**: string (ReadOnly)
+
+## MachineLearningServiceError
+### Properties
+* **error**: [ErrorResponse](#errorresponse) (ReadOnly): Error response information.
+
+## NodeStateCounts
+### Properties
+* **idleNodeCount**: int (ReadOnly): Number of compute nodes in idle state.
+* **leavingNodeCount**: int (ReadOnly): Number of compute nodes which are leaving the amlCompute.
+* **preemptedNodeCount**: int (ReadOnly): Number of compute nodes which are in preempted state.
+* **preparingNodeCount**: int (ReadOnly): Number of compute nodes which are being prepared.
+* **runningNodeCount**: int (ReadOnly): Number of compute nodes which are running jobs.
+* **unusableNodeCount**: int (ReadOnly): Number of compute nodes which are in unusable state.
+
+## NotebookListCredentialsResult
+### Properties
+* **primaryAccessKey**: string (ReadOnly)
+* **secondaryAccessKey**: string (ReadOnly)
+
+## NotebookPreparationError
+### Properties
+* **errorMessage**: string
+* **statusCode**: int
+
+## NotebookResourceInfo
+### Properties
+* **fqdn**: string
+* **notebookPreparationError**: [NotebookPreparationError](#notebookpreparationerror)
+* **resourceId**: string: the data plane resourceId that used to initialize notebook component
+
+## Password
+### Properties
+* **name**: string (ReadOnly)
+* **value**: string (ReadOnly)
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly): Specifies the resource ID.
+* **identity**: [Identity](#identity): Identity for the resource.
+* **location**: string: Specifies the location of the resource.
+* **name**: string (ReadOnly): Specifies the name of the resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **sku**: [Sku](#sku): Sku of the resource
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
+* **type**: string (ReadOnly): Specifies the type of the resource.
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
+* **description**: string: The reason for approval/rejection of the connection.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string: The private endpoint connection status.
+
+## RegistryListCredentialsResult
+### Properties
+* **location**: string (ReadOnly)
+* **passwords**: [Password](#password)[] (ReadOnly): Array of Password
+* **username**: string (ReadOnly)
+
+## ResourceId
+### Properties
+* **id**: string (Required): The ID of the resource
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ScaleSettings
+### Properties
+* **maxNodeCount**: int (Required): Max number of nodes to use
+* **minNodeCount**: int: Min number of nodes to use
+* **nodeIdleTimeBeforeScaleDown**: string: Node Idle Time before scaling down amlCompute
+
+## SharedPrivateLinkResource
+### Properties
+* **name**: string: Unique name of the private link.
+* **properties**: [SharedPrivateLinkResourceProperty](#sharedprivatelinkresourceproperty): Properties of a shared private link resource.
+
+## SharedPrivateLinkResourceProperty
+### Properties
+* **groupId**: string: The private link resource group id.
+* **privateLinkResourceId**: string: The resource id that private link links to.
+* **requestMessage**: string: Request message.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string: The private endpoint connection status.
+
+## Sku
+### Properties
+* **name**: string: Name of the sku
+* **tier**: string: Tier of the sku like Basic or Enterprise
+
+## SslConfiguration
+### Properties
+* **cert**: string: Cert data
+* **cname**: string: CNAME of the cert
+* **key**: string: Key data
+* **leafDomainLabel**: string: The leaf domain label name
+* **overwriteExistingDomain**: bool: Boolean value for overwriting the domain
+* **status**: 'Auto' | 'Disabled' | 'Enabled' | string: Enable or disable ssl for scoring
+
+## SystemService
+### Properties
+* **publicIpAddress**: string (ReadOnly): Public IP address
+* **systemServiceType**: string (ReadOnly): The type of this system service.
+* **version**: string (ReadOnly): The version for this type.
+
+## UserAccountCredentials
+### Properties
+* **adminUserName**: string (Required): Name of the administrator user account which can be used to SSH to nodes.
+* **adminUserPassword**: string: Password of the administrator user account.
+* **adminUserSshPublicKey**: string: SSH public key of the administrator user account.
+
+## VirtualMachineProperties
+### Properties
+* **address**: string: Public IP address of the virtual machine.
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
+* **sshPort**: int: Port open for ssh connections.
+* **virtualMachineSize**: string: Virtual Machine size
+
+## VirtualMachineSshCredentials
+### Properties
+* **password**: string: Password of admin account
+* **privateKeyData**: string: Private key data
+* **publicKeyData**: string: Public key data
+* **username**: string: Username of admin account
+
+## WorkspaceProperties
+### Properties
+* **allowPublicAccessWhenBehindVnet**: bool: The flag to indicate whether to allow public access when behind VNet.
+* **applicationInsights**: string: ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
+* **containerRegistry**: string: ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
+* **creationTime**: string (ReadOnly): The creation time of the machine learning workspace in ISO8601 format.
+* **description**: string: The description of this workspace.
+* **discoveryUrl**: string: Url for the discovery service to identify regional endpoints for machine learning experimentation services
+* **encryption**: [EncryptionProperty](#encryptionproperty)
+* **friendlyName**: string: The friendly name for this workspace. This name in mutable
+* **hbiWorkspace**: bool: The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
+* **imageBuildCompute**: string: The compute name for image build
+* **keyVault**: string: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
+* **notebookInfo**: [NotebookResourceInfo](#notebookresourceinfo) (ReadOnly)
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections in the workspace.
+* **privateLinkCount**: int (ReadOnly): Count of private connections in the workspace
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
+* **serviceProvisionedResourceGroup**: string (ReadOnly): The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
+* **sharedPrivateLinkResources**: [SharedPrivateLinkResource](#sharedprivatelinkresource)[]: The list of shared private link resources in this workspace.
+* **storageAccount**: string: ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
+* **workspaceId**: string (ReadOnly): The immutable id associated with this workspace.
 

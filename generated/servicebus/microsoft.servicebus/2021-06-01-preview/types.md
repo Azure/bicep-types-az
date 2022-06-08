@@ -144,6 +144,89 @@
 * **ApiVersion**: 2021-06-01-preview
 * **Output**: [AccessKeys](#accesskeys)
 
+## AccessKeys
+### Properties
+* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
+* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
+* **keyName**: string (ReadOnly): A string that describes the authorization rule.
+* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace authorization rule.
+* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace authorization rule.
+* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+
+## AccessKeys
+### Properties
+* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
+* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
+* **keyName**: string (ReadOnly): A string that describes the authorization rule.
+* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace authorization rule.
+* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace authorization rule.
+* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+
+## AccessKeys
+### Properties
+* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
+* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
+* **keyName**: string (ReadOnly): A string that describes the authorization rule.
+* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace authorization rule.
+* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace authorization rule.
+* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+
+## AccessKeys
+### Properties
+* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
+* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
+* **keyName**: string (ReadOnly): A string that describes the authorization rule.
+* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace authorization rule.
+* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace authorization rule.
+* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+
+## Action
+### Properties
+* **compatibilityLevel**: int: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
+* **requiresPreprocessing**: bool: Value that indicates whether the rule action requires preprocessing.
+* **sqlExpression**: string: SQL expression. e.g. MyProperty='ABC'
+
+## ArmDisasterRecoveryProperties
+### Properties
+* **alternateName**: string: Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
+* **partnerNamespace**: string: ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
+* **pendingReplicationOperationsCount**: int (ReadOnly): Number of entities pending to be replicated.
+* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
+* **role**: 'Primary' | 'PrimaryNotReplicating' | 'Secondary' (ReadOnly): role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
+
+## ConnectionState
+### Properties
+* **description**: string: Description of the connection state.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Status of the connection.
+
+## CorrelationFilter
+### Properties
+* **contentType**: string: Content type of the message.
+* **correlationId**: string: Identifier of the correlation.
+* **label**: string: Application specific label.
+* **messageId**: string: Identifier of the message.
+* **properties**: [CorrelationFilterProperties](#correlationfilterproperties): dictionary object for custom filters
+* **replyTo**: string: Address of the queue to reply to.
+* **replyToSessionId**: string: Session identifier to reply to.
+* **requiresPreprocessing**: bool: Value that indicates whether the rule action requires preprocessing.
+* **sessionId**: string: Session identifier.
+* **to**: string: Address to send to.
+
+## CorrelationFilterProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Encryption
+### Properties
+* **keySource**: 'Microsoft.KeyVault': Enumerates the possible value of keySource for Encryption
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)[]: Properties of KeyVault
+* **requireInfrastructureEncryption**: bool: Enable Infrastructure Encryption (Double Encryption)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): ObjectId from the KeyVault
@@ -156,30 +239,6 @@
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
 
-## UserAssignedIdentity
-### Properties
-* **clientId**: string (ReadOnly): Client Id of user assigned identity
-* **principalId**: string (ReadOnly): Principal Id of user assigned identity
-
-## SBNamespaceProperties
-### Properties
-* **createdAt**: string (ReadOnly): The time the namespace was created
-* **disableLocalAuth**: bool: This property disables SAS authentication for the Service Bus namespace.
-* **encryption**: [Encryption](#encryption): Properties to configure Encryption
-* **metricId**: string (ReadOnly): Identifier for Azure Insights metrics
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: List of private endpoint connections.
-* **provisioningState**: string (ReadOnly): Provisioning state of the namespace.
-* **serviceBusEndpoint**: string (ReadOnly): Endpoint you can use to perform Service Bus operations.
-* **status**: string (ReadOnly): Status of the namespace.
-* **updatedAt**: string (ReadOnly): The time the namespace was updated.
-* **zoneRedundant**: bool: Enabling this property creates a Premium Service Bus Namespace in regions supported availability zones.
-
-## Encryption
-### Properties
-* **keySource**: 'Microsoft.KeyVault': Enumerates the possible value of keySource for Encryption
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)[]: Properties of KeyVault
-* **requireInfrastructureEncryption**: bool: Enable Infrastructure Encryption (Double Encryption)
-
 ## KeyVaultProperties
 ### Properties
 * **identity**: [UserAssignedIdentityProperties](#userassignedidentityproperties)
@@ -187,64 +246,13 @@
 * **keyVaultUri**: string: Uri of KeyVault
 * **keyVersion**: string: Version of KeyVault
 
-## UserAssignedIdentityProperties
+## MessageCountDetails
 ### Properties
-* **userAssignedIdentity**: string: ARM ID of user Identity selected for encryption
-
-## PrivateEndpointConnection
-### Properties
-* **id**: string (ReadOnly): Resource Id
-* **name**: string (ReadOnly): Resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **type**: string (ReadOnly): Resource type
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): PrivateEndpoint information.
-* **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate): ConnectionState information.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the Private Endpoint Connection.
-
-## PrivateEndpoint
-### Properties
-* **id**: string: The ARM identifier for Private Endpoint.
-
-## ConnectionState
-### Properties
-* **description**: string: Description of the connection state.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Status of the connection.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The type of identity that last modified the resource.
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## SBSku
-### Properties
-* **capacity**: int: The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.
-* **name**: 'Basic' | 'Premium' | 'Standard' (Required): Name of this SKU.
-* **tier**: 'Basic' | 'Premium' | 'Standard': The billing tier of this particular SKU.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## SBAuthorizationRuleProperties
-### Properties
-* **rights**: 'Listen' | 'Manage' | 'Send'[] (Required): The rights associated with the rule.
-
-## ArmDisasterRecoveryProperties
-### Properties
-* **alternateName**: string: Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
-* **partnerNamespace**: string: ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
-* **pendingReplicationOperationsCount**: int (ReadOnly): Number of entities pending to be replicated.
-* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
-* **role**: 'Primary' | 'PrimaryNotReplicating' | 'Secondary' (ReadOnly): role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
+* **activeMessageCount**: int (ReadOnly): Number of active messages in the queue, topic, or subscription.
+* **deadLetterMessageCount**: int (ReadOnly): Number of messages that are dead lettered.
+* **scheduledMessageCount**: int (ReadOnly): Number of scheduled messages.
+* **transferDeadLetterMessageCount**: int (ReadOnly): Number of messages transferred into dead letters.
+* **transferMessageCount**: int (ReadOnly): Number of messages transferred to another queue, topic, or subscription.
 
 ## MigrationConfigPropertiesProperties
 ### Properties
@@ -272,9 +280,53 @@
 * **ignoreMissingVnetServiceEndpoint**: bool: Value that indicates whether to ignore missing VNet Service Endpoint
 * **subnet**: [Subnet](#subnet): Properties supplied for Subnet
 
-## Subnet
+## PrivateEndpoint
 ### Properties
-* **id**: string (Required): Resource ID of Virtual Network Subnet
+* **id**: string: The ARM identifier for Private Endpoint.
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly): Resource Id
+* **name**: string (ReadOnly): Resource name
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: string (ReadOnly): Resource type
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): PrivateEndpoint information.
+* **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate): ConnectionState information.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the Private Endpoint Connection.
+
+## Ruleproperties
+### Properties
+* **action**: [Action](#action): Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
+* **correlationFilter**: [CorrelationFilter](#correlationfilter): Represents the correlation filter expression.
+* **filterType**: 'CorrelationFilter' | 'SqlFilter': Rule filter types
+* **sqlFilter**: [SqlFilter](#sqlfilter): Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
+
+## SBAuthorizationRuleProperties
+### Properties
+* **rights**: 'Listen' | 'Manage' | 'Send'[] (Required): The rights associated with the rule.
+
+## SBClientAffineProperties
+### Properties
+* **clientId**: string: Indicates the Client ID of the application that created the client-affine subscription.
+* **isDurable**: bool: For client-affine subscriptions, this value indicates whether the subscription is durable or not.
+* **isShared**: bool: For client-affine subscriptions, this value indicates whether the subscription is shared or not.
+
+## SBNamespaceProperties
+### Properties
+* **createdAt**: string (ReadOnly): The time the namespace was created
+* **disableLocalAuth**: bool: This property disables SAS authentication for the Service Bus namespace.
+* **encryption**: [Encryption](#encryption): Properties to configure Encryption
+* **metricId**: string (ReadOnly): Identifier for Azure Insights metrics
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: List of private endpoint connections.
+* **provisioningState**: string (ReadOnly): Provisioning state of the namespace.
+* **serviceBusEndpoint**: string (ReadOnly): Endpoint you can use to perform Service Bus operations.
+* **status**: string (ReadOnly): Status of the namespace.
+* **updatedAt**: string (ReadOnly): The time the namespace was updated.
+* **zoneRedundant**: bool: Enabling this property creates a Premium Service Bus Namespace in regions supported availability zones.
 
 ## SBQueueProperties
 ### Properties
@@ -301,33 +353,11 @@
 * **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Entity status.
 * **updatedAt**: string (ReadOnly): The exact time the message was updated.
 
-## MessageCountDetails
+## SBSku
 ### Properties
-* **activeMessageCount**: int (ReadOnly): Number of active messages in the queue, topic, or subscription.
-* **deadLetterMessageCount**: int (ReadOnly): Number of messages that are dead lettered.
-* **scheduledMessageCount**: int (ReadOnly): Number of scheduled messages.
-* **transferDeadLetterMessageCount**: int (ReadOnly): Number of messages transferred into dead letters.
-* **transferMessageCount**: int (ReadOnly): Number of messages transferred to another queue, topic, or subscription.
-
-## SBTopicProperties
-### Properties
-* **accessedAt**: string (ReadOnly): Last time the message was sent, or a request was received, for this topic.
-* **autoDeleteOnIdle**: string: ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
-* **countDetails**: [MessageCountDetails](#messagecountdetails) (ReadOnly): Message Count Details.
-* **createdAt**: string (ReadOnly): Exact time the message was created.
-* **defaultMessageTimeToLive**: string: ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
-* **duplicateDetectionHistoryTimeWindow**: string: ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
-* **enableBatchedOperations**: bool: Value that indicates whether server-side batched operations are enabled.
-* **enableExpress**: bool: Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
-* **enablePartitioning**: bool: Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
-* **maxMessageSizeInKilobytes**: int: Maximum size (in KB) of the message payload that can be accepted by the topic. This property is only used in Premium today and default is 1024.
-* **maxSizeInMegabytes**: int: Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
-* **requiresDuplicateDetection**: bool: Value indicating if this topic requires duplicate detection.
-* **sizeInBytes**: int (ReadOnly): Size of the topic, in bytes.
-* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Entity status.
-* **subscriptionCount**: int (ReadOnly): Number of subscriptions.
-* **supportOrdering**: bool: Value that indicates whether the topic supports ordering.
-* **updatedAt**: string (ReadOnly): The exact time the message was updated.
+* **capacity**: int: The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.
+* **name**: 'Basic' | 'Premium' | 'Standard' (Required): Name of this SKU.
+* **tier**: 'Basic' | 'Premium' | 'Standard': The billing tier of this particular SKU.
 
 ## SBSubscriptionProperties
 ### Properties
@@ -351,42 +381,25 @@
 * **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Entity status.
 * **updatedAt**: string (ReadOnly): The exact time the message was updated.
 
-## SBClientAffineProperties
+## SBTopicProperties
 ### Properties
-* **clientId**: string: Indicates the Client ID of the application that created the client-affine subscription.
-* **isDurable**: bool: For client-affine subscriptions, this value indicates whether the subscription is durable or not.
-* **isShared**: bool: For client-affine subscriptions, this value indicates whether the subscription is shared or not.
-
-## Ruleproperties
-### Properties
-* **action**: [Action](#action): Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
-* **correlationFilter**: [CorrelationFilter](#correlationfilter): Represents the correlation filter expression.
-* **filterType**: 'CorrelationFilter' | 'SqlFilter': Rule filter types
-* **sqlFilter**: [SqlFilter](#sqlfilter): Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
-
-## Action
-### Properties
-* **compatibilityLevel**: int: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
-* **requiresPreprocessing**: bool: Value that indicates whether the rule action requires preprocessing.
-* **sqlExpression**: string: SQL expression. e.g. MyProperty='ABC'
-
-## CorrelationFilter
-### Properties
-* **contentType**: string: Content type of the message.
-* **correlationId**: string: Identifier of the correlation.
-* **label**: string: Application specific label.
-* **messageId**: string: Identifier of the message.
-* **properties**: [CorrelationFilterProperties](#correlationfilterproperties): dictionary object for custom filters
-* **replyTo**: string: Address of the queue to reply to.
-* **replyToSessionId**: string: Session identifier to reply to.
-* **requiresPreprocessing**: bool: Value that indicates whether the rule action requires preprocessing.
-* **sessionId**: string: Session identifier.
-* **to**: string: Address to send to.
-
-## CorrelationFilterProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **accessedAt**: string (ReadOnly): Last time the message was sent, or a request was received, for this topic.
+* **autoDeleteOnIdle**: string: ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
+* **countDetails**: [MessageCountDetails](#messagecountdetails) (ReadOnly): Message Count Details.
+* **createdAt**: string (ReadOnly): Exact time the message was created.
+* **defaultMessageTimeToLive**: string: ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
+* **duplicateDetectionHistoryTimeWindow**: string: ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
+* **enableBatchedOperations**: bool: Value that indicates whether server-side batched operations are enabled.
+* **enableExpress**: bool: Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
+* **enablePartitioning**: bool: Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
+* **maxMessageSizeInKilobytes**: int: Maximum size (in KB) of the message payload that can be accepted by the topic. This property is only used in Premium today and default is 1024.
+* **maxSizeInMegabytes**: int: Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
+* **requiresDuplicateDetection**: bool: Value indicating if this topic requires duplicate detection.
+* **sizeInBytes**: int (ReadOnly): Size of the topic, in bytes.
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Entity status.
+* **subscriptionCount**: int (ReadOnly): Number of subscriptions.
+* **supportOrdering**: bool: Value that indicates whether the topic supports ordering.
+* **updatedAt**: string (ReadOnly): The exact time the message was updated.
 
 ## SqlFilter
 ### Properties
@@ -394,43 +407,30 @@
 * **requiresPreprocessing**: bool: Value that indicates whether the rule action requires preprocessing.
 * **sqlExpression**: string: The SQL expression. e.g. MyProperty='ABC'
 
-## AccessKeys
+## Subnet
 ### Properties
-* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
-* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
-* **keyName**: string (ReadOnly): A string that describes the authorization rule.
-* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace authorization rule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace authorization rule.
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **id**: string (Required): Resource ID of Virtual Network Subnet
 
-## AccessKeys
+## SystemData
 ### Properties
-* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
-* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
-* **keyName**: string (ReadOnly): A string that describes the authorization rule.
-* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace authorization rule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace authorization rule.
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The type of identity that last modified the resource.
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
-## AccessKeys
+## TrackedResourceTags
 ### Properties
-* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
-* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
-* **keyName**: string (ReadOnly): A string that describes the authorization rule.
-* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace authorization rule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace authorization rule.
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+### Additional Properties
+* **Additional Properties Type**: string
 
-## AccessKeys
+## UserAssignedIdentity
 ### Properties
-* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
-* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
-* **keyName**: string (ReadOnly): A string that describes the authorization rule.
-* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace authorization rule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace authorization rule.
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **clientId**: string (ReadOnly): Client Id of user assigned identity
+* **principalId**: string (ReadOnly): Principal Id of user assigned identity
+
+## UserAssignedIdentityProperties
+### Properties
+* **userAssignedIdentity**: string: ARM ID of user Identity selected for encryption
 

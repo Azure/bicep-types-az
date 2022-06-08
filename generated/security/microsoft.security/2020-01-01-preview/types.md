@@ -9,11 +9,6 @@
 * **properties**: [ConnectorSettingProperties](#connectorsettingproperties): Describes properties of a connector setting
 * **type**: 'Microsoft.Security/connectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## ConnectorSettingProperties
-### Properties
-* **authenticationDetails**: [AuthenticationDetailsProperties](#authenticationdetailsproperties): Settings for cloud authentication management
-* **hybridComputeSettings**: [HybridComputeSettingsProperties](#hybridcomputesettingsproperties): Settings for hybrid compute management
-
 ## AuthenticationDetailsProperties
 * **Discriminator**: authenticationType
 
@@ -49,6 +44,11 @@
 * **tokenUri**: string (Required): Token URI field of the API key (write only)
 * **type**: string (Required): Type field of the API key (write only)
 
+
+## ConnectorSettingProperties
+### Properties
+* **authenticationDetails**: [AuthenticationDetailsProperties](#authenticationdetailsproperties): Settings for cloud authentication management
+* **hybridComputeSettings**: [HybridComputeSettingsProperties](#hybridcomputesettingsproperties): Settings for hybrid compute management
 
 ## HybridComputeSettingsProperties
 ### Properties

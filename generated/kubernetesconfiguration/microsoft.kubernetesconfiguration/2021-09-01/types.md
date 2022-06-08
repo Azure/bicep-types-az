@@ -11,11 +11,18 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.KubernetesConfiguration/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Identity
+## ErrorAdditionalInfo
 ### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned': The identity type.
+* **info**: any (ReadOnly): Any object
+* **type**: string (ReadOnly): The additional info type.
+
+## ErrorDetail
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
 
 ## ExtensionProperties
 ### Properties
@@ -54,18 +61,19 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ErrorDetail
+## ExtensionStatus
 ### Properties
-* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
-* **code**: string (ReadOnly): The error code.
-* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
-* **message**: string (ReadOnly): The error message.
-* **target**: string (ReadOnly): The error target.
+* **code**: string: Status code provided by the Extension
+* **displayStatus**: string: Short description of status of the extension.
+* **level**: 'Error' | 'Information' | 'Warning' | string: Level of the status.
+* **message**: string: Detailed message of the status from the Extension.
+* **time**: string: DateLiteral (per ISO8601) noting the time of installation status.
 
-## ErrorAdditionalInfo
+## Identity
 ### Properties
-* **info**: any (ReadOnly): Any object
-* **type**: string (ReadOnly): The additional info type.
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'SystemAssigned': The identity type.
 
 ## Scope
 ### Properties
@@ -79,14 +87,6 @@
 ## ScopeNamespace
 ### Properties
 * **targetNamespace**: string: Namespace where the extension will be created for an Namespace scoped extension.  If this namespace does not exist, it will be created
-
-## ExtensionStatus
-### Properties
-* **code**: string: Status code provided by the Extension
-* **displayStatus**: string: Short description of status of the extension.
-* **level**: 'Error' | 'Information' | 'Warning' | string: Level of the status.
-* **message**: string: Detailed message of the status from the Extension.
-* **time**: string: DateLiteral (per ISO8601) noting the time of installation status.
 
 ## SystemData
 ### Properties

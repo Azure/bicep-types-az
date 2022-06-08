@@ -20,15 +20,9 @@
 * **properties**: [ConfigurationProperties](#configurationproperties): Tenant configuration properties.
 * **type**: 'Microsoft.Portal/tenantConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## DashboardProperties
+## ConfigurationProperties
 ### Properties
-* **lenses**: [DashboardPropertiesLenses](#dashboardpropertieslenses): The dashboard lenses.
-* **metadata**: [DashboardPropertiesMetadata](#dashboardpropertiesmetadata): The dashboard metadata.
-
-## DashboardPropertiesLenses
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [DashboardLens](#dashboardlens)
+* **enforcePrivateMarkdownStorage**: bool: When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
 
 ## DashboardLens
 ### Properties
@@ -46,15 +40,15 @@
 ### Additional Properties
 * **Additional Properties Type**: [DashboardParts](#dashboardparts)
 
-## DashboardParts
-### Properties
-* **metadata**: [DashboardPartMetadata](#dashboardpartmetadata): A dashboard part metadata.
-* **position**: [DashboardPartsPosition](#dashboardpartsposition) (Required): The dashboard's part position.
-
 ## DashboardPartMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## DashboardParts
+### Properties
+* **metadata**: [DashboardPartMetadata](#dashboardpartmetadata): A dashboard part metadata.
+* **position**: [DashboardPartsPosition](#dashboardpartsposition) (Required): The dashboard's part position.
 
 ## DashboardPartsPosition
 ### Properties
@@ -69,6 +63,16 @@
 ### Additional Properties
 * **Additional Properties Type**: any
 
+## DashboardProperties
+### Properties
+* **lenses**: [DashboardPropertiesLenses](#dashboardpropertieslenses): The dashboard lenses.
+* **metadata**: [DashboardPropertiesMetadata](#dashboardpropertiesmetadata): The dashboard metadata.
+
+## DashboardPropertiesLenses
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [DashboardLens](#dashboardlens)
+
 ## DashboardPropertiesMetadata
 ### Properties
 ### Additional Properties
@@ -78,8 +82,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## ConfigurationProperties
-### Properties
-* **enforcePrivateMarkdownStorage**: bool: When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
 

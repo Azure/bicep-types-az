@@ -19,6 +19,20 @@
 * **properties**: [RegistrationDefinitionProperties](#registrationdefinitionproperties): Properties of a registration definition.
 * **type**: 'Microsoft.ManagedServices/registrationDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Authorization
+### Properties
+* **delegatedRoleDefinitionIds**: string[]: The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.
+* **principalId**: string (Required): Principal Id of the security group/service principal/user that would be assigned permissions to the projected subscription
+* **principalIdDisplayName**: string: Display name of the principal Id.
+* **roleDefinitionId**: string (Required): The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.
+
+## Plan
+### Properties
+* **name**: string (Required): The plan name.
+* **product**: string (Required): The product code.
+* **publisher**: string (Required): The publisher ID.
+* **version**: string (Required): The plan's version.
+
 ## RegistrationAssignmentProperties
 ### Properties
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): Current state of the registration definition.
@@ -33,13 +47,6 @@
 * **properties**: [RegistrationAssignmentPropertiesRegistrationDefinitionProperties](#registrationassignmentpropertiesregistrationdefinitionproperties): Properties of registration definition inside registration assignment.
 * **type**: string (ReadOnly): Type of the resource (Microsoft.ManagedServices/registrationDefinitions).
 
-## Plan
-### Properties
-* **name**: string (Required): The plan name.
-* **product**: string (Required): The product code.
-* **publisher**: string (Required): The publisher ID.
-* **version**: string (Required): The plan's version.
-
 ## RegistrationAssignmentPropertiesRegistrationDefinitionProperties
 ### Properties
 * **authorizations**: [Authorization](#authorization)[]: Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
@@ -50,13 +57,6 @@
 * **manageeTenantName**: string: Name of the home tenant.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' | string: Current state of the registration definition.
 * **registrationDefinitionName**: string: Name of the registration definition.
-
-## Authorization
-### Properties
-* **delegatedRoleDefinitionIds**: string[]: The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.
-* **principalId**: string (Required): Principal Id of the security group/service principal/user that would be assigned permissions to the projected subscription
-* **principalIdDisplayName**: string: Display name of the principal Id.
-* **roleDefinitionId**: string (Required): The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.
 
 ## RegistrationDefinitionProperties
 ### Properties

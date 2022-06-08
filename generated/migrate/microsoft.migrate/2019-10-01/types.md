@@ -82,58 +82,6 @@
 * **properties**: [CollectorProperties](#collectorproperties)
 * **type**: 'Microsoft.Migrate/assessmentProjects/vmwarecollectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## ProjectProperties
-### Properties
-* **assessmentSolutionId**: string: Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.
-* **createdTimestamp**: string (ReadOnly): Time when this project was created. Date-Time represented in ISO-8601 format.
-* **customerStorageAccountArmId**: string: The ARM id of the storage account used for interactions when public access is disabled.
-* **customerWorkspaceId**: string: The ARM id of service map workspace created by customer.
-* **customerWorkspaceLocation**: string: Location of service map workspace created by customer.
-* **lastAssessmentTimestamp**: string (ReadOnly): Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.
-* **numberOfAssessments**: int (ReadOnly): Number of assessments created in the project.
-* **numberOfGroups**: int (ReadOnly): Number of groups created in the project.
-* **numberOfMachines**: int (ReadOnly): Number of machines in the project.
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections to the project.
-* **projectStatus**: 'Active' | 'Inactive' | string: Assessment project status.
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the project.
-* **publicNetworkAccess**: string: This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
-* **serviceEndpoint**: string (ReadOnly): Endpoint at which the collector agent can call agent REST API.
-* **updatedTimestamp**: string (ReadOnly): Time when this project was last updated. Date-Time represented in ISO-8601 format.
-
-## PrivateEndpointConnection
-### Properties
-* **eTag**: string: For optimistic concurrency control.
-* **id**: string (ReadOnly): Path reference to this private endpoint endpoint connection. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/privateEndpointConnections/{privateEndpointConnectionName}
-* **name**: string (ReadOnly): Name of the private endpoint endpoint connection.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): Private endpoint connection properties.
-* **type**: string (ReadOnly): Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: [ResourceId](#resourceid) (ReadOnly): ARM id for a resource.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): State of a private endpoint connection.
-* **provisioningState**: 'Accepted' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Indicates whether there is an ongoing operation on the private endpoint.
-
-## ResourceId
-### Properties
-* **id**: string (ReadOnly)
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionsRequired**: string: Actions required on the private endpoint connection.
-* **description**: string: Description of the private endpoint connection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Connection status of the private endpoint connection.
-
-## GroupProperties
-### Properties
-* **areAssessmentsRunning**: bool (ReadOnly): If the assessments are in running state.
-* **assessments**: string[] (ReadOnly): List of References to Assessments created on this group.
-* **createdTimestamp**: string (ReadOnly): Time when this group was created. Date-Time represented in ISO-8601 format.
-* **groupStatus**: 'Completed' | 'Created' | 'Invalid' | 'Running' | 'Updated' | string (ReadOnly): Whether the group has been created and is valid.
-* **groupType**: string: The type of group.
-* **machineCount**: int (ReadOnly): Number of machines part of this group.
-* **updatedTimestamp**: string (ReadOnly): Time when this group was last updated. Date-Time represented in ISO-8601 format.
-
 ## AssessmentProperties
 ### Properties
 * **azureDiskType**: 'Premium' | 'Standard' | 'StandardOrPremium' | 'StandardSSD' | 'Unknown' | string (Required): Storage type selected for this disk.
@@ -167,18 +115,6 @@
 * **updatedTimestamp**: string (ReadOnly): Time when this project was last updated. Date-Time represented in ISO-8601 format.
 * **vmUptime**: [VmUptime](#vmuptime) (Required)
 
-## VmUptime
-### Properties
-* **daysPerMonth**: int: Number of days in a month for VM uptime.
-* **hoursPerDay**: int: Number of hours per day for VM uptime.
-
-## CollectorProperties
-### Properties
-* **agentProperties**: [CollectorAgentProperties](#collectoragentproperties)
-* **createdTimestamp**: string (ReadOnly): Time when this collector was created. Date-Time represented in ISO-8601 format.
-* **discoverySiteId**: string: The ARM id of the discovery service site.
-* **updatedTimestamp**: string (ReadOnly): Time when this collector was updated. Date-Time represented in ISO-8601 format.
-
 ## CollectorAgentProperties
 ### Properties
 * **id**: string (ReadOnly)
@@ -194,9 +130,73 @@
 * **objectId**: string: Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
 * **tenantId**: string: Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
 
+## CollectorProperties
+### Properties
+* **agentProperties**: [CollectorAgentProperties](#collectoragentproperties)
+* **createdTimestamp**: string (ReadOnly): Time when this collector was created. Date-Time represented in ISO-8601 format.
+* **discoverySiteId**: string: The ARM id of the discovery service site.
+* **updatedTimestamp**: string (ReadOnly): Time when this collector was updated. Date-Time represented in ISO-8601 format.
+
+## GroupProperties
+### Properties
+* **areAssessmentsRunning**: bool (ReadOnly): If the assessments are in running state.
+* **assessments**: string[] (ReadOnly): List of References to Assessments created on this group.
+* **createdTimestamp**: string (ReadOnly): Time when this group was created. Date-Time represented in ISO-8601 format.
+* **groupStatus**: 'Completed' | 'Created' | 'Invalid' | 'Running' | 'Updated' | string (ReadOnly): Whether the group has been created and is valid.
+* **groupType**: string: The type of group.
+* **machineCount**: int (ReadOnly): Number of machines part of this group.
+* **updatedTimestamp**: string (ReadOnly): Time when this group was last updated. Date-Time represented in ISO-8601 format.
+
 ## ImportCollectorProperties
 ### Properties
 * **createdTimestamp**: string (ReadOnly)
 * **discoverySiteId**: string
 * **updatedTimestamp**: string (ReadOnly)
+
+## PrivateEndpointConnection
+### Properties
+* **eTag**: string: For optimistic concurrency control.
+* **id**: string (ReadOnly): Path reference to this private endpoint endpoint connection. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/privateEndpointConnections/{privateEndpointConnectionName}
+* **name**: string (ReadOnly): Name of the private endpoint endpoint connection.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): Private endpoint connection properties.
+* **type**: string (ReadOnly): Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: [ResourceId](#resourceid) (ReadOnly): ARM id for a resource.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): State of a private endpoint connection.
+* **provisioningState**: 'Accepted' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Indicates whether there is an ongoing operation on the private endpoint.
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: string: Actions required on the private endpoint connection.
+* **description**: string: Description of the private endpoint connection.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Connection status of the private endpoint connection.
+
+## ProjectProperties
+### Properties
+* **assessmentSolutionId**: string: Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.
+* **createdTimestamp**: string (ReadOnly): Time when this project was created. Date-Time represented in ISO-8601 format.
+* **customerStorageAccountArmId**: string: The ARM id of the storage account used for interactions when public access is disabled.
+* **customerWorkspaceId**: string: The ARM id of service map workspace created by customer.
+* **customerWorkspaceLocation**: string: Location of service map workspace created by customer.
+* **lastAssessmentTimestamp**: string (ReadOnly): Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.
+* **numberOfAssessments**: int (ReadOnly): Number of assessments created in the project.
+* **numberOfGroups**: int (ReadOnly): Number of groups created in the project.
+* **numberOfMachines**: int (ReadOnly): Number of machines in the project.
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections to the project.
+* **projectStatus**: 'Active' | 'Inactive' | string: Assessment project status.
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the project.
+* **publicNetworkAccess**: string: This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
+* **serviceEndpoint**: string (ReadOnly): Endpoint at which the collector agent can call agent REST API.
+* **updatedTimestamp**: string (ReadOnly): Time when this project was last updated. Date-Time represented in ISO-8601 format.
+
+## ResourceId
+### Properties
+* **id**: string (ReadOnly)
+
+## VmUptime
+### Properties
+* **daysPerMonth**: int: Number of days in a month for VM uptime.
+* **hoursPerDay**: int: Number of hours per day for VM uptime.
 

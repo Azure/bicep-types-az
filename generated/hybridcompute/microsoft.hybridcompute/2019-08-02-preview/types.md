@@ -24,11 +24,45 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
+## ErrorDetail
+### Properties
+* **code**: string (Required): The error's code.
+* **details**: [ErrorDetail](#errordetail)[]: Additional error details.
+* **message**: string (Required): A human readable error message.
+* **target**: string: Indicates which property in the request is responsible for the error.
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The identity's principal id.
 * **tenantId**: string (ReadOnly): The identity's tenant id.
 * **type**: string: The identity type.
+
+## MachineExtensionInstanceView
+### Properties
+* **name**: string: The machine extension name.
+* **status**: [MachineExtensionInstanceViewStatus](#machineextensioninstanceviewstatus): Instance view status.
+* **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
+* **typeHandlerVersion**: string: Specifies the version of the script handler.
+
+## MachineExtensionInstanceViewStatus
+### Properties
+* **code**: string: The status code.
+* **displayStatus**: string: The short localizable label for the status.
+* **level**: 'Error' | 'Info' | 'Warning': The level code.
+* **message**: string: The detailed status message, including for alerts and error messages.
+* **time**: string: The time of the status.
+
+## MachineExtensionProperties
+### Properties
+* **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+* **forceUpdateTag**: string: How the extension handler should be forced to update even if the extension configuration has not changed.
+* **instanceView**: [MachineExtensionInstanceView](#machineextensioninstanceview): Describes the Machine Extension Instance View.
+* **protectedSettings**: any: Any object
+* **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
+* **publisher**: string: The name of the extension handler publisher.
+* **settings**: any: Any object
+* **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
+* **typeHandlerVersion**: string: Specifies the version of the script handler.
 
 ## MachineProperties
 ### Properties
@@ -47,28 +81,6 @@
 * **status**: 'Connected' | 'Disconnected' | 'Error' (ReadOnly): The status of the hybrid machine agent.
 * **vmId**: string (ReadOnly): Specifies the hybrid machine unique ID.
 
-## ErrorDetail
-### Properties
-* **code**: string (Required): The error's code.
-* **details**: [ErrorDetail](#errordetail)[]: Additional error details.
-* **message**: string (Required): A human readable error message.
-* **target**: string: Indicates which property in the request is responsible for the error.
-
-## MachineExtensionInstanceView
-### Properties
-* **name**: string: The machine extension name.
-* **status**: [MachineExtensionInstanceViewStatus](#machineextensioninstanceviewstatus): Instance view status.
-* **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
-* **typeHandlerVersion**: string: Specifies the version of the script handler.
-
-## MachineExtensionInstanceViewStatus
-### Properties
-* **code**: string: The status code.
-* **displayStatus**: string: The short localizable label for the status.
-* **level**: 'Error' | 'Info' | 'Warning': The level code.
-* **message**: string: The detailed status message, including for alerts and error messages.
-* **time**: string: The time of the status.
-
 ## OSProfile
 ### Properties
 * **computerName**: string (ReadOnly): Specifies the host OS name of the hybrid machine.
@@ -77,18 +89,6 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## MachineExtensionProperties
-### Properties
-* **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-* **forceUpdateTag**: string: How the extension handler should be forced to update even if the extension configuration has not changed.
-* **instanceView**: [MachineExtensionInstanceView](#machineextensioninstanceview): Describes the Machine Extension Instance View.
-* **protectedSettings**: any: Any object
-* **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
-* **publisher**: string: The name of the extension handler publisher.
-* **settings**: any: Any object
-* **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
-* **typeHandlerVersion**: string: Specifies the version of the script handler.
 
 ## ResourceTags
 ### Properties

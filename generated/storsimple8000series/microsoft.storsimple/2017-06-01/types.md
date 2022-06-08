@@ -134,47 +134,10 @@
 * **ApiVersion**: 2017-06-01
 * **Output**: [SymmetricEncryptedSecret](#symmetricencryptedsecret)
 
-## ManagerProperties
-### Properties
-* **cisIntrinsicSettings**: [ManagerIntrinsicSettings](#managerintrinsicsettings): Intrinsic settings which refers to the type of the StorSimple Manager.
-* **provisioningState**: string: Specifies the state of the resource as it is getting provisioned. Value of "Succeeded" means the Manager was successfully created.
-* **sku**: [ManagerSku](#managersku): The Sku.
-
-## ManagerIntrinsicSettings
-### Properties
-* **type**: 'GardaV1' | 'HelsinkiV1' (Required): The type of StorSimple Manager.
-
-## ManagerSku
-### Properties
-* **name**: 'Standard' (Required): Refers to the sku name which should be "Standard"
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## AccessControlRecordProperties
 ### Properties
 * **initiatorName**: string (Required): The iSCSI initiator name (IQN).
 * **volumeCount**: int (ReadOnly): The number of volumes using the access control record.
-
-## BandwidthRateSettingProperties
-### Properties
-* **schedules**: [BandwidthSchedule](#bandwidthschedule)[] (Required): The schedules.
-* **volumeCount**: int (ReadOnly): The number of volumes that uses the bandwidth setting.
-
-## BandwidthSchedule
-### Properties
-* **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[] (Required): The days of the week when this schedule is applicable.
-* **rateInMbps**: int (Required): The rate in Mbps.
-* **start**: [Time](#time) (Required): The time.
-* **stop**: [Time](#time) (Required): The time.
-
-## Time
-### Properties
-* **hours**: int (Required): The hour.
-* **minutes**: int (Required): The minute.
-* **seconds**: int (Required): The second.
 
 ## AlertNotificationProperties
 ### Properties
@@ -182,6 +145,12 @@
 * **alertNotificationCulture**: string: The alert notification culture.
 * **emailNotification**: 'Disabled' | 'Enabled' (Required): Indicates whether email notification enabled or not.
 * **notificationToServiceOwners**: 'Disabled' | 'Enabled': Indicates whether email notification enabled or not.
+
+## AsymmetricEncryptedSecret
+### Properties
+* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' (Required): The algorithm used to encrypt "Value".
+* **encryptionCertThumbprint**: string: Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.
+* **value**: string (Required): The value of the secret.
 
 ## BackupPolicyProperties
 ### Properties
@@ -202,70 +171,17 @@
 * **scheduleStatus**: 'Disabled' | 'Enabled' (Required): The schedule status.
 * **startTime**: string (Required): The start time of the schedule.
 
-## ScheduleRecurrence
+## BandwidthRateSettingProperties
 ### Properties
-* **recurrenceType**: 'Daily' | 'Hourly' | 'Minutes' | 'Weekly' (Required): The recurrence type.
-* **recurrenceValue**: int (Required): The recurrence value.
-* **weeklyDaysList**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: The week days list. Applicable only for schedules of recurrence type 'weekly'.
+* **schedules**: [BandwidthSchedule](#bandwidthschedule)[] (Required): The schedules.
+* **volumeCount**: int (ReadOnly): The number of volumes that uses the bandwidth setting.
 
-## TimeSettingsProperties
+## BandwidthSchedule
 ### Properties
-* **primaryTimeServer**: string: The primary Network Time Protocol (NTP) server name, like 'time.windows.com'.
-* **secondaryTimeServer**: string[]: The secondary Network Time Protocol (NTP) server name, like 'time.contoso.com'. It's optional.
-* **timeZone**: string (Required): The timezone of device, like '(UTC -06:00) Central America'
-
-## VolumeContainerProperties
-### Properties
-* **bandWidthRateInMbps**: int: The bandwidth-rate set on the volume container.
-* **bandwidthSettingId**: string: The ID of the bandwidth setting associated with the volume container.
-* **encryptionKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
-* **encryptionStatus**: 'Disabled' | 'Enabled' (ReadOnly): The encryption status to indicates if encryption is enabled or not.
-* **ownerShipStatus**: 'NotOwned' | 'Owned' (ReadOnly): The owner ship status of the volume container. Only when the status is "NotOwned", the delete operation on the volume container is permitted.
-* **storageAccountCredentialId**: string (Required): The path ID of storage account associated with the volume container.
-* **totalCloudStorageUsageInBytes**: int (ReadOnly): The total cloud storage for the volume container.
-* **volumeCount**: int (ReadOnly): The number of volumes in the volume Container.
-
-## AsymmetricEncryptedSecret
-### Properties
-* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' (Required): The algorithm used to encrypt "Value".
-* **encryptionCertThumbprint**: string: Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.
-* **value**: string (Required): The value of the secret.
-
-## VolumeProperties
-### Properties
-* **accessControlRecordIds**: string[] (Required): The IDs of the access control records, associated with the volume.
-* **backupPolicyIds**: string[] (ReadOnly): The IDs of the backup policies, in which this volume is part of.
-* **backupStatus**: 'Disabled' | 'Enabled' (ReadOnly): The backup status of the volume.
-* **monitoringStatus**: 'Disabled' | 'Enabled' (Required): The monitoring status of the volume.
-* **operationStatus**: 'Deleting' | 'None' | 'Restoring' | 'Updating' (ReadOnly): The operation status on the volume.
-* **sizeInBytes**: int (Required): The size of the volume in bytes.
-* **volumeContainerId**: string (ReadOnly): The ID of the volume container, in which this volume is created.
-* **volumeStatus**: 'Offline' | 'Online' (Required): The volume status.
-* **volumeType**: 'Archival' | 'LocallyPinned' | 'Tiered' (Required): The volume type.
-
-## ManagerExtendedInfoProperties
-### Properties
-* **algorithm**: string (Required): Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted
-* **encryptionKey**: string: Represents the CEK of the resource.
-* **encryptionKeyThumbprint**: string: Represents the Cert thumbprint that was used to encrypt the CEK.
-* **integrityKey**: string (Required): Represents the CIK of the resource.
-* **portalCertificateThumbprint**: string: Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
-* **version**: string: The version of the extended info being persisted.
-
-## StorageAccountCredentialProperties
-### Properties
-* **accessKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
-* **endPoint**: string (Required): The storage endpoint
-* **sslStatus**: 'Disabled' | 'Enabled' (Required): Signifies whether SSL needs to be enabled or not.
-* **volumesCount**: int (ReadOnly): The count of volumes using this storage account credential.
-
-## Key
-### Properties
-* **activationKey**: string (ReadOnly): The activation key for the device.
-
-## FailoverSetsList
-### Properties
-* **value**: [FailoverSet](#failoverset)[] (ReadOnly): The list of failover sets.
+* **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[] (Required): The days of the week when this schedule is applicable.
+* **rateInMbps**: int (Required): The rate in Mbps.
+* **start**: [Time](#time) (Required): The time.
+* **stop**: [Time](#time) (Required): The time.
 
 ## FailoverSet
 ### Properties
@@ -277,28 +193,9 @@
 * **errorMessage**: string (ReadOnly): The error message, if the failover set is not eligible for failover.
 * **isEligibleForFailover**: bool (ReadOnly): Represents if this failover set is eligible for failover or not.
 
-## VolumeContainerFailoverMetadata
+## FailoverSetsList
 ### Properties
-* **volumeContainerId**: string (ReadOnly): The path ID of the volume container.
-* **volumes**: [VolumeFailoverMetadata](#volumefailovermetadata)[] (ReadOnly): The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.
-
-## VolumeFailoverMetadata
-### Properties
-* **backupCreatedDate**: string (ReadOnly): The date at which the snapshot was taken.
-* **backupElementId**: string (ReadOnly): The path ID of the backup-element for this volume, inside the backup set.
-* **backupId**: string (ReadOnly): The path ID of the backup set.
-* **backupPolicyId**: string (ReadOnly): The path ID of the backup policy using which the snapshot was taken.
-* **sizeInBytes**: int (ReadOnly): The size of the volume in bytes at the time the snapshot was taken.
-* **volumeId**: string (ReadOnly): The path ID of the volume.
-* **volumeType**: 'Archival' | 'LocallyPinned' | 'Tiered' (ReadOnly): The volume type.
-
-## ListFailoverTargetsRequest
-### Properties
-* **volumeContainers**: string[] (WriteOnly): The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.
-
-## FailoverTargetsList
-### Properties
-* **value**: [FailoverTarget](#failovertarget)[] (ReadOnly): The list of all the failover targets.
+* **value**: [FailoverSet](#failoverset)[] (ReadOnly): The list of failover sets.
 
 ## FailoverTarget
 ### Properties
@@ -314,10 +211,64 @@
 * **modelDescription**: string (ReadOnly): The model number of the device.
 * **volumesCount**: int (ReadOnly): The count of volumes on the device.
 
-## TargetEligibilityResult
+## FailoverTargetsList
 ### Properties
-* **eligibilityStatus**: 'Eligible' | 'NotEligible' (ReadOnly): The eligibility status of device, as a failover target device.
-* **messages**: [TargetEligibilityErrorMessage](#targeteligibilityerrormessage)[] (ReadOnly): The list of error messages, if a device does not qualify as a failover target device.
+* **value**: [FailoverTarget](#failovertarget)[] (ReadOnly): The list of all the failover targets.
+
+## Key
+### Properties
+* **activationKey**: string (ReadOnly): The activation key for the device.
+
+## ListFailoverTargetsRequest
+### Properties
+* **volumeContainers**: string[] (WriteOnly): The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.
+
+## ManagerExtendedInfoProperties
+### Properties
+* **algorithm**: string (Required): Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted
+* **encryptionKey**: string: Represents the CEK of the resource.
+* **encryptionKeyThumbprint**: string: Represents the Cert thumbprint that was used to encrypt the CEK.
+* **integrityKey**: string (Required): Represents the CIK of the resource.
+* **portalCertificateThumbprint**: string: Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
+* **version**: string: The version of the extended info being persisted.
+
+## ManagerIntrinsicSettings
+### Properties
+* **type**: 'GardaV1' | 'HelsinkiV1' (Required): The type of StorSimple Manager.
+
+## ManagerProperties
+### Properties
+* **cisIntrinsicSettings**: [ManagerIntrinsicSettings](#managerintrinsicsettings): Intrinsic settings which refers to the type of the StorSimple Manager.
+* **provisioningState**: string: Specifies the state of the resource as it is getting provisioned. Value of "Succeeded" means the Manager was successfully created.
+* **sku**: [ManagerSku](#managersku): The Sku.
+
+## ManagerSku
+### Properties
+* **name**: 'Standard' (Required): Refers to the sku name which should be "Standard"
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ScheduleRecurrence
+### Properties
+* **recurrenceType**: 'Daily' | 'Hourly' | 'Minutes' | 'Weekly' (Required): The recurrence type.
+* **recurrenceValue**: int (Required): The recurrence value.
+* **weeklyDaysList**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: The week days list. Applicable only for schedules of recurrence type 'weekly'.
+
+## StorageAccountCredentialProperties
+### Properties
+* **accessKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
+* **endPoint**: string (Required): The storage endpoint
+* **sslStatus**: 'Disabled' | 'Enabled' (Required): Signifies whether SSL needs to be enabled or not.
+* **volumesCount**: int (ReadOnly): The count of volumes using this storage account credential.
+
+## SymmetricEncryptedSecret
+### Properties
+* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' (ReadOnly): The algorithm used to encrypt "Value".
+* **value**: string (ReadOnly): The value of the secret itself. If the secret is in plaintext or null then EncryptionAlgorithm will be none.
+* **valueCertificateThumbprint**: string (ReadOnly): The thumbprint of the cert that was used to encrypt "Value".
 
 ## TargetEligibilityErrorMessage
 ### Properties
@@ -325,9 +276,58 @@
 * **resolution**: string (ReadOnly): The localized resolution message for the error.
 * **resultCode**: 'LocalToTieredVolumesConversionWarning' | 'TargetAndSourceCannotBeSameError' | 'TargetInsufficientCapacityError' | 'TargetInsufficientLocalVolumeMemoryError' | 'TargetInsufficientTieredVolumeMemoryError' | 'TargetIsNotOnlineError' | 'TargetSourceIncompatibleVersionError' (ReadOnly): The result code for the error, due to which the device does not qualify as a failover target device.
 
-## SymmetricEncryptedSecret
+## TargetEligibilityResult
 ### Properties
-* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' (ReadOnly): The algorithm used to encrypt "Value".
-* **value**: string (ReadOnly): The value of the secret itself. If the secret is in plaintext or null then EncryptionAlgorithm will be none.
-* **valueCertificateThumbprint**: string (ReadOnly): The thumbprint of the cert that was used to encrypt "Value".
+* **eligibilityStatus**: 'Eligible' | 'NotEligible' (ReadOnly): The eligibility status of device, as a failover target device.
+* **messages**: [TargetEligibilityErrorMessage](#targeteligibilityerrormessage)[] (ReadOnly): The list of error messages, if a device does not qualify as a failover target device.
+
+## Time
+### Properties
+* **hours**: int (Required): The hour.
+* **minutes**: int (Required): The minute.
+* **seconds**: int (Required): The second.
+
+## TimeSettingsProperties
+### Properties
+* **primaryTimeServer**: string: The primary Network Time Protocol (NTP) server name, like 'time.windows.com'.
+* **secondaryTimeServer**: string[]: The secondary Network Time Protocol (NTP) server name, like 'time.contoso.com'. It's optional.
+* **timeZone**: string (Required): The timezone of device, like '(UTC -06:00) Central America'
+
+## VolumeContainerFailoverMetadata
+### Properties
+* **volumeContainerId**: string (ReadOnly): The path ID of the volume container.
+* **volumes**: [VolumeFailoverMetadata](#volumefailovermetadata)[] (ReadOnly): The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.
+
+## VolumeContainerProperties
+### Properties
+* **bandWidthRateInMbps**: int: The bandwidth-rate set on the volume container.
+* **bandwidthSettingId**: string: The ID of the bandwidth setting associated with the volume container.
+* **encryptionKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
+* **encryptionStatus**: 'Disabled' | 'Enabled' (ReadOnly): The encryption status to indicates if encryption is enabled or not.
+* **ownerShipStatus**: 'NotOwned' | 'Owned' (ReadOnly): The owner ship status of the volume container. Only when the status is "NotOwned", the delete operation on the volume container is permitted.
+* **storageAccountCredentialId**: string (Required): The path ID of storage account associated with the volume container.
+* **totalCloudStorageUsageInBytes**: int (ReadOnly): The total cloud storage for the volume container.
+* **volumeCount**: int (ReadOnly): The number of volumes in the volume Container.
+
+## VolumeFailoverMetadata
+### Properties
+* **backupCreatedDate**: string (ReadOnly): The date at which the snapshot was taken.
+* **backupElementId**: string (ReadOnly): The path ID of the backup-element for this volume, inside the backup set.
+* **backupId**: string (ReadOnly): The path ID of the backup set.
+* **backupPolicyId**: string (ReadOnly): The path ID of the backup policy using which the snapshot was taken.
+* **sizeInBytes**: int (ReadOnly): The size of the volume in bytes at the time the snapshot was taken.
+* **volumeId**: string (ReadOnly): The path ID of the volume.
+* **volumeType**: 'Archival' | 'LocallyPinned' | 'Tiered' (ReadOnly): The volume type.
+
+## VolumeProperties
+### Properties
+* **accessControlRecordIds**: string[] (Required): The IDs of the access control records, associated with the volume.
+* **backupPolicyIds**: string[] (ReadOnly): The IDs of the backup policies, in which this volume is part of.
+* **backupStatus**: 'Disabled' | 'Enabled' (ReadOnly): The backup status of the volume.
+* **monitoringStatus**: 'Disabled' | 'Enabled' (Required): The monitoring status of the volume.
+* **operationStatus**: 'Deleting' | 'None' | 'Restoring' | 'Updating' (ReadOnly): The operation status on the volume.
+* **sizeInBytes**: int (Required): The size of the volume in bytes.
+* **volumeContainerId**: string (ReadOnly): The ID of the volume container, in which this volume is created.
+* **volumeStatus**: 'Offline' | 'Online' (Required): The volume status.
+* **volumeType**: 'Archival' | 'LocallyPinned' | 'Tiered' (Required): The volume type.
 

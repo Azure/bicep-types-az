@@ -47,11 +47,90 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## AgentConfiguration
+### Properties
+* **extensionsAllowList**: [ConfigurationExtension](#configurationextension)[] (ReadOnly): Array of extensions that are allowed to be installed or updated.
+* **extensionsBlockList**: [ConfigurationExtension](#configurationextension)[] (ReadOnly): Array of extensions that are blocked (cannot be installed or updated)
+* **extensionsEnabled**: string (ReadOnly): Specifies whether the extension service is enabled or disabled.
+* **guestConfigurationEnabled**: string (ReadOnly): Specified whether the guest configuration service is enabled or disabled.
+* **incomingConnectionsPorts**: string[] (ReadOnly): Specifies the list of ports that the agent will be able to listen on.
+* **proxyBypass**: string[] (ReadOnly): List of service names which should not use the specified proxy server.
+* **proxyUrl**: string (ReadOnly): Specifies the URL of the proxy to be used.
+
+## CloudMetadata
+### Properties
+* **provider**: string (ReadOnly): Specifies the cloud provider (Azure/AWS/GCP...).
+
+## ConfigurationExtension
+### Properties
+* **publisher**: string (ReadOnly): Publisher of the extension.
+* **type**: string (ReadOnly): Type of the extension.
+
+## DetectedProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): Any object
+* **type**: string (ReadOnly): The additional info type.
+
+## ErrorDetail
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
+
+## HybridComputePrivateLinkScopeProperties
+### Properties
+* **privateEndpointConnections**: [PrivateEndpointConnectionDataModel](#privateendpointconnectiondatamodel)[] (ReadOnly): The collection of associated Private Endpoint Connections.
+* **privateLinkScopeId**: string (ReadOnly): The Guid id of the private link scope.
+* **provisioningState**: string (ReadOnly): Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: The network access policy to determine if Azure Arc agents can use public Azure Arc service endpoints. Defaults to disabled (access to Azure Arc services only via private link).
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
 * **type**: 'SystemAssigned': The identity type.
+
+## LocationData
+### Properties
+* **city**: string: The city or locality where the resource is located.
+* **countryOrRegion**: string: The country or region where the resource is located
+* **district**: string: The district, state, or province where the resource is located.
+* **name**: string (Required): A canonical name for the geographic or physical location.
+
+## MachineExtensionInstanceView
+### Properties
+* **name**: string: The machine extension name.
+* **status**: [MachineExtensionInstanceViewStatus](#machineextensioninstanceviewstatus): Instance view status.
+* **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
+* **typeHandlerVersion**: string: Specifies the version of the script handler.
+
+## MachineExtensionInstanceViewStatus
+### Properties
+* **code**: string: The status code.
+* **displayStatus**: string: The short localizable label for the status.
+* **level**: 'Error' | 'Info' | 'Warning' | string: The level code.
+* **message**: string: The detailed status message, including for alerts and error messages.
+* **time**: string: The time of the status.
+
+## MachineExtensionProperties
+### Properties
+* **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+* **enableAutomaticUpgrade**: bool: Indicates whether the extension should be automatically upgraded by the platform if there is a newer version available.
+* **forceUpdateTag**: string: How the extension handler should be forced to update even if the extension configuration has not changed.
+* **instanceView**: [MachineExtensionInstanceView](#machineextensioninstanceview): Describes the Machine Extension Instance View.
+* **protectedSettings**: any: Any object
+* **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
+* **publisher**: string: The name of the extension handler publisher.
+* **settings**: any: Any object
+* **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
+* **typeHandlerVersion**: string: Specifies the version of the script handler.
 
 ## MachineProperties
 ### Properties
@@ -83,65 +162,6 @@
 * **vmId**: string: Specifies the hybrid machine unique ID.
 * **vmUuid**: string (ReadOnly): Specifies the Arc Machine's unique SMBIOS ID
 
-## AgentConfiguration
-### Properties
-* **extensionsAllowList**: [ConfigurationExtension](#configurationextension)[] (ReadOnly): Array of extensions that are allowed to be installed or updated.
-* **extensionsBlockList**: [ConfigurationExtension](#configurationextension)[] (ReadOnly): Array of extensions that are blocked (cannot be installed or updated)
-* **extensionsEnabled**: string (ReadOnly): Specifies whether the extension service is enabled or disabled.
-* **guestConfigurationEnabled**: string (ReadOnly): Specified whether the guest configuration service is enabled or disabled.
-* **incomingConnectionsPorts**: string[] (ReadOnly): Specifies the list of ports that the agent will be able to listen on.
-* **proxyBypass**: string[] (ReadOnly): List of service names which should not use the specified proxy server.
-* **proxyUrl**: string (ReadOnly): Specifies the URL of the proxy to be used.
-
-## ConfigurationExtension
-### Properties
-* **publisher**: string (ReadOnly): Publisher of the extension.
-* **type**: string (ReadOnly): Type of the extension.
-
-## CloudMetadata
-### Properties
-* **provider**: string (ReadOnly): Specifies the cloud provider (Azure/AWS/GCP...).
-
-## DetectedProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ErrorDetail
-### Properties
-* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
-* **code**: string (ReadOnly): The error code.
-* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
-* **message**: string (ReadOnly): The error message.
-* **target**: string (ReadOnly): The error target.
-
-## ErrorAdditionalInfo
-### Properties
-* **info**: any (ReadOnly): Any object
-* **type**: string (ReadOnly): The additional info type.
-
-## MachineExtensionInstanceView
-### Properties
-* **name**: string: The machine extension name.
-* **status**: [MachineExtensionInstanceViewStatus](#machineextensioninstanceviewstatus): Instance view status.
-* **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
-* **typeHandlerVersion**: string: Specifies the version of the script handler.
-
-## MachineExtensionInstanceViewStatus
-### Properties
-* **code**: string: The status code.
-* **displayStatus**: string: The short localizable label for the status.
-* **level**: 'Error' | 'Info' | 'Warning' | string: The level code.
-* **message**: string: The detailed status message, including for alerts and error messages.
-* **time**: string: The time of the status.
-
-## LocationData
-### Properties
-* **city**: string: The city or locality where the resource is located.
-* **countryOrRegion**: string: The country or region where the resource is located
-* **district**: string: The district, state, or province where the resource is located.
-* **name**: string (Required): A canonical name for the geographic or physical location.
-
 ## OSProfile
 ### Properties
 * **computerName**: string (ReadOnly): Specifies the host OS name of the hybrid machine.
@@ -152,63 +172,14 @@
 ### Properties
 * **patchSettings**: [PatchSettings](#patchsettings): Specifies the patch settings.
 
-## PatchSettings
-### Properties
-* **assessmentMode**: 'AutomaticByPlatform' | 'ImageDefault' | string: Specifies the assessment mode.
-* **patchMode**: 'AutomaticByOS' | 'AutomaticByPlatform' | 'ImageDefault' | 'Manual' | string: Specifies the patch mode.
-
 ## OSProfileWindowsConfiguration
 ### Properties
 * **patchSettings**: [PatchSettings](#patchsettings): Specifies the patch settings.
 
-## ServiceStatuses
+## PatchSettings
 ### Properties
-* **extensionService**: [ServiceStatus](#servicestatus): Describes the status and behavior of a service.
-* **guestConfigurationService**: [ServiceStatus](#servicestatus): Describes the status and behavior of a service.
-
-## ServiceStatus
-### Properties
-* **startupType**: string: The behavior of the service when the Arc-enabled machine starts up.
-* **status**: string: The current status of the service.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## MachineExtensionProperties
-### Properties
-* **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-* **enableAutomaticUpgrade**: bool: Indicates whether the extension should be automatically upgraded by the platform if there is a newer version available.
-* **forceUpdateTag**: string: How the extension handler should be forced to update even if the extension configuration has not changed.
-* **instanceView**: [MachineExtensionInstanceView](#machineextensioninstanceview): Describes the Machine Extension Instance View.
-* **protectedSettings**: any: Any object
-* **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
-* **publisher**: string: The name of the extension handler publisher.
-* **settings**: any: Any object
-* **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
-* **typeHandlerVersion**: string: Specifies the version of the script handler.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## HybridComputePrivateLinkScopeProperties
-### Properties
-* **privateEndpointConnections**: [PrivateEndpointConnectionDataModel](#privateendpointconnectiondatamodel)[] (ReadOnly): The collection of associated Private Endpoint Connections.
-* **privateLinkScopeId**: string (ReadOnly): The Guid id of the private link scope.
-* **provisioningState**: string (ReadOnly): Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: The network access policy to determine if Azure Arc agents can use public Azure Arc service endpoints. Defaults to disabled (access to Azure Arc services only via private link).
+* **assessmentMode**: 'AutomaticByPlatform' | 'ImageDefault' | string: Specifies the assessment mode.
+* **patchMode**: 'AutomaticByOS' | 'AutomaticByPlatform' | 'ImageDefault' | 'Manual' | string: Specifies the patch mode.
 
 ## PrivateEndpointConnectionDataModel
 ### Properties
@@ -228,13 +199,42 @@
 ### Properties
 * **id**: string: Resource id of the private endpoint.
 
+## PrivateLinkScopesResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## PrivateLinkServiceConnectionStateProperty
 ### Properties
 * **actionsRequired**: string (ReadOnly): The actions required for private link service connection.
 * **description**: string (Required): The private link service connection description.
 * **status**: string (Required): The private link service connection status.
 
-## PrivateLinkScopesResourceTags
+## ServiceStatus
+### Properties
+* **startupType**: string: The behavior of the service when the Arc-enabled machine starts up.
+* **status**: string: The current status of the service.
+
+## ServiceStatuses
+### Properties
+* **extensionService**: [ServiceStatus](#servicestatus): Describes the status and behavior of a service.
+* **guestConfigurationService**: [ServiceStatus](#servicestatus): Describes the status and behavior of a service.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

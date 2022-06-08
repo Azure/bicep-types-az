@@ -12,6 +12,11 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'microsoft.insights/workbooks' (ReadOnly, DeployTimeConstant): The resource type
 
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## WorkbookProperties
 ### Properties
 * **category**: string (Required): Workbook category, as defined by the user at creation time.
@@ -22,9 +27,4 @@
 * **timeModified**: string (ReadOnly): Date and time in UTC of the last modification that was made to this workbook definition.
 * **userId**: string (ReadOnly): Unique user id of the specific user that owns this workbook.
 * **version**: string: Workbook version
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

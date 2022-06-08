@@ -22,6 +22,33 @@
 * **tags**: [ResourceGroupTags](#resourcegrouptags): The tags attached to the resource group.
 * **type**: 'Microsoft.Resources/resourceGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## AliasPathType
+### Properties
+* **apiVersions**: string[] (ReadOnly): The API versions.
+* **path**: string (ReadOnly): The path of an alias.
+
+## AliasType
+### Properties
+* **name**: string (ReadOnly): The alias name.
+* **paths**: [AliasPathType](#aliaspathtype)[] (ReadOnly): The paths for an alias.
+
+## BasicDependency
+### Properties
+* **id**: string (ReadOnly): The ID of the dependency.
+* **resourceName**: string (ReadOnly): The dependency resource name.
+* **resourceType**: string (ReadOnly): The dependency resource type.
+
+## DebugSetting
+### Properties
+* **detailLevel**: string: Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.
+
+## Dependency
+### Properties
+* **dependsOn**: [BasicDependency](#basicdependency)[] (ReadOnly): The list of dependencies.
+* **id**: string (ReadOnly): The ID of the dependency.
+* **resourceName**: string (ReadOnly): The dependency resource name.
+* **resourceType**: string (ReadOnly): The dependency resource type.
+
 ## DeploymentProperties
 ### Properties
 * **correlationId**: string (ReadOnly): The correlation ID of the deployment.
@@ -39,22 +66,10 @@
 * **templateLink**: [TemplateLink](#templatelink): Entity representing the reference to the template.
 * **timestamp**: string (ReadOnly): The timestamp of the template deployment.
 
-## DebugSetting
+## ErrorAdditionalInfo
 ### Properties
-* **detailLevel**: string: Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.
-
-## Dependency
-### Properties
-* **dependsOn**: [BasicDependency](#basicdependency)[] (ReadOnly): The list of dependencies.
-* **id**: string (ReadOnly): The ID of the dependency.
-* **resourceName**: string (ReadOnly): The dependency resource name.
-* **resourceType**: string (ReadOnly): The dependency resource type.
-
-## BasicDependency
-### Properties
-* **id**: string (ReadOnly): The ID of the dependency.
-* **resourceName**: string (ReadOnly): The dependency resource name.
-* **resourceType**: string (ReadOnly): The dependency resource type.
+* **info**: any (ReadOnly): Any object
+* **type**: string (ReadOnly): The additional info type.
 
 ## ErrorResponse
 ### Properties
@@ -63,11 +78,6 @@
 * **details**: [ErrorResponse](#errorresponse)[] (ReadOnly): The error details.
 * **message**: string (ReadOnly): The error message.
 * **target**: string (ReadOnly): The error target.
-
-## ErrorAdditionalInfo
-### Properties
-* **info**: any (ReadOnly): Any object
-* **type**: string (ReadOnly): The additional info type.
 
 ## OnErrorDeployment
 ### Properties
@@ -98,30 +108,10 @@
 * **resourceType**: string (ReadOnly): The resource type.
 * **zoneMappings**: [ZoneMapping](#zonemapping)[] (ReadOnly): Array of ZoneMapping
 
-## AliasType
-### Properties
-* **name**: string (ReadOnly): The alias name.
-* **paths**: [AliasPathType](#aliaspathtype)[] (ReadOnly): The paths for an alias.
-
-## AliasPathType
-### Properties
-* **apiVersions**: string[] (ReadOnly): The API versions.
-* **path**: string (ReadOnly): The path of an alias.
-
 ## ProviderResourceTypeProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## ZoneMapping
-### Properties
-* **location**: string (ReadOnly): The location of the zone mapping.
-* **zones**: string[] (ReadOnly): Array of ZoneMappingZonesItem
-
-## TemplateLink
-### Properties
-* **contentVersion**: string: If included, must match the ContentVersion in the template.
-* **uri**: string (Required): The URI of the template to deploy.
 
 ## ResourceGroupProperties
 ### Properties
@@ -131,4 +121,14 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TemplateLink
+### Properties
+* **contentVersion**: string: If included, must match the ContentVersion in the template.
+* **uri**: string (Required): The URI of the template to deploy.
+
+## ZoneMapping
+### Properties
+* **location**: string (ReadOnly): The location of the zone mapping.
+* **zones**: string[] (ReadOnly): Array of ZoneMappingZonesItem
 

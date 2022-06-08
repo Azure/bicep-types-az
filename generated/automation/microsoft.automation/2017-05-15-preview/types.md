@@ -36,6 +36,28 @@
 * **properties**: [SourceControlSyncJobCreateProperties](#sourcecontrolsyncjobcreateproperties) (Required): Definition of create source control sync job properties.
 * **type**: 'Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs' (ReadOnly, DeployTimeConstant): The resource type
 
+## AdvancedSchedule
+### Properties
+* **monthDays**: int[]: Days of the month that the job should execute on. Must be between 1 and 31.
+* **monthlyOccurrences**: [AdvancedScheduleMonthlyOccurrence](#advancedschedulemonthlyoccurrence)[]: Occurrences of days within a month.
+* **weekDays**: string[]: Days of the week that the job should execute on.
+
+## AdvancedScheduleMonthlyOccurrence
+### Properties
+* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string: Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+* **occurrence**: int: Occurrence of the week within the month. Must be between 1 and 5
+
+## AzureQueryProperties
+### Properties
+* **locations**: string[]: List of locations to scope the query to.
+* **scope**: string[]: List of Subscription or Resource Group ARM Ids.
+* **tagSettings**: [TagSettingsProperties](#tagsettingsproperties): Tag filter information for the VM.
+
+## ErrorResponse
+### Properties
+* **code**: string: Error code
+* **message**: string: Error message indicating why the operation failed.
+
 ## JobCreateProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Gets or sets the creation time of the job.
@@ -58,26 +80,21 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## LinuxProperties
+### Properties
+* **excludedPackageNameMasks**: string[]: packages excluded from the software update configuration.
+* **includedPackageClassifications**: 'Critical' | 'Other' | 'Security' | 'Unclassified' | string: Update classifications included in the software update configuration.
+* **includedPackageNameMasks**: string[]: packages included from the software update configuration.
+* **rebootSetting**: string: Reboot setting for the software update configuration.
+
+## NonAzureQueryProperties
+### Properties
+* **functionAlias**: string: Log Analytics Saved Search name.
+* **workspaceId**: string: Workspace Id for Log Analytics in which the saved Search is resided.
+
 ## RunbookAssociationProperty
 ### Properties
 * **name**: string: Gets or sets the name of the runbook.
-
-## SoftwareUpdateConfigurationProperties
-### Properties
-* **createdBy**: string (ReadOnly): CreatedBy property, which only appears in the response.
-* **creationTime**: string (ReadOnly): Creation time of the resource, which only appears in the response.
-* **error**: [ErrorResponse](#errorresponse): Error response of an operation failure
-* **lastModifiedBy**: string (ReadOnly): LastModifiedBy property, which only appears in the response.
-* **lastModifiedTime**: string (ReadOnly): Last time resource was modified, which only appears in the response.
-* **provisioningState**: string (ReadOnly): Provisioning state for the software update configuration, which only appears in the response.
-* **scheduleInfo**: [ScheduleProperties](#scheduleproperties) (Required): Definition of schedule parameters.
-* **tasks**: [SoftwareUpdateConfigurationTasks](#softwareupdateconfigurationtasks): Task properties of the software update configuration.
-* **updateConfiguration**: [UpdateConfiguration](#updateconfiguration) (Required): Update specific properties of the software update configuration.
-
-## ErrorResponse
-### Properties
-* **code**: string: Error code
-* **message**: string: Error message indicating why the operation failed.
 
 ## ScheduleProperties
 ### Properties
@@ -96,81 +113,22 @@
 * **startTimeOffsetMinutes**: int (ReadOnly): Gets the start time's offset in minutes.
 * **timeZone**: string: Gets or sets the time zone of the schedule.
 
-## AdvancedSchedule
+## SoftwareUpdateConfigurationProperties
 ### Properties
-* **monthDays**: int[]: Days of the month that the job should execute on. Must be between 1 and 31.
-* **monthlyOccurrences**: [AdvancedScheduleMonthlyOccurrence](#advancedschedulemonthlyoccurrence)[]: Occurrences of days within a month.
-* **weekDays**: string[]: Days of the week that the job should execute on.
-
-## AdvancedScheduleMonthlyOccurrence
-### Properties
-* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string: Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
-* **occurrence**: int: Occurrence of the week within the month. Must be between 1 and 5
+* **createdBy**: string (ReadOnly): CreatedBy property, which only appears in the response.
+* **creationTime**: string (ReadOnly): Creation time of the resource, which only appears in the response.
+* **error**: [ErrorResponse](#errorresponse): Error response of an operation failure
+* **lastModifiedBy**: string (ReadOnly): LastModifiedBy property, which only appears in the response.
+* **lastModifiedTime**: string (ReadOnly): Last time resource was modified, which only appears in the response.
+* **provisioningState**: string (ReadOnly): Provisioning state for the software update configuration, which only appears in the response.
+* **scheduleInfo**: [ScheduleProperties](#scheduleproperties) (Required): Definition of schedule parameters.
+* **tasks**: [SoftwareUpdateConfigurationTasks](#softwareupdateconfigurationtasks): Task properties of the software update configuration.
+* **updateConfiguration**: [UpdateConfiguration](#updateconfiguration) (Required): Update specific properties of the software update configuration.
 
 ## SoftwareUpdateConfigurationTasks
 ### Properties
 * **postTask**: [TaskProperties](#taskproperties): Task properties of the software update configuration.
 * **preTask**: [TaskProperties](#taskproperties): Task properties of the software update configuration.
-
-## TaskProperties
-### Properties
-* **parameters**: [TaskPropertiesParameters](#taskpropertiesparameters): Gets or sets the parameters of the task.
-* **source**: string: Gets or sets the name of the runbook.
-
-## TaskPropertiesParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## UpdateConfiguration
-### Properties
-* **azureVirtualMachines**: string[]: List of azure resource Ids for azure virtual machines targeted by the software update configuration.
-* **duration**: string: Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
-* **linux**: [LinuxProperties](#linuxproperties): Linux specific update configuration.
-* **nonAzureComputerNames**: string[]: List of names of non-azure machines targeted by the software update configuration.
-* **operatingSystem**: 'Linux' | 'Windows' (Required): Target operating system for the software update configuration.
-* **targets**: [TargetProperties](#targetproperties): Group specific to the update configuration.
-* **windows**: [WindowsProperties](#windowsproperties): Windows specific update configuration.
-
-## LinuxProperties
-### Properties
-* **excludedPackageNameMasks**: string[]: packages excluded from the software update configuration.
-* **includedPackageClassifications**: 'Critical' | 'Other' | 'Security' | 'Unclassified' | string: Update classifications included in the software update configuration.
-* **includedPackageNameMasks**: string[]: packages included from the software update configuration.
-* **rebootSetting**: string: Reboot setting for the software update configuration.
-
-## TargetProperties
-### Properties
-* **azureQueries**: [AzureQueryProperties](#azurequeryproperties)[]: List of Azure queries in the software update configuration.
-* **nonAzureQueries**: [NonAzureQueryProperties](#nonazurequeryproperties)[]: List of non Azure queries in the software update configuration.
-
-## AzureQueryProperties
-### Properties
-* **locations**: string[]: List of locations to scope the query to.
-* **scope**: string[]: List of Subscription or Resource Group ARM Ids.
-* **tagSettings**: [TagSettingsProperties](#tagsettingsproperties): Tag filter information for the VM.
-
-## TagSettingsProperties
-### Properties
-* **filterOperator**: 'All' | 'Any': Filter VMs by Any or All specified tags.
-* **tags**: [TagSettingsPropertiesTags](#tagsettingspropertiestags): Dictionary of tags with its list of values.
-
-## TagSettingsPropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string[]
-
-## NonAzureQueryProperties
-### Properties
-* **functionAlias**: string: Log Analytics Saved Search name.
-* **workspaceId**: string: Workspace Id for Log Analytics in which the saved Search is resided.
-
-## WindowsProperties
-### Properties
-* **excludedKbNumbers**: string[]: KB numbers excluded from the software update configuration.
-* **includedKbNumbers**: string[]: KB numbers included from the software update configuration.
-* **includedUpdateClassifications**: 'Critical' | 'Definition' | 'FeaturePack' | 'Security' | 'ServicePack' | 'Tools' | 'Unclassified' | 'UpdateRollup' | 'Updates' | string: Update classification included in the software update configuration. A comma separated string with required values
-* **rebootSetting**: string: Reboot setting for the software update configuration.
 
 ## SourceControlCreateOrUpdateProperties
 ### Properties
@@ -201,4 +159,46 @@
 * **sourceControlSyncJobId**: string (ReadOnly): The source control sync job id.
 * **startTime**: string (ReadOnly): The start time of the job.
 * **syncType**: 'FullSync' | 'PartialSync' | string (ReadOnly): The sync type.
+
+## TagSettingsProperties
+### Properties
+* **filterOperator**: 'All' | 'Any': Filter VMs by Any or All specified tags.
+* **tags**: [TagSettingsPropertiesTags](#tagsettingspropertiestags): Dictionary of tags with its list of values.
+
+## TagSettingsPropertiesTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string[]
+
+## TargetProperties
+### Properties
+* **azureQueries**: [AzureQueryProperties](#azurequeryproperties)[]: List of Azure queries in the software update configuration.
+* **nonAzureQueries**: [NonAzureQueryProperties](#nonazurequeryproperties)[]: List of non Azure queries in the software update configuration.
+
+## TaskProperties
+### Properties
+* **parameters**: [TaskPropertiesParameters](#taskpropertiesparameters): Gets or sets the parameters of the task.
+* **source**: string: Gets or sets the name of the runbook.
+
+## TaskPropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## UpdateConfiguration
+### Properties
+* **azureVirtualMachines**: string[]: List of azure resource Ids for azure virtual machines targeted by the software update configuration.
+* **duration**: string: Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
+* **linux**: [LinuxProperties](#linuxproperties): Linux specific update configuration.
+* **nonAzureComputerNames**: string[]: List of names of non-azure machines targeted by the software update configuration.
+* **operatingSystem**: 'Linux' | 'Windows' (Required): Target operating system for the software update configuration.
+* **targets**: [TargetProperties](#targetproperties): Group specific to the update configuration.
+* **windows**: [WindowsProperties](#windowsproperties): Windows specific update configuration.
+
+## WindowsProperties
+### Properties
+* **excludedKbNumbers**: string[]: KB numbers excluded from the software update configuration.
+* **includedKbNumbers**: string[]: KB numbers included from the software update configuration.
+* **includedUpdateClassifications**: 'Critical' | 'Definition' | 'FeaturePack' | 'Security' | 'ServicePack' | 'Tools' | 'Unclassified' | 'UpdateRollup' | 'Updates' | string: Update classification included in the software update configuration. A comma separated string with required values
+* **rebootSetting**: string: Reboot setting for the software update configuration.
 

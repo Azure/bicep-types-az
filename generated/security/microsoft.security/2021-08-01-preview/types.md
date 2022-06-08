@@ -28,6 +28,14 @@
 * **tags**: [Tags](#tags): A list of key value pairs that describe the resource.
 * **type**: 'Microsoft.Security/standards' (ReadOnly, DeployTimeConstant): The resource type
 
+## AssignedComponentItem
+### Properties
+* **key**: string: unique key to a security assessment object
+
+## AssignedStandardItem
+### Properties
+* **id**: string: full resourceId of the Microsoft.Security/standard object
+
 ## AssignmentProperties
 ### Properties
 * **additionalData**: [AssignmentPropertiesAdditionalData](#assignmentpropertiesadditionaldata): Additional data about the assignment
@@ -44,13 +52,18 @@
 ### Properties
 * **exemptionCategory**: string: Exemption category of this assignment
 
-## AssignedComponentItem
+## StandardComponentProperties
 ### Properties
-* **key**: string: unique key to a security assessment object
+* **key**: string: Component Key matching componentMetadata
 
-## AssignedStandardItem
+## StandardProperties
 ### Properties
-* **id**: string: full resourceId of the Microsoft.Security/standard object
+* **category**: string: category of the standard provided
+* **components**: [StandardComponentProperties](#standardcomponentproperties)[]: List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
+* **description**: string: description of the standard
+* **displayName**: string: display name of the standard, equivalent to the standardId
+* **standardType**: string (ReadOnly): standard type (Custom or BuiltIn only currently)
+* **supportedClouds**: 'AWS' | 'GCP'[]: List of all standard supported clouds.
 
 ## SystemData
 ### Properties
@@ -65,19 +78,6 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## StandardProperties
-### Properties
-* **category**: string: category of the standard provided
-* **components**: [StandardComponentProperties](#standardcomponentproperties)[]: List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
-* **description**: string: description of the standard
-* **displayName**: string: display name of the standard, equivalent to the standardId
-* **standardType**: string (ReadOnly): standard type (Custom or BuiltIn only currently)
-* **supportedClouds**: 'AWS' | 'GCP'[]: List of all standard supported clouds.
-
-## StandardComponentProperties
-### Properties
-* **key**: string: Component Key matching componentMetadata
 
 ## Tags
 ### Properties

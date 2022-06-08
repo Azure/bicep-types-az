@@ -9,6 +9,14 @@
 * **properties**: [SubscriptionFeatureRegistrationProperties](#subscriptionfeatureregistrationproperties)
 * **type**: 'Microsoft.Features/featureProviders/subscriptionFeatureRegistrations' (ReadOnly, DeployTimeConstant): The resource type
 
+## AuthorizationProfile
+### Properties
+* **approvedTime**: string (ReadOnly): The approved time
+* **approver**: string (ReadOnly): The approver
+* **requestedTime**: string (ReadOnly): The requested time
+* **requester**: string (ReadOnly): The requester
+* **requesterObjectId**: string (ReadOnly): The requester object id
+
 ## SubscriptionFeatureRegistrationProperties
 ### Properties
 * **approvalType**: 'ApprovalRequired' | 'AutoApproval' | 'NotSpecified' | string (ReadOnly): The feature approval type.
@@ -25,14 +33,6 @@
 * **state**: 'NotRegistered' | 'NotSpecified' | 'Pending' | 'Registered' | 'Registering' | 'Unregistered' | 'Unregistering' | string: The state.
 * **subscriptionId**: string (ReadOnly): The subscriptionId.
 * **tenantId**: string (ReadOnly): The tenantId.
-
-## AuthorizationProfile
-### Properties
-* **approvedTime**: string (ReadOnly): The approved time
-* **approver**: string (ReadOnly): The approver
-* **requestedTime**: string (ReadOnly): The requested time
-* **requester**: string (ReadOnly): The requester
-* **requesterObjectId**: string (ReadOnly): The requester object id
 
 ## SubscriptionFeatureRegistrationPropertiesMetadata
 ### Properties

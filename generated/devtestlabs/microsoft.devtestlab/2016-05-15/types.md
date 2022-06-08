@@ -202,25 +202,53 @@
 * **ApiVersion**: 2016-05-15
 * **Output**: [ResponseWithContinuationLabVhd](#responsewithcontinuationlabvhd)
 
-## LabProperties
+## ApplicableSchedule
 ### Properties
-* **artifactsStorageAccount**: string (ReadOnly): The lab's artifact storage account.
-* **createdDate**: string (ReadOnly): The creation date of the lab.
-* **defaultPremiumStorageAccount**: string (ReadOnly): The lab's default premium storage account.
-* **defaultStorageAccount**: string (ReadOnly): The lab's default storage account.
-* **labStorageType**: 'Premium' | 'Standard' | string: The storage type for the disk (i.e. Standard, Premium).
-* **premiumDataDisks**: 'Disabled' | 'Enabled' | string: The setting to enable usage of premium data disks.
-When its value is 'Enabled', creation of standard or premium data disks is allowed.
-When its value is 'Disabled', only creation of standard data disks is allowed.
-* **premiumDataDiskStorageAccount**: string (ReadOnly): The lab's premium data disk storage account.
-* **provisioningState**: string: The provisioning status of the resource.
-* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
-* **vaultName**: string (ReadOnly): The lab's Key vault.
+* **id**: string (ReadOnly): The identifier of the resource.
+* **location**: string: The location of the resource.
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [ApplicableScheduleProperties](#applicablescheduleproperties) (Required): Properties of a schedules applicable to a virtual machine.
+* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **type**: string (ReadOnly): The type of the resource.
 
-## ResourceTags
+## ApplicableSchedule
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **id**: string (ReadOnly): The identifier of the resource.
+* **location**: string: The location of the resource.
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [ApplicableScheduleProperties](#applicablescheduleproperties) (Required): Properties of a schedules applicable to a virtual machine.
+* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **type**: string (ReadOnly): The type of the resource.
+
+## ApplicableScheduleProperties
+### Properties
+* **labVmsShutdown**: [Schedule](#schedule): A schedule.
+* **labVmsStartup**: [Schedule](#schedule): A schedule.
+
+## ArmTemplateParameterProperties
+### Properties
+* **name**: string: The name of the template parameter.
+* **value**: string: The value of the template parameter.
+
+## ArtifactDeploymentStatusProperties
+### Properties
+* **artifactsApplied**: int: The total count of the artifacts that were successfully applied.
+* **deploymentStatus**: string: The deployment status of the artifact.
+* **totalArtifacts**: int: The total count of the artifacts that were tentatively applied.
+
+## ArtifactInstallProperties
+### Properties
+* **artifactId**: string: The artifact's identifier.
+* **deploymentStatusMessage**: string: The status message from the deployment.
+* **installTime**: string: The time that the artifact starts to install on the virtual machine.
+* **parameters**: [ArtifactParameterProperties](#artifactparameterproperties)[]: The parameters of the artifact.
+* **status**: string: The status of the artifact.
+* **vmExtensionStatusMessage**: string: The status message from the virtual machine extension.
+
+## ArtifactParameterProperties
+### Properties
+* **name**: string: The name of the artifact parameter.
+* **value**: string: The value of the artifact parameter.
 
 ## ArtifactSourceProperties
 ### Properties
@@ -236,54 +264,32 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
 * **uri**: string: The artifact source's URI.
 
-## ResourceTags
+## BulkCreationParameters
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **instanceCount**: int: The number of virtual machine instances to create.
 
-## LabCostProperties
+## ComputeDataDisk
 ### Properties
-* **createdDate**: string: The creation date of the cost.
-* **currencyCode**: string: The currency code of the cost.
-* **endDateTime**: string: The end time of the cost data.
-* **labCostDetails**: [LabCostDetailsProperties](#labcostdetailsproperties)[] (ReadOnly): The lab cost details component of the cost data.
-* **labCostSummary**: [LabCostSummaryProperties](#labcostsummaryproperties) (ReadOnly): The properties of the cost summary.
-* **provisioningState**: string: The provisioning status of the resource.
-* **resourceCosts**: [LabResourceCostProperties](#labresourcecostproperties)[] (ReadOnly): The resource cost component of the cost data.
-* **startDateTime**: string: The start time of the cost data.
-* **targetCost**: [TargetCostProperties](#targetcostproperties): Properties of a cost target.
-* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
+* **diskSizeGiB**: int: Gets data disk size in GiB.
+* **diskUri**: string: When backed by a blob, the URI of underlying blob.
+* **managedDiskId**: string: When backed by managed disk, this is the ID of the compute disk resource.
+* **name**: string: Gets data disk name.
 
-## LabCostDetailsProperties
+## ComputeVmInstanceViewStatus
 ### Properties
-* **cost**: int: The cost component of the cost item.
-* **costType**: 'Projected' | 'Reported' | 'Unavailable' | string: The type of the cost.
-* **date**: string: The date of the cost item.
+* **code**: string: Gets the status Code.
+* **displayStatus**: string: Gets the short localizable label for the status.
+* **message**: string: Gets the message associated with the status.
 
-## LabCostSummaryProperties
+## ComputeVmProperties
 ### Properties
-* **estimatedLabCost**: int: The cost component of the cost item.
-
-## LabResourceCostProperties
-### Properties
-* **externalResourceId**: string: The ID of the external resource
-* **resourceCost**: int: The cost component of the resource cost item.
-* **resourceId**: string: The ID of the resource
-* **resourcename**: string: The name of the resource.
-* **resourceOwner**: string: The owner of the resource (ex. janedoe@microsoft.com)
-* **resourcePricingTier**: string: The category of the resource (ex. Premium_LRS, Standard_DS1)
-* **resourceStatus**: string: The status of the resource (ex. Active)
-* **resourceType**: string: The logical resource type (ex. virtualmachine, storageaccount)
-* **resourceUId**: string: The unique identifier of the resource.
-
-## TargetCostProperties
-### Properties
-* **costThresholds**: [CostThresholdProperties](#costthresholdproperties)[]: Cost thresholds.
-* **cycleEndDateTime**: string: Reporting cycle end date.
-* **cycleStartDateTime**: string: Reporting cycle start date.
-* **cycleType**: 'CalendarMonth' | 'Custom' | string: Reporting cycle type.
-* **status**: 'Disabled' | 'Enabled' | string: Target cost status
-* **target**: int: Lab target cost
+* **dataDiskIds**: string[]: Gets data disks blob uri for the virtual machine.
+* **dataDisks**: [ComputeDataDisk](#computedatadisk)[]: Gets all data disks attached to the virtual machine.
+* **networkInterfaceId**: string: Gets the network interface ID of the virtual machine.
+* **osDiskId**: string: Gets OS disk blob uri for the virtual machine.
+* **osType**: string: Gets the OS type of the virtual machine.
+* **statuses**: [ComputeVmInstanceViewStatus](#computevminstanceviewstatus)[]: Gets the statuses of the virtual machine.
+* **vmSize**: string: Gets the size of the virtual machine.
 
 ## CostThresholdProperties
 ### Properties
@@ -292,15 +298,6 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **percentageThreshold**: [PercentageCostThresholdProperties](#percentagecostthresholdproperties): Properties of a percentage cost threshold.
 * **sendNotificationWhenExceeded**: 'Disabled' | 'Enabled' | string: Indicates whether this threshold will be displayed on cost charts.
 * **thresholdId**: string: The ID of the cost threshold item.
-
-## PercentageCostThresholdProperties
-### Properties
-* **thresholdValue**: int: The cost threshold value.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## CustomImageProperties
 ### Properties
@@ -325,18 +322,45 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **sourceVmId**: string: The source vm identifier.
 * **windowsOsInfo**: [WindowsOsInfo](#windowsosinfo): Information about a Windows OS.
 
-## LinuxOsInfo
+## DayDetails
 ### Properties
-* **linuxOsState**: 'DeprovisionApplied' | 'DeprovisionRequested' | 'NonDeprovisioned' | string: The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
+* **time**: string: The time of day the schedule will occur.
 
-## WindowsOsInfo
+## DiskProperties
 ### Properties
-* **windowsOsState**: 'NonSysprepped' | 'SysprepApplied' | 'SysprepRequested' | string: The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
+* **createdDate**: string (ReadOnly): The creation date of the disk.
+* **diskBlobName**: string: When backed by a blob, the name of the VHD blob without extension.
+* **diskSizeGiB**: int: The size of the disk in Gibibytes.
+* **diskType**: 'Premium' | 'Standard' | string: The storage type for the disk (i.e. Standard, Premium).
+* **diskUri**: string: When backed by a blob, the URI of underlying blob.
+* **hostCaching**: string: The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).
+* **leasedByLabVmId**: string: The resource ID of the VM to which this disk is leased.
+* **managedDiskId**: string: When backed by managed disk, this is the ID of the compute disk resource.
+* **provisioningState**: string: The provisioning status of the resource.
+* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
 
-## ResourceTags
+## EnvironmentDeploymentProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **armTemplateId**: string: The Azure Resource Manager template's identifier.
+* **parameters**: [ArmTemplateParameterProperties](#armtemplateparameterproperties)[]: The parameters of the Azure Resource Manager template.
+
+## EnvironmentProperties
+### Properties
+* **armTemplateDisplayName**: string: The display name of the Azure Resource Manager template that produced the environment.
+* **createdByUser**: string (ReadOnly): The creator of the environment.
+* **deploymentProperties**: [EnvironmentDeploymentProperties](#environmentdeploymentproperties): Properties of an environment deployment.
+* **provisioningState**: string: The provisioning status of the resource.
+* **resourceGroupId**: string (ReadOnly): The identifier of the resource group containing the environment's resources.
+* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
+
+## Event
+### Properties
+* **eventName**: 'AutoShutdown' | 'Cost' | string: The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
+
+## ExternalSubnet
+### Properties
+* **id**: string: Gets or sets the identifier.
+* **name**: string: Gets or sets the name.
 
 ## FormulaProperties
 ### Properties
@@ -348,6 +372,89 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **provisioningState**: string: The provisioning status of the resource.
 * **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
 * **vm**: [FormulaPropertiesFromVm](#formulapropertiesfromvm): Information about a VM from which a formula is to be created.
+
+## FormulaPropertiesFromVm
+### Properties
+* **labVmId**: string: The identifier of the VM from which a formula is to be created.
+
+## GalleryImageReference
+### Properties
+* **offer**: string: The offer of the gallery image.
+* **osType**: string: The OS type of the gallery image.
+* **publisher**: string: The publisher of the gallery image.
+* **sku**: string: The SKU of the gallery image.
+* **version**: string: The version of the gallery image.
+
+## HourDetails
+### Properties
+* **minute**: int: Minutes of the hour the schedule will run.
+
+## IdentityProperties
+### Properties
+* **clientSecretUrl**: string: The client secret URL of the identity.
+* **principalId**: string: The principal id of resource identity.
+* **tenantId**: string: The tenant identifier of resource.
+* **type**: string: Managed identity.
+
+## InboundNatRule
+### Properties
+* **backendPort**: int: The port to which the external traffic will be redirected.
+* **frontendPort**: int: The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.
+* **transportProtocol**: 'Tcp' | 'Udp' | string: The transport protocol for the endpoint.
+
+## LabCostDetailsProperties
+### Properties
+* **cost**: int: The cost component of the cost item.
+* **costType**: 'Projected' | 'Reported' | 'Unavailable' | string: The type of the cost.
+* **date**: string: The date of the cost item.
+
+## LabCostProperties
+### Properties
+* **createdDate**: string: The creation date of the cost.
+* **currencyCode**: string: The currency code of the cost.
+* **endDateTime**: string: The end time of the cost data.
+* **labCostDetails**: [LabCostDetailsProperties](#labcostdetailsproperties)[] (ReadOnly): The lab cost details component of the cost data.
+* **labCostSummary**: [LabCostSummaryProperties](#labcostsummaryproperties) (ReadOnly): The properties of the cost summary.
+* **provisioningState**: string: The provisioning status of the resource.
+* **resourceCosts**: [LabResourceCostProperties](#labresourcecostproperties)[] (ReadOnly): The resource cost component of the cost data.
+* **startDateTime**: string: The start time of the cost data.
+* **targetCost**: [TargetCostProperties](#targetcostproperties): Properties of a cost target.
+* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
+
+## LabCostSummaryProperties
+### Properties
+* **estimatedLabCost**: int: The cost component of the cost item.
+
+## LabProperties
+### Properties
+* **artifactsStorageAccount**: string (ReadOnly): The lab's artifact storage account.
+* **createdDate**: string (ReadOnly): The creation date of the lab.
+* **defaultPremiumStorageAccount**: string (ReadOnly): The lab's default premium storage account.
+* **defaultStorageAccount**: string (ReadOnly): The lab's default storage account.
+* **labStorageType**: 'Premium' | 'Standard' | string: The storage type for the disk (i.e. Standard, Premium).
+* **premiumDataDisks**: 'Disabled' | 'Enabled' | string: The setting to enable usage of premium data disks.
+When its value is 'Enabled', creation of standard or premium data disks is allowed.
+When its value is 'Disabled', only creation of standard data disks is allowed.
+* **premiumDataDiskStorageAccount**: string (ReadOnly): The lab's premium data disk storage account.
+* **provisioningState**: string: The provisioning status of the resource.
+* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
+* **vaultName**: string (ReadOnly): The lab's Key vault.
+
+## LabResourceCostProperties
+### Properties
+* **externalResourceId**: string: The ID of the external resource
+* **resourceCost**: int: The cost component of the resource cost item.
+* **resourceId**: string: The ID of the resource
+* **resourcename**: string: The name of the resource.
+* **resourceOwner**: string: The owner of the resource (ex. janedoe@microsoft.com)
+* **resourcePricingTier**: string: The category of the resource (ex. Premium_LRS, Standard_DS1)
+* **resourceStatus**: string: The status of the resource (ex. Active)
+* **resourceType**: string: The logical resource type (ex. virtualmachine, storageaccount)
+* **resourceUId**: string: The unique identifier of the resource.
+
+## LabVhd
+### Properties
+* **id**: string (ReadOnly): The URI to the VHD.
 
 ## LabVirtualMachineCreationParameter
 ### Properties
@@ -390,290 +497,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **userName**: string: The user name of the virtual machine.
 * **virtualMachineCreationSource**: 'FromCustomImage' | 'FromGalleryImage' | string: Tells source of creation of lab virtual machine. Output property only.
 
-## ApplicableSchedule
-### Properties
-* **id**: string (ReadOnly): The identifier of the resource.
-* **location**: string: The location of the resource.
-* **name**: string (ReadOnly): The name of the resource.
-* **properties**: [ApplicableScheduleProperties](#applicablescheduleproperties) (Required): Properties of a schedules applicable to a virtual machine.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
-* **type**: string (ReadOnly): The type of the resource.
-
-## ApplicableScheduleProperties
-### Properties
-* **labVmsShutdown**: [Schedule](#schedule): A schedule.
-* **labVmsStartup**: [Schedule](#schedule): A schedule.
-
-## Schedule
-### Properties
-* **id**: string (ReadOnly): The identifier of the resource.
-* **location**: string: The location of the resource.
-* **name**: string (ReadOnly): The name of the resource.
-* **properties**: [ScheduleProperties](#scheduleproperties) (Required): Properties of a schedule.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
-* **type**: string (ReadOnly): The type of the resource.
-
-## ScheduleProperties
-### Properties
-* **createdDate**: string (ReadOnly): The creation date of the schedule.
-* **dailyRecurrence**: [DayDetails](#daydetails): Properties of a daily schedule.
-* **hourlyRecurrence**: [HourDetails](#hourdetails): Properties of an hourly schedule.
-* **notificationSettings**: [NotificationSettings](#notificationsettings): Notification settings for a schedule.
-* **provisioningState**: string: The provisioning status of the resource.
-* **status**: 'Disabled' | 'Enabled' | string: Indicates if the artifact source is enabled (values: Enabled, Disabled).
-* **targetResourceId**: string: The resource ID to which the schedule belongs
-* **taskType**: string: The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
-* **timeZoneId**: string: The time zone ID (e.g. Pacific Standard time).
-* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
-* **weeklyRecurrence**: [WeekDetails](#weekdetails): Properties of a weekly schedule.
-
-## DayDetails
-### Properties
-* **time**: string: The time of day the schedule will occur.
-
-## HourDetails
-### Properties
-* **minute**: int: Minutes of the hour the schedule will run.
-
-## NotificationSettings
-### Properties
-* **status**: 'Disabled' | 'Enabled' | string: If notifications are enabled for this schedule (i.e. Enabled, Disabled).
-* **timeInMinutes**: int: Time in minutes before event at which notification will be sent.
-* **webhookUrl**: string: The webhook URL to which the notification will be sent.
-
-## WeekDetails
-### Properties
-* **time**: string: The time of the day the schedule will occur.
-* **weekdays**: string[]: The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ArtifactDeploymentStatusProperties
-### Properties
-* **artifactsApplied**: int: The total count of the artifacts that were successfully applied.
-* **deploymentStatus**: string: The deployment status of the artifact.
-* **totalArtifacts**: int: The total count of the artifacts that were tentatively applied.
-
-## ArtifactInstallProperties
-### Properties
-* **artifactId**: string: The artifact's identifier.
-* **deploymentStatusMessage**: string: The status message from the deployment.
-* **installTime**: string: The time that the artifact starts to install on the virtual machine.
-* **parameters**: [ArtifactParameterProperties](#artifactparameterproperties)[]: The parameters of the artifact.
-* **status**: string: The status of the artifact.
-* **vmExtensionStatusMessage**: string: The status message from the virtual machine extension.
-
-## ArtifactParameterProperties
-### Properties
-* **name**: string: The name of the artifact parameter.
-* **value**: string: The value of the artifact parameter.
-
-## BulkCreationParameters
-### Properties
-* **instanceCount**: int: The number of virtual machine instances to create.
-
-## ComputeVmProperties
-### Properties
-* **dataDiskIds**: string[]: Gets data disks blob uri for the virtual machine.
-* **dataDisks**: [ComputeDataDisk](#computedatadisk)[]: Gets all data disks attached to the virtual machine.
-* **networkInterfaceId**: string: Gets the network interface ID of the virtual machine.
-* **osDiskId**: string: Gets OS disk blob uri for the virtual machine.
-* **osType**: string: Gets the OS type of the virtual machine.
-* **statuses**: [ComputeVmInstanceViewStatus](#computevminstanceviewstatus)[]: Gets the statuses of the virtual machine.
-* **vmSize**: string: Gets the size of the virtual machine.
-
-## ComputeDataDisk
-### Properties
-* **diskSizeGiB**: int: Gets data disk size in GiB.
-* **diskUri**: string: When backed by a blob, the URI of underlying blob.
-* **managedDiskId**: string: When backed by managed disk, this is the ID of the compute disk resource.
-* **name**: string: Gets data disk name.
-
-## ComputeVmInstanceViewStatus
-### Properties
-* **code**: string: Gets the status Code.
-* **displayStatus**: string: Gets the short localizable label for the status.
-* **message**: string: Gets the message associated with the status.
-
-## GalleryImageReference
-### Properties
-* **offer**: string: The offer of the gallery image.
-* **osType**: string: The OS type of the gallery image.
-* **publisher**: string: The publisher of the gallery image.
-* **sku**: string: The SKU of the gallery image.
-* **version**: string: The version of the gallery image.
-
-## NetworkInterfaceProperties
-### Properties
-* **dnsName**: string: The DNS name.
-* **privateIpAddress**: string: The private IP address.
-* **publicIpAddress**: string: The public IP address.
-* **publicIpAddressId**: string: The resource ID of the public IP address.
-* **rdpAuthority**: string: The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
-* **sharedPublicIpAddressConfiguration**: [SharedPublicIpAddressConfiguration](#sharedpublicipaddressconfiguration): Properties of a virtual machine that determine how it is connected to a load balancer.
-* **sshAuthority**: string: The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
-* **subnetId**: string: The resource ID of the sub net.
-* **virtualNetworkId**: string: The resource ID of the virtual network.
-
-## SharedPublicIpAddressConfiguration
-### Properties
-* **inboundNatRules**: [InboundNatRule](#inboundnatrule)[]: The incoming NAT rules
-
-## InboundNatRule
-### Properties
-* **backendPort**: int: The port to which the external traffic will be redirected.
-* **frontendPort**: int: The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.
-* **transportProtocol**: 'Tcp' | 'Udp' | string: The transport protocol for the endpoint.
-
 ## LabVirtualMachineCreationParameterTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## FormulaPropertiesFromVm
-### Properties
-* **labVmId**: string: The identifier of the VM from which a formula is to be created.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## NotificationChannelProperties
-### Properties
-* **createdDate**: string (ReadOnly): The creation date of the notification channel.
-* **description**: string: Description of notification.
-* **events**: [Event](#event)[]: The list of event for which this notification is enabled.
-* **provisioningState**: string: The provisioning status of the resource.
-* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
-* **webHookUrl**: string: The webhook URL to send notifications to.
-
-## Event
-### Properties
-* **eventName**: 'AutoShutdown' | 'Cost' | string: The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## PolicyProperties
-### Properties
-* **createdDate**: string (ReadOnly): The creation date of the policy.
-* **description**: string: The description of the policy.
-* **evaluatorType**: 'AllowedValuesPolicy' | 'MaxValuePolicy' | string: The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).
-* **factData**: string: The fact data of the policy.
-* **factName**: 'GalleryImage' | 'LabPremiumVmCount' | 'LabTargetCost' | 'LabVmCount' | 'LabVmSize' | 'UserOwnedLabPremiumVmCount' | 'UserOwnedLabVmCount' | 'UserOwnedLabVmCountInSubnet' | string: The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.
-* **provisioningState**: string: The provisioning status of the resource.
-* **status**: 'Disabled' | 'Enabled' | string: The status of the policy.
-* **threshold**: string: The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).
-* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## IdentityProperties
-### Properties
-* **clientSecretUrl**: string: The client secret URL of the identity.
-* **principalId**: string: The principal id of resource identity.
-* **tenantId**: string: The tenant identifier of resource.
-* **type**: string: Managed identity.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## UserProperties
-### Properties
-* **createdDate**: string (ReadOnly): The creation date of the user profile.
-* **identity**: [UserIdentity](#useridentity): Identity attributes of a lab user.
-* **provisioningState**: string: The provisioning status of the resource.
-* **secretStore**: [UserSecretStore](#usersecretstore): Properties of a user's secret store.
-* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
-
-## UserIdentity
-### Properties
-* **appId**: string: Set to the app Id of the client JWT making the request.
-* **objectId**: string: Set to the object Id of the client JWT making the request. Not all users have object Id. For CSP (reseller) scenarios for example, object Id is not available.
-* **principalId**: string: Set to the principal Id of the client JWT making the request. Service principal will not have the principal Id.
-* **principalName**: string: Set to the principal name / UPN of the client JWT making the request.
-* **tenantId**: string: Set to the tenant ID of the client JWT making the request.
-
-## UserSecretStore
-### Properties
-* **keyVaultId**: string: The ID of the user's Key vault.
-* **keyVaultUri**: string: The URI of the user's Key vault.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## DiskProperties
-### Properties
-* **createdDate**: string (ReadOnly): The creation date of the disk.
-* **diskBlobName**: string: When backed by a blob, the name of the VHD blob without extension.
-* **diskSizeGiB**: int: The size of the disk in Gibibytes.
-* **diskType**: 'Premium' | 'Standard' | string: The storage type for the disk (i.e. Standard, Premium).
-* **diskUri**: string: When backed by a blob, the URI of underlying blob.
-* **hostCaching**: string: The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).
-* **leasedByLabVmId**: string: The resource ID of the VM to which this disk is leased.
-* **managedDiskId**: string: When backed by managed disk, this is the ID of the compute disk resource.
-* **provisioningState**: string: The provisioning status of the resource.
-* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## EnvironmentProperties
-### Properties
-* **armTemplateDisplayName**: string: The display name of the Azure Resource Manager template that produced the environment.
-* **createdByUser**: string (ReadOnly): The creator of the environment.
-* **deploymentProperties**: [EnvironmentDeploymentProperties](#environmentdeploymentproperties): Properties of an environment deployment.
-* **provisioningState**: string: The provisioning status of the resource.
-* **resourceGroupId**: string (ReadOnly): The identifier of the resource group containing the environment's resources.
-* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
-
-## EnvironmentDeploymentProperties
-### Properties
-* **armTemplateId**: string: The Azure Resource Manager template's identifier.
-* **parameters**: [ArmTemplateParameterProperties](#armtemplateparameterproperties)[]: The parameters of the Azure Resource Manager template.
-
-## ArmTemplateParameterProperties
-### Properties
-* **name**: string: The name of the template parameter.
-* **value**: string: The value of the template parameter.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## SecretProperties
-### Properties
-* **provisioningState**: string: The provisioning status of the resource.
-* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
-* **value**: string: The value of the secret for secret creation.
-
-## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -712,50 +536,52 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **userName**: string: The user name of the virtual machine.
 * **virtualMachineCreationSource**: 'FromCustomImage' | 'FromGalleryImage' | string: Tells source of creation of lab virtual machine. Output property only.
 
-## ResourceTags
+## LinuxOsInfo
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **linuxOsState**: 'DeprovisionApplied' | 'DeprovisionRequested' | 'NonDeprovisioned' | string: The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
 
-## ResourceTags
+## NetworkInterfaceProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **dnsName**: string: The DNS name.
+* **privateIpAddress**: string: The private IP address.
+* **publicIpAddress**: string: The public IP address.
+* **publicIpAddressId**: string: The resource ID of the public IP address.
+* **rdpAuthority**: string: The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
+* **sharedPublicIpAddressConfiguration**: [SharedPublicIpAddressConfiguration](#sharedpublicipaddressconfiguration): Properties of a virtual machine that determine how it is connected to a load balancer.
+* **sshAuthority**: string: The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
+* **subnetId**: string: The resource ID of the sub net.
+* **virtualNetworkId**: string: The resource ID of the virtual network.
 
-## VirtualNetworkProperties
+## NotificationChannelProperties
 ### Properties
-* **allowedSubnets**: [Subnet](#subnet)[]: The allowed subnets of the virtual network.
-* **createdDate**: string (ReadOnly): The creation date of the virtual network.
-* **description**: string: The description of the virtual network.
-* **externalProviderResourceId**: string: The Microsoft.Network resource identifier of the virtual network.
-* **externalSubnets**: [ExternalSubnet](#externalsubnet)[]: The external subnet properties.
+* **createdDate**: string (ReadOnly): The creation date of the notification channel.
+* **description**: string: Description of notification.
+* **events**: [Event](#event)[]: The list of event for which this notification is enabled.
 * **provisioningState**: string: The provisioning status of the resource.
-* **subnetOverrides**: [SubnetOverride](#subnetoverride)[]: The subnet overrides of the virtual network.
 * **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
+* **webHookUrl**: string: The webhook URL to send notifications to.
 
-## Subnet
+## NotificationSettings
 ### Properties
-* **allowPublicIp**: 'Allow' | 'Default' | 'Deny' | string: The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
-* **labSubnetName**: string: The name of the subnet as seen in the lab.
-* **resourceId**: string: The resource ID of the subnet.
+* **status**: 'Disabled' | 'Enabled' | string: If notifications are enabled for this schedule (i.e. Enabled, Disabled).
+* **timeInMinutes**: int: Time in minutes before event at which notification will be sent.
+* **webhookUrl**: string: The webhook URL to which the notification will be sent.
 
-## ExternalSubnet
+## PercentageCostThresholdProperties
 ### Properties
-* **id**: string: Gets or sets the identifier.
-* **name**: string: Gets or sets the name.
+* **thresholdValue**: int: The cost threshold value.
 
-## SubnetOverride
+## PolicyProperties
 ### Properties
-* **labSubnetName**: string: The name given to the subnet within the lab.
-* **resourceId**: string: The resource ID of the subnet.
-* **sharedPublicIpAddressConfiguration**: [SubnetSharedPublicIpAddressConfiguration](#subnetsharedpublicipaddressconfiguration): Configuration for public IP address sharing.
-* **useInVmCreationPermission**: 'Allow' | 'Default' | 'Deny' | string: The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
-* **usePublicIpAddressPermission**: 'Allow' | 'Default' | 'Deny' | string: The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
-* **virtualNetworkPoolName**: string: The virtual network pool associated with this subnet.
-
-## SubnetSharedPublicIpAddressConfiguration
-### Properties
-* **allowedPorts**: [Port](#port)[]: Backend ports that virtual machines on this subnet are allowed to expose
+* **createdDate**: string (ReadOnly): The creation date of the policy.
+* **description**: string: The description of the policy.
+* **evaluatorType**: 'AllowedValuesPolicy' | 'MaxValuePolicy' | string: The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).
+* **factData**: string: The fact data of the policy.
+* **factName**: 'GalleryImage' | 'LabPremiumVmCount' | 'LabTargetCost' | 'LabVmCount' | 'LabVmSize' | 'UserOwnedLabPremiumVmCount' | 'UserOwnedLabVmCount' | 'UserOwnedLabVmCountInSubnet' | string: The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.
+* **provisioningState**: string: The provisioning status of the resource.
+* **status**: 'Disabled' | 'Enabled' | string: The status of the policy.
+* **threshold**: string: The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).
+* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
 
 ## Port
 ### Properties
@@ -772,26 +598,200 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ResponseWithContinuationSchedule
+## ResourceTags
 ### Properties
-* **nextLink**: string (ReadOnly): Link for next set of results.
-* **value**: [Schedule](#schedule)[] (ReadOnly): Results of the list operation.
+### Additional Properties
+* **Additional Properties Type**: string
 
-## ApplicableSchedule
+## ResourceTags
 ### Properties
-* **id**: string (ReadOnly): The identifier of the resource.
-* **location**: string: The location of the resource.
-* **name**: string (ReadOnly): The name of the resource.
-* **properties**: [ApplicableScheduleProperties](#applicablescheduleproperties) (Required): Properties of a schedules applicable to a virtual machine.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
-* **type**: string (ReadOnly): The type of the resource.
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResponseWithContinuationLabVhd
 ### Properties
 * **nextLink**: string (ReadOnly): Link for next set of results.
 * **value**: [LabVhd](#labvhd)[] (ReadOnly): Results of the list operation.
 
-## LabVhd
+## ResponseWithContinuationSchedule
 ### Properties
-* **id**: string (ReadOnly): The URI to the VHD.
+* **nextLink**: string (ReadOnly): Link for next set of results.
+* **value**: [Schedule](#schedule)[] (ReadOnly): Results of the list operation.
+
+## Schedule
+### Properties
+* **id**: string (ReadOnly): The identifier of the resource.
+* **location**: string: The location of the resource.
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [ScheduleProperties](#scheduleproperties) (Required): Properties of a schedule.
+* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **type**: string (ReadOnly): The type of the resource.
+
+## ScheduleProperties
+### Properties
+* **createdDate**: string (ReadOnly): The creation date of the schedule.
+* **dailyRecurrence**: [DayDetails](#daydetails): Properties of a daily schedule.
+* **hourlyRecurrence**: [HourDetails](#hourdetails): Properties of an hourly schedule.
+* **notificationSettings**: [NotificationSettings](#notificationsettings): Notification settings for a schedule.
+* **provisioningState**: string: The provisioning status of the resource.
+* **status**: 'Disabled' | 'Enabled' | string: Indicates if the artifact source is enabled (values: Enabled, Disabled).
+* **targetResourceId**: string: The resource ID to which the schedule belongs
+* **taskType**: string: The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
+* **timeZoneId**: string: The time zone ID (e.g. Pacific Standard time).
+* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
+* **weeklyRecurrence**: [WeekDetails](#weekdetails): Properties of a weekly schedule.
+
+## SecretProperties
+### Properties
+* **provisioningState**: string: The provisioning status of the resource.
+* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
+* **value**: string: The value of the secret for secret creation.
+
+## SharedPublicIpAddressConfiguration
+### Properties
+* **inboundNatRules**: [InboundNatRule](#inboundnatrule)[]: The incoming NAT rules
+
+## Subnet
+### Properties
+* **allowPublicIp**: 'Allow' | 'Default' | 'Deny' | string: The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
+* **labSubnetName**: string: The name of the subnet as seen in the lab.
+* **resourceId**: string: The resource ID of the subnet.
+
+## SubnetOverride
+### Properties
+* **labSubnetName**: string: The name given to the subnet within the lab.
+* **resourceId**: string: The resource ID of the subnet.
+* **sharedPublicIpAddressConfiguration**: [SubnetSharedPublicIpAddressConfiguration](#subnetsharedpublicipaddressconfiguration): Configuration for public IP address sharing.
+* **useInVmCreationPermission**: 'Allow' | 'Default' | 'Deny' | string: The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
+* **usePublicIpAddressPermission**: 'Allow' | 'Default' | 'Deny' | string: The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
+* **virtualNetworkPoolName**: string: The virtual network pool associated with this subnet.
+
+## SubnetSharedPublicIpAddressConfiguration
+### Properties
+* **allowedPorts**: [Port](#port)[]: Backend ports that virtual machines on this subnet are allowed to expose
+
+## TargetCostProperties
+### Properties
+* **costThresholds**: [CostThresholdProperties](#costthresholdproperties)[]: Cost thresholds.
+* **cycleEndDateTime**: string: Reporting cycle end date.
+* **cycleStartDateTime**: string: Reporting cycle start date.
+* **cycleType**: 'CalendarMonth' | 'Custom' | string: Reporting cycle type.
+* **status**: 'Disabled' | 'Enabled' | string: Target cost status
+* **target**: int: Lab target cost
+
+## UserIdentity
+### Properties
+* **appId**: string: Set to the app Id of the client JWT making the request.
+* **objectId**: string: Set to the object Id of the client JWT making the request. Not all users have object Id. For CSP (reseller) scenarios for example, object Id is not available.
+* **principalId**: string: Set to the principal Id of the client JWT making the request. Service principal will not have the principal Id.
+* **principalName**: string: Set to the principal name / UPN of the client JWT making the request.
+* **tenantId**: string: Set to the tenant ID of the client JWT making the request.
+
+## UserProperties
+### Properties
+* **createdDate**: string (ReadOnly): The creation date of the user profile.
+* **identity**: [UserIdentity](#useridentity): Identity attributes of a lab user.
+* **provisioningState**: string: The provisioning status of the resource.
+* **secretStore**: [UserSecretStore](#usersecretstore): Properties of a user's secret store.
+* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
+
+## UserSecretStore
+### Properties
+* **keyVaultId**: string: The ID of the user's Key vault.
+* **keyVaultUri**: string: The URI of the user's Key vault.
+
+## VirtualNetworkProperties
+### Properties
+* **allowedSubnets**: [Subnet](#subnet)[]: The allowed subnets of the virtual network.
+* **createdDate**: string (ReadOnly): The creation date of the virtual network.
+* **description**: string: The description of the virtual network.
+* **externalProviderResourceId**: string: The Microsoft.Network resource identifier of the virtual network.
+* **externalSubnets**: [ExternalSubnet](#externalsubnet)[]: The external subnet properties.
+* **provisioningState**: string: The provisioning status of the resource.
+* **subnetOverrides**: [SubnetOverride](#subnetoverride)[]: The subnet overrides of the virtual network.
+* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
+
+## WeekDetails
+### Properties
+* **time**: string: The time of the day the schedule will occur.
+* **weekdays**: string[]: The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).
+
+## WindowsOsInfo
+### Properties
+* **windowsOsState**: 'NonSysprepped' | 'SysprepApplied' | 'SysprepRequested' | string: The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
 

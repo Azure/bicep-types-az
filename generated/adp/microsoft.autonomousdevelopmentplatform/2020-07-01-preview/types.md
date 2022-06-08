@@ -26,6 +26,17 @@
 * **accountId**: string (ReadOnly): The account's data-plane ID
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Gets the status of the account at the time the operation was called.
 
+## DataPoolLocation
+### Properties
+* **name**: string (Required): The location name
+
+## DataPoolProperties
+### Properties
+* **dataPoolId**: string (ReadOnly): The Data Pool's data-plane ID
+* **locations**: [DataPoolLocation](#datapoollocation)[]: Gets or sets the collection of locations where Data Pool resources should be created.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Gets the status of the account at the time the operation was called.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -39,15 +50,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## DataPoolProperties
-### Properties
-* **dataPoolId**: string (ReadOnly): The Data Pool's data-plane ID
-* **locations**: [DataPoolLocation](#datapoollocation)[]: Gets or sets the collection of locations where Data Pool resources should be created.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Gets the status of the account at the time the operation was called.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-
-## DataPoolLocation
-### Properties
-* **name**: string (Required): The location name
 

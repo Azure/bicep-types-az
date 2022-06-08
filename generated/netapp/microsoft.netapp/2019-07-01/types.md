@@ -60,31 +60,6 @@
 * **status**: string: Status of the Active Directory
 * **username**: string: Username of Active Directory domain administrator
 
-## PoolProperties
-### Properties
-* **poolId**: string (ReadOnly): UUID v4 used to identify the Pool
-* **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' | string (Required): The service level of the file system
-* **size**: int (Required): Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
-
-## VolumeProperties
-### Properties
-* **baremetalTenantId**: string (ReadOnly): Unique Baremetal Tenant Identifier.
-* **creationToken**: string (Required): A unique file path for the volume. Used when creating mount targets
-* **exportPolicy**: [VolumePropertiesExportPolicy](#volumepropertiesexportpolicy): Set of export policy rules
-* **fileSystemId**: string (ReadOnly): Unique FileSystem Identifier.
-* **mountTargets**: [MountTargetProperties](#mounttargetproperties)[] (ReadOnly): List of mount targets
-* **protocolTypes**: string[]: Set of protocol types, default NFSv3, CIFS fro SMB protocol
-* **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' | string: The service level of the file system
-* **snapshotId**: string: UUID v4 or resource identifier used to identify the Snapshot.
-* **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
-* **usageThreshold**: int (Required): Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
-
-## VolumePropertiesExportPolicy
-### Properties
-* **rules**: [ExportPolicyRule](#exportpolicyrule)[]: Export policy rule
-
 ## ExportPolicyRule
 ### Properties
 * **allowedClients**: string: Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names
@@ -108,10 +83,35 @@
 * **startIp**: string: The start of IPv4 address range to use when creating a new mount target
 * **subnet**: string: The subnet
 
+## PoolProperties
+### Properties
+* **poolId**: string (ReadOnly): UUID v4 used to identify the Pool
+* **provisioningState**: string (ReadOnly): Azure lifecycle management
+* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' | string (Required): The service level of the file system
+* **size**: int (Required): Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
+
 ## SnapshotProperties
 ### Properties
 * **created**: string (ReadOnly): The creation date of the snapshot
 * **fileSystemId**: string: UUID v4 used to identify the FileSystem
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **snapshotId**: string (ReadOnly): UUID v4 used to identify the Snapshot
+
+## VolumeProperties
+### Properties
+* **baremetalTenantId**: string (ReadOnly): Unique Baremetal Tenant Identifier.
+* **creationToken**: string (Required): A unique file path for the volume. Used when creating mount targets
+* **exportPolicy**: [VolumePropertiesExportPolicy](#volumepropertiesexportpolicy): Set of export policy rules
+* **fileSystemId**: string (ReadOnly): Unique FileSystem Identifier.
+* **mountTargets**: [MountTargetProperties](#mounttargetproperties)[] (ReadOnly): List of mount targets
+* **protocolTypes**: string[]: Set of protocol types, default NFSv3, CIFS fro SMB protocol
+* **provisioningState**: string (ReadOnly): Azure lifecycle management
+* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' | string: The service level of the file system
+* **snapshotId**: string: UUID v4 or resource identifier used to identify the Snapshot.
+* **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
+* **usageThreshold**: int (Required): Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
+
+## VolumePropertiesExportPolicy
+### Properties
+* **rules**: [ExportPolicyRule](#exportpolicyrule)[]: Export policy rule
 

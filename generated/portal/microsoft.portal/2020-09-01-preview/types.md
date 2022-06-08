@@ -20,10 +20,9 @@
 * **properties**: [ConfigurationProperties](#configurationproperties): Tenant configuration properties.
 * **type**: 'Microsoft.Portal/tenantConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## DashboardProperties
+## ConfigurationProperties
 ### Properties
-* **lenses**: [DashboardLens](#dashboardlens)[]: The dashboard lenses.
-* **metadata**: [DashboardPropertiesMetadata](#dashboardpropertiesmetadata): The dashboard metadata.
+* **enforcePrivateMarkdownStorage**: bool: When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
 
 ## DashboardLens
 ### Properties
@@ -36,11 +35,6 @@
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## DashboardParts
-### Properties
-* **metadata**: [DashboardPartMetadata](#dashboardpartmetadata): A dashboard part metadata.
-* **position**: [DashboardPartsPosition](#dashboardpartsposition) (Required): The dashboard's part position.
-
 ## DashboardPartMetadata
 * **Discriminator**: type
 
@@ -51,6 +45,39 @@
 * **settings**: [MarkdownPartMetadataSettings](#markdownpartmetadatasettings): Markdown part settings.
 * **type**: 'Extension/HubsExtension/PartType/MarkdownPart' (Required): The type of dashboard part.
 
+
+## DashboardParts
+### Properties
+* **metadata**: [DashboardPartMetadata](#dashboardpartmetadata): A dashboard part metadata.
+* **position**: [DashboardPartsPosition](#dashboardpartsposition) (Required): The dashboard's part position.
+
+## DashboardPartsPosition
+### Properties
+* **colSpan**: int (Required): The dashboard's part column span.
+* **metadata**: [DashboardPartsPositionMetadata](#dashboardpartspositionmetadata): The dashboard part's metadata.
+* **rowSpan**: int (Required): The dashboard's part row span.
+* **x**: int (Required): The dashboard's part x coordinate.
+* **y**: int (Required): The dashboard's part y coordinate.
+
+## DashboardPartsPositionMetadata
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DashboardProperties
+### Properties
+* **lenses**: [DashboardLens](#dashboardlens)[]: The dashboard lenses.
+* **metadata**: [DashboardPropertiesMetadata](#dashboardpropertiesmetadata): The dashboard metadata.
+
+## DashboardPropertiesMetadata
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DashboardTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## MarkdownPartMetadataSettings
 ### Properties
@@ -67,31 +94,4 @@
 * **markdownUri**: string: The uri of markdown content.
 * **subtitle**: string: The subtitle of the markdown part.
 * **title**: string: The title of the markdown part.
-
-## DashboardPartsPosition
-### Properties
-* **colSpan**: int (Required): The dashboard's part column span.
-* **metadata**: [DashboardPartsPositionMetadata](#dashboardpartspositionmetadata): The dashboard part's metadata.
-* **rowSpan**: int (Required): The dashboard's part row span.
-* **x**: int (Required): The dashboard's part x coordinate.
-* **y**: int (Required): The dashboard's part y coordinate.
-
-## DashboardPartsPositionMetadata
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## DashboardPropertiesMetadata
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## DashboardTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ConfigurationProperties
-### Properties
-* **enforcePrivateMarkdownStorage**: bool: When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
 

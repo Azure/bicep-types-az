@@ -12,15 +12,15 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## PrivateEndpoint
+### Properties
+* **id**: string: Gets or sets id
+
 ## PrivateEndpointConnection
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint network resource that is linked to the Private Endpoint connection
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Private Link Service Connection State
 * **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' | string: Gets or sets provisioning state of the private endpoint connection
-
-## PrivateEndpoint
-### Properties
-* **id**: string: Gets or sets id
 
 ## PrivateLinkServiceConnectionState
 ### Properties

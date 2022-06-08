@@ -14,6 +14,11 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HealthBot/healthBots' (ReadOnly, DeployTimeConstant): The resource type
 
+## HealthBotProperties
+### Properties
+* **botManagementPortalLink**: string (ReadOnly): The link.
+* **provisioningState**: string (ReadOnly): The provisioning state of the Azure Health Bot resource.
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity. This property will only be provided for a system assigned identity.
@@ -21,21 +26,6 @@
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The identity type. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the Azure Health Bot
 * **userAssignedIdentities**: [UserAssignedIdentityMap](#userassignedidentitymap): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-
-## UserAssignedIdentityMap
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
-
-## UserAssignedIdentity
-### Properties
-* **clientId**: string (ReadOnly): The client ID of user assigned identity.
-* **principalId**: string (ReadOnly): The principal ID of user assigned identity.
-
-## HealthBotProperties
-### Properties
-* **botManagementPortalLink**: string (ReadOnly): The link.
-* **provisioningState**: string (ReadOnly): The provisioning state of the Azure Health Bot resource.
 
 ## Sku
 ### Properties
@@ -54,4 +44,14 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UserAssignedIdentity
+### Properties
+* **clientId**: string (ReadOnly): The client ID of user assigned identity.
+* **principalId**: string (ReadOnly): The principal ID of user assigned identity.
+
+## UserAssignedIdentityMap
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
 

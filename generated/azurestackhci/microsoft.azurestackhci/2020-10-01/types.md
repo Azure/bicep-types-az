@@ -12,6 +12,18 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureStackHCI/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
+## ClusterNode
+### Properties
+* **coreCount**: int (ReadOnly): Number of physical cores on the cluster node.
+* **id**: int (ReadOnly): Id of the node in the cluster.
+* **manufacturer**: string (ReadOnly): Manufacturer of the cluster node hardware.
+* **memoryInGiB**: int (ReadOnly): Total available memory on the cluster node (in GiB).
+* **model**: string (ReadOnly): Model name of the cluster node hardware.
+* **name**: string (ReadOnly): Name of the cluster node.
+* **osName**: string (ReadOnly): Operating system running on the cluster node.
+* **osVersion**: string (ReadOnly): Version of the operating system running on the cluster node.
+* **serialNumber**: string (ReadOnly): Immutable id of the cluster node.
+
 ## ClusterProperties
 ### Properties
 * **aadClientId**: string (Required): App id of cluster AAD identity.
@@ -33,18 +45,6 @@
 * **clusterVersion**: string (ReadOnly): Version of the cluster software.
 * **lastUpdated**: string (ReadOnly): Last time the cluster reported the data.
 * **nodes**: [ClusterNode](#clusternode)[] (ReadOnly): List of nodes reported by the cluster.
-
-## ClusterNode
-### Properties
-* **coreCount**: int (ReadOnly): Number of physical cores on the cluster node.
-* **id**: int (ReadOnly): Id of the node in the cluster.
-* **manufacturer**: string (ReadOnly): Manufacturer of the cluster node hardware.
-* **memoryInGiB**: int (ReadOnly): Total available memory on the cluster node (in GiB).
-* **model**: string (ReadOnly): Model name of the cluster node hardware.
-* **name**: string (ReadOnly): Name of the cluster node.
-* **osName**: string (ReadOnly): Operating system running on the cluster node.
-* **osVersion**: string (ReadOnly): Version of the operating system running on the cluster node.
-* **serialNumber**: string (ReadOnly): Immutable id of the cluster node.
 
 ## SystemData
 ### Properties

@@ -39,18 +39,9 @@
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
 * **type**: 'None' | 'SystemAssigned' | string (Required): The identity type.
 
-## VaultProperties
+## PrivateEndpoint
 ### Properties
-* **privateEndpointConnections**: [PrivateEndpointConnectionVaultProperties](#privateendpointconnectionvaultproperties)[] (ReadOnly): List of private endpoint connection.
-* **privateEndpointStateForBackup**: 'Enabled' | 'None' | string (ReadOnly): Private endpoint state for backup.
-* **privateEndpointStateForSiteRecovery**: 'Enabled' | 'None' | string (ReadOnly): Private endpoint state for backup.
-* **provisioningState**: string (ReadOnly): Provisioning State.
-* **upgradeDetails**: [UpgradeDetails](#upgradedetails): Details for upgrading vault.
-
-## PrivateEndpointConnectionVaultProperties
-### Properties
-* **id**: string (ReadOnly): Format of id subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.[Service]/{resource}/{resourceName}/privateEndpointConnections/{connectionName}.
-* **properties**: [PrivateEndpointConnection](#privateendpointconnection) (ReadOnly): Private Endpoint Connection Response Properties.
+* **id**: string (ReadOnly): Gets or sets id.
 
 ## PrivateEndpointConnection
 ### Properties
@@ -58,15 +49,30 @@
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly): Gets or sets private link service connection state.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' | string (ReadOnly): Gets or sets provisioning state of the private endpoint connection.
 
-## PrivateEndpoint
+## PrivateEndpointConnectionVaultProperties
 ### Properties
-* **id**: string (ReadOnly): Gets or sets id.
+* **id**: string (ReadOnly): Format of id subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.[Service]/{resource}/{resourceName}/privateEndpointConnections/{connectionName}.
+* **properties**: [PrivateEndpointConnection](#privateendpointconnection) (ReadOnly): Private Endpoint Connection Response Properties.
 
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: string (ReadOnly): Gets or sets actions required.
 * **description**: string (ReadOnly): Gets or sets description.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (ReadOnly): Gets or sets the status.
+
+## RawCertificateData
+### Properties
+* **authType**: 'AAD' | 'ACS' | 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid' | string: Specifies the authentication type.
+* **certificate**: any: The base64 encoded certificate raw data string
+
+## Sku
+### Properties
+* **name**: 'RS0' | 'Standard' | string (Required): The Sku name.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## UpgradeDetails
 ### Properties
@@ -80,24 +86,18 @@
 * **triggerType**: 'ForcedUpgrade' | 'UserTriggered' | string (ReadOnly): The way the vault upgrade was triggered.
 * **upgradedResourceId**: string (ReadOnly): Resource ID of the upgraded vault.
 
-## Sku
-### Properties
-* **name**: 'RS0' | 'Standard' | string (Required): The Sku name.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## RawCertificateData
-### Properties
-* **authType**: 'AAD' | 'ACS' | 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid' | string: Specifies the authentication type.
-* **certificate**: any: The base64 encoded certificate raw data string
-
 ## VaultExtendedInfo
 ### Properties
 * **algorithm**: string: Algorithm for Vault ExtendedInfo
 * **encryptionKey**: string: Encryption key.
 * **encryptionKeyThumbprint**: string: Encryption key thumbprint.
 * **integrityKey**: string: Integrity key.
+
+## VaultProperties
+### Properties
+* **privateEndpointConnections**: [PrivateEndpointConnectionVaultProperties](#privateendpointconnectionvaultproperties)[] (ReadOnly): List of private endpoint connection.
+* **privateEndpointStateForBackup**: 'Enabled' | 'None' | string (ReadOnly): Private endpoint state for backup.
+* **privateEndpointStateForSiteRecovery**: 'Enabled' | 'None' | string (ReadOnly): Private endpoint state for backup.
+* **provisioningState**: string (ReadOnly): Provisioning State.
+* **upgradeDetails**: [UpgradeDetails](#upgradedetails): Details for upgrading vault.
 

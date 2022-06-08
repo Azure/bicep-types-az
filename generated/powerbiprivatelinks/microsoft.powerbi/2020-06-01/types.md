@@ -22,10 +22,15 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.PowerBI/privateLinkServicesForPowerBI/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## TenantProperties
+## ConnectionState
 ### Properties
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (WriteOnly): Specifies the private endpoint connections of the resource.
-* **tenantId**: string (WriteOnly): Specifies the tenant id of the resource.
+* **actionsRequired**: string (WriteOnly): Actions required (if any).
+* **description**: string (WriteOnly): Description of the connection state.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (WriteOnly): Status of the connection.
+
+## PrivateEndpoint
+### Properties
+* **id**: string (WriteOnly): Specifies the id of private endpoint.
 
 ## PrivateEndpointConnection
 ### Properties
@@ -41,16 +46,6 @@
 * **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate) (WriteOnly): ConnectionState information.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (WriteOnly): Provisioning state of the Private Endpoint Connection.
 
-## PrivateEndpoint
-### Properties
-* **id**: string (WriteOnly): Specifies the id of private endpoint.
-
-## ConnectionState
-### Properties
-* **actionsRequired**: string (WriteOnly): Actions required (if any).
-* **description**: string (WriteOnly): Description of the connection state.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (WriteOnly): Status of the connection.
-
 ## SystemData
 ### Properties
 * **createdAt**: string (WriteOnly): The timestamp of resource creation (UTC).
@@ -59,6 +54,11 @@
 * **lastModifiedAt**: string (WriteOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (WriteOnly): The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (WriteOnly): The type of identity that created the resource.
+
+## TenantProperties
+### Properties
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (WriteOnly): Specifies the private endpoint connections of the resource.
+* **tenantId**: string (WriteOnly): Specifies the tenant id of the resource.
 
 ## TenantResourceTags
 ### Properties

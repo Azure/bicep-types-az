@@ -43,15 +43,48 @@
 * **Input**: [ContactParameters](#contactparameters)
 * **Output**: [AvailableContactsListResult](#availablecontactslistresult)
 
-## ContactProfileProperties
+## AuthorizedGroundstation
 ### Properties
-* **autoTrackingConfiguration**: 'disabled' | 'sBand' | 'xBand': Auto track configuration.
-* **eventHubUri**: string: The URI of the Event Hub used for telemetry
-* **links**: [ContactProfileLink](#contactprofilelink)[] (Required): Links of the Contact Profile
-* **minimumElevationDegrees**: int: Minimum viable elevation for the contact in decimal degrees.
-* **minimumViableContactDuration**: string: Minimum viable contact duration in ISO 8601 format.
-* **networkConfiguration**: [ContactProfilesPropertiesNetworkConfiguration](#contactprofilespropertiesnetworkconfiguration) (Required): Network configuration of customer virtual network.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The current state of the resource's creation, deletion, or modification
+* **expirationDate**: string: Date of authorization expiration
+* **groundStation**: string: Groundstation name
+
+## AvailableContacts
+### Properties
+* **groundStationName**: string (ReadOnly): Name of Azure Ground Station.
+* **properties**: [AvailableContactsProperties](#availablecontactsproperties) (ReadOnly): Properties of Contact resource.
+* **spacecraft**: [AvailableContactsSpacecraft](#availablecontactsspacecraft) (ReadOnly): The reference to the spacecraft resource.
+
+## AvailableContactsListResult
+### Properties
+* **nextLink**: string (ReadOnly): The URL to get the next set of results.
+* **value**: [AvailableContacts](#availablecontacts)[] (ReadOnly): A list of available contacts
+
+## AvailableContactsProperties
+### Properties
+* **endAzimuthDegrees**: int (ReadOnly): Azimuth of the antenna at the end of the contact in decimal degrees.
+* **endElevationDegrees**: int (ReadOnly): Spacecraft elevation above the horizon at contact end.
+* **maximumElevationDegrees**: int (ReadOnly): Maximum elevation of the antenna during the contact in decimal degrees.
+* **rxEndTime**: string (ReadOnly): Time to lost receiving a signal.
+* **rxStartTime**: string (ReadOnly): Earliest time to receive a signal.
+* **startAzimuthDegrees**: int (ReadOnly): Azimuth of the antenna at the start of the contact in decimal degrees.
+* **startElevationDegrees**: int (ReadOnly): Spacecraft elevation above the horizon at contact start.
+* **txEndTime**: string (ReadOnly): Time at which antenna transmit will be disabled.
+* **txStartTime**: string (ReadOnly): Time at which antenna transmit will be enabled.
+
+## AvailableContactsSpacecraft
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+
+## ContactParameters
+### Properties
+* **contactProfile**: [ContactParametersContactProfile](#contactparameterscontactprofile) (Required, WriteOnly): The reference to the contact profile resource.
+* **endTime**: string (Required, WriteOnly): End time of a contact.
+* **groundStationName**: string (Required, WriteOnly): Name of Azure Ground Station.
+* **startTime**: string (Required, WriteOnly): Start time of a contact.
+
+## ContactParametersContactProfile
+### Properties
+* **id**: string (WriteOnly): Resource ID.
 
 ## ContactProfileLink
 ### Properties
@@ -73,58 +106,19 @@
 * **modulationConfiguration**: string: Configuration for modulation
 * **name**: string (Required): Channel name
 
-## EndPoint
+## ContactProfileProperties
 ### Properties
-* **endPointName**: string (Required): Name of an end point.
-* **ipAddress**: string (Required): IP Address.
-* **port**: string (Required): TCP port to listen on to receive data.
-* **protocol**: 'TCP' | 'UDP' | string (Required): Protocol either UDP or TCP.
+* **autoTrackingConfiguration**: 'disabled' | 'sBand' | 'xBand': Auto track configuration.
+* **eventHubUri**: string: The URI of the Event Hub used for telemetry
+* **links**: [ContactProfileLink](#contactprofilelink)[] (Required): Links of the Contact Profile
+* **minimumElevationDegrees**: int: Minimum viable elevation for the contact in decimal degrees.
+* **minimumViableContactDuration**: string: Minimum viable contact duration in ISO 8601 format.
+* **networkConfiguration**: [ContactProfilesPropertiesNetworkConfiguration](#contactprofilespropertiesnetworkconfiguration) (Required): Network configuration of customer virtual network.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The current state of the resource's creation, deletion, or modification
 
 ## ContactProfilesPropertiesNetworkConfiguration
 ### Properties
 * **subnetId**: string (Required): Customer subnet ARM resource identifier.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## SpacecraftsProperties
-### Properties
-* **links**: [SpacecraftLink](#spacecraftlink)[]: Links of the Spacecraft
-* **noradId**: string (Required): NORAD ID of the spacecraft.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The current state of the resource's creation, deletion, or modification
-* **titleLine**: string: Title line of Two Line Element (TLE).
-* **tleLine1**: string: Line 1 of Two Line Element (TLE).
-* **tleLine2**: string: Line 2 of Two Line Element (TLE).
-
-## SpacecraftLink
-### Properties
-* **authorizations**: [AuthorizedGroundstation](#authorizedgroundstation)[] (ReadOnly): Authorized Ground Stations
-* **bandwidthMHz**: int (Required): Bandwidth in MHz
-* **centerFrequencyMHz**: int (Required): Center Frequency in MHz
-* **direction**: 'downlink' | 'uplink' | string (Required): Direction (uplink or downlink)
-* **name**: string (Required): Link name
-* **polarization**: 'LHCP' | 'RHCP' | 'linearHorizontal' | 'linearVertical' | string (Required): polarization. eg (RHCP, LHCP)
-
-## AuthorizedGroundstation
-### Properties
-* **expirationDate**: string: Date of authorization expiration
-* **groundStation**: string: Groundstation name
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## ContactsProperties
 ### Properties
@@ -155,41 +149,47 @@
 ### Properties
 * **id**: string: Resource ID.
 
-## ContactParameters
+## EndPoint
 ### Properties
-* **contactProfile**: [ContactParametersContactProfile](#contactparameterscontactprofile) (Required, WriteOnly): The reference to the contact profile resource.
-* **endTime**: string (Required, WriteOnly): End time of a contact.
-* **groundStationName**: string (Required, WriteOnly): Name of Azure Ground Station.
-* **startTime**: string (Required, WriteOnly): Start time of a contact.
+* **endPointName**: string (Required): Name of an end point.
+* **ipAddress**: string (Required): IP Address.
+* **port**: string (Required): TCP port to listen on to receive data.
+* **protocol**: 'TCP' | 'UDP' | string (Required): Protocol either UDP or TCP.
 
-## ContactParametersContactProfile
+## SpacecraftLink
 ### Properties
-* **id**: string (WriteOnly): Resource ID.
+* **authorizations**: [AuthorizedGroundstation](#authorizedgroundstation)[] (ReadOnly): Authorized Ground Stations
+* **bandwidthMHz**: int (Required): Bandwidth in MHz
+* **centerFrequencyMHz**: int (Required): Center Frequency in MHz
+* **direction**: 'downlink' | 'uplink' | string (Required): Direction (uplink or downlink)
+* **name**: string (Required): Link name
+* **polarization**: 'LHCP' | 'RHCP' | 'linearHorizontal' | 'linearVertical' | string (Required): polarization. eg (RHCP, LHCP)
 
-## AvailableContactsListResult
+## SpacecraftsProperties
 ### Properties
-* **nextLink**: string (ReadOnly): The URL to get the next set of results.
-* **value**: [AvailableContacts](#availablecontacts)[] (ReadOnly): A list of available contacts
+* **links**: [SpacecraftLink](#spacecraftlink)[]: Links of the Spacecraft
+* **noradId**: string (Required): NORAD ID of the spacecraft.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The current state of the resource's creation, deletion, or modification
+* **titleLine**: string: Title line of Two Line Element (TLE).
+* **tleLine1**: string: Line 1 of Two Line Element (TLE).
+* **tleLine2**: string: Line 2 of Two Line Element (TLE).
 
-## AvailableContacts
+## SystemData
 ### Properties
-* **groundStationName**: string (ReadOnly): Name of Azure Ground Station.
-* **properties**: [AvailableContactsProperties](#availablecontactsproperties) (ReadOnly): Properties of Contact resource.
-* **spacecraft**: [AvailableContactsSpacecraft](#availablecontactsspacecraft) (ReadOnly): The reference to the spacecraft resource.
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
-## AvailableContactsProperties
+## TrackedResourceTags
 ### Properties
-* **endAzimuthDegrees**: int (ReadOnly): Azimuth of the antenna at the end of the contact in decimal degrees.
-* **endElevationDegrees**: int (ReadOnly): Spacecraft elevation above the horizon at contact end.
-* **maximumElevationDegrees**: int (ReadOnly): Maximum elevation of the antenna during the contact in decimal degrees.
-* **rxEndTime**: string (ReadOnly): Time to lost receiving a signal.
-* **rxStartTime**: string (ReadOnly): Earliest time to receive a signal.
-* **startAzimuthDegrees**: int (ReadOnly): Azimuth of the antenna at the start of the contact in decimal degrees.
-* **startElevationDegrees**: int (ReadOnly): Spacecraft elevation above the horizon at contact start.
-* **txEndTime**: string (ReadOnly): Time at which antenna transmit will be disabled.
-* **txStartTime**: string (ReadOnly): Time at which antenna transmit will be enabled.
+### Additional Properties
+* **Additional Properties Type**: string
 
-## AvailableContactsSpacecraft
+## TrackedResourceTags
 ### Properties
-* **id**: string (ReadOnly): Resource ID.
+### Additional Properties
+* **Additional Properties Type**: string
 

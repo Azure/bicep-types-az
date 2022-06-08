@@ -66,14 +66,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## UserProperties
-### Properties
-* **name**: string: Username
-* **publishingPassword**: string: Password used for publishing.
-* **publishingPasswordHash**: string: Password hash used for publishing.
-* **publishingPasswordHashSalt**: string: Password hash salt used for publishing.
-* **publishingUserName**: string (Required): Username used for publishing.
-
 ## SourceControlProperties
 ### Properties
 * **expirationTime**: string: OAuth token expiration.
@@ -81,4 +73,12 @@
 * **refreshToken**: string: OAuth refresh token.
 * **token**: string: OAuth access token.
 * **tokenSecret**: string: OAuth access token secret.
+
+## UserProperties
+### Properties
+* **name**: string: Username
+* **publishingPassword**: string: Password used for publishing.
+* **publishingPasswordHash**: string: Password hash used for publishing.
+* **publishingPasswordHashSalt**: string: Password hash salt used for publishing.
+* **publishingUserName**: string (Required): Username used for publishing.
 

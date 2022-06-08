@@ -106,20 +106,6 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DesktopVirtualization/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## ResourceModelWithAllowedPropertySetIdentity
-### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned': The identity type.
-
-## ResourceModelWithAllowedPropertySetPlan
-### Properties
-* **name**: string (Required): A user defined name of the 3rd Party Artifact that is being procured.
-* **product**: string (Required): The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.
-* **promotionCode**: string: A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
-* **publisher**: string (Required): The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
-* **version**: string: The version of the desired product/artifact.
-
 ## ApplicationGroupProperties
 ### Properties
 * **applicationGroupType**: 'Desktop' | 'RemoteApp' | string (Required): Resource Type of ApplicationGroup.
@@ -130,24 +116,6 @@
 * **migrationRequest**: [MigrationRequestProperties](#migrationrequestproperties): Properties for arm migration.
 * **objectId**: string (ReadOnly): ObjectId of ApplicationGroup. (internal use)
 * **workspaceArmPath**: string (ReadOnly): Workspace arm path of ApplicationGroup.
-
-## MigrationRequestProperties
-### Properties
-* **migrationPath**: string: The path to the legacy object to migrate.
-* **operation**: 'Complete' | 'Hide' | 'Revoke' | 'Start' | 'Unhide' | string: The type of operation for migration.
-
-## ResourceModelWithAllowedPropertySetSku
-### Properties
-* **capacity**: int: If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
-* **family**: string: If the service has different generations of hardware, for the same SKU, then that can be captured here.
-* **name**: string (Required): The name of the SKU. Ex - P3. It is typically a letter+number code
-* **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
-* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
-
-## ResourceModelWithAllowedPropertySetTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## ApplicationProperties
 ### Properties
@@ -191,30 +159,10 @@
 * **validationEnvironment**: bool: Is validation environment.
 * **vmTemplate**: string: VM template for sessionhosts configuration within hostpool.
 
-## RegistrationInfo
+## MigrationRequestProperties
 ### Properties
-* **expirationTime**: string: Expiration time of registration token.
-* **registrationTokenOperation**: 'Delete' | 'None' | 'Update' | string: The type of resetting the token.
-* **token**: string: The registration token base64 encoded string.
-
-## ResourceModelWithAllowedPropertySetTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## MsixPackageProperties
-### Properties
-* **displayName**: string: User friendly Name to be displayed in the portal.
-* **imagePath**: string: VHD/CIM image path on Network Share.
-* **isActive**: bool: Make this version of the package the active one across the hostpool.
-* **isRegularRegistration**: bool: Specifies how to register Package in feed.
-* **lastUpdated**: string: Date Package was last updated, found in the appxmanifest.xml.
-* **packageApplications**: [MsixPackageApplications](#msixpackageapplications)[]: List of package applications.
-* **packageDependencies**: [MsixPackageDependencies](#msixpackagedependencies)[]: List of package dependencies.
-* **packageFamilyName**: string: Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
-* **packageName**: string: Package Name from appxmanifest.xml.
-* **packageRelativePath**: string: Relative Path to the package inside the image.
-* **version**: string: Package Version found in the appxmanifest.xml.
+* **migrationPath**: string: The path to the legacy object to migrate.
+* **operation**: 'Complete' | 'Hide' | 'Revoke' | 'Start' | 'Unhide' | string: The type of operation for migration.
 
 ## MsixPackageApplications
 ### Properties
@@ -232,15 +180,29 @@
 * **minVersion**: string: Dependency version required.
 * **publisher**: string: Name of dependency publisher.
 
+## MsixPackageProperties
+### Properties
+* **displayName**: string: User friendly Name to be displayed in the portal.
+* **imagePath**: string: VHD/CIM image path on Network Share.
+* **isActive**: bool: Make this version of the package the active one across the hostpool.
+* **isRegularRegistration**: bool: Specifies how to register Package in feed.
+* **lastUpdated**: string: Date Package was last updated, found in the appxmanifest.xml.
+* **packageApplications**: [MsixPackageApplications](#msixpackageapplications)[]: List of package applications.
+* **packageDependencies**: [MsixPackageDependencies](#msixpackagedependencies)[]: List of package dependencies.
+* **packageFamilyName**: string: Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
+* **packageName**: string: Package Name from appxmanifest.xml.
+* **packageRelativePath**: string: Relative Path to the package inside the image.
+* **version**: string: Package Version found in the appxmanifest.xml.
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
+
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string: The current provisioning state.
-
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
 
 ## PrivateLinkServiceConnectionState
 ### Properties
@@ -248,14 +210,58 @@
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
 
-## SystemData
+## RegistrationInfo
 ### Properties
-* **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
-* **createdBy**: string (ReadOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
-* **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
+* **expirationTime**: string: Expiration time of registration token.
+* **registrationTokenOperation**: 'Delete' | 'None' | 'Update' | string: The type of resetting the token.
+* **token**: string: The registration token base64 encoded string.
+
+## ResourceModelWithAllowedPropertySetIdentity
+### Properties
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'SystemAssigned': The identity type.
+
+## ResourceModelWithAllowedPropertySetPlan
+### Properties
+* **name**: string (Required): A user defined name of the 3rd Party Artifact that is being procured.
+* **product**: string (Required): The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.
+* **promotionCode**: string: A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
+* **publisher**: string (Required): The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
+* **version**: string: The version of the desired product/artifact.
+
+## ResourceModelWithAllowedPropertySetSku
+### Properties
+* **capacity**: int: If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
+* **family**: string: If the service has different generations of hardware, for the same SKU, then that can be captured here.
+* **name**: string (Required): The name of the SKU. Ex - P3. It is typically a letter+number code
+* **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
+
+## ResourceModelWithAllowedPropertySetTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceModelWithAllowedPropertySetTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceModelWithAllowedPropertySetTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceModelWithAllowedPropertySetTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ScalingHostPoolReference
+### Properties
+* **hostPoolArmPath**: string: Arm path of referenced hostpool.
+* **scalingPlanEnabled**: bool: Is the scaling plan enabled for this hostpool.
 
 ## ScalingPlanProperties
 ### Properties
@@ -267,11 +273,6 @@
 * **objectId**: string (ReadOnly): ObjectId of scaling plan. (internal use)
 * **schedules**: [ScalingSchedule](#scalingschedule)[]: List of ScalingSchedule definitions.
 * **timeZone**: string: Timezone of the scaling plan.
-
-## ScalingHostPoolReference
-### Properties
-* **hostPoolArmPath**: string: Arm path of referenced hostpool.
-* **scalingPlanEnabled**: bool: Is the scaling plan enabled for this hostpool.
 
 ## ScalingSchedule
 ### Properties
@@ -294,10 +295,14 @@
 * **rampUpMinimumHostsPct**: int: Minimum host percentage for ramp up period.
 * **rampUpStartTime**: string: Starting time for ramp up period.
 
-## ResourceModelWithAllowedPropertySetTags
+## SystemData
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
+* **createdBy**: string (ReadOnly): The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
+* **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 
 ## WorkspaceProperties
 ### Properties
@@ -307,9 +312,4 @@
 * **friendlyName**: string: Friendly name of Workspace.
 * **objectId**: string (ReadOnly): ObjectId of Workspace. (internal use)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Enabled allows this resource to be accessed from both public and private networks, Disabled allows this resource to only be accessed via private endpoints
-
-## ResourceModelWithAllowedPropertySetTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

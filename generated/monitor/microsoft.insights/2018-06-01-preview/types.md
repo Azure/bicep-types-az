@@ -22,12 +22,6 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'microsoft.insights/guestDiagnosticSettingsAssociation' (ReadOnly, DeployTimeConstant): The resource type
 
-## GuestDiagnosticSettings
-### Properties
-* **dataSources**: [DataSource](#datasource)[]: the array of data source object which are configured to collect and send data
-* **osType**: 'Linux' | 'Windows' | string: Operating system type for the configuration
-* **proxySetting**: string
-
 ## DataSource
 ### Properties
 * **configuration**: [DataSourceConfiguration](#datasourceconfiguration) (Required)
@@ -40,10 +34,31 @@
 * **perfCounters**: [PerformanceCounterConfiguration](#performancecounterconfiguration)[]: Performance counter configuration
 * **providers**: [EtwProviderConfiguration](#etwproviderconfiguration)[]: ETW providers configuration
 
+## EtwEventConfiguration
+### Properties
+* **filter**: string
+* **id**: int (Required)
+* **name**: string (Required)
+
+## EtwProviderConfiguration
+### Properties
+* **events**: [EtwEventConfiguration](#etweventconfiguration)[] (Required): Array of EtwEventConfiguration
+* **id**: string (Required)
+
 ## EventLogConfiguration
 ### Properties
 * **filter**: string
 * **logName**: string (Required)
+
+## GuestDiagnosticSettings
+### Properties
+* **dataSources**: [DataSource](#datasource)[]: the array of data source object which are configured to collect and send data
+* **osType**: 'Linux' | 'Windows' | string: Operating system type for the configuration
+* **proxySetting**: string
+
+## GuestDiagnosticSettingsAssociation
+### Properties
+* **guestDiagnosticSettingsName**: string (Required): The guest diagnostic settings name.
 
 ## PerformanceCounterConfiguration
 ### Properties
@@ -51,32 +66,17 @@
 * **name**: string (Required)
 * **samplingPeriod**: string (Required)
 
-## EtwProviderConfiguration
+## ResourceTags
 ### Properties
-* **events**: [EtwEventConfiguration](#etweventconfiguration)[] (Required): Array of EtwEventConfiguration
-* **id**: string (Required)
+### Additional Properties
+* **Additional Properties Type**: string
 
-## EtwEventConfiguration
+## ResourceTags
 ### Properties
-* **filter**: string
-* **id**: int (Required)
-* **name**: string (Required)
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## SinkConfiguration
 ### Properties
 * **kind**: 'ApplicationInsights' | 'EventHub' | 'LogAnalytics' | string (Required)
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## GuestDiagnosticSettingsAssociation
-### Properties
-* **guestDiagnosticSettingsName**: string (Required): The guest diagnostic settings name.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

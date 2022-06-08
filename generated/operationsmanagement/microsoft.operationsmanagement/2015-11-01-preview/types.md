@@ -32,6 +32,11 @@
 * **tags**: [SolutionTags](#solutiontags): Resource tags
 * **type**: 'Microsoft.OperationsManagement/solutions' (ReadOnly, DeployTimeConstant): The resource type
 
+## ArmTemplateParameter
+### Properties
+* **name**: string: name of the parameter.
+* **value**: string: value for the parameter. In Jtoken
+
 ## ManagementAssociationProperties
 ### Properties
 * **applicationId**: string (Required): The applicationId of the appliance for this association.
@@ -43,11 +48,6 @@
 * **parentResourceType**: string (Required): The type of the parent resource.
 * **provisioningState**: string (ReadOnly): The provisioning state for the ManagementConfiguration.
 * **template**: any (Required): Any object
-
-## ArmTemplateParameter
-### Properties
-* **name**: string: name of the parameter.
-* **value**: string: value for the parameter. In Jtoken
 
 ## SolutionPlan
 ### Properties

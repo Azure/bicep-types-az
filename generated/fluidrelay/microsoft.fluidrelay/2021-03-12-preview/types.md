@@ -12,16 +12,16 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.FluidRelay/fluidRelayServers' (ReadOnly, DeployTimeConstant): The resource type
 
+## FluidRelayEndpoints
+### Properties
+* **ordererEndpoints**: string[] (ReadOnly): The Fluid Relay Orderer endpoints.
+* **storageEndpoints**: string[] (ReadOnly): The Fluid Relay storage endpoints.
+
 ## FluidRelayServerProperties
 ### Properties
 * **fluidRelayEndpoints**: [FluidRelayEndpoints](#fluidrelayendpoints) (ReadOnly): The Fluid Relay endpoints for this server
 * **frsTenantId**: string (ReadOnly): The Fluid tenantId for this server
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string: Provision states for FluidRelay RP
-
-## FluidRelayEndpoints
-### Properties
-* **ordererEndpoints**: string[] (ReadOnly): The Fluid Relay Orderer endpoints.
-* **storageEndpoints**: string[] (ReadOnly): The Fluid Relay storage endpoints.
 
 ## SystemData
 ### Properties

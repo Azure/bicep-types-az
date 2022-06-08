@@ -27,6 +27,20 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.Aad/domainServices/ouContainer' (ReadOnly, DeployTimeConstant): The resource type
 
+## ContainerAccount
+### Properties
+* **accountName**: string (ReadOnly): The account name
+* **password**: string (ReadOnly): The account password
+* **spn**: string (ReadOnly): The account spn
+
+## DomainSecuritySettings
+### Properties
+* **ntlmV1**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not NtlmV1 is enabled or disabled.
+* **syncKerberosPasswords**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
+* **syncNtlmPasswords**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
+* **syncOnPremPasswords**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
+* **tlsV1**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not TlsV1 is enabled or disabled.
+
 ## DomainServiceProperties
 ### Properties
 * **deploymentId**: string (ReadOnly): Deployment Id
@@ -45,53 +59,13 @@
 * **tenantId**: string (ReadOnly): Azure Active Directory Tenant Id
 * **version**: int (ReadOnly): Data Model Version
 
-## DomainSecuritySettings
+## ForestTrust
 ### Properties
-* **ntlmV1**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not NtlmV1 is enabled or disabled.
-* **syncKerberosPasswords**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
-* **syncNtlmPasswords**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
-* **syncOnPremPasswords**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
-* **tlsV1**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not TlsV1 is enabled or disabled.
-
-## LdapsSettings
-### Properties
-* **certificateNotAfter**: string (ReadOnly): NotAfter DateTime of configure ldaps certificate.
-* **certificateThumbprint**: string (ReadOnly): Thumbprint of configure ldaps certificate.
-* **externalAccess**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.
-* **ldaps**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not Secure LDAP is enabled or disabled.
-* **pfxCertificate**: string: The certificate required to configure Secure LDAP. The parameter passed here should be a base64encoded representation of the certificate pfx file.
-* **pfxCertificatePassword**: string: The password to decrypt the provided Secure LDAP certificate pfx file.
-* **publicCertificate**: string (ReadOnly): Public certificate used to configure secure ldap.
-
-## MigrationProperties
-### Properties
-* **migrationProgress**: [MigrationProgress](#migrationprogress) (ReadOnly): Migration Progress
-* **oldSubnetId**: string (ReadOnly): Old Subnet Id
-* **oldVnetSiteId**: string (ReadOnly): Old Vnet Site Id
-
-## MigrationProgress
-### Properties
-* **completionPercentage**: int: Completion Percentage
-* **progressMessage**: string: Progress Message
-
-## NotificationSettings
-### Properties
-* **additionalRecipients**: string[]: The list of additional recipients
-* **notifyDcAdmins**: 'Disabled' | 'Enabled' | string: Should domain controller admins be notified
-* **notifyGlobalAdmins**: 'Disabled' | 'Enabled' | string: Should global admins be notified
-
-## ReplicaSet
-### Properties
-* **domainControllerIpAddress**: string[] (ReadOnly): List of Domain Controller IP Address
-* **externalAccessIpAddress**: string (ReadOnly): External access ip address.
-* **healthAlerts**: [HealthAlert](#healthalert)[] (ReadOnly): List of Domain Health Alerts
-* **healthLastEvaluated**: string (ReadOnly): Last domain evaluation run DateTime
-* **healthMonitors**: [HealthMonitor](#healthmonitor)[] (ReadOnly): List of Domain Health Monitors
-* **location**: string: Virtual network location
-* **replicaSetId**: string (ReadOnly): ReplicaSet Id
-* **serviceStatus**: string (ReadOnly): Status of Domain Service instance
-* **subnetId**: string: The name of the virtual network that Domain Services will be deployed on. The id of the subnet that Domain Services will be deployed on. /virtualNetwork/vnetName/subnets/subnetName.
-* **vnetSiteId**: string (ReadOnly): Virtual network site id
+* **friendlyName**: string: Friendly Name
+* **remoteDnsIps**: string: Remote Dns ips
+* **trustDirection**: string: Trust Direction
+* **trustedDomainFqdn**: string: Trusted Domain FQDN
+* **trustPassword**: string: Trust Password
 
 ## HealthAlert
 ### Properties
@@ -109,23 +83,32 @@
 * **id**: string (ReadOnly): Health Monitor Id
 * **name**: string (ReadOnly): Health Monitor Name
 
-## ResourceForestSettings
+## LdapsSettings
 ### Properties
-* **resourceForest**: string: Resource Forest
-* **settings**: [ForestTrust](#foresttrust)[]: List of settings for Resource Forest
+* **certificateNotAfter**: string (ReadOnly): NotAfter DateTime of configure ldaps certificate.
+* **certificateThumbprint**: string (ReadOnly): Thumbprint of configure ldaps certificate.
+* **externalAccess**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.
+* **ldaps**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not Secure LDAP is enabled or disabled.
+* **pfxCertificate**: string: The certificate required to configure Secure LDAP. The parameter passed here should be a base64encoded representation of the certificate pfx file.
+* **pfxCertificatePassword**: string: The password to decrypt the provided Secure LDAP certificate pfx file.
+* **publicCertificate**: string (ReadOnly): Public certificate used to configure secure ldap.
 
-## ForestTrust
+## MigrationProgress
 ### Properties
-* **friendlyName**: string: Friendly Name
-* **remoteDnsIps**: string: Remote Dns ips
-* **trustDirection**: string: Trust Direction
-* **trustedDomainFqdn**: string: Trusted Domain FQDN
-* **trustPassword**: string: Trust Password
+* **completionPercentage**: int: Completion Percentage
+* **progressMessage**: string: Progress Message
 
-## ResourceTags
+## MigrationProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **migrationProgress**: [MigrationProgress](#migrationprogress) (ReadOnly): Migration Progress
+* **oldSubnetId**: string (ReadOnly): Old Subnet Id
+* **oldVnetSiteId**: string (ReadOnly): Old Vnet Site Id
+
+## NotificationSettings
+### Properties
+* **additionalRecipients**: string[]: The list of additional recipients
+* **notifyDcAdmins**: 'Disabled' | 'Enabled' | string: Should domain controller admins be notified
+* **notifyGlobalAdmins**: 'Disabled' | 'Enabled' | string: Should global admins be notified
 
 ## OuContainerProperties
 ### Properties
@@ -138,11 +121,28 @@
 * **serviceStatus**: string (ReadOnly): Status of OuContainer instance
 * **tenantId**: string (ReadOnly): Azure Active Directory tenant id
 
-## ContainerAccount
+## ReplicaSet
 ### Properties
-* **accountName**: string (ReadOnly): The account name
-* **password**: string (ReadOnly): The account password
-* **spn**: string (ReadOnly): The account spn
+* **domainControllerIpAddress**: string[] (ReadOnly): List of Domain Controller IP Address
+* **externalAccessIpAddress**: string (ReadOnly): External access ip address.
+* **healthAlerts**: [HealthAlert](#healthalert)[] (ReadOnly): List of Domain Health Alerts
+* **healthLastEvaluated**: string (ReadOnly): Last domain evaluation run DateTime
+* **healthMonitors**: [HealthMonitor](#healthmonitor)[] (ReadOnly): List of Domain Health Monitors
+* **location**: string: Virtual network location
+* **replicaSetId**: string (ReadOnly): ReplicaSet Id
+* **serviceStatus**: string (ReadOnly): Status of Domain Service instance
+* **subnetId**: string: The name of the virtual network that Domain Services will be deployed on. The id of the subnet that Domain Services will be deployed on. /virtualNetwork/vnetName/subnets/subnetName.
+* **vnetSiteId**: string (ReadOnly): Virtual network site id
+
+## ResourceForestSettings
+### Properties
+* **resourceForest**: string: Resource Forest
+* **settings**: [ForestTrust](#foresttrust)[]: List of settings for Resource Forest
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

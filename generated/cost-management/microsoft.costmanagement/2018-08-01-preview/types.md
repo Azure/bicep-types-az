@@ -22,6 +22,24 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.CostManagement/reports' (ReadOnly, DeployTimeConstant): The resource type
 
+## ConnectorCollectionErrorInfo
+### Properties
+* **errorCode**: string (ReadOnly): Short error message
+* **errorMessage**: string (ReadOnly): Detailed error message
+* **errorStartTime**: string (ReadOnly): Time the error started occurring (Last time error occurred in lastRun)
+
+## ConnectorCollectionInfo
+### Properties
+* **error**: [ConnectorCollectionErrorInfo](#connectorcollectionerrorinfo): Details of any error encountered on last collection attempt
+* **lastRun**: string (ReadOnly): Last time the data acquisition process completed (even if no new data was found)
+* **lastUpdated**: string (ReadOnly): Last time the external data was updated into Azure
+* **sourceLastUpdated**: string (ReadOnly): Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
+
+## ConnectorDefinitionTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ConnectorProperties
 ### Properties
 * **collection**: [ConnectorCollectionInfo](#connectorcollectioninfo) (ReadOnly): Collection and ingestion information
@@ -34,37 +52,16 @@
 * **reportId**: string: Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
 * **status**: 'active' | 'error' | 'suspended' | string: Connector status
 
-## ConnectorCollectionInfo
+## ReportAggregation
 ### Properties
-* **error**: [ConnectorCollectionErrorInfo](#connectorcollectionerrorinfo): Details of any error encountered on last collection attempt
-* **lastRun**: string (ReadOnly): Last time the data acquisition process completed (even if no new data was found)
-* **lastUpdated**: string (ReadOnly): Last time the external data was updated into Azure
-* **sourceLastUpdated**: string (ReadOnly): Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
+* **function**: 'Sum' | string (Required): The name of the aggregation function to use.
+* **name**: string (Required): The name of the column to aggregate.
 
-## ConnectorCollectionErrorInfo
+## ReportComparisonExpression
 ### Properties
-* **errorCode**: string (ReadOnly): Short error message
-* **errorMessage**: string (ReadOnly): Detailed error message
-* **errorStartTime**: string (ReadOnly): Time the error started occurring (Last time error occurred in lastRun)
-
-## ConnectorDefinitionTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ReportProperties
-### Properties
-* **definition**: [ReportDefinition](#reportdefinition) (Required): The definition of a report.
-* **deliveryInfo**: [ReportDeliveryInfo](#reportdeliveryinfo) (Required): The delivery information associated with a report.
-* **format**: 'Csv' | string: The format of the report being delivered.
-* **schedule**: [ReportSchedule](#reportschedule): The schedule associated with a report.
-
-## ReportDefinition
-### Properties
-* **dataset**: [ReportDataset](#reportdataset): The definition of data present in the report.
-* **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | string (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided.
-* **timePeriod**: [ReportTimePeriod](#reporttimeperiod): The start and end date for pulling data for the report.
-* **type**: 'Usage' | string (Required): The type of the report.
+* **name**: string (Required): The name of the column to use in comparison.
+* **operator**: 'In' | string (Required): The operator to use for comparison.
+* **values**: string[] (Required): Array of values to use for comparison
 
 ## ReportDataset
 ### Properties
@@ -79,14 +76,26 @@
 ### Additional Properties
 * **Additional Properties Type**: [ReportAggregation](#reportaggregation)
 
-## ReportAggregation
-### Properties
-* **function**: 'Sum' | string (Required): The name of the aggregation function to use.
-* **name**: string (Required): The name of the column to aggregate.
-
 ## ReportDatasetConfiguration
 ### Properties
 * **columns**: string[]: Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.
+
+## ReportDefinition
+### Properties
+* **dataset**: [ReportDataset](#reportdataset): The definition of data present in the report.
+* **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | string (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+* **timePeriod**: [ReportTimePeriod](#reporttimeperiod): The start and end date for pulling data for the report.
+* **type**: 'Usage' | string (Required): The type of the report.
+
+## ReportDeliveryDestination
+### Properties
+* **container**: string (Required): The name of the container where reports will be uploaded.
+* **resourceId**: string (Required): The resource id of the storage account where reports will be delivered.
+* **rootFolderPath**: string: The name of the directory where reports will be uploaded.
+
+## ReportDeliveryInfo
+### Properties
+* **destination**: [ReportDeliveryDestination](#reportdeliverydestination) (Required): The destination information for the delivery of the report.
 
 ## ReportFilter
 ### Properties
@@ -96,31 +105,22 @@
 * **or**: [ReportFilter](#reportfilter)[]: The logical "OR" expression. Must have at least 2 items.
 * **tag**: [ReportComparisonExpression](#reportcomparisonexpression): The comparison expression to be used in the report.
 
-## ReportComparisonExpression
-### Properties
-* **name**: string (Required): The name of the column to use in comparison.
-* **operator**: 'In' | string (Required): The operator to use for comparison.
-* **values**: string[] (Required): Array of values to use for comparison
-
 ## ReportGrouping
 ### Properties
 * **name**: string (Required): The name of the column to group.
 * **type**: 'Dimension' | 'Tag' | string (Required): The type of the column in the report.
 
-## ReportTimePeriod
+## ReportProperties
 ### Properties
-* **from**: string (Required): The start date to pull data from.
-* **to**: string (Required): The end date to pull data to.
+* **definition**: [ReportDefinition](#reportdefinition) (Required): The definition of a report.
+* **deliveryInfo**: [ReportDeliveryInfo](#reportdeliveryinfo) (Required): The delivery information associated with a report.
+* **format**: 'Csv' | string: The format of the report being delivered.
+* **schedule**: [ReportSchedule](#reportschedule): The schedule associated with a report.
 
-## ReportDeliveryInfo
+## ReportRecurrencePeriod
 ### Properties
-* **destination**: [ReportDeliveryDestination](#reportdeliverydestination) (Required): The destination information for the delivery of the report.
-
-## ReportDeliveryDestination
-### Properties
-* **container**: string (Required): The name of the container where reports will be uploaded.
-* **resourceId**: string (Required): The resource id of the storage account where reports will be delivered.
-* **rootFolderPath**: string: The name of the directory where reports will be uploaded.
+* **from**: string (Required): The start date of recurrence.
+* **to**: string: The end date of recurrence.
 
 ## ReportSchedule
 ### Properties
@@ -128,10 +128,10 @@
 * **recurrencePeriod**: [ReportRecurrencePeriod](#reportrecurrenceperiod): The start and end date for recurrence schedule.
 * **status**: 'Active' | 'Inactive' | string: The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.
 
-## ReportRecurrencePeriod
+## ReportTimePeriod
 ### Properties
-* **from**: string (Required): The start date of recurrence.
-* **to**: string: The end date of recurrence.
+* **from**: string (Required): The start date to pull data from.
+* **to**: string (Required): The end date to pull data to.
 
 ## ResourceTags
 ### Properties

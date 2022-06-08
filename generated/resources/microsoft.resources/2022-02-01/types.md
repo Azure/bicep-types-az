@@ -24,6 +24,20 @@
 * **tags**: [TemplateSpecVersionTags](#templatespecversiontags): Resource tags.
 * **type**: 'Microsoft.Resources/templateSpecs/versions' (ReadOnly, DeployTimeConstant): The resource type
 
+## LinkedTemplateArtifact
+### Properties
+* **path**: string (Required): A filesystem safe relative path of the artifact.
+* **template**: any (Required): Any object
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+
 ## TemplateSpecProperties
 ### Properties
 * **description**: string: Template Spec description.
@@ -36,25 +50,16 @@
 ### Additional Properties
 * **Additional Properties Type**: [TemplateSpecVersionInfo](#templatespecversioninfo)
 
+## TemplateSpecTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## TemplateSpecVersionInfo
 ### Properties
 * **description**: string (ReadOnly): Template Spec version description.
 * **timeCreated**: string (ReadOnly): The timestamp of when the version was created.
 * **timeModified**: string (ReadOnly): The timestamp of when the version was last modified.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## TemplateSpecTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## TemplateSpecVersionProperties
 ### Properties
@@ -63,11 +68,6 @@
 * **mainTemplate**: any: Any object
 * **metadata**: any: Any object
 * **uiFormDefinition**: any: Any object
-
-## LinkedTemplateArtifact
-### Properties
-* **path**: string (Required): A filesystem safe relative path of the artifact.
-* **template**: any (Required): Any object
 
 ## TemplateSpecVersionTags
 ### Properties

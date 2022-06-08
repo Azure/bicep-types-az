@@ -24,6 +24,40 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## AzureSqlProtectedItemExtendedInfo
+### Properties
+* **oldestRecoveryPoint**: string: The oldest backup copy available for this item in the service.
+* **policyState**: string: The state of the backup policy associated with this backup item.
+* **recoveryPointCount**: int: The number of available backup copies for this backup item.
+
+## DailyRetentionFormat
+### Properties
+* **daysOfTheMonth**: [Day](#day)[]: List of days of the month.
+
+## DailyRetentionSchedule
+### Properties
+* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
+* **retentionTimes**: string[]: The retention times of retention policy.
+
+## Day
+### Properties
+* **date**: int
+* **isLast**: bool
+
+## MabFileFolderProtectedItemExtendedInfo
+### Properties
+* **lastRefreshedAt**: string: The last day and time the agent synced with the service.
+* **oldestRecoveryPoint**: string: The oldest backup copy available.
+* **recoveryPointCount**: int: The number of backup copies associated with the backup item.
+
+## MonthlyRetentionSchedule
+### Properties
+* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
+* **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format.
+* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly': Retention schedule format type for monthly retention policy.
+* **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
+* **retentionTimes**: string[]: Retention times of the retention policy.
+
 ## ProtectedItem
 * **Discriminator**: protectedItemType
 
@@ -59,23 +93,6 @@
 * **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': The backup state of the backup item.
 
 
-## MabFileFolderProtectedItemExtendedInfo
-### Properties
-* **lastRefreshedAt**: string: The last day and time the agent synced with the service.
-* **oldestRecoveryPoint**: string: The oldest backup copy available.
-* **recoveryPointCount**: int: The number of backup copies associated with the backup item.
-
-## AzureSqlProtectedItemExtendedInfo
-### Properties
-* **oldestRecoveryPoint**: string: The oldest backup copy available for this item in the service.
-* **policyState**: string: The state of the backup policy associated with this backup item.
-* **recoveryPointCount**: int: The number of available backup copies for this backup item.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ProtectionPolicy
 * **Discriminator**: backupManagementType
 
@@ -99,6 +116,22 @@
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): The base class for backup schedules.
 
 
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RetentionDuration
+### Properties
+* **count**: int: Count of the duration types. Retention duration is determined by the combining the Count times and durationType. 
+   For example, if Count = 3 and durationType = Weeks, then the retention duration is three weeks.
+* **durationType**: 'Days' | 'Invalid' | 'Months' | 'Weeks' | 'Years': The retention duration type of the retention policy.
+
 ## RetentionPolicy
 * **Discriminator**: retentionPolicyType
 
@@ -117,33 +150,22 @@
 * **retentionPolicyType**: 'SimpleRetentionPolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
 
 
-## DailyRetentionSchedule
-### Properties
-* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
-* **retentionTimes**: string[]: The retention times of retention policy.
+## SchedulePolicy
+* **Discriminator**: schedulePolicyType
 
-## RetentionDuration
-### Properties
-* **count**: int: Count of the duration types. Retention duration is determined by the combining the Count times and durationType. 
-   For example, if Count = 3 and durationType = Weeks, then the retention duration is three weeks.
-* **durationType**: 'Days' | 'Invalid' | 'Months' | 'Weeks' | 'Years': The retention duration type of the retention policy.
+### Base Properties
+### LongTermSchedulePolicy
+#### Properties
+* **schedulePolicyType**: 'LongTermSchedulePolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
 
-## MonthlyRetentionSchedule
-### Properties
-* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
-* **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format.
-* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly': Retention schedule format type for monthly retention policy.
-* **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
-* **retentionTimes**: string[]: Retention times of the retention policy.
+### SimpleSchedulePolicy
+#### Properties
+* **schedulePolicyType**: 'SimpleSchedulePolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **scheduleRunDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: This list is the days of the week when the schedule runs.
+* **scheduleRunFrequency**: 'Daily' | 'Invalid' | 'Weekly': Defines the frequency interval (daily or weekly) for the schedule policy.
+* **scheduleRunTimes**: string[]: List of times, during a day, when the schedule runs.
+* **scheduleWeeklyFrequency**: int: The number of times per week the schedule runs.
 
-## DailyRetentionFormat
-### Properties
-* **daysOfTheMonth**: [Day](#day)[]: List of days of the month.
-
-## Day
-### Properties
-* **date**: int
-* **isLast**: bool
 
 ## WeeklyRetentionFormat
 ### Properties
@@ -164,26 +186,4 @@
 * **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly': Retention schedule format type for monthly retention policy.
 * **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
 * **retentionTimes**: string[]: Retention times for the retention policy.
-
-## SchedulePolicy
-* **Discriminator**: schedulePolicyType
-
-### Base Properties
-### LongTermSchedulePolicy
-#### Properties
-* **schedulePolicyType**: 'LongTermSchedulePolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
-
-### SimpleSchedulePolicy
-#### Properties
-* **schedulePolicyType**: 'SimpleSchedulePolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **scheduleRunDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: This list is the days of the week when the schedule runs.
-* **scheduleRunFrequency**: 'Daily' | 'Invalid' | 'Weekly': Defines the frequency interval (daily or weekly) for the schedule policy.
-* **scheduleRunTimes**: string[]: List of times, during a day, when the schedule runs.
-* **scheduleWeeklyFrequency**: int: The number of times per week the schedule runs.
-
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

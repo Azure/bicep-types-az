@@ -90,23 +90,12 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the resource.
 * **resourceGuid**: string (ReadOnly): The resourceGuid for the DNS forwarding ruleset.
 
-## SubResource
+## DnsResolverProperties
 ### Properties
-* **id**: string: Resource ID.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **dnsResolverState**: 'Connected' | 'Disconnected' | string (ReadOnly): The current status of the DNS resolver. This is a read-only property and any attempt to set this value will be ignored.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the resource.
+* **resourceGuid**: string (ReadOnly): The Guid property of the resource.
+* **virtualNetwork**: [SubResource](#subresource) (Required): Reference to another ARM resource.
 
 ## ForwardingRuleProperties
 ### Properties
@@ -117,34 +106,6 @@
 * **targetDnsServers**: [TargetDnsServer](#targetdnsserver)[] (Required): DNS servers to forward the DNS query to.
 
 ## ForwardingRulePropertiesMetadata
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TargetDnsServer
-### Properties
-* **ipAddress**: string: DNS server IP address.
-* **port**: int: DNS server port.
-
-## VirtualNetworkLinkProperties
-### Properties
-* **metadata**: [VirtualNetworkLinkPropertiesMetadata](#virtualnetworklinkpropertiesmetadata): Metadata attached to the virtual network link.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the resource.
-* **virtualNetwork**: [SubResource](#subresource): Reference to another ARM resource.
-
-## VirtualNetworkLinkPropertiesMetadata
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## DnsResolverProperties
-### Properties
-* **dnsResolverState**: 'Connected' | 'Disconnected' | string (ReadOnly): The current status of the DNS resolver. This is a read-only property and any attempt to set this value will be ignored.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the resource.
-* **resourceGuid**: string (ReadOnly): The Guid property of the resource.
-* **virtualNetwork**: [SubResource](#subresource) (Required): Reference to another ARM resource.
-
-## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -161,38 +122,77 @@
 * **privateIpAllocationMethod**: 'Dynamic' | 'Static' | string: Private IP address allocation method.
 * **subnet**: [SubResource](#subresource): Reference to another ARM resource.
 
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## OutboundEndpointProperties
 ### Properties
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the resource.
 * **resourceGuid**: string (ReadOnly): The Guid property of the resource.
 * **subnet**: [SubResource](#subresource): Reference to another ARM resource.
 
+## SubResource
+### Properties
+* **id**: string: Resource ID.
+
+## SubResourceListResult
+### Properties
+* **nextLink**: string (ReadOnly): The continuation token for the next page of results.
+* **value**: [SubResource](#subresource)[] (ReadOnly): Enumeration of the sub-resources.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+
+## TargetDnsServer
+### Properties
+* **ipAddress**: string: DNS server IP address.
+* **port**: int: DNS server port.
+
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## VirtualNetworkDnsForwardingRulesetListResult
+## TrackedResourceTags
 ### Properties
-* **nextLink**: string (ReadOnly): The continuation token for the next page of results.
-* **value**: [VirtualNetworkDnsForwardingRuleset](#virtualnetworkdnsforwardingruleset)[] (ReadOnly): Enumeration of the Virtual Network DNS Forwarding Ruleset.
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## VirtualNetworkDnsForwardingRuleset
 ### Properties
 * **id**: string (ReadOnly): DNS Forwarding Ruleset Resource ID.
 * **properties**: [VirtualNetworkLinkSubResourceProperties](#virtualnetworklinksubresourceproperties) (ReadOnly): The reference to the virtual network link that associates between the DNS forwarding ruleset and virtual network.
 
+## VirtualNetworkDnsForwardingRulesetListResult
+### Properties
+* **nextLink**: string (ReadOnly): The continuation token for the next page of results.
+* **value**: [VirtualNetworkDnsForwardingRuleset](#virtualnetworkdnsforwardingruleset)[] (ReadOnly): Enumeration of the Virtual Network DNS Forwarding Ruleset.
+
+## VirtualNetworkLinkProperties
+### Properties
+* **metadata**: [VirtualNetworkLinkPropertiesMetadata](#virtualnetworklinkpropertiesmetadata): Metadata attached to the virtual network link.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the resource.
+* **virtualNetwork**: [SubResource](#subresource): Reference to another ARM resource.
+
+## VirtualNetworkLinkPropertiesMetadata
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## VirtualNetworkLinkSubResourceProperties
 ### Properties
 * **virtualNetworkLink**: [SubResource](#subresource) (ReadOnly): Reference to another ARM resource.
-
-## SubResourceListResult
-### Properties
-* **nextLink**: string (ReadOnly): The continuation token for the next page of results.
-* **value**: [SubResource](#subresource)[] (ReadOnly): Enumeration of the sub-resources.
 

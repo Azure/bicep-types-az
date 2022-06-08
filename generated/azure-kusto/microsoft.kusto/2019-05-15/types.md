@@ -54,6 +54,12 @@
 * **ApiVersion**: 2019-05-15
 * **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
 
+## AzureSku
+### Properties
+* **capacity**: int: The number of instances of the cluster.
+* **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_L16s' | 'Standard_L4s' | 'Standard_L8s' | string (Required): SKU name.
+* **tier**: 'Basic' | 'Standard' | string (Required): SKU tier.
+
 ## ClusterProperties
 ### Properties
 * **dataIngestionUri**: string (ReadOnly): The cluster data ingestion URI.
@@ -66,33 +72,19 @@
 * **uri**: string (ReadOnly): The cluster URI.
 * **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): A class that contains virtual network definition.
 
-## OptimizedAutoscale
+## DatabasePrincipal
 ### Properties
-* **isEnabled**: bool (Required): A boolean value that indicate if the optimized autoscale feature is enabled or not.
-* **maximum**: int (Required): Maximum allowed instances count.
-* **minimum**: int (Required): Minimum allowed instances count.
-* **version**: int (Required): The version of the template defined, for instance 1.
+* **appId**: string (ReadOnly): Application id - relevant only for application principal type.
+* **email**: string (ReadOnly): Database principal email if exists.
+* **fqn**: string (ReadOnly): Database principal fully qualified name.
+* **name**: string (ReadOnly): Database principal name.
+* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewers' | 'User' | 'Viewer' | string (ReadOnly): Database principal role.
+* **tenantName**: string (ReadOnly): The tenant name of the principal
+* **type**: 'App' | 'Group' | 'User' | string (ReadOnly): Database principal type.
 
-## TrustedExternalTenant
+## DatabasePrincipalListResult
 ### Properties
-* **value**: string: GUID representing an external tenant.
-
-## VirtualNetworkConfiguration
-### Properties
-* **dataManagementPublicIpId**: string (Required): Data management's service public IP address resource id.
-* **enginePublicIpId**: string (Required): Engine service's public IP address resource id.
-* **subnetId**: string (Required): The subnet resource id.
-
-## AzureSku
-### Properties
-* **capacity**: int: The number of instances of the cluster.
-* **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_L16s' | 'Standard_L4s' | 'Standard_L8s' | string (Required): SKU name.
-* **tier**: 'Basic' | 'Standard' | string (Required): SKU tier.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **value**: [DatabasePrincipal](#databaseprincipal)[] (ReadOnly): The list of Kusto database principals.
 
 ## DatabaseProperties
 ### Properties
@@ -133,17 +125,25 @@
 * **sharedAccessPolicyName**: string (Required): The name of the share access policy name
 * **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
 
-## DatabasePrincipalListResult
+## OptimizedAutoscale
 ### Properties
-* **value**: [DatabasePrincipal](#databaseprincipal)[] (ReadOnly): The list of Kusto database principals.
+* **isEnabled**: bool (Required): A boolean value that indicate if the optimized autoscale feature is enabled or not.
+* **maximum**: int (Required): Maximum allowed instances count.
+* **minimum**: int (Required): Minimum allowed instances count.
+* **version**: int (Required): The version of the template defined, for instance 1.
 
-## DatabasePrincipal
+## TrackedResourceTags
 ### Properties
-* **appId**: string (ReadOnly): Application id - relevant only for application principal type.
-* **email**: string (ReadOnly): Database principal email if exists.
-* **fqn**: string (ReadOnly): Database principal fully qualified name.
-* **name**: string (ReadOnly): Database principal name.
-* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewers' | 'User' | 'Viewer' | string (ReadOnly): Database principal role.
-* **tenantName**: string (ReadOnly): The tenant name of the principal
-* **type**: 'App' | 'Group' | 'User' | string (ReadOnly): Database principal type.
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrustedExternalTenant
+### Properties
+* **value**: string: GUID representing an external tenant.
+
+## VirtualNetworkConfiguration
+### Properties
+* **dataManagementPublicIpId**: string (Required): Data management's service public IP address resource id.
+* **enginePublicIpId**: string (Required): Engine service's public IP address resource id.
+* **subnetId**: string (Required): The subnet resource id.
 

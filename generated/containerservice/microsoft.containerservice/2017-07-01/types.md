@@ -11,18 +11,6 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.ContainerService/containerServices' (ReadOnly, DeployTimeConstant): The resource type
 
-## ContainerServiceProperties
-### Properties
-* **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[]: Properties of the agent pool.
-* **customProfile**: [ContainerServiceCustomProfile](#containerservicecustomprofile): Properties to configure a custom container service cluster.
-* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile): Profile for diagnostics on the container service cluster.
-* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile) (Required): Profile for Linux VMs in the container service cluster.
-* **masterProfile**: [ContainerServiceMasterProfile](#containerservicemasterprofile) (Required): Profile for the container service master.
-* **orchestratorProfile**: [ContainerServiceOrchestratorProfile](#containerserviceorchestratorprofile) (Required): Profile for the container service orchestrator.
-* **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
-* **servicePrincipalProfile**: [ContainerServicePrincipalProfile](#containerserviceprincipalprofile): Information about a service principal identity for the cluster to use for manipulating Azure APIs. Either secret or keyVaultSecretRef must be specified.
-* **windowsProfile**: [ContainerServiceWindowsProfile](#containerservicewindowsprofile): Profile for Windows VMs in the container service cluster.
-
 ## ContainerServiceAgentPoolProfile
 ### Properties
 * **count**: int: Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1.
@@ -44,23 +32,10 @@
 ### Properties
 * **vmDiagnostics**: [ContainerServiceVMDiagnostics](#containerservicevmdiagnostics) (Required): Profile for diagnostics on the container service VMs.
 
-## ContainerServiceVMDiagnostics
-### Properties
-* **enabled**: bool (Required): Whether the VM diagnostic agent is provisioned on the VM.
-* **storageUri**: string (ReadOnly): The URI of the storage account where diagnostics are stored.
-
 ## ContainerServiceLinuxProfile
 ### Properties
 * **adminUsername**: string (Required): The administrator username to use for Linux VMs.
 * **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required): SSH configuration for Linux-based VMs running on Azure.
-
-## ContainerServiceSshConfiguration
-### Properties
-* **publicKeys**: [ContainerServiceSshPublicKey](#containerservicesshpublickey)[] (Required): The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.
-
-## ContainerServiceSshPublicKey
-### Properties
-* **keyData**: string (Required): Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.
 
 ## ContainerServiceMasterProfile
 ### Properties
@@ -84,16 +59,41 @@
 * **keyVaultSecretRef**: [KeyVaultSecretRef](#keyvaultsecretref): Reference to a secret stored in Azure Key Vault.
 * **secret**: string: The secret password associated with the service principal in plain text.
 
-## KeyVaultSecretRef
+## ContainerServiceProperties
 ### Properties
-* **secretName**: string (Required): The secret name.
-* **vaultID**: string (Required): Key vault identifier.
-* **version**: string: The secret version.
+* **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[]: Properties of the agent pool.
+* **customProfile**: [ContainerServiceCustomProfile](#containerservicecustomprofile): Properties to configure a custom container service cluster.
+* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile): Profile for diagnostics on the container service cluster.
+* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile) (Required): Profile for Linux VMs in the container service cluster.
+* **masterProfile**: [ContainerServiceMasterProfile](#containerservicemasterprofile) (Required): Profile for the container service master.
+* **orchestratorProfile**: [ContainerServiceOrchestratorProfile](#containerserviceorchestratorprofile) (Required): Profile for the container service orchestrator.
+* **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
+* **servicePrincipalProfile**: [ContainerServicePrincipalProfile](#containerserviceprincipalprofile): Information about a service principal identity for the cluster to use for manipulating Azure APIs. Either secret or keyVaultSecretRef must be specified.
+* **windowsProfile**: [ContainerServiceWindowsProfile](#containerservicewindowsprofile): Profile for Windows VMs in the container service cluster.
+
+## ContainerServiceSshConfiguration
+### Properties
+* **publicKeys**: [ContainerServiceSshPublicKey](#containerservicesshpublickey)[] (Required): The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.
+
+## ContainerServiceSshPublicKey
+### Properties
+* **keyData**: string (Required): Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.
+
+## ContainerServiceVMDiagnostics
+### Properties
+* **enabled**: bool (Required): Whether the VM diagnostic agent is provisioned on the VM.
+* **storageUri**: string (ReadOnly): The URI of the storage account where diagnostics are stored.
 
 ## ContainerServiceWindowsProfile
 ### Properties
 * **adminPassword**: string (Required): The administrator password to use for Windows VMs.
 * **adminUsername**: string (Required): The administrator username to use for Windows VMs.
+
+## KeyVaultSecretRef
+### Properties
+* **secretName**: string (Required): The secret name.
+* **vaultID**: string (Required): Key vault identifier.
+* **version**: string: The secret version.
 
 ## ResourceTags
 ### Properties

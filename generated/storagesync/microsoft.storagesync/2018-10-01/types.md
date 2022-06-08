@@ -47,10 +47,17 @@
 * **properties**: [ServerEndpointCreateParametersProperties](#serverendpointcreateparametersproperties): ServerEndpoint Properties object.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## StorageSyncServiceCreateParametersTags
+## CloudEndpointCreateParametersProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **backupEnabled**: string (ReadOnly): Backup Enabled
+* **friendlyName**: string (ReadOnly): Friendly Name
+* **lastOperationName**: string (ReadOnly): Resource Last Operation Name
+* **lastWorkflowId**: string (ReadOnly): CloudEndpoint lastWorkflowId
+* **partnershipId**: string (ReadOnly): Partnership Id
+* **provisioningState**: string (ReadOnly): CloudEndpoint Provisioning State
+* **storageAccountResourceId**: string: Storage Account Resource Id
+* **storageAccountShareName**: string: Storage Account Share name
+* **storageAccountTenantId**: string: Storage Account Tenant Id
 
 ## RegisteredServerCreateParametersProperties
 ### Properties
@@ -73,18 +80,6 @@
 * **serverRole**: string: Registered Server serverRole
 * **serviceLocation**: string (ReadOnly): Service Location
 * **storageSyncServiceUid**: string (ReadOnly): Registered Server storageSyncServiceUid
-
-## CloudEndpointCreateParametersProperties
-### Properties
-* **backupEnabled**: string (ReadOnly): Backup Enabled
-* **friendlyName**: string (ReadOnly): Friendly Name
-* **lastOperationName**: string (ReadOnly): Resource Last Operation Name
-* **lastWorkflowId**: string (ReadOnly): CloudEndpoint lastWorkflowId
-* **partnershipId**: string (ReadOnly): Partnership Id
-* **provisioningState**: string (ReadOnly): CloudEndpoint Provisioning State
-* **storageAccountResourceId**: string: Storage Account Resource Id
-* **storageAccountShareName**: string: Storage Account Share name
-* **storageAccountTenantId**: string: Storage Account Tenant Id
 
 ## ServerEndpointCreateParametersProperties
 ### Properties
@@ -113,6 +108,11 @@
 * **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' | string (ReadOnly): Type of the Health state
 * **uploadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string (ReadOnly): Type of the Health state
 * **uploadStatus**: [SyncSessionStatus](#syncsessionstatus) (ReadOnly): Sync Session status object.
+
+## StorageSyncServiceCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## SyncProgressStatus
 ### Properties

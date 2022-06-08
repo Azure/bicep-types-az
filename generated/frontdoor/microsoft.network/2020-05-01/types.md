@@ -20,36 +20,6 @@
 * **properties**: [RulesEngineProperties](#rulesengineproperties): The JSON object that contains the properties required to create a Rules Engine Configuration.
 * **type**: 'Microsoft.Network/frontDoors/rulesEngines' (ReadOnly, DeployTimeConstant): The resource type
 
-## FrontDoorProperties
-### Properties
-* **backendPools**: [BackendPool](#backendpool)[]: Backend pools available to routing rules.
-* **backendPoolsSettings**: [BackendPoolsSettings](#backendpoolssettings): Settings that apply to all backend pools.
-* **cname**: string (ReadOnly): The host that each frontendEndpoint must CNAME to.
-* **enabledState**: 'Disabled' | 'Enabled' | string: Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
-* **friendlyName**: string: A friendly name for the frontDoor
-* **frontdoorId**: string (ReadOnly): The Id of the frontdoor.
-* **frontendEndpoints**: [FrontendEndpoint](#frontendendpoint)[]: Frontend endpoints available to routing rules.
-* **healthProbeSettings**: [HealthProbeSettingsModel](#healthprobesettingsmodel)[]: Health probe settings associated with this Front Door instance.
-* **loadBalancingSettings**: [LoadBalancingSettingsModel](#loadbalancingsettingsmodel)[]: Load balancing settings associated with this Front Door instance.
-* **provisioningState**: string (ReadOnly): Provisioning state of the Front Door.
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the Front Door or Front Door SubResource.
-* **routingRules**: [RoutingRule](#routingrule)[]: Routing rules associated with this Front Door.
-* **rulesEngines**: [RulesEngine](#rulesengine)[] (ReadOnly): Rules Engine Configurations available to routing rules.
-
-## BackendPool
-### Properties
-* **id**: string: Resource ID.
-* **name**: string: Resource name.
-* **properties**: [BackendPoolProperties](#backendpoolproperties): The JSON object that contains the properties required to create a Backend Pool.
-* **type**: string (ReadOnly): Resource type.
-
-## BackendPoolProperties
-### Properties
-* **backends**: [Backend](#backend)[]: The set of backends for this pool
-* **healthProbeSettings**: [SubResource](#subresource): Reference to another subresource.
-* **loadBalancingSettings**: [SubResource](#subresource): Reference to another subresource.
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the Front Door or Front Door SubResource.
-
 ## Backend
 ### Properties
 * **address**: string: Location of the backend (IP address or FQDN)
@@ -65,14 +35,59 @@
 * **privateLinkResourceId**: string: The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
 * **weight**: int: Weight of this endpoint for load balancing purposes.
 
-## SubResource
+## BackendPool
 ### Properties
 * **id**: string: Resource ID.
+* **name**: string: Resource name.
+* **properties**: [BackendPoolProperties](#backendpoolproperties): The JSON object that contains the properties required to create a Backend Pool.
+* **type**: string (ReadOnly): Resource type.
+
+## BackendPoolProperties
+### Properties
+* **backends**: [Backend](#backend)[]: The set of backends for this pool
+* **healthProbeSettings**: [SubResource](#subresource): Reference to another subresource.
+* **loadBalancingSettings**: [SubResource](#subresource): Reference to another subresource.
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the Front Door or Front Door SubResource.
 
 ## BackendPoolsSettings
 ### Properties
 * **enforceCertificateNameCheck**: 'Disabled' | 'Enabled' | string: Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.
 * **sendRecvTimeoutSeconds**: int: Send and receive timeout on forwarding request to the backend. When timeout is reached, the request fails and returns.
+
+## CacheConfiguration
+### Properties
+* **cacheDuration**: string: The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year
+* **dynamicCompression**: 'Disabled' | 'Enabled' | string: Whether to use dynamic compression for cached content
+* **queryParameters**: string: query parameters to include or exclude (comma separated).
+* **queryParameterStripDirective**: 'StripAll' | 'StripAllExcept' | 'StripNone' | 'StripOnly' | string: Treatment of URL query terms when forming the cache key.
+
+## CustomHttpsConfiguration
+### Properties
+* **certificateSource**: 'AzureKeyVault' | 'FrontDoor' | string (Required): Defines the source of the SSL certificate
+* **frontDoorCertificateSourceParameters**: [FrontDoorCertificateSourceParameters](#frontdoorcertificatesourceparameters): Parameters required for enabling SSL with Front Door-managed certificates
+* **keyVaultCertificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters): Parameters required for bring-your-own-certification via Key Vault
+* **minimumTlsVersion**: '1.0' | '1.2' | string (Required): The minimum TLS version required from the clients to establish an SSL handshake with Front Door.
+* **protocolType**: 'ServerNameIndication' | string (Required): Defines the TLS extension protocol that is used for secure delivery
+
+## FrontDoorCertificateSourceParameters
+### Properties
+* **certificateType**: 'Dedicated' | string: Defines the type of the certificate used for secure connections to a frontendEndpoint
+
+## FrontDoorProperties
+### Properties
+* **backendPools**: [BackendPool](#backendpool)[]: Backend pools available to routing rules.
+* **backendPoolsSettings**: [BackendPoolsSettings](#backendpoolssettings): Settings that apply to all backend pools.
+* **cname**: string (ReadOnly): The host that each frontendEndpoint must CNAME to.
+* **enabledState**: 'Disabled' | 'Enabled' | string: Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
+* **friendlyName**: string: A friendly name for the frontDoor
+* **frontdoorId**: string (ReadOnly): The Id of the frontdoor.
+* **frontendEndpoints**: [FrontendEndpoint](#frontendendpoint)[]: Frontend endpoints available to routing rules.
+* **healthProbeSettings**: [HealthProbeSettingsModel](#healthprobesettingsmodel)[]: Health probe settings associated with this Front Door instance.
+* **loadBalancingSettings**: [LoadBalancingSettingsModel](#loadbalancingsettingsmodel)[]: Load balancing settings associated with this Front Door instance.
+* **provisioningState**: string (ReadOnly): Provisioning state of the Front Door.
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the Front Door or Front Door SubResource.
+* **routingRules**: [RoutingRule](#routingrule)[]: Routing rules associated with this Front Door.
+* **rulesEngines**: [RulesEngine](#rulesengine)[] (ReadOnly): Rules Engine Configurations available to routing rules.
 
 ## FrontendEndpoint
 ### Properties
@@ -92,31 +107,15 @@
 * **sessionAffinityTtlSeconds**: int: UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
 * **webApplicationFirewallPolicyLink**: [FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLink](#frontendendpointupdateparameterswebapplicationfirewallpolicylink): Defines the Web Application Firewall policy for each host (if applicable)
 
-## CustomHttpsConfiguration
-### Properties
-* **certificateSource**: 'AzureKeyVault' | 'FrontDoor' | string (Required): Defines the source of the SSL certificate
-* **frontDoorCertificateSourceParameters**: [FrontDoorCertificateSourceParameters](#frontdoorcertificatesourceparameters): Parameters required for enabling SSL with Front Door-managed certificates
-* **keyVaultCertificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters): Parameters required for bring-your-own-certification via Key Vault
-* **minimumTlsVersion**: '1.0' | '1.2' | string (Required): The minimum TLS version required from the clients to establish an SSL handshake with Front Door.
-* **protocolType**: 'ServerNameIndication' | string (Required): Defines the TLS extension protocol that is used for secure delivery
-
-## FrontDoorCertificateSourceParameters
-### Properties
-* **certificateType**: 'Dedicated' | string: Defines the type of the certificate used for secure connections to a frontendEndpoint
-
-## KeyVaultCertificateSourceParameters
-### Properties
-* **secretName**: string: The name of the Key Vault secret representing the full certificate PFX
-* **secretVersion**: string: The version of the Key Vault secret representing the full certificate PFX
-* **vault**: [KeyVaultCertificateSourceParametersVault](#keyvaultcertificatesourceparametersvault): The Key Vault containing the SSL certificate
-
-## KeyVaultCertificateSourceParametersVault
-### Properties
-* **id**: string: Resource ID.
-
 ## FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLink
 ### Properties
 * **id**: string: Resource ID.
+
+## HeaderAction
+### Properties
+* **headerActionType**: 'Append' | 'Delete' | 'Overwrite' | string (Required): Which type of manipulation to apply to the header.
+* **headerName**: string (Required): The name of the header this action will apply to.
+* **value**: string: The value to update the given header name with. This value is not used if the actionType is Delete.
 
 ## HealthProbeSettingsModel
 ### Properties
@@ -134,6 +133,16 @@
 * **protocol**: 'Http' | 'Https' | string: Accepted protocol schemes.
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the Front Door or Front Door SubResource.
 
+## KeyVaultCertificateSourceParameters
+### Properties
+* **secretName**: string: The name of the Key Vault secret representing the full certificate PFX
+* **secretVersion**: string: The version of the Key Vault secret representing the full certificate PFX
+* **vault**: [KeyVaultCertificateSourceParametersVault](#keyvaultcertificatesourceparametersvault): The Key Vault containing the SSL certificate
+
+## KeyVaultCertificateSourceParametersVault
+### Properties
+* **id**: string: Resource ID.
+
 ## LoadBalancingSettingsModel
 ### Properties
 * **id**: string: Resource ID.
@@ -148,23 +157,10 @@
 * **sampleSize**: int: The number of samples to consider for load balancing decisions
 * **successfulSamplesRequired**: int: The number of samples within the sample period that must succeed
 
-## RoutingRule
+## ResourceTags
 ### Properties
-* **id**: string: Resource ID.
-* **name**: string: Resource name.
-* **properties**: [RoutingRuleProperties](#routingruleproperties): The JSON object that contains the properties required to create a routing rule.
-* **type**: string (ReadOnly): Resource type.
-
-## RoutingRuleProperties
-### Properties
-* **acceptedProtocols**: 'Http' | 'Https' | string[]: Protocol schemes to match for this rule
-* **enabledState**: 'Disabled' | 'Enabled' | string: Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
-* **frontendEndpoints**: [SubResource](#subresource)[]: Frontend endpoints associated with this rule
-* **patternsToMatch**: string[]: The route patterns of the rule.
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the Front Door or Front Door SubResource.
-* **routeConfiguration**: [RouteConfiguration](#routeconfiguration): Base class for all types of Route.
-* **rulesEngine**: [SubResource](#subresource): Reference to another subresource.
-* **webApplicationFirewallPolicyLink**: [RoutingRuleUpdateParametersWebApplicationFirewallPolicyLink](#routingruleupdateparameterswebapplicationfirewallpolicylink): Defines the Web Application Firewall policy for each routing rule (if applicable)
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## RouteConfiguration
 * **Discriminator**: @odata.type
@@ -189,12 +185,23 @@
 * **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect' | string: The redirect type the rule will use when redirecting traffic.
 
 
-## CacheConfiguration
+## RoutingRule
 ### Properties
-* **cacheDuration**: string: The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year
-* **dynamicCompression**: 'Disabled' | 'Enabled' | string: Whether to use dynamic compression for cached content
-* **queryParameters**: string: query parameters to include or exclude (comma separated).
-* **queryParameterStripDirective**: 'StripAll' | 'StripAllExcept' | 'StripNone' | 'StripOnly' | string: Treatment of URL query terms when forming the cache key.
+* **id**: string: Resource ID.
+* **name**: string: Resource name.
+* **properties**: [RoutingRuleProperties](#routingruleproperties): The JSON object that contains the properties required to create a routing rule.
+* **type**: string (ReadOnly): Resource type.
+
+## RoutingRuleProperties
+### Properties
+* **acceptedProtocols**: 'Http' | 'Https' | string[]: Protocol schemes to match for this rule
+* **enabledState**: 'Disabled' | 'Enabled' | string: Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
+* **frontendEndpoints**: [SubResource](#subresource)[]: Frontend endpoints associated with this rule
+* **patternsToMatch**: string[]: The route patterns of the rule.
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the Front Door or Front Door SubResource.
+* **routeConfiguration**: [RouteConfiguration](#routeconfiguration): Base class for all types of Route.
+* **rulesEngine**: [SubResource](#subresource): Reference to another subresource.
+* **webApplicationFirewallPolicyLink**: [RoutingRuleUpdateParametersWebApplicationFirewallPolicyLink](#routingruleupdateparameterswebapplicationfirewallpolicylink): Defines the Web Application Firewall policy for each routing rule (if applicable)
 
 ## RoutingRuleUpdateParametersWebApplicationFirewallPolicyLink
 ### Properties
@@ -206,6 +213,21 @@
 * **name**: string (ReadOnly): Resource name.
 * **properties**: [RulesEngineProperties](#rulesengineproperties): The JSON object that contains the properties required to create a Rules Engine Configuration.
 * **type**: string (ReadOnly): Resource type.
+
+## RulesEngineAction
+### Properties
+* **requestHeaderActions**: [HeaderAction](#headeraction)[]: A list of header actions to apply from the request from AFD to the origin.
+* **responseHeaderActions**: [HeaderAction](#headeraction)[]: A list of header actions to apply from the response from AFD to the client.
+* **routeConfigurationOverride**: [RouteConfiguration](#routeconfiguration): Base class for all types of Route.
+
+## RulesEngineMatchCondition
+### Properties
+* **negateCondition**: bool: Describes if this is negate condition or not
+* **rulesEngineMatchValue**: string[] (Required): Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+* **rulesEngineMatchVariable**: 'IsMobile' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestFilename' | 'RequestFilenameExtension' | 'RequestHeader' | 'RequestMethod' | 'RequestPath' | 'RequestScheme' | 'RequestUri' | string (Required): Match Variable
+* **rulesEngineOperator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | string (Required): Describes operator to apply to the match condition.
+* **selector**: string: Name of selector in RequestHeader or RequestBody to be matched
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
 
 ## RulesEngineProperties
 ### Properties
@@ -220,29 +242,7 @@
 * **name**: string (Required): A name to refer to this specific rule.
 * **priority**: int (Required): A priority assigned to this rule.
 
-## RulesEngineAction
+## SubResource
 ### Properties
-* **requestHeaderActions**: [HeaderAction](#headeraction)[]: A list of header actions to apply from the request from AFD to the origin.
-* **responseHeaderActions**: [HeaderAction](#headeraction)[]: A list of header actions to apply from the response from AFD to the client.
-* **routeConfigurationOverride**: [RouteConfiguration](#routeconfiguration): Base class for all types of Route.
-
-## HeaderAction
-### Properties
-* **headerActionType**: 'Append' | 'Delete' | 'Overwrite' | string (Required): Which type of manipulation to apply to the header.
-* **headerName**: string (Required): The name of the header this action will apply to.
-* **value**: string: The value to update the given header name with. This value is not used if the actionType is Delete.
-
-## RulesEngineMatchCondition
-### Properties
-* **negateCondition**: bool: Describes if this is negate condition or not
-* **rulesEngineMatchValue**: string[] (Required): Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
-* **rulesEngineMatchVariable**: 'IsMobile' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestFilename' | 'RequestFilenameExtension' | 'RequestHeader' | 'RequestMethod' | 'RequestPath' | 'RequestScheme' | 'RequestUri' | string (Required): Match Variable
-* **rulesEngineOperator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | string (Required): Describes operator to apply to the match condition.
-* **selector**: string: Name of selector in RequestHeader or RequestBody to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **id**: string: Resource ID.
 

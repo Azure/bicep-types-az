@@ -117,71 +117,32 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
+## CreationData
+### Properties
+* **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Import' | 'Restore' | 'Upload' | string (Required): This enumerates the possible sources of a disk's creation.
+* **galleryImageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
+* **imageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
+* **logicalSectorSize**: int: Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.
+* **sourceResourceId**: string: If createOption is Copy, this is the ARM id of the source snapshot or disk.
+* **sourceUniqueId**: string (ReadOnly): If this field is set, this is the unique id identifying the source of this resource.
+* **sourceUri**: string: If createOption is Import, this is the URI of a blob to be imported into a managed disk.
+* **storageAccountId**: string: Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.
+* **uploadSizeBytes**: int: If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).
+
+## DataDiskImageEncryption
+### Properties
+* **diskEncryptionSetId**: string: A relative URI containing the resource ID of the disk encryption set.
+* **lun**: int (Required): This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
+
+## Disallowed
+### Properties
+* **diskTypes**: string[]: A list of disk types.
+
 ## DiskAccessProperties
 ### Properties
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): A readonly collection of private endpoint connections created on the disk. Currently only one endpoint connection is supported.
 * **provisioningState**: string (ReadOnly): The disk access resource provisioning state.
 * **timeCreated**: string (ReadOnly): The time when the disk access was created.
-
-## PrivateEndpointConnection
-### Properties
-* **id**: string (ReadOnly): private endpoint connection Id
-* **name**: string (ReadOnly): private endpoint connection name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
-* **type**: string (ReadOnly): private endpoint connection type
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
-
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
-* **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## EncryptionSetIdentity
-### Properties
-* **principalId**: string (ReadOnly): The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity
-* **tenantId**: string (ReadOnly): The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity
-* **type**: 'None' | 'SystemAssigned' | string: The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.
-
-## EncryptionSetProperties
-### Properties
-* **activeKey**: [KeyForDiskEncryptionSet](#keyfordiskencryptionset): Key Vault Key Url to be used for server side encryption of Managed Disks and Snapshots
-* **encryptionType**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys' | string: The type of key used to encrypt the data of the disk.
-* **previousKeys**: [KeyForDiskEncryptionSet](#keyfordiskencryptionset)[] (ReadOnly): A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.
-* **provisioningState**: string (ReadOnly): The disk encryption set provisioning state.
-
-## KeyForDiskEncryptionSet
-### Properties
-* **keyUrl**: string (Required): Fully versioned Key Url pointing to a key in KeyVault
-* **sourceVault**: [SourceVault](#sourcevault): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
-
-## SourceVault
-### Properties
-* **id**: string: Resource Id
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ExtendedLocation
-### Properties
-* **name**: string: The name of the extended location.
-* **type**: 'EdgeZone' | string: The type of extendedLocation.
 
 ## DiskProperties
 ### Properties
@@ -208,27 +169,33 @@
 * **timeCreated**: string (ReadOnly): The time when the disk was created.
 * **uniqueId**: string (ReadOnly): Unique Guid identifying the resource.
 
-## CreationData
+## DiskSku
 ### Properties
-* **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Import' | 'Restore' | 'Upload' | string (Required): This enumerates the possible sources of a disk's creation.
-* **galleryImageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
-* **imageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
-* **logicalSectorSize**: int: Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.
-* **sourceResourceId**: string: If createOption is Copy, this is the ARM id of the source snapshot or disk.
-* **sourceUniqueId**: string (ReadOnly): If this field is set, this is the unique id identifying the source of this resource.
-* **sourceUri**: string: If createOption is Import, this is the URI of a blob to be imported into a managed disk.
-* **storageAccountId**: string: Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.
-* **uploadSizeBytes**: int: If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).
-
-## ImageDiskReference
-### Properties
-* **id**: string (Required): A relative uri containing either a Platform Image Repository or user image reference.
-* **lun**: int: If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.
+* **name**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | 'UltraSSD_LRS' | string: The sku name.
+* **tier**: string (ReadOnly): The sku tier.
 
 ## Encryption
 ### Properties
 * **diskEncryptionSetId**: string: ResourceId of the disk encryption set to use for enabling encryption at rest.
 * **type**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys' | 'EncryptionAtRestWithPlatformKey' | string: The type of key used to encrypt the data of the disk.
+
+## EncryptionImages
+### Properties
+* **dataDiskImages**: [DataDiskImageEncryption](#datadiskimageencryption)[]: A list of encryption specifications for data disk images.
+* **osDiskImage**: [OSDiskImageEncryption](#osdiskimageencryption): Contains encryption settings for an OS disk image.
+
+## EncryptionSetIdentity
+### Properties
+* **principalId**: string (ReadOnly): The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity
+* **tenantId**: string (ReadOnly): The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity
+* **type**: 'None' | 'SystemAssigned' | string: The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.
+
+## EncryptionSetProperties
+### Properties
+* **activeKey**: [KeyForDiskEncryptionSet](#keyfordiskencryptionset): Key Vault Key Url to be used for server side encryption of Managed Disks and Snapshots
+* **encryptionType**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys' | string: The type of key used to encrypt the data of the disk.
+* **previousKeys**: [KeyForDiskEncryptionSet](#keyfordiskencryptionset)[] (ReadOnly): A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.
+* **provisioningState**: string (ReadOnly): The disk encryption set provisioning state.
 
 ## EncryptionSettingsCollection
 ### Properties
@@ -241,62 +208,10 @@
 * **diskEncryptionKey**: [KeyVaultAndSecretReference](#keyvaultandsecretreference): Key Vault Secret Url and vault id of the encryption key
 * **keyEncryptionKey**: [KeyVaultAndKeyReference](#keyvaultandkeyreference): Key Vault Key Url and vault id of KeK, KeK is optional and when provided is used to unwrap the encryptionKey
 
-## KeyVaultAndSecretReference
+## ExtendedLocation
 ### Properties
-* **secretUrl**: string (Required): Url pointing to a key or secret in KeyVault
-* **sourceVault**: [SourceVault](#sourcevault) (Required): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
-
-## KeyVaultAndKeyReference
-### Properties
-* **keyUrl**: string (Required): Url pointing to a key or secret in KeyVault
-* **sourceVault**: [SourceVault](#sourcevault) (Required): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
-
-## PurchasePlan
-### Properties
-* **name**: string (Required): The plan ID.
-* **product**: string (Required): Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
-* **promotionCode**: string: The Offer Promotion Code.
-* **publisher**: string (Required): The publisher ID.
-
-## ShareInfoElement
-### Properties
-* **vmUri**: string (ReadOnly): A relative URI containing the ID of the VM that has the disk attached.
-
-## DiskSku
-### Properties
-* **name**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | 'UltraSSD_LRS' | string: The sku name.
-* **tier**: string (ReadOnly): The sku tier.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## GalleryProperties
-### Properties
-* **description**: string: The description of this Shared Image Gallery resource. This property is updatable.
-* **identifier**: [GalleryIdentifier](#galleryidentifier): Describes the gallery unique name.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state, which only appears in the response.
-* **sharingProfile**: [SharingProfile](#sharingprofile): Profile for gallery sharing to subscription or tenant
-
-## GalleryIdentifier
-### Properties
-* **uniqueName**: string (ReadOnly): The unique name of the Shared Image Gallery. This name is generated automatically by Azure.
-
-## SharingProfile
-### Properties
-* **groups**: [SharingProfileGroup](#sharingprofilegroup)[] (ReadOnly): A list of sharing profile groups.
-* **permissions**: 'Groups' | 'Private' | string: This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**
-
-## SharingProfileGroup
-### Properties
-* **ids**: string[]: A list of subscription/tenant ids the gallery is aimed to be shared to.
-* **type**: 'AADTenants' | 'Subscriptions' | string: This property allows you to specify the type of sharing group. <br><br> Possible values are: <br><br> **Subscriptions** <br><br> **AADTenants**
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **name**: string: The name of the extended location.
+* **type**: 'EdgeZone' | string: The type of extendedLocation.
 
 ## GalleryApplicationProperties
 ### Properties
@@ -306,11 +221,6 @@
 * **privacyStatementUri**: string: The privacy statement uri.
 * **releaseNoteUri**: string: The release note uri.
 * **supportedOSType**: 'Linux' | 'Windows' (Required): This property allows you to specify the supported type of the OS that application is built for. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## GalleryApplicationVersionProperties
 ### Properties
@@ -330,54 +240,32 @@
 * **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: Specifies the storage account type to be used to store the image. This property is not updatable.
 * **targetRegions**: [TargetRegion](#targetregion)[]: The target regions where the Image Version is going to be replicated to. This property is updatable.
 
-## UserArtifactManage
+## GalleryArtifactVersionSource
 ### Properties
-* **install**: string (Required): Required. The path and arguments to install the gallery application. This is limited to 4096 characters.
-* **remove**: string (Required): Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.
-* **update**: string: Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.
+* **id**: string: The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.
+* **uri**: string: The uri of the gallery artifact version source. Currently used to specify vhd/blob source.
 
-## UserArtifactSource
+## GalleryDataDiskImage
 ### Properties
-* **defaultConfigurationLink**: string: Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.
-* **mediaLink**: string (Required): Required. The mediaLink of the artifact, must be a readable storage page blob.
-
-## TargetRegion
-### Properties
-* **encryption**: [EncryptionImages](#encryptionimages): Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.
-* **name**: string (Required): The name of the region.
-* **regionalReplicaCount**: int: The number of replicas of the Image Version to be created per region. This property is updatable.
-* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: Specifies the storage account type to be used to store the image. This property is not updatable.
-
-## EncryptionImages
-### Properties
-* **dataDiskImages**: [DataDiskImageEncryption](#datadiskimageencryption)[]: A list of encryption specifications for data disk images.
-* **osDiskImage**: [OSDiskImageEncryption](#osdiskimageencryption): Contains encryption settings for an OS disk image.
-
-## DataDiskImageEncryption
-### Properties
-* **diskEncryptionSetId**: string: A relative URI containing the resource ID of the disk encryption set.
+* **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite': The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'
 * **lun**: int (Required): This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
+* **sizeInGB**: int (ReadOnly): This property indicates the size of the VHD to be created.
+* **source**: [GalleryArtifactVersionSource](#galleryartifactversionsource): The gallery artifact version source.
 
-## OSDiskImageEncryption
+## GalleryIdentifier
 ### Properties
-* **diskEncryptionSetId**: string: A relative URI containing the resource ID of the disk encryption set.
+* **uniqueName**: string (ReadOnly): The unique name of the Shared Image Gallery. This name is generated automatically by Azure.
 
-## ReplicationStatus
+## GalleryImageFeature
 ### Properties
-* **aggregatedState**: 'Completed' | 'Failed' | 'InProgress' | 'Unknown' | string (ReadOnly): This is the aggregated replication status based on all the regional replication status flags.
-* **summary**: [RegionalReplicationStatus](#regionalreplicationstatus)[] (ReadOnly): This is a summary of replication status for each region.
+* **name**: string: The name of the gallery image feature.
+* **value**: string: The value of the gallery image feature.
 
-## RegionalReplicationStatus
+## GalleryImageIdentifier
 ### Properties
-* **details**: string (ReadOnly): The details of the replication status.
-* **progress**: int (ReadOnly): It indicates progress of the replication job.
-* **region**: string (ReadOnly): The region to which the gallery image version is being replicated to.
-* **state**: 'Completed' | 'Failed' | 'Replicating' | 'Unknown' | string (ReadOnly): This is the regional replication state.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **offer**: string (Required): The name of the gallery image definition offer.
+* **publisher**: string (Required): The name of the gallery image definition publisher.
+* **sku**: string (Required): The name of the gallery image definition SKU.
 
 ## GalleryImageProperties
 ### Properties
@@ -395,42 +283,6 @@
 * **purchasePlan**: [ImagePurchasePlan](#imagepurchaseplan): Describes the gallery image definition purchase plan. This is used by marketplace images.
 * **recommended**: [RecommendedMachineConfiguration](#recommendedmachineconfiguration): The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.
 * **releaseNoteUri**: string: The release note uri.
-
-## Disallowed
-### Properties
-* **diskTypes**: string[]: A list of disk types.
-
-## GalleryImageFeature
-### Properties
-* **name**: string: The name of the gallery image feature.
-* **value**: string: The value of the gallery image feature.
-
-## GalleryImageIdentifier
-### Properties
-* **offer**: string (Required): The name of the gallery image definition offer.
-* **publisher**: string (Required): The name of the gallery image definition publisher.
-* **sku**: string (Required): The name of the gallery image definition SKU.
-
-## ImagePurchasePlan
-### Properties
-* **name**: string: The plan ID.
-* **product**: string: The product ID.
-* **publisher**: string: The publisher ID.
-
-## RecommendedMachineConfiguration
-### Properties
-* **memory**: [ResourceRange](#resourcerange): Describes the resource range.
-* **vCPUs**: [ResourceRange](#resourcerange): Describes the resource range.
-
-## ResourceRange
-### Properties
-* **max**: int: The maximum number of the resource.
-* **min**: int: The minimum number of the resource.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## GalleryImageVersionProperties
 ### Properties
@@ -454,28 +306,159 @@
 * **osDiskImage**: [GalleryOSDiskImage](#galleryosdiskimage): This is the OS disk image.
 * **source**: [GalleryArtifactVersionSource](#galleryartifactversionsource): The gallery artifact version source.
 
-## GalleryDataDiskImage
-### Properties
-* **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite': The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'
-* **lun**: int (Required): This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
-* **sizeInGB**: int (ReadOnly): This property indicates the size of the VHD to be created.
-* **source**: [GalleryArtifactVersionSource](#galleryartifactversionsource): The gallery artifact version source.
-
-## GalleryArtifactVersionSource
-### Properties
-* **id**: string: The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.
-* **uri**: string: The uri of the gallery artifact version source. Currently used to specify vhd/blob source.
-
 ## GalleryOSDiskImage
 ### Properties
 * **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite': The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'
 * **sizeInGB**: int (ReadOnly): This property indicates the size of the VHD to be created.
 * **source**: [GalleryArtifactVersionSource](#galleryartifactversionsource): The gallery artifact version source.
 
+## GalleryProperties
+### Properties
+* **description**: string: The description of this Shared Image Gallery resource. This property is updatable.
+* **identifier**: [GalleryIdentifier](#galleryidentifier): Describes the gallery unique name.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state, which only appears in the response.
+* **sharingProfile**: [SharingProfile](#sharingprofile): Profile for gallery sharing to subscription or tenant
+
+## ImageDiskReference
+### Properties
+* **id**: string (Required): A relative uri containing either a Platform Image Repository or user image reference.
+* **lun**: int: If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.
+
+## ImagePurchasePlan
+### Properties
+* **name**: string: The plan ID.
+* **product**: string: The product ID.
+* **publisher**: string: The publisher ID.
+
+## KeyForDiskEncryptionSet
+### Properties
+* **keyUrl**: string (Required): Fully versioned Key Url pointing to a key in KeyVault
+* **sourceVault**: [SourceVault](#sourcevault): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
+
+## KeyVaultAndKeyReference
+### Properties
+* **keyUrl**: string (Required): Url pointing to a key or secret in KeyVault
+* **sourceVault**: [SourceVault](#sourcevault) (Required): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
+
+## KeyVaultAndSecretReference
+### Properties
+* **secretUrl**: string (Required): Url pointing to a key or secret in KeyVault
+* **sourceVault**: [SourceVault](#sourcevault) (Required): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
+
+## OSDiskImageEncryption
+### Properties
+* **diskEncryptionSetId**: string: A relative URI containing the resource ID of the disk encryption set.
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly): private endpoint connection Id
+* **name**: string (ReadOnly): private endpoint connection name
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **type**: string (ReadOnly): private endpoint connection type
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
+* **description**: string: The reason for approval/rejection of the connection.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
+
+## PurchasePlan
+### Properties
+* **name**: string (Required): The plan ID.
+* **product**: string (Required): Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
+* **promotionCode**: string: The Offer Promotion Code.
+* **publisher**: string (Required): The publisher ID.
+
+## RecommendedMachineConfiguration
+### Properties
+* **memory**: [ResourceRange](#resourcerange): Describes the resource range.
+* **vCPUs**: [ResourceRange](#resourcerange): Describes the resource range.
+
+## RegionalReplicationStatus
+### Properties
+* **details**: string (ReadOnly): The details of the replication status.
+* **progress**: int (ReadOnly): It indicates progress of the replication job.
+* **region**: string (ReadOnly): The region to which the gallery image version is being replicated to.
+* **state**: 'Completed' | 'Failed' | 'Replicating' | 'Unknown' | string (ReadOnly): This is the regional replication state.
+
+## ReplicationStatus
+### Properties
+* **aggregatedState**: 'Completed' | 'Failed' | 'InProgress' | 'Unknown' | string (ReadOnly): This is the aggregated replication status based on all the regional replication status flags.
+* **summary**: [RegionalReplicationStatus](#regionalreplicationstatus)[] (ReadOnly): This is a summary of replication status for each region.
+
+## ResourceRange
+### Properties
+* **max**: int: The maximum number of the resource.
+* **min**: int: The minimum number of the resource.
+
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ShareInfoElement
+### Properties
+* **vmUri**: string (ReadOnly): A relative URI containing the ID of the VM that has the disk attached.
+
+## SharingProfile
+### Properties
+* **groups**: [SharingProfileGroup](#sharingprofilegroup)[] (ReadOnly): A list of sharing profile groups.
+* **permissions**: 'Groups' | 'Private' | string: This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**
+
+## SharingProfileGroup
+### Properties
+* **ids**: string[]: A list of subscription/tenant ids the gallery is aimed to be shared to.
+* **type**: 'AADTenants' | 'Subscriptions' | string: This property allows you to specify the type of sharing group. <br><br> Possible values are: <br><br> **Subscriptions** <br><br> **AADTenants**
 
 ## SnapshotProperties
 ### Properties
@@ -500,8 +483,25 @@
 * **name**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: The sku name.
 * **tier**: string (ReadOnly): The sku tier.
 
-## ResourceTags
+## SourceVault
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **id**: string: Resource Id
+
+## TargetRegion
+### Properties
+* **encryption**: [EncryptionImages](#encryptionimages): Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.
+* **name**: string (Required): The name of the region.
+* **regionalReplicaCount**: int: The number of replicas of the Image Version to be created per region. This property is updatable.
+* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: Specifies the storage account type to be used to store the image. This property is not updatable.
+
+## UserArtifactManage
+### Properties
+* **install**: string (Required): Required. The path and arguments to install the gallery application. This is limited to 4096 characters.
+* **remove**: string (Required): Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.
+* **update**: string: Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.
+
+## UserArtifactSource
+### Properties
+* **defaultConfigurationLink**: string: Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.
+* **mediaLink**: string (Required): Required. The mediaLink of the artifact, must be a readable storage page blob.
 

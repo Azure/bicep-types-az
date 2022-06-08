@@ -22,11 +22,23 @@
 * **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a server firewall rule.
 * **type**: 'Microsoft.DBForPostgreSql/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## FirewallRuleProperties
+### Properties
+* **endIpAddress**: string (Required): The end IP address of the server firewall rule. Must be IPv4 format.
+* **startIpAddress**: string (Required): The start IP address of the server firewall rule. Must be IPv4 format.
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
 * **type**: 'SystemAssigned': The identity type.
+
+## MaintenanceWindow
+### Properties
+* **customWindow**: string: indicates whether custom window is enabled or disabled
+* **dayOfWeek**: int: day of week for maintenance window
+* **startHour**: int: start hour for maintenance window
+* **startMinute**: int: start minute for maintenance window
 
 ## ServerProperties
 ### Properties
@@ -61,22 +73,9 @@
 ### Properties
 * **subnetArmResourceId**: string: delegated subnet arm resource id.
 
-## MaintenanceWindow
-### Properties
-* **customWindow**: string: indicates whether custom window is enabled or disabled
-* **dayOfWeek**: int: day of week for maintenance window
-* **startHour**: int: start hour for maintenance window
-* **startMinute**: int: start minute for maintenance window
-
 ## ServerPropertiesPrivateDnsZoneArguments
 ### Properties
 * **privateDnsZoneArmResourceId**: string: private dns zone arm resource id.
-
-## StorageProfile
-### Properties
-* **backupRetentionDays**: int: Backup retention days for the server.
-* **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: A value indicating whether Geo-Redundant backup is enabled on the server.
-* **storageMB**: int: Max storage allowed for a server.
 
 ## ServerPropertiesTags
 ### Properties
@@ -88,13 +87,14 @@
 * **name**: string (Required): The name of the sku, typically, tier + family + cores, e.g. Standard_D4s_v3.
 * **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' | string (Required): The tier of the particular SKU, e.g. Burstable.
 
+## StorageProfile
+### Properties
+* **backupRetentionDays**: int: Backup retention days for the server.
+* **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: A value indicating whether Geo-Redundant backup is enabled on the server.
+* **storageMB**: int: Max storage allowed for a server.
+
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## FirewallRuleProperties
-### Properties
-* **endIpAddress**: string (Required): The end IP address of the server firewall rule. Must be IPv4 format.
-* **startIpAddress**: string (Required): The start IP address of the server firewall rule. Must be IPv4 format.
 

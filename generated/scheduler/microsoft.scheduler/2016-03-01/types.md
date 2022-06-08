@@ -20,74 +20,6 @@
 * **properties**: [JobProperties](#jobproperties)
 * **type**: 'Microsoft.Scheduler/jobCollections/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
-## JobCollectionProperties
-### Properties
-* **quota**: [JobCollectionQuota](#jobcollectionquota)
-* **sku**: [Sku](#sku)
-* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'Suspended': Gets or sets the state.
-
-## JobCollectionQuota
-### Properties
-* **maxJobCount**: int: Gets or set the maximum job count.
-* **maxJobOccurrence**: int: Gets or sets the maximum job occurrence.
-* **maxRecurrence**: [JobMaxRecurrence](#jobmaxrecurrence)
-
-## JobMaxRecurrence
-### Properties
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week': Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
-* **interval**: int: Gets or sets the interval between retries.
-
-## Sku
-### Properties
-* **name**: 'Free' | 'P10Premium' | 'P20Premium' | 'Standard': Gets or set the SKU.
-
-## JobCollectionDefinitionTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## JobProperties
-### Properties
-* **action**: [JobAction](#jobaction)
-* **recurrence**: [JobRecurrence](#jobrecurrence)
-* **startTime**: string: Gets or sets the job start time.
-* **state**: 'Completed' | 'Disabled' | 'Enabled' | 'Faulted': Gets or set the job state.
-* **status**: [JobStatus](#jobstatus) (ReadOnly)
-
-## JobAction
-### Properties
-* **errorAction**: [JobErrorAction](#joberroraction)
-* **queueMessage**: [StorageQueueMessage](#storagequeuemessage)
-* **request**: [HttpRequest](#httprequest)
-* **retryPolicy**: [RetryPolicy](#retrypolicy)
-* **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage)
-* **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage)
-* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue': Gets or sets the job action type.
-
-## JobErrorAction
-### Properties
-* **queueMessage**: [StorageQueueMessage](#storagequeuemessage)
-* **request**: [HttpRequest](#httprequest)
-* **retryPolicy**: [RetryPolicy](#retrypolicy)
-* **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage)
-* **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage)
-* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue': Gets or sets the job action type.
-
-## StorageQueueMessage
-### Properties
-* **message**: string: Gets or sets the message.
-* **queueName**: string: Gets or sets the queue name.
-* **sasToken**: string: Gets or sets the SAS key.
-* **storageAccount**: string: Gets or sets the storage account name.
-
-## HttpRequest
-### Properties
-* **authentication**: [HttpAuthentication](#httpauthentication)
-* **body**: string: Gets or sets the request body.
-* **headers**: [HttpRequestHeaders](#httprequestheaders): Gets or sets the headers.
-* **method**: string: Gets or sets the method of the request.
-* **uri**: string: Gets or sets the URI of the request.
-
 ## HttpAuthentication
 * **Discriminator**: type
 
@@ -116,68 +48,67 @@
 * **type**: 'ClientCertificate' (Required): Gets or sets the HTTP authentication type.
 
 
+## HttpRequest
+### Properties
+* **authentication**: [HttpAuthentication](#httpauthentication)
+* **body**: string: Gets or sets the request body.
+* **headers**: [HttpRequestHeaders](#httprequestheaders): Gets or sets the headers.
+* **method**: string: Gets or sets the method of the request.
+* **uri**: string: Gets or sets the URI of the request.
+
 ## HttpRequestHeaders
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## RetryPolicy
+## JobAction
 ### Properties
-* **retryCount**: int: Gets or sets the number of times a retry should be attempted.
-* **retryInterval**: string: Gets or sets the retry interval between retries, specify duration in ISO 8601 format.
-* **retryType**: 'Fixed' | 'None': Gets or sets the retry strategy to be used.
+* **errorAction**: [JobErrorAction](#joberroraction)
+* **queueMessage**: [StorageQueueMessage](#storagequeuemessage)
+* **request**: [HttpRequest](#httprequest)
+* **retryPolicy**: [RetryPolicy](#retrypolicy)
+* **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage)
+* **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage)
+* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue': Gets or sets the job action type.
 
-## ServiceBusQueueMessage
-### Properties
-* **authentication**: [ServiceBusAuthentication](#servicebusauthentication)
-* **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties)
-* **customMessageProperties**: [ServiceBusMessageCustomMessageProperties](#servicebusmessagecustommessageproperties): Gets or sets the custom message properties.
-* **message**: string: Gets or sets the message.
-* **namespace**: string: Gets or sets the namespace.
-* **queueName**: string: Gets or sets the queue name.
-* **transportType**: 'AMQP' | 'NetMessaging' | 'NotSpecified': Gets or sets the transport type.
-
-## ServiceBusAuthentication
-### Properties
-* **sasKey**: string: Gets or sets the SAS key.
-* **sasKeyName**: string: Gets or sets the SAS key name.
-* **type**: 'NotSpecified' | 'SharedAccessKey': Gets or sets the authentication type.
-
-## ServiceBusBrokeredMessageProperties
-### Properties
-* **contentType**: string: Gets or sets the content type.
-* **correlationId**: string: Gets or sets the correlation ID.
-* **forcePersistence**: bool: Gets or sets the force persistence.
-* **label**: string: Gets or sets the label.
-* **messageId**: string: Gets or sets the message ID.
-* **partitionKey**: string: Gets or sets the partition key.
-* **replyTo**: string: Gets or sets the reply to.
-* **replyToSessionId**: string: Gets or sets the reply to session ID.
-* **scheduledEnqueueTimeUtc**: string: Gets or sets the scheduled enqueue time UTC.
-* **sessionId**: string: Gets or sets the session ID.
-* **timeToLive**: string: Gets or sets the time to live.
-* **to**: string: Gets or sets the to.
-* **viaPartitionKey**: string: Gets or sets the via partition key.
-
-## ServiceBusMessageCustomMessageProperties
+## JobCollectionDefinitionTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ServiceBusTopicMessage
+## JobCollectionProperties
 ### Properties
-* **authentication**: [ServiceBusAuthentication](#servicebusauthentication)
-* **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties)
-* **customMessageProperties**: [ServiceBusMessageCustomMessageProperties](#servicebusmessagecustommessageproperties): Gets or sets the custom message properties.
-* **message**: string: Gets or sets the message.
-* **namespace**: string: Gets or sets the namespace.
-* **topicPath**: string: Gets or sets the topic path.
-* **transportType**: 'AMQP' | 'NetMessaging' | 'NotSpecified': Gets or sets the transport type.
+* **quota**: [JobCollectionQuota](#jobcollectionquota)
+* **sku**: [Sku](#sku)
+* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'Suspended': Gets or sets the state.
 
-## ServiceBusMessageCustomMessageProperties
+## JobCollectionQuota
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **maxJobCount**: int: Gets or set the maximum job count.
+* **maxJobOccurrence**: int: Gets or sets the maximum job occurrence.
+* **maxRecurrence**: [JobMaxRecurrence](#jobmaxrecurrence)
+
+## JobErrorAction
+### Properties
+* **queueMessage**: [StorageQueueMessage](#storagequeuemessage)
+* **request**: [HttpRequest](#httprequest)
+* **retryPolicy**: [RetryPolicy](#retrypolicy)
+* **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage)
+* **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage)
+* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue': Gets or sets the job action type.
+
+## JobMaxRecurrence
+### Properties
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week': Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
+* **interval**: int: Gets or sets the interval between retries.
+
+## JobProperties
+### Properties
+* **action**: [JobAction](#jobaction)
+* **recurrence**: [JobRecurrence](#jobrecurrence)
+* **startTime**: string: Gets or sets the job start time.
+* **state**: 'Completed' | 'Disabled' | 'Enabled' | 'Faulted': Gets or set the job state.
+* **status**: [JobStatus](#jobstatus) (ReadOnly)
 
 ## JobRecurrence
 ### Properties
@@ -207,4 +138,73 @@
 * **faultedCount**: int (ReadOnly): Gets the number of faulted occurrences (occurrences that were retried and failed as many times as the retry policy states).
 * **lastExecutionTime**: string (ReadOnly): Gets the time the last occurrence executed in ISO-8601 format.  Could be empty if job has not run yet.
 * **nextExecutionTime**: string (ReadOnly): Gets the time of the next occurrence in ISO-8601 format. Could be empty if the job is completed.
+
+## RetryPolicy
+### Properties
+* **retryCount**: int: Gets or sets the number of times a retry should be attempted.
+* **retryInterval**: string: Gets or sets the retry interval between retries, specify duration in ISO 8601 format.
+* **retryType**: 'Fixed' | 'None': Gets or sets the retry strategy to be used.
+
+## ServiceBusAuthentication
+### Properties
+* **sasKey**: string: Gets or sets the SAS key.
+* **sasKeyName**: string: Gets or sets the SAS key name.
+* **type**: 'NotSpecified' | 'SharedAccessKey': Gets or sets the authentication type.
+
+## ServiceBusBrokeredMessageProperties
+### Properties
+* **contentType**: string: Gets or sets the content type.
+* **correlationId**: string: Gets or sets the correlation ID.
+* **forcePersistence**: bool: Gets or sets the force persistence.
+* **label**: string: Gets or sets the label.
+* **messageId**: string: Gets or sets the message ID.
+* **partitionKey**: string: Gets or sets the partition key.
+* **replyTo**: string: Gets or sets the reply to.
+* **replyToSessionId**: string: Gets or sets the reply to session ID.
+* **scheduledEnqueueTimeUtc**: string: Gets or sets the scheduled enqueue time UTC.
+* **sessionId**: string: Gets or sets the session ID.
+* **timeToLive**: string: Gets or sets the time to live.
+* **to**: string: Gets or sets the to.
+* **viaPartitionKey**: string: Gets or sets the via partition key.
+
+## ServiceBusMessageCustomMessageProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ServiceBusMessageCustomMessageProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ServiceBusQueueMessage
+### Properties
+* **authentication**: [ServiceBusAuthentication](#servicebusauthentication)
+* **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties)
+* **customMessageProperties**: [ServiceBusMessageCustomMessageProperties](#servicebusmessagecustommessageproperties): Gets or sets the custom message properties.
+* **message**: string: Gets or sets the message.
+* **namespace**: string: Gets or sets the namespace.
+* **queueName**: string: Gets or sets the queue name.
+* **transportType**: 'AMQP' | 'NetMessaging' | 'NotSpecified': Gets or sets the transport type.
+
+## ServiceBusTopicMessage
+### Properties
+* **authentication**: [ServiceBusAuthentication](#servicebusauthentication)
+* **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties)
+* **customMessageProperties**: [ServiceBusMessageCustomMessageProperties](#servicebusmessagecustommessageproperties): Gets or sets the custom message properties.
+* **message**: string: Gets or sets the message.
+* **namespace**: string: Gets or sets the namespace.
+* **topicPath**: string: Gets or sets the topic path.
+* **transportType**: 'AMQP' | 'NetMessaging' | 'NotSpecified': Gets or sets the transport type.
+
+## Sku
+### Properties
+* **name**: 'Free' | 'P10Premium' | 'P20Premium' | 'Standard': Gets or set the SKU.
+
+## StorageQueueMessage
+### Properties
+* **message**: string: Gets or sets the message.
+* **queueName**: string: Gets or sets the queue name.
+* **sasToken**: string: Gets or sets the SAS key.
+* **storageAccount**: string: Gets or sets the storage account name.
 

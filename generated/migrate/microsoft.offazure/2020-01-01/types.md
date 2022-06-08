@@ -51,47 +51,6 @@
 * **properties**: [VCenterProperties](#vcenterproperties): Class for vCenter properties.
 * **type**: 'Microsoft.OffAzure/VMwareSites/vCenters' (ReadOnly, DeployTimeConstant): The resource type
 
-## SiteProperties
-### Properties
-* **agentDetails**: [SiteAgentProperties](#siteagentproperties): Class for site agent properties.
-* **applianceName**: string: Appliance Name.
-* **discoverySolutionId**: string: ARM ID of migration hub solution for SDS.
-* **serviceEndpoint**: string (ReadOnly): Service endpoint.
-* **servicePrincipalIdentityDetails**: [SiteSpnProperties](#sitespnproperties): Class for site properties.
-
-## SiteAgentProperties
-### Properties
-* **id**: string (ReadOnly): ID of the agent.
-* **keyVaultId**: string: Key vault ARM Id.
-* **keyVaultUri**: string: Key vault URI.
-* **lastHeartBeatUtc**: string (ReadOnly): Last heartbeat time of the agent in UTC.
-* **version**: string (ReadOnly): Version of the agent.
-
-## SiteSpnProperties
-### Properties
-* **aadAuthority**: string: AAD Authority URL which was used to request the token for the service principal.
-* **applicationId**: string: Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-* **audience**: string: Intended audience for the service principal.
-* **objectId**: string: Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-* **rawCertData**: string: Raw certificate data for building certificate expiry flows.
-* **tenantId**: string: Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-
-## HyperVSiteTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## HyperVClusterProperties
-### Properties
-* **createdTimestamp**: string (ReadOnly): Timestamp marking Hyper-V cluster creation.
-* **errors**: [HealthErrorDetails](#healtherrordetails)[] (ReadOnly): Errors for Hyper-V clusters.
-* **fqdn**: string: FQDN/IPAddress of the Hyper-V cluster.
-* **functionalLevel**: int (ReadOnly): Functional level of the Hyper-V cluster.
-* **hostFqdnList**: string[]: List of hosts (FQDN) currently being tracked by the cluster.
-* **runAsAccountId**: string: Run as account ID of the Hyper-V cluster.
-* **status**: string (ReadOnly): Status of the Hyper-V cluster.
-* **updatedTimestamp**: string (ReadOnly): Timestamp marking last updated on the Hyper-V cluster.
-
 ## HealthErrorDetails
 ### Properties
 * **code**: string (ReadOnly): Error name.
@@ -109,6 +68,17 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## HyperVClusterProperties
+### Properties
+* **createdTimestamp**: string (ReadOnly): Timestamp marking Hyper-V cluster creation.
+* **errors**: [HealthErrorDetails](#healtherrordetails)[] (ReadOnly): Errors for Hyper-V clusters.
+* **fqdn**: string: FQDN/IPAddress of the Hyper-V cluster.
+* **functionalLevel**: int (ReadOnly): Functional level of the Hyper-V cluster.
+* **hostFqdnList**: string[]: List of hosts (FQDN) currently being tracked by the cluster.
+* **runAsAccountId**: string: Run as account ID of the Hyper-V cluster.
+* **status**: string (ReadOnly): Status of the Hyper-V cluster.
+* **updatedTimestamp**: string (ReadOnly): Timestamp marking last updated on the Hyper-V cluster.
+
 ## HyperVHostProperties
 ### Properties
 * **createdTimestamp**: string (ReadOnly): Timestamp marking Hyper-V host creation.
@@ -118,10 +88,35 @@
 * **updatedTimestamp**: string (ReadOnly): Timestamp marking last updated on the Hyper-V host.
 * **version**: string (ReadOnly): Version of the Hyper-V host.
 
-## VMwareSiteTags
+## HyperVSiteTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SiteAgentProperties
+### Properties
+* **id**: string (ReadOnly): ID of the agent.
+* **keyVaultId**: string: Key vault ARM Id.
+* **keyVaultUri**: string: Key vault URI.
+* **lastHeartBeatUtc**: string (ReadOnly): Last heartbeat time of the agent in UTC.
+* **version**: string (ReadOnly): Version of the agent.
+
+## SiteProperties
+### Properties
+* **agentDetails**: [SiteAgentProperties](#siteagentproperties): Class for site agent properties.
+* **applianceName**: string: Appliance Name.
+* **discoverySolutionId**: string: ARM ID of migration hub solution for SDS.
+* **serviceEndpoint**: string (ReadOnly): Service endpoint.
+* **servicePrincipalIdentityDetails**: [SiteSpnProperties](#sitespnproperties): Class for site properties.
+
+## SiteSpnProperties
+### Properties
+* **aadAuthority**: string: AAD Authority URL which was used to request the token for the service principal.
+* **applicationId**: string: Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+* **audience**: string: Intended audience for the service principal.
+* **objectId**: string: Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+* **rawCertData**: string: Raw certificate data for building certificate expiry flows.
+* **tenantId**: string: Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
 
 ## VCenterProperties
 ### Properties
@@ -134,4 +129,9 @@
 * **runAsAccountId**: string: Run as account ID of the vCenter.
 * **updatedTimestamp**: string (ReadOnly): Timestamp marking last updated on the vCenter.
 * **version**: string (ReadOnly): Version of the vCenter.
+
+## VMwareSiteTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

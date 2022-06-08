@@ -26,15 +26,6 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Management/managementGroups/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
-## CreateManagementGroupProperties
-### Properties
-* **children**: [CreateManagementGroupChildInfo](#createmanagementgroupchildinfo)[] (ReadOnly): The list of children.
-* **details**: [CreateManagementGroupDetails](#createmanagementgroupdetails): The details of a management group used during creation.
-* **displayName**: string: The friendly name of the management group. If no value is passed then this  field will be set to the groupId.
-* **path**: [ManagementGroupPathElement](#managementgrouppathelement)[] (ReadOnly): The path from the root to the current group.
-* **roles**: string[] (ReadOnly): The roles definitions associated with the management group.
-* **tenantId**: string (ReadOnly): The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
-
 ## CreateManagementGroupChildInfo
 ### Properties
 * **children**: [CreateManagementGroupChildInfo](#createmanagementgroupchildinfo)[] (ReadOnly): The list of children.
@@ -51,6 +42,21 @@
 * **updatedTime**: string (ReadOnly): The date and time when this object was last updated.
 * **version**: int (ReadOnly): The version number of the object.
 
+## CreateManagementGroupProperties
+### Properties
+* **children**: [CreateManagementGroupChildInfo](#createmanagementgroupchildinfo)[] (ReadOnly): The list of children.
+* **details**: [CreateManagementGroupDetails](#createmanagementgroupdetails): The details of a management group used during creation.
+* **displayName**: string: The friendly name of the management group. If no value is passed then this  field will be set to the groupId.
+* **path**: [ManagementGroupPathElement](#managementgrouppathelement)[] (ReadOnly): The path from the root to the current group.
+* **roles**: string[] (ReadOnly): The roles definitions associated with the management group.
+* **tenantId**: string (ReadOnly): The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
+
+## CreateOrUpdateSettingsProperties
+### Properties
+* **defaultManagementGroup**: string: Settings that sets the default Management Group under which new subscriptions get added in this tenant. For example, /providers/Microsoft.Management/managementGroups/defaultGroup
+* **requireAuthorizationForGroupCreation**: bool: Indicates whether RBAC access is required upon group creation under the root Management Group. If set to true, user will require Microsoft.Management/managementGroups/write action on the root Management Group scope in order to create new Groups directly under the root. This will prevent new users from creating new Management Groups, unless they are given access.
+* **tenantId**: string (ReadOnly): The AAD Tenant ID associated with the hierarchy settings. For example, 00000000-0000-0000-0000-000000000000
+
 ## CreateParentGroupInfo
 ### Properties
 * **displayName**: string (ReadOnly): The friendly name of the parent management group.
@@ -61,10 +67,4 @@
 ### Properties
 * **displayName**: string (ReadOnly): The friendly name of the group.
 * **name**: string (ReadOnly): The name of the group.
-
-## CreateOrUpdateSettingsProperties
-### Properties
-* **defaultManagementGroup**: string: Settings that sets the default Management Group under which new subscriptions get added in this tenant. For example, /providers/Microsoft.Management/managementGroups/defaultGroup
-* **requireAuthorizationForGroupCreation**: bool: Indicates whether RBAC access is required upon group creation under the root Management Group. If set to true, user will require Microsoft.Management/managementGroups/write action on the root Management Group scope in order to create new Groups directly under the root. This will prevent new users from creating new Management Groups, unless they are given access.
-* **tenantId**: string (ReadOnly): The AAD Tenant ID associated with the hierarchy settings. For example, 00000000-0000-0000-0000-000000000000
 

@@ -228,6 +228,22 @@
 * **ApiVersion**: 2019-06-01
 * **Output**: [KeyListResult](#keylistresult)
 
+## AdvancedSchedule
+### Properties
+* **monthDays**: int[]: Days of the month that the job should execute on. Must be between 1 and 31.
+* **monthlyOccurrences**: [AdvancedScheduleMonthlyOccurrence](#advancedschedulemonthlyoccurrence)[]: Occurrences of days within a month.
+* **weekDays**: string[]: Days of the week that the job should execute on.
+
+## AdvancedScheduleMonthlyOccurrence
+### Properties
+* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string: Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+* **occurrence**: int: Occurrence of the week within the month. Must be between 1 and 5
+
+## AutomationAccountCreateOrUpdateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## AutomationAccountCreateOrUpdateProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Gets the creation time.
@@ -237,16 +253,11 @@
 * **sku**: [Sku](#sku): The account SKU.
 * **state**: 'Ok' | 'Suspended' | 'Unavailable' | string (ReadOnly): Gets status of account.
 
-## Sku
+## AzureQueryProperties
 ### Properties
-* **capacity**: int: Gets or sets the SKU capacity.
-* **family**: string: Gets or sets the SKU family.
-* **name**: 'Basic' | 'Free' | string (Required): Gets or sets the SKU name of the account.
-
-## AutomationAccountCreateOrUpdateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **locations**: string[]: List of locations to scope the query to.
+* **scope**: string[]: List of Subscription or Resource Group ARM Ids.
+* **tagSettings**: [TagSettingsProperties](#tagsettingsproperties): Tag filter information for the VM.
 
 ## CertificateCreateOrUpdateProperties
 ### Properties
@@ -257,6 +268,67 @@
 * **isExportable**: bool: Gets or sets the is exportable flag of the certificate.
 * **lastModifiedTime**: string (ReadOnly): Gets the last modified time.
 * **thumbprint**: string: Gets or sets the thumbprint of the certificate.
+
+## ConnectionCreateOrUpdateProperties
+### Properties
+* **connectionType**: [ConnectionTypeAssociationProperty](#connectiontypeassociationproperty) (Required): The connection type property associated with the entity.
+* **creationTime**: string (ReadOnly): Gets the creation time.
+* **description**: string: Gets or sets the description of the connection.
+* **fieldDefinitionValues**: [ConnectionCreateOrUpdatePropertiesFieldDefinitionValues](#connectioncreateorupdatepropertiesfielddefinitionvalues): Gets or sets the field definition properties of the connection.
+* **lastModifiedTime**: string (ReadOnly): Gets the last modified time.
+
+## ConnectionCreateOrUpdatePropertiesFieldDefinitionValues
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ConnectionTypeAssociationProperty
+### Properties
+* **name**: string: Gets or sets the name of the connection type.
+
+## ConnectionTypeCreateOrUpdateProperties
+### Properties
+* **creationTime**: string (ReadOnly): Gets the creation time.
+* **description**: string (ReadOnly): Gets or sets the description.
+* **fieldDefinitions**: [ConnectionTypeCreateOrUpdatePropertiesFieldDefinitions](#connectiontypecreateorupdatepropertiesfielddefinitions) (Required): Gets or sets the field definitions of the connection type.
+* **isGlobal**: bool: Gets or sets a Boolean value to indicate if the connection type is global.
+* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
+
+## ConnectionTypeCreateOrUpdatePropertiesFieldDefinitions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [FieldDefinition](#fielddefinition)
+
+## ContentHash
+### Properties
+* **algorithm**: string (Required): Gets or sets the content hash algorithm used to hash the content.
+* **value**: string (Required): Gets or sets expected hash value of the content.
+
+## ContentLink
+### Properties
+* **contentHash**: [ContentHash](#contenthash): Definition of the runbook property type.
+* **uri**: string: Gets or sets the uri of the runbook content.
+* **version**: string: Gets or sets the version of the content.
+
+## ContentSource
+### Properties
+* **hash**: [ContentHash](#contenthash) (WriteOnly): Definition of the runbook property type.
+* **type**: 'embeddedContent' | 'uri' | string (WriteOnly): Gets or sets the content source type.
+* **value**: string (WriteOnly): Gets or sets the value of the content. This is based on the content source type.
+* **version**: string (WriteOnly): Gets or sets the version of the content.
+
+## CredentialCreateOrUpdateProperties
+### Properties
+* **creationTime**: string (ReadOnly): Gets the creation time.
+* **description**: string: Gets or sets the description of the credential.
+* **lastModifiedTime**: string (ReadOnly): Gets the last modified time.
+* **password**: string (Required, WriteOnly): Gets or sets the password of the credential.
+* **userName**: string (Required): Gets or sets the user name of the credential.
+
+## DscCompilationJobCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## DscCompilationJobCreateProperties
 ### Properties
@@ -276,16 +348,16 @@
 * **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' | string (ReadOnly): Gets or sets the status of the job.
 * **statusDetails**: string (ReadOnly): Gets or sets the status details of the job.
 
-## DscConfigurationAssociationProperty
-### Properties
-* **name**: string: Gets or sets the name of the Dsc configuration.
-
 ## DscCompilationJobCreatePropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## DscCompilationJobCreateParametersTags
+## DscConfigurationAssociationProperty
+### Properties
+* **name**: string: Gets or sets the name of the Dsc configuration.
+
+## DscConfigurationCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -316,66 +388,30 @@
 * **position**: int: Get or sets the position of the parameter.
 * **type**: string: Gets or sets the type of the parameter.
 
-## ContentSource
+## DscNodeConfigurationCreateOrUpdateParametersProperties
 ### Properties
-* **hash**: [ContentHash](#contenthash) (WriteOnly): Definition of the runbook property type.
-* **type**: 'embeddedContent' | 'uri' | string (WriteOnly): Gets or sets the content source type.
-* **value**: string (WriteOnly): Gets or sets the value of the content. This is based on the content source type.
-* **version**: string (WriteOnly): Gets or sets the version of the content.
-
-## ContentHash
-### Properties
-* **algorithm**: string (Required): Gets or sets the content hash algorithm used to hash the content.
-* **value**: string (Required): Gets or sets expected hash value of the content.
-
-## DscConfigurationCreateOrUpdateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ConnectionCreateOrUpdateProperties
-### Properties
-* **connectionType**: [ConnectionTypeAssociationProperty](#connectiontypeassociationproperty) (Required): The connection type property associated with the entity.
-* **creationTime**: string (ReadOnly): Gets the creation time.
-* **description**: string: Gets or sets the description of the connection.
-* **fieldDefinitionValues**: [ConnectionCreateOrUpdatePropertiesFieldDefinitionValues](#connectioncreateorupdatepropertiesfielddefinitionvalues): Gets or sets the field definition properties of the connection.
-* **lastModifiedTime**: string (ReadOnly): Gets the last modified time.
-
-## ConnectionTypeAssociationProperty
-### Properties
-* **name**: string: Gets or sets the name of the connection type.
-
-## ConnectionCreateOrUpdatePropertiesFieldDefinitionValues
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ConnectionTypeCreateOrUpdateProperties
-### Properties
-* **creationTime**: string (ReadOnly): Gets the creation time.
-* **description**: string (ReadOnly): Gets or sets the description.
-* **fieldDefinitions**: [ConnectionTypeCreateOrUpdatePropertiesFieldDefinitions](#connectiontypecreateorupdatepropertiesfielddefinitions) (Required): Gets or sets the field definitions of the connection type.
-* **isGlobal**: bool: Gets or sets a Boolean value to indicate if the connection type is global.
+* **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required): The Dsc configuration property associated with the entity.
+* **creationTime**: string (ReadOnly): Gets or sets creation time.
+* **incrementNodeConfigurationBuild**: bool: If a new build version of NodeConfiguration is required.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
+* **nodeCount**: int (ReadOnly): Number of nodes with this node configuration assigned
+* **source**: [ContentSource](#contentsource) (Required): Definition of the content source.
 
-## ConnectionTypeCreateOrUpdatePropertiesFieldDefinitions
+## DscNodeConfigurationCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [FieldDefinition](#fielddefinition)
+* **Additional Properties Type**: string
+
+## ErrorResponse
+### Properties
+* **code**: string: Error code
+* **message**: string: Error message indicating why the operation failed.
 
 ## FieldDefinition
 ### Properties
 * **isEncrypted**: bool: Gets or sets the isEncrypted flag of the connection field definition.
 * **isOptional**: bool: Gets or sets the isOptional flag of the connection field definition.
 * **type**: string (Required): Gets or sets the type of the connection field definition.
-
-## CredentialCreateOrUpdateProperties
-### Properties
-* **creationTime**: string (ReadOnly): Gets the creation time.
-* **description**: string: Gets or sets the description of the credential.
-* **lastModifiedTime**: string (ReadOnly): Gets the last modified time.
-* **password**: string (Required, WriteOnly): Gets or sets the password of the credential.
-* **userName**: string (Required): Gets or sets the user name of the credential.
 
 ## JobCreateProperties
 ### Properties
@@ -399,10 +435,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## RunbookAssociationProperty
-### Properties
-* **name**: string: Gets or sets the name of the runbook.
-
 ## JobScheduleCreateProperties
 ### Properties
 * **jobScheduleId**: string (ReadOnly): Gets or sets the id of job schedule.
@@ -416,9 +448,27 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ScheduleAssociationProperty
+## Key
 ### Properties
-* **name**: string: Gets or sets the name of the Schedule.
+* **KeyName**: 'Primary' | 'Secondary' | string (ReadOnly): Automation key name.
+* **Permissions**: 'Full' | 'Read' | string (ReadOnly): Automation key permissions.
+* **Value**: string (ReadOnly): Value of the Automation Key used for registration.
+
+## KeyListResult
+### Properties
+* **keys**: [Key](#key)[] (ReadOnly): Lists the automation keys.
+
+## LinuxProperties
+### Properties
+* **excludedPackageNameMasks**: string[]: packages excluded from the software update configuration.
+* **includedPackageClassifications**: 'Critical' | 'Other' | 'Security' | 'Unclassified' | string: Update classifications included in the software update configuration.
+* **includedPackageNameMasks**: string[]: packages included from the software update configuration.
+* **rebootSetting**: string: Reboot setting for the software update configuration.
+
+## ModuleCreateOrUpdateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ModuleCreateOrUpdateProperties
 ### Properties
@@ -434,32 +484,17 @@
 * **sizeInBytes**: int (ReadOnly): Gets or sets the size in bytes of the module.
 * **version**: string (ReadOnly): Gets or sets the version of the module.
 
-## ContentLink
-### Properties
-* **contentHash**: [ContentHash](#contenthash): Definition of the runbook property type.
-* **uri**: string: Gets or sets the uri of the runbook content.
-* **version**: string: Gets or sets the version of the content.
-
 ## ModuleErrorInfo
 ### Properties
 * **code**: string (ReadOnly): Gets or sets the error code.
 * **message**: string (ReadOnly): Gets or sets the error message.
 
-## ModuleCreateOrUpdateParametersTags
+## NonAzureQueryProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **functionAlias**: string: Log Analytics Saved Search name.
+* **workspaceId**: string: Workspace Id for Log Analytics in which the saved Search is resided.
 
-## DscNodeConfigurationCreateOrUpdateParametersProperties
-### Properties
-* **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required): The Dsc configuration property associated with the entity.
-* **creationTime**: string (ReadOnly): Gets or sets creation time.
-* **incrementNodeConfigurationBuild**: bool: If a new build version of NodeConfiguration is required.
-* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
-* **nodeCount**: int (ReadOnly): Number of nodes with this node configuration assigned
-* **source**: [ContentSource](#contentsource) (Required): Definition of the content source.
-
-## DscNodeConfigurationCreateOrUpdateParametersTags
+## PythonPackageCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -478,7 +513,11 @@
 * **sizeInBytes**: int (ReadOnly): Gets or sets the size in bytes of the module.
 * **version**: string (ReadOnly): Gets or sets the version of the module.
 
-## PythonPackageCreateParametersTags
+## RunbookAssociationProperty
+### Properties
+* **name**: string: Gets or sets the name of the runbook.
+
+## RunbookCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -527,15 +566,9 @@
 ### Additional Properties
 * **Additional Properties Type**: [RunbookParameter](#runbookparameter)
 
-## RunbookCreateOrUpdateParametersTags
+## ScheduleAssociationProperty
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TestJobCreateParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **name**: string: Gets or sets the name of the Schedule.
 
 ## ScheduleCreateOrUpdateProperties
 ### Properties
@@ -554,16 +587,11 @@
 * **startTimeOffsetMinutes**: int (ReadOnly): Gets the start time's offset in minutes.
 * **timeZone**: string: Gets or sets the time zone of the schedule.
 
-## AdvancedSchedule
+## Sku
 ### Properties
-* **monthDays**: int[]: Days of the month that the job should execute on. Must be between 1 and 31.
-* **monthlyOccurrences**: [AdvancedScheduleMonthlyOccurrence](#advancedschedulemonthlyoccurrence)[]: Occurrences of days within a month.
-* **weekDays**: string[]: Days of the week that the job should execute on.
-
-## AdvancedScheduleMonthlyOccurrence
-### Properties
-* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string: Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
-* **occurrence**: int: Occurrence of the week within the month. Must be between 1 and 5
+* **capacity**: int: Gets or sets the SKU capacity.
+* **family**: string: Gets or sets the SKU family.
+* **name**: 'Basic' | 'Free' | string (Required): Gets or sets the SKU name of the account.
 
 ## SoftwareUpdateConfigurationProperties
 ### Properties
@@ -577,92 +605,10 @@
 * **tasks**: [SoftwareUpdateConfigurationTasks](#softwareupdateconfigurationtasks): Task properties of the software update configuration.
 * **updateConfiguration**: [UpdateConfiguration](#updateconfiguration) (Required): Update specific properties of the software update configuration.
 
-## ErrorResponse
-### Properties
-* **code**: string: Error code
-* **message**: string: Error message indicating why the operation failed.
-
-## SUCScheduleProperties
-### Properties
-* **advancedSchedule**: [AdvancedSchedule](#advancedschedule): The properties of the create Advanced Schedule.
-* **creationTime**: string: Gets or sets the creation time.
-* **description**: string: Gets or sets the description.
-* **expiryTime**: string: Gets or sets the end time of the schedule.
-* **expiryTimeOffsetMinutes**: int: Gets or sets the expiry time's offset in minutes.
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'OneTime' | 'Week' | string: Gets or sets the frequency of the schedule.
-* **interval**: int: Gets or sets the interval of the schedule.
-* **isEnabled**: bool: Gets or sets a value indicating whether this schedule is enabled.
-* **lastModifiedTime**: string: Gets or sets the last modified time.
-* **nextRun**: string: Gets or sets the next run time of the schedule.
-* **nextRunOffsetMinutes**: int: Gets or sets the next run time's offset in minutes.
-* **startTime**: string: Gets or sets the start time of the schedule.
-* **startTimeOffsetMinutes**: int (ReadOnly): Gets the start time's offset in minutes.
-* **timeZone**: string: Gets or sets the time zone of the schedule.
-
 ## SoftwareUpdateConfigurationTasks
 ### Properties
 * **postTask**: [TaskProperties](#taskproperties): Task properties of the software update configuration.
 * **preTask**: [TaskProperties](#taskproperties): Task properties of the software update configuration.
-
-## TaskProperties
-### Properties
-* **parameters**: [TaskPropertiesParameters](#taskpropertiesparameters): Gets or sets the parameters of the task.
-* **source**: string: Gets or sets the name of the runbook.
-
-## TaskPropertiesParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## UpdateConfiguration
-### Properties
-* **azureVirtualMachines**: string[]: List of azure resource Ids for azure virtual machines targeted by the software update configuration.
-* **duration**: string: Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
-* **linux**: [LinuxProperties](#linuxproperties): Linux specific update configuration.
-* **nonAzureComputerNames**: string[]: List of names of non-azure machines targeted by the software update configuration.
-* **operatingSystem**: 'Linux' | 'Windows' (Required): Target operating system for the software update configuration.
-* **targets**: [TargetProperties](#targetproperties): Group specific to the update configuration.
-* **windows**: [WindowsProperties](#windowsproperties): Windows specific update configuration.
-
-## LinuxProperties
-### Properties
-* **excludedPackageNameMasks**: string[]: packages excluded from the software update configuration.
-* **includedPackageClassifications**: 'Critical' | 'Other' | 'Security' | 'Unclassified' | string: Update classifications included in the software update configuration.
-* **includedPackageNameMasks**: string[]: packages included from the software update configuration.
-* **rebootSetting**: string: Reboot setting for the software update configuration.
-
-## TargetProperties
-### Properties
-* **azureQueries**: [AzureQueryProperties](#azurequeryproperties)[]: List of Azure queries in the software update configuration.
-* **nonAzureQueries**: [NonAzureQueryProperties](#nonazurequeryproperties)[]: List of non Azure queries in the software update configuration.
-
-## AzureQueryProperties
-### Properties
-* **locations**: string[]: List of locations to scope the query to.
-* **scope**: string[]: List of Subscription or Resource Group ARM Ids.
-* **tagSettings**: [TagSettingsProperties](#tagsettingsproperties): Tag filter information for the VM.
-
-## TagSettingsProperties
-### Properties
-* **filterOperator**: 'All' | 'Any': Filter VMs by Any or All specified tags.
-* **tags**: [TagSettingsPropertiesTags](#tagsettingspropertiestags): Dictionary of tags with its list of values.
-
-## TagSettingsPropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string[]
-
-## NonAzureQueryProperties
-### Properties
-* **functionAlias**: string: Log Analytics Saved Search name.
-* **workspaceId**: string: Workspace Id for Log Analytics in which the saved Search is resided.
-
-## WindowsProperties
-### Properties
-* **excludedKbNumbers**: string[]: KB numbers excluded from the software update configuration.
-* **includedKbNumbers**: string[]: KB numbers included from the software update configuration.
-* **includedUpdateClassifications**: 'Critical' | 'Definition' | 'FeaturePack' | 'Security' | 'ServicePack' | 'Tools' | 'Unclassified' | 'UpdateRollup' | 'Updates' | string: Update classification included in the software update configuration. A comma separated string with required values
-* **rebootSetting**: string: Reboot setting for the software update configuration.
 
 ## SourceControlCreateOrUpdateProperties
 ### Properties
@@ -694,6 +640,63 @@
 * **startTime**: string (ReadOnly): The start time of the job.
 * **syncType**: 'FullSync' | 'PartialSync' | string (ReadOnly): The sync type.
 
+## SUCScheduleProperties
+### Properties
+* **advancedSchedule**: [AdvancedSchedule](#advancedschedule): The properties of the create Advanced Schedule.
+* **creationTime**: string: Gets or sets the creation time.
+* **description**: string: Gets or sets the description.
+* **expiryTime**: string: Gets or sets the end time of the schedule.
+* **expiryTimeOffsetMinutes**: int: Gets or sets the expiry time's offset in minutes.
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'OneTime' | 'Week' | string: Gets or sets the frequency of the schedule.
+* **interval**: int: Gets or sets the interval of the schedule.
+* **isEnabled**: bool: Gets or sets a value indicating whether this schedule is enabled.
+* **lastModifiedTime**: string: Gets or sets the last modified time.
+* **nextRun**: string: Gets or sets the next run time of the schedule.
+* **nextRunOffsetMinutes**: int: Gets or sets the next run time's offset in minutes.
+* **startTime**: string: Gets or sets the start time of the schedule.
+* **startTimeOffsetMinutes**: int (ReadOnly): Gets the start time's offset in minutes.
+* **timeZone**: string: Gets or sets the time zone of the schedule.
+
+## TagSettingsProperties
+### Properties
+* **filterOperator**: 'All' | 'Any': Filter VMs by Any or All specified tags.
+* **tags**: [TagSettingsPropertiesTags](#tagsettingspropertiestags): Dictionary of tags with its list of values.
+
+## TagSettingsPropertiesTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string[]
+
+## TargetProperties
+### Properties
+* **azureQueries**: [AzureQueryProperties](#azurequeryproperties)[]: List of Azure queries in the software update configuration.
+* **nonAzureQueries**: [NonAzureQueryProperties](#nonazurequeryproperties)[]: List of non Azure queries in the software update configuration.
+
+## TaskProperties
+### Properties
+* **parameters**: [TaskPropertiesParameters](#taskpropertiesparameters): Gets or sets the parameters of the task.
+* **source**: string: Gets or sets the name of the runbook.
+
+## TaskPropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TestJobCreateParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## UpdateConfiguration
+### Properties
+* **azureVirtualMachines**: string[]: List of azure resource Ids for azure virtual machines targeted by the software update configuration.
+* **duration**: string: Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
+* **linux**: [LinuxProperties](#linuxproperties): Linux specific update configuration.
+* **nonAzureComputerNames**: string[]: List of names of non-azure machines targeted by the software update configuration.
+* **operatingSystem**: 'Linux' | 'Windows' (Required): Target operating system for the software update configuration.
+* **targets**: [TargetProperties](#targetproperties): Group specific to the update configuration.
+* **windows**: [WindowsProperties](#windowsproperties): Windows specific update configuration.
+
 ## VariableCreateOrUpdateProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Gets or sets the creation time.
@@ -724,13 +727,10 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## KeyListResult
+## WindowsProperties
 ### Properties
-* **keys**: [Key](#key)[] (ReadOnly): Lists the automation keys.
-
-## Key
-### Properties
-* **KeyName**: 'Primary' | 'Secondary' | string (ReadOnly): Automation key name.
-* **Permissions**: 'Full' | 'Read' | string (ReadOnly): Automation key permissions.
-* **Value**: string (ReadOnly): Value of the Automation Key used for registration.
+* **excludedKbNumbers**: string[]: KB numbers excluded from the software update configuration.
+* **includedKbNumbers**: string[]: KB numbers included from the software update configuration.
+* **includedUpdateClassifications**: 'Critical' | 'Definition' | 'FeaturePack' | 'Security' | 'ServicePack' | 'Tools' | 'Unclassified' | 'UpdateRollup' | 'Updates' | string: Update classification included in the software update configuration. A comma separated string with required values
+* **rebootSetting**: string: Reboot setting for the software update configuration.
 

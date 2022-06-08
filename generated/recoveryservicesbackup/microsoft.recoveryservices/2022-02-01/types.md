@@ -108,20 +108,33 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## BackupResourceVaultConfig
+## AzureFileshareProtectedItemExtendedInfo
 ### Properties
-* **enhancedSecurityState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Enabled or Disabled.
-* **isSoftDeleteFeatureStateEditable**: bool: Is soft delete feature state editable
-* **resourceGuardOperationRequests**: string[]: ResourceGuard Operation Requests
-* **softDeleteFeatureState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Soft Delete feature state
+* **oldestRecoveryPoint**: string: The oldest backup copy available for this item in the service.
+* **policyState**: string: Indicates consistency of policy object and policy applied to this backup item.
+* **recoveryPointCount**: int: Number of available backup copies associated with this backup item.
+* **resourceState**: string (ReadOnly): Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}
+* **resourceStateSyncTime**: string (ReadOnly): The resource state sync time for this backup item.
+
+## AzureFileshareProtectedItemKpisHealths
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [KPIResourceHealthDetails](#kpiresourcehealthdetails)
+
+## AzureSqlProtectedItemExtendedInfo
+### Properties
+* **oldestRecoveryPoint**: string: The oldest backup copy available for this item in the service.
+* **policyState**: string: State of the backup policy associated with this backup item.
+* **recoveryPointCount**: int: Number of available backup copies associated with this backup item.
+
+## BackupResourceConfig
+### Properties
+* **crossRegionRestoreFlag**: bool: Opt in details of Cross Region Restore feature.
+* **dedupState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Vault Dedup state
 * **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type
 * **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type
 * **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked' | string: Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **xcoolState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Vault x-cool state
 
 ## BackupResourceEncryptionConfig
 ### Properties
@@ -133,132 +146,15 @@
 * **userAssignedIdentity**: string (ReadOnly): User Assigned Identity Id
 * **useSystemAssignedIdentity**: bool (ReadOnly): bool to indicate whether to use system Assigned Identity or not
 
-## ResourceTags
+## BackupResourceVaultConfig
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ProtectionIntent
-* **Discriminator**: protectionIntentItemType
-
-### Base Properties
-* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string: Backup management type to execute the current job.
-* **itemId**: string: ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
-* **policyId**: string: ID of the backup policy with which this item is backed up.
-* **protectionState**: 'Invalid' | 'NotProtected' | 'Protected' | 'Protecting' | 'ProtectionFailed' | string: Specifies whether the container is registered or not
-* **sourceResourceId**: string: ARM ID of the resource to be backed up.
-### AzureResourceProtectionIntent
-#### Properties
-* **friendlyName**: string: Friendly name of the VM represented by this backup item.
-* **protectionIntentItemType**: 'AzureResourceItem' (Required): backup protectionIntent type.
-
-### AzureWorkloadContainerAutoProtectionIntent
-#### Properties
-* **protectionIntentItemType**: 'AzureWorkloadContainerAutoProtectionIntent' (Required): backup protectionIntent type.
-
-### AzureWorkloadSQLAutoProtectionIntent
-#### Properties
-* **protectionIntentItemType**: 'AzureWorkloadSQLAutoProtectionIntent' (Required): backup protectionIntent type.
-* **workloadItemType**: 'Invalid' | 'SAPAseDatabase' | 'SAPAseSystem' | 'SAPHanaDatabase' | 'SAPHanaSystem' | 'SQLDataBase' | 'SQLInstance' | string: Workload item type of the item for which intent is to be set
-
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ProtectionContainer
-* **Discriminator**: containerType
-
-### Base Properties
-* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string: Backup management type to execute the current job.
-* **friendlyName**: string: Friendly name of the container.
-* **healthStatus**: string: Status of health of the container.
-* **protectableObjectType**: string: Type of the protectable object associated with this container
-* **registrationStatus**: string: Status of registration of the container with the Recovery Services Vault.
-### AzureBackupServerContainer
-#### Properties
-* **containerType**: 'AzureBackupServerContainer' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
-Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
-Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
-Backup is VMAppContainer
-
-### AzureSqlContainer
-#### Properties
-* **containerType**: 'AzureSqlContainer' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
-Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
-Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
-Backup is VMAppContainer
-
-### GenericContainer
-#### Properties
-* **containerType**: 'GenericContainer' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
-Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
-Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
-Backup is VMAppContainer
-* **extendedInformation**: [GenericContainerExtendedInfo](#genericcontainerextendedinfo): Container extended information
-* **fabricName**: string: Name of the container's fabric
-
-### AzureIaaSClassicComputeVMContainer
-#### Properties
-* **containerType**: 'Microsoft.ClassicCompute/virtualMachines' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
-Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
-Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
-Backup is VMAppContainer
-
-### AzureIaaSComputeVMContainer
-#### Properties
-* **containerType**: 'Microsoft.Compute/virtualMachines' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
-Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
-Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
-Backup is VMAppContainer
-
-### AzureSqlagWorkloadContainerProtectionContainer
-#### Properties
-* **containerType**: 'SQLAGWorkLoadContainer' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
-Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
-Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
-Backup is VMAppContainer
-
-### AzureStorageContainer
-#### Properties
-* **acquireStorageAccountLock**: 'Acquire' | 'NotAcquire' | string: Whether storage account lock is to be acquired for this container or not.
-* **containerType**: 'StorageContainer' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
-Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
-Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
-Backup is VMAppContainer
-* **protectedItemCount**: int: Number of items backed up in this container.
-* **resourceGroup**: string: Resource group name of Recovery Services Vault.
-* **sourceResourceId**: string: Fully qualified ARM url.
-* **storageAccountVersion**: string: Storage account version.
-
-### AzureVMAppContainerProtectionContainer
-#### Properties
-* **containerType**: 'VMAppContainer' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
-Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
-Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
-Backup is VMAppContainer
-
-### MabContainer
-#### Properties
-* **agentVersion**: string: Agent version of this container.
-* **canReRegister**: bool: Can the container be registered one more time.
-* **containerHealthState**: string: Health state of mab container.
-* **containerId**: int: ContainerID represents the container.
-* **containerType**: 'Windows' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
-Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
-Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
-Backup is VMAppContainer
-* **extendedInfo**: [MabContainerExtendedInfo](#mabcontainerextendedinfo): Additional information of the container.
-* **mabContainerHealthDetails**: [MABContainerHealthDetails](#mabcontainerhealthdetails)[]: Health details on this mab container.
-* **protectedItemCount**: int: Number of items backed up in this container.
-
-
-## GenericContainerExtendedInfo
-### Properties
-* **containerIdentityInfo**: [ContainerIdentityInfo](#containeridentityinfo): Container identity information
-* **rawCertData**: string: Public key of container cert
-* **serviceEndpoints**: [GenericContainerExtendedInfoServiceEndpoints](#genericcontainerextendedinfoserviceendpoints): Azure Backup Service Endpoints for the container
+* **enhancedSecurityState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Enabled or Disabled.
+* **isSoftDeleteFeatureStateEditable**: bool: Is soft delete feature state editable
+* **resourceGuardOperationRequests**: string[]: ResourceGuard Operation Requests
+* **softDeleteFeatureState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Soft Delete feature state
+* **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type
+* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type
+* **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked' | string: Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
 
 ## ContainerIdentityInfo
 ### Properties
@@ -267,10 +163,78 @@ Backup is VMAppContainer
 * **servicePrincipalClientId**: string: Protection container identity - AAD Service Principal
 * **uniqueName**: string: Unique name of the container
 
+## DailyRetentionFormat
+### Properties
+* **daysOfTheMonth**: [Day](#day)[]: List of days of the month.
+
+## DailyRetentionSchedule
+### Properties
+* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
+* **retentionTimes**: string[]: Retention times of retention policy.
+
+## DailySchedule
+### Properties
+* **scheduleRunTimes**: string[]: List of times of day this schedule has to be run.
+
+## Day
+### Properties
+* **date**: int: Date of the month
+* **isLast**: bool: Whether Date is last date of month
+
+## DPMProtectedItemExtendedInfo
+### Properties
+* **diskStorageUsedInBytes**: string: Used Disk storage in bytes.
+* **isCollocated**: bool: To check if backup item is collocated.
+* **isPresentOnCloud**: bool: To check if backup item is cloud protected.
+* **lastBackupStatus**: string: Last backup status information on backup item.
+* **lastRefreshedAt**: string: Last refresh time on backup item.
+* **oldestRecoveryPoint**: string: Oldest cloud recovery point time.
+* **onPremiseLatestRecoveryPoint**: string: latest disk recovery point time.
+* **onPremiseOldestRecoveryPoint**: string: Oldest disk recovery point time.
+* **onPremiseRecoveryPointCount**: int: disk recovery point count.
+* **protectableObjectLoadPath**: [DPMProtectedItemExtendedInfoProtectableObjectLoadPath](#dpmprotecteditemextendedinfoprotectableobjectloadpath): Attribute to provide information on various DBs.
+* **protected**: bool: To check if backup item is disk protected.
+* **protectionGroupName**: string: Protection group name of the backup item.
+* **recoveryPointCount**: int: cloud recovery point count.
+* **totalDiskStorageSizeInBytes**: string: total Disk storage in bytes.
+
+## DPMProtectedItemExtendedInfoProtectableObjectLoadPath
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## GenericContainerExtendedInfo
+### Properties
+* **containerIdentityInfo**: [ContainerIdentityInfo](#containeridentityinfo): Container identity information
+* **rawCertData**: string: Public key of container cert
+* **serviceEndpoints**: [GenericContainerExtendedInfoServiceEndpoints](#genericcontainerextendedinfoserviceendpoints): Azure Backup Service Endpoints for the container
+
 ## GenericContainerExtendedInfoServiceEndpoints
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## GenericProtectedItemSourceAssociations
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## HourlySchedule
+### Properties
+* **interval**: int: Interval at which backup needs to be triggered. For hourly the value
+ can be 4/6/8/12
+* **scheduleWindowDuration**: int: To specify duration of the backup window
+* **scheduleWindowStartTime**: string: To specify start time of the backup window
+
+## InstantRPAdditionalDetails
+### Properties
+* **azureBackupRGNamePrefix**: string
+* **azureBackupRGNameSuffix**: string
+
+## KPIResourceHealthDetails
+### Properties
+* **resourceHealthDetails**: [ResourceHealthDetails](#resourcehealthdetails)[]: Resource Health Status
+* **resourceHealthStatus**: 'Healthy' | 'Invalid' | 'PersistentDegraded' | 'PersistentUnhealthy' | 'TransientDegraded' | 'TransientUnhealthy' | string: Resource Health Status
 
 ## MabContainerExtendedInfo
 ### Properties
@@ -287,10 +251,35 @@ Backup is VMAppContainer
 * **recommendations**: string[]: Health Recommended Actions
 * **title**: string: Health Title
 
-## ResourceTags
+## MabFileFolderProtectedItemExtendedInfo
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **lastRefreshedAt**: string: Last time when the agent data synced to service.
+* **oldestRecoveryPoint**: string: The oldest backup copy available.
+* **recoveryPointCount**: int: Number of backup copies associated with the backup item.
+
+## MonthlyRetentionSchedule
+### Properties
+* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
+* **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format.
+* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly' | string: Retention schedule format type for monthly retention policy.
+* **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
+* **retentionTimes**: string[]: Retention times of retention policy.
+
+## PrivateEndpoint
+### Properties
+* **id**: string: Gets or sets id
+
+## PrivateEndpointConnection
+### Properties
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint network resource that is linked to the Private Endpoint connection
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Private Link Service Connection State
+* **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' | string: Gets or sets provisioning state of the private endpoint connection
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionRequired**: string: Gets or sets actions required
+* **description**: string: Gets or sets description
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Gets or sets the status
 
 ## ProtectedItem
 * **Discriminator**: protectedItemType
@@ -380,74 +369,116 @@ Backup is VMAppContainer
 * **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped' | string: Backup state of the backed up item.
 
 
-## AzureFileshareProtectedItemExtendedInfo
-### Properties
-* **oldestRecoveryPoint**: string: The oldest backup copy available for this item in the service.
-* **policyState**: string: Indicates consistency of policy object and policy applied to this backup item.
-* **recoveryPointCount**: int: Number of available backup copies associated with this backup item.
-* **resourceState**: string (ReadOnly): Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}
-* **resourceStateSyncTime**: string (ReadOnly): The resource state sync time for this backup item.
+## ProtectionContainer
+* **Discriminator**: containerType
 
-## AzureFileshareProtectedItemKpisHealths
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [KPIResourceHealthDetails](#kpiresourcehealthdetails)
+### Base Properties
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string: Backup management type to execute the current job.
+* **friendlyName**: string: Friendly name of the container.
+* **healthStatus**: string: Status of health of the container.
+* **protectableObjectType**: string: Type of the protectable object associated with this container
+* **registrationStatus**: string: Status of registration of the container with the Recovery Services Vault.
+### AzureBackupServerContainer
+#### Properties
+* **containerType**: 'AzureBackupServerContainer' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+Backup is VMAppContainer
 
-## KPIResourceHealthDetails
-### Properties
-* **resourceHealthDetails**: [ResourceHealthDetails](#resourcehealthdetails)[]: Resource Health Status
-* **resourceHealthStatus**: 'Healthy' | 'Invalid' | 'PersistentDegraded' | 'PersistentUnhealthy' | 'TransientDegraded' | 'TransientUnhealthy' | string: Resource Health Status
+### AzureSqlContainer
+#### Properties
+* **containerType**: 'AzureSqlContainer' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+Backup is VMAppContainer
 
-## ResourceHealthDetails
-### Properties
-* **code**: int (ReadOnly): Health Code
-* **message**: string (ReadOnly): Health Message
-* **recommendations**: string[] (ReadOnly): Health Recommended Actions
-* **title**: string (ReadOnly): Health Title
+### GenericContainer
+#### Properties
+* **containerType**: 'GenericContainer' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+Backup is VMAppContainer
+* **extendedInformation**: [GenericContainerExtendedInfo](#genericcontainerextendedinfo): Container extended information
+* **fabricName**: string: Name of the container's fabric
 
-## DPMProtectedItemExtendedInfo
-### Properties
-* **diskStorageUsedInBytes**: string: Used Disk storage in bytes.
-* **isCollocated**: bool: To check if backup item is collocated.
-* **isPresentOnCloud**: bool: To check if backup item is cloud protected.
-* **lastBackupStatus**: string: Last backup status information on backup item.
-* **lastRefreshedAt**: string: Last refresh time on backup item.
-* **oldestRecoveryPoint**: string: Oldest cloud recovery point time.
-* **onPremiseLatestRecoveryPoint**: string: latest disk recovery point time.
-* **onPremiseOldestRecoveryPoint**: string: Oldest disk recovery point time.
-* **onPremiseRecoveryPointCount**: int: disk recovery point count.
-* **protectableObjectLoadPath**: [DPMProtectedItemExtendedInfoProtectableObjectLoadPath](#dpmprotecteditemextendedinfoprotectableobjectloadpath): Attribute to provide information on various DBs.
-* **protected**: bool: To check if backup item is disk protected.
-* **protectionGroupName**: string: Protection group name of the backup item.
-* **recoveryPointCount**: int: cloud recovery point count.
-* **totalDiskStorageSizeInBytes**: string: total Disk storage in bytes.
+### AzureIaaSClassicComputeVMContainer
+#### Properties
+* **containerType**: 'Microsoft.ClassicCompute/virtualMachines' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+Backup is VMAppContainer
 
-## DPMProtectedItemExtendedInfoProtectableObjectLoadPath
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+### AzureIaaSComputeVMContainer
+#### Properties
+* **containerType**: 'Microsoft.Compute/virtualMachines' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+Backup is VMAppContainer
 
-## GenericProtectedItemSourceAssociations
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+### AzureSqlagWorkloadContainerProtectionContainer
+#### Properties
+* **containerType**: 'SQLAGWorkLoadContainer' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+Backup is VMAppContainer
 
-## MabFileFolderProtectedItemExtendedInfo
-### Properties
-* **lastRefreshedAt**: string: Last time when the agent data synced to service.
-* **oldestRecoveryPoint**: string: The oldest backup copy available.
-* **recoveryPointCount**: int: Number of backup copies associated with the backup item.
+### AzureStorageContainer
+#### Properties
+* **acquireStorageAccountLock**: 'Acquire' | 'NotAcquire' | string: Whether storage account lock is to be acquired for this container or not.
+* **containerType**: 'StorageContainer' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+Backup is VMAppContainer
+* **protectedItemCount**: int: Number of items backed up in this container.
+* **resourceGroup**: string: Resource group name of Recovery Services Vault.
+* **sourceResourceId**: string: Fully qualified ARM url.
+* **storageAccountVersion**: string: Storage account version.
 
-## AzureSqlProtectedItemExtendedInfo
-### Properties
-* **oldestRecoveryPoint**: string: The oldest backup copy available for this item in the service.
-* **policyState**: string: State of the backup policy associated with this backup item.
-* **recoveryPointCount**: int: Number of available backup copies associated with this backup item.
+### AzureVMAppContainerProtectionContainer
+#### Properties
+* **containerType**: 'VMAppContainer' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+Backup is VMAppContainer
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+### MabContainer
+#### Properties
+* **agentVersion**: string: Agent version of this container.
+* **canReRegister**: bool: Can the container be registered one more time.
+* **containerHealthState**: string: Health state of mab container.
+* **containerId**: int: ContainerID represents the container.
+* **containerType**: 'Windows' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+Backup is VMAppContainer
+* **extendedInfo**: [MabContainerExtendedInfo](#mabcontainerextendedinfo): Additional information of the container.
+* **mabContainerHealthDetails**: [MABContainerHealthDetails](#mabcontainerhealthdetails)[]: Health details on this mab container.
+* **protectedItemCount**: int: Number of items backed up in this container.
+
+
+## ProtectionIntent
+* **Discriminator**: protectionIntentItemType
+
+### Base Properties
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string: Backup management type to execute the current job.
+* **itemId**: string: ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
+* **policyId**: string: ID of the backup policy with which this item is backed up.
+* **protectionState**: 'Invalid' | 'NotProtected' | 'Protected' | 'Protecting' | 'ProtectionFailed' | string: Specifies whether the container is registered or not
+* **sourceResourceId**: string: ARM ID of the resource to be backed up.
+### AzureResourceProtectionIntent
+#### Properties
+* **friendlyName**: string: Friendly name of the VM represented by this backup item.
+* **protectionIntentItemType**: 'AzureResourceItem' (Required): backup protectionIntent type.
+
+### AzureWorkloadContainerAutoProtectionIntent
+#### Properties
+* **protectionIntentItemType**: 'AzureWorkloadContainerAutoProtectionIntent' (Required): backup protectionIntent type.
+
+### AzureWorkloadSQLAutoProtectionIntent
+#### Properties
+* **protectionIntentItemType**: 'AzureWorkloadSQLAutoProtectionIntent' (Required): backup protectionIntent type.
+* **workloadItemType**: 'Invalid' | 'SAPAseDatabase' | 'SAPAseSystem' | 'SAPHanaDatabase' | 'SAPHanaSystem' | 'SQLDataBase' | 'SQLInstance' | string: Workload item type of the item for which intent is to be set
+
 
 ## ProtectionPolicy
 * **Discriminator**: backupManagementType
@@ -500,10 +531,75 @@ Backup is VMAppContainer
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
 
 
-## InstantRPAdditionalDetails
+## ResourceGuardOperationDetail
 ### Properties
-* **azureBackupRGNamePrefix**: string
-* **azureBackupRGNameSuffix**: string
+* **defaultResourceRequest**: string (ReadOnly)
+* **vaultCriticalOperation**: string (ReadOnly)
+
+## ResourceGuardProxyBase
+### Properties
+* **description**: string (ReadOnly)
+* **lastUpdatedTime**: string (ReadOnly)
+* **resourceGuardOperationDetails**: [ResourceGuardOperationDetail](#resourceguardoperationdetail)[] (ReadOnly): Array of ResourceGuardOperationDetail
+* **resourceGuardResourceId**: string (ReadOnly)
+
+## ResourceHealthDetails
+### Properties
+* **code**: int (ReadOnly): Health Code
+* **message**: string (ReadOnly): Health Message
+* **recommendations**: string[] (ReadOnly): Health Recommended Actions
+* **title**: string (ReadOnly): Health Title
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RetentionDuration
+### Properties
+* **count**: int: Count of duration types. Retention duration is obtained by the counting the duration type Count times.
+For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.
+* **durationType**: 'Days' | 'Invalid' | 'Months' | 'Weeks' | 'Years' | string: Retention duration type of retention policy.
 
 ## RetentionPolicy
 * **Discriminator**: retentionPolicyType
@@ -522,54 +618,6 @@ Backup is VMAppContainer
 * **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
 * **retentionPolicyType**: 'SimpleRetentionPolicy' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
 
-
-## DailyRetentionSchedule
-### Properties
-* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
-* **retentionTimes**: string[]: Retention times of retention policy.
-
-## RetentionDuration
-### Properties
-* **count**: int: Count of duration types. Retention duration is obtained by the counting the duration type Count times.
-For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.
-* **durationType**: 'Days' | 'Invalid' | 'Months' | 'Weeks' | 'Years' | string: Retention duration type of retention policy.
-
-## MonthlyRetentionSchedule
-### Properties
-* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
-* **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format.
-* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly' | string: Retention schedule format type for monthly retention policy.
-* **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
-* **retentionTimes**: string[]: Retention times of retention policy.
-
-## DailyRetentionFormat
-### Properties
-* **daysOfTheMonth**: [Day](#day)[]: List of days of the month.
-
-## Day
-### Properties
-* **date**: int: Date of the month
-* **isLast**: bool: Whether Date is last date of month
-
-## WeeklyRetentionFormat
-### Properties
-* **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of days of the week.
-* **weeksOfTheMonth**: 'First' | 'Fourth' | 'Invalid' | 'Last' | 'Second' | 'Third'[]: List of weeks of month.
-
-## WeeklyRetentionSchedule
-### Properties
-* **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of days of week for weekly retention policy.
-* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
-* **retentionTimes**: string[]: Retention times of retention policy.
-
-## YearlyRetentionSchedule
-### Properties
-* **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'Invalid' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September'[]: List of months of year of yearly retention policy.
-* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
-* **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format.
-* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly' | string: Retention schedule format type for monthly retention policy.
-* **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
-* **retentionTimes**: string[]: Retention times of retention policy.
 
 ## SchedulePolicy
 * **Discriminator**: schedulePolicyType
@@ -602,22 +650,6 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 * **weeklySchedule**: [WeeklySchedule](#weeklyschedule)
 
 
-## HourlySchedule
-### Properties
-* **interval**: int: Interval at which backup needs to be triggered. For hourly the value
- can be 4/6/8/12
-* **scheduleWindowDuration**: int: To specify duration of the backup window
-* **scheduleWindowStartTime**: string: To specify start time of the backup window
-
-## DailySchedule
-### Properties
-* **scheduleRunTimes**: string[]: List of times of day this schedule has to be run.
-
-## WeeklySchedule
-### Properties
-* **scheduleRunDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: Array of DayOfWeek
-* **scheduleRunTimes**: string[]: List of times of day this schedule has to be run.
-
 ## Settings
 ### Properties
 * **isCompression**: bool: Workload compression flag. This has been added so that 'isSqlCompression'
@@ -631,60 +663,28 @@ will be deprecated once clients upgrade to consider this flag.
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
 
-## ResourceTags
+## WeeklyRetentionFormat
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of days of the week.
+* **weeksOfTheMonth**: 'First' | 'Fourth' | 'Invalid' | 'Last' | 'Second' | 'Third'[]: List of weeks of month.
 
-## ResourceGuardProxyBase
+## WeeklyRetentionSchedule
 ### Properties
-* **description**: string (ReadOnly)
-* **lastUpdatedTime**: string (ReadOnly)
-* **resourceGuardOperationDetails**: [ResourceGuardOperationDetail](#resourceguardoperationdetail)[] (ReadOnly): Array of ResourceGuardOperationDetail
-* **resourceGuardResourceId**: string (ReadOnly)
+* **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of days of week for weekly retention policy.
+* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
+* **retentionTimes**: string[]: Retention times of retention policy.
 
-## ResourceGuardOperationDetail
+## WeeklySchedule
 ### Properties
-* **defaultResourceRequest**: string (ReadOnly)
-* **vaultCriticalOperation**: string (ReadOnly)
+* **scheduleRunDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: Array of DayOfWeek
+* **scheduleRunTimes**: string[]: List of times of day this schedule has to be run.
 
-## ResourceTags
+## YearlyRetentionSchedule
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## BackupResourceConfig
-### Properties
-* **crossRegionRestoreFlag**: bool: Opt in details of Cross Region Restore feature.
-* **dedupState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Vault Dedup state
-* **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type
-* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type
-* **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked' | string: Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
-* **xcoolState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Vault x-cool state
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## PrivateEndpointConnection
-### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint network resource that is linked to the Private Endpoint connection
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Private Link Service Connection State
-* **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' | string: Gets or sets provisioning state of the private endpoint connection
-
-## PrivateEndpoint
-### Properties
-* **id**: string: Gets or sets id
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionRequired**: string: Gets or sets actions required
-* **description**: string: Gets or sets description
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Gets or sets the status
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'Invalid' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September'[]: List of months of year of yearly retention policy.
+* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
+* **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format.
+* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly' | string: Retention schedule format type for monthly retention policy.
+* **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
+* **retentionTimes**: string[]: Retention times of retention policy.
 

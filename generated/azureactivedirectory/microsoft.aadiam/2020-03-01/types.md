@@ -24,10 +24,9 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
 * **type**: 'microsoft.aadiam/privateLinkForAzureAd/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## PrivateLinkPolicyTags
+## PrivateEndpoint
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **id**: string: Full identifier of the private endpoint resource.
 
 ## PrivateEndpointConnectionProperties
 ### Properties
@@ -36,15 +35,7 @@
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): An object that represents the approval state of the private link connection.
 * **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The current provisioning state.
 
-## PrivateEndpoint
-### Properties
-* **id**: string: Full identifier of the private endpoint resource.
-
-## TagsResource
-### Properties
-* **tags**: [TagsResourceTags](#tagsresourcetags): Resource tags
-
-## TagsResourceTags
+## PrivateLinkPolicyTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -54,4 +45,13 @@
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval or rejection.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
+
+## TagsResource
+### Properties
+* **tags**: [TagsResourceTags](#tagsresourcetags): Resource tags
+
+## TagsResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

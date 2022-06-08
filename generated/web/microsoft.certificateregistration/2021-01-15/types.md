@@ -24,9 +24,15 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.CertificateRegistration/certificateOrders/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
+## AppServiceCertificate
+### Properties
+* **keyVaultId**: string: Key Vault resource Id.
+* **keyVaultSecretName**: string: Key Vault secret name.
+* **provisioningState**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'ExternalPrivateKey' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder' (ReadOnly): Status of the Key Vault secret.
+
 ## AppServiceCertificateOrderProperties
 ### Properties
-* **appServiceCertificateNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive'[] (ReadOnly): Reasons why App Service Certificate is not renewable at the current moment.
+* **appServiceCertificateNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive' | string[] (ReadOnly): Reasons why App Service Certificate is not renewable at the current moment.
 * **autoRenew**: bool: <code>true</code> if the certificate should be automatically renewed when it expires; otherwise, <code>false</code>.
 * **certificates**: [AppServiceCertificateOrderPropertiesCertificates](#appservicecertificateorderpropertiescertificates): State of the Key Vault secret.
 * **contact**: [CertificateOrderContact](#certificateordercontact) (ReadOnly)
@@ -52,19 +58,6 @@
 ### Additional Properties
 * **Additional Properties Type**: [AppServiceCertificate](#appservicecertificate)
 
-## AppServiceCertificate
-### Properties
-* **keyVaultId**: string: Key Vault resource Id.
-* **keyVaultSecretName**: string: Key Vault secret name.
-* **provisioningState**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'ExternalPrivateKey' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder' (ReadOnly): Status of the Key Vault secret.
-
-## CertificateOrderContact
-### Properties
-* **email**: string
-* **nameFirst**: string
-* **nameLast**: string
-* **phone**: string
-
 ## CertificateDetails
 ### Properties
 * **issuer**: string (ReadOnly): Certificate Issuer.
@@ -76,6 +69,13 @@
 * **subject**: string (ReadOnly): Certificate Subject.
 * **thumbprint**: string (ReadOnly): Certificate Thumbprint.
 * **version**: int (ReadOnly): Certificate Version.
+
+## CertificateOrderContact
+### Properties
+* **email**: string
+* **nameFirst**: string
+* **nameLast**: string
+* **phone**: string
 
 ## ResourceTags
 ### Properties

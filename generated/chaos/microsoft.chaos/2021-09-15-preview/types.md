@@ -34,39 +34,6 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Chaos/targets/capabilities' (ReadOnly, DeployTimeConstant): The resource type
 
-## ResourceIdentity
-### Properties
-* **principalId**: string (ReadOnly): GUID that represents the principal ID of this resource identity.
-* **tenantId**: string (ReadOnly): GUID that represents the tenant ID of this resource identity.
-* **type**: 'None' | 'SystemAssigned' (Required): String of the resource identity type.
-
-## ExperimentProperties
-### Properties
-* **selectors**: [Selector](#selector)[] (Required): List of selectors.
-* **startOnCreation**: bool: A boolean value that indicates if experiment should be started on creation or not.
-* **steps**: [Step](#step)[] (Required): List of steps.
-
-## Selector
-### Properties
-* **id**: string (Required): String of the selector ID.
-* **targets**: [TargetReference](#targetreference)[] (Required): List of Target references.
-* **type**: 'List' | 'Percent' | 'Random' | 'Tag' (Required): Enum of the selector type.
-
-## TargetReference
-### Properties
-* **id**: string (Required): String of the resource ID of a Target resource.
-* **type**: 'ChaosTarget' (Required): Enum of the Target reference type.
-
-## Step
-### Properties
-* **branches**: [Branch](#branch)[] (Required): List of branches.
-* **name**: string (Required): String of the step name.
-
-## Branch
-### Properties
-* **actions**: [Action](#action)[] (Required): List of actions.
-* **name**: string (Required): String of the branch name.
-
 ## Action
 * **Discriminator**: type
 
@@ -91,10 +58,46 @@
 * **type**: 'discrete' (Required): Enum that discriminates between action models.
 
 
+## Branch
+### Properties
+* **actions**: [Action](#action)[] (Required): List of actions.
+* **name**: string (Required): String of the branch name.
+
+## CapabilityProperties
+### Properties
+* **description**: string (ReadOnly): Localized string of the description.
+* **parametersSchema**: string (ReadOnly): String that represents a URL.
+* **publisher**: string (ReadOnly): String of the Publisher that this Capability extends.
+* **targetType**: string (ReadOnly): String of the Target Type that this Capability extends.
+* **urn**: string (ReadOnly): String that represents a URN.
+
+## ExperimentProperties
+### Properties
+* **selectors**: [Selector](#selector)[] (Required): List of selectors.
+* **startOnCreation**: bool: A boolean value that indicates if experiment should be started on creation or not.
+* **steps**: [Step](#step)[] (Required): List of steps.
+
 ## KeyValuePair
 ### Properties
 * **key**: string (Required): The name of the setting for the action.
 * **value**: string (Required): The value of the setting for the action.
+
+## ResourceIdentity
+### Properties
+* **principalId**: string (ReadOnly): GUID that represents the principal ID of this resource identity.
+* **tenantId**: string (ReadOnly): GUID that represents the tenant ID of this resource identity.
+* **type**: 'None' | 'SystemAssigned' (Required): String of the resource identity type.
+
+## Selector
+### Properties
+* **id**: string (Required): String of the selector ID.
+* **targets**: [TargetReference](#targetreference)[] (Required): List of Target references.
+* **type**: 'List' | 'Percent' | 'Random' | 'Tag' (Required): Enum of the selector type.
+
+## Step
+### Properties
+* **branches**: [Branch](#branch)[] (Required): List of branches.
+* **name**: string (Required): String of the step name.
 
 ## SystemData
 ### Properties
@@ -105,21 +108,18 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## TargetProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## CapabilityProperties
+## TargetReference
 ### Properties
-* **description**: string (ReadOnly): Localized string of the description.
-* **parametersSchema**: string (ReadOnly): String that represents a URL.
-* **publisher**: string (ReadOnly): String of the Publisher that this Capability extends.
-* **targetType**: string (ReadOnly): String of the Target Type that this Capability extends.
-* **urn**: string (ReadOnly): String that represents a URN.
+* **id**: string (Required): String of the resource ID of a Target resource.
+* **type**: 'ChaosTarget' (Required): Enum of the Target reference type.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

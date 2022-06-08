@@ -14,33 +14,6 @@
 * **tags**: [Tags](#tags): A list of key value pairs that describe the resource.
 * **type**: 'Microsoft.Security/securityConnectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## SecurityConnectorProperties
-### Properties
-* **environmentData**: [EnvironmentData](#environmentdata): The security connector environment data.
-* **environmentName**: 'AWS' | 'Azure' | 'GCP' | 'Github' | string: The multi cloud resource's cloud name.
-* **hierarchyIdentifier**: string: The multi cloud resource identifier (account id in case of AWS connector, project number in case of GCP connector).
-* **offerings**: [CloudOffering](#cloudoffering)[]: A collection of offerings for the security connector.
-
-## EnvironmentData
-* **Discriminator**: environmentType
-
-### Base Properties
-### AWSEnvironmentData
-#### Properties
-* **environmentType**: 'AwsAccount' (Required): The type of the environment data.
-* **organizationalData**: [AwsOrganizationalData](#awsorganizationaldata): The awsOrganization data
-
-### GcpProjectEnvironmentData
-#### Properties
-* **environmentType**: 'GcpProject' (Required): The type of the environment data.
-* **organizationalData**: [GcpOrganizationalData](#gcporganizationaldata): The gcpOrganization data
-* **projectDetails**: [GcpProjectDetails](#gcpprojectdetails): The details about the project represented by the security connector
-
-### GithubScopeEnvironmentData
-#### Properties
-* **environmentType**: 'GithubScope' (Required): The type of the environment data.
-
-
 ## AwsOrganizationalData
 * **Discriminator**: organizationMembershipType
 
@@ -56,29 +29,6 @@
 * **organizationMembershipType**: 'Organization' (Required): The multi cloud account's membership type in the organization
 * **stacksetName**: string: If the multi cloud account is of membership type organization, this will be the name of the onboarding stackset
 
-
-## GcpOrganizationalData
-* **Discriminator**: organizationMembershipType
-
-### Base Properties
-### GcpOrganizationalDataMember
-#### Properties
-* **organizationMembershipType**: 'Member' (Required): The multi cloud account's membership type in the organization
-* **parentHierarchyId**: string: If the multi cloud account is not of membership type organization, this will be the ID of the project's parent
-
-### GcpOrganizationalDataOrganization
-#### Properties
-* **excludedProjectNumbers**: string[]: If the multi cloud account is of membership type organization, list of accounts excluded from offering
-* **organizationMembershipType**: 'Organization' (Required): The multi cloud account's membership type in the organization
-* **serviceAccountEmailAddress**: string: The service account email address which represents the organization level permissions container.
-* **workloadIdentityProviderId**: string: The GCP workload identity provider id which represents the permissions required to auto provision security connectors
-
-
-## GcpProjectDetails
-### Properties
-* **projectId**: string: The GCP Project id
-* **projectNumber**: string: The unique GCP Project number
-* **workloadIdentityPoolId**: string (ReadOnly): The GCP workload identity federation pool id
 
 ## CloudOffering
 * **Discriminator**: offeringType
@@ -241,9 +191,59 @@
 ### Properties
 * **type**: 'Qualys' | 'TVM' | string: The Vulnerability Assessment solution to be provisioned. Can be either 'TVM' or 'Qualys'
 
+## EnvironmentData
+* **Discriminator**: environmentType
+
+### Base Properties
+### AWSEnvironmentData
+#### Properties
+* **environmentType**: 'AwsAccount' (Required): The type of the environment data.
+* **organizationalData**: [AwsOrganizationalData](#awsorganizationaldata): The awsOrganization data
+
+### GcpProjectEnvironmentData
+#### Properties
+* **environmentType**: 'GcpProject' (Required): The type of the environment data.
+* **organizationalData**: [GcpOrganizationalData](#gcporganizationaldata): The gcpOrganization data
+* **projectDetails**: [GcpProjectDetails](#gcpprojectdetails): The details about the project represented by the security connector
+
+### GithubScopeEnvironmentData
+#### Properties
+* **environmentType**: 'GithubScope' (Required): The type of the environment data.
+
+
+## GcpOrganizationalData
+* **Discriminator**: organizationMembershipType
+
+### Base Properties
+### GcpOrganizationalDataMember
+#### Properties
+* **organizationMembershipType**: 'Member' (Required): The multi cloud account's membership type in the organization
+* **parentHierarchyId**: string: If the multi cloud account is not of membership type organization, this will be the ID of the project's parent
+
+### GcpOrganizationalDataOrganization
+#### Properties
+* **excludedProjectNumbers**: string[]: If the multi cloud account is of membership type organization, list of accounts excluded from offering
+* **organizationMembershipType**: 'Organization' (Required): The multi cloud account's membership type in the organization
+* **serviceAccountEmailAddress**: string: The service account email address which represents the organization level permissions container.
+* **workloadIdentityProviderId**: string: The GCP workload identity provider id which represents the permissions required to auto provision security connectors
+
+
+## GcpProjectDetails
+### Properties
+* **projectId**: string: The GCP Project id
+* **projectNumber**: string: The unique GCP Project number
+* **workloadIdentityPoolId**: string (ReadOnly): The GCP workload identity federation pool id
+
 ## InformationProtectionAwsOfferingInformationProtection
 ### Properties
 * **cloudRoleArn**: string: The cloud role ARN in AWS for this feature
+
+## SecurityConnectorProperties
+### Properties
+* **environmentData**: [EnvironmentData](#environmentdata): The security connector environment data.
+* **environmentName**: 'AWS' | 'Azure' | 'GCP' | 'Github' | string: The multi cloud resource's cloud name.
+* **hierarchyIdentifier**: string: The multi cloud resource identifier (account id in case of AWS connector, project number in case of GCP connector).
+* **offerings**: [CloudOffering](#cloudoffering)[]: A collection of offerings for the security connector.
 
 ## SystemData
 ### Properties

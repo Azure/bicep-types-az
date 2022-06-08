@@ -18,6 +18,27 @@
 * **Input**: [TopLevelDomainAgreementOption](#topleveldomainagreementoption)
 * **Output**: [TldLegalAgreementCollection](#tldlegalagreementcollection)
 
+## Address
+### Properties
+* **address1**: string: Address 1
+* **address2**: string: Address 2
+* **city**: string: City
+* **country**: string: Country
+* **postalCode**: string: Postal code
+* **state**: string: State
+
+## Contact
+### Properties
+* **addressMailing**: [Address](#address): Address information for domain registration
+* **email**: string: Email address
+* **fax**: string: Fax number
+* **jobTitle**: string: Job title
+* **nameFirst**: string: First name
+* **nameLast**: string: Last name
+* **nameMiddle**: string: Middle name
+* **organization**: string: Organization
+* **phone**: string: Phone number
+
 ## DomainProperties
 ### Properties
 * **autoRenew**: bool: If true then domain will renewed automatically
@@ -27,7 +48,7 @@
 * **contactRegistrant**: [Contact](#contact): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information will be made publicly available through the Whois directories as per ICANN requirements.
 * **contactTech**: [Contact](#contact): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information will be made publicly available through the Whois directories as per ICANN requirements.
 * **createdTime**: string: Domain creation timestamp
-* **domainNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive'[]: Reasons why domain is not renewable
+* **domainNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive' | string[]: Reasons why domain is not renewable
 * **expirationTime**: string: Domain expiration timestamp
 * **lastRenewedTime**: string: Timestamp when the domain was renewed last time
 * **managedHostNames**: [HostName](#hostname)[]: All hostnames derived from the domain and assigned to Azure resources
@@ -43,27 +64,6 @@
 * **agreedBy**: string: Client IP address
 * **agreementKeys**: string[]: List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements Api under TopLevelDomain resource
 
-## Contact
-### Properties
-* **addressMailing**: [Address](#address): Address information for domain registration
-* **email**: string: Email address
-* **fax**: string: Fax number
-* **jobTitle**: string: Job title
-* **nameFirst**: string: First name
-* **nameLast**: string: Last name
-* **nameMiddle**: string: Middle name
-* **organization**: string: Organization
-* **phone**: string: Phone number
-
-## Address
-### Properties
-* **address1**: string: Address 1
-* **address2**: string: Address 2
-* **city**: string: City
-* **country**: string: Country
-* **postalCode**: string: Postal code
-* **state**: string: State
-
 ## HostName
 ### Properties
 * **azureResourceName**: string: Name of the Azure resource the hostname is assigned to. If it is assigned to a traffic manager then it will be the traffic manager name otherwise it will be the website name
@@ -78,19 +78,19 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## TopLevelDomainAgreementOption
-### Properties
-* **includePrivacy**: bool (WriteOnly): If true then the list of agreements will include agreements for domain privacy as well.
-
-## TldLegalAgreementCollection
-### Properties
-* **nextLink**: string (ReadOnly): Link to next page of resources
-* **value**: [TldLegalAgreement](#tldlegalagreement)[] (ReadOnly): Collection of resources
-
 ## TldLegalAgreement
 ### Properties
 * **agreementKey**: string (ReadOnly): Unique identifier for the agreement
 * **content**: string (ReadOnly): Agreement details
 * **title**: string (ReadOnly): Agreement title
 * **url**: string (ReadOnly): Url where a copy of the agreement details is hosted
+
+## TldLegalAgreementCollection
+### Properties
+* **nextLink**: string (ReadOnly): Link to next page of resources
+* **value**: [TldLegalAgreement](#tldlegalagreement)[] (ReadOnly): Collection of resources
+
+## TopLevelDomainAgreementOption
+### Properties
+* **includePrivacy**: bool (WriteOnly): If true then the list of agreements will include agreements for domain privacy as well.
 

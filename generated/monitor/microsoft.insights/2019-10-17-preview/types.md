@@ -51,16 +51,16 @@
 ### Properties
 * **id**: string: Resource id of the private endpoint.
 
+## PrivateLinkScopesResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## PrivateLinkServiceConnectionStateProperty
 ### Properties
 * **actionsRequired**: string (ReadOnly): The actions required for private link service connection.
 * **description**: string (Required): The private link service connection description.
 * **status**: string (Required): The private link service connection status.
-
-## PrivateLinkScopesResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## ScopedResourceProperties
 ### Properties

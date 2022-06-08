@@ -32,6 +32,32 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Relay/namespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## NetworkRuleSetProperties
+### Properties
+* **defaultAction**: 'Allow' | 'Deny' | string: Default Action for Network Rule Set
+* **ipRules**: [NWRuleSetIpRules](#nwrulesetiprules)[]: List of IpRules
+
+## NWRuleSetIpRules
+### Properties
+* **action**: 'Allow' | string: The IP Filter Action
+* **ipMask**: string: IP Mask
+
+## PrivateEndpoint
+### Properties
+* **id**: string: Full identifier of the private endpoint resource.
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint object properties.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): An object that represents the approval state of the private link connection.
+* **provisioningState**: 'Creating' | 'Deleting' | 'DeletingByProxy' | 'Succeeded' | 'Unknown' | 'Updating' | 'UpdatingByProxy' | string (ReadOnly): The current provisioning state.
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
+* **description**: string: The reason for approval or rejection.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
+
 ## RelayNamespaceProperties
 ### Properties
 * **createdAt**: string (ReadOnly): The time the namespace was created.
@@ -49,32 +75,6 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## NetworkRuleSetProperties
-### Properties
-* **defaultAction**: 'Allow' | 'Deny' | string: Default Action for Network Rule Set
-* **ipRules**: [NWRuleSetIpRules](#nwrulesetiprules)[]: List of IpRules
-
-## NWRuleSetIpRules
-### Properties
-* **action**: 'Allow' | string: The IP Filter Action
-* **ipMask**: string: IP Mask
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint object properties.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): An object that represents the approval state of the private link connection.
-* **provisioningState**: 'Creating' | 'Deleting' | 'DeletingByProxy' | 'Succeeded' | 'Unknown' | 'Updating' | 'UpdatingByProxy' | string (ReadOnly): The current provisioning state.
-
-## PrivateEndpoint
-### Properties
-* **id**: string: Full identifier of the private endpoint resource.
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
-* **description**: string: The reason for approval or rejection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
 
 ## TrackedResourceTags
 ### Properties

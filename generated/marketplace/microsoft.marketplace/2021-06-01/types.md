@@ -50,43 +50,6 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
 * **type**: 'Microsoft.Marketplace/privateStores/requestApprovals' (ReadOnly, DeployTimeConstant): The resource type
 
-## PrivateStoreProperties
-### Properties
-* **availability**: 'disabled' | 'enabled' | string: Indicates private store availability
-* **branding**: [PrivateStorePropertiesBranding](#privatestorepropertiesbranding): Gets or sets list of branding characteristics
-* **collectionIds**: string[] (ReadOnly): Gets list of associated collection ids
-* **eTag**: string: Identifier for purposes of race condition
-* **isGov**: bool: Is government
-* **notificationsSettings**: [NotificationsSettingsProperties](#notificationssettingsproperties): Describes the json payload for notifications settings
-* **privateStoreId**: string (ReadOnly): Private Store id
-* **privateStoreName**: string: Private Store Name
-* **tenantId**: string: Tenant id
-
-## PrivateStorePropertiesBranding
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## NotificationsSettingsProperties
-### Properties
-* **recipients**: [Recipient](#recipient)[]: Gets or sets list of notified recipients for new requests
-* **sendToAllMarketplaceAdmins**: bool: Gets or sets whether to send email to all marketplace admins for new requests
-
-## Recipient
-### Properties
-* **displayName**: string (ReadOnly): Display Name
-* **emailAddress**: string (ReadOnly): Email Address
-* **principalId**: string: Principal ID
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC)
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
-
 ## AdminRequestApprovalProperties
 ### Properties
 * **adminAction**: 'Approved' | 'Rejected' | string: Gets or sets admin action
@@ -99,20 +62,6 @@
 * **plans**: [PlanRequesterDetails](#planrequesterdetails)[] (ReadOnly): Gets list of plans with requesters details
 * **publisherId**: string: Gets or sets publisher Id
 
-## PlanRequesterDetails
-### Properties
-* **planDisplayName**: string (ReadOnly): Gets the plan display name
-* **planId**: string (ReadOnly): Gets the plan id
-* **requesters**: [UserRequestDetails](#userrequestdetails)[] (ReadOnly): Gets requesters details list
-
-## UserRequestDetails
-### Properties
-* **date**: string (ReadOnly): Gets request date
-* **justification**: string (ReadOnly): Gets justification
-* **subscriptionId**: string: Gets the subscription id that the user is requesting to add the plan to
-* **subscriptionName**: string: Gets the subscription name that the user is requesting to add the plan to
-* **user**: string (ReadOnly): Gets user id
-
 ## CollectionProperties
 ### Properties
 * **allSubscriptions**: bool: Indicating whether all subscriptions are selected (=true) or not (=false).
@@ -122,6 +71,11 @@
 * **enabled**: bool: Indicating whether the collection is enabled or disabled.
 * **numberOfOffers**: int (ReadOnly): Gets the number of offers associated with the collection.
 * **subscriptionsList**: string[]: Gets or sets subscription ids list. Empty list indicates all subscriptions are selected, null indicates no update is done, explicit list indicates the explicit selected subscriptions. On insert, null is considered as bad request
+
+## NotificationsSettingsProperties
+### Properties
+* **recipients**: [Recipient](#recipient)[]: Gets or sets list of notified recipients for new requests
+* **sendToAllMarketplaceAdmins**: bool: Gets or sets whether to send email to all marketplace admins for new requests
 
 ## OfferProperties
 ### Properties
@@ -151,6 +105,44 @@
 * **skuId**: string (ReadOnly): Identifier for this plan
 * **stackType**: string (ReadOnly): Stack type (classic or arm)
 
+## PlanDetails
+### Properties
+* **justification**: string: Gets or sets user's justification for the plan's request
+* **planId**: string: Gets or sets Plan Id
+* **requestDate**: any (ReadOnly): Anything
+* **status**: 'Approved' | 'None' | 'Pending' | 'Rejected' | string (ReadOnly): Gets the plan status
+* **subscriptionId**: string: Gets or sets the subscription id that the user is requesting to add the plan to
+* **subscriptionName**: string: Gets or sets the subscription name that the user is requesting to add the plan to
+
+## PlanRequesterDetails
+### Properties
+* **planDisplayName**: string (ReadOnly): Gets the plan display name
+* **planId**: string (ReadOnly): Gets the plan id
+* **requesters**: [UserRequestDetails](#userrequestdetails)[] (ReadOnly): Gets requesters details list
+
+## PrivateStoreProperties
+### Properties
+* **availability**: 'disabled' | 'enabled' | string: Indicates private store availability
+* **branding**: [PrivateStorePropertiesBranding](#privatestorepropertiesbranding): Gets or sets list of branding characteristics
+* **collectionIds**: string[] (ReadOnly): Gets list of associated collection ids
+* **eTag**: string: Identifier for purposes of race condition
+* **isGov**: bool: Is government
+* **notificationsSettings**: [NotificationsSettingsProperties](#notificationssettingsproperties): Describes the json payload for notifications settings
+* **privateStoreId**: string (ReadOnly): Private Store id
+* **privateStoreName**: string: Private Store Name
+* **tenantId**: string: Tenant id
+
+## PrivateStorePropertiesBranding
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Recipient
+### Properties
+* **displayName**: string (ReadOnly): Display Name
+* **emailAddress**: string (ReadOnly): Email Address
+* **principalId**: string: Principal ID
+
 ## RequestApprovalProperties
 ### Properties
 * **isClosed**: bool (ReadOnly): Gets a value indicating whether the request is closed
@@ -160,12 +152,20 @@
 * **plansDetails**: [PlanDetails](#plandetails)[]: Gets or sets the plans details
 * **publisherId**: string: The offer's publisher id
 
-## PlanDetails
+## SystemData
 ### Properties
-* **justification**: string: Gets or sets user's justification for the plan's request
-* **planId**: string: Gets or sets Plan Id
-* **requestDate**: any (ReadOnly): Anything
-* **status**: 'Approved' | 'None' | 'Pending' | 'Rejected' | string (ReadOnly): Gets the plan status
-* **subscriptionId**: string: Gets or sets the subscription id that the user is requesting to add the plan to
-* **subscriptionName**: string: Gets or sets the subscription name that the user is requesting to add the plan to
+* **createdAt**: string: The timestamp of resource creation (UTC)
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
+
+## UserRequestDetails
+### Properties
+* **date**: string (ReadOnly): Gets request date
+* **justification**: string (ReadOnly): Gets justification
+* **subscriptionId**: string: Gets the subscription id that the user is requesting to add the plan to
+* **subscriptionName**: string: Gets the subscription name that the user is requesting to add the plan to
+* **user**: string (ReadOnly): Gets user id
 

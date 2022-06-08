@@ -42,13 +42,6 @@
 * **properties**: [ScopeAssignmentProperties](#scopeassignmentproperties): Properties of Managed Network
 * **type**: 'Microsoft.ManagedNetwork/scopeAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## ManagedNetworkProperties
-### Properties
-* **connectivity**: [ConnectivityCollection](#connectivitycollection) (ReadOnly): The collection of Connectivity related groups and policies within the Managed Network
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the ManagedNetwork resource.
-* **scope**: [Scope](#scope): Scope of a Managed Network
-
 ## ConnectivityCollection
 ### Properties
 * **groups**: [ManagedNetworkGroup](#managednetworkgroup)[] (ReadOnly): The collection of connectivity related Managed Network Groups within the Managed Network
@@ -72,10 +65,6 @@
 * **subscriptions**: [ResourceId](#resourceid)[]: The collection of subscriptions covered by the Managed Network
 * **virtualNetworks**: [ResourceId](#resourceid)[]: The collection of virtual nets covered by the Managed Network
 
-## ResourceId
-### Properties
-* **id**: string: Resource Id
-
 ## ManagedNetworkPeeringPolicy
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
@@ -93,6 +82,17 @@
 * **spokes**: [ResourceId](#resourceid)[]: Gets or sets the spokes group IDs
 * **type**: 'HubAndSpokeTopology' | 'MeshTopology' | string (Required): Gets or sets the connectivity type of a network structure policy
 
+## ManagedNetworkProperties
+### Properties
+* **connectivity**: [ConnectivityCollection](#connectivitycollection) (ReadOnly): The collection of Connectivity related groups and policies within the Managed Network
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the ManagedNetwork resource.
+* **scope**: [Scope](#scope): Scope of a Managed Network
+
+## ResourceId
+### Properties
+* **id**: string: Resource Id
+
 ## Scope
 ### Properties
 * **managementGroups**: [ResourceId](#resourceid)[]: The collection of management groups covered by the Managed Network
@@ -100,14 +100,14 @@
 * **subscriptions**: [ResourceId](#resourceid)[]: The collection of subscriptions covered by the Managed Network
 * **virtualNetworks**: [ResourceId](#resourceid)[]: The collection of virtual nets covered by the Managed Network
 
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ScopeAssignmentProperties
 ### Properties
 * **assignedManagedNetwork**: string: The managed network ID with scope will be assigned to.
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the ManagedNetwork resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

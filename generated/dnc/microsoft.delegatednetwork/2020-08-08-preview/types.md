@@ -35,6 +35,15 @@
 * **tags**: [OrchestratorResourceTags](#orchestratorresourcetags): The resource tags.
 * **type**: 'Microsoft.DelegatedNetwork/orchestrators' (ReadOnly, DeployTimeConstant): The resource type
 
+## ControllerDetails
+### Properties
+* **id**: string: controller arm resource id
+
+## ControllerResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## DelegatedControllerProperties
 ### Properties
 * **dncAppId**: string (ReadOnly): dnc application id should be used by customer to authenticate with dnc gateway.
@@ -43,25 +52,12 @@
 * **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The current state of dnc controller resource.
 * **resourceGuid**: string (ReadOnly): Resource guid.
 
-## ControllerResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## DelegatedSubnetProperties
 ### Properties
 * **controllerDetails**: [ControllerDetails](#controllerdetails): controller details
 * **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The current state of dnc delegated subnet resource.
 * **resourceGuid**: string (ReadOnly): Resource guid.
 * **subnetDetails**: [SubnetDetails](#subnetdetails): Properties of orchestrator
-
-## ControllerDetails
-### Properties
-* **id**: string: controller arm resource id
-
-## SubnetDetails
-### Properties
-* **id**: string: subnet arm resource id
 
 ## DelegatedSubnetResourceTags
 ### Properties
@@ -88,4 +84,8 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SubnetDetails
+### Properties
+* **id**: string: subnet arm resource id
 

@@ -27,6 +27,20 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.Aad/domainServices/ouContainer' (ReadOnly, DeployTimeConstant): The resource type
 
+## ContainerAccount
+### Properties
+* **accountName**: string (ReadOnly): The account name
+* **password**: string (ReadOnly): The account password
+* **spn**: string (ReadOnly): The account spn
+
+## DomainSecuritySettings
+### Properties
+* **ntlmV1**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not NtlmV1 is enabled or disabled.
+* **syncKerberosPasswords**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
+* **syncNtlmPasswords**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
+* **syncOnPremPasswords**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
+* **tlsV1**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not TlsV1 is enabled or disabled.
+
 ## DomainServiceProperties
 ### Properties
 * **deploymentId**: string (ReadOnly): Deployment Id
@@ -50,13 +64,13 @@
 * **version**: int (ReadOnly): Data Model Version
 * **vnetSiteId**: string (ReadOnly): Virtual network site id
 
-## DomainSecuritySettings
+## ForestTrust
 ### Properties
-* **ntlmV1**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not NtlmV1 is enabled or disabled.
-* **syncKerberosPasswords**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
-* **syncNtlmPasswords**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
-* **syncOnPremPasswords**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
-* **tlsV1**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not TlsV1 is enabled or disabled.
+* **friendlyName**: string: Friendly Name
+* **remoteDnsIps**: string: Remote Dns ips
+* **trustDirection**: string: Trust Direction
+* **trustedDomainFqdn**: string: Trusted Domain FQDN
+* **trustPassword**: string: Trust Password
 
 ## HealthAlert
 ### Properties
@@ -85,40 +99,22 @@
 * **pfxCertificatePassword**: string: The password to decrypt the provided Secure LDAP certificate pfx file.
 * **publicCertificate**: string (ReadOnly): Public certificate used to configure secure ldap.
 
+## MigrationProgress
+### Properties
+* **completionPercentage**: int: Completion Percentage
+* **progressMessage**: string: Progress Message
+
 ## MigrationProperties
 ### Properties
 * **migrationProgress**: [MigrationProgress](#migrationprogress) (ReadOnly): Migration Progress
 * **oldSubnetId**: string (ReadOnly): Old Subnet Id
 * **oldVnetSiteId**: string (ReadOnly): Old Vnet Site Id
 
-## MigrationProgress
-### Properties
-* **completionPercentage**: int: Completion Percentage
-* **progressMessage**: string: Progress Message
-
 ## NotificationSettings
 ### Properties
 * **additionalRecipients**: string[]: The list of additional recipients
 * **notifyDcAdmins**: 'Disabled' | 'Enabled' | string: Should domain controller admins be notified
 * **notifyGlobalAdmins**: 'Disabled' | 'Enabled' | string: Should global admins be notified
-
-## ResourceForestSettings
-### Properties
-* **resourceForest**: string: Resource Forest
-* **settings**: [ForestTrust](#foresttrust)[]: List of settings for Resource Forest
-
-## ForestTrust
-### Properties
-* **friendlyName**: string: Friendly Name
-* **remoteDnsIps**: string: Remote Dns ips
-* **trustDirection**: string: Trust Direction
-* **trustedDomainFqdn**: string: Trusted Domain FQDN
-* **trustPassword**: string: Trust Password
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## OuContainerProperties
 ### Properties
@@ -131,11 +127,15 @@
 * **serviceStatus**: string (ReadOnly): Status of OuContainer instance
 * **tenantId**: string (ReadOnly): Azure Active Directory tenant id
 
-## ContainerAccount
+## ResourceForestSettings
 ### Properties
-* **accountName**: string (ReadOnly): The account name
-* **password**: string (ReadOnly): The account password
-* **spn**: string (ReadOnly): The account spn
+* **resourceForest**: string: Resource Forest
+* **settings**: [ForestTrust](#foresttrust)[]: List of settings for Resource Forest
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

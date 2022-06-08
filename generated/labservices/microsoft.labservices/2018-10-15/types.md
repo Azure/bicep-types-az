@@ -77,26 +77,45 @@
 * **ApiVersion**: 2018-10-15
 * **Output**: [ListLabsResponse](#listlabsresponse)
 
-## LabAccountProperties
+## EnvironmentDetails
 ### Properties
-* **enabledRegionSelection**: bool: Represents if region selection is enabled
+* **description**: string (ReadOnly): Description of the Environment
+* **environmentState**: string (ReadOnly): Publishing state of the environment setting Possible values are Creating, Created, Failed
+* **id**: string (ReadOnly): Resource Id of the environment
 * **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): Details of the status of an operation.
+* **name**: string (ReadOnly): Name of the Environment
+* **passwordLastReset**: string (ReadOnly): When the password was last reset on the environment.
+* **provisioningState**: string (ReadOnly): The provisioning state of the environment. This also includes LabIsFull and NotYetProvisioned status.
+* **totalUsage**: string (ReadOnly): How long the environment has been used by a lab user
+* **virtualMachineDetails**: [VirtualMachineDetails](#virtualmachinedetails) (ReadOnly): Details of the backing virtual machine.
+
+## EnvironmentProperties
+### Properties
+* **claimedByUserName**: string (ReadOnly): The name or email address of the user who has claimed the environment
+* **claimedByUserObjectId**: string (ReadOnly): The AAD object Id of the user who has claimed the environment
+* **claimedByUserPrincipalId**: string (ReadOnly): The user principal Id of the user who has claimed the environment
+* **isClaimed**: bool (ReadOnly): Is the environment claimed or not
+* **lastKnownPowerState**: string (ReadOnly): Last known power state of the environment
+* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): Details of the status of an operation.
+* **networkInterface**: [NetworkInterface](#networkinterface) (ReadOnly): Network details of the environment
+* **passwordLastReset**: string (ReadOnly): When the password was last reset on the environment.
 * **provisioningState**: string: The provisioning status of the resource.
-* **sizeConfiguration**: [SizeConfigurationProperties](#sizeconfigurationproperties) (ReadOnly): Represents the size configuration under the lab account
+* **resourceSets**: [ResourceSet](#resourceset): Represents a VM and the setting Id it was created for.
+* **totalUsage**: string (ReadOnly): How long the environment has been used by a lab user
 * **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
 
-## LatestOperationResult
+## EnvironmentSettingProperties
 ### Properties
-* **errorCode**: string (ReadOnly): Error code on failure.
-* **errorMessage**: string (ReadOnly): The error message.
-* **httpMethod**: string (ReadOnly): The HttpMethod - PUT/POST/DELETE for the operation.
-* **operationUrl**: string (ReadOnly): The URL to use to check long-running operation status
-* **requestUri**: string (ReadOnly): Request URI of the operation.
-* **status**: string (ReadOnly): The current status of the operation.
-
-## SizeConfigurationProperties
-### Properties
-* **environmentSizes**: [EnvironmentSize](#environmentsize)[]: Represents a list of size categories supported by this Lab Account (Small, Medium, Large)
+* **configurationState**: 'Completed' | 'NotApplicable' | string: Describes the user's progress in configuring their environment setting
+* **description**: string: Describes the environment and its resource settings
+* **lastChanged**: string (ReadOnly): Time when the template VM was last changed.
+* **lastPublished**: string (ReadOnly): Time when the template VM was last sent for publishing.
+* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): Details of the status of an operation.
+* **provisioningState**: string: The provisioning status of the resource.
+* **publishingState**: 'Draft' | 'PublishFailed' | 'Published' | 'Publishing' | 'Scaling' | string (ReadOnly): Describes the readiness of this environment setting
+* **resourceSettings**: [ResourceSettings](#resourcesettings) (Required): Represents resource specific settings
+* **title**: string: Brief title describing the environment and its resource settings
+* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
 
 ## EnvironmentSize
 ### Properties
@@ -105,18 +124,6 @@
 * **minNumberOfCores**: int (ReadOnly): The number of cores a VM of this size has. This is the minimum number of cores within this tier.
 * **name**: 'Basic' | 'Performance' | 'Standard' | string: The size category
 * **vmSizes**: [SizeInfo](#sizeinfo)[]: Represents a set of compute sizes that can serve this given size type
-
-## SizeInfo
-### Properties
-* **computeSize**: string: Represents the actual compute size, e.g. Standard_A2_v2.
-* **memory**: int: The amount of memory available (in GB).
-* **numberOfCores**: int: The number of cores a VM of this size has.
-* **price**: int: The pay-as-you-go price per hour this size will cost. It does not include discounts and may not reflect the actual price the size will cost.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## GalleryImageProperties
 ### Properties
@@ -141,10 +148,20 @@
 * **sku**: string: The SKU of the gallery image.
 * **version**: string: The version of the gallery image.
 
-## ResourceTags
+## LabAccountProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **enabledRegionSelection**: bool: Represents if region selection is enabled
+* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): Details of the status of an operation.
+* **provisioningState**: string: The provisioning status of the resource.
+* **sizeConfiguration**: [SizeConfigurationProperties](#sizeconfigurationproperties) (ReadOnly): Represents the size configuration under the lab account
+* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
+
+## LabDetails
+### Properties
+* **id**: string (ReadOnly): The Id of the lab.
+* **name**: string (ReadOnly): Name of the lab
+* **provisioningState**: string (ReadOnly): The provisioning state of the lab.
+* **usageQuota**: string (ReadOnly): The maximum duration a user can use a VM in this lab.
 
 ## LabProperties
 ### Properties
@@ -160,23 +177,45 @@
 * **userAccessMode**: 'Open' | 'Restricted' | string: Lab user access mode (open to all vs. restricted to those listed on the lab).
 * **userQuota**: int (ReadOnly): Maximum value MaxUsersInLab can be set to, as specified by the service
 
-## ResourceTags
+## LatestOperationResult
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **errorCode**: string (ReadOnly): Error code on failure.
+* **errorMessage**: string (ReadOnly): The error message.
+* **httpMethod**: string (ReadOnly): The HttpMethod - PUT/POST/DELETE for the operation.
+* **operationUrl**: string (ReadOnly): The URL to use to check long-running operation status
+* **requestUri**: string (ReadOnly): Request URI of the operation.
+* **status**: string (ReadOnly): The current status of the operation.
 
-## EnvironmentSettingProperties
+## ListEnvironmentsPayload
 ### Properties
-* **configurationState**: 'Completed' | 'NotApplicable' | string: Describes the user's progress in configuring their environment setting
-* **description**: string: Describes the environment and its resource settings
-* **lastChanged**: string (ReadOnly): Time when the template VM was last changed.
-* **lastPublished**: string (ReadOnly): Time when the template VM was last sent for publishing.
-* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): Details of the status of an operation.
-* **provisioningState**: string: The provisioning status of the resource.
-* **publishingState**: 'Draft' | 'PublishFailed' | 'Published' | 'Publishing' | 'Scaling' | string (ReadOnly): Describes the readiness of this environment setting
-* **resourceSettings**: [ResourceSettings](#resourcesettings) (Required): Represents resource specific settings
-* **title**: string: Brief title describing the environment and its resource settings
-* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
+* **labId**: string (WriteOnly): The resource Id of the lab
+
+## ListEnvironmentsResponse
+### Properties
+* **environments**: [EnvironmentDetails](#environmentdetails)[] (ReadOnly): List of all the environments
+
+## ListLabsResponse
+### Properties
+* **labs**: [LabDetails](#labdetails)[] (ReadOnly): List of all the labs
+
+## NetworkInterface
+### Properties
+* **privateIpAddress**: string (ReadOnly): PrivateIp address of the Compute VM
+* **rdpAuthority**: string (ReadOnly): Connection information for Windows
+* **sshAuthority**: string (ReadOnly): Connection information for Linux
+* **username**: string (ReadOnly): Username of the VM
+
+## ReferenceVm
+### Properties
+* **password**: string: The password of the virtual machine. This will be set to null in GET resource API
+* **userName**: string (Required): The username of the virtual machine
+* **vmResourceId**: string (ReadOnly): VM resource Id for the environment
+* **vmStateDetails**: [VmStateDetails](#vmstatedetails) (ReadOnly): Details about the state of the reference virtual machine.
+
+## ResourceSet
+### Properties
+* **resourceSettingId**: string: resourceSettingId for the environment
+* **vmResourceId**: string: VM resource Id for the environment
 
 ## ResourceSettings
 ### Properties
@@ -187,56 +226,46 @@
 * **referenceVm**: [ReferenceVm](#referencevm) (Required): Details of a Reference Vm
 * **size**: 'Basic' | 'Performance' | 'Standard' | string: The size category
 
-## ReferenceVm
+## ResourceTags
 ### Properties
-* **password**: string: The password of the virtual machine. This will be set to null in GET resource API
-* **userName**: string (Required): The username of the virtual machine
-* **vmResourceId**: string (ReadOnly): VM resource Id for the environment
-* **vmStateDetails**: [VmStateDetails](#vmstatedetails) (ReadOnly): Details about the state of the reference virtual machine.
-
-## VmStateDetails
-### Properties
-* **lastKnownPowerState**: string (ReadOnly): Last known compute power state captured in DTL
-* **powerState**: string (ReadOnly): The power state of the reference virtual machine.
-* **rdpAuthority**: string (ReadOnly): The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
-* **sshAuthority**: string (ReadOnly): The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## EnvironmentProperties
+## ResourceTags
 ### Properties
-* **claimedByUserName**: string (ReadOnly): The name or email address of the user who has claimed the environment
-* **claimedByUserObjectId**: string (ReadOnly): The AAD object Id of the user who has claimed the environment
-* **claimedByUserPrincipalId**: string (ReadOnly): The user principal Id of the user who has claimed the environment
-* **isClaimed**: bool (ReadOnly): Is the environment claimed or not
-* **lastKnownPowerState**: string (ReadOnly): Last known power state of the environment
-* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): Details of the status of an operation.
-* **networkInterface**: [NetworkInterface](#networkinterface) (ReadOnly): Network details of the environment
-* **passwordLastReset**: string (ReadOnly): When the password was last reset on the environment.
-* **provisioningState**: string: The provisioning status of the resource.
-* **resourceSets**: [ResourceSet](#resourceset): Represents a VM and the setting Id it was created for.
-* **totalUsage**: string (ReadOnly): How long the environment has been used by a lab user
-* **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
-
-## NetworkInterface
-### Properties
-* **privateIpAddress**: string (ReadOnly): PrivateIp address of the Compute VM
-* **rdpAuthority**: string (ReadOnly): Connection information for Windows
-* **sshAuthority**: string (ReadOnly): Connection information for Linux
-* **username**: string (ReadOnly): Username of the VM
-
-## ResourceSet
-### Properties
-* **resourceSettingId**: string: resourceSettingId for the environment
-* **vmResourceId**: string: VM resource Id for the environment
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SizeConfigurationProperties
+### Properties
+* **environmentSizes**: [EnvironmentSize](#environmentsize)[]: Represents a list of size categories supported by this Lab Account (Small, Medium, Large)
+
+## SizeInfo
+### Properties
+* **computeSize**: string: Represents the actual compute size, e.g. Standard_A2_v2.
+* **memory**: int: The amount of memory available (in GB).
+* **numberOfCores**: int: The number of cores a VM of this size has.
+* **price**: int: The pay-as-you-go price per hour this size will cost. It does not include discounts and may not reflect the actual price the size will cost.
 
 ## UserProperties
 ### Properties
@@ -249,31 +278,6 @@
 * **totalUsage**: string (ReadOnly): How long the user has used his VMs in this lab
 * **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ListEnvironmentsPayload
-### Properties
-* **labId**: string (WriteOnly): The resource Id of the lab
-
-## ListEnvironmentsResponse
-### Properties
-* **environments**: [EnvironmentDetails](#environmentdetails)[] (ReadOnly): List of all the environments
-
-## EnvironmentDetails
-### Properties
-* **description**: string (ReadOnly): Description of the Environment
-* **environmentState**: string (ReadOnly): Publishing state of the environment setting Possible values are Creating, Created, Failed
-* **id**: string (ReadOnly): Resource Id of the environment
-* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): Details of the status of an operation.
-* **name**: string (ReadOnly): Name of the Environment
-* **passwordLastReset**: string (ReadOnly): When the password was last reset on the environment.
-* **provisioningState**: string (ReadOnly): The provisioning state of the environment. This also includes LabIsFull and NotYetProvisioned status.
-* **totalUsage**: string (ReadOnly): How long the environment has been used by a lab user
-* **virtualMachineDetails**: [VirtualMachineDetails](#virtualmachinedetails) (ReadOnly): Details of the backing virtual machine.
-
 ## VirtualMachineDetails
 ### Properties
 * **lastKnownPowerState**: string (ReadOnly): Last known compute power state captured in DTL
@@ -283,14 +287,10 @@
 * **sshAuthority**: string (ReadOnly): Connection information for Linux
 * **userName**: string (ReadOnly): Compute VM login user name
 
-## ListLabsResponse
+## VmStateDetails
 ### Properties
-* **labs**: [LabDetails](#labdetails)[] (ReadOnly): List of all the labs
-
-## LabDetails
-### Properties
-* **id**: string (ReadOnly): The Id of the lab.
-* **name**: string (ReadOnly): Name of the lab
-* **provisioningState**: string (ReadOnly): The provisioning state of the lab.
-* **usageQuota**: string (ReadOnly): The maximum duration a user can use a VM in this lab.
+* **lastKnownPowerState**: string (ReadOnly): Last known compute power state captured in DTL
+* **powerState**: string (ReadOnly): The power state of the reference virtual machine.
+* **rdpAuthority**: string (ReadOnly): The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
+* **sshAuthority**: string (ReadOnly): The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
 

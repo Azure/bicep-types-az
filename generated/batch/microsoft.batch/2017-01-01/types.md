@@ -42,6 +42,21 @@
 * **ApiVersion**: 2017-01-01
 * **Output**: [BatchAccountKeys](#batchaccountkeys)
 
+## ApplicationPackage
+### Properties
+* **format**: string (ReadOnly): The format of the application package, if the package is active.
+* **id**: string (ReadOnly): The ID of the application.
+* **lastActivationTime**: string (ReadOnly): The time at which the package was last activated, if the package is active.
+* **state**: 'active' | 'pending' | 'unmapped' (ReadOnly): The current state of the application package.
+* **storageUrl**: string (ReadOnly): The storage URL at which the application package is stored.
+* **storageUrlExpiry**: string (ReadOnly): The UTC time at which the storage URL will expire.
+* **version**: string (ReadOnly): The version of the application package.
+
+## AutoStorageBaseProperties
+### Properties
+* **lastKeySync**: string (ReadOnly): The UTC time at which storage keys were last synchronized with the Batch account.
+* **storageAccountId**: string (Required): The resource ID of the storage account to be used for auto storage account.
+
 ## BatchAccountBaseProperties
 ### Properties
 * **accountEndpoint**: string (ReadOnly): The endpoint used by this account to interact with the Batch services.
@@ -53,33 +68,18 @@
 * **poolQuota**: int (ReadOnly): The pool quota for this Batch account.
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Succeeded' (ReadOnly): The provisioned state of the resource
 
-## AutoStorageBaseProperties
-### Properties
-* **lastKeySync**: string (ReadOnly): The UTC time at which storage keys were last synchronized with the Batch account.
-* **storageAccountId**: string (Required): The resource ID of the storage account to be used for auto storage account.
-
-## KeyVaultReference
-### Properties
-* **id**: string (Required): The resource ID of the Azure key vault associated with the Batch account.
-* **url**: string (Required): The Url of the Azure key vault associated with the Batch account.
-
 ## BatchAccountCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ApplicationPackage
-### Properties
-* **format**: string (ReadOnly): The format of the application package, if the package is active.
-* **id**: string (ReadOnly): The ID of the application.
-* **lastActivationTime**: string (ReadOnly): The time at which the package was last activated, if the package is active.
-* **state**: 'active' | 'pending' | 'unmapped' (ReadOnly): The current state of the application package.
-* **storageUrl**: string (ReadOnly): The storage URL at which the application package is stored.
-* **storageUrlExpiry**: string (ReadOnly): The UTC time at which the storage URL will expire.
-* **version**: string (ReadOnly): The version of the application package.
-
 ## BatchAccountKeys
 ### Properties
 * **primary**: string (ReadOnly): The primary key associated with the account.
 * **secondary**: string (ReadOnly): The secondary key associated with the account.
+
+## KeyVaultReference
+### Properties
+* **id**: string (Required): The resource ID of the Azure key vault associated with the Batch account.
+* **url**: string (Required): The Url of the Azure key vault associated with the Batch account.
 
