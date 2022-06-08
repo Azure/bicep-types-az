@@ -23,11 +23,17 @@
 * **Input**: [FoosRequest](#foosrequest)
 * **Output**: [FoosResponse](#foosresponse)
 
-## TestType1Properties
+## FoosRequest
 ### Properties
-* **basicString**: string: Description for a basic string property.
-* **skuTier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
-* **stringEnum**: 'Bar' | 'Foo' | string: Description for a basic enum property.
+* **someString**: string (Required, WriteOnly): The foo request string
+
+## FoosResponse
+### Properties
+* **someString**: string (ReadOnly): The foo response string
+
+## FoosResponse
+### Properties
+* **someString**: string (ReadOnly): The foo response string
 
 ## SystemData
 ### Properties
@@ -38,20 +44,14 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
+## TestType1Properties
+### Properties
+* **basicString**: string: Description for a basic string property.
+* **skuTier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
+* **stringEnum**: 'Bar' | 'Foo' | string: Description for a basic enum property.
+
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## FoosResponse
-### Properties
-* **someString**: string (ReadOnly): The foo response string
-
-## FoosRequest
-### Properties
-* **someString**: string (Required, WriteOnly): The foo request string
-
-## FoosResponse
-### Properties
-* **someString**: string (ReadOnly): The foo response string
 
