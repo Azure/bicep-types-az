@@ -234,7 +234,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 ### Properties
 * **endAddress**: string (WriteOnly): The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
 * **name**: string (WriteOnly): The name of this route. This is only returned by the server and does not need to be set by the client.
-* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC' (WriteOnly): The type of route this is:
+* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC' | string (WriteOnly): The type of route this is:
 DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
 INHERITED - Routes inherited from the real Virtual Network routes
 STATIC - Static route set on the app only

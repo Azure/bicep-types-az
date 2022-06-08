@@ -44,7 +44,7 @@ directories as per ICANN requirements.
 * **createdTime**: string (ReadOnly): Domain creation timestamp.
 * **dnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns': Current DNS type
 * **dnsZoneId**: string: Azure DNS Zone to use
-* **domainNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive'[] (ReadOnly): Reasons why domain is not renewable.
+* **domainNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive' | string[] (ReadOnly): Reasons why domain is not renewable.
 * **expirationTime**: string (ReadOnly): Domain expiration timestamp.
 * **lastRenewedTime**: string (ReadOnly): Timestamp when the domain was renewed last time.
 * **managedHostNames**: [HostName](#hostname)[] (ReadOnly): All hostnames derived from the domain and assigned to Azure resources.

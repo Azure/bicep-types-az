@@ -9358,25 +9358,44 @@
 * [2020-01-01](securityinsights/microsoft.securityinsights/2020-01-01/types.md#resource-microsoftsecurityinsightsalertrules2020-01-01)
 * [2021-03-01-preview](securityinsights/microsoft.securityinsights/2021-03-01-preview/types.md#resource-microsoftsecurityinsightsalertrules2021-03-01-preview)
 * [2021-09-01-preview](securityinsights/microsoft.securityinsights/2021-09-01-preview/types.md#resource-microsoftsecurityinsightsalertrules2021-09-01-preview)
+* [2021-10-01](securityinsights/microsoft.securityinsights/2021-10-01/types.md#resource-microsoftsecurityinsightsalertrules2021-10-01)
+* [2021-10-01-preview](securityinsights/microsoft.securityinsights/2021-10-01-preview/types.md#resource-microsoftsecurityinsightsalertrules2021-10-01-preview)
+* [2022-01-01-preview](securityinsights/microsoft.securityinsights/2022-01-01-preview/types.md#resource-microsoftsecurityinsightsalertrules2022-01-01-preview)
+* [2022-04-01-preview](securityinsights/microsoft.securityinsights/2022-04-01-preview/types.md#resource-microsoftsecurityinsightsalertrules2022-04-01-preview)
 
 ### microsoft.securityinsights/alertrules/actions
 * [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightsalertrulesactions2019-01-01-preview)
 * [2020-01-01](securityinsights/microsoft.securityinsights/2020-01-01/types.md#resource-microsoftsecurityinsightsalertrulesactions2020-01-01)
 * [2021-03-01-preview](securityinsights/microsoft.securityinsights/2021-03-01-preview/types.md#resource-microsoftsecurityinsightsalertrulesactions2021-03-01-preview)
 * [2021-09-01-preview](securityinsights/microsoft.securityinsights/2021-09-01-preview/types.md#resource-microsoftsecurityinsightsalertrulesactions2021-09-01-preview)
+* [2021-10-01](securityinsights/microsoft.securityinsights/2021-10-01/types.md#resource-microsoftsecurityinsightsalertrulesactions2021-10-01)
+* [2021-10-01-preview](securityinsights/microsoft.securityinsights/2021-10-01-preview/types.md#resource-microsoftsecurityinsightsalertrulesactions2021-10-01-preview)
+* [2022-01-01-preview](securityinsights/microsoft.securityinsights/2022-01-01-preview/types.md#resource-microsoftsecurityinsightsalertrulesactions2022-01-01-preview)
+* [2022-04-01-preview](securityinsights/microsoft.securityinsights/2022-04-01-preview/types.md#resource-microsoftsecurityinsightsalertrulesactions2022-04-01-preview)
 
 ### microsoft.securityinsights/automationrules
 * [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightsautomationrules2019-01-01-preview)
 * [2021-09-01-preview](securityinsights/microsoft.securityinsights/2021-09-01-preview/types.md#resource-microsoftsecurityinsightsautomationrules2021-09-01-preview)
+* [2021-10-01](securityinsights/microsoft.securityinsights/2021-10-01/types.md#resource-microsoftsecurityinsightsautomationrules2021-10-01)
+* [2021-10-01-preview](securityinsights/microsoft.securityinsights/2021-10-01-preview/types.md#resource-microsoftsecurityinsightsautomationrules2021-10-01-preview)
+* [2022-01-01-preview](securityinsights/microsoft.securityinsights/2022-01-01-preview/types.md#resource-microsoftsecurityinsightsautomationrules2022-01-01-preview)
+* [2022-04-01-preview](securityinsights/microsoft.securityinsights/2022-04-01-preview/types.md#resource-microsoftsecurityinsightsautomationrules2022-04-01-preview)
 
 ### microsoft.securityinsights/bookmarks
 * [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightsbookmarks2019-01-01-preview)
 * [2020-01-01](securityinsights/microsoft.securityinsights/2020-01-01/types.md#resource-microsoftsecurityinsightsbookmarks2020-01-01)
 * [2021-09-01-preview](securityinsights/microsoft.securityinsights/2021-09-01-preview/types.md#resource-microsoftsecurityinsightsbookmarks2021-09-01-preview)
+* [2021-10-01](securityinsights/microsoft.securityinsights/2021-10-01/types.md#resource-microsoftsecurityinsightsbookmarks2021-10-01)
+* [2021-10-01-preview](securityinsights/microsoft.securityinsights/2021-10-01-preview/types.md#resource-microsoftsecurityinsightsbookmarks2021-10-01-preview)
+* [2022-01-01-preview](securityinsights/microsoft.securityinsights/2022-01-01-preview/types.md#resource-microsoftsecurityinsightsbookmarks2022-01-01-preview)
+* [2022-04-01-preview](securityinsights/microsoft.securityinsights/2022-04-01-preview/types.md#resource-microsoftsecurityinsightsbookmarks2022-04-01-preview)
 
 ### microsoft.securityinsights/bookmarks/relations
 * [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightsbookmarksrelations2019-01-01-preview)
 * [2021-09-01-preview](securityinsights/microsoft.securityinsights/2021-09-01-preview/types.md#resource-microsoftsecurityinsightsbookmarksrelations2021-09-01-preview)
+* [2021-10-01-preview](securityinsights/microsoft.securityinsights/2021-10-01-preview/types.md#resource-microsoftsecurityinsightsbookmarksrelations2021-10-01-preview)
+* [2022-01-01-preview](securityinsights/microsoft.securityinsights/2022-01-01-preview/types.md#resource-microsoftsecurityinsightsbookmarksrelations2022-01-01-preview)
+* [2022-04-01-preview](securityinsights/microsoft.securityinsights/2022-04-01-preview/types.md#resource-microsoftsecurityinsightsbookmarksrelations2022-04-01-preview)
 
 ### microsoft.securityinsights/cases
 * [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightscases2019-01-01-preview)
@@ -9392,10 +9411,17 @@
 * [2020-01-01](securityinsights/microsoft.securityinsights/2020-01-01/types.md#resource-microsoftsecurityinsightsdataconnectors2020-01-01)
 * [2021-03-01-preview](securityinsights/microsoft.securityinsights/2021-03-01-preview/types.md#resource-microsoftsecurityinsightsdataconnectors2021-03-01-preview)
 * [2021-09-01-preview](securityinsights/microsoft.securityinsights/2021-09-01-preview/types.md#resource-microsoftsecurityinsightsdataconnectors2021-09-01-preview)
+* [2021-10-01](securityinsights/microsoft.securityinsights/2021-10-01/types.md#resource-microsoftsecurityinsightsdataconnectors2021-10-01)
+* [2021-10-01-preview](securityinsights/microsoft.securityinsights/2021-10-01-preview/types.md#resource-microsoftsecurityinsightsdataconnectors2021-10-01-preview)
+* [2022-01-01-preview](securityinsights/microsoft.securityinsights/2022-01-01-preview/types.md#resource-microsoftsecurityinsightsdataconnectors2022-01-01-preview)
+* [2022-04-01-preview](securityinsights/microsoft.securityinsights/2022-04-01-preview/types.md#resource-microsoftsecurityinsightsdataconnectors2022-04-01-preview)
 
 ### microsoft.securityinsights/entityqueries
 * [2021-03-01-preview](securityinsights/microsoft.securityinsights/2021-03-01-preview/types.md#resource-microsoftsecurityinsightsentityqueries2021-03-01-preview)
 * [2021-09-01-preview](securityinsights/microsoft.securityinsights/2021-09-01-preview/types.md#resource-microsoftsecurityinsightsentityqueries2021-09-01-preview)
+* [2021-10-01-preview](securityinsights/microsoft.securityinsights/2021-10-01-preview/types.md#resource-microsoftsecurityinsightsentityqueries2021-10-01-preview)
+* [2022-01-01-preview](securityinsights/microsoft.securityinsights/2022-01-01-preview/types.md#resource-microsoftsecurityinsightsentityqueries2022-01-01-preview)
+* [2022-04-01-preview](securityinsights/microsoft.securityinsights/2022-04-01-preview/types.md#resource-microsoftsecurityinsightsentityqueries2022-04-01-preview)
 
 ### microsoft.securityinsights/incidents
 * [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightsincidents2019-01-01-preview)
@@ -9403,6 +9429,10 @@
 * [2021-03-01-preview](securityinsights/microsoft.securityinsights/2021-03-01-preview/types.md#resource-microsoftsecurityinsightsincidents2021-03-01-preview)
 * [2021-04-01](securityinsights/microsoft.securityinsights/2021-04-01/types.md#resource-microsoftsecurityinsightsincidents2021-04-01)
 * [2021-09-01-preview](securityinsights/microsoft.securityinsights/2021-09-01-preview/types.md#resource-microsoftsecurityinsightsincidents2021-09-01-preview)
+* [2021-10-01](securityinsights/microsoft.securityinsights/2021-10-01/types.md#resource-microsoftsecurityinsightsincidents2021-10-01)
+* [2021-10-01-preview](securityinsights/microsoft.securityinsights/2021-10-01-preview/types.md#resource-microsoftsecurityinsightsincidents2021-10-01-preview)
+* [2022-01-01-preview](securityinsights/microsoft.securityinsights/2022-01-01-preview/types.md#resource-microsoftsecurityinsightsincidents2022-01-01-preview)
+* [2022-04-01-preview](securityinsights/microsoft.securityinsights/2022-04-01-preview/types.md#resource-microsoftsecurityinsightsincidents2022-04-01-preview)
 
 ### microsoft.securityinsights/incidents/comments
 * [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightsincidentscomments2019-01-01-preview)
@@ -9410,46 +9440,79 @@
 * [2021-03-01-preview](securityinsights/microsoft.securityinsights/2021-03-01-preview/types.md#resource-microsoftsecurityinsightsincidentscomments2021-03-01-preview)
 * [2021-04-01](securityinsights/microsoft.securityinsights/2021-04-01/types.md#resource-microsoftsecurityinsightsincidentscomments2021-04-01)
 * [2021-09-01-preview](securityinsights/microsoft.securityinsights/2021-09-01-preview/types.md#resource-microsoftsecurityinsightsincidentscomments2021-09-01-preview)
+* [2021-10-01](securityinsights/microsoft.securityinsights/2021-10-01/types.md#resource-microsoftsecurityinsightsincidentscomments2021-10-01)
+* [2021-10-01-preview](securityinsights/microsoft.securityinsights/2021-10-01-preview/types.md#resource-microsoftsecurityinsightsincidentscomments2021-10-01-preview)
+* [2022-01-01-preview](securityinsights/microsoft.securityinsights/2022-01-01-preview/types.md#resource-microsoftsecurityinsightsincidentscomments2022-01-01-preview)
+* [2022-04-01-preview](securityinsights/microsoft.securityinsights/2022-04-01-preview/types.md#resource-microsoftsecurityinsightsincidentscomments2022-04-01-preview)
 
 ### microsoft.securityinsights/incidents/relations
 * [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightsincidentsrelations2019-01-01-preview)
 * [2021-03-01-preview](securityinsights/microsoft.securityinsights/2021-03-01-preview/types.md#resource-microsoftsecurityinsightsincidentsrelations2021-03-01-preview)
 * [2021-04-01](securityinsights/microsoft.securityinsights/2021-04-01/types.md#resource-microsoftsecurityinsightsincidentsrelations2021-04-01)
 * [2021-09-01-preview](securityinsights/microsoft.securityinsights/2021-09-01-preview/types.md#resource-microsoftsecurityinsightsincidentsrelations2021-09-01-preview)
+* [2021-10-01](securityinsights/microsoft.securityinsights/2021-10-01/types.md#resource-microsoftsecurityinsightsincidentsrelations2021-10-01)
+* [2021-10-01-preview](securityinsights/microsoft.securityinsights/2021-10-01-preview/types.md#resource-microsoftsecurityinsightsincidentsrelations2021-10-01-preview)
+* [2022-01-01-preview](securityinsights/microsoft.securityinsights/2022-01-01-preview/types.md#resource-microsoftsecurityinsightsincidentsrelations2022-01-01-preview)
+* [2022-04-01-preview](securityinsights/microsoft.securityinsights/2022-04-01-preview/types.md#resource-microsoftsecurityinsightsincidentsrelations2022-04-01-preview)
 
 ### microsoft.securityinsights/metadata
 * [2021-03-01-preview](securityinsights/microsoft.securityinsights/2021-03-01-preview/types.md#resource-microsoftsecurityinsightsmetadata2021-03-01-preview)
 * [2021-09-01-preview](securityinsights/microsoft.securityinsights/2021-09-01-preview/types.md#resource-microsoftsecurityinsightsmetadata2021-09-01-preview)
+* [2021-10-01-preview](securityinsights/microsoft.securityinsights/2021-10-01-preview/types.md#resource-microsoftsecurityinsightsmetadata2021-10-01-preview)
+* [2022-01-01-preview](securityinsights/microsoft.securityinsights/2022-01-01-preview/types.md#resource-microsoftsecurityinsightsmetadata2022-01-01-preview)
+* [2022-04-01-preview](securityinsights/microsoft.securityinsights/2022-04-01-preview/types.md#resource-microsoftsecurityinsightsmetadata2022-04-01-preview)
 
 ### microsoft.securityinsights/onboardingstates
 * [2021-03-01-preview](securityinsights/microsoft.securityinsights/2021-03-01-preview/types.md#resource-microsoftsecurityinsightsonboardingstates2021-03-01-preview)
 * [2021-09-01-preview](securityinsights/microsoft.securityinsights/2021-09-01-preview/types.md#resource-microsoftsecurityinsightsonboardingstates2021-09-01-preview)
+* [2021-10-01](securityinsights/microsoft.securityinsights/2021-10-01/types.md#resource-microsoftsecurityinsightsonboardingstates2021-10-01)
+* [2021-10-01-preview](securityinsights/microsoft.securityinsights/2021-10-01-preview/types.md#resource-microsoftsecurityinsightsonboardingstates2021-10-01-preview)
+* [2022-01-01-preview](securityinsights/microsoft.securityinsights/2022-01-01-preview/types.md#resource-microsoftsecurityinsightsonboardingstates2022-01-01-preview)
+* [2022-04-01-preview](securityinsights/microsoft.securityinsights/2022-04-01-preview/types.md#resource-microsoftsecurityinsightsonboardingstates2022-04-01-preview)
 
 ### microsoft.securityinsights/settings
 * [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightssettings2019-01-01-preview)
 * [2021-03-01-preview](securityinsights/microsoft.securityinsights/2021-03-01-preview/types.md#resource-microsoftsecurityinsightssettings2021-03-01-preview)
 * [2021-09-01-preview](securityinsights/microsoft.securityinsights/2021-09-01-preview/types.md#resource-microsoftsecurityinsightssettings2021-09-01-preview)
+* [2021-10-01-preview](securityinsights/microsoft.securityinsights/2021-10-01-preview/types.md#resource-microsoftsecurityinsightssettings2021-10-01-preview)
+* [2022-01-01-preview](securityinsights/microsoft.securityinsights/2022-01-01-preview/types.md#resource-microsoftsecurityinsightssettings2022-01-01-preview)
+* [2022-04-01-preview](securityinsights/microsoft.securityinsights/2022-04-01-preview/types.md#resource-microsoftsecurityinsightssettings2022-04-01-preview)
 
 ### microsoft.securityinsights/sourcecontrols
 * [2021-03-01-preview](securityinsights/microsoft.securityinsights/2021-03-01-preview/types.md#resource-microsoftsecurityinsightssourcecontrols2021-03-01-preview)
 * [2021-09-01-preview](securityinsights/microsoft.securityinsights/2021-09-01-preview/types.md#resource-microsoftsecurityinsightssourcecontrols2021-09-01-preview)
+* [2021-10-01-preview](securityinsights/microsoft.securityinsights/2021-10-01-preview/types.md#resource-microsoftsecurityinsightssourcecontrols2021-10-01-preview)
+* [2022-01-01-preview](securityinsights/microsoft.securityinsights/2022-01-01-preview/types.md#resource-microsoftsecurityinsightssourcecontrols2022-01-01-preview)
+* [2022-04-01-preview](securityinsights/microsoft.securityinsights/2022-04-01-preview/types.md#resource-microsoftsecurityinsightssourcecontrols2022-04-01-preview)
 
 ### microsoft.securityinsights/threatintelligence/indicators
 * [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightsthreatintelligenceindicators2019-01-01-preview)
 * [2021-04-01](securityinsights/microsoft.securityinsights/2021-04-01/types.md#resource-microsoftsecurityinsightsthreatintelligenceindicators2021-04-01)
 * [2021-09-01-preview](securityinsights/microsoft.securityinsights/2021-09-01-preview/types.md#resource-microsoftsecurityinsightsthreatintelligenceindicators2021-09-01-preview)
+* [2021-10-01](securityinsights/microsoft.securityinsights/2021-10-01/types.md#resource-microsoftsecurityinsightsthreatintelligenceindicators2021-10-01)
+* [2021-10-01-preview](securityinsights/microsoft.securityinsights/2021-10-01-preview/types.md#resource-microsoftsecurityinsightsthreatintelligenceindicators2021-10-01-preview)
+* [2022-01-01-preview](securityinsights/microsoft.securityinsights/2022-01-01-preview/types.md#resource-microsoftsecurityinsightsthreatintelligenceindicators2022-01-01-preview)
+* [2022-04-01-preview](securityinsights/microsoft.securityinsights/2022-04-01-preview/types.md#resource-microsoftsecurityinsightsthreatintelligenceindicators2022-04-01-preview)
 
 ### microsoft.securityinsights/watchlists
 * [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightswatchlists2019-01-01-preview)
 * [2021-03-01-preview](securityinsights/microsoft.securityinsights/2021-03-01-preview/types.md#resource-microsoftsecurityinsightswatchlists2021-03-01-preview)
 * [2021-04-01](securityinsights/microsoft.securityinsights/2021-04-01/types.md#resource-microsoftsecurityinsightswatchlists2021-04-01)
 * [2021-09-01-preview](securityinsights/microsoft.securityinsights/2021-09-01-preview/types.md#resource-microsoftsecurityinsightswatchlists2021-09-01-preview)
+* [2021-10-01](securityinsights/microsoft.securityinsights/2021-10-01/types.md#resource-microsoftsecurityinsightswatchlists2021-10-01)
+* [2021-10-01-preview](securityinsights/microsoft.securityinsights/2021-10-01-preview/types.md#resource-microsoftsecurityinsightswatchlists2021-10-01-preview)
+* [2022-01-01-preview](securityinsights/microsoft.securityinsights/2022-01-01-preview/types.md#resource-microsoftsecurityinsightswatchlists2022-01-01-preview)
+* [2022-04-01-preview](securityinsights/microsoft.securityinsights/2022-04-01-preview/types.md#resource-microsoftsecurityinsightswatchlists2022-04-01-preview)
 
 ### microsoft.securityinsights/watchlists/watchlistitems
 * [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightswatchlistswatchlistitems2019-01-01-preview)
 * [2021-03-01-preview](securityinsights/microsoft.securityinsights/2021-03-01-preview/types.md#resource-microsoftsecurityinsightswatchlistswatchlistitems2021-03-01-preview)
 * [2021-04-01](securityinsights/microsoft.securityinsights/2021-04-01/types.md#resource-microsoftsecurityinsightswatchlistswatchlistitems2021-04-01)
 * [2021-09-01-preview](securityinsights/microsoft.securityinsights/2021-09-01-preview/types.md#resource-microsoftsecurityinsightswatchlistswatchlistitems2021-09-01-preview)
+* [2021-10-01](securityinsights/microsoft.securityinsights/2021-10-01/types.md#resource-microsoftsecurityinsightswatchlistswatchlistitems2021-10-01)
+* [2021-10-01-preview](securityinsights/microsoft.securityinsights/2021-10-01-preview/types.md#resource-microsoftsecurityinsightswatchlistswatchlistitems2021-10-01-preview)
+* [2022-01-01-preview](securityinsights/microsoft.securityinsights/2022-01-01-preview/types.md#resource-microsoftsecurityinsightswatchlistswatchlistitems2022-01-01-preview)
+* [2022-04-01-preview](securityinsights/microsoft.securityinsights/2022-04-01-preview/types.md#resource-microsoftsecurityinsightswatchlistswatchlistitems2022-04-01-preview)
 
 ## microsoft.serialconsole
 ### microsoft.serialconsole/serialports
