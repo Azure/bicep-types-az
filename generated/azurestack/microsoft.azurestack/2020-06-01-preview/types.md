@@ -44,45 +44,14 @@
 * **ApiVersion**: 2020-06-01-preview
 * **Output**: [ExtendedProduct](#extendedproduct)
 
-## LinkedSubscriptionParameterProperties
-### Properties
-* **deviceConnectionStatus**: string (ReadOnly): The status of the remote management connection of the Azure Stack device.
-* **deviceId**: string (ReadOnly): The identifier of the Azure Stack device for remote management.
-* **deviceLinkState**: string (ReadOnly): The connection state of the Azure Stack device.
-* **deviceObjectId**: string (ReadOnly): The object identifier associated with the Azure Stack device connecting to Azure.
-* **lastConnectedTime**: string (ReadOnly): The last remote management connection time for the Azure Stack device connected to the linked subscription resource.
-* **linkedSubscriptionId**: string (Required): The identifier associated with the device subscription.
-* **registrationResourceId**: string (Required): The identifier associated with the device registration.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## RegistrationParameterProperties
-### Properties
-* **billingModel**: string (ReadOnly): Specifies the billing mode for the Azure Stack registration.
-* **cloudId**: string (ReadOnly): The identifier of the registered Azure Stack.
-* **objectId**: string (ReadOnly): The object identifier associated with the Azure Stack connecting to Azure.
-* **registrationToken**: string (Required, WriteOnly): The token identifying registered Azure Stack
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## CustomerSubscriptionProperties
 ### Properties
 * **tenantId**: string: Tenant Id.
+
+## DataDiskImage
+### Properties
+* **lun**: int (ReadOnly): The LUN.
+* **sourceBlobSasUri**: string (ReadOnly): SAS key for source blob.
 
 ## ExtendedProduct
 ### Properties
@@ -102,15 +71,46 @@
 * **vmOsType**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): Operating system type (Windows or Linux).
 * **vmScaleSetEnabled**: bool (ReadOnly): Indicates if virtual machine Scale Set is enabled in the specified product.
 
-## DataDiskImage
+## LinkedSubscriptionParameterProperties
 ### Properties
-* **lun**: int (ReadOnly): The LUN.
-* **sourceBlobSasUri**: string (ReadOnly): SAS key for source blob.
+* **deviceConnectionStatus**: string (ReadOnly): The status of the remote management connection of the Azure Stack device.
+* **deviceId**: string (ReadOnly): The identifier of the Azure Stack device for remote management.
+* **deviceLinkState**: string (ReadOnly): The connection state of the Azure Stack device.
+* **deviceObjectId**: string (ReadOnly): The object identifier associated with the Azure Stack device connecting to Azure.
+* **lastConnectedTime**: string (ReadOnly): The last remote management connection time for the Azure Stack device connected to the linked subscription resource.
+* **linkedSubscriptionId**: string (Required): The identifier associated with the device subscription.
+* **registrationResourceId**: string (Required): The identifier associated with the device registration.
 
 ## OsDiskImage
 ### Properties
 * **operatingSystem**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): Operating system type (Windows or Linux).
 * **sourceBlobSasUri**: string (ReadOnly): SAS key for source blob.
+
+## RegistrationParameterProperties
+### Properties
+* **billingModel**: string (ReadOnly): Specifies the billing mode for the Azure Stack registration.
+* **cloudId**: string (ReadOnly): The identifier of the registered Azure Stack.
+* **objectId**: string (ReadOnly): The object identifier associated with the Azure Stack connecting to Azure.
+* **registrationToken**: string (Required, WriteOnly): The token identifying registered Azure Stack
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Uri
 ### Properties

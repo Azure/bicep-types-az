@@ -93,52 +93,9 @@
 * **ApiVersion**: 2021-09-01-preview
 * **Output**: [TestKeys](#testkeys)
 
-## ClusterResourceProperties
+## ApplicationInsightsAgentVersions
 ### Properties
-* **networkProfile**: [NetworkProfile](#networkprofile): Service network profile payload
-* **powerState**: 'Running' | 'Stopped' | string (ReadOnly): Power state of the Service
-* **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MoveFailed' | 'Moved' | 'Moving' | 'Starting' | 'Stopping' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Service
-* **serviceId**: string (ReadOnly): ServiceInstanceEntity GUID which uniquely identifies a created resource
-* **version**: int (ReadOnly): Version of the Service
-
-## NetworkProfile
-### Properties
-* **appNetworkResourceGroup**: string: Name of the resource group containing network resources of Azure Spring Cloud Apps
-* **appSubnetId**: string: Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps
-* **outboundIPs**: [NetworkProfileOutboundIPs](#networkprofileoutboundips) (ReadOnly): Desired outbound IP resources for Azure Spring Cloud instance.
-* **requiredTraffics**: [RequiredTraffic](#requiredtraffic)[] (ReadOnly): Required inbound or outbound traffics for Azure Spring Cloud instance.
-* **serviceCidr**: string: Azure Spring Cloud service reserved CIDR
-* **serviceRuntimeNetworkResourceGroup**: string: Name of the resource group containing network resources of Azure Spring Cloud Service Runtime
-* **serviceRuntimeSubnetId**: string: Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime
-
-## NetworkProfileOutboundIPs
-### Properties
-* **publicIPs**: string[] (ReadOnly): A list of public IP addresses.
-
-## RequiredTraffic
-### Properties
-* **direction**: 'Inbound' | 'Outbound' | string (ReadOnly): The direction of required traffic
-* **fqdns**: string[] (ReadOnly): The FQDN list of required traffic
-* **ips**: string[] (ReadOnly): The ip list of required traffic
-* **port**: int (ReadOnly): The port of required traffic
-* **protocol**: string (ReadOnly): The protocol of required traffic
-
-## Sku
-### Properties
-* **capacity**: int: Current capacity of the target resource
-* **name**: string: Name of the Sku
-* **tier**: string: Tier of the Sku
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ManagedIdentityProperties
-### Properties
-* **principalId**: string: Principal Id
-* **tenantId**: string: Tenant Id
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string: Type of the managed identity
+* **java**: string (ReadOnly): Indicates the version of application insight java agent
 
 ## AppResourceProperties
 ### Properties
@@ -155,40 +112,6 @@
 * **temporaryDisk**: [TemporaryDisk](#temporarydisk): Temporary disk payload
 * **url**: string (ReadOnly): URL of the App
 
-## CustomPersistentDiskResource
-### Properties
-* **customPersistentDiskProperties**: [CustomPersistentDiskProperties](#custompersistentdiskproperties): Custom persistent disk resource payload.
-* **storageId**: string (Required): The resource id of Azure Spring Cloud Storage resource.
-
-## CustomPersistentDiskProperties
-* **Discriminator**: type
-
-### Base Properties
-* **mountOptions**: string[]: These are the mount options for a persistent disk.
-* **mountPath**: string (Required): The mount path of the persistent disk.
-* **readOnly**: bool: Indicates whether the persistent disk is a readOnly one.
-### AzureFileVolume
-#### Properties
-* **shareName**: string (Required): The share name of the Azure File share.
-* **type**: 'AzureFileVolume' (Required): The type of the underlying resource to mount as a persistent disk.
-
-
-## LoadedCertificate
-### Properties
-* **loadTrustStore**: bool: Indicate whether the certificate will be loaded into default trust store, only work for Java runtime.
-* **resourceId**: string (Required): Resource Id of loaded certificate
-
-## PersistentDisk
-### Properties
-* **mountPath**: string: Mount path of the persistent disk
-* **sizeInGB**: int: Size of the persistent disk in GB
-* **usedInGB**: int (ReadOnly): Size of the used persistent disk in GB
-
-## TemporaryDisk
-### Properties
-* **mountPath**: string: Mount path of the temporary disk
-* **sizeInGB**: int: Size of the temporary disk in GB
-
 ## BindingResourceProperties
 ### Properties
 * **bindingParameters**: [BindingResourcePropertiesBindingParameters](#bindingresourcepropertiesbindingparameters): Binding parameters of the Binding resource
@@ -204,6 +127,102 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## CertificateProperties
+* **Discriminator**: type
+
+### Base Properties
+* **activateDate**: string (ReadOnly): The activate date of certificate.
+* **dnsNames**: string[] (ReadOnly): The domain list of certificate.
+* **expirationDate**: string (ReadOnly): The expiration date of certificate.
+* **issuedDate**: string (ReadOnly): The issue date of certificate.
+* **issuer**: string (ReadOnly): The issuer of certificate.
+* **subjectName**: string (ReadOnly): The subject name of certificate.
+* **thumbprint**: string (ReadOnly): The thumbprint of certificate.
+### ContentCertificateProperties
+#### Properties
+* **content**: string (WriteOnly): The content of uploaded certificate.
+* **type**: 'ContentCertificate' (Required): The type of the certificate source.
+
+### KeyVaultCertificateProperties
+#### Properties
+* **certVersion**: string: The certificate version of key vault.
+* **excludePrivateKey**: bool: Optional. If set to true, it will not import private key from key vault.
+* **keyVaultCertName**: string (Required): The certificate name of key vault.
+* **type**: 'KeyVaultCertificate' (Required): The type of the certificate source.
+* **vaultUri**: string (Required): The vault uri of user key vault.
+
+
+## ClusterResourceProperties
+### Properties
+* **networkProfile**: [NetworkProfile](#networkprofile): Service network profile payload
+* **powerState**: 'Running' | 'Stopped' | string (ReadOnly): Power state of the Service
+* **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MoveFailed' | 'Moved' | 'Moving' | 'Starting' | 'Stopping' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Service
+* **serviceId**: string (ReadOnly): ServiceInstanceEntity GUID which uniquely identifies a created resource
+* **version**: int (ReadOnly): Version of the Service
+
+## ConfigServerGitProperty
+### Properties
+* **hostKey**: string: Public sshKey of git repository.
+* **hostKeyAlgorithm**: string: SshKey algorithm of git repository.
+* **label**: string: Label of the repository
+* **password**: string: Password of git repository basic auth.
+* **privateKey**: string: Private sshKey algorithm of git repository.
+* **repositories**: [GitPatternRepository](#gitpatternrepository)[]: Repositories of git.
+* **searchPaths**: string[]: Searching path of the repository
+* **strictHostKeyChecking**: bool: Strict host key checking or not.
+* **uri**: string (Required): URI of the repository
+* **username**: string: Username of git repository basic auth.
+
+## ConfigServerProperties
+### Properties
+* **configServer**: [ConfigServerSettings](#configserversettings): The settings of config server.
+* **error**: [Error](#error): The error code compose of code and message.
+* **provisioningState**: 'Deleted' | 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the config server.
+
+## ConfigServerSettings
+### Properties
+* **gitProperty**: [ConfigServerGitProperty](#configservergitproperty): Property of git.
+
+## CustomContainer
+### Properties
+* **args**: string[]: Arguments to the entrypoint. The docker image's CMD is used if this is not provided.
+* **command**: string[]: Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided.
+* **containerImage**: string: Container image of the custom container. This should be in the form of <repository>:<tag> without the server name of the registry
+* **imageRegistryCredential**: [ImageRegistryCredential](#imageregistrycredential): Credential of the image registry
+* **server**: string: The name of the registry that contains the container image
+
+## CustomDomainProperties
+### Properties
+* **appName**: string (ReadOnly): The app name of domain.
+* **certName**: string: The bound certificate name of domain.
+* **thumbprint**: string: The thumbprint of bound certificate.
+
+## CustomPersistentDiskProperties
+* **Discriminator**: type
+
+### Base Properties
+* **mountOptions**: string[]: These are the mount options for a persistent disk.
+* **mountPath**: string (Required): The mount path of the persistent disk.
+* **readOnly**: bool: Indicates whether the persistent disk is a readOnly one.
+### AzureFileVolume
+#### Properties
+* **shareName**: string (Required): The share name of the Azure File share.
+* **type**: 'AzureFileVolume' (Required): The type of the underlying resource to mount as a persistent disk.
+
+
+## CustomPersistentDiskResource
+### Properties
+* **customPersistentDiskProperties**: [CustomPersistentDiskProperties](#custompersistentdiskproperties): Custom persistent disk resource payload.
+* **storageId**: string (Required): The resource id of Azure Spring Cloud Storage resource.
+
+## DeploymentInstance
+### Properties
+* **discoveryStatus**: string (ReadOnly): Discovery status of the deployment instance
+* **name**: string (ReadOnly): Name of the deployment instance
+* **reason**: string (ReadOnly): Failed reason of the deployment instance
+* **startTime**: string (ReadOnly): Start time of the deployment instance
+* **status**: string (ReadOnly): Status of the deployment instance
 
 ## DeploymentResourceProperties
 ### Properties
@@ -236,94 +255,10 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ResourceRequests
+## Error
 ### Properties
-* **cpu**: string: Required CPU. 1 core can be represented by 1 or 1000m. This should be 500m or 1 for Basic tier, and {500m, 1, 2, 3, 4} for Standard tier.
-* **memory**: string: Required memory. 1 GB can be represented by 1Gi or 1024Mi. This should be {512Mi, 1Gi, 2Gi} for Basic tier, and {512Mi, 1Gi, 2Gi, ..., 8Gi} for Standard tier.
-
-## DeploymentInstance
-### Properties
-* **discoveryStatus**: string (ReadOnly): Discovery status of the deployment instance
-* **name**: string (ReadOnly): Name of the deployment instance
-* **reason**: string (ReadOnly): Failed reason of the deployment instance
-* **startTime**: string (ReadOnly): Start time of the deployment instance
-* **status**: string (ReadOnly): Status of the deployment instance
-
-## UserSourceInfo
-### Properties
-* **artifactSelector**: string: Selector for the artifact to be used for the deployment for multi-module projects. This should be
-the relative path to the target module/project.
-* **customContainer**: [CustomContainer](#customcontainer): Custom container payload
-* **relativePath**: string: Relative path of the storage which stores the source
-* **type**: 'Container' | 'Jar' | 'NetCoreZip' | 'Source' | string: Type of the source uploaded
-* **version**: string: Version of the source
-
-## CustomContainer
-### Properties
-* **args**: string[]: Arguments to the entrypoint. The docker image's CMD is used if this is not provided.
-* **command**: string[]: Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided.
-* **containerImage**: string: Container image of the custom container. This should be in the form of <repository>:<tag> without the server name of the registry
-* **imageRegistryCredential**: [ImageRegistryCredential](#imageregistrycredential): Credential of the image registry
-* **server**: string: The name of the registry that contains the container image
-
-## ImageRegistryCredential
-### Properties
-* **password**: string: The password of the image registry credential
-* **username**: string: The username of the image registry credential
-
-## CustomDomainProperties
-### Properties
-* **appName**: string (ReadOnly): The app name of domain.
-* **certName**: string: The bound certificate name of domain.
-* **thumbprint**: string: The thumbprint of bound certificate.
-
-## CertificateProperties
-* **Discriminator**: type
-
-### Base Properties
-* **activateDate**: string (ReadOnly): The activate date of certificate.
-* **dnsNames**: string[] (ReadOnly): The domain list of certificate.
-* **expirationDate**: string (ReadOnly): The expiration date of certificate.
-* **issuedDate**: string (ReadOnly): The issue date of certificate.
-* **issuer**: string (ReadOnly): The issuer of certificate.
-* **subjectName**: string (ReadOnly): The subject name of certificate.
-* **thumbprint**: string (ReadOnly): The thumbprint of certificate.
-### ContentCertificateProperties
-#### Properties
-* **content**: string (WriteOnly): The content of uploaded certificate.
-* **type**: 'ContentCertificate' (Required): The type of the certificate source.
-
-### KeyVaultCertificateProperties
-#### Properties
-* **certVersion**: string: The certificate version of key vault.
-* **excludePrivateKey**: bool: Optional. If set to true, it will not import private key from key vault.
-* **keyVaultCertName**: string (Required): The certificate name of key vault.
-* **type**: 'KeyVaultCertificate' (Required): The type of the certificate source.
-* **vaultUri**: string (Required): The vault uri of user key vault.
-
-
-## ConfigServerProperties
-### Properties
-* **configServer**: [ConfigServerSettings](#configserversettings): The settings of config server.
-* **error**: [Error](#error): The error code compose of code and message.
-* **provisioningState**: 'Deleted' | 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the config server.
-
-## ConfigServerSettings
-### Properties
-* **gitProperty**: [ConfigServerGitProperty](#configservergitproperty): Property of git.
-
-## ConfigServerGitProperty
-### Properties
-* **hostKey**: string: Public sshKey of git repository.
-* **hostKeyAlgorithm**: string: SshKey algorithm of git repository.
-* **label**: string: Label of the repository
-* **password**: string: Password of git repository basic auth.
-* **privateKey**: string: Private sshKey algorithm of git repository.
-* **repositories**: [GitPatternRepository](#gitpatternrepository)[]: Repositories of git.
-* **searchPaths**: string[]: Searching path of the repository
-* **strictHostKeyChecking**: bool: Strict host key checking or not.
-* **uri**: string (Required): URI of the repository
-* **username**: string: Username of git repository basic auth.
+* **code**: string: The code of error.
+* **message**: string: The message of error.
 
 ## GitPatternRepository
 ### Properties
@@ -339,10 +274,21 @@ the relative path to the target module/project.
 * **uri**: string (Required): URI of the repository
 * **username**: string: Username of git repository basic auth.
 
-## Error
+## ImageRegistryCredential
 ### Properties
-* **code**: string: The code of error.
-* **message**: string: The message of error.
+* **password**: string: The password of the image registry credential
+* **username**: string: The username of the image registry credential
+
+## LoadedCertificate
+### Properties
+* **loadTrustStore**: bool: Indicate whether the certificate will be loaded into default trust store, only work for Java runtime.
+* **resourceId**: string (Required): Resource Id of loaded certificate
+
+## ManagedIdentityProperties
+### Properties
+* **principalId**: string: Principal Id
+* **tenantId**: string: Tenant Id
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string: Type of the managed identity
 
 ## MonitoringSettingProperties
 ### Properties
@@ -353,9 +299,44 @@ the relative path to the target module/project.
 * **provisioningState**: 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Monitoring Setting.
 * **traceEnabled**: bool: Indicates whether enable the trace functionality, which will be deprecated since api version 2020-11-01-preview. Please leverage appInsightsInstrumentationKey to indicate if monitoringSettings enabled or not
 
-## ApplicationInsightsAgentVersions
+## NetworkProfile
 ### Properties
-* **java**: string (ReadOnly): Indicates the version of application insight java agent
+* **appNetworkResourceGroup**: string: Name of the resource group containing network resources of Azure Spring Cloud Apps
+* **appSubnetId**: string: Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps
+* **outboundIPs**: [NetworkProfileOutboundIPs](#networkprofileoutboundips) (ReadOnly): Desired outbound IP resources for Azure Spring Cloud instance.
+* **requiredTraffics**: [RequiredTraffic](#requiredtraffic)[] (ReadOnly): Required inbound or outbound traffics for Azure Spring Cloud instance.
+* **serviceCidr**: string: Azure Spring Cloud service reserved CIDR
+* **serviceRuntimeNetworkResourceGroup**: string: Name of the resource group containing network resources of Azure Spring Cloud Service Runtime
+* **serviceRuntimeSubnetId**: string: Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime
+
+## NetworkProfileOutboundIPs
+### Properties
+* **publicIPs**: string[] (ReadOnly): A list of public IP addresses.
+
+## PersistentDisk
+### Properties
+* **mountPath**: string: Mount path of the persistent disk
+* **sizeInGB**: int: Size of the persistent disk in GB
+* **usedInGB**: int (ReadOnly): Size of the used persistent disk in GB
+
+## RequiredTraffic
+### Properties
+* **direction**: 'Inbound' | 'Outbound' | string (ReadOnly): The direction of required traffic
+* **fqdns**: string[] (ReadOnly): The FQDN list of required traffic
+* **ips**: string[] (ReadOnly): The ip list of required traffic
+* **port**: int (ReadOnly): The port of required traffic
+* **protocol**: string (ReadOnly): The protocol of required traffic
+
+## ResourceRequests
+### Properties
+* **cpu**: string: Required CPU. 1 core can be represented by 1 or 1000m. This should be 500m or 1 for Basic tier, and {500m, 1, 2, 3, 4} for Standard tier.
+* **memory**: string: Required memory. 1 GB can be represented by 1Gi or 1024Mi. This should be {512Mi, 1Gi, 2Gi} for Basic tier, and {512Mi, 1Gi, 2Gi, ..., 8Gi} for Standard tier.
+
+## Sku
+### Properties
+* **capacity**: int: Current capacity of the target resource
+* **name**: string: Name of the Sku
+* **tier**: string: Tier of the Sku
 
 ## StorageProperties
 * **Discriminator**: storageType
@@ -377,6 +358,11 @@ the relative path to the target module/project.
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
+## TemporaryDisk
+### Properties
+* **mountPath**: string: Mount path of the temporary disk
+* **sizeInGB**: int: Size of the temporary disk in GB
+
 ## TestKeys
 ### Properties
 * **enabled**: bool (ReadOnly): Indicates whether the test endpoint feature enabled or not
@@ -384,4 +370,18 @@ the relative path to the target module/project.
 * **primaryTestEndpoint**: string (ReadOnly): Primary test endpoint
 * **secondaryKey**: string (ReadOnly): Secondary key
 * **secondaryTestEndpoint**: string (ReadOnly): Secondary test endpoint
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## UserSourceInfo
+### Properties
+* **artifactSelector**: string: Selector for the artifact to be used for the deployment for multi-module projects. This should be
+the relative path to the target module/project.
+* **customContainer**: [CustomContainer](#customcontainer): Custom container payload
+* **relativePath**: string: Relative path of the storage which stores the source
+* **type**: 'Container' | 'Jar' | 'NetCoreZip' | 'Source' | string: Type of the source uploaded
+* **version**: string: Version of the source
 

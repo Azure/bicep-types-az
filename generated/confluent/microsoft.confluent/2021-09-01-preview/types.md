@@ -33,14 +33,14 @@
 * **retrieveDatetime**: string: Date and time in UTC of when the terms were accepted. This is empty if Accepted is false.
 * **signature**: string: Terms signature.
 
-## SystemData
+## OfferDetail
 ### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **id**: string (Required): Offer Id
+* **planId**: string (Required): Offer Plan Id
+* **planName**: string (Required): Offer Plan Name
+* **publisherId**: string (Required): Publisher Id
+* **status**: 'Failed' | 'InProgress' | 'PendingFulfillmentStart' | 'Reinstated' | 'Started' | 'Subscribed' | 'Succeeded' | 'Suspended' | 'Unsubscribed' | 'Updating' | string (ReadOnly): SaaS Offer Status for confluent RP
+* **termUnit**: string (Required): Offer Plan Term unit
 
 ## OrganizationResourceProperties
 ### Properties
@@ -51,23 +51,23 @@
 * **ssoUrl**: string (ReadOnly): SSO url for the Confluent organization.
 * **userDetail**: [UserDetail](#userdetail) (Required): Subscriber detail
 
-## OfferDetail
+## OrganizationResourceTags
 ### Properties
-* **id**: string (Required): Offer Id
-* **planId**: string (Required): Offer Plan Id
-* **planName**: string (Required): Offer Plan Name
-* **publisherId**: string (Required): Publisher Id
-* **status**: 'Failed' | 'InProgress' | 'PendingFulfillmentStart' | 'Reinstated' | 'Started' | 'Subscribed' | 'Succeeded' | 'Suspended' | 'Unsubscribed' | 'Updating' | string (ReadOnly): SaaS Offer Status for confluent RP
-* **termUnit**: string (Required): Offer Plan Term unit
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## UserDetail
 ### Properties
 * **emailAddress**: string (Required): Email address
 * **firstName**: string: First name
 * **lastName**: string: Last name
-
-## OrganizationResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

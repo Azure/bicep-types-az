@@ -118,38 +118,6 @@
 * **statusReasonCode**: 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' | string (ReadOnly): Reason for the specified billing profile status.
 * **targetClouds**: 'USGov' | 'USNat' | 'USSec' | string[] (ReadOnly): Identifies the cloud environments that are associated with a billing profile. This is a system managed optional field and gets updated as the billing profile gets associated with accounts in various clouds.
 
-## IndirectRelationshipInfo
-### Properties
-* **billingAccountName**: string (ReadOnly): The billing account name of the partner or the customer for an indirect motion.
-* **billingProfileName**: string (ReadOnly): The billing profile name of the partner or the customer for an indirect motion.
-* **displayName**: string (ReadOnly): The display name of the partner or customer for an indirect motion.
-
-## InvoiceSection
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **name**: string (ReadOnly): Resource name.
-* **properties**: [InvoiceSectionProperties](#invoicesectionproperties) (ReadOnly): The properties of an invoice section.
-* **type**: string (ReadOnly): Resource type.
-
-## InvoiceSectionProperties
-### Properties
-* **displayName**: string (ReadOnly): The name of the invoice section.
-* **state**: 'Active' | 'Restricted' | string (ReadOnly): Identifies the state of an invoice section.
-* **targetCloud**: 'USGov' | 'USNat' | 'USSec' | string (ReadOnly): Possible cloud environments.
-
-## InstructionProperties
-### Properties
-* **amount**: int (Required): The amount budgeted for this billing instruction.
-* **creationDate**: string: The date this billing instruction was created.
-* **endDate**: string (Required): The date this billing instruction is no longer in effect.
-* **startDate**: string (Required): The date this billing instruction goes into effect.
-
-## PolicyProperties
-### Properties
-* **marketplacePurchases**: 'AllAllowed' | 'NotAllowed' | 'OnlyFreeAllowed' | string: The policy that controls whether Azure marketplace purchases are allowed for a billing profile.
-* **reservationPurchases**: 'Allowed' | 'NotAllowed' | string: The policy that controls whether Azure reservation purchases are allowed for a billing profile.
-* **viewCharges**: 'Allowed' | 'NotAllowed' | string: The policy that controls whether users with Azure RBAC access to a subscription can view its charges.
-
 ## BillingRoleAssignmentProperties
 ### Properties
 * **createdByPrincipalId**: string (ReadOnly): The principal Id of the user who created the role assignment.
@@ -168,10 +136,36 @@
 ### Properties
 * **viewCharges**: 'Allowed' | 'NotAllowed' | string: The policy that controls whether the users in customer's organization can view charges at pay-as-you-go prices.
 
+## IndirectRelationshipInfo
+### Properties
+* **billingAccountName**: string (ReadOnly): The billing account name of the partner or the customer for an indirect motion.
+* **billingProfileName**: string (ReadOnly): The billing profile name of the partner or the customer for an indirect motion.
+* **displayName**: string (ReadOnly): The display name of the partner or customer for an indirect motion.
+
+## InstructionProperties
+### Properties
+* **amount**: int (Required): The amount budgeted for this billing instruction.
+* **creationDate**: string: The date this billing instruction was created.
+* **endDate**: string (Required): The date this billing instruction is no longer in effect.
+* **startDate**: string (Required): The date this billing instruction goes into effect.
+
+## InvoiceSection
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [InvoiceSectionProperties](#invoicesectionproperties) (ReadOnly): The properties of an invoice section.
+* **type**: string (ReadOnly): Resource type.
+
 ## InvoiceSectionListWithCreateSubPermissionResult
 ### Properties
 * **nextLink**: string (ReadOnly): The link (url) to the next page of results.
 * **value**: [InvoiceSectionWithCreateSubPermission](#invoicesectionwithcreatesubpermission)[] (ReadOnly): The list of invoice section properties with create subscription permission.
+
+## InvoiceSectionProperties
+### Properties
+* **displayName**: string (ReadOnly): The name of the invoice section.
+* **state**: 'Active' | 'Restricted' | string (ReadOnly): Identifies the state of an invoice section.
+* **targetCloud**: 'USGov' | 'USNat' | 'USSec' | string (ReadOnly): Possible cloud environments.
 
 ## InvoiceSectionWithCreateSubPermission
 ### Properties
@@ -183,4 +177,10 @@
 * **enabledAzurePlans**: [AzurePlan](#azureplan)[] (ReadOnly): Enabled azure plans for the associated billing profile.
 * **invoiceSectionDisplayName**: string (ReadOnly): The name of the invoice section.
 * **invoiceSectionId**: string (ReadOnly): The ID of the invoice section.
+
+## PolicyProperties
+### Properties
+* **marketplacePurchases**: 'AllAllowed' | 'NotAllowed' | 'OnlyFreeAllowed' | string: The policy that controls whether Azure marketplace purchases are allowed for a billing profile.
+* **reservationPurchases**: 'Allowed' | 'NotAllowed' | string: The policy that controls whether Azure reservation purchases are allowed for a billing profile.
+* **viewCharges**: 'Allowed' | 'NotAllowed' | string: The policy that controls whether users with Azure RBAC access to a subscription can view its charges.
 

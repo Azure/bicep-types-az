@@ -31,26 +31,18 @@
 * **plans**: [PlanRequesterDetails](#planrequesterdetails)[] (ReadOnly): Gets list of plans with requesters details
 * **publisherId**: string: Gets or sets publisher Id
 
+## PlanDetails
+### Properties
+* **justification**: string: Gets or sets user's justification for the plan's request
+* **planId**: string: Gets or sets Plan Id
+* **requestDate**: any (ReadOnly): Anything
+* **status**: 'Approved' | 'None' | 'Pending' | 'Rejected' | string (ReadOnly): Gets the plan status
+
 ## PlanRequesterDetails
 ### Properties
 * **planDisplayName**: string (ReadOnly): Gets the plan display name
 * **planId**: string (ReadOnly): Gets the plan id
 * **requesters**: [UserRequestDetails](#userrequestdetails)[] (ReadOnly): Gets requesters details list
-
-## UserRequestDetails
-### Properties
-* **date**: string (ReadOnly): Gets request date
-* **justification**: string (ReadOnly): Gets justification
-* **user**: string (ReadOnly): Gets user id
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC)
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
 
 ## RequestApprovalProperties
 ### Properties
@@ -61,10 +53,18 @@
 * **plansDetails**: [PlanDetails](#plandetails)[]: Gets or sets the plans details
 * **publisherId**: string: The offer's publisher id
 
-## PlanDetails
+## SystemData
 ### Properties
-* **justification**: string: Gets or sets user's justification for the plan's request
-* **planId**: string: Gets or sets Plan Id
-* **requestDate**: any (ReadOnly): Anything
-* **status**: 'Approved' | 'None' | 'Pending' | 'Rejected' | string (ReadOnly): Gets the plan status
+* **createdAt**: string: The timestamp of resource creation (UTC)
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
+
+## UserRequestDetails
+### Properties
+* **date**: string (ReadOnly): Gets request date
+* **justification**: string (ReadOnly): Gets justification
+* **user**: string (ReadOnly): Gets user id
 

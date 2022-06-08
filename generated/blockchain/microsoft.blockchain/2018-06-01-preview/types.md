@@ -37,6 +37,23 @@
 * **ApiVersion**: 2018-06-01-preview
 * **Output**: [ConsortiumCollection](#consortiumcollection)
 
+## ApiKey
+### Properties
+* **keyName**: string (ReadOnly): Gets or sets the API key name.
+* **value**: string (ReadOnly): Gets or sets the API key value.
+
+## ApiKeyCollection
+### Properties
+* **keys**: [ApiKey](#apikey)[] (ReadOnly): Gets or sets the collection of API key.
+
+## ApiKeyCollection
+### Properties
+* **keys**: [ApiKey](#apikey)[] (ReadOnly): Gets or sets the collection of API key.
+
+## BlockchainMemberNodesSku
+### Properties
+* **capacity**: int: Gets or sets the nodes capacity.
+
 ## BlockchainMemberProperties
 ### Properties
 * **consortium**: string: Gets or sets the consortium for the blockchain member.
@@ -54,15 +71,20 @@
 * **userName**: string (ReadOnly): Gets the auth user name of the blockchain member.
 * **validatorNodesSku**: [BlockchainMemberNodesSku](#blockchainmembernodessku): Payload of the blockchain member nodes Sku for a blockchain member.
 
+## Consortium
+### Properties
+* **name**: string (ReadOnly): Gets or sets the blockchain member name.
+* **protocol**: 'Corda' | 'NotSpecified' | 'Parity' | 'Quorum' | string (ReadOnly): Gets or sets the blockchain protocol.
+
+## ConsortiumCollection
+### Properties
+* **value**: [Consortium](#consortium)[] (ReadOnly): Gets or sets the collection of consortiums.
+
 ## FirewallRule
 ### Properties
 * **endIpAddress**: string: Gets or sets the end IP address of the firewall rule range.
 * **ruleName**: string: Gets or sets the name of the firewall rules.
 * **startIpAddress**: string: Gets or sets the start IP address of the firewall rule range.
-
-## BlockchainMemberNodesSku
-### Properties
-* **capacity**: int: Gets or sets the nodes capacity.
 
 ## Sku
 ### Properties
@@ -82,26 +104,4 @@
 * **provisioningState**: 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Gets or sets the blockchain member provision state.
 * **publicKey**: string (ReadOnly): Gets or sets the transaction node public key.
 * **userName**: string (ReadOnly): Gets or sets the transaction node dns endpoint basic auth user name.
-
-## ApiKeyCollection
-### Properties
-* **keys**: [ApiKey](#apikey)[] (ReadOnly): Gets or sets the collection of API key.
-
-## ApiKey
-### Properties
-* **keyName**: string (ReadOnly): Gets or sets the API key name.
-* **value**: string (ReadOnly): Gets or sets the API key value.
-
-## ApiKeyCollection
-### Properties
-* **keys**: [ApiKey](#apikey)[] (ReadOnly): Gets or sets the collection of API key.
-
-## ConsortiumCollection
-### Properties
-* **value**: [Consortium](#consortium)[] (ReadOnly): Gets or sets the collection of consortiums.
-
-## Consortium
-### Properties
-* **name**: string (ReadOnly): Gets or sets the blockchain member name.
-* **protocol**: 'Corda' | 'NotSpecified' | 'Parity' | 'Quorum' | string (ReadOnly): Gets or sets the blockchain protocol.
 

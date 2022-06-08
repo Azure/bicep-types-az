@@ -19,11 +19,6 @@
 * **ApiVersion**: 2016-02-01-preview
 * **Output**: [CognitiveServicesAccountKeys](#cognitiveservicesaccountkeys)
 
-## Sku
-### Properties
-* **name**: 'F0' | 'P0' | 'P1' | 'P2' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4' | 'S5' | 'S6' | string (Required): Gets or sets the sku name. Required for account creation, optional for update.
-* **tier**: 'Free' | 'Premium' | 'Standard' (ReadOnly): Gets the sku tier. This is based on the SKU name.
-
 ## CognitiveServicesAccountCreateParametersTags
 ### Properties
 ### Additional Properties
@@ -33,4 +28,9 @@
 ### Properties
 * **key1**: string (ReadOnly): Gets the value of key 1.
 * **key2**: string (ReadOnly): Gets the value of key 2.
+
+## Sku
+### Properties
+* **name**: 'F0' | 'P0' | 'P1' | 'P2' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4' | 'S5' | 'S6' | string (Required): Gets or sets the sku name. Required for account creation, optional for update.
+* **tier**: 'Free' | 'Premium' | 'Standard' (ReadOnly): Gets the sku tier. This is based on the SKU name.
 

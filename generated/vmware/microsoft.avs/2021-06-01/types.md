@@ -153,66 +153,6 @@
 * **ApiVersion**: 2021-06-01
 * **Output**: [AdminCredentials](#admincredentials)
 
-## PrivateCloudProperties
-### Properties
-* **circuit**: [Circuit](#circuit): An ExpressRoute Circuit
-* **endpoints**: [Endpoints](#endpoints) (ReadOnly): Endpoint addresses
-* **externalCloudLinks**: string[] (ReadOnly): Array of cloud link IDs from other clouds that connect to this one
-* **identitySources**: [IdentitySource](#identitysource)[]: vCenter Single Sign On Identity Sources
-* **internet**: 'Disabled' | 'Enabled' | string: Connectivity to internet is enabled or disabled
-* **managementCluster**: [ManagementCluster](#managementcluster): The properties of a management cluster
-* **managementNetwork**: string (ReadOnly): Network used to access vCenter Server and NSX-T Manager
-* **networkBlock**: string (Required): The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
-* **nsxtCertificateThumbprint**: string (ReadOnly): Thumbprint of the NSX-T Manager SSL certificate
-* **nsxtPassword**: string: Optionally, set the NSX-T Manager password when the private cloud is created
-* **provisioningNetwork**: string (ReadOnly): Used for virtual machine cold migration, cloning, and snapshot migration
-* **provisioningState**: 'Building' | 'Cancelled' | 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state
-* **vcenterCertificateThumbprint**: string (ReadOnly): Thumbprint of the vCenter Server SSL certificate
-* **vcenterPassword**: string: Optionally, set the vCenter admin password when the private cloud is created
-* **vmotionNetwork**: string (ReadOnly): Used for live migration of virtual machines
-
-## Circuit
-### Properties
-* **expressRouteID**: string (ReadOnly): Identifier of the ExpressRoute Circuit (Microsoft Colo only)
-* **expressRoutePrivatePeeringID**: string (ReadOnly): ExpressRoute Circuit private peering identifier
-* **primarySubnet**: string (ReadOnly): CIDR of primary subnet
-* **secondarySubnet**: string (ReadOnly): CIDR of secondary subnet
-
-## Endpoints
-### Properties
-* **hcxCloudManager**: string (ReadOnly): Endpoint for the HCX Cloud Manager
-* **nsxtManager**: string (ReadOnly): Endpoint for the NSX-T Data Center manager
-* **vcsa**: string (ReadOnly): Endpoint for Virtual Center Server Appliance
-
-## IdentitySource
-### Properties
-* **alias**: string: The domain's NetBIOS name
-* **baseGroupDN**: string: The base distinguished name for groups
-* **baseUserDN**: string: The base distinguished name for users
-* **domain**: string: The domain's dns name
-* **name**: string: The name of the identity source
-* **password**: string: The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.
-* **primaryServer**: string: Primary server URL
-* **secondaryServer**: string: Secondary server URL
-* **ssl**: 'Disabled' | 'Enabled' | string: Protect LDAP communication using SSL certificate (LDAPS)
-* **username**: string: The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group
-
-## ManagementCluster
-### Properties
-* **clusterId**: int (ReadOnly): The identity
-* **clusterSize**: int: The cluster size
-* **hosts**: string[] (ReadOnly): The hosts
-* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The state of the cluster provisioning
-
-## Sku
-### Properties
-* **name**: string (Required): The name of the SKU.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## AddonProperties
 * **Discriminator**: addonType
 
@@ -234,11 +174,19 @@
 * **vrsCount**: int (Required): The vSphere Replication Server (VRS) count
 
 
-## ExpressRouteAuthorizationProperties
+## AdminCredentials
 ### Properties
-* **expressRouteAuthorizationId**: string (ReadOnly): The ID of the ExpressRoute Circuit Authorization
-* **expressRouteAuthorizationKey**: string (ReadOnly): The key of the ExpressRoute Circuit Authorization
-* **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The state of the  ExpressRoute Circuit Authorization provisioning
+* **nsxtPassword**: string (ReadOnly): NSX-T Manager password
+* **nsxtUsername**: string (ReadOnly): NSX-T Manager username
+* **vcenterPassword**: string (ReadOnly): vCenter admin password
+* **vcenterUsername**: string (ReadOnly): vCenter admin username
+
+## Circuit
+### Properties
+* **expressRouteID**: string (ReadOnly): Identifier of the ExpressRoute Circuit (Microsoft Colo only)
+* **expressRoutePrivatePeeringID**: string (ReadOnly): ExpressRoute Circuit private peering identifier
+* **primarySubnet**: string (ReadOnly): CIDR of primary subnet
+* **secondarySubnet**: string (ReadOnly): CIDR of secondary subnet
 
 ## CloudLinkProperties
 ### Properties
@@ -265,9 +213,17 @@
 * **path**: string (ReadOnly): Device path
 * **targetId**: string (Required): Azure resource ID of the iSCSI target
 
-## NetAppVolume
+## Endpoints
 ### Properties
-* **id**: string (Required): Azure resource ID of the NetApp volume
+* **hcxCloudManager**: string (ReadOnly): Endpoint for the HCX Cloud Manager
+* **nsxtManager**: string (ReadOnly): Endpoint for the NSX-T Data Center manager
+* **vcsa**: string (ReadOnly): Endpoint for Virtual Center Server Appliance
+
+## ExpressRouteAuthorizationProperties
+### Properties
+* **expressRouteAuthorizationId**: string (ReadOnly): The ID of the ExpressRoute Circuit Authorization
+* **expressRouteAuthorizationKey**: string (ReadOnly): The key of the ExpressRoute Circuit Authorization
+* **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The state of the  ExpressRoute Circuit Authorization provisioning
 
 ## GlobalReachConnectionProperties
 ### Properties
@@ -282,23 +238,52 @@
 * **activationKey**: string (ReadOnly): The activation key
 * **status**: 'Available' | 'Consumed' | 'Deactivated' | 'Deleted' | string (ReadOnly): The status of the HCX Enterprise Site
 
-## ScriptExecutionProperties
+## IdentitySource
 ### Properties
-* **errors**: string[] (ReadOnly): Standard error output stream from the powershell execution
-* **failureReason**: string: Error message if the script was able to run, but if the script itself had errors or powershell threw an exception
-* **finishedAt**: string (ReadOnly): Time the script execution was finished
-* **hiddenParameters**: [ScriptExecutionParameter](#scriptexecutionparameter)[]: Parameters that will be hidden/not visible to ARM, such as passwords and credentials
-* **information**: string[] (ReadOnly): Standard information out stream from the powershell execution
-* **namedOutputs**: [ScriptExecutionPropertiesNamedOutputs](#scriptexecutionpropertiesnamedoutputs): User-defined dictionary.
-* **output**: string[]: Standard output stream from the powershell execution
-* **parameters**: [ScriptExecutionParameter](#scriptexecutionparameter)[]: Parameters the script will accept
-* **provisioningState**: 'Cancelled' | 'Cancelling' | 'Deleting' | 'Failed' | 'Pending' | 'Running' | 'Succeeded' | string (ReadOnly): The state of the script execution resource
-* **retention**: string: Time to live for the resource. If not provided, will be available for 60 days
-* **scriptCmdletId**: string: A reference to the script cmdlet resource if user is running a AVS script
-* **startedAt**: string (ReadOnly): Time the script execution was started
-* **submittedAt**: string (ReadOnly): Time the script execution was submitted
-* **timeout**: string (Required): Time limit for execution
-* **warnings**: string[] (ReadOnly): Standard warning out stream from the powershell execution
+* **alias**: string: The domain's NetBIOS name
+* **baseGroupDN**: string: The base distinguished name for groups
+* **baseUserDN**: string: The base distinguished name for users
+* **domain**: string: The domain's dns name
+* **name**: string: The name of the identity source
+* **password**: string: The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.
+* **primaryServer**: string: Primary server URL
+* **secondaryServer**: string: Secondary server URL
+* **ssl**: 'Disabled' | 'Enabled' | string: Protect LDAP communication using SSL certificate (LDAPS)
+* **username**: string: The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group
+
+## ManagementCluster
+### Properties
+* **clusterId**: int (ReadOnly): The identity
+* **clusterSize**: int: The cluster size
+* **hosts**: string[] (ReadOnly): The hosts
+* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The state of the cluster provisioning
+
+## NetAppVolume
+### Properties
+* **id**: string (Required): Azure resource ID of the NetApp volume
+
+## PrivateCloudProperties
+### Properties
+* **circuit**: [Circuit](#circuit): An ExpressRoute Circuit
+* **endpoints**: [Endpoints](#endpoints) (ReadOnly): Endpoint addresses
+* **externalCloudLinks**: string[] (ReadOnly): Array of cloud link IDs from other clouds that connect to this one
+* **identitySources**: [IdentitySource](#identitysource)[]: vCenter Single Sign On Identity Sources
+* **internet**: 'Disabled' | 'Enabled' | string: Connectivity to internet is enabled or disabled
+* **managementCluster**: [ManagementCluster](#managementcluster): The properties of a management cluster
+* **managementNetwork**: string (ReadOnly): Network used to access vCenter Server and NSX-T Manager
+* **networkBlock**: string (Required): The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
+* **nsxtCertificateThumbprint**: string (ReadOnly): Thumbprint of the NSX-T Manager SSL certificate
+* **nsxtPassword**: string: Optionally, set the NSX-T Manager password when the private cloud is created
+* **provisioningNetwork**: string (ReadOnly): Used for virtual machine cold migration, cloning, and snapshot migration
+* **provisioningState**: 'Building' | 'Cancelled' | 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state
+* **vcenterCertificateThumbprint**: string (ReadOnly): Thumbprint of the vCenter Server SSL certificate
+* **vcenterPassword**: string: Optionally, set the vCenter admin password when the private cloud is created
+* **vmotionNetwork**: string (ReadOnly): Used for live migration of virtual machines
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ScriptExecutionParameter
 * **Discriminator**: type
@@ -322,10 +307,32 @@
 * **value**: string: The value for the passed parameter
 
 
+## ScriptExecutionProperties
+### Properties
+* **errors**: string[] (ReadOnly): Standard error output stream from the powershell execution
+* **failureReason**: string: Error message if the script was able to run, but if the script itself had errors or powershell threw an exception
+* **finishedAt**: string (ReadOnly): Time the script execution was finished
+* **hiddenParameters**: [ScriptExecutionParameter](#scriptexecutionparameter)[]: Parameters that will be hidden/not visible to ARM, such as passwords and credentials
+* **information**: string[] (ReadOnly): Standard information out stream from the powershell execution
+* **namedOutputs**: [ScriptExecutionPropertiesNamedOutputs](#scriptexecutionpropertiesnamedoutputs): User-defined dictionary.
+* **output**: string[]: Standard output stream from the powershell execution
+* **parameters**: [ScriptExecutionParameter](#scriptexecutionparameter)[]: Parameters the script will accept
+* **provisioningState**: 'Cancelled' | 'Cancelling' | 'Deleting' | 'Failed' | 'Pending' | 'Running' | 'Succeeded' | string (ReadOnly): The state of the script execution resource
+* **retention**: string: Time to live for the resource. If not provided, will be available for 60 days
+* **scriptCmdletId**: string: A reference to the script cmdlet resource if user is running a AVS script
+* **startedAt**: string (ReadOnly): Time the script execution was started
+* **submittedAt**: string (ReadOnly): Time the script execution was submitted
+* **timeout**: string (Required): Time limit for execution
+* **warnings**: string[] (ReadOnly): Standard warning out stream from the powershell execution
+
 ## ScriptExecutionPropertiesNamedOutputs
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## Sku
+### Properties
+* **name**: string (Required): The name of the SKU.
 
 ## WorkloadNetworkDhcpEntity
 * **Discriminator**: dhcpType
@@ -385,6 +392,10 @@
 * **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state
 * **publicIPBlock**: string (ReadOnly): CIDR Block of the Public IP Block.
 
+## WorkloadNetworkSegmentPortVif
+### Properties
+* **portName**: string: Name of port or VIF attached to segment.
+
 ## WorkloadNetworkSegmentProperties
 ### Properties
 * **connectedGateway**: string: Gateway which to connect segment to.
@@ -394,10 +405,6 @@
 * **revision**: int: NSX revision number.
 * **status**: 'SUCCESS, FAILURE' | string (ReadOnly): Segment status.
 * **subnet**: [WorkloadNetworkSegmentSubnet](#workloadnetworksegmentsubnet): Subnet configuration for segment
-
-## WorkloadNetworkSegmentPortVif
-### Properties
-* **portName**: string: Name of port or VIF attached to segment.
 
 ## WorkloadNetworkSegmentSubnet
 ### Properties
@@ -411,11 +418,4 @@
 * **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state
 * **revision**: int: NSX revision number.
 * **status**: 'SUCCESS, FAILURE' | string (ReadOnly): VM Group status.
-
-## AdminCredentials
-### Properties
-* **nsxtPassword**: string (ReadOnly): NSX-T Manager password
-* **nsxtUsername**: string (ReadOnly): NSX-T Manager username
-* **vcenterPassword**: string (ReadOnly): vCenter admin password
-* **vcenterUsername**: string (ReadOnly): vCenter admin username
 

@@ -12,6 +12,15 @@
 * **tags**: [WebtestsResourceTags](#webtestsresourcetags): Resource tags
 * **type**: 'Microsoft.Insights/webtests' (ReadOnly, DeployTimeConstant): The resource type
 
+## HeaderField
+### Properties
+* **key**: string: The name of the header.
+* **value**: string: The value of the header.
+
+## WebTestGeolocation
+### Properties
+* **Id**: string: Location ID for the WebTest to run from.
+
 ## WebTestProperties
 ### Properties
 * **Configuration**: [WebTestPropertiesConfiguration](#webtestpropertiesconfiguration): An XML configuration specification for a WebTest.
@@ -32,10 +41,6 @@
 ### Properties
 * **WebTest**: string: The XML specification of a WebTest to run against an application.
 
-## WebTestGeolocation
-### Properties
-* **Id**: string: Location ID for the WebTest to run from.
-
 ## WebTestPropertiesRequest
 ### Properties
 * **FollowRedirects**: bool: Follow redirects for this web test.
@@ -44,11 +49,6 @@
 * **ParseDependentRequests**: bool: Parse Dependent request for this WebTest.
 * **RequestBody**: string: Base64 encoded string body to send with this web test.
 * **RequestUrl**: string: Url location to test.
-
-## HeaderField
-### Properties
-* **key**: string: The name of the header.
-* **value**: string: The value of the header.
 
 ## WebTestPropertiesValidationRules
 ### Properties

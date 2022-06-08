@@ -55,12 +55,19 @@
 * **tags**: [ServerEndpointCreateParametersTags](#serverendpointcreateparameterstags) (WriteOnly): Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## StorageSyncServiceProperties
+## CloudEndpointCreateParametersProperties
 ### Properties
-* **storageSyncServiceStatus**: int (ReadOnly): Storage Sync service status.
-* **storageSyncServiceUid**: string (ReadOnly): Storage Sync service Uid
+* **backupEnabled**: bool (ReadOnly): Backup Enabled
+* **friendlyName**: string (ReadOnly): Friendly Name
+* **lastOperationName**: string (ReadOnly): Resource Last Operation Name
+* **lastWorkflowId**: string (ReadOnly): CloudEndpoint lastWorkflowId
+* **partnershipId**: string (ReadOnly): Partnership Id
+* **provisioningState**: string (ReadOnly): CloudEndpoint Provisioning State
+* **storageAccountResourceId**: string: Storage Account Resource Id
+* **storageAccountShareName**: string: Storage Account Share name
+* **storageAccountTenantId**: string: Storage Account Tenant Id
 
-## StorageSyncServiceCreateParametersTags
+## CloudEndpointCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -91,28 +98,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## SyncGroupCreateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## CloudEndpointCreateParametersProperties
-### Properties
-* **backupEnabled**: bool (ReadOnly): Backup Enabled
-* **friendlyName**: string (ReadOnly): Friendly Name
-* **lastOperationName**: string (ReadOnly): Resource Last Operation Name
-* **lastWorkflowId**: string (ReadOnly): CloudEndpoint lastWorkflowId
-* **partnershipId**: string (ReadOnly): Partnership Id
-* **provisioningState**: string (ReadOnly): CloudEndpoint Provisioning State
-* **storageAccountResourceId**: string: Storage Account Resource Id
-* **storageAccountShareName**: string: Storage Account Share name
-* **storageAccountTenantId**: string: Storage Account Tenant Id
-
-## CloudEndpointCreateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ServerEndpointCreateParametersProperties
 ### Properties
 * **cloudTiering**: 'off' | 'on' | string: Type of the Feature Status
@@ -126,6 +111,21 @@
 * **volumeFreeSpacePercent**: int: Level of free space to be maintained by Cloud Tiering if it is enabled.
 
 ## ServerEndpointCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## StorageSyncServiceCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## StorageSyncServiceProperties
+### Properties
+* **storageSyncServiceStatus**: int (ReadOnly): Storage Sync service status.
+* **storageSyncServiceUid**: string (ReadOnly): Storage Sync service Uid
+
+## SyncGroupCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -47,10 +47,17 @@
 * **properties**: [ServerEndpointCreateParametersProperties](#serverendpointcreateparametersproperties): ServerEndpoint Properties object.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## StorageSyncServiceCreateParametersTags
+## CloudEndpointCreateParametersProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **backupEnabled**: bool (ReadOnly): Backup Enabled
+* **friendlyName**: string (ReadOnly): Friendly Name
+* **lastOperationName**: string (ReadOnly): Resource Last Operation Name
+* **lastWorkflowId**: string (ReadOnly): CloudEndpoint lastWorkflowId
+* **partnershipId**: string (ReadOnly): Partnership Id
+* **provisioningState**: string (ReadOnly): CloudEndpoint Provisioning State
+* **storageAccountResourceId**: string: Storage Account Resource Id
+* **storageAccountShareName**: string: Storage Account Share name
+* **storageAccountTenantId**: string: Storage Account Tenant Id
 
 ## RegisteredServerCreateParametersProperties
 ### Properties
@@ -74,18 +81,6 @@
 * **serviceLocation**: string (ReadOnly): Service Location
 * **storageSyncServiceUid**: string (ReadOnly): Registered Server storageSyncServiceUid
 
-## CloudEndpointCreateParametersProperties
-### Properties
-* **backupEnabled**: bool (ReadOnly): Backup Enabled
-* **friendlyName**: string (ReadOnly): Friendly Name
-* **lastOperationName**: string (ReadOnly): Resource Last Operation Name
-* **lastWorkflowId**: string (ReadOnly): CloudEndpoint lastWorkflowId
-* **partnershipId**: string (ReadOnly): Partnership Id
-* **provisioningState**: string (ReadOnly): CloudEndpoint Provisioning State
-* **storageAccountResourceId**: string: Storage Account Resource Id
-* **storageAccountShareName**: string: Storage Account Share name
-* **storageAccountTenantId**: string: Storage Account Tenant Id
-
 ## ServerEndpointCreateParametersProperties
 ### Properties
 * **cloudTiering**: 'off' | 'on' | string: Type of the Feature Status
@@ -98,4 +93,9 @@
 * **syncStatus**: any (ReadOnly): Any object
 * **tierFilesOlderThanDays**: int: Tier files older than days.
 * **volumeFreeSpacePercent**: int: Level of free space to be maintained by Cloud Tiering if it is enabled.
+
+## StorageSyncServiceCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

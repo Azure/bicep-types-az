@@ -33,15 +33,19 @@ region is specified on update the request will succeed.
 * **properties**: [DataStoreProperties](#datastoreproperties) (Required): Data Store for sources and sinks
 * **type**: 'Microsoft.HybridData/dataManagers/dataStores' (ReadOnly, DeployTimeConstant): The resource type
 
-## Sku
+## CustomerSecret
 ### Properties
-* **name**: string: The sku name. Required for data manager creation, optional for update.
-* **tier**: string: The sku tier. This is based on the SKU name.
+* **algorithm**: 'None' | 'PlainText' | 'RSA1_5' | 'RSA_OAEP' (Required): The encryption algorithm used to encrypt data.
+* **keyIdentifier**: string (Required): The identifier to the data service input object which this secret corresponds to.
+* **keyValue**: string (Required): It contains the encrypted customer secret.
 
-## ResourceTags
+## DataStoreProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **customerSecrets**: [CustomerSecret](#customersecret)[]: List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
+* **dataStoreTypeId**: string (Required): The arm id of the data store type.
+* **extendedProperties**: any: Any object
+* **repositoryId**: string: Arm Id for the manager resource to which the data source is associated. This is optional.
+* **state**: 'Disabled' | 'Enabled' | 'Supported' (Required): State of the data service.
 
 ## JobDefinitionProperties
 ### Properties
@@ -55,22 +59,18 @@ region is specified on update the request will succeed.
 * **state**: 'Disabled' | 'Enabled' | 'Supported' (Required): State of the data service.
 * **userConfirmation**: 'NotRequired' | 'Required': Enum to detect if user confirmation is required. If not passed will default to NotRequired.
 
-## CustomerSecret
+## ResourceTags
 ### Properties
-* **algorithm**: 'None' | 'PlainText' | 'RSA1_5' | 'RSA_OAEP' (Required): The encryption algorithm used to encrypt data.
-* **keyIdentifier**: string (Required): The identifier to the data service input object which this secret corresponds to.
-* **keyValue**: string (Required): It contains the encrypted customer secret.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Schedule
 ### Properties
 * **name**: string: Name of the schedule.
 * **policyList**: string[]: A list of repetition intervals in ISO 8601 format.
 
-## DataStoreProperties
+## Sku
 ### Properties
-* **customerSecrets**: [CustomerSecret](#customersecret)[]: List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
-* **dataStoreTypeId**: string (Required): The arm id of the data store type.
-* **extendedProperties**: any: Any object
-* **repositoryId**: string: Arm Id for the manager resource to which the data source is associated. This is optional.
-* **state**: 'Disabled' | 'Enabled' | 'Supported' (Required): State of the data service.
+* **name**: string: The sku name. Required for data manager creation, optional for update.
+* **tier**: string: The sku tier. This is based on the SKU name.
 

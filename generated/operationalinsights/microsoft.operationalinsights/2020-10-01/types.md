@@ -25,22 +25,17 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Identity
+## AssociatedWorkspace
 ### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required): Type of managed service identity.
-* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **associateDate**: string (ReadOnly): The time of workspace association.
+* **resourceId**: string (ReadOnly): The ResourceId id the assigned workspace.
+* **workspaceId**: string (ReadOnly): The id of the assigned workspace.
+* **workspaceName**: string (ReadOnly): The name id the assigned workspace.
 
-## IdentityUserAssignedIdentities
+## CapacityReservationProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
-
-## UserIdentityProperties
-### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+* **lastSkuUpdate**: string (ReadOnly): The last time Sku was updated.
+* **minCapacity**: int (ReadOnly): Minimum CapacityReservation value in GB.
 
 ## ClusterProperties
 ### Properties
@@ -55,17 +50,22 @@
 * **lastModifiedDate**: string (ReadOnly): The last time the cluster was updated.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the cluster.
 
-## AssociatedWorkspace
+## ClusterSku
 ### Properties
-* **associateDate**: string (ReadOnly): The time of workspace association.
-* **resourceId**: string (ReadOnly): The ResourceId id the assigned workspace.
-* **workspaceId**: string (ReadOnly): The id of the assigned workspace.
-* **workspaceName**: string (ReadOnly): The name id the assigned workspace.
+* **capacity**: int: The capacity value
+* **name**: 'CapacityReservation' | string: The name of the SKU.
 
-## CapacityReservationProperties
+## Identity
 ### Properties
-* **lastSkuUpdate**: string (ReadOnly): The last time Sku was updated.
-* **minCapacity**: int (ReadOnly): Minimum CapacityReservation value in GB.
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required): Type of managed service identity.
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+
+## IdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
 
 ## KeyVaultProperties
 ### Properties
@@ -74,15 +74,41 @@
 * **keyVaultUri**: string: The Key Vault uri which holds they key associated with the Log Analytics cluster.
 * **keyVersion**: string: The version of the key associated with the Log Analytics cluster.
 
-## ClusterSku
+## PrivateLinkScopedResource
 ### Properties
-* **capacity**: int: The capacity value
-* **name**: 'CapacityReservation' | string: The name of the SKU.
+* **resourceId**: string: The full resource Id of the private link scope resource.
+* **scopeId**: string: The private link scope unique Identifier.
 
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## UserIdentityProperties
+### Properties
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+
+## WorkspaceCapping
+### Properties
+* **dailyQuotaGb**: int: The workspace daily quota for ingestion.
+* **dataIngestionStatus**: 'ApproachingQuota' | 'ForceOff' | 'ForceOn' | 'OverQuota' | 'RespectQuota' | 'SubscriptionSuspended' | string (ReadOnly): The status of data ingestion for this workspace.
+* **quotaNextResetTime**: string (ReadOnly): The time when the quota will be rest.
+
+## WorkspaceFeatures
+### Properties
+* **clusterResourceId**: string: Dedicated LA cluster resourceId that is linked to the workspaces.
+* **disableLocalAuth**: bool: Disable Non-AAD based Auth.
+* **enableDataExport**: bool: Flag that indicate if data should be exported.
+* **enableLogAccessUsingOnlyResourcePermissions**: bool: Flag that indicate which permission to use - resource or workspace or both.
+* **immediatePurgeDataOn30Days**: bool: Flag that describes if we want to remove the data after 30 days.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## WorkspaceProperties
 ### Properties
@@ -99,35 +125,9 @@
 * **sku**: [WorkspaceSku](#workspacesku): The SKU (tier) of a workspace.
 * **workspaceCapping**: [WorkspaceCapping](#workspacecapping): The daily volume cap for ingestion.
 
-## WorkspaceFeatures
-### Properties
-* **clusterResourceId**: string: Dedicated LA cluster resourceId that is linked to the workspaces.
-* **disableLocalAuth**: bool: Disable Non-AAD based Auth.
-* **enableDataExport**: bool: Flag that indicate if data should be exported.
-* **enableLogAccessUsingOnlyResourcePermissions**: bool: Flag that indicate which permission to use - resource or workspace or both.
-* **immediatePurgeDataOn30Days**: bool: Flag that describes if we want to remove the data after 30 days.
-### Additional Properties
-* **Additional Properties Type**: any
-
-## PrivateLinkScopedResource
-### Properties
-* **resourceId**: string: The full resource Id of the private link scope resource.
-* **scopeId**: string: The private link scope unique Identifier.
-
 ## WorkspaceSku
 ### Properties
 * **capacityReservationLevel**: int: The capacity reservation level for this workspace, when CapacityReservation sku is selected.
 * **lastSkuUpdate**: string (ReadOnly): The last time when the sku was updated.
 * **name**: 'CapacityReservation' | 'Free' | 'LACluster' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' | string (Required): The name of the SKU.
-
-## WorkspaceCapping
-### Properties
-* **dailyQuotaGb**: int: The workspace daily quota for ingestion.
-* **dataIngestionStatus**: 'ApproachingQuota' | 'ForceOff' | 'ForceOn' | 'OverQuota' | 'RespectQuota' | 'SubscriptionSuspended' | string (ReadOnly): The status of data ingestion for this workspace.
-* **quotaNextResetTime**: string (ReadOnly): The time when the quota will be rest.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

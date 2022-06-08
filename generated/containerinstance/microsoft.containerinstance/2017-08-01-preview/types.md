@@ -11,6 +11,26 @@
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## AzureFileVolume
+### Properties
+* **readOnly**: bool: The flag indicating whether the Azure File shared mounted as a volume is read-only.
+* **shareName**: string (Required): The name of the Azure File share to be mounted as a volume.
+* **storageAccountKey**: string: The storage account access key used to access the Azure File share.
+* **storageAccountName**: string (Required): The name of the storage account that contains the Azure File share.
+
+## Container
+### Properties
+* **name**: string (Required): The user-provided name of the container instance.
+* **properties**: [ContainerProperties](#containerproperties) (Required): The container instance properties.
+
+## ContainerEvent
+### Properties
+* **count**: int: The count of the event.
+* **firstTimestamp**: string: The date-time of the earliest logged event.
+* **lastTimestamp**: string: The date-time of the latest logged event.
+* **message**: string: The event message.
+* **type**: string: The event type.
+
 ## ContainerGroupProperties
 ### Properties
 * **containers**: [Container](#container)[] (Required): The containers within the container group.
@@ -22,10 +42,9 @@
 * **state**: string (ReadOnly): The current state of the container group. This is only valid for the response.
 * **volumes**: [Volume](#volume)[]: The list of volumes that can be mounted by containers in this container group.
 
-## Container
+## ContainerPort
 ### Properties
-* **name**: string (Required): The user-provided name of the container instance.
-* **properties**: [ContainerProperties](#containerproperties) (Required): The container instance properties.
+* **port**: int (Required): The port number exposed within the container group.
 
 ## ContainerProperties
 ### Properties
@@ -36,11 +55,6 @@
 * **ports**: [ContainerPort](#containerport)[]: The exposed ports on the container instance.
 * **resources**: [ResourceRequirements](#resourcerequirements) (Required): The resource requirements.
 * **volumeMounts**: [VolumeMount](#volumemount)[]: The volume mounts available to the container instance.
-
-## EnvironmentVariable
-### Properties
-* **name**: string (Required): The name of the environment variable.
-* **value**: string (Required): The value of the environment variable.
 
 ## ContainerPropertiesInstanceView
 ### Properties
@@ -57,38 +71,10 @@
 * **startTime**: string: The date-time when the container instance state started.
 * **state**: string: The state of the container instance.
 
-## ContainerEvent
+## EnvironmentVariable
 ### Properties
-* **count**: int: The count of the event.
-* **firstTimestamp**: string: The date-time of the earliest logged event.
-* **lastTimestamp**: string: The date-time of the latest logged event.
-* **message**: string: The event message.
-* **type**: string: The event type.
-
-## ContainerPort
-### Properties
-* **port**: int (Required): The port number exposed within the container group.
-
-## ResourceRequirements
-### Properties
-* **limits**: [ResourceLimits](#resourcelimits): The resource limits.
-* **requests**: [ResourceRequests](#resourcerequests) (Required): The resource requests.
-
-## ResourceLimits
-### Properties
-* **cpu**: int: The CPU limit of this container instance.
-* **memoryInGB**: int: The memory limit in GB of this container instance.
-
-## ResourceRequests
-### Properties
-* **cpu**: int (Required): The CPU request of this container instance.
-* **memoryInGB**: int (Required): The memory request in GB of this container instance.
-
-## VolumeMount
-### Properties
-* **mountPath**: string (Required): The path within the container where the volume should be mounted. Must not contain colon (:).
-* **name**: string (Required): The name of the volume mount.
-* **readOnly**: bool: The flag indicating whether the volume mount is read-only.
+* **name**: string (Required): The name of the environment variable.
+* **value**: string (Required): The value of the environment variable.
 
 ## ImageRegistryCredential
 ### Properties
@@ -107,20 +93,34 @@
 * **port**: int (Required): The port number.
 * **protocol**: 'TCP' | 'UDP' | string: The protocol associated with the port.
 
-## Volume
+## ResourceLimits
 ### Properties
-* **azureFile**: [AzureFileVolume](#azurefilevolume) (Required): The properties of the Azure File volume. Azure File shares are mounted as volumes.
-* **name**: string (Required): The name of the volume.
+* **cpu**: int: The CPU limit of this container instance.
+* **memoryInGB**: int: The memory limit in GB of this container instance.
 
-## AzureFileVolume
+## ResourceRequests
 ### Properties
-* **readOnly**: bool: The flag indicating whether the Azure File shared mounted as a volume is read-only.
-* **shareName**: string (Required): The name of the Azure File share to be mounted as a volume.
-* **storageAccountKey**: string: The storage account access key used to access the Azure File share.
-* **storageAccountName**: string (Required): The name of the storage account that contains the Azure File share.
+* **cpu**: int (Required): The CPU request of this container instance.
+* **memoryInGB**: int (Required): The memory request in GB of this container instance.
+
+## ResourceRequirements
+### Properties
+* **limits**: [ResourceLimits](#resourcelimits): The resource limits.
+* **requests**: [ResourceRequests](#resourcerequests) (Required): The resource requests.
 
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Volume
+### Properties
+* **azureFile**: [AzureFileVolume](#azurefilevolume) (Required): The properties of the Azure File volume. Azure File shares are mounted as volumes.
+* **name**: string (Required): The name of the volume.
+
+## VolumeMount
+### Properties
+* **mountPath**: string (Required): The path within the container where the volume should be mounted. Must not contain colon (:).
+* **name**: string (Required): The name of the volume mount.
+* **readOnly**: bool: The flag indicating whether the volume mount is read-only.
 

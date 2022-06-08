@@ -33,6 +33,35 @@
 * **name**: string (Required): the name of the alert rule.
 * **provisioningState**: string: the provisioning state.
 
+## LogProfileProperties
+### Properties
+* **categories**: string[] (Required): the categories of the logs. These categories are created as is convenient to the user. Some values are: 'Write', 'Delete', and/or 'Action.'
+* **locations**: string[] (Required): List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the 'global' location.
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy) (Required): Specifies the retention policy for the log.
+* **serviceBusRuleId**: string: The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: '{service bus resource ID}/authorizationrules/{key name}'.
+* **storageAccountId**: string: the resource id of the storage account to which you would like to send the Activity Log.
+
+## ManagementEventAggregationCondition
+### Properties
+* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': Operators allowed in the rule condition.
+* **threshold**: int: The threshold value that activates the alert.
+* **windowSize**: string: the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RetentionPolicy
+### Properties
+* **days**: int (Required): the number of days for the retention in days. A value of 0 will retain the events indefinitely.
+* **enabled**: bool (Required): a value indicating whether the retention policy is enabled.
+
 ## RuleAction
 * **Discriminator**: odata.type
 
@@ -49,11 +78,6 @@
 * **properties**: [RuleWebhookActionProperties](#rulewebhookactionproperties): the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
 * **serviceUri**: string: the service uri to Post the notification when the alert activates or resolves.
 
-
-## RuleWebhookActionProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## RuleCondition
 * **Discriminator**: odata.type
@@ -111,31 +135,7 @@
 ### Properties
 * **emailAddress**: string: the email address.
 
-## ManagementEventAggregationCondition
-### Properties
-* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': Operators allowed in the rule condition.
-* **threshold**: int: The threshold value that activates the alert.
-* **windowSize**: string: the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## LogProfileProperties
-### Properties
-* **categories**: string[] (Required): the categories of the logs. These categories are created as is convenient to the user. Some values are: 'Write', 'Delete', and/or 'Action.'
-* **locations**: string[] (Required): List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the 'global' location.
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy) (Required): Specifies the retention policy for the log.
-* **serviceBusRuleId**: string: The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: '{service bus resource ID}/authorizationrules/{key name}'.
-* **storageAccountId**: string: the resource id of the storage account to which you would like to send the Activity Log.
-
-## RetentionPolicy
-### Properties
-* **days**: int (Required): the number of days for the retention in days. A value of 0 will retain the events indefinitely.
-* **enabled**: bool (Required): a value indicating whether the retention policy is enabled.
-
-## ResourceTags
+## RuleWebhookActionProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

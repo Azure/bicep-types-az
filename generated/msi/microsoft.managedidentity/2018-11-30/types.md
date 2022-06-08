@@ -11,14 +11,14 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ManagedIdentity/userAssignedIdentities' (ReadOnly, DeployTimeConstant): The resource type
 
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## UserAssignedIdentityProperties
 ### Properties
 * **clientId**: string (ReadOnly): The id of the app associated with the identity. This is a random generated UUID by MSI.
 * **principalId**: string (ReadOnly): The id of the service principal object associated with the created identity.
 * **tenantId**: string (ReadOnly): The id of the tenant which the identity belongs to.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

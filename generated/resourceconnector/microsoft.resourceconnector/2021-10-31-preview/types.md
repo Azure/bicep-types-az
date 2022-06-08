@@ -18,11 +18,15 @@
 * **ApiVersion**: 2021-10-31-preview
 * **Output**: [ApplianceListCredentialResults](#appliancelistcredentialresults)
 
-## Identity
+## ApplianceCredentialKubeconfig
 ### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' | string: The identity type.
+* **name**: 'clusterUser' | string (ReadOnly): Name which contains the role of the kubeconfig.
+* **value**: string (ReadOnly): Contains the kubeconfig value.
+
+## ApplianceListCredentialResults
+### Properties
+* **hybridConnectionConfig**: [HybridConnectionConfig](#hybridconnectionconfig) (ReadOnly): Contains the REP (rendezvous endpoint) and “Listener” access token from notification service (NS).
+* **kubeconfigs**: [ApplianceCredentialKubeconfig](#appliancecredentialkubeconfig)[] (ReadOnly): The list of appliance kubeconfigs.
 
 ## ApplianceProperties
 ### Properties
@@ -37,6 +41,19 @@
 ### Properties
 * **provider**: 'HCI' | 'SCVMM' | 'VMWare' | string: Information about the connected appliance.
 
+## HybridConnectionConfig
+### Properties
+* **expirationTime**: int (ReadOnly): Timestamp when this token will be expired.
+* **hybridConnectionName**: string (ReadOnly): Name of the connection
+* **relay**: string (ReadOnly): Name of the notification service.
+* **token**: string (ReadOnly): Listener access token
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'None' | 'SystemAssigned' | string: The identity type.
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -50,21 +67,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## ApplianceListCredentialResults
-### Properties
-* **hybridConnectionConfig**: [HybridConnectionConfig](#hybridconnectionconfig) (ReadOnly): Contains the REP (rendezvous endpoint) and “Listener” access token from notification service (NS).
-* **kubeconfigs**: [ApplianceCredentialKubeconfig](#appliancecredentialkubeconfig)[] (ReadOnly): The list of appliance kubeconfigs.
-
-## HybridConnectionConfig
-### Properties
-* **expirationTime**: int (ReadOnly): Timestamp when this token will be expired.
-* **hybridConnectionName**: string (ReadOnly): Name of the connection
-* **relay**: string (ReadOnly): Name of the notification service.
-* **token**: string (ReadOnly): Listener access token
-
-## ApplianceCredentialKubeconfig
-### Properties
-* **name**: 'clusterUser' | string (ReadOnly): Name which contains the role of the kubeconfig.
-* **value**: string (ReadOnly): Contains the kubeconfig value.
 

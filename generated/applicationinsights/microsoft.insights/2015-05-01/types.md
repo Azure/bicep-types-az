@@ -145,6 +145,21 @@
 * **tags**: [WorkbookResourceTags](#workbookresourcetags): Resource tags
 * **type**: 'microsoft.insights/workbooks' (ReadOnly, DeployTimeConstant): The resource type
 
+## ApplicationInsightsComponentAnalyticsItemProperties
+### Properties
+* **functionAlias**: string: A function alias, used when the type of the item is Function
+
+## ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions
+### Properties
+* **Description**: string: The rule description
+* **DisplayName**: string: The rule name as it is displayed in UI
+* **HelpUrl**: string: URL which displays additional info about the proactive detection rule
+* **IsEnabledByDefault**: bool: A flag indicating whether the rule is enabled by default
+* **IsHidden**: bool: A flag indicating whether the rule is hidden (from the UI)
+* **IsInPreview**: bool: A flag indicating whether the rule is in preview
+* **Name**: string: The rule name
+* **SupportsEmailNotifications**: bool: A flag indicating whether email notifications are supported for detections for this rule
+
 ## ApplicationInsightsComponentProperties
 ### Properties
 * **AppId**: string (ReadOnly): Application Insights Unique ID for your Application.
@@ -166,30 +181,10 @@
 * **SamplingPercentage**: int: Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.
 * **TenantId**: string (ReadOnly): Azure Tenant Id.
 
-## PrivateLinkScopedResource
-### Properties
-* **ResourceId**: string: The full resource Id of the private link scope resource.
-* **ScopeId**: string: The private link scope unique Identifier.
-
 ## ComponentsResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## ApplicationInsightsComponentAnalyticsItemProperties
-### Properties
-* **functionAlias**: string: A function alias, used when the type of the item is Function
-
-## ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions
-### Properties
-* **Description**: string: The rule description
-* **DisplayName**: string: The rule name as it is displayed in UI
-* **HelpUrl**: string: URL which displays additional info about the proactive detection rule
-* **IsEnabledByDefault**: bool: A flag indicating whether the rule is enabled by default
-* **IsHidden**: bool: A flag indicating whether the rule is hidden (from the UI)
-* **IsInPreview**: bool: A flag indicating whether the rule is in preview
-* **Name**: string: The rule name
-* **SupportsEmailNotifications**: bool: A flag indicating whether email notifications are supported for detections for this rule
 
 ## MyWorkbookProperties
 ### Properties
@@ -206,6 +201,15 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## PrivateLinkScopedResource
+### Properties
+* **ResourceId**: string: The full resource Id of the private link scope resource.
+* **ScopeId**: string: The private link scope unique Identifier.
+
+## WebTestGeolocation
+### Properties
+* **Id**: string: Location ID for the webtest to run from.
 
 ## WebTestProperties
 ### Properties
@@ -224,10 +228,6 @@
 ## WebTestPropertiesConfiguration
 ### Properties
 * **WebTest**: string: The XML specification of a WebTest to run against an application.
-
-## WebTestGeolocation
-### Properties
-* **Id**: string: Location ID for the webtest to run from.
 
 ## WebtestsResourceTags
 ### Properties

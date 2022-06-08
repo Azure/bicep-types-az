@@ -31,7 +31,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceListResult
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'OperationResultsDescription-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityandcompliance/resource-manager/Microsoft.SecurityAndCompliance/stable/2021-01-11/common-types.json#/components/schemas/OperationResultsDescription-properties
-info    | autorest.bicep took 14ms
+info    | autorest.bicep took 16ms
 info    | Processing batch task - {"tag":"microsoft.securityandcompliance-2021-03-08"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -59,5 +59,5 @@ warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceListResult
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'OperationResultsDescription-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityandcompliance/resource-manager/Microsoft.SecurityAndCompliance/stable/2021-03-08/common-types.json#/components/schemas/OperationResultsDescription-properties
-info    | autorest.bicep took 8ms
-info    | Autorest completed in 11.72s. 4 files generated.
+info    | autorest.bicep took 6ms
+info    | Autorest completed in 11.64s. 4 files generated.

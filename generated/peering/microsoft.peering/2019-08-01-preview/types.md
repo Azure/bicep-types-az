@@ -42,17 +42,49 @@
 * **properties**: [PeeringServicePrefixProperties](#peeringserviceprefixproperties): The peering service prefix properties class.
 * **type**: 'Microsoft.Peering/peeringServices/prefixes' (ReadOnly, DeployTimeConstant): The resource type
 
+## BgpSession
+### Properties
+* **maxPrefixesAdvertisedV4**: int: The maximum number of prefixes advertised over the IPv4 session.
+* **maxPrefixesAdvertisedV6**: int: The maximum number of prefixes advertised over the IPv6 session.
+* **md5AuthenticationKey**: string: The MD5 authentication key of the session.
+* **microsoftSessionIPv4Address**: string (ReadOnly): The IPv4 session address on Microsoft's end.
+* **microsoftSessionIPv6Address**: string (ReadOnly): The IPv6 session address on Microsoft's end.
+* **peerSessionIPv4Address**: string: The IPv4 session address on peer's end.
+* **peerSessionIPv6Address**: string: The IPv6 session address on peer's end.
+* **sessionPrefixV4**: string: The IPv4 prefix that contains both ends' IPv4 addresses.
+* **sessionPrefixV6**: string: The IPv6 prefix that contains both ends' IPv6 addresses.
+* **sessionStateV4**: 'Active' | 'Connect' | 'Established' | 'Idle' | 'None' | 'OpenConfirm' | 'OpenReceived' | 'OpenSent' | 'PendingAdd' | 'PendingRemove' | 'PendingUpdate' | string (ReadOnly): The state of the IPv4 session.
+* **sessionStateV6**: 'Active' | 'Connect' | 'Established' | 'Idle' | 'None' | 'OpenConfirm' | 'OpenReceived' | 'OpenSent' | 'PendingAdd' | 'PendingRemove' | 'PendingUpdate' | string (ReadOnly): The state of the IPv6 session.
+
+## ContactInfo
+### Properties
+* **emails**: string[]: The list of email addresses.
+* **phone**: string[]: The list of contact numbers.
+
+## DirectConnection
+### Properties
+* **bandwidthInMbps**: int: The bandwidth of the connection.
+* **bgpSession**: [BgpSession](#bgpsession): The properties that define a BGP session.
+* **connectionIdentifier**: string: The unique identifier (GUID) for the connection.
+* **connectionState**: 'Active' | 'Approved' | 'None' | 'PendingApproval' | 'ProvisioningCompleted' | 'ProvisioningFailed' | 'ProvisioningStarted' | 'Validating' | string (ReadOnly): The state of the connection.
+* **peeringDBFacilityId**: int: The PeeringDB.com ID of the facility at which the connection has to be set up.
+* **provisionedBandwidthInMbps**: int: The bandwidth that is actually provisioned.
+* **sessionAddressProvider**: 'Microsoft' | 'Peer' | string: The field indicating if Microsoft provides session ip addresses.
+* **useForPeeringService**: bool: The flag that indicates whether or not the connection is used for peering service.
+
+## ExchangeConnection
+### Properties
+* **bgpSession**: [BgpSession](#bgpsession): The properties that define a BGP session.
+* **connectionIdentifier**: string: The unique identifier (GUID) for the connection.
+* **connectionState**: 'Active' | 'Approved' | 'None' | 'PendingApproval' | 'ProvisioningCompleted' | 'ProvisioningFailed' | 'ProvisioningStarted' | 'Validating' | string (ReadOnly): The state of the connection.
+* **peeringDBFacilityId**: int: The PeeringDB.com ID of the facility at which the connection has to be set up.
+
 ## PeerAsnProperties
 ### Properties
 * **peerAsn**: int: The Autonomous System Number (ASN) of the peer.
 * **peerContactInfo**: [ContactInfo](#contactinfo): The contact information of the peer.
 * **peerName**: string: The name of the peer.
 * **validationState**: 'Approved' | 'Failed' | 'None' | 'Pending' | string: The validation state of the ASN associated with the peer.
-
-## ContactInfo
-### Properties
-* **emails**: string[]: The list of email addresses.
-* **phone**: string[]: The list of contact numbers.
 
 ## PeeringProperties
 ### Properties
@@ -68,46 +100,28 @@
 * **peerAsn**: [SubResource](#subresource): The sub resource.
 * **useForPeeringService**: bool: The flag that indicates whether or not the peering is used for peering service.
 
-## DirectConnection
-### Properties
-* **bandwidthInMbps**: int: The bandwidth of the connection.
-* **bgpSession**: [BgpSession](#bgpsession): The properties that define a BGP session.
-* **connectionIdentifier**: string: The unique identifier (GUID) for the connection.
-* **connectionState**: 'Active' | 'Approved' | 'None' | 'PendingApproval' | 'ProvisioningCompleted' | 'ProvisioningFailed' | 'ProvisioningStarted' | 'Validating' | string (ReadOnly): The state of the connection.
-* **peeringDBFacilityId**: int: The PeeringDB.com ID of the facility at which the connection has to be set up.
-* **provisionedBandwidthInMbps**: int: The bandwidth that is actually provisioned.
-* **sessionAddressProvider**: 'Microsoft' | 'Peer' | string: The field indicating if Microsoft provides session ip addresses.
-* **useForPeeringService**: bool: The flag that indicates whether or not the connection is used for peering service.
-
-## BgpSession
-### Properties
-* **maxPrefixesAdvertisedV4**: int: The maximum number of prefixes advertised over the IPv4 session.
-* **maxPrefixesAdvertisedV6**: int: The maximum number of prefixes advertised over the IPv6 session.
-* **md5AuthenticationKey**: string: The MD5 authentication key of the session.
-* **microsoftSessionIPv4Address**: string (ReadOnly): The IPv4 session address on Microsoft's end.
-* **microsoftSessionIPv6Address**: string (ReadOnly): The IPv6 session address on Microsoft's end.
-* **peerSessionIPv4Address**: string: The IPv4 session address on peer's end.
-* **peerSessionIPv6Address**: string: The IPv6 session address on peer's end.
-* **sessionPrefixV4**: string: The IPv4 prefix that contains both ends' IPv4 addresses.
-* **sessionPrefixV6**: string: The IPv6 prefix that contains both ends' IPv6 addresses.
-* **sessionStateV4**: 'Active' | 'Connect' | 'Established' | 'Idle' | 'None' | 'OpenConfirm' | 'OpenReceived' | 'OpenSent' | 'PendingAdd' | 'PendingRemove' | 'PendingUpdate' | string (ReadOnly): The state of the IPv4 session.
-* **sessionStateV6**: 'Active' | 'Connect' | 'Established' | 'Idle' | 'None' | 'OpenConfirm' | 'OpenReceived' | 'OpenSent' | 'PendingAdd' | 'PendingRemove' | 'PendingUpdate' | string (ReadOnly): The state of the IPv6 session.
-
-## SubResource
-### Properties
-* **id**: string: The identifier of the referenced resource.
-
 ## PeeringPropertiesExchange
 ### Properties
 * **connections**: [ExchangeConnection](#exchangeconnection)[]: The set of connections that constitute an exchange peering.
 * **peerAsn**: [SubResource](#subresource): The sub resource.
 
-## ExchangeConnection
+## PeeringServicePrefixProperties
 ### Properties
-* **bgpSession**: [BgpSession](#bgpsession): The properties that define a BGP session.
-* **connectionIdentifier**: string: The unique identifier (GUID) for the connection.
-* **connectionState**: 'Active' | 'Approved' | 'None' | 'PendingApproval' | 'ProvisioningCompleted' | 'ProvisioningFailed' | 'ProvisioningStarted' | 'Validating' | string (ReadOnly): The state of the connection.
-* **peeringDBFacilityId**: int: The PeeringDB.com ID of the facility at which the connection has to be set up.
+* **learnedType**: 'None' | 'ViaPartner' | 'ViaSession' | string: The prefix learned type
+* **prefix**: string: Valid route prefix
+* **prefixValidationState**: 'Failed' | 'Invalid' | 'None' | 'Pending' | 'Unknown' | 'Verified' | string: The prefix validation state
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
+
+## PeeringServiceProperties
+### Properties
+* **peeringServiceLocation**: string: The PeeringServiceLocation of the Customer.
+* **peeringServiceProvider**: string: The MAPS Provider Name.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
+
+## PeeringServiceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## PeeringSku
 ### Properties
@@ -121,21 +135,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## PeeringServiceProperties
+## SubResource
 ### Properties
-* **peeringServiceLocation**: string: The PeeringServiceLocation of the Customer.
-* **peeringServiceProvider**: string: The MAPS Provider Name.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
-
-## PeeringServiceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## PeeringServicePrefixProperties
-### Properties
-* **learnedType**: 'None' | 'ViaPartner' | 'ViaSession' | string: The prefix learned type
-* **prefix**: string: Valid route prefix
-* **prefixValidationState**: 'Failed' | 'Invalid' | 'None' | 'Pending' | 'Unknown' | 'Verified' | string: The prefix validation state
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
+* **id**: string: The identifier of the referenced resource.
 

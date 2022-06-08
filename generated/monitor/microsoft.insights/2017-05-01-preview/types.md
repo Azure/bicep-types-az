@@ -26,15 +26,15 @@
 * **enabled**: bool (Required): a value indicating whether this log is enabled.
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Specifies the retention policy for the log.
 
-## RetentionPolicy
-### Properties
-* **days**: int (Required): the number of days for the retention in days. A value of 0 will retain the events indefinitely.
-* **enabled**: bool (Required): a value indicating whether the retention policy is enabled.
-
 ## MetricSettings
 ### Properties
 * **category**: string: Name of a Diagnostic Metric category for a resource type this setting is applied to. To obtain the list of Diagnostic metric categories for a resource, first perform a GET diagnostic settings operation.
 * **enabled**: bool (Required): a value indicating whether this category is enabled.
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Specifies the retention policy for the log.
 * **timeGrain**: string: the timegrain of the metric in ISO8601 format.
+
+## RetentionPolicy
+### Properties
+* **days**: int (Required): the number of days for the retention in days. A value of 0 will retain the events indefinitely.
+* **enabled**: bool (Required): a value indicating whether the retention policy is enabled.
 

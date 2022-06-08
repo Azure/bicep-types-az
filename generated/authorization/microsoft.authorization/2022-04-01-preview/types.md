@@ -18,27 +18,6 @@
 * **properties**: [RoleEligibilityScheduleRequestProperties](#roleeligibilityschedulerequestproperties): Role eligibility schedule request properties with scope.
 * **type**: 'Microsoft.Authorization/roleEligibilityScheduleRequests' (ReadOnly, DeployTimeConstant): The resource type
 
-## RoleAssignmentScheduleRequestProperties
-### Properties
-* **approvalId**: string (ReadOnly): The approvalId of the role assignment schedule request.
-* **condition**: string: The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
-* **conditionVersion**: string: Version of the condition. Currently accepted value is '2.0'
-* **createdOn**: string (ReadOnly): DateTime when role assignment schedule request was created
-* **expandedProperties**: [ExpandedProperties](#expandedproperties) (ReadOnly): Expanded info of resource, role and principal
-* **justification**: string: Justification for the role assignment
-* **linkedRoleEligibilityScheduleId**: string: The linked role eligibility schedule id - to activate an eligibility.
-* **principalId**: string (Required): The principal ID.
-* **principalType**: 'Device' | 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User' | string (ReadOnly): The principal type of the assigned principal ID.
-* **requestorId**: string (ReadOnly): Id of the user who created this request
-* **requestType**: 'AdminAssign' | 'AdminExtend' | 'AdminRemove' | 'AdminRenew' | 'AdminUpdate' | 'SelfActivate' | 'SelfDeactivate' | 'SelfExtend' | 'SelfRenew' | string (Required): The type of the role assignment schedule request. Eg: SelfActivate, AdminAssign etc
-* **roleDefinitionId**: string (Required): The role definition ID.
-* **scheduleInfo**: [RoleAssignmentScheduleRequestPropertiesScheduleInfo](#roleassignmentschedulerequestpropertiesscheduleinfo): Schedule info of the role assignment schedule
-* **scope**: string (ReadOnly): The role assignment schedule request scope.
-* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' | string (ReadOnly): The status of the role assignment schedule request.
-* **targetRoleAssignmentScheduleId**: string: The resultant role assignment schedule id or the role assignment schedule id being updated
-* **targetRoleAssignmentScheduleInstanceId**: string: The role assignment schedule instance id being updated
-* **ticketInfo**: [RoleAssignmentScheduleRequestPropertiesTicketInfo](#roleassignmentschedulerequestpropertiesticketinfo): Ticket Info of the role assignment
-
 ## ExpandedProperties
 ### Properties
 * **principal**: [ExpandedPropertiesPrincipal](#expandedpropertiesprincipal): Details of the principal
@@ -63,6 +42,27 @@
 * **displayName**: string: Display name of the resource
 * **id**: string: Scope id of the resource
 * **type**: string: Type of the resource
+
+## RoleAssignmentScheduleRequestProperties
+### Properties
+* **approvalId**: string (ReadOnly): The approvalId of the role assignment schedule request.
+* **condition**: string: The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
+* **conditionVersion**: string: Version of the condition. Currently accepted value is '2.0'
+* **createdOn**: string (ReadOnly): DateTime when role assignment schedule request was created
+* **expandedProperties**: [ExpandedProperties](#expandedproperties) (ReadOnly): Expanded info of resource, role and principal
+* **justification**: string: Justification for the role assignment
+* **linkedRoleEligibilityScheduleId**: string: The linked role eligibility schedule id - to activate an eligibility.
+* **principalId**: string (Required): The principal ID.
+* **principalType**: 'Device' | 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User' | string (ReadOnly): The principal type of the assigned principal ID.
+* **requestorId**: string (ReadOnly): Id of the user who created this request
+* **requestType**: 'AdminAssign' | 'AdminExtend' | 'AdminRemove' | 'AdminRenew' | 'AdminUpdate' | 'SelfActivate' | 'SelfDeactivate' | 'SelfExtend' | 'SelfRenew' | string (Required): The type of the role assignment schedule request. Eg: SelfActivate, AdminAssign etc
+* **roleDefinitionId**: string (Required): The role definition ID.
+* **scheduleInfo**: [RoleAssignmentScheduleRequestPropertiesScheduleInfo](#roleassignmentschedulerequestpropertiesscheduleinfo): Schedule info of the role assignment schedule
+* **scope**: string (ReadOnly): The role assignment schedule request scope.
+* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' | string (ReadOnly): The status of the role assignment schedule request.
+* **targetRoleAssignmentScheduleId**: string: The resultant role assignment schedule id or the role assignment schedule id being updated
+* **targetRoleAssignmentScheduleInstanceId**: string: The role assignment schedule instance id being updated
+* **ticketInfo**: [RoleAssignmentScheduleRequestPropertiesTicketInfo](#roleassignmentschedulerequestpropertiesticketinfo): Ticket Info of the role assignment
 
 ## RoleAssignmentScheduleRequestPropertiesScheduleInfo
 ### Properties

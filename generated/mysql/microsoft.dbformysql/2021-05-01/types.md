@@ -34,6 +34,36 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Backup
+### Properties
+* **backupRetentionDays**: int: Backup retention days for the server.
+* **earliestRestoreDate**: string (ReadOnly): Earliest restore point creation time (ISO8601 format)
+* **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: Enum to indicate whether value is 'Enabled' or 'Disabled'
+
+## DatabaseProperties
+### Properties
+* **charset**: string: The charset of the database.
+* **collation**: string: The collation of the database.
+
+## DataEncryption
+### Properties
+* **geoBackupKeyUri**: string: Geo backup key uri as key vault can't cross region, need cmk in same region as geo backup
+* **geoBackupUserAssignedIdentityId**: string: Geo backup user identity resource id as identity can't cross region, need identity in same region as geo backup
+* **primaryKeyUri**: string: Primary key uri
+* **primaryUserAssignedIdentityId**: string: Primary user identity resource id
+* **type**: 'AzureKeyVault' | 'SystemManaged': The key type, AzureKeyVault for enable cmk, SystemManaged for disable cmk.
+
+## FirewallRuleProperties
+### Properties
+* **endIpAddress**: string (Required): The end IP address of the server firewall rule. Must be IPv4 format.
+* **startIpAddress**: string (Required): The start IP address of the server firewall rule. Must be IPv4 format.
+
+## HighAvailability
+### Properties
+* **mode**: 'Disabled' | 'SameZone' | 'ZoneRedundant' | string: High availability mode for a server.
+* **standbyAvailabilityZone**: string: Availability zone of the standby server.
+* **state**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | string (ReadOnly): The state of server high availability.
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): ObjectId from the KeyVault
@@ -45,6 +75,19 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## MaintenanceWindow
+### Properties
+* **customWindow**: string: indicates whether custom window is enabled or disabled
+* **dayOfWeek**: int: day of week for maintenance window
+* **startHour**: int: start hour for maintenance window
+* **startMinute**: int: start minute for maintenance window
+
+## Network
+### Properties
+* **delegatedSubnetResourceId**: string: Delegated subnet resource id used to setup vnet for a server.
+* **privateDnsZoneResourceId**: string: Private DNS zone resource id.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string (ReadOnly): Enum to indicate whether value is 'Enabled' or 'Disabled'
 
 ## ServerProperties
 ### Properties
@@ -66,38 +109,10 @@
 * **storage**: [Storage](#storage): Storage Profile properties of a server
 * **version**: '5.7' | '8.0.21' | string: The version of a server.
 
-## Backup
+## Sku
 ### Properties
-* **backupRetentionDays**: int: Backup retention days for the server.
-* **earliestRestoreDate**: string (ReadOnly): Earliest restore point creation time (ISO8601 format)
-* **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: Enum to indicate whether value is 'Enabled' or 'Disabled'
-
-## DataEncryption
-### Properties
-* **geoBackupKeyUri**: string: Geo backup key uri as key vault can't cross region, need cmk in same region as geo backup
-* **geoBackupUserAssignedIdentityId**: string: Geo backup user identity resource id as identity can't cross region, need identity in same region as geo backup
-* **primaryKeyUri**: string: Primary key uri
-* **primaryUserAssignedIdentityId**: string: Primary user identity resource id
-* **type**: 'AzureKeyVault' | 'SystemManaged': The key type, AzureKeyVault for enable cmk, SystemManaged for disable cmk.
-
-## HighAvailability
-### Properties
-* **mode**: 'Disabled' | 'SameZone' | 'ZoneRedundant' | string: High availability mode for a server.
-* **standbyAvailabilityZone**: string: Availability zone of the standby server.
-* **state**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | string (ReadOnly): The state of server high availability.
-
-## MaintenanceWindow
-### Properties
-* **customWindow**: string: indicates whether custom window is enabled or disabled
-* **dayOfWeek**: int: day of week for maintenance window
-* **startHour**: int: start hour for maintenance window
-* **startMinute**: int: start minute for maintenance window
-
-## Network
-### Properties
-* **delegatedSubnetResourceId**: string: Delegated subnet resource id used to setup vnet for a server.
-* **privateDnsZoneResourceId**: string: Private DNS zone resource id.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string (ReadOnly): Enum to indicate whether value is 'Enabled' or 'Disabled'
+* **name**: string (Required): The name of the sku, e.g. Standard_D32s_v3.
+* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' | string (Required): The tier of the particular SKU, e.g. GeneralPurpose.
 
 ## Storage
 ### Properties
@@ -105,11 +120,6 @@
 * **iops**: int: Storage IOPS for a server.
 * **storageSizeGB**: int: Max storage size allowed for a server.
 * **storageSku**: string (ReadOnly): The sku name of the server storage.
-
-## Sku
-### Properties
-* **name**: string (Required): The name of the sku, e.g. Standard_D32s_v3.
-* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' | string (Required): The tier of the particular SKU, e.g. GeneralPurpose.
 
 ## SystemData
 ### Properties
@@ -124,14 +134,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## DatabaseProperties
-### Properties
-* **charset**: string: The charset of the database.
-* **collation**: string: The collation of the database.
-
-## FirewallRuleProperties
-### Properties
-* **endIpAddress**: string (Required): The end IP address of the server firewall rule. Must be IPv4 format.
-* **startIpAddress**: string (Required): The start IP address of the server firewall rule. Must be IPv4 format.
 

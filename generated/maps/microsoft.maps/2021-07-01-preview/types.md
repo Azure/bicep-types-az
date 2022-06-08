@@ -31,6 +31,21 @@
 * **ApiVersion**: 2021-07-01-preview
 * **Output**: [MapsAccountKeys](#mapsaccountkeys)
 
+## Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties
+### Properties
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+
+## CreatorProperties
+### Properties
+* **provisioningState**: string (ReadOnly): The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
+* **storageUnits**: int (Required): The storage units to be allocated. Integer values from 1 to 100, inclusive.
+
+## LinkedResource
+### Properties
+* **id**: string (Required): ARM resource id in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/accounts/{storageName}'.
+* **uniqueName**: string (Required): A provided name which uniquely identifies the linked resource.
+
 ## ManagedServiceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -43,10 +58,12 @@
 ### Additional Properties
 * **Additional Properties Type**: [Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties](#components1jq1t4ischemasmanagedserviceidentitypropertiesuserassignedidentitiesadditionalproperties)
 
-## Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties
+## MapsAccountKeys
 ### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+* **primaryKey**: string (ReadOnly): The primary key for accessing the Maps REST APIs.
+* **primaryKeyLastUpdated**: string (ReadOnly): The last updated date and time of the primary key.
+* **secondaryKey**: string (ReadOnly): The secondary key for accessing the Maps REST APIs.
+* **secondaryKeyLastUpdated**: string (ReadOnly): The last updated date and time of the secondary key.
 
 ## MapsAccountProperties
 ### Properties
@@ -54,11 +71,6 @@
 * **linkedResources**: [LinkedResource](#linkedresource)[]: The array of associated resources to the Map account. Linked resource in the array cannot individually update, you must update all linked resources in the array together. These resources may be used on operations on the Azure Maps REST API. Access is controlled by the Map Account Managed Identity(s) permissions to those resource(s).
 * **provisioningState**: string (ReadOnly): The provisioning state of the Map account resource.
 * **uniqueId**: string (ReadOnly): A unique identifier for the maps account
-
-## LinkedResource
-### Properties
-* **id**: string (Required): ARM resource id in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/accounts/{storageName}'.
-* **uniqueName**: string (Required): A provided name which uniquely identifies the linked resource.
 
 ## Sku
 ### Properties
@@ -79,20 +91,8 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## CreatorProperties
-### Properties
-* **provisioningState**: string (ReadOnly): The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
-* **storageUnits**: int (Required): The storage units to be allocated. Integer values from 1 to 100, inclusive.
-
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## MapsAccountKeys
-### Properties
-* **primaryKey**: string (ReadOnly): The primary key for accessing the Maps REST APIs.
-* **primaryKeyLastUpdated**: string (ReadOnly): The last updated date and time of the primary key.
-* **secondaryKey**: string (ReadOnly): The secondary key for accessing the Maps REST APIs.
-* **secondaryKeyLastUpdated**: string (ReadOnly): The last updated date and time of the secondary key.
 

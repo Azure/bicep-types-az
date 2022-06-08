@@ -21,6 +21,21 @@
 * **properties**: [IscsiTargetCreateProperties](#iscsitargetcreateproperties) (Required): Properties for iSCSI target create or update request.
 * **type**: 'Microsoft.StoragePool/diskPools/iscsiTargets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Acl
+### Properties
+* **credentials**: [IscsiTargetCredentials](#iscsitargetcredentials) (WriteOnly): Challenge Handshake Authentication Protocol (CHAP) credentials for an iSCSI target ACL.
+* **initiatorIqn**: string (Required): iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".
+* **mappedLuns**: string[] (Required): List of LUN names mapped to the ACL.
+
+## Attributes
+### Properties
+* **authentication**: bool (Required): Indicates whether or not authentication is enabled on the ACL.
+* **prodModeWriteProtect**: bool (Required): Indicates whether or not write protect is enabled on the LUNs.
+
+## Disk
+### Properties
+* **id**: string (Required): Unique Azure Resource ID of the Managed Disk.
+
 ## DiskPoolCreateProperties
 ### Properties
 * **additionalCapabilities**: string[]: List of additional capabilities for a Disk pool.
@@ -31,9 +46,27 @@
 * **subnetId**: string (Required): Azure Resource ID of a Subnet for the Disk pool.
 * **tier**: 'Basic' | 'Premium' | 'Standard' | string (Required): SKU of the VM host part of the Disk pool deployment
 
-## Disk
+## DiskPoolCreateTags
 ### Properties
-* **id**: string (Required): Unique Azure Resource ID of the Managed Disk.
+### Additional Properties
+* **Additional Properties Type**: string
+
+## IscsiLun
+### Properties
+* **managedDiskAzureResourceId**: string (Required): Azure Resource ID of the Managed Disk.
+* **name**: string (Required): User defined name for iSCSI LUN; example: "lun0"
+
+## IscsiTargetCreateProperties
+### Properties
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the iSCSI target.
+* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' | string (ReadOnly): Operational status of the resource.
+* **targetIqn**: string: iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
+* **tpgs**: [TargetPortalGroupCreate](#targetportalgroupcreate)[] (Required): List of iSCSI target portal groups. Can have 1 portal group at most.
+
+## IscsiTargetCredentials
+### Properties
+* **password**: string (Required): Password for Challenge Handshake Authentication Protocol (CHAP) authentication.
+* **username**: string (Required): Username for Challenge Handshake Authentication Protocol (CHAP) authentication.
 
 ## SystemMetadata
 ### Properties
@@ -44,18 +77,6 @@
 * **lastModifiedBy**: string (ReadOnly): A string identifier for the identity that last modified the resource.
 * **lastModifiedByType**: string (ReadOnly): The type of identity that last modified the resource: user, application, managedIdentity.
 
-## DiskPoolCreateTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## IscsiTargetCreateProperties
-### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the iSCSI target.
-* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' | string (ReadOnly): Operational status of the resource.
-* **targetIqn**: string: iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
-* **tpgs**: [TargetPortalGroupCreate](#targetportalgroupcreate)[] (Required): List of iSCSI target portal groups. Can have 1 portal group at most.
-
 ## TargetPortalGroupCreate
 ### Properties
 * **acls**: [Acl](#acl)[] (Required): Access Control List (ACL) for an iSCSI target portal group.
@@ -64,25 +85,4 @@
 * **luns**: [IscsiLun](#iscsilun)[] (Required): List of LUNs to be exposed through the iSCSI target portal group.
 * **port**: int (ReadOnly): The port used by iSCSI target portal group.
 * **tag**: int (ReadOnly): The tag associated with the iSCSI target portal group.
-
-## Acl
-### Properties
-* **credentials**: [IscsiTargetCredentials](#iscsitargetcredentials) (WriteOnly): Challenge Handshake Authentication Protocol (CHAP) credentials for an iSCSI target ACL.
-* **initiatorIqn**: string (Required): iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".
-* **mappedLuns**: string[] (Required): List of LUN names mapped to the ACL.
-
-## IscsiTargetCredentials
-### Properties
-* **password**: string (Required): Password for Challenge Handshake Authentication Protocol (CHAP) authentication.
-* **username**: string (Required): Username for Challenge Handshake Authentication Protocol (CHAP) authentication.
-
-## Attributes
-### Properties
-* **authentication**: bool (Required): Indicates whether or not authentication is enabled on the ACL.
-* **prodModeWriteProtect**: bool (Required): Indicates whether or not write protect is enabled on the LUNs.
-
-## IscsiLun
-### Properties
-* **managedDiskAzureResourceId**: string (Required): Azure Resource ID of the Managed Disk.
-* **name**: string (Required): User defined name for iSCSI LUN; example: "lun0"
 

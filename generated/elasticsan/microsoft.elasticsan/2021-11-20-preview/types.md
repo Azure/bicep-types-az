@@ -49,10 +49,42 @@
 * **totalVolumeSizeGiB**: int (ReadOnly): Total size of the provisioned Volumes in GiB.
 * **volumeGroupCount**: int (ReadOnly): Total number of volume groups in this Elastic San appliance.
 
+## IscsiTargetInfo
+### Properties
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the iSCSI Target.
+* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' | string: Operational status of the resource.
+* **targetIqn**: string (ReadOnly): iSCSI Target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
+* **targetPortalHostname**: string (ReadOnly): iSCSI Target Portal Host Name
+* **targetPortalPort**: int (ReadOnly): iSCSI Target Portal Port
+
+## NetworkRuleSet
+### Properties
+* **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: The list of virtual network rules.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Sku
 ### Properties
 * **name**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: The sku name.
 * **tier**: 'Hero' | 'Hub' | 'Satellite' | string: The sku tier.
+
+## SourceCreationData
+### Properties
+* **createSource**: 'Export' | 'FromDiskSnapshot' | 'FromVolume' | 'None' (Required): This enumerates the possible sources of a volume creation.
+* **sourceUri**: string: If createOption is Copy, this is the ARM id of the source snapshot or disk. If createOption is Restore, this is the ARM-like id of the source disk restore point.
 
 ## SystemData
 ### Properties
@@ -63,10 +95,11 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
-## ResourceTags
+## VirtualNetworkRule
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **action**: 'Allow': The action of virtual network rule.
+* **id**: string (Required): Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
+* **state**: 'deprovisioning' | 'failed' | 'networkSourceDeleted' | 'provisioning' | 'succeeded' (ReadOnly): Gets the state of virtual network rule.
 
 ## VolumeGroupProperties
 ### Properties
@@ -75,43 +108,10 @@
 * **protocolType**: 'Iscsi' | 'None' | string (Required): Storage Target type.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the iSCSI Target.
 
-## NetworkRuleSet
-### Properties
-* **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: The list of virtual network rules.
-
-## VirtualNetworkRule
-### Properties
-* **action**: 'Allow': The action of virtual network rule.
-* **id**: string (Required): Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
-* **state**: 'deprovisioning' | 'failed' | 'networkSourceDeleted' | 'provisioning' | 'succeeded' (ReadOnly): Gets the state of virtual network rule.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## VolumeProperties
 ### Properties
 * **creationData**: [SourceCreationData](#sourcecreationdata): Data used when creating a disk.
 * **sizeGiB**: int: Volume size.
 * **storageTarget**: [IscsiTargetInfo](#iscsitargetinfo) (ReadOnly): Iscsi target information
 * **volumeId**: string (ReadOnly): Unique Id of the volume in GUID format
-
-## SourceCreationData
-### Properties
-* **createSource**: 'Export' | 'FromDiskSnapshot' | 'FromVolume' | 'None' (Required): This enumerates the possible sources of a volume creation.
-* **sourceUri**: string: If createOption is Copy, this is the ARM id of the source snapshot or disk. If createOption is Restore, this is the ARM-like id of the source disk restore point.
-
-## IscsiTargetInfo
-### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the iSCSI Target.
-* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' | string: Operational status of the resource.
-* **targetIqn**: string (ReadOnly): iSCSI Target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
-* **targetPortalHostname**: string (ReadOnly): iSCSI Target Portal Host Name
-* **targetPortalPort**: int (ReadOnly): iSCSI Target Portal Port
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

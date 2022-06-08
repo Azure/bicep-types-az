@@ -30,16 +30,6 @@
 * **ApiVersion**: 2018-09-01-preview
 * **Output**: [KeyDescriptionList](#keydescriptionlist)
 
-## SKU
-### Properties
-* **name**: string (Required): The name of the SKU
-* **tier**: string: The price tier of the SKU
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ChannelProperties
 ### Properties
 * **channelFunctions**: string[]: The functions to be enabled for the channel
@@ -51,23 +41,33 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ChannelTypeDescriptionList
-### Properties
-* **value**: [ChannelTypeDescription](#channeltypedescription)[] (ReadOnly): Channel descriptions
-
 ## ChannelTypeDescription
 ### Properties
 * **channelDescription**: string (ReadOnly): Text description for the channel
 * **channelFunctions**: string[] (ReadOnly): All the available functions for the channel
 * **channelType**: string (ReadOnly): Channel type
 
-## KeyDescriptionList
+## ChannelTypeDescriptionList
 ### Properties
-* **value**: [KeyDescription](#keydescription)[] (ReadOnly): Account keys
+* **value**: [ChannelTypeDescription](#channeltypedescription)[] (ReadOnly): Channel descriptions
 
 ## KeyDescription
 ### Properties
 * **name**: string (ReadOnly): The name of the key
 * **rank**: 'PrimaryKey' | 'SecondaryKey' | string (ReadOnly): The rank of the EngagementFabric account key
 * **value**: string (ReadOnly): The value of the key
+
+## KeyDescriptionList
+### Properties
+* **value**: [KeyDescription](#keydescription)[] (ReadOnly): Account keys
+
+## SKU
+### Properties
+* **name**: string (Required): The name of the SKU
+* **tier**: string: The price tier of the SKU
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

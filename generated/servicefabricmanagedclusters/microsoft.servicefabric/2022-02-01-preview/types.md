@@ -75,6 +75,103 @@
 * **tags**: [ManagedProxyResourceTags](#managedproxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedClusters/nodeTypes' (ReadOnly, DeployTimeConstant): The resource type
 
+## ApplicationHealthPolicy
+### Properties
+* **considerWarningAsError**: bool (Required): Indicates whether warnings are treated with the same severity as errors.
+* **defaultServiceTypeHealthPolicy**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy): Represents the health policy used to evaluate the health of services belonging to a service type.
+* **maxPercentUnhealthyDeployedApplications**: int (Required): The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.
+The percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.
+This is calculated by dividing the number of unhealthy deployed applications over the number of nodes where the application is currently deployed on in the cluster.
+The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
+* **serviceTypeHealthPolicyMap**: [ServiceTypeHealthPolicyMap](#servicetypehealthpolicymap): Defines a ServiceTypeHealthPolicy per service type name.
+
+The entries in the map replace the default service type health policy for each specified service type.
+For example, in an application that contains both a stateless gateway service type and a stateful engine service type, the health policies for the stateless and stateful services can be configured differently.
+With policy per service type, there's more granular control of the health of the service.
+
+If no policy is specified for a service type name, the DefaultServiceTypeHealthPolicy is used for evaluation.
+
+## ApplicationParameterList
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ApplicationResourceProperties
+### Properties
+* **managedIdentities**: [ApplicationUserAssignedIdentity](#applicationuserassignedidentity)[]: List of user assigned identities for the application, each mapped to a friendly name.
+* **parameters**: [ApplicationParameterList](#applicationparameterlist): List of application parameters with overridden values from their default values specified in the application manifest.
+* **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response
+* **upgradePolicy**: [ApplicationUpgradePolicy](#applicationupgradepolicy): Describes the policy for a monitored application upgrade.
+* **version**: string: The version of the application type as defined in the application manifest.
+This name must be the full Arm Resource ID for the referenced application type version.
+
+## ApplicationTypeResourceProperties
+### Properties
+* **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
+
+## ApplicationTypeVersionResourceProperties
+### Properties
+* **appPackageUrl**: string (Required): The URL to the application package
+* **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response
+
+## ApplicationTypeVersionsCleanupPolicy
+### Properties
+* **maxUnusedVersionsToKeep**: int (Required): Number of unused versions per application type to keep.
+
+## ApplicationUpgradePolicy
+### Properties
+* **applicationHealthPolicy**: [ApplicationHealthPolicy](#applicationhealthpolicy): Defines a health policy used to evaluate the health of an application or one of its children entities.
+* **forceRestart**: bool: If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
+* **instanceCloseDelayDuration**: int: Duration in seconds, to wait before a stateless instance is closed, to allow the active requests to drain gracefully. This would be effective when the instance is closing during the application/cluster upgrade, only for those instances which have a non-zero delay duration configured in the service description.
+* **recreateApplication**: bool: Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed.
+* **rollingUpgradeMonitoringPolicy**: [RollingUpgradeMonitoringPolicy](#rollingupgrademonitoringpolicy): The policy used for monitoring the application upgrade
+* **upgradeMode**: 'Monitored' | 'UnmonitoredAuto' | string: The mode used to monitor health during a rolling upgrade. The values are Monitored, and UnmonitoredAuto.
+* **upgradeReplicaSetCheckTimeout**: int: The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).
+
+## ApplicationUserAssignedIdentity
+### Properties
+* **name**: string (Required): The friendly name of user assigned identity.
+* **principalId**: string (Required): The principal id of user assigned identity.
+
+## AzureActiveDirectory
+### Properties
+* **clientApplication**: string: Azure active directory client application id.
+* **clusterApplication**: string: Azure active directory cluster application id.
+* **tenantId**: string: Azure active directory tenant id.
+
+## ClientCertificate
+### Properties
+* **commonName**: string: Certificate common name.
+* **isAdmin**: bool (Required): Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
+* **issuerThumbprint**: string: Issuer thumbprint for the certificate. Only used together with CommonName.
+* **thumbprint**: string: Certificate thumbprint.
+
+## EndpointRangeDescription
+### Properties
+* **endPort**: int (Required): End port of a range of ports
+* **startPort**: int (Required): Starting port of a range of ports
+
+## FrontendConfiguration
+### Properties
+* **ipAddressType**: 'IPv4' | 'IPv6' | string: The IP address type.
+* **loadBalancerBackendAddressPoolId**: string: The resource Id of the Load Balancer backend address pool that the VM instances of the node type are associated with. The format of the resource Id is '/subscriptions/<subscriptionId>/resourceGroups/<resourceGroupName>/providers/Microsoft.Network/loadBalancers/<loadBalancerName>/backendAddressPools/<backendAddressPoolName>'.
+* **loadBalancerInboundNatPoolId**: string: The resource Id of the Load Balancer inbound NAT pool that the VM instances of the node type are associated with. The format of the resource Id is '/subscriptions/<subscriptionId>/resourceGroups/<resourceGroupName>/providers/Microsoft.Network/loadBalancers/<loadBalancerName>/inboundNatPools/<inboundNatPoolName>'.
+
+## IPTag
+### Properties
+* **ipTagType**: string (Required): The IP tag type.
+* **tag**: string (Required): The value of the IP tag.
+
+## LoadBalancingRule
+### Properties
+* **backendPort**: int (Required): The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
+* **frontendPort**: int (Required): The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
+* **loadDistribution**: string: The load distribution policy for this rule.
+* **probePort**: int: The prob port used by the load balancing rule. Acceptable values are between 1 and 65535.
+* **probeProtocol**: 'http' | 'https' | 'tcp' | string (Required): the reference to the load balancer probe used by the load balancing rule.
+* **probeRequestPath**: string: The probe request path. Only supported for HTTP/HTTPS probes.
+* **protocol**: 'tcp' | 'udp' | string (Required): The reference to the transport protocol used by the load balancing rule.
+
 ## ManagedClusterProperties
 ### Properties
 * **addonFeatures**: 'BackupRestoreService' | 'DnsService' | 'ResourceMonitorService' | string[]: List of add-on features to enable on the cluster.
@@ -109,55 +206,18 @@
 * **subnetId**: string: If specified, the node types for the cluster are created in this subnet instead of the default VNet. The **networkSecurityRules** specified for the cluster are also applied to this subnet. This setting cannot be changed once the cluster is created.
 * **zonalResiliency**: bool: Indicates if the cluster has zone resiliency.
 
-## ApplicationTypeVersionsCleanupPolicy
+## ManagedIdentity
 ### Properties
-* **maxUnusedVersionsToKeep**: int (Required): Number of unused versions per application type to keep.
+* **principalId**: string (ReadOnly): The principal id of the managed identity. This property will only be provided for a system assigned identity.
+* **tenantId**: string (ReadOnly): The tenant id of the managed identity. This property will only be provided for a system assigned identity.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of managed identity for the resource.
+* **userAssignedIdentities**: [UserAssignedIdentityMap](#userassignedidentitymap): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
+'/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## Subnet
+## ManagedProxyResourceTags
 ### Properties
-* **enableIpv6**: bool: Indicates wether to enable Ipv6 or not. If not provided, it will take the same configuration as the cluster.
-* **name**: string (Required): Subnet name.
-* **networkSecurityGroupId**: string: Full resource id for the network security group.
-* **privateEndpointNetworkPolicies**: 'disabled' | 'enabled' | string: Enable or Disable apply network policies on private end point in the subnet.
-* **privateLinkServiceNetworkPolicies**: 'disabled' | 'enabled' | string: Enable or Disable apply network policies on private link service in the subnet.
-
-## AzureActiveDirectory
-### Properties
-* **clientApplication**: string: Azure active directory client application id.
-* **clusterApplication**: string: Azure active directory cluster application id.
-* **tenantId**: string: Azure active directory tenant id.
-
-## ClientCertificate
-### Properties
-* **commonName**: string: Certificate common name.
-* **isAdmin**: bool (Required): Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
-* **issuerThumbprint**: string: Issuer thumbprint for the certificate. Only used together with CommonName.
-* **thumbprint**: string: Certificate thumbprint.
-
-## SettingsSectionDescription
-### Properties
-* **name**: string (Required): The section name of the fabric settings.
-* **parameters**: [SettingsParameterDescription](#settingsparameterdescription)[] (Required): The collection of parameters in the section.
-
-## SettingsParameterDescription
-### Properties
-* **name**: string (Required): The parameter name of fabric setting.
-* **value**: string (Required): The parameter value of fabric setting.
-
-## IPTag
-### Properties
-* **ipTagType**: string (Required): The IP tag type.
-* **tag**: string (Required): The value of the IP tag.
-
-## LoadBalancingRule
-### Properties
-* **backendPort**: int (Required): The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
-* **frontendPort**: int (Required): The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
-* **loadDistribution**: string: The load distribution policy for this rule.
-* **probePort**: int: The prob port used by the load balancing rule. Acceptable values are between 1 and 65535.
-* **probeProtocol**: 'http' | 'https' | 'tcp' | string (Required): the reference to the load balancer probe used by the load balancing rule.
-* **probeRequestPath**: string: The probe request path. Only supported for HTTP/HTTPS probes.
-* **protocol**: 'tcp' | 'udp' | string (Required): The reference to the transport protocol used by the load balancing rule.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## NetworkSecurityRule
 ### Properties
@@ -176,169 +236,54 @@
 * **sourcePortRange**: string: The source port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
 * **sourcePortRanges**: string[]: The source port ranges.
 
-## ServiceEndpoint
+## NodeTypeProperties
 ### Properties
-* **locations**: string[]: A list of locations.
-* **service**: string (Required): The type of the endpoint service.
+* **additionalDataDisks**: [VmssDataDisk](#vmssdatadisk)[]: Additional managed data disks.
+* **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
+* **capacities**: [NodeTypePropertiesCapacities](#nodetypepropertiescapacities): The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
+* **dataDiskLetter**: string: Managed data disk letter. It can not use the reserved letter C or D and it can not change after created.
+* **dataDiskSizeGB**: int: Disk size for the managed disk attached to the vms on the node type in GBs.
+* **dataDiskType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | string: Managed data disk type. IOPS and throughput are given by the disk size, to see more information go to https://docs.microsoft.com/en-us/azure/virtual-machines/disks-types.
+* **enableAcceleratedNetworking**: bool: Specifies whether the network interface is accelerated networking-enabled.
+* **enableEncryptionAtHost**: bool: Enable or disable the Host Encryption for the virtual machines on the node type. This will enable the encryption for all the disks including Resource/Temp disk at host itself. Default: The Encryption at host will be disabled unless this property is set to true for the resource.
+* **enableOverProvisioning**: bool: Specifies whether the node type should be overprovisioned. It is only allowed for stateless node types.
+* **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
+* **frontendConfigurations**: [FrontendConfiguration](#frontendconfiguration)[]: Indicates the node type uses its own frontend configurations instead of the default one for the cluster. This setting can only be specified for non-primary node types and can not be added or removed after the node type is created.
+* **isPrimary**: bool (Required): Indicates the Service Fabric system services for the cluster will run on this node type. This setting cannot be changed once the node type is created.
+* **isSpotVM**: bool: Indicates whether the node type will be Spot Virtual Machines. Azure will allocate the VMs if there is capacity available and the VMs can be evicted at any time.
+* **isStateless**: bool: Indicates if the node type can only host Stateless workloads.
+* **multiplePlacementGroups**: bool: Indicates if scale set associated with the node type can be composed of multiple placement groups.
+* **networkSecurityRules**: [NetworkSecurityRule](#networksecurityrule)[]: The Network Security Rules for this node type. This setting can only be specified for node types that are configured with frontend configurations.
+* **placementProperties**: [NodeTypePropertiesPlacementProperties](#nodetypepropertiesplacementproperties): The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
+* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the managed resource.
+* **useDefaultPublicLoadBalancer**: bool: Specifies whether the use public load balancer. If not specified and the node type doesn't have its own frontend configuration, it will be attached to the default load balancer. If the node type uses its own Load balancer and useDefaultPublicLoadBalancer is true, then the frontend has to be an Internal Load Balancer. If the node type uses its own Load balancer and useDefaultPublicLoadBalancer is false or not set, then the custom load balancer must include a public load balancer to provide outbound connectivity.
+* **useTempDataDisk**: bool: Specifies whether to use the temporary disk for the service fabric data root, in which case no managed data disk will be attached and the temporary disk will be used. It is only allowed for stateless node types.
+* **vmExtensions**: [VmssExtension](#vmssextension)[]: Set of extensions that should be installed onto the virtual machines.
+* **vmImageOffer**: string: The offer type of the Azure Virtual Machines Marketplace image. For example, UbuntuServer or WindowsServer.
+* **vmImagePublisher**: string: The publisher of the Azure Virtual Machines Marketplace image. For example, Canonical or MicrosoftWindowsServer.
+* **vmImageSku**: string: The SKU of the Azure Virtual Machines Marketplace image. For example, 14.04.0-LTS or 2012-R2-Datacenter.
+* **vmImageVersion**: string: The version of the Azure Virtual Machines Marketplace image. A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
+* **vmInstanceCount**: int (Required): The number of nodes in the node type. <br /><br />**Values:** <br />-1 - Use when auto scale rules are configured or sku.capacity is defined <br /> 0 - Not supported <br /> >0 - Use for manual scale.
+* **vmManagedIdentity**: [VmManagedIdentity](#vmmanagedidentity): Identities for the virtual machine scale set under the node type.
+* **vmSecrets**: [VaultSecretGroup](#vaultsecretgroup)[]: The secrets to install in the virtual machines.
+* **vmSize**: string: The size of virtual machines in the pool. All virtual machines in a pool are the same size. For example, Standard_D3.
+* **zones**: string[]: Specifies the availability zones where the node type would span across. If the cluster is not spanning across availability zones, initiates az migration for the cluster.
 
-## Sku
-### Properties
-* **name**: 'Basic' | 'Standard' | string (Required): Sku Name.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC).
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: string: The type of identity that last modified the resource.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ManagedIdentity
-### Properties
-* **principalId**: string (ReadOnly): The principal id of the managed identity. This property will only be provided for a system assigned identity.
-* **tenantId**: string (ReadOnly): The tenant id of the managed identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of managed identity for the resource.
-* **userAssignedIdentities**: [UserAssignedIdentityMap](#userassignedidentitymap): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
-'/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-
-## UserAssignedIdentityMap
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
-
-## UserAssignedIdentity
-### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
-
-## ApplicationResourceProperties
-### Properties
-* **managedIdentities**: [ApplicationUserAssignedIdentity](#applicationuserassignedidentity)[]: List of user assigned identities for the application, each mapped to a friendly name.
-* **parameters**: [ApplicationParameterList](#applicationparameterlist): List of application parameters with overridden values from their default values specified in the application manifest.
-* **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response
-* **upgradePolicy**: [ApplicationUpgradePolicy](#applicationupgradepolicy): Describes the policy for a monitored application upgrade.
-* **version**: string: The version of the application type as defined in the application manifest.
-This name must be the full Arm Resource ID for the referenced application type version.
-
-## ApplicationUserAssignedIdentity
-### Properties
-* **name**: string (Required): The friendly name of user assigned identity.
-* **principalId**: string (Required): The principal id of user assigned identity.
-
-## ApplicationParameterList
+## NodeTypePropertiesCapacities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ApplicationUpgradePolicy
-### Properties
-* **applicationHealthPolicy**: [ApplicationHealthPolicy](#applicationhealthpolicy): Defines a health policy used to evaluate the health of an application or one of its children entities.
-* **forceRestart**: bool: If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
-* **instanceCloseDelayDuration**: int: Duration in seconds, to wait before a stateless instance is closed, to allow the active requests to drain gracefully. This would be effective when the instance is closing during the application/cluster upgrade, only for those instances which have a non-zero delay duration configured in the service description.
-* **recreateApplication**: bool: Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed.
-* **rollingUpgradeMonitoringPolicy**: [RollingUpgradeMonitoringPolicy](#rollingupgrademonitoringpolicy): The policy used for monitoring the application upgrade
-* **upgradeMode**: 'Monitored' | 'UnmonitoredAuto' | string: The mode used to monitor health during a rolling upgrade. The values are Monitored, and UnmonitoredAuto.
-* **upgradeReplicaSetCheckTimeout**: int: The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).
-
-## ApplicationHealthPolicy
-### Properties
-* **considerWarningAsError**: bool (Required): Indicates whether warnings are treated with the same severity as errors.
-* **defaultServiceTypeHealthPolicy**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy): Represents the health policy used to evaluate the health of services belonging to a service type.
-* **maxPercentUnhealthyDeployedApplications**: int (Required): The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.
-The percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.
-This is calculated by dividing the number of unhealthy deployed applications over the number of nodes where the application is currently deployed on in the cluster.
-The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
-* **serviceTypeHealthPolicyMap**: [ServiceTypeHealthPolicyMap](#servicetypehealthpolicymap): Defines a ServiceTypeHealthPolicy per service type name.
-
-The entries in the map replace the default service type health policy for each specified service type.
-For example, in an application that contains both a stateless gateway service type and a stateful engine service type, the health policies for the stateless and stateful services can be configured differently.
-With policy per service type, there's more granular control of the health of the service.
-
-If no policy is specified for a service type name, the DefaultServiceTypeHealthPolicy is used for evaluation.
-
-## ServiceTypeHealthPolicy
-### Properties
-* **maxPercentUnhealthyPartitionsPerService**: int (Required): The maximum allowed percentage of unhealthy partitions per service.
-
-The percentage represents the maximum tolerated percentage of partitions that can be unhealthy before the service is considered in error.
-If the percentage is respected but there is at least one unhealthy partition, the health is evaluated as Warning.
-The percentage is calculated by dividing the number of unhealthy partitions over the total number of partitions in the service.
-The computation rounds up to tolerate one failure on small numbers of partitions.
-* **maxPercentUnhealthyReplicasPerPartition**: int (Required): The maximum allowed percentage of unhealthy replicas per partition.
-
-The percentage represents the maximum tolerated percentage of replicas that can be unhealthy before the partition is considered in error.
-If the percentage is respected but there is at least one unhealthy replica, the health is evaluated as Warning.
-The percentage is calculated by dividing the number of unhealthy replicas over the total number of replicas in the partition.
-The computation rounds up to tolerate one failure on small numbers of replicas.
-* **maxPercentUnhealthyServices**: int (Required): The maximum allowed percentage of unhealthy services.
-
-The percentage represents the maximum tolerated percentage of services that can be unhealthy before the application is considered in error.
-If the percentage is respected but there is at least one unhealthy service, the health is evaluated as Warning.
-This is calculated by dividing the number of unhealthy services of the specific service type over the total number of services of the specific service type.
-The computation rounds up to tolerate one failure on small numbers of services.
-
-## ServiceTypeHealthPolicyMap
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy)
-
-## RollingUpgradeMonitoringPolicy
-### Properties
-* **failureAction**: 'Manual' | 'Rollback' | string (Required): The compensating action to perform when a Monitored upgrade encounters monitoring policy or health policy violations. Invalid indicates the failure action is invalid. Rollback specifies that the upgrade will start rolling back automatically. Manual indicates that the upgrade will switch to UnmonitoredManual upgrade mode.
-* **healthCheckRetryTimeout**: string (Required): The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
-* **healthCheckStableDuration**: string (Required): The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
-* **healthCheckWaitDuration**: string (Required): The amount of time to wait after completing an upgrade domain before applying health policies. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
-* **upgradeDomainTimeout**: string (Required): The amount of time each upgrade domain has to complete before FailureAction is executed. Cannot be larger than 12 hours. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
-* **upgradeTimeout**: string (Required): The amount of time the overall upgrade has to complete before FailureAction is executed. Cannot be larger than 12 hours. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
-
-## ProxyResourceTags
+## NodeTypePropertiesPlacementProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ServiceResourceProperties
-* **Discriminator**: serviceKind
-
-### Base Properties
-* **correlationScheme**: [ServiceCorrelation](#servicecorrelation)[]: A list that describes the correlation of the service with other services.
-* **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero' | string: Specifies the move cost for the service.
-* **partitionDescription**: [Partition](#partition) (Required): Describes how the service is partitioned.
-* **placementConstraints**: string: The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".
-* **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response
-* **scalingPolicies**: [ScalingPolicy](#scalingpolicy)[]: Scaling policies for this service.
-* **serviceLoadMetrics**: [ServiceLoadMetric](#serviceloadmetric)[]: The service load metrics is given as an array of ServiceLoadMetric objects.
-* **servicePackageActivationMode**: 'ExclusiveProcess' | 'SharedProcess' | string: The activation Mode of the service package
-* **servicePlacementPolicies**: [ServicePlacementPolicy](#serviceplacementpolicy)[]: A list that describes the correlation of the service with other services.
-* **serviceTypeName**: string (Required): The name of the service type
-### StatefulServiceProperties
-#### Properties
-* **hasPersistedState**: bool: A flag indicating whether this is a persistent service which stores states on the local disk. If it is then the value of this property is true, if not it is false.
-* **minReplicaSetSize**: int: The minimum replica set size as a number.
-* **quorumLossWaitDuration**: string: The maximum duration for which a partition is allowed to be in a state of quorum loss, represented in ISO 8601 format "hh:mm:ss".
-* **replicaRestartWaitDuration**: string: The duration between when a replica goes down and when a new replica is created, represented in ISO 8601 format "hh:mm:ss".
-* **serviceKind**: 'Stateful' (Required): The kind of service (Stateless or Stateful).
-* **servicePlacementTimeLimit**: string: The duration for which replicas can stay InBuild before reporting that build is stuck, represented in ISO 8601 format "hh:mm:ss".
-* **standByReplicaKeepDuration**: string: The definition on how long StandBy replicas should be maintained before being removed, represented in ISO 8601 format "hh:mm:ss".
-* **targetReplicaSetSize**: int: The target replica set size as a number.
-
-### StatelessServiceProperties
-#### Properties
-* **instanceCount**: int (Required): The instance count.
-* **minInstanceCount**: int: MinInstanceCount is the minimum number of instances that must be up to meet the EnsureAvailability safety check during operations like upgrade or deactivate node. The actual number that is used is max( MinInstanceCount, ceil( MinInstancePercentage/100.0 * InstanceCount) ). Note, if InstanceCount is set to -1, during MinInstanceCount computation -1 is first converted into the number of nodes on which the instances are allowed to be placed according to the placement constraints on the service.
-* **minInstancePercentage**: int: MinInstancePercentage is the minimum percentage of InstanceCount that must be up to meet the EnsureAvailability safety check during operations like upgrade or deactivate node. The actual number that is used is max( MinInstanceCount, ceil( MinInstancePercentage/100.0 * InstanceCount) ). Note, if InstanceCount is set to -1, during MinInstancePercentage computation, -1 is first converted into the number of nodes on which the instances are allowed to be placed according to the placement constraints on the service.
-* **serviceKind**: 'Stateless' (Required): The kind of service (Stateless or Stateful).
-
-
-## ServiceCorrelation
+## NodeTypeSku
 ### Properties
-* **scheme**: 'AlignedAffinity' | 'NonAlignedAffinity' | string (Required): The service correlation scheme.
-* **serviceName**: string (Required): The full ARM Resource ID describing the service resource
+* **capacity**: int (Required): The number of nodes in the node type.<br /><br />If present in request it will override properties.vmInstanceCount.
+* **name**: string: The sku name. <br /><br />Name is internally generated and is used in auto-scale scenarios.<br /> Property does not allow to be changed to other values than generated.<br /> To avoid deployment errors please omit the property.
+* **tier**: string: Specifies the tier of the node type. <br /><br /> Possible Values:<br /> **Standard**
 
 ## Partition
 * **Discriminator**: partitionScheme
@@ -363,10 +308,39 @@ should be split between the partition ‘Count’
 * **partitionScheme**: 'UniformInt64Range' (Required): Specifies how the service is partitioned.
 
 
-## ScalingPolicy
+## ProxyResourceTags
 ### Properties
-* **scalingMechanism**: [ScalingMechanism](#scalingmechanism) (Required): Describes the mechanism for performing a scaling operation.
-* **scalingTrigger**: [ScalingTrigger](#scalingtrigger) (Required): Describes the trigger for performing a scaling operation.
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ProxyResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ProxyResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ProxyResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RollingUpgradeMonitoringPolicy
+### Properties
+* **failureAction**: 'Manual' | 'Rollback' | string (Required): The compensating action to perform when a Monitored upgrade encounters monitoring policy or health policy violations. Invalid indicates the failure action is invalid. Rollback specifies that the upgrade will start rolling back automatically. Manual indicates that the upgrade will switch to UnmonitoredManual upgrade mode.
+* **healthCheckRetryTimeout**: string (Required): The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
+* **healthCheckStableDuration**: string (Required): The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
+* **healthCheckWaitDuration**: string (Required): The amount of time to wait after completing an upgrade domain before applying health policies. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
+* **upgradeDomainTimeout**: string (Required): The amount of time each upgrade domain has to complete before FailureAction is executed. Cannot be larger than 12 hours. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
+* **upgradeTimeout**: string (Required): The amount of time the overall upgrade has to complete before FailureAction is executed. Cannot be larger than 12 hours. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
 
 ## ScalingMechanism
 * **Discriminator**: kind
@@ -386,6 +360,11 @@ should be split between the partition ‘Count’
 * **minInstanceCount**: int (Required): Minimum number of instances of the partition.
 * **scaleIncrement**: int (Required): The number of instances to add or remove during a scaling operation.
 
+
+## ScalingPolicy
+### Properties
+* **scalingMechanism**: [ScalingMechanism](#scalingmechanism) (Required): Describes the mechanism for performing a scaling operation.
+* **scalingTrigger**: [ScalingTrigger](#scalingtrigger) (Required): Describes the trigger for performing a scaling operation.
 
 ## ScalingTrigger
 * **Discriminator**: kind
@@ -408,6 +387,16 @@ should be split between the partition ‘Count’
 * **upperLoadThreshold**: int (Required): The upper limit of the load beyond which a scale out operation should be performed.
 * **useOnlyPrimaryLoad**: bool (Required): Flag determines whether only the load of primary replica should be considered for scaling. If set to true, then trigger will only consider the load of primary replicas of stateful service. If set to false, trigger will consider load of all replicas. This parameter cannot be set to true for stateless service.
 
+
+## ServiceCorrelation
+### Properties
+* **scheme**: 'AlignedAffinity' | 'NonAlignedAffinity' | string (Required): The service correlation scheme.
+* **serviceName**: string (Required): The full ARM Resource ID describing the service resource
+
+## ServiceEndpoint
+### Properties
+* **locations**: string[]: A list of locations.
+* **service**: string (Required): The type of the endpoint service.
 
 ## ServiceLoadMetric
 ### Properties
@@ -446,62 +435,123 @@ should be split between the partition ‘Count’
 * **type**: 'RequiredDomainDistribution' (Required): The type of placement policy for a service fabric service. Following are the possible values.
 
 
-## ProxyResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+## ServiceResourceProperties
+* **Discriminator**: serviceKind
 
-## ApplicationTypeResourceProperties
-### Properties
-* **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
-
-## ProxyResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ApplicationTypeVersionResourceProperties
-### Properties
-* **appPackageUrl**: string (Required): The URL to the application package
+### Base Properties
+* **correlationScheme**: [ServiceCorrelation](#servicecorrelation)[]: A list that describes the correlation of the service with other services.
+* **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero' | string: Specifies the move cost for the service.
+* **partitionDescription**: [Partition](#partition) (Required): Describes how the service is partitioned.
+* **placementConstraints**: string: The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response
+* **scalingPolicies**: [ScalingPolicy](#scalingpolicy)[]: Scaling policies for this service.
+* **serviceLoadMetrics**: [ServiceLoadMetric](#serviceloadmetric)[]: The service load metrics is given as an array of ServiceLoadMetric objects.
+* **servicePackageActivationMode**: 'ExclusiveProcess' | 'SharedProcess' | string: The activation Mode of the service package
+* **servicePlacementPolicies**: [ServicePlacementPolicy](#serviceplacementpolicy)[]: A list that describes the correlation of the service with other services.
+* **serviceTypeName**: string (Required): The name of the service type
+### StatefulServiceProperties
+#### Properties
+* **hasPersistedState**: bool: A flag indicating whether this is a persistent service which stores states on the local disk. If it is then the value of this property is true, if not it is false.
+* **minReplicaSetSize**: int: The minimum replica set size as a number.
+* **quorumLossWaitDuration**: string: The maximum duration for which a partition is allowed to be in a state of quorum loss, represented in ISO 8601 format "hh:mm:ss".
+* **replicaRestartWaitDuration**: string: The duration between when a replica goes down and when a new replica is created, represented in ISO 8601 format "hh:mm:ss".
+* **serviceKind**: 'Stateful' (Required): The kind of service (Stateless or Stateful).
+* **servicePlacementTimeLimit**: string: The duration for which replicas can stay InBuild before reporting that build is stuck, represented in ISO 8601 format "hh:mm:ss".
+* **standByReplicaKeepDuration**: string: The definition on how long StandBy replicas should be maintained before being removed, represented in ISO 8601 format "hh:mm:ss".
+* **targetReplicaSetSize**: int: The target replica set size as a number.
 
-## ProxyResourceTags
+### StatelessServiceProperties
+#### Properties
+* **instanceCount**: int (Required): The instance count.
+* **minInstanceCount**: int: MinInstanceCount is the minimum number of instances that must be up to meet the EnsureAvailability safety check during operations like upgrade or deactivate node. The actual number that is used is max( MinInstanceCount, ceil( MinInstancePercentage/100.0 * InstanceCount) ). Note, if InstanceCount is set to -1, during MinInstanceCount computation -1 is first converted into the number of nodes on which the instances are allowed to be placed according to the placement constraints on the service.
+* **minInstancePercentage**: int: MinInstancePercentage is the minimum percentage of InstanceCount that must be up to meet the EnsureAvailability safety check during operations like upgrade or deactivate node. The actual number that is used is max( MinInstanceCount, ceil( MinInstancePercentage/100.0 * InstanceCount) ). Note, if InstanceCount is set to -1, during MinInstancePercentage computation, -1 is first converted into the number of nodes on which the instances are allowed to be placed according to the placement constraints on the service.
+* **serviceKind**: 'Stateless' (Required): The kind of service (Stateless or Stateful).
+
+
+## ServiceTypeHealthPolicy
+### Properties
+* **maxPercentUnhealthyPartitionsPerService**: int (Required): The maximum allowed percentage of unhealthy partitions per service.
+
+The percentage represents the maximum tolerated percentage of partitions that can be unhealthy before the service is considered in error.
+If the percentage is respected but there is at least one unhealthy partition, the health is evaluated as Warning.
+The percentage is calculated by dividing the number of unhealthy partitions over the total number of partitions in the service.
+The computation rounds up to tolerate one failure on small numbers of partitions.
+* **maxPercentUnhealthyReplicasPerPartition**: int (Required): The maximum allowed percentage of unhealthy replicas per partition.
+
+The percentage represents the maximum tolerated percentage of replicas that can be unhealthy before the partition is considered in error.
+If the percentage is respected but there is at least one unhealthy replica, the health is evaluated as Warning.
+The percentage is calculated by dividing the number of unhealthy replicas over the total number of replicas in the partition.
+The computation rounds up to tolerate one failure on small numbers of replicas.
+* **maxPercentUnhealthyServices**: int (Required): The maximum allowed percentage of unhealthy services.
+
+The percentage represents the maximum tolerated percentage of services that can be unhealthy before the application is considered in error.
+If the percentage is respected but there is at least one unhealthy service, the health is evaluated as Warning.
+This is calculated by dividing the number of unhealthy services of the specific service type over the total number of services of the specific service type.
+The computation rounds up to tolerate one failure on small numbers of services.
+
+## ServiceTypeHealthPolicyMap
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: string
+* **Additional Properties Type**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy)
 
-## NodeTypeProperties
+## SettingsParameterDescription
 ### Properties
-* **additionalDataDisks**: [VmssDataDisk](#vmssdatadisk)[]: Additional managed data disks.
-* **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
-* **capacities**: [NodeTypePropertiesCapacities](#nodetypepropertiescapacities): The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
-* **dataDiskLetter**: string: Managed data disk letter. It can not use the reserved letter C or D and it can not change after created.
-* **dataDiskSizeGB**: int: Disk size for the managed disk attached to the vms on the node type in GBs.
-* **dataDiskType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | string: Managed data disk type. IOPS and throughput are given by the disk size, to see more information go to https://docs.microsoft.com/en-us/azure/virtual-machines/disks-types.
-* **enableAcceleratedNetworking**: bool: Specifies whether the network interface is accelerated networking-enabled.
-* **enableEncryptionAtHost**: bool: Enable or disable the Host Encryption for the virtual machines on the node type. This will enable the encryption for all the disks including Resource/Temp disk at host itself. Default: The Encryption at host will be disabled unless this property is set to true for the resource.
-* **enableOverProvisioning**: bool: Specifies whether the node type should be overprovisioned. It is only allowed for stateless node types.
-* **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
-* **frontendConfigurations**: [FrontendConfiguration](#frontendconfiguration)[]: Indicates the node type uses its own frontend configurations instead of the default one for the cluster. This setting can only be specified for non-primary node types and can not be added or removed after the node type is created.
-* **isPrimary**: bool (Required): Indicates the Service Fabric system services for the cluster will run on this node type. This setting cannot be changed once the node type is created.
-* **isSpotVM**: bool: Indicates whether the node type will be Spot Virtual Machines. Azure will allocate the VMs if there is capacity available and the VMs can be evicted at any time.
-* **isStateless**: bool: Indicates if the node type can only host Stateless workloads.
-* **multiplePlacementGroups**: bool: Indicates if scale set associated with the node type can be composed of multiple placement groups.
-* **networkSecurityRules**: [NetworkSecurityRule](#networksecurityrule)[]: The Network Security Rules for this node type. This setting can only be specified for node types that are configured with frontend configurations.
-* **placementProperties**: [NodeTypePropertiesPlacementProperties](#nodetypepropertiesplacementproperties): The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
-* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the managed resource.
-* **useDefaultPublicLoadBalancer**: bool: Specifies whether the use public load balancer. If not specified and the node type doesn't have its own frontend configuration, it will be attached to the default load balancer. If the node type uses its own Load balancer and useDefaultPublicLoadBalancer is true, then the frontend has to be an Internal Load Balancer. If the node type uses its own Load balancer and useDefaultPublicLoadBalancer is false or not set, then the custom load balancer must include a public load balancer to provide outbound connectivity.
-* **useTempDataDisk**: bool: Specifies whether to use the temporary disk for the service fabric data root, in which case no managed data disk will be attached and the temporary disk will be used. It is only allowed for stateless node types.
-* **vmExtensions**: [VmssExtension](#vmssextension)[]: Set of extensions that should be installed onto the virtual machines.
-* **vmImageOffer**: string: The offer type of the Azure Virtual Machines Marketplace image. For example, UbuntuServer or WindowsServer.
-* **vmImagePublisher**: string: The publisher of the Azure Virtual Machines Marketplace image. For example, Canonical or MicrosoftWindowsServer.
-* **vmImageSku**: string: The SKU of the Azure Virtual Machines Marketplace image. For example, 14.04.0-LTS or 2012-R2-Datacenter.
-* **vmImageVersion**: string: The version of the Azure Virtual Machines Marketplace image. A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
-* **vmInstanceCount**: int (Required): The number of nodes in the node type. <br /><br />**Values:** <br />-1 - Use when auto scale rules are configured or sku.capacity is defined <br /> 0 - Not supported <br /> >0 - Use for manual scale.
-* **vmManagedIdentity**: [VmManagedIdentity](#vmmanagedidentity): Identities for the virtual machine scale set under the node type.
-* **vmSecrets**: [VaultSecretGroup](#vaultsecretgroup)[]: The secrets to install in the virtual machines.
-* **vmSize**: string: The size of virtual machines in the pool. All virtual machines in a pool are the same size. For example, Standard_D3.
-* **zones**: string[]: Specifies the availability zones where the node type would span across. If the cluster is not spanning across availability zones, initiates az migration for the cluster.
+* **name**: string (Required): The parameter name of fabric setting.
+* **value**: string (Required): The parameter value of fabric setting.
+
+## SettingsSectionDescription
+### Properties
+* **name**: string (Required): The section name of the fabric settings.
+* **parameters**: [SettingsParameterDescription](#settingsparameterdescription)[] (Required): The collection of parameters in the section.
+
+## Sku
+### Properties
+* **name**: 'Basic' | 'Standard' | string (Required): Sku Name.
+
+## Subnet
+### Properties
+* **enableIpv6**: bool: Indicates wether to enable Ipv6 or not. If not provided, it will take the same configuration as the cluster.
+* **name**: string (Required): Subnet name.
+* **networkSecurityGroupId**: string: Full resource id for the network security group.
+* **privateEndpointNetworkPolicies**: 'disabled' | 'enabled' | string: Enable or Disable apply network policies on private end point in the subnet.
+* **privateLinkServiceNetworkPolicies**: 'disabled' | 'enabled' | string: Enable or Disable apply network policies on private link service in the subnet.
+
+## SubResource
+### Properties
+* **id**: string: Azure resource identifier.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC).
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: string: The type of identity that last modified the resource.
+
+## UserAssignedIdentity
+### Properties
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+
+## UserAssignedIdentityMap
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## VaultCertificate
+### Properties
+* **certificateStore**: string (Required): For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added. The specified certificate store is implicitly in the LocalMachine account. <br><br>For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name <UppercaseThumbprint>.crt for the X509 certificate file and <UppercaseThumbprint>.prv for private key. Both of these files are .pem formatted.
+* **certificateUrl**: string (Required): This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>  "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>}
+
+## VaultSecretGroup
+### Properties
+* **sourceVault**: [SubResource](#subresource) (Required): Azure resource identifier.
+* **vaultCertificates**: [VaultCertificate](#vaultcertificate)[] (Required): The list of key vault references in SourceVault which contain certificates.
+
+## VmManagedIdentity
+### Properties
+* **userAssignedIdentities**: string[]: The list of user identities associated with the virtual machine scale set under the node type. Each entry will be an ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## VmssDataDisk
 ### Properties
@@ -509,27 +559,6 @@ should be split between the partition ‘Count’
 * **diskSizeGB**: int (Required): Disk size for each vm in the node type in GBs.
 * **diskType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | string (Required): Managed data disk type. IOPS and throughput are given by the disk size, to see more information go to https://docs.microsoft.com/en-us/azure/virtual-machines/disks-types.
 * **lun**: int (Required): Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM. Lun 0 is reserved for the service fabric data disk.
-
-## EndpointRangeDescription
-### Properties
-* **endPort**: int (Required): End port of a range of ports
-* **startPort**: int (Required): Starting port of a range of ports
-
-## NodeTypePropertiesCapacities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## FrontendConfiguration
-### Properties
-* **ipAddressType**: 'IPv4' | 'IPv6' | string: The IP address type.
-* **loadBalancerBackendAddressPoolId**: string: The resource Id of the Load Balancer backend address pool that the VM instances of the node type are associated with. The format of the resource Id is '/subscriptions/<subscriptionId>/resourceGroups/<resourceGroupName>/providers/Microsoft.Network/loadBalancers/<loadBalancerName>/backendAddressPools/<backendAddressPoolName>'.
-* **loadBalancerInboundNatPoolId**: string: The resource Id of the Load Balancer inbound NAT pool that the VM instances of the node type are associated with. The format of the resource Id is '/subscriptions/<subscriptionId>/resourceGroups/<resourceGroupName>/providers/Microsoft.Network/loadBalancers/<loadBalancerName>/inboundNatPools/<inboundNatPoolName>'.
-
-## NodeTypePropertiesPlacementProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## VmssExtension
 ### Properties
@@ -548,33 +577,4 @@ should be split between the partition ‘Count’
 * **settings**: any: Any object
 * **type**: string (Required): Specifies the type of the extension; an example is "CustomScriptExtension".
 * **typeHandlerVersion**: string (Required): Specifies the version of the script handler.
-
-## VmManagedIdentity
-### Properties
-* **userAssignedIdentities**: string[]: The list of user identities associated with the virtual machine scale set under the node type. Each entry will be an ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-
-## VaultSecretGroup
-### Properties
-* **sourceVault**: [SubResource](#subresource) (Required): Azure resource identifier.
-* **vaultCertificates**: [VaultCertificate](#vaultcertificate)[] (Required): The list of key vault references in SourceVault which contain certificates.
-
-## SubResource
-### Properties
-* **id**: string: Azure resource identifier.
-
-## VaultCertificate
-### Properties
-* **certificateStore**: string (Required): For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added. The specified certificate store is implicitly in the LocalMachine account. <br><br>For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name <UppercaseThumbprint>.crt for the X509 certificate file and <UppercaseThumbprint>.prv for private key. Both of these files are .pem formatted.
-* **certificateUrl**: string (Required): This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>  "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>}
-
-## NodeTypeSku
-### Properties
-* **capacity**: int (Required): The number of nodes in the node type.<br /><br />If present in request it will override properties.vmInstanceCount.
-* **name**: string: The sku name. <br /><br />Name is internally generated and is used in auto-scale scenarios.<br /> Property does not allow to be changed to other values than generated.<br /> To avoid deployment errors please omit the property.
-* **tier**: string: Specifies the tier of the node type. <br /><br /> Possible Values:<br /> **Standard**
-
-## ManagedProxyResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

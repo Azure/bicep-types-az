@@ -32,28 +32,6 @@
 * **properties**: [AssessmentProperties](#assessmentproperties) (Required): Properties of an assessment.
 * **type**: 'Microsoft.Migrate/projects/groups/assessments' (ReadOnly, DeployTimeConstant): The resource type
 
-## ProjectProperties
-### Properties
-* **createdTimestamp**: string (ReadOnly): Time when this project was created. Date-Time represented in ISO-8601 format.
-* **customerWorkspaceId**: string: ARM ID of the Service Map workspace created by user.
-* **customerWorkspaceLocation**: string: Location of the Service Map workspace created by user.
-* **discoveryStatus**: 'Completed' | 'InProgress' | 'NotStarted' | 'Unknown' | string (ReadOnly): Reports whether project is under discovery.
-* **lastAssessmentTimestamp**: string (ReadOnly): Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.
-* **lastDiscoverySessionId**: string (ReadOnly): Session id of the last discovery.
-* **lastDiscoveryTimestamp**: string (ReadOnly): Time when this project was created. Date-Time represented in ISO-8601 format. This value will be null until discovery is complete.
-* **numberOfAssessments**: int (ReadOnly): Number of assessments created in the project.
-* **numberOfGroups**: int (ReadOnly): Number of groups created in the project.
-* **numberOfMachines**: int (ReadOnly): Number of machines in the project.
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string: Provisioning state of the project.
-* **updatedTimestamp**: string (ReadOnly): Time when this project was last updated. Date-Time represented in ISO-8601 format.
-
-## GroupProperties
-### Properties
-* **assessments**: string[] (ReadOnly): List of References to Assessments created on this group.
-* **createdTimestamp**: string (ReadOnly): Time when this project was created. Date-Time represented in ISO-8601 format.
-* **machines**: string[] (Required): List of machine names that are part of this group.
-* **updatedTimestamp**: string (ReadOnly): Time when this project was last updated. Date-Time represented in ISO-8601 format.
-
 ## AssessmentProperties
 ### Properties
 * **azureHybridUseBenefit**: 'No' | 'Unknown' | 'Yes' | string (Required): AHUB discount on windows virtual machines.
@@ -76,5 +54,27 @@
 * **stage**: 'Approved' | 'InProgress' | 'UnderReview' | string (Required): User configurable setting that describes the status of the assessment.
 * **status**: 'Completed' | 'Created' | 'Invalid' | 'Running' | 'Updated' | string (ReadOnly): Whether the assessment has been created and is valid.
 * **timeRange**: 'Day' | 'Month' | 'Week' | string (Required): Time range of performance data used to recommend a size.
+* **updatedTimestamp**: string (ReadOnly): Time when this project was last updated. Date-Time represented in ISO-8601 format.
+
+## GroupProperties
+### Properties
+* **assessments**: string[] (ReadOnly): List of References to Assessments created on this group.
+* **createdTimestamp**: string (ReadOnly): Time when this project was created. Date-Time represented in ISO-8601 format.
+* **machines**: string[] (Required): List of machine names that are part of this group.
+* **updatedTimestamp**: string (ReadOnly): Time when this project was last updated. Date-Time represented in ISO-8601 format.
+
+## ProjectProperties
+### Properties
+* **createdTimestamp**: string (ReadOnly): Time when this project was created. Date-Time represented in ISO-8601 format.
+* **customerWorkspaceId**: string: ARM ID of the Service Map workspace created by user.
+* **customerWorkspaceLocation**: string: Location of the Service Map workspace created by user.
+* **discoveryStatus**: 'Completed' | 'InProgress' | 'NotStarted' | 'Unknown' | string (ReadOnly): Reports whether project is under discovery.
+* **lastAssessmentTimestamp**: string (ReadOnly): Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.
+* **lastDiscoverySessionId**: string (ReadOnly): Session id of the last discovery.
+* **lastDiscoveryTimestamp**: string (ReadOnly): Time when this project was created. Date-Time represented in ISO-8601 format. This value will be null until discovery is complete.
+* **numberOfAssessments**: int (ReadOnly): Number of assessments created in the project.
+* **numberOfGroups**: int (ReadOnly): Number of groups created in the project.
+* **numberOfMachines**: int (ReadOnly): Number of machines in the project.
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string: Provisioning state of the project.
 * **updatedTimestamp**: string (ReadOnly): Time when this project was last updated. Date-Time represented in ISO-8601 format.
 

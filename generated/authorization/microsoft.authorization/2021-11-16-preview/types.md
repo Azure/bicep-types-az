@@ -80,6 +80,19 @@
 * **principalType**: 'servicePrincipal' | 'user' | string (ReadOnly, WriteOnly): The identity type : user/servicePrincipal
 * **userPrincipalName**: string (ReadOnly, WriteOnly): The user principal name(if valid)
 
+## AccessReviewHistoryDefinitionProperties
+### Properties
+* **createdBy**: [AccessReviewActorIdentity](#accessreviewactoridentity) (ReadOnly): Details of the actor identity
+* **createdDateTime**: string (ReadOnly): Date time when history definition was created
+* **decisions**: 'Approve' | 'Deny' | 'DontKnow' | 'NotNotified' | 'NotReviewed' | string[] (ReadOnly): Collection of review decisions which the history data should be filtered on. For example if Approve and Deny are supplied the data will only contain review results in which the decision maker approved or denied a review request.
+* **displayName**: string (ReadOnly): The display name for the history definition.
+* **instances**: [AccessReviewHistoryInstance](#accessreviewhistoryinstance)[] (ReadOnly): Set of access review history instances for this history definition.
+* **reviewHistoryPeriodEndDateTime**: string (ReadOnly): Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
+* **reviewHistoryPeriodStartDateTime**: string (ReadOnly): Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
+* **scopes**: [AccessReviewScope](#accessreviewscope)[] (ReadOnly): A collection of scopes used when selecting review history data
+* **settings**: [AccessReviewHistoryScheduleSettings](#accessreviewhistoryschedulesettings) (ReadOnly): Recurrence settings of an Access Review History Definition.
+* **status**: 'Done' | 'Error' | 'InProgress' | 'Requested' | string (ReadOnly): This read-only field specifies the of the requested review history data. This is either requested, in-progress, done or error.
+
 ## AccessReviewHistoryInstance
 ### Properties
 * **id**: string (ReadOnly, WriteOnly): The access review history definition instance id.
@@ -98,49 +111,10 @@
 * **runDateTime**: string (WriteOnly): Date time when the history data report is scheduled to be generated.
 * **status**: 'Done' | 'Error' | 'InProgress' | 'Requested' | string (ReadOnly, WriteOnly): This read-only field specifies the of the requested review history data. This is either requested, in-progress, done or error.
 
-## AccessReviewHistoryDefinitionProperties
-### Properties
-* **createdBy**: [AccessReviewActorIdentity](#accessreviewactoridentity) (ReadOnly): Details of the actor identity
-* **createdDateTime**: string (ReadOnly): Date time when history definition was created
-* **decisions**: 'Approve' | 'Deny' | 'DontKnow' | 'NotNotified' | 'NotReviewed' | string[] (ReadOnly): Collection of review decisions which the history data should be filtered on. For example if Approve and Deny are supplied the data will only contain review results in which the decision maker approved or denied a review request.
-* **displayName**: string (ReadOnly): The display name for the history definition.
-* **instances**: [AccessReviewHistoryInstance](#accessreviewhistoryinstance)[] (ReadOnly): Set of access review history instances for this history definition.
-* **reviewHistoryPeriodEndDateTime**: string (ReadOnly): Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
-* **reviewHistoryPeriodStartDateTime**: string (ReadOnly): Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
-* **scopes**: [AccessReviewScope](#accessreviewscope)[] (ReadOnly): A collection of scopes used when selecting review history data
-* **settings**: [AccessReviewHistoryScheduleSettings](#accessreviewhistoryschedulesettings) (ReadOnly): Recurrence settings of an Access Review History Definition.
-* **status**: 'Done' | 'Error' | 'InProgress' | 'Requested' | string (ReadOnly): This read-only field specifies the of the requested review history data. This is either requested, in-progress, done or error.
-
-## AccessReviewScope
-### Properties
-* **assignmentState**: 'active' | 'eligible' | string (ReadOnly, WriteOnly): The role assignment state eligible/active to review
-* **expandNestedMemberships**: bool (WriteOnly): Flag to indicate whether to expand nested memberships or not.
-* **inactiveDuration**: string (WriteOnly): Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
-* **principalType**: 'guestUser' | 'redeemedGuestUser' | 'servicePrincipal' | 'user' | 'user,group' | string (ReadOnly, WriteOnly): The identity type user/servicePrincipal to review
-* **resourceId**: string (ReadOnly, WriteOnly): ResourceId in which this review is getting created
-* **roleDefinitionId**: string (ReadOnly, WriteOnly): This is used to indicate the role being reviewed
-
 ## AccessReviewHistoryScheduleSettings
 ### Properties
 * **pattern**: [AccessReviewRecurrencePattern](#accessreviewrecurrencepattern) (WriteOnly): Recurrence Pattern of an Access Review Schedule Definition.
 * **range**: [AccessReviewRecurrenceRange](#accessreviewrecurrencerange) (WriteOnly): Recurrence Range of an Access Review Schedule Definition.
-
-## AccessReviewRecurrencePattern
-### Properties
-* **interval**: int (WriteOnly): The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
-* **type**: 'absoluteMonthly' | 'weekly' | string (WriteOnly): The recurrence type : weekly, monthly, etc.
-
-## AccessReviewRecurrenceRange
-### Properties
-* **endDate**: string (WriteOnly): The DateTime when the review is scheduled to end. Required if type is endDate
-* **numberOfOccurrences**: int (WriteOnly): The number of times to repeat the access review. Required and must be positive if type is numbered.
-* **startDate**: string (WriteOnly): The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
-* **type**: 'endDate' | 'noEnd' | 'numbered' | string (WriteOnly): The recurrence range type. The possible values are: endDate, noEnd, numbered.
-
-## AccessReviewReviewer
-### Properties
-* **principalId**: string (WriteOnly): The id of the reviewer(user/servicePrincipal)
-* **principalType**: 'servicePrincipal' | 'user' | string (ReadOnly, WriteOnly): The identity type : user/servicePrincipal
 
 ## AccessReviewInstance
 ### Properties
@@ -157,6 +131,28 @@
 * **reviewersType**: 'Assigned' | 'Managers' | 'Self' | string (ReadOnly, WriteOnly): This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.
 * **startDateTime**: string (WriteOnly): The DateTime when the review instance is scheduled to be start.
 * **status**: 'Applied' | 'Applying' | 'AutoReviewed' | 'AutoReviewing' | 'Completed' | 'Completing' | 'InProgress' | 'Initializing' | 'NotStarted' | 'Scheduled' | 'Starting' | string (ReadOnly, WriteOnly): This read-only field specifies the status of an access review instance.
+
+## AccessReviewRecurrencePattern
+### Properties
+* **interval**: int (WriteOnly): The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
+* **type**: 'absoluteMonthly' | 'weekly' | string (WriteOnly): The recurrence type : weekly, monthly, etc.
+
+## AccessReviewRecurrenceRange
+### Properties
+* **endDate**: string (WriteOnly): The DateTime when the review is scheduled to end. Required if type is endDate
+* **numberOfOccurrences**: int (WriteOnly): The number of times to repeat the access review. Required and must be positive if type is numbered.
+* **startDate**: string (WriteOnly): The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
+* **type**: 'endDate' | 'noEnd' | 'numbered' | string (WriteOnly): The recurrence range type. The possible values are: endDate, noEnd, numbered.
+
+## AccessReviewRecurrenceSettings
+### Properties
+* **pattern**: [AccessReviewRecurrencePattern](#accessreviewrecurrencepattern) (WriteOnly): Recurrence Pattern of an Access Review Schedule Definition.
+* **range**: [AccessReviewRecurrenceRange](#accessreviewrecurrencerange) (WriteOnly): Recurrence Range of an Access Review Schedule Definition.
+
+## AccessReviewReviewer
+### Properties
+* **principalId**: string (WriteOnly): The id of the reviewer(user/servicePrincipal)
+* **principalType**: 'servicePrincipal' | 'user' | string (ReadOnly, WriteOnly): The identity type : user/servicePrincipal
 
 ## AccessReviewScheduleDefinitionProperties
 ### Properties
@@ -185,8 +181,12 @@
 * **recurrence**: [AccessReviewRecurrenceSettings](#accessreviewrecurrencesettings) (WriteOnly): Recurrence Settings of an Access Review Schedule Definition.
 * **reminderNotificationsEnabled**: bool (WriteOnly): Flag to indicate whether sending reminder emails to reviewers are enabled.
 
-## AccessReviewRecurrenceSettings
+## AccessReviewScope
 ### Properties
-* **pattern**: [AccessReviewRecurrencePattern](#accessreviewrecurrencepattern) (WriteOnly): Recurrence Pattern of an Access Review Schedule Definition.
-* **range**: [AccessReviewRecurrenceRange](#accessreviewrecurrencerange) (WriteOnly): Recurrence Range of an Access Review Schedule Definition.
+* **assignmentState**: 'active' | 'eligible' | string (ReadOnly, WriteOnly): The role assignment state eligible/active to review
+* **expandNestedMemberships**: bool (WriteOnly): Flag to indicate whether to expand nested memberships or not.
+* **inactiveDuration**: string (WriteOnly): Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
+* **principalType**: 'guestUser' | 'redeemedGuestUser' | 'servicePrincipal' | 'user' | 'user,group' | string (ReadOnly, WriteOnly): The identity type user/servicePrincipal to review
+* **resourceId**: string (ReadOnly, WriteOnly): ResourceId in which this review is getting created
+* **roleDefinitionId**: string (ReadOnly, WriteOnly): This is used to indicate the role being reviewed
 

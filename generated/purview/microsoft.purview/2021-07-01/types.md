@@ -28,22 +28,10 @@
 * **ApiVersion**: 2021-07-01
 * **Output**: [AccessKeys](#accesskeys)
 
-## Identity
+## AccessKeys
 ### Properties
-* **principalId**: string (ReadOnly): Service principal object Id
-* **tenantId**: string (ReadOnly): Tenant Id
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string: Identity Type
-* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): User Assigned Identities
-
-## IdentityUserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
-
-## UserAssignedIdentity
-### Properties
-* **clientId**: string (ReadOnly): Gets or Sets Client ID
-* **principalId**: string (ReadOnly): Gets or Sets Principal ID
+* **atlasKafkaPrimaryEndpoint**: string (ReadOnly): Gets or sets the primary connection string.
+* **atlasKafkaSecondaryEndpoint**: string (ReadOnly): Gets or sets the secondary connection string.
 
 ## AccountProperties
 ### Properties
@@ -59,11 +47,6 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'SoftDeleted' | 'SoftDeleting' | 'Succeeded' | 'Unknown' | string (ReadOnly): Gets or sets the state of the provisioning.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'NotSpecified' | string: Gets or sets the public network access.
 
-## CloudConnectors
-### Properties
-* **awsExternalId**: string (ReadOnly): AWS external identifier.
-Configured in AWS to allow use of the role arn used for scanning
-
 ## AccountPropertiesEndpoints
 ### Properties
 * **catalog**: string (ReadOnly): Gets the catalog endpoint.
@@ -75,6 +58,32 @@ Configured in AWS to allow use of the role arn used for scanning
 * **eventHubNamespace**: string (ReadOnly): Gets the managed event hub namespace resource identifier.
 * **resourceGroup**: string (ReadOnly): Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.
 * **storageAccount**: string (ReadOnly): Gets the managed storage account resource identifier.
+
+## AccountSku
+### Properties
+* **capacity**: int: Gets or sets the sku capacity.
+* **name**: 'Standard' | string: Gets or sets the sku name.
+
+## CloudConnectors
+### Properties
+* **awsExternalId**: string (ReadOnly): AWS external identifier.
+Configured in AWS to allow use of the role arn used for scanning
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly): Service principal object Id
+* **tenantId**: string (ReadOnly): Tenant Id
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string: Identity Type
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): User Assigned Identities
+
+## IdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## PrivateEndpoint
+### Properties
+* **id**: string: The private endpoint identifier.
 
 ## PrivateEndpointConnection
 ### Properties
@@ -89,20 +98,11 @@ Configured in AWS to allow use of the role arn used for scanning
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): The private link service connection state.
 * **provisioningState**: string (ReadOnly): The provisioning state.
 
-## PrivateEndpoint
-### Properties
-* **id**: string: The private endpoint identifier.
-
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: string: The required actions.
 * **description**: string: The description.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Unknown' | string: The status.
-
-## AccountSku
-### Properties
-* **capacity**: int: Gets or sets the sku capacity.
-* **name**: 'Standard' | string: Gets or sets the sku name.
 
 ## TrackedResourceSystemData
 ### Properties
@@ -118,8 +118,8 @@ Configured in AWS to allow use of the role arn used for scanning
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## AccessKeys
+## UserAssignedIdentity
 ### Properties
-* **atlasKafkaPrimaryEndpoint**: string (ReadOnly): Gets or sets the primary connection string.
-* **atlasKafkaSecondaryEndpoint**: string (ReadOnly): Gets or sets the secondary connection string.
+* **clientId**: string (ReadOnly): Gets or Sets Client ID
+* **principalId**: string (ReadOnly): Gets or Sets Principal ID
 

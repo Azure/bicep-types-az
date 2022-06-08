@@ -58,6 +58,25 @@
 * **principalID**: string: AAD principal ID.
 * **principalType**: 'Application' | 'User' | string: AAD principal type.
 
+## ModelingInputData
+### Properties
+* **connectionString**: string: Connection string to raw input data.
+
+## ModelingResourceProperties
+### Properties
+* **features**: 'Basic' | 'Premium' | 'Standard' | string: Modeling features controls the set of supported scenarios\models being computed. This can only be set at Modeling creation.
+* **frequency**: 'High' | 'Low' | 'Medium' | string: Modeling frequency controls the modeling compute frequency.
+* **inputData**: [ModelingInputData](#modelinginputdata): The configuration to raw CDM data to be used as Modeling resource input.
+* **provisioningState**: string (ReadOnly): The resource provisioning state.
+* **size**: 'Large' | 'Medium' | 'Small' | string: Modeling size controls the maximum supported input data size.
+
+## ServiceEndpointResourceProperties
+### Properties
+* **pairedLocation**: string (ReadOnly): The paired location that will be used by this ServiceEndpoint.
+* **preAllocatedCapacity**: int: ServiceEndpoint pre-allocated capacity controls the maximum requests-per-second allowed for that endpoint. Only applicable when Account configuration is Capacity.
+* **provisioningState**: string (ReadOnly): The resource provisioning state.
+* **url**: string (ReadOnly): The URL where the ServiceEndpoint API is accessible at.
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -72,29 +91,10 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ModelingResourceProperties
-### Properties
-* **features**: 'Basic' | 'Premium' | 'Standard' | string: Modeling features controls the set of supported scenarios\models being computed. This can only be set at Modeling creation.
-* **frequency**: 'High' | 'Low' | 'Medium' | string: Modeling frequency controls the modeling compute frequency.
-* **inputData**: [ModelingInputData](#modelinginputdata): The configuration to raw CDM data to be used as Modeling resource input.
-* **provisioningState**: string (ReadOnly): The resource provisioning state.
-* **size**: 'Large' | 'Medium' | 'Small' | string: Modeling size controls the maximum supported input data size.
-
-## ModelingInputData
-### Properties
-* **connectionString**: string: Connection string to raw input data.
-
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## ServiceEndpointResourceProperties
-### Properties
-* **pairedLocation**: string (ReadOnly): The paired location that will be used by this ServiceEndpoint.
-* **preAllocatedCapacity**: int: ServiceEndpoint pre-allocated capacity controls the maximum requests-per-second allowed for that endpoint. Only applicable when Account configuration is Capacity.
-* **provisioningState**: string (ReadOnly): The resource provisioning state.
-* **url**: string (ReadOnly): The URL where the ServiceEndpoint API is accessible at.
 
 ## TrackedResourceTags
 ### Properties

@@ -76,6 +76,10 @@
 * **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
 * **type**: 'Microsoft.NetApp/netAppAccounts/snapshotPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## AccountEncryption
+### Properties
+* **keySource**: 'Microsoft.NetApp' | string: Encryption Key Source. Possible values are: 'Microsoft.NetApp'.
+
 ## AccountProperties
 ### Properties
 * **activeDirectories**: [ActiveDirectory](#activedirectory)[]: Active Directories
@@ -103,24 +107,6 @@
 * **statusDetails**: string (ReadOnly): Any details in regards to the Status of the Active Directory
 * **username**: string: Username of Active Directory domain administrator
 
-## AccountEncryption
-### Properties
-* **keySource**: 'Microsoft.NetApp' | string: Encryption Key Source. Possible values are: 'Microsoft.NetApp'.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## BackupPolicyProperties
 ### Properties
 * **dailyBackupsToKeep**: int: Daily backups count to keep
@@ -133,16 +119,60 @@
 * **weeklyBackupsToKeep**: int: Weekly backups count to keep
 * **yearlyBackupsToKeep**: int: Yearly backups count to keep
 
-## VolumeBackups
+## BackupProperties
 ### Properties
-* **backupsCount**: int: Total count of backups for volume
-* **policyEnabled**: bool: Policy enabled
-* **volumeName**: string: Volume name
+* **backupId**: string (ReadOnly): UUID v4 used to identify the Backup
+* **backupType**: 'Manual' | 'Scheduled' | string (ReadOnly): Type of backup Manual or Scheduled
+* **creationDate**: string (ReadOnly): The creation date of the backup
+* **failureReason**: string (ReadOnly): Failure reason
+* **label**: string: Label for backup
+* **provisioningState**: string (ReadOnly): Azure lifecycle management
+* **size**: int (ReadOnly): Size of backup
 
-## ResourceTags
+## DailySchedule
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **hour**: int: Indicates which hour in UTC timezone a snapshot should be taken
+* **minute**: int: Indicates which minute snapshot should be taken
+* **snapshotsToKeep**: int: Daily snapshot count to keep
+* **usedBytes**: int: Resource size in bytes, current storage usage for the volume in bytes
+
+## ExportPolicyRule
+### Properties
+* **allowedClients**: string: Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names
+* **cifs**: bool: Allows CIFS protocol
+* **hasRootAccess**: bool: Has root access to volume
+* **kerberos5iReadOnly**: bool: Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later
+* **kerberos5iReadWrite**: bool: Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later
+* **kerberos5pReadOnly**: bool: Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later
+* **kerberos5pReadWrite**: bool: Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later
+* **kerberos5ReadOnly**: bool: Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later
+* **kerberos5ReadWrite**: bool: Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later
+* **nfsv3**: bool: Allows NFSv3 protocol. Enable only for NFSv3 type volumes
+* **nfsv41**: bool: Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes
+* **ruleIndex**: int: Order index
+* **unixReadOnly**: bool: Read only access
+* **unixReadWrite**: bool: Read and write access
+
+## HourlySchedule
+### Properties
+* **minute**: int: Indicates which minute snapshot should be taken
+* **snapshotsToKeep**: int: Hourly snapshot count to keep
+* **usedBytes**: int: Resource size in bytes, current storage usage for the volume in bytes
+
+## MonthlySchedule
+### Properties
+* **daysOfMonth**: string: Indicates which days of the month snapshot should be taken. A comma delimited string.
+* **hour**: int: Indicates which hour in UTC timezone a snapshot should be taken
+* **minute**: int: Indicates which minute snapshot should be taken
+* **snapshotsToKeep**: int: Monthly snapshot count to keep
+* **usedBytes**: int: Resource size in bytes, current storage usage for the volume in bytes
+
+## MountTargetProperties
+### Properties
+* **fileSystemId**: string (Required): UUID v4 used to identify the MountTarget
+* **ipAddress**: string (ReadOnly): The mount target's IPv4 address
+* **mountTargetId**: string (ReadOnly): UUID v4 used to identify the MountTarget
+* **smbServerFqdn**: string: The SMB server's Fully Qualified Domain Name, FQDN
 
 ## PoolProperties
 ### Properties
@@ -154,10 +184,76 @@
 * **totalThroughputMibps**: int (ReadOnly): Total throughput of pool in Mibps
 * **utilizedThroughputMibps**: int (ReadOnly): Utilized throughput of pool in Mibps
 
+## ReplicationObject
+### Properties
+* **endpointType**: 'dst' | 'src' | string: Indicates whether the local volume is the source or destination for the Volume Replication
+* **remoteVolumeRegion**: string: The remote region for the other end of the Volume Replication.
+* **remoteVolumeResourceId**: string (Required): The resource ID of the remote volume.
+* **replicationId**: string: Id
+* **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' | string (Required): Schedule
+
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SnapshotPolicyProperties
+### Properties
+* **dailySchedule**: [DailySchedule](#dailyschedule): Daily Schedule properties
+* **enabled**: bool: The property to decide policy is enabled or not
+* **hourlySchedule**: [HourlySchedule](#hourlyschedule): Hourly Schedule properties
+* **monthlySchedule**: [MonthlySchedule](#monthlyschedule): Monthly Schedule properties
+* **name**: string (ReadOnly): Snapshot policy name
+* **provisioningState**: string (ReadOnly): Azure lifecycle management
+* **weeklySchedule**: [WeeklySchedule](#weeklyschedule): Weekly Schedule properties, make a snapshot every week at a specific day or days
+
+## SnapshotProperties
+### Properties
+* **created**: string (ReadOnly): The creation date of the snapshot
+* **provisioningState**: string (ReadOnly): Azure lifecycle management
+* **snapshotId**: string (ReadOnly): UUID v4 used to identify the Snapshot
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+
+## VolumeBackupProperties
+### Properties
+* **backupEnabled**: bool: Backup Enabled
+* **backupPolicyId**: string: Backup Policy Resource ID
+* **policyEnforced**: bool: Policy Enforced
+* **vaultId**: string: Vault Resource ID
+
+## VolumeBackups
+### Properties
+* **backupsCount**: int: Total count of backups for volume
+* **policyEnabled**: bool: Policy enabled
+* **volumeName**: string: Volume name
 
 ## VolumeProperties
 ### Properties
@@ -190,104 +286,13 @@
 * **replication**: [ReplicationObject](#replicationobject): Replication properties
 * **snapshot**: [VolumeSnapshotProperties](#volumesnapshotproperties): Volume Snapshot Properties
 
-## VolumeBackupProperties
-### Properties
-* **backupEnabled**: bool: Backup Enabled
-* **backupPolicyId**: string: Backup Policy Resource ID
-* **policyEnforced**: bool: Policy Enforced
-* **vaultId**: string: Vault Resource ID
-
-## ReplicationObject
-### Properties
-* **endpointType**: 'dst' | 'src' | string: Indicates whether the local volume is the source or destination for the Volume Replication
-* **remoteVolumeRegion**: string: The remote region for the other end of the Volume Replication.
-* **remoteVolumeResourceId**: string (Required): The resource ID of the remote volume.
-* **replicationId**: string: Id
-* **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' | string (Required): Schedule
-
-## VolumeSnapshotProperties
-### Properties
-* **snapshotPolicyId**: string: Snapshot Policy ResourceId
-
 ## VolumePropertiesExportPolicy
 ### Properties
 * **rules**: [ExportPolicyRule](#exportpolicyrule)[]: Export policy rule
 
-## ExportPolicyRule
+## VolumeSnapshotProperties
 ### Properties
-* **allowedClients**: string: Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names
-* **cifs**: bool: Allows CIFS protocol
-* **hasRootAccess**: bool: Has root access to volume
-* **kerberos5iReadOnly**: bool: Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later
-* **kerberos5iReadWrite**: bool: Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later
-* **kerberos5pReadOnly**: bool: Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later
-* **kerberos5pReadWrite**: bool: Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later
-* **kerberos5ReadOnly**: bool: Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later
-* **kerberos5ReadWrite**: bool: Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later
-* **nfsv3**: bool: Allows NFSv3 protocol. Enable only for NFSv3 type volumes
-* **nfsv41**: bool: Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes
-* **ruleIndex**: int: Order index
-* **unixReadOnly**: bool: Read only access
-* **unixReadWrite**: bool: Read and write access
-
-## MountTargetProperties
-### Properties
-* **fileSystemId**: string (Required): UUID v4 used to identify the MountTarget
-* **ipAddress**: string (ReadOnly): The mount target's IPv4 address
-* **mountTargetId**: string (ReadOnly): UUID v4 used to identify the MountTarget
-* **smbServerFqdn**: string: The SMB server's Fully Qualified Domain Name, FQDN
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## BackupProperties
-### Properties
-* **backupId**: string (ReadOnly): UUID v4 used to identify the Backup
-* **backupType**: 'Manual' | 'Scheduled' | string (ReadOnly): Type of backup Manual or Scheduled
-* **creationDate**: string (ReadOnly): The creation date of the backup
-* **failureReason**: string (ReadOnly): Failure reason
-* **label**: string: Label for backup
-* **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **size**: int (ReadOnly): Size of backup
-
-## SnapshotProperties
-### Properties
-* **created**: string (ReadOnly): The creation date of the snapshot
-* **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **snapshotId**: string (ReadOnly): UUID v4 used to identify the Snapshot
-
-## SnapshotPolicyProperties
-### Properties
-* **dailySchedule**: [DailySchedule](#dailyschedule): Daily Schedule properties
-* **enabled**: bool: The property to decide policy is enabled or not
-* **hourlySchedule**: [HourlySchedule](#hourlyschedule): Hourly Schedule properties
-* **monthlySchedule**: [MonthlySchedule](#monthlyschedule): Monthly Schedule properties
-* **name**: string (ReadOnly): Snapshot policy name
-* **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **weeklySchedule**: [WeeklySchedule](#weeklyschedule): Weekly Schedule properties, make a snapshot every week at a specific day or days
-
-## DailySchedule
-### Properties
-* **hour**: int: Indicates which hour in UTC timezone a snapshot should be taken
-* **minute**: int: Indicates which minute snapshot should be taken
-* **snapshotsToKeep**: int: Daily snapshot count to keep
-* **usedBytes**: int: Resource size in bytes, current storage usage for the volume in bytes
-
-## HourlySchedule
-### Properties
-* **minute**: int: Indicates which minute snapshot should be taken
-* **snapshotsToKeep**: int: Hourly snapshot count to keep
-* **usedBytes**: int: Resource size in bytes, current storage usage for the volume in bytes
-
-## MonthlySchedule
-### Properties
-* **daysOfMonth**: string: Indicates which days of the month snapshot should be taken. A comma delimited string.
-* **hour**: int: Indicates which hour in UTC timezone a snapshot should be taken
-* **minute**: int: Indicates which minute snapshot should be taken
-* **snapshotsToKeep**: int: Monthly snapshot count to keep
-* **usedBytes**: int: Resource size in bytes, current storage usage for the volume in bytes
+* **snapshotPolicyId**: string: Snapshot Policy ResourceId
 
 ## WeeklySchedule
 ### Properties
@@ -296,9 +301,4 @@
 * **minute**: int: Indicates which minute snapshot should be taken
 * **snapshotsToKeep**: int: Weekly snapshot count to keep
 * **usedBytes**: int: Resource size in bytes, current storage usage for the volume in bytes
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

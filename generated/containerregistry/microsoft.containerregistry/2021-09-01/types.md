@@ -58,6 +58,66 @@
 * **ApiVersion**: 2021-09-01
 * **Output**: [EventListResult](#eventlistresult)
 
+## Actor
+### Properties
+* **name**: string (ReadOnly): The subject or username associated with the request context that generated the event.
+
+## EncryptionProperty
+### Properties
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
+* **status**: 'disabled' | 'enabled' | string: Indicates whether or not the encryption is enabled for container registry.
+
+## Event
+### Properties
+* **eventRequestMessage**: [EventRequestMessage](#eventrequestmessage) (ReadOnly): The event request message sent to the service URI.
+* **eventResponseMessage**: [EventResponseMessage](#eventresponsemessage) (ReadOnly): The event response message received from the service URI.
+* **id**: string (ReadOnly): The event ID.
+
+## EventContent
+### Properties
+* **action**: string (ReadOnly): The action that encompasses the provided event.
+* **actor**: [Actor](#actor) (ReadOnly): The agent that initiated the event. For most situations, this could be from the authorization context of the request.
+* **id**: string (ReadOnly): The event ID.
+* **request**: [Request](#request) (ReadOnly): The request that generated the event.
+* **source**: [Source](#source) (ReadOnly): The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
+* **target**: [Target](#target) (ReadOnly): The target of the event.
+* **timestamp**: string (ReadOnly): The time at which the event occurred.
+
+## EventListResult
+### Properties
+* **nextLink**: string (ReadOnly): The URI that can be used to request the next list of events.
+* **value**: [Event](#event)[] (ReadOnly): The list of events. Since this list may be incomplete, the nextLink field should be used to request the next list of events.
+
+## EventRequestMessage
+### Properties
+* **content**: [EventContent](#eventcontent) (ReadOnly): The content of the event request message.
+* **headers**: [EventRequestMessageHeaders](#eventrequestmessageheaders) (ReadOnly): The headers of the event request message.
+* **method**: string (ReadOnly): The HTTP method used to send the event request message.
+* **requestUri**: string (ReadOnly): The URI used to send the event request message.
+* **version**: string (ReadOnly): The HTTP message version.
+
+## EventRequestMessageHeaders
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## EventResponseMessage
+### Properties
+* **content**: string (ReadOnly): The content of the event response message.
+* **headers**: [EventResponseMessageHeaders](#eventresponsemessageheaders) (ReadOnly): The headers of the event response message.
+* **reasonPhrase**: string (ReadOnly): The reason phrase of the event response message.
+* **statusCode**: string (ReadOnly): The status code of the event response message.
+* **version**: string (ReadOnly): The HTTP message version.
+
+## EventResponseMessageHeaders
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ExportPolicy
+### Properties
+* **status**: 'disabled' | 'enabled' | string: The value that indicates whether the policy is enabled or not.
+
 ## IdentityProperties
 ### Properties
 * **principalId**: string: The principal ID of resource identity.
@@ -73,10 +133,68 @@ dictionary key references will be ARM resource ids in the form:
 ### Additional Properties
 * **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
 
-## UserIdentityProperties
+## IPRule
 ### Properties
-* **clientId**: string: The client id of user assigned identity.
-* **principalId**: string: The principal id of user assigned identity.
+* **action**: 'Allow' | string: The action of IP ACL rule.
+* **value**: string (Required): Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
+
+## KeyVaultProperties
+### Properties
+* **identity**: string: The client id of the identity which will be used to access key vault.
+* **keyIdentifier**: string: Key vault uri to access the encryption key.
+* **keyRotationEnabled**: bool (ReadOnly): Auto key rotation status for a CMK enabled registry.
+* **lastKeyRotationTimestamp**: string (ReadOnly): Timestamp of the last successful key rotation.
+* **versionedKeyIdentifier**: string (ReadOnly): The fully qualified key identifier that includes the version of the key that is actually used for encryption.
+
+## NetworkRuleSet
+### Properties
+* **defaultAction**: 'Allow' | 'Deny' | string (Required): The default action of allow or deny when no other rules match.
+* **ipRules**: [IPRule](#iprule)[]: The IP ACL rules.
+
+## Policies
+### Properties
+* **exportPolicy**: [ExportPolicy](#exportpolicy): The export policy for a container registry.
+* **quarantinePolicy**: [QuarantinePolicy](#quarantinepolicy): The quarantine policy for a container registry.
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): The retention policy for a container registry.
+* **trustPolicy**: [TrustPolicy](#trustpolicy): The content trust policy for a container registry.
+
+## PrivateEndpoint
+### Properties
+* **id**: string: This is private endpoint resource created with Microsoft.Network resource provider.
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly): The resource ID.
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The properties of a private endpoint connection.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: string (ReadOnly): The type of the resource.
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): The state of a private link service connection.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of private endpoint connection resource.
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: 'None' | 'Recreate' | string: A message indicating if changes on the service provider require any updates on the consumer.
+* **description**: string: The description for connection status. For example if connection is rejected it can indicate reason for rejection.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: The private link service connection status.
+
+## QuarantinePolicy
+### Properties
+* **status**: 'disabled' | 'enabled' | string: The value that indicates whether the policy is enabled or not.
+
+## RegistryListCredentialsResult
+### Properties
+* **passwords**: [RegistryPassword](#registrypassword)[] (ReadOnly): The list of passwords for a container registry.
+* **username**: string (ReadOnly): The username for a container registry.
+
+## RegistryPassword
+### Properties
+* **name**: 'password' | 'password2' (ReadOnly): The password name.
+* **value**: string (ReadOnly): The password value.
 
 ## RegistryProperties
 ### Properties
@@ -95,43 +213,30 @@ dictionary key references will be ARM resource ids in the form:
 * **status**: [Status](#status) (ReadOnly): The status of an Azure resource at the time the operation was called.
 * **zoneRedundancy**: 'Disabled' | 'Enabled' | string: Whether or not zone redundancy is enabled for this container registry
 
-## EncryptionProperty
+## ReplicationProperties
 ### Properties
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
-* **status**: 'disabled' | 'enabled' | string: Indicates whether or not the encryption is enabled for container registry.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of private endpoint connection resource.
+* **regionEndpointEnabled**: bool: Specifies whether the replication's regional endpoint is enabled. Requests will not be routed to a replication whose regional endpoint is disabled, however its data will continue to be synced with other replications.
+* **status**: [Status](#status) (ReadOnly): The status of an Azure resource at the time the operation was called.
+* **zoneRedundancy**: 'Disabled' | 'Enabled' | string: Whether or not zone redundancy is enabled for this container registry
 
-## KeyVaultProperties
+## Request
 ### Properties
-* **identity**: string: The client id of the identity which will be used to access key vault.
-* **keyIdentifier**: string: Key vault uri to access the encryption key.
-* **keyRotationEnabled**: bool (ReadOnly): Auto key rotation status for a CMK enabled registry.
-* **lastKeyRotationTimestamp**: string (ReadOnly): Timestamp of the last successful key rotation.
-* **versionedKeyIdentifier**: string (ReadOnly): The fully qualified key identifier that includes the version of the key that is actually used for encryption.
+* **addr**: string (ReadOnly): The IP or hostname and possibly port of the client connection that initiated the event. This is the RemoteAddr from the standard http request.
+* **host**: string (ReadOnly): The externally accessible hostname of the registry instance, as specified by the http host header on incoming requests.
+* **id**: string (ReadOnly): The ID of the request that initiated the event.
+* **method**: string (ReadOnly): The request method that generated the event.
+* **useragent**: string (ReadOnly): The user agent header of the request.
 
-## NetworkRuleSet
+## ResourceTags
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny' | string (Required): The default action of allow or deny when no other rules match.
-* **ipRules**: [IPRule](#iprule)[]: The IP ACL rules.
+### Additional Properties
+* **Additional Properties Type**: string
 
-## IPRule
+## ResourceTags
 ### Properties
-* **action**: 'Allow' | string: The action of IP ACL rule.
-* **value**: string (Required): Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
-
-## Policies
-### Properties
-* **exportPolicy**: [ExportPolicy](#exportpolicy): The export policy for a container registry.
-* **quarantinePolicy**: [QuarantinePolicy](#quarantinepolicy): The quarantine policy for a container registry.
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): The retention policy for a container registry.
-* **trustPolicy**: [TrustPolicy](#trustpolicy): The content trust policy for a container registry.
-
-## ExportPolicy
-### Properties
-* **status**: 'disabled' | 'enabled' | string: The value that indicates whether the policy is enabled or not.
-
-## QuarantinePolicy
-### Properties
-* **status**: 'disabled' | 'enabled' | string: The value that indicates whether the policy is enabled or not.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## RetentionPolicy
 ### Properties
@@ -139,34 +244,21 @@ dictionary key references will be ARM resource ids in the form:
 * **lastUpdatedTime**: string (ReadOnly): The timestamp when the policy was last updated.
 * **status**: 'disabled' | 'enabled' | string: The value that indicates whether the policy is enabled or not.
 
-## TrustPolicy
+## Sku
 ### Properties
-* **status**: 'disabled' | 'enabled' | string: The value that indicates whether the policy is enabled or not.
-* **type**: 'Notary' | string: The type of trust policy.
+* **name**: 'Basic' | 'Classic' | 'Premium' | 'Standard' | string (Required): The SKU name of the container registry. Required for registry creation.
+* **tier**: 'Basic' | 'Classic' | 'Premium' | 'Standard' | string (ReadOnly): The SKU tier based on the SKU name.
 
-## PrivateEndpointConnection
+## Source
 ### Properties
-* **id**: string (ReadOnly): The resource ID.
-* **name**: string (ReadOnly): The name of the resource.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The properties of a private endpoint connection.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **type**: string (ReadOnly): The type of the resource.
+* **addr**: string (ReadOnly): The IP or hostname and the port of the registry node that generated the event. Generally, this will be resolved by os.Hostname() along with the running port.
+* **instanceID**: string (ReadOnly): The running instance of an application. Changes after each restart.
 
-## PrivateEndpointConnectionProperties
+## Status
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): The state of a private link service connection.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of private endpoint connection resource.
-
-## PrivateEndpoint
-### Properties
-* **id**: string: This is private endpoint resource created with Microsoft.Network resource provider.
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionsRequired**: 'None' | 'Recreate' | string: A message indicating if changes on the service provider require any updates on the consumer.
-* **description**: string: The description for connection status. For example if connection is rejected it can indicate reason for rejection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: The private link service connection status.
+* **displayStatus**: string (ReadOnly): The short label for the status.
+* **message**: string (ReadOnly): The detailed message for the status, including alerts and error messages.
+* **timestamp**: string (ReadOnly): The timestamp when the status was changed to the current value.
 
 ## SystemData
 ### Properties
@@ -177,30 +269,29 @@ dictionary key references will be ARM resource ids in the form:
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
-## Status
+## Target
 ### Properties
-* **displayStatus**: string (ReadOnly): The short label for the status.
-* **message**: string (ReadOnly): The detailed message for the status, including alerts and error messages.
-* **timestamp**: string (ReadOnly): The timestamp when the status was changed to the current value.
+* **digest**: string (ReadOnly): The digest of the content, as defined by the Registry V2 HTTP API Specification.
+* **length**: int (ReadOnly): The number of bytes of the content. Same as Size field.
+* **mediaType**: string (ReadOnly): The MIME type of the referenced object.
+* **name**: string (ReadOnly): The name of the artifact.
+* **repository**: string (ReadOnly): The repository name.
+* **size**: int (ReadOnly): The number of bytes of the content. Same as Length field.
+* **tag**: string (ReadOnly): The tag name.
+* **url**: string (ReadOnly): The direct URL to the content.
+* **version**: string (ReadOnly): The version of the artifact.
 
-## Sku
+## TrustPolicy
 ### Properties
-* **name**: 'Basic' | 'Classic' | 'Premium' | 'Standard' | string (Required): The SKU name of the container registry. Required for registry creation.
-* **tier**: 'Basic' | 'Classic' | 'Premium' | 'Standard' | string (ReadOnly): The SKU tier based on the SKU name.
+* **status**: 'disabled' | 'enabled' | string: The value that indicates whether the policy is enabled or not.
+* **type**: 'Notary' | string: The type of trust policy.
 
-## ResourceTags
+## UserIdentityProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **clientId**: string: The client id of user assigned identity.
+* **principalId**: string: The principal id of user assigned identity.
 
-## ReplicationProperties
-### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of private endpoint connection resource.
-* **regionEndpointEnabled**: bool: Specifies whether the replication's regional endpoint is enabled. Requests will not be routed to a replication whose regional endpoint is disabled, however its data will continue to be synced with other replications.
-* **status**: [Status](#status) (ReadOnly): The status of an Azure resource at the time the operation was called.
-* **zoneRedundancy**: 'Disabled' | 'Enabled' | string: Whether or not zone redundancy is enabled for this container registry
-
-## ResourceTags
+## WebhookCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -215,97 +306,6 @@ dictionary key references will be ARM resource ids in the form:
 * **status**: 'disabled' | 'enabled' | string: The status of the webhook at the time the operation was called.
 
 ## WebhookPropertiesCreateParametersCustomHeaders
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## WebhookCreateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## RegistryListCredentialsResult
-### Properties
-* **passwords**: [RegistryPassword](#registrypassword)[] (ReadOnly): The list of passwords for a container registry.
-* **username**: string (ReadOnly): The username for a container registry.
-
-## RegistryPassword
-### Properties
-* **name**: 'password' | 'password2' (ReadOnly): The password name.
-* **value**: string (ReadOnly): The password value.
-
-## EventListResult
-### Properties
-* **nextLink**: string (ReadOnly): The URI that can be used to request the next list of events.
-* **value**: [Event](#event)[] (ReadOnly): The list of events. Since this list may be incomplete, the nextLink field should be used to request the next list of events.
-
-## Event
-### Properties
-* **eventRequestMessage**: [EventRequestMessage](#eventrequestmessage) (ReadOnly): The event request message sent to the service URI.
-* **eventResponseMessage**: [EventResponseMessage](#eventresponsemessage) (ReadOnly): The event response message received from the service URI.
-* **id**: string (ReadOnly): The event ID.
-
-## EventRequestMessage
-### Properties
-* **content**: [EventContent](#eventcontent) (ReadOnly): The content of the event request message.
-* **headers**: [EventRequestMessageHeaders](#eventrequestmessageheaders) (ReadOnly): The headers of the event request message.
-* **method**: string (ReadOnly): The HTTP method used to send the event request message.
-* **requestUri**: string (ReadOnly): The URI used to send the event request message.
-* **version**: string (ReadOnly): The HTTP message version.
-
-## EventContent
-### Properties
-* **action**: string (ReadOnly): The action that encompasses the provided event.
-* **actor**: [Actor](#actor) (ReadOnly): The agent that initiated the event. For most situations, this could be from the authorization context of the request.
-* **id**: string (ReadOnly): The event ID.
-* **request**: [Request](#request) (ReadOnly): The request that generated the event.
-* **source**: [Source](#source) (ReadOnly): The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
-* **target**: [Target](#target) (ReadOnly): The target of the event.
-* **timestamp**: string (ReadOnly): The time at which the event occurred.
-
-## Actor
-### Properties
-* **name**: string (ReadOnly): The subject or username associated with the request context that generated the event.
-
-## Request
-### Properties
-* **addr**: string (ReadOnly): The IP or hostname and possibly port of the client connection that initiated the event. This is the RemoteAddr from the standard http request.
-* **host**: string (ReadOnly): The externally accessible hostname of the registry instance, as specified by the http host header on incoming requests.
-* **id**: string (ReadOnly): The ID of the request that initiated the event.
-* **method**: string (ReadOnly): The request method that generated the event.
-* **useragent**: string (ReadOnly): The user agent header of the request.
-
-## Source
-### Properties
-* **addr**: string (ReadOnly): The IP or hostname and the port of the registry node that generated the event. Generally, this will be resolved by os.Hostname() along with the running port.
-* **instanceID**: string (ReadOnly): The running instance of an application. Changes after each restart.
-
-## Target
-### Properties
-* **digest**: string (ReadOnly): The digest of the content, as defined by the Registry V2 HTTP API Specification.
-* **length**: int (ReadOnly): The number of bytes of the content. Same as Size field.
-* **mediaType**: string (ReadOnly): The MIME type of the referenced object.
-* **name**: string (ReadOnly): The name of the artifact.
-* **repository**: string (ReadOnly): The repository name.
-* **size**: int (ReadOnly): The number of bytes of the content. Same as Length field.
-* **tag**: string (ReadOnly): The tag name.
-* **url**: string (ReadOnly): The direct URL to the content.
-* **version**: string (ReadOnly): The version of the artifact.
-
-## EventRequestMessageHeaders
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## EventResponseMessage
-### Properties
-* **content**: string (ReadOnly): The content of the event response message.
-* **headers**: [EventResponseMessageHeaders](#eventresponsemessageheaders) (ReadOnly): The headers of the event response message.
-* **reasonPhrase**: string (ReadOnly): The reason phrase of the event response message.
-* **statusCode**: string (ReadOnly): The status code of the event response message.
-* **version**: string (ReadOnly): The HTTP message version.
-
-## EventResponseMessageHeaders
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

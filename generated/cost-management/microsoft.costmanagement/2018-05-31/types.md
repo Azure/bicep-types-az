@@ -10,19 +10,16 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.CostManagement/reportconfigs' (ReadOnly, DeployTimeConstant): The resource type
 
-## ReportConfigProperties
+## ReportConfigAggregation
 ### Properties
-* **definition**: [ReportConfigDefinition](#reportconfigdefinition) (Required): The definition of a report config.
-* **deliveryInfo**: [ReportConfigDeliveryInfo](#reportconfigdeliveryinfo) (Required): The delivery information associated with a report config.
-* **format**: 'Csv' | string: The format of the report being delivered.
-* **schedule**: [ReportConfigSchedule](#reportconfigschedule): The schedule associated with a report config.
+* **function**: 'Sum' | string (Required): The name of the aggregation function to use.
+* **name**: string (Required): The name of the column to aggregate.
 
-## ReportConfigDefinition
+## ReportConfigComparisonExpression
 ### Properties
-* **dataset**: [ReportConfigDataset](#reportconfigdataset): The definition of data present in the report.
-* **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' | string (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided.
-* **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod): The start and end date for pulling data for the report.
-* **type**: 'Usage' | string (Required): The type of the report.
+* **name**: string (Required): The name of the column to use in comparison.
+* **operator**: 'In' | string (Required): The operator to use for comparison.
+* **values**: string[] (Required): Array of values to use for comparison
 
 ## ReportConfigDataset
 ### Properties
@@ -37,14 +34,26 @@
 ### Additional Properties
 * **Additional Properties Type**: [ReportConfigAggregation](#reportconfigaggregation)
 
-## ReportConfigAggregation
-### Properties
-* **function**: 'Sum' | string (Required): The name of the aggregation function to use.
-* **name**: string (Required): The name of the column to aggregate.
-
 ## ReportConfigDatasetConfiguration
 ### Properties
 * **columns**: string[]: Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.
+
+## ReportConfigDefinition
+### Properties
+* **dataset**: [ReportConfigDataset](#reportconfigdataset): The definition of data present in the report.
+* **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' | string (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+* **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod): The start and end date for pulling data for the report.
+* **type**: 'Usage' | string (Required): The type of the report.
+
+## ReportConfigDeliveryDestination
+### Properties
+* **container**: string (Required): The name of the container where reports will be uploaded.
+* **resourceId**: string (Required): The resource id of the storage account where reports will be delivered.
+* **rootFolderPath**: string: The name of the directory where reports will be uploaded.
+
+## ReportConfigDeliveryInfo
+### Properties
+* **destination**: [ReportConfigDeliveryDestination](#reportconfigdeliverydestination) (Required): The destination information for the delivery of the report.
 
 ## ReportConfigFilter
 ### Properties
@@ -54,31 +63,22 @@
 * **or**: [ReportConfigFilter](#reportconfigfilter)[]: The logical "OR" expression. Must have at least 2 items.
 * **tag**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): The comparison expression to be used in the report.
 
-## ReportConfigComparisonExpression
-### Properties
-* **name**: string (Required): The name of the column to use in comparison.
-* **operator**: 'In' | string (Required): The operator to use for comparison.
-* **values**: string[] (Required): Array of values to use for comparison
-
 ## ReportConfigGrouping
 ### Properties
 * **columnType**: 'Dimension' | 'Tag' | string (Required): The type of the column in the report.
 * **name**: string (Required): The name of the column to group.
 
-## ReportConfigTimePeriod
+## ReportConfigProperties
 ### Properties
-* **from**: string (Required): The start date to pull data from.
-* **to**: string (Required): The end date to pull data to.
+* **definition**: [ReportConfigDefinition](#reportconfigdefinition) (Required): The definition of a report config.
+* **deliveryInfo**: [ReportConfigDeliveryInfo](#reportconfigdeliveryinfo) (Required): The delivery information associated with a report config.
+* **format**: 'Csv' | string: The format of the report being delivered.
+* **schedule**: [ReportConfigSchedule](#reportconfigschedule): The schedule associated with a report config.
 
-## ReportConfigDeliveryInfo
+## ReportConfigRecurrencePeriod
 ### Properties
-* **destination**: [ReportConfigDeliveryDestination](#reportconfigdeliverydestination) (Required): The destination information for the delivery of the report.
-
-## ReportConfigDeliveryDestination
-### Properties
-* **container**: string (Required): The name of the container where reports will be uploaded.
-* **resourceId**: string (Required): The resource id of the storage account where reports will be delivered.
-* **rootFolderPath**: string: The name of the directory where reports will be uploaded.
+* **from**: string (Required): The start date of recurrence.
+* **to**: string: The end date of recurrence. If not provided, we default this to 10 years from the start date.
 
 ## ReportConfigSchedule
 ### Properties
@@ -86,10 +86,10 @@
 * **recurrencePeriod**: [ReportConfigRecurrencePeriod](#reportconfigrecurrenceperiod) (Required): The start and end date for recurrence schedule.
 * **status**: 'Active' | 'Inactive' | string: The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.
 
-## ReportConfigRecurrencePeriod
+## ReportConfigTimePeriod
 ### Properties
-* **from**: string (Required): The start date of recurrence.
-* **to**: string: The end date of recurrence. If not provided, we default this to 10 years from the start date.
+* **from**: string (Required): The start date to pull data from.
+* **to**: string (Required): The end date to pull data to.
 
 ## ResourceTags
 ### Properties

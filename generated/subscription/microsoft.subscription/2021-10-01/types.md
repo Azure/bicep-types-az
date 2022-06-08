@@ -23,6 +23,18 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Subscription/policies' (ReadOnly, DeployTimeConstant): The resource type
 
+## PutAliasRequestAdditionalProperties
+### Properties
+* **managementGroupId**: string (WriteOnly): Management group Id for the subscription.
+* **subscriptionOwnerId**: string (WriteOnly): Owner Id of the subscription
+* **subscriptionTenantId**: string (WriteOnly): Tenant Id of the subscription
+* **tags**: [PutAliasRequestAdditionalPropertiesTags](#putaliasrequestadditionalpropertiestags) (WriteOnly): Tags for the subscription
+
+## PutAliasRequestAdditionalPropertiesTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## PutAliasRequestProperties
 ### Properties
 * **acceptOwnershipState**: 'Completed' | 'Expired' | 'Pending' | string (ReadOnly): The accept ownership state of the resource.
@@ -41,18 +53,6 @@ For Legacy EA - /billingAccounts/{billingAccountName}/enrollmentAccounts/{enroll
 * **subscriptionOwnerId**: string (ReadOnly): Owner Id of the subscription
 * **tags**: [SubscriptionAliasResponsePropertiesTags](#subscriptionaliasresponsepropertiestags) (ReadOnly): Tags for the subscription
 * **workload**: 'DevTest' | 'Production' | string: The workload type of the subscription. It can be either Production or DevTest.
-
-## PutAliasRequestAdditionalProperties
-### Properties
-* **managementGroupId**: string (WriteOnly): Management group Id for the subscription.
-* **subscriptionOwnerId**: string (WriteOnly): Owner Id of the subscription
-* **subscriptionTenantId**: string (WriteOnly): Tenant Id of the subscription
-* **tags**: [PutAliasRequestAdditionalPropertiesTags](#putaliasrequestadditionalpropertiestags) (WriteOnly): Tags for the subscription
-
-## PutAliasRequestAdditionalPropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## SubscriptionAliasResponsePropertiesTags
 ### Properties

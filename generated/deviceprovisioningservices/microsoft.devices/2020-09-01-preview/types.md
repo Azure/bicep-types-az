@@ -61,6 +61,25 @@
 * **clientId**: string (ReadOnly): Client Id
 * **principalId**: string (ReadOnly): Principal Id
 
+## CertificateProperties
+### Properties
+* **created**: string (ReadOnly): The certificate's creation date and time.
+* **expiry**: string (ReadOnly): The certificate's expiration date and time.
+* **isVerified**: bool (ReadOnly): Determines whether certificate has been verified.
+* **subject**: string (ReadOnly): The certificate's subject name.
+* **thumbprint**: string (ReadOnly): The certificate's thumbprint.
+* **updated**: string (ReadOnly): The certificate's last update date and time.
+
+## EncryptionKeyIdentity
+### Properties
+* **userAssignedIdentity**: string: The user assigned identity.
+
+## EncryptionPropertiesDescription
+### Properties
+* **identity**: [EncryptionKeyIdentity](#encryptionkeyidentity): The properties of the identity used to access the key encryption key in KeyVault.
+* **keySource**: string: The source of the encryption key. Typically, Microsoft.KeyVault
+* **keyVaultProperties**: [KeyVaultKeyProperties](#keyvaultkeyproperties)[]: The properties of the encryption key configured in KeyVault.
+
 ## IotDpsPropertiesDescription
 ### Properties
 * **allocationPolicy**: 'GeoLatency' | 'Hashed' | 'Static' | string: Allocation policy to be used by this provisioning service.
@@ -76,26 +95,11 @@
 * **serviceOperationsHostName**: string (ReadOnly): Service endpoint for provisioning service.
 * **state**: 'Activating' | 'ActivationFailed' | 'Active' | 'Deleted' | 'Deleting' | 'DeletionFailed' | 'FailingOver' | 'FailoverFailed' | 'Resuming' | 'Suspended' | 'Suspending' | 'Transitioning' | string: Current state of the provisioning service.
 
-## SharedAccessSignatureAuthorizationRuleAccessRightsDescription
+## IotDpsSkuInfo
 ### Properties
-* **keyName**: string (Required): Name of the key.
-* **primaryKey**: string: Primary SAS key value.
-* **rights**: 'DeviceConnect' | 'EnrollmentRead' | 'EnrollmentWrite' | 'RegistrationStatusRead' | 'RegistrationStatusWrite' | 'ServiceConfig' | string (Required): Rights that this key has.
-* **secondaryKey**: string: Secondary SAS key value.
-
-## EncryptionPropertiesDescription
-### Properties
-* **identity**: [EncryptionKeyIdentity](#encryptionkeyidentity): The properties of the identity used to access the key encryption key in KeyVault.
-* **keySource**: string: The source of the encryption key. Typically, Microsoft.KeyVault
-* **keyVaultProperties**: [KeyVaultKeyProperties](#keyvaultkeyproperties)[]: The properties of the encryption key configured in KeyVault.
-
-## EncryptionKeyIdentity
-### Properties
-* **userAssignedIdentity**: string: The user assigned identity.
-
-## KeyVaultKeyProperties
-### Properties
-* **keyIdentifier**: string: The identifier of the key.
+* **capacity**: int: The number of units to provision
+* **name**: 'S1' | string: Sku name.
+* **tier**: string (ReadOnly): Pricing tier name of the provisioning service.
 
 ## IotHubDefinitionDescription
 ### Properties
@@ -112,6 +116,14 @@
 * **ipMask**: string (Required): A string that contains the IP address range in CIDR notation for the rule.
 * **target**: 'all' | 'deviceApi' | 'serviceApi': Target for requests captured by this rule.
 
+## KeyVaultKeyProperties
+### Properties
+* **keyIdentifier**: string: The identifier of the key.
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly): The resource identifier.
+
 ## PrivateEndpointConnection
 ### Properties
 * **id**: string (ReadOnly): The resource identifier.
@@ -124,40 +136,16 @@
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The private endpoint property of a private endpoint connection
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): The current state of a private endpoint connection
 
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly): The resource identifier.
-
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: string: Actions required for a private endpoint connection
 * **description**: string (Required): The description for the current state of a private endpoint connection
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (Required): The status of a private endpoint connection
 
-## IotDpsSkuInfo
-### Properties
-* **capacity**: int: The number of units to provision
-* **name**: 'S1' | string: Sku name.
-* **tier**: string (ReadOnly): Pricing tier name of the provisioning service.
-
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## CertificateProperties
-### Properties
-* **created**: string (ReadOnly): The certificate's creation date and time.
-* **expiry**: string (ReadOnly): The certificate's expiration date and time.
-* **isVerified**: bool (ReadOnly): Determines whether certificate has been verified.
-* **subject**: string (ReadOnly): The certificate's subject name.
-* **thumbprint**: string (ReadOnly): The certificate's thumbprint.
-* **updated**: string (ReadOnly): The certificate's last update date and time.
-
-## SharedAccessSignatureAuthorizationRuleListResult
-### Properties
-* **nextLink**: string (ReadOnly): The next link.
-* **value**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[] (ReadOnly): The list of shared access policies.
 
 ## SharedAccessSignatureAuthorizationRuleAccessRightsDescription
 ### Properties
@@ -165,4 +153,16 @@
 * **primaryKey**: string: Primary SAS key value.
 * **rights**: 'DeviceConnect' | 'EnrollmentRead' | 'EnrollmentWrite' | 'RegistrationStatusRead' | 'RegistrationStatusWrite' | 'ServiceConfig' | string (Required): Rights that this key has.
 * **secondaryKey**: string: Secondary SAS key value.
+
+## SharedAccessSignatureAuthorizationRuleAccessRightsDescription
+### Properties
+* **keyName**: string (Required): Name of the key.
+* **primaryKey**: string: Primary SAS key value.
+* **rights**: 'DeviceConnect' | 'EnrollmentRead' | 'EnrollmentWrite' | 'RegistrationStatusRead' | 'RegistrationStatusWrite' | 'ServiceConfig' | string (Required): Rights that this key has.
+* **secondaryKey**: string: Secondary SAS key value.
+
+## SharedAccessSignatureAuthorizationRuleListResult
+### Properties
+* **nextLink**: string (ReadOnly): The next link.
+* **value**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[] (ReadOnly): The list of shared access policies.
 

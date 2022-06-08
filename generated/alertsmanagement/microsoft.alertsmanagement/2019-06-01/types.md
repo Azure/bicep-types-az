@@ -11,6 +11,12 @@
 * **tags**: [AzureResourceTags](#azureresourcetags): The resource tags.
 * **type**: 'microsoft.alertsManagement/smartDetectorAlertRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## ActionGroupsInformation
+### Properties
+* **customEmailSubject**: string: An optional custom email subject to use in email notifications.
+* **customWebhookPayload**: string: An optional custom web-hook payload to use in web-hook notifications.
+* **groupIds**: string[] (Required): The Action Group resource IDs.
+
 ## AlertRuleProperties
 ### Properties
 * **actionGroups**: [ActionGroupsInformation](#actiongroupsinformation) (Required): The Action Groups information, used by the alert rule.
@@ -22,11 +28,10 @@
 * **state**: 'Disabled' | 'Enabled' | string (Required): The alert rule state.
 * **throttling**: [ThrottlingInformation](#throttlinginformation): Optional throttling information for the alert rule.
 
-## ActionGroupsInformation
+## AzureResourceTags
 ### Properties
-* **customEmailSubject**: string: An optional custom email subject to use in email notifications.
-* **customWebhookPayload**: string: An optional custom web-hook payload to use in web-hook notifications.
-* **groupIds**: string[] (Required): The Action Group resource IDs.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Detector
 ### Properties
@@ -45,9 +50,4 @@
 ## ThrottlingInformation
 ### Properties
 * **duration**: string: The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes
-
-## AzureResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

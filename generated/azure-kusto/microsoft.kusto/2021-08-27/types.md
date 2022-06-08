@@ -136,22 +136,34 @@
 * **ApiVersion**: 2021-08-27
 * **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
 
-## Identity
+## AcceptedAudiences
 ### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string (Required): The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove all identities.
-* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user identities associated with the Kusto cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **value**: string: GUID or valid URL representing an accepted audience.
 
-## IdentityUserAssignedIdentities
+## AttachedDatabaseConfigurationProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: [ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties](#componentssgqdofschemasidentitypropertiesuserassignedidentitiesadditionalproperties)
+* **attachedDatabaseNames**: string[] (ReadOnly): The list of databases from the clusterResourceId which are currently attached to the cluster.
+* **clusterResourceId**: string (Required): The resource id of the cluster where the databases you would like to attach reside.
+* **databaseName**: string (Required): The name of the database which you would like to attach, use * if you want to follow all current and future databases.
+* **defaultPrincipalsModificationKind**: 'None' | 'Replace' | 'Union' | string (Required): The default principals modification kind
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
+* **tableLevelSharingProperties**: [TableLevelSharingProperties](#tablelevelsharingproperties): Tables that will be included and excluded in the follower database
 
-## ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
+## AzureSku
 ### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+* **capacity**: int: The number of instances of the cluster.
+* **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Dev(No SLA)_Standard_E2a_v4' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_E16a_v4' | 'Standard_E16as_v4+3TB_PS' | 'Standard_E16as_v4+4TB_PS' | 'Standard_E2a_v4' | 'Standard_E4a_v4' | 'Standard_E64i_v3' | 'Standard_E80ids_v4' | 'Standard_E8a_v4' | 'Standard_E8as_v4+1TB_PS' | 'Standard_E8as_v4+2TB_PS' | 'Standard_L16s' | 'Standard_L16s_v2' | 'Standard_L4s' | 'Standard_L8s' | 'Standard_L8s_v2' | string (Required): SKU name.
+* **tier**: 'Basic' | 'Standard' | string (Required): SKU tier.
+
+## ClusterPrincipalProperties
+### Properties
+* **principalId**: string (Required): The principal ID assigned to the cluster principal. It can be a user email, application ID, or security group name.
+* **principalName**: string (ReadOnly): The principal name
+* **principalType**: 'App' | 'Group' | 'User' | string (Required): Principal type.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
+* **role**: 'AllDatabasesAdmin' | 'AllDatabasesViewer' | string (Required): Cluster principal role.
+* **tenantId**: string: The tenant id of the principal
+* **tenantName**: string (ReadOnly): The tenant name of the principal
 
 ## ClusterProperties
 ### Properties
@@ -177,101 +189,38 @@
 * **uri**: string (ReadOnly): The cluster URI.
 * **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): A class that contains virtual network definition.
 
-## AcceptedAudiences
+## ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
-* **value**: string: GUID or valid URL representing an accepted audience.
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
 
-## KeyVaultProperties
+## DatabasePrincipal
 ### Properties
-* **keyName**: string: The name of the key vault key.
-* **keyVaultUri**: string: The Uri of the key vault.
-* **keyVersion**: string: The version of the key vault key.
-* **userIdentity**: string: The user assigned identity (ARM resource id) that has access to the key.
+* **appId**: string (ReadOnly): Application id - relevant only for application principal type.
+* **email**: string (ReadOnly): Database principal email if exists.
+* **fqn**: string (ReadOnly): Database principal fully qualified name.
+* **name**: string (ReadOnly): Database principal name.
+* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewer' | 'User' | 'Viewer' | string (ReadOnly): Database principal role.
+* **tenantName**: string (ReadOnly): The tenant name of the principal
+* **type**: 'App' | 'Group' | 'User' | string (ReadOnly): Database principal type.
 
-## LanguageExtensionsList
+## DatabasePrincipalListResult
 ### Properties
-* **value**: [LanguageExtension](#languageextension)[]: The list of language extensions.
+* **value**: [DatabasePrincipal](#databaseprincipal)[] (ReadOnly): The list of Kusto database principals.
 
-## LanguageExtension
+## DatabasePrincipalProperties
 ### Properties
-* **languageExtensionName**: 'PYTHON' | 'R' | string: Language extension that can run within KQL query.
-
-## OptimizedAutoscale
-### Properties
-* **isEnabled**: bool (Required): A boolean value that indicate if the optimized autoscale feature is enabled or not.
-* **maximum**: int (Required): Maximum allowed instances count.
-* **minimum**: int (Required): Minimum allowed instances count.
-* **version**: int (Required): The version of the template defined, for instance 1.
-
-## TrustedExternalTenant
-### Properties
-* **value**: string: GUID representing an external tenant.
-
-## VirtualNetworkConfiguration
-### Properties
-* **dataManagementPublicIpId**: string (Required): Data management's service public IP address resource id.
-* **enginePublicIpId**: string (Required): Engine service's public IP address resource id.
-* **subnetId**: string (Required): The subnet resource id.
-
-## AzureSku
-### Properties
-* **capacity**: int: The number of instances of the cluster.
-* **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Dev(No SLA)_Standard_E2a_v4' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_E16a_v4' | 'Standard_E16as_v4+3TB_PS' | 'Standard_E16as_v4+4TB_PS' | 'Standard_E2a_v4' | 'Standard_E4a_v4' | 'Standard_E64i_v3' | 'Standard_E80ids_v4' | 'Standard_E8a_v4' | 'Standard_E8as_v4+1TB_PS' | 'Standard_E8as_v4+2TB_PS' | 'Standard_L16s' | 'Standard_L16s_v2' | 'Standard_L4s' | 'Standard_L8s' | 'Standard_L8s_v2' | string (Required): SKU name.
-* **tier**: 'Basic' | 'Standard' | string (Required): SKU tier.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## AttachedDatabaseConfigurationProperties
-### Properties
-* **attachedDatabaseNames**: string[] (ReadOnly): The list of databases from the clusterResourceId which are currently attached to the cluster.
-* **clusterResourceId**: string (Required): The resource id of the cluster where the databases you would like to attach reside.
-* **databaseName**: string (Required): The name of the database which you would like to attach, use * if you want to follow all current and future databases.
-* **defaultPrincipalsModificationKind**: 'None' | 'Replace' | 'Union' | string (Required): The default principals modification kind
+* **principalId**: string (Required): The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.
+* **principalName**: string (ReadOnly): The principal name
+* **principalType**: 'App' | 'Group' | 'User' | string (Required): Principal type.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
-* **tableLevelSharingProperties**: [TableLevelSharingProperties](#tablelevelsharingproperties): Tables that will be included and excluded in the follower database
-
-## TableLevelSharingProperties
-### Properties
-* **externalTablesToExclude**: string[]: List of external tables exclude from the follower database
-* **externalTablesToInclude**: string[]: List of external tables to include in the follower database
-* **materializedViewsToExclude**: string[]: List of materialized views exclude from the follower database
-* **materializedViewsToInclude**: string[]: List of materialized views to include in the follower database
-* **tablesToExclude**: string[]: List of tables to exclude from the follower database
-* **tablesToInclude**: string[]: List of tables to include in the follower database
-
-## ReadOnlyFollowingDatabaseProperties
-### Properties
-* **attachedDatabaseConfigurationName**: string (ReadOnly): The name of the attached database configuration cluster
-* **hotCachePeriod**: string: The time the data should be kept in cache for fast queries in TimeSpan.
-* **leaderClusterResourceId**: string (ReadOnly): The name of the leader cluster
-* **principalsModificationKind**: 'None' | 'Replace' | 'Union' | string (ReadOnly): The principals modification kind of the database
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
-* **softDeletePeriod**: string (ReadOnly): The time the data should be kept before it stops being accessible to queries in TimeSpan.
-* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): A class that contains database statistics information.
+* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewer' | 'User' | 'Viewer' | string (Required): Database principal role.
+* **tenantId**: string: The tenant id of the principal
+* **tenantName**: string (ReadOnly): The tenant name of the principal
 
 ## DatabaseStatistics
 ### Properties
 * **size**: int: The database size - the total size of compressed data and index in bytes.
-
-## ReadWriteDatabaseProperties
-### Properties
-* **hotCachePeriod**: string: The time the data should be kept in cache for fast queries in TimeSpan.
-* **isFollowed**: bool (ReadOnly): Indicates whether the database is followed.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
-* **softDeletePeriod**: string: The time the data should be kept before it stops being accessible to queries in TimeSpan.
-* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): A class that contains database statistics information.
 
 ## EventGridConnectionProperties
 ### Properties
@@ -297,6 +246,28 @@
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
 * **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
 
+## FollowerDatabaseDefinition
+### Properties
+* **attachedDatabaseConfigurationName**: string (ReadOnly): Resource name of the attached database configuration in the follower cluster.
+* **clusterResourceId**: string (ReadOnly): Resource id of the cluster that follows a database owned by this cluster.
+* **databaseName**: string (ReadOnly): The database name owned by this cluster that was followed. * in case following all databases.
+
+## FollowerDatabaseListResult
+### Properties
+* **value**: [FollowerDatabaseDefinition](#followerdatabasedefinition)[] (ReadOnly): The list of follower database result.
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string (Required): The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove all identities.
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user identities associated with the Kusto cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+
+## IdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties](#componentssgqdofschemasidentitypropertiesuserassignedidentitiesadditionalproperties)
+
 ## IotHubConnectionProperties
 ### Properties
 * **consumerGroup**: string (Required): The iot hub consumer group.
@@ -308,23 +279,24 @@
 * **sharedAccessPolicyName**: string (Required): The name of the share access policy
 * **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
 
-## DatabasePrincipalProperties
+## KeyVaultProperties
 ### Properties
-* **principalId**: string (Required): The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.
-* **principalName**: string (ReadOnly): The principal name
-* **principalType**: 'App' | 'Group' | 'User' | string (Required): Principal type.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
-* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewer' | 'User' | 'Viewer' | string (Required): Database principal role.
-* **tenantId**: string: The tenant id of the principal
-* **tenantName**: string (ReadOnly): The tenant name of the principal
+* **keyName**: string: The name of the key vault key.
+* **keyVaultUri**: string: The Uri of the key vault.
+* **keyVersion**: string: The version of the key vault key.
+* **userIdentity**: string: The user assigned identity (ARM resource id) that has access to the key.
 
-## ScriptProperties
+## LanguageExtension
 ### Properties
-* **continueOnErrors**: bool: Flag that indicates whether to continue if one of the command fails.
-* **forceUpdateTag**: string: A unique string. If changed the script will be applied again.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
-* **scriptUrl**: string (Required): The url to the KQL script blob file.
-* **scriptUrlSasToken**: string (Required, WriteOnly): The SaS token.
+* **languageExtensionName**: 'PYTHON' | 'R' | string: Language extension that can run within KQL query.
+
+## LanguageExtensionsList
+### Properties
+* **value**: [LanguageExtension](#languageextension)[]: The list of language extensions.
+
+## LanguageExtensionsList
+### Properties
+* **value**: [LanguageExtension](#languageextension)[]: The list of language extensions.
 
 ## ManagedPrivateEndpointProperties
 ### Properties
@@ -334,15 +306,12 @@
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
 * **requestMessage**: string: The user request message.
 
-## ClusterPrincipalProperties
+## OptimizedAutoscale
 ### Properties
-* **principalId**: string (Required): The principal ID assigned to the cluster principal. It can be a user email, application ID, or security group name.
-* **principalName**: string (ReadOnly): The principal name
-* **principalType**: 'App' | 'Group' | 'User' | string (Required): Principal type.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
-* **role**: 'AllDatabasesAdmin' | 'AllDatabasesViewer' | string (Required): Cluster principal role.
-* **tenantId**: string: The tenant id of the principal
-* **tenantName**: string (ReadOnly): The tenant name of the principal
+* **isEnabled**: bool (Required): A boolean value that indicate if the optimized autoscale feature is enabled or not.
+* **maximum**: int (Required): Maximum allowed instances count.
+* **minimum**: int (Required): Minimum allowed instances count.
+* **version**: int (Required): The version of the template defined, for instance 1.
 
 ## PrivateEndpointConnectionProperties
 ### Properties
@@ -361,31 +330,62 @@
 * **description**: string: The private link service connection description.
 * **status**: string: The private link service connection status.
 
-## FollowerDatabaseListResult
+## ReadOnlyFollowingDatabaseProperties
 ### Properties
-* **value**: [FollowerDatabaseDefinition](#followerdatabasedefinition)[] (ReadOnly): The list of follower database result.
+* **attachedDatabaseConfigurationName**: string (ReadOnly): The name of the attached database configuration cluster
+* **hotCachePeriod**: string: The time the data should be kept in cache for fast queries in TimeSpan.
+* **leaderClusterResourceId**: string (ReadOnly): The name of the leader cluster
+* **principalsModificationKind**: 'None' | 'Replace' | 'Union' | string (ReadOnly): The principals modification kind of the database
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
+* **softDeletePeriod**: string (ReadOnly): The time the data should be kept before it stops being accessible to queries in TimeSpan.
+* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): A class that contains database statistics information.
 
-## FollowerDatabaseDefinition
+## ReadWriteDatabaseProperties
 ### Properties
-* **attachedDatabaseConfigurationName**: string (ReadOnly): Resource name of the attached database configuration in the follower cluster.
-* **clusterResourceId**: string (ReadOnly): Resource id of the cluster that follows a database owned by this cluster.
-* **databaseName**: string (ReadOnly): The database name owned by this cluster that was followed. * in case following all databases.
+* **hotCachePeriod**: string: The time the data should be kept in cache for fast queries in TimeSpan.
+* **isFollowed**: bool (ReadOnly): Indicates whether the database is followed.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
+* **softDeletePeriod**: string: The time the data should be kept before it stops being accessible to queries in TimeSpan.
+* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): A class that contains database statistics information.
 
-## LanguageExtensionsList
+## ScriptProperties
 ### Properties
-* **value**: [LanguageExtension](#languageextension)[]: The list of language extensions.
+* **continueOnErrors**: bool: Flag that indicates whether to continue if one of the command fails.
+* **forceUpdateTag**: string: A unique string. If changed the script will be applied again.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
+* **scriptUrl**: string (Required): The url to the KQL script blob file.
+* **scriptUrlSasToken**: string (Required, WriteOnly): The SaS token.
 
-## DatabasePrincipalListResult
+## SystemData
 ### Properties
-* **value**: [DatabasePrincipal](#databaseprincipal)[] (ReadOnly): The list of Kusto database principals.
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
-## DatabasePrincipal
+## TableLevelSharingProperties
 ### Properties
-* **appId**: string (ReadOnly): Application id - relevant only for application principal type.
-* **email**: string (ReadOnly): Database principal email if exists.
-* **fqn**: string (ReadOnly): Database principal fully qualified name.
-* **name**: string (ReadOnly): Database principal name.
-* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewer' | 'User' | 'Viewer' | string (ReadOnly): Database principal role.
-* **tenantName**: string (ReadOnly): The tenant name of the principal
-* **type**: 'App' | 'Group' | 'User' | string (ReadOnly): Database principal type.
+* **externalTablesToExclude**: string[]: List of external tables exclude from the follower database
+* **externalTablesToInclude**: string[]: List of external tables to include in the follower database
+* **materializedViewsToExclude**: string[]: List of materialized views exclude from the follower database
+* **materializedViewsToInclude**: string[]: List of materialized views to include in the follower database
+* **tablesToExclude**: string[]: List of tables to exclude from the follower database
+* **tablesToInclude**: string[]: List of tables to include in the follower database
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrustedExternalTenant
+### Properties
+* **value**: string: GUID representing an external tenant.
+
+## VirtualNetworkConfiguration
+### Properties
+* **dataManagementPublicIpId**: string (Required): Data management's service public IP address resource id.
+* **enginePublicIpId**: string (Required): Engine service's public IP address resource id.
+* **subnetId**: string (Required): The subnet resource id.
 

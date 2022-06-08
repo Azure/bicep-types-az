@@ -40,6 +40,12 @@
 * **ApiVersion**: 2018-09-07-preview
 * **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
 
+## AzureSku
+### Properties
+* **capacity**: int: SKU capacity.
+* **name**: 'D13_v2' | 'D14_v2' | 'KC16' | 'KC8' | 'KS16' | 'KS8' | 'L16' | 'L8' | string (Required): SKU name.
+* **tier**: 'Standard' | string (Required): SKU tier.
+
 ## ClusterProperties
 ### Properties
 * **dataIngestionUri**: string (ReadOnly): The cluster data ingestion URI.
@@ -48,20 +54,18 @@
 * **trustedExternalTenants**: [TrustedExternalTenant](#trustedexternaltenant)[]: The cluster's external tenants.
 * **uri**: string (ReadOnly): The cluster URI.
 
-## TrustedExternalTenant
+## DatabasePrincipal
 ### Properties
-* **value**: string: GUID representing an external tenant.
+* **appId**: string (ReadOnly): Application id - relevant only for application principal type.
+* **email**: string (ReadOnly): Database principal email if exists.
+* **fqn**: string (ReadOnly): Database principal fully qualified name.
+* **name**: string (ReadOnly): Database principal name.
+* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewers' | 'User' | 'Viewer' | string (ReadOnly): Database principal role.
+* **type**: 'App' | 'Group' | 'User' | string (ReadOnly): Database principal type.
 
-## AzureSku
+## DatabasePrincipalListResult
 ### Properties
-* **capacity**: int: SKU capacity.
-* **name**: 'D13_v2' | 'D14_v2' | 'KC16' | 'KC8' | 'KS16' | 'KS8' | 'L16' | 'L8' | string (Required): SKU name.
-* **tier**: 'Standard' | string (Required): SKU tier.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **value**: [DatabasePrincipal](#databaseprincipal)[] (ReadOnly): The list of Kusto database principals.
 
 ## DatabaseProperties
 ### Properties
@@ -74,11 +78,6 @@
 ### Properties
 * **size**: int: The database size - the total size of compressed data and index in bytes.
 
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## EventHubConnectionProperties
 ### Properties
 * **consumerGroup**: string (Required): The event hub consumer group.
@@ -87,16 +86,17 @@
 * **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
 * **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
 
-## DatabasePrincipalListResult
+## TrackedResourceTags
 ### Properties
-* **value**: [DatabasePrincipal](#databaseprincipal)[] (ReadOnly): The list of Kusto database principals.
+### Additional Properties
+* **Additional Properties Type**: string
 
-## DatabasePrincipal
+## TrackedResourceTags
 ### Properties
-* **appId**: string (ReadOnly): Application id - relevant only for application principal type.
-* **email**: string (ReadOnly): Database principal email if exists.
-* **fqn**: string (ReadOnly): Database principal fully qualified name.
-* **name**: string (ReadOnly): Database principal name.
-* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewers' | 'User' | 'Viewer' | string (ReadOnly): Database principal role.
-* **type**: 'App' | 'Group' | 'User' | string (ReadOnly): Database principal type.
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrustedExternalTenant
+### Properties
+* **value**: string: GUID representing an external tenant.
 

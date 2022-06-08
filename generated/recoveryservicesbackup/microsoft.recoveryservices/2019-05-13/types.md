@@ -24,6 +24,75 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## AzureFileshareProtectedItemExtendedInfo
+### Properties
+* **oldestRecoveryPoint**: string: The oldest backup copy available for this item in the service.
+* **policyState**: string: Indicates consistency of policy object and policy applied to this backup item.
+* **recoveryPointCount**: int: Number of available backup copies associated with this backup item.
+* **resourceState**: string (ReadOnly): Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}
+* **resourceStateSyncTime**: string (ReadOnly): The resource state sync time for this backup item.
+
+## AzureSqlProtectedItemExtendedInfo
+### Properties
+* **oldestRecoveryPoint**: string: The oldest backup copy available for this item in the service.
+* **policyState**: string: State of the backup policy associated with this backup item.
+* **recoveryPointCount**: int: Number of available backup copies associated with this backup item.
+
+## DailyRetentionFormat
+### Properties
+* **daysOfTheMonth**: [Day](#day)[]: List of days of the month.
+
+## DailyRetentionSchedule
+### Properties
+* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
+* **retentionTimes**: string[]: Retention times of retention policy.
+
+## Day
+### Properties
+* **date**: int: Date of the month
+* **isLast**: bool: Whether Date is last date of month
+
+## DPMProtectedItemExtendedInfo
+### Properties
+* **diskStorageUsedInBytes**: string: Used Disk storage in bytes.
+* **isCollocated**: bool: To check if backup item is collocated.
+* **isPresentOnCloud**: bool: To check if backup item is cloud protected.
+* **lastBackupStatus**: string: Last backup status information on backup item.
+* **lastRefreshedAt**: string: Last refresh time on backup item.
+* **oldestRecoveryPoint**: string: Oldest cloud recovery point time.
+* **onPremiseLatestRecoveryPoint**: string: latest disk recovery point time.
+* **onPremiseOldestRecoveryPoint**: string: Oldest disk recovery point time.
+* **onPremiseRecoveryPointCount**: int: disk recovery point count.
+* **protectableObjectLoadPath**: [DPMProtectedItemExtendedInfoProtectableObjectLoadPath](#dpmprotecteditemextendedinfoprotectableobjectloadpath): Attribute to provide information on various DBs.
+* **protected**: bool: To check if backup item is disk protected.
+* **protectionGroupName**: string: Protection group name of the backup item.
+* **recoveryPointCount**: int: cloud recovery point count.
+* **totalDiskStorageSizeInBytes**: string: total Disk storage in bytes.
+
+## DPMProtectedItemExtendedInfoProtectableObjectLoadPath
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## GenericProtectedItemSourceAssociations
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## MabFileFolderProtectedItemExtendedInfo
+### Properties
+* **lastRefreshedAt**: string: Last time when the agent data synced to service.
+* **oldestRecoveryPoint**: string: The oldest backup copy available.
+* **recoveryPointCount**: int: Number of backup copies associated with the backup item.
+
+## MonthlyRetentionSchedule
+### Properties
+* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
+* **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format.
+* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly' | string: Retention schedule format type for monthly retention policy.
+* **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
+* **retentionTimes**: string[]: Retention times of retention policy.
+
 ## ProtectedItem
 * **Discriminator**: protectedItemType
 
@@ -109,58 +178,6 @@
 * **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped' | string: Backup state of the backed up item.
 
 
-## AzureFileshareProtectedItemExtendedInfo
-### Properties
-* **oldestRecoveryPoint**: string: The oldest backup copy available for this item in the service.
-* **policyState**: string: Indicates consistency of policy object and policy applied to this backup item.
-* **recoveryPointCount**: int: Number of available backup copies associated with this backup item.
-* **resourceState**: string (ReadOnly): Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}
-* **resourceStateSyncTime**: string (ReadOnly): The resource state sync time for this backup item.
-
-## DPMProtectedItemExtendedInfo
-### Properties
-* **diskStorageUsedInBytes**: string: Used Disk storage in bytes.
-* **isCollocated**: bool: To check if backup item is collocated.
-* **isPresentOnCloud**: bool: To check if backup item is cloud protected.
-* **lastBackupStatus**: string: Last backup status information on backup item.
-* **lastRefreshedAt**: string: Last refresh time on backup item.
-* **oldestRecoveryPoint**: string: Oldest cloud recovery point time.
-* **onPremiseLatestRecoveryPoint**: string: latest disk recovery point time.
-* **onPremiseOldestRecoveryPoint**: string: Oldest disk recovery point time.
-* **onPremiseRecoveryPointCount**: int: disk recovery point count.
-* **protectableObjectLoadPath**: [DPMProtectedItemExtendedInfoProtectableObjectLoadPath](#dpmprotecteditemextendedinfoprotectableobjectloadpath): Attribute to provide information on various DBs.
-* **protected**: bool: To check if backup item is disk protected.
-* **protectionGroupName**: string: Protection group name of the backup item.
-* **recoveryPointCount**: int: cloud recovery point count.
-* **totalDiskStorageSizeInBytes**: string: total Disk storage in bytes.
-
-## DPMProtectedItemExtendedInfoProtectableObjectLoadPath
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## GenericProtectedItemSourceAssociations
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## MabFileFolderProtectedItemExtendedInfo
-### Properties
-* **lastRefreshedAt**: string: Last time when the agent data synced to service.
-* **oldestRecoveryPoint**: string: The oldest backup copy available.
-* **recoveryPointCount**: int: Number of backup copies associated with the backup item.
-
-## AzureSqlProtectedItemExtendedInfo
-### Properties
-* **oldestRecoveryPoint**: string: The oldest backup copy available for this item in the service.
-* **policyState**: string: State of the backup policy associated with this backup item.
-* **recoveryPointCount**: int: Number of available backup copies associated with this backup item.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ProtectionPolicy
 * **Discriminator**: backupManagementType
 
@@ -209,6 +226,22 @@
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
 
 
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RetentionDuration
+### Properties
+* **count**: int: Count of duration types. Retention duration is obtained by the counting the duration type Count times.
+For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.
+* **durationType**: 'Days' | 'Invalid' | 'Months' | 'Weeks' | 'Years' | string: Retention duration type of retention policy.
+
 ## RetentionPolicy
 * **Discriminator**: retentionPolicyType
 
@@ -226,54 +259,6 @@
 * **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
 * **retentionPolicyType**: 'SimpleRetentionPolicy' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
 
-
-## DailyRetentionSchedule
-### Properties
-* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
-* **retentionTimes**: string[]: Retention times of retention policy.
-
-## RetentionDuration
-### Properties
-* **count**: int: Count of duration types. Retention duration is obtained by the counting the duration type Count times.
-For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.
-* **durationType**: 'Days' | 'Invalid' | 'Months' | 'Weeks' | 'Years' | string: Retention duration type of retention policy.
-
-## MonthlyRetentionSchedule
-### Properties
-* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
-* **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format.
-* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly' | string: Retention schedule format type for monthly retention policy.
-* **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
-* **retentionTimes**: string[]: Retention times of retention policy.
-
-## DailyRetentionFormat
-### Properties
-* **daysOfTheMonth**: [Day](#day)[]: List of days of the month.
-
-## Day
-### Properties
-* **date**: int: Date of the month
-* **isLast**: bool: Whether Date is last date of month
-
-## WeeklyRetentionFormat
-### Properties
-* **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of days of the week.
-* **weeksOfTheMonth**: 'First' | 'Fourth' | 'Invalid' | 'Last' | 'Second' | 'Third'[]: List of weeks of month.
-
-## WeeklyRetentionSchedule
-### Properties
-* **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of days of week for weekly retention policy.
-* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
-* **retentionTimes**: string[]: Retention times of retention policy.
-
-## YearlyRetentionSchedule
-### Properties
-* **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'Invalid' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September'[]: List of months of year of yearly retention policy.
-* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
-* **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format.
-* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly' | string: Retention schedule format type for monthly retention policy.
-* **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
-* **retentionTimes**: string[]: Retention times of retention policy.
 
 ## SchedulePolicy
 * **Discriminator**: schedulePolicyType
@@ -310,8 +295,23 @@ will be deprecated once clients upgrade to consider this flag.
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
 
-## ResourceTags
+## WeeklyRetentionFormat
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of days of the week.
+* **weeksOfTheMonth**: 'First' | 'Fourth' | 'Invalid' | 'Last' | 'Second' | 'Third'[]: List of weeks of month.
+
+## WeeklyRetentionSchedule
+### Properties
+* **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of days of week for weekly retention policy.
+* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
+* **retentionTimes**: string[]: Retention times of retention policy.
+
+## YearlyRetentionSchedule
+### Properties
+* **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'Invalid' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September'[]: List of months of year of yearly retention policy.
+* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
+* **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format.
+* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly' | string: Retention schedule format type for monthly retention policy.
+* **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
+* **retentionTimes**: string[]: Retention times of retention policy.
 

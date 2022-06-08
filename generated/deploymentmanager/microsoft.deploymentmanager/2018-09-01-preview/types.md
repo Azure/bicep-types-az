@@ -83,19 +83,43 @@
 * **type**: 'Sas' (Required): The authentication type
 
 
-## SasProperties
+## CloudErrorBody
 ### Properties
-* **sasUri**: string (Required): The SAS URI to the Azure Storage blob container. Any offset from the root of the container to where the artifacts are located can be defined in the artifactRoot.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **code**: string (ReadOnly): Error code string.
+* **details**: [CloudErrorBody](#clouderrorbody)[] (ReadOnly): More detailed error information.
+* **message**: string (ReadOnly): Descriptive error information.
+* **target**: string (ReadOnly): Error target
 
 ## Identity
 ### Properties
 * **identityIds**: string[] (Required): The list of identities.
 * **type**: string (Required): The identity type.
+
+## Message
+### Properties
+* **message**: string (ReadOnly): The actual message text.
+* **timeStamp**: string (ReadOnly): Time in UTC this message was provided.
+
+## PrePostStep
+### Properties
+* **stepId**: string (Required): The resource Id of the step to be run.
+
+## ResourceOperation
+### Properties
+* **operationId**: string (ReadOnly): Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.
+* **provisioningState**: string (ReadOnly): State of the resource deployment. For ARM resources, this is the current provisioning state of the resource.
+* **resourceName**: string (ReadOnly): Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.
+* **resourceType**: string (ReadOnly): Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.
+* **statusCode**: string (ReadOnly): Http status code of the operation.
+* **statusMessage**: string (ReadOnly): Descriptive information of the resource operation.
+
+## RolloutOperationInfo
+### Properties
+* **endTime**: string (ReadOnly): The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.
+* **error**: [CloudErrorBody](#clouderrorbody) (ReadOnly): Detailed error information of any failure.
+* **retryAttempt**: int (ReadOnly): The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.
+* **skipSucceededOnRetry**: bool (ReadOnly): True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.
+* **startTime**: string (ReadOnly): The start time of the rollout in UTC.
 
 ## RolloutRequestProperties
 ### Properties
@@ -108,20 +132,18 @@
 * **targetServiceTopologyId**: string (Required): The resource Id of the service topology from which service units are being referenced in step groups to be deployed.
 * **totalRetryAttempts**: int (ReadOnly): The cardinal count of total number of retries performed on the rollout at a given time.
 
-## RolloutOperationInfo
+## RolloutStep
 ### Properties
-* **endTime**: string (ReadOnly): The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.
-* **error**: [CloudErrorBody](#clouderrorbody) (ReadOnly): Detailed error information of any failure.
-* **retryAttempt**: int (ReadOnly): The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.
-* **skipSucceededOnRetry**: bool (ReadOnly): True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.
-* **startTime**: string (ReadOnly): The start time of the rollout in UTC.
+* **messages**: [Message](#message)[] (ReadOnly): Supplementary informative messages during rollout.
+* **name**: string (ReadOnly): Name of the step.
+* **operationInfo**: [StepOperationInfo](#stepoperationinfo) (ReadOnly): Detailed information of a specific step run.
+* **resourceOperations**: [ResourceOperation](#resourceoperation)[] (ReadOnly): Set of resource operations that were performed, if any, on an Azure resource.
+* **status**: string (ReadOnly): Current state of the step.
+* **stepGroup**: string (ReadOnly): The step group the current step is part of.
 
-## CloudErrorBody
+## SasProperties
 ### Properties
-* **code**: string (ReadOnly): Error code string.
-* **details**: [CloudErrorBody](#clouderrorbody)[] (ReadOnly): More detailed error information.
-* **message**: string (ReadOnly): Descriptive error information.
-* **target**: string (ReadOnly): Error target
+* **sasUri**: string (Required): The SAS URI to the Azure Storage blob container. Any offset from the root of the container to where the artifacts are located can be defined in the artifactRoot.
 
 ## Service
 ### Properties
@@ -129,6 +151,15 @@
 * **serviceUnits**: [ServiceUnit](#serviceunit)[] (ReadOnly): The detailed information about the units that make up the service.
 * **targetLocation**: string (ReadOnly): The Azure location to which the resources in the service belong to or should be deployed to.
 * **targetSubscriptionId**: string (ReadOnly): The subscription to which the resources in the service belong to or should be deployed to.
+
+## ServiceResourceProperties
+### Properties
+* **targetLocation**: string (Required): The Azure location to which the resources in the service belong to or should be deployed to.
+* **targetSubscriptionId**: string (Required): The subscription to which the resources in the service belong to or should be deployed to.
+
+## ServiceTopologyResourceProperties
+### Properties
+* **artifactSourceId**: string: The resource Id of the artifact source that contains the artifacts that can be referenced in the service units.
 
 ## ServiceUnit
 ### Properties
@@ -145,37 +176,11 @@
 * **templateArtifactSourceRelativePath**: string: The path to the ARM template file relative to the artifact source.
 * **templateUri**: string: The full URI of the ARM template file with the SAS token.
 
-## RolloutStep
+## ServiceUnitResourceProperties
 ### Properties
-* **messages**: [Message](#message)[] (ReadOnly): Supplementary informative messages during rollout.
-* **name**: string (ReadOnly): Name of the step.
-* **operationInfo**: [StepOperationInfo](#stepoperationinfo) (ReadOnly): Detailed information of a specific step run.
-* **resourceOperations**: [ResourceOperation](#resourceoperation)[] (ReadOnly): Set of resource operations that were performed, if any, on an Azure resource.
-* **status**: string (ReadOnly): Current state of the step.
-* **stepGroup**: string (ReadOnly): The step group the current step is part of.
-
-## Message
-### Properties
-* **message**: string (ReadOnly): The actual message text.
-* **timeStamp**: string (ReadOnly): Time in UTC this message was provided.
-
-## StepOperationInfo
-### Properties
-* **correlationId**: string (ReadOnly): Unique identifier to track the request for ARM-based resources.
-* **deploymentName**: string (ReadOnly): The name of the ARM deployment initiated as part of the step.
-* **endTime**: string (ReadOnly): End time of the action in UTC.
-* **error**: [CloudErrorBody](#clouderrorbody) (ReadOnly): Detailed error information of any failure.
-* **lastUpdatedTime**: string (ReadOnly): Last time in UTC this operation was updated.
-* **startTime**: string (ReadOnly): Start time of the action in UTC.
-
-## ResourceOperation
-### Properties
-* **operationId**: string (ReadOnly): Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.
-* **provisioningState**: string (ReadOnly): State of the resource deployment. For ARM resources, this is the current provisioning state of the resource.
-* **resourceName**: string (ReadOnly): Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.
-* **resourceType**: string (ReadOnly): Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.
-* **statusCode**: string (ReadOnly): Http status code of the operation.
-* **statusMessage**: string (ReadOnly): Descriptive information of the resource operation.
+* **artifacts**: [ServiceUnitArtifacts](#serviceunitartifacts): Defines the artifacts of a service unit.
+* **deploymentMode**: 'Complete' | 'Incremental' (Required): Describes the type of ARM deployment to be performed on the resource.
+* **targetResourceGroup**: string (Required): The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
 
 ## Step
 ### Properties
@@ -185,44 +190,14 @@
 * **postDeploymentSteps**: [PrePostStep](#prepoststep)[]: The list of steps to be run after deploying the target.
 * **preDeploymentSteps**: [PrePostStep](#prepoststep)[]: The list of steps to be run before deploying the target.
 
-## PrePostStep
+## StepOperationInfo
 ### Properties
-* **stepId**: string (Required): The resource Id of the step to be run.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ServiceTopologyResourceProperties
-### Properties
-* **artifactSourceId**: string: The resource Id of the artifact source that contains the artifacts that can be referenced in the service units.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ServiceResourceProperties
-### Properties
-* **targetLocation**: string (Required): The Azure location to which the resources in the service belong to or should be deployed to.
-* **targetSubscriptionId**: string (Required): The subscription to which the resources in the service belong to or should be deployed to.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ServiceUnitResourceProperties
-### Properties
-* **artifacts**: [ServiceUnitArtifacts](#serviceunitartifacts): Defines the artifacts of a service unit.
-* **deploymentMode**: 'Complete' | 'Incremental' (Required): Describes the type of ARM deployment to be performed on the resource.
-* **targetResourceGroup**: string (Required): The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **correlationId**: string (ReadOnly): Unique identifier to track the request for ARM-based resources.
+* **deploymentName**: string (ReadOnly): The name of the ARM deployment initiated as part of the step.
+* **endTime**: string (ReadOnly): End time of the action in UTC.
+* **error**: [CloudErrorBody](#clouderrorbody) (ReadOnly): Detailed error information of any failure.
+* **lastUpdatedTime**: string (ReadOnly): Last time in UTC this operation was updated.
+* **startTime**: string (ReadOnly): Start time of the action in UTC.
 
 ## StepProperties
 * **Discriminator**: stepType
@@ -234,12 +209,37 @@
 * **stepType**: 'Wait' (Required): The type of step.
 
 
-## WaitStepAttributes
+## TrackedResourceTags
 ### Properties
-* **duration**: string (Required): The duration in ISO 8601 format of how long the wait should be.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## WaitStepAttributes
+### Properties
+* **duration**: string (Required): The duration in ISO 8601 format of how long the wait should be.
 

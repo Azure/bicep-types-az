@@ -54,26 +54,10 @@
 * **ApiVersion**: 2021-05-01-preview
 * **Output**: [VideoStreamingToken](#videostreamingtoken)
 
-## VideoAnalyzerIdentity
+## AccessPolicyProperties
 ### Properties
-* **type**: string (Required): The identity type.
-* **userAssignedIdentities**: [UserAssignedManagedIdentities](#userassignedmanagedidentities): The User Assigned Managed Identities.
-
-## UserAssignedManagedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedManagedIdentity](#userassignedmanagedidentity)
-
-## UserAssignedManagedIdentity
-### Properties
-* **clientId**: string (ReadOnly): The client ID.
-* **principalId**: string (ReadOnly): The principal ID.
-
-## VideoAnalyzerProperties
-### Properties
-* **encryption**: [AccountEncryption](#accountencryption): Defines how the Video Analyzer account is (optionally) encrypted.
-* **endpoints**: [Endpoint](#endpoint)[] (ReadOnly): The list of endpoints associated with this resource.
-* **storageAccounts**: [StorageAccount](#storageaccount)[]: The storage accounts for this resource.
+* **authentication**: [AuthenticationBase](#authenticationbase): Base class for access policies authentication methods.
+* **role**: 'Reader' | string: Defines the access level granted by this policy.
 
 ## AccountEncryption
 ### Properties
@@ -82,19 +66,45 @@
 * **status**: string (ReadOnly): The current status of the Key Vault mapping.
 * **type**: 'CustomerKey' | 'SystemKey' | string (Required): The type of key used to encrypt the Account Key.
 
-## ResourceIdentity
+## AuthenticationBase
+* **Discriminator**: @type
+
+### Base Properties
+### JwtAuthentication
+#### Properties
+* **@type**: '#Microsoft.VideoAnalyzer.JwtAuthentication' (Required): The discriminator for derived types.
+* **audiences**: string[]: List of expected token audiences. Token audience is valid if it matches at least one of the given values.
+* **claims**: [TokenClaim](#tokenclaim)[]: List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.
+* **issuers**: string[]: List of expected token issuers. Token issuer is valid if it matches at least one of the given values.
+* **keys**: [TokenKey](#tokenkey)[]: List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.
+
+
+## EdgeModuleProperties
 ### Properties
-* **userAssignedIdentity**: string (Required): The user assigned managed identity's resource identifier to use when accessing a resource.
+* **edgeModuleId**: string (ReadOnly): Internal ID generated for the instance of the Video Analyzer edge module.
+
+## EdgeModuleProvisioningToken
+### Properties
+* **expirationDate**: string (ReadOnly): The expiration date of the registration token. The Azure Video Analyzer IoT edge module must be initialized and connected to the Internet prior to the token expiration date.
+* **token**: string (ReadOnly): The token blob to be provided to the Azure Video Analyzer IoT edge module through the Azure IoT Edge module twin properties.
+
+## Endpoint
+### Properties
+* **endpointUrl**: string: The URL of the endpoint.
+* **type**: 'ClientApi' | string (Required): The type of the endpoint.
 
 ## KeyVaultProperties
 ### Properties
 * **currentKeyIdentifier**: string (ReadOnly): The current key used to encrypt Video Analyzer account, including the key version.
 * **keyIdentifier**: string (Required): The URL of the Key Vault key used to encrypt the account. The key may either be versioned (for example https://vault/keys/mykey/version1) or reference a key without a version (for example https://vault/keys/mykey).
 
-## Endpoint
+## ListProvisioningTokenInput
 ### Properties
-* **endpointUrl**: string: The URL of the endpoint.
-* **type**: 'ClientApi' | string (Required): The type of the endpoint.
+* **expirationDate**: string (Required, WriteOnly): The desired expiration date of the registration token. The Azure Video Analyzer IoT edge module must be initialized and connected to the Internet prior to the token expiration date.
+
+## ResourceIdentity
+### Properties
+* **userAssignedIdentity**: string (Required): The user assigned managed identity's resource identifier to use when accessing a resource.
 
 ## StorageAccount
 ### Properties
@@ -110,29 +120,6 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## AccessPolicyProperties
-### Properties
-* **authentication**: [AuthenticationBase](#authenticationbase): Base class for access policies authentication methods.
-* **role**: 'Reader' | string: Defines the access level granted by this policy.
-
-## AuthenticationBase
-* **Discriminator**: @type
-
-### Base Properties
-### JwtAuthentication
-#### Properties
-* **@type**: '#Microsoft.VideoAnalyzer.JwtAuthentication' (Required): The discriminator for derived types.
-* **audiences**: string[]: List of expected token audiences. Token audience is valid if it matches at least one of the given values.
-* **claims**: [TokenClaim](#tokenclaim)[]: List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.
-* **issuers**: string[]: List of expected token issuers. Token issuer is valid if it matches at least one of the given values.
-* **keys**: [TokenKey](#tokenkey)[]: List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.
-
 
 ## TokenClaim
 ### Properties
@@ -159,18 +146,31 @@
 * **n**: string (Required): RSA public key modulus.
 
 
-## EdgeModuleProperties
+## TrackedResourceTags
 ### Properties
-* **edgeModuleId**: string (ReadOnly): Internal ID generated for the instance of the Video Analyzer edge module.
+### Additional Properties
+* **Additional Properties Type**: string
 
-## VideoProperties
+## UserAssignedManagedIdentities
 ### Properties
-* **description**: string: Optional video description provided by the user. Value can be up to 2048 characters long.
-* **flags**: [VideoFlags](#videoflags) (ReadOnly): Video flags contain information about the available video actions and its dynamic properties based on the current video state.
-* **mediaInfo**: [VideoMediaInfo](#videomediainfo) (ReadOnly): Contains information about the video and audio content.
-* **streaming**: [VideoStreaming](#videostreaming) (ReadOnly): Video streaming holds information about video streaming URLs.
-* **title**: string: Optional video title provided by the user. Value can be up to 256 characters long.
-* **type**: 'Archive' | string (ReadOnly): Type of the video archive. Different archive formats provide different capabilities.
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedManagedIdentity](#userassignedmanagedidentity)
+
+## UserAssignedManagedIdentity
+### Properties
+* **clientId**: string (ReadOnly): The client ID.
+* **principalId**: string (ReadOnly): The principal ID.
+
+## VideoAnalyzerIdentity
+### Properties
+* **type**: string (Required): The identity type.
+* **userAssignedIdentities**: [UserAssignedManagedIdentities](#userassignedmanagedidentities): The User Assigned Managed Identities.
+
+## VideoAnalyzerProperties
+### Properties
+* **encryption**: [AccountEncryption](#accountencryption): Defines how the Video Analyzer account is (optionally) encrypted.
+* **endpoints**: [Endpoint](#endpoint)[] (ReadOnly): The list of endpoints associated with this resource.
+* **storageAccounts**: [StorageAccount](#storageaccount)[]: The storage accounts for this resource.
 
 ## VideoFlags
 ### Properties
@@ -182,6 +182,15 @@
 ### Properties
 * **segmentLength**: string (ReadOnly): Video segment length indicates the length of individual video files (segments) which are persisted to storage. Smaller segments provide lower archive playback latency but generate larger volume of storage transactions. Larger segments reduce the amount of storage transactions while increasing the archive playback latency. Value must be specified in ISO8601 duration format (i.e. "PT30S" equals 30 seconds) and can vary between 30 seconds to 5 minutes, in 30 seconds increments.
 
+## VideoProperties
+### Properties
+* **description**: string: Optional video description provided by the user. Value can be up to 2048 characters long.
+* **flags**: [VideoFlags](#videoflags) (ReadOnly): Video flags contain information about the available video actions and its dynamic properties based on the current video state.
+* **mediaInfo**: [VideoMediaInfo](#videomediainfo) (ReadOnly): Contains information about the video and audio content.
+* **streaming**: [VideoStreaming](#videostreaming) (ReadOnly): Video streaming holds information about video streaming URLs.
+* **title**: string: Optional video title provided by the user. Value can be up to 256 characters long.
+* **type**: 'Archive' | string (ReadOnly): Type of the video archive. Different archive formats provide different capabilities.
+
 ## VideoStreaming
 ### Properties
 * **archiveBaseUrl**: string: Video streaming base URL for the video archive. When present, archived video can be played through the Azure Video Analyzer player. Alternatively, this URL can be used with compatible DASH or HLS players by appending the following to the base URL:
@@ -191,15 +200,6 @@
   - DASH CMAF: /manifest(format=mpd-time-cmaf)
 
 Moreover, an ongoing video recording can be played in "live mode" with latencies which are approximately double of the chosen video segment length.
-
-## ListProvisioningTokenInput
-### Properties
-* **expirationDate**: string (Required, WriteOnly): The desired expiration date of the registration token. The Azure Video Analyzer IoT edge module must be initialized and connected to the Internet prior to the token expiration date.
-
-## EdgeModuleProvisioningToken
-### Properties
-* **expirationDate**: string (ReadOnly): The expiration date of the registration token. The Azure Video Analyzer IoT edge module must be initialized and connected to the Internet prior to the token expiration date.
-* **token**: string (ReadOnly): The token blob to be provided to the Azure Video Analyzer IoT edge module through the Azure IoT Edge module twin properties.
 
 ## VideoStreamingToken
 ### Properties

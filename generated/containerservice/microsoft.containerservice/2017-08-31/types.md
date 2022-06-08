@@ -16,15 +16,9 @@
 * **ApiVersion**: 2017-08-31
 * **Output**: [ManagedClusterAccessProfile](#managedclusteraccessprofile)
 
-## ManagedClusterProperties
+## AccessProfile
 ### Properties
-* **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[]: Properties of the agent pool.
-* **dnsPrefix**: string: DNS prefix specified when creating the managed cluster.
-* **fqdn**: string (ReadOnly): FQDN for the master pool.
-* **kubernetesVersion**: string: Version of Kubernetes specified when creating the managed cluster.
-* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile): Profile for Linux VMs in the container service cluster.
-* **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
-* **servicePrincipalProfile**: [ContainerServicePrincipalProfile](#containerserviceprincipalprofile): Information about a service principal identity for the cluster to use for manipulating Azure APIs. Either secret or keyVaultSecretRef must be specified.
+* **kubeConfig**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
 
 ## ContainerServiceAgentPoolProfile
 ### Properties
@@ -44,6 +38,12 @@
 * **adminUsername**: string (Required): The administrator username to use for Linux VMs.
 * **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required): SSH configuration for Linux-based VMs running on Azure.
 
+## ContainerServicePrincipalProfile
+### Properties
+* **clientId**: string (Required): The ID for the service principal.
+* **keyVaultSecretRef**: [KeyVaultSecretRef](#keyvaultsecretref): Reference to a secret stored in Azure Key Vault.
+* **secret**: string: The secret password associated with the service principal in plain text.
+
 ## ContainerServiceSshConfiguration
 ### Properties
 * **publicKeys**: [ContainerServiceSshPublicKey](#containerservicesshpublickey)[] (Required): The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.
@@ -52,22 +52,11 @@
 ### Properties
 * **keyData**: string (Required): Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.
 
-## ContainerServicePrincipalProfile
-### Properties
-* **clientId**: string (Required): The ID for the service principal.
-* **keyVaultSecretRef**: [KeyVaultSecretRef](#keyvaultsecretref): Reference to a secret stored in Azure Key Vault.
-* **secret**: string: The secret password associated with the service principal in plain text.
-
 ## KeyVaultSecretRef
 ### Properties
 * **secretName**: string (Required): The secret name.
 * **vaultID**: string (Required): Key vault identifier.
 * **version**: string: The secret version.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## ManagedClusterAccessProfile
 ### Properties
@@ -78,9 +67,20 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: string (ReadOnly): Resource type
 
-## AccessProfile
+## ManagedClusterProperties
 ### Properties
-* **kubeConfig**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
+* **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[]: Properties of the agent pool.
+* **dnsPrefix**: string: DNS prefix specified when creating the managed cluster.
+* **fqdn**: string (ReadOnly): FQDN for the master pool.
+* **kubernetesVersion**: string: Version of Kubernetes specified when creating the managed cluster.
+* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile): Profile for Linux VMs in the container service cluster.
+* **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
+* **servicePrincipalProfile**: [ContainerServicePrincipalProfile](#containerserviceprincipalprofile): Information about a service principal identity for the cluster to use for manipulating Azure APIs. Either secret or keyVaultSecretRef must be specified.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

@@ -52,6 +52,25 @@
 * **ApiVersion**: 2020-06-02
 * **Output**: [ConnectionSetting](#connectionsetting)
 
+## AlexaChannelProperties
+### Properties
+* **alexaSkillId**: string (Required): The Alexa skill Id
+* **isEnabled**: bool (Required): Whether this channel is enabled for the bot
+* **serviceEndpointUri**: string (ReadOnly): Full Uri used to configured the skill in Alexa
+* **urlFragment**: string (ReadOnly): Url fragment used in part of the Uri configured in Alexa
+
+## BotChannel
+### Properties
+* **etag**: string (ReadOnly): Entity Tag
+* **id**: string (ReadOnly): Specifies the resource ID.
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Indicates the type of bot service
+* **location**: string (ReadOnly): Specifies the location of the resource.
+* **name**: string (ReadOnly): Specifies the name of the resource.
+* **properties**: [Channel](#channel) (ReadOnly): Channel definition
+* **sku**: [Sku](#sku) (ReadOnly): The SKU of the cognitive services account.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
+* **type**: string (ReadOnly): Specifies the type of the resource.
+
 ## BotProperties
 ### Properties
 * **cmekKeyVaultUrl**: string: The CMK Url
@@ -69,16 +88,6 @@
 * **luisAppIds**: string[]: Collection of LUIS App Ids
 * **luisKey**: string: The LUIS Key
 * **msaAppId**: string (Required): Microsoft App Id for the bot
-
-## Sku
-### Properties
-* **name**: 'F0' | 'S1' | string (Required): The name of SKU.
-* **tier**: 'Free' | 'Standard' | string (ReadOnly): Gets the sku tier. This is based on the SKU name.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## Channel
 * **Discriminator**: channelName
@@ -150,12 +159,32 @@
 * **properties**: [WebChatChannelProperties](#webchatchannelproperties): The parameters to provide for the Web Chat channel.
 
 
-## AlexaChannelProperties
+## ConnectionSetting
 ### Properties
-* **alexaSkillId**: string (Required): The Alexa skill Id
-* **isEnabled**: bool (Required): Whether this channel is enabled for the bot
-* **serviceEndpointUri**: string (ReadOnly): Full Uri used to configured the skill in Alexa
-* **urlFragment**: string (ReadOnly): Url fragment used in part of the Uri configured in Alexa
+* **etag**: string (ReadOnly): Entity Tag
+* **id**: string (ReadOnly): Specifies the resource ID.
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Indicates the type of bot service
+* **location**: string (ReadOnly): Specifies the location of the resource.
+* **name**: string (ReadOnly): Specifies the name of the resource.
+* **properties**: [ConnectionSettingProperties](#connectionsettingproperties) (ReadOnly): Properties for a Connection Setting Item
+* **sku**: [Sku](#sku) (ReadOnly): The SKU of the cognitive services account.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
+* **type**: string (ReadOnly): Specifies the type of the resource.
+
+## ConnectionSettingParameter
+### Properties
+* **key**: string: Key for the Connection Setting Parameter.
+* **value**: string: Value associated with the Connection Setting Parameter.
+
+## ConnectionSettingProperties
+### Properties
+* **clientId**: string: Client Id associated with the Connection Setting.
+* **clientSecret**: string: Client Secret associated with the Connection Setting
+* **parameters**: [ConnectionSettingParameter](#connectionsettingparameter)[]: Service Provider Parameters associated with the Connection Setting
+* **scopes**: string: Scopes associated with the Connection Setting
+* **serviceProviderDisplayName**: string: Service Provider Display Name associated with the Connection Setting
+* **serviceProviderId**: string: Service Provider Id associated with the Connection Setting
+* **settingId**: string (ReadOnly): Setting Id set by the service for the Connection Setting.
 
 ## DirectLineChannelProperties
 ### Properties
@@ -226,6 +255,36 @@
 * **enableCalling**: bool: Enable calling for Microsoft Teams channel
 * **isEnabled**: bool (Required): Whether this channel is enabled for the bot
 
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Sku
+### Properties
+* **name**: 'F0' | 'S1' | string (Required): The name of SKU.
+* **tier**: 'Free' | 'Standard' | string (ReadOnly): Gets the sku tier. This is based on the SKU name.
+
 ## SkypeChannelProperties
 ### Properties
 * **callingWebHook**: string: Calling web hook for Skype channel
@@ -278,63 +337,4 @@
 * **key2**: string (ReadOnly): Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
 * **siteId**: string (ReadOnly): Site Id
 * **siteName**: string (Required): Site name
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ConnectionSettingProperties
-### Properties
-* **clientId**: string: Client Id associated with the Connection Setting.
-* **clientSecret**: string: Client Secret associated with the Connection Setting
-* **parameters**: [ConnectionSettingParameter](#connectionsettingparameter)[]: Service Provider Parameters associated with the Connection Setting
-* **scopes**: string: Scopes associated with the Connection Setting
-* **serviceProviderDisplayName**: string: Service Provider Display Name associated with the Connection Setting
-* **serviceProviderId**: string: Service Provider Id associated with the Connection Setting
-* **settingId**: string (ReadOnly): Setting Id set by the service for the Connection Setting.
-
-## ConnectionSettingParameter
-### Properties
-* **key**: string: Key for the Connection Setting Parameter.
-* **value**: string: Value associated with the Connection Setting Parameter.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## BotChannel
-### Properties
-* **etag**: string (ReadOnly): Entity Tag
-* **id**: string (ReadOnly): Specifies the resource ID.
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Indicates the type of bot service
-* **location**: string (ReadOnly): Specifies the location of the resource.
-* **name**: string (ReadOnly): Specifies the name of the resource.
-* **properties**: [Channel](#channel) (ReadOnly): Channel definition
-* **sku**: [Sku](#sku) (ReadOnly): The SKU of the cognitive services account.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
-* **type**: string (ReadOnly): Specifies the type of the resource.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ConnectionSetting
-### Properties
-* **etag**: string (ReadOnly): Entity Tag
-* **id**: string (ReadOnly): Specifies the resource ID.
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Indicates the type of bot service
-* **location**: string (ReadOnly): Specifies the location of the resource.
-* **name**: string (ReadOnly): Specifies the name of the resource.
-* **properties**: [ConnectionSettingProperties](#connectionsettingproperties) (ReadOnly): Properties for a Connection Setting Item
-* **sku**: [Sku](#sku) (ReadOnly): The SKU of the cognitive services account.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
-* **type**: string (ReadOnly): Specifies the type of the resource.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

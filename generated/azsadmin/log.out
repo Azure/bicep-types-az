@@ -23,4 +23,4 @@ warning | PreCheck/SchemaMissingType | The schema 'SubscriptionList' with an und
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionId}': Unable to locate "/providers/" segment
 info    | autorest.bicep took 2ms
-info    | Autorest completed in 4.91s. 0 files generated.
+info    | Autorest completed in 5.01s. 0 files generated.

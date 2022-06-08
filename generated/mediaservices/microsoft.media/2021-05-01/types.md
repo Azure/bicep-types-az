@@ -28,6 +28,46 @@
 * **Input**: [ListEdgePoliciesInput](#listedgepoliciesinput)
 * **Output**: [EdgePolicies](#edgepolicies)
 
+## AccessControl
+### Properties
+* **defaultAction**: 'Allow' | 'Deny' | string: The behavior for IP access control in Key Delivery.
+* **ipAllowList**: string[]: The IP allow list for access control in Key Delivery. If the default action is set to 'Allow', the IP allow list must be empty.
+
+## AccountEncryption
+### Properties
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
+* **type**: 'CustomerKey' | 'SystemKey' | string (Required): The type of key used to encrypt the Account Key.
+
+## EdgePolicies
+### Properties
+* **usageDataCollectionPolicy**: [EdgeUsageDataCollectionPolicy](#edgeusagedatacollectionpolicy) (ReadOnly)
+
+## EdgeUsageDataCollectionPolicy
+### Properties
+* **dataCollectionFrequency**: string (ReadOnly): Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
+* **dataReportingFrequency**: string (ReadOnly): Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
+* **eventHubDetails**: [EdgeUsageDataEventHub](#edgeusagedataeventhub) (ReadOnly)
+* **maxAllowedUnreportedUsageDuration**: string (ReadOnly): Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
+
+## EdgeUsageDataEventHub
+### Properties
+* **name**: string (ReadOnly): Name of the Event Hub where usage will be reported.
+* **namespace**: string (ReadOnly): Namespace of the Event Hub where usage will be reported.
+* **token**: string (ReadOnly): SAS token needed to interact with Event Hub.
+
+## KeyDelivery
+### Properties
+* **accessControl**: [AccessControl](#accesscontrol)
+
+## KeyVaultProperties
+### Properties
+* **currentKeyIdentifier**: string (ReadOnly): The current key used to encrypt the Media Services account, including the key version.
+* **keyIdentifier**: string: The URL of the Key Vault key used to encrypt the account. The key may either be versioned (for example https://vault/keys/mykey/version1) or reference a key without a version (for example https://vault/keys/mykey).
+
+## ListEdgePoliciesInput
+### Properties
+* **deviceId**: string (WriteOnly): Unique identifier of the edge device.
+
 ## MediaServiceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The Principal ID of the identity.
@@ -42,24 +82,21 @@
 * **storageAccounts**: [StorageAccount](#storageaccount)[]: The storage accounts for this resource.
 * **storageAuthentication**: 'ManagedIdentity' | 'System' | string
 
-## AccountEncryption
+## PrivateEndpoint
 ### Properties
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
-* **type**: 'CustomerKey' | 'SystemKey' | string (Required): The type of key used to encrypt the Account Key.
+* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
 
-## KeyVaultProperties
+## PrivateEndpointConnectionProperties
 ### Properties
-* **currentKeyIdentifier**: string (ReadOnly): The current key used to encrypt the Media Services account, including the key version.
-* **keyIdentifier**: string: The URL of the Key Vault key used to encrypt the account. The key may either be versioned (for example https://vault/keys/mykey/version1) or reference a key without a version (for example https://vault/keys/mykey).
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
 
-## KeyDelivery
+## PrivateLinkServiceConnectionState
 ### Properties
-* **accessControl**: [AccessControl](#accesscontrol)
-
-## AccessControl
-### Properties
-* **defaultAction**: 'Allow' | 'Deny' | string: The behavior for IP access control in Key Delivery.
-* **ipAllowList**: string[]: The IP allow list for access control in Key Delivery. If the default action is set to 'Allow', the IP allow list must be empty.
+* **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
+* **description**: string: The reason for approval/rejection of the connection.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
 
 ## StorageAccount
 ### Properties
@@ -79,41 +116,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
-
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
-* **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
-
-## ListEdgePoliciesInput
-### Properties
-* **deviceId**: string (WriteOnly): Unique identifier of the edge device.
-
-## EdgePolicies
-### Properties
-* **usageDataCollectionPolicy**: [EdgeUsageDataCollectionPolicy](#edgeusagedatacollectionpolicy) (ReadOnly)
-
-## EdgeUsageDataCollectionPolicy
-### Properties
-* **dataCollectionFrequency**: string (ReadOnly): Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
-* **dataReportingFrequency**: string (ReadOnly): Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
-* **eventHubDetails**: [EdgeUsageDataEventHub](#edgeusagedataeventhub) (ReadOnly)
-* **maxAllowedUnreportedUsageDuration**: string (ReadOnly): Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
-
-## EdgeUsageDataEventHub
-### Properties
-* **name**: string (ReadOnly): Name of the Event Hub where usage will be reported.
-* **namespace**: string (ReadOnly): Namespace of the Event Hub where usage will be reported.
-* **token**: string (ReadOnly): SAS token needed to interact with Event Hub.
 

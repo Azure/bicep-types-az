@@ -165,22 +165,21 @@
 * **ApiVersion**: 2020-01-13-preview
 * **Output**: [KeyListResult](#keylistresult)
 
-## Identity
+## AdvancedSchedule
 ### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The identity type.
-* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **monthDays**: int[]: Days of the month that the job should execute on. Must be between 1 and 31.
+* **monthlyOccurrences**: [AdvancedScheduleMonthlyOccurrence](#advancedschedulemonthlyoccurrence)[]: Occurrences of days within a month.
+* **weekDays**: string[]: Days of the week that the job should execute on.
 
-## IdentityUserAssignedIdentities
+## AdvancedScheduleMonthlyOccurrence
+### Properties
+* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string: Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+* **occurrence**: int: Occurrence of the week within the month. Must be between 1 and 5
+
+## AutomationAccountCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties](#componentssgqdofschemasidentitypropertiesuserassignedidentitiesadditionalproperties)
-
-## ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
-### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+* **Additional Properties Type**: string
 
 ## AutomationAccountCreateOrUpdateProperties
 ### Properties
@@ -194,6 +193,123 @@
 * **sku**: [Sku](#sku): The account SKU.
 * **state**: 'Ok' | 'Suspended' | 'Unavailable' | string (ReadOnly): Gets status of account.
 
+## CertificateCreateOrUpdateProperties
+### Properties
+* **base64Value**: string (Required, WriteOnly): Gets or sets the base64 encoded value of the certificate.
+* **creationTime**: string (ReadOnly): Gets the creation time.
+* **description**: string: Gets or sets the description of the certificate.
+* **expiryTime**: string (ReadOnly): Gets the expiry time of the certificate.
+* **isExportable**: bool: Gets or sets the is exportable flag of the certificate.
+* **lastModifiedTime**: string (ReadOnly): Gets the last modified time.
+* **thumbprint**: string: Gets or sets the thumbprint of the certificate.
+
+## ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
+### Properties
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+
+## ConnectionCreateOrUpdateProperties
+### Properties
+* **connectionType**: [ConnectionTypeAssociationProperty](#connectiontypeassociationproperty) (Required): The connection type property associated with the entity.
+* **creationTime**: string (ReadOnly): Gets the creation time.
+* **description**: string: Gets or sets the description of the connection.
+* **fieldDefinitionValues**: [ConnectionCreateOrUpdatePropertiesFieldDefinitionValues](#connectioncreateorupdatepropertiesfielddefinitionvalues): Gets or sets the field definition properties of the connection.
+* **lastModifiedTime**: string (ReadOnly): Gets the last modified time.
+
+## ConnectionCreateOrUpdatePropertiesFieldDefinitionValues
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ConnectionTypeAssociationProperty
+### Properties
+* **name**: string: Gets or sets the name of the connection type.
+
+## ConnectionTypeCreateOrUpdateProperties
+### Properties
+* **creationTime**: string (ReadOnly): Gets the creation time.
+* **description**: string (ReadOnly): Gets or sets the description.
+* **fieldDefinitions**: [ConnectionTypeCreateOrUpdatePropertiesFieldDefinitions](#connectiontypecreateorupdatepropertiesfielddefinitions) (Required): Gets or sets the field definitions of the connection type.
+* **isGlobal**: bool: Gets or sets a Boolean value to indicate if the connection type is global.
+* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
+
+## ConnectionTypeCreateOrUpdatePropertiesFieldDefinitions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [FieldDefinition](#fielddefinition)
+
+## ContentHash
+### Properties
+* **algorithm**: string (Required): Gets or sets the content hash algorithm used to hash the content.
+* **value**: string (Required): Gets or sets expected hash value of the content.
+
+## ContentLink
+### Properties
+* **contentHash**: [ContentHash](#contenthash): Definition of the runbook property type.
+* **uri**: string: Gets or sets the uri of the runbook content.
+* **version**: string: Gets or sets the version of the content.
+
+## ContentSource
+### Properties
+* **hash**: [ContentHash](#contenthash) (WriteOnly): Definition of the runbook property type.
+* **type**: 'embeddedContent' | 'uri' | string (WriteOnly): Gets or sets the content source type.
+* **value**: string (WriteOnly): Gets or sets the value of the content. This is based on the content source type.
+* **version**: string (WriteOnly): Gets or sets the version of the content.
+
+## CredentialCreateOrUpdateProperties
+### Properties
+* **creationTime**: string (ReadOnly): Gets the creation time.
+* **description**: string: Gets or sets the description of the credential.
+* **lastModifiedTime**: string (ReadOnly): Gets the last modified time.
+* **password**: string (Required, WriteOnly): Gets or sets the password of the credential.
+* **userName**: string (Required): Gets or sets the user name of the credential.
+
+## DscCompilationJobCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DscCompilationJobCreateProperties
+### Properties
+* **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required): The Dsc configuration property associated with the entity.
+* **creationTime**: string (ReadOnly): Gets the creation time of the job.
+* **endTime**: string (ReadOnly): Gets the end time of the job.
+* **exception**: string (ReadOnly): Gets the exception of the job.
+* **incrementNodeConfigurationBuild**: bool (WriteOnly): If a new build version of NodeConfiguration is required.
+* **jobId**: string (ReadOnly): Gets the id of the job.
+* **lastModifiedTime**: string (ReadOnly): Gets the last modified time of the job.
+* **lastStatusModifiedTime**: string (ReadOnly): Gets the last status modified time of the job.
+* **parameters**: [DscCompilationJobCreatePropertiesParameters](#dsccompilationjobcreatepropertiesparameters): Gets or sets the parameters of the job.
+* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' | string (ReadOnly): The provisioning state of the resource.
+* **runOn**: string (ReadOnly): Gets or sets the runOn which specifies the group name where the job is to be executed.
+* **startedBy**: string (ReadOnly): Gets the compilation job started by.
+* **startTime**: string (ReadOnly): Gets the start time of the job.
+* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' | string (ReadOnly): Gets or sets the status of the job.
+* **statusDetails**: string (ReadOnly): Gets or sets the status details of the job.
+
+## DscCompilationJobCreatePropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DscConfigurationAssociationProperty
+### Properties
+* **name**: string: Gets or sets the name of the Dsc configuration.
+
+## DscNodeConfigurationCreateOrUpdateParametersProperties
+### Properties
+* **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required): The Dsc configuration property associated with the entity.
+* **creationTime**: string (ReadOnly): Gets or sets creation time.
+* **incrementNodeConfigurationBuild**: bool: If a new build version of NodeConfiguration is required.
+* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
+* **nodeCount**: int (ReadOnly): Number of nodes with this node configuration assigned
+* **source**: [ContentSource](#contentsource) (Required): Definition of the content source.
+
+## DscNodeConfigurationCreateOrUpdateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## EncryptionProperties
 ### Properties
 * **identity**: [EncryptionPropertiesIdentity](#encryptionpropertiesidentity): User identity used for CMK.
@@ -204,11 +320,76 @@
 ### Properties
 * **userAssignedIdentity**: any: Any object
 
+## FieldDefinition
+### Properties
+* **isEncrypted**: bool: Gets or sets the isEncrypted flag of the connection field definition.
+* **isOptional**: bool: Gets or sets the isOptional flag of the connection field definition.
+* **type**: string (Required): Gets or sets the type of the connection field definition.
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The identity type.
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+
+## IdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties](#componentssgqdofschemasidentitypropertiesuserassignedidentitiesadditionalproperties)
+
+## JobScheduleCreateProperties
+### Properties
+* **jobScheduleId**: string (ReadOnly): Gets or sets the id of job schedule.
+* **parameters**: [JobScheduleCreatePropertiesParameters](#jobschedulecreatepropertiesparameters): Gets or sets a list of job properties.
+* **runbook**: [RunbookAssociationProperty](#runbookassociationproperty) (Required): The runbook property associated with the entity.
+* **runOn**: string: Gets or sets the hybrid worker group that the scheduled job should run on.
+* **schedule**: [ScheduleAssociationProperty](#scheduleassociationproperty) (Required): The schedule property associated with the entity.
+
+## JobScheduleCreatePropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Key
+### Properties
+* **KeyName**: 'Primary' | 'Secondary' | string (ReadOnly): Automation key name.
+* **Permissions**: 'Full' | 'Read' | string (ReadOnly): Automation key permissions.
+* **Value**: string (ReadOnly): Value of the Automation Key used for registration.
+
+## KeyListResult
+### Properties
+* **keys**: [Key](#key)[] (ReadOnly): Lists the automation keys.
+
 ## KeyVaultProperties
 ### Properties
 * **keyName**: string: The name of key used to encrypt data.
 * **keyvaultUri**: string: The URI of the key vault key used to encrypt data.
 * **keyVersion**: string: The key version of the key used to encrypt data.
+
+## ModuleCreateOrUpdateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ModuleCreateOrUpdateProperties
+### Properties
+* **activityCount**: int (ReadOnly): Gets or sets the activity count of the module.
+* **contentLink**: [ContentLink](#contentlink) (Required): Definition of the content link.
+* **creationTime**: string (ReadOnly): Gets or sets the creation time.
+* **description**: string (ReadOnly): Gets or sets the description.
+* **error**: [ModuleErrorInfo](#moduleerrorinfo) (ReadOnly): Definition of the module error info type.
+* **isComposite**: bool (ReadOnly): Gets or sets type of module, if its composite or not.
+* **isGlobal**: bool (ReadOnly): Gets or sets the isGlobal flag of the module.
+* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
+* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly): Gets or sets the provisioning state of the module.
+* **sizeInBytes**: int (ReadOnly): Gets or sets the size in bytes of the module.
+* **version**: string (ReadOnly): Gets or sets the version of the module.
+
+## ModuleErrorInfo
+### Properties
+* **code**: string (ReadOnly): Gets or sets the error code.
+* **message**: string (ReadOnly): Gets or sets the error message.
 
 ## PrivateEndpointConnection
 ### Properties
@@ -233,176 +414,7 @@
 * **description**: string: The private link service connection description.
 * **status**: string: The private link service connection status.
 
-## Sku
-### Properties
-* **capacity**: int: Gets or sets the SKU capacity.
-* **family**: string: Gets or sets the SKU family.
-* **name**: 'Basic' | 'Free' | string (Required): Gets or sets the SKU name of the account.
-
-## AutomationAccountCreateOrUpdateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## CertificateCreateOrUpdateProperties
-### Properties
-* **base64Value**: string (Required, WriteOnly): Gets or sets the base64 encoded value of the certificate.
-* **creationTime**: string (ReadOnly): Gets the creation time.
-* **description**: string: Gets or sets the description of the certificate.
-* **expiryTime**: string (ReadOnly): Gets the expiry time of the certificate.
-* **isExportable**: bool: Gets or sets the is exportable flag of the certificate.
-* **lastModifiedTime**: string (ReadOnly): Gets the last modified time.
-* **thumbprint**: string: Gets or sets the thumbprint of the certificate.
-
-## DscCompilationJobCreateProperties
-### Properties
-* **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required): The Dsc configuration property associated with the entity.
-* **creationTime**: string (ReadOnly): Gets the creation time of the job.
-* **endTime**: string (ReadOnly): Gets the end time of the job.
-* **exception**: string (ReadOnly): Gets the exception of the job.
-* **incrementNodeConfigurationBuild**: bool (WriteOnly): If a new build version of NodeConfiguration is required.
-* **jobId**: string (ReadOnly): Gets the id of the job.
-* **lastModifiedTime**: string (ReadOnly): Gets the last modified time of the job.
-* **lastStatusModifiedTime**: string (ReadOnly): Gets the last status modified time of the job.
-* **parameters**: [DscCompilationJobCreatePropertiesParameters](#dsccompilationjobcreatepropertiesparameters): Gets or sets the parameters of the job.
-* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' | string (ReadOnly): The provisioning state of the resource.
-* **runOn**: string (ReadOnly): Gets or sets the runOn which specifies the group name where the job is to be executed.
-* **startedBy**: string (ReadOnly): Gets the compilation job started by.
-* **startTime**: string (ReadOnly): Gets the start time of the job.
-* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' | string (ReadOnly): Gets or sets the status of the job.
-* **statusDetails**: string (ReadOnly): Gets or sets the status details of the job.
-
-## DscConfigurationAssociationProperty
-### Properties
-* **name**: string: Gets or sets the name of the Dsc configuration.
-
-## DscCompilationJobCreatePropertiesParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## DscCompilationJobCreateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ConnectionCreateOrUpdateProperties
-### Properties
-* **connectionType**: [ConnectionTypeAssociationProperty](#connectiontypeassociationproperty) (Required): The connection type property associated with the entity.
-* **creationTime**: string (ReadOnly): Gets the creation time.
-* **description**: string: Gets or sets the description of the connection.
-* **fieldDefinitionValues**: [ConnectionCreateOrUpdatePropertiesFieldDefinitionValues](#connectioncreateorupdatepropertiesfielddefinitionvalues): Gets or sets the field definition properties of the connection.
-* **lastModifiedTime**: string (ReadOnly): Gets the last modified time.
-
-## ConnectionTypeAssociationProperty
-### Properties
-* **name**: string: Gets or sets the name of the connection type.
-
-## ConnectionCreateOrUpdatePropertiesFieldDefinitionValues
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ConnectionTypeCreateOrUpdateProperties
-### Properties
-* **creationTime**: string (ReadOnly): Gets the creation time.
-* **description**: string (ReadOnly): Gets or sets the description.
-* **fieldDefinitions**: [ConnectionTypeCreateOrUpdatePropertiesFieldDefinitions](#connectiontypecreateorupdatepropertiesfielddefinitions) (Required): Gets or sets the field definitions of the connection type.
-* **isGlobal**: bool: Gets or sets a Boolean value to indicate if the connection type is global.
-* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
-
-## ConnectionTypeCreateOrUpdatePropertiesFieldDefinitions
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [FieldDefinition](#fielddefinition)
-
-## FieldDefinition
-### Properties
-* **isEncrypted**: bool: Gets or sets the isEncrypted flag of the connection field definition.
-* **isOptional**: bool: Gets or sets the isOptional flag of the connection field definition.
-* **type**: string (Required): Gets or sets the type of the connection field definition.
-
-## CredentialCreateOrUpdateProperties
-### Properties
-* **creationTime**: string (ReadOnly): Gets the creation time.
-* **description**: string: Gets or sets the description of the credential.
-* **lastModifiedTime**: string (ReadOnly): Gets the last modified time.
-* **password**: string (Required, WriteOnly): Gets or sets the password of the credential.
-* **userName**: string (Required): Gets or sets the user name of the credential.
-
-## JobScheduleCreateProperties
-### Properties
-* **jobScheduleId**: string (ReadOnly): Gets or sets the id of job schedule.
-* **parameters**: [JobScheduleCreatePropertiesParameters](#jobschedulecreatepropertiesparameters): Gets or sets a list of job properties.
-* **runbook**: [RunbookAssociationProperty](#runbookassociationproperty) (Required): The runbook property associated with the entity.
-* **runOn**: string: Gets or sets the hybrid worker group that the scheduled job should run on.
-* **schedule**: [ScheduleAssociationProperty](#scheduleassociationproperty) (Required): The schedule property associated with the entity.
-
-## JobScheduleCreatePropertiesParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## RunbookAssociationProperty
-### Properties
-* **name**: string: Gets or sets the name of the runbook.
-
-## ScheduleAssociationProperty
-### Properties
-* **name**: string: Gets or sets the name of the Schedule.
-
-## ModuleCreateOrUpdateProperties
-### Properties
-* **activityCount**: int (ReadOnly): Gets or sets the activity count of the module.
-* **contentLink**: [ContentLink](#contentlink) (Required): Definition of the content link.
-* **creationTime**: string (ReadOnly): Gets or sets the creation time.
-* **description**: string (ReadOnly): Gets or sets the description.
-* **error**: [ModuleErrorInfo](#moduleerrorinfo) (ReadOnly): Definition of the module error info type.
-* **isComposite**: bool (ReadOnly): Gets or sets type of module, if its composite or not.
-* **isGlobal**: bool (ReadOnly): Gets or sets the isGlobal flag of the module.
-* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
-* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly): Gets or sets the provisioning state of the module.
-* **sizeInBytes**: int (ReadOnly): Gets or sets the size in bytes of the module.
-* **version**: string (ReadOnly): Gets or sets the version of the module.
-
-## ContentLink
-### Properties
-* **contentHash**: [ContentHash](#contenthash): Definition of the runbook property type.
-* **uri**: string: Gets or sets the uri of the runbook content.
-* **version**: string: Gets or sets the version of the content.
-
-## ContentHash
-### Properties
-* **algorithm**: string (Required): Gets or sets the content hash algorithm used to hash the content.
-* **value**: string (Required): Gets or sets expected hash value of the content.
-
-## ModuleErrorInfo
-### Properties
-* **code**: string (ReadOnly): Gets or sets the error code.
-* **message**: string (ReadOnly): Gets or sets the error message.
-
-## ModuleCreateOrUpdateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## DscNodeConfigurationCreateOrUpdateParametersProperties
-### Properties
-* **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required): The Dsc configuration property associated with the entity.
-* **creationTime**: string (ReadOnly): Gets or sets creation time.
-* **incrementNodeConfigurationBuild**: bool: If a new build version of NodeConfiguration is required.
-* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
-* **nodeCount**: int (ReadOnly): Number of nodes with this node configuration assigned
-* **source**: [ContentSource](#contentsource) (Required): Definition of the content source.
-
-## ContentSource
-### Properties
-* **hash**: [ContentHash](#contenthash) (WriteOnly): Definition of the runbook property type.
-* **type**: 'embeddedContent' | 'uri' | string (WriteOnly): Gets or sets the content source type.
-* **value**: string (WriteOnly): Gets or sets the value of the content. This is based on the content source type.
-* **version**: string (WriteOnly): Gets or sets the version of the content.
-
-## DscNodeConfigurationCreateOrUpdateParametersTags
+## PythonPackageCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -421,10 +433,13 @@
 * **sizeInBytes**: int (ReadOnly): Gets or sets the size in bytes of the module.
 * **version**: string (ReadOnly): Gets or sets the version of the module.
 
-## PythonPackageCreateParametersTags
+## RunbookAssociationProperty
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **name**: string: Gets or sets the name of the runbook.
+
+## ScheduleAssociationProperty
+### Properties
+* **name**: string: Gets or sets the name of the Schedule.
 
 ## ScheduleCreateOrUpdateProperties
 ### Properties
@@ -443,16 +458,11 @@
 * **startTimeOffsetMinutes**: int (ReadOnly): Gets the start time's offset in minutes.
 * **timeZone**: string: Gets or sets the time zone of the schedule.
 
-## AdvancedSchedule
+## Sku
 ### Properties
-* **monthDays**: int[]: Days of the month that the job should execute on. Must be between 1 and 31.
-* **monthlyOccurrences**: [AdvancedScheduleMonthlyOccurrence](#advancedschedulemonthlyoccurrence)[]: Occurrences of days within a month.
-* **weekDays**: string[]: Days of the week that the job should execute on.
-
-## AdvancedScheduleMonthlyOccurrence
-### Properties
-* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string: Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
-* **occurrence**: int: Occurrence of the week within the month. Must be between 1 and 5
+* **capacity**: int: Gets or sets the SKU capacity.
+* **family**: string: Gets or sets the SKU family.
+* **name**: 'Basic' | 'Free' | string (Required): Gets or sets the SKU name of the account.
 
 ## SourceControlCreateOrUpdateProperties
 ### Properties
@@ -513,14 +523,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## KeyListResult
-### Properties
-* **keys**: [Key](#key)[] (ReadOnly): Lists the automation keys.
-
-## Key
-### Properties
-* **KeyName**: 'Primary' | 'Secondary' | string (ReadOnly): Automation key name.
-* **Permissions**: 'Full' | 'Read' | string (ReadOnly): Automation key permissions.
-* **Value**: string (ReadOnly): Value of the Automation Key used for registration.
 

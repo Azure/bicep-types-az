@@ -113,86 +113,6 @@
 * **vnetSubnetName**: string: Subnet of the Virtual Network.
 * **workerPools**: [WorkerPool](#workerpool)[] (Required): Description of worker pools with worker size IDs, VM sizes, and number of workers in each pool.
 
-## NameValuePair
-### Properties
-* **name**: string: Pair name.
-* **value**: string: Pair value.
-
-## StampCapacity
-### Properties
-* **availableCapacity**: int: Available capacity (# of machines, bytes of storage etc...).
-* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared/dedicated workers.
-* **excludeFromCapacityAllocation**: bool: If <code>true</code>, it includes basic apps.
-Basic apps are not used for capacity allocation.
-* **isApplicableForAllComputeModes**: bool: <code>true</code> if capacity is applicable for all apps; otherwise, <code>false</code>.
-* **name**: string: Name of the stamp.
-* **siteMode**: string: Shared or Dedicated.
-* **totalCapacity**: int: Total capacity (# of machines, bytes of storage etc...).
-* **unit**: string: Name of the unit.
-* **workerSize**: 'D1' | 'D2' | 'D3' | 'Default' | 'Large' | 'Medium' | 'Small': Size of the machines.
-* **workerSizeId**: int: Size ID of machines: 
-0 - Small
-1 - Medium
-2 - Large
-
-## NetworkAccessControlEntry
-### Properties
-* **action**: 'Deny' | 'Permit': Action object.
-* **description**: string: Description of network access control entry.
-* **order**: int: Order of precedence.
-* **remoteSubnet**: string: Remote subnet.
-
-## VirtualIPMapping
-### Properties
-* **internalHttpPort**: int: Internal HTTP port.
-* **internalHttpsPort**: int: Internal HTTPS port.
-* **inUse**: bool: Is virtual IP mapping in use.
-* **virtualIP**: string: Virtual IP address.
-
-## VirtualNetworkProfile
-### Properties
-* **id**: string: Resource id of the Virtual Network.
-* **name**: string (ReadOnly): Name of the Virtual Network (read-only).
-* **subnet**: string: Subnet within the Virtual Network.
-* **type**: string (ReadOnly): Resource type of the Virtual Network (read-only).
-
-## WorkerPool
-### Properties
-* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared/dedicated workers.
-* **instanceNames**: string[] (ReadOnly): Names of all instances in the worker pool (read only).
-* **workerCount**: int: Number of instances in the worker pool.
-* **workerSize**: string: VM size of the worker pool instances.
-* **workerSizeId**: int: Worker size ID for referencing this worker pool.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## SkuDescription
-### Properties
-* **capabilities**: [Capability](#capability)[]: Capabilities of the SKU, e.g., is traffic manager enabled?
-* **capacity**: int: Current number of instances assigned to the resource.
-* **family**: string: Family code of the resource SKU.
-* **locations**: string[]: Locations of the SKU.
-* **name**: string: Name of the resource SKU.
-* **size**: string: Size specifier of the resource SKU.
-* **skuCapacity**: [SkuCapacity](#skucapacity): Description of the App Service plan scale options.
-* **tier**: string: Service tier of the resource SKU.
-
-## Capability
-### Properties
-* **name**: string: Name of the SKU capability.
-* **reason**: string: Reason of the SKU capability.
-* **value**: string: Value of the SKU capability.
-
-## SkuCapacity
-### Properties
-* **default**: int: Default number of workers for this App Service plan SKU.
-* **maximum**: int: Maximum number of workers for this App Service plan SKU.
-* **minimum**: int: Minimum number of workers for this App Service plan SKU.
-* **scaleType**: string: Available scale configurations for an App Service plan.
-
 ## AppServicePlanProperties
 ### Properties
 * **adminSiteName**: string: App Service plan administration site.
@@ -214,16 +134,101 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 * **targetWorkerSizeId**: int: Scaling worker size ID.
 * **workerTierName**: string: Target worker tier assigned to the App Service plan.
 
+## Capability
+### Properties
+* **name**: string: Name of the SKU capability.
+* **reason**: string: Reason of the SKU capability.
+* **value**: string: Value of the SKU capability.
+
 ## HostingEnvironmentProfile
 ### Properties
 * **id**: string: Resource ID of the App Service Environment.
 * **name**: string (ReadOnly): Name of the App Service Environment.
 * **type**: string (ReadOnly): Resource type of the App Service Environment.
 
+## HybridConnectionKey
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [HybridConnectionKeyProperties](#hybridconnectionkeyproperties) (ReadOnly): HybridConnectionKey resource specific properties
+* **type**: string (ReadOnly): Resource type.
+
+## HybridConnectionKeyProperties
+### Properties
+* **sendKeyName**: string (ReadOnly): The name of the send key.
+* **sendKeyValue**: string (ReadOnly): The value of the send key.
+
+## NameValuePair
+### Properties
+* **name**: string: Pair name.
+* **value**: string: Pair value.
+
+## NetworkAccessControlEntry
+### Properties
+* **action**: 'Deny' | 'Permit': Action object.
+* **description**: string: Description of network access control entry.
+* **order**: int: Order of precedence.
+* **remoteSubnet**: string: Remote subnet.
+
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SkuCapacity
+### Properties
+* **default**: int: Default number of workers for this App Service plan SKU.
+* **maximum**: int: Maximum number of workers for this App Service plan SKU.
+* **minimum**: int: Minimum number of workers for this App Service plan SKU.
+* **scaleType**: string: Available scale configurations for an App Service plan.
+
+## SkuDescription
+### Properties
+* **capabilities**: [Capability](#capability)[]: Capabilities of the SKU, e.g., is traffic manager enabled?
+* **capacity**: int: Current number of instances assigned to the resource.
+* **family**: string: Family code of the resource SKU.
+* **locations**: string[]: Locations of the SKU.
+* **name**: string: Name of the resource SKU.
+* **size**: string: Size specifier of the resource SKU.
+* **skuCapacity**: [SkuCapacity](#skucapacity): Description of the App Service plan scale options.
+* **tier**: string: Service tier of the resource SKU.
+
+## StampCapacity
+### Properties
+* **availableCapacity**: int: Available capacity (# of machines, bytes of storage etc...).
+* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared/dedicated workers.
+* **excludeFromCapacityAllocation**: bool: If <code>true</code>, it includes basic apps.
+Basic apps are not used for capacity allocation.
+* **isApplicableForAllComputeModes**: bool: <code>true</code> if capacity is applicable for all apps; otherwise, <code>false</code>.
+* **name**: string: Name of the stamp.
+* **siteMode**: string: Shared or Dedicated.
+* **totalCapacity**: int: Total capacity (# of machines, bytes of storage etc...).
+* **unit**: string: Name of the unit.
+* **workerSize**: 'D1' | 'D2' | 'D3' | 'Default' | 'Large' | 'Medium' | 'Small': Size of the machines.
+* **workerSizeId**: int: Size ID of machines: 
+0 - Small
+1 - Medium
+2 - Large
+
+## VirtualIPMapping
+### Properties
+* **internalHttpPort**: int: Internal HTTP port.
+* **internalHttpsPort**: int: Internal HTTPS port.
+* **inUse**: bool: Is virtual IP mapping in use.
+* **virtualIP**: string: Virtual IP address.
+
+## VirtualNetworkProfile
+### Properties
+* **id**: string: Resource id of the Virtual Network.
+* **name**: string (ReadOnly): Name of the Virtual Network (read-only).
+* **subnet**: string: Subnet within the Virtual Network.
+* **type**: string (ReadOnly): Resource type of the Virtual Network (read-only).
 
 ## VnetGatewayProperties
 ### Properties
@@ -242,16 +247,11 @@ STATIC - Static route set on the app only
 These values will be used for syncing an app's routes with those from a Virtual Network.
 * **startAddress**: string (WriteOnly): The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
 
-## HybridConnectionKey
+## WorkerPool
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [HybridConnectionKeyProperties](#hybridconnectionkeyproperties) (ReadOnly): HybridConnectionKey resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## HybridConnectionKeyProperties
-### Properties
-* **sendKeyName**: string (ReadOnly): The name of the send key.
-* **sendKeyValue**: string (ReadOnly): The value of the send key.
+* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared/dedicated workers.
+* **instanceNames**: string[] (ReadOnly): Names of all instances in the worker pool (read only).
+* **workerCount**: int: Number of instances in the worker pool.
+* **workerSize**: string: VM size of the worker pool instances.
+* **workerSizeId**: int: Worker size ID for referencing this worker pool.
 

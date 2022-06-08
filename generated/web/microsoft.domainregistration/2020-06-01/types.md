@@ -28,6 +28,31 @@
 * **Input**: [TopLevelDomainAgreementOption](#topleveldomainagreementoption)
 * **Output**: [TldLegalAgreementCollection](#tldlegalagreementcollection)
 
+## Address
+### Properties
+* **address1**: string (Required): First line of an Address.
+* **address2**: string: The second line of the Address. Optional.
+* **city**: string (Required): The city for the address.
+* **country**: string (Required): The country for the address.
+* **postalCode**: string (Required): The postal code for the address.
+* **state**: string (Required): The state or province for the address.
+
+## Contact
+### Properties
+* **addressMailing**: [Address](#address): Address information for domain registration.
+* **email**: string (Required): Email address.
+* **fax**: string: Fax number.
+* **jobTitle**: string: Job title.
+* **nameFirst**: string (Required): First name.
+* **nameLast**: string (Required): Last name.
+* **nameMiddle**: string: Middle name.
+* **organization**: string: Organization contact belongs to.
+* **phone**: string (Required): Phone number.
+
+## DomainOwnershipIdentifierProperties
+### Properties
+* **ownershipId**: string: Ownership Id.
+
 ## DomainProperties
 ### Properties
 * **authCode**: string
@@ -62,27 +87,6 @@ directories as per ICANN requirements.
 * **agreedBy**: string: Client IP address.
 * **agreementKeys**: string[]: List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under <code>TopLevelDomain</code> resource.
 
-## Contact
-### Properties
-* **addressMailing**: [Address](#address): Address information for domain registration.
-* **email**: string (Required): Email address.
-* **fax**: string: Fax number.
-* **jobTitle**: string: Job title.
-* **nameFirst**: string (Required): First name.
-* **nameLast**: string (Required): Last name.
-* **nameMiddle**: string: Middle name.
-* **organization**: string: Organization contact belongs to.
-* **phone**: string (Required): Phone number.
-
-## Address
-### Properties
-* **address1**: string (Required): First line of an Address.
-* **address2**: string: The second line of the Address. Optional.
-* **city**: string (Required): The city for the address.
-* **country**: string (Required): The country for the address.
-* **postalCode**: string (Required): The postal code for the address.
-* **state**: string (Required): The state or province for the address.
-
 ## HostName
 ### Properties
 * **azureResourceName**: string: Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.
@@ -97,24 +101,20 @@ directories as per ICANN requirements.
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## DomainOwnershipIdentifierProperties
-### Properties
-* **ownershipId**: string: Ownership Id.
-
-## TopLevelDomainAgreementOption
-### Properties
-* **forTransfer**: bool (WriteOnly): If <code>true</code>, then the list of agreements will include agreements for domain transfer as well; otherwise, <code>false</code>.
-* **includePrivacy**: bool (WriteOnly): If <code>true</code>, then the list of agreements will include agreements for domain privacy as well; otherwise, <code>false</code>.
-
-## TldLegalAgreementCollection
-### Properties
-* **nextLink**: string (ReadOnly): Link to next page of resources.
-* **value**: [TldLegalAgreement](#tldlegalagreement)[] (ReadOnly): Collection of resources.
-
 ## TldLegalAgreement
 ### Properties
 * **agreementKey**: string (ReadOnly): Unique identifier for the agreement.
 * **content**: string (ReadOnly): Agreement details.
 * **title**: string (ReadOnly): Agreement title.
 * **url**: string (ReadOnly): URL where a copy of the agreement details is hosted.
+
+## TldLegalAgreementCollection
+### Properties
+* **nextLink**: string (ReadOnly): Link to next page of resources.
+* **value**: [TldLegalAgreement](#tldlegalagreement)[] (ReadOnly): Collection of resources.
+
+## TopLevelDomainAgreementOption
+### Properties
+* **forTransfer**: bool (WriteOnly): If <code>true</code>, then the list of agreements will include agreements for domain transfer as well; otherwise, <code>false</code>.
+* **includePrivacy**: bool (WriteOnly): If <code>true</code>, then the list of agreements will include agreements for domain privacy as well; otherwise, <code>false</code>.
 

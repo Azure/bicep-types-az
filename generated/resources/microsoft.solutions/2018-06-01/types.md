@@ -30,11 +30,11 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Solutions/applications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Identity
+## ApplicationArtifact
 ### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned': The identity type.
+* **name**: string: The managed application artifact name.
+* **type**: 'Custom' | 'Template': The managed application artifact type.
+* **uri**: string: The managed application artifact blob uri.
 
 ## ApplicationDefinitionProperties
 ### Properties
@@ -48,30 +48,24 @@
 * **mainTemplate**: any: Any object
 * **packageFileUri**: string: The managed application definition package file Uri. Use this element
 
-## ApplicationArtifact
+## ApplicationProperties
 ### Properties
-* **name**: string: The managed application artifact name.
-* **type**: 'Custom' | 'Template': The managed application artifact type.
-* **uri**: string: The managed application artifact blob uri.
+* **applicationDefinitionId**: string: The fully qualified path of managed application definition Id.
+* **managedResourceGroupId**: string (Required): The managed resource group Id.
+* **outputs**: any (ReadOnly): Any object
+* **parameters**: any: Any object
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status of the managed application.
 
 ## ApplicationProviderAuthorization
 ### Properties
 * **principalId**: string (Required): The provider's principal identifier. This is the identity that the provider will use to call ARM to manage the managed application resources.
 * **roleDefinitionId**: string (Required): The provider's role definition identifier. This role will define all the permissions that the provider must have on the managed application's container resource group. This role definition cannot have permission to delete the resource group.
 
-## Sku
+## Identity
 ### Properties
-* **capacity**: int: The SKU capacity.
-* **family**: string: The SKU family.
-* **model**: string: The SKU model.
-* **name**: string (Required): The SKU name.
-* **size**: string: The SKU size.
-* **tier**: string: The SKU tier.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'SystemAssigned': The identity type.
 
 ## Plan
 ### Properties
@@ -81,16 +75,22 @@
 * **publisher**: string (Required): The publisher ID.
 * **version**: string (Required): The plan's version.
 
-## ApplicationProperties
+## ResourceTags
 ### Properties
-* **applicationDefinitionId**: string: The fully qualified path of managed application definition Id.
-* **managedResourceGroupId**: string (Required): The managed resource group Id.
-* **outputs**: any (ReadOnly): Any object
-* **parameters**: any: Any object
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status of the managed application.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Sku
+### Properties
+* **capacity**: int: The SKU capacity.
+* **family**: string: The SKU family.
+* **model**: string: The SKU model.
+* **name**: string (Required): The SKU name.
+* **size**: string: The SKU size.
+* **tier**: string: The SKU tier.
 

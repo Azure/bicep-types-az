@@ -27,6 +27,20 @@
 * **properties**: [ShowbackRuleProperties](#showbackruleproperties): The properties of a showback rule.
 * **type**: 'Microsoft.CostManagement/showbackRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## ConnectorCollectionErrorInfo
+### Properties
+* **errorCode**: string (ReadOnly): Short error code
+* **errorInnerMessage**: string (ReadOnly): External Provider error message
+* **errorMessage**: string (ReadOnly): Detailed error message
+* **errorStartTime**: string (ReadOnly): Time the error started occurring (Last time error occurred in lastChecked)
+
+## ConnectorCollectionInfo
+### Properties
+* **error**: [ConnectorCollectionErrorInfo](#connectorcollectionerrorinfo): Details of any error encountered on last collection attempt
+* **lastChecked**: string (ReadOnly): Last time the data acquisition process initiated connecting to the external provider
+* **lastUpdated**: string (ReadOnly): Last time the external data was updated into Azure
+* **sourceLastUpdated**: string (ReadOnly): Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
+
 ## ConnectorProperties
 ### Properties
 * **billingModel**: 'autoUpgrade' | 'expired' | 'premium' | 'trial' | string: Connector billing model
@@ -45,19 +59,26 @@
 * **status**: 'active' | 'error' | 'expired' | 'warning' | string (ReadOnly): Connector status
 * **subscriptionId**: string: Billing SubscriptionId
 
-## ConnectorCollectionInfo
+## CostAllocationDetails
 ### Properties
-* **error**: [ConnectorCollectionErrorInfo](#connectorcollectionerrorinfo): Details of any error encountered on last collection attempt
-* **lastChecked**: string (ReadOnly): Last time the data acquisition process initiated connecting to the external provider
-* **lastUpdated**: string (ReadOnly): Last time the external data was updated into Azure
-* **sourceLastUpdated**: string (ReadOnly): Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
+* **policy**: 'Evenly' | 'Fixed' | 'Proportional' | string: Cost allocation policy.
 
-## ConnectorCollectionErrorInfo
+## CustomPriceDetails
 ### Properties
-* **errorCode**: string (ReadOnly): Short error code
-* **errorInnerMessage**: string (ReadOnly): External Provider error message
-* **errorMessage**: string (ReadOnly): Detailed error message
-* **errorStartTime**: string (ReadOnly): Time the error started occurring (Last time error occurred in lastChecked)
+* **benefits**: 'AHUB' | 'All' | 'None' | 'Reservations' | 'Sum' | string[]: Array of benefits.
+* **markups**: [Markup](#markup)[]: List of markups.
+* **pricesheet**: string
+
+## Markup
+### Properties
+* **percentage**: string
+
+## Scope
+### Properties
+* **childScope**: [Scope](#scope): The Scope model definition
+* **id**: string: Scope id
+* **name**: string: Scope name
+* **type**: string: Scope type
 
 ## ShowbackRuleProperties
 * **Discriminator**: ruleType
@@ -80,25 +101,4 @@
 * **details**: [CustomPriceDetails](#custompricedetails): Represents Custom price showback rule model
 * **ruleType**: 'CustomPrice' (Required): The rule type of the showback rule solution.
 
-
-## Scope
-### Properties
-* **childScope**: [Scope](#scope): The Scope model definition
-* **id**: string: Scope id
-* **name**: string: Scope name
-* **type**: string: Scope type
-
-## CostAllocationDetails
-### Properties
-* **policy**: 'Evenly' | 'Fixed' | 'Proportional' | string: Cost allocation policy.
-
-## CustomPriceDetails
-### Properties
-* **benefits**: 'AHUB' | 'All' | 'None' | 'Reservations' | 'Sum' | string[]: Array of benefits.
-* **markups**: [Markup](#markup)[]: List of markups.
-* **pricesheet**: string
-
-## Markup
-### Properties
-* **percentage**: string
 

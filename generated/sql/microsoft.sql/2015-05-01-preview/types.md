@@ -114,70 +114,6 @@
 * **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Properties of a virtual network rule.
 * **type**: 'Microsoft.Sql/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## ResourceIdentity
-### Properties
-* **principalId**: string (ReadOnly): The Azure Active Directory principal id.
-* **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string: The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
-
-## ManagedInstanceProperties
-### Properties
-* **administratorLogin**: string: Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).
-* **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for managed instance creation).
-* **collation**: string: Collation of the managed instance.
-* **dnsZone**: string (ReadOnly): The Dns Zone that the managed instance is in.
-* **dnsZonePartner**: string (WriteOnly): The resource id of another managed instance whose DNS zone this managed instance will share after creation.
-* **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the managed instance.
-* **instancePoolId**: string: The Id of the instance pool this managed server belongs to.
-* **licenseType**: 'BasePrice' | 'LicenseIncluded' | string: The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
-* **maintenanceConfigurationId**: string: Specifies maintenance configuration id to apply to this managed instance.
-* **managedInstanceCreateMode**: 'Default' | 'PointInTimeRestore' | string (WriteOnly): Specifies the mode of database creation.
-
-Default: Regular instance creation.
-
-Restore: Creates an instance by restoring a set of backups to specific point in time. RestorePointInTime and SourceManagedInstanceId must be specified.
-* **minimalTlsVersion**: string: Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
-* **proxyOverride**: 'Default' | 'Proxy' | 'Redirect' | string: Connection type used for connecting to the instance.
-* **publicDataEndpointEnabled**: bool: Whether or not the public data endpoint is enabled.
-* **restorePointInTime**: string (WriteOnly): Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
-* **sourceManagedInstanceId**: string (WriteOnly): The resource identifier of the source managed instance associated with create operation of this instance.
-* **state**: string (ReadOnly): The state of the managed instance.
-* **storageSizeInGB**: int: Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.
-* **subnetId**: string: Subnet resource ID for the managed instance.
-* **timezoneId**: string: Id of the timezone. Allowed values are timezones supported by Windows.
-Windows keeps details on supported timezones, including the id, in registry under
-KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones.
-You can get those registry values via SQL Server by querying SELECT name AS timezone_id FROM sys.time_zone_info.
-List of Ids can also be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell.
-An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standard Time".
-* **vCores**: int: The number of vCores. Allowed values: 8, 16, 24, 32, 40, 64, 80.
-
-## Sku
-### Properties
-* **capacity**: int: Capacity of the particular SKU.
-* **family**: string: If the service has different generations of hardware, for the same SKU, then that can be captured here.
-* **name**: string (Required): The name of the SKU, typically, a letter + Number code, e.g. P3.
-* **size**: string: Size of the particular SKU
-* **tier**: string: The tier or edition of the particular SKU, e.g. Basic, Premium.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ServerProperties
-### Properties
-* **administratorLogin**: string: Administrator username for the server. Once created it cannot be changed.
-* **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for server creation).
-* **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
-* **state**: string (ReadOnly): The state of the server.
-* **version**: string: The version of the server.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## DatabaseBlobAuditingPolicyProperties
 ### Properties
 * **auditActionsAndGroups**: string[]: Specifies the Actions-Groups and Actions to audit.
@@ -262,6 +198,120 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
 
+## EncryptionProtectorProperties
+### Properties
+* **serverKeyName**: string: The name of the server key.
+* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' | string (Required): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
+* **subregion**: string (ReadOnly): Subregion of the encryption protector.
+* **thumbprint**: string (ReadOnly): Thumbprint of the server key.
+* **uri**: string (ReadOnly): The URI of the server key.
+
+## FailoverGroupProperties
+### Properties
+* **databases**: string[]: List of databases in the failover group.
+* **partnerServers**: [PartnerInfo](#partnerinfo)[] (Required): List of partner server information for the failover group.
+* **readOnlyEndpoint**: [FailoverGroupReadOnlyEndpoint](#failovergroupreadonlyendpoint): Read-only endpoint of the failover group instance.
+* **readWriteEndpoint**: [FailoverGroupReadWriteEndpoint](#failovergroupreadwriteendpoint) (Required): Read-write endpoint of the failover group instance.
+* **replicationRole**: 'Primary' | 'Secondary' | string (ReadOnly): Local replication role of the failover group instance.
+* **replicationState**: string (ReadOnly): Replication state of the failover group instance.
+
+## FailoverGroupReadOnlyEndpoint
+### Properties
+* **failoverPolicy**: 'Disabled' | 'Enabled' | string: Failover policy of the read-only endpoint for the failover group.
+
+## FailoverGroupReadWriteEndpoint
+### Properties
+* **failoverPolicy**: 'Automatic' | 'Manual' | string (Required): Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+* **failoverWithDataLossGracePeriodMinutes**: int: Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+
+## FailoverGroupTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ManagedInstanceProperties
+### Properties
+* **administratorLogin**: string: Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).
+* **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for managed instance creation).
+* **collation**: string: Collation of the managed instance.
+* **dnsZone**: string (ReadOnly): The Dns Zone that the managed instance is in.
+* **dnsZonePartner**: string (WriteOnly): The resource id of another managed instance whose DNS zone this managed instance will share after creation.
+* **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the managed instance.
+* **instancePoolId**: string: The Id of the instance pool this managed server belongs to.
+* **licenseType**: 'BasePrice' | 'LicenseIncluded' | string: The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
+* **maintenanceConfigurationId**: string: Specifies maintenance configuration id to apply to this managed instance.
+* **managedInstanceCreateMode**: 'Default' | 'PointInTimeRestore' | string (WriteOnly): Specifies the mode of database creation.
+
+Default: Regular instance creation.
+
+Restore: Creates an instance by restoring a set of backups to specific point in time. RestorePointInTime and SourceManagedInstanceId must be specified.
+* **minimalTlsVersion**: string: Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
+* **proxyOverride**: 'Default' | 'Proxy' | 'Redirect' | string: Connection type used for connecting to the instance.
+* **publicDataEndpointEnabled**: bool: Whether or not the public data endpoint is enabled.
+* **restorePointInTime**: string (WriteOnly): Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
+* **sourceManagedInstanceId**: string (WriteOnly): The resource identifier of the source managed instance associated with create operation of this instance.
+* **state**: string (ReadOnly): The state of the managed instance.
+* **storageSizeInGB**: int: Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.
+* **subnetId**: string: Subnet resource ID for the managed instance.
+* **timezoneId**: string: Id of the timezone. Allowed values are timezones supported by Windows.
+Windows keeps details on supported timezones, including the id, in registry under
+KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones.
+You can get those registry values via SQL Server by querying SELECT name AS timezone_id FROM sys.time_zone_info.
+List of Ids can also be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell.
+An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standard Time".
+* **vCores**: int: The number of vCores. Allowed values: 8, 16, 24, 32, 40, 64, 80.
+
+## PartnerInfo
+### Properties
+* **id**: string (Required): Resource identifier of the partner server.
+* **location**: string (ReadOnly): Geo location of the partner server.
+* **replicationRole**: 'Primary' | 'Secondary' | string (ReadOnly): Local replication role of the failover group instance.
+
+## ResourceIdentity
+### Properties
+* **principalId**: string (ReadOnly): The Azure Active Directory principal id.
+* **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string: The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
+
+## ServerFirewallRuleProperties
+### Properties
+* **endIpAddress**: string: The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value '0.0.0.0' for all Azure-internal IP addresses.
+* **startIpAddress**: string: The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' for all Azure-internal IP addresses.
+
+## ServerKeyProperties
+### Properties
+* **creationDate**: string: The server key creation date.
+* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' | string (Required): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
+* **subregion**: string (ReadOnly): Subregion of the server key.
+* **thumbprint**: string: Thumbprint of the server key.
+* **uri**: string: The URI of the server key.
+
+## ServerProperties
+### Properties
+* **administratorLogin**: string: Administrator username for the server. Once created it cannot be changed.
+* **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for server creation).
+* **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
+* **state**: string (ReadOnly): The state of the server.
+* **version**: string: The version of the server.
+
+## Sku
+### Properties
+* **capacity**: int: Capacity of the particular SKU.
+* **family**: string: If the service has different generations of hardware, for the same SKU, then that can be captured here.
+* **name**: string (Required): The name of the SKU, typically, a letter + Number code, e.g. P3.
+* **size**: string: Size of the particular SKU
+* **tier**: string: The tier or edition of the particular SKU, e.g. Basic, Premium.
+
+## SyncAgentProperties
+### Properties
+* **expiryTime**: string (ReadOnly): Expiration time of the sync agent version.
+* **isUpToDate**: bool (ReadOnly): If the sync agent version is up to date.
+* **lastAliveTime**: string (ReadOnly): Last alive time of the sync agent.
+* **name**: string (ReadOnly): Name of the sync agent.
+* **state**: 'NeverConnected' | 'Offline' | 'Online' | string (ReadOnly): State of the sync agent.
+* **syncDatabaseId**: string: ARM resource id of the sync database in the sync agent.
+* **version**: string (ReadOnly): Version of the sync agent.
+
 ## SyncGroupProperties
 ### Properties
 * **conflictResolutionPolicy**: 'HubWin' | 'MemberWin' | string: Conflict resolution policy of the sync group.
@@ -301,65 +351,15 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **syncState**: 'DeProvisionFailed' | 'DeProvisioned' | 'DeProvisioning' | 'DisabledBackupRestore' | 'DisabledTombstoneCleanup' | 'ProvisionFailed' | 'Provisioned' | 'Provisioning' | 'ReprovisionFailed' | 'Reprovisioning' | 'SyncCancelled' | 'SyncCancelling' | 'SyncFailed' | 'SyncInProgress' | 'SyncSucceeded' | 'SyncSucceededWithWarnings' | 'UnProvisioned' | 'UnReprovisioned' | string (ReadOnly): Sync state of the sync member.
 * **userName**: string: User name of the member database in the sync member.
 
-## EncryptionProtectorProperties
-### Properties
-* **serverKeyName**: string: The name of the server key.
-* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' | string (Required): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
-* **subregion**: string (ReadOnly): Subregion of the encryption protector.
-* **thumbprint**: string (ReadOnly): Thumbprint of the server key.
-* **uri**: string (ReadOnly): The URI of the server key.
-
-## FailoverGroupProperties
-### Properties
-* **databases**: string[]: List of databases in the failover group.
-* **partnerServers**: [PartnerInfo](#partnerinfo)[] (Required): List of partner server information for the failover group.
-* **readOnlyEndpoint**: [FailoverGroupReadOnlyEndpoint](#failovergroupreadonlyendpoint): Read-only endpoint of the failover group instance.
-* **readWriteEndpoint**: [FailoverGroupReadWriteEndpoint](#failovergroupreadwriteendpoint) (Required): Read-write endpoint of the failover group instance.
-* **replicationRole**: 'Primary' | 'Secondary' | string (ReadOnly): Local replication role of the failover group instance.
-* **replicationState**: string (ReadOnly): Replication state of the failover group instance.
-
-## PartnerInfo
-### Properties
-* **id**: string (Required): Resource identifier of the partner server.
-* **location**: string (ReadOnly): Geo location of the partner server.
-* **replicationRole**: 'Primary' | 'Secondary' | string (ReadOnly): Local replication role of the failover group instance.
-
-## FailoverGroupReadOnlyEndpoint
-### Properties
-* **failoverPolicy**: 'Disabled' | 'Enabled' | string: Failover policy of the read-only endpoint for the failover group.
-
-## FailoverGroupReadWriteEndpoint
-### Properties
-* **failoverPolicy**: 'Automatic' | 'Manual' | string (Required): Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
-* **failoverWithDataLossGracePeriodMinutes**: int: Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
-
-## FailoverGroupTags
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ServerFirewallRuleProperties
+## TrackedResourceTags
 ### Properties
-* **endIpAddress**: string: The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value '0.0.0.0' for all Azure-internal IP addresses.
-* **startIpAddress**: string: The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' for all Azure-internal IP addresses.
-
-## ServerKeyProperties
-### Properties
-* **creationDate**: string: The server key creation date.
-* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' | string (Required): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
-* **subregion**: string (ReadOnly): Subregion of the server key.
-* **thumbprint**: string: Thumbprint of the server key.
-* **uri**: string: The URI of the server key.
-
-## SyncAgentProperties
-### Properties
-* **expiryTime**: string (ReadOnly): Expiration time of the sync agent version.
-* **isUpToDate**: bool (ReadOnly): If the sync agent version is up to date.
-* **lastAliveTime**: string (ReadOnly): Last alive time of the sync agent.
-* **name**: string (ReadOnly): Name of the sync agent.
-* **state**: 'NeverConnected' | 'Offline' | 'Online' | string (ReadOnly): State of the sync agent.
-* **syncDatabaseId**: string: ARM resource id of the sync database in the sync agent.
-* **version**: string (ReadOnly): Version of the sync agent.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## VirtualNetworkRuleProperties
 ### Properties

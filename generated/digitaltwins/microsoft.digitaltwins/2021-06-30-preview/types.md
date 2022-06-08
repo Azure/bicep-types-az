@@ -43,29 +43,6 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/timeSeriesDatabaseConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## DigitalTwinsIdentity
-### Properties
-* **principalId**: string (ReadOnly): The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity
-* **tenantId**: string (ReadOnly): The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity
-* **type**: 'None' | 'SystemAssigned' | string: The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported.
-
-## DigitalTwinsProperties
-### Properties
-* **createdTime**: string (ReadOnly): Time when DigitalTwinsInstance was created.
-* **hostName**: string (ReadOnly): Api endpoint to work with DigitalTwinsInstance.
-* **lastUpdatedTime**: string (ReadOnly): Time when DigitalTwinsInstance was updated.
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: The private endpoint connections.
-* **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Updating' | 'Warning' | string (ReadOnly): The provisioning state.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Public network access for the DigitalTwinsInstance.
-
-## PrivateEndpointConnection
-### Properties
-* **id**: string (ReadOnly): The resource identifier.
-* **name**: string (ReadOnly): The resource name.
-* **properties**: [ConnectionProperties](#connectionproperties) (Required): The properties of a private endpoint connection.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **type**: string (ReadOnly): The resource type.
-
 ## ConnectionProperties
 ### Properties
 * **groupIds**: string[]: The list of group ids for the private endpoint connection.
@@ -73,29 +50,11 @@
 * **privateLinkServiceConnectionState**: [ConnectionPropertiesPrivateLinkServiceConnectionState](#connectionpropertiesprivatelinkserviceconnectionstate): The connection state.
 * **provisioningState**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (ReadOnly): The provisioning state.
 
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly): The resource identifier.
-
 ## ConnectionPropertiesPrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: string: Actions required for a private endpoint connection.
 * **description**: string (Required): The description for the current state of a private endpoint connection.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (Required): The status of a private endpoint connection.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## DigitalTwinsResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## DigitalTwinsEndpointResourceProperties
 * **Discriminator**: endpointType
@@ -129,6 +88,47 @@
 * **primaryConnectionString**: string: PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
 * **secondaryConnectionString**: string: SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
 
+
+## DigitalTwinsIdentity
+### Properties
+* **principalId**: string (ReadOnly): The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity
+* **tenantId**: string (ReadOnly): The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity
+* **type**: 'None' | 'SystemAssigned' | string: The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported.
+
+## DigitalTwinsProperties
+### Properties
+* **createdTime**: string (ReadOnly): Time when DigitalTwinsInstance was created.
+* **hostName**: string (ReadOnly): Api endpoint to work with DigitalTwinsInstance.
+* **lastUpdatedTime**: string (ReadOnly): Time when DigitalTwinsInstance was updated.
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: The private endpoint connections.
+* **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Updating' | 'Warning' | string (ReadOnly): The provisioning state.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Public network access for the DigitalTwinsInstance.
+
+## DigitalTwinsResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly): The resource identifier.
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly): The resource identifier.
+* **name**: string (ReadOnly): The resource name.
+* **properties**: [ConnectionProperties](#connectionproperties) (Required): The properties of a private endpoint connection.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: string (ReadOnly): The resource type.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TimeSeriesDatabaseConnectionProperties
 * **Discriminator**: connectionType

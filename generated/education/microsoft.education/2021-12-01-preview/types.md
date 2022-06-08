@@ -20,6 +20,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Education/labs/students' (ReadOnly, DeployTimeConstant): The resource type
 
+## Amount
+### Properties
+* **currency**: string: The type of currency being used for the value.
+* **value**: int: Amount value.
+
 ## LabProperties
 ### Properties
 * **budgetPerStudent**: [Amount](#amount) (Required): The amount.
@@ -32,20 +37,6 @@
 * **status**: 'Active' | 'Deleted' | string (ReadOnly): The status of this lab
 * **totalAllocatedBudget**: [Amount](#amount) (ReadOnly): The amount.
 * **totalBudget**: [Amount](#amount) (ReadOnly): The amount.
-
-## Amount
-### Properties
-* **currency**: string: The type of currency being used for the value.
-* **value**: int: Amount value.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## StudentProperties
 ### Properties
@@ -60,4 +51,13 @@
 * **subscriptionAlias**: string: Subscription alias
 * **subscriptionId**: string (ReadOnly): Subscription Id
 * **subscriptionInviteLastSentDate**: string: subscription invite last sent date
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 

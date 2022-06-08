@@ -16,6 +16,13 @@
 * **status**: 'Completed' | 'Completing' | 'Escalated' | 'Escalating' | 'Expired' | 'InProgress' | 'Initializing' | 'NotStarted' | string (ReadOnly, WriteOnly): This read-only field specifies the status of an approval.
 * **type**: 'Microsoft.Authorization/roleAssignmentApprovals/stages' (ReadOnly, DeployTimeConstant): The resource type
 
+## RoleAssignmentApprovalActorIdentity
+### Properties
+* **principalId**: string (ReadOnly, WriteOnly): The identity id
+* **principalName**: string (ReadOnly, WriteOnly): The identity display name
+* **principalType**: 'servicePrincipal' | 'user' | string (ReadOnly, WriteOnly): The identity type : user/servicePrincipal
+* **userPrincipalName**: string (ReadOnly, WriteOnly): The user principal name(if valid)
+
 ## RoleAssignmentApprovalStepProperties
 ### Properties
 * **assignedToMe**: bool (ReadOnly): Indicates whether the stage is assigned to me for review
@@ -25,11 +32,4 @@
 * **reviewedDateTime**: string (ReadOnly): Date Time when a decision was taken.
 * **reviewResult**: 'Approve' | 'Deny' | 'NotReviewed' | string (ReadOnly): The decision on the approval stage. This value is initially set to NotReviewed. Approvers can take action of Approve/Deny
 * **status**: 'Completed' | 'Completing' | 'Escalated' | 'Escalating' | 'Expired' | 'InProgress' | 'Initializing' | 'NotStarted' | string (ReadOnly): This read-only field specifies the status of an approval.
-
-## RoleAssignmentApprovalActorIdentity
-### Properties
-* **principalId**: string (ReadOnly, WriteOnly): The identity id
-* **principalName**: string (ReadOnly, WriteOnly): The identity display name
-* **principalType**: 'servicePrincipal' | 'user' | string (ReadOnly, WriteOnly): The identity type : user/servicePrincipal
-* **userPrincipalName**: string (ReadOnly, WriteOnly): The user principal name(if valid)
 

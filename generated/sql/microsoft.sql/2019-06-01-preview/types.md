@@ -83,72 +83,6 @@
 * **properties**: [WorkloadClassifierProperties](#workloadclassifierproperties): Workload classifier definition. For more information look at sys.workload_management_workload_classifiers (DMV).
 * **type**: 'Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers' (ReadOnly, DeployTimeConstant): The resource type
 
-## ManagedDatabaseProperties
-### Properties
-* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS' | string: Collation of the metadata catalog.
-* **collation**: string: Collation of the managed database.
-* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'RestoreExternalBackup' | 'RestoreLongTermRetentionBackup' | string (WriteOnly): Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).
-* **creationDate**: string (ReadOnly): Creation date of the database.
-* **defaultSecondaryLocation**: string (ReadOnly): Geo paired region.
-* **earliestRestorePoint**: string (ReadOnly): Earliest restore point in time for point in time restore.
-* **failoverGroupId**: string (ReadOnly): Instance Failover Group resource identifier that this managed database belongs to.
-* **longTermRetentionBackupResourceId**: string (WriteOnly): The name of the Long Term Retention backup to be used for restore of this managed database.
-* **recoverableDatabaseId**: string (WriteOnly): The resource identifier of the recoverable database associated with create operation of this database.
-* **restorableDroppedDatabaseId**: string (WriteOnly): The restorable dropped database resource id to restore when creating this database.
-* **restorePointInTime**: string (WriteOnly): Conditional. If createMode is PointInTimeRestore, this value is required. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
-* **sourceDatabaseId**: string (WriteOnly): The resource identifier of the source database associated with create operation of this database.
-* **status**: 'Creating' | 'Inaccessible' | 'Offline' | 'Online' | 'Restoring' | 'Shutdown' | 'Updating' | string (ReadOnly): Status of the database.
-* **storageContainerSasToken**: string (WriteOnly): Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.
-* **storageContainerUri**: string (WriteOnly): Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceIdentity
-### Properties
-* **principalId**: string (ReadOnly): The Azure Active Directory principal id.
-* **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string: The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
-
-## ServerProperties
-### Properties
-* **administratorLogin**: string: Administrator username for the server. Once created it cannot be changed.
-* **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for server creation).
-* **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
-* **minimalTlsVersion**: string: Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
-* **privateEndpointConnections**: [ServerPrivateEndpointConnection](#serverprivateendpointconnection)[] (ReadOnly): List of private endpoint connections on a server
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
-* **state**: string (ReadOnly): The state of the server.
-* **version**: string: The version of the server.
-
-## ServerPrivateEndpointConnection
-### Properties
-* **id**: string (ReadOnly): Resource ID.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Properties of a private endpoint connection.
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty)
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty)
-* **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' | string (ReadOnly): State of the private endpoint connection.
-
-## PrivateEndpointProperty
-### Properties
-* **id**: string: Resource id of the private endpoint.
-
-## PrivateLinkServiceConnectionStateProperty
-### Properties
-* **actionsRequired**: 'None' | string (ReadOnly): The actions required for private link service connection.
-* **description**: string (Required): The private link service connection description.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (Required): The private link service connection status.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## AdministratorProperties
 ### Properties
 * **administratorType**: 'ActiveDirectory' | string (Required): Type of the sever administrator.
@@ -221,6 +155,62 @@ When source subscription belongs to a different tenant than target subscription,
 * **storageAccountType**: 'GRS' | 'LRS' | 'ZRS' | string: The storage account type used to store backups for this database.
 * **zoneRedundant**: bool: Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
 
+## ManagedDatabaseProperties
+### Properties
+* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS' | string: Collation of the metadata catalog.
+* **collation**: string: Collation of the managed database.
+* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'RestoreExternalBackup' | 'RestoreLongTermRetentionBackup' | string (WriteOnly): Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).
+* **creationDate**: string (ReadOnly): Creation date of the database.
+* **defaultSecondaryLocation**: string (ReadOnly): Geo paired region.
+* **earliestRestorePoint**: string (ReadOnly): Earliest restore point in time for point in time restore.
+* **failoverGroupId**: string (ReadOnly): Instance Failover Group resource identifier that this managed database belongs to.
+* **longTermRetentionBackupResourceId**: string (WriteOnly): The name of the Long Term Retention backup to be used for restore of this managed database.
+* **recoverableDatabaseId**: string (WriteOnly): The resource identifier of the recoverable database associated with create operation of this database.
+* **restorableDroppedDatabaseId**: string (WriteOnly): The restorable dropped database resource id to restore when creating this database.
+* **restorePointInTime**: string (WriteOnly): Conditional. If createMode is PointInTimeRestore, this value is required. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
+* **sourceDatabaseId**: string (WriteOnly): The resource identifier of the source database associated with create operation of this database.
+* **status**: 'Creating' | 'Inaccessible' | 'Offline' | 'Online' | 'Restoring' | 'Shutdown' | 'Updating' | string (ReadOnly): Status of the database.
+* **storageContainerSasToken**: string (WriteOnly): Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.
+* **storageContainerUri**: string (WriteOnly): Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty)
+* **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' | string (ReadOnly): State of the private endpoint connection.
+
+## PrivateEndpointProperty
+### Properties
+* **id**: string: Resource id of the private endpoint.
+
+## PrivateLinkServiceConnectionStateProperty
+### Properties
+* **actionsRequired**: 'None' | string (ReadOnly): The actions required for private link service connection.
+* **description**: string (Required): The private link service connection description.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (Required): The private link service connection status.
+
+## ResourceIdentity
+### Properties
+* **principalId**: string (ReadOnly): The Azure Active Directory principal id.
+* **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string: The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
+
+## ServerPrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Properties of a private endpoint connection.
+
+## ServerProperties
+### Properties
+* **administratorLogin**: string: Administrator username for the server. Once created it cannot be changed.
+* **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for server creation).
+* **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
+* **minimalTlsVersion**: string: Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
+* **privateEndpointConnections**: [ServerPrivateEndpointConnection](#serverprivateendpointconnection)[] (ReadOnly): List of private endpoint connections on a server
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+* **state**: string (ReadOnly): The state of the server.
+* **version**: string: The version of the server.
+
 ## Sku
 ### Properties
 * **capacity**: int: Capacity of the particular SKU.
@@ -228,11 +218,6 @@ When source subscription belongs to a different tenant than target subscription,
 * **name**: string (Required): The name of the SKU, typically, a letter + Number code, e.g. P3.
 * **size**: string: Size of the particular SKU
 * **tier**: string: The tier or edition of the particular SKU, e.g. Basic, Premium.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## SyncGroupProperties
 ### Properties
@@ -278,14 +263,20 @@ When source subscription belongs to a different tenant than target subscription,
 * **usePrivateLinkConnection**: bool: Whether to use private link connection.
 * **userName**: string: User name of the member database in the sync member.
 
-## WorkloadGroupProperties
+## TrackedResourceTags
 ### Properties
-* **importance**: string: The workload group importance level.
-* **maxResourcePercent**: int (Required): The workload group cap percentage resource.
-* **maxResourcePercentPerRequest**: int: The workload group request maximum grant percentage.
-* **minResourcePercent**: int (Required): The workload group minimum percentage resource.
-* **minResourcePercentPerRequest**: int (Required): The workload group request minimum grant percentage.
-* **queryExecutionTimeout**: int: The workload group query execution timeout.
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## WorkloadClassifierProperties
 ### Properties
@@ -295,4 +286,13 @@ When source subscription belongs to a different tenant than target subscription,
 * **label**: string: The workload classifier label.
 * **memberName**: string (Required): The workload classifier member name.
 * **startTime**: string: The workload classifier start time for classification.
+
+## WorkloadGroupProperties
+### Properties
+* **importance**: string: The workload group importance level.
+* **maxResourcePercent**: int (Required): The workload group cap percentage resource.
+* **maxResourcePercentPerRequest**: int: The workload group request maximum grant percentage.
+* **minResourcePercent**: int (Required): The workload group minimum percentage resource.
+* **minResourcePercentPerRequest**: int (Required): The workload group request minimum grant percentage.
+* **queryExecutionTimeout**: int: The workload group query execution timeout.
 

@@ -50,9 +50,83 @@
 * **state**: 'Disabled' | 'Enabled' | 'Expired' (Required): Possible states of the rule
 * **suppressionAlertsScope**: [SuppressionAlertsScope](#suppressionalertsscope)
 
-## SuppressionAlertsScope
+## AssessmentLinks
 ### Properties
-* **allOf**: [ScopeElement](#scopeelement)[] (Required): All the conditions inside need to be true in order to suppress the alert
+* **azurePortalUri**: string (ReadOnly): Link to assessment in Azure Portal
+
+## AssessmentStatus
+### Properties
+* **cause**: string: Programmatic code for the cause of the assessment status
+* **code**: 'Healthy' | 'NotApplicable' | 'Unhealthy' | string (Required): Programmatic code for the status of the assessment
+* **description**: string: Human readable description of the assessment status
+
+## AutomationAction
+* **Discriminator**: actionType
+
+### Base Properties
+### AutomationActionEventHub
+#### Properties
+* **actionType**: 'EventHub' (Required): The type of the action that will be triggered by the Automation
+* **connectionString**: string: The target Event Hub connection string (it will not be included in any response).
+* **eventHubResourceId**: string: The target Event Hub Azure Resource ID.
+* **sasPolicyName**: string (ReadOnly): The target Event Hub SAS policy name.
+
+### AutomationActionLogicApp
+#### Properties
+* **actionType**: 'LogicApp' (Required): The type of the action that will be triggered by the Automation
+* **logicAppResourceId**: string: The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App
+* **uri**: string: The Logic App trigger URI endpoint (it will not be included in any response).
+
+### AutomationActionWorkspace
+#### Properties
+* **actionType**: 'Workspace' (Required): The type of the action that will be triggered by the Automation
+* **workspaceResourceId**: string: The fully qualified Log Analytics Workspace Azure Resource ID.
+
+
+## AutomationProperties
+### Properties
+* **actions**: [AutomationAction](#automationaction)[]: A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.
+* **description**: string: The security automation description.
+* **isEnabled**: bool: Indicates whether the security automation is enabled.
+* **scopes**: [AutomationScope](#automationscope)[]: A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.
+* **sources**: [AutomationSource](#automationsource)[]: A collection of the source event types which evaluate the security automation set of rules.
+
+## AutomationRuleSet
+### Properties
+* **rules**: [AutomationTriggeringRule](#automationtriggeringrule)[]: Array of AutomationTriggeringRule
+
+## AutomationScope
+### Properties
+* **description**: string: The resources scope description.
+* **scopePath**: string: The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).
+
+## AutomationSource
+### Properties
+* **eventSource**: 'Alerts' | 'Assessments' | 'AssessmentsSnapshot' | 'RegulatoryComplianceAssessment' | 'RegulatoryComplianceAssessmentSnapshot' | 'SecureScoreControls' | 'SecureScoreControlsSnapshot' | 'SecureScores' | 'SecureScoresSnapshot' | 'SubAssessments' | 'SubAssessmentsSnapshot' | string: A valid event source type.
+* **ruleSets**: [AutomationRuleSet](#automationruleset)[]: A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').
+
+## AutomationTriggeringRule
+### Properties
+* **expectedValue**: string: The expected value.
+* **operator**: 'Contains' | 'EndsWith' | 'Equals' | 'GreaterThan' | 'GreaterThanOrEqualTo' | 'LesserThan' | 'LesserThanOrEqualTo' | 'NotEquals' | 'StartsWith' | string: A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
+* **propertyJPath**: string: The JPath of the entity model property that should be checked.
+* **propertyType**: 'Boolean' | 'Integer' | 'Number' | 'String' | string: The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
+
+## ResourceDetails
+* **Discriminator**: source
+
+### Base Properties
+### AzureResourceDetails
+#### Properties
+* **id**: string (ReadOnly): Azure resource Id of the assessed resource
+* **source**: 'Azure' (Required): The platform where the assessed resource resides
+
+### OnPremiseSqlResourceDetails
+#### Properties
+* **databaseName**: string (Required): The Sql database name installed on the machine
+* **serverName**: string (Required): The Sql server name installed on the machine
+* **source**: 'OnPremiseSql' (Required): The platform where the assessed resource resides
+
 
 ## ScopeElement
 ### Properties
@@ -87,83 +161,9 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## AssessmentLinks
+## SuppressionAlertsScope
 ### Properties
-* **azurePortalUri**: string (ReadOnly): Link to assessment in Azure Portal
-
-## ResourceDetails
-* **Discriminator**: source
-
-### Base Properties
-### AzureResourceDetails
-#### Properties
-* **id**: string (ReadOnly): Azure resource Id of the assessed resource
-* **source**: 'Azure' (Required): The platform where the assessed resource resides
-
-### OnPremiseSqlResourceDetails
-#### Properties
-* **databaseName**: string (Required): The Sql database name installed on the machine
-* **serverName**: string (Required): The Sql server name installed on the machine
-* **source**: 'OnPremiseSql' (Required): The platform where the assessed resource resides
-
-
-## AssessmentStatus
-### Properties
-* **cause**: string: Programmatic code for the cause of the assessment status
-* **code**: 'Healthy' | 'NotApplicable' | 'Unhealthy' | string (Required): Programmatic code for the status of the assessment
-* **description**: string: Human readable description of the assessment status
-
-## AutomationProperties
-### Properties
-* **actions**: [AutomationAction](#automationaction)[]: A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.
-* **description**: string: The security automation description.
-* **isEnabled**: bool: Indicates whether the security automation is enabled.
-* **scopes**: [AutomationScope](#automationscope)[]: A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.
-* **sources**: [AutomationSource](#automationsource)[]: A collection of the source event types which evaluate the security automation set of rules.
-
-## AutomationAction
-* **Discriminator**: actionType
-
-### Base Properties
-### AutomationActionEventHub
-#### Properties
-* **actionType**: 'EventHub' (Required): The type of the action that will be triggered by the Automation
-* **connectionString**: string: The target Event Hub connection string (it will not be included in any response).
-* **eventHubResourceId**: string: The target Event Hub Azure Resource ID.
-* **sasPolicyName**: string (ReadOnly): The target Event Hub SAS policy name.
-
-### AutomationActionLogicApp
-#### Properties
-* **actionType**: 'LogicApp' (Required): The type of the action that will be triggered by the Automation
-* **logicAppResourceId**: string: The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App
-* **uri**: string: The Logic App trigger URI endpoint (it will not be included in any response).
-
-### AutomationActionWorkspace
-#### Properties
-* **actionType**: 'Workspace' (Required): The type of the action that will be triggered by the Automation
-* **workspaceResourceId**: string: The fully qualified Log Analytics Workspace Azure Resource ID.
-
-
-## AutomationScope
-### Properties
-* **description**: string: The resources scope description.
-* **scopePath**: string: The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).
-
-## AutomationSource
-### Properties
-* **eventSource**: 'Alerts' | 'Assessments' | 'AssessmentsSnapshot' | 'RegulatoryComplianceAssessment' | 'RegulatoryComplianceAssessmentSnapshot' | 'SecureScoreControls' | 'SecureScoreControlsSnapshot' | 'SecureScores' | 'SecureScoresSnapshot' | 'SubAssessments' | 'SubAssessmentsSnapshot' | string: A valid event source type.
-* **ruleSets**: [AutomationRuleSet](#automationruleset)[]: A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').
-
-## AutomationRuleSet
-### Properties
-* **rules**: [AutomationTriggeringRule](#automationtriggeringrule)[]: Array of AutomationTriggeringRule
-
-## AutomationTriggeringRule
-### Properties
-* **expectedValue**: string: The expected value.
-* **operator**: 'Contains' | 'EndsWith' | 'Equals' | 'GreaterThan' | 'GreaterThanOrEqualTo' | 'LesserThan' | 'LesserThanOrEqualTo' | 'NotEquals' | 'StartsWith' | string: A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
-* **propertyJPath**: string: The JPath of the entity model property that should be checked.
-* **propertyType**: 'Boolean' | 'Integer' | 'Number' | 'String' | string: The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
+* **allOf**: [ScopeElement](#scopeelement)[] (Required): All the conditions inside need to be true in order to suppress the alert
 
 ## Tags
 ### Properties

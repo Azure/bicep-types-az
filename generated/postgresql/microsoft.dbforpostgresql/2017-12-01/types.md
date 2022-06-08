@@ -67,11 +67,73 @@
 * **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Properties of a virtual network rule.
 * **type**: 'Microsoft.DBforPostgreSQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## ConfigurationProperties
+### Properties
+* **allowedValues**: string (ReadOnly): Allowed values of the configuration.
+* **dataType**: string (ReadOnly): Data type of the configuration.
+* **defaultValue**: string (ReadOnly): Default value of the configuration.
+* **description**: string (ReadOnly): Description of the configuration.
+* **source**: string: Source of the configuration.
+* **value**: string: Value of the configuration.
+
+## DatabaseProperties
+### Properties
+* **charset**: string: The charset of the database.
+* **collation**: string: The collation of the database.
+
+## FirewallRuleProperties
+### Properties
+* **endIpAddress**: string (Required): The end IP address of the server firewall rule. Must be IPv4 format.
+* **startIpAddress**: string (Required): The start IP address of the server firewall rule. Must be IPv4 format.
+
+## PrivateEndpointProperty
+### Properties
+* **id**: string (ReadOnly): Resource id of the private endpoint.
+
 ## ResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The Azure Active Directory principal id.
 * **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
 * **type**: 'SystemAssigned' | string: The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
+
+## SecurityAlertPolicyProperties
+### Properties
+* **disabledAlerts**: string[]: Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly
+* **emailAccountAdmins**: bool: Specifies that the alert is sent to the account administrators.
+* **emailAddresses**: string[]: Specifies an array of e-mail addresses to which the alert is sent.
+* **retentionDays**: int: Specifies the number of days to keep in the Threat Detection audit logs.
+* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy, whether it is enabled or disabled.
+* **storageAccountAccessKey**: string: Specifies the identifier key of the Threat Detection audit storage account.
+* **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
+
+## ServerAdministratorProperties
+### Properties
+* **administratorType**: 'ActiveDirectory' (Required): The type of administrator.
+* **login**: string (Required): The server administrator login account name.
+* **sid**: string (Required): The server administrator Sid (Secure ID).
+* **tenantId**: string (Required): The server Active Directory Administrator tenant id.
+
+## ServerForCreateTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ServerPrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly): Resource ID of the Private Endpoint Connection.
+* **properties**: [ServerPrivateEndpointConnectionProperties](#serverprivateendpointconnectionproperties) (ReadOnly): Properties of a private endpoint connection.
+
+## ServerPrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty) (ReadOnly)
+* **privateLinkServiceConnectionState**: [ServerPrivateLinkServiceConnectionStateProperty](#serverprivatelinkserviceconnectionstateproperty) (ReadOnly)
+* **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' | string (ReadOnly): State of the private endpoint connection.
+
+## ServerPrivateLinkServiceConnectionStateProperty
+### Properties
+* **actionsRequired**: 'None' | string (ReadOnly): The actions required for private link service connection.
+* **description**: string (ReadOnly): The private link service connection description.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (ReadOnly): The private link service connection status.
 
 ## ServerPropertiesForCreate
 * **Discriminator**: createMode
@@ -115,34 +177,6 @@
 * **sourceServerId**: string (Required, WriteOnly): The master server id to create replica from.
 
 
-## ServerPrivateEndpointConnection
-### Properties
-* **id**: string (ReadOnly): Resource ID of the Private Endpoint Connection.
-* **properties**: [ServerPrivateEndpointConnectionProperties](#serverprivateendpointconnectionproperties) (ReadOnly): Properties of a private endpoint connection.
-
-## ServerPrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty) (ReadOnly)
-* **privateLinkServiceConnectionState**: [ServerPrivateLinkServiceConnectionStateProperty](#serverprivatelinkserviceconnectionstateproperty) (ReadOnly)
-* **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' | string (ReadOnly): State of the private endpoint connection.
-
-## PrivateEndpointProperty
-### Properties
-* **id**: string (ReadOnly): Resource id of the private endpoint.
-
-## ServerPrivateLinkServiceConnectionStateProperty
-### Properties
-* **actionsRequired**: 'None' | string (ReadOnly): The actions required for private link service connection.
-* **description**: string (ReadOnly): The private link service connection description.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (ReadOnly): The private link service connection status.
-
-## StorageProfile
-### Properties
-* **backupRetentionDays**: int: Backup retention days for the server.
-* **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: Enable Geo-redundant or not for server backup.
-* **storageAutogrow**: 'Disabled' | 'Enabled' | string: Enable Storage Auto Grow.
-* **storageMB**: int: Max storage allowed for a server.
-
 ## Sku
 ### Properties
 * **capacity**: int: The scale up/out capacity, representing server's compute units.
@@ -151,46 +185,12 @@
 * **size**: string: The size code, to be interpreted by resource as appropriate.
 * **tier**: 'Basic' | 'GeneralPurpose' | 'MemoryOptimized' | string: The tier of the particular SKU, e.g. Basic.
 
-## ServerForCreateTags
+## StorageProfile
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ServerAdministratorProperties
-### Properties
-* **administratorType**: 'ActiveDirectory' (Required): The type of administrator.
-* **login**: string (Required): The server administrator login account name.
-* **sid**: string (Required): The server administrator Sid (Secure ID).
-* **tenantId**: string (Required): The server Active Directory Administrator tenant id.
-
-## ConfigurationProperties
-### Properties
-* **allowedValues**: string (ReadOnly): Allowed values of the configuration.
-* **dataType**: string (ReadOnly): Data type of the configuration.
-* **defaultValue**: string (ReadOnly): Default value of the configuration.
-* **description**: string (ReadOnly): Description of the configuration.
-* **source**: string: Source of the configuration.
-* **value**: string: Value of the configuration.
-
-## DatabaseProperties
-### Properties
-* **charset**: string: The charset of the database.
-* **collation**: string: The collation of the database.
-
-## FirewallRuleProperties
-### Properties
-* **endIpAddress**: string (Required): The end IP address of the server firewall rule. Must be IPv4 format.
-* **startIpAddress**: string (Required): The start IP address of the server firewall rule. Must be IPv4 format.
-
-## SecurityAlertPolicyProperties
-### Properties
-* **disabledAlerts**: string[]: Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly
-* **emailAccountAdmins**: bool: Specifies that the alert is sent to the account administrators.
-* **emailAddresses**: string[]: Specifies an array of e-mail addresses to which the alert is sent.
-* **retentionDays**: int: Specifies the number of days to keep in the Threat Detection audit logs.
-* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy, whether it is enabled or disabled.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the Threat Detection audit storage account.
-* **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
+* **backupRetentionDays**: int: Backup retention days for the server.
+* **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: Enable Geo-redundant or not for server backup.
+* **storageAutogrow**: 'Disabled' | 'Enabled' | string: Enable Storage Auto Grow.
+* **storageMB**: int: Max storage allowed for a server.
 
 ## VirtualNetworkRuleProperties
 ### Properties

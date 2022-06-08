@@ -119,21 +119,13 @@
 * **properties**: [View](#view): The view in Customer 360 web application.
 * **type**: 'Microsoft.CustomerInsights/hubs/views' (ReadOnly, DeployTimeConstant): The resource type
 
-## HubPropertiesFormat
+## AssignmentPrincipal
 ### Properties
-* **apiEndpoint**: string (ReadOnly): API endpoint URL of the hub.
-* **hubBillingInfo**: [HubBillingInfoFormat](#hubbillinginfoformat): Hub billing info.
-* **provisioningState**: string (ReadOnly): Provisioning state of the hub.
-* **tenantFeatures**: int: The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.
-* **webEndpoint**: string (ReadOnly): Web endpoint URL of the hub.
+* **principalId**: string (Required): The principal id being assigned to.
+* **principalMetadata**: [AssignmentPrincipalMetadata](#assignmentprincipalmetadata): Other metadata for the principal.
+* **principalType**: string (Required): The Type of the principal ID.
 
-## HubBillingInfoFormat
-### Properties
-* **maxUnits**: int: The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.
-* **minUnits**: int: The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.
-* **skuName**: string: The sku name.
-
-## ResourceTags
+## AssignmentPrincipalMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -159,11 +151,6 @@
 * **state**: 'Created' | 'Creating' | 'Deleting' | 'Expiring' | 'Failed' | 'Ready' (ReadOnly): State of connector.
 * **tenantId**: string (ReadOnly): The hub name.
 
-## ConnectorProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
 ## ConnectorMapping
 ### Properties
 * **connectorMappingName**: string (ReadOnly): The connector mapping name
@@ -181,17 +168,6 @@
 * **runId**: string (ReadOnly): The RunId.
 * **state**: 'Created' | 'Creating' | 'Expiring' | 'Failed' | 'Ready' | 'Running' | 'Stopped' (ReadOnly): State of connector mapping.
 * **tenantId**: string (ReadOnly): The hub name.
-
-## ConnectorMappingProperties
-### Properties
-* **availability**: [ConnectorMappingAvailability](#connectormappingavailability) (Required): Connector mapping property availability.
-* **completeOperation**: [ConnectorMappingCompleteOperation](#connectormappingcompleteoperation) (Required): The complete operation.
-* **errorManagement**: [ConnectorMappingErrorManagement](#connectormappingerrormanagement) (Required): The error management.
-* **fileFilter**: string: The file filter for the mapping.
-* **folderPath**: string: The folder path for the mapping.
-* **format**: [ConnectorMappingFormat](#connectormappingformat) (Required): Connector mapping property format.
-* **hasHeader**: bool: If the file contains a header or not.
-* **structure**: [ConnectorMappingStructure](#connectormappingstructure)[] (Required): Ingestion mapping information at property level.
 
 ## ConnectorMappingAvailability
 ### Properties
@@ -217,12 +193,65 @@
 * **quoteCharacter**: string: Quote character, used to indicate enquoted fields.
 * **quoteEscapeCharacter**: string: Escape character for quotes, can be the same as the quoteCharacter.
 
+## ConnectorMappingProperties
+### Properties
+* **availability**: [ConnectorMappingAvailability](#connectormappingavailability) (Required): Connector mapping property availability.
+* **completeOperation**: [ConnectorMappingCompleteOperation](#connectormappingcompleteoperation) (Required): The complete operation.
+* **errorManagement**: [ConnectorMappingErrorManagement](#connectormappingerrormanagement) (Required): The error management.
+* **fileFilter**: string: The file filter for the mapping.
+* **folderPath**: string: The folder path for the mapping.
+* **format**: [ConnectorMappingFormat](#connectormappingformat) (Required): Connector mapping property format.
+* **hasHeader**: bool: If the file contains a header or not.
+* **structure**: [ConnectorMappingStructure](#connectormappingstructure)[] (Required): Ingestion mapping information at property level.
+
 ## ConnectorMappingStructure
 ### Properties
 * **columnName**: string (Required): The column name of the import file.
 * **customFormatSpecifier**: string: Custom format specifier for input parsing.
 * **isEncrypted**: bool: Indicates if the column is encrypted.
 * **propertyName**: string (Required): The property name of the mapping entity.
+
+## ConnectorProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DataSource
+### Properties
+* **dataSourceReferenceId**: string (ReadOnly): The data source reference id.
+* **dataSourceType**: 'Connector' | 'LinkInteraction' | 'SystemDefault' | string (ReadOnly): The data source type.
+* **id**: int (ReadOnly): The data source ID.
+* **name**: string (ReadOnly): The data source name
+* **status**: 'Active' | 'Deleted' | 'None' | string (ReadOnly): The data source status.
+
+## DataSourcePrecedence
+### Properties
+* **dataSource**: [DataSource](#datasource): Data Source is a way for us to know the source of instances. A single type can have data coming in from multiple places. In activities we use this to determine precedence rules.
+* **precedence**: int: the precedence value.
+
+## DictionaryOfString
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DictionaryOfString
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## HubBillingInfoFormat
+### Properties
+* **maxUnits**: int: The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.
+* **minUnits**: int: The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.
+* **skuName**: string: The sku name.
+
+## HubPropertiesFormat
+### Properties
+* **apiEndpoint**: string (ReadOnly): API endpoint URL of the hub.
+* **hubBillingInfo**: [HubBillingInfoFormat](#hubbillinginfoformat): Hub billing info.
+* **provisioningState**: string (ReadOnly): Provisioning state of the hub.
+* **tenantFeatures**: int: The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.
+* **webEndpoint**: string (ReadOnly): Web endpoint URL of the hub.
 
 ## InteractionTypeDefinition
 ### Properties
@@ -250,96 +279,10 @@
 * **timestampFieldName**: string: The timestamp property name. Represents the time when the interaction or profile update happened.
 * **typeName**: string: The name of the entity.
 
-## MetadataDefinitionBaseAttributes
+## KpiAlias
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string[]
-
-## DataSourcePrecedence
-### Properties
-* **dataSource**: [DataSource](#datasource): Data Source is a way for us to know the source of instances. A single type can have data coming in from multiple places. In activities we use this to determine precedence rules.
-* **precedence**: int: the precedence value.
-
-## DataSource
-### Properties
-* **dataSourceReferenceId**: string (ReadOnly): The data source reference id.
-* **dataSourceType**: 'Connector' | 'LinkInteraction' | 'SystemDefault' | string (ReadOnly): The data source type.
-* **id**: int (ReadOnly): The data source ID.
-* **name**: string (ReadOnly): The data source name
-* **status**: 'Active' | 'Deleted' | 'None' | string (ReadOnly): The data source status.
-
-## MetadataDefinitionBaseDescription
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## MetadataDefinitionBaseDisplayName
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## PropertyDefinition
-### Properties
-* **arrayValueSeparator**: string: Array value separator for properties with isArray set.
-* **dataSourcePrecedenceRules**: [DataSourcePrecedence](#datasourceprecedence)[] (ReadOnly): This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.
-* **enumValidValues**: [ProfileEnumValidValuesFormat](#profileenumvalidvaluesformat)[]: Describes valid values for an enum property.
-* **fieldName**: string (Required): Name of the property.
-* **fieldType**: string (Required): Type of the property.
-* **isArray**: bool: Indicates if the property is actually an array of the fieldType above on the data api.
-* **isAvailableInGraph**: bool: Whether property is available in graph or not.
-* **isEnum**: bool: Indicates if the property is an enum.
-* **isFlagEnum**: bool: Indicates if the property is an flag enum.
-* **isImage**: bool: Whether the property is an Image.
-* **isLocalizedString**: bool: Whether the property is a localized string.
-* **isName**: bool: Whether the property is a name or a part of name.
-* **isRequired**: bool: Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.
-* **maxLength**: int: Max length of string. Used only if type is string.
-* **propertyId**: string: The ID associated with the property.
-* **schemaItemPropLink**: string: URL encoded schema.org item prop link for the property.
-
-## ProfileEnumValidValuesFormat
-### Properties
-* **localizedValueNames**: [ProfileEnumValidValuesFormatLocalizedValueNames](#profileenumvalidvaluesformatlocalizedvaluenames): Localized names of the enum member.
-* **value**: int: The integer value of the enum member.
-
-## ProfileEnumValidValuesFormatLocalizedValueNames
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## MetadataDefinitionBaseLocalizedAttributes
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [DictionaryOfString](#dictionaryofstring)
-
-## DictionaryOfString
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Participant
-### Properties
-* **description**: [ParticipantDescription](#participantdescription): Localized descriptions.
-* **displayName**: [ParticipantDisplayName](#participantdisplayname): Localized display name.
-* **participantName**: string (Required): Participant name.
-* **participantPropertyReferences**: [ParticipantPropertyReference](#participantpropertyreference)[] (Required): The property references.
-* **profileTypeName**: string (Required): Profile type name.
-* **role**: string: The role that the participant is playing in the interaction.
-
-## ParticipantDescription
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ParticipantDisplayName
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ParticipantPropertyReference
-### Properties
-* **sourcePropertyName**: string (Required): The source property that maps to the target property.
-* **targetPropertyName**: string (Required): The target property that maps to the source property.
+* **aliasName**: string (Required): KPI alias name.
+* **expression**: string (Required): The expression.
 
 ## KpiDefinition
 ### Properties
@@ -362,11 +305,6 @@
 * **tenantId**: string (ReadOnly): The hub name.
 * **thresHolds**: [KpiThresholds](#kpithresholds): Defines the KPI Threshold limits.
 * **unit**: string: The unit of measurement for the KPI.
-
-## KpiAlias
-### Properties
-* **aliasName**: string (Required): KPI alias name.
-* **expression**: string (Required): The expression.
 
 ## KpiDefinitionDescription
 ### Properties
@@ -430,11 +368,74 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## TypePropertiesMapping
+## MetadataDefinitionBaseAttributes
 ### Properties
-* **linkType**: 'CopyIfNull' | 'UpdateAlways': Link type.
-* **sourcePropertyName**: string (Required): Property name on the source Entity Type.
-* **targetPropertyName**: string (Required): Property name on the target Entity Type.
+### Additional Properties
+* **Additional Properties Type**: string[]
+
+## MetadataDefinitionBaseAttributes
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string[]
+
+## MetadataDefinitionBaseDescription
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## MetadataDefinitionBaseDescription
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## MetadataDefinitionBaseDisplayName
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## MetadataDefinitionBaseDisplayName
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## MetadataDefinitionBaseLocalizedAttributes
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [DictionaryOfString](#dictionaryofstring)
+
+## MetadataDefinitionBaseLocalizedAttributes
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [DictionaryOfString](#dictionaryofstring)
+
+## Participant
+### Properties
+* **description**: [ParticipantDescription](#participantdescription): Localized descriptions.
+* **displayName**: [ParticipantDisplayName](#participantdisplayname): Localized display name.
+* **participantName**: string (Required): Participant name.
+* **participantPropertyReferences**: [ParticipantPropertyReference](#participantpropertyreference)[] (Required): The property references.
+* **profileTypeName**: string (Required): Profile type name.
+* **role**: string: The role that the participant is playing in the interaction.
+
+## ParticipantDescription
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ParticipantDisplayName
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ParticipantProfilePropertyReference
+### Properties
+* **interactionPropertyName**: string (Required): The source interaction property that maps to the target profile property.
+* **profilePropertyName**: string (Required): The target profile property that maps to the source interaction property.
+
+## ParticipantPropertyReference
+### Properties
+* **sourcePropertyName**: string (Required): The source property that maps to the target property.
+* **targetPropertyName**: string (Required): The target property that maps to the source property.
 
 ## Prediction
 ### Properties
@@ -489,6 +490,16 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ProfileEnumValidValuesFormat
+### Properties
+* **localizedValueNames**: [ProfileEnumValidValuesFormatLocalizedValueNames](#profileenumvalidvaluesformatlocalizedvaluenames): Localized names of the enum member.
+* **value**: int: The integer value of the enum member.
+
+## ProfileEnumValidValuesFormatLocalizedValueNames
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ProfileTypeDefinition
 ### Properties
 * **apiEntitySetName**: string: The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
@@ -510,44 +521,46 @@
 * **timestampFieldName**: string: The timestamp property name. Represents the time when the interaction or profile update happened.
 * **typeName**: string: The name of the entity.
 
-## MetadataDefinitionBaseAttributes
+## PropertyDefinition
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string[]
+* **arrayValueSeparator**: string: Array value separator for properties with isArray set.
+* **dataSourcePrecedenceRules**: [DataSourcePrecedence](#datasourceprecedence)[] (ReadOnly): This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.
+* **enumValidValues**: [ProfileEnumValidValuesFormat](#profileenumvalidvaluesformat)[]: Describes valid values for an enum property.
+* **fieldName**: string (Required): Name of the property.
+* **fieldType**: string (Required): Type of the property.
+* **isArray**: bool: Indicates if the property is actually an array of the fieldType above on the data api.
+* **isAvailableInGraph**: bool: Whether property is available in graph or not.
+* **isEnum**: bool: Indicates if the property is an enum.
+* **isFlagEnum**: bool: Indicates if the property is an flag enum.
+* **isImage**: bool: Whether the property is an Image.
+* **isLocalizedString**: bool: Whether the property is a localized string.
+* **isName**: bool: Whether the property is a name or a part of name.
+* **isRequired**: bool: Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.
+* **maxLength**: int: Max length of string. Used only if type is string.
+* **propertyId**: string: The ID associated with the property.
+* **schemaItemPropLink**: string: URL encoded schema.org item prop link for the property.
 
-## MetadataDefinitionBaseDescription
+## RelationshipDefinition
+### Properties
+* **cardinality**: 'ManyToMany' | 'OneToMany' | 'OneToOne': The Relationship Cardinality.
+* **description**: [RelationshipDefinitionDescription](#relationshipdefinitiondescription): Localized descriptions for the Relationship.
+* **displayName**: [RelationshipDefinitionDisplayName](#relationshipdefinitiondisplayname): Localized display name for the Relationship.
+* **expiryDateTimeUtc**: string: The expiry date time in UTC.
+* **fields**: [PropertyDefinition](#propertydefinition)[]: The properties of the Relationship.
+* **lookupMappings**: [RelationshipTypeMapping](#relationshiptypemapping)[]: Optional property to be used to map fields in profile to their strong ids in related profile.
+* **profileType**: string (Required): Profile type.
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state.
+* **relatedProfileType**: string (Required): Related profile being referenced.
+* **relationshipGuidId**: string (ReadOnly): The relationship guid id.
+* **relationshipName**: string (ReadOnly): The Relationship name.
+* **tenantId**: string (ReadOnly): The hub name.
+
+## RelationshipDefinitionDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## MetadataDefinitionBaseDisplayName
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## MetadataDefinitionBaseLocalizedAttributes
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [DictionaryOfString](#dictionaryofstring)
-
-## DictionaryOfString
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## StrongId
-### Properties
-* **description**: [StrongIdDescription](#strongiddescription): Localized descriptions.
-* **displayName**: [StrongIdDisplayName](#strongiddisplayname): Localized display name.
-* **keyPropertyNames**: string[] (Required): The properties which make up the unique ID.
-* **strongIdName**: string (Required): The Name identifying the strong ID.
-
-## StrongIdDescription
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## StrongIdDisplayName
+## RelationshipDefinitionDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -582,44 +595,24 @@
 * **linkType**: 'CopyIfNull' | 'UpdateAlways': Link type.
 * **relationshipFieldName**: string (Required): The field name on the Relationship metadata.
 
-## ParticipantProfilePropertyReference
+## RelationshipTypeFieldMapping
 ### Properties
-* **interactionPropertyName**: string (Required): The source interaction property that maps to the target profile property.
-* **profilePropertyName**: string (Required): The target profile property that maps to the source interaction property.
-
-## RelationshipDefinition
-### Properties
-* **cardinality**: 'ManyToMany' | 'OneToMany' | 'OneToOne': The Relationship Cardinality.
-* **description**: [RelationshipDefinitionDescription](#relationshipdefinitiondescription): Localized descriptions for the Relationship.
-* **displayName**: [RelationshipDefinitionDisplayName](#relationshipdefinitiondisplayname): Localized display name for the Relationship.
-* **expiryDateTimeUtc**: string: The expiry date time in UTC.
-* **fields**: [PropertyDefinition](#propertydefinition)[]: The properties of the Relationship.
-* **lookupMappings**: [RelationshipTypeMapping](#relationshiptypemapping)[]: Optional property to be used to map fields in profile to their strong ids in related profile.
-* **profileType**: string (Required): Profile type.
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state.
-* **relatedProfileType**: string (Required): Related profile being referenced.
-* **relationshipGuidId**: string (ReadOnly): The relationship guid id.
-* **relationshipName**: string (ReadOnly): The Relationship name.
-* **tenantId**: string (ReadOnly): The hub name.
-
-## RelationshipDefinitionDescription
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## RelationshipDefinitionDisplayName
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **profileFieldName**: string (Required): Specifies the fieldName in profile.
+* **relatedProfileKeyProperty**: string (Required): Specifies the KeyProperty (from StrongId) of the related profile.
 
 ## RelationshipTypeMapping
 ### Properties
 * **fieldMappings**: [RelationshipTypeFieldMapping](#relationshiptypefieldmapping)[] (Required): Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.
 
-## RelationshipTypeFieldMapping
+## ResourceSetDescription
 ### Properties
-* **profileFieldName**: string (Required): Specifies the fieldName in profile.
-* **relatedProfileKeyProperty**: string (Required): Specifies the KeyProperty (from StrongId) of the related profile.
+* **elements**: string[]: The elements included in the set.
+* **exceptions**: string[]: The elements that are not included in the set, in case elements contains '*' indicating 'all'.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## RoleAssignment
 ### Properties
@@ -644,11 +637,6 @@
 * **views**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
 * **widgetTypes**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
 
-## ResourceSetDescription
-### Properties
-* **elements**: string[]: The elements included in the set.
-* **exceptions**: string[]: The elements that are not included in the set, in case elements contains '*' indicating 'all'.
-
 ## RoleAssignmentDescription
 ### Properties
 ### Additional Properties
@@ -659,16 +647,28 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## AssignmentPrincipal
+## StrongId
 ### Properties
-* **principalId**: string (Required): The principal id being assigned to.
-* **principalMetadata**: [AssignmentPrincipalMetadata](#assignmentprincipalmetadata): Other metadata for the principal.
-* **principalType**: string (Required): The Type of the principal ID.
+* **description**: [StrongIdDescription](#strongiddescription): Localized descriptions.
+* **displayName**: [StrongIdDisplayName](#strongiddisplayname): Localized display name.
+* **keyPropertyNames**: string[] (Required): The properties which make up the unique ID.
+* **strongIdName**: string (Required): The Name identifying the strong ID.
 
-## AssignmentPrincipalMetadata
+## StrongIdDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## StrongIdDisplayName
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TypePropertiesMapping
+### Properties
+* **linkType**: 'CopyIfNull' | 'UpdateAlways': Link type.
+* **sourcePropertyName**: string (Required): Property name on the source Entity Type.
+* **targetPropertyName**: string (Required): Property name on the target Entity Type.
 
 ## View
 ### Properties

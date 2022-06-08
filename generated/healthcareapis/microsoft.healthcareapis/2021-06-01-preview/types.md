@@ -92,23 +92,117 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.HealthcareApis/workspaces/iotconnectors/fhirdestinations' (ReadOnly, DeployTimeConstant): The resource type
 
-## ServicesResourceIdentity
+## DicomServiceAuthenticationConfiguration
 ### Properties
-* **principalId**: string (ReadOnly): The principal ID of the resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of the resource.
-* **type**: 'None' | 'SystemAssigned' | string: Type of identity being specified, currently SystemAssigned and None are allowed.
+* **audiences**: string[] (ReadOnly): The audiences for the service
+* **authority**: string (ReadOnly): The authority url for the service
 
-## ServicesProperties
+## DicomServiceProperties
 ### Properties
-* **accessPolicies**: [ServiceAccessPolicyEntry](#serviceaccesspolicyentry)[]: The access policies of the service instance.
-* **acrConfiguration**: [ServiceAcrConfigurationInfo](#serviceacrconfigurationinfo): Azure container registry configuration information
-* **authenticationConfiguration**: [ServiceAuthenticationConfigurationInfo](#serviceauthenticationconfigurationinfo): Authentication configuration information
-* **corsConfiguration**: [ServiceCorsConfigurationInfo](#servicecorsconfigurationinfo): The settings for the CORS configuration of the service instance.
-* **cosmosDbConfiguration**: [ServiceCosmosDbConfigurationInfo](#servicecosmosdbconfigurationinfo): The settings for the Cosmos DB database backing the service.
-* **exportConfiguration**: [ServiceExportConfigurationInfo](#serviceexportconfigurationinfo): Export operation configuration information
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: The list of private endpoint connections that are set up for this resource.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' | string (ReadOnly): The provisioning state.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+* **authenticationConfiguration**: [DicomServiceAuthenticationConfiguration](#dicomserviceauthenticationconfiguration): Authentication configuration information
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' | string: The provisioning state.
+* **serviceUrl**: string (ReadOnly): The url of the Dicom Services.
+
+## FhirServiceAccessPolicyEntry
+### Properties
+* **objectId**: string (Required): An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.
+
+## FhirServiceAcrConfiguration
+### Properties
+* **loginServers**: string[]: The list of the Azure container registry login servers.
+
+## FhirServiceAuthenticationConfiguration
+### Properties
+* **audience**: string: The audience url for the service
+* **authority**: string: The authority url for the service
+* **smartProxyEnabled**: bool: If the SMART on FHIR proxy is enabled
+
+## FhirServiceCorsConfiguration
+### Properties
+* **allowCredentials**: bool: If credentials are allowed via CORS.
+* **headers**: string[]: The headers to be allowed via CORS.
+* **maxAge**: int: The max age to be allowed via CORS.
+* **methods**: string[]: The methods to be allowed via CORS.
+* **origins**: string[]: The origins to be allowed via CORS.
+
+## FhirServiceExportConfiguration
+### Properties
+* **storageAccountName**: string: The name of the default export storage account.
+
+## FhirServiceProperties
+### Properties
+* **accessPolicies**: [FhirServiceAccessPolicyEntry](#fhirserviceaccesspolicyentry)[]: The access policies of the service instance.
+* **acrConfiguration**: [FhirServiceAcrConfiguration](#fhirserviceacrconfiguration): Azure container registry configuration information
+* **authenticationConfiguration**: [FhirServiceAuthenticationConfiguration](#fhirserviceauthenticationconfiguration): Authentication configuration information
+* **corsConfiguration**: [FhirServiceCorsConfiguration](#fhirservicecorsconfiguration): The settings for the CORS configuration of the service instance.
+* **exportConfiguration**: [FhirServiceExportConfiguration](#fhirserviceexportconfiguration): Export operation configuration information
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' | string: The provisioning state.
+
+## IotConnectorProperties
+### Properties
+* **deviceMapping**: [IotMappingProperties](#iotmappingproperties): The mapping content.
+* **ingestionEndpointConfiguration**: [IotEventHubIngestionEndpointConfiguration](#ioteventhubingestionendpointconfiguration): Event Hub ingestion endpoint configuration
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' | string: The provisioning state.
+
+## IotEventHubIngestionEndpointConfiguration
+### Properties
+* **consumerGroup**: string: Consumer group of the event hub to connected to.
+* **eventHubName**: string: Event Hub name to connect to.
+* **fullyQualifiedEventHubNamespace**: string: Fully qualified namespace of the Event Hub to connect to.
+
+## IotFhirDestinationProperties
+### Properties
+* **fhirMapping**: [IotMappingProperties](#iotmappingproperties) (Required): The mapping content.
+* **fhirServiceResourceId**: string (Required): Fully qualified resource id of the FHIR service to connect to.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' | string: The provisioning state.
+* **resourceIdentityResolutionType**: 'Create' | 'Lookup' | string (Required): The type of IoT identity resolution to use with the destination.
+
+## IotMappingProperties
+### Properties
+* **content**: any: Any object
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
+* **description**: string: The reason for approval/rejection of the connection.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ServiceAccessPolicyEntry
 ### Properties
@@ -141,28 +235,32 @@
 ### Properties
 * **storageAccountName**: string: The name of the default export storage account.
 
-## PrivateEndpointConnection
+## ServiceManagedIdentityIdentity
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-* **name**: string (ReadOnly): The name of the resource
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
-* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+* **type**: 'None' | 'SystemAssigned' | string: Type of identity being specified, currently SystemAssigned and None are allowed.
 
-## PrivateEndpointConnectionProperties
+## ServicesProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
+* **accessPolicies**: [ServiceAccessPolicyEntry](#serviceaccesspolicyentry)[]: The access policies of the service instance.
+* **acrConfiguration**: [ServiceAcrConfigurationInfo](#serviceacrconfigurationinfo): Azure container registry configuration information
+* **authenticationConfiguration**: [ServiceAuthenticationConfigurationInfo](#serviceauthenticationconfigurationinfo): Authentication configuration information
+* **corsConfiguration**: [ServiceCorsConfigurationInfo](#servicecorsconfigurationinfo): The settings for the CORS configuration of the service instance.
+* **cosmosDbConfiguration**: [ServiceCosmosDbConfigurationInfo](#servicecosmosdbconfigurationinfo): The settings for the Cosmos DB database backing the service.
+* **exportConfiguration**: [ServiceExportConfigurationInfo](#serviceexportconfigurationinfo): Export operation configuration information
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: The list of private endpoint connections that are set up for this resource.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' | string (ReadOnly): The provisioning state.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Control permission for data plane traffic coming from public networks while private endpoint is enabled.
 
-## PrivateEndpoint
+## ServicesResourceIdentity
 ### Properties
-* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
+* **principalId**: string (ReadOnly): The principal ID of the resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of the resource.
+* **type**: 'None' | 'SystemAssigned' | string: Type of identity being specified, currently SystemAssigned and None are allowed.
 
-## PrivateLinkServiceConnectionState
+## ServicesResourceTags
 ### Properties
-* **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
-* **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## SystemData
 ### Properties
@@ -173,105 +271,7 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
-## ServicesResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## WorkspaceProperties
 ### Properties
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' | string: The provisioning state.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## DicomServiceProperties
-### Properties
-* **authenticationConfiguration**: [DicomServiceAuthenticationConfiguration](#dicomserviceauthenticationconfiguration): Authentication configuration information
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' | string: The provisioning state.
-* **serviceUrl**: string (ReadOnly): The url of the Dicom Services.
-
-## DicomServiceAuthenticationConfiguration
-### Properties
-* **audiences**: string[] (ReadOnly): The audiences for the service
-* **authority**: string (ReadOnly): The authority url for the service
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ServiceManagedIdentityIdentity
-### Properties
-* **type**: 'None' | 'SystemAssigned' | string: Type of identity being specified, currently SystemAssigned and None are allowed.
-
-## FhirServiceProperties
-### Properties
-* **accessPolicies**: [FhirServiceAccessPolicyEntry](#fhirserviceaccesspolicyentry)[]: The access policies of the service instance.
-* **acrConfiguration**: [FhirServiceAcrConfiguration](#fhirserviceacrconfiguration): Azure container registry configuration information
-* **authenticationConfiguration**: [FhirServiceAuthenticationConfiguration](#fhirserviceauthenticationconfiguration): Authentication configuration information
-* **corsConfiguration**: [FhirServiceCorsConfiguration](#fhirservicecorsconfiguration): The settings for the CORS configuration of the service instance.
-* **exportConfiguration**: [FhirServiceExportConfiguration](#fhirserviceexportconfiguration): Export operation configuration information
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' | string: The provisioning state.
-
-## FhirServiceAccessPolicyEntry
-### Properties
-* **objectId**: string (Required): An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.
-
-## FhirServiceAcrConfiguration
-### Properties
-* **loginServers**: string[]: The list of the Azure container registry login servers.
-
-## FhirServiceAuthenticationConfiguration
-### Properties
-* **audience**: string: The audience url for the service
-* **authority**: string: The authority url for the service
-* **smartProxyEnabled**: bool: If the SMART on FHIR proxy is enabled
-
-## FhirServiceCorsConfiguration
-### Properties
-* **allowCredentials**: bool: If credentials are allowed via CORS.
-* **headers**: string[]: The headers to be allowed via CORS.
-* **maxAge**: int: The max age to be allowed via CORS.
-* **methods**: string[]: The methods to be allowed via CORS.
-* **origins**: string[]: The origins to be allowed via CORS.
-
-## FhirServiceExportConfiguration
-### Properties
-* **storageAccountName**: string: The name of the default export storage account.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## IotConnectorProperties
-### Properties
-* **deviceMapping**: [IotMappingProperties](#iotmappingproperties): The mapping content.
-* **ingestionEndpointConfiguration**: [IotEventHubIngestionEndpointConfiguration](#ioteventhubingestionendpointconfiguration): Event Hub ingestion endpoint configuration
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' | string: The provisioning state.
-
-## IotMappingProperties
-### Properties
-* **content**: any: Any object
-
-## IotEventHubIngestionEndpointConfiguration
-### Properties
-* **consumerGroup**: string: Consumer group of the event hub to connected to.
-* **eventHubName**: string: Event Hub name to connect to.
-* **fullyQualifiedEventHubNamespace**: string: Fully qualified namespace of the Event Hub to connect to.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## IotFhirDestinationProperties
-### Properties
-* **fhirMapping**: [IotMappingProperties](#iotmappingproperties) (Required): The mapping content.
-* **fhirServiceResourceId**: string (Required): Fully qualified resource id of the FHIR service to connect to.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' | string: The provisioning state.
-* **resourceIdentityResolutionType**: 'Create' | 'Lookup' | string (Required): The type of IoT identity resolution to use with the destination.
 

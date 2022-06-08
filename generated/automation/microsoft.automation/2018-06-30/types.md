@@ -55,6 +55,27 @@
 * **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant): The resource type
 
 
+## ContentHash
+### Properties
+* **algorithm**: string (Required): Gets or sets the content hash algorithm used to hash the content.
+* **value**: string (Required): Gets or sets expected hash value of the content.
+
+## ContentLink
+### Properties
+* **contentHash**: [ContentHash](#contenthash): Definition of the runbook property type.
+* **uri**: string: Gets or sets the uri of the runbook content.
+* **version**: string: Gets or sets the version of the content.
+
+## ModuleErrorInfo
+### Properties
+* **code**: string (ReadOnly): Gets or sets the error code.
+* **message**: string (ReadOnly): Gets or sets the error message.
+
+## PythonPackageCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## PythonPackageCreateProperties
 ### Properties
 * **activityCount**: int (ReadOnly): Gets or sets the activity count of the module.
@@ -69,23 +90,7 @@
 * **sizeInBytes**: int (ReadOnly): Gets or sets the size in bytes of the module.
 * **version**: string (ReadOnly): Gets or sets the version of the module.
 
-## ContentLink
-### Properties
-* **contentHash**: [ContentHash](#contenthash): Definition of the runbook property type.
-* **uri**: string: Gets or sets the uri of the runbook content.
-* **version**: string: Gets or sets the version of the content.
-
-## ContentHash
-### Properties
-* **algorithm**: string (Required): Gets or sets the content hash algorithm used to hash the content.
-* **value**: string (Required): Gets or sets expected hash value of the content.
-
-## ModuleErrorInfo
-### Properties
-* **code**: string (ReadOnly): Gets or sets the error code.
-* **message**: string (ReadOnly): Gets or sets the error message.
-
-## PythonPackageCreateParametersTags
+## RunbookCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -133,11 +138,6 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [RunbookParameter](#runbookparameter)
-
-## RunbookCreateOrUpdateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## TestJobCreateParameters
 ### Properties

@@ -31,28 +31,16 @@
 * **Input**: [ServiceSasParameters](#servicesasparameters)
 * **Output**: [ListServiceSasResponse](#listservicesasresponse)
 
-## Identity
+## AccountSasParameters
 ### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned' (Required): The identity type.
-
-## StorageAccountPropertiesCreateParameters
-### Properties
-* **accessTier**: 'Cool' | 'Hot': Required for storage accounts where kind = BlobStorage. The access tier used for billing.
-* **creationTime**: string (ReadOnly): Gets the creation date and time of the storage account in UTC.
-* **customDomain**: [CustomDomain](#customdomain): The custom domain assigned to this storage account. This can be set via Update.
-* **encryption**: [Encryption](#encryption): The encryption settings on the storage account.
-* **lastGeoFailoverTime**: string (ReadOnly): Gets the timestamp of the most recent instance of a failover to the secondary location. Only the most recent timestamp is retained. This element is not returned if there has never been a failover instance. Only available if the accountType is Standard_GRS or Standard_RAGRS.
-* **networkAcls**: [NetworkRuleSet](#networkruleset): Network rule set
-* **primaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): The URIs that are used to perform a retrieval of a public blob, queue, or table object.
-* **primaryLocation**: string (ReadOnly): Gets the location of the primary data center for the storage account.
-* **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly): Gets the status of the storage account at the time the operation was called.
-* **secondaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): The URIs that are used to perform a retrieval of a public blob, queue, or table object.
-* **secondaryLocation**: string (ReadOnly): Gets the location of the geo-replicated secondary for the storage account. Only available if the accountType is Standard_GRS or Standard_RAGRS.
-* **statusOfPrimary**: 'available' | 'unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable.
-* **statusOfSecondary**: 'available' | 'unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable.
-* **supportsHttpsTrafficOnly**: bool: Allows https traffic only to storage service if sets to true.
+* **keyToSign**: string (WriteOnly): The key to sign the account SAS token with.
+* **signedExpiry**: string (Required, WriteOnly): The time at which the shared access signature becomes invalid.
+* **signedIp**: string (WriteOnly): An IP address or a range of IP addresses from which to accept requests.
+* **signedPermission**: 'a' | 'c' | 'd' | 'l' | 'p' | 'r' | 'u' | 'w' | string (Required, WriteOnly): The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).
+* **signedProtocol**: 'https' | 'https,http' (WriteOnly): The protocol permitted for a request made with the account SAS.
+* **signedResourceTypes**: 'c' | 'o' | 's' | string (Required, WriteOnly): The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files.
+* **signedServices**: 'b' | 'f' | 'q' | 't' | string (Required, WriteOnly): The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f).
+* **signedStart**: string (WriteOnly): The time at which the SAS becomes valid.
 
 ## CustomDomain
 ### Properties
@@ -65,11 +53,10 @@
 * **keyvaultproperties**: [KeyVaultProperties](#keyvaultproperties): Properties of key vault.
 * **services**: [EncryptionServices](#encryptionservices): A list of services that support encryption.
 
-## KeyVaultProperties
+## EncryptionService
 ### Properties
-* **keyname**: string: The name of KeyVault key.
-* **keyvaulturi**: string: The Uri of KeyVault.
-* **keyversion**: string: The version of KeyVault key.
+* **enabled**: bool: A boolean indicating whether or not the service encrypts the data as it is stored.
+* **lastEnabledTime**: string (ReadOnly): Gets a rough estimate of the date/time when the encryption was last enabled by the user. Only returned when encryption is enabled. There might be some unencrypted blobs which were written after this time, as it is just a rough estimate.
 
 ## EncryptionServices
 ### Properties
@@ -78,10 +65,37 @@
 * **queue**: [EncryptionService](#encryptionservice) (ReadOnly): A service that allows server-side encryption to be used.
 * **table**: [EncryptionService](#encryptionservice) (ReadOnly): A service that allows server-side encryption to be used.
 
-## EncryptionService
+## Endpoints
 ### Properties
-* **enabled**: bool: A boolean indicating whether or not the service encrypts the data as it is stored.
-* **lastEnabledTime**: string (ReadOnly): Gets a rough estimate of the date/time when the encryption was last enabled by the user. Only returned when encryption is enabled. There might be some unencrypted blobs which were written after this time, as it is just a rough estimate.
+* **blob**: string (ReadOnly): Gets the blob endpoint.
+* **file**: string (ReadOnly): Gets the file endpoint.
+* **queue**: string (ReadOnly): Gets the queue endpoint.
+* **table**: string (ReadOnly): Gets the table endpoint.
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'SystemAssigned' (Required): The identity type.
+
+## IPRule
+### Properties
+* **action**: 'Allow': The action of virtual network rule.
+* **value**: string (Required): Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
+
+## KeyVaultProperties
+### Properties
+* **keyname**: string: The name of KeyVault key.
+* **keyvaulturi**: string: The Uri of KeyVault.
+* **keyversion**: string: The version of KeyVault key.
+
+## ListAccountSasResponse
+### Properties
+* **accountSasToken**: string (ReadOnly): List SAS credentials of storage account.
+
+## ListServiceSasResponse
+### Properties
+* **serviceSasToken**: string (ReadOnly): List service SAS credentials of specific resource.
 
 ## NetworkRuleSet
 ### Properties
@@ -90,74 +104,11 @@
 * **ipRules**: [IPRule](#iprule)[]: Sets the IP ACL rules
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: Sets the virtual network rules
 
-## IPRule
-### Properties
-* **action**: 'Allow': The action of virtual network rule.
-* **value**: string (Required): Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
-
-## VirtualNetworkRule
-### Properties
-* **action**: 'Allow': The action of virtual network rule.
-* **id**: string (Required): Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
-* **state**: 'deprovisioning' | 'failed' | 'networkSourceDeleted' | 'provisioning' | 'succeeded': Gets the state of virtual network rule.
-
-## Endpoints
-### Properties
-* **blob**: string (ReadOnly): Gets the blob endpoint.
-* **file**: string (ReadOnly): Gets the file endpoint.
-* **queue**: string (ReadOnly): Gets the queue endpoint.
-* **table**: string (ReadOnly): Gets the table endpoint.
-
-## Sku
-### Properties
-* **capabilities**: [SKUCapability](#skucapability)[] (ReadOnly): The capability information in the specified sku, including file encryption, network acls, change notification, etc.
-* **kind**: 'BlobStorage' | 'Storage' | 'StorageV2' (ReadOnly): Indicates the type of storage account.
-* **locations**: string[] (ReadOnly): The set of locations that the SKU is available. This will be supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.).
-* **name**: 'Premium_LRS' | 'Standard_GRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_ZRS' (Required): Gets or sets the sku name. Required for account creation; optional for update. Note that in older versions, sku name was called accountType.
-* **resourceType**: string (ReadOnly): The type of the resource, usually it is 'storageAccounts'.
-* **restrictions**: [Restriction](#restriction)[]: The restrictions because of which SKU cannot be used. This is empty if there are no restrictions.
-* **tier**: 'Premium' | 'Standard' (ReadOnly): Gets the sku tier. This is based on the SKU name.
-
-## SKUCapability
-### Properties
-* **name**: string (ReadOnly): The name of capability, The capability information in the specified sku, including file encryption, network acls, change notification, etc.
-* **value**: string (ReadOnly): A string value to indicate states of given capability. Possibly 'true' or 'false'.
-
 ## Restriction
 ### Properties
 * **reasonCode**: 'NotAvailableForSubscription' | 'QuotaId' | string: The reason for the restriction. As of now this can be "QuotaId" or "NotAvailableForSubscription". Quota Id is set when the SKU has requiredQuotas parameter as the subscription does not belong to that quota. The "NotAvailableForSubscription" is related to capacity at DC.
 * **type**: string (ReadOnly): The type of restrictions. As of now only possible value for this is location.
 * **values**: string[] (ReadOnly): The value of restrictions. If the restriction type is set to location. This would be different locations where the SKU is restricted.
-
-## StorageAccountCreateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## AccountSasParameters
-### Properties
-* **keyToSign**: string (WriteOnly): The key to sign the account SAS token with.
-* **signedExpiry**: string (Required, WriteOnly): The time at which the shared access signature becomes invalid.
-* **signedIp**: string (WriteOnly): An IP address or a range of IP addresses from which to accept requests.
-* **signedPermission**: 'a' | 'c' | 'd' | 'l' | 'p' | 'r' | 'u' | 'w' | string (Required, WriteOnly): The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).
-* **signedProtocol**: 'https' | 'https,http' (WriteOnly): The protocol permitted for a request made with the account SAS.
-* **signedResourceTypes**: 'c' | 'o' | 's' | string (Required, WriteOnly): The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files.
-* **signedServices**: 'b' | 'f' | 'q' | 't' | string (Required, WriteOnly): The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f).
-* **signedStart**: string (WriteOnly): The time at which the SAS becomes valid.
-
-## ListAccountSasResponse
-### Properties
-* **accountSasToken**: string (ReadOnly): List SAS credentials of storage account.
-
-## StorageAccountListKeysResult
-### Properties
-* **keys**: [StorageAccountKey](#storageaccountkey)[] (ReadOnly): Gets the list of storage account keys and their properties for the specified storage account.
-
-## StorageAccountKey
-### Properties
-* **keyName**: string (ReadOnly): Name of the key.
-* **permissions**: 'Full' | 'Read' (ReadOnly): Permissions for the key -- read-only or full permissions.
-* **value**: string (ReadOnly): Base 64-encoded value of the key.
 
 ## ServiceSasParameters
 ### Properties
@@ -180,7 +131,56 @@
 * **startPk**: string (WriteOnly): The start of partition key.
 * **startRk**: string (WriteOnly): The start of row key.
 
-## ListServiceSasResponse
+## Sku
 ### Properties
-* **serviceSasToken**: string (ReadOnly): List service SAS credentials of specific resource.
+* **capabilities**: [SKUCapability](#skucapability)[] (ReadOnly): The capability information in the specified sku, including file encryption, network acls, change notification, etc.
+* **kind**: 'BlobStorage' | 'Storage' | 'StorageV2' (ReadOnly): Indicates the type of storage account.
+* **locations**: string[] (ReadOnly): The set of locations that the SKU is available. This will be supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.).
+* **name**: 'Premium_LRS' | 'Standard_GRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_ZRS' (Required): Gets or sets the sku name. Required for account creation; optional for update. Note that in older versions, sku name was called accountType.
+* **resourceType**: string (ReadOnly): The type of the resource, usually it is 'storageAccounts'.
+* **restrictions**: [Restriction](#restriction)[]: The restrictions because of which SKU cannot be used. This is empty if there are no restrictions.
+* **tier**: 'Premium' | 'Standard' (ReadOnly): Gets the sku tier. This is based on the SKU name.
+
+## SKUCapability
+### Properties
+* **name**: string (ReadOnly): The name of capability, The capability information in the specified sku, including file encryption, network acls, change notification, etc.
+* **value**: string (ReadOnly): A string value to indicate states of given capability. Possibly 'true' or 'false'.
+
+## StorageAccountCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## StorageAccountKey
+### Properties
+* **keyName**: string (ReadOnly): Name of the key.
+* **permissions**: 'Full' | 'Read' (ReadOnly): Permissions for the key -- read-only or full permissions.
+* **value**: string (ReadOnly): Base 64-encoded value of the key.
+
+## StorageAccountListKeysResult
+### Properties
+* **keys**: [StorageAccountKey](#storageaccountkey)[] (ReadOnly): Gets the list of storage account keys and their properties for the specified storage account.
+
+## StorageAccountPropertiesCreateParameters
+### Properties
+* **accessTier**: 'Cool' | 'Hot': Required for storage accounts where kind = BlobStorage. The access tier used for billing.
+* **creationTime**: string (ReadOnly): Gets the creation date and time of the storage account in UTC.
+* **customDomain**: [CustomDomain](#customdomain): The custom domain assigned to this storage account. This can be set via Update.
+* **encryption**: [Encryption](#encryption): The encryption settings on the storage account.
+* **lastGeoFailoverTime**: string (ReadOnly): Gets the timestamp of the most recent instance of a failover to the secondary location. Only the most recent timestamp is retained. This element is not returned if there has never been a failover instance. Only available if the accountType is Standard_GRS or Standard_RAGRS.
+* **networkAcls**: [NetworkRuleSet](#networkruleset): Network rule set
+* **primaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): The URIs that are used to perform a retrieval of a public blob, queue, or table object.
+* **primaryLocation**: string (ReadOnly): Gets the location of the primary data center for the storage account.
+* **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly): Gets the status of the storage account at the time the operation was called.
+* **secondaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): The URIs that are used to perform a retrieval of a public blob, queue, or table object.
+* **secondaryLocation**: string (ReadOnly): Gets the location of the geo-replicated secondary for the storage account. Only available if the accountType is Standard_GRS or Standard_RAGRS.
+* **statusOfPrimary**: 'available' | 'unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable.
+* **statusOfSecondary**: 'available' | 'unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable.
+* **supportsHttpsTrafficOnly**: bool: Allows https traffic only to storage service if sets to true.
+
+## VirtualNetworkRule
+### Properties
+* **action**: 'Allow': The action of virtual network rule.
+* **id**: string (Required): Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
+* **state**: 'deprovisioning' | 'failed' | 'networkSourceDeleted' | 'provisioning' | 'succeeded': Gets the state of virtual network rule.
 

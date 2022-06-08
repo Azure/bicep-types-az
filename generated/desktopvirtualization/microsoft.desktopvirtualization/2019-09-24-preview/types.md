@@ -50,11 +50,6 @@
 * **hostPoolArmPath**: string (Required): HostPool arm path of ApplicationGroup.
 * **workspaceArmPath**: string (ReadOnly): Workspace arm path of ApplicationGroup.
 
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ApplicationProperties
 ### Properties
 * **commandLineArguments**: string: Command Line Arguments for Application.
@@ -96,14 +91,19 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## WorkspaceProperties
+## TrackedResourceTags
 ### Properties
-* **applicationGroupReferences**: string[]: List of applicationGroup resource Ids.
-* **description**: string: Description of Workspace.
-* **friendlyName**: string: Friendly name of Workspace.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## WorkspaceProperties
+### Properties
+* **applicationGroupReferences**: string[]: List of applicationGroup resource Ids.
+* **description**: string: Description of Workspace.
+* **friendlyName**: string: Friendly name of Workspace.
 

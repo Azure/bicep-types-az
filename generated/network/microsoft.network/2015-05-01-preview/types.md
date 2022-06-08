@@ -183,20 +183,14 @@
 * **properties**: [SubnetPropertiesFormat](#subnetpropertiesformat)
 * **type**: 'Microsoft.Network/virtualnetworks/subnets' (ReadOnly, DeployTimeConstant): The resource type
 
-## ApplicationGatewayPropertiesFormat
+## AddressSpace
 ### Properties
-* **backendAddressPools**: [ApplicationGatewayBackendAddressPool](#applicationgatewaybackendaddresspool)[]: Gets or sets backend address pool of application gateway resource
-* **backendHttpSettingsCollection**: [ApplicationGatewayBackendHttpSettings](#applicationgatewaybackendhttpsettings)[]: Gets or sets backend http settings of application gateway resource
-* **frontendIPConfigurations**: [ApplicationGatewayFrontendIPConfiguration](#applicationgatewayfrontendipconfiguration)[]: Gets or sets frontend IP addresses of application gateway resource
-* **frontendPorts**: [ApplicationGatewayFrontendPort](#applicationgatewayfrontendport)[]: Gets or sets frontend ports of application gateway resource
-* **gatewayIPConfigurations**: [ApplicationGatewayIPConfiguration](#applicationgatewayipconfiguration)[]: Gets or sets subnets of application gateway resource
-* **httpListeners**: [ApplicationGatewayHttpListener](#applicationgatewayhttplistener)[]: Gets or sets HTTP listeners of application gateway resource
-* **operationalState**: 'Running' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): Gets operational state of application gateway resource
-* **provisioningState**: string: Gets or sets Provisioning state of the ApplicationGateway resource Updating/Deleting/Failed
-* **requestRoutingRules**: [ApplicationGatewayRequestRoutingRule](#applicationgatewayrequestroutingrule)[]: Gets or sets request routing rules of application gateway resource
-* **resourceGuid**: string: Gets or sets resource guid property of the ApplicationGateway resource
-* **sku**: [ApplicationGatewaySku](#applicationgatewaysku): SKU of application gateway
-* **sslCertificates**: [ApplicationGatewaySslCertificate](#applicationgatewaysslcertificate)[]: Gets or sets ssl certificates of application gateway resource
+* **addressPrefixes**: string[]: Gets or sets List of address blocks reserved for this virtual network in CIDR notation
+
+## ApplicationGatewayBackendAddress
+### Properties
+* **fqdn**: string: Gets or sets the dns name
+* **ipAddress**: string: Gets or sets the ip address
 
 ## ApplicationGatewayBackendAddressPool
 ### Properties
@@ -210,15 +204,6 @@
 * **backendAddresses**: [ApplicationGatewayBackendAddress](#applicationgatewaybackendaddress)[]: Gets or sets the backend addresses
 * **backendIPConfigurations**: [SubResource](#subresource)[]: Gets or sets backendIPConfiguration of application gateway
 * **provisioningState**: string: Gets or sets Provisioning state of the backend address pool resource Updating/Deleting/Failed
-
-## ApplicationGatewayBackendAddress
-### Properties
-* **fqdn**: string: Gets or sets the dns name
-* **ipAddress**: string: Gets or sets the ip address
-
-## SubResource
-### Properties
-* **id**: string: Resource Id
 
 ## ApplicationGatewayBackendHttpSettings
 ### Properties
@@ -261,18 +246,6 @@
 * **port**: int: Gets or sets the frontend port
 * **provisioningState**: string: Gets or sets Provisioning state of the frontend port resource Updating/Deleting/Failed
 
-## ApplicationGatewayIPConfiguration
-### Properties
-* **etag**: string: A unique read-only string that changes whenever the resource is updated
-* **id**: string: Resource Id
-* **name**: string: Gets name of the resource that is unique within a resource group. This name can be used to access the resource
-* **properties**: [ApplicationGatewayIPConfigurationPropertiesFormat](#applicationgatewayipconfigurationpropertiesformat): Properties of IP configuration of application gateway
-
-## ApplicationGatewayIPConfigurationPropertiesFormat
-### Properties
-* **provisioningState**: string: Gets or sets Provisioning state of the application gateway subnet resource Updating/Deleting/Failed
-* **subnet**: [SubResource](#subresource)
-
 ## ApplicationGatewayHttpListener
 ### Properties
 * **etag**: string: A unique read-only string that changes whenever the resource is updated
@@ -287,6 +260,33 @@
 * **protocol**: 'Http' | 'Https' | string: Gets or sets the protocol
 * **provisioningState**: string: Gets or sets Provisioning state of the http listener resource Updating/Deleting/Failed
 * **sslCertificate**: [SubResource](#subresource)
+
+## ApplicationGatewayIPConfiguration
+### Properties
+* **etag**: string: A unique read-only string that changes whenever the resource is updated
+* **id**: string: Resource Id
+* **name**: string: Gets name of the resource that is unique within a resource group. This name can be used to access the resource
+* **properties**: [ApplicationGatewayIPConfigurationPropertiesFormat](#applicationgatewayipconfigurationpropertiesformat): Properties of IP configuration of application gateway
+
+## ApplicationGatewayIPConfigurationPropertiesFormat
+### Properties
+* **provisioningState**: string: Gets or sets Provisioning state of the application gateway subnet resource Updating/Deleting/Failed
+* **subnet**: [SubResource](#subresource)
+
+## ApplicationGatewayPropertiesFormat
+### Properties
+* **backendAddressPools**: [ApplicationGatewayBackendAddressPool](#applicationgatewaybackendaddresspool)[]: Gets or sets backend address pool of application gateway resource
+* **backendHttpSettingsCollection**: [ApplicationGatewayBackendHttpSettings](#applicationgatewaybackendhttpsettings)[]: Gets or sets backend http settings of application gateway resource
+* **frontendIPConfigurations**: [ApplicationGatewayFrontendIPConfiguration](#applicationgatewayfrontendipconfiguration)[]: Gets or sets frontend IP addresses of application gateway resource
+* **frontendPorts**: [ApplicationGatewayFrontendPort](#applicationgatewayfrontendport)[]: Gets or sets frontend ports of application gateway resource
+* **gatewayIPConfigurations**: [ApplicationGatewayIPConfiguration](#applicationgatewayipconfiguration)[]: Gets or sets subnets of application gateway resource
+* **httpListeners**: [ApplicationGatewayHttpListener](#applicationgatewayhttplistener)[]: Gets or sets HTTP listeners of application gateway resource
+* **operationalState**: 'Running' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): Gets operational state of application gateway resource
+* **provisioningState**: string: Gets or sets Provisioning state of the ApplicationGateway resource Updating/Deleting/Failed
+* **requestRoutingRules**: [ApplicationGatewayRequestRoutingRule](#applicationgatewayrequestroutingrule)[]: Gets or sets request routing rules of application gateway resource
+* **resourceGuid**: string: Gets or sets resource guid property of the ApplicationGateway resource
+* **sku**: [ApplicationGatewaySku](#applicationgatewaysku): SKU of application gateway
+* **sslCertificates**: [ApplicationGatewaySslCertificate](#applicationgatewaysslcertificate)[]: Gets or sets ssl certificates of application gateway resource
 
 ## ApplicationGatewayRequestRoutingRule
 ### Properties
@@ -323,107 +323,29 @@
 * **provisioningState**: string: Gets or sets Provisioning state of the ssl certificate resource Updating/Deleting/Failed
 * **publicCertData**: string: Gets or sets the certificate public data
 
-## ResourceTags
+## AuthorizationPropertiesFormat
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **authorizationKey**: string: Gets or sets the authorization key
+* **authorizationUseStatus**: 'Available' | 'InUse' | string: Gets or sets AuthorizationUseStatus
+* **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
 
-## VirtualNetworkGatewayConnectionPropertiesFormat
-### Properties
-* **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown' | string: Virtual network Gateway connection status
-* **connectionType**: 'ExpressRoute' | 'IPsec' | 'VPNClient' | 'Vnet2Vnet' | string: Gateway connection type IPsec/Dedicated/VpnClient/Vnet2Vnet
-* **egressBytesTransferred**: int: The Egress Bytes Transferred in this connection
-* **ingressBytesTransferred**: int: The Ingress Bytes Transferred in this connection
-* **localNetworkGateway2**: [LocalNetworkGateway](#localnetworkgateway): A common class for general resource information
-* **peer**: [SubResource](#subresource)
-* **provisioningState**: string: Gets or sets Provisioning state of the VirtualNetworkGatewayConnection resource Updating/Deleting/Failed
-* **resourceGuid**: string: Gets or sets resource guid property of the VirtualNetworkGatewayConnection resource
-* **routingWeight**: int: The Routing weight.
-* **sharedKey**: string: The IPsec share key.
-* **virtualNetworkGateway1**: [VirtualNetworkGateway](#virtualnetworkgateway): A common class for general resource information
-* **virtualNetworkGateway2**: [VirtualNetworkGateway](#virtualnetworkgateway): A common class for general resource information
-
-## LocalNetworkGateway
-### Properties
-* **etag**: string: Gets a unique read-only string that changes whenever the resource is updated
-* **id**: string (ReadOnly): Resource Id
-* **location**: string (Required): Resource location
-* **name**: string (ReadOnly): Resource name
-* **properties**: [LocalNetworkGatewayPropertiesFormat](#localnetworkgatewaypropertiesformat): LocalNetworkGateway properties
-* **tags**: [ResourceTags](#resourcetags): Resource tags
-* **type**: string (ReadOnly): Resource type
-
-## LocalNetworkGatewayPropertiesFormat
-### Properties
-* **gatewayIpAddress**: string: IP address of local network gateway.
-* **localNetworkAddressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets
-* **provisioningState**: string: Gets or sets Provisioning state of the LocalNetworkGateway resource Updating/Deleting/Failed
-* **resourceGuid**: string: Gets or sets resource guid property of the LocalNetworkGateway resource
-
-## AddressSpace
-### Properties
-* **addressPrefixes**: string[]: Gets or sets List of address blocks reserved for this virtual network in CIDR notation
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## VirtualNetworkGateway
-### Properties
-* **etag**: string: Gets a unique read-only string that changes whenever the resource is updated
-* **id**: string (ReadOnly): Resource Id
-* **location**: string (Required): Resource location
-* **name**: string (ReadOnly): Resource name
-* **properties**: [VirtualNetworkGatewayPropertiesFormat](#virtualnetworkgatewaypropertiesformat): VirtualNetworkGateway properties
-* **tags**: [ResourceTags](#resourcetags): Resource tags
-* **type**: string (ReadOnly): Resource type
-
-## VirtualNetworkGatewayPropertiesFormat
-### Properties
-* **enableBgp**: bool: EnableBgp Flag
-* **gatewayDefaultSite**: [SubResource](#subresource)
-* **gatewayType**: 'ExpressRoute' | 'Vpn' | string: The type of this virtual network gateway.
-* **ipConfigurations**: [VirtualNetworkGatewayIpConfiguration](#virtualnetworkgatewayipconfiguration)[]: IpConfigurations for Virtual network gateway.
-* **provisioningState**: string: Gets or sets Provisioning state of the VirtualNetworkGateway resource Updating/Deleting/Failed
-* **resourceGuid**: string: Gets or sets resource guid property of the VirtualNetworkGateway resource
-* **vpnType**: 'PolicyBased' | 'RouteBased' | string: The type of this virtual network gateway.
-
-## VirtualNetworkGatewayIpConfiguration
+## BackendAddressPool
 ### Properties
 * **etag**: string: A unique read-only string that changes whenever the resource is updated
 * **id**: string: Resource Id
 * **name**: string: Gets name of the resource that is unique within a resource group. This name can be used to access the resource
-* **properties**: [VirtualNetworkGatewayIpConfigurationPropertiesFormat](#virtualnetworkgatewayipconfigurationpropertiesformat): Properties of VirtualNetworkGatewayIPConfiguration
+* **properties**: [BackendAddressPoolPropertiesFormat](#backendaddresspoolpropertiesformat): Properties of BackendAddressPool
 
-## VirtualNetworkGatewayIpConfigurationPropertiesFormat
+## BackendAddressPoolPropertiesFormat
 ### Properties
-* **privateIPAddress**: string: Gets or sets the privateIPAddress of the Network Interface IP Configuration
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: Gets or sets PrivateIP allocation method (Static/Dynamic)
-* **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
-* **publicIPAddress**: [SubResource](#subresource)
-* **subnet**: [SubResource](#subresource)
+* **backendIPConfigurations**: [SubResource](#subresource)[]: Gets collection of references to IPs defined in NICs
+* **loadBalancingRules**: [SubResource](#subresource)[]: Gets Load Balancing rules that use this Backend Address Pool
+* **outboundNatRule**: [SubResource](#subresource)
+* **provisioningState**: string: Provisioning state of the PublicIP resource Updating/Deleting/Failed
 
-## ResourceTags
+## DhcpOptions
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ExpressRouteCircuitPropertiesFormat
-### Properties
-* **authorizations**: [ExpressRouteCircuitAuthorization](#expressroutecircuitauthorization)[]: Gets or sets list of authorizations
-* **circuitProvisioningState**: string: Gets or sets CircuitProvisioningState state of the resource
-* **peerings**: [ExpressRouteCircuitPeering](#expressroutecircuitpeering)[]: Gets or sets list of peerings
-* **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
-* **serviceKey**: string: Gets or sets ServiceKey
-* **serviceProviderNotes**: string: Gets or sets ServiceProviderNotes
-* **serviceProviderProperties**: [ExpressRouteCircuitServiceProviderProperties](#expressroutecircuitserviceproviderproperties): Contains ServiceProviderProperties in an ExpressRouteCircuit
-* **serviceProviderProvisioningState**: 'Deprovisioning' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | string: Gets or sets ServiceProviderProvisioningState state of the resource
+* **dnsServers**: string[]: Gets or sets list of DNS servers IP addresses
 
 ## ExpressRouteCircuitAuthorization
 ### Properties
@@ -432,18 +354,19 @@
 * **name**: string: Gets name of the resource that is unique within a resource group. This name can be used to access the resource
 * **properties**: [AuthorizationPropertiesFormat](#authorizationpropertiesformat)
 
-## AuthorizationPropertiesFormat
-### Properties
-* **authorizationKey**: string: Gets or sets the authorization key
-* **authorizationUseStatus**: 'Available' | 'InUse' | string: Gets or sets AuthorizationUseStatus
-* **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
-
 ## ExpressRouteCircuitPeering
 ### Properties
 * **etag**: string: A unique read-only string that changes whenever the resource is updated
 * **id**: string: Resource Id
 * **name**: string: Gets name of the resource that is unique within a resource group. This name can be used to access the resource
 * **properties**: [ExpressRouteCircuitPeeringPropertiesFormat](#expressroutecircuitpeeringpropertiesformat)
+
+## ExpressRouteCircuitPeeringConfig
+### Properties
+* **advertisedPublicPrefixes**: string[]: Gets or sets the reference of AdvertisedPublicPrefixes
+* **advertisedPublicPrefixesState**: 'Configured' | 'Configuring' | 'NotConfigured' | 'ValidationNeeded' | string: Gets or sets AdvertisedPublicPrefixState of the Peering resource
+* **customerASN**: int: Gets or Sets CustomerAsn of the peering.
+* **routingRegistryName**: string: Gets or Sets RoutingRegistryName of the config.
 
 ## ExpressRouteCircuitPeeringPropertiesFormat
 ### Properties
@@ -461,17 +384,16 @@
 * **stats**: [ExpressRouteCircuitStats](#expressroutecircuitstats): Contains Stats associated with the peering
 * **vlanId**: int: Gets or sets the vlan id
 
-## ExpressRouteCircuitPeeringConfig
+## ExpressRouteCircuitPropertiesFormat
 ### Properties
-* **advertisedPublicPrefixes**: string[]: Gets or sets the reference of AdvertisedPublicPrefixes
-* **advertisedPublicPrefixesState**: 'Configured' | 'Configuring' | 'NotConfigured' | 'ValidationNeeded' | string: Gets or sets AdvertisedPublicPrefixState of the Peering resource
-* **customerASN**: int: Gets or Sets CustomerAsn of the peering.
-* **routingRegistryName**: string: Gets or Sets RoutingRegistryName of the config.
-
-## ExpressRouteCircuitStats
-### Properties
-* **bytesIn**: int: Gets BytesIn of the peering.
-* **bytesOut**: int: Gets BytesOut of the peering.
+* **authorizations**: [ExpressRouteCircuitAuthorization](#expressroutecircuitauthorization)[]: Gets or sets list of authorizations
+* **circuitProvisioningState**: string: Gets or sets CircuitProvisioningState state of the resource
+* **peerings**: [ExpressRouteCircuitPeering](#expressroutecircuitpeering)[]: Gets or sets list of peerings
+* **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
+* **serviceKey**: string: Gets or sets ServiceKey
+* **serviceProviderNotes**: string: Gets or sets ServiceProviderNotes
+* **serviceProviderProperties**: [ExpressRouteCircuitServiceProviderProperties](#expressroutecircuitserviceproviderproperties): Contains ServiceProviderProperties in an ExpressRouteCircuit
+* **serviceProviderProvisioningState**: 'Deprovisioning' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | string: Gets or sets ServiceProviderProvisioningState state of the resource
 
 ## ExpressRouteCircuitServiceProviderProperties
 ### Properties
@@ -485,36 +407,10 @@
 * **name**: string: Gets or sets name of the sku.
 * **tier**: 'Premium' | 'Standard' | string: Gets or sets tier of the sku.
 
-## ResourceTags
+## ExpressRouteCircuitStats
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## LoadBalancerPropertiesFormat
-### Properties
-* **backendAddressPools**: [BackendAddressPool](#backendaddresspool)[]: Gets or sets Pools of backend IP addresses
-* **frontendIPConfigurations**: [FrontendIpConfiguration](#frontendipconfiguration)[]: Gets or sets frontend IP addresses of the load balancer
-* **inboundNatPools**: [InboundNatPool](#inboundnatpool)[]: Gets or sets inbound NAT pools
-* **inboundNatRules**: [InboundNatRule](#inboundnatrule)[]: Gets or sets list of inbound rules
-* **loadBalancingRules**: [LoadBalancingRule](#loadbalancingrule)[]: Gets or sets load balancing rules
-* **outboundNatRules**: [OutboundNatRule](#outboundnatrule)[]: Gets or sets outbound NAT rules
-* **probes**: [Probe](#probe)[]: Gets or sets list of Load balancer probes
-* **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
-* **resourceGuid**: string: Gets or sets resource guid property of the Load balancer resource
-
-## BackendAddressPool
-### Properties
-* **etag**: string: A unique read-only string that changes whenever the resource is updated
-* **id**: string: Resource Id
-* **name**: string: Gets name of the resource that is unique within a resource group. This name can be used to access the resource
-* **properties**: [BackendAddressPoolPropertiesFormat](#backendaddresspoolpropertiesformat): Properties of BackendAddressPool
-
-## BackendAddressPoolPropertiesFormat
-### Properties
-* **backendIPConfigurations**: [SubResource](#subresource)[]: Gets collection of references to IPs defined in NICs
-* **loadBalancingRules**: [SubResource](#subresource)[]: Gets Load Balancing rules that use this Backend Address Pool
-* **outboundNatRule**: [SubResource](#subresource)
-* **provisioningState**: string: Provisioning state of the PublicIP resource Updating/Deleting/Failed
+* **bytesIn**: int: Gets BytesIn of the peering.
+* **bytesOut**: int: Gets BytesOut of the peering.
 
 ## FrontendIpConfiguration
 ### Properties
@@ -569,6 +465,18 @@
 * **protocol**: 'Tcp' | 'Udp' | string (Required): Gets or sets the transport protocol for the external endpoint. Possible values are Udp or Tcp
 * **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
 
+## LoadBalancerPropertiesFormat
+### Properties
+* **backendAddressPools**: [BackendAddressPool](#backendaddresspool)[]: Gets or sets Pools of backend IP addresses
+* **frontendIPConfigurations**: [FrontendIpConfiguration](#frontendipconfiguration)[]: Gets or sets frontend IP addresses of the load balancer
+* **inboundNatPools**: [InboundNatPool](#inboundnatpool)[]: Gets or sets inbound NAT pools
+* **inboundNatRules**: [InboundNatRule](#inboundnatrule)[]: Gets or sets list of inbound rules
+* **loadBalancingRules**: [LoadBalancingRule](#loadbalancingrule)[]: Gets or sets load balancing rules
+* **outboundNatRules**: [OutboundNatRule](#outboundnatrule)[]: Gets or sets outbound NAT rules
+* **probes**: [Probe](#probe)[]: Gets or sets list of Load balancer probes
+* **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
+* **resourceGuid**: string: Gets or sets resource guid property of the Load balancer resource
+
 ## LoadBalancingRule
 ### Properties
 * **etag**: string: A unique read-only string that changes whenever the resource is updated
@@ -588,6 +496,68 @@
 * **probe**: [SubResource](#subresource)
 * **protocol**: 'Tcp' | 'Udp' | string (Required): Gets or sets the transport protocol for the external endpoint. Possible values are Udp or Tcp
 * **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
+
+## LocalNetworkGateway
+### Properties
+* **etag**: string: Gets a unique read-only string that changes whenever the resource is updated
+* **id**: string (ReadOnly): Resource Id
+* **location**: string (Required): Resource location
+* **name**: string (ReadOnly): Resource name
+* **properties**: [LocalNetworkGatewayPropertiesFormat](#localnetworkgatewaypropertiesformat): LocalNetworkGateway properties
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: string (ReadOnly): Resource type
+
+## LocalNetworkGatewayPropertiesFormat
+### Properties
+* **gatewayIpAddress**: string: IP address of local network gateway.
+* **localNetworkAddressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets
+* **provisioningState**: string: Gets or sets Provisioning state of the LocalNetworkGateway resource Updating/Deleting/Failed
+* **resourceGuid**: string: Gets or sets resource guid property of the LocalNetworkGateway resource
+
+## NetworkInterfaceDnsSettings
+### Properties
+* **appliedDnsServers**: string[]: Gets or sets list of Applied DNS servers IP addresses
+* **dnsServers**: string[]: Gets or sets list of DNS servers IP addresses
+* **internalDnsNameLabel**: string: Gets or sets the Internal DNS name
+* **internalFqdn**: string: Gets or sets full IDNS name in the form, DnsName.VnetId.ZoneId.TopLevelSuffix. This is set when the NIC is associated to a VM
+
+## NetworkInterfaceIpConfiguration
+### Properties
+* **etag**: string: A unique read-only string that changes whenever the resource is updated
+* **id**: string: Resource Id
+* **name**: string: Gets name of the resource that is unique within a resource group. This name can be used to access the resource
+* **properties**: [NetworkInterfaceIpConfigurationPropertiesFormat](#networkinterfaceipconfigurationpropertiesformat): Properties of IPConfiguration
+
+## NetworkInterfaceIpConfigurationPropertiesFormat
+### Properties
+* **loadBalancerBackendAddressPools**: [SubResource](#subresource)[]: Gets or sets the reference of LoadBalancerBackendAddressPool resource
+* **loadBalancerInboundNatRules**: [SubResource](#subresource)[]: Gets or sets list of references of LoadBalancerInboundNatRules
+* **privateIPAddress**: string: Gets or sets the privateIPAddress of the Network Interface IP Configuration
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: Gets or sets PrivateIP allocation method (Static/Dynamic)
+* **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
+* **publicIPAddress**: [SubResource](#subresource)
+* **subnet**: [SubResource](#subresource)
+
+## NetworkInterfacePropertiesFormat
+### Properties
+* **dnsSettings**: [NetworkInterfaceDnsSettings](#networkinterfacednssettings): Dns Settings of a network interface
+* **enableIPForwarding**: bool: Gets or sets whether IPForwarding is enabled on the NIC
+* **ipConfigurations**: [NetworkInterfaceIpConfiguration](#networkinterfaceipconfiguration)[]: Gets or sets list of IPConfigurations of the NetworkInterface
+* **macAddress**: string: Gets the MAC Address of the network interface
+* **networkSecurityGroup**: [SubResource](#subresource)
+* **primary**: bool: Gets whether this is a primary NIC on a virtual machine
+* **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
+* **resourceGuid**: string: Gets or sets resource guid property of the network interface resource
+* **virtualMachine**: [SubResource](#subresource)
+
+## NetworkSecurityGroupPropertiesFormat
+### Properties
+* **defaultSecurityRules**: [SecurityRule](#securityrule)[]: Gets or sets Default security rules of network security group
+* **networkInterfaces**: [SubResource](#subresource)[]: Gets collection of references to Network Interfaces
+* **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
+* **resourceGuid**: string: Gets or sets resource guid property of the network security group resource
+* **securityRules**: [SecurityRule](#securityrule)[]: Gets or sets Security rules of network security group
+* **subnets**: [SubResource](#subresource)[]: Gets collection of references to subnets
 
 ## OutboundNatRule
 ### Properties
@@ -620,64 +590,105 @@
 * **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
 * **requestPath**: string: Gets or sets the URI used for requesting health status from the VM. Path is required if a protocol is set to http. Otherwise, it is not allowed. There is no default value
 
-## ResourceTags
+## PublicIpAddressDnsSettings
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **domainNameLabel**: string: Gets or sets the Domain name label.The concatenation of the domain name label and the regionalized DNS zone make up the fully qualified domain name associated with the public IP address. If a domain name label is specified, an A DNS record is created for the public IP in the Microsoft Azure DNS system.
+* **fqdn**: string: Gets the FQDN, Fully qualified domain name of the A DNS record associated with the public IP. This is the concatenation of the domainNameLabel and the regionalized DNS zone.
+* **reverseFqdn**: string: Gets or Sets the Reverse FQDN. A user-visible, fully qualified domain name that resolves to this public IP address. If the reverseFqdn is specified, then a PTR DNS record is created pointing from the IP address in the in-addr.arpa domain to the reverse FQDN.
 
-## ResourceTags
+## PublicIpAddressPropertiesFormat
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## NetworkInterfacePropertiesFormat
-### Properties
-* **dnsSettings**: [NetworkInterfaceDnsSettings](#networkinterfacednssettings): Dns Settings of a network interface
-* **enableIPForwarding**: bool: Gets or sets whether IPForwarding is enabled on the NIC
-* **ipConfigurations**: [NetworkInterfaceIpConfiguration](#networkinterfaceipconfiguration)[]: Gets or sets list of IPConfigurations of the NetworkInterface
-* **macAddress**: string: Gets the MAC Address of the network interface
-* **networkSecurityGroup**: [SubResource](#subresource)
-* **primary**: bool: Gets whether this is a primary NIC on a virtual machine
+* **dnsSettings**: [PublicIpAddressDnsSettings](#publicipaddressdnssettings): Contains FQDN of the DNS record associated with the public IP address
+* **idleTimeoutInMinutes**: int: Gets or sets the idle timeout of the public IP address
+* **ipAddress**: string: Gets the assigned public IP address
+* **ipConfiguration**: [SubResource](#subresource)
 * **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
-* **resourceGuid**: string: Gets or sets resource guid property of the network interface resource
-* **virtualMachine**: [SubResource](#subresource)
+* **publicIPAllocationMethod**: 'Dynamic' | 'Static' | string (Required): Gets or sets PrivateIP allocation method (Static/Dynamic)
+* **resourceGuid**: string: Gets or sets resource guid property of the PublicIP resource
 
-## NetworkInterfaceDnsSettings
+## ResourceTags
 ### Properties
-* **appliedDnsServers**: string[]: Gets or sets list of Applied DNS servers IP addresses
-* **dnsServers**: string[]: Gets or sets list of DNS servers IP addresses
-* **internalDnsNameLabel**: string: Gets or sets the Internal DNS name
-* **internalFqdn**: string: Gets or sets full IDNS name in the form, DnsName.VnetId.ZoneId.TopLevelSuffix. This is set when the NIC is associated to a VM
+### Additional Properties
+* **Additional Properties Type**: string
 
-## NetworkInterfaceIpConfiguration
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Route
 ### Properties
 * **etag**: string: A unique read-only string that changes whenever the resource is updated
 * **id**: string: Resource Id
 * **name**: string: Gets name of the resource that is unique within a resource group. This name can be used to access the resource
-* **properties**: [NetworkInterfaceIpConfigurationPropertiesFormat](#networkinterfaceipconfigurationpropertiesformat): Properties of IPConfiguration
+* **properties**: [RoutePropertiesFormat](#routepropertiesformat): Route resource
 
-## NetworkInterfaceIpConfigurationPropertiesFormat
+## RoutePropertiesFormat
 ### Properties
-* **loadBalancerBackendAddressPools**: [SubResource](#subresource)[]: Gets or sets the reference of LoadBalancerBackendAddressPool resource
-* **loadBalancerInboundNatRules**: [SubResource](#subresource)[]: Gets or sets list of references of LoadBalancerInboundNatRules
-* **privateIPAddress**: string: Gets or sets the privateIPAddress of the Network Interface IP Configuration
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: Gets or sets PrivateIP allocation method (Static/Dynamic)
-* **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
-* **publicIPAddress**: [SubResource](#subresource)
-* **subnet**: [SubResource](#subresource)
+* **addressPrefix**: string: Gets or sets the destination CIDR to which the route applies.
+* **nextHopIpAddress**: string: Gets or sets the IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
+* **nextHopType**: 'Internet' | 'None' | 'VirtualAppliance' | 'VirtualNetworkGateway' | 'VnetLocal' | string (Required): Gets NextHopType.
+* **provisioningState**: string: Gets or sets Provisioning state of the resource Updating/Deleting/Failed
 
-## ResourceTags
+## RouteTablePropertiesFormat
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## NetworkSecurityGroupPropertiesFormat
-### Properties
-* **defaultSecurityRules**: [SecurityRule](#securityrule)[]: Gets or sets Default security rules of network security group
-* **networkInterfaces**: [SubResource](#subresource)[]: Gets collection of references to Network Interfaces
-* **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
-* **resourceGuid**: string: Gets or sets resource guid property of the network security group resource
-* **securityRules**: [SecurityRule](#securityrule)[]: Gets or sets Security rules of network security group
+* **provisioningState**: string: Gets or sets Provisioning state of the resource Updating/Deleting/Failed
+* **routes**: [Route](#route)[]: Gets or sets Routes in a Route Table
 * **subnets**: [SubResource](#subresource)[]: Gets collection of references to subnets
 
 ## SecurityRule
@@ -700,74 +711,6 @@
 * **sourceAddressPrefix**: string (Required): Gets or sets source address prefix. CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
 * **sourcePortRange**: string: Gets or sets Source Port or Range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## PublicIpAddressPropertiesFormat
-### Properties
-* **dnsSettings**: [PublicIpAddressDnsSettings](#publicipaddressdnssettings): Contains FQDN of the DNS record associated with the public IP address
-* **idleTimeoutInMinutes**: int: Gets or sets the idle timeout of the public IP address
-* **ipAddress**: string: Gets the assigned public IP address
-* **ipConfiguration**: [SubResource](#subresource)
-* **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
-* **publicIPAllocationMethod**: 'Dynamic' | 'Static' | string (Required): Gets or sets PrivateIP allocation method (Static/Dynamic)
-* **resourceGuid**: string: Gets or sets resource guid property of the PublicIP resource
-
-## PublicIpAddressDnsSettings
-### Properties
-* **domainNameLabel**: string: Gets or sets the Domain name label.The concatenation of the domain name label and the regionalized DNS zone make up the fully qualified domain name associated with the public IP address. If a domain name label is specified, an A DNS record is created for the public IP in the Microsoft Azure DNS system.
-* **fqdn**: string: Gets the FQDN, Fully qualified domain name of the A DNS record associated with the public IP. This is the concatenation of the domainNameLabel and the regionalized DNS zone.
-* **reverseFqdn**: string: Gets or Sets the Reverse FQDN. A user-visible, fully qualified domain name that resolves to this public IP address. If the reverseFqdn is specified, then a PTR DNS record is created pointing from the IP address in the in-addr.arpa domain to the reverse FQDN.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## RouteTablePropertiesFormat
-### Properties
-* **provisioningState**: string: Gets or sets Provisioning state of the resource Updating/Deleting/Failed
-* **routes**: [Route](#route)[]: Gets or sets Routes in a Route Table
-* **subnets**: [SubResource](#subresource)[]: Gets collection of references to subnets
-
-## Route
-### Properties
-* **etag**: string: A unique read-only string that changes whenever the resource is updated
-* **id**: string: Resource Id
-* **name**: string: Gets name of the resource that is unique within a resource group. This name can be used to access the resource
-* **properties**: [RoutePropertiesFormat](#routepropertiesformat): Route resource
-
-## RoutePropertiesFormat
-### Properties
-* **addressPrefix**: string: Gets or sets the destination CIDR to which the route applies.
-* **nextHopIpAddress**: string: Gets or sets the IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
-* **nextHopType**: 'Internet' | 'None' | 'VirtualAppliance' | 'VirtualNetworkGateway' | 'VnetLocal' | string (Required): Gets NextHopType.
-* **provisioningState**: string: Gets or sets Provisioning state of the resource Updating/Deleting/Failed
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## VirtualNetworkPropertiesFormat
-### Properties
-* **addressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets
-* **dhcpOptions**: [DhcpOptions](#dhcpoptions): DHCPOptions contains an array of DNS servers available to VMs deployed in the virtual networkStandard DHCP option for a subnet overrides VNET DHCP options.
-* **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
-* **resourceGuid**: string: Gets or sets resource guid property of the VirtualNetwork resource
-* **subnets**: [Subnet](#subnet)[]: Gets or sets List of subnets in a VirtualNetwork
-
-## DhcpOptions
-### Properties
-* **dnsServers**: string[]: Gets or sets list of DNS servers IP addresses
-
 ## Subnet
 ### Properties
 * **etag**: string: A unique read-only string that changes whenever the resource is updated
@@ -783,8 +726,65 @@
 * **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
 * **routeTable**: [SubResource](#subresource)
 
-## ResourceTags
+## SubResource
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **id**: string: Resource Id
+
+## VirtualNetworkGateway
+### Properties
+* **etag**: string: Gets a unique read-only string that changes whenever the resource is updated
+* **id**: string (ReadOnly): Resource Id
+* **location**: string (Required): Resource location
+* **name**: string (ReadOnly): Resource name
+* **properties**: [VirtualNetworkGatewayPropertiesFormat](#virtualnetworkgatewaypropertiesformat): VirtualNetworkGateway properties
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: string (ReadOnly): Resource type
+
+## VirtualNetworkGatewayConnectionPropertiesFormat
+### Properties
+* **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown' | string: Virtual network Gateway connection status
+* **connectionType**: 'ExpressRoute' | 'IPsec' | 'VPNClient' | 'Vnet2Vnet' | string: Gateway connection type IPsec/Dedicated/VpnClient/Vnet2Vnet
+* **egressBytesTransferred**: int: The Egress Bytes Transferred in this connection
+* **ingressBytesTransferred**: int: The Ingress Bytes Transferred in this connection
+* **localNetworkGateway2**: [LocalNetworkGateway](#localnetworkgateway): A common class for general resource information
+* **peer**: [SubResource](#subresource)
+* **provisioningState**: string: Gets or sets Provisioning state of the VirtualNetworkGatewayConnection resource Updating/Deleting/Failed
+* **resourceGuid**: string: Gets or sets resource guid property of the VirtualNetworkGatewayConnection resource
+* **routingWeight**: int: The Routing weight.
+* **sharedKey**: string: The IPsec share key.
+* **virtualNetworkGateway1**: [VirtualNetworkGateway](#virtualnetworkgateway): A common class for general resource information
+* **virtualNetworkGateway2**: [VirtualNetworkGateway](#virtualnetworkgateway): A common class for general resource information
+
+## VirtualNetworkGatewayIpConfiguration
+### Properties
+* **etag**: string: A unique read-only string that changes whenever the resource is updated
+* **id**: string: Resource Id
+* **name**: string: Gets name of the resource that is unique within a resource group. This name can be used to access the resource
+* **properties**: [VirtualNetworkGatewayIpConfigurationPropertiesFormat](#virtualnetworkgatewayipconfigurationpropertiesformat): Properties of VirtualNetworkGatewayIPConfiguration
+
+## VirtualNetworkGatewayIpConfigurationPropertiesFormat
+### Properties
+* **privateIPAddress**: string: Gets or sets the privateIPAddress of the Network Interface IP Configuration
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: Gets or sets PrivateIP allocation method (Static/Dynamic)
+* **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
+* **publicIPAddress**: [SubResource](#subresource)
+* **subnet**: [SubResource](#subresource)
+
+## VirtualNetworkGatewayPropertiesFormat
+### Properties
+* **enableBgp**: bool: EnableBgp Flag
+* **gatewayDefaultSite**: [SubResource](#subresource)
+* **gatewayType**: 'ExpressRoute' | 'Vpn' | string: The type of this virtual network gateway.
+* **ipConfigurations**: [VirtualNetworkGatewayIpConfiguration](#virtualnetworkgatewayipconfiguration)[]: IpConfigurations for Virtual network gateway.
+* **provisioningState**: string: Gets or sets Provisioning state of the VirtualNetworkGateway resource Updating/Deleting/Failed
+* **resourceGuid**: string: Gets or sets resource guid property of the VirtualNetworkGateway resource
+* **vpnType**: 'PolicyBased' | 'RouteBased' | string: The type of this virtual network gateway.
+
+## VirtualNetworkPropertiesFormat
+### Properties
+* **addressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets
+* **dhcpOptions**: [DhcpOptions](#dhcpoptions): DHCPOptions contains an array of DNS servers available to VMs deployed in the virtual networkStandard DHCP option for a subnet overrides VNET DHCP options.
+* **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
+* **resourceGuid**: string: Gets or sets resource guid property of the VirtualNetwork resource
+* **subnets**: [Subnet](#subnet)[]: Gets or sets List of subnets in a VirtualNetwork
 

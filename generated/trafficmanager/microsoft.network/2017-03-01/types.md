@@ -11,14 +11,6 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Network/trafficmanagerprofiles' (ReadOnly, DeployTimeConstant): The resource type
 
-## ProfileProperties
-### Properties
-* **dnsConfig**: [DnsConfig](#dnsconfig): Class containing DNS settings in a Traffic Manager profile.
-* **endpoints**: [Endpoint](#endpoint)[]: Gets or sets the list of endpoints in the Traffic Manager profile.
-* **monitorConfig**: [MonitorConfig](#monitorconfig): Class containing endpoint monitoring settings in a Traffic Manager profile.
-* **profileStatus**: string: Gets or sets the status of the Traffic Manager profile.  Possible values are 'Enabled' and 'Disabled'.
-* **trafficRoutingMethod**: string: Gets or sets the traffic routing method of the Traffic Manager profile.  Possible values are 'Performance', 'Weighted', 'Priority' or 'Geographic'.
-
 ## DnsConfig
 ### Properties
 * **fqdn**: string: Gets or sets the fully-qualified domain name (FQDN) of the Traffic Manager profile.  This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.
@@ -50,6 +42,14 @@
 * **port**: int: Gets or sets the TCP port used to probe for endpoint health.
 * **profileMonitorStatus**: string: Gets or sets the profile-level monitoring status of the Traffic Manager profile.
 * **protocol**: string: Gets or sets the protocol (HTTP or HTTPS) used to probe for endpoint health.
+
+## ProfileProperties
+### Properties
+* **dnsConfig**: [DnsConfig](#dnsconfig): Class containing DNS settings in a Traffic Manager profile.
+* **endpoints**: [Endpoint](#endpoint)[]: Gets or sets the list of endpoints in the Traffic Manager profile.
+* **monitorConfig**: [MonitorConfig](#monitorconfig): Class containing endpoint monitoring settings in a Traffic Manager profile.
+* **profileStatus**: string: Gets or sets the status of the Traffic Manager profile.  Possible values are 'Enabled' and 'Disabled'.
+* **trafficRoutingMethod**: string: Gets or sets the traffic routing method of the Traffic Manager profile.  Possible values are 'Performance', 'Weighted', 'Priority' or 'Geographic'.
 
 ## ResourceTags
 ### Properties

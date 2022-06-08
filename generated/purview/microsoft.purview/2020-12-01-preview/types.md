@@ -27,11 +27,10 @@
 * **ApiVersion**: 2020-12-01-preview
 * **Output**: [AccessKeys](#accesskeys)
 
-## Identity
+## AccessKeys
 ### Properties
-* **principalId**: string (ReadOnly): Service principal object Id
-* **tenantId**: string (ReadOnly): Tenant Id
-* **type**: 'SystemAssigned' | string: Identity Type
+* **atlasKafkaPrimaryEndpoint**: string (ReadOnly): Gets or sets the primary connection string.
+* **atlasKafkaSecondaryEndpoint**: string (ReadOnly): Gets or sets the secondary connection string.
 
 ## AccountProperties
 ### Properties
@@ -48,11 +47,6 @@
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'NotSpecified' | string: Gets or sets the public network access.
 * **systemData**: [AccountPropertiesSystemData](#accountpropertiessystemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 
-## CloudConnectors
-### Properties
-* **awsExternalId**: string (ReadOnly): AWS external identifier.
-Configured in AWS to allow use of the role arn used for scanning
-
 ## AccountPropertiesEndpoints
 ### Properties
 * **catalog**: string (ReadOnly): Gets the catalog endpoint.
@@ -64,29 +58,6 @@ Configured in AWS to allow use of the role arn used for scanning
 * **eventHubNamespace**: string (ReadOnly): Gets the managed event hub namespace resource identifier.
 * **resourceGroup**: string (ReadOnly): Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.
 * **storageAccount**: string (ReadOnly): Gets the managed storage account resource identifier.
-
-## PrivateEndpointConnection
-### Properties
-* **id**: string (ReadOnly): Gets or sets the identifier.
-* **name**: string (ReadOnly): Gets or sets the name.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): A private endpoint connection properties class.
-* **type**: string (ReadOnly): Gets or sets the type.
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): A private endpoint class.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): The private link service connection state.
-* **provisioningState**: string (ReadOnly): The provisioning state.
-
-## PrivateEndpoint
-### Properties
-* **id**: string: The private endpoint identifier.
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionsRequired**: string: The required actions.
-* **description**: string: The description.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Unknown' | string: The status.
 
 ## AccountPropertiesSystemData
 ### Properties
@@ -102,13 +73,42 @@ Configured in AWS to allow use of the role arn used for scanning
 * **capacity**: int: Gets or sets the sku capacity.
 * **name**: 'Standard' | string: Gets or sets the sku name.
 
+## CloudConnectors
+### Properties
+* **awsExternalId**: string (ReadOnly): AWS external identifier.
+Configured in AWS to allow use of the role arn used for scanning
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly): Service principal object Id
+* **tenantId**: string (ReadOnly): Tenant Id
+* **type**: 'SystemAssigned' | string: Identity Type
+
+## PrivateEndpoint
+### Properties
+* **id**: string: The private endpoint identifier.
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly): Gets or sets the identifier.
+* **name**: string (ReadOnly): Gets or sets the name.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): A private endpoint connection properties class.
+* **type**: string (ReadOnly): Gets or sets the type.
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): A private endpoint class.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): The private link service connection state.
+* **provisioningState**: string (ReadOnly): The provisioning state.
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: string: The required actions.
+* **description**: string: The description.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Unknown' | string: The status.
+
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## AccessKeys
-### Properties
-* **atlasKafkaPrimaryEndpoint**: string (ReadOnly): Gets or sets the primary connection string.
-* **atlasKafkaSecondaryEndpoint**: string (ReadOnly): Gets or sets the secondary connection string.
 

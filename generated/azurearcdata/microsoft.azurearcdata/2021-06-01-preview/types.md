@@ -53,10 +53,10 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureArcData/sqlServerInstances' (ReadOnly, DeployTimeConstant): The resource type
 
-## ExtendedLocation
+## BasicLoginInformation
 ### Properties
-* **name**: string: The name of the extended location.
-* **type**: 'CustomLocation' | string: The type of extendedLocation.
+* **password**: string (WriteOnly): Login password.
+* **username**: string: Login username.
 
 ## DataControllerProperties
 ### Properties
@@ -69,10 +69,10 @@
 * **uploadServicePrincipal**: [UploadServicePrincipal](#uploadserviceprincipal): Service principal for uploading billing, metrics and logs.
 * **uploadWatermark**: [UploadWatermark](#uploadwatermark): Properties on upload watermark.  Mostly timestamp for each upload data type
 
-## BasicLoginInformation
+## ExtendedLocation
 ### Properties
-* **password**: string (WriteOnly): Login password.
-* **username**: string: Login username.
+* **name**: string: The name of the extended location.
+* **type**: 'CustomLocation' | string: The type of extendedLocation.
 
 ## LogAnalyticsWorkspaceConfig
 ### Properties
@@ -84,33 +84,6 @@
 * **id**: string (Required): A globally unique ID identifying the associated Kubernetes cluster
 * **publicSigningKey**: string (Required): Certificate that contains the Kubernetes cluster public key used to verify signing
 * **signingCertificateThumbprint**: string: Unique thumbprint returned to customer to verify the certificate being uploaded
-
-## UploadServicePrincipal
-### Properties
-* **authority**: string: Authority for the service principal. Example: https://login.microsoftonline.com/
-* **clientId**: string: Client ID of the service principal for uploading data.
-* **clientSecret**: string (WriteOnly): Secret of the service principal
-* **tenantId**: string: Tenant ID of the service principal.
-
-## UploadWatermark
-### Properties
-* **logs**: string: Last uploaded date for logs from kubernetes cluster. Defaults to current date time
-* **metrics**: string: Last uploaded date for metrics from kubernetes cluster. Defaults to current date time
-* **usages**: string: Last uploaded date for usages from kubernetes cluster. Defaults to current date time
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC)
-* **createdBy**: string: An identifier for the identity that created the resource
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: An identifier for the identity that last modified the resource
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## PostgresInstanceProperties
 ### Properties
@@ -129,11 +102,6 @@
 * **name**: string (Required): The name of the SKU.  It is typically a letter+number code
 * **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
 * **tier**: 'Hyperscale': This field is required to be implemented by the Resource Provider if the service has more than one tier.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## SqlManagedInstanceProperties
 ### Properties
@@ -155,11 +123,6 @@
 * **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
 * **tier**: 'BusinessCritical' | 'GeneralPurpose': This field is required to be implemented by the Resource Provider if the service has more than one tier.
 
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## SqlServerInstanceProperties
 ### Properties
 * **collation**: string: SQL Server collation.
@@ -178,8 +141,45 @@
 * **vCore**: string: The number of logical processors used by the SQL Server instance.
 * **version**: string: SQL Server version.
 
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC)
+* **createdBy**: string: An identifier for the identity that created the resource
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: An identifier for the identity that last modified the resource
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
+
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## UploadServicePrincipal
+### Properties
+* **authority**: string: Authority for the service principal. Example: https://login.microsoftonline.com/
+* **clientId**: string: Client ID of the service principal for uploading data.
+* **clientSecret**: string (WriteOnly): Secret of the service principal
+* **tenantId**: string: Tenant ID of the service principal.
+
+## UploadWatermark
+### Properties
+* **logs**: string: Last uploaded date for logs from kubernetes cluster. Defaults to current date time
+* **metrics**: string: Last uploaded date for metrics from kubernetes cluster. Defaults to current date time
+* **usages**: string: Last uploaded date for usages from kubernetes cluster. Defaults to current date time
 

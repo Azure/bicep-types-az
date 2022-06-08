@@ -73,53 +73,11 @@
 * **Input**: [ListCallbackUrlParameters](#listcallbackurlparameters)
 * **Output**: [CallbackUrl](#callbackurl)
 
-## IntegrationAccountSku
-### Properties
-* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard'
-
-## IntegrationAccountResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## IntegrationAccountAgreementProperties
-### Properties
-* **agreementType**: 'AS2' | 'Edifact' | 'NotSpecified' | 'X12'
-* **changedTime**: string (ReadOnly): The changed time.
-* **content**: [AgreementContent](#agreementcontent)
-* **createdTime**: string (ReadOnly): The created time.
-* **guestIdentity**: [BusinessIdentity](#businessidentity)
-* **guestPartner**: string: The guest partner.
-* **hostIdentity**: [BusinessIdentity](#businessidentity)
-* **hostPartner**: string: The host partner.
-* **metadata**: any: Any object
-
 ## AgreementContent
 ### Properties
 * **AS2**: [AS2AgreementContent](#as2agreementcontent)
 * **Edifact**: [EdifactAgreementContent](#edifactagreementcontent)
 * **X12**: [X12AgreementContent](#x12agreementcontent)
-
-## AS2AgreementContent
-### Properties
-* **receiveAgreement**: [AS2OneWayAgreement](#as2onewayagreement)
-* **sendAgreement**: [AS2OneWayAgreement](#as2onewayagreement)
-
-## AS2OneWayAgreement
-### Properties
-* **protocolSettings**: [AS2ProtocolSettings](#as2protocolsettings)
-* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity)
-* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity)
-
-## AS2ProtocolSettings
-### Properties
-* **acknowledgementConnectionSettings**: [AS2AcknowledgementConnectionSettings](#as2acknowledgementconnectionsettings)
-* **envelopeSettings**: [AS2EnvelopeSettings](#as2envelopesettings)
-* **errorSettings**: [AS2ErrorSettings](#as2errorsettings)
-* **mdnSettings**: [AS2MdnSettings](#as2mdnsettings)
-* **messageConnectionSettings**: [AS2MessageConnectionSettings](#as2messageconnectionsettings)
-* **securitySettings**: [AS2SecuritySettings](#as2securitysettings)
-* **validationSettings**: [AS2ValidationSettings](#as2validationsettings)
 
 ## AS2AcknowledgementConnectionSettings
 ### Properties
@@ -127,6 +85,11 @@
 * **keepHttpConnectionAlive**: bool: The value indicating whether to keep the connection alive.
 * **supportHttpStatusCodeContinue**: bool: The value indicating whether to support HTTP status code 'CONTINUE'.
 * **unfoldHttpHeaders**: bool: The value indicating whether to unfold the HTTP headers.
+
+## AS2AgreementContent
+### Properties
+* **receiveAgreement**: [AS2OneWayAgreement](#as2onewayagreement)
+* **sendAgreement**: [AS2OneWayAgreement](#as2onewayagreement)
 
 ## AS2EnvelopeSettings
 ### Properties
@@ -160,6 +123,22 @@
 * **supportHttpStatusCodeContinue**: bool: The value indicating whether to support HTTP status code 'CONTINUE'.
 * **unfoldHttpHeaders**: bool: The value indicating whether to unfold the HTTP headers.
 
+## AS2OneWayAgreement
+### Properties
+* **protocolSettings**: [AS2ProtocolSettings](#as2protocolsettings)
+* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity)
+* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity)
+
+## AS2ProtocolSettings
+### Properties
+* **acknowledgementConnectionSettings**: [AS2AcknowledgementConnectionSettings](#as2acknowledgementconnectionsettings)
+* **envelopeSettings**: [AS2EnvelopeSettings](#as2envelopesettings)
+* **errorSettings**: [AS2ErrorSettings](#as2errorsettings)
+* **mdnSettings**: [AS2MdnSettings](#as2mdnsettings)
+* **messageConnectionSettings**: [AS2MessageConnectionSettings](#as2messageconnectionsettings)
+* **securitySettings**: [AS2SecuritySettings](#as2securitysettings)
+* **validationSettings**: [AS2ValidationSettings](#as2validationsettings)
+
 ## AS2SecuritySettings
 ### Properties
 * **enableNrrForInboundDecodedMessages**: bool: The value indicating whether to enable NRR for inbound decoded messages.
@@ -184,35 +163,18 @@
 * **overrideMessageProperties**: bool: The value indicating whether to override incoming message properties with those in agreement.
 * **signMessage**: bool: The value indicating whether the message has to be signed.
 
+## B2BPartnerContent
+### Properties
+* **businessIdentities**: [BusinessIdentity](#businessidentity)[]: The list of partner business identities.
+
 ## BusinessIdentity
 ### Properties
 * **Qualifier**: string: The business identity qualifier.
 * **Value**: string: The business identity value.
 
-## EdifactAgreementContent
+## CallbackUrl
 ### Properties
-* **receiveAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement)
-* **sendAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement)
-
-## EdifactOneWayAgreement
-### Properties
-* **protocolSettings**: [EdifactProtocolSettings](#edifactprotocolsettings)
-* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity)
-* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity)
-
-## EdifactProtocolSettings
-### Properties
-* **acknowledgementSettings**: [EdifactAcknowledgementSettings](#edifactacknowledgementsettings)
-* **edifactDelimiterOverrides**: [EdifactDelimiterOverride](#edifactdelimiteroverride)[]: The EDIFACT delimiter override settings.
-* **envelopeOverrides**: [EdifactEnvelopeOverride](#edifactenvelopeoverride)[]: The EDIFACT envelope override settings.
-* **envelopeSettings**: [EdifactEnvelopeSettings](#edifactenvelopesettings)
-* **framingSettings**: [EdifactFramingSettings](#edifactframingsettings)
-* **messageFilter**: [EdifactMessageFilter](#edifactmessagefilter)
-* **messageFilterList**: [EdifactMessageIdentifier](#edifactmessageidentifier)[]: The EDIFACT message filter list.
-* **processingSettings**: [EdifactProcessingSettings](#edifactprocessingsettings)
-* **schemaReferences**: [EdifactSchemaReference](#edifactschemareference)[]: The EDIFACT schema references.
-* **validationOverrides**: [EdifactValidationOverride](#edifactvalidationoverride)[]: The EDIFACT validation override settings.
-* **validationSettings**: [EdifactValidationSettings](#edifactvalidationsettings)
+* **value**: string (ReadOnly): The URL value.
 
 ## EdifactAcknowledgementSettings
 ### Properties
@@ -227,6 +189,11 @@
 * **needTechnicalAcknowledgement**: bool: The value indicating whether technical acknowledgement is needed.
 * **rolloverAcknowledgementControlNumber**: bool: The value indicating whether to rollover acknowledgement control number.
 * **sendSynchronousAcknowledgement**: bool: The value indicating whether to send synchronous acknowledgement.
+
+## EdifactAgreementContent
+### Properties
+* **receiveAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement)
+* **sendAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement)
 
 ## EdifactDelimiterOverride
 ### Properties
@@ -327,6 +294,12 @@
 ### Properties
 * **messageId**: string: The message id on which this envelope settings has to be applied.
 
+## EdifactOneWayAgreement
+### Properties
+* **protocolSettings**: [EdifactProtocolSettings](#edifactprotocolsettings)
+* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity)
+* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity)
+
 ## EdifactProcessingSettings
 ### Properties
 * **createEmptyXmlTagsForTrailingSeparators**: bool: The value indicating whether to create empty xml tags for trailing separators.
@@ -334,6 +307,20 @@
 * **preserveInterchange**: bool: The value indicating whether to preserve interchange.
 * **suspendInterchangeOnError**: bool: The value indicating whether to suspend interchange on error.
 * **useDotAsDecimalSeparator**: bool: The value indicating whether to use dot as decimal separator.
+
+## EdifactProtocolSettings
+### Properties
+* **acknowledgementSettings**: [EdifactAcknowledgementSettings](#edifactacknowledgementsettings)
+* **edifactDelimiterOverrides**: [EdifactDelimiterOverride](#edifactdelimiteroverride)[]: The EDIFACT delimiter override settings.
+* **envelopeOverrides**: [EdifactEnvelopeOverride](#edifactenvelopeoverride)[]: The EDIFACT envelope override settings.
+* **envelopeSettings**: [EdifactEnvelopeSettings](#edifactenvelopesettings)
+* **framingSettings**: [EdifactFramingSettings](#edifactframingsettings)
+* **messageFilter**: [EdifactMessageFilter](#edifactmessagefilter)
+* **messageFilterList**: [EdifactMessageIdentifier](#edifactmessageidentifier)[]: The EDIFACT message filter list.
+* **processingSettings**: [EdifactProcessingSettings](#edifactprocessingsettings)
+* **schemaReferences**: [EdifactSchemaReference](#edifactschemareference)[]: The EDIFACT schema references.
+* **validationOverrides**: [EdifactValidationOverride](#edifactvalidationoverride)[]: The EDIFACT validation override settings.
+* **validationSettings**: [EdifactValidationSettings](#edifactvalidationsettings)
 
 ## EdifactSchemaReference
 ### Properties
@@ -368,31 +355,121 @@
 * **validateEDITypes**: bool: The value indicating whether to Whether to validate EDI types.
 * **validateXSDTypes**: bool: The value indicating whether to Whether to validate XSD types.
 
-## X12AgreementContent
+## IntegrationAccountAgreementProperties
 ### Properties
-* **receiveAgreement**: [X12OneWayAgreement](#x12onewayagreement)
-* **sendAgreement**: [X12OneWayAgreement](#x12onewayagreement)
+* **agreementType**: 'AS2' | 'Edifact' | 'NotSpecified' | 'X12'
+* **changedTime**: string (ReadOnly): The changed time.
+* **content**: [AgreementContent](#agreementcontent)
+* **createdTime**: string (ReadOnly): The created time.
+* **guestIdentity**: [BusinessIdentity](#businessidentity)
+* **guestPartner**: string: The guest partner.
+* **hostIdentity**: [BusinessIdentity](#businessidentity)
+* **hostPartner**: string: The host partner.
+* **metadata**: any: Any object
 
-## X12OneWayAgreement
+## IntegrationAccountCertificateProperties
 ### Properties
-* **protocolSettings**: [X12ProtocolSettings](#x12protocolsettings)
-* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity)
-* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity)
+* **changedTime**: string (ReadOnly): The changed time.
+* **createdTime**: string (ReadOnly): The created time.
+* **key**: [KeyVaultKeyReference](#keyvaultkeyreference)
+* **metadata**: any: Any object
+* **publicCertificate**: string: The public certificate.
 
-## X12ProtocolSettings
+## IntegrationAccountContentHash
 ### Properties
-* **acknowledgementSettings**: [X12AcknowledgementSettings](#x12acknowledgementsettings)
-* **envelopeOverrides**: [X12EnvelopeOverride](#x12envelopeoverride)[]: The X12 envelope override settings.
-* **envelopeSettings**: [X12EnvelopeSettings](#x12envelopesettings)
-* **framingSettings**: [X12FramingSettings](#x12framingsettings)
-* **messageFilter**: [X12MessageFilter](#x12messagefilter)
-* **messageFilterList**: [X12MessageIdentifier](#x12messageidentifier)[]: The X12 message filter list.
-* **processingSettings**: [X12ProcessingSettings](#x12processingsettings)
-* **schemaReferences**: [X12SchemaReference](#x12schemareference)[]: The X12 schema references.
-* **securitySettings**: [X12SecuritySettings](#x12securitysettings)
-* **validationOverrides**: [X12ValidationOverride](#x12validationoverride)[]: The X12 validation override settings.
-* **validationSettings**: [X12ValidationSettings](#x12validationsettings)
-* **x12DelimiterOverrides**: [X12DelimiterOverrides](#x12delimiteroverrides)[]: The X12 delimiter override settings.
+* **algorithm**: string: The content hash algorithm.
+* **value**: string: The content hash value.
+
+## IntegrationAccountContentLink
+### Properties
+* **contentHash**: [IntegrationAccountContentHash](#integrationaccountcontenthash)
+* **contentSize**: int: The content size.
+* **contentVersion**: string: The content version.
+* **metadata**: any: Any object
+* **uri**: string: The content link URI.
+
+## IntegrationAccountMapProperties
+### Properties
+* **changedTime**: string (ReadOnly): The changed time.
+* **content**: any: Any object
+* **contentLink**: [IntegrationAccountContentLink](#integrationaccountcontentlink) (ReadOnly)
+* **contentType**: string: The content type.
+* **createdTime**: string (ReadOnly): The created time.
+* **mapType**: 'NotSpecified' | 'Xslt'
+* **metadata**: any: Any object
+
+## IntegrationAccountPartnerProperties
+### Properties
+* **changedTime**: string (ReadOnly): The changed time.
+* **content**: [PartnerContent](#partnercontent)
+* **createdTime**: string (ReadOnly): The created time.
+* **metadata**: any: Any object
+* **partnerType**: 'B2B' | 'NotSpecified'
+
+## IntegrationAccountResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## IntegrationAccountResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## IntegrationAccountResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## IntegrationAccountResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## IntegrationAccountResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## IntegrationAccountResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## IntegrationAccountSchemaProperties
+### Properties
+* **changedTime**: string (ReadOnly): The changed time.
+* **content**: any: Any object
+* **contentLink**: [IntegrationAccountContentLink](#integrationaccountcontentlink) (ReadOnly)
+* **contentType**: string: The content type.
+* **createdTime**: string (ReadOnly): The created time.
+* **metadata**: any: Any object
+* **schemaType**: 'NotSpecified' | 'Xml'
+* **targetNamespace**: string: The target namespace.
+
+## IntegrationAccountSku
+### Properties
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard'
+
+## KeyVaultKeyReference
+### Properties
+* **keyName**: string: The private key name in key vault.
+* **keyVault**: [KeyVaultKeyReferenceKeyVault](#keyvaultkeyreferencekeyvault): The key vault reference.
+* **keyVersion**: string: The private key version in key vault.
+
+## KeyVaultKeyReferenceKeyVault
+### Properties
+* **id**: string: The resource id.
+* **name**: string (ReadOnly): The resource name.
+* **type**: string (ReadOnly): The resource type.
+
+## ListCallbackUrlParameters
+### Properties
+* **NotAfter**: string (WriteOnly): The expiry time.
+
+## PartnerContent
+### Properties
+* **b2b**: [B2BPartnerContent](#b2bpartnercontent)
 
 ## X12AcknowledgementSettings
 ### Properties
@@ -411,6 +488,23 @@
 * **needTechnicalAcknowledgement**: bool: The value indicating whether technical acknowledgement is needed.
 * **rolloverAcknowledgementControlNumber**: bool: The value indicating whether to rollover acknowledgement control number.
 * **sendSynchronousAcknowledgement**: bool: The value indicating whether to send synchronous acknowledgement.
+
+## X12AgreementContent
+### Properties
+* **receiveAgreement**: [X12OneWayAgreement](#x12onewayagreement)
+* **sendAgreement**: [X12OneWayAgreement](#x12onewayagreement)
+
+## X12DelimiterOverrides
+### Properties
+* **componentSeparator**: int: The component separator.
+* **dataElementSeparator**: int: The data element separator.
+* **messageId**: string: The message id.
+* **protocolVersion**: string: The protocol version.
+* **replaceCharacter**: int: The replacement character.
+* **replaceSeparatorsInPayload**: bool: The value indicating whether to replace separators in payload.
+* **segmentTerminator**: int: The segment terminator.
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified'
+* **targetNamespace**: string: The target namespace on which this delimiter settings has to be applied.
 
 ## X12EnvelopeOverride
 ### Properties
@@ -470,6 +564,12 @@
 ### Properties
 * **messageId**: string: The message id.
 
+## X12OneWayAgreement
+### Properties
+* **protocolSettings**: [X12ProtocolSettings](#x12protocolsettings)
+* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity)
+* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity)
+
 ## X12ProcessingSettings
 ### Properties
 * **convertImpliedDecimal**: bool: The value indicating whether to convert numerical type to implied decimal.
@@ -478,6 +578,21 @@
 * **preserveInterchange**: bool: The value indicating whether to preserve interchange.
 * **suspendInterchangeOnError**: bool: The value indicating whether to suspend interchange on error.
 * **useDotAsDecimalSeparator**: bool: The value indicating whether to use dot as decimal separator.
+
+## X12ProtocolSettings
+### Properties
+* **acknowledgementSettings**: [X12AcknowledgementSettings](#x12acknowledgementsettings)
+* **envelopeOverrides**: [X12EnvelopeOverride](#x12envelopeoverride)[]: The X12 envelope override settings.
+* **envelopeSettings**: [X12EnvelopeSettings](#x12envelopesettings)
+* **framingSettings**: [X12FramingSettings](#x12framingsettings)
+* **messageFilter**: [X12MessageFilter](#x12messagefilter)
+* **messageFilterList**: [X12MessageIdentifier](#x12messageidentifier)[]: The X12 message filter list.
+* **processingSettings**: [X12ProcessingSettings](#x12processingsettings)
+* **schemaReferences**: [X12SchemaReference](#x12schemareference)[]: The X12 schema references.
+* **securitySettings**: [X12SecuritySettings](#x12securitysettings)
+* **validationOverrides**: [X12ValidationOverride](#x12validationoverride)[]: The X12 validation override settings.
+* **validationSettings**: [X12ValidationSettings](#x12validationsettings)
+* **x12DelimiterOverrides**: [X12DelimiterOverrides](#x12delimiteroverrides)[]: The X12 delimiter override settings.
 
 ## X12SchemaReference
 ### Properties
@@ -515,119 +630,4 @@
 * **validateCharacterSet**: bool: The value indicating whether to validate character set in the message.
 * **validateEDITypes**: bool: The value indicating whether to Whether to validate EDI types.
 * **validateXSDTypes**: bool: The value indicating whether to Whether to validate XSD types.
-
-## X12DelimiterOverrides
-### Properties
-* **componentSeparator**: int: The component separator.
-* **dataElementSeparator**: int: The data element separator.
-* **messageId**: string: The message id.
-* **protocolVersion**: string: The protocol version.
-* **replaceCharacter**: int: The replacement character.
-* **replaceSeparatorsInPayload**: bool: The value indicating whether to replace separators in payload.
-* **segmentTerminator**: int: The segment terminator.
-* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified'
-* **targetNamespace**: string: The target namespace on which this delimiter settings has to be applied.
-
-## IntegrationAccountResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## IntegrationAccountCertificateProperties
-### Properties
-* **changedTime**: string (ReadOnly): The changed time.
-* **createdTime**: string (ReadOnly): The created time.
-* **key**: [KeyVaultKeyReference](#keyvaultkeyreference)
-* **metadata**: any: Any object
-* **publicCertificate**: string: The public certificate.
-
-## KeyVaultKeyReference
-### Properties
-* **keyName**: string: The private key name in key vault.
-* **keyVault**: [KeyVaultKeyReferenceKeyVault](#keyvaultkeyreferencekeyvault): The key vault reference.
-* **keyVersion**: string: The private key version in key vault.
-
-## KeyVaultKeyReferenceKeyVault
-### Properties
-* **id**: string: The resource id.
-* **name**: string (ReadOnly): The resource name.
-* **type**: string (ReadOnly): The resource type.
-
-## IntegrationAccountResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## IntegrationAccountMapProperties
-### Properties
-* **changedTime**: string (ReadOnly): The changed time.
-* **content**: any: Any object
-* **contentLink**: [IntegrationAccountContentLink](#integrationaccountcontentlink) (ReadOnly)
-* **contentType**: string: The content type.
-* **createdTime**: string (ReadOnly): The created time.
-* **mapType**: 'NotSpecified' | 'Xslt'
-* **metadata**: any: Any object
-
-## IntegrationAccountContentLink
-### Properties
-* **contentHash**: [IntegrationAccountContentHash](#integrationaccountcontenthash)
-* **contentSize**: int: The content size.
-* **contentVersion**: string: The content version.
-* **metadata**: any: Any object
-* **uri**: string: The content link URI.
-
-## IntegrationAccountContentHash
-### Properties
-* **algorithm**: string: The content hash algorithm.
-* **value**: string: The content hash value.
-
-## IntegrationAccountResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## IntegrationAccountPartnerProperties
-### Properties
-* **changedTime**: string (ReadOnly): The changed time.
-* **content**: [PartnerContent](#partnercontent)
-* **createdTime**: string (ReadOnly): The created time.
-* **metadata**: any: Any object
-* **partnerType**: 'B2B' | 'NotSpecified'
-
-## PartnerContent
-### Properties
-* **b2b**: [B2BPartnerContent](#b2bpartnercontent)
-
-## B2BPartnerContent
-### Properties
-* **businessIdentities**: [BusinessIdentity](#businessidentity)[]: The list of partner business identities.
-
-## IntegrationAccountResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## IntegrationAccountSchemaProperties
-### Properties
-* **changedTime**: string (ReadOnly): The changed time.
-* **content**: any: Any object
-* **contentLink**: [IntegrationAccountContentLink](#integrationaccountcontentlink) (ReadOnly)
-* **contentType**: string: The content type.
-* **createdTime**: string (ReadOnly): The created time.
-* **metadata**: any: Any object
-* **schemaType**: 'NotSpecified' | 'Xml'
-* **targetNamespace**: string: The target namespace.
-
-## IntegrationAccountResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ListCallbackUrlParameters
-### Properties
-* **NotAfter**: string (WriteOnly): The expiry time.
-
-## CallbackUrl
-### Properties
-* **value**: string (ReadOnly): The URL value.
 

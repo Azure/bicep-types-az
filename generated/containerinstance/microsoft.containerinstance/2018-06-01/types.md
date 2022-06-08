@@ -11,6 +11,26 @@
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## AzureFileVolume
+### Properties
+* **readOnly**: bool: The flag indicating whether the Azure File shared mounted as a volume is read-only.
+* **shareName**: string (Required): The name of the Azure File share to be mounted as a volume.
+* **storageAccountKey**: string: The storage account access key used to access the Azure File share.
+* **storageAccountName**: string (Required): The name of the storage account that contains the Azure File share.
+
+## Container
+### Properties
+* **name**: string (Required): The user-provided name of the container instance.
+* **properties**: [ContainerProperties](#containerproperties) (Required): The container instance properties.
+
+## ContainerExec
+### Properties
+* **command**: string[]: The commands to execute within the container.
+
+## ContainerGroupDiagnostics
+### Properties
+* **logAnalytics**: [LogAnalytics](#loganalytics): Container group log analytics information.
+
 ## ContainerGroupProperties
 ### Properties
 * **containers**: [Container](#container)[] (Required): The containers within the container group.
@@ -26,10 +46,31 @@
 - `Never` Never restart
 * **volumes**: [Volume](#volume)[]: The list of volumes that can be mounted by containers in this container group.
 
-## Container
+## ContainerGroupPropertiesInstanceView
 ### Properties
-* **name**: string (Required): The user-provided name of the container instance.
-* **properties**: [ContainerProperties](#containerproperties) (Required): The container instance properties.
+* **events**: [Event](#event)[] (ReadOnly): The events of this container group.
+* **state**: string (ReadOnly): The state of the container group. Only valid in response.
+
+## ContainerHttpGet
+### Properties
+* **path**: string: The path to probe.
+* **port**: int (Required): The port number to probe.
+* **scheme**: 'http' | 'https' | string: The scheme.
+
+## ContainerPort
+### Properties
+* **port**: int (Required): The port number exposed within the container group.
+* **protocol**: 'TCP' | 'UDP' | string: The protocol associated with the port.
+
+## ContainerProbe
+### Properties
+* **exec**: [ContainerExec](#containerexec): The container execution command, for liveness or readiness probe
+* **failureThreshold**: int: The failure threshold.
+* **httpGet**: [ContainerHttpGet](#containerhttpget): The container Http Get settings, for liveness or readiness probe
+* **initialDelaySeconds**: int: The initial delay seconds.
+* **periodSeconds**: int: The period seconds.
+* **successThreshold**: int: The success threshold.
+* **timeoutSeconds**: int: The timeout seconds.
 
 ## ContainerProperties
 ### Properties
@@ -42,12 +83,6 @@
 * **readinessProbe**: [ContainerProbe](#containerprobe): The container probe, for liveness or readiness
 * **resources**: [ResourceRequirements](#resourcerequirements) (Required): The resource requirements.
 * **volumeMounts**: [VolumeMount](#volumemount)[]: The volume mounts available to the container instance.
-
-## EnvironmentVariable
-### Properties
-* **name**: string (Required): The name of the environment variable.
-* **secureValue**: string: The value of the secure environment variable.
-* **value**: string: The value of the environment variable.
 
 ## ContainerPropertiesInstanceView
 ### Properties
@@ -64,6 +99,12 @@
 * **startTime**: string: The date-time when the container instance state started.
 * **state**: string: The state of the container instance.
 
+## EnvironmentVariable
+### Properties
+* **name**: string (Required): The name of the environment variable.
+* **secureValue**: string: The value of the secure environment variable.
+* **value**: string: The value of the environment variable.
+
 ## Event
 ### Properties
 * **count**: int: The count of the event.
@@ -73,35 +114,35 @@
 * **name**: string: The event name.
 * **type**: string: The event type.
 
-## ContainerProbe
+## GitRepoVolume
 ### Properties
-* **exec**: [ContainerExec](#containerexec): The container execution command, for liveness or readiness probe
-* **failureThreshold**: int: The failure threshold.
-* **httpGet**: [ContainerHttpGet](#containerhttpget): The container Http Get settings, for liveness or readiness probe
-* **initialDelaySeconds**: int: The initial delay seconds.
-* **periodSeconds**: int: The period seconds.
-* **successThreshold**: int: The success threshold.
-* **timeoutSeconds**: int: The timeout seconds.
+* **directory**: string: Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
+* **repository**: string (Required): Repository URL
+* **revision**: string: Commit hash for the specified revision.
 
-## ContainerExec
+## ImageRegistryCredential
 ### Properties
-* **command**: string[]: The commands to execute within the container.
+* **password**: string: The password for the private registry.
+* **server**: string (Required): The Docker image registry server without a protocol such as "http" and "https".
+* **username**: string (Required): The username for the private registry.
 
-## ContainerHttpGet
+## IpAddress
 ### Properties
-* **path**: string: The path to probe.
-* **port**: int (Required): The port number to probe.
-* **scheme**: 'http' | 'https' | string: The scheme.
+* **dnsNameLabel**: string: The Dns name label for the IP.
+* **fqdn**: string (ReadOnly): The FQDN for the IP.
+* **ip**: string: The IP exposed to the public internet.
+* **ports**: [Port](#port)[] (Required): The list of ports exposed on the container group.
+* **type**: 'Public' | string (Required): Specifies if the IP is exposed to the public internet.
 
-## ContainerPort
+## LogAnalytics
 ### Properties
-* **port**: int (Required): The port number exposed within the container group.
+* **workspaceId**: string (Required): The workspace id for log analytics
+* **workspaceKey**: string (Required): The workspace key for log analytics
+
+## Port
+### Properties
+* **port**: int (Required): The port number.
 * **protocol**: 'TCP' | 'UDP' | string: The protocol associated with the port.
-
-## ResourceRequirements
-### Properties
-* **limits**: [ResourceLimits](#resourcelimits): The resource limits.
-* **requests**: [ResourceRequests](#resourcerequests) (Required): The resource requests.
 
 ## ResourceLimits
 ### Properties
@@ -113,44 +154,20 @@
 * **cpu**: int (Required): The CPU request of this container instance.
 * **memoryInGB**: int (Required): The memory request in GB of this container instance.
 
-## VolumeMount
+## ResourceRequirements
 ### Properties
-* **mountPath**: string (Required): The path within the container where the volume should be mounted. Must not contain colon (:).
-* **name**: string (Required): The name of the volume mount.
-* **readOnly**: bool: The flag indicating whether the volume mount is read-only.
+* **limits**: [ResourceLimits](#resourcelimits): The resource limits.
+* **requests**: [ResourceRequests](#resourcerequests) (Required): The resource requests.
 
-## ContainerGroupDiagnostics
+## ResourceTags
 ### Properties
-* **logAnalytics**: [LogAnalytics](#loganalytics): Container group log analytics information.
+### Additional Properties
+* **Additional Properties Type**: string
 
-## LogAnalytics
+## SecretVolume
 ### Properties
-* **workspaceId**: string (Required): The workspace id for log analytics
-* **workspaceKey**: string (Required): The workspace key for log analytics
-
-## ImageRegistryCredential
-### Properties
-* **password**: string: The password for the private registry.
-* **server**: string (Required): The Docker image registry server without a protocol such as "http" and "https".
-* **username**: string (Required): The username for the private registry.
-
-## ContainerGroupPropertiesInstanceView
-### Properties
-* **events**: [Event](#event)[] (ReadOnly): The events of this container group.
-* **state**: string (ReadOnly): The state of the container group. Only valid in response.
-
-## IpAddress
-### Properties
-* **dnsNameLabel**: string: The Dns name label for the IP.
-* **fqdn**: string (ReadOnly): The FQDN for the IP.
-* **ip**: string: The IP exposed to the public internet.
-* **ports**: [Port](#port)[] (Required): The list of ports exposed on the container group.
-* **type**: 'Public' | string (Required): Specifies if the IP is exposed to the public internet.
-
-## Port
-### Properties
-* **port**: int (Required): The port number.
-* **protocol**: 'TCP' | 'UDP' | string: The protocol associated with the port.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Volume
 ### Properties
@@ -160,26 +177,9 @@
 * **name**: string (Required): The name of the volume.
 * **secret**: [SecretVolume](#secretvolume): The secret volume.
 
-## AzureFileVolume
+## VolumeMount
 ### Properties
-* **readOnly**: bool: The flag indicating whether the Azure File shared mounted as a volume is read-only.
-* **shareName**: string (Required): The name of the Azure File share to be mounted as a volume.
-* **storageAccountKey**: string: The storage account access key used to access the Azure File share.
-* **storageAccountName**: string (Required): The name of the storage account that contains the Azure File share.
-
-## GitRepoVolume
-### Properties
-* **directory**: string: Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
-* **repository**: string (Required): Repository URL
-* **revision**: string: Commit hash for the specified revision.
-
-## SecretVolume
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **mountPath**: string (Required): The path within the container where the volume should be mounted. Must not contain colon (:).
+* **name**: string (Required): The name of the volume mount.
+* **readOnly**: bool: The flag indicating whether the volume mount is read-only.
 

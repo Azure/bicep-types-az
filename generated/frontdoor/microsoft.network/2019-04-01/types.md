@@ -11,19 +11,15 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/frontDoors' (ReadOnly, DeployTimeConstant): The resource type
 
-## FrontDoorProperties
+## Backend
 ### Properties
-* **backendPools**: [BackendPool](#backendpool)[]: Backend pools available to routing rules.
-* **backendPoolsSettings**: [BackendPoolsSettings](#backendpoolssettings): Settings that apply to all backend pools.
-* **cname**: string (ReadOnly): The host that each frontendEndpoint must CNAME to.
-* **enabledState**: 'Disabled' | 'Enabled' | string: Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
-* **friendlyName**: string: A friendly name for the frontDoor
-* **frontendEndpoints**: [FrontendEndpoint](#frontendendpoint)[]: Frontend endpoints available to routing rules.
-* **healthProbeSettings**: [HealthProbeSettingsModel](#healthprobesettingsmodel)[]: Health probe settings associated with this Front Door instance.
-* **loadBalancingSettings**: [LoadBalancingSettingsModel](#loadbalancingsettingsmodel)[]: Load balancing settings associated with this Front Door instance.
-* **provisioningState**: string (ReadOnly): Provisioning state of the Front Door.
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the Front Door or Front Door SubResource.
-* **routingRules**: [RoutingRule](#routingrule)[]: Routing rules associated with this Front Door.
+* **address**: string: Location of the backend (IP address or FQDN)
+* **backendHostHeader**: string: The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
+* **enabledState**: 'Disabled' | 'Enabled' | string: Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'
+* **httpPort**: int: The HTTP TCP port number. Must be between 1 and 65535.
+* **httpsPort**: int: The HTTPS TCP port number. Must be between 1 and 65535.
+* **priority**: int: Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
+* **weight**: int: Weight of this endpoint for load balancing purposes.
 
 ## BackendPool
 ### Properties
@@ -39,23 +35,39 @@
 * **loadBalancingSettings**: [SubResource](#subresource): Reference to another subresource.
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the Front Door or Front Door SubResource.
 
-## Backend
-### Properties
-* **address**: string: Location of the backend (IP address or FQDN)
-* **backendHostHeader**: string: The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
-* **enabledState**: 'Disabled' | 'Enabled' | string: Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'
-* **httpPort**: int: The HTTP TCP port number. Must be between 1 and 65535.
-* **httpsPort**: int: The HTTPS TCP port number. Must be between 1 and 65535.
-* **priority**: int: Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
-* **weight**: int: Weight of this endpoint for load balancing purposes.
-
-## SubResource
-### Properties
-* **id**: string: Resource ID.
-
 ## BackendPoolsSettings
 ### Properties
 * **enforceCertificateNameCheck**: 'Disabled' | 'Enabled' | string: Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.
+
+## CacheConfiguration
+### Properties
+* **dynamicCompression**: 'Disabled' | 'Enabled' | string: Whether to use dynamic compression for cached content
+* **queryParameterStripDirective**: 'StripAll' | 'StripNone' | string: Treatment of URL query terms when forming the cache key.
+
+## CustomHttpsConfiguration
+### Properties
+* **certificateSource**: 'AzureKeyVault' | 'FrontDoor' | string: Defines the source of the SSL certificate
+* **frontDoorCertificateSourceParameters**: [FrontDoorCertificateSourceParameters](#frontdoorcertificatesourceparameters): Parameters required for enabling SSL with Front Door-managed certificates
+* **keyVaultCertificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters): Parameters required for bring-your-own-certification via Key Vault
+* **protocolType**: 'ServerNameIndication' | string: Defines the TLS extension protocol that is used for secure delivery
+
+## FrontDoorCertificateSourceParameters
+### Properties
+* **certificateType**: 'Dedicated' | string: Defines the type of the certificate used for secure connections to a frontendEndpoint
+
+## FrontDoorProperties
+### Properties
+* **backendPools**: [BackendPool](#backendpool)[]: Backend pools available to routing rules.
+* **backendPoolsSettings**: [BackendPoolsSettings](#backendpoolssettings): Settings that apply to all backend pools.
+* **cname**: string (ReadOnly): The host that each frontendEndpoint must CNAME to.
+* **enabledState**: 'Disabled' | 'Enabled' | string: Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
+* **friendlyName**: string: A friendly name for the frontDoor
+* **frontendEndpoints**: [FrontendEndpoint](#frontendendpoint)[]: Frontend endpoints available to routing rules.
+* **healthProbeSettings**: [HealthProbeSettingsModel](#healthprobesettingsmodel)[]: Health probe settings associated with this Front Door instance.
+* **loadBalancingSettings**: [LoadBalancingSettingsModel](#loadbalancingsettingsmodel)[]: Load balancing settings associated with this Front Door instance.
+* **provisioningState**: string (ReadOnly): Provisioning state of the Front Door.
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the Front Door or Front Door SubResource.
+* **routingRules**: [RoutingRule](#routingrule)[]: Routing rules associated with this Front Door.
 
 ## FrontendEndpoint
 ### Properties
@@ -75,27 +87,6 @@
 * **sessionAffinityTtlSeconds**: int: UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
 * **webApplicationFirewallPolicyLink**: [FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLink](#frontendendpointupdateparameterswebapplicationfirewallpolicylink): Defines the Web Application Firewall policy for each host (if applicable)
 
-## CustomHttpsConfiguration
-### Properties
-* **certificateSource**: 'AzureKeyVault' | 'FrontDoor' | string: Defines the source of the SSL certificate
-* **frontDoorCertificateSourceParameters**: [FrontDoorCertificateSourceParameters](#frontdoorcertificatesourceparameters): Parameters required for enabling SSL with Front Door-managed certificates
-* **keyVaultCertificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters): Parameters required for bring-your-own-certification via Key Vault
-* **protocolType**: 'ServerNameIndication' | string: Defines the TLS extension protocol that is used for secure delivery
-
-## FrontDoorCertificateSourceParameters
-### Properties
-* **certificateType**: 'Dedicated' | string: Defines the type of the certificate used for secure connections to a frontendEndpoint
-
-## KeyVaultCertificateSourceParameters
-### Properties
-* **secretName**: string: The name of the Key Vault secret representing the full certificate PFX
-* **secretVersion**: string: The version of the Key Vault secret representing the full certificate PFX
-* **vault**: [KeyVaultCertificateSourceParametersVault](#keyvaultcertificatesourceparametersvault): The Key Vault containing the SSL certificate
-
-## KeyVaultCertificateSourceParametersVault
-### Properties
-* **id**: string: Resource ID.
-
 ## FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLink
 ### Properties
 * **id**: string: Resource ID.
@@ -114,6 +105,16 @@
 * **protocol**: 'Http' | 'Https' | string: Accepted protocol schemes.
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the Front Door or Front Door SubResource.
 
+## KeyVaultCertificateSourceParameters
+### Properties
+* **secretName**: string: The name of the Key Vault secret representing the full certificate PFX
+* **secretVersion**: string: The version of the Key Vault secret representing the full certificate PFX
+* **vault**: [KeyVaultCertificateSourceParametersVault](#keyvaultcertificatesourceparametersvault): The Key Vault containing the SSL certificate
+
+## KeyVaultCertificateSourceParametersVault
+### Properties
+* **id**: string: Resource ID.
+
 ## LoadBalancingSettingsModel
 ### Properties
 * **id**: string: Resource ID.
@@ -128,21 +129,10 @@
 * **sampleSize**: int: The number of samples to consider for load balancing decisions
 * **successfulSamplesRequired**: int: The number of samples within the sample period that must succeed
 
-## RoutingRule
+## ResourceTags
 ### Properties
-* **id**: string: Resource ID.
-* **name**: string: Resource name.
-* **properties**: [RoutingRuleProperties](#routingruleproperties): The JSON object that contains the properties required to create a routing rule.
-* **type**: string (ReadOnly): Resource type.
-
-## RoutingRuleProperties
-### Properties
-* **acceptedProtocols**: 'Http' | 'Https' | string[]: Protocol schemes to match for this rule
-* **enabledState**: 'Disabled' | 'Enabled' | string: Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
-* **frontendEndpoints**: [SubResource](#subresource)[]: Frontend endpoints associated with this rule
-* **patternsToMatch**: string[]: The route patterns of the rule.
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the Front Door or Front Door SubResource.
-* **routeConfiguration**: [RouteConfiguration](#routeconfiguration): Base class for all types of Route.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## RouteConfiguration
 * **Discriminator**: @odata.type
@@ -167,13 +157,23 @@
 * **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect' | string: The redirect type the rule will use when redirecting traffic.
 
 
-## CacheConfiguration
+## RoutingRule
 ### Properties
-* **dynamicCompression**: 'Disabled' | 'Enabled' | string: Whether to use dynamic compression for cached content
-* **queryParameterStripDirective**: 'StripAll' | 'StripNone' | string: Treatment of URL query terms when forming the cache key.
+* **id**: string: Resource ID.
+* **name**: string: Resource name.
+* **properties**: [RoutingRuleProperties](#routingruleproperties): The JSON object that contains the properties required to create a routing rule.
+* **type**: string (ReadOnly): Resource type.
 
-## ResourceTags
+## RoutingRuleProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **acceptedProtocols**: 'Http' | 'Https' | string[]: Protocol schemes to match for this rule
+* **enabledState**: 'Disabled' | 'Enabled' | string: Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
+* **frontendEndpoints**: [SubResource](#subresource)[]: Frontend endpoints associated with this rule
+* **patternsToMatch**: string[]: The route patterns of the rule.
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the Front Door or Front Door SubResource.
+* **routeConfiguration**: [RouteConfiguration](#routeconfiguration): Base class for all types of Route.
+
+## SubResource
+### Properties
+* **id**: string: Resource ID.
 

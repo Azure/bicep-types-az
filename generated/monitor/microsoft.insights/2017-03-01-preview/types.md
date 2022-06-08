@@ -19,10 +19,6 @@
 * **enabled**: bool: Indicates whether this activity log alert is enabled. If an activity log alert is not enabled, then none of its actions will be activated.
 * **scopes**: string[] (Required): A list of resourceIds that will be used as prefixes. The alert will only apply to activityLogs with resourceIds that fall under one of these prefixes. This list must include at least one item.
 
-## ActivityLogAlertActionList
-### Properties
-* **actionGroups**: [ActivityLogAlertActionGroup](#activitylogalertactiongroup)[]: The list of activity log alerts.
-
 ## ActivityLogAlertActionGroup
 ### Properties
 * **actionGroupId**: string (Required): The resourceId of the action group. This cannot be null or empty.
@@ -32,6 +28,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ActivityLogAlertActionList
+### Properties
+* **actionGroups**: [ActivityLogAlertActionGroup](#activitylogalertactiongroup)[]: The list of activity log alerts.
 
 ## ActivityLogAlertAllOfCondition
 ### Properties

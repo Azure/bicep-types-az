@@ -12,6 +12,10 @@
 * **tags**: [EnergyServiceTags](#energyservicetags): Resource tags.
 * **type**: 'Microsoft.OpenEnergyPlatform/energyServices' (ReadOnly, DeployTimeConstant): The resource type
 
+## DataPartitionNames
+### Properties
+* **name**: string
+
 ## EnergyServiceProperties
 ### Properties
 * **authAppId**: string
@@ -19,9 +23,10 @@
 * **dnsName**: string (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly)
 
-## DataPartitionNames
+## EnergyServiceTags
 ### Properties
-* **name**: string
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## SystemData
 ### Properties
@@ -31,9 +36,4 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## EnergyServiceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

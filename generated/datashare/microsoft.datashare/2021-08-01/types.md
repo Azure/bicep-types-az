@@ -254,40 +254,10 @@
 * **ApiVersion**: 2021-08-01
 * **Output**: [ShareSubscriptionSynchronizationList](#sharesubscriptionsynchronizationlist)
 
-## Identity
-### Properties
-* **principalId**: string (ReadOnly): service principal Id
-* **tenantId**: string (ReadOnly): Tenant Id
-* **type**: 'SystemAssigned' | string: Identity Type
-
 ## AccountProperties
 ### Properties
 * **createdAt**: string (ReadOnly): Time at which the account was created.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
-* **userEmail**: string (ReadOnly): Email of the user who created the resource
-* **userName**: string (ReadOnly): Name of the user who created the resource
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The type of identity that last modified the resource.
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
-
-## DefaultDtoTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ShareProperties
-### Properties
-* **createdAt**: string (ReadOnly): Time at which the share was created.
-* **description**: string: Share description.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
-* **shareKind**: 'CopyBased' | 'InPlace' | string: Share kind.
-* **terms**: string: Share terms.
 * **userEmail**: string (ReadOnly): Email of the user who created the resource
 * **userName**: string (ReadOnly): Name of the user who created the resource
 
@@ -308,6 +278,18 @@
 * **resourceGroup**: string (Required): Resource group of ADLS account.
 * **subscriptionId**: string (Required): Subscription id of ADLS account.
 
+## AdlsGen2FileDataSetMappingProperties
+### Properties
+* **dataSetId**: string (Required): The id of the source data set.
+* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
+* **filePath**: string (Required): File path within the file system.
+* **fileSystem**: string (Required): File system to which the file belongs.
+* **outputType**: 'Csv' | 'Parquet' | string: Type of output file
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
+* **resourceGroup**: string (Required): Resource group of storage account.
+* **storageAccountName**: string (Required): Storage account name of the source data set.
+* **subscriptionId**: string (Required): Subscription id of storage account.
+
 ## AdlsGen2FileProperties
 ### Properties
 * **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
@@ -317,6 +299,16 @@
 * **storageAccountName**: string (Required): Storage account name of the source data set
 * **subscriptionId**: string (Required): Subscription id of storage account
 
+## AdlsGen2FileSystemDataSetMappingProperties
+### Properties
+* **dataSetId**: string (Required): The id of the source data set.
+* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
+* **fileSystem**: string (Required): The file system name.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
+* **resourceGroup**: string (Required): Resource group of storage account.
+* **storageAccountName**: string (Required): Storage account name of the source data set.
+* **subscriptionId**: string (Required): Subscription id of storage account.
+
 ## AdlsGen2FileSystemProperties
 ### Properties
 * **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
@@ -324,6 +316,17 @@
 * **resourceGroup**: string (Required): Resource group of storage account
 * **storageAccountName**: string (Required): Storage account name of the source data set
 * **subscriptionId**: string (Required): Subscription id of storage account
+
+## AdlsGen2FolderDataSetMappingProperties
+### Properties
+* **dataSetId**: string (Required): The id of the source data set.
+* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
+* **fileSystem**: string (Required): File system to which the folder belongs.
+* **folderPath**: string (Required): Folder path within the file system.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
+* **resourceGroup**: string (Required): Resource group of storage account.
+* **storageAccountName**: string (Required): Storage account name of the source data set.
+* **subscriptionId**: string (Required): Subscription id of storage account.
 
 ## AdlsGen2FolderProperties
 ### Properties
@@ -334,14 +337,34 @@
 * **storageAccountName**: string (Required): Storage account name of the source data set
 * **subscriptionId**: string (Required): Subscription id of storage account
 
-## BlobProperties
+## BlobContainerMappingProperties
 ### Properties
-* **containerName**: string (Required): Container that has the file path.
+* **containerName**: string (Required): BLOB Container name.
+* **dataSetId**: string (Required): The id of the source data set.
+* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
+* **resourceGroup**: string (Required): Resource group of storage account.
+* **storageAccountName**: string (Required): Storage account name of the source data set.
+* **subscriptionId**: string (Required): Subscription id of storage account.
+
+## BlobContainerProperties
+### Properties
+* **containerName**: string (Required): BLOB Container name.
 * **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
-* **filePath**: string (Required): File path within the source data set
 * **resourceGroup**: string (Required): Resource group of storage account
 * **storageAccountName**: string (Required): Storage account name of the source data set
 * **subscriptionId**: string (Required): Subscription id of storage account
+
+## BlobFolderMappingProperties
+### Properties
+* **containerName**: string (Required): Container that has the file path.
+* **dataSetId**: string (Required): The id of the source data set.
+* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
+* **prefix**: string (Required): Prefix for blob folder
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
+* **resourceGroup**: string (Required): Resource group of storage account.
+* **storageAccountName**: string (Required): Storage account name of the source data set.
+* **subscriptionId**: string (Required): Subscription id of storage account.
 
 ## BlobFolderProperties
 ### Properties
@@ -352,65 +375,37 @@
 * **storageAccountName**: string (Required): Storage account name of the source data set
 * **subscriptionId**: string (Required): Subscription id of storage account
 
-## BlobContainerProperties
+## BlobMappingProperties
 ### Properties
-* **containerName**: string (Required): BLOB Container name.
+* **containerName**: string (Required): Container that has the file path.
+* **dataSetId**: string (Required): The id of the source data set.
+* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
+* **filePath**: string (Required): File path within the source data set
+* **outputType**: 'Csv' | 'Parquet' | string: Type of output file
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
+* **resourceGroup**: string (Required): Resource group of storage account.
+* **storageAccountName**: string (Required): Storage account name of the source data set.
+* **subscriptionId**: string (Required): Subscription id of storage account.
+
+## BlobProperties
+### Properties
+* **containerName**: string (Required): Container that has the file path.
 * **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
+* **filePath**: string (Required): File path within the source data set
 * **resourceGroup**: string (Required): Resource group of storage account
 * **storageAccountName**: string (Required): Storage account name of the source data set
 * **subscriptionId**: string (Required): Subscription id of storage account
 
-## KustoClusterDataSetProperties
+## DefaultDtoTags
 ### Properties
-* **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
-* **kustoClusterResourceId**: string (Required): Resource id of the kusto cluster.
-* **location**: string (ReadOnly): Location of the kusto cluster.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
+### Additional Properties
+* **Additional Properties Type**: string
 
-## KustoDatabaseDataSetProperties
+## Identity
 ### Properties
-* **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
-* **kustoDatabaseResourceId**: string (Required): Resource id of the kusto database.
-* **location**: string (ReadOnly): Location of the kusto cluster.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
-
-## KustoTableDataSetProperties
-### Properties
-* **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
-* **kustoDatabaseResourceId**: string (Required): Resource id of the kusto database.
-* **location**: string (ReadOnly): Location of the kusto cluster.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
-* **tableLevelSharingProperties**: [TableLevelSharingProperties](#tablelevelsharingproperties) (Required): Table level sharing properties dto for kusto data set properties
-
-## TableLevelSharingProperties
-### Properties
-* **externalTablesToExclude**: string[]: External tables to be excluded in the data set
-* **externalTablesToInclude**: string[]: External tables to be included in the data set
-* **materializedViewsToExclude**: string[]: Materialized views to be excluded in the data set
-* **materializedViewsToInclude**: string[]: Materialized views to be included in the data set
-* **tablesToExclude**: string[]: Tables to be excluded in the data set
-* **tablesToInclude**: string[]: Tables to be included in the data set
-
-## SqlDBTableProperties
-### Properties
-* **databaseName**: string (Required): Database name of the source data set
-* **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
-* **schemaName**: string (Required): Schema of the table. Default value is dbo.
-* **sqlServerResourceId**: string (Required): Resource id of SQL server
-* **tableName**: string (Required): SQL DB table name.
-
-## SqlDWTableProperties
-### Properties
-* **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
-* **dataWarehouseName**: string (Required): DataWarehouse name of the source data set
-* **schemaName**: string (Required): Schema of the table. Default value is dbo.
-* **sqlServerResourceId**: string (Required): Resource id of SQL server
-* **tableName**: string (Required): SQL DW table name.
-
-## SynapseWorkspaceSqlPoolTableDataSetProperties
-### Properties
-* **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
-* **synapseWorkspaceSqlPoolTableResourceId**: string (Required): Resource id of the Synapse Workspace SQL Pool Table
+* **principalId**: string (ReadOnly): service principal Id
+* **tenantId**: string (ReadOnly): Tenant Id
+* **type**: 'SystemAssigned' | string: Identity Type
 
 ## InvitationProperties
 ### Properties
@@ -427,6 +422,57 @@ invitations to specific users or applications in an AD tenant.
 * **userEmail**: string (ReadOnly): Email of the user who created the resource
 * **userName**: string (ReadOnly): Name of the user who created the resource
 
+## KustoClusterDataSetMappingProperties
+### Properties
+* **dataSetId**: string (Required): The id of the source data set.
+* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
+* **kustoClusterResourceId**: string (Required): Resource id of the sink kusto cluster.
+* **location**: string (ReadOnly): Location of the sink kusto cluster.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
+
+## KustoClusterDataSetProperties
+### Properties
+* **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
+* **kustoClusterResourceId**: string (Required): Resource id of the kusto cluster.
+* **location**: string (ReadOnly): Location of the kusto cluster.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
+
+## KustoDatabaseDataSetMappingProperties
+### Properties
+* **dataSetId**: string (Required): The id of the source data set.
+* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
+* **kustoClusterResourceId**: string (Required): Resource id of the sink kusto cluster.
+* **location**: string (ReadOnly): Location of the sink kusto cluster.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
+
+## KustoDatabaseDataSetProperties
+### Properties
+* **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
+* **kustoDatabaseResourceId**: string (Required): Resource id of the kusto database.
+* **location**: string (ReadOnly): Location of the kusto cluster.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
+
+## KustoTableDataSetMappingProperties
+### Properties
+* **dataSetId**: string (Required): The id of the source data set.
+* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
+* **kustoClusterResourceId**: string (Required): Resource id of the sink kusto cluster.
+* **location**: string (ReadOnly): Location of the sink kusto cluster.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
+
+## KustoTableDataSetProperties
+### Properties
+* **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
+* **kustoDatabaseResourceId**: string (Required): Resource id of the kusto database.
+* **location**: string (ReadOnly): Location of the kusto cluster.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
+* **tableLevelSharingProperties**: [TableLevelSharingProperties](#tablelevelsharingproperties) (Required): Table level sharing properties dto for kusto data set properties
+
+## ScheduledSourceShareSynchronizationSettingProperties
+### Properties
+* **recurrenceInterval**: 'Day' | 'Hour' | string (ReadOnly): Recurrence Interval
+* **synchronizationTime**: string (ReadOnly): Synchronization time
+
 ## ScheduledSynchronizationSettingProperties
 ### Properties
 * **createdAt**: string (ReadOnly): Time at which the synchronization setting was created.
@@ -434,6 +480,26 @@ invitations to specific users or applications in an AD tenant.
 * **recurrenceInterval**: 'Day' | 'Hour' | string (Required): Recurrence Interval
 * **synchronizationTime**: string (Required): Synchronization time
 * **userName**: string (ReadOnly): Name of the user who created the synchronization setting.
+
+## ScheduledTriggerProperties
+### Properties
+* **createdAt**: string (ReadOnly): Time at which the trigger was created.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
+* **recurrenceInterval**: 'Day' | 'Hour' | string (Required): Recurrence Interval
+* **synchronizationMode**: 'FullSync' | 'Incremental' | string: Synchronization mode
+* **synchronizationTime**: string (Required): Synchronization time
+* **triggerStatus**: 'Active' | 'Inactive' | 'SourceSynchronizationSettingDeleted' | string (ReadOnly): Gets the trigger state
+* **userName**: string (ReadOnly): Name of the user who created the trigger.
+
+## ShareProperties
+### Properties
+* **createdAt**: string (ReadOnly): Time at which the share was created.
+* **description**: string: Share description.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
+* **shareKind**: 'CopyBased' | 'InPlace' | string: Share kind.
+* **terms**: string: Share terms.
+* **userEmail**: string (ReadOnly): Email of the user who created the resource
+* **userName**: string (ReadOnly): Name of the user who created the resource
 
 ## ShareSubscriptionProperties
 ### Properties
@@ -453,152 +519,20 @@ invitations to specific users or applications in an AD tenant.
 * **userEmail**: string (ReadOnly): Email of the user who created the resource
 * **userName**: string (ReadOnly): Name of the user who created the resource
 
-## AdlsGen2FileDataSetMappingProperties
+## ShareSubscriptionSynchronization
 ### Properties
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
-* **filePath**: string (Required): File path within the file system.
-* **fileSystem**: string (Required): File system to which the file belongs.
-* **outputType**: 'Csv' | 'Parquet' | string: Type of output file
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
-* **resourceGroup**: string (Required): Resource group of storage account.
-* **storageAccountName**: string (Required): Storage account name of the source data set.
-* **subscriptionId**: string (Required): Subscription id of storage account.
+* **durationMs**: int (ReadOnly, WriteOnly): Synchronization duration
+* **endTime**: string (ReadOnly, WriteOnly): End time of synchronization
+* **message**: string (ReadOnly, WriteOnly): message of Synchronization
+* **startTime**: string (ReadOnly, WriteOnly): start time of synchronization
+* **status**: string (ReadOnly, WriteOnly): Raw Status
+* **synchronizationId**: string (Required, WriteOnly): Synchronization id
+* **synchronizationMode**: 'FullSync' | 'Incremental' | string (ReadOnly, WriteOnly): Synchronization mode
 
-## AdlsGen2FileSystemDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
-* **fileSystem**: string (Required): The file system name.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
-* **resourceGroup**: string (Required): Resource group of storage account.
-* **storageAccountName**: string (Required): Storage account name of the source data set.
-* **subscriptionId**: string (Required): Subscription id of storage account.
-
-## AdlsGen2FolderDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
-* **fileSystem**: string (Required): File system to which the folder belongs.
-* **folderPath**: string (Required): Folder path within the file system.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
-* **resourceGroup**: string (Required): Resource group of storage account.
-* **storageAccountName**: string (Required): Storage account name of the source data set.
-* **subscriptionId**: string (Required): Subscription id of storage account.
-
-## BlobMappingProperties
-### Properties
-* **containerName**: string (Required): Container that has the file path.
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
-* **filePath**: string (Required): File path within the source data set
-* **outputType**: 'Csv' | 'Parquet' | string: Type of output file
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
-* **resourceGroup**: string (Required): Resource group of storage account.
-* **storageAccountName**: string (Required): Storage account name of the source data set.
-* **subscriptionId**: string (Required): Subscription id of storage account.
-
-## BlobFolderMappingProperties
-### Properties
-* **containerName**: string (Required): Container that has the file path.
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
-* **prefix**: string (Required): Prefix for blob folder
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
-* **resourceGroup**: string (Required): Resource group of storage account.
-* **storageAccountName**: string (Required): Storage account name of the source data set.
-* **subscriptionId**: string (Required): Subscription id of storage account.
-
-## BlobContainerMappingProperties
-### Properties
-* **containerName**: string (Required): BLOB Container name.
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
-* **resourceGroup**: string (Required): Resource group of storage account.
-* **storageAccountName**: string (Required): Storage account name of the source data set.
-* **subscriptionId**: string (Required): Subscription id of storage account.
-
-## KustoClusterDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
-* **kustoClusterResourceId**: string (Required): Resource id of the sink kusto cluster.
-* **location**: string (ReadOnly): Location of the sink kusto cluster.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
-
-## KustoDatabaseDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
-* **kustoClusterResourceId**: string (Required): Resource id of the sink kusto cluster.
-* **location**: string (ReadOnly): Location of the sink kusto cluster.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
-
-## KustoTableDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
-* **kustoClusterResourceId**: string (Required): Resource id of the sink kusto cluster.
-* **location**: string (ReadOnly): Location of the sink kusto cluster.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
-
-## SqlDBTableDataSetMappingProperties
-### Properties
-* **databaseName**: string (Required): DatabaseName name of the sink data set
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
-* **schemaName**: string (Required): Schema of the table. Default value is dbo.
-* **sqlServerResourceId**: string (Required): Resource id of SQL server
-* **tableName**: string (Required): SQL DB table name.
-
-## SqlDWTableDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
-* **dataWarehouseName**: string (Required): DataWarehouse name of the source data set
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
-* **schemaName**: string (Required): Schema of the table. Default value is dbo.
-* **sqlServerResourceId**: string (Required): Resource id of SQL server
-* **tableName**: string (Required): SQL DW table name.
-
-## SynapseWorkspaceSqlPoolTableDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
-* **synapseWorkspaceSqlPoolTableResourceId**: string (Required): Resource id of the Synapse Workspace SQL Pool Table
-
-## ScheduledTriggerProperties
-### Properties
-* **createdAt**: string (ReadOnly): Time at which the trigger was created.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
-* **recurrenceInterval**: 'Day' | 'Hour' | string (Required): Recurrence Interval
-* **synchronizationMode**: 'FullSync' | 'Incremental' | string: Synchronization mode
-* **synchronizationTime**: string (Required): Synchronization time
-* **triggerStatus**: 'Active' | 'Inactive' | 'SourceSynchronizationSettingDeleted' | string (ReadOnly): Gets the trigger state
-* **userName**: string (ReadOnly): Name of the user who created the trigger.
-
-## SourceShareSynchronizationSettingList
+## ShareSubscriptionSynchronizationList
 ### Properties
 * **nextLink**: string (ReadOnly): The Url of next result page.
-* **value**: [SourceShareSynchronizationSetting](#sourcesharesynchronizationsetting)[] (ReadOnly): Collection of items of type DataTransferObjects.
-
-## SourceShareSynchronizationSetting
-* **Discriminator**: kind
-
-### Base Properties
-### ScheduledSourceSynchronizationSetting
-#### Properties
-* **kind**: 'ScheduleBased' (Required): Kind of synchronization setting on share.
-* **properties**: [ScheduledSourceShareSynchronizationSettingProperties](#scheduledsourcesharesynchronizationsettingproperties) (ReadOnly): A Scheduled source synchronization setting data transfer object.
-
-
-## ScheduledSourceShareSynchronizationSettingProperties
-### Properties
-* **recurrenceInterval**: 'Day' | 'Hour' | string (ReadOnly): Recurrence Interval
-* **synchronizationTime**: string (ReadOnly): Synchronization time
+* **value**: [ShareSubscriptionSynchronization](#sharesubscriptionsynchronization)[] (ReadOnly): Collection of items of type DataTransferObjects.
 
 ## ShareSynchronization
 ### Properties
@@ -613,10 +547,73 @@ invitations to specific users or applications in an AD tenant.
 * **synchronizationId**: string (WriteOnly): Synchronization id
 * **synchronizationMode**: 'FullSync' | 'Incremental' | string (ReadOnly, WriteOnly): Synchronization mode
 
-## SynchronizationDetailsList
+## ShareSynchronizationList
 ### Properties
 * **nextLink**: string (ReadOnly): The Url of next result page.
-* **value**: [SynchronizationDetails](#synchronizationdetails)[] (ReadOnly): Collection of items of type DataTransferObjects.
+* **value**: [ShareSynchronization](#sharesynchronization)[] (ReadOnly): Collection of items of type DataTransferObjects.
+
+## SourceShareSynchronizationSetting
+* **Discriminator**: kind
+
+### Base Properties
+### ScheduledSourceSynchronizationSetting
+#### Properties
+* **kind**: 'ScheduleBased' (Required): Kind of synchronization setting on share.
+* **properties**: [ScheduledSourceShareSynchronizationSettingProperties](#scheduledsourcesharesynchronizationsettingproperties) (ReadOnly): A Scheduled source synchronization setting data transfer object.
+
+
+## SourceShareSynchronizationSettingList
+### Properties
+* **nextLink**: string (ReadOnly): The Url of next result page.
+* **value**: [SourceShareSynchronizationSetting](#sourcesharesynchronizationsetting)[] (ReadOnly): Collection of items of type DataTransferObjects.
+
+## SqlDBTableDataSetMappingProperties
+### Properties
+* **databaseName**: string (Required): DatabaseName name of the sink data set
+* **dataSetId**: string (Required): The id of the source data set.
+* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
+* **schemaName**: string (Required): Schema of the table. Default value is dbo.
+* **sqlServerResourceId**: string (Required): Resource id of SQL server
+* **tableName**: string (Required): SQL DB table name.
+
+## SqlDBTableProperties
+### Properties
+* **databaseName**: string (Required): Database name of the source data set
+* **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
+* **schemaName**: string (Required): Schema of the table. Default value is dbo.
+* **sqlServerResourceId**: string (Required): Resource id of SQL server
+* **tableName**: string (Required): SQL DB table name.
+
+## SqlDWTableDataSetMappingProperties
+### Properties
+* **dataSetId**: string (Required): The id of the source data set.
+* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
+* **dataWarehouseName**: string (Required): DataWarehouse name of the source data set
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
+* **schemaName**: string (Required): Schema of the table. Default value is dbo.
+* **sqlServerResourceId**: string (Required): Resource id of SQL server
+* **tableName**: string (Required): SQL DW table name.
+
+## SqlDWTableProperties
+### Properties
+* **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
+* **dataWarehouseName**: string (Required): DataWarehouse name of the source data set
+* **schemaName**: string (Required): Schema of the table. Default value is dbo.
+* **sqlServerResourceId**: string (Required): Resource id of SQL server
+* **tableName**: string (Required): SQL DW table name.
+
+## SynapseWorkspaceSqlPoolTableDataSetMappingProperties
+### Properties
+* **dataSetId**: string (Required): The id of the source data set.
+* **dataSetMappingStatus**: 'Broken' | 'Ok' | string (ReadOnly): Gets the status of the data set mapping.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the Account
+* **synapseWorkspaceSqlPoolTableResourceId**: string (Required): Resource id of the Synapse Workspace SQL Pool Table
+
+## SynapseWorkspaceSqlPoolTableDataSetProperties
+### Properties
+* **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
+* **synapseWorkspaceSqlPoolTableResourceId**: string (Required): Resource id of the Synapse Workspace SQL Pool Table
 
 ## SynchronizationDetails
 ### Properties
@@ -636,28 +633,31 @@ invitations to specific users or applications in an AD tenant.
 * **status**: string (ReadOnly): Raw Status
 * **vCore**: int (ReadOnly): The vCore units consumed for the data set synchronization
 
-## ShareSubscriptionSynchronization
+## SynchronizationDetailsList
 ### Properties
-* **durationMs**: int (ReadOnly, WriteOnly): Synchronization duration
-* **endTime**: string (ReadOnly, WriteOnly): End time of synchronization
-* **message**: string (ReadOnly, WriteOnly): message of Synchronization
-* **startTime**: string (ReadOnly, WriteOnly): start time of synchronization
-* **status**: string (ReadOnly, WriteOnly): Raw Status
-* **synchronizationId**: string (Required, WriteOnly): Synchronization id
-* **synchronizationMode**: 'FullSync' | 'Incremental' | string (ReadOnly, WriteOnly): Synchronization mode
+* **nextLink**: string (ReadOnly): The Url of next result page.
+* **value**: [SynchronizationDetails](#synchronizationdetails)[] (ReadOnly): Collection of items of type DataTransferObjects.
 
 ## SynchronizationDetailsList
 ### Properties
 * **nextLink**: string (ReadOnly): The Url of next result page.
 * **value**: [SynchronizationDetails](#synchronizationdetails)[] (ReadOnly): Collection of items of type DataTransferObjects.
 
-## ShareSynchronizationList
+## SystemData
 ### Properties
-* **nextLink**: string (ReadOnly): The Url of next result page.
-* **value**: [ShareSynchronization](#sharesynchronization)[] (ReadOnly): Collection of items of type DataTransferObjects.
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The type of identity that last modified the resource.
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
-## ShareSubscriptionSynchronizationList
+## TableLevelSharingProperties
 ### Properties
-* **nextLink**: string (ReadOnly): The Url of next result page.
-* **value**: [ShareSubscriptionSynchronization](#sharesubscriptionsynchronization)[] (ReadOnly): Collection of items of type DataTransferObjects.
+* **externalTablesToExclude**: string[]: External tables to be excluded in the data set
+* **externalTablesToInclude**: string[]: External tables to be included in the data set
+* **materializedViewsToExclude**: string[]: Materialized views to be excluded in the data set
+* **materializedViewsToInclude**: string[]: Materialized views to be included in the data set
+* **tablesToExclude**: string[]: Tables to be excluded in the data set
+* **tablesToInclude**: string[]: Tables to be included in the data set
 

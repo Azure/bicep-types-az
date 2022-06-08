@@ -12,6 +12,39 @@
 * **tags**: [ResourceTags](#resourcetags): Resource Tags
 * **type**: 'Microsoft.DevOps/pipelines' (ReadOnly, DeployTimeConstant): The resource type
 
+## Authorization
+### Properties
+* **authorizationType**: 'personalAccessToken' | string (Required): Type of authorization.
+* **parameters**: [AuthorizationParameters](#authorizationparameters): Authorization parameters corresponding to the authorization type.
+
+## AuthorizationParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## BootstrapConfiguration
+### Properties
+* **sourceRepository**: [CodeRepository](#coderepository): Repository containing the source code for a pipeline.
+* **template**: [PipelineTemplate](#pipelinetemplate) (Required): Template used to bootstrap the pipeline.
+
+## CodeRepository
+### Properties
+* **authorization**: [Authorization](#authorization): Authorization info used to access a resource (like code repository).
+* **defaultBranch**: string (Required): Default branch used to configure Continuous Integration (CI) in the pipeline.
+* **id**: string (Required): Unique immutable identifier of the code repository.
+* **properties**: [CodeRepositoryProperties](#coderepositoryproperties): Repository-specific properties.
+* **repositoryType**: 'gitHub' | 'vstsGit' | string (Required): Type of code repository.
+
+## CodeRepositoryProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## OrganizationReference
+### Properties
+* **id**: string (ReadOnly): Unique immutable identifier for the Azure DevOps Organization.
+* **name**: string (Required): Name of the Azure DevOps Organization.
+
 ## PipelineProperties
 * **Discriminator**: pipelineType
 
@@ -30,34 +63,6 @@
 * **repository**: [CodeRepository](#coderepository) (Required): Repository containing the source code for a pipeline.
 
 
-## BootstrapConfiguration
-### Properties
-* **sourceRepository**: [CodeRepository](#coderepository): Repository containing the source code for a pipeline.
-* **template**: [PipelineTemplate](#pipelinetemplate) (Required): Template used to bootstrap the pipeline.
-
-## CodeRepository
-### Properties
-* **authorization**: [Authorization](#authorization): Authorization info used to access a resource (like code repository).
-* **defaultBranch**: string (Required): Default branch used to configure Continuous Integration (CI) in the pipeline.
-* **id**: string (Required): Unique immutable identifier of the code repository.
-* **properties**: [CodeRepositoryProperties](#coderepositoryproperties): Repository-specific properties.
-* **repositoryType**: 'gitHub' | 'vstsGit' | string (Required): Type of code repository.
-
-## Authorization
-### Properties
-* **authorizationType**: 'personalAccessToken' | string (Required): Type of authorization.
-* **parameters**: [AuthorizationParameters](#authorizationparameters): Authorization parameters corresponding to the authorization type.
-
-## AuthorizationParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## CodeRepositoryProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## PipelineTemplate
 ### Properties
 * **id**: string (Required): Unique identifier of the pipeline template.
@@ -68,15 +73,15 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## OrganizationReference
-### Properties
-* **id**: string (ReadOnly): Unique immutable identifier for the Azure DevOps Organization.
-* **name**: string (Required): Name of the Azure DevOps Organization.
-
 ## ProjectReference
 ### Properties
 * **id**: string (ReadOnly): Unique immutable identifier of the Azure DevOps Project.
 * **name**: string (Required): Name of the Azure DevOps Project.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## SystemData
 ### Properties
@@ -86,9 +91,4 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

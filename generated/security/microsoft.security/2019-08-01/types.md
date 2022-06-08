@@ -21,12 +21,11 @@
 * **tags**: [TagsResourceTags](#tagsresourcetags): Resource tags
 * **type**: 'Microsoft.Security/iotSecuritySolutions' (ReadOnly, DeployTimeConstant): The resource type
 
-## DeviceSecurityGroupProperties
+## AdditionalWorkspacesProperties
 ### Properties
-* **allowlistRules**: [AllowlistCustomAlertRule](#allowlistcustomalertrule)[]: The allow-list custom alert rules.
-* **denylistRules**: [DenylistCustomAlertRule](#denylistcustomalertrule)[]: The deny-list custom alert rules.
-* **thresholdRules**: [ThresholdCustomAlertRule](#thresholdcustomalertrule)[]: The list of custom alert threshold rules.
-* **timeWindowRules**: [TimeWindowCustomAlertRule](#timewindowcustomalertrule)[]: The list of custom alert time-window rules.
+* **dataTypes**: 'Alerts' | 'RawEvents' | string[]: List of data types sent to workspace
+* **type**: 'Sentinel' | string: Workspace type.
+* **workspace**: string: Workspace resource id
 
 ## AllowlistCustomAlertRule
 * **Discriminator**: ruleType
@@ -62,6 +61,47 @@
 * **isEnabled**: bool (Required): Status of the custom alert.
 * **ruleType**: string (Required): The type of the custom alert rule.
 * **valueType**: 'IpCidr' | 'String' | string (ReadOnly): The value type of the items in the list.
+
+## DeviceSecurityGroupProperties
+### Properties
+* **allowlistRules**: [AllowlistCustomAlertRule](#allowlistcustomalertrule)[]: The allow-list custom alert rules.
+* **denylistRules**: [DenylistCustomAlertRule](#denylistcustomalertrule)[]: The deny-list custom alert rules.
+* **thresholdRules**: [ThresholdCustomAlertRule](#thresholdcustomalertrule)[]: The list of custom alert threshold rules.
+* **timeWindowRules**: [TimeWindowCustomAlertRule](#timewindowcustomalertrule)[]: The list of custom alert time-window rules.
+
+## IoTSecuritySolutionProperties
+### Properties
+* **additionalWorkspaces**: [AdditionalWorkspacesProperties](#additionalworkspacesproperties)[]: List of additional workspaces
+* **autoDiscoveredResources**: string[] (ReadOnly): List of resources that were automatically discovered as relevant to the security solution.
+* **disabledDataSources**: 'TwinData' | string[]: Disabled data sources. Disabling these data sources compromises the system.
+* **displayName**: string (Required): Resource display name.
+* **export**: 'RawEvents' | string[]: List of additional options for exporting to workspace data.
+* **iotHubs**: string[] (Required): IoT Hub resource IDs
+* **recommendationsConfiguration**: [RecommendationConfigurationProperties](#recommendationconfigurationproperties)[]: List of the configuration status for each recommendation type.
+* **status**: 'Disabled' | 'Enabled' | string: Status of the IoT Security solution.
+* **unmaskedIpLoggingStatus**: 'Disabled' | 'Enabled' | string: Unmasked IP address logging status
+* **userDefinedResources**: [UserDefinedResourcesProperties](#userdefinedresourcesproperties): Properties of the IoT Security solution's user defined resources.
+* **workspace**: string: Workspace resource ID
+
+## RecommendationConfigurationProperties
+### Properties
+* **name**: string (ReadOnly)
+* **recommendationType**: 'IoT_ACRAuthentication' | 'IoT_AgentSendsUnutilizedMessages' | 'IoT_Baseline' | 'IoT_EdgeHubMemOptimize' | 'IoT_EdgeLoggingOptions' | 'IoT_IPFilter_DenyAll' | 'IoT_IPFilter_PermissiveRule' | 'IoT_InconsistentModuleSettings' | 'IoT_InstallAgent' | 'IoT_OpenPorts' | 'IoT_PermissiveFirewallPolicy' | 'IoT_PermissiveInputFirewallRules' | 'IoT_PermissiveOutputFirewallRules' | 'IoT_PrivilegedDockerOptions' | 'IoT_SharedCredentials' | 'IoT_VulnerableTLSCipherSuite' | string (Required): The type of IoT Security recommendation.
+* **status**: 'Disabled' | 'Enabled' | string (Required): Recommendation status. When the recommendation status is disabled recommendations are not generated.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+
+## TagsResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ThresholdCustomAlertRule
 * **Discriminator**: ruleType
@@ -212,48 +252,8 @@
 * **ruleType**: 'UnauthorizedOperationsNotInAllowedRange' (Required): The type of the custom alert rule.
 
 
-## IoTSecuritySolutionProperties
-### Properties
-* **additionalWorkspaces**: [AdditionalWorkspacesProperties](#additionalworkspacesproperties)[]: List of additional workspaces
-* **autoDiscoveredResources**: string[] (ReadOnly): List of resources that were automatically discovered as relevant to the security solution.
-* **disabledDataSources**: 'TwinData' | string[]: Disabled data sources. Disabling these data sources compromises the system.
-* **displayName**: string (Required): Resource display name.
-* **export**: 'RawEvents' | string[]: List of additional options for exporting to workspace data.
-* **iotHubs**: string[] (Required): IoT Hub resource IDs
-* **recommendationsConfiguration**: [RecommendationConfigurationProperties](#recommendationconfigurationproperties)[]: List of the configuration status for each recommendation type.
-* **status**: 'Disabled' | 'Enabled' | string: Status of the IoT Security solution.
-* **unmaskedIpLoggingStatus**: 'Disabled' | 'Enabled' | string: Unmasked IP address logging status
-* **userDefinedResources**: [UserDefinedResourcesProperties](#userdefinedresourcesproperties): Properties of the IoT Security solution's user defined resources.
-* **workspace**: string: Workspace resource ID
-
-## AdditionalWorkspacesProperties
-### Properties
-* **dataTypes**: 'Alerts' | 'RawEvents' | string[]: List of data types sent to workspace
-* **type**: 'Sentinel' | string: Workspace type.
-* **workspace**: string: Workspace resource id
-
-## RecommendationConfigurationProperties
-### Properties
-* **name**: string (ReadOnly)
-* **recommendationType**: 'IoT_ACRAuthentication' | 'IoT_AgentSendsUnutilizedMessages' | 'IoT_Baseline' | 'IoT_EdgeHubMemOptimize' | 'IoT_EdgeLoggingOptions' | 'IoT_IPFilter_DenyAll' | 'IoT_IPFilter_PermissiveRule' | 'IoT_InconsistentModuleSettings' | 'IoT_InstallAgent' | 'IoT_OpenPorts' | 'IoT_PermissiveFirewallPolicy' | 'IoT_PermissiveInputFirewallRules' | 'IoT_PermissiveOutputFirewallRules' | 'IoT_PrivilegedDockerOptions' | 'IoT_SharedCredentials' | 'IoT_VulnerableTLSCipherSuite' | string (Required): The type of IoT Security recommendation.
-* **status**: 'Disabled' | 'Enabled' | string (Required): Recommendation status. When the recommendation status is disabled recommendations are not generated.
-
 ## UserDefinedResourcesProperties
 ### Properties
 * **query**: string (Required): Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""
 * **querySubscriptions**: string[] (Required): List of Azure subscription ids on which the user defined resources query should be executed.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## TagsResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

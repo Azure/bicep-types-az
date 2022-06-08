@@ -137,7 +137,7 @@ warning | PreCheck/EmptyParentSchemaWarning | Schema 'AverageLoadScalingTrigger'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'AzureInternalMonitoringPipelineSinkDescription-fluentdConfigUrl' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmesh/resource-manager/Microsoft.ServiceFabricMesh/preview/2018-09-01-preview/servicefabricmesh.json#/components/schemas/AzureInternalMonitoringPipelineSinkDescription-fluentdConfigUrl
-info    | autorest.bicep took 17ms
+info    | autorest.bicep took 21ms
 info    | Processing batch task - {"tag":"microsoft.servicefabricmesh-2018-07-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -181,5 +181,5 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'TrackedResource' has a property 'location' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from TrackedResource
 warning | Modeler/MissingType | The schema 'AzureInternalMonitoringPipelineSinkDescription-fluentdConfigUrl' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmesh/resource-manager/Microsoft.ServiceFabricMesh/preview/2018-07-01-preview/servicefabricmesh.json#/components/schemas/AzureInternalMonitoringPipelineSinkDescription-fluentdConfigUrl
-info    | autorest.bicep took 5ms
-info    | Autorest completed in 9.25s. 4 files generated.
+info    | autorest.bicep took 6ms
+info    | Autorest completed in 9.77s. 4 files generated.

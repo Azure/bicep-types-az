@@ -40,9 +40,38 @@
 * **ApiVersion**: 2020-02-01-preview
 * **Output**: [MapsAccountKeys](#mapsaccountkeys)
 
+## CreatorCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## CreatorProperties
+### Properties
+* **provisioningState**: string (ReadOnly): The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
+
+## MapsAccountCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## MapsAccountKeys
+### Properties
+* **id**: string (ReadOnly): The full Azure resource identifier of the Maps Account.
+* **primaryKey**: string (ReadOnly): The primary key for accessing the Maps REST APIs.
+* **secondaryKey**: string (ReadOnly): The secondary key for accessing the Maps REST APIs.
+
 ## MapsAccountProperties
 ### Properties
 * **x-ms-client-id**: string (ReadOnly): A unique identifier for the maps account
+
+## PrivateAtlasCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## PrivateAtlasProperties
+### Properties
+* **provisioningState**: string (ReadOnly): The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
 
 ## Sku
 ### Properties
@@ -57,33 +86,4 @@
 * **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
-
-## MapsAccountCreateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## CreatorProperties
-### Properties
-* **provisioningState**: string (ReadOnly): The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
-
-## CreatorCreateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## PrivateAtlasProperties
-### Properties
-* **provisioningState**: string (ReadOnly): The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
-
-## PrivateAtlasCreateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## MapsAccountKeys
-### Properties
-* **id**: string (ReadOnly): The full Azure resource identifier of the Maps Account.
-* **primaryKey**: string (ReadOnly): The primary key for accessing the Maps REST APIs.
-* **secondaryKey**: string (ReadOnly): The secondary key for accessing the Maps REST APIs.
 

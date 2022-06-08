@@ -58,54 +58,6 @@
 * **ApiVersion**: 2016-03-01
 * **Output**: [ResourceListKeys](#resourcelistkeys)
 
-## NamespaceProperties
-### Properties
-* **createdAt**: string: The time the namespace was created.
-* **critical**: bool: Whether or not the namespace is set as Critical.
-* **enabled**: bool: Whether or not the namespace is currently enabled.
-* **name**: string: The name of the namespace.
-* **namespaceType**: 'Messaging' | 'NotificationHub': The namespace type.
-* **provisioningState**: string: Provisioning state of the Namespace.
-* **region**: string: Specifies the targeted region in which the namespace should be created. It can be any of the following values: Australia East, Australia Southeast, Central US, East US, East US 2, West US, North Central US, South Central US, East Asia, Southeast Asia, Brazil South, Japan East, Japan West, North Europe, West Europe
-* **scaleUnit**: string: ScaleUnit where the namespace gets created
-* **serviceBusEndpoint**: string: Endpoint you can use to perform NotificationHub operations.
-* **status**: string: Status of the namespace. It can be any of these values:1 = Created/Active2 = Creating3 = Suspended4 = Deleting
-* **subscriptionId**: string: The Id of the Azure subscription associated with the namespace.
-
-## Sku
-### Properties
-* **capacity**: int: The capacity of the resource
-* **family**: string: The Sku Family
-* **name**: 'Basic' | 'Free' | 'Standard' | string (Required): Name of the notification hub sku
-* **size**: string: The Sku size
-* **tier**: string: The tier of particular sku
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## SharedAccessAuthorizationRuleProperties
-### Properties
-* **rights**: 'Listen' | 'Manage' | 'Send'[]: The rights associated with the rule.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## NotificationHubProperties
-### Properties
-* **admCredential**: [AdmCredential](#admcredential): Description of a NotificationHub AdmCredential.
-* **apnsCredential**: [ApnsCredential](#apnscredential): Description of a NotificationHub ApnsCredential.
-* **authorizationRules**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties)[]: The AuthorizationRules of the created NotificationHub
-* **baiduCredential**: [BaiduCredential](#baiducredential): Description of a NotificationHub BaiduCredential.
-* **gcmCredential**: [GcmCredential](#gcmcredential): Description of a NotificationHub GcmCredential.
-* **mpnsCredential**: [MpnsCredential](#mpnscredential): Description of a NotificationHub MpnsCredential.
-* **name**: string: The NotificationHub name.
-* **registrationTtl**: string: The RegistrationTtl of the created NotificationHub
-* **wnsCredential**: [WnsCredential](#wnscredential): Description of a NotificationHub WnsCredential.
-
 ## AdmCredential
 ### Properties
 * **properties**: [AdmCredentialProperties](#admcredentialproperties): Description of a NotificationHub AdmCredential.
@@ -156,6 +108,80 @@
 * **mpnsCertificate**: string: The MPNS certificate.
 * **thumbprint**: string: The MPNS certificate Thumbprint
 
+## NamespaceProperties
+### Properties
+* **createdAt**: string: The time the namespace was created.
+* **critical**: bool: Whether or not the namespace is set as Critical.
+* **enabled**: bool: Whether or not the namespace is currently enabled.
+* **name**: string: The name of the namespace.
+* **namespaceType**: 'Messaging' | 'NotificationHub': The namespace type.
+* **provisioningState**: string: Provisioning state of the Namespace.
+* **region**: string: Specifies the targeted region in which the namespace should be created. It can be any of the following values: Australia East, Australia Southeast, Central US, East US, East US 2, West US, North Central US, South Central US, East Asia, Southeast Asia, Brazil South, Japan East, Japan West, North Europe, West Europe
+* **scaleUnit**: string: ScaleUnit where the namespace gets created
+* **serviceBusEndpoint**: string: Endpoint you can use to perform NotificationHub operations.
+* **status**: string: Status of the namespace. It can be any of these values:1 = Created/Active2 = Creating3 = Suspended4 = Deleting
+* **subscriptionId**: string: The Id of the Azure subscription associated with the namespace.
+
+## NotificationHubProperties
+### Properties
+* **admCredential**: [AdmCredential](#admcredential): Description of a NotificationHub AdmCredential.
+* **apnsCredential**: [ApnsCredential](#apnscredential): Description of a NotificationHub ApnsCredential.
+* **authorizationRules**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties)[]: The AuthorizationRules of the created NotificationHub
+* **baiduCredential**: [BaiduCredential](#baiducredential): Description of a NotificationHub BaiduCredential.
+* **gcmCredential**: [GcmCredential](#gcmcredential): Description of a NotificationHub GcmCredential.
+* **mpnsCredential**: [MpnsCredential](#mpnscredential): Description of a NotificationHub MpnsCredential.
+* **name**: string: The NotificationHub name.
+* **registrationTtl**: string: The RegistrationTtl of the created NotificationHub
+* **wnsCredential**: [WnsCredential](#wnscredential): Description of a NotificationHub WnsCredential.
+
+## ResourceListKeys
+### Properties
+* **keyName**: string (ReadOnly): KeyName of the created AuthorizationRule
+* **primaryConnectionString**: string (ReadOnly): PrimaryConnectionString of the AuthorizationRule.
+* **primaryKey**: string (ReadOnly): PrimaryKey of the created AuthorizationRule.
+* **secondaryConnectionString**: string (ReadOnly): SecondaryConnectionString of the created AuthorizationRule
+* **secondaryKey**: string (ReadOnly): SecondaryKey of the created AuthorizationRule
+
+## ResourceListKeys
+### Properties
+* **keyName**: string (ReadOnly): KeyName of the created AuthorizationRule
+* **primaryConnectionString**: string (ReadOnly): PrimaryConnectionString of the AuthorizationRule.
+* **primaryKey**: string (ReadOnly): PrimaryKey of the created AuthorizationRule.
+* **secondaryConnectionString**: string (ReadOnly): SecondaryConnectionString of the created AuthorizationRule
+* **secondaryKey**: string (ReadOnly): SecondaryKey of the created AuthorizationRule
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SharedAccessAuthorizationRuleProperties
+### Properties
+* **rights**: 'Listen' | 'Manage' | 'Send'[]: The rights associated with the rule.
+
+## Sku
+### Properties
+* **capacity**: int: The capacity of the resource
+* **family**: string: The Sku Family
+* **name**: 'Basic' | 'Free' | 'Standard' | string (Required): Name of the notification hub sku
+* **size**: string: The Sku size
+* **tier**: string: The tier of particular sku
+
 ## WnsCredential
 ### Properties
 * **properties**: [WnsCredentialProperties](#wnscredentialproperties): Description of a NotificationHub WnsCredential.
@@ -165,30 +191,4 @@
 * **packageSid**: string: The package ID for this credential.
 * **secretKey**: string: The secret key.
 * **windowsLiveEndpoint**: string: The Windows Live endpoint.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceListKeys
-### Properties
-* **keyName**: string (ReadOnly): KeyName of the created AuthorizationRule
-* **primaryConnectionString**: string (ReadOnly): PrimaryConnectionString of the AuthorizationRule.
-* **primaryKey**: string (ReadOnly): PrimaryKey of the created AuthorizationRule.
-* **secondaryConnectionString**: string (ReadOnly): SecondaryConnectionString of the created AuthorizationRule
-* **secondaryKey**: string (ReadOnly): SecondaryKey of the created AuthorizationRule
-
-## ResourceListKeys
-### Properties
-* **keyName**: string (ReadOnly): KeyName of the created AuthorizationRule
-* **primaryConnectionString**: string (ReadOnly): PrimaryConnectionString of the AuthorizationRule.
-* **primaryKey**: string (ReadOnly): PrimaryKey of the created AuthorizationRule.
-* **secondaryConnectionString**: string (ReadOnly): SecondaryConnectionString of the created AuthorizationRule
-* **secondaryKey**: string (ReadOnly): SecondaryKey of the created AuthorizationRule
 

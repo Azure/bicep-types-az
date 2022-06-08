@@ -21,6 +21,11 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **type**: 'Microsoft.Attestation/attestationProviders/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## AttestationServiceCreationParamsTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## AttestationServiceCreationSpecificParams
 ### Properties
 * **attestUri**: string (ReadOnly): Gets the uri of attestation service
@@ -28,14 +33,6 @@
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections associated with the attestation provider.
 * **status**: 'Error' | 'NotReady' | 'Ready' | string (ReadOnly): Status of attestation service.
 * **trustModel**: string (ReadOnly): Trust model for the attestation provider.
-
-## JsonWebKeySet
-### Properties
-* **keys**: [JsonWebKey](#jsonwebkey)[] (WriteOnly): The value of the "keys" parameter is an array of JWK values.  By
-default, the order of the JWK values within the array does not imply
-an order of preference among them, although applications of JWK Sets
-can choose to assign a meaning to the order for their purposes, if
-desired.
 
 ## JsonWebKey
 ### Properties
@@ -82,6 +79,18 @@ The PKIX certificate containing the key value MUST be the first
 certificate.
 * **y**: string (WriteOnly): Y coordinate for the Elliptic Curve point
 
+## JsonWebKeySet
+### Properties
+* **keys**: [JsonWebKey](#jsonwebkey)[] (WriteOnly): The value of the "keys" parameter is an array of JWK values.  By
+default, the order of the JWK values within the array does not imply
+an order of preference among them, although applications of JWK Sets
+can choose to assign a meaning to the order for their purposes, if
+desired.
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
+
 ## PrivateEndpointConnection
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
@@ -94,10 +103,6 @@ certificate.
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly): A collection of information about the state of the connection between service consumer and provider.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
-
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
 
 ## PrivateLinkServiceConnectionState
 ### Properties
@@ -113,9 +118,4 @@ certificate.
 * **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
-
-## AttestationServiceCreationParamsTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

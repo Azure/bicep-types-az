@@ -11,16 +11,6 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.ContainerService/containerServices' (ReadOnly, DeployTimeConstant): The resource type
 
-## ContainerServiceProperties
-### Properties
-* **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[] (Required): Properties of agent pools
-* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile)
-* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile) (Required): Profile for Linux VM
-* **masterProfile**: [ContainerServiceMasterProfile](#containerservicemasterprofile) (Required): Profile for container service master
-* **orchestratorProfile**: [ContainerServiceOrchestratorProfile](#containerserviceorchestratorprofile): Profile for Orchestrator
-* **provisioningState**: string (ReadOnly): Gets the provisioning state, which only appears in the response.
-* **windowsProfile**: [ContainerServiceWindowsProfile](#containerservicewindowsprofile): Profile for Windows jumpbox
-
 ## ContainerServiceAgentPoolProfile
 ### Properties
 * **count**: int: No. of agents (VMs) that will host docker containers
@@ -33,23 +23,10 @@
 ### Properties
 * **vmDiagnostics**: [ContainerServiceVMDiagnostics](#containerservicevmdiagnostics): Describes VM Diagnostics.
 
-## ContainerServiceVMDiagnostics
-### Properties
-* **enabled**: bool: Gets or sets whether VM Diagnostic Agent should be provisioned on the Virtual Machine.
-* **storageUri**: string (ReadOnly): Gets or sets whether VM Diagnostic Agent should be provisioned on the Virtual Machine.
-
 ## ContainerServiceLinuxProfile
 ### Properties
 * **adminUsername**: string (Required): The administrator username to use for all Linux VMs
 * **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required): SSH configuration for Linux based VMs running on Azure
-
-## ContainerServiceSshConfiguration
-### Properties
-* **publicKeys**: [ContainerServiceSshPublicKey](#containerservicesshpublickey)[]: Gets or sets the list of SSH public keys used to authenticate with Linux based VMs
-
-## ContainerServiceSshPublicKey
-### Properties
-* **keyData**: string (Required): Gets or sets Certificate public key used to authenticate with VM through SSH. The certificate must be in Pem format with or without headers.
 
 ## ContainerServiceMasterProfile
 ### Properties
@@ -60,6 +37,29 @@
 ## ContainerServiceOrchestratorProfile
 ### Properties
 * **orchestratorType**: 'DCOS' | 'Mesos' | 'SwarmPreview': Specifies what orchestrator will be used to manage container cluster resources.
+
+## ContainerServiceProperties
+### Properties
+* **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[] (Required): Properties of agent pools
+* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile)
+* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile) (Required): Profile for Linux VM
+* **masterProfile**: [ContainerServiceMasterProfile](#containerservicemasterprofile) (Required): Profile for container service master
+* **orchestratorProfile**: [ContainerServiceOrchestratorProfile](#containerserviceorchestratorprofile): Profile for Orchestrator
+* **provisioningState**: string (ReadOnly): Gets the provisioning state, which only appears in the response.
+* **windowsProfile**: [ContainerServiceWindowsProfile](#containerservicewindowsprofile): Profile for Windows jumpbox
+
+## ContainerServiceSshConfiguration
+### Properties
+* **publicKeys**: [ContainerServiceSshPublicKey](#containerservicesshpublickey)[]: Gets or sets the list of SSH public keys used to authenticate with Linux based VMs
+
+## ContainerServiceSshPublicKey
+### Properties
+* **keyData**: string (Required): Gets or sets Certificate public key used to authenticate with VM through SSH. The certificate must be in Pem format with or without headers.
+
+## ContainerServiceVMDiagnostics
+### Properties
+* **enabled**: bool: Gets or sets whether VM Diagnostic Agent should be provisioned on the Virtual Machine.
+* **storageUri**: string (ReadOnly): Gets or sets whether VM Diagnostic Agent should be provisioned on the Virtual Machine.
 
 ## ContainerServiceWindowsProfile
 ### Properties

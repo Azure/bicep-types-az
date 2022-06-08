@@ -37,10 +37,9 @@
 * **tenantId**: string (ReadOnly): The tenant id associated with the Automanage account.
 * **type**: 'None' | 'SystemAssigned': The type of identity used for the Automanage account. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
 
-## TrackedResourceTags
+## ConfigurationProfileAssignmentCompliance
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **updateStatus**: 'Created' | 'Failed' | 'Succeeded' | string (ReadOnly): The state of compliance, which only appears in the response.
 
 ## ConfigurationProfileAssignmentProperties
 ### Properties
@@ -51,15 +50,6 @@
 * **provisioningState**: 'Created' | 'Failed' | 'Succeeded' | string (ReadOnly): The state of onboarding, which only appears in the response.
 * **targetId**: string: The target VM resource URI
 
-## ConfigurationProfileAssignmentCompliance
-### Properties
-* **updateStatus**: 'Created' | 'Failed' | 'Succeeded' | string (ReadOnly): The state of compliance, which only appears in the response.
-
-## ConfigurationProfilePreferenceProperties
-### Properties
-* **antiMalware**: [ConfigurationProfilePreferenceAntiMalware](#configurationprofilepreferenceantimalware): Automanage configuration profile Antimalware preferences.
-* **vmBackup**: [ConfigurationProfilePreferenceVmBackup](#configurationprofilepreferencevmbackup): Automanage configuration profile VM Backup preferences.
-
 ## ConfigurationProfilePreferenceAntiMalware
 ### Properties
 * **enableRealTimeProtection**: 'False' | 'True' | string: Enables or disables Real Time Protection
@@ -69,12 +59,22 @@
 * **scanTimeInMinutes**: string: Schedule scan settings time
 * **scanType**: 'Full' | 'Quick' | string: Type of scheduled scan
 
+## ConfigurationProfilePreferenceProperties
+### Properties
+* **antiMalware**: [ConfigurationProfilePreferenceAntiMalware](#configurationprofilepreferenceantimalware): Automanage configuration profile Antimalware preferences.
+* **vmBackup**: [ConfigurationProfilePreferenceVmBackup](#configurationprofilepreferencevmbackup): Automanage configuration profile VM Backup preferences.
+
 ## ConfigurationProfilePreferenceVmBackup
 ### Properties
 * **instantRpRetentionRangeInDays**: int: Instant RP retention policy range in days
 * **retentionPolicy**: string: Retention policy with the details on backup copy retention ranges.
 * **schedulePolicy**: string: Backup schedule specified as part of backup policy.
 * **timeZone**: string: TimeZone optional input as string. For example: Pacific Standard Time
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

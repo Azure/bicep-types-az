@@ -70,11 +70,6 @@
 * **hostPoolArmPath**: string (Required): HostPool arm path of ApplicationGroup.
 * **workspaceArmPath**: string (ReadOnly): Workspace arm path of ApplicationGroup.
 
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ApplicationProperties
 ### Properties
 * **applicationType**: 'InBuilt' | 'MsixApplication' | string: Resource Type of Application.
@@ -112,31 +107,6 @@
 * **validationEnvironment**: bool: Is validation environment.
 * **vmTemplate**: string: VM template for sessionhosts configuration within hostpool.
 
-## RegistrationInfo
-### Properties
-* **expirationTime**: string: Expiration time of registration token.
-* **registrationTokenOperation**: 'Delete' | 'None' | 'Update' | string: The type of resetting the token.
-* **token**: string: The registration token base64 encoded string.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## MsixPackageProperties
-### Properties
-* **displayName**: string: User friendly Name to be displayed in the portal.
-* **imagePath**: string: VHD/CIM image path on Network Share.
-* **isActive**: bool: Make this version of the package the active one across the hostpool.
-* **isRegularRegistration**: bool: Specifies how to register Package in feed.
-* **lastUpdated**: string: Date Package was last updated, found in the appxmanifest.xml.
-* **packageApplications**: [MsixPackageApplications](#msixpackageapplications)[]: List of package applications.
-* **packageDependencies**: [MsixPackageDependencies](#msixpackagedependencies)[]: List of package dependencies.
-* **packageFamilyName**: string: Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
-* **packageName**: string: Package Name from appxmanifest.xml.
-* **packageRelativePath**: string: Relative Path to the package inside the image.
-* **version**: string: Package Version found in the appxmanifest.xml.
-
 ## MsixPackageApplications
 ### Properties
 * **appId**: string: Package Application Id, found in appxmanifest.xml.
@@ -153,6 +123,31 @@
 * **minVersion**: string: Dependency version required.
 * **publisher**: string: Name of dependency publisher.
 
+## MsixPackageProperties
+### Properties
+* **displayName**: string: User friendly Name to be displayed in the portal.
+* **imagePath**: string: VHD/CIM image path on Network Share.
+* **isActive**: bool: Make this version of the package the active one across the hostpool.
+* **isRegularRegistration**: bool: Specifies how to register Package in feed.
+* **lastUpdated**: string: Date Package was last updated, found in the appxmanifest.xml.
+* **packageApplications**: [MsixPackageApplications](#msixpackageapplications)[]: List of package applications.
+* **packageDependencies**: [MsixPackageDependencies](#msixpackagedependencies)[]: List of package dependencies.
+* **packageFamilyName**: string: Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
+* **packageName**: string: Package Name from appxmanifest.xml.
+* **packageRelativePath**: string: Relative Path to the package inside the image.
+* **version**: string: Package Version found in the appxmanifest.xml.
+
+## RegistrationInfo
+### Properties
+* **expirationTime**: string: Expiration time of registration token.
+* **registrationTokenOperation**: 'Delete' | 'None' | 'Update' | string: The type of resetting the token.
+* **token**: string: The registration token base64 encoded string.
+
+## ScalingHostPoolReference
+### Properties
+* **hostPoolArmPath**: string: Arm path of referenced hostpool.
+* **scalingPlanEnabled**: bool: Is the scaling plan enabled for this hostpool.
+
 ## ScalingPlanProperties
 ### Properties
 * **description**: string: Description of scaling plan.
@@ -162,11 +157,6 @@
 * **hostPoolType**: 'Personal' | 'Pooled' | string: HostPool type for desktop.
 * **schedules**: [ScalingSchedule](#scalingschedule)[]: List of ScalingSchedule definitions.
 * **timeZone**: string: Timezone of the scaling plan.
-
-## ScalingHostPoolReference
-### Properties
-* **hostPoolArmPath**: string: Arm path of referenced hostpool.
-* **scalingPlanEnabled**: bool: Is the scaling plan enabled for this hostpool.
 
 ## ScalingSchedule
 ### Properties
@@ -194,14 +184,24 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## WorkspaceProperties
+## TrackedResourceTags
 ### Properties
-* **applicationGroupReferences**: string[]: List of applicationGroup resource Ids.
-* **description**: string: Description of Workspace.
-* **friendlyName**: string: Friendly name of Workspace.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## WorkspaceProperties
+### Properties
+* **applicationGroupReferences**: string[]: List of applicationGroup resource Ids.
+* **description**: string: Description of Workspace.
+* **friendlyName**: string: Friendly name of Workspace.
 

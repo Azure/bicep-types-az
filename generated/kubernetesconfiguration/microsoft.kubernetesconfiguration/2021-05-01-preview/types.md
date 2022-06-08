@@ -21,11 +21,30 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.KubernetesConfiguration/sourceControlConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Identity
+## ComplianceStatus
 ### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned': The identity type.
+* **complianceState**: 'Compliant' | 'Failed' | 'Installed' | 'Noncompliant' | 'Pending' | string (ReadOnly): The compliance state of the configuration.
+* **lastConfigApplied**: string: Datetime the configuration was last applied.
+* **message**: string: Message from when the configuration was applied.
+* **messageLevel**: 'Error' | 'Information' | 'Warning' | string: Level of the message.
+
+## ConfigurationProtectedSettings
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): Any object
+* **type**: string (ReadOnly): The additional info type.
+
+## ErrorDetail
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
 
 ## ExtensionProperties
 ### Properties
@@ -57,18 +76,24 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ErrorDetail
+## ExtensionStatus
 ### Properties
-* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
-* **code**: string (ReadOnly): The error code.
-* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
-* **message**: string (ReadOnly): The error message.
-* **target**: string (ReadOnly): The error target.
+* **code**: string: Status code provided by the Extension
+* **displayStatus**: string: Short description of status of the extension.
+* **level**: 'Error' | 'Information' | 'Warning' | string: Level of the status.
+* **message**: string: Detailed message of the status from the Extension.
+* **time**: string: DateLiteral (per ISO8601) noting the time of installation status.
 
-## ErrorAdditionalInfo
+## HelmOperatorProperties
 ### Properties
-* **info**: any (ReadOnly): Any object
-* **type**: string (ReadOnly): The additional info type.
+* **chartValues**: string: Values override for the operator Helm chart.
+* **chartVersion**: string: Version of the operator Helm chart.
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'SystemAssigned': The identity type.
 
 ## Scope
 ### Properties
@@ -82,23 +107,6 @@
 ## ScopeNamespace
 ### Properties
 * **targetNamespace**: string: Namespace where the extension will be created for an Namespace scoped extension.  If this namespace does not exist, it will be created
-
-## ExtensionStatus
-### Properties
-* **code**: string: Status code provided by the Extension
-* **displayStatus**: string: Short description of status of the extension.
-* **level**: 'Error' | 'Information' | 'Warning' | string: Level of the status.
-* **message**: string: Detailed message of the status from the Extension.
-* **time**: string: DateLiteral (per ISO8601) noting the time of installation status.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## SourceControlConfigurationProperties
 ### Properties
@@ -116,20 +124,12 @@
 * **repositoryUrl**: string: Url of the SourceControl Repository.
 * **sshKnownHostsContents**: string: Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances
 
-## ComplianceStatus
+## SystemData
 ### Properties
-* **complianceState**: 'Compliant' | 'Failed' | 'Installed' | 'Noncompliant' | 'Pending' | string (ReadOnly): The compliance state of the configuration.
-* **lastConfigApplied**: string: Datetime the configuration was last applied.
-* **message**: string: Message from when the configuration was applied.
-* **messageLevel**: 'Error' | 'Information' | 'Warning' | string: Level of the message.
-
-## ConfigurationProtectedSettings
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## HelmOperatorProperties
-### Properties
-* **chartValues**: string: Values override for the operator Helm chart.
-* **chartVersion**: string: Version of the operator Helm chart.
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 

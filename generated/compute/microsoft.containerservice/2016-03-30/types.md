@@ -11,16 +11,6 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.ContainerService/containerServices' (ReadOnly, DeployTimeConstant): The resource type
 
-## ContainerServiceProperties
-### Properties
-* **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[] (Required): Properties of the agent pool.
-* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile)
-* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile) (Required): Profile for Linux VMs in the container service cluster.
-* **masterProfile**: [ContainerServiceMasterProfile](#containerservicemasterprofile) (Required): Profile for the container service master.
-* **orchestratorProfile**: [ContainerServiceOrchestratorProfile](#containerserviceorchestratorprofile): Profile for the container service orchestrator.
-* **provisioningState**: string (ReadOnly): the current deployment or provisioning state, which only appears in the response.
-* **windowsProfile**: [ContainerServiceWindowsProfile](#containerservicewindowsprofile): Profile for Windows VMs in the container service cluster.
-
 ## ContainerServiceAgentPoolProfile
 ### Properties
 * **count**: int: Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1.
@@ -33,23 +23,10 @@
 ### Properties
 * **vmDiagnostics**: [ContainerServiceVMDiagnostics](#containerservicevmdiagnostics) (Required): Profile for diagnostics on the container service VMs.
 
-## ContainerServiceVMDiagnostics
-### Properties
-* **enabled**: bool (Required): Whether the VM diagnostic agent is provisioned on the VM.
-* **storageUri**: string (ReadOnly): The URI of the storage account where diagnostics are stored.
-
 ## ContainerServiceLinuxProfile
 ### Properties
 * **adminUsername**: string (Required): The administrator username to use for all Linux VMs
 * **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required): SSH configuration for Linux-based VMs running on Azure.
-
-## ContainerServiceSshConfiguration
-### Properties
-* **publicKeys**: [ContainerServiceSshPublicKey](#containerservicesshpublickey)[] (Required): the list of SSH public keys used to authenticate with Linux-based VMs.
-
-## ContainerServiceSshPublicKey
-### Properties
-* **keyData**: string (Required): Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.
 
 ## ContainerServiceMasterProfile
 ### Properties
@@ -60,6 +37,29 @@
 ## ContainerServiceOrchestratorProfile
 ### Properties
 * **orchestratorType**: 'DCOS' | 'Swarm' (Required): The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.
+
+## ContainerServiceProperties
+### Properties
+* **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[] (Required): Properties of the agent pool.
+* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile)
+* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile) (Required): Profile for Linux VMs in the container service cluster.
+* **masterProfile**: [ContainerServiceMasterProfile](#containerservicemasterprofile) (Required): Profile for the container service master.
+* **orchestratorProfile**: [ContainerServiceOrchestratorProfile](#containerserviceorchestratorprofile): Profile for the container service orchestrator.
+* **provisioningState**: string (ReadOnly): the current deployment or provisioning state, which only appears in the response.
+* **windowsProfile**: [ContainerServiceWindowsProfile](#containerservicewindowsprofile): Profile for Windows VMs in the container service cluster.
+
+## ContainerServiceSshConfiguration
+### Properties
+* **publicKeys**: [ContainerServiceSshPublicKey](#containerservicesshpublickey)[] (Required): the list of SSH public keys used to authenticate with Linux-based VMs.
+
+## ContainerServiceSshPublicKey
+### Properties
+* **keyData**: string (Required): Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.
+
+## ContainerServiceVMDiagnostics
+### Properties
+* **enabled**: bool (Required): Whether the VM diagnostic agent is provisioned on the VM.
+* **storageUri**: string (ReadOnly): The URI of the storage account where diagnostics are stored.
 
 ## ContainerServiceWindowsProfile
 ### Properties

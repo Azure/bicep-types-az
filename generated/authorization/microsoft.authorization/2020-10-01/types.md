@@ -27,26 +27,22 @@
 * **properties**: [RoleManagementPolicyAssignmentProperties](#rolemanagementpolicyassignmentproperties): Role management policy assignment properties with scope.
 * **type**: 'Microsoft.Authorization/roleManagementPolicyAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## RoleAssignmentScheduleRequestProperties
+## ApprovalSettings
 ### Properties
-* **approvalId**: string (ReadOnly): The approvalId of the role assignment schedule request.
-* **condition**: string: The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
-* **conditionVersion**: string: Version of the condition. Currently accepted value is '2.0'
-* **createdOn**: string (ReadOnly): DateTime when role assignment schedule request was created
-* **expandedProperties**: [ExpandedProperties](#expandedproperties) (ReadOnly)
-* **justification**: string: Justification for the role assignment
-* **linkedRoleEligibilityScheduleId**: string: The linked role eligibility schedule id - to activate an eligibility.
-* **principalId**: string (Required): The principal ID.
-* **principalType**: 'Device' | 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User' | string (ReadOnly): The principal type of the assigned principal ID.
-* **requestorId**: string (ReadOnly): Id of the user who created this request
-* **requestType**: 'AdminAssign' | 'AdminExtend' | 'AdminRemove' | 'AdminRenew' | 'AdminUpdate' | 'SelfActivate' | 'SelfDeactivate' | 'SelfExtend' | 'SelfRenew' | string (Required): The type of the role assignment schedule request. Eg: SelfActivate, AdminAssign etc
-* **roleDefinitionId**: string (Required): The role definition ID.
-* **scheduleInfo**: [RoleAssignmentScheduleRequestPropertiesScheduleInfo](#roleassignmentschedulerequestpropertiesscheduleinfo): Schedule info of the role assignment schedule
-* **scope**: string (ReadOnly): The role assignment schedule request scope.
-* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' | string (ReadOnly): The status of the role assignment schedule.
-* **targetRoleAssignmentScheduleId**: string: The resultant role assignment schedule id or the role assignment schedule id being updated
-* **targetRoleAssignmentScheduleInstanceId**: string: The role assignment schedule instance id being updated
-* **ticketInfo**: [RoleAssignmentScheduleRequestPropertiesTicketInfo](#roleassignmentschedulerequestpropertiesticketinfo): Ticket Info of the role assignment
+* **approvalMode**: 'NoApproval' | 'Parallel' | 'Serial' | 'SingleStage' | string: The type of rule
+* **approvalStages**: [ApprovalStage](#approvalstage)[]: The approval stages of the request.
+* **isApprovalRequired**: bool: Determines whether approval is required or not.
+* **isApprovalRequiredForExtension**: bool: Determines whether approval is required for assignment extension.
+* **isRequestorJustificationRequired**: bool: Determine whether requestor justification is required.
+
+## ApprovalStage
+### Properties
+* **approvalStageTimeOutInDays**: int: The time in days when approval request would be timed out
+* **escalationApprovers**: [UserSet](#userset)[]: The escalation approver of the request.
+* **escalationTimeInMinutes**: int: The time in minutes when the approval request would be escalated if the primary approver does not approve
+* **isApproverJustificationRequired**: bool: Determines whether approver need to provide justification for his decision.
+* **isEscalationEnabled**: bool: The value determine whether escalation feature is enabled.
+* **primaryApprovers**: [UserSet](#userset)[]: The primary approver of the request.
 
 ## ExpandedProperties
 ### Properties
@@ -72,6 +68,58 @@
 * **displayName**: string: Display name of the resource
 * **id**: string: Scope id of the resource
 * **type**: string: Type of the resource
+
+## PolicyAssignmentProperties
+### Properties
+* **policy**: [PolicyAssignmentPropertiesPolicy](#policyassignmentpropertiespolicy): Details of the policy
+* **roleDefinition**: [PolicyAssignmentPropertiesRoleDefinition](#policyassignmentpropertiesroledefinition): Details of role definition
+* **scope**: [PolicyAssignmentPropertiesScope](#policyassignmentpropertiesscope): Details of the resource scope
+
+## PolicyAssignmentPropertiesPolicy
+### Properties
+* **id**: string: Id of the policy
+* **lastModifiedBy**: [Principal](#principal) (ReadOnly): The name of the entity last modified it
+* **lastModifiedDateTime**: string: The last modified date time.
+
+## PolicyAssignmentPropertiesRoleDefinition
+### Properties
+* **displayName**: string: Display name of the role definition
+* **id**: string: Id of the role definition
+* **type**: string: Type of the role definition
+
+## PolicyAssignmentPropertiesScope
+### Properties
+* **displayName**: string: Display name of the resource
+* **id**: string: Scope id of the resource
+* **type**: string: Type of the resource
+
+## Principal
+### Properties
+* **displayName**: string: The name of the principal made changes
+* **email**: string: Email of principal
+* **id**: string: The id of the principal made changes
+* **type**: string: Type of principal such as user , group etc
+
+## RoleAssignmentScheduleRequestProperties
+### Properties
+* **approvalId**: string (ReadOnly): The approvalId of the role assignment schedule request.
+* **condition**: string: The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
+* **conditionVersion**: string: Version of the condition. Currently accepted value is '2.0'
+* **createdOn**: string (ReadOnly): DateTime when role assignment schedule request was created
+* **expandedProperties**: [ExpandedProperties](#expandedproperties) (ReadOnly)
+* **justification**: string: Justification for the role assignment
+* **linkedRoleEligibilityScheduleId**: string: The linked role eligibility schedule id - to activate an eligibility.
+* **principalId**: string (Required): The principal ID.
+* **principalType**: 'Device' | 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User' | string (ReadOnly): The principal type of the assigned principal ID.
+* **requestorId**: string (ReadOnly): Id of the user who created this request
+* **requestType**: 'AdminAssign' | 'AdminExtend' | 'AdminRemove' | 'AdminRenew' | 'AdminUpdate' | 'SelfActivate' | 'SelfDeactivate' | 'SelfExtend' | 'SelfRenew' | string (Required): The type of the role assignment schedule request. Eg: SelfActivate, AdminAssign etc
+* **roleDefinitionId**: string (Required): The role definition ID.
+* **scheduleInfo**: [RoleAssignmentScheduleRequestPropertiesScheduleInfo](#roleassignmentschedulerequestpropertiesscheduleinfo): Schedule info of the role assignment schedule
+* **scope**: string (ReadOnly): The role assignment schedule request scope.
+* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' | string (ReadOnly): The status of the role assignment schedule.
+* **targetRoleAssignmentScheduleId**: string: The resultant role assignment schedule id or the role assignment schedule id being updated
+* **targetRoleAssignmentScheduleInstanceId**: string: The role assignment schedule instance id being updated
+* **ticketInfo**: [RoleAssignmentScheduleRequestPropertiesTicketInfo](#roleassignmentschedulerequestpropertiesticketinfo): Ticket Info of the role assignment
 
 ## RoleAssignmentScheduleRequestPropertiesScheduleInfo
 ### Properties
@@ -180,58 +228,10 @@
 * **operations**: string[]: The type of operation.
 * **targetObjects**: string[]: The list of target objects.
 
-## ApprovalSettings
-### Properties
-* **approvalMode**: 'NoApproval' | 'Parallel' | 'Serial' | 'SingleStage' | string: The type of rule
-* **approvalStages**: [ApprovalStage](#approvalstage)[]: The approval stages of the request.
-* **isApprovalRequired**: bool: Determines whether approval is required or not.
-* **isApprovalRequiredForExtension**: bool: Determines whether approval is required for assignment extension.
-* **isRequestorJustificationRequired**: bool: Determine whether requestor justification is required.
-
-## ApprovalStage
-### Properties
-* **approvalStageTimeOutInDays**: int: The time in days when approval request would be timed out
-* **escalationApprovers**: [UserSet](#userset)[]: The escalation approver of the request.
-* **escalationTimeInMinutes**: int: The time in minutes when the approval request would be escalated if the primary approver does not approve
-* **isApproverJustificationRequired**: bool: Determines whether approver need to provide justification for his decision.
-* **isEscalationEnabled**: bool: The value determine whether escalation feature is enabled.
-* **primaryApprovers**: [UserSet](#userset)[]: The primary approver of the request.
-
 ## UserSet
 ### Properties
 * **description**: string: The description of the user.
 * **id**: string: The object id of the user.
 * **isBackup**: bool: The value indicating whether the user is a backup fallback approver
 * **userType**: 'Group' | 'User' | string: The type of user.
-
-## PolicyAssignmentProperties
-### Properties
-* **policy**: [PolicyAssignmentPropertiesPolicy](#policyassignmentpropertiespolicy): Details of the policy
-* **roleDefinition**: [PolicyAssignmentPropertiesRoleDefinition](#policyassignmentpropertiesroledefinition): Details of role definition
-* **scope**: [PolicyAssignmentPropertiesScope](#policyassignmentpropertiesscope): Details of the resource scope
-
-## PolicyAssignmentPropertiesPolicy
-### Properties
-* **id**: string: Id of the policy
-* **lastModifiedBy**: [Principal](#principal) (ReadOnly): The name of the entity last modified it
-* **lastModifiedDateTime**: string: The last modified date time.
-
-## Principal
-### Properties
-* **displayName**: string: The name of the principal made changes
-* **email**: string: Email of principal
-* **id**: string: The id of the principal made changes
-* **type**: string: Type of principal such as user , group etc
-
-## PolicyAssignmentPropertiesRoleDefinition
-### Properties
-* **displayName**: string: Display name of the role definition
-* **id**: string: Id of the role definition
-* **type**: string: Type of the role definition
-
-## PolicyAssignmentPropertiesScope
-### Properties
-* **displayName**: string: Display name of the resource
-* **id**: string: Scope id of the resource
-* **type**: string: Type of the resource
 

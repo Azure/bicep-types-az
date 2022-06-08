@@ -47,10 +47,23 @@
 * **properties**: [ServerEndpointCreateParametersProperties](#serverendpointcreateparametersproperties): ServerEndpoint Properties object.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## StorageSyncServiceCreateParametersTags
+## CloudEndpointCreateParametersProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **azureFileShareName**: string: Azure file share name
+* **backupEnabled**: string (ReadOnly): Backup Enabled
+* **friendlyName**: string (ReadOnly): Friendly Name
+* **lastOperationName**: string (ReadOnly): Resource Last Operation Name
+* **lastWorkflowId**: string (ReadOnly): CloudEndpoint lastWorkflowId
+* **partnershipId**: string (ReadOnly): Partnership Id
+* **provisioningState**: string (ReadOnly): CloudEndpoint Provisioning State
+* **storageAccountResourceId**: string: Storage Account Resource Id
+* **storageAccountTenantId**: string: Storage Account Tenant Id
+
+## FilesNotSyncingError
+### Properties
+* **errorCode**: int (ReadOnly): Error code (HResult)
+* **persistentCount**: int (ReadOnly): Count of persistent files not syncing with the specified error code
+* **transientCount**: int (ReadOnly): Count of transient files not syncing with the specified error code
 
 ## RegisteredServerCreateParametersProperties
 ### Properties
@@ -73,18 +86,6 @@
 * **serverRole**: string: Registered Server serverRole
 * **serviceLocation**: string (ReadOnly): Service Location
 * **storageSyncServiceUid**: string (ReadOnly): Registered Server storageSyncServiceUid
-
-## CloudEndpointCreateParametersProperties
-### Properties
-* **azureFileShareName**: string: Azure file share name
-* **backupEnabled**: string (ReadOnly): Backup Enabled
-* **friendlyName**: string (ReadOnly): Friendly Name
-* **lastOperationName**: string (ReadOnly): Resource Last Operation Name
-* **lastWorkflowId**: string (ReadOnly): CloudEndpoint lastWorkflowId
-* **partnershipId**: string (ReadOnly): Partnership Id
-* **provisioningState**: string (ReadOnly): CloudEndpoint Provisioning State
-* **storageAccountResourceId**: string: Storage Account Resource Id
-* **storageAccountTenantId**: string: Storage Account Tenant Id
 
 ## ServerEndpointCreateParametersProperties
 ### Properties
@@ -117,6 +118,11 @@
 * **uploadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string (ReadOnly): Type of the Health state
 * **uploadStatus**: [SyncSessionStatus](#syncsessionstatus) (ReadOnly): Sync Session status object.
 
+## StorageSyncServiceCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## SyncActivityStatus
 ### Properties
 * **appliedBytes**: int (ReadOnly): Applied bytes
@@ -135,10 +141,4 @@
 * **lastSyncTimestamp**: string (ReadOnly): Last sync timestamp
 * **persistentFilesNotSyncingCount**: int (ReadOnly): Count of persistent files not syncing. Reserved for future use.
 * **transientFilesNotSyncingCount**: int (ReadOnly): Count of transient files not syncing. Reserved for future use.
-
-## FilesNotSyncingError
-### Properties
-* **errorCode**: int (ReadOnly): Error code (HResult)
-* **persistentCount**: int (ReadOnly): Count of persistent files not syncing with the specified error code
-* **transientCount**: int (ReadOnly): Count of transient files not syncing with the specified error code
 

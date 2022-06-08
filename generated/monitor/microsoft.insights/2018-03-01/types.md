@@ -57,6 +57,11 @@
 * **httpTriggerUrl**: string (Required): The http trigger url where http request sent to.
 * **name**: string (Required): The name of the azure function receiver. Names must be unique across all receivers within an action group.
 
+## DynamicThresholdFailingPeriods
+### Properties
+* **minFailingPeriodsToAlert**: int (Required): The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods.
+* **numberOfEvaluationPeriods**: int (Required): The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points.
+
 ## EmailReceiver
 ### Properties
 * **emailAddress**: string (Required): The email address of this receiver.
@@ -76,45 +81,6 @@
 * **callbackUrl**: string (Required): The callback url where http request sent to.
 * **name**: string (Required): The name of the logic app receiver. Names must be unique across all receivers within an action group.
 * **resourceId**: string (Required): The azure resource id of the logic app receiver.
-
-## SmsReceiver
-### Properties
-* **countryCode**: string (Required): The country code of the SMS receiver.
-* **name**: string (Required): The name of the SMS receiver. Names must be unique across all receivers within an action group.
-* **phoneNumber**: string (Required): The phone number of the SMS receiver.
-* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): Indicates the status of the receiver. Receivers that are not Enabled will not receive any communications.
-
-## VoiceReceiver
-### Properties
-* **countryCode**: string (Required): The country code of the voice receiver.
-* **name**: string (Required): The name of the voice receiver. Names must be unique across all receivers within an action group.
-* **phoneNumber**: string (Required): The phone number of the voice receiver.
-
-## WebhookReceiver
-### Properties
-* **name**: string (Required): The name of the webhook receiver. Names must be unique across all receivers within an action group.
-* **serviceUri**: string (Required): The URI where webhooks should be sent.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## MetricAlertProperties
-### Properties
-* **actions**: [MetricAlertAction](#metricalertaction)[]: the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
-* **autoMitigate**: bool: the flag that indicates whether the alert should be auto resolved or not. The default is true.
-* **criteria**: [MetricAlertCriteria](#metricalertcriteria) (Required): The rule criteria that defines the conditions of the alert rule.
-* **description**: string: the description of the metric alert that will be included in the alert email.
-* **enabled**: bool (Required): the flag that indicates whether the metric alert is enabled.
-* **evaluationFrequency**: string (Required): how often the metric alert is evaluated represented in ISO 8601 duration format.
-* **isMigrated**: bool (ReadOnly): the value indicating whether this alert rule is migrated.
-* **lastUpdatedTime**: string (ReadOnly): Last time the rule was updated in ISO8601 format.
-* **scopes**: string[] (Required): the list of resource id's that this metric alert is scoped to.
-* **severity**: int (Required): Alert severity {0, 1, 2, 3, 4}
-* **targetResourceRegion**: string: the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
-* **targetResourceType**: string: the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
-* **windowSize**: string (Required): the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold.
 
 ## MetricAlertAction
 ### Properties
@@ -148,6 +114,42 @@
 * **webTestId**: string (Required): The Application Insights web test Id.
 
 
+## MetricAlertProperties
+### Properties
+* **actions**: [MetricAlertAction](#metricalertaction)[]: the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+* **autoMitigate**: bool: the flag that indicates whether the alert should be auto resolved or not. The default is true.
+* **criteria**: [MetricAlertCriteria](#metricalertcriteria) (Required): The rule criteria that defines the conditions of the alert rule.
+* **description**: string: the description of the metric alert that will be included in the alert email.
+* **enabled**: bool (Required): the flag that indicates whether the metric alert is enabled.
+* **evaluationFrequency**: string (Required): how often the metric alert is evaluated represented in ISO 8601 duration format.
+* **isMigrated**: bool (ReadOnly): the value indicating whether this alert rule is migrated.
+* **lastUpdatedTime**: string (ReadOnly): Last time the rule was updated in ISO8601 format.
+* **scopes**: string[] (Required): the list of resource id's that this metric alert is scoped to.
+* **severity**: int (Required): Alert severity {0, 1, 2, 3, 4}
+* **targetResourceRegion**: string: the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
+* **targetResourceType**: string: the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
+* **windowSize**: string (Required): the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold.
+
+## MetricCriteria
+### Properties
+* **criterionType**: 'DynamicThresholdCriterion' | 'StaticThresholdCriterion' | string (Required): Specifies the type of threshold criteria
+* **dimensions**: [MetricDimension](#metricdimension)[]: List of dimension conditions.
+* **metricName**: string (Required): Name of the metric.
+* **metricNamespace**: string: Namespace of the metric.
+* **name**: string (Required): Name of the criteria.
+* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string (Required): the criteria operator.
+* **skipMetricValidation**: bool: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
+* **threshold**: int (Required): the criteria threshold value that activates the alert.
+* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' | string (Required): the criteria time aggregation types.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## MetricDimension
+### Properties
+* **name**: string (Required): Name of the dimension.
+* **operator**: string (Required): the dimension operator. Only 'Include' and 'Exclude' are supported
+* **values**: string[] (Required): list of dimension values.
+
 ## MultiMetricCriteria
 * **Discriminator**: criterionType
 
@@ -173,33 +175,31 @@
 * **threshold**: int (Required): the criteria threshold value that activates the alert.
 
 
-## MetricDimension
+## ResourceTags
 ### Properties
-* **name**: string (Required): Name of the dimension.
-* **operator**: string (Required): the dimension operator. Only 'Include' and 'Exclude' are supported
-* **values**: string[] (Required): list of dimension values.
-
-## DynamicThresholdFailingPeriods
-### Properties
-* **minFailingPeriodsToAlert**: int (Required): The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods.
-* **numberOfEvaluationPeriods**: int (Required): The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points.
-
-## MetricCriteria
-### Properties
-* **criterionType**: 'DynamicThresholdCriterion' | 'StaticThresholdCriterion' | string (Required): Specifies the type of threshold criteria
-* **dimensions**: [MetricDimension](#metricdimension)[]: List of dimension conditions.
-* **metricName**: string (Required): Name of the metric.
-* **metricNamespace**: string: Namespace of the metric.
-* **name**: string (Required): Name of the criteria.
-* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string (Required): the criteria operator.
-* **skipMetricValidation**: bool: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
-* **threshold**: int (Required): the criteria threshold value that activates the alert.
-* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' | string (Required): the criteria time aggregation types.
 ### Additional Properties
-* **Additional Properties Type**: any
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SmsReceiver
+### Properties
+* **countryCode**: string (Required): The country code of the SMS receiver.
+* **name**: string (Required): The name of the SMS receiver. Names must be unique across all receivers within an action group.
+* **phoneNumber**: string (Required): The phone number of the SMS receiver.
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): Indicates the status of the receiver. Receivers that are not Enabled will not receive any communications.
+
+## VoiceReceiver
+### Properties
+* **countryCode**: string (Required): The country code of the voice receiver.
+* **name**: string (Required): The name of the voice receiver. Names must be unique across all receivers within an action group.
+* **phoneNumber**: string (Required): The phone number of the voice receiver.
+
+## WebhookReceiver
+### Properties
+* **name**: string (Required): The name of the webhook receiver. Names must be unique across all receivers within an action group.
+* **serviceUri**: string (Required): The URI where webhooks should be sent.
 

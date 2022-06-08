@@ -22,22 +22,6 @@
 * **Input**: [ListKeyValueParameters](#listkeyvalueparameters)
 * **Output**: [KeyValue](#keyvalue)
 
-## ConfigurationStoreProperties
-### Properties
-* **creationDate**: string (ReadOnly): The creation date of configuration store.
-* **endpoint**: string (ReadOnly): The DNS endpoint where the configuration store API will be available.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the configuration store.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ApiKeyListResult
-### Properties
-* **nextLink**: string (ReadOnly): The URI that can be used to request the next set of paged results.
-* **value**: [ApiKey](#apikey)[] (ReadOnly): The collection value.
-
 ## ApiKey
 ### Properties
 * **connectionString**: string (ReadOnly): A connection string that can be used by supporting clients for authentication.
@@ -47,10 +31,16 @@
 * **readOnly**: bool (ReadOnly): Whether this key can only be used for read operations.
 * **value**: string (ReadOnly): The value of the key that is used for authentication purposes.
 
-## ListKeyValueParameters
+## ApiKeyListResult
 ### Properties
-* **key**: string (Required, WriteOnly): The key to retrieve.
-* **label**: string (WriteOnly): The label of the key.
+* **nextLink**: string (ReadOnly): The URI that can be used to request the next set of paged results.
+* **value**: [ApiKey](#apikey)[] (ReadOnly): The collection value.
+
+## ConfigurationStoreProperties
+### Properties
+* **creationDate**: string (ReadOnly): The creation date of configuration store.
+* **endpoint**: string (ReadOnly): The DNS endpoint where the configuration store API will be available.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the configuration store.
 
 ## KeyValue
 ### Properties
@@ -68,6 +58,16 @@ A locked key-value may not be modified until it is unlocked.
 * **value**: string (ReadOnly): The value of the key-value.
 
 ## KeyValueTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ListKeyValueParameters
+### Properties
+* **key**: string (Required, WriteOnly): The key to retrieve.
+* **label**: string (WriteOnly): The label of the key.
+
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

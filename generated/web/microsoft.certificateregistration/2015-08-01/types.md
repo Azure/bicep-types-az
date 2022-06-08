@@ -24,6 +24,44 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.CertificateRegistration/certificateOrders/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
+## CertificateDetails
+### Properties
+* **id**: string: Resource Id
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
+* **name**: string: Resource Name
+* **properties**: [CertificateDetailsProperties](#certificatedetailsproperties)
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: string: Resource type
+
+## CertificateDetailsProperties
+### Properties
+* **issuer**: string: Issuer
+* **notAfter**: string: Valid to
+* **notBefore**: string: Valid from
+* **rawData**: string: Raw certificate data
+* **serialNumber**: string: Serial Number
+* **signatureAlgorithm**: string: Signature Algorithm
+* **subject**: string: Subject
+* **thumbprint**: string: Thumbprint
+* **version**: int: Version
+
+## CertificateOrderCertificate
+### Properties
+* **id**: string: Resource Id
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
+* **name**: string: Resource Name
+* **properties**: [CertificateOrderCertificateProperties](#certificateordercertificateproperties)
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: string: Resource type
+
+## CertificateOrderCertificateProperties
+### Properties
+* **keyVaultId**: string: Key Vault Csm resource Id
+* **keyVaultSecretName**: string: Key Vault secret name
+* **provisioningState**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder': Status of the Key Vault secret
+
 ## CertificateOrderProperties
 ### Properties
 * **autoRenew**: bool: Auto renew
@@ -48,48 +86,10 @@
 ### Additional Properties
 * **Additional Properties Type**: [CertificateOrderCertificate](#certificateordercertificate)
 
-## CertificateOrderCertificate
-### Properties
-* **id**: string: Resource Id
-* **kind**: string: Kind of resource
-* **location**: string (Required): Resource Location
-* **name**: string: Resource Name
-* **properties**: [CertificateOrderCertificateProperties](#certificateordercertificateproperties)
-* **tags**: [ResourceTags](#resourcetags): Resource tags
-* **type**: string: Resource type
-
-## CertificateOrderCertificateProperties
-### Properties
-* **keyVaultId**: string: Key Vault Csm resource Id
-* **keyVaultSecretName**: string: Key Vault secret name
-* **provisioningState**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder': Status of the Key Vault secret
-
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## CertificateDetails
-### Properties
-* **id**: string: Resource Id
-* **kind**: string: Kind of resource
-* **location**: string (Required): Resource Location
-* **name**: string: Resource Name
-* **properties**: [CertificateDetailsProperties](#certificatedetailsproperties)
-* **tags**: [ResourceTags](#resourcetags): Resource tags
-* **type**: string: Resource type
-
-## CertificateDetailsProperties
-### Properties
-* **issuer**: string: Issuer
-* **notAfter**: string: Valid to
-* **notBefore**: string: Valid from
-* **rawData**: string: Raw certificate data
-* **serialNumber**: string: Serial Number
-* **signatureAlgorithm**: string: Signature Algorithm
-* **subject**: string: Subject
-* **thumbprint**: string: Thumbprint
-* **version**: int: Version
 
 ## ResourceTags
 ### Properties

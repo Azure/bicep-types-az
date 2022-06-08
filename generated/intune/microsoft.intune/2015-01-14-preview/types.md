@@ -81,15 +81,6 @@
 * **pinNumRetry**: int
 * **screenCapture**: 'allow' | 'block' | string
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## MAMPolicyAppOrGroupIdProperties
-### Properties
-* **url**: string (Required)
-
 ## IOsmamPolicyProperties
 ### Properties
 * **accessRecheckOfflineTimeout**: string
@@ -112,6 +103,15 @@
 * **pin**: 'notRequired' | 'required' | string
 * **pinNumRetry**: int
 * **touchId**: 'disable' | 'enable' | string
+
+## MAMPolicyAppOrGroupIdProperties
+### Properties
+* **url**: string (Required)
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

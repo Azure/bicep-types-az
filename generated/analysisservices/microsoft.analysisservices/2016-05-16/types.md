@@ -22,10 +22,6 @@
 * **serverMonitorMode**: int: The server monitor mode for AS server
 * **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' | string (ReadOnly): The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.
 
-## ServerAdministrators
-### Properties
-* **members**: string[]: An array of administrator user identities.
-
 ## ResourceSku
 ### Properties
 * **capacity**: int: The number of instances in the read only query pool.
@@ -36,4 +32,8 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ServerAdministrators
+### Properties
+* **members**: string[]: An array of administrator user identities.
 

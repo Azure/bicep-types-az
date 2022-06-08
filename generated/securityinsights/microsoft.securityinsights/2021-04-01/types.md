@@ -67,6 +67,45 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SecurityInsights/watchlists/watchlistItems' (ReadOnly, DeployTimeConstant): The resource type
 
+## ClientInfo
+### Properties
+* **email**: string: The email of the client.
+* **name**: string: The name of the client.
+* **objectId**: string: The object id of the client.
+* **userPrincipalName**: string: The user principal name of the client.
+
+## EntityCommonPropertiesAdditionalData
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## IncidentAdditionalData
+### Properties
+* **alertProductNames**: string[] (ReadOnly): List of product names of alerts in the incident
+* **alertsCount**: int (ReadOnly): The number of alerts in the incident
+* **bookmarksCount**: int (ReadOnly): The number of bookmarks in the incident
+* **commentsCount**: int (ReadOnly): The number of comments in the incident
+* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PrivilegeEscalation' | string[] (ReadOnly): The tactics associated with incident
+
+## IncidentCommentProperties
+### Properties
+* **author**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
+* **createdTimeUtc**: string (ReadOnly): The time the comment was created
+* **lastModifiedTimeUtc**: string (ReadOnly): The time the comment was updated
+* **message**: string (Required): The comment message
+
+## IncidentLabel
+### Properties
+* **labelName**: string (Required): The name of the label
+* **labelType**: 'System' | 'User' | string (ReadOnly): The type of the label
+
+## IncidentOwnerInfo
+### Properties
+* **assignedTo**: string: The name of the user the incident is assigned to.
+* **email**: string: The email of the user the incident is assigned to.
+* **objectId**: string: The object id of the user the incident is assigned to.
+* **userPrincipalName**: string: The user principal name of the user the incident is assigned to.
+
 ## IncidentProperties
 ### Properties
 * **additionalData**: [IncidentAdditionalData](#incidentadditionaldata) (ReadOnly): Incident additional data property bag.
@@ -87,25 +126,12 @@
 * **status**: 'Active' | 'Closed' | 'New' | string (Required): The status of the incident
 * **title**: string (Required): The title of the incident
 
-## IncidentAdditionalData
+## RelationProperties
 ### Properties
-* **alertProductNames**: string[] (ReadOnly): List of product names of alerts in the incident
-* **alertsCount**: int (ReadOnly): The number of alerts in the incident
-* **bookmarksCount**: int (ReadOnly): The number of bookmarks in the incident
-* **commentsCount**: int (ReadOnly): The number of comments in the incident
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PrivilegeEscalation' | string[] (ReadOnly): The tactics associated with incident
-
-## IncidentLabel
-### Properties
-* **labelName**: string (Required): The name of the label
-* **labelType**: 'System' | 'User' | string (ReadOnly): The type of the label
-
-## IncidentOwnerInfo
-### Properties
-* **assignedTo**: string: The name of the user the incident is assigned to.
-* **email**: string: The email of the user the incident is assigned to.
-* **objectId**: string: The object id of the user the incident is assigned to.
-* **userPrincipalName**: string: The user principal name of the user the incident is assigned to.
+* **relatedResourceId**: string (Required): The resource ID of the related resource
+* **relatedResourceKind**: string (ReadOnly): The resource kind of the related resource
+* **relatedResourceName**: string (ReadOnly): The name of the related resource
+* **relatedResourceType**: string (ReadOnly): The resource type of the related resource
 
 ## SystemData
 ### Properties
@@ -116,26 +142,24 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
-## IncidentCommentProperties
+## ThreatIntelligenceExternalReference
 ### Properties
-* **author**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
-* **createdTimeUtc**: string (ReadOnly): The time the comment was created
-* **lastModifiedTimeUtc**: string (ReadOnly): The time the comment was updated
-* **message**: string (Required): The comment message
+* **description**: string (WriteOnly): External reference description
+* **externalId**: string (WriteOnly): External reference ID
+* **hashes**: [ThreatIntelligenceExternalReferenceHashes](#threatintelligenceexternalreferencehashes) (WriteOnly): External reference hashes
+* **sourceName**: string (WriteOnly): External reference source name
+* **url**: string (WriteOnly): External reference URL
 
-## ClientInfo
+## ThreatIntelligenceExternalReferenceHashes
 ### Properties
-* **email**: string: The email of the client.
-* **name**: string: The name of the client.
-* **objectId**: string: The object id of the client.
-* **userPrincipalName**: string: The user principal name of the client.
+### Additional Properties
+* **Additional Properties Type**: string
 
-## RelationProperties
+## ThreatIntelligenceGranularMarkingModel
 ### Properties
-* **relatedResourceId**: string (Required): The resource ID of the related resource
-* **relatedResourceKind**: string (ReadOnly): The resource kind of the related resource
-* **relatedResourceName**: string (ReadOnly): The name of the related resource
-* **relatedResourceType**: string (ReadOnly): The resource type of the related resource
+* **language**: string (WriteOnly): Language granular marking model
+* **markingRef**: int (WriteOnly): marking reference granular marking model
+* **selectors**: string[] (WriteOnly): granular marking model selectors
 
 ## ThreatIntelligenceIndicatorProperties
 ### Properties
@@ -170,34 +194,10 @@
 * **validFrom**: string (WriteOnly): Valid from
 * **validUntil**: string (WriteOnly): Valid until
 
-## EntityCommonPropertiesAdditionalData
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
 ## ThreatIntelligenceIndicatorPropertiesExtensions
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
-
-## ThreatIntelligenceExternalReference
-### Properties
-* **description**: string (WriteOnly): External reference description
-* **externalId**: string (WriteOnly): External reference ID
-* **hashes**: [ThreatIntelligenceExternalReferenceHashes](#threatintelligenceexternalreferencehashes) (WriteOnly): External reference hashes
-* **sourceName**: string (WriteOnly): External reference source name
-* **url**: string (WriteOnly): External reference URL
-
-## ThreatIntelligenceExternalReferenceHashes
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ThreatIntelligenceGranularMarkingModel
-### Properties
-* **language**: string (WriteOnly): Language granular marking model
-* **markingRef**: int (WriteOnly): marking reference granular marking model
-* **selectors**: string[] (WriteOnly): granular marking model selectors
 
 ## ThreatIntelligenceKillChainPhase
 ### Properties
@@ -213,6 +213,25 @@
 ### Properties
 * **value**: string (WriteOnly): Value of parsed pattern
 * **valueType**: string (WriteOnly): Type of the value
+
+## UserInfo
+### Properties
+* **email**: string (ReadOnly): The email of the user.
+* **name**: string (ReadOnly): The name of the user.
+* **objectId**: string: The object id of the user.
+
+## WatchlistItemProperties
+### Properties
+* **created**: string: The time the watchlist item was created
+* **createdBy**: [UserInfo](#userinfo): User information that made some action
+* **entityMapping**: any: Any object
+* **isDeleted**: bool: A flag that indicates if the watchlist item is deleted or not
+* **itemsKeyValue**: any (Required): Any object
+* **tenantId**: string: The tenantId to which the watchlist item belongs to
+* **updated**: string: The last time the watchlist item was updated
+* **updatedBy**: [UserInfo](#userinfo): User information that made some action
+* **watchlistItemId**: string: The id (a Guid) of the watchlist item
+* **watchlistItemType**: string: The type of the watchlist item
 
 ## WatchlistProperties
 ### Properties
@@ -238,23 +257,4 @@ value1,value2
 * **watchlistAlias**: string: The alias of the watchlist
 * **watchlistId**: string: The id (a Guid) of the watchlist
 * **watchlistType**: string: The type of the watchlist
-
-## UserInfo
-### Properties
-* **email**: string (ReadOnly): The email of the user.
-* **name**: string (ReadOnly): The name of the user.
-* **objectId**: string: The object id of the user.
-
-## WatchlistItemProperties
-### Properties
-* **created**: string: The time the watchlist item was created
-* **createdBy**: [UserInfo](#userinfo): User information that made some action
-* **entityMapping**: any: Any object
-* **isDeleted**: bool: A flag that indicates if the watchlist item is deleted or not
-* **itemsKeyValue**: any (Required): Any object
-* **tenantId**: string: The tenantId to which the watchlist item belongs to
-* **updated**: string: The last time the watchlist item was updated
-* **updatedBy**: [UserInfo](#userinfo): User information that made some action
-* **watchlistItemId**: string: The id (a Guid) of the watchlist item
-* **watchlistItemType**: string: The type of the watchlist item
 

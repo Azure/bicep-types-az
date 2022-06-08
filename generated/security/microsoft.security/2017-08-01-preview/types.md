@@ -93,17 +93,6 @@
 ### Properties
 * **isEnabled**: bool: Indicates whether Advanced Threat Protection is enabled.
 
-## AutoProvisioningSettingProperties
-### Properties
-* **autoProvision**: 'Off' | 'On' | string (Required): Describes what kind of security agent provisioning action to take
-
-## DeviceSecurityGroupProperties
-### Properties
-* **allowlistRules**: [AllowlistCustomAlertRule](#allowlistcustomalertrule)[]: The allow-list custom alert rules.
-* **denylistRules**: [DenylistCustomAlertRule](#denylistcustomalertrule)[]: The deny-list custom alert rules.
-* **thresholdRules**: [ThresholdCustomAlertRule](#thresholdcustomalertrule)[]: The list of custom alert threshold rules.
-* **timeWindowRules**: [TimeWindowCustomAlertRule](#timewindowcustomalertrule)[]: The list of custom alert time-window rules.
-
 ## AllowlistCustomAlertRule
 * **Discriminator**: ruleType
 
@@ -126,6 +115,14 @@
 * **ruleType**: 'ProcessNotAllowed' (Required): The type of the custom alert rule.
 
 
+## AutoProvisioningSettingProperties
+### Properties
+* **autoProvision**: 'Off' | 'On' | string (Required): Describes what kind of security agent provisioning action to take
+
+## DataExportSettingProperties
+### Properties
+* **enabled**: bool (Required): Is the data export setting is enabled
+
 ## DenylistCustomAlertRule
 ### Properties
 * **denylistValues**: string[] (Required): The values to deny. The format of the values depends on the rule type.
@@ -134,6 +131,89 @@
 * **isEnabled**: bool (Required): Status of the custom alert.
 * **ruleType**: string (Required): The type of the custom alert rule.
 * **valueType**: 'IpCidr' | 'String' | string (ReadOnly): The value type of the items in the list.
+
+## DeviceSecurityGroupProperties
+### Properties
+* **allowlistRules**: [AllowlistCustomAlertRule](#allowlistcustomalertrule)[]: The allow-list custom alert rules.
+* **denylistRules**: [DenylistCustomAlertRule](#denylistcustomalertrule)[]: The deny-list custom alert rules.
+* **thresholdRules**: [ThresholdCustomAlertRule](#thresholdcustomalertrule)[]: The list of custom alert threshold rules.
+* **timeWindowRules**: [TimeWindowCustomAlertRule](#timewindowcustomalertrule)[]: The list of custom alert time-window rules.
+
+## InformationProtectionKeyword
+### Properties
+* **canBeNumeric**: bool: Indicates whether the keyword can be applied on numeric types or not.
+* **custom**: bool: Indicates whether the keyword is custom or not.
+* **excluded**: bool: Indicates whether the keyword is excluded or not.
+* **pattern**: string: The keyword pattern.
+
+## InformationProtectionPolicyProperties
+### Properties
+* **informationTypes**: [InformationProtectionPolicyPropertiesInformationTypes](#informationprotectionpolicypropertiesinformationtypes): The sensitivity information types.
+* **labels**: [InformationProtectionPolicyPropertiesLabels](#informationprotectionpolicypropertieslabels): Dictionary of sensitivity labels.
+* **lastModifiedUtc**: string (ReadOnly): Describes the last UTC time the policy was modified.
+* **version**: string (ReadOnly): Describes the version of the policy.
+
+## InformationProtectionPolicyPropertiesInformationTypes
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [InformationType](#informationtype)
+
+## InformationProtectionPolicyPropertiesLabels
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [SensitivityLabel](#sensitivitylabel)
+
+## InformationType
+### Properties
+* **custom**: bool: Indicates whether the information type is custom or not.
+* **description**: string: The description of the information type.
+* **displayName**: string: The name of the information type.
+* **enabled**: bool: Indicates whether the information type is enabled or not.
+* **keywords**: [InformationProtectionKeyword](#informationprotectionkeyword)[]: The information type keywords.
+* **order**: int: The order of the information type.
+* **recommendedLabelId**: string: The recommended label id to be associated with this information type.
+
+## IoTSecuritySolutionProperties
+### Properties
+* **autoDiscoveredResources**: string[] (ReadOnly): List of resources that were automatically discovered as relevant to the security solution.
+* **disabledDataSources**: 'TwinData' | string[]: Disabled data sources. Disabling these data sources compromises the system.
+* **displayName**: string (Required): Resource display name.
+* **export**: 'RawEvents' | string[]: List of additional export to workspace data options
+* **iotHubs**: string[] (Required): IoT Hub resource IDs
+* **recommendationsConfiguration**: [RecommendationConfigurationProperties](#recommendationconfigurationproperties)[]: List of recommendation configuration
+* **status**: 'Disabled' | 'Enabled' | string: Security solution status
+* **userDefinedResources**: [UserDefinedResourcesProperties](#userdefinedresourcesproperties): Properties of the solution's user defined resources.
+* **workspace**: string (Required): Workspace resource ID
+
+## PricingProperties
+### Properties
+* **pricingTier**: 'Free' | 'Standard' | string (Required): Pricing tier type
+
+## RecommendationConfigurationProperties
+### Properties
+* **name**: string (ReadOnly)
+* **recommendationType**: 'IoT_ACRAuthentication' | 'IoT_AgentSendsUnutilizedMessages' | 'IoT_Baseline' | 'IoT_EdgeHubMemOptimize' | 'IoT_EdgeLoggingOptions' | 'IoT_IPFilter_DenyAll' | 'IoT_IPFilter_PermissiveRule' | 'IoT_InconsistentModuleSettings' | 'IoT_InstallAgent' | 'IoT_OpenPorts' | 'IoT_PermissiveFirewallPolicy' | 'IoT_PermissiveInputFirewallRules' | 'IoT_PermissiveOutputFirewallRules' | 'IoT_PrivilegedDockerOptions' | 'IoT_SharedCredentials' | 'IoT_VulnerableTLSCipherSuite' | string (Required): The recommendation type.
+* **status**: 'Disabled' | 'Enabled' | string (Required): Recommendation status. The recommendation is not generated when the status is disabled
+
+## SecurityContactProperties
+### Properties
+* **alertNotifications**: 'Off' | 'On' | string (Required): Whether to send security alerts notifications to the security contact
+* **alertsToAdmins**: 'Off' | 'On' | string (Required): Whether to send security alerts notifications to subscription admins
+* **email**: string (Required): The email of this security contact
+* **phone**: string: The phone number of this security contact
+
+## SensitivityLabel
+### Properties
+* **description**: string: The description of the sensitivity label.
+* **displayName**: string: The name of the sensitivity label.
+* **enabled**: bool: Indicates whether the label is enabled or not.
+* **order**: int: The order of the sensitivity label.
+* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None': The rank of the sensitivity label.
+
+## TagsResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ThresholdCustomAlertRule
 * **Discriminator**: ruleType
@@ -284,90 +364,10 @@
 * **ruleType**: 'UnauthorizedOperationsNotInAllowedRange' (Required): The type of the custom alert rule.
 
 
-## InformationProtectionPolicyProperties
-### Properties
-* **informationTypes**: [InformationProtectionPolicyPropertiesInformationTypes](#informationprotectionpolicypropertiesinformationtypes): The sensitivity information types.
-* **labels**: [InformationProtectionPolicyPropertiesLabels](#informationprotectionpolicypropertieslabels): Dictionary of sensitivity labels.
-* **lastModifiedUtc**: string (ReadOnly): Describes the last UTC time the policy was modified.
-* **version**: string (ReadOnly): Describes the version of the policy.
-
-## InformationProtectionPolicyPropertiesInformationTypes
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [InformationType](#informationtype)
-
-## InformationType
-### Properties
-* **custom**: bool: Indicates whether the information type is custom or not.
-* **description**: string: The description of the information type.
-* **displayName**: string: The name of the information type.
-* **enabled**: bool: Indicates whether the information type is enabled or not.
-* **keywords**: [InformationProtectionKeyword](#informationprotectionkeyword)[]: The information type keywords.
-* **order**: int: The order of the information type.
-* **recommendedLabelId**: string: The recommended label id to be associated with this information type.
-
-## InformationProtectionKeyword
-### Properties
-* **canBeNumeric**: bool: Indicates whether the keyword can be applied on numeric types or not.
-* **custom**: bool: Indicates whether the keyword is custom or not.
-* **excluded**: bool: Indicates whether the keyword is excluded or not.
-* **pattern**: string: The keyword pattern.
-
-## InformationProtectionPolicyPropertiesLabels
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [SensitivityLabel](#sensitivitylabel)
-
-## SensitivityLabel
-### Properties
-* **description**: string: The description of the sensitivity label.
-* **displayName**: string: The name of the sensitivity label.
-* **enabled**: bool: Indicates whether the label is enabled or not.
-* **order**: int: The order of the sensitivity label.
-* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None': The rank of the sensitivity label.
-
-## IoTSecuritySolutionProperties
-### Properties
-* **autoDiscoveredResources**: string[] (ReadOnly): List of resources that were automatically discovered as relevant to the security solution.
-* **disabledDataSources**: 'TwinData' | string[]: Disabled data sources. Disabling these data sources compromises the system.
-* **displayName**: string (Required): Resource display name.
-* **export**: 'RawEvents' | string[]: List of additional export to workspace data options
-* **iotHubs**: string[] (Required): IoT Hub resource IDs
-* **recommendationsConfiguration**: [RecommendationConfigurationProperties](#recommendationconfigurationproperties)[]: List of recommendation configuration
-* **status**: 'Disabled' | 'Enabled' | string: Security solution status
-* **userDefinedResources**: [UserDefinedResourcesProperties](#userdefinedresourcesproperties): Properties of the solution's user defined resources.
-* **workspace**: string (Required): Workspace resource ID
-
-## RecommendationConfigurationProperties
-### Properties
-* **name**: string (ReadOnly)
-* **recommendationType**: 'IoT_ACRAuthentication' | 'IoT_AgentSendsUnutilizedMessages' | 'IoT_Baseline' | 'IoT_EdgeHubMemOptimize' | 'IoT_EdgeLoggingOptions' | 'IoT_IPFilter_DenyAll' | 'IoT_IPFilter_PermissiveRule' | 'IoT_InconsistentModuleSettings' | 'IoT_InstallAgent' | 'IoT_OpenPorts' | 'IoT_PermissiveFirewallPolicy' | 'IoT_PermissiveInputFirewallRules' | 'IoT_PermissiveOutputFirewallRules' | 'IoT_PrivilegedDockerOptions' | 'IoT_SharedCredentials' | 'IoT_VulnerableTLSCipherSuite' | string (Required): The recommendation type.
-* **status**: 'Disabled' | 'Enabled' | string (Required): Recommendation status. The recommendation is not generated when the status is disabled
-
 ## UserDefinedResourcesProperties
 ### Properties
 * **query**: string (Required): Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""
 * **querySubscriptions**: string[] (Required): List of Azure subscription ids on which the user defined resources query should be executed.
-
-## TagsResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## PricingProperties
-### Properties
-* **pricingTier**: 'Free' | 'Standard' | string (Required): Pricing tier type
-
-## SecurityContactProperties
-### Properties
-* **alertNotifications**: 'Off' | 'On' | string (Required): Whether to send security alerts notifications to the security contact
-* **alertsToAdmins**: 'Off' | 'On' | string (Required): Whether to send security alerts notifications to subscription admins
-* **email**: string (Required): The email of this security contact
-* **phone**: string: The phone number of this security contact
-
-## DataExportSettingProperties
-### Properties
-* **enabled**: bool (Required): Is the data export setting is enabled
 
 ## WorkspaceSettingProperties
 ### Properties

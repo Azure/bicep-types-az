@@ -29,23 +29,77 @@
 * **ApiVersion**: 2015-03-01-preview
 * **Output**: [HostInfo](#hostinfo)[]
 
-## ClusterIdentity
+## ApplicationGetEndpoint
 ### Properties
-* **principalId**: string (ReadOnly): The principal id of cluster identity. This property will only be provided for a system assigned identity.
-* **tenantId**: string (ReadOnly): The tenant id associated with the cluster. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of identity used for the cluster. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.
-* **userAssignedIdentities**: [ClusterIdentityUserAssignedIdentities](#clusteridentityuserassignedidentities): The list of user identities associated with the cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **destinationPort**: int: The destination port to connect to.
+* **location**: string: The location of the endpoint.
+* **privateIPAddress**: string: The private ip address of the endpoint.
+* **publicPort**: int: The public port to connect to.
 
-## ClusterIdentityUserAssignedIdentities
+## ApplicationGetHttpsEndpoint
+### Properties
+* **accessModes**: string[]: The list of access modes for the application.
+* **destinationPort**: int: The destination port to connect to.
+* **disableGatewayAuth**: bool (WriteOnly): The value indicates whether to disable GatewayAuth.
+* **location**: string (ReadOnly): The location of the endpoint.
+* **privateIPAddress**: string: The private ip address of the endpoint.
+* **publicPort**: int (ReadOnly): The public port to connect to.
+* **subDomainSuffix**: string (WriteOnly): The subdomain suffix of the application.
+
+## ApplicationProperties
+### Properties
+* **applicationState**: string (ReadOnly): The application state.
+* **applicationType**: string: The application type.
+* **computeProfile**: [ComputeProfile](#computeprofile): Describes the compute profile.
+* **createdDate**: string (ReadOnly): The application create date time.
+* **errors**: [Errors](#errors)[]: The list of errors.
+* **httpsEndpoints**: [ApplicationGetHttpsEndpoint](#applicationgethttpsendpoint)[]: The list of application HTTPS endpoints.
+* **installScriptActions**: [RuntimeScriptAction](#runtimescriptaction)[]: The list of install script actions.
+* **marketplaceIdentifier**: string (ReadOnly): The marketplace identifier.
+* **provisioningState**: string (ReadOnly): The provisioning state of the application.
+* **sshEndpoints**: [ApplicationGetEndpoint](#applicationgetendpoint)[]: The list of application SSH endpoints.
+* **uninstallScriptActions**: [RuntimeScriptAction](#runtimescriptaction)[]: The list of uninstall script actions.
+
+## ApplicationTags
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [ComponentsC51Ht8SchemasClusteridentityPropertiesUserassignedidentitiesAdditionalproperties](#componentsc51ht8schemasclusteridentitypropertiesuserassignedidentitiesadditionalproperties)
+* **Additional Properties Type**: string
 
-## ComponentsC51Ht8SchemasClusteridentityPropertiesUserassignedidentitiesAdditionalproperties
+## Autoscale
 ### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
-* **tenantId**: string: The tenant id of user assigned identity.
+* **capacity**: [AutoscaleCapacity](#autoscalecapacity): The load-based autoscale request parameters
+* **recurrence**: [AutoscaleRecurrence](#autoscalerecurrence): Schedule-based autoscale request parameters
+
+## AutoscaleCapacity
+### Properties
+* **maxInstanceCount**: int: The maximum instance count of the cluster
+* **minInstanceCount**: int: The minimum instance count of the cluster
+
+## AutoscaleRecurrence
+### Properties
+* **schedule**: [AutoscaleSchedule](#autoscaleschedule)[]: Array of schedule-based autoscale rules
+* **timeZone**: string: The time zone for the autoscale schedule times
+
+## AutoscaleSchedule
+### Properties
+* **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: Days of the week for a schedule-based autoscale rule
+* **timeAndCapacity**: [AutoscaleTimeAndCapacity](#autoscaletimeandcapacity): Time and capacity request parameters
+
+## AutoscaleTimeAndCapacity
+### Properties
+* **maxInstanceCount**: int: The maximum instance count of the cluster
+* **minInstanceCount**: int: The minimum instance count of the cluster
+* **time**: string: 24-hour time in the form xx:xx
+
+## ClientGroupInfo
+### Properties
+* **groupId**: string: The AAD security group id.
+* **groupName**: string: The AAD security group name.
+
+## ClusterCreateParametersExtendedTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ClusterCreateProperties
 ### Properties
@@ -84,6 +138,24 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ClusterIdentity
+### Properties
+* **principalId**: string (ReadOnly): The principal id of cluster identity. This property will only be provided for a system assigned identity.
+* **tenantId**: string (ReadOnly): The tenant id associated with the cluster. This property will only be provided for a system assigned identity.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of identity used for the cluster. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.
+* **userAssignedIdentities**: [ClusterIdentityUserAssignedIdentities](#clusteridentityuserassignedidentities): The list of user identities associated with the cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+
+## ClusterIdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ComponentsC51Ht8SchemasClusteridentityPropertiesUserassignedidentitiesAdditionalproperties](#componentsc51ht8schemasclusteridentitypropertiesuserassignedidentitiesadditionalproperties)
+
+## ComponentsC51Ht8SchemasClusteridentityPropertiesUserassignedidentitiesAdditionalproperties
+### Properties
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+* **tenantId**: string: The tenant id of user assigned identity.
+
 ## ComputeIsolationProperties
 ### Properties
 * **enableComputeIsolation**: bool: The flag indicates whether enable compute isolation or not.
@@ -93,85 +165,6 @@
 ### Properties
 * **roles**: [Role](#role)[]: The list of roles in the cluster.
 
-## Role
-### Properties
-* **autoscale**: [Autoscale](#autoscale): The autoscale request parameters
-* **dataDisksGroups**: [DataDisksGroups](#datadisksgroups)[]: The data disks groups for the role.
-* **encryptDataDisks**: bool: Indicates whether encrypt the data disks.
-* **hardwareProfile**: [HardwareProfile](#hardwareprofile): The hardware profile.
-* **minInstanceCount**: int: The minimum instance count of the cluster.
-* **name**: string: The name of the role.
-* **osProfile**: [OsProfile](#osprofile): The Linux operation systems profile.
-* **scriptActions**: [ScriptAction](#scriptaction)[]: The list of script actions on the role.
-* **targetInstanceCount**: int: The instance count of the cluster.
-* **virtualNetworkProfile**: [VirtualNetworkProfile](#virtualnetworkprofile): The virtual network properties.
-* **VMGroupName**: string: The name of the virtual machine group.
-
-## Autoscale
-### Properties
-* **capacity**: [AutoscaleCapacity](#autoscalecapacity): The load-based autoscale request parameters
-* **recurrence**: [AutoscaleRecurrence](#autoscalerecurrence): Schedule-based autoscale request parameters
-
-## AutoscaleCapacity
-### Properties
-* **maxInstanceCount**: int: The maximum instance count of the cluster
-* **minInstanceCount**: int: The minimum instance count of the cluster
-
-## AutoscaleRecurrence
-### Properties
-* **schedule**: [AutoscaleSchedule](#autoscaleschedule)[]: Array of schedule-based autoscale rules
-* **timeZone**: string: The time zone for the autoscale schedule times
-
-## AutoscaleSchedule
-### Properties
-* **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: Days of the week for a schedule-based autoscale rule
-* **timeAndCapacity**: [AutoscaleTimeAndCapacity](#autoscaletimeandcapacity): Time and capacity request parameters
-
-## AutoscaleTimeAndCapacity
-### Properties
-* **maxInstanceCount**: int: The maximum instance count of the cluster
-* **minInstanceCount**: int: The minimum instance count of the cluster
-* **time**: string: 24-hour time in the form xx:xx
-
-## DataDisksGroups
-### Properties
-* **diskSizeGB**: int (ReadOnly): ReadOnly. The DiskSize in GB. Do not set this value.
-* **disksPerNode**: int: The number of disks per node.
-* **storageAccountType**: string (ReadOnly): ReadOnly. The storage account type. Do not set this value.
-
-## HardwareProfile
-### Properties
-* **vmSize**: string: The size of the VM
-
-## OsProfile
-### Properties
-* **linuxOperatingSystemProfile**: [LinuxOperatingSystemProfile](#linuxoperatingsystemprofile): The ssh username, password, and ssh public key.
-
-## LinuxOperatingSystemProfile
-### Properties
-* **password**: string: The password.
-* **sshProfile**: [SshProfile](#sshprofile): The list of SSH public keys.
-* **username**: string: The username.
-
-## SshProfile
-### Properties
-* **publicKeys**: [SshPublicKey](#sshpublickey)[]: The list of SSH public keys.
-
-## SshPublicKey
-### Properties
-* **certificateData**: string: The certificate for SSH.
-
-## ScriptAction
-### Properties
-* **name**: string (Required): The name of the script action.
-* **parameters**: string (Required): The parameters for the script provided.
-* **uri**: string (Required): The URI to the script.
-
-## VirtualNetworkProfile
-### Properties
-* **id**: string: The ID of the virtual network.
-* **subnet**: string: The name of the subnet.
-
 ## ConnectivityEndpoint
 ### Properties
 * **location**: string (ReadOnly): The location of the endpoint.
@@ -179,6 +172,12 @@
 * **port**: int (ReadOnly): The port to connect to.
 * **privateIPAddress**: string (ReadOnly): The private ip address of the endpoint.
 * **protocol**: string (ReadOnly): The protocol of the endpoint.
+
+## DataDisksGroups
+### Properties
+* **diskSizeGB**: int (ReadOnly): ReadOnly. The DiskSize in GB. Do not set this value.
+* **disksPerNode**: int: The number of disks per node.
+* **storageAccountType**: string (ReadOnly): ReadOnly. The storage account type. Do not set this value.
 
 ## DiskEncryptionProperties
 ### Properties
@@ -203,29 +202,72 @@
 * **excludedServicesConfigId**: string (ReadOnly): The config id of excluded services.
 * **excludedServicesList**: string (ReadOnly): The list of excluded services.
 
+## HardwareProfile
+### Properties
+* **vmSize**: string: The size of the VM
+
+## HostInfo
+### Properties
+* **effectiveDiskEncryptionKeyUrl**: string (ReadOnly): The effective disk encryption key URL used by the host
+* **fqdn**: string (ReadOnly): The Fully Qualified Domain Name of host
+* **name**: string (ReadOnly): The host name
+
 ## KafkaRestProperties
 ### Properties
 * **clientGroupInfo**: [ClientGroupInfo](#clientgroupinfo): The information of AAD security group.
 * **configurationOverride**: [KafkaRestPropertiesConfigurationOverride](#kafkarestpropertiesconfigurationoverride): The configurations that need to be overriden.
-
-## ClientGroupInfo
-### Properties
-* **groupId**: string: The AAD security group id.
-* **groupName**: string: The AAD security group name.
 
 ## KafkaRestPropertiesConfigurationOverride
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## LinuxOperatingSystemProfile
+### Properties
+* **password**: string: The password.
+* **sshProfile**: [SshProfile](#sshprofile): The list of SSH public keys.
+* **username**: string: The username.
+
 ## NetworkProperties
 ### Properties
 * **privateLink**: 'Disabled' | 'Enabled' | string: Indicates whether or not private link is enabled.
 * **resourceProviderConnection**: 'Inbound' | 'Outbound' | string: The direction for the resource provider connection.
 
+## OsProfile
+### Properties
+* **linuxOperatingSystemProfile**: [LinuxOperatingSystemProfile](#linuxoperatingsystemprofile): The ssh username, password, and ssh public key.
+
 ## QuotaInfo
 ### Properties
 * **coresUsed**: int (ReadOnly): The cores used by the cluster.
+
+## Role
+### Properties
+* **autoscale**: [Autoscale](#autoscale): The autoscale request parameters
+* **dataDisksGroups**: [DataDisksGroups](#datadisksgroups)[]: The data disks groups for the role.
+* **encryptDataDisks**: bool: Indicates whether encrypt the data disks.
+* **hardwareProfile**: [HardwareProfile](#hardwareprofile): The hardware profile.
+* **minInstanceCount**: int: The minimum instance count of the cluster.
+* **name**: string: The name of the role.
+* **osProfile**: [OsProfile](#osprofile): The Linux operation systems profile.
+* **scriptActions**: [ScriptAction](#scriptaction)[]: The list of script actions on the role.
+* **targetInstanceCount**: int: The instance count of the cluster.
+* **virtualNetworkProfile**: [VirtualNetworkProfile](#virtualnetworkprofile): The virtual network properties.
+* **VMGroupName**: string: The name of the virtual machine group.
+
+## RuntimeScriptAction
+### Properties
+* **applicationName**: string (ReadOnly): The application name of the script action, if any.
+* **name**: string (Required): The name of the script action.
+* **parameters**: string (WriteOnly): The parameters for the script
+* **roles**: string[] (Required): The list of roles where script will be executed.
+* **uri**: string (Required): The URI to the script.
+
+## ScriptAction
+### Properties
+* **name**: string (Required): The name of the script action.
+* **parameters**: string (Required): The parameters for the script provided.
+* **uri**: string (Required): The URI to the script.
 
 ## SecurityProfile
 ### Properties
@@ -239,9 +281,13 @@
 * **msiResourceId**: string: User assigned identity that has permissions to read and create cluster-related artifacts in the user's AADDS.
 * **organizationalUnitDN**: string: The organizational unit within the Active Directory to place the cluster and service accounts.
 
-## StorageProfile
+## SshProfile
 ### Properties
-* **storageaccounts**: [StorageAccount](#storageaccount)[]: The list of storage accounts in the cluster.
+* **publicKeys**: [SshPublicKey](#sshpublickey)[]: The list of SSH public keys.
+
+## SshPublicKey
+### Properties
+* **certificateData**: string: The certificate for SSH.
 
 ## StorageAccount
 ### Properties
@@ -255,58 +301,12 @@
 * **resourceId**: string: The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.
 * **saskey**: string: The shared access signature key.
 
-## ClusterCreateParametersExtendedTags
+## StorageProfile
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **storageaccounts**: [StorageAccount](#storageaccount)[]: The list of storage accounts in the cluster.
 
-## ApplicationProperties
+## VirtualNetworkProfile
 ### Properties
-* **applicationState**: string (ReadOnly): The application state.
-* **applicationType**: string: The application type.
-* **computeProfile**: [ComputeProfile](#computeprofile): Describes the compute profile.
-* **createdDate**: string (ReadOnly): The application create date time.
-* **errors**: [Errors](#errors)[]: The list of errors.
-* **httpsEndpoints**: [ApplicationGetHttpsEndpoint](#applicationgethttpsendpoint)[]: The list of application HTTPS endpoints.
-* **installScriptActions**: [RuntimeScriptAction](#runtimescriptaction)[]: The list of install script actions.
-* **marketplaceIdentifier**: string (ReadOnly): The marketplace identifier.
-* **provisioningState**: string (ReadOnly): The provisioning state of the application.
-* **sshEndpoints**: [ApplicationGetEndpoint](#applicationgetendpoint)[]: The list of application SSH endpoints.
-* **uninstallScriptActions**: [RuntimeScriptAction](#runtimescriptaction)[]: The list of uninstall script actions.
-
-## ApplicationGetHttpsEndpoint
-### Properties
-* **accessModes**: string[]: The list of access modes for the application.
-* **destinationPort**: int: The destination port to connect to.
-* **disableGatewayAuth**: bool (WriteOnly): The value indicates whether to disable GatewayAuth.
-* **location**: string (ReadOnly): The location of the endpoint.
-* **privateIPAddress**: string: The private ip address of the endpoint.
-* **publicPort**: int (ReadOnly): The public port to connect to.
-* **subDomainSuffix**: string (WriteOnly): The subdomain suffix of the application.
-
-## RuntimeScriptAction
-### Properties
-* **applicationName**: string (ReadOnly): The application name of the script action, if any.
-* **name**: string (Required): The name of the script action.
-* **parameters**: string (WriteOnly): The parameters for the script
-* **roles**: string[] (Required): The list of roles where script will be executed.
-* **uri**: string (Required): The URI to the script.
-
-## ApplicationGetEndpoint
-### Properties
-* **destinationPort**: int: The destination port to connect to.
-* **location**: string: The location of the endpoint.
-* **privateIPAddress**: string: The private ip address of the endpoint.
-* **publicPort**: int: The public port to connect to.
-
-## ApplicationTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## HostInfo
-### Properties
-* **effectiveDiskEncryptionKeyUrl**: string (ReadOnly): The effective disk encryption key URL used by the host
-* **fqdn**: string (ReadOnly): The Fully Qualified Domain Name of host
-* **name**: string (ReadOnly): The host name
+* **id**: string: The ID of the virtual network.
+* **subnet**: string: The name of the subnet.
 

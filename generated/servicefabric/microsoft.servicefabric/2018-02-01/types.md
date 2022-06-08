@@ -11,6 +11,78 @@
 * **tags**: [ResourceTags](#resourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
+## ApplicationDeltaHealthPolicy
+### Properties
+* **defaultServiceTypeDeltaHealthPolicy**: [ServiceTypeDeltaHealthPolicy](#servicetypedeltahealthpolicy): Represents the delta health policy used to evaluate the health of services belonging to a service type when upgrading the cluster.
+* **serviceTypeDeltaHealthPolicies**: [ServiceTypeDeltaHealthPolicyMap](#servicetypedeltahealthpolicymap): Defines a map that contains specific delta health policies for different service types.
+Each entry specifies as key the service type name and as value a ServiceTypeDeltaHealthPolicy used to evaluate the service health when upgrading the cluster.
+The map is empty by default.
+
+## ApplicationDeltaHealthPolicyMap
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ApplicationDeltaHealthPolicy](#applicationdeltahealthpolicy)
+
+## ApplicationHealthPolicy
+### Properties
+* **defaultServiceTypeHealthPolicy**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy): Represents the health policy used to evaluate the health of services belonging to a service type.
+* **serviceTypeHealthPolicies**: [ServiceTypeHealthPolicyMap](#servicetypehealthpolicymap): Defines a ServiceTypeHealthPolicy per service type name.
+
+The entries in the map replace the default service type health policy for each specified service type.
+For example, in an application that contains both a stateless gateway service type and a stateful engine service type, the health policies for the stateless and stateful services can be configured differently.
+With policy per service type, there's more granular control of the health of the service.
+
+If no policy is specified for a service type name, the DefaultServiceTypeHealthPolicy is used for evaluation.
+
+## ApplicationHealthPolicyMap
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ApplicationHealthPolicy](#applicationhealthpolicy)
+
+## AzureActiveDirectory
+### Properties
+* **clientApplication**: string: Azure active directory client application id.
+* **clusterApplication**: string: Azure active directory cluster application id.
+* **tenantId**: string: Azure active directory tenant id.
+
+## CertificateDescription
+### Properties
+* **thumbprint**: string (Required): Thumbprint of the primary certificate.
+* **thumbprintSecondary**: string: Thumbprint of the secondary certificate.
+* **x509StoreName**: 'AddressBook' | 'AuthRoot' | 'CertificateAuthority' | 'Disallowed' | 'My' | 'Root' | 'TrustedPeople' | 'TrustedPublisher' | string: The local certificate store location.
+
+## ClientCertificateCommonName
+### Properties
+* **certificateCommonName**: string (Required): The common name of the client certificate.
+* **certificateIssuerThumbprint**: string (Required): The issuer thumbprint of the client certificate.
+* **isAdmin**: bool (Required): Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
+
+## ClientCertificateThumbprint
+### Properties
+* **certificateThumbprint**: string (Required): The thumbprint of the client certificate.
+* **isAdmin**: bool (Required): Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
+
+## ClusterHealthPolicy
+### Properties
+* **applicationHealthPolicies**: [ApplicationHealthPolicyMap](#applicationhealthpolicymap): Defines a map that contains specific application health policies for different applications.
+Each entry specifies as key the application name and as value an ApplicationHealthPolicy used to evaluate the application health.
+The application name should include the 'fabric:' URI scheme.
+The map is empty by default.
+* **maxPercentUnhealthyApplications**: int: The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
+
+The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.
+If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.
+This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.
+The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
+* **maxPercentUnhealthyNodes**: int: The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
+
+The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.
+If the percentage is respected but there is at least one unhealthy node, the health is evaluated as Warning.
+The percentage is calculated by dividing the number of unhealthy nodes over the total number of nodes in the cluster.
+The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
+
+In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
+
 ## ClusterProperties
 ### Properties
 * **addOnFeatures**: 'BackupRestoreService' | 'DnsService' | 'RepairManager' | 'ResourceMonitorService' | string[]: The list of add-on features to enable in the cluster.
@@ -56,44 +128,39 @@
   - Manual - The cluster will not be automatically upgraded to the latest Service Fabric runtime version. The cluster is upgraded by setting the **clusterCodeVersion** property in the cluster resource.
 * **vmImage**: string: The VM image VMSS has been configured with. Generic names such as Windows or Linux can be used.
 
+## ClusterUpgradeDeltaHealthPolicy
+### Properties
+* **applicationDeltaHealthPolicies**: [ApplicationDeltaHealthPolicyMap](#applicationdeltahealthpolicymap): Defines a map that contains specific application delta health policies for different applications.
+Each entry specifies as key the application name and as value an ApplicationDeltaHealthPolicy used to evaluate the application health when upgrading the cluster.
+The application name should include the 'fabric:' URI scheme.
+The map is empty by default.
+* **maxPercentDeltaUnhealthyApplications**: int (Required): The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
+The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
+* **maxPercentDeltaUnhealthyNodes**: int (Required): The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
+The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+* **maxPercentUpgradeDomainDeltaUnhealthyNodes**: int (Required): The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
+The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
+
+## ClusterUpgradePolicy
+### Properties
+* **deltaHealthPolicy**: [ClusterUpgradeDeltaHealthPolicy](#clusterupgradedeltahealthpolicy): Describes the delta health policies for the cluster upgrade.
+* **forceRestart**: bool: If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
+* **healthCheckRetryTimeout**: string (Required): The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+* **healthCheckStableDuration**: string (Required): The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+* **healthCheckWaitDuration**: string (Required): The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+* **healthPolicy**: [ClusterHealthPolicy](#clusterhealthpolicy) (Required): Defines a health policy used to evaluate the health of the cluster or of a cluster node.
+* **upgradeDomainTimeout**: string (Required): The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+* **upgradeReplicaSetCheckTimeout**: string (Required): The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+* **upgradeTimeout**: string (Required): The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+
 ## ClusterVersionDetails
 ### Properties
 * **codeVersion**: string: The Service Fabric runtime version of the cluster.
 * **environment**: 'Linux' | 'Windows' | string: Cluster operating system, the default will be Windows
 * **supportExpiryUtc**: string: The date of expiry of support of the version.
-
-## AzureActiveDirectory
-### Properties
-* **clientApplication**: string: Azure active directory client application id.
-* **clusterApplication**: string: Azure active directory cluster application id.
-* **tenantId**: string: Azure active directory tenant id.
-
-## CertificateDescription
-### Properties
-* **thumbprint**: string (Required): Thumbprint of the primary certificate.
-* **thumbprintSecondary**: string: Thumbprint of the secondary certificate.
-* **x509StoreName**: 'AddressBook' | 'AuthRoot' | 'CertificateAuthority' | 'Disallowed' | 'My' | 'Root' | 'TrustedPeople' | 'TrustedPublisher' | string: The local certificate store location.
-
-## ServerCertificateCommonNames
-### Properties
-* **commonNames**: [ServerCertificateCommonName](#servercertificatecommonname)[]: The list of server certificates referenced by common name that are used to secure the cluster.
-* **x509StoreName**: 'AddressBook' | 'AuthRoot' | 'CertificateAuthority' | 'Disallowed' | 'My' | 'Root' | 'TrustedPeople' | 'TrustedPublisher' | string: The local certificate store location.
-
-## ServerCertificateCommonName
-### Properties
-* **certificateCommonName**: string (Required): The common name of the server certificate.
-* **certificateIssuerThumbprint**: string (Required): The issuer thumbprint of the server certificate.
-
-## ClientCertificateCommonName
-### Properties
-* **certificateCommonName**: string (Required): The common name of the client certificate.
-* **certificateIssuerThumbprint**: string (Required): The issuer thumbprint of the client certificate.
-* **isAdmin**: bool (Required): Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
-
-## ClientCertificateThumbprint
-### Properties
-* **certificateThumbprint**: string (Required): The thumbprint of the client certificate.
-* **isAdmin**: bool (Required): Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
 
 ## DiagnosticsStorageAccountConfig
 ### Properties
@@ -103,15 +170,10 @@
 * **storageAccountName**: string (Required): The Azure storage account name.
 * **tableEndpoint**: string (Required): The table endpoint of the azure storage account.
 
-## SettingsSectionDescription
+## EndpointRangeDescription
 ### Properties
-* **name**: string (Required): The section name of the fabric settings.
-* **parameters**: [SettingsParameterDescription](#settingsparameterdescription)[] (Required): The collection of parameters in the section.
-
-## SettingsParameterDescription
-### Properties
-* **name**: string (Required): The parameter name of fabric setting.
-* **value**: string (Required): The parameter value of fabric setting.
+* **endPort**: int (Required): End port of a range of ports
+* **startPort**: int (Required): Starting port of a range of ports
 
 ## NodeTypeDescription
 ### Properties
@@ -131,11 +193,6 @@
 * **reverseProxyEndpointPort**: int: The endpoint used by reverse proxy.
 * **vmInstanceCount**: int (Required): The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.
 
-## EndpointRangeDescription
-### Properties
-* **endPort**: int (Required): End port of a range of ports
-* **startPort**: int (Required): Starting port of a range of ports
-
 ## NodeTypeDescriptionCapacities
 ### Properties
 ### Additional Properties
@@ -146,45 +203,20 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ClusterUpgradePolicy
-### Properties
-* **deltaHealthPolicy**: [ClusterUpgradeDeltaHealthPolicy](#clusterupgradedeltahealthpolicy): Describes the delta health policies for the cluster upgrade.
-* **forceRestart**: bool: If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
-* **healthCheckRetryTimeout**: string (Required): The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
-* **healthCheckStableDuration**: string (Required): The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
-* **healthCheckWaitDuration**: string (Required): The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
-* **healthPolicy**: [ClusterHealthPolicy](#clusterhealthpolicy) (Required): Defines a health policy used to evaluate the health of the cluster or of a cluster node.
-* **upgradeDomainTimeout**: string (Required): The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
-* **upgradeReplicaSetCheckTimeout**: string (Required): The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
-* **upgradeTimeout**: string (Required): The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
-
-## ClusterUpgradeDeltaHealthPolicy
-### Properties
-* **applicationDeltaHealthPolicies**: [ApplicationDeltaHealthPolicyMap](#applicationdeltahealthpolicymap): Defines a map that contains specific application delta health policies for different applications.
-Each entry specifies as key the application name and as value an ApplicationDeltaHealthPolicy used to evaluate the application health when upgrading the cluster.
-The application name should include the 'fabric:' URI scheme.
-The map is empty by default.
-* **maxPercentDeltaUnhealthyApplications**: int (Required): The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
-The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
-* **maxPercentDeltaUnhealthyNodes**: int (Required): The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-* **maxPercentUpgradeDomainDeltaUnhealthyNodes**: int (Required): The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
-
-## ApplicationDeltaHealthPolicyMap
+## ResourceTags
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [ApplicationDeltaHealthPolicy](#applicationdeltahealthpolicy)
+* **Additional Properties Type**: string
 
-## ApplicationDeltaHealthPolicy
+## ServerCertificateCommonName
 ### Properties
-* **defaultServiceTypeDeltaHealthPolicy**: [ServiceTypeDeltaHealthPolicy](#servicetypedeltahealthpolicy): Represents the delta health policy used to evaluate the health of services belonging to a service type when upgrading the cluster.
-* **serviceTypeDeltaHealthPolicies**: [ServiceTypeDeltaHealthPolicyMap](#servicetypedeltahealthpolicymap): Defines a map that contains specific delta health policies for different service types.
-Each entry specifies as key the service type name and as value a ServiceTypeDeltaHealthPolicy used to evaluate the service health when upgrading the cluster.
-The map is empty by default.
+* **certificateCommonName**: string (Required): The common name of the server certificate.
+* **certificateIssuerThumbprint**: string (Required): The issuer thumbprint of the server certificate.
+
+## ServerCertificateCommonNames
+### Properties
+* **commonNames**: [ServerCertificateCommonName](#servercertificatecommonname)[]: The list of server certificates referenced by common name that are used to secure the cluster.
+* **x509StoreName**: 'AddressBook' | 'AuthRoot' | 'CertificateAuthority' | 'Disallowed' | 'My' | 'Root' | 'TrustedPeople' | 'TrustedPublisher' | string: The local certificate store location.
 
 ## ServiceTypeDeltaHealthPolicy
 ### Properties
@@ -197,43 +229,6 @@ The check is performed after every upgrade domain upgrade completion to make sur
 ### Additional Properties
 * **Additional Properties Type**: [ServiceTypeDeltaHealthPolicy](#servicetypedeltahealthpolicy)
 
-## ClusterHealthPolicy
-### Properties
-* **applicationHealthPolicies**: [ApplicationHealthPolicyMap](#applicationhealthpolicymap): Defines a map that contains specific application health policies for different applications.
-Each entry specifies as key the application name and as value an ApplicationHealthPolicy used to evaluate the application health.
-The application name should include the 'fabric:' URI scheme.
-The map is empty by default.
-* **maxPercentUnhealthyApplications**: int: The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
-
-The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.
-If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.
-This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.
-The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
-* **maxPercentUnhealthyNodes**: int: The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
-
-The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.
-If the percentage is respected but there is at least one unhealthy node, the health is evaluated as Warning.
-The percentage is calculated by dividing the number of unhealthy nodes over the total number of nodes in the cluster.
-The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
-
-In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
-
-## ApplicationHealthPolicyMap
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [ApplicationHealthPolicy](#applicationhealthpolicy)
-
-## ApplicationHealthPolicy
-### Properties
-* **defaultServiceTypeHealthPolicy**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy): Represents the health policy used to evaluate the health of services belonging to a service type.
-* **serviceTypeHealthPolicies**: [ServiceTypeHealthPolicyMap](#servicetypehealthpolicymap): Defines a ServiceTypeHealthPolicy per service type name.
-
-The entries in the map replace the default service type health policy for each specified service type.
-For example, in an application that contains both a stateless gateway service type and a stateful engine service type, the health policies for the stateless and stateful services can be configured differently.
-With policy per service type, there's more granular control of the health of the service.
-
-If no policy is specified for a service type name, the DefaultServiceTypeHealthPolicy is used for evaluation.
-
 ## ServiceTypeHealthPolicy
 ### Properties
 * **maxPercentUnhealthyServices**: int: The maximum percentage of services allowed to be unhealthy before your application is considered in error.
@@ -243,8 +238,13 @@ If no policy is specified for a service type name, the DefaultServiceTypeHealthP
 ### Additional Properties
 * **Additional Properties Type**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy)
 
-## ResourceTags
+## SettingsParameterDescription
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **name**: string (Required): The parameter name of fabric setting.
+* **value**: string (Required): The parameter value of fabric setting.
+
+## SettingsSectionDescription
+### Properties
+* **name**: string (Required): The section name of the fabric settings.
+* **parameters**: [SettingsParameterDescription](#settingsparameterdescription)[] (Required): The collection of parameters in the section.
 

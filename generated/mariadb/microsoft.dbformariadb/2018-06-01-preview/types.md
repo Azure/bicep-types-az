@@ -58,11 +58,45 @@
 * **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Properties of a virtual network rule.
 * **type**: 'Microsoft.DBforMariaDB/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## ConfigurationProperties
+### Properties
+* **allowedValues**: string (ReadOnly): Allowed values of the configuration.
+* **dataType**: string (ReadOnly): Data type of the configuration.
+* **defaultValue**: string (ReadOnly): Default value of the configuration.
+* **description**: string (ReadOnly): Description of the configuration.
+* **source**: string: Source of the configuration.
+* **value**: string: Value of the configuration.
+
+## DatabaseProperties
+### Properties
+* **charset**: string: The charset of the database.
+* **collation**: string: The collation of the database.
+
+## FirewallRuleProperties
+### Properties
+* **endIpAddress**: string (Required): The end IP address of the server firewall rule. Must be IPv4 format.
+* **startIpAddress**: string (Required): The start IP address of the server firewall rule. Must be IPv4 format.
+
 ## ResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The Azure Active Directory principal id.
 * **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
 * **type**: 'SystemAssigned' | string (ReadOnly): The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
+
+## SecurityAlertPolicyProperties
+### Properties
+* **disabledAlerts**: string[]: Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly
+* **emailAccountAdmins**: bool: Specifies that the alert is sent to the account administrators.
+* **emailAddresses**: string[]: Specifies an array of e-mail addresses to which the alert is sent.
+* **retentionDays**: int: Specifies the number of days to keep in the Threat Detection audit logs.
+* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy, whether it is enabled or disabled.
+* **storageAccountAccessKey**: string: Specifies the identifier key of the Threat Detection audit storage account.
+* **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
+
+## ServerForCreateTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ServerPropertiesForCreate
 * **Discriminator**: createMode
@@ -102,13 +136,6 @@
 * **sourceServerId**: string (Required, WriteOnly): The master server id to create replica from.
 
 
-## StorageProfile
-### Properties
-* **backupRetentionDays**: int: Backup retention days for the server.
-* **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: Enable Geo-redundant or not for server backup.
-* **storageAutogrow**: 'Disabled' | 'Enabled' | string: Enable Storage Auto Grow.
-* **storageMB**: int: Max storage allowed for a server.
-
 ## Sku
 ### Properties
 * **capacity**: int: The scale up/out capacity, representing server's compute units.
@@ -117,39 +144,12 @@
 * **size**: string: The size code, to be interpreted by resource as appropriate.
 * **tier**: 'Basic' | 'GeneralPurpose' | 'MemoryOptimized' | string: The tier of the particular SKU, e.g. Basic.
 
-## ServerForCreateTags
+## StorageProfile
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ConfigurationProperties
-### Properties
-* **allowedValues**: string (ReadOnly): Allowed values of the configuration.
-* **dataType**: string (ReadOnly): Data type of the configuration.
-* **defaultValue**: string (ReadOnly): Default value of the configuration.
-* **description**: string (ReadOnly): Description of the configuration.
-* **source**: string: Source of the configuration.
-* **value**: string: Value of the configuration.
-
-## DatabaseProperties
-### Properties
-* **charset**: string: The charset of the database.
-* **collation**: string: The collation of the database.
-
-## FirewallRuleProperties
-### Properties
-* **endIpAddress**: string (Required): The end IP address of the server firewall rule. Must be IPv4 format.
-* **startIpAddress**: string (Required): The start IP address of the server firewall rule. Must be IPv4 format.
-
-## SecurityAlertPolicyProperties
-### Properties
-* **disabledAlerts**: string[]: Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly
-* **emailAccountAdmins**: bool: Specifies that the alert is sent to the account administrators.
-* **emailAddresses**: string[]: Specifies an array of e-mail addresses to which the alert is sent.
-* **retentionDays**: int: Specifies the number of days to keep in the Threat Detection audit logs.
-* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy, whether it is enabled or disabled.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the Threat Detection audit storage account.
-* **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
+* **backupRetentionDays**: int: Backup retention days for the server.
+* **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: Enable Geo-redundant or not for server backup.
+* **storageAutogrow**: 'Disabled' | 'Enabled' | string: Enable Storage Auto Grow.
+* **storageMB**: int: Max storage allowed for a server.
 
 ## VirtualNetworkRuleProperties
 ### Properties

@@ -32,6 +32,25 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AzureStackHCI/clusters/arcSettings/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
+## ArcSettingProperties
+### Properties
+* **aggregateState**: 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Succeeded' | 'Updating' | string (ReadOnly): Aggregate state of Arc agent across the nodes in this HCI cluster.
+* **arcInstanceResourceGroup**: string (ReadOnly): The resource group that hosts the Arc agents, ie. Hybrid Compute Machine resources.
+* **perNodeDetails**: [PerNodeState](#pernodestate)[] (ReadOnly): State of Arc agent in each of the nodes.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state of the ArcSetting proxy resource.
+
+## ClusterNode
+### Properties
+* **coreCount**: int (ReadOnly): Number of physical cores on the cluster node.
+* **id**: int (ReadOnly): Id of the node in the cluster.
+* **manufacturer**: string (ReadOnly): Manufacturer of the cluster node hardware.
+* **memoryInGiB**: int (ReadOnly): Total available memory on the cluster node (in GiB).
+* **model**: string (ReadOnly): Model name of the cluster node hardware.
+* **name**: string (ReadOnly): Name of the cluster node.
+* **osName**: string (ReadOnly): Operating system running on the cluster node.
+* **osVersion**: string (ReadOnly): Version of the operating system running on the cluster node.
+* **serialNumber**: string (ReadOnly): Immutable id of the cluster node.
+
 ## ClusterProperties
 ### Properties
 * **aadClientId**: string (Required): App id of cluster AAD identity.
@@ -55,17 +74,34 @@
 * **lastUpdated**: string (ReadOnly): Last time the cluster reported the data.
 * **nodes**: [ClusterNode](#clusternode)[] (ReadOnly): List of nodes reported by the cluster.
 
-## ClusterNode
+## ExtensionParameters
 ### Properties
-* **coreCount**: int (ReadOnly): Number of physical cores on the cluster node.
-* **id**: int (ReadOnly): Id of the node in the cluster.
-* **manufacturer**: string (ReadOnly): Manufacturer of the cluster node hardware.
-* **memoryInGiB**: int (ReadOnly): Total available memory on the cluster node (in GiB).
-* **model**: string (ReadOnly): Model name of the cluster node hardware.
-* **name**: string (ReadOnly): Name of the cluster node.
-* **osName**: string (ReadOnly): Operating system running on the cluster node.
-* **osVersion**: string (ReadOnly): Version of the operating system running on the cluster node.
-* **serialNumber**: string (ReadOnly): Immutable id of the cluster node.
+* **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+* **forceUpdateTag**: string: How the extension handler should be forced to update even if the extension configuration has not changed.
+* **protectedSettings**: any: Any object
+* **publisher**: string: The name of the extension handler publisher.
+* **settings**: any: Any object
+* **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
+* **typeHandlerVersion**: string: Specifies the version of the script handler.
+
+## ExtensionProperties
+### Properties
+* **aggregateState**: 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Succeeded' | 'Updating' | string (ReadOnly): Aggregate state of Arc Extensions across the nodes in this HCI cluster.
+* **extensionParameters**: [ExtensionParameters](#extensionparameters): Describes the properties of a Machine Extension. This object mirrors the definition in HybridCompute.
+* **perNodeExtensionDetails**: [PerNodeExtensionState](#pernodeextensionstate)[] (ReadOnly): State of Arc Extension in each of the nodes.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state of the ArcSetting proxy resource.
+
+## PerNodeExtensionState
+### Properties
+* **extension**: string (ReadOnly): Fully qualified resource ID for the particular Arc Extension on this node.
+* **name**: string (ReadOnly): Name of the node in HCI Cluster.
+* **state**: 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'Disconnected' | 'Error' | 'Failed' | 'Moving' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): State of Arc Extension in this node.
+
+## PerNodeState
+### Properties
+* **arcInstance**: string (ReadOnly): Fully qualified resource ID for the Arc agent of this node.
+* **name**: string (ReadOnly): Name of the Node in HCI Cluster
+* **state**: 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'Disconnected' | 'Error' | 'Failed' | 'Moving' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): State of Arc agent in this node.
 
 ## SystemData
 ### Properties
@@ -80,40 +116,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## ArcSettingProperties
-### Properties
-* **aggregateState**: 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Succeeded' | 'Updating' | string (ReadOnly): Aggregate state of Arc agent across the nodes in this HCI cluster.
-* **arcInstanceResourceGroup**: string (ReadOnly): The resource group that hosts the Arc agents, ie. Hybrid Compute Machine resources.
-* **perNodeDetails**: [PerNodeState](#pernodestate)[] (ReadOnly): State of Arc agent in each of the nodes.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state of the ArcSetting proxy resource.
-
-## PerNodeState
-### Properties
-* **arcInstance**: string (ReadOnly): Fully qualified resource ID for the Arc agent of this node.
-* **name**: string (ReadOnly): Name of the Node in HCI Cluster
-* **state**: 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'Disconnected' | 'Error' | 'Failed' | 'Moving' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): State of Arc agent in this node.
-
-## ExtensionProperties
-### Properties
-* **aggregateState**: 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Succeeded' | 'Updating' | string (ReadOnly): Aggregate state of Arc Extensions across the nodes in this HCI cluster.
-* **extensionParameters**: [ExtensionParameters](#extensionparameters): Describes the properties of a Machine Extension. This object mirrors the definition in HybridCompute.
-* **perNodeExtensionDetails**: [PerNodeExtensionState](#pernodeextensionstate)[] (ReadOnly): State of Arc Extension in each of the nodes.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state of the ArcSetting proxy resource.
-
-## ExtensionParameters
-### Properties
-* **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-* **forceUpdateTag**: string: How the extension handler should be forced to update even if the extension configuration has not changed.
-* **protectedSettings**: any: Any object
-* **publisher**: string: The name of the extension handler publisher.
-* **settings**: any: Any object
-* **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
-* **typeHandlerVersion**: string: Specifies the version of the script handler.
-
-## PerNodeExtensionState
-### Properties
-* **extension**: string (ReadOnly): Fully qualified resource ID for the particular Arc Extension on this node.
-* **name**: string (ReadOnly): Name of the node in HCI Cluster.
-* **state**: 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'Disconnected' | 'Error' | 'Failed' | 'Moving' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): State of Arc Extension in this node.
 

@@ -174,11 +174,86 @@
 * **ApiVersion**: 2021-02-01-preview
 * **Output**: [DCAccessCode](#dcaccesscode)
 
-## ResourceIdentity
+## Address
 ### Properties
-* **principalId**: string (ReadOnly): Service Principal Id backing the Msi
-* **tenantId**: string (ReadOnly): Home Tenant Id
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string: Identity type
+* **addressLine1**: string: The address line1.
+* **addressLine2**: string: The address line2.
+* **addressLine3**: string: The address line3.
+* **city**: string: The city name.
+* **country**: string (Required): The country name.
+* **postalCode**: string: The postal code.
+* **state**: string: The state name.
+
+## ArcAddonProperties
+### Properties
+* **hostPlatform**: 'Linux' | 'Windows' | string (ReadOnly): Host OS supported by the Arc addon.
+* **hostPlatformType**: 'KubernetesCluster' | 'LinuxVM' | string (ReadOnly): Platform where the runtime is hosted.
+* **provisioningState**: 'Created' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Reconfiguring' | 'Updating' | string (ReadOnly): Addon Provisioning State
+* **resourceGroupName**: string (Required): Arc resource group name
+* **resourceLocation**: string (Required): Arc resource location
+* **resourceName**: string (Required): Arc resource Name
+* **subscriptionId**: string (Required): Arc resource subscription Id
+* **version**: string (ReadOnly): Arc resource version
+
+## AsymmetricEncryptedSecret
+### Properties
+* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' | string (Required): The algorithm used to encrypt "Value".
+* **encryptionCertThumbprint**: string: Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.
+* **value**: string (Required): The value of the secret.
+
+## Authentication
+### Properties
+* **symmetricKey**: [SymmetricKey](#symmetrickey): Symmetric key for authentication.
+
+## AzureContainerInfo
+### Properties
+* **containerName**: string (Required): Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).
+* **dataFormat**: 'AzureFile' | 'BlockBlob' | 'PageBlob' | string (Required): Storage format used for the file represented by the share.
+* **storageAccountCredentialId**: string (Required): ID of the storage account credential used to access storage.
+
+## BandwidthScheduleProperties
+### Properties
+* **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[] (Required): The days of the week when this schedule is applicable.
+* **rateInMbps**: int (Required): The bandwidth rate in Mbps.
+* **start**: string (Required): The start time of the schedule in UTC.
+* **stop**: string (Required): The stop time of the schedule in UTC.
+
+## ClientAccessRight
+### Properties
+* **accessPermission**: 'NoAccess' | 'ReadOnly' | 'ReadWrite' | string (Required): Type of access to be allowed for the client.
+* **client**: string (Required): IP of the client.
+
+## CloudEdgeManagementRoleProperties
+### Properties
+* **edgeProfile**: [EdgeProfile](#edgeprofile) (ReadOnly): Details about Edge Profile for the resource
+* **localManagementStatus**: 'Disabled' | 'Enabled' | string (ReadOnly): Local Edge Management Status
+* **roleStatus**: 'Disabled' | 'Enabled' | string (Required): Local Edge Management Status
+
+## CniConfig
+### Properties
+* **podSubnet**: string (ReadOnly): Pod Subnet
+* **serviceSubnet**: string (ReadOnly): Service subnet
+* **type**: string (ReadOnly): Cni type
+* **version**: string (ReadOnly): Cni version
+
+## ComputeResource
+### Properties
+* **memoryInGB**: int (Required): Memory in GB
+* **processorCount**: int (Required): Processor count
+
+## ContactDetails
+### Properties
+* **companyName**: string (Required): The name of the company.
+* **contactPerson**: string (Required): The contact person name.
+* **emailList**: string[] (Required): The email list.
+* **phone**: string (Required): The phone number.
+
+## ContainerProperties
+### Properties
+* **containerStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating' | string (ReadOnly): Current status of the container.
+* **createdDateTime**: string (ReadOnly): The UTC time when container got created.
+* **dataFormat**: 'AzureFile' | 'BlockBlob' | 'PageBlob' | string (Required): Storage format used for the file represented by the share.
+* **refreshDetails**: [RefreshDetails](#refreshdetails) (ReadOnly): Fields for tracking refresh job on the share or container.
 
 ## DataBoxEdgeDeviceProperties
 ### Properties
@@ -199,6 +274,19 @@
 * **serialNumber**: string (ReadOnly): The Serial Number of Data Box Edge/Gateway device.
 * **timeZone**: string (ReadOnly): The Data Box Edge/Gateway device timezone.
 
+## DataBoxEdgeDeviceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DCAccessCode
+### Properties
+* **properties**: [DCAccessCodeProperties](#dcaccesscodeproperties) (ReadOnly): DCAccessCode Properties.
+
+## DCAccessCodeProperties
+### Properties
+* **authCode**: string (ReadOnly): DCAccess Code for the Self Managed shipment.
+
 ## EdgeProfile
 ### Properties
 * **subscription**: [EdgeProfileSubscription](#edgeprofilesubscription): Subscription details for the Edge Profile
@@ -212,49 +300,160 @@
 * **state**: 'Deleted' | 'Registered' | 'Suspended' | 'Unregistered' | 'Warned' | string
 * **subscriptionId**: string
 
-## SubscriptionProperties
+## EtcdInfo
 ### Properties
-* **locationPlacementId**: string
-* **quotaId**: string
-* **registeredFeatures**: [SubscriptionRegisteredFeatures](#subscriptionregisteredfeatures)[]: Array of SubscriptionRegisteredFeatures
-* **serializedDetails**: string
-* **tenantId**: string
+* **type**: string (ReadOnly): Etcd type
+* **version**: string (ReadOnly): Etcd version
 
-## SubscriptionRegisteredFeatures
+## FileSourceInfo
 ### Properties
-* **name**: string
-* **state**: string
+* **shareId**: string (Required): File share ID.
 
-## ResourceMoveDetails
+## FileTriggerProperties
 ### Properties
-* **operationInProgress**: 'None' | 'ResourceMoveFailed' | 'ResourceMoveInProgress' | string: Denotes whether move operation is in progress
-* **operationInProgressLockTimeoutInUTC**: string: Denotes the timeout of the operation to finish
+* **customContextTag**: string: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
+* **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Compute role against which events will be raised.
+* **sourceInfo**: [FileSourceInfo](#filesourceinfo) (Required): File source details.
 
-## Sku
+## ImageRepositoryCredential
 ### Properties
-* **name**: 'EP2_128_1T4_Mx1_W' | 'EP2_256_2T4_W' | 'EP2_64_1VPU_W' | 'Edge' | 'EdgeMR_Mini' | 'EdgePR_Base' | 'EdgePR_Base_UPS' | 'EdgeP_Base' | 'EdgeP_High' | 'GPU' | 'Gateway' | 'Management' | 'RCA_Large' | 'RCA_Small' | 'RDC' | 'TCA_Large' | 'TCA_Small' | 'TDC' | 'TEA_1Node' | 'TEA_1Node_Heater' | 'TEA_1Node_UPS' | 'TEA_1Node_UPS_Heater' | 'TEA_4Node_Heater' | 'TEA_4Node_UPS_Heater' | 'TMA' | string: The Sku name.
-* **tier**: 'Standard' | string: The Sku tier.
+* **imageRepositoryUrl**: string (Required): Image repository url (e.g.: mcr.microsoft.com).
+* **password**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
+* **userName**: string (Required): Repository user name.
 
-## SystemData
+## IoTAddonProperties
 ### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The type of identity that last modified the resource.
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **hostPlatform**: 'Linux' | 'Windows' | string (ReadOnly): Host OS supported by the Arc addon.
+* **hostPlatformType**: 'KubernetesCluster' | 'LinuxVM' | string (ReadOnly): Platform where the runtime is hosted.
+* **ioTDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
+* **ioTEdgeDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
+* **provisioningState**: 'Created' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Reconfiguring' | 'Updating' | string (ReadOnly): Addon Provisioning State
+* **version**: string (ReadOnly): Version of IoT running on the appliance.
 
-## DataBoxEdgeDeviceTags
+## IoTDeviceInfo
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **authentication**: [Authentication](#authentication): Authentication mechanism for IoT devices.
+* **deviceId**: string (Required): ID of the IoT device/edge device.
+* **ioTHostHub**: string (Required): Host name for the IoT hub associated to the device.
+* **ioTHostHubId**: string: Id for the IoT hub associated to the device.
 
-## BandwidthScheduleProperties
+## IoTEdgeAgentInfo
 ### Properties
-* **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[] (Required): The days of the week when this schedule is applicable.
-* **rateInMbps**: int (Required): The bandwidth rate in Mbps.
-* **start**: string (Required): The start time of the schedule in UTC.
-* **stop**: string (Required): The stop time of the schedule in UTC.
+* **imageName**: string (Required): Name of the IoT edge agent image.
+* **imageRepository**: [ImageRepositoryCredential](#imagerepositorycredential): Image repository credential.
+* **tag**: string (Required): Image Tag.
+
+## IoTRoleProperties
+### Properties
+* **computeResource**: [ComputeResource](#computeresource): Compute infrastructure Resource
+* **hostPlatform**: 'Linux' | 'Windows' | string (Required): Host OS supported by the Arc addon.
+* **hostPlatformType**: 'KubernetesCluster' | 'LinuxVM' | string (ReadOnly): Platform where the runtime is hosted.
+* **ioTDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
+* **ioTEdgeAgentInfo**: [IoTEdgeAgentInfo](#iotedgeagentinfo): IoT edge agent details is optional, this will be used for download system Agent module while bootstrapping IoT Role if specified.
+* **ioTEdgeDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
+* **roleStatus**: 'Disabled' | 'Enabled' | string (Required): Local Edge Management Status
+* **shareMappings**: [MountPointMap](#mountpointmap)[]: Mount points of shares in role(s).
+
+## KubernetesClusterInfo
+### Properties
+* **etcdInfo**: [EtcdInfo](#etcdinfo) (ReadOnly): Etcd configuration
+* **nodes**: [NodeInfo](#nodeinfo)[] (ReadOnly): Kubernetes cluster nodes
+* **version**: string (Required): Kubernetes cluster version
+
+## KubernetesIPConfiguration
+### Properties
+* **ipAddress**: string: IP address of the Kubernetes node.
+* **port**: string (ReadOnly): Port of the Kubernetes node.
+
+## KubernetesRoleCompute
+### Properties
+* **memoryInBytes**: int (ReadOnly): Memory in bytes
+* **processorCount**: int (ReadOnly): Processor count
+* **vmProfile**: string (Required): VM profile
+
+## KubernetesRoleNetwork
+### Properties
+* **cniConfig**: [CniConfig](#cniconfig) (ReadOnly): Cni configuration
+* **loadBalancerConfig**: [LoadBalancerConfig](#loadbalancerconfig) (ReadOnly): Load balancer configuration
+
+## KubernetesRoleProperties
+### Properties
+* **hostPlatform**: 'Linux' | 'Windows' | string (Required): Host OS supported by the Arc addon.
+* **hostPlatformType**: 'KubernetesCluster' | 'LinuxVM' | string (ReadOnly): Platform where the runtime is hosted.
+* **kubernetesClusterInfo**: [KubernetesClusterInfo](#kubernetesclusterinfo) (Required): Kubernetes cluster configuration
+* **kubernetesRoleResources**: [KubernetesRoleResources](#kubernetesroleresources) (Required): Kubernetes role resources
+* **provisioningState**: 'Created' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Reconfiguring' | 'Updating' | string (ReadOnly): State of Kubernetes deployment
+* **roleStatus**: 'Disabled' | 'Enabled' | string (Required): Local Edge Management Status
+
+## KubernetesRoleResources
+### Properties
+* **compute**: [KubernetesRoleCompute](#kubernetesrolecompute) (Required): Kubernetes role compute resource
+* **network**: [KubernetesRoleNetwork](#kubernetesrolenetwork) (ReadOnly): Kubernetes role network resource
+* **storage**: [KubernetesRoleStorage](#kubernetesrolestorage): Kubernetes role storage resource
+
+## KubernetesRoleStorage
+### Properties
+* **endpoints**: [MountPointMap](#mountpointmap)[]: Mount points of shares in role(s).
+* **storageClasses**: [KubernetesRoleStorageClassInfo](#kubernetesrolestorageclassinfo)[] (ReadOnly): Kubernetes storage class info.
+
+## KubernetesRoleStorageClassInfo
+### Properties
+* **name**: string (ReadOnly): Storage class name.
+* **posixCompliant**: 'Disabled' | 'Enabled' | 'Invalid' | string (ReadOnly): If provisioned storage is posix compliant.
+* **type**: string (ReadOnly): Storage class type.
+
+## LoadBalancerConfig
+### Properties
+* **type**: string (ReadOnly): Load balancer type
+* **version**: string (ReadOnly): Load balancer version
+
+## MECRoleProperties
+### Properties
+* **connectionString**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
+* **controllerEndpoint**: string: Controller Endpoint.
+* **resourceUniqueId**: string: Unique Id of the Resource.
+* **roleStatus**: 'Disabled' | 'Enabled' | string (Required): Local Edge Management Status
+
+## MetricConfiguration
+### Properties
+* **counterSets**: [MetricCounterSet](#metriccounterset)[] (Required): Host name for the IoT hub associated to the device.
+* **mdmAccount**: string: The MDM account to which the counters should be pushed.
+* **metricNameSpace**: string: The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified
+* **resourceId**: string (Required): The Resource ID on which the metrics should be pushed.
+
+## MetricCounter
+### Properties
+* **additionalDimensions**: [MetricDimension](#metricdimension)[]: The additional dimensions to be added to metric.
+* **dimensionFilter**: [MetricDimension](#metricdimension)[]: The dimension filter.
+* **instance**: string: The instance from which counter should be collected.
+* **name**: string (Required): The counter name.
+
+## MetricCounterSet
+### Properties
+* **counters**: [MetricCounter](#metriccounter)[] (Required): The counters that should be collected in this set.
+
+## MetricDimension
+### Properties
+* **sourceName**: string (Required): The dimension value.
+* **sourceType**: string (Required): The dimension type.
+
+## MonitoringMetricConfigurationProperties
+### Properties
+* **metricConfigurations**: [MetricConfiguration](#metricconfiguration)[] (Required): The metrics configuration details
+
+## MountPointMap
+### Properties
+* **mountPoint**: string (ReadOnly): Mount point for the share.
+* **mountType**: 'HostPath' | 'Volume' | string (ReadOnly): Mounting type.
+* **roleId**: string (ReadOnly): ID of the role to which share is mounted.
+* **roleType**: 'ASA' | 'CloudEdgeManagement' | 'Cognitive' | 'Functions' | 'IOT' | 'Kubernetes' | 'MEC' | string (ReadOnly)
+* **shareId**: string (Required): ID of the share mounted to the role VM.
+
+## NodeInfo
+### Properties
+* **ipConfiguration**: [KubernetesIPConfiguration](#kubernetesipconfiguration)[]: IP Configuration of the Kubernetes node.
+* **name**: string (ReadOnly): Node name.
+* **type**: 'Invalid' | 'Master' | 'Worker' | string (ReadOnly): Node type - Master/Worker
 
 ## OrderProperties
 ### Properties
@@ -266,13 +465,6 @@
 * **serialNumber**: string (ReadOnly): Serial number of the device.
 * **shipmentType**: 'NotApplicable' | 'SelfPickup' | 'ShippedToCustomer' | string
 * **shippingAddress**: [Address](#address): The shipping address of the customer.
-
-## ContactDetails
-### Properties
-* **companyName**: string (Required): The name of the company.
-* **contactPerson**: string (Required): The contact person name.
-* **emailList**: string[] (Required): The email list.
-* **phone**: string (Required): The phone number.
 
 ## OrderStatus
 ### Properties
@@ -288,210 +480,44 @@ by the already existing properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## TrackingInfo
+## PeriodicTimerProperties
 ### Properties
-* **carrierName**: string: Name of the carrier used in the delivery.
-* **serialNumber**: string: Serial number of the device being tracked.
-* **trackingId**: string: Tracking ID of the shipment.
-* **trackingUrl**: string: Tracking URL of the shipment.
+* **customContextTag**: string: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
+* **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Compute role against which events will be raised.
+* **sourceInfo**: [PeriodicTimerSourceInfo](#periodictimersourceinfo) (Required): Periodic timer event source.
 
-## Address
+## PeriodicTimerSourceInfo
 ### Properties
-* **addressLine1**: string: The address line1.
-* **addressLine2**: string: The address line2.
-* **addressLine3**: string: The address line3.
-* **city**: string: The city name.
-* **country**: string (Required): The country name.
-* **postalCode**: string: The postal code.
-* **state**: string: The state name.
+* **schedule**: string (Required): Periodic frequency at which timer event needs to be raised. Supports daily, hourly, minutes, and seconds.
+* **startTime**: string (Required): The time of the day that results in a valid trigger. Schedule is computed with reference to the time specified upto seconds. If timezone is not specified the time will considered to be in device timezone. The value will always be returned as UTC time.
+* **topic**: string: Topic where periodic events are published to IoT device.
 
-## CloudEdgeManagementRoleProperties
+## RefreshDetails
 ### Properties
-* **edgeProfile**: [EdgeProfile](#edgeprofile) (ReadOnly): Details about Edge Profile for the resource
-* **localManagementStatus**: 'Disabled' | 'Enabled' | string (ReadOnly): Local Edge Management Status
-* **roleStatus**: 'Disabled' | 'Enabled' | string (Required): Local Edge Management Status
+* **errorManifestFile**: string: Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.
+* **inProgressRefreshJobId**: string: If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.
+* **lastCompletedRefreshJobTimeInUTC**: string: Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.
+* **lastJob**: string: Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.
 
-## IoTRoleProperties
+## ResourceIdentity
 ### Properties
-* **computeResource**: [ComputeResource](#computeresource): Compute infrastructure Resource
-* **hostPlatform**: 'Linux' | 'Windows' | string (Required): Host OS supported by the Arc addon.
-* **hostPlatformType**: 'KubernetesCluster' | 'LinuxVM' | string (ReadOnly): Platform where the runtime is hosted.
-* **ioTDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
-* **ioTEdgeAgentInfo**: [IoTEdgeAgentInfo](#iotedgeagentinfo): IoT edge agent details is optional, this will be used for download system Agent module while bootstrapping IoT Role if specified.
-* **ioTEdgeDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
-* **roleStatus**: 'Disabled' | 'Enabled' | string (Required): Local Edge Management Status
-* **shareMappings**: [MountPointMap](#mountpointmap)[]: Mount points of shares in role(s).
+* **principalId**: string (ReadOnly): Service Principal Id backing the Msi
+* **tenantId**: string (ReadOnly): Home Tenant Id
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string: Identity type
 
-## ComputeResource
+## ResourceMoveDetails
 ### Properties
-* **memoryInGB**: int (Required): Memory in GB
-* **processorCount**: int (Required): Processor count
+* **operationInProgress**: 'None' | 'ResourceMoveFailed' | 'ResourceMoveInProgress' | string: Denotes whether move operation is in progress
+* **operationInProgressLockTimeoutInUTC**: string: Denotes the timeout of the operation to finish
 
-## IoTDeviceInfo
+## RoleSinkInfo
 ### Properties
-* **authentication**: [Authentication](#authentication): Authentication mechanism for IoT devices.
-* **deviceId**: string (Required): ID of the IoT device/edge device.
-* **ioTHostHub**: string (Required): Host name for the IoT hub associated to the device.
-* **ioTHostHubId**: string: Id for the IoT hub associated to the device.
+* **roleId**: string (Required): Compute role ID.
 
-## Authentication
+## ShareAccessRight
 ### Properties
-* **symmetricKey**: [SymmetricKey](#symmetrickey): Symmetric key for authentication.
-
-## SymmetricKey
-### Properties
-* **connectionString**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
-
-## AsymmetricEncryptedSecret
-### Properties
-* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' | string (Required): The algorithm used to encrypt "Value".
-* **encryptionCertThumbprint**: string: Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.
-* **value**: string (Required): The value of the secret.
-
-## IoTEdgeAgentInfo
-### Properties
-* **imageName**: string (Required): Name of the IoT edge agent image.
-* **imageRepository**: [ImageRepositoryCredential](#imagerepositorycredential): Image repository credential.
-* **tag**: string (Required): Image Tag.
-
-## ImageRepositoryCredential
-### Properties
-* **imageRepositoryUrl**: string (Required): Image repository url (e.g.: mcr.microsoft.com).
-* **password**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
-* **userName**: string (Required): Repository user name.
-
-## MountPointMap
-### Properties
-* **mountPoint**: string (ReadOnly): Mount point for the share.
-* **mountType**: 'HostPath' | 'Volume' | string (ReadOnly): Mounting type.
-* **roleId**: string (ReadOnly): ID of the role to which share is mounted.
-* **roleType**: 'ASA' | 'CloudEdgeManagement' | 'Cognitive' | 'Functions' | 'IOT' | 'Kubernetes' | 'MEC' | string (ReadOnly)
-* **shareId**: string (Required): ID of the share mounted to the role VM.
-
-## KubernetesRoleProperties
-### Properties
-* **hostPlatform**: 'Linux' | 'Windows' | string (Required): Host OS supported by the Arc addon.
-* **hostPlatformType**: 'KubernetesCluster' | 'LinuxVM' | string (ReadOnly): Platform where the runtime is hosted.
-* **kubernetesClusterInfo**: [KubernetesClusterInfo](#kubernetesclusterinfo) (Required): Kubernetes cluster configuration
-* **kubernetesRoleResources**: [KubernetesRoleResources](#kubernetesroleresources) (Required): Kubernetes role resources
-* **provisioningState**: 'Created' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Reconfiguring' | 'Updating' | string (ReadOnly): State of Kubernetes deployment
-* **roleStatus**: 'Disabled' | 'Enabled' | string (Required): Local Edge Management Status
-
-## KubernetesClusterInfo
-### Properties
-* **etcdInfo**: [EtcdInfo](#etcdinfo) (ReadOnly): Etcd configuration
-* **nodes**: [NodeInfo](#nodeinfo)[] (ReadOnly): Kubernetes cluster nodes
-* **version**: string (Required): Kubernetes cluster version
-
-## EtcdInfo
-### Properties
-* **type**: string (ReadOnly): Etcd type
-* **version**: string (ReadOnly): Etcd version
-
-## NodeInfo
-### Properties
-* **ipConfiguration**: [KubernetesIPConfiguration](#kubernetesipconfiguration)[]: IP Configuration of the Kubernetes node.
-* **name**: string (ReadOnly): Node name.
-* **type**: 'Invalid' | 'Master' | 'Worker' | string (ReadOnly): Node type - Master/Worker
-
-## KubernetesIPConfiguration
-### Properties
-* **ipAddress**: string: IP address of the Kubernetes node.
-* **port**: string (ReadOnly): Port of the Kubernetes node.
-
-## KubernetesRoleResources
-### Properties
-* **compute**: [KubernetesRoleCompute](#kubernetesrolecompute) (Required): Kubernetes role compute resource
-* **network**: [KubernetesRoleNetwork](#kubernetesrolenetwork) (ReadOnly): Kubernetes role network resource
-* **storage**: [KubernetesRoleStorage](#kubernetesrolestorage): Kubernetes role storage resource
-
-## KubernetesRoleCompute
-### Properties
-* **memoryInBytes**: int (ReadOnly): Memory in bytes
-* **processorCount**: int (ReadOnly): Processor count
-* **vmProfile**: string (Required): VM profile
-
-## KubernetesRoleNetwork
-### Properties
-* **cniConfig**: [CniConfig](#cniconfig) (ReadOnly): Cni configuration
-* **loadBalancerConfig**: [LoadBalancerConfig](#loadbalancerconfig) (ReadOnly): Load balancer configuration
-
-## CniConfig
-### Properties
-* **podSubnet**: string (ReadOnly): Pod Subnet
-* **serviceSubnet**: string (ReadOnly): Service subnet
-* **type**: string (ReadOnly): Cni type
-* **version**: string (ReadOnly): Cni version
-
-## LoadBalancerConfig
-### Properties
-* **type**: string (ReadOnly): Load balancer type
-* **version**: string (ReadOnly): Load balancer version
-
-## KubernetesRoleStorage
-### Properties
-* **endpoints**: [MountPointMap](#mountpointmap)[]: Mount points of shares in role(s).
-* **storageClasses**: [KubernetesRoleStorageClassInfo](#kubernetesrolestorageclassinfo)[] (ReadOnly): Kubernetes storage class info.
-
-## KubernetesRoleStorageClassInfo
-### Properties
-* **name**: string (ReadOnly): Storage class name.
-* **posixCompliant**: 'Disabled' | 'Enabled' | 'Invalid' | string (ReadOnly): If provisioned storage is posix compliant.
-* **type**: string (ReadOnly): Storage class type.
-
-## MECRoleProperties
-### Properties
-* **connectionString**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
-* **controllerEndpoint**: string: Controller Endpoint.
-* **resourceUniqueId**: string: Unique Id of the Resource.
-* **roleStatus**: 'Disabled' | 'Enabled' | string (Required): Local Edge Management Status
-
-## ArcAddonProperties
-### Properties
-* **hostPlatform**: 'Linux' | 'Windows' | string (ReadOnly): Host OS supported by the Arc addon.
-* **hostPlatformType**: 'KubernetesCluster' | 'LinuxVM' | string (ReadOnly): Platform where the runtime is hosted.
-* **provisioningState**: 'Created' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Reconfiguring' | 'Updating' | string (ReadOnly): Addon Provisioning State
-* **resourceGroupName**: string (Required): Arc resource group name
-* **resourceLocation**: string (Required): Arc resource location
-* **resourceName**: string (Required): Arc resource Name
-* **subscriptionId**: string (Required): Arc resource subscription Id
-* **version**: string (ReadOnly): Arc resource version
-
-## IoTAddonProperties
-### Properties
-* **hostPlatform**: 'Linux' | 'Windows' | string (ReadOnly): Host OS supported by the Arc addon.
-* **hostPlatformType**: 'KubernetesCluster' | 'LinuxVM' | string (ReadOnly): Platform where the runtime is hosted.
-* **ioTDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
-* **ioTEdgeDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
-* **provisioningState**: 'Created' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Reconfiguring' | 'Updating' | string (ReadOnly): Addon Provisioning State
-* **version**: string (ReadOnly): Version of IoT running on the appliance.
-
-## MonitoringMetricConfigurationProperties
-### Properties
-* **metricConfigurations**: [MetricConfiguration](#metricconfiguration)[] (Required): The metrics configuration details
-
-## MetricConfiguration
-### Properties
-* **counterSets**: [MetricCounterSet](#metriccounterset)[] (Required): Host name for the IoT hub associated to the device.
-* **mdmAccount**: string: The MDM account to which the counters should be pushed.
-* **metricNameSpace**: string: The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified
-* **resourceId**: string (Required): The Resource ID on which the metrics should be pushed.
-
-## MetricCounterSet
-### Properties
-* **counters**: [MetricCounter](#metriccounter)[] (Required): The counters that should be collected in this set.
-
-## MetricCounter
-### Properties
-* **additionalDimensions**: [MetricDimension](#metricdimension)[]: The additional dimensions to be added to metric.
-* **dimensionFilter**: [MetricDimension](#metricdimension)[]: The dimension filter.
-* **instance**: string: The instance from which counter should be collected.
-* **name**: string (Required): The counter name.
-
-## MetricDimension
-### Properties
-* **sourceName**: string (Required): The dimension value.
-* **sourceType**: string (Required): The dimension type.
+* **accessType**: 'Change' | 'Custom' | 'Read' | string (Required): Type of access to be allowed on the share for this user.
+* **shareId**: string (Required): The share ID.
 
 ## ShareProperties
 ### Properties
@@ -506,28 +532,10 @@ by the already existing properties
 * **shareStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating' | string (Required): Current status of the share.
 * **userAccessRights**: [UserAccessRight](#useraccessright)[]: Mapping of users and corresponding access rights on the share (required for SMB protocol).
 
-## AzureContainerInfo
+## Sku
 ### Properties
-* **containerName**: string (Required): Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).
-* **dataFormat**: 'AzureFile' | 'BlockBlob' | 'PageBlob' | string (Required): Storage format used for the file represented by the share.
-* **storageAccountCredentialId**: string (Required): ID of the storage account credential used to access storage.
-
-## ClientAccessRight
-### Properties
-* **accessPermission**: 'NoAccess' | 'ReadOnly' | 'ReadWrite' | string (Required): Type of access to be allowed for the client.
-* **client**: string (Required): IP of the client.
-
-## RefreshDetails
-### Properties
-* **errorManifestFile**: string: Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.
-* **inProgressRefreshJobId**: string: If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.
-* **lastCompletedRefreshJobTimeInUTC**: string: Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.
-* **lastJob**: string: Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.
-
-## UserAccessRight
-### Properties
-* **accessType**: 'Change' | 'Custom' | 'Read' | string (Required): Type of access to be allowed on the share for this user.
-* **userId**: string (Required): User ID (already existing in the device).
+* **name**: 'EP2_128_1T4_Mx1_W' | 'EP2_256_2T4_W' | 'EP2_64_1VPU_W' | 'Edge' | 'EdgeMR_Mini' | 'EdgePR_Base' | 'EdgePR_Base_UPS' | 'EdgeP_Base' | 'EdgeP_High' | 'GPU' | 'Gateway' | 'Management' | 'RCA_Large' | 'RCA_Small' | 'RDC' | 'TCA_Large' | 'TCA_Small' | 'TDC' | 'TEA_1Node' | 'TEA_1Node_Heater' | 'TEA_1Node_UPS' | 'TEA_1Node_UPS_Heater' | 'TEA_4Node_Heater' | 'TEA_4Node_UPS_Heater' | 'TMA' | string: The Sku name.
+* **tier**: 'Standard' | string: The Sku tier.
 
 ## StorageAccountCredentialProperties
 ### Properties
@@ -549,55 +557,47 @@ by the already existing properties
 * **storageAccountCredentialId**: string: Storage Account Credential Id
 * **storageAccountStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating' | string: Current status of the storage account
 
-## ContainerProperties
+## SubscriptionProperties
 ### Properties
-* **containerStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating' | string (ReadOnly): Current status of the container.
-* **createdDateTime**: string (ReadOnly): The UTC time when container got created.
-* **dataFormat**: 'AzureFile' | 'BlockBlob' | 'PageBlob' | string (Required): Storage format used for the file represented by the share.
-* **refreshDetails**: [RefreshDetails](#refreshdetails) (ReadOnly): Fields for tracking refresh job on the share or container.
+* **locationPlacementId**: string
+* **quotaId**: string
+* **registeredFeatures**: [SubscriptionRegisteredFeatures](#subscriptionregisteredfeatures)[]: Array of SubscriptionRegisteredFeatures
+* **serializedDetails**: string
+* **tenantId**: string
 
-## FileTriggerProperties
+## SubscriptionRegisteredFeatures
 ### Properties
-* **customContextTag**: string: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
-* **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Compute role against which events will be raised.
-* **sourceInfo**: [FileSourceInfo](#filesourceinfo) (Required): File source details.
+* **name**: string
+* **state**: string
 
-## RoleSinkInfo
+## SymmetricKey
 ### Properties
-* **roleId**: string (Required): Compute role ID.
+* **connectionString**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
 
-## FileSourceInfo
+## SystemData
 ### Properties
-* **shareId**: string (Required): File share ID.
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The type of identity that last modified the resource.
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
-## PeriodicTimerProperties
+## TrackingInfo
 ### Properties
-* **customContextTag**: string: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
-* **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Compute role against which events will be raised.
-* **sourceInfo**: [PeriodicTimerSourceInfo](#periodictimersourceinfo) (Required): Periodic timer event source.
+* **carrierName**: string: Name of the carrier used in the delivery.
+* **serialNumber**: string: Serial number of the device being tracked.
+* **trackingId**: string: Tracking ID of the shipment.
+* **trackingUrl**: string: Tracking URL of the shipment.
 
-## PeriodicTimerSourceInfo
+## UserAccessRight
 ### Properties
-* **schedule**: string (Required): Periodic frequency at which timer event needs to be raised. Supports daily, hourly, minutes, and seconds.
-* **startTime**: string (Required): The time of the day that results in a valid trigger. Schedule is computed with reference to the time specified upto seconds. If timezone is not specified the time will considered to be in device timezone. The value will always be returned as UTC time.
-* **topic**: string: Topic where periodic events are published to IoT device.
+* **accessType**: 'Change' | 'Custom' | 'Read' | string (Required): Type of access to be allowed on the share for this user.
+* **userId**: string (Required): User ID (already existing in the device).
 
 ## UserProperties
 ### Properties
 * **encryptedPassword**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
 * **shareAccessRights**: [ShareAccessRight](#shareaccessright)[] (ReadOnly): List of shares that the user has rights on. This field should not be specified during user creation.
 * **userType**: 'ARM' | 'LocalManagement' | 'Share' | string: Type of the user.
-
-## ShareAccessRight
-### Properties
-* **accessType**: 'Change' | 'Custom' | 'Read' | string (Required): Type of access to be allowed on the share for this user.
-* **shareId**: string (Required): The share ID.
-
-## DCAccessCode
-### Properties
-* **properties**: [DCAccessCodeProperties](#dcaccesscodeproperties) (ReadOnly): DCAccessCode Properties.
-
-## DCAccessCodeProperties
-### Properties
-* **authCode**: string (ReadOnly): DCAccess Code for the Self Managed shipment.
 

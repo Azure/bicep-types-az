@@ -28,20 +28,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Insights/workbooks' (ReadOnly, DeployTimeConstant): The resource type
 
-## MyWorkbookResourceEtag
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## MyWorkbookManagedIdentity
 ### Properties
 * **type**: 'None' | 'UserAssigned' | string: The identity type.
 * **userAssignedIdentities**: [MyWorkbookUserAssignedIdentities](#myworkbookuserassignedidentities): Customer Managed Identity
-
-## MyWorkbookUserAssignedIdentities
-### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
 
 ## MyWorkbookProperties
 ### Properties
@@ -55,12 +45,27 @@
 * **userId**: string (ReadOnly): Unique user id of the specific user that owns this private workbook.
 * **version**: string: This instance's version of the data model. This can change as new features are added that can be marked private workbook.
 
+## MyWorkbookResourceEtag
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## MyWorkbookResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## MyWorkbookUserAssignedIdentities
+### Properties
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+
 ## ResourceEtag
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -69,12 +74,6 @@
 ### Properties
 * **type**: 'None' | 'UserAssigned' | string: The identity type.
 * **userAssignedIdentities**: [WorkbookUserAssignedIdentities](#workbookuserassignedidentities): Customer Managed Identity
-
-## WorkbookUserAssignedIdentities
-### Properties
-* **clientId**: string (ReadOnly): The client ID of resource.
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
 
 ## WorkbookProperties
 ### Properties
@@ -88,8 +87,9 @@
 * **userId**: string (ReadOnly): Unique user id of the specific user that owns this workbook.
 * **version**: string: Workbook version
 
-## ResourceTags
+## WorkbookUserAssignedIdentities
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **clientId**: string (ReadOnly): The client ID of resource.
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
 

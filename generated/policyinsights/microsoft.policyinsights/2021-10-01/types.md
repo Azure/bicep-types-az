@@ -15,6 +15,39 @@
 * **ApiVersion**: 2021-10-01
 * **Output**: [RemediationDeploymentsListResult](#remediationdeploymentslistresult)
 
+## ErrorDefinition
+### Properties
+* **additionalInfo**: [TypedErrorInfo](#typederrorinfo)[] (ReadOnly): Additional scenario specific error details.
+* **code**: string (ReadOnly): Service specific error code which serves as the substatus for the HTTP error code.
+* **details**: [ErrorDefinition](#errordefinition)[] (ReadOnly): Internal error details.
+* **message**: string (ReadOnly): Description of the error.
+* **target**: string (ReadOnly): The target of the error.
+
+## RemediationDeployment
+### Properties
+* **createdOn**: string (ReadOnly): The time at which the remediation was created.
+* **deploymentId**: string (ReadOnly): Resource ID of the template deployment that will remediate the resource.
+* **error**: [ErrorDefinition](#errordefinition) (ReadOnly): Error definition.
+* **lastUpdatedOn**: string (ReadOnly): The time at which the remediation deployment was last updated.
+* **remediatedResourceId**: string (ReadOnly): Resource ID of the resource that is being remediated by the deployment.
+* **resourceLocation**: string (ReadOnly): Location of the resource that is being remediated.
+* **status**: string (ReadOnly): Status of the remediation deployment.
+
+## RemediationDeploymentsListResult
+### Properties
+* **nextLink**: string (ReadOnly): The URL to get the next set of results.
+* **value**: [RemediationDeployment](#remediationdeployment)[] (ReadOnly): Array of deployments for the remediation.
+
+## RemediationDeploymentSummary
+### Properties
+* **failedDeployments**: int (ReadOnly): The number of deployments required by the remediation that have failed.
+* **successfulDeployments**: int (ReadOnly): The number of deployments required by the remediation that have succeeded.
+* **totalDeployments**: int (ReadOnly): The number of deployments required by the remediation.
+
+## RemediationFilters
+### Properties
+* **locations**: string[]: The resource locations that will be remediated.
+
 ## RemediationProperties
 ### Properties
 * **correlationId**: string (ReadOnly): The remediation correlation Id. Can be used to find events related to the remediation in the activity log.
@@ -31,19 +64,9 @@
 * **resourceDiscoveryMode**: 'ExistingNonCompliant' | 'ReEvaluateCompliance' | string: The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
 * **statusMessage**: string (ReadOnly): The remediation status message. Provides additional details regarding the state of the remediation.
 
-## RemediationDeploymentSummary
-### Properties
-* **failedDeployments**: int (ReadOnly): The number of deployments required by the remediation that have failed.
-* **successfulDeployments**: int (ReadOnly): The number of deployments required by the remediation that have succeeded.
-* **totalDeployments**: int (ReadOnly): The number of deployments required by the remediation.
-
 ## RemediationPropertiesFailureThreshold
 ### Properties
 * **percentage**: int: A number between 0.0 to 1.0 representing the percentage failure threshold. The remediation will fail if the percentage of failed remediation operations (i.e. failed deployments) exceeds this threshold.
-
-## RemediationFilters
-### Properties
-* **locations**: string[]: The resource locations that will be remediated.
 
 ## SystemData
 ### Properties
@@ -53,29 +76,6 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## RemediationDeploymentsListResult
-### Properties
-* **nextLink**: string (ReadOnly): The URL to get the next set of results.
-* **value**: [RemediationDeployment](#remediationdeployment)[] (ReadOnly): Array of deployments for the remediation.
-
-## RemediationDeployment
-### Properties
-* **createdOn**: string (ReadOnly): The time at which the remediation was created.
-* **deploymentId**: string (ReadOnly): Resource ID of the template deployment that will remediate the resource.
-* **error**: [ErrorDefinition](#errordefinition) (ReadOnly): Error definition.
-* **lastUpdatedOn**: string (ReadOnly): The time at which the remediation deployment was last updated.
-* **remediatedResourceId**: string (ReadOnly): Resource ID of the resource that is being remediated by the deployment.
-* **resourceLocation**: string (ReadOnly): Location of the resource that is being remediated.
-* **status**: string (ReadOnly): Status of the remediation deployment.
-
-## ErrorDefinition
-### Properties
-* **additionalInfo**: [TypedErrorInfo](#typederrorinfo)[] (ReadOnly): Additional scenario specific error details.
-* **code**: string (ReadOnly): Service specific error code which serves as the substatus for the HTTP error code.
-* **details**: [ErrorDefinition](#errordefinition)[] (ReadOnly): Internal error details.
-* **message**: string (ReadOnly): Description of the error.
-* **target**: string (ReadOnly): The target of the error.
 
 ## TypedErrorInfo
 ### Properties

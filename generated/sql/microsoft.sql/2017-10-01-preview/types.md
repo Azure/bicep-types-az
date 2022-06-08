@@ -83,68 +83,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/elasticPools' (ReadOnly, DeployTimeConstant): The resource type
 
-## InstanceFailoverGroupProperties
+## BackupShortTermRetentionPolicyProperties
 ### Properties
-* **managedInstancePairs**: [ManagedInstancePairInfo](#managedinstancepairinfo)[] (Required): List of managed instance pairs in the failover group.
-* **partnerRegions**: [PartnerRegionInfo](#partnerregioninfo)[] (Required): Partner region information for the failover group.
-* **readOnlyEndpoint**: [InstanceFailoverGroupReadOnlyEndpoint](#instancefailovergroupreadonlyendpoint): Read-only endpoint of the failover group instance.
-* **readWriteEndpoint**: [InstanceFailoverGroupReadWriteEndpoint](#instancefailovergroupreadwriteendpoint) (Required): Read-write endpoint of the failover group instance.
-* **replicationRole**: 'Primary' | 'Secondary' | string (ReadOnly): Local replication role of the failover group instance.
-* **replicationState**: string (ReadOnly): Replication state of the failover group instance.
-
-## ManagedInstancePairInfo
-### Properties
-* **partnerManagedInstanceId**: string: Id of Partner Managed Instance in pair.
-* **primaryManagedInstanceId**: string: Id of Primary Managed Instance in pair.
-
-## PartnerRegionInfo
-### Properties
-* **location**: string: Geo location of the partner managed instances.
-* **replicationRole**: 'Primary' | 'Secondary' | string (ReadOnly): Local replication role of the failover group instance.
-
-## InstanceFailoverGroupReadOnlyEndpoint
-### Properties
-* **failoverPolicy**: 'Disabled' | 'Enabled' | string: Failover policy of the read-only endpoint for the failover group.
-
-## InstanceFailoverGroupReadWriteEndpoint
-### Properties
-* **failoverPolicy**: 'Automatic' | 'Manual' | string (Required): Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
-* **failoverWithDataLossGracePeriodMinutes**: int: Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
-
-## DatabaseVulnerabilityAssessmentProperties
-### Properties
-* **recurringScans**: [VulnerabilityAssessmentRecurringScansProperties](#vulnerabilityassessmentrecurringscansproperties): Properties of a Vulnerability Assessment recurring scans.
-* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the storage account for vulnerability assessment scan results. If 'StorageContainerSasKey' isn't specified, storageAccountAccessKey is required.
-* **storageContainerPath**: string (WriteOnly): A blob storage container path to hold the scan results (e.g. https://myStorage.blob.core.windows.net/VaScans/).  It is required if server level vulnerability assessment policy doesn't set
-* **storageContainerSasKey**: string (WriteOnly): A shared access signature (SAS Key) that has read and write access to the blob container specified in 'storageContainerPath' parameter. If 'storageAccountAccessKey' isn't specified, StorageContainerSasKey is required.
-
-## VulnerabilityAssessmentRecurringScansProperties
-### Properties
-* **emails**: string[]: Specifies an array of e-mail addresses to which the scan notification is sent.
-* **emailSubscriptionAdmins**: bool: Specifies that the schedule scan notification will be is sent to the subscription administrators.
-* **isEnabled**: bool: Recurring scans state.
-
-## DatabaseVulnerabilityAssessmentRuleBaselineProperties
-### Properties
-* **baselineResults**: [DatabaseVulnerabilityAssessmentRuleBaselineItem](#databasevulnerabilityassessmentrulebaselineitem)[] (Required): The rule baseline result
-
-## DatabaseVulnerabilityAssessmentRuleBaselineItem
-### Properties
-* **result**: string[] (Required): The rule baseline result
-
-## ManagedInstanceEncryptionProtectorProperties
-### Properties
-* **serverKeyName**: string: The name of the managed instance key.
-* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' | string (Required): The key type like 'ServiceManaged', 'AzureKeyVault'.
-* **thumbprint**: string (ReadOnly): Thumbprint of the server key.
-* **uri**: string (ReadOnly): The URI of the server key.
-
-## ManagedInstanceKeyProperties
-### Properties
-* **creationDate**: string (ReadOnly): The key creation date.
-* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' | string (Required, WriteOnly): The key type like 'ServiceManaged', 'AzureKeyVault'.
-* **thumbprint**: string (ReadOnly): Thumbprint of the key.
-* **uri**: string (WriteOnly): The URI of the key. If the ServerKeyType is AzureKeyVault, then the URI is required.
+* **retentionDays**: int: The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
 
 ## DatabaseProperties
 ### Properties
@@ -196,6 +137,77 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **status**: 'AutoClosed' | 'Copying' | 'Creating' | 'Disabled' | 'EmergencyMode' | 'Inaccessible' | 'Offline' | 'OfflineChangingDwPerformanceTiers' | 'OfflineSecondary' | 'Online' | 'OnlineChangingDwPerformanceTiers' | 'Paused' | 'Pausing' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Resuming' | 'Scaling' | 'Shutdown' | 'Standby' | 'Suspect' | string (ReadOnly): The status of the database.
 * **zoneRedundant**: bool: Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
 
+## DatabaseVulnerabilityAssessmentProperties
+### Properties
+* **recurringScans**: [VulnerabilityAssessmentRecurringScansProperties](#vulnerabilityassessmentrecurringscansproperties): Properties of a Vulnerability Assessment recurring scans.
+* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the storage account for vulnerability assessment scan results. If 'StorageContainerSasKey' isn't specified, storageAccountAccessKey is required.
+* **storageContainerPath**: string (WriteOnly): A blob storage container path to hold the scan results (e.g. https://myStorage.blob.core.windows.net/VaScans/).  It is required if server level vulnerability assessment policy doesn't set
+* **storageContainerSasKey**: string (WriteOnly): A shared access signature (SAS Key) that has read and write access to the blob container specified in 'storageContainerPath' parameter. If 'storageAccountAccessKey' isn't specified, StorageContainerSasKey is required.
+
+## DatabaseVulnerabilityAssessmentRuleBaselineItem
+### Properties
+* **result**: string[] (Required): The rule baseline result
+
+## DatabaseVulnerabilityAssessmentRuleBaselineProperties
+### Properties
+* **baselineResults**: [DatabaseVulnerabilityAssessmentRuleBaselineItem](#databasevulnerabilityassessmentrulebaselineitem)[] (Required): The rule baseline result
+
+## ElasticPoolPerDatabaseSettings
+### Properties
+* **maxCapacity**: int: The maximum capacity any one database can consume.
+* **minCapacity**: int: The minimum capacity all databases are guaranteed.
+
+## ElasticPoolProperties
+### Properties
+* **creationDate**: string (ReadOnly): The creation date of the elastic pool (ISO8601 format).
+* **licenseType**: 'BasePrice' | 'LicenseIncluded' | string: The license type to apply for this elastic pool.
+* **maxSizeBytes**: int: The storage limit for the database elastic pool in bytes.
+* **perDatabaseSettings**: [ElasticPoolPerDatabaseSettings](#elasticpoolperdatabasesettings): Per database settings of an elastic pool.
+* **state**: 'Creating' | 'Disabled' | 'Ready' | string (ReadOnly): The state of the elastic pool.
+* **zoneRedundant**: bool: Whether or not this elastic pool is zone redundant, which means the replicas of this elastic pool will be spread across multiple availability zones.
+
+## InstanceFailoverGroupProperties
+### Properties
+* **managedInstancePairs**: [ManagedInstancePairInfo](#managedinstancepairinfo)[] (Required): List of managed instance pairs in the failover group.
+* **partnerRegions**: [PartnerRegionInfo](#partnerregioninfo)[] (Required): Partner region information for the failover group.
+* **readOnlyEndpoint**: [InstanceFailoverGroupReadOnlyEndpoint](#instancefailovergroupreadonlyendpoint): Read-only endpoint of the failover group instance.
+* **readWriteEndpoint**: [InstanceFailoverGroupReadWriteEndpoint](#instancefailovergroupreadwriteendpoint) (Required): Read-write endpoint of the failover group instance.
+* **replicationRole**: 'Primary' | 'Secondary' | string (ReadOnly): Local replication role of the failover group instance.
+* **replicationState**: string (ReadOnly): Replication state of the failover group instance.
+
+## InstanceFailoverGroupReadOnlyEndpoint
+### Properties
+* **failoverPolicy**: 'Disabled' | 'Enabled' | string: Failover policy of the read-only endpoint for the failover group.
+
+## InstanceFailoverGroupReadWriteEndpoint
+### Properties
+* **failoverPolicy**: 'Automatic' | 'Manual' | string (Required): Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+* **failoverWithDataLossGracePeriodMinutes**: int: Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+
+## ManagedInstanceEncryptionProtectorProperties
+### Properties
+* **serverKeyName**: string: The name of the managed instance key.
+* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' | string (Required): The key type like 'ServiceManaged', 'AzureKeyVault'.
+* **thumbprint**: string (ReadOnly): Thumbprint of the server key.
+* **uri**: string (ReadOnly): The URI of the server key.
+
+## ManagedInstanceKeyProperties
+### Properties
+* **creationDate**: string (ReadOnly): The key creation date.
+* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' | string (Required, WriteOnly): The key type like 'ServiceManaged', 'AzureKeyVault'.
+* **thumbprint**: string (ReadOnly): Thumbprint of the key.
+* **uri**: string (WriteOnly): The URI of the key. If the ServerKeyType is AzureKeyVault, then the URI is required.
+
+## ManagedInstancePairInfo
+### Properties
+* **partnerManagedInstanceId**: string: Id of Partner Managed Instance in pair.
+* **primaryManagedInstanceId**: string: Id of Primary Managed Instance in pair.
+
+## PartnerRegionInfo
+### Properties
+* **location**: string: Geo location of the partner managed instances.
+* **replicationRole**: 'Primary' | 'Secondary' | string (ReadOnly): Local replication role of the failover group instance.
+
 ## Sku
 ### Properties
 * **capacity**: int: Capacity of the particular SKU.
@@ -209,26 +221,14 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## BackupShortTermRetentionPolicyProperties
-### Properties
-* **retentionDays**: int: The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
-
-## ElasticPoolProperties
-### Properties
-* **creationDate**: string (ReadOnly): The creation date of the elastic pool (ISO8601 format).
-* **licenseType**: 'BasePrice' | 'LicenseIncluded' | string: The license type to apply for this elastic pool.
-* **maxSizeBytes**: int: The storage limit for the database elastic pool in bytes.
-* **perDatabaseSettings**: [ElasticPoolPerDatabaseSettings](#elasticpoolperdatabasesettings): Per database settings of an elastic pool.
-* **state**: 'Creating' | 'Disabled' | 'Ready' | string (ReadOnly): The state of the elastic pool.
-* **zoneRedundant**: bool: Whether or not this elastic pool is zone redundant, which means the replicas of this elastic pool will be spread across multiple availability zones.
-
-## ElasticPoolPerDatabaseSettings
-### Properties
-* **maxCapacity**: int: The maximum capacity any one database can consume.
-* **minCapacity**: int: The minimum capacity all databases are guaranteed.
-
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## VulnerabilityAssessmentRecurringScansProperties
+### Properties
+* **emails**: string[]: Specifies an array of e-mail addresses to which the scan notification is sent.
+* **emailSubscriptionAdmins**: bool: Specifies that the schedule scan notification will be is sent to the subscription administrators.
+* **isEnabled**: bool: Recurring scans state.
 

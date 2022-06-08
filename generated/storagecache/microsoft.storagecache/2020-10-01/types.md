@@ -25,30 +25,6 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant): The resource type
 
-## CacheIdentity
-### Properties
-* **principalId**: string (ReadOnly): The principal id of the cache.
-* **tenantId**: string (ReadOnly): The tenant id associated with the cache.
-* **type**: 'None' | 'SystemAssigned': The type of identity used for the cache
-
-## CacheProperties
-### Properties
-* **cacheSizeGB**: int: The size of this Cache, in GB.
-* **directoryServicesSettings**: [CacheDirectorySettings](#cachedirectorysettings): Cache Directory Services settings.
-* **encryptionSettings**: [CacheEncryptionSettings](#cacheencryptionsettings): Cache encryption settings.
-* **health**: [CacheHealth](#cachehealth) (ReadOnly): An indication of Cache health. Gives more information about health than just that related to provisioning.
-* **mountAddresses**: string[] (ReadOnly): Array of IP addresses that can be used by clients mounting this Cache.
-* **networkSettings**: [CacheNetworkSettings](#cachenetworksettings): Cache network settings.
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
-* **securitySettings**: [CacheSecuritySettings](#cachesecuritysettings): Cache security settings.
-* **subnet**: string: A fully qualified URL.
-* **upgradeStatus**: [CacheUpgradeStatus](#cacheupgradestatus): Properties describing the software upgrade state of the Cache.
-
-## CacheDirectorySettings
-### Properties
-* **activeDirectory**: [CacheActiveDirectorySettings](#cacheactivedirectorysettings): Active Directory settings used to join a cache to a domain.
-* **usernameDownload**: [CacheUsernameDownloadSettings](#cacheusernamedownloadsettings): Settings for Extended Groups username and group download.
-
 ## CacheActiveDirectorySettings
 ### Properties
 * **cacheNetBiosName**: string (Required): The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].
@@ -63,6 +39,60 @@
 ### Properties
 * **password**: string (Required): Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
 * **username**: string (Required): Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
+
+## CacheDirectorySettings
+### Properties
+* **activeDirectory**: [CacheActiveDirectorySettings](#cacheactivedirectorysettings): Active Directory settings used to join a cache to a domain.
+* **usernameDownload**: [CacheUsernameDownloadSettings](#cacheusernamedownloadsettings): Settings for Extended Groups username and group download.
+
+## CacheEncryptionSettings
+### Properties
+* **keyEncryptionKey**: [KeyVaultKeyReference](#keyvaultkeyreference): Describes a reference to Key Vault Key.
+
+## CacheHealth
+### Properties
+* **state**: 'Degraded' | 'Down' | 'Flushing' | 'Healthy' | 'Stopped' | 'Stopping' | 'Transitioning' | 'Unknown' | 'Upgrading' | string: List of Cache health states.
+* **statusDescription**: string: Describes explanation of state.
+
+## CacheIdentity
+### Properties
+* **principalId**: string (ReadOnly): The principal id of the cache.
+* **tenantId**: string (ReadOnly): The tenant id associated with the cache.
+* **type**: 'None' | 'SystemAssigned': The type of identity used for the cache
+
+## CacheNetworkSettings
+### Properties
+* **mtu**: int: The IPv4 maximum transmission unit configured for the subnet.
+* **utilityAddresses**: string[] (ReadOnly): Array of additional IP addresses used by this Cache.
+
+## CacheProperties
+### Properties
+* **cacheSizeGB**: int: The size of this Cache, in GB.
+* **directoryServicesSettings**: [CacheDirectorySettings](#cachedirectorysettings): Cache Directory Services settings.
+* **encryptionSettings**: [CacheEncryptionSettings](#cacheencryptionsettings): Cache encryption settings.
+* **health**: [CacheHealth](#cachehealth) (ReadOnly): An indication of Cache health. Gives more information about health than just that related to provisioning.
+* **mountAddresses**: string[] (ReadOnly): Array of IP addresses that can be used by clients mounting this Cache.
+* **networkSettings**: [CacheNetworkSettings](#cachenetworksettings): Cache network settings.
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+* **securitySettings**: [CacheSecuritySettings](#cachesecuritysettings): Cache security settings.
+* **subnet**: string: A fully qualified URL.
+* **upgradeStatus**: [CacheUpgradeStatus](#cacheupgradestatus): Properties describing the software upgrade state of the Cache.
+
+## CacheSecuritySettings
+### Properties
+* **accessPolicies**: [NfsAccessPolicy](#nfsaccesspolicy)[]: NFS access policies defined for this cache.
+
+## CacheSku
+### Properties
+* **name**: string: SKU name for this Cache.
+
+## CacheUpgradeStatus
+### Properties
+* **currentFirmwareVersion**: string (ReadOnly): Version string of the firmware currently installed on this Cache.
+* **firmwareUpdateDeadline**: string (ReadOnly): Time at which the pending firmware update will automatically be installed on the Cache.
+* **firmwareUpdateStatus**: 'available' | 'unavailable' | string (ReadOnly): True if there is a firmware update ready to install on this Cache. The firmware will automatically be installed after firmwareUpdateDeadline if not triggered earlier via the upgrade operation.
+* **lastFirmwareUpdate**: string (ReadOnly): Time of the last successful firmware update.
+* **pendingFirmwareVersion**: string (ReadOnly): When firmwareUpdateAvailable is true, this field holds the version string for the update.
 
 ## CacheUsernameDownloadSettings
 ### Properties
@@ -84,9 +114,9 @@
 * **bindDn**: string: The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
 * **bindPassword**: string: The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
 
-## CacheEncryptionSettings
+## ClfsTarget
 ### Properties
-* **keyEncryptionKey**: [KeyVaultKeyReference](#keyvaultkeyreference): Describes a reference to Key Vault Key.
+* **target**: string: A fully qualified URL.
 
 ## KeyVaultKeyReference
 ### Properties
@@ -97,19 +127,17 @@
 ### Properties
 * **id**: string: Resource Id.
 
-## CacheHealth
+## NamespaceJunction
 ### Properties
-* **state**: 'Degraded' | 'Down' | 'Flushing' | 'Healthy' | 'Stopped' | 'Stopping' | 'Transitioning' | 'Unknown' | 'Upgrading' | string: List of Cache health states.
-* **statusDescription**: string: Describes explanation of state.
+* **namespacePath**: string: Namespace path on a Cache for a Storage Target.
+* **nfsAccessPolicy**: string: Name of the access policy applied to this junction.
+* **nfsExport**: string: NFS export where targetPath exists.
+* **targetPath**: string: Path in Storage Target to which namespacePath points.
 
-## CacheNetworkSettings
+## Nfs3Target
 ### Properties
-* **mtu**: int: The IPv4 maximum transmission unit configured for the subnet.
-* **utilityAddresses**: string[] (ReadOnly): Array of additional IP addresses used by this Cache.
-
-## CacheSecuritySettings
-### Properties
-* **accessPolicies**: [NfsAccessPolicy](#nfsaccesspolicy)[]: NFS access policies defined for this cache.
+* **target**: string: IP address or host name of an NFSv3 host (e.g., 10.0.44.44).
+* **usageModel**: string: Identifies the usage model to be used for this Storage Target. Get choices from .../usageModels
 
 ## NfsAccessPolicy
 ### Properties
@@ -126,27 +154,6 @@
 * **scope**: 'default' | 'host' | 'network' | string (Required): Scope for this rule. The scope and filter determine which clients match the rule.
 * **submountAccess**: bool: For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path '/'. If set to yes, clients can mount a deeper path, like '/a/b'.
 * **suid**: bool: Allow SUID semantics.
-
-## CacheUpgradeStatus
-### Properties
-* **currentFirmwareVersion**: string (ReadOnly): Version string of the firmware currently installed on this Cache.
-* **firmwareUpdateDeadline**: string (ReadOnly): Time at which the pending firmware update will automatically be installed on the Cache.
-* **firmwareUpdateStatus**: 'available' | 'unavailable' | string (ReadOnly): True if there is a firmware update ready to install on this Cache. The firmware will automatically be installed after firmwareUpdateDeadline if not triggered earlier via the upgrade operation.
-* **lastFirmwareUpdate**: string (ReadOnly): Time of the last successful firmware update.
-* **pendingFirmwareVersion**: string (ReadOnly): When firmwareUpdateAvailable is true, this field holds the version string for the update.
-
-## CacheSku
-### Properties
-* **name**: string: SKU name for this Cache.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## StorageTargetProperties
 * **Discriminator**: targetType
@@ -170,28 +177,21 @@
 * **targetType**: 'unknown' (Required): Type of the Storage Target.
 
 
-## ClfsTarget
+## SystemData
 ### Properties
-* **target**: string: A fully qualified URL.
-
-## NamespaceJunction
-### Properties
-* **namespacePath**: string: Namespace path on a Cache for a Storage Target.
-* **nfsAccessPolicy**: string: Name of the access policy applied to this junction.
-* **nfsExport**: string: NFS export where targetPath exists.
-* **targetPath**: string: Path in Storage Target to which namespacePath points.
-
-## Nfs3Target
-### Properties
-* **target**: string: IP address or host name of an NFSv3 host (e.g., 10.0.44.44).
-* **usageModel**: string: Identifies the usage model to be used for this Storage Target. Get choices from .../usageModels
-
-## UnknownTarget
-### Properties
-* **unknownMap**: [UnknownProperties](#unknownproperties): Properties of an unknown type of Storage Target.
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## UnknownProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UnknownTarget
+### Properties
+* **unknownMap**: [UnknownProperties](#unknownproperties): Properties of an unknown type of Storage Target.
 

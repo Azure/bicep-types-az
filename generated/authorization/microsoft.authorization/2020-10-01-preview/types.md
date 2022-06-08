@@ -36,6 +36,62 @@
 * **properties**: [RoleManagementPolicyAssignmentProperties](#rolemanagementpolicyassignmentproperties): Role management policy assignment properties with scope.
 * **type**: 'Microsoft.Authorization/roleManagementPolicyAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
+## ExpandedProperties
+### Properties
+* **principal**: [ExpandedPropertiesPrincipal](#expandedpropertiesprincipal): Details of the principal
+* **roleDefinition**: [ExpandedPropertiesRoleDefinition](#expandedpropertiesroledefinition): Details of role definition
+* **scope**: [ExpandedPropertiesScope](#expandedpropertiesscope): Details of the resource scope
+
+## ExpandedPropertiesPrincipal
+### Properties
+* **displayName**: string: Display name of the principal
+* **email**: string: Email id of the principal
+* **id**: string: Id of the principal
+* **type**: string: Type of the principal
+
+## ExpandedPropertiesRoleDefinition
+### Properties
+* **displayName**: string: Display name of the role definition
+* **id**: string: Id of the role definition
+* **type**: string: Type of the role definition
+
+## ExpandedPropertiesScope
+### Properties
+* **displayName**: string: Display name of the resource
+* **id**: string: Scope id of the resource
+* **type**: string: Type of the resource
+
+## PolicyAssignmentProperties
+### Properties
+* **policy**: [PolicyAssignmentPropertiesPolicy](#policyassignmentpropertiespolicy): Details of the policy
+* **roleDefinition**: [PolicyAssignmentPropertiesRoleDefinition](#policyassignmentpropertiesroledefinition): Details of role definition
+* **scope**: [PolicyAssignmentPropertiesScope](#policyassignmentpropertiesscope): Details of the resource scope
+
+## PolicyAssignmentPropertiesPolicy
+### Properties
+* **id**: string: Id of the policy
+* **lastModifiedBy**: [Principal](#principal) (ReadOnly): The name of the entity last modified it
+* **lastModifiedDateTime**: string: The last modified date time.
+
+## PolicyAssignmentPropertiesRoleDefinition
+### Properties
+* **displayName**: string: Display name of the role definition
+* **id**: string: Id of the role definition
+* **type**: string: Type of the role definition
+
+## PolicyAssignmentPropertiesScope
+### Properties
+* **displayName**: string: Display name of the resource
+* **id**: string: Scope id of the resource
+* **type**: string: Type of the resource
+
+## Principal
+### Properties
+* **displayName**: string: The name of the principal made changes
+* **email**: string: Email of principal
+* **id**: string: The id of the principal made changes
+* **type**: string: Type of principal such as user , group etc
+
 ## RoleAssignmentProperties
 ### Properties
 * **condition**: string: The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
@@ -71,31 +127,6 @@
 * **targetRoleAssignmentScheduleId**: string: The resultant role assignment schedule id or the role assignment schedule id being updated
 * **targetRoleAssignmentScheduleInstanceId**: string: The role assignment schedule instance id being updated
 * **ticketInfo**: [RoleAssignmentScheduleRequestPropertiesTicketInfo](#roleassignmentschedulerequestpropertiesticketinfo): Ticket Info of the role assignment
-
-## ExpandedProperties
-### Properties
-* **principal**: [ExpandedPropertiesPrincipal](#expandedpropertiesprincipal): Details of the principal
-* **roleDefinition**: [ExpandedPropertiesRoleDefinition](#expandedpropertiesroledefinition): Details of role definition
-* **scope**: [ExpandedPropertiesScope](#expandedpropertiesscope): Details of the resource scope
-
-## ExpandedPropertiesPrincipal
-### Properties
-* **displayName**: string: Display name of the principal
-* **email**: string: Email id of the principal
-* **id**: string: Id of the principal
-* **type**: string: Type of the principal
-
-## ExpandedPropertiesRoleDefinition
-### Properties
-* **displayName**: string: Display name of the role definition
-* **id**: string: Id of the role definition
-* **type**: string: Type of the role definition
-
-## ExpandedPropertiesScope
-### Properties
-* **displayName**: string: Display name of the resource
-* **id**: string: Scope id of the resource
-* **type**: string: Type of the resource
 
 ## RoleAssignmentScheduleRequestPropertiesScheduleInfo
 ### Properties
@@ -155,35 +186,4 @@
 * **policyId**: string: The policy id role management policy assignment.
 * **roleDefinitionId**: string: The role definition of management policy assignment.
 * **scope**: string: The role management policy scope.
-
-## PolicyAssignmentProperties
-### Properties
-* **policy**: [PolicyAssignmentPropertiesPolicy](#policyassignmentpropertiespolicy): Details of the policy
-* **roleDefinition**: [PolicyAssignmentPropertiesRoleDefinition](#policyassignmentpropertiesroledefinition): Details of role definition
-* **scope**: [PolicyAssignmentPropertiesScope](#policyassignmentpropertiesscope): Details of the resource scope
-
-## PolicyAssignmentPropertiesPolicy
-### Properties
-* **id**: string: Id of the policy
-* **lastModifiedBy**: [Principal](#principal) (ReadOnly): The name of the entity last modified it
-* **lastModifiedDateTime**: string: The last modified date time.
-
-## Principal
-### Properties
-* **displayName**: string: The name of the principal made changes
-* **email**: string: Email of principal
-* **id**: string: The id of the principal made changes
-* **type**: string: Type of principal such as user , group etc
-
-## PolicyAssignmentPropertiesRoleDefinition
-### Properties
-* **displayName**: string: Display name of the role definition
-* **id**: string: Id of the role definition
-* **type**: string: Type of the role definition
-
-## PolicyAssignmentPropertiesScope
-### Properties
-* **displayName**: string: Display name of the resource
-* **id**: string: Scope id of the resource
-* **type**: string: Type of the resource
 

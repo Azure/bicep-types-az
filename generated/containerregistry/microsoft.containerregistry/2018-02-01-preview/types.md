@@ -30,40 +30,25 @@
 * **ApiVersion**: 2018-02-01-preview
 * **Output**: [SourceRepositoryProperties](#sourcerepositoryproperties)
 
-## BuildTaskProperties
+## BaseImageDependency
 ### Properties
-* **alias**: string (Required): The alternative updatable name for a build task.
-* **creationDate**: string (ReadOnly): The creation date of build task.
-* **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the build has to happen.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of a build.
-* **sourceRepository**: [SourceRepositoryProperties](#sourcerepositoryproperties) (Required): The properties of the source code repository.
-* **status**: 'Disabled' | 'Enabled' | string: The current status of build task.
-* **timeout**: int: Build timeout in seconds.
+* **digest**: string: The sha256-based digest of the image manifest.
+* **registry**: string: The registry login server.
+* **repository**: string: The repository name.
+* **tag**: string: The tag name.
+* **type**: 'BuildTime' | 'RunTime' | string: The type of the base image dependency.
 
-## PlatformProperties
+## BuildArgument
 ### Properties
-* **cpu**: int: The CPU configuration in terms of number of cores required for the build.
-* **osType**: 'Linux' | 'Windows' | string (Required): The operating system type required for the build.
+* **isSecret**: bool: Flag to indicate whether the argument represents a secret and want to be removed from build logs.
+* **name**: string (Required): The name of the argument.
+* **type**: 'DockerBuildArgument' | string (Required): The type of the argument.
+* **value**: string (Required): The value of the argument.
 
-## SourceRepositoryProperties
+## BuildArgumentList
 ### Properties
-* **isCommitTriggerEnabled**: bool: The value of this property indicates whether the source control commit trigger is enabled or not.
-* **repositoryUrl**: string (Required): The full URL to the source code repository
-* **sourceControlAuthProperties**: [SourceControlAuthInfo](#sourcecontrolauthinfo): The authorization properties for accessing the source code repository.
-* **sourceControlType**: 'Github' | 'VisualStudioTeamService' | string (Required): The type of source control service.
-
-## SourceControlAuthInfo
-### Properties
-* **expiresIn**: int: Time in seconds that the token remains valid
-* **refreshToken**: string: The refresh token used to refresh the access token.
-* **scope**: string: The scope of the access token.
-* **token**: string (Required): The access token used to access the source control provider.
-* **tokenType**: 'OAuth' | 'PAT' | string: The type of Auth token.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **nextLink**: string (ReadOnly): The URI that can be used to request the next set of paged results.
+* **value**: [BuildArgument](#buildargument)[] (ReadOnly): The collection value.
 
 ## BuildStepProperties
 * **Discriminator**: type
@@ -84,25 +69,40 @@
 * **type**: 'Docker' (Required): The type of the step.
 
 
-## BaseImageDependency
+## BuildTaskProperties
 ### Properties
-* **digest**: string: The sha256-based digest of the image manifest.
-* **registry**: string: The registry login server.
-* **repository**: string: The repository name.
-* **tag**: string: The tag name.
-* **type**: 'BuildTime' | 'RunTime' | string: The type of the base image dependency.
+* **alias**: string (Required): The alternative updatable name for a build task.
+* **creationDate**: string (ReadOnly): The creation date of build task.
+* **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the build has to happen.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of a build.
+* **sourceRepository**: [SourceRepositoryProperties](#sourcerepositoryproperties) (Required): The properties of the source code repository.
+* **status**: 'Disabled' | 'Enabled' | string: The current status of build task.
+* **timeout**: int: Build timeout in seconds.
 
-## BuildArgument
+## PlatformProperties
 ### Properties
-* **isSecret**: bool: Flag to indicate whether the argument represents a secret and want to be removed from build logs.
-* **name**: string (Required): The name of the argument.
-* **type**: 'DockerBuildArgument' | string (Required): The type of the argument.
-* **value**: string (Required): The value of the argument.
+* **cpu**: int: The CPU configuration in terms of number of cores required for the build.
+* **osType**: 'Linux' | 'Windows' | string (Required): The operating system type required for the build.
 
-## BuildArgumentList
+## ResourceTags
 ### Properties
-* **nextLink**: string (ReadOnly): The URI that can be used to request the next set of paged results.
-* **value**: [BuildArgument](#buildargument)[] (ReadOnly): The collection value.
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SourceControlAuthInfo
+### Properties
+* **expiresIn**: int: Time in seconds that the token remains valid
+* **refreshToken**: string: The refresh token used to refresh the access token.
+* **scope**: string: The scope of the access token.
+* **token**: string (Required): The access token used to access the source control provider.
+* **tokenType**: 'OAuth' | 'PAT' | string: The type of Auth token.
+
+## SourceRepositoryProperties
+### Properties
+* **isCommitTriggerEnabled**: bool: The value of this property indicates whether the source control commit trigger is enabled or not.
+* **repositoryUrl**: string (Required): The full URL to the source code repository
+* **sourceControlAuthProperties**: [SourceControlAuthInfo](#sourcecontrolauthinfo): The authorization properties for accessing the source code repository.
+* **sourceControlType**: 'Github' | 'VisualStudioTeamService' | string (Required): The type of source control service.
 
 ## SourceRepositoryProperties
 ### Properties

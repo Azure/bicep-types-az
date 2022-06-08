@@ -11,17 +11,6 @@
 * **tags**: [VaultCreateOrUpdateParametersTags](#vaultcreateorupdateparameterstags): The tags that will be assigned to the key vault.
 * **type**: 'Microsoft.KeyVault/vaults' (ReadOnly, DeployTimeConstant): The resource type
 
-## VaultProperties
-### Properties
-* **accessPolicies**: [AccessPolicyEntry](#accesspolicyentry)[] (Required): An array of 0 to 16 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID.
-* **enabledForDeployment**: bool: Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.
-* **enabledForDiskEncryption**: bool: Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.
-* **enabledForTemplateDeployment**: bool: Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.
-* **enableSoftDelete**: bool: Property to specify whether the 'soft delete' functionality is enabled for this key vault.
-* **sku**: [Sku](#sku) (Required): SKU details
-* **tenantId**: string (Required): The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
-* **vaultUri**: string: The URI of the vault for performing operations on keys and secrets.
-
 ## AccessPolicyEntry
 ### Properties
 * **applicationId**: string: Application ID of the client making request on behalf of a principal
@@ -44,4 +33,15 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## VaultProperties
+### Properties
+* **accessPolicies**: [AccessPolicyEntry](#accesspolicyentry)[] (Required): An array of 0 to 16 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID.
+* **enabledForDeployment**: bool: Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.
+* **enabledForDiskEncryption**: bool: Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.
+* **enabledForTemplateDeployment**: bool: Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.
+* **enableSoftDelete**: bool: Property to specify whether the 'soft delete' functionality is enabled for this key vault.
+* **sku**: [Sku](#sku) (Required): SKU details
+* **tenantId**: string (Required): The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
+* **vaultUri**: string: The URI of the vault for performing operations on keys and secrets.
 

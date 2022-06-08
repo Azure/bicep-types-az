@@ -9,6 +9,18 @@
 * **properties**: [SourceControlConfigurationProperties](#sourcecontrolconfigurationproperties): Properties to create a Source Control Configuration resource
 * **type**: 'Microsoft.KubernetesConfiguration/sourceControlConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
+## ComplianceStatus
+### Properties
+* **complianceState**: 'Compliant' | 'Failed' | 'Installed' | 'Noncompliant' | 'Pending' | string (ReadOnly): The compliance state of the configuration.
+* **lastConfigApplied**: string: Datetime the configuration was last applied.
+* **message**: string: Message from when the configuration was applied.
+* **messageLevel**: 'Error' | 'Information' | 'Warning' | string: Level of the message.
+
+## HelmOperatorProperties
+### Properties
+* **chartValues**: string: Values override for the operator Helm chart.
+* **chartVersion**: string: Version of the operator Helm chart.
+
 ## SourceControlConfigurationProperties
 ### Properties
 * **complianceStatus**: [ComplianceStatus](#compliancestatus) (ReadOnly): Compliance Status details
@@ -22,16 +34,4 @@
 * **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioning state of the resource provider.
 * **repositoryPublicKey**: string (ReadOnly): Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).
 * **repositoryUrl**: string: Url of the SourceControl Repository.
-
-## ComplianceStatus
-### Properties
-* **complianceState**: 'Compliant' | 'Failed' | 'Installed' | 'Noncompliant' | 'Pending' | string (ReadOnly): The compliance state of the configuration.
-* **lastConfigApplied**: string: Datetime the configuration was last applied.
-* **message**: string: Message from when the configuration was applied.
-* **messageLevel**: 'Error' | 'Information' | 'Warning' | string: Level of the message.
-
-## HelmOperatorProperties
-### Properties
-* **chartValues**: string: Values override for the operator Helm chart.
-* **chartVersion**: string: Version of the operator Helm chart.
 

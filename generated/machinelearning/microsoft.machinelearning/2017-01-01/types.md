@@ -11,6 +11,192 @@
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearning/webServices' (ReadOnly, DeployTimeConstant): The resource type
 
+## AssetItem
+### Properties
+* **id**: string: Asset's Id.
+* **inputPorts**: [AssetItemInputPorts](#assetiteminputports): Information about the asset's input ports.
+* **locationInfo**: [BlobLocation](#bloblocation) (Required): Describes the access location for a blob.
+* **metadata**: [AssetItemMetadata](#assetitemmetadata): If the asset is a custom module, this holds the module's metadata.
+* **name**: string (Required): Asset's friendly name.
+* **outputPorts**: [AssetItemOutputPorts](#assetitemoutputports): Information about the asset's output ports.
+* **parameters**: [ModuleAssetParameter](#moduleassetparameter)[]: If the asset is a custom module, this holds the module's parameters.
+* **type**: 'Module' | 'Resource' | string (Required): Asset's type.
+
+## AssetItemInputPorts
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [InputPort](#inputport)
+
+## AssetItemMetadata
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## AssetItemOutputPorts
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [OutputPort](#outputport)
+
+## BlobLocation
+### Properties
+* **credentials**: string: Access credentials for the blob, if applicable (e.g. blob specified by storage account connection string + blob URI)
+* **uri**: string (Required): The URI from which the blob is accessible from. For example, aml://abc for system assets or https://xyz for user assets or payload.
+
+## ColumnSpecification
+### Properties
+* **enum**: any[]: If the data type is categorical, this provides the list of accepted categories.
+* **format**: 'Byte' | 'Char' | 'Complex128' | 'Complex64' | 'Date-time' | 'Date-timeOffset' | 'Double' | 'Duration' | 'Float' | 'Int16' | 'Int32' | 'Int64' | 'Int8' | 'Uint16' | 'Uint32' | 'Uint64' | 'Uint8' | string: Additional format information for the data type.
+* **type**: 'Boolean' | 'Integer' | 'Number' | 'String' | string (Required): Data type of the column.
+* **x-ms-isnullable**: bool: Flag indicating if the type supports null values or not.
+* **x-ms-isordered**: bool: Flag indicating whether the categories are treated as an ordered set or not, if this is a categorical column.
+
+## CommitmentPlan
+### Properties
+* **id**: string (Required): Specifies the Azure Resource Manager ID of the commitment plan associated with the web service.
+
+## DiagnosticsConfiguration
+### Properties
+* **expiry**: string: Specifies the date and time when the logging will cease. If null, diagnostic collection is not time limited.
+* **level**: 'All' | 'Error' | 'None' | string (Required): Specifies the verbosity of the diagnostic output. Valid values are: None - disables tracing; Error - collects only error (stderr) traces; All - collects all traces (stdout and stderr).
+
+## ExampleRequest
+### Properties
+* **globalParameters**: [ExampleRequestGlobalParameters](#examplerequestglobalparameters): Sample input data for the web service's global parameters
+* **inputs**: [ExampleRequestInputs](#examplerequestinputs): Sample input data for the web service's input(s) given as an input name to sample input values matrix map.
+
+## ExampleRequestGlobalParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ExampleRequestInputs
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any[][]
+
+## GraphEdge
+### Properties
+* **sourceNodeId**: string: The source graph node's identifier.
+* **sourcePortId**: string: The identifier of the source node's port that the edge connects from.
+* **targetNodeId**: string: The destination graph node's identifier.
+* **targetPortId**: string: The identifier of the destination node's port that the edge connects into.
+
+## GraphNode
+### Properties
+* **assetId**: string: The id of the asset represented by this node.
+* **inputId**: string: The id of the input element represented by this node.
+* **outputId**: string: The id of the output element represented by this node.
+* **parameters**: [GraphNodeParameters](#graphnodeparameters): If applicable, parameters of the node. Global graph parameters map into these, with values set at runtime.
+
+## GraphNodeParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [WebServiceParameter](#webserviceparameter)
+
+## GraphPackage
+### Properties
+* **edges**: [GraphEdge](#graphedge)[]: The list of edges making up the graph.
+* **graphParameters**: [GraphPackageGraphParameters](#graphpackagegraphparameters): The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.
+* **nodes**: [GraphPackageNodes](#graphpackagenodes): The set of nodes making up the graph, provided as a nodeId to GraphNode map
+
+## GraphPackageGraphParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [GraphParameter](#graphparameter)
+
+## GraphPackageNodes
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [GraphNode](#graphnode)
+
+## GraphParameter
+### Properties
+* **description**: string: Description of this graph parameter.
+* **links**: [GraphParameterLink](#graphparameterlink)[] (Required): Association links for this parameter to nodes in the graph.
+* **type**: 'Boolean' | 'ColumnPicker' | 'Credential' | 'DataGatewayName' | 'Double' | 'Enumerated' | 'Float' | 'Int' | 'Mode' | 'ParameterRange' | 'Script' | 'String' | string (Required): Graph parameter's type.
+
+## GraphParameterLink
+### Properties
+* **nodeId**: string (Required): The graph node's identifier
+* **parameterKey**: string (Required): The identifier of the node parameter that the global parameter maps to.
+
+## InputPort
+### Properties
+* **type**: 'Dataset' | string: Port data type.
+
+## MachineLearningWorkspace
+### Properties
+* **id**: string (Required): Specifies the workspace ID of the machine learning workspace associated with the web service
+
+## ModeValueInfo
+### Properties
+* **interfaceString**: string: The interface string name for the nested parameter.
+* **parameters**: [ModuleAssetParameter](#moduleassetparameter)[]: The definition of the parameter.
+
+## ModuleAssetParameter
+### Properties
+* **modeValuesInfo**: [ModuleAssetParameterModeValuesInfo](#moduleassetparametermodevaluesinfo): Definitions for nested interface parameters if this is a complex module parameter.
+* **name**: string: Parameter name.
+* **parameterType**: string: Parameter type.
+
+## ModuleAssetParameterModeValuesInfo
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ModeValueInfo](#modevalueinfo)
+
+## OutputPort
+### Properties
+* **type**: 'Dataset' | string: Port data type.
+
+## RealtimeConfiguration
+### Properties
+* **maxConcurrentCalls**: int: Specifies the maximum concurrent calls that can be made to the web service. Minimum value: 4, Maximum value: 200.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ServiceInputOutputSpecification
+### Properties
+* **description**: string: The description of the Swagger schema.
+* **properties**: [ServiceInputOutputSpecificationProperties](#serviceinputoutputspecificationproperties) (Required): Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.
+* **title**: string: The title of your Swagger schema.
+* **type**: string (Required): The type of the entity described in swagger. Always 'object'.
+
+## ServiceInputOutputSpecificationProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [TableSpecification](#tablespecification)
+
+## StorageAccount
+### Properties
+* **key**: string: Specifies the key used to access the storage account.
+* **name**: string: Specifies the name of the storage account.
+
+## TableSpecification
+### Properties
+* **description**: string: Swagger schema description.
+* **format**: string: The format, if 'type' is not 'object'
+* **properties**: [TableSpecificationProperties](#tablespecificationproperties): The set of columns within the data table.
+* **title**: string: Swagger schema title.
+* **type**: string (Required): The type of the entity described in swagger.
+
+## TableSpecificationProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ColumnSpecification](#columnspecification)
+
+## WebServiceKeys
+### Properties
+* **primary**: string: The primary access key.
+* **secondary**: string: The secondary access key.
+
+## WebServiceParameter
+### Properties
+* **certificateThumbprint**: string: If the parameter value in 'value' field is encrypted, the thumbprint of the certificate should be put here.
+* **value**: any: Any object
+
 ## WebServiceProperties
 * **Discriminator**: packageType
 
@@ -47,194 +233,8 @@
 ### Additional Properties
 * **Additional Properties Type**: [AssetItem](#assetitem)
 
-## AssetItem
-### Properties
-* **id**: string: Asset's Id.
-* **inputPorts**: [AssetItemInputPorts](#assetiteminputports): Information about the asset's input ports.
-* **locationInfo**: [BlobLocation](#bloblocation) (Required): Describes the access location for a blob.
-* **metadata**: [AssetItemMetadata](#assetitemmetadata): If the asset is a custom module, this holds the module's metadata.
-* **name**: string (Required): Asset's friendly name.
-* **outputPorts**: [AssetItemOutputPorts](#assetitemoutputports): Information about the asset's output ports.
-* **parameters**: [ModuleAssetParameter](#moduleassetparameter)[]: If the asset is a custom module, this holds the module's parameters.
-* **type**: 'Module' | 'Resource' | string (Required): Asset's type.
-
-## AssetItemInputPorts
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [InputPort](#inputport)
-
-## InputPort
-### Properties
-* **type**: 'Dataset' | string: Port data type.
-
-## BlobLocation
-### Properties
-* **credentials**: string: Access credentials for the blob, if applicable (e.g. blob specified by storage account connection string + blob URI)
-* **uri**: string (Required): The URI from which the blob is accessible from. For example, aml://abc for system assets or https://xyz for user assets or payload.
-
-## AssetItemMetadata
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## AssetItemOutputPorts
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [OutputPort](#outputport)
-
-## OutputPort
-### Properties
-* **type**: 'Dataset' | string: Port data type.
-
-## ModuleAssetParameter
-### Properties
-* **modeValuesInfo**: [ModuleAssetParameterModeValuesInfo](#moduleassetparametermodevaluesinfo): Definitions for nested interface parameters if this is a complex module parameter.
-* **name**: string: Parameter name.
-* **parameterType**: string: Parameter type.
-
-## ModuleAssetParameterModeValuesInfo
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [ModeValueInfo](#modevalueinfo)
-
-## ModeValueInfo
-### Properties
-* **interfaceString**: string: The interface string name for the nested parameter.
-* **parameters**: [ModuleAssetParameter](#moduleassetparameter)[]: The definition of the parameter.
-
-## CommitmentPlan
-### Properties
-* **id**: string (Required): Specifies the Azure Resource Manager ID of the commitment plan associated with the web service.
-
-## DiagnosticsConfiguration
-### Properties
-* **expiry**: string: Specifies the date and time when the logging will cease. If null, diagnostic collection is not time limited.
-* **level**: 'All' | 'Error' | 'None' | string (Required): Specifies the verbosity of the diagnostic output. Valid values are: None - disables tracing; Error - collects only error (stderr) traces; All - collects all traces (stdout and stderr).
-
-## ExampleRequest
-### Properties
-* **globalParameters**: [ExampleRequestGlobalParameters](#examplerequestglobalparameters): Sample input data for the web service's global parameters
-* **inputs**: [ExampleRequestInputs](#examplerequestinputs): Sample input data for the web service's input(s) given as an input name to sample input values matrix map.
-
-## ExampleRequestGlobalParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## ExampleRequestInputs
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any[][]
-
-## ServiceInputOutputSpecification
-### Properties
-* **description**: string: The description of the Swagger schema.
-* **properties**: [ServiceInputOutputSpecificationProperties](#serviceinputoutputspecificationproperties) (Required): Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.
-* **title**: string: The title of your Swagger schema.
-* **type**: string (Required): The type of the entity described in swagger. Always 'object'.
-
-## ServiceInputOutputSpecificationProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [TableSpecification](#tablespecification)
-
-## TableSpecification
-### Properties
-* **description**: string: Swagger schema description.
-* **format**: string: The format, if 'type' is not 'object'
-* **properties**: [TableSpecificationProperties](#tablespecificationproperties): The set of columns within the data table.
-* **title**: string: Swagger schema title.
-* **type**: string (Required): The type of the entity described in swagger.
-
-## TableSpecificationProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [ColumnSpecification](#columnspecification)
-
-## ColumnSpecification
-### Properties
-* **enum**: any[]: If the data type is categorical, this provides the list of accepted categories.
-* **format**: 'Byte' | 'Char' | 'Complex128' | 'Complex64' | 'Date-time' | 'Date-timeOffset' | 'Double' | 'Duration' | 'Float' | 'Int16' | 'Int32' | 'Int64' | 'Int8' | 'Uint16' | 'Uint32' | 'Uint64' | 'Uint8' | string: Additional format information for the data type.
-* **type**: 'Boolean' | 'Integer' | 'Number' | 'String' | string (Required): Data type of the column.
-* **x-ms-isnullable**: bool: Flag indicating if the type supports null values or not.
-* **x-ms-isordered**: bool: Flag indicating whether the categories are treated as an ordered set or not, if this is a categorical column.
-
-## WebServiceKeys
-### Properties
-* **primary**: string: The primary access key.
-* **secondary**: string: The secondary access key.
-
-## MachineLearningWorkspace
-### Properties
-* **id**: string (Required): Specifies the workspace ID of the machine learning workspace associated with the web service
-
 ## WebServicePropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [WebServiceParameter](#webserviceparameter)
-
-## WebServiceParameter
-### Properties
-* **certificateThumbprint**: string: If the parameter value in 'value' field is encrypted, the thumbprint of the certificate should be put here.
-* **value**: any: Any object
-
-## RealtimeConfiguration
-### Properties
-* **maxConcurrentCalls**: int: Specifies the maximum concurrent calls that can be made to the web service. Minimum value: 4, Maximum value: 200.
-
-## StorageAccount
-### Properties
-* **key**: string: Specifies the key used to access the storage account.
-* **name**: string: Specifies the name of the storage account.
-
-## GraphPackage
-### Properties
-* **edges**: [GraphEdge](#graphedge)[]: The list of edges making up the graph.
-* **graphParameters**: [GraphPackageGraphParameters](#graphpackagegraphparameters): The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.
-* **nodes**: [GraphPackageNodes](#graphpackagenodes): The set of nodes making up the graph, provided as a nodeId to GraphNode map
-
-## GraphEdge
-### Properties
-* **sourceNodeId**: string: The source graph node's identifier.
-* **sourcePortId**: string: The identifier of the source node's port that the edge connects from.
-* **targetNodeId**: string: The destination graph node's identifier.
-* **targetPortId**: string: The identifier of the destination node's port that the edge connects into.
-
-## GraphPackageGraphParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [GraphParameter](#graphparameter)
-
-## GraphParameter
-### Properties
-* **description**: string: Description of this graph parameter.
-* **links**: [GraphParameterLink](#graphparameterlink)[] (Required): Association links for this parameter to nodes in the graph.
-* **type**: 'Boolean' | 'ColumnPicker' | 'Credential' | 'DataGatewayName' | 'Double' | 'Enumerated' | 'Float' | 'Int' | 'Mode' | 'ParameterRange' | 'Script' | 'String' | string (Required): Graph parameter's type.
-
-## GraphParameterLink
-### Properties
-* **nodeId**: string (Required): The graph node's identifier
-* **parameterKey**: string (Required): The identifier of the node parameter that the global parameter maps to.
-
-## GraphPackageNodes
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [GraphNode](#graphnode)
-
-## GraphNode
-### Properties
-* **assetId**: string: The id of the asset represented by this node.
-* **inputId**: string: The id of the input element represented by this node.
-* **outputId**: string: The id of the output element represented by this node.
-* **parameters**: [GraphNodeParameters](#graphnodeparameters): If applicable, parameters of the node. Global graph parameters map into these, with values set at runtime.
-
-## GraphNodeParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [WebServiceParameter](#webserviceparameter)
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

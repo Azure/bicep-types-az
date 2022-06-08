@@ -18,19 +18,6 @@
 * **properties**: [OfferProperties](#offerproperties)
 * **type**: 'Microsoft.Marketplace/privateStores/offers' (ReadOnly, DeployTimeConstant): The resource type
 
-## PrivateStoreProperties
-### Properties
-* **availability**: 'disabled' | 'enabled' | string: Indicates private store availability
-* **customerTag**: string: Customer tag
-* **eTag**: string: Identifier for purposes of race condition
-* **hasCommercialAssociation**: bool: Indicating whether private store has association with Commercial's Billing Account (through billing account's customer tag retrieved from GSM for a subscription
-* **hasMultiTenantAssociation**: bool: Indicating whether private store has association with multiple tenants (through tenant's tag retrieved from AAD
-* **isGov**: bool: Is government
-* **privateStoreId**: string: Private Store id
-* **privateStoreName**: string: Private Store Name
-* **tenantIds**: string[]: Tenant ids
-* **tenantTag**: string: Tenant Tag
-
 ## OfferProperties
 ### Properties
 * **createdAt**: string (ReadOnly): Private store offer creation date
@@ -58,4 +45,17 @@
 * **planId**: string (ReadOnly): Text identifier for this plan
 * **skuId**: string (ReadOnly): Identifier for this plan
 * **stackType**: string (ReadOnly): Stack type (classic or arm)
+
+## PrivateStoreProperties
+### Properties
+* **availability**: 'disabled' | 'enabled' | string: Indicates private store availability
+* **customerTag**: string: Customer tag
+* **eTag**: string: Identifier for purposes of race condition
+* **hasCommercialAssociation**: bool: Indicating whether private store has association with Commercial's Billing Account (through billing account's customer tag retrieved from GSM for a subscription
+* **hasMultiTenantAssociation**: bool: Indicating whether private store has association with multiple tenants (through tenant's tag retrieved from AAD
+* **isGov**: bool: Is government
+* **privateStoreId**: string: Private Store id
+* **privateStoreName**: string: Private Store Name
+* **tenantIds**: string[]: Tenant ids
+* **tenantTag**: string: Tenant Tag
 

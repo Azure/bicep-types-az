@@ -41,11 +41,42 @@
 * **properties**: [ServerKeyProperties](#serverkeyproperties): Properties for a key execution.
 * **type**: 'Microsoft.DBForMySql/flexibleServers/keys' (ReadOnly, DeployTimeConstant): The resource type
 
+## DatabaseProperties
+### Properties
+* **charset**: string: The charset of the database.
+* **collation**: string: The collation of the database.
+
+## DelegatedSubnetArguments
+### Properties
+* **subnetArmResourceId**: string: delegated subnet arm resource id.
+
+## FirewallRuleProperties
+### Properties
+* **endIpAddress**: string (Required): The end IP address of the server firewall rule. Must be IPv4 format.
+* **startIpAddress**: string (Required): The start IP address of the server firewall rule. Must be IPv4 format.
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
 * **type**: 'SystemAssigned': The identity type.
+
+## MaintenanceWindow
+### Properties
+* **customWindow**: string: indicates whether custom window is enabled or disabled
+* **dayOfWeek**: int: day of week for maintenance window
+* **startHour**: int: start hour for maintenance window
+* **startMinute**: int: start minute for maintenance window
+
+## PrivateDnsZoneArguments
+### Properties
+* **privateDnsZoneArmResourceId**: string: private dns zone arm resource id.
+
+## ServerKeyProperties
+### Properties
+* **creationDate**: string (ReadOnly): The key creation date.
+* **serverKeyType**: 'AzureKeyVault' | string (Required): The key type like 'AzureKeyVault'.
+* **uri**: string: The URI of the key.
 
 ## ServerProperties
 ### Properties
@@ -74,29 +105,6 @@
 * **tags**: [ServerPropertiesTags](#serverpropertiestags): Application-specific metadata in the form of key-value pairs.
 * **version**: '5.7' | string: The version of a server.
 
-## DelegatedSubnetArguments
-### Properties
-* **subnetArmResourceId**: string: delegated subnet arm resource id.
-
-## MaintenanceWindow
-### Properties
-* **customWindow**: string: indicates whether custom window is enabled or disabled
-* **dayOfWeek**: int: day of week for maintenance window
-* **startHour**: int: start hour for maintenance window
-* **startMinute**: int: start minute for maintenance window
-
-## PrivateDnsZoneArguments
-### Properties
-* **privateDnsZoneArmResourceId**: string: private dns zone arm resource id.
-
-## StorageProfile
-### Properties
-* **backupRetentionDays**: int: Backup retention days for the server.
-* **fileStorageSkuName**: string (ReadOnly): The sku name of the file storage.
-* **storageAutogrow**: 'Disabled' | 'Enabled' | string: Enable Storage Auto Grow.
-* **storageIops**: int: Storage IOPS for a server.
-* **storageMB**: int: Max storage allowed for a server.
-
 ## ServerPropertiesTags
 ### Properties
 ### Additional Properties
@@ -107,24 +115,16 @@
 * **name**: string (Required): The name of the sku, e.g. Standard_D32s_v3.
 * **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' | string (Required): The tier of the particular SKU, e.g. GeneralPurpose.
 
+## StorageProfile
+### Properties
+* **backupRetentionDays**: int: Backup retention days for the server.
+* **fileStorageSkuName**: string (ReadOnly): The sku name of the file storage.
+* **storageAutogrow**: 'Disabled' | 'Enabled' | string: Enable Storage Auto Grow.
+* **storageIops**: int: Storage IOPS for a server.
+* **storageMB**: int: Max storage allowed for a server.
+
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## DatabaseProperties
-### Properties
-* **charset**: string: The charset of the database.
-* **collation**: string: The collation of the database.
-
-## FirewallRuleProperties
-### Properties
-* **endIpAddress**: string (Required): The end IP address of the server firewall rule. Must be IPv4 format.
-* **startIpAddress**: string (Required): The start IP address of the server firewall rule. Must be IPv4 format.
-
-## ServerKeyProperties
-### Properties
-* **creationDate**: string (ReadOnly): The key creation date.
-* **serverKeyType**: 'AzureKeyVault' | string (Required): The key type like 'AzureKeyVault'.
-* **uri**: string: The URI of the key.
 
