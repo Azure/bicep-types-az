@@ -41,16 +41,24 @@
 * **properties**: [OriginPropertiesParameters](#originpropertiesparameters)
 * **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant): The resource type
 
-## ProfileProperties
+## CustomDomainPropertiesParameters
 ### Properties
+* **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning status of the resource.
-* **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' (ReadOnly): Resource status of the profile.
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly): Resource status of the custom domain.
 
-## Sku
+## DeepCreatedOrigin
 ### Properties
-* **name**: 'Custom_Verizon' | 'Premium_Verizon' | 'Standard_Akamai' | 'Standard_Verizon': Name of the pricing tier
+* **name**: string (Required): Origin name
+* **properties**: [DeepCreatedOriginProperties](#deepcreatedoriginproperties): Properties of deep created origin on a CDN endpoint.
 
-## ProfileCreateParametersTags
+## DeepCreatedOriginProperties
+### Properties
+* **hostName**: string (Required): The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.
+* **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535
+* **httpsPort**: int: The value of the HTTPS port. Must be between 1 and 65535
+
+## EndpointCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -69,28 +77,6 @@
 * **queryStringCachingBehavior**: 'BypassCaching' | 'IgnoreQueryString' | 'NotSet' | 'UseQueryString': Defines the query string caching behavior.
 * **resourceState**: 'Creating' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Resource status of the endpoint.
 
-## DeepCreatedOrigin
-### Properties
-* **name**: string (Required): Origin name
-* **properties**: [DeepCreatedOriginProperties](#deepcreatedoriginproperties): Properties of deep created origin on a CDN endpoint.
-
-## DeepCreatedOriginProperties
-### Properties
-* **hostName**: string (Required): The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.
-* **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535
-* **httpsPort**: int: The value of the HTTPS port. Must be between 1 and 65535
-
-## EndpointCreateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## CustomDomainPropertiesParameters
-### Properties
-* **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
-* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning status of the resource.
-* **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly): Resource status of the custom domain.
-
 ## OriginPropertiesParameters
 ### Properties
 * **hostName**: string (Required): The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.
@@ -98,4 +84,18 @@
 * **httpsPort**: int: The value of the HTTPS port. Must be between 1 and 65535.
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning status of the resource.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly): Resource status of the origin.
+
+## ProfileCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ProfileProperties
+### Properties
+* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning status of the resource.
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' (ReadOnly): Resource status of the profile.
+
+## Sku
+### Properties
+* **name**: 'Custom_Verizon' | 'Premium_Verizon' | 'Standard_Akamai' | 'Standard_Verizon': Name of the pricing tier
 

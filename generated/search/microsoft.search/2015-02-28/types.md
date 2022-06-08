@@ -16,6 +16,16 @@
 * **ApiVersion**: 2015-02-28
 * **Output**: [AdminKeyResult](#adminkeyresult)
 
+## AdminKeyResult
+### Properties
+* **primaryKey**: string (ReadOnly): The primary API key of the Search service.
+* **secondaryKey**: string (ReadOnly): The secondary API key of the Search service.
+
+## SearchServiceCreateOrUpdateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## SearchServiceProperties
 ### Properties
 * **partitionCount**: int: The number of partitions in the Search service; if specified, it can be 1, 2, 3, 4, 6, or 12.
@@ -25,14 +35,4 @@
 ## Sku
 ### Properties
 * **name**: 'free' | 'standard' | 'standard2': The SKU of the Search service.
-
-## SearchServiceCreateOrUpdateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## AdminKeyResult
-### Properties
-* **primaryKey**: string (ReadOnly): The primary API key of the Search service.
-* **secondaryKey**: string (ReadOnly): The secondary API key of the Search service.
 

@@ -32,6 +32,55 @@
 * **properties**: [Tags](#tags) (Required): A dictionary of name and value pairs.
 * **type**: 'Microsoft.Resources/tags' (ReadOnly, DeployTimeConstant): The resource type
 
+## Alias
+### Properties
+* **defaultMetadata**: [AliasPathMetadata](#aliaspathmetadata) (ReadOnly)
+* **defaultPath**: string (ReadOnly): The default path for an alias.
+* **defaultPattern**: [AliasPattern](#aliaspattern) (ReadOnly): The type of the pattern for an alias path.
+* **name**: string (ReadOnly): The alias name.
+* **paths**: [AliasPath](#aliaspath)[] (ReadOnly): The paths for an alias.
+* **type**: 'Mask' | 'NotSpecified' | 'PlainText' (ReadOnly): The type of the alias.
+
+## AliasPath
+### Properties
+* **apiVersions**: string[] (ReadOnly): The API versions.
+* **metadata**: [AliasPathMetadata](#aliaspathmetadata) (ReadOnly)
+* **path**: string (ReadOnly): The path of an alias.
+* **pattern**: [AliasPattern](#aliaspattern) (ReadOnly): The type of the pattern for an alias path.
+
+## AliasPathMetadata
+### Properties
+* **attributes**: 'Modifiable' | 'None' | string (ReadOnly): The attributes of the token that the alias path is referring to.
+* **type**: 'Any' | 'Array' | 'Boolean' | 'Integer' | 'NotSpecified' | 'Number' | 'Object' | 'String' | string (ReadOnly): The type of the token that the alias path is referring to.
+
+## AliasPattern
+### Properties
+* **phrase**: string (ReadOnly): The alias pattern phrase.
+* **type**: 'Extract' | 'NotSpecified' (ReadOnly): The type of alias pattern
+* **variable**: string (ReadOnly): The alias pattern variable.
+
+## ApiProfile
+### Properties
+* **apiVersion**: string (ReadOnly): The API version.
+* **profileVersion**: string (ReadOnly): The profile version.
+
+## BasicDependency
+### Properties
+* **id**: string (ReadOnly): The ID of the dependency.
+* **resourceName**: string (ReadOnly): The dependency resource name.
+* **resourceType**: string (ReadOnly): The dependency resource type.
+
+## DebugSetting
+### Properties
+* **detailLevel**: string: Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.
+
+## Dependency
+### Properties
+* **dependsOn**: [BasicDependency](#basicdependency)[] (ReadOnly): The list of dependencies.
+* **id**: string (ReadOnly): The ID of the dependency.
+* **resourceName**: string (ReadOnly): The dependency resource name.
+* **resourceType**: string (ReadOnly): The dependency resource type.
+
 ## DeploymentProperties
 ### Properties
 * **correlationId**: string (ReadOnly): The correlation ID of the deployment.
@@ -54,22 +103,15 @@
 * **timestamp**: string (ReadOnly): The timestamp of the template deployment.
 * **validatedResources**: [ResourceReference](#resourcereference)[] (ReadOnly): Array of validated resources.
 
-## DebugSetting
+## DeploymentTags
 ### Properties
-* **detailLevel**: string: Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.
+### Additional Properties
+* **Additional Properties Type**: string
 
-## Dependency
+## ErrorAdditionalInfo
 ### Properties
-* **dependsOn**: [BasicDependency](#basicdependency)[] (ReadOnly): The list of dependencies.
-* **id**: string (ReadOnly): The ID of the dependency.
-* **resourceName**: string (ReadOnly): The dependency resource name.
-* **resourceType**: string (ReadOnly): The dependency resource type.
-
-## BasicDependency
-### Properties
-* **id**: string (ReadOnly): The ID of the dependency.
-* **resourceName**: string (ReadOnly): The dependency resource name.
-* **resourceType**: string (ReadOnly): The dependency resource type.
+* **info**: any (ReadOnly): Any object
+* **type**: string (ReadOnly): The additional info type.
 
 ## ErrorResponse
 ### Properties
@@ -78,11 +120,6 @@
 * **details**: [ErrorResponse](#errorresponse)[] (ReadOnly): The error details.
 * **message**: string (ReadOnly): The error message.
 * **target**: string (ReadOnly): The error target.
-
-## ErrorAdditionalInfo
-### Properties
-* **info**: any (ReadOnly): Any object
-* **type**: string (ReadOnly): The additional info type.
 
 ## ExpressionEvaluationOptions
 ### Properties
@@ -93,10 +130,6 @@
 * **deploymentName**: string: The deployment to be used on error case.
 * **provisioningState**: string (ReadOnly): The state of the provisioning for the on error deployment.
 * **type**: 'LastSuccessful' | 'SpecificDeployment': The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
-
-## ResourceReference
-### Properties
-* **id**: string (ReadOnly): The fully qualified resource Id.
 
 ## ParametersLink
 ### Properties
@@ -123,56 +156,7 @@
 * **resourceType**: string (ReadOnly): The resource type.
 * **zoneMappings**: [ZoneMapping](#zonemapping)[] (ReadOnly): Array of ZoneMapping
 
-## Alias
-### Properties
-* **defaultMetadata**: [AliasPathMetadata](#aliaspathmetadata) (ReadOnly)
-* **defaultPath**: string (ReadOnly): The default path for an alias.
-* **defaultPattern**: [AliasPattern](#aliaspattern) (ReadOnly): The type of the pattern for an alias path.
-* **name**: string (ReadOnly): The alias name.
-* **paths**: [AliasPath](#aliaspath)[] (ReadOnly): The paths for an alias.
-* **type**: 'Mask' | 'NotSpecified' | 'PlainText' (ReadOnly): The type of the alias.
-
-## AliasPathMetadata
-### Properties
-* **attributes**: 'Modifiable' | 'None' | string (ReadOnly): The attributes of the token that the alias path is referring to.
-* **type**: 'Any' | 'Array' | 'Boolean' | 'Integer' | 'NotSpecified' | 'Number' | 'Object' | 'String' | string (ReadOnly): The type of the token that the alias path is referring to.
-
-## AliasPattern
-### Properties
-* **phrase**: string (ReadOnly): The alias pattern phrase.
-* **type**: 'Extract' | 'NotSpecified' (ReadOnly): The type of alias pattern
-* **variable**: string (ReadOnly): The alias pattern variable.
-
-## AliasPath
-### Properties
-* **apiVersions**: string[] (ReadOnly): The API versions.
-* **metadata**: [AliasPathMetadata](#aliaspathmetadata) (ReadOnly)
-* **path**: string (ReadOnly): The path of an alias.
-* **pattern**: [AliasPattern](#aliaspattern) (ReadOnly): The type of the pattern for an alias path.
-
-## ApiProfile
-### Properties
-* **apiVersion**: string (ReadOnly): The API version.
-* **profileVersion**: string (ReadOnly): The profile version.
-
 ## ProviderResourceTypeProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ZoneMapping
-### Properties
-* **location**: string (ReadOnly): The location of the zone mapping.
-* **zones**: string[] (ReadOnly): Array of ZoneMappingZonesItem
-
-## TemplateLink
-### Properties
-* **contentVersion**: string: If included, must match the ContentVersion in the template.
-* **id**: string: The resource id of a Template Spec. Use either the id or uri property, but not both.
-* **relativePath**: string: Applicable only if this template link references a Template Spec. This relativePath property can optionally be used to reference a Template Spec artifact by path.
-* **uri**: string: The URI of the template to deploy. Use either the uri or id property, but not both.
-
-## DeploymentTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -186,6 +170,10 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ResourceReference
+### Properties
+* **id**: string (ReadOnly): The fully qualified resource Id.
+
 ## Tags
 ### Properties
 * **tags**: [Tags](#tags): Dictionary of <string>
@@ -194,4 +182,16 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TemplateLink
+### Properties
+* **contentVersion**: string: If included, must match the ContentVersion in the template.
+* **id**: string: The resource id of a Template Spec. Use either the id or uri property, but not both.
+* **relativePath**: string: Applicable only if this template link references a Template Spec. This relativePath property can optionally be used to reference a Template Spec artifact by path.
+* **uri**: string: The URI of the template to deploy. Use either the uri or id property, but not both.
+
+## ZoneMapping
+### Properties
+* **location**: string (ReadOnly): The location of the zone mapping.
+* **zones**: string[] (ReadOnly): Array of ZoneMappingZonesItem
 

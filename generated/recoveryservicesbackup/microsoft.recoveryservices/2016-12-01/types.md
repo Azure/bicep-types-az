@@ -24,6 +24,45 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupstorageconfig' (ReadOnly, DeployTimeConstant): The resource type
 
+## BackupResourceConfig
+### Properties
+* **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | string: Storage type
+* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | string: Storage type
+* **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked' | string: Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
+
+## ContainerIdentityInfo
+### Properties
+* **aadTenantId**: string: Protection container identity - AAD Tenant
+* **audience**: string: Protection container identity - Audience
+* **servicePrincipalClientId**: string: Protection container identity - AAD Service Principal
+* **uniqueName**: string: Unique name of the container
+
+## GenericContainerExtendedInfo
+### Properties
+* **containerIdentityInfo**: [ContainerIdentityInfo](#containeridentityinfo): Container identity information
+* **rawCertData**: string: Public key of container cert
+* **serviceEndpoints**: [GenericContainerExtendedInfoServiceEndpoints](#genericcontainerextendedinfoserviceendpoints): Azure Backup Service Endpoints for the container
+
+## GenericContainerExtendedInfoServiceEndpoints
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## MabContainerExtendedInfo
+### Properties
+* **backupItems**: string[]: List of backup items associated with this container.
+* **backupItemType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string: Type of backup items associated with this container.
+* **lastBackupStatus**: string: Latest backup status of this container.
+* **lastRefreshedAt**: string: Time stamp when this container was refreshed.
+* **policyName**: string: Backup policy associated with this container.
+
+## MABContainerHealthDetails
+### Properties
+* **code**: int: Health Code
+* **message**: string: Health Message
+* **recommendations**: string[]: Health Recommended Actions
+* **title**: string: Health Title
+
 ## ProtectionContainer
 * **Discriminator**: containerType
 
@@ -109,49 +148,10 @@ Backup is VMAppContainer
 * **protectedItemCount**: int: Number of items backed up in this container.
 
 
-## GenericContainerExtendedInfo
-### Properties
-* **containerIdentityInfo**: [ContainerIdentityInfo](#containeridentityinfo): Container identity information
-* **rawCertData**: string: Public key of container cert
-* **serviceEndpoints**: [GenericContainerExtendedInfoServiceEndpoints](#genericcontainerextendedinfoserviceendpoints): Azure Backup Service Endpoints for the container
-
-## ContainerIdentityInfo
-### Properties
-* **aadTenantId**: string: Protection container identity - AAD Tenant
-* **audience**: string: Protection container identity - Audience
-* **servicePrincipalClientId**: string: Protection container identity - AAD Service Principal
-* **uniqueName**: string: Unique name of the container
-
-## GenericContainerExtendedInfoServiceEndpoints
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## MabContainerExtendedInfo
-### Properties
-* **backupItems**: string[]: List of backup items associated with this container.
-* **backupItemType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string: Type of backup items associated with this container.
-* **lastBackupStatus**: string: Latest backup status of this container.
-* **lastRefreshedAt**: string: Time stamp when this container was refreshed.
-* **policyName**: string: Backup policy associated with this container.
-
-## MABContainerHealthDetails
-### Properties
-* **code**: int: Health Code
-* **message**: string: Health Message
-* **recommendations**: string[]: Health Recommended Actions
-* **title**: string: Health Title
-
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## BackupResourceConfig
-### Properties
-* **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | string: Storage type
-* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | string: Storage type
-* **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked' | string: Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
 
 ## ResourceTags
 ### Properties

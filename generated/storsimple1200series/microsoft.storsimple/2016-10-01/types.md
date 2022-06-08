@@ -122,33 +122,9 @@
 * **properties**: [StorageDomainProperties](#storagedomainproperties) (Required): The storage domain properties.
 * **type**: 'Microsoft.StorSimple/managers/storageDomains' (ReadOnly, DeployTimeConstant): The resource type
 
-## ManagerProperties
-### Properties
-* **cisIntrinsicSettings**: [ManagerIntrinsicSettings](#managerintrinsicsettings): Intrinsic settings which refers to the type of the StorSimple manager
-* **provisioningState**: string (ReadOnly): Specifies the state of the resource as it is getting provisioned. Value of "Succeeded" means the Manager was successfully created
-* **sku**: [ManagerSku](#managersku): The Sku.
-
-## ManagerIntrinsicSettings
-### Properties
-* **type**: 'GardaV1' | 'HelsinkiV1' (Required): Refers to the type of the StorSimple Manager
-
-## ManagerSku
-### Properties
-* **name**: 'Standard' (Required): Refers to the sku name which should be "Standard"
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## AccessControlRecordProperties
 ### Properties
 * **initiatorName**: string (Required): The Iscsi initiator name (IQN)
-
-## RawCertificateData
-### Properties
-* **authType**: 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid': Specify the Authentication type
-* **certificate**: string (Required): Gets or sets the base64 encoded certificate raw data string
 
 ## AlertSettingsProperties
 ### Properties
@@ -157,24 +133,19 @@
 * **emailNotification**: 'Disabled' | 'Enabled' (Required): Value indicating whether user/admins will receive emails when an alert condition occurs on the system
 * **notificationToServiceOwners**: 'Disabled' | 'Enabled' (Required): Value indicating whether service owners will receive emails when an alert condition occurs on the system. Applicable only if emailNotification flag is Enabled.
 
-## BackupScheduleGroupProperties
-### Properties
-* **startTime**: [Time](#time) (Required): The Time.
-
-## Time
-### Properties
-* **hour**: int (Required): The hour.
-* **minute**: int (Required): The minute.
-
-## ChapProperties
-### Properties
-* **password**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret) (Required): This class can be used as the Type for any secret entity represented as Password, CertThumbprint, Algorithm. This class is intended to be used when the secret is encrypted with an asymmetric key pair. The encryptionAlgorithm field is mainly for future usage to potentially allow different entities encrypted using different algorithms.
-
 ## AsymmetricEncryptedSecret
 ### Properties
 * **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' (Required): Algorithm used to encrypt "Value"
 * **encryptionCertificateThumbprint**: string: Thumbprint certificate that was used to encrypt "Value"
 * **value**: string (Required): The value of the secret itself. If the secret is in plaintext then EncryptionAlgorithm will be none and EncryptionCertThumbprint will be null.
+
+## BackupScheduleGroupProperties
+### Properties
+* **startTime**: [Time](#time) (Required): The Time.
+
+## ChapProperties
+### Properties
+* **password**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret) (Required): This class can be used as the Type for any secret entity represented as Password, CertThumbprint, Algorithm. This class is intended to be used when the secret is encrypted with an asymmetric key pair. The encryptionAlgorithm field is mainly for future usage to potentially allow different entities encrypted using different algorithms.
 
 ## FileServerProperties
 ### Properties
@@ -194,14 +165,6 @@
 * **shareStatus**: 'Offline' | 'Online' (Required): The Share Status
 * **usedCapacityInBytes**: int (ReadOnly): The used capacity in Bytes.
 
-## IscsiServerProperties
-### Properties
-* **backupScheduleGroupId**: string (Required): The backup policy id.
-* **chapId**: string: The chap id.
-* **description**: string: The description.
-* **reverseChapId**: string: The reverse chap id.
-* **storageDomainId**: string (Required): The storage domain id.
-
 ## IscsiDiskProperties
 ### Properties
 * **accessControlRecords**: string[] (Required): The access control records.
@@ -213,6 +176,14 @@
 * **provisionedCapacityInBytes**: int (Required): The provisioned capacity in bytes.
 * **usedCapacityInBytes**: int (ReadOnly): The used capacity in bytes.
 
+## IscsiServerProperties
+### Properties
+* **backupScheduleGroupId**: string (Required): The backup policy id.
+* **chapId**: string: The chap id.
+* **description**: string: The description.
+* **reverseChapId**: string: The reverse chap id.
+* **storageDomainId**: string (Required): The storage domain id.
+
 ## ManagerExtendedInfoProperties
 ### Properties
 * **algorithm**: string (Required): Represents the encryption algorithm used to encrypt the other keys. None - if EncryptionKey is saved in plain text format. AlgorithmName - if encryption is used
@@ -221,6 +192,30 @@
 * **integrityKey**: string (Required): Represents the CIK of the resource
 * **portalCertificateThumbprint**: string: Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
 * **version**: string: Represents the version of the ExtendedInfo object being persisted
+
+## ManagerIntrinsicSettings
+### Properties
+* **type**: 'GardaV1' | 'HelsinkiV1' (Required): Refers to the type of the StorSimple Manager
+
+## ManagerProperties
+### Properties
+* **cisIntrinsicSettings**: [ManagerIntrinsicSettings](#managerintrinsicsettings): Intrinsic settings which refers to the type of the StorSimple manager
+* **provisioningState**: string (ReadOnly): Specifies the state of the resource as it is getting provisioned. Value of "Succeeded" means the Manager was successfully created
+* **sku**: [ManagerSku](#managersku): The Sku.
+
+## ManagerSku
+### Properties
+* **name**: 'Standard' (Required): Refers to the sku name which should be "Standard"
+
+## RawCertificateData
+### Properties
+* **authType**: 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid': Specify the Authentication type
+* **certificate**: string (Required): Gets or sets the base64 encoded certificate raw data string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## StorageAccountCredentialProperties
 ### Properties
@@ -236,4 +231,9 @@
 * **encryptionKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): This class can be used as the Type for any secret entity represented as Password, CertThumbprint, Algorithm. This class is intended to be used when the secret is encrypted with an asymmetric key pair. The encryptionAlgorithm field is mainly for future usage to potentially allow different entities encrypted using different algorithms.
 * **encryptionStatus**: 'Disabled' | 'Enabled' (Required): The encryption status which indicates if encryption is enabled or not.
 * **storageAccountCredentialIds**: string[] (Required): The storage account credentials.
+
+## Time
+### Properties
+* **hour**: int (Required): The hour.
+* **minute**: int (Required): The minute.
 

@@ -27,6 +27,14 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
+## CreationData
+### Properties
+* **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Import' | 'Restore' | 'Upload' | string (Required): This enumerates the possible sources of a disk's creation.
+* **imageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
+* **sourceResourceId**: string: If createOption is Copy, this is the ARM id of the source snapshot or disk.
+* **sourceUri**: string: If createOption is Import, this is the URI of a blob to be imported into a managed disk.
+* **storageAccountId**: string: If createOption is Import, the Azure Resource Manager identifier of the storage account containing the blob to import as a disk. Required only if the blob is in a different subscription
+
 ## DiskProperties
 ### Properties
 * **creationData**: [CreationData](#creationdata) (Required): Data used when creating a disk.
@@ -40,18 +48,10 @@
 * **provisioningState**: string (ReadOnly): The disk provisioning state.
 * **timeCreated**: string (ReadOnly): The time when the disk was created.
 
-## CreationData
+## DiskSku
 ### Properties
-* **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Import' | 'Restore' | 'Upload' | string (Required): This enumerates the possible sources of a disk's creation.
-* **imageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
-* **sourceResourceId**: string: If createOption is Copy, this is the ARM id of the source snapshot or disk.
-* **sourceUri**: string: If createOption is Import, this is the URI of a blob to be imported into a managed disk.
-* **storageAccountId**: string: If createOption is Import, the Azure Resource Manager identifier of the storage account containing the blob to import as a disk. Required only if the blob is in a different subscription
-
-## ImageDiskReference
-### Properties
-* **id**: string (Required): A relative uri containing either a Platform Image Repository or user image reference.
-* **lun**: int: If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.
+* **name**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | 'UltraSSD_LRS' | string: The sku name.
+* **tier**: string (ReadOnly): The sku tier.
 
 ## EncryptionSettingsCollection
 ### Properties
@@ -63,24 +63,25 @@
 * **diskEncryptionKey**: [KeyVaultAndSecretReference](#keyvaultandsecretreference): Key Vault Secret Url and vault id of the encryption key
 * **keyEncryptionKey**: [KeyVaultAndKeyReference](#keyvaultandkeyreference): Key Vault Key Url and vault id of KeK, KeK is optional and when provided is used to unwrap the encryptionKey
 
-## KeyVaultAndSecretReference
+## ImageDiskReference
 ### Properties
-* **secretUrl**: string (Required): Url pointing to a key or secret in KeyVault
-* **sourceVault**: [SourceVault](#sourcevault) (Required): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
-
-## SourceVault
-### Properties
-* **id**: string: Resource Id
+* **id**: string (Required): A relative uri containing either a Platform Image Repository or user image reference.
+* **lun**: int: If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.
 
 ## KeyVaultAndKeyReference
 ### Properties
 * **keyUrl**: string (Required): Url pointing to a key or secret in KeyVault
 * **sourceVault**: [SourceVault](#sourcevault) (Required): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
 
-## DiskSku
+## KeyVaultAndSecretReference
 ### Properties
-* **name**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | 'UltraSSD_LRS' | string: The sku name.
-* **tier**: string (ReadOnly): The sku tier.
+* **secretUrl**: string (Required): Url pointing to a key or secret in KeyVault
+* **sourceVault**: [SourceVault](#sourcevault) (Required): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
@@ -102,8 +103,7 @@
 * **name**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: The sku name.
 * **tier**: string (ReadOnly): The sku tier.
 
-## ResourceTags
+## SourceVault
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **id**: string: Resource Id
 

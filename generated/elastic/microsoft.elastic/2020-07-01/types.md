@@ -39,25 +39,20 @@
 * **ApiVersion**: 2020-07-01
 * **Output**: [VMHostListResponse](#vmhostlistresponse)
 
-## IdentityProperties
+## CompanyInfo
 ### Properties
-* **principalId**: string (ReadOnly): The identity ID.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned' | string: Managed Identity types.
+* **business**: string: Business of the company
+* **country**: string: Country of the company location.
+* **domain**: string: Domain of the company
+* **employeesNumber**: string: Number of employees in the company
+* **state**: string: State of the company location.
 
-## MonitorProperties
+## DeploymentInfoResponse
 ### Properties
-* **elasticProperties**: [ElasticProperties](#elasticproperties): Elastic Resource Properties.
-* **liftrResourceCategory**: 'MonitorLogs' | 'Unknown' | string (ReadOnly)
-* **liftrResourcePreference**: int (ReadOnly): The priority of the resource.
-* **monitoringStatus**: 'Disabled' | 'Enabled' | string: Flag specifying if the resource monitoring is enabled or disabled.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string: Provisioning state of Elastic resource.
-* **userInfo**: [UserInfo](#userinfo) (WriteOnly): User Information to be passed to partners.
-
-## ElasticProperties
-### Properties
-* **elasticCloudDeployment**: [ElasticCloudDeployment](#elasticclouddeployment): Details of the user's elastic deployment associated with the monitor resource.
-* **elasticCloudUser**: [ElasticCloudUser](#elasticclouduser): Details of the user's elastic account.
+* **diskCapacity**: string (ReadOnly): Disk capacity of the elasticsearch in Elastic cloud deployment.
+* **memoryCapacity**: string (ReadOnly): RAM capacity of the elasticsearch in Elastic cloud deployment.
+* **status**: 'Healthy' | 'Unhealthy' | string (ReadOnly): Flag specifying if the Elastic deployment status is healthy or not.
+* **version**: string (ReadOnly): Version of the elasticsearch in Elastic cloud deployment.
 
 ## ElasticCloudDeployment
 ### Properties
@@ -75,21 +70,59 @@
 * **emailAddress**: string (ReadOnly): Email of the Elastic User Account.
 * **id**: string (ReadOnly): User Id of the elastic account of the User.
 
-## UserInfo
+## ElasticMonitorResourceTags
 ### Properties
-* **companyInfo**: [CompanyInfo](#companyinfo): Company information of the user to be passed to partners.
-* **companyName**: string: Company name of the user
-* **emailAddress**: string: Email of the user used by Elastic for contacting them if needed
-* **firstName**: string: First name of the user
-* **lastName**: string: Last name of the user
+### Additional Properties
+* **Additional Properties Type**: string
 
-## CompanyInfo
+## ElasticProperties
 ### Properties
-* **business**: string: Business of the company
-* **country**: string: Country of the company location.
-* **domain**: string: Domain of the company
-* **employeesNumber**: string: Number of employees in the company
-* **state**: string: State of the company location.
+* **elasticCloudDeployment**: [ElasticCloudDeployment](#elasticclouddeployment): Details of the user's elastic deployment associated with the monitor resource.
+* **elasticCloudUser**: [ElasticCloudUser](#elasticclouduser): Details of the user's elastic account.
+
+## FilteringTag
+### Properties
+* **action**: 'Exclude' | 'Include' | string: Valid actions for a filtering tag. Exclusion takes priority over inclusion.
+* **name**: string: The name (also known as the key) of the tag.
+* **value**: string: The value of the tag.
+
+## IdentityProperties
+### Properties
+* **principalId**: string (ReadOnly): The identity ID.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'SystemAssigned' | string: Managed Identity types.
+
+## LogRules
+### Properties
+* **filteringTags**: [FilteringTag](#filteringtag)[]: List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
+* **sendAadLogs**: bool: Flag specifying if AAD logs should be sent for the Monitor resource.
+* **sendActivityLogs**: bool: Flag specifying if activity logs from Azure resources should be sent for the Monitor resource.
+* **sendSubscriptionLogs**: bool: Flag specifying if subscription logs should be sent for the Monitor resource.
+
+## MonitoredResource
+### Properties
+* **id**: string (ReadOnly): The ARM id of the resource.
+* **reasonForLogsStatus**: string (ReadOnly): Reason for why the resource is sending logs (or why it is not sending).
+* **sendingLogs**: 'False' | 'True' | string (ReadOnly): Flag indicating the status of the resource for sending logs operation to Elastic.
+
+## MonitoredResourceListResponse
+### Properties
+* **nextLink**: string (ReadOnly): Link to the next set of results, if any.
+* **value**: [MonitoredResource](#monitoredresource)[] (ReadOnly): Results of a list operation.
+
+## MonitoringTagRulesProperties
+### Properties
+* **logRules**: [LogRules](#logrules): Set of rules for sending logs for the Monitor resource.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string: Provisioning state of Elastic resource.
+
+## MonitorProperties
+### Properties
+* **elasticProperties**: [ElasticProperties](#elasticproperties): Elastic Resource Properties.
+* **liftrResourceCategory**: 'MonitorLogs' | 'Unknown' | string (ReadOnly)
+* **liftrResourcePreference**: int (ReadOnly): The priority of the resource.
+* **monitoringStatus**: 'Disabled' | 'Enabled' | string: Flag specifying if the resource monitoring is enabled or disabled.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string: Provisioning state of Elastic resource.
+* **userInfo**: [UserInfo](#userinfo) (WriteOnly): User Information to be passed to partners.
 
 ## ResourceSku
 ### Properties
@@ -104,46 +137,13 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
-## ElasticMonitorResourceTags
+## UserInfo
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## MonitoringTagRulesProperties
-### Properties
-* **logRules**: [LogRules](#logrules): Set of rules for sending logs for the Monitor resource.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string: Provisioning state of Elastic resource.
-
-## LogRules
-### Properties
-* **filteringTags**: [FilteringTag](#filteringtag)[]: List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
-* **sendAadLogs**: bool: Flag specifying if AAD logs should be sent for the Monitor resource.
-* **sendActivityLogs**: bool: Flag specifying if activity logs from Azure resources should be sent for the Monitor resource.
-* **sendSubscriptionLogs**: bool: Flag specifying if subscription logs should be sent for the Monitor resource.
-
-## FilteringTag
-### Properties
-* **action**: 'Exclude' | 'Include' | string: Valid actions for a filtering tag. Exclusion takes priority over inclusion.
-* **name**: string: The name (also known as the key) of the tag.
-* **value**: string: The value of the tag.
-
-## DeploymentInfoResponse
-### Properties
-* **diskCapacity**: string (ReadOnly): Disk capacity of the elasticsearch in Elastic cloud deployment.
-* **memoryCapacity**: string (ReadOnly): RAM capacity of the elasticsearch in Elastic cloud deployment.
-* **status**: 'Healthy' | 'Unhealthy' | string (ReadOnly): Flag specifying if the Elastic deployment status is healthy or not.
-* **version**: string (ReadOnly): Version of the elasticsearch in Elastic cloud deployment.
-
-## MonitoredResourceListResponse
-### Properties
-* **nextLink**: string (ReadOnly): Link to the next set of results, if any.
-* **value**: [MonitoredResource](#monitoredresource)[] (ReadOnly): Results of a list operation.
-
-## MonitoredResource
-### Properties
-* **id**: string (ReadOnly): The ARM id of the resource.
-* **reasonForLogsStatus**: string (ReadOnly): Reason for why the resource is sending logs (or why it is not sending).
-* **sendingLogs**: 'False' | 'True' | string (ReadOnly): Flag indicating the status of the resource for sending logs operation to Elastic.
+* **companyInfo**: [CompanyInfo](#companyinfo): Company information of the user to be passed to partners.
+* **companyName**: string: Company name of the user
+* **emailAddress**: string: Email of the user used by Elastic for contacting them if needed
+* **firstName**: string: First name of the user
+* **lastName**: string: Last name of the user
 
 ## VMHostListResponse
 ### Properties

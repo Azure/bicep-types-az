@@ -31,11 +31,40 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.KubernetesConfiguration/sourceControlConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Identity
+## BucketDefinition
 ### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned': The identity type.
+* **accessKey**: string: Plaintext access key used to securely access the S3 bucket
+* **bucketName**: string: The bucket name to sync from the url endpoint for the flux configuration.
+* **insecure**: bool: Specify whether to use insecure communication when puling data from the S3 bucket.
+* **localAuthRef**: string: Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the managed or user-provided configuration secrets.
+* **syncIntervalInSeconds**: int: The interval at which to re-reconcile the cluster git repository source with the remote.
+* **timeoutInSeconds**: int: The maximum time to attempt to reconcile the cluster git repository source with the remote.
+* **url**: string: The URL to sync for the flux configuration S3 bucket.
+
+## ComplianceStatus
+### Properties
+* **complianceState**: 'Compliant' | 'Failed' | 'Installed' | 'Noncompliant' | 'Pending' | string (ReadOnly): The compliance state of the configuration.
+* **lastConfigApplied**: string: Datetime the configuration was last applied.
+* **message**: string: Message from when the configuration was applied.
+* **messageLevel**: 'Error' | 'Information' | 'Warning' | string: Level of the message.
+
+## ConfigurationProtectedSettings
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): Any object
+* **type**: string (ReadOnly): The additional info type.
+
+## ErrorDetail
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
 
 ## ExtensionProperties
 ### Properties
@@ -75,32 +104,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ErrorDetail
-### Properties
-* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
-* **code**: string (ReadOnly): The error code.
-* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
-* **message**: string (ReadOnly): The error message.
-* **target**: string (ReadOnly): The error target.
-
-## ErrorAdditionalInfo
-### Properties
-* **info**: any (ReadOnly): Any object
-* **type**: string (ReadOnly): The additional info type.
-
-## Scope
-### Properties
-* **cluster**: [ScopeCluster](#scopecluster): Specifies that the scope of the extension is Cluster
-* **namespace**: [ScopeNamespace](#scopenamespace): Specifies that the scope of the extension is Namespace
-
-## ScopeCluster
-### Properties
-* **releaseNamespace**: string: Namespace where the extension Release must be placed, for a Cluster scoped extension.  If this namespace does not exist, it will be created
-
-## ScopeNamespace
-### Properties
-* **targetNamespace**: string: Namespace where the extension will be created for an Namespace scoped extension.  If this namespace does not exist, it will be created
-
 ## ExtensionStatus
 ### Properties
 * **code**: string: Status code provided by the Extension
@@ -108,15 +111,6 @@
 * **level**: 'Error' | 'Information' | 'Warning' | string: Level of the status.
 * **message**: string: Detailed message of the status from the Extension.
 * **time**: string: DateLiteral (per ISO8601) noting the time of installation status.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## FluxConfigurationProperties
 ### Properties
@@ -137,20 +131,15 @@
 * **statusUpdatedAt**: string (ReadOnly): Datetime the fluxConfiguration synced its status on the cluster with Azure.
 * **suspend**: bool: Whether this configuration should suspend its reconciliation of its kustomizations and sources.
 
-## BucketDefinition
-### Properties
-* **accessKey**: string: Plaintext access key used to securely access the S3 bucket
-* **bucketName**: string: The bucket name to sync from the url endpoint for the flux configuration.
-* **insecure**: bool: Specify whether to use insecure communication when puling data from the S3 bucket.
-* **localAuthRef**: string: Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the managed or user-provided configuration secrets.
-* **syncIntervalInSeconds**: int: The interval at which to re-reconcile the cluster git repository source with the remote.
-* **timeoutInSeconds**: int: The maximum time to attempt to reconcile the cluster git repository source with the remote.
-* **url**: string: The URL to sync for the flux configuration S3 bucket.
-
 ## FluxConfigurationPropertiesConfigurationProtectedSettings
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## FluxConfigurationPropertiesKustomizations
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [KustomizationDefinition](#kustomizationdefinition)
 
 ## GitRepositoryDefinition
 ### Properties
@@ -163,17 +152,24 @@
 * **timeoutInSeconds**: int: The maximum time to attempt to reconcile the cluster git repository source with the remote.
 * **url**: string: The URL to sync for the flux configuration git repository.
 
-## RepositoryRefDefinition
+## HelmOperatorProperties
 ### Properties
-* **branch**: string: The git repository branch name to checkout.
-* **commit**: string: The commit SHA to checkout. This value must be combined with the branch name to be valid. This takes precedence over semver.
-* **semver**: string: The semver range used to match against git repository tags. This takes precedence over tag.
-* **tag**: string: The git repository tag name to checkout. This takes precedence over branch.
+* **chartValues**: string: Values override for the operator Helm chart.
+* **chartVersion**: string: Version of the operator Helm chart.
 
-## FluxConfigurationPropertiesKustomizations
+## HelmReleasePropertiesDefinition
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: [KustomizationDefinition](#kustomizationdefinition)
+* **failureCount**: int: Total number of times that the HelmRelease failed to install or upgrade
+* **helmChartRef**: [ObjectReferenceDefinition](#objectreferencedefinition): Object reference to a Kubernetes object on a cluster
+* **installFailureCount**: int: Number of times that the HelmRelease failed to install
+* **lastRevisionApplied**: int: The revision number of the last released object change
+* **upgradeFailureCount**: int: Number of times that the HelmRelease failed to upgrade
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'SystemAssigned': The identity type.
 
 ## KustomizationDefinition
 ### Properties
@@ -186,6 +182,19 @@
 * **syncIntervalInSeconds**: int: The interval at which to re-reconcile the Kustomization on the cluster.
 * **timeoutInSeconds**: int: The maximum time to attempt to reconcile the Kustomization on the cluster.
 
+## ObjectReferenceDefinition
+### Properties
+* **name**: string: Name of the object
+* **namespace**: string: Namespace of the object
+
+## ObjectStatusConditionDefinition
+### Properties
+* **lastTransitionTime**: string: Last time this status condition has changed
+* **message**: string: A more verbose description of the object status condition
+* **reason**: string: Reason for the specified status condition type status
+* **status**: string: Status of the Kubernetes object condition type
+* **type**: string: Object status condition type for this object
+
 ## ObjectStatusDefinition
 ### Properties
 * **appliedBy**: [ObjectReferenceDefinition](#objectreferencedefinition): Object reference to a Kubernetes object on a cluster
@@ -196,26 +205,25 @@
 * **namespace**: string: Namespace of the applied object
 * **statusConditions**: [ObjectStatusConditionDefinition](#objectstatusconditiondefinition)[]: List of Kubernetes object status conditions present on the cluster
 
-## ObjectReferenceDefinition
+## RepositoryRefDefinition
 ### Properties
-* **name**: string: Name of the object
-* **namespace**: string: Namespace of the object
+* **branch**: string: The git repository branch name to checkout.
+* **commit**: string: The commit SHA to checkout. This value must be combined with the branch name to be valid. This takes precedence over semver.
+* **semver**: string: The semver range used to match against git repository tags. This takes precedence over tag.
+* **tag**: string: The git repository tag name to checkout. This takes precedence over branch.
 
-## HelmReleasePropertiesDefinition
+## Scope
 ### Properties
-* **failureCount**: int: Total number of times that the HelmRelease failed to install or upgrade
-* **helmChartRef**: [ObjectReferenceDefinition](#objectreferencedefinition): Object reference to a Kubernetes object on a cluster
-* **installFailureCount**: int: Number of times that the HelmRelease failed to install
-* **lastRevisionApplied**: int: The revision number of the last released object change
-* **upgradeFailureCount**: int: Number of times that the HelmRelease failed to upgrade
+* **cluster**: [ScopeCluster](#scopecluster): Specifies that the scope of the extension is Cluster
+* **namespace**: [ScopeNamespace](#scopenamespace): Specifies that the scope of the extension is Namespace
 
-## ObjectStatusConditionDefinition
+## ScopeCluster
 ### Properties
-* **lastTransitionTime**: string: Last time this status condition has changed
-* **message**: string: A more verbose description of the object status condition
-* **reason**: string: Reason for the specified status condition type status
-* **status**: string: Status of the Kubernetes object condition type
-* **type**: string: Object status condition type for this object
+* **releaseNamespace**: string: Namespace where the extension Release must be placed, for a Cluster scoped extension.  If this namespace does not exist, it will be created
+
+## ScopeNamespace
+### Properties
+* **targetNamespace**: string: Namespace where the extension will be created for an Namespace scoped extension.  If this namespace does not exist, it will be created
 
 ## SourceControlConfigurationProperties
 ### Properties
@@ -233,20 +241,12 @@
 * **repositoryUrl**: string: Url of the SourceControl Repository.
 * **sshKnownHostsContents**: string: Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances
 
-## ComplianceStatus
+## SystemData
 ### Properties
-* **complianceState**: 'Compliant' | 'Failed' | 'Installed' | 'Noncompliant' | 'Pending' | string (ReadOnly): The compliance state of the configuration.
-* **lastConfigApplied**: string: Datetime the configuration was last applied.
-* **message**: string: Message from when the configuration was applied.
-* **messageLevel**: 'Error' | 'Information' | 'Warning' | string: Level of the message.
-
-## ConfigurationProtectedSettings
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## HelmOperatorProperties
-### Properties
-* **chartValues**: string: Values override for the operator Helm chart.
-* **chartVersion**: string: Version of the operator Helm chart.
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 

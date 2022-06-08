@@ -36,40 +36,10 @@
 * **tenantId**: string (ReadOnly): The tenant ID of the resource identity.
 * **type**: 'None' | 'SystemAssigned': The identity type. This is the only required field when adding a system assigned identity to a resource.
 
-## PolicyAssignmentProperties
-### Properties
-* **description**: string: This message will be part of response in case of policy violation.
-* **displayName**: string: The display name of the policy assignment.
-* **enforcementMode**: 'Default' | 'DoNotEnforce' | string: The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
-* **metadata**: any: Any object
-* **notScopes**: string[]: The policy's excluded scopes.
-* **parameters**: [ParameterValues](#parametervalues): The parameter values for the policy rule. The keys are the parameter names.
-* **policyDefinitionId**: string: The ID of the policy definition or policy set definition being assigned.
-* **scope**: string: The scope for the policy assignment.
-
-## ParameterValues
+## ParameterDefinitions
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [ParameterValuesValue](#parametervaluesvalue)
-
-## ParameterValuesValue
-### Properties
-* **value**: any: Any object
-
-## PolicySku
-### Properties
-* **name**: string (Required): The name of the policy sku. Possible values are A0 and A1.
-* **tier**: string: The policy sku tier. Possible values are Free and Standard.
-
-## PolicyDefinitionProperties
-### Properties
-* **description**: string: The policy definition description.
-* **displayName**: string: The display name of the policy definition.
-* **metadata**: any: Any object
-* **mode**: string: The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
-* **parameters**: [ParameterDefinitions](#parameterdefinitions): The parameter definitions for parameters used in the policy. The keys are the parameter names.
-* **policyRule**: any: Any object
-* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static' | string: The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
+* **Additional Properties Type**: [ParameterDefinitionsValue](#parameterdefinitionsvalue)
 
 ## ParameterDefinitions
 ### Properties
@@ -90,6 +60,56 @@
 ### Additional Properties
 * **Additional Properties Type**: any
 
+## ParameterValues
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ParameterValuesValue](#parametervaluesvalue)
+
+## ParameterValues
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ParameterValuesValue](#parametervaluesvalue)
+
+## ParameterValuesValue
+### Properties
+* **value**: any: Any object
+
+## PolicyAssignmentProperties
+### Properties
+* **description**: string: This message will be part of response in case of policy violation.
+* **displayName**: string: The display name of the policy assignment.
+* **enforcementMode**: 'Default' | 'DoNotEnforce' | string: The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
+* **metadata**: any: Any object
+* **notScopes**: string[]: The policy's excluded scopes.
+* **parameters**: [ParameterValues](#parametervalues): The parameter values for the policy rule. The keys are the parameter names.
+* **policyDefinitionId**: string: The ID of the policy definition or policy set definition being assigned.
+* **scope**: string: The scope for the policy assignment.
+
+## PolicyDefinitionGroup
+### Properties
+* **additionalMetadataId**: string: A resource ID of a resource that contains additional metadata about the group.
+* **category**: string: The group's category.
+* **description**: string: The group's description.
+* **displayName**: string: The group's display name.
+* **name**: string (Required): The name of the group.
+
+## PolicyDefinitionProperties
+### Properties
+* **description**: string: The policy definition description.
+* **displayName**: string: The display name of the policy definition.
+* **metadata**: any: Any object
+* **mode**: string: The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
+* **parameters**: [ParameterDefinitions](#parameterdefinitions): The parameter definitions for parameters used in the policy. The keys are the parameter names.
+* **policyRule**: any: Any object
+* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static' | string: The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
+
+## PolicyDefinitionReference
+### Properties
+* **groupNames**: string[]: The name of the groups that this policy definition reference belongs to.
+* **parameters**: [ParameterValues](#parametervalues): The parameter values for the policy rule. The keys are the parameter names.
+* **policyDefinitionId**: string (Required): The ID of the policy definition or policy set definition.
+* **policyDefinitionReferenceId**: string: A unique id (within the policy set definition) for this policy definition reference.
+
 ## PolicySetDefinitionProperties
 ### Properties
 * **description**: string: The policy set definition description.
@@ -100,28 +120,8 @@
 * **policyDefinitions**: [PolicyDefinitionReference](#policydefinitionreference)[] (Required): An array of policy definition references.
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static' | string: The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
 
-## ParameterDefinitions
+## PolicySku
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: [ParameterDefinitionsValue](#parameterdefinitionsvalue)
-
-## PolicyDefinitionGroup
-### Properties
-* **additionalMetadataId**: string: A resource ID of a resource that contains additional metadata about the group.
-* **category**: string: The group's category.
-* **description**: string: The group's description.
-* **displayName**: string: The group's display name.
-* **name**: string (Required): The name of the group.
-
-## PolicyDefinitionReference
-### Properties
-* **groupNames**: string[]: The name of the groups that this policy definition reference belongs to.
-* **parameters**: [ParameterValues](#parametervalues): The parameter values for the policy rule. The keys are the parameter names.
-* **policyDefinitionId**: string (Required): The ID of the policy definition or policy set definition.
-* **policyDefinitionReferenceId**: string: A unique id (within the policy set definition) for this policy definition reference.
-
-## ParameterValues
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [ParameterValuesValue](#parametervaluesvalue)
+* **name**: string (Required): The name of the policy sku. Possible values are A0 and A1.
+* **tier**: string: The policy sku tier. Possible values are Free and Standard.
 

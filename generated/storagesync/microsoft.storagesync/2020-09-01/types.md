@@ -62,15 +62,91 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## StorageSyncServiceCreateParametersProperties
+## CloudEndpointChangeEnumerationActivity
 ### Properties
-* **incomingTrafficPolicy**: 'AllowAllTraffic' | 'AllowVirtualNetworksOnly' | string: Type of the Incoming Traffic Policy
+* **deletesProgressPercent**: int (ReadOnly): Progress percentage for processing deletes. This is done separately from the rest of the enumeration run
+* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
+* **minutesRemaining**: int (ReadOnly): Estimate of time remaining for the enumeration run
+* **operationState**: 'EnumerationInProgress' | 'InitialEnumerationInProgress' | string (ReadOnly): State of change enumeration activity
+* **processedDirectoriesCount**: int (ReadOnly): Count of directories processed
+* **processedFilesCount**: int (ReadOnly): Count of files processed
+* **progressPercent**: int (ReadOnly): Progress percentage for change enumeration run, excluding processing of deletes
+* **startedTimestamp**: string (ReadOnly): Timestamp when change enumeration started
+* **statusCode**: int (ReadOnly): When non-zero, indicates an issue that is delaying change enumeration
+* **totalCountsState**: 'Calculating' | 'Final' | string (ReadOnly): State of the total counts of change enumeration activity
+* **totalDirectoriesCount**: int (ReadOnly): Total count of directories enumerated
+* **totalFilesCount**: int (ReadOnly): Total count of files enumerated
+* **totalSizeBytes**: int (ReadOnly): Total enumerated size in bytes
+
+## CloudEndpointChangeEnumerationStatus
+### Properties
+* **activity**: [CloudEndpointChangeEnumerationActivity](#cloudendpointchangeenumerationactivity) (ReadOnly): Cloud endpoint change enumeration activity object
+* **lastEnumerationStatus**: [CloudEndpointLastChangeEnumerationStatus](#cloudendpointlastchangeenumerationstatus) (ReadOnly): Cloud endpoint change enumeration status object
+* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
+
+## CloudEndpointCreateParametersProperties
+### Properties
+* **azureFileShareName**: string: Azure file share name
+* **backupEnabled**: string (ReadOnly): Backup Enabled
+* **changeEnumerationStatus**: [CloudEndpointChangeEnumerationStatus](#cloudendpointchangeenumerationstatus) (ReadOnly): Cloud endpoint change enumeration status object
+* **friendlyName**: string: Friendly Name
 * **lastOperationName**: string (ReadOnly): Resource Last Operation Name
-* **lastWorkflowId**: string (ReadOnly): StorageSyncService lastWorkflowId
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connection associated with the specified storage sync service
-* **provisioningState**: string (ReadOnly): StorageSyncService Provisioning State
-* **storageSyncServiceStatus**: int (ReadOnly): Storage Sync service status.
-* **storageSyncServiceUid**: string (ReadOnly): Storage Sync service Uid
+* **lastWorkflowId**: string (ReadOnly): CloudEndpoint lastWorkflowId
+* **partnershipId**: string (ReadOnly): Partnership Id
+* **provisioningState**: string (ReadOnly): CloudEndpoint Provisioning State
+* **storageAccountResourceId**: string: Storage Account Resource Id
+* **storageAccountTenantId**: string: Storage Account Tenant Id
+
+## CloudEndpointLastChangeEnumerationStatus
+### Properties
+* **completedTimestamp**: string (ReadOnly): Timestamp when change enumeration completed
+* **namespaceDirectoriesCount**: int (ReadOnly): Count of directories in the namespace
+* **namespaceFilesCount**: int (ReadOnly): Count of files in the namespace
+* **namespaceSizeBytes**: int (ReadOnly): Namespace size in bytes
+* **nextRunTimestamp**: string (ReadOnly): Timestamp of when change enumeration is expected to run again
+* **startedTimestamp**: string (ReadOnly): Timestamp when change enumeration started
+
+## CloudTieringCachePerformance
+### Properties
+* **cacheHitBytes**: int (ReadOnly): Count of bytes that were served from the local server
+* **cacheHitBytesPercent**: int (ReadOnly): Percentage of total bytes (hit + miss) that were served from the local server
+* **cacheMissBytes**: int (ReadOnly): Count of bytes that were served from the cloud
+* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
+
+## CloudTieringDatePolicyStatus
+### Properties
+* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
+* **tieredFilesMostRecentAccessTimestamp**: string (ReadOnly): Most recent access time of tiered files
+
+## CloudTieringFilesNotTiering
+### Properties
+* **errors**: [FilesNotTieringError](#filesnottieringerror)[] (ReadOnly): Array of tiering errors
+* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
+* **totalFileCount**: int (ReadOnly): Last cloud tiering result (HResult)
+
+## CloudTieringSpaceSavings
+### Properties
+* **cachedSizeBytes**: int (ReadOnly): Cached content size on the server
+* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
+* **spaceSavingsBytes**: int (ReadOnly): Count of bytes saved on the server
+* **spaceSavingsPercent**: int (ReadOnly): Percentage of cached size over total size
+* **totalSizeCloudBytes**: int (ReadOnly): Total size of content in the azure file share
+* **volumeSizeBytes**: int (ReadOnly): Volume size
+
+## CloudTieringVolumeFreeSpacePolicyStatus
+### Properties
+* **currentVolumeFreeSpacePercent**: int (ReadOnly): Current volume free space percentage.
+* **effectiveVolumeFreeSpacePolicy**: int (ReadOnly): In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.
+* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
+
+## FilesNotTieringError
+### Properties
+* **errorCode**: int (ReadOnly): Error code (HResult)
+* **fileCount**: int (ReadOnly): Count of files with this error
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
 
 ## PrivateEndpointConnection
 ### Properties
@@ -86,29 +162,11 @@
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly): A collection of information about the state of the connection between service consumer and provider.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
 
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
-
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: string (ReadOnly): A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string (ReadOnly): The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected' | string (ReadOnly): The private endpoint connection status.
-
-## SystemData
-### Properties
-* **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
-* **createdBy**: string (ReadOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
-* **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
-
-## StorageSyncServiceCreateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## RegisteredServerCreateParametersProperties
 ### Properties
@@ -136,49 +194,25 @@
 * **serviceLocation**: string (ReadOnly): Service Location
 * **storageSyncServiceUid**: string (ReadOnly): Registered Server storageSyncServiceUid
 
-## CloudEndpointCreateParametersProperties
+## ServerEndpointBackgroundDataDownloadActivity
 ### Properties
-* **azureFileShareName**: string: Azure file share name
-* **backupEnabled**: string (ReadOnly): Backup Enabled
-* **changeEnumerationStatus**: [CloudEndpointChangeEnumerationStatus](#cloudendpointchangeenumerationstatus) (ReadOnly): Cloud endpoint change enumeration status object
-* **friendlyName**: string: Friendly Name
-* **lastOperationName**: string (ReadOnly): Resource Last Operation Name
-* **lastWorkflowId**: string (ReadOnly): CloudEndpoint lastWorkflowId
-* **partnershipId**: string (ReadOnly): Partnership Id
-* **provisioningState**: string (ReadOnly): CloudEndpoint Provisioning State
-* **storageAccountResourceId**: string: Storage Account Resource Id
-* **storageAccountTenantId**: string: Storage Account Tenant Id
+* **downloadedBytes**: int (ReadOnly): Running count of bytes downloaded
+* **percentProgress**: int (ReadOnly): Progress percentage
+* **startedTimestamp**: string (ReadOnly): Timestamp when the operation started
+* **timestamp**: string (ReadOnly): Timestamp when properties were updated
 
-## CloudEndpointChangeEnumerationStatus
+## ServerEndpointCloudTieringStatus
 ### Properties
-* **activity**: [CloudEndpointChangeEnumerationActivity](#cloudendpointchangeenumerationactivity) (ReadOnly): Cloud endpoint change enumeration activity object
-* **lastEnumerationStatus**: [CloudEndpointLastChangeEnumerationStatus](#cloudendpointlastchangeenumerationstatus) (ReadOnly): Cloud endpoint change enumeration status object
+* **cachePerformance**: [CloudTieringCachePerformance](#cloudtieringcacheperformance) (ReadOnly): Server endpoint cloud tiering status object.
+* **datePolicyStatus**: [CloudTieringDatePolicyStatus](#cloudtieringdatepolicystatus) (ReadOnly): Status of the date policy
+* **filesNotTiering**: [CloudTieringFilesNotTiering](#cloudtieringfilesnottiering) (ReadOnly): Server endpoint cloud tiering status object.
+* **health**: 'Error' | 'Healthy' | 'Unavailable' | string (ReadOnly): Type of the server endpoint health state
+* **healthLastUpdatedTimestamp**: string (ReadOnly): The last updated timestamp of health state
+* **lastCloudTieringResult**: int (ReadOnly): Last cloud tiering result (HResult)
+* **lastSuccessTimestamp**: string (ReadOnly): Last cloud tiering success timestamp
 * **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
-
-## CloudEndpointChangeEnumerationActivity
-### Properties
-* **deletesProgressPercent**: int (ReadOnly): Progress percentage for processing deletes. This is done separately from the rest of the enumeration run
-* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
-* **minutesRemaining**: int (ReadOnly): Estimate of time remaining for the enumeration run
-* **operationState**: 'EnumerationInProgress' | 'InitialEnumerationInProgress' | string (ReadOnly): State of change enumeration activity
-* **processedDirectoriesCount**: int (ReadOnly): Count of directories processed
-* **processedFilesCount**: int (ReadOnly): Count of files processed
-* **progressPercent**: int (ReadOnly): Progress percentage for change enumeration run, excluding processing of deletes
-* **startedTimestamp**: string (ReadOnly): Timestamp when change enumeration started
-* **statusCode**: int (ReadOnly): When non-zero, indicates an issue that is delaying change enumeration
-* **totalCountsState**: 'Calculating' | 'Final' | string (ReadOnly): State of the total counts of change enumeration activity
-* **totalDirectoriesCount**: int (ReadOnly): Total count of directories enumerated
-* **totalFilesCount**: int (ReadOnly): Total count of files enumerated
-* **totalSizeBytes**: int (ReadOnly): Total enumerated size in bytes
-
-## CloudEndpointLastChangeEnumerationStatus
-### Properties
-* **completedTimestamp**: string (ReadOnly): Timestamp when change enumeration completed
-* **namespaceDirectoriesCount**: int (ReadOnly): Count of directories in the namespace
-* **namespaceFilesCount**: int (ReadOnly): Count of files in the namespace
-* **namespaceSizeBytes**: int (ReadOnly): Namespace size in bytes
-* **nextRunTimestamp**: string (ReadOnly): Timestamp of when change enumeration is expected to run again
-* **startedTimestamp**: string (ReadOnly): Timestamp when change enumeration started
+* **spaceSavings**: [CloudTieringSpaceSavings](#cloudtieringspacesavings) (ReadOnly): Server endpoint cloud tiering status object.
+* **volumeFreeSpacePolicyStatus**: [CloudTieringVolumeFreeSpacePolicyStatus](#cloudtieringvolumefreespacepolicystatus) (ReadOnly): Status of the volume free space policy
 
 ## ServerEndpointCreateParametersProperties
 ### Properties
@@ -203,89 +237,22 @@
 * **tierFilesOlderThanDays**: int: Tier files older than days.
 * **volumeFreeSpacePercent**: int: Level of free space to be maintained by Cloud Tiering if it is enabled.
 
-## ServerEndpointCloudTieringStatus
-### Properties
-* **cachePerformance**: [CloudTieringCachePerformance](#cloudtieringcacheperformance) (ReadOnly): Server endpoint cloud tiering status object.
-* **datePolicyStatus**: [CloudTieringDatePolicyStatus](#cloudtieringdatepolicystatus) (ReadOnly): Status of the date policy
-* **filesNotTiering**: [CloudTieringFilesNotTiering](#cloudtieringfilesnottiering) (ReadOnly): Server endpoint cloud tiering status object.
-* **health**: 'Error' | 'Healthy' | 'Unavailable' | string (ReadOnly): Type of the server endpoint health state
-* **healthLastUpdatedTimestamp**: string (ReadOnly): The last updated timestamp of health state
-* **lastCloudTieringResult**: int (ReadOnly): Last cloud tiering result (HResult)
-* **lastSuccessTimestamp**: string (ReadOnly): Last cloud tiering success timestamp
-* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
-* **spaceSavings**: [CloudTieringSpaceSavings](#cloudtieringspacesavings) (ReadOnly): Server endpoint cloud tiering status object.
-* **volumeFreeSpacePolicyStatus**: [CloudTieringVolumeFreeSpacePolicyStatus](#cloudtieringvolumefreespacepolicystatus) (ReadOnly): Status of the volume free space policy
-
-## CloudTieringCachePerformance
-### Properties
-* **cacheHitBytes**: int (ReadOnly): Count of bytes that were served from the local server
-* **cacheHitBytesPercent**: int (ReadOnly): Percentage of total bytes (hit + miss) that were served from the local server
-* **cacheMissBytes**: int (ReadOnly): Count of bytes that were served from the cloud
-* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
-
-## CloudTieringDatePolicyStatus
-### Properties
-* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
-* **tieredFilesMostRecentAccessTimestamp**: string (ReadOnly): Most recent access time of tiered files
-
-## CloudTieringFilesNotTiering
-### Properties
-* **errors**: [FilesNotTieringError](#filesnottieringerror)[] (ReadOnly): Array of tiering errors
-* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
-* **totalFileCount**: int (ReadOnly): Last cloud tiering result (HResult)
-
-## FilesNotTieringError
+## ServerEndpointFilesNotSyncingError
 ### Properties
 * **errorCode**: int (ReadOnly): Error code (HResult)
-* **fileCount**: int (ReadOnly): Count of files with this error
-
-## CloudTieringSpaceSavings
-### Properties
-* **cachedSizeBytes**: int (ReadOnly): Cached content size on the server
-* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
-* **spaceSavingsBytes**: int (ReadOnly): Count of bytes saved on the server
-* **spaceSavingsPercent**: int (ReadOnly): Percentage of cached size over total size
-* **totalSizeCloudBytes**: int (ReadOnly): Total size of content in the azure file share
-* **volumeSizeBytes**: int (ReadOnly): Volume size
-
-## CloudTieringVolumeFreeSpacePolicyStatus
-### Properties
-* **currentVolumeFreeSpacePercent**: int (ReadOnly): Current volume free space percentage.
-* **effectiveVolumeFreeSpacePolicy**: int (ReadOnly): In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.
-* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
-
-## ServerEndpointRecallStatus
-### Properties
-* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
-* **recallErrors**: [ServerEndpointRecallError](#serverendpointrecallerror)[] (ReadOnly): Array of recall errors
-* **totalRecallErrorsCount**: int (ReadOnly): Total count of recall errors.
+* **persistentCount**: int (ReadOnly): Count of persistent files not syncing with the specified error code
+* **transientCount**: int (ReadOnly): Count of transient files not syncing with the specified error code
 
 ## ServerEndpointRecallError
 ### Properties
 * **count**: int (ReadOnly): Count of occurences of the error
 * **errorCode**: int (ReadOnly): Error code (HResult)
 
-## ServerEndpointSyncStatus
+## ServerEndpointRecallStatus
 ### Properties
-* **backgroundDataDownloadActivity**: [ServerEndpointBackgroundDataDownloadActivity](#serverendpointbackgrounddatadownloadactivity) (ReadOnly): Background data download activity object
-* **combinedHealth**: 'Error' | 'Healthy' | 'Unavailable' | string (ReadOnly): Type of the server endpoint health state
-* **downloadActivity**: [ServerEndpointSyncActivityStatus](#serverendpointsyncactivitystatus) (ReadOnly): Sync Session status object.
-* **downloadHealth**: 'Error' | 'Healthy' | 'Unavailable' | string (ReadOnly): Type of the server endpoint health state
-* **downloadStatus**: [ServerEndpointSyncSessionStatus](#serverendpointsyncsessionstatus) (ReadOnly): Sync Session status object.
-* **lastUpdatedTimestamp**: string (ReadOnly): Last Updated Timestamp
-* **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' | string (ReadOnly): Type of the Health state
-* **syncActivity**: 'Download' | 'Upload' | 'UploadAndDownload' | string (ReadOnly): Type of the sync activity state
-* **totalPersistentFilesNotSyncingCount**: int (ReadOnly): Total count of persistent files not syncing (combined upload + download).
-* **uploadActivity**: [ServerEndpointSyncActivityStatus](#serverendpointsyncactivitystatus) (ReadOnly): Sync Session status object.
-* **uploadHealth**: 'Error' | 'Healthy' | 'Unavailable' | string (ReadOnly): Type of the server endpoint health state
-* **uploadStatus**: [ServerEndpointSyncSessionStatus](#serverendpointsyncsessionstatus) (ReadOnly): Sync Session status object.
-
-## ServerEndpointBackgroundDataDownloadActivity
-### Properties
-* **downloadedBytes**: int (ReadOnly): Running count of bytes downloaded
-* **percentProgress**: int (ReadOnly): Progress percentage
-* **startedTimestamp**: string (ReadOnly): Timestamp when the operation started
-* **timestamp**: string (ReadOnly): Timestamp when properties were updated
+* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
+* **recallErrors**: [ServerEndpointRecallError](#serverendpointrecallerror)[] (ReadOnly): Array of recall errors
+* **totalRecallErrorsCount**: int (ReadOnly): Total count of recall errors.
 
 ## ServerEndpointSyncActivityStatus
 ### Properties
@@ -309,9 +276,42 @@
 * **persistentFilesNotSyncingCount**: int (ReadOnly): Count of persistent files not syncing.
 * **transientFilesNotSyncingCount**: int (ReadOnly): Count of transient files not syncing.
 
-## ServerEndpointFilesNotSyncingError
+## ServerEndpointSyncStatus
 ### Properties
-* **errorCode**: int (ReadOnly): Error code (HResult)
-* **persistentCount**: int (ReadOnly): Count of persistent files not syncing with the specified error code
-* **transientCount**: int (ReadOnly): Count of transient files not syncing with the specified error code
+* **backgroundDataDownloadActivity**: [ServerEndpointBackgroundDataDownloadActivity](#serverendpointbackgrounddatadownloadactivity) (ReadOnly): Background data download activity object
+* **combinedHealth**: 'Error' | 'Healthy' | 'Unavailable' | string (ReadOnly): Type of the server endpoint health state
+* **downloadActivity**: [ServerEndpointSyncActivityStatus](#serverendpointsyncactivitystatus) (ReadOnly): Sync Session status object.
+* **downloadHealth**: 'Error' | 'Healthy' | 'Unavailable' | string (ReadOnly): Type of the server endpoint health state
+* **downloadStatus**: [ServerEndpointSyncSessionStatus](#serverendpointsyncsessionstatus) (ReadOnly): Sync Session status object.
+* **lastUpdatedTimestamp**: string (ReadOnly): Last Updated Timestamp
+* **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' | string (ReadOnly): Type of the Health state
+* **syncActivity**: 'Download' | 'Upload' | 'UploadAndDownload' | string (ReadOnly): Type of the sync activity state
+* **totalPersistentFilesNotSyncingCount**: int (ReadOnly): Total count of persistent files not syncing (combined upload + download).
+* **uploadActivity**: [ServerEndpointSyncActivityStatus](#serverendpointsyncactivitystatus) (ReadOnly): Sync Session status object.
+* **uploadHealth**: 'Error' | 'Healthy' | 'Unavailable' | string (ReadOnly): Type of the server endpoint health state
+* **uploadStatus**: [ServerEndpointSyncSessionStatus](#serverendpointsyncsessionstatus) (ReadOnly): Sync Session status object.
+
+## StorageSyncServiceCreateParametersProperties
+### Properties
+* **incomingTrafficPolicy**: 'AllowAllTraffic' | 'AllowVirtualNetworksOnly' | string: Type of the Incoming Traffic Policy
+* **lastOperationName**: string (ReadOnly): Resource Last Operation Name
+* **lastWorkflowId**: string (ReadOnly): StorageSyncService lastWorkflowId
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connection associated with the specified storage sync service
+* **provisioningState**: string (ReadOnly): StorageSyncService Provisioning State
+* **storageSyncServiceStatus**: int (ReadOnly): Storage Sync service status.
+* **storageSyncServiceUid**: string (ReadOnly): Storage Sync service Uid
+
+## StorageSyncServiceCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SystemData
+### Properties
+* **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
+* **createdBy**: string (ReadOnly): The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
+* **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 

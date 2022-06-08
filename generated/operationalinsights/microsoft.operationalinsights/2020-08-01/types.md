@@ -86,12 +86,6 @@
 * **tags**: [StorageInsightTags](#storageinsighttags): Resource tags.
 * **type**: 'Microsoft.OperationalInsights/workspaces/storageInsightConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Identity
-### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' (Required): The identity type.
-
 ## ClusterProperties
 ### Properties
 * **clusterId**: string (ReadOnly): The ID associated with the cluster.
@@ -99,64 +93,10 @@
 * **nextLink**: string: The link used to get the next page of recommendations.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the cluster.
 
-## KeyVaultProperties
-### Properties
-* **keyName**: string: The name of the key associated with the Log Analytics cluster.
-* **keyVaultUri**: string: The Key Vault uri which holds they key associated with the Log Analytics cluster.
-* **keyVersion**: string: The version of the key associated with the Log Analytics cluster.
-
 ## ClusterSku
 ### Properties
 * **capacity**: int: The capacity value
 * **name**: 'CapacityReservation' | string: The name of the SKU.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## WorkspaceProperties
-### Properties
-* **createdDate**: string (ReadOnly): Workspace creation date.
-* **customerId**: string (ReadOnly): This is a read-only property. Represents the ID associated with the workspace.
-* **features**: [WorkspaceFeatures](#workspacefeatures): Workspace features.
-* **forceCmkForQuery**: bool: Indicates whether customer managed storage is mandatory for query management.
-* **modifiedDate**: string (ReadOnly): Workspace modification date.
-* **privateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly): List of linked private link scope resources.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' | string: The provisioning state of the workspace.
-* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled' | string: The network access type for operating on the Log Analytics Workspace. By default it is Enabled
-* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled' | string: The network access type for operating on the Log Analytics Workspace. By default it is Enabled
-* **retentionInDays**: int: The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
-* **sku**: [WorkspaceSku](#workspacesku): The SKU (tier) of a workspace.
-* **workspaceCapping**: [WorkspaceCapping](#workspacecapping): The daily volume cap for ingestion.
-
-## WorkspaceFeatures
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## PrivateLinkScopedResource
-### Properties
-* **resourceId**: string: The full resource Id of the private link scope resource.
-* **scopeId**: string: The private link scope unique Identifier.
-
-## WorkspaceSku
-### Properties
-* **capacityReservationLevel**: int: The capacity reservation level for this workspace, when CapacityReservation sku is selected.
-* **lastSkuUpdate**: string (ReadOnly): The last time when the sku was updated.
-* **maxCapacityReservationLevel**: int (ReadOnly): The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.
-* **name**: 'CapacityReservation' | 'Free' | 'LACluster' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' | string (Required): The name of the SKU.
-
-## WorkspaceCapping
-### Properties
-* **dailyQuotaGb**: int: The workspace daily quota for ingestion.
-* **dataIngestionStatus**: 'ApproachingQuota' | 'ForceOff' | 'ForceOn' | 'OverQuota' | 'RespectQuota' | 'SubscriptionSuspended' | string (ReadOnly): The status of data ingestion for this workspace.
-* **quotaNextResetTime**: string (ReadOnly): The time when the quota will be rest.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## DataExportProperties
 ### Properties
@@ -166,6 +106,11 @@
 * **enable**: bool: Active when enabled.
 * **lastModifiedDate**: string: Date and time when the export was last modified.
 * **tableNames**: string[] (Required): An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
+
+## DataSourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Destination
 ### Properties
@@ -177,10 +122,17 @@
 ### Properties
 * **eventHubName**: string: Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
 
-## DataSourceTags
+## Identity
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'None' | 'SystemAssigned' (Required): The identity type.
+
+## KeyVaultProperties
+### Properties
+* **keyName**: string: The name of the key associated with the Log Analytics cluster.
+* **keyVaultUri**: string: The Key Vault uri which holds they key associated with the Log Analytics cluster.
+* **keyVersion**: string: The version of the key associated with the Log Analytics cluster.
 
 ## LinkedServiceProperties
 ### Properties
@@ -198,6 +150,11 @@
 * **dataSourceType**: 'Alerts' | 'AzureWatson' | 'CustomLogs' | 'Query' (ReadOnly): Linked storage accounts type.
 * **storageAccountIds**: string[]: Linked storage accounts resources ids.
 
+## PrivateLinkScopedResource
+### Properties
+* **resourceId**: string: The full resource Id of the private link scope resource.
+* **scopeId**: string: The private link scope unique Identifier.
+
 ## SavedSearchProperties
 ### Properties
 * **category**: string (Required): The category of the saved search. This helps the user to find a saved search faster.
@@ -208,10 +165,10 @@
 * **tags**: [Tag](#tag)[]: The tags attached to the saved search.
 * **version**: int: The version number of the query language. The current version is 2 and is the default.
 
-## Tag
+## StorageAccount
 ### Properties
-* **name**: string (Required): The tag name.
-* **value**: string (Required): The tag value.
+* **id**: string (Required): The Azure Resource Manager ID of the storage account resource.
+* **key**: string (Required): The storage account key.
 
 ## StorageInsightProperties
 ### Properties
@@ -225,13 +182,56 @@
 * **description**: string: Description of the state of the storage insight.
 * **state**: 'ERROR' | 'OK' | string (Required): The state of the storage insight connection to the workspace
 
-## StorageAccount
-### Properties
-* **id**: string (Required): The Azure Resource Manager ID of the storage account resource.
-* **key**: string (Required): The storage account key.
-
 ## StorageInsightTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Tag
+### Properties
+* **name**: string (Required): The tag name.
+* **value**: string (Required): The tag value.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## WorkspaceCapping
+### Properties
+* **dailyQuotaGb**: int: The workspace daily quota for ingestion.
+* **dataIngestionStatus**: 'ApproachingQuota' | 'ForceOff' | 'ForceOn' | 'OverQuota' | 'RespectQuota' | 'SubscriptionSuspended' | string (ReadOnly): The status of data ingestion for this workspace.
+* **quotaNextResetTime**: string (ReadOnly): The time when the quota will be rest.
+
+## WorkspaceFeatures
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## WorkspaceProperties
+### Properties
+* **createdDate**: string (ReadOnly): Workspace creation date.
+* **customerId**: string (ReadOnly): This is a read-only property. Represents the ID associated with the workspace.
+* **features**: [WorkspaceFeatures](#workspacefeatures): Workspace features.
+* **forceCmkForQuery**: bool: Indicates whether customer managed storage is mandatory for query management.
+* **modifiedDate**: string (ReadOnly): Workspace modification date.
+* **privateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly): List of linked private link scope resources.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' | string: The provisioning state of the workspace.
+* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled' | string: The network access type for operating on the Log Analytics Workspace. By default it is Enabled
+* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled' | string: The network access type for operating on the Log Analytics Workspace. By default it is Enabled
+* **retentionInDays**: int: The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
+* **sku**: [WorkspaceSku](#workspacesku): The SKU (tier) of a workspace.
+* **workspaceCapping**: [WorkspaceCapping](#workspacecapping): The daily volume cap for ingestion.
+
+## WorkspaceSku
+### Properties
+* **capacityReservationLevel**: int: The capacity reservation level for this workspace, when CapacityReservation sku is selected.
+* **lastSkuUpdate**: string (ReadOnly): The last time when the sku was updated.
+* **maxCapacityReservationLevel**: int (ReadOnly): The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.
+* **name**: 'CapacityReservation' | 'Free' | 'LACluster' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' | string (Required): The name of the SKU.
 

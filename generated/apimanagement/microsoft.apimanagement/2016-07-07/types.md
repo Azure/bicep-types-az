@@ -219,6 +219,19 @@
 * **state**: 'Active' | 'Blocked': User state.
 * **type**: 'Microsoft.ApiManagement/service/users' (ReadOnly, DeployTimeConstant): The resource type
 
+## AdditionalRegion
+### Properties
+* **location**: string (Required): The location name of the additional region among Azure Data center regions.
+* **skuType**: 'Developer' | 'Premium' | 'Standard' (Required): The SKU type in the location.
+* **skuUnitCount**: int: The SKU Unit count at the location. The maximum SKU Unit count depends on the SkuType. Maximum allowed for Developer SKU is 1, for Standard SKU is 4, and for Premium SKU is 10, at a location.
+* **staticIPs**: string[] (ReadOnly): Static IP addresses of the location's virtual machines.
+* **vpnconfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Configuration of a virtual network to which API Management service is deployed.
+
+## ApiManagementServiceBaseParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ApiManagementServiceProperties
 ### Properties
 * **additionalLocations**: [AdditionalRegion](#additionalregion)[]: Additional datacenter locations of the API Management service.
@@ -238,31 +251,19 @@
 * **vpnconfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Configuration of a virtual network to which API Management service is deployed.
 * **vpnType**: 'External' | 'Internal' | 'None': The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that the API Management service deployment is set up inside a Virtual Network having an Intranet Facing Endpoint only. When vpnConfiguration is specified, vpnType must be specified.
 
-## AdditionalRegion
-### Properties
-* **location**: string (Required): The location name of the additional region among Azure Data center regions.
-* **skuType**: 'Developer' | 'Premium' | 'Standard' (Required): The SKU type in the location.
-* **skuUnitCount**: int: The SKU Unit count at the location. The maximum SKU Unit count depends on the SkuType. Maximum allowed for Developer SKU is 1, for Standard SKU is 4, and for Premium SKU is 10, at a location.
-* **staticIPs**: string[] (ReadOnly): Static IP addresses of the location's virtual machines.
-* **vpnconfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Configuration of a virtual network to which API Management service is deployed.
-
-## VirtualNetworkConfiguration
-### Properties
-* **location**: string: The location of the virtual network.
-* **subnetname**: string (ReadOnly): The name of the subnet.
-* **subnetResourceId**: string: The name of the subnet Resource ID. This has format /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/{virtual network name}/subnets/{subnet name}.
-* **vnetid**: string (ReadOnly): The virtual network ID. This is typically a GUID. Expect a null GUID by default.
-
 ## ApiManagementServicePropertiesCustomProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## HostnameConfiguration
+## ApiManagementServiceSkuProperties
 ### Properties
-* **certificate**: [CertificateInformation](#certificateinformation) (Required): SSL certificate information.
-* **hostname**: string (Required): Hostname.
-* **type**: 'Management' | 'Portal' | 'Proxy' | 'Scm' (Required): Hostname type.
+* **capacity**: int: Capacity of the SKU (number of deployed units of the SKU). The default value is 1.
+* **name**: 'Developer' | 'Premium' | 'Standard' (Required): The SKU type in the location.
+
+## AuthenticationSettingsContract
+### Properties
+* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract) (WriteOnly): API OAuth2 Authentication settings details.
 
 ## CertificateInformation
 ### Properties
@@ -270,36 +271,21 @@
 * **subject**: string (Required): Subject of the certificate.
 * **thumbprint**: string (Required): Thumbprint of the certificate.
 
-## ApiManagementServiceSkuProperties
+## HostnameConfiguration
 ### Properties
-* **capacity**: int: Capacity of the SKU (number of deployed units of the SKU). The default value is 1.
-* **name**: 'Developer' | 'Premium' | 'Standard' (Required): The SKU type in the location.
+* **certificate**: [CertificateInformation](#certificateinformation) (Required): SSL certificate information.
+* **hostname**: string (Required): Hostname.
+* **type**: 'Management' | 'Portal' | 'Proxy' | 'Scm' (Required): Hostname type.
 
-## ApiManagementServiceBaseParametersTags
+## LoggerCreateParametersCredentials
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## AuthenticationSettingsContract
-### Properties
-* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract) (WriteOnly): API OAuth2 Authentication settings details.
 
 ## OAuth2AuthenticationSettingsContract
 ### Properties
 * **authorizationServerId**: string (WriteOnly): OAuth authorization server identifier.
 * **scope**: string (WriteOnly): operations scope.
-
-## SubscriptionKeyParameterNamesContract
-### Properties
-* **header**: string (WriteOnly): Subscription key header name.
-* **query**: string (WriteOnly): Subscription key query string parameter name.
-
-## RequestContract
-### Properties
-* **description**: string: Operation request description.
-* **headers**: [ParameterContract](#parametercontract)[]: Collection of operation request headers.
-* **queryParameters**: [ParameterContract](#parametercontract)[]: Collection of operation request query parameters.
-* **representations**: [RepresentationContract](#representationcontract)[]: Collection of operation request representations.
 
 ## ParameterContract
 ### Properties
@@ -315,24 +301,38 @@
 * **contentType**: string (Required): Specifies a registered or custom content type for this representation, e.g. application/xml.
 * **sample**: string: An example of the representation.
 
+## RequestContract
+### Properties
+* **description**: string: Operation request description.
+* **headers**: [ParameterContract](#parametercontract)[]: Collection of operation request headers.
+* **queryParameters**: [ParameterContract](#parametercontract)[]: Collection of operation request query parameters.
+* **representations**: [RepresentationContract](#representationcontract)[]: Collection of operation request representations.
+
 ## ResultContract
 ### Properties
 * **description**: string: Operation response description.
 * **representations**: [RepresentationContract](#representationcontract)[]: Collection of operation response representations.
 * **statusCode**: int (Required): Operation response HTTP status code.
 
+## SubscriptionKeyParameterNamesContract
+### Properties
+* **header**: string (WriteOnly): Subscription key header name.
+* **query**: string (WriteOnly): Subscription key query string parameter name.
+
 ## TokenBodyParameterContract
 ### Properties
 * **name**: string (Required): body parameter name.
 * **value**: string (Required): body parameter value.
 
-## LoggerCreateParametersCredentials
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## UserIdentityContract
 ### Properties
 * **id**: string (ReadOnly): Identifier value within provider.
 * **provider**: string (ReadOnly): Identity provider name.
+
+## VirtualNetworkConfiguration
+### Properties
+* **location**: string: The location of the virtual network.
+* **subnetname**: string (ReadOnly): The name of the subnet.
+* **subnetResourceId**: string: The name of the subnet Resource ID. This has format /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/{virtual network name}/subnets/{subnet name}.
+* **vnetid**: string (ReadOnly): The virtual network ID. This is typically a GUID. Expect a null GUID by default.
 

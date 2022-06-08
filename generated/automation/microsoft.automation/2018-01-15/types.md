@@ -21,6 +21,23 @@
 * **tags**: [DscNodeConfigurationCreateOrUpdateParametersTags](#dscnodeconfigurationcreateorupdateparameterstags) (WriteOnly): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
+## ContentHash
+### Properties
+* **algorithm**: string (Required, WriteOnly): Gets or sets the content hash algorithm used to hash the content.
+* **value**: string (Required, WriteOnly): Gets or sets expected hash value of the content.
+
+## ContentSource
+### Properties
+* **hash**: [ContentHash](#contenthash) (WriteOnly): Definition of the runbook property type.
+* **type**: 'embeddedContent' | 'uri' | string (WriteOnly): Gets or sets the content source type.
+* **value**: string (WriteOnly): Gets or sets the value of the content. This is based on the content source type.
+* **version**: string (WriteOnly): Gets or sets the version of the content.
+
+## DscCompilationJobCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## DscCompilationJobCreateProperties
 ### Properties
 * **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required): The Dsc configuration property associated with the entity.
@@ -39,19 +56,14 @@
 * **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' | string (ReadOnly): Gets or sets the status of the job.
 * **statusDetails**: string (ReadOnly): Gets or sets the status details of the job.
 
-## DscConfigurationAssociationProperty
-### Properties
-* **name**: string: Gets or sets the name of the Dsc configuration.
-
 ## DscCompilationJobCreatePropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## DscCompilationJobCreateParametersTags
+## DscConfigurationAssociationProperty
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **name**: string: Gets or sets the name of the Dsc configuration.
 
 ## DscNodeConfigurationCreateOrUpdateParametersProperties
 ### Properties
@@ -61,18 +73,6 @@
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
 * **nodeCount**: int (ReadOnly): Number of nodes with this node configuration assigned
 * **source**: [ContentSource](#contentsource) (Required): Definition of the content source.
-
-## ContentSource
-### Properties
-* **hash**: [ContentHash](#contenthash) (WriteOnly): Definition of the runbook property type.
-* **type**: 'embeddedContent' | 'uri' | string (WriteOnly): Gets or sets the content source type.
-* **value**: string (WriteOnly): Gets or sets the value of the content. This is based on the content source type.
-* **version**: string (WriteOnly): Gets or sets the version of the content.
-
-## ContentHash
-### Properties
-* **algorithm**: string (Required, WriteOnly): Gets or sets the content hash algorithm used to hash the content.
-* **value**: string (Required, WriteOnly): Gets or sets expected hash value of the content.
 
 ## DscNodeConfigurationCreateOrUpdateParametersTags
 ### Properties

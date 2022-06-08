@@ -23,6 +23,15 @@
 * **systemData**: [SystemMetadata](#systemmetadata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.StoragePool/diskPools/iscsiTargets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Acl
+### Properties
+* **initiatorIqn**: string (Required): iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".
+* **mappedLuns**: string[] (Required): List of LUN names mapped to the ACL.
+
+## Disk
+### Properties
+* **id**: string (Required): Unique Azure Resource ID of the Managed Disk.
+
 ## DiskPoolCreateProperties
 ### Properties
 * **additionalCapabilities**: string[]: List of additional capabilities for a Disk Pool.
@@ -32,9 +41,27 @@
 * **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' | string (ReadOnly): Operational status of the resource.
 * **subnetId**: string (Required): Azure Resource ID of a Subnet for the Disk Pool.
 
-## Disk
+## DiskPoolCreateTags
 ### Properties
-* **id**: string (Required): Unique Azure Resource ID of the Managed Disk.
+### Additional Properties
+* **Additional Properties Type**: string
+
+## IscsiLun
+### Properties
+* **lun**: int (ReadOnly): Specifies the Logical Unit Number of the iSCSI LUN.
+* **managedDiskAzureResourceId**: string (Required): Azure Resource ID of the Managed Disk.
+* **name**: string (Required): User defined name for iSCSI LUN; example: "lun0"
+
+## IscsiTargetCreateProperties
+### Properties
+* **aclMode**: 'Dynamic' | 'Static' | string (Required): ACL mode for iSCSI Target.
+* **endpoints**: string[] (ReadOnly): List of private IPv4 addresses to connect to the iSCSI Target.
+* **luns**: [IscsiLun](#iscsilun)[]: List of LUNs to be exposed through iSCSI Target.
+* **port**: int (ReadOnly): The port used by iSCSI Target portal group.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the iSCSI Target.
+* **staticAcls**: [Acl](#acl)[]: Access Control List (ACL) for an iSCSI Target; defines LUN masking policy
+* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' | string (ReadOnly): Operational status of the resource.
+* **targetIqn**: string: iSCSI Target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
 
 ## Sku
 ### Properties
@@ -49,31 +76,4 @@
 * **lastModifiedAt**: string (ReadOnly): The type of identity that last modified the resource.
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
-
-## DiskPoolCreateTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## IscsiTargetCreateProperties
-### Properties
-* **aclMode**: 'Dynamic' | 'Static' | string (Required): ACL mode for iSCSI Target.
-* **endpoints**: string[] (ReadOnly): List of private IPv4 addresses to connect to the iSCSI Target.
-* **luns**: [IscsiLun](#iscsilun)[]: List of LUNs to be exposed through iSCSI Target.
-* **port**: int (ReadOnly): The port used by iSCSI Target portal group.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the iSCSI Target.
-* **staticAcls**: [Acl](#acl)[]: Access Control List (ACL) for an iSCSI Target; defines LUN masking policy
-* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' | string (ReadOnly): Operational status of the resource.
-* **targetIqn**: string: iSCSI Target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
-
-## IscsiLun
-### Properties
-* **lun**: int (ReadOnly): Specifies the Logical Unit Number of the iSCSI LUN.
-* **managedDiskAzureResourceId**: string (Required): Azure Resource ID of the Managed Disk.
-* **name**: string (Required): User defined name for iSCSI LUN; example: "lun0"
-
-## Acl
-### Properties
-* **initiatorIqn**: string (Required): iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".
-* **mappedLuns**: string[] (Required): List of LUN names mapped to the ACL.
 

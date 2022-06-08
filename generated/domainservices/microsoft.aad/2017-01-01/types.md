@@ -12,6 +12,12 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.AAD/domainServices' (ReadOnly, DeployTimeConstant): The resource type
 
+## DomainSecuritySettings
+### Properties
+* **ntlmV1**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not NtlmV1 is enabled or disabled.
+* **syncNtlmPasswords**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
+* **tlsV1**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not TlsV1 is enabled or disabled.
+
 ## DomainServiceProperties
 ### Properties
 * **deploymentId**: string (ReadOnly): Deployment Id
@@ -29,12 +35,6 @@
 * **subnetId**: string: The name of the virtual network that Domain Services will be deployed on. The id of the subnet that Domain Services will be deployed on. /virtualNetwork/vnetName/subnets/subnetName.
 * **tenantId**: string (ReadOnly): Azure Active Directory tenant id
 * **vnetSiteId**: string (ReadOnly): Virtual network site id
-
-## DomainSecuritySettings
-### Properties
-* **ntlmV1**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not NtlmV1 is enabled or disabled.
-* **syncNtlmPasswords**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
-* **tlsV1**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not TlsV1 is enabled or disabled.
 
 ## HealthAlert
 ### Properties

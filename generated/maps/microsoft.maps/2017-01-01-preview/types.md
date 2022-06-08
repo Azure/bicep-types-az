@@ -17,15 +17,6 @@
 * **ApiVersion**: 2017-01-01-preview
 * **Output**: [MapsAccountKeys](#mapsaccountkeys)
 
-## MapsAccountProperties
-### Properties
-* **x-ms-client-id**: string (ReadOnly): A unique identifier for the maps account
-
-## Sku
-### Properties
-* **name**: string (Required): The name of the SKU, in standard format (such as S0).
-* **tier**: string (ReadOnly): Gets the sku tier. This is based on the SKU name.
-
 ## MapsAccountCreateParametersTags
 ### Properties
 ### Additional Properties
@@ -36,4 +27,13 @@
 * **id**: string (ReadOnly): The full Azure resource identifier of the Maps Account.
 * **primaryKey**: string (ReadOnly): The primary key for accessing the Maps REST APIs.
 * **secondaryKey**: string (ReadOnly): The secondary key for accessing the Maps REST APIs.
+
+## MapsAccountProperties
+### Properties
+* **x-ms-client-id**: string (ReadOnly): A unique identifier for the maps account
+
+## Sku
+### Properties
+* **name**: string (Required): The name of the SKU, in standard format (such as S0).
+* **tier**: string (ReadOnly): Gets the sku tier. This is based on the SKU name.
 

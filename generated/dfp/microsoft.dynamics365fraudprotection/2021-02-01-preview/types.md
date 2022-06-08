@@ -12,14 +12,19 @@
 * **tags**: [DFPInstanceTags](#dfpinstancetags): Key-value pairs of additional resource provisioning properties.
 * **type**: 'Microsoft.Dynamics365FraudProtection/instances' (ReadOnly, DeployTimeConstant): The resource type
 
+## DFPInstanceAdministrators
+### Properties
+* **members**: string[]: An array of administrator user identities.
+
 ## DFPInstanceProperties
 ### Properties
 * **administration**: [DFPInstanceAdministrators](#dfpinstanceadministrators): An array of administrator user identities
 * **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' | string (ReadOnly): The current deployment state of DFP resource. The provisioningState is to indicate states for resource provisioning.
 
-## DFPInstanceAdministrators
+## DFPInstanceTags
 ### Properties
-* **members**: string[]: An array of administrator user identities.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## SystemData
 ### Properties
@@ -29,9 +34,4 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## DFPInstanceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

@@ -18,6 +18,26 @@ The geo region of a resource never changes after it is created.
 * **ApiVersion**: 2018-10-01
 * **Output**: [SignalRKeys](#signalrkeys)
 
+## ResourceSku
+### Properties
+* **capacity**: int: Optional, integer. The unit count of SignalR resource. 1 by default.
+
+If present, following values are allowed:
+    Free: 1
+    Standard: 1,2,5,10,20,50,100
+* **family**: string: Optional string. For future use.
+* **name**: string (Required): The name of the SKU. Required.
+
+Allowed values: Standard_S1, Free_F1
+* **size**: string: Optional string. For future use.
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard' | string: Optional tier of this particular SKU. 'Standard' or 'Free'. 
+
+`Basic` is deprecated, use `Standard` instead.
+
+## SignalRCorsSettings
+### Properties
+* **allowedOrigins**: string[]: Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.
+
 ## SignalRCreateOrUpdateProperties
 ### Properties
 * **cors**: [SignalRCorsSettings](#signalrcorssettings): Cross-Origin Resource Sharing (CORS) settings.
@@ -36,10 +56,6 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
 * **serverPort**: int (ReadOnly): The publicly accessible port of the SignalR service which is designed for customer server side usage.
 * **version**: string (ReadOnly): Version of the SignalR resource. Probably you need the same or higher version of client SDKs.
 
-## SignalRCorsSettings
-### Properties
-* **allowedOrigins**: string[]: Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.
-
 ## SignalRFeature
 ### Properties
 * **flag**: 'EnableConnectivityLogs' | 'ServiceMode' | string (Required): FeatureFlags is the supported features of Azure SignalR service.
@@ -53,31 +69,15 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ResourceSku
-### Properties
-* **capacity**: int: Optional, integer. The unit count of SignalR resource. 1 by default.
-
-If present, following values are allowed:
-    Free: 1
-    Standard: 1,2,5,10,20,50,100
-* **family**: string: Optional string. For future use.
-* **name**: string (Required): The name of the SKU. Required.
-
-Allowed values: Standard_S1, Free_F1
-* **size**: string: Optional string. For future use.
-* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard' | string: Optional tier of this particular SKU. 'Standard' or 'Free'. 
-
-`Basic` is deprecated, use `Standard` instead.
-
-## SignalRUpdateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## SignalRKeys
 ### Properties
 * **primaryConnectionString**: string (ReadOnly): SignalR connection string constructed via the primaryKey
 * **primaryKey**: string (ReadOnly): The primary access key.
 * **secondaryConnectionString**: string (ReadOnly): SignalR connection string constructed via the secondaryKey
 * **secondaryKey**: string (ReadOnly): The secondary access key.
+
+## SignalRUpdateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

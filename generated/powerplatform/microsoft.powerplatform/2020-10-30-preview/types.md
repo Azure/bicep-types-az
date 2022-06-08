@@ -40,6 +40,61 @@
 ### Properties
 * **description**: string: The description of the account.
 
+## EnterprisePolicyIdentity
+### Properties
+* **systemAssignedIdentityPrincipalId**: string (ReadOnly): The principal id of EnterprisePolicy identity.
+* **tenantId**: string (ReadOnly): The tenant id associated with the EnterprisePolicy.
+* **type**: 'None' | 'SystemAssigned': The type of identity used for the EnterprisePolicy. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
+
+## KeyProperties
+### Properties
+* **name**: string: The identifier of the key vault key used to encrypt data.
+* **version**: string: The version of the identity which will be used to access key vault.
+
+## KeyVaultProperties
+### Properties
+* **id**: string: Uri of KeyVault
+* **key**: [KeyProperties](#keyproperties): Url and version of the KeyVault Secret
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
+* **description**: string: The reason for approval/rejection of the connection.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
+
+## Properties
+### Properties
+* **encryption**: [PropertiesEncryption](#propertiesencryption): The encryption settings for a configuration store.
+* **lockbox**: [PropertiesLockbox](#propertieslockbox): Settings concerning lockbox.
+* **networkInjection**: [PropertiesNetworkInjection](#propertiesnetworkinjection): Settings concerning network injection.
+
+## PropertiesEncryption
+### Properties
+* **keyVault**: [KeyVaultProperties](#keyvaultproperties): Settings concerning key vault encryption for a configuration store.
+* **state**: 'Disabled' | 'Enabled' | 'NotConfigured' | string: The state of onboarding, which only appears in the response.
+
+## PropertiesLockbox
+### Properties
+* **state**: 'Disabled' | 'Enabled' | 'NotConfigured' | string: The state of onboarding, which only appears in the response.
+
+## PropertiesNetworkInjection
+### Properties
+* **virtualNetworks**: [VirtualNetworkPropertiesList](#virtualnetworkpropertieslist): A list of private link resources
+
+## SubnetProperties
+### Properties
+* **name**: string: Subnet name.
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -54,73 +109,18 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## EnterprisePolicyIdentity
+## TrackedResourceTags
 ### Properties
-* **systemAssignedIdentityPrincipalId**: string (ReadOnly): The principal id of EnterprisePolicy identity.
-* **tenantId**: string (ReadOnly): The tenant id associated with the EnterprisePolicy.
-* **type**: 'None' | 'SystemAssigned': The type of identity used for the EnterprisePolicy. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
-
-## Properties
-### Properties
-* **encryption**: [PropertiesEncryption](#propertiesencryption): The encryption settings for a configuration store.
-* **lockbox**: [PropertiesLockbox](#propertieslockbox): Settings concerning lockbox.
-* **networkInjection**: [PropertiesNetworkInjection](#propertiesnetworkinjection): Settings concerning network injection.
-
-## PropertiesEncryption
-### Properties
-* **keyVault**: [KeyVaultProperties](#keyvaultproperties): Settings concerning key vault encryption for a configuration store.
-* **state**: 'Disabled' | 'Enabled' | 'NotConfigured' | string: The state of onboarding, which only appears in the response.
-
-## KeyVaultProperties
-### Properties
-* **id**: string: Uri of KeyVault
-* **key**: [KeyProperties](#keyproperties): Url and version of the KeyVault Secret
-
-## KeyProperties
-### Properties
-* **name**: string: The identifier of the key vault key used to encrypt data.
-* **version**: string: The version of the identity which will be used to access key vault.
-
-## PropertiesLockbox
-### Properties
-* **state**: 'Disabled' | 'Enabled' | 'NotConfigured' | string: The state of onboarding, which only appears in the response.
-
-## PropertiesNetworkInjection
-### Properties
-* **virtualNetworks**: [VirtualNetworkPropertiesList](#virtualnetworkpropertieslist): A list of private link resources
-
-## VirtualNetworkPropertiesList
-### Properties
-* **nextLink**: string: Next page link if any.
-* **value**: [VirtualNetworkProperties](#virtualnetworkproperties)[]: Array of virtual networks.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## VirtualNetworkProperties
 ### Properties
 * **id**: string: Uri of the virtual network.
 * **subnet**: [SubnetProperties](#subnetproperties): Properties of a subnet.
 
-## SubnetProperties
+## VirtualNetworkPropertiesList
 ### Properties
-* **name**: string: Subnet name.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
-
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
-* **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
+* **nextLink**: string: Next page link if any.
+* **value**: [VirtualNetworkProperties](#virtualnetworkproperties)[]: Array of virtual networks.
 

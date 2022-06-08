@@ -36,15 +36,6 @@
 * **maintenanceConfigurationId**: string: The maintenance configuration Id
 * **resourceId**: string: The unique resourceId
 
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
 ## MaintenanceConfigurationProperties
 ### Properties
 * **extensionProperties**: [MaintenanceConfigurationPropertiesExtensionProperties](#maintenanceconfigurationpropertiesextensionproperties): Gets or sets extensionProperties of the maintenanceConfiguration
@@ -58,6 +49,11 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## MaintenanceConfigurationTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## MaintenanceWindow
 ### Properties
 * **duration**: string: Duration of the maintenance window in HH:mm format. If not provided, default value will be used based on maintenance scope provided. Example: 05:00.
@@ -66,8 +62,12 @@
 * **startDateTime**: string: Effective start date of the maintenance window in YYYY-MM-DD hh:mm format. The start date can be set to either the current date or future date. The window will be created in the time zone provided and adjusted to daylight savings according to that time zone.
 * **timeZone**: string: Name of the timezone. List of timezones can be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell. Example: Pacific Standard Time, UTC, W. Europe Standard Time, Korea Standard Time, Cen. Australia Standard Time.
 
-## MaintenanceConfigurationTags
+## SystemData
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 

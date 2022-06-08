@@ -30,6 +30,18 @@
 * **ApiVersion**: 2021-02-01
 * **Output**: [MapsAccountKeys](#mapsaccountkeys)
 
+## CreatorProperties
+### Properties
+* **provisioningState**: string (ReadOnly): The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
+* **storageUnits**: int (Required): The storage units to be allocated. Integer values from 1 to 100, inclusive.
+
+## MapsAccountKeys
+### Properties
+* **primaryKey**: string (ReadOnly): The primary key for accessing the Maps REST APIs.
+* **primaryKeyLastUpdated**: string (ReadOnly): The last updated date and time of the primary key.
+* **secondaryKey**: string (ReadOnly): The secondary key for accessing the Maps REST APIs.
+* **secondaryKeyLastUpdated**: string (ReadOnly): The last updated date and time of the secondary key.
+
 ## MapsAccountProperties
 ### Properties
 * **disableLocalAuth**: bool: Allows toggle functionality on Azure Policy to disable Azure Maps local authentication support. This will disable Shared Keys authentication from any usage.
@@ -55,20 +67,8 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## CreatorProperties
-### Properties
-* **provisioningState**: string (ReadOnly): The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
-* **storageUnits**: int (Required): The storage units to be allocated. Integer values from 1 to 100, inclusive.
-
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## MapsAccountKeys
-### Properties
-* **primaryKey**: string (ReadOnly): The primary key for accessing the Maps REST APIs.
-* **primaryKeyLastUpdated**: string (ReadOnly): The last updated date and time of the primary key.
-* **secondaryKey**: string (ReadOnly): The secondary key for accessing the Maps REST APIs.
-* **secondaryKeyLastUpdated**: string (ReadOnly): The last updated date and time of the secondary key.
 

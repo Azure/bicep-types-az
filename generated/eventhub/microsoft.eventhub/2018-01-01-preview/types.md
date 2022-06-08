@@ -121,6 +121,57 @@
 * **ApiVersion**: 2018-01-01-preview
 * **Output**: [AccessKeys](#accesskeys)
 
+## AccessKeys
+### Properties
+* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
+* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
+* **keyName**: string (ReadOnly): A string that describes the AuthorizationRule.
+* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace AuthorizationRule.
+* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace AuthorizationRule.
+* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+
+## AccessKeys
+### Properties
+* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
+* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
+* **keyName**: string (ReadOnly): A string that describes the AuthorizationRule.
+* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace AuthorizationRule.
+* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace AuthorizationRule.
+* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+
+## AccessKeys
+### Properties
+* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
+* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
+* **keyName**: string (ReadOnly): A string that describes the AuthorizationRule.
+* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace AuthorizationRule.
+* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace AuthorizationRule.
+* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+
+## ArmDisasterRecoveryProperties
+### Properties
+* **alternateName**: string: Alternate name specified when alias and namespace names are same.
+* **partnerNamespace**: string: ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
+* **pendingReplicationOperationsCount**: int (ReadOnly): Number of entities pending to be replicated.
+* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
+* **role**: 'Primary' | 'PrimaryNotReplicating' | 'Secondary' (ReadOnly): role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
+
+## AuthorizationRuleProperties
+### Properties
+* **rights**: 'Listen' | 'Manage' | 'Send' | string[] (Required): The rights associated with the rule.
+
+## CaptureDescription
+### Properties
+* **destination**: [Destination](#destination): Capture storage details for capture description
+* **enabled**: bool: A value that indicates whether capture description is enabled.
+* **encoding**: 'Avro' | 'AvroDeflate': Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version
+* **intervalInSeconds**: int: The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
+* **sizeLimitInBytes**: int: The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
+* **skipEmptyArchives**: bool: A value that indicates whether to Skip Empty Archives
+
 ## ClusterProperties
 ### Properties
 * **createdAt**: string (ReadOnly): The UTC time when the Event Hubs Cluster was created.
@@ -133,16 +184,27 @@
 * **capacity**: int: The quantity of Event Hubs Cluster Capacity Units contained in this cluster.
 * **name**: 'Dedicated' | string (Required): Name of this SKU.
 
-## TrackedResourceTags
+## ConnectionState
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **description**: string: Description of the connection state.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Status of the connection.
 
-## Identity
+## ConsumerGroupProperties
 ### Properties
-* **principalId**: string: ObjectId from the KeyVault
-* **tenantId**: string: TenantId from the KeyVault
-* **type**: 'SystemAssigned': Enumerates the possible value Identity type, which currently supports only 'SystemAssigned'
+* **createdAt**: string (ReadOnly): Exact time the message was created.
+* **updatedAt**: string (ReadOnly): The exact time the message was updated.
+* **userMetadata**: string: User Metadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.
+
+## Destination
+### Properties
+* **name**: string: Name for capture destination
+* **properties**: [DestinationProperties](#destinationproperties): Properties describing the storage account, blob container and archive name format for capture destination
+
+## DestinationProperties
+### Properties
+* **archiveNameFormat**: string: Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order
+* **blobContainer**: string: Blob container Name
+* **storageAccountResourceId**: string: Resource id of the storage account to be used to create the blobs
 
 ## EHNamespaceProperties
 ### Properties
@@ -164,35 +226,6 @@
 * **keySource**: 'Microsoft.KeyVault': Enumerates the possible value of keySource for Encryption
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)[]: Properties of KeyVault
 
-## KeyVaultProperties
-### Properties
-* **keyName**: string: Name of the Key from KeyVault
-* **keyVaultUri**: string: Uri of KeyVault
-* **keyVersion**: string: Key Version
-
-## Sku
-### Properties
-* **capacity**: int: The Event Hubs throughput units, value should be 0 to 20 throughput units.
-* **name**: 'Basic' | 'Standard' | string (Required): Name of this SKU.
-* **tier**: 'Basic' | 'Standard' | string: The billing tier of this particular SKU.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## AuthorizationRuleProperties
-### Properties
-* **rights**: 'Listen' | 'Manage' | 'Send' | string[] (Required): The rights associated with the rule.
-
-## ArmDisasterRecoveryProperties
-### Properties
-* **alternateName**: string: Alternate name specified when alias and namespace names are same.
-* **partnerNamespace**: string: ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
-* **pendingReplicationOperationsCount**: int (ReadOnly): Number of entities pending to be replicated.
-* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
-* **role**: 'Primary' | 'PrimaryNotReplicating' | 'Secondary' (ReadOnly): role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
-
 ## EventhubProperties
 ### Properties
 * **captureDescription**: [CaptureDescription](#capturedescription): Properties to configure capture description for eventhub
@@ -203,37 +236,23 @@
 * **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of the Event Hub.
 * **updatedAt**: string (ReadOnly): The exact time the message was updated.
 
-## CaptureDescription
+## Identity
 ### Properties
-* **destination**: [Destination](#destination): Capture storage details for capture description
-* **enabled**: bool: A value that indicates whether capture description is enabled.
-* **encoding**: 'Avro' | 'AvroDeflate': Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version
-* **intervalInSeconds**: int: The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
-* **sizeLimitInBytes**: int: The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
-* **skipEmptyArchives**: bool: A value that indicates whether to Skip Empty Archives
-
-## Destination
-### Properties
-* **name**: string: Name for capture destination
-* **properties**: [DestinationProperties](#destinationproperties): Properties describing the storage account, blob container and archive name format for capture destination
-
-## DestinationProperties
-### Properties
-* **archiveNameFormat**: string: Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order
-* **blobContainer**: string: Blob container Name
-* **storageAccountResourceId**: string: Resource id of the storage account to be used to create the blobs
-
-## ConsumerGroupProperties
-### Properties
-* **createdAt**: string (ReadOnly): Exact time the message was created.
-* **updatedAt**: string (ReadOnly): The exact time the message was updated.
-* **userMetadata**: string: User Metadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.
+* **principalId**: string: ObjectId from the KeyVault
+* **tenantId**: string: TenantId from the KeyVault
+* **type**: 'SystemAssigned': Enumerates the possible value Identity type, which currently supports only 'SystemAssigned'
 
 ## IpFilterRuleProperties
 ### Properties
 * **action**: 'Accept' | 'Reject' | string: The IP Filter Action
 * **filterName**: string: IP Filter name
 * **ipMask**: string: IP Mask
+
+## KeyVaultProperties
+### Properties
+* **keyName**: string: Name of the Key from KeyVault
+* **keyVaultUri**: string: Uri of KeyVault
+* **keyVersion**: string: Key Version
 
 ## NetworkRuleSetProperties
 ### Properties
@@ -252,9 +271,9 @@
 * **ignoreMissingVnetServiceEndpoint**: bool: Value that indicates whether to ignore missing Vnet Service Endpoint
 * **subnet**: [Subnet](#subnet): Properties supplied for Subnet
 
-## Subnet
+## PrivateEndpoint
 ### Properties
-* **id**: string: Resource ID of Virtual Network Subnet
+* **id**: string: The ARM identifier for Private Endpoint.
 
 ## PrivateEndpointConnectionProperties
 ### Properties
@@ -262,46 +281,27 @@
 * **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate): ConnectionState information.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the Private Endpoint Connection.
 
-## PrivateEndpoint
+## Sku
 ### Properties
-* **id**: string: The ARM identifier for Private Endpoint.
+* **capacity**: int: The Event Hubs throughput units, value should be 0 to 20 throughput units.
+* **name**: 'Basic' | 'Standard' | string (Required): Name of this SKU.
+* **tier**: 'Basic' | 'Standard' | string: The billing tier of this particular SKU.
 
-## ConnectionState
+## Subnet
 ### Properties
-* **description**: string: Description of the connection state.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Status of the connection.
+* **id**: string: Resource ID of Virtual Network Subnet
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## VirtualNetworkRuleProperties
 ### Properties
 * **virtualNetworkSubnetId**: string: ARM ID of Virtual Network Subnet
-
-## AccessKeys
-### Properties
-* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
-* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
-* **keyName**: string (ReadOnly): A string that describes the AuthorizationRule.
-* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace AuthorizationRule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace AuthorizationRule.
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-
-## AccessKeys
-### Properties
-* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
-* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
-* **keyName**: string (ReadOnly): A string that describes the AuthorizationRule.
-* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace AuthorizationRule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace AuthorizationRule.
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-
-## AccessKeys
-### Properties
-* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
-* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
-* **keyName**: string (ReadOnly): A string that describes the AuthorizationRule.
-* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace AuthorizationRule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace AuthorizationRule.
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
 

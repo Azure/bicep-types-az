@@ -25,12 +25,6 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ExtendedLocation/customLocations/resourceSyncRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Identity
-### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' | string: The identity type.
-
 ## CustomLocationProperties
 ### Properties
 * **authentication**: [CustomLocationPropertiesAuthentication](#customlocationpropertiesauthentication): This is optional input that contains the authentication that should be used to generate the namespace.
@@ -46,19 +40,17 @@
 * **type**: string: The type of the Custom Locations authentication
 * **value**: string (WriteOnly): The kubeconfig value.
 
-## SystemData
+## Identity
 ### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'None' | 'SystemAssigned' | string: The identity type.
 
-## TrackedResourceTags
+## MatchExpressionsProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **key**: string: Key is the label key that the selector applies to.
+* **operator**: string: The Operator field represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
+* **values**: string[]: The label value
 
 ## ResourceSyncRuleProperties
 ### Properties
@@ -72,13 +64,21 @@
 * **matchExpressions**: [MatchExpressionsProperties](#matchexpressionsproperties)[]: Resource Sync Rules matchExpression property definition.
 * **matchLabels**: [ResourceSyncRulePropertiesSelectorMatchLabels](#resourcesyncrulepropertiesselectormatchlabels): MatchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is 'key', the operator is 'In', and the values array contains only 'value'.
 
-## MatchExpressionsProperties
-### Properties
-* **key**: string: Key is the label key that the selector applies to.
-* **operator**: string: The Operator field represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
-* **values**: string[]: The label value
-
 ## ResourceSyncRulePropertiesSelectorMatchLabels
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

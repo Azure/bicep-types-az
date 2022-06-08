@@ -10,6 +10,15 @@
 * **properties**: [GuestConfigurationAssignmentProperties](#guestconfigurationassignmentproperties): Properties of guest configuration assignment object.
 * **type**: 'Microsoft.GuestConfiguration/guestConfigurationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
+## ConfigurationParameter
+### Properties
+* **name**: string (ReadOnly): Name of the configuration parameter.
+* **value**: string (ReadOnly): Value of the configuration parameter.
+
+## ConfigurationParameterList
+### Properties
+* **value**: [ConfigurationParameter](#configurationparameter)[]: Represents the list for configuration parameters.
+
 ## GuestConfigurationAssignmentProperties
 ### Properties
 * **assignmentHash**: string (ReadOnly): Combined hash of the configuration package and parameters.
@@ -26,13 +35,4 @@
 * **kind**: 'DSC' | string: Kind of the guest configuration. For example:DSC
 * **name**: string: Name of the guest configuration.
 * **type**: string: Type of the guest configuration.
-
-## ConfigurationParameterList
-### Properties
-* **value**: [ConfigurationParameter](#configurationparameter)[]: Represents the list for configuration parameters.
-
-## ConfigurationParameter
-### Properties
-* **name**: string (ReadOnly): Name of the configuration parameter.
-* **value**: string (ReadOnly): Value of the configuration parameter.
 

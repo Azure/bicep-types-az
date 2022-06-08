@@ -62,15 +62,67 @@
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
-## UserAssignedIdentities
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Properties of the PrivateEndpointConnectProperties.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The Private Endpoint resource.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly): A collection of information about the state of the connection between service consumer and provider.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: string (ReadOnly): A message indicating if changes on the service provider require any updates on the consumer.
+* **description**: string (ReadOnly): The reason for approval/rejection of the connection.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | string (ReadOnly): The private endpoint connection status.
+
+## RedisAccessKeys
+### Properties
+* **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
+* **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
+
+## RedisAccessKeys
+### Properties
+* **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
+* **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
+
+## RedisCommonPropertiesRedisConfiguration
+### Properties
+* **aof-storage-connection-string-0**: string: First storage account connection string
+* **aof-storage-connection-string-1**: string: Second storage account connection string
+* **maxclients**: string (ReadOnly): The max clients config
+* **maxfragmentationmemory-reserved**: string: Value in megabytes reserved for fragmentation per shard
+* **maxmemory-delta**: string: Value in megabytes reserved for non-cache usage per shard e.g. failover.
+* **maxmemory-policy**: string: The eviction strategy used when your data won't fit within its memory limit.
+* **maxmemory-reserved**: string: Value in megabytes reserved for non-cache usage per shard e.g. failover.
+* **preferred-data-archive-auth-method**: string (ReadOnly): Preferred auth method to communicate to storage account used for data archive, specify SAS or ManagedIdentity, default value is SAS
+* **preferred-data-persistence-auth-method**: string (ReadOnly): Preferred auth method to communicate to storage account used for data persistence, specify SAS or ManagedIdentity, default value is SAS
+* **rdb-backup-enabled**: string: Specifies whether the rdb backup is enabled
+* **rdb-backup-frequency**: string: Specifies the frequency for creating rdb backup
+* **rdb-backup-max-snapshot-count**: string: Specifies the maximum number of snapshots for rdb backup
+* **rdb-storage-connection-string**: string: The storage account connection string for storing rdb file
+* **zonal-configuration**: string (ReadOnly): Zonal Configuration
+### Additional Properties
+* **Additional Properties Type**: any
+
+## RedisCommonPropertiesTenantSettings
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+* **Additional Properties Type**: string
 
-## UserAssignedIdentity
+## RedisCreateParametersTags
 ### Properties
-* **clientId**: string (ReadOnly): The client ID of the assigned identity.
-* **principalId**: string (ReadOnly): The principal ID of the assigned identity.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## RedisCreateProperties
 ### Properties
@@ -95,10 +147,10 @@
 * **subnetId**: string: The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1
 * **tenantSettings**: [RedisCommonPropertiesTenantSettings](#rediscommonpropertiestenantsettings): A dictionary of tenant settings
 
-## RedisAccessKeys
+## RedisFirewallRuleProperties
 ### Properties
-* **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
-* **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
+* **endIP**: string (Required): highest IP address included in the range
+* **startIP**: string (Required): lowest IP address included in the range
 
 ## RedisInstanceDetails
 ### Properties
@@ -112,69 +164,6 @@
 ## RedisLinkedServer
 ### Properties
 * **id**: string (ReadOnly): Linked server Id.
-
-## PrivateEndpointConnection
-### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-* **name**: string (ReadOnly): The name of the resource
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Properties of the PrivateEndpointConnectProperties.
-* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The Private Endpoint resource.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
-
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionsRequired**: string (ReadOnly): A message indicating if changes on the service provider require any updates on the consumer.
-* **description**: string (ReadOnly): The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected' | string (ReadOnly): The private endpoint connection status.
-
-## RedisCommonPropertiesRedisConfiguration
-### Properties
-* **aof-storage-connection-string-0**: string: First storage account connection string
-* **aof-storage-connection-string-1**: string: Second storage account connection string
-* **maxclients**: string (ReadOnly): The max clients config
-* **maxfragmentationmemory-reserved**: string: Value in megabytes reserved for fragmentation per shard
-* **maxmemory-delta**: string: Value in megabytes reserved for non-cache usage per shard e.g. failover.
-* **maxmemory-policy**: string: The eviction strategy used when your data won't fit within its memory limit.
-* **maxmemory-reserved**: string: Value in megabytes reserved for non-cache usage per shard e.g. failover.
-* **preferred-data-archive-auth-method**: string (ReadOnly): Preferred auth method to communicate to storage account used for data archive, specify SAS or ManagedIdentity, default value is SAS
-* **preferred-data-persistence-auth-method**: string (ReadOnly): Preferred auth method to communicate to storage account used for data persistence, specify SAS or ManagedIdentity, default value is SAS
-* **rdb-backup-enabled**: string: Specifies whether the rdb backup is enabled
-* **rdb-backup-frequency**: string: Specifies the frequency for creating rdb backup
-* **rdb-backup-max-snapshot-count**: string: Specifies the maximum number of snapshots for rdb backup
-* **rdb-storage-connection-string**: string: The storage account connection string for storing rdb file
-* **zonal-configuration**: string (ReadOnly): Zonal Configuration
-### Additional Properties
-* **Additional Properties Type**: any
-
-## Sku
-### Properties
-* **capacity**: int (Required): The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).
-* **family**: 'C' | 'P' | string (Required): The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).
-* **name**: 'Basic' | 'Premium' | 'Standard' | string (Required): The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)
-
-## RedisCommonPropertiesTenantSettings
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## RedisCreateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## RedisFirewallRuleProperties
-### Properties
-* **endIP**: string (Required): highest IP address included in the range
-* **startIP**: string (Required): lowest IP address included in the range
 
 ## RedisLinkedServerCreateProperties
 ### Properties
@@ -193,8 +182,19 @@
 * **maintenanceWindow**: string: ISO8601 timespan specifying how much time cache patching can take.
 * **startHourUtc**: int (Required): Start hour after which cache patching can start.
 
-## RedisAccessKeys
+## Sku
 ### Properties
-* **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
-* **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
+* **capacity**: int (Required): The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).
+* **family**: 'C' | 'P' | string (Required): The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).
+* **name**: 'Basic' | 'Premium' | 'Standard' | string (Required): The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)
+
+## UserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## UserAssignedIdentity
+### Properties
+* **clientId**: string (ReadOnly): The client ID of the assigned identity.
+* **principalId**: string (ReadOnly): The principal ID of the assigned identity.
 

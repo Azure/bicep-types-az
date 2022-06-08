@@ -111,6 +111,58 @@
 * **properties**: [UserProperties](#userproperties) (Required): The user properties.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/users' (ReadOnly, DeployTimeConstant): The resource type
 
+## Address
+### Properties
+* **addressLine1**: string (Required): The address line1.
+* **addressLine2**: string: The address line2.
+* **addressLine3**: string: The address line3.
+* **city**: string (Required): The city name.
+* **country**: string (Required): The country name.
+* **postalCode**: string (Required): The postal code.
+* **state**: string (Required): The state name.
+
+## AsymmetricEncryptedSecret
+### Properties
+* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' | string (Required): The algorithm used to encrypt "Value".
+* **encryptionCertThumbprint**: string: Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.
+* **value**: string (Required): The value of the secret.
+
+## Authentication
+### Properties
+* **symmetricKey**: [SymmetricKey](#symmetrickey): Symmetric key for authentication.
+
+## AzureContainerInfo
+### Properties
+* **containerName**: string (Required): Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).
+* **dataFormat**: 'AzureFile' | 'BlockBlob' | 'PageBlob' | string (Required): Storage format used for the file represented by the share.
+* **storageAccountCredentialId**: string (Required): ID of the storage account credential used to access storage.
+
+## BandwidthScheduleProperties
+### Properties
+* **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[] (Required): The days of the week when this schedule is applicable.
+* **rateInMbps**: int (Required): The bandwidth rate in Mbps.
+* **start**: string (Required): The start time of the schedule in UTC.
+* **stop**: string (Required): The stop time of the schedule in UTC.
+
+## ClientAccessRight
+### Properties
+* **accessPermission**: 'NoAccess' | 'ReadOnly' | 'ReadWrite' | string (Required): Type of access to be allowed for the client.
+* **client**: string (Required): IP of the client.
+
+## ContactDetails
+### Properties
+* **companyName**: string (Required): The name of the company.
+* **contactPerson**: string (Required): The contact person name.
+* **emailList**: string[] (Required): The email list.
+* **phone**: string (Required): The phone number.
+
+## ContainerProperties
+### Properties
+* **containerStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating' | string (ReadOnly): Current status of the container.
+* **createdDateTime**: string (ReadOnly): The UTC time when container got created.
+* **dataFormat**: 'AzureFile' | 'BlockBlob' | 'PageBlob' | string (Required): Storage format used for the file represented by the share.
+* **refreshDetails**: [RefreshDetails](#refreshdetails) (ReadOnly): Fields for tracking refresh job on the share or container.
+
 ## DataBoxEdgeDeviceProperties
 ### Properties
 * **configuredRoleTypes**: 'ASA' | 'Cognitive' | 'Functions' | 'IOT' | string[] (ReadOnly): Type of compute roles configured.
@@ -128,22 +180,42 @@
 * **serialNumber**: string (ReadOnly): The Serial Number of Data Box Edge/Gateway device.
 * **timeZone**: string (ReadOnly): The Data Box Edge/Gateway device timezone.
 
-## Sku
-### Properties
-* **name**: 'Edge' | 'Gateway' | 'TEA_1Node' | 'TEA_1Node_Heater' | 'TEA_1Node_UPS' | 'TEA_1Node_UPS_Heater' | 'TEA_4Node_Heater' | 'TEA_4Node_UPS_Heater' | 'TMA' | string: The Sku name
-* **tier**: 'Standard' | string: The Sku tier
-
 ## DataBoxEdgeDeviceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## BandwidthScheduleProperties
+## FileSourceInfo
 ### Properties
-* **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[] (Required): The days of the week when this schedule is applicable.
-* **rateInMbps**: int (Required): The bandwidth rate in Mbps.
-* **start**: string (Required): The start time of the schedule in UTC.
-* **stop**: string (Required): The stop time of the schedule in UTC.
+* **shareId**: string (Required): File share ID.
+
+## FileTriggerProperties
+### Properties
+* **customContextTag**: string: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
+* **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Compute role against which events will be raised.
+* **sourceInfo**: [FileSourceInfo](#filesourceinfo) (Required): File source details.
+
+## IoTDeviceInfo
+### Properties
+* **authentication**: [Authentication](#authentication): Authentication mechanism for IoT devices.
+* **deviceId**: string (Required): ID of the IoT device/edge device.
+* **ioTHostHub**: string (Required): Host name for the IoT hub associated to the device.
+* **ioTHostHubId**: string: Id for the IoT hub associated to the device.
+
+## IoTRoleProperties
+### Properties
+* **hostPlatform**: 'Linux' | 'Windows' | string (Required): Host OS supported by the IoT role.
+* **ioTDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
+* **ioTEdgeDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
+* **roleStatus**: 'Disabled' | 'Enabled' | string (Required): Role status.
+* **shareMappings**: [MountPointMap](#mountpointmap)[]: Mount points of shares in role(s).
+
+## MountPointMap
+### Properties
+* **mountPoint**: string (ReadOnly): Mount point for the share.
+* **roleId**: string (ReadOnly): ID of the role to which share is mounted.
+* **roleType**: 'ASA' | 'Cognitive' | 'Functions' | 'IOT' | string (ReadOnly)
+* **shareId**: string (Required): ID of the share mounted to the role VM.
 
 ## OrderProperties
 ### Properties
@@ -154,13 +226,6 @@
 * **returnTrackingInfo**: [TrackingInfo](#trackinginfo)[] (ReadOnly): Tracking information for the package returned from the customer whether it has an original or a replacement device.
 * **serialNumber**: string (ReadOnly): Serial number of the device.
 * **shippingAddress**: [Address](#address) (Required): The shipping address of the customer.
-
-## ContactDetails
-### Properties
-* **companyName**: string (Required): The name of the company.
-* **contactPerson**: string (Required): The contact person name.
-* **emailList**: string[] (Required): The email list.
-* **phone**: string (Required): The phone number.
 
 ## OrderStatus
 ### Properties
@@ -175,58 +240,33 @@ by the already existing properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## TrackingInfo
+## PeriodicTimerProperties
 ### Properties
-* **carrierName**: string: Name of the carrier used in the delivery.
-* **serialNumber**: string: Serial number of the device being tracked.
-* **trackingId**: string: Tracking ID of the shipment.
-* **trackingUrl**: string: Tracking URL of the shipment.
+* **customContextTag**: string: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
+* **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Compute role against which events will be raised.
+* **sourceInfo**: [PeriodicTimerSourceInfo](#periodictimersourceinfo) (Required): Periodic timer event source.
 
-## Address
+## PeriodicTimerSourceInfo
 ### Properties
-* **addressLine1**: string (Required): The address line1.
-* **addressLine2**: string: The address line2.
-* **addressLine3**: string: The address line3.
-* **city**: string (Required): The city name.
-* **country**: string (Required): The country name.
-* **postalCode**: string (Required): The postal code.
-* **state**: string (Required): The state name.
+* **schedule**: string (Required): Periodic frequency at which timer event needs to be raised. Supports daily, hourly, minutes, and seconds.
+* **startTime**: string (Required): The time of the day that results in a valid trigger. Schedule is computed with reference to the time specified upto seconds. If timezone is not specified the time will considered to be in device timezone. The value will always be returned as UTC time.
+* **topic**: string: Topic where periodic events are published to IoT device.
 
-## IoTRoleProperties
+## RefreshDetails
 ### Properties
-* **hostPlatform**: 'Linux' | 'Windows' | string (Required): Host OS supported by the IoT role.
-* **ioTDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
-* **ioTEdgeDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
-* **roleStatus**: 'Disabled' | 'Enabled' | string (Required): Role status.
-* **shareMappings**: [MountPointMap](#mountpointmap)[]: Mount points of shares in role(s).
+* **errorManifestFile**: string: Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.
+* **inProgressRefreshJobId**: string: If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.
+* **lastCompletedRefreshJobTimeInUTC**: string: Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.
+* **lastJob**: string: Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.
 
-## IoTDeviceInfo
+## RoleSinkInfo
 ### Properties
-* **authentication**: [Authentication](#authentication): Authentication mechanism for IoT devices.
-* **deviceId**: string (Required): ID of the IoT device/edge device.
-* **ioTHostHub**: string (Required): Host name for the IoT hub associated to the device.
-* **ioTHostHubId**: string: Id for the IoT hub associated to the device.
+* **roleId**: string (Required): Compute role ID.
 
-## Authentication
+## ShareAccessRight
 ### Properties
-* **symmetricKey**: [SymmetricKey](#symmetrickey): Symmetric key for authentication.
-
-## SymmetricKey
-### Properties
-* **connectionString**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
-
-## AsymmetricEncryptedSecret
-### Properties
-* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' | string (Required): The algorithm used to encrypt "Value".
-* **encryptionCertThumbprint**: string: Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.
-* **value**: string (Required): The value of the secret.
-
-## MountPointMap
-### Properties
-* **mountPoint**: string (ReadOnly): Mount point for the share.
-* **roleId**: string (ReadOnly): ID of the role to which share is mounted.
-* **roleType**: 'ASA' | 'Cognitive' | 'Functions' | 'IOT' | string (ReadOnly)
-* **shareId**: string (Required): ID of the share mounted to the role VM.
+* **accessType**: 'Change' | 'Custom' | 'Read' | string (Required): Type of access to be allowed on the share for this user.
+* **shareId**: string (Required): The share ID.
 
 ## ShareProperties
 ### Properties
@@ -241,28 +281,10 @@ by the already existing properties
 * **shareStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating' | string (Required): Current status of the share.
 * **userAccessRights**: [UserAccessRight](#useraccessright)[]: Mapping of users and corresponding access rights on the share (required for SMB protocol).
 
-## AzureContainerInfo
+## Sku
 ### Properties
-* **containerName**: string (Required): Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).
-* **dataFormat**: 'AzureFile' | 'BlockBlob' | 'PageBlob' | string (Required): Storage format used for the file represented by the share.
-* **storageAccountCredentialId**: string (Required): ID of the storage account credential used to access storage.
-
-## ClientAccessRight
-### Properties
-* **accessPermission**: 'NoAccess' | 'ReadOnly' | 'ReadWrite' | string (Required): Type of access to be allowed for the client.
-* **client**: string (Required): IP of the client.
-
-## RefreshDetails
-### Properties
-* **errorManifestFile**: string: Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.
-* **inProgressRefreshJobId**: string: If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.
-* **lastCompletedRefreshJobTimeInUTC**: string: Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.
-* **lastJob**: string: Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.
-
-## UserAccessRight
-### Properties
-* **accessType**: 'Change' | 'Custom' | 'Read' | string (Required): Type of access to be allowed on the share for this user.
-* **userId**: string (Required): User ID (already existing in the device).
+* **name**: 'Edge' | 'Gateway' | 'TEA_1Node' | 'TEA_1Node_Heater' | 'TEA_1Node_UPS' | 'TEA_1Node_UPS_Heater' | 'TEA_4Node_Heater' | 'TEA_4Node_UPS_Heater' | 'TMA' | string: The Sku name
+* **tier**: 'Standard' | string: The Sku tier
 
 ## StorageAccountCredentialProperties
 ### Properties
@@ -284,47 +306,25 @@ by the already existing properties
 * **storageAccountCredentialId**: string: Storage Account Credential Id
 * **storageAccountStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating' | string: Current status of the storage account
 
-## ContainerProperties
+## SymmetricKey
 ### Properties
-* **containerStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating' | string (ReadOnly): Current status of the container.
-* **createdDateTime**: string (ReadOnly): The UTC time when container got created.
-* **dataFormat**: 'AzureFile' | 'BlockBlob' | 'PageBlob' | string (Required): Storage format used for the file represented by the share.
-* **refreshDetails**: [RefreshDetails](#refreshdetails) (ReadOnly): Fields for tracking refresh job on the share or container.
+* **connectionString**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
 
-## FileTriggerProperties
+## TrackingInfo
 ### Properties
-* **customContextTag**: string: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
-* **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Compute role against which events will be raised.
-* **sourceInfo**: [FileSourceInfo](#filesourceinfo) (Required): File source details.
+* **carrierName**: string: Name of the carrier used in the delivery.
+* **serialNumber**: string: Serial number of the device being tracked.
+* **trackingId**: string: Tracking ID of the shipment.
+* **trackingUrl**: string: Tracking URL of the shipment.
 
-## RoleSinkInfo
+## UserAccessRight
 ### Properties
-* **roleId**: string (Required): Compute role ID.
-
-## FileSourceInfo
-### Properties
-* **shareId**: string (Required): File share ID.
-
-## PeriodicTimerProperties
-### Properties
-* **customContextTag**: string: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
-* **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Compute role against which events will be raised.
-* **sourceInfo**: [PeriodicTimerSourceInfo](#periodictimersourceinfo) (Required): Periodic timer event source.
-
-## PeriodicTimerSourceInfo
-### Properties
-* **schedule**: string (Required): Periodic frequency at which timer event needs to be raised. Supports daily, hourly, minutes, and seconds.
-* **startTime**: string (Required): The time of the day that results in a valid trigger. Schedule is computed with reference to the time specified upto seconds. If timezone is not specified the time will considered to be in device timezone. The value will always be returned as UTC time.
-* **topic**: string: Topic where periodic events are published to IoT device.
+* **accessType**: 'Change' | 'Custom' | 'Read' | string (Required): Type of access to be allowed on the share for this user.
+* **userId**: string (Required): User ID (already existing in the device).
 
 ## UserProperties
 ### Properties
 * **encryptedPassword**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
 * **shareAccessRights**: [ShareAccessRight](#shareaccessright)[]: List of shares that the user has rights on. This field should not be specified during user creation.
 * **userType**: 'ARM' | 'LocalManagement' | 'Share' | string (Required): Type of the user.
-
-## ShareAccessRight
-### Properties
-* **accessType**: 'Change' | 'Custom' | 'Read' | string (Required): Type of access to be allowed on the share for this user.
-* **shareId**: string (Required): The share ID.
 

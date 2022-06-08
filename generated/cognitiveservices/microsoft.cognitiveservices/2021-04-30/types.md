@@ -33,23 +33,6 @@
 * **ApiVersion**: 2021-04-30
 * **Output**: [ApiKeys](#apikeys)
 
-## Identity
-### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The identity type.
-* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
-
-## IdentityUserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
-
-## UserAssignedIdentity
-### Properties
-* **clientId**: string (ReadOnly): Client App Id associated with this identity.
-* **principalId**: string (ReadOnly): Azure Active Directory principal ID associated with this Identity.
-
 ## AccountProperties
 ### Properties
 * **allowedFqdnList**: string[]: Array of AccountPropertiesAllowedFqdnListItem
@@ -75,6 +58,21 @@
 * **skuChangeInfo**: [SkuChangeInfo](#skuchangeinfo) (ReadOnly): Sku change info of account.
 * **userOwnedStorage**: [UserOwnedStorage](#userownedstorage)[]: The storage accounts for this resource.
 
+## AccountPropertiesEndpoints
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## AccountTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ApiKeys
+### Properties
+* **key1**: string (ReadOnly): Gets the value of key 1.
+* **key2**: string (ReadOnly): Gets the value of key 2.
+
 ## ApiProperties
 ### Properties
 * **aadClientId**: string: (Metrics Advisor Only) The Azure AD Client Id (Application Id).
@@ -96,29 +94,26 @@
 * **renewalPeriod**: int: The renewal period in seconds of Call Rate Limit.
 * **rules**: [ThrottlingRule](#throttlingrule)[]: Array of ThrottlingRule
 
-## ThrottlingRule
-### Properties
-* **count**: int
-* **dynamicThrottlingEnabled**: bool
-* **key**: string
-* **matchPatterns**: [RequestMatchPattern](#requestmatchpattern)[]: Array of RequestMatchPattern
-* **minCount**: int
-* **renewalPeriod**: int
-
-## RequestMatchPattern
-### Properties
-* **method**: string
-* **path**: string
-
-## SkuCapability
-### Properties
-* **name**: string: The name of the SkuCapability.
-* **value**: string: The value of the SkuCapability.
-
 ## Encryption
 ### Properties
 * **keySource**: 'Microsoft.CognitiveServices' | 'Microsoft.KeyVault' | string: Enumerates the possible value of keySource for Encryption
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): Properties to configure keyVault Properties
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The identity type.
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
+
+## IdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## IpRule
+### Properties
+* **value**: string (Required): An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).
 
 ## KeyVaultProperties
 ### Properties
@@ -127,26 +122,15 @@
 * **keyVaultUri**: string: Uri of KeyVault
 * **keyVersion**: string: Version of the Key from KeyVault
 
-## AccountPropertiesEndpoints
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## NetworkRuleSet
 ### Properties
 * **defaultAction**: 'Allow' | 'Deny' | string: The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
 * **ipRules**: [IpRule](#iprule)[]: The list of IP address rules.
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: The list of virtual network rules.
 
-## IpRule
+## PrivateEndpoint
 ### Properties
-* **value**: string (Required): An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).
-
-## VirtualNetworkRule
-### Properties
-* **id**: string (Required): Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.
-* **ignoreMissingVnetServiceEndpoint**: bool: Ignore missing vnet service endpoint or not.
-* **state**: string: Gets the state of virtual network rule.
+* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
 
 ## PrivateEndpointConnection
 ### Properties
@@ -165,15 +149,41 @@
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
 
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
-
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
+
+## QuotaLimit
+### Properties
+* **count**: int
+* **renewalPeriod**: int
+* **rules**: [ThrottlingRule](#throttlingrule)[]: Array of ThrottlingRule
+
+## RequestMatchPattern
+### Properties
+* **method**: string
+* **path**: string
+
+## Sku
+### Properties
+* **capacity**: int: If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
+* **family**: string: If the service has different generations of hardware, for the same SKU, then that can be captured here.
+* **name**: string (Required): The name of the SKU. Ex - P3. It is typically a letter+number code
+* **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
+* **tier**: 'Basic' | 'Enterprise' | 'Free' | 'Premium' | 'Standard' | string: This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
+
+## SkuCapability
+### Properties
+* **name**: string: The name of the SkuCapability.
+* **value**: string: The value of the SkuCapability.
+
+## SkuChangeInfo
+### Properties
+* **countOfDowngrades**: int: Gets the count of downgrades.
+* **countOfUpgradesAfterDowngrades**: int: Gets the count of upgrades after downgrades.
+* **lastChangeDate**: string: Gets the last change date.
 
 ## SystemData
 ### Properties
@@ -184,38 +194,28 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
-## QuotaLimit
+## ThrottlingRule
 ### Properties
 * **count**: int
+* **dynamicThrottlingEnabled**: bool
+* **key**: string
+* **matchPatterns**: [RequestMatchPattern](#requestmatchpattern)[]: Array of RequestMatchPattern
+* **minCount**: int
 * **renewalPeriod**: int
-* **rules**: [ThrottlingRule](#throttlingrule)[]: Array of ThrottlingRule
 
-## SkuChangeInfo
+## UserAssignedIdentity
 ### Properties
-* **countOfDowngrades**: int: Gets the count of downgrades.
-* **countOfUpgradesAfterDowngrades**: int: Gets the count of upgrades after downgrades.
-* **lastChangeDate**: string: Gets the last change date.
+* **clientId**: string (ReadOnly): Client App Id associated with this identity.
+* **principalId**: string (ReadOnly): Azure Active Directory principal ID associated with this Identity.
 
 ## UserOwnedStorage
 ### Properties
 * **identityClientId**: string
 * **resourceId**: string: Full resource id of a Microsoft.Storage resource.
 
-## Sku
+## VirtualNetworkRule
 ### Properties
-* **capacity**: int: If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
-* **family**: string: If the service has different generations of hardware, for the same SKU, then that can be captured here.
-* **name**: string (Required): The name of the SKU. Ex - P3. It is typically a letter+number code
-* **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
-* **tier**: 'Basic' | 'Enterprise' | 'Free' | 'Premium' | 'Standard' | string: This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
-
-## AccountTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ApiKeys
-### Properties
-* **key1**: string (ReadOnly): Gets the value of key 1.
-* **key2**: string (ReadOnly): Gets the value of key 2.
+* **id**: string (Required): Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.
+* **ignoreMissingVnetServiceEndpoint**: bool: Ignore missing vnet service endpoint or not.
+* **state**: string: Gets the state of virtual network rule.
 

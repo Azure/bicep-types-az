@@ -206,28 +206,6 @@
 * **properties**: [FirewallRuleProperties](#firewallruleproperties): Represents the properties of a server firewall rule.
 * **type**: 'Microsoft.Sql/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## ServerProperties
-### Properties
-* **administratorLogin**: string: Administrator username for the server. Can only be specified when the server is being created (and is required for creation).
-* **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for server creation).
-* **externalAdministratorLogin**: string (ReadOnly): The display name of the Azure Active Directory object with admin permissions on this server. Legacy parameter, always null. To check for Active Directory admin, query .../servers/{serverName}/administrators
-* **externalAdministratorSid**: string (ReadOnly): The ID of the Active Azure Directory object with admin permissions on this server. Legacy parameter, always null. To check for Active Directory admin, query .../servers/{serverName}/administrators.
-* **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
-* **state**: 'Disabled' | 'Ready' (ReadOnly): The state of the server.
-* **version**: '12.0' | '2.0' | string: The version of the server.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ServerAdministratorProperties
-### Properties
-* **administratorType**: 'ActiveDirectory' (Required): The type of administrator.
-* **login**: string (Required): The server administrator login value.
-* **sid**: string (Required): The server administrator Sid (Secure ID).
-* **tenantId**: string (Required): The server Active Directory Administrator tenant id.
-
 ## AdvisorProperties
 ### Properties
 * **advisorStatus**: 'GA' | 'LimitedPublicPreview' | 'PrivatePreview' | 'PublicPreview' (ReadOnly): Gets the status of availability of this advisor to customers. Possible values are 'GA', 'PublicPreview', 'LimitedPublicPreview' and 'PrivatePreview'.
@@ -235,28 +213,15 @@
 * **lastChecked**: string (ReadOnly): Gets the time when the current resource was analyzed for recommendations by this advisor.
 * **recommendationsStatus**: string (ReadOnly): Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, 'Ok' (Recommendations available), LowActivity (not enough workload to analyze), 'DbSeemsTuned' (Database is doing well), etc.
 
-## ServerTableAuditingPolicyProperties
+## DatabaseConnectionPolicyProperties
 ### Properties
-* **auditingState**: string: The state of the policy.
-* **auditLogsTableName**: string: The audit logs table name.
-* **eventTypesToAudit**: string: Comma-separated list of event types to audit.
-* **fullAuditLogsTableName**: string: The full audit logs table name.
-* **retentionDays**: string: The number of days to keep in the audit logs.
-* **storageAccountKey**: string: The key of the auditing storage account.
-* **storageAccountName**: string: The table storage account name
-* **storageAccountResourceGroupName**: string: The table storage account resource group name
-* **storageAccountSecondaryKey**: string: The secondary key of the auditing storage account.
-* **storageAccountSubscriptionId**: string: The table storage subscription Id.
-* **storageTableEndpoint**: string: The storage table endpoint.
-
-## ServerCommunicationLinkProperties
-### Properties
-* **partnerServer**: string (Required): The name of the partner server.
-* **state**: string (ReadOnly): The state.
-
-## ServerConnectionPolicyProperties
-### Properties
-* **connectionType**: 'Default' | 'Proxy' | 'Redirect' (Required): The server connection type.
+* **proxyDnsName**: string: The fully qualified host name of the auditing proxy.
+* **proxyPort**: string: The port number of the auditing proxy.
+* **redirectionState**: string: The state of proxy redirection.
+* **securityEnabledAccess**: string: The state of security access.
+* **state**: string: The connection policy state.
+* **useServerDefault**: string: Whether server default is enabled or disabled.
+* **visibility**: string: The visibility of the auditing proxy.
 
 ## DatabaseProperties
 ### Properties
@@ -315,6 +280,102 @@ The list of SKUs may vary by region and support offer. To determine the service 
 * **transparentDataEncryption**: [TransparentDataEncryption](#transparentdataencryption)[] (ReadOnly): The transparent data encryption info for this database.
 * **zoneRedundant**: bool: Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
 
+## DatabaseSecurityAlertPolicyProperties
+### Properties
+* **disabledAlerts**: string: Specifies the semicolon-separated list of alerts that are disabled, or empty string to disable no alerts. Possible values: Sql_Injection; Sql_Injection_Vulnerability; Access_Anomaly; Data_Exfiltration; Unsafe_Action.
+* **emailAccountAdmins**: 'Disabled' | 'Enabled': Specifies that the alert is sent to the account administrators.
+* **emailAddresses**: string: Specifies the semicolon-separated list of e-mail addresses to which the alert is sent.
+* **retentionDays**: int: Specifies the number of days to keep in the Threat Detection audit logs.
+* **state**: 'Disabled' | 'Enabled' | 'New' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint and storageAccountAccessKey are required.
+* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the Threat Detection audit storage account. If state is Enabled, storageAccountAccessKey is required.
+* **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs. If state is Enabled, storageEndpoint is required.
+* **useServerDefault**: 'Disabled' | 'Enabled': Specifies whether to use the default server policy.
+
+## DatabaseTableAuditingPolicyProperties
+### Properties
+* **auditingState**: string: The state of the policy.
+* **auditLogsTableName**: string: The audit logs table name.
+* **eventTypesToAudit**: string: Comma-separated list of event types to audit.
+* **fullAuditLogsTableName**: string: The full audit logs table name.
+* **retentionDays**: string: The number of days to keep in the audit logs.
+* **storageAccountKey**: string: The key of the auditing storage account.
+* **storageAccountName**: string: The table storage account name
+* **storageAccountResourceGroupName**: string: The table storage account resource group name
+* **storageAccountSecondaryKey**: string: The secondary key of the auditing storage account.
+* **storageAccountSubscriptionId**: string: The table storage subscription Id.
+* **storageTableEndpoint**: string: The storage table endpoint.
+* **useServerDefault**: string: Whether server default is enabled or disabled.
+
+## DataMaskingPolicyProperties
+### Properties
+* **applicationPrincipals**: string (ReadOnly): The list of the application principals. This is a legacy parameter and is no longer used.
+* **dataMaskingState**: 'Disabled' | 'Enabled' (Required): The state of the data masking policy.
+* **exemptPrincipals**: string: The list of the exempt principals. Specifies the semicolon-separated list of database users for which the data masking policy does not apply. The specified users receive data results without masking for all of the database queries.
+* **maskingLevel**: string (ReadOnly): The masking level. This is a legacy parameter and is no longer used.
+
+## DataMaskingRuleProperties
+### Properties
+* **aliasName**: string: The alias name. This is a legacy parameter and is no longer used.
+* **columnName**: string (Required): The column name on which the data masking rule is applied.
+* **id**: string (ReadOnly): The rule Id.
+* **maskingFunction**: 'CCN' | 'Default' | 'Email' | 'Number' | 'SSN' | 'Text' (Required): The masking function that is used for the data masking rule.
+* **numberFrom**: string: The numberFrom property of the masking rule. Required if maskingFunction is set to Number, otherwise this parameter will be ignored.
+* **numberTo**: string: The numberTo property of the data masking rule. Required if maskingFunction is set to Number, otherwise this parameter will be ignored.
+* **prefixSize**: string: If maskingFunction is set to Text, the number of characters to show unmasked in the beginning of the string. Otherwise, this parameter will be ignored.
+* **replacementString**: string: If maskingFunction is set to Text, the character to use for masking the unexposed part of the string. Otherwise, this parameter will be ignored.
+* **ruleState**: 'Disabled' | 'Enabled': The rule state. Used to delete a rule. To delete an existing rule, specify the schemaName, tableName, columnName, maskingFunction, and specify ruleState as disabled. However, if the rule doesn't already exist, the rule will be created with ruleState set to enabled, regardless of the provided value of ruleState.
+* **schemaName**: string (Required): The schema name on which the data masking rule is applied.
+* **suffixSize**: string: If maskingFunction is set to Text, the number of characters to show unmasked at the end of the string. Otherwise, this parameter will be ignored.
+* **tableName**: string (Required): The table name on which the data masking rule is applied.
+
+## DisasterRecoveryConfigurationProperties
+### Properties
+* **autoFailover**: 'Off' | 'On' | string (ReadOnly): Whether or not failover can be done automatically.
+* **failoverPolicy**: 'Automatic' | 'Manual' | string (ReadOnly): How aggressive the automatic failover should be.
+* **logicalServerName**: string (ReadOnly): Logical name of the server.
+* **partnerLogicalServerName**: string (ReadOnly): Logical name of the partner server.
+* **partnerServerId**: string (ReadOnly): Id of the partner server.
+* **role**: 'None' | 'Primary' | 'Secondary' | string (ReadOnly): The role of the current server in the disaster recovery configuration.
+* **status**: 'Creating' | 'Dropping' | 'FailingOver' | 'Ready' | string (ReadOnly): The status of the disaster recovery configuration.
+
+## ElasticPoolProperties
+### Properties
+* **creationDate**: string (ReadOnly): The creation date of the elastic pool (ISO8601 format).
+* **databaseDtuMax**: int: The maximum DTU any one database can consume.
+* **databaseDtuMin**: int: The minimum DTU all databases are guaranteed.
+* **dtu**: int: The total shared DTU for the database elastic pool.
+* **edition**: 'Basic' | 'BusinessCritical' | 'GeneralPurpose' | 'Premium' | 'Standard' | string: The edition of the recommended elastic pool. The ElasticPoolEdition enumeration contains all the valid editions.
+* **state**: 'Creating' | 'Disabled' | 'Ready' | string (ReadOnly): The state of the elastic pool.
+* **storageMB**: int: Gets storage limit for the database elastic pool in MB.
+* **zoneRedundant**: bool: Whether or not this database elastic pool is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
+
+## FirewallRuleProperties
+### Properties
+* **endIpAddress**: string (Required): The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value '0.0.0.0' to represent all Azure-internal IP addresses.
+* **startIpAddress**: string (Required): The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses.
+
+## GeoBackupPolicyProperties
+### Properties
+* **state**: 'Disabled' | 'Enabled' (Required): The state of the geo backup policy.
+* **storageType**: string (ReadOnly): The storage type of the geo backup policy.
+
+## ImportExtensionProperties
+### Properties
+* **administratorLogin**: string (Required, WriteOnly): The name of the SQL administrator.
+* **administratorLoginPassword**: string (Required, WriteOnly): The password of the SQL administrator.
+* **authenticationType**: 'ADPassword' | 'SQL' (WriteOnly): The authentication type.
+* **operationMode**: 'Import' (Required, WriteOnly): The type of import operation being performed. This is always Import.
+* **storageKey**: string (Required, WriteOnly): The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?."
+* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required, WriteOnly): The type of the storage key to use.
+* **storageUri**: string (Required, WriteOnly): The storage uri to use.
+
+## OperationImpact
+### Properties
+* **changeValueAbsolute**: int (ReadOnly): The absolute impact to dimension.
+* **changeValueRelative**: int (ReadOnly): The relative impact to dimension (null if not applicable)
+* **name**: string (ReadOnly): The name of the impact dimension.
+* **unit**: string (ReadOnly): The unit in which estimated impact to dimension is measured.
+
 ## RecommendedIndex
 ### Properties
 * **id**: string (ReadOnly): Resource ID.
@@ -337,12 +398,45 @@ The list of SKUs may vary by region and support offer. To determine the service 
 * **state**: 'Active' | 'Blocked' | 'Executing' | 'Expired' | 'Ignored' | 'Pending Revert' | 'Pending' | 'Reverted' | 'Reverting' | 'Success' | 'Verifying' (ReadOnly): The current recommendation state.
 * **table**: string (ReadOnly): The table on which to build index.
 
-## OperationImpact
+## ServerAdministratorProperties
 ### Properties
-* **changeValueAbsolute**: int (ReadOnly): The absolute impact to dimension.
-* **changeValueRelative**: int (ReadOnly): The relative impact to dimension (null if not applicable)
-* **name**: string (ReadOnly): The name of the impact dimension.
-* **unit**: string (ReadOnly): The unit in which estimated impact to dimension is measured.
+* **administratorType**: 'ActiveDirectory' (Required): The type of administrator.
+* **login**: string (Required): The server administrator login value.
+* **sid**: string (Required): The server administrator Sid (Secure ID).
+* **tenantId**: string (Required): The server Active Directory Administrator tenant id.
+
+## ServerCommunicationLinkProperties
+### Properties
+* **partnerServer**: string (Required): The name of the partner server.
+* **state**: string (ReadOnly): The state.
+
+## ServerConnectionPolicyProperties
+### Properties
+* **connectionType**: 'Default' | 'Proxy' | 'Redirect' (Required): The server connection type.
+
+## ServerProperties
+### Properties
+* **administratorLogin**: string: Administrator username for the server. Can only be specified when the server is being created (and is required for creation).
+* **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for server creation).
+* **externalAdministratorLogin**: string (ReadOnly): The display name of the Azure Active Directory object with admin permissions on this server. Legacy parameter, always null. To check for Active Directory admin, query .../servers/{serverName}/administrators
+* **externalAdministratorSid**: string (ReadOnly): The ID of the Active Azure Directory object with admin permissions on this server. Legacy parameter, always null. To check for Active Directory admin, query .../servers/{serverName}/administrators.
+* **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
+* **state**: 'Disabled' | 'Ready' (ReadOnly): The state of the server.
+* **version**: '12.0' | '2.0' | string: The version of the server.
+
+## ServerTableAuditingPolicyProperties
+### Properties
+* **auditingState**: string: The state of the policy.
+* **auditLogsTableName**: string: The audit logs table name.
+* **eventTypesToAudit**: string: Comma-separated list of event types to audit.
+* **fullAuditLogsTableName**: string: The full audit logs table name.
+* **retentionDays**: string: The number of days to keep in the audit logs.
+* **storageAccountKey**: string: The key of the auditing storage account.
+* **storageAccountName**: string: The table storage account name
+* **storageAccountResourceGroupName**: string: The table storage account resource group name
+* **storageAccountSecondaryKey**: string: The secondary key of the auditing storage account.
+* **storageAccountSubscriptionId**: string: The table storage subscription Id.
+* **storageTableEndpoint**: string: The storage table endpoint.
 
 ## ServiceTierAdvisor
 ### Properties
@@ -379,6 +473,21 @@ The list of SKUs may vary by region and support offer. To determine the service 
 * **serviceLevelObjective**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L' | string (ReadOnly): The serviceLevelObjective for SLO usage metric.
 * **serviceLevelObjectiveId**: string (ReadOnly): The serviceLevelObjectiveId for SLO usage metric.
 
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## TransparentDataEncryption
 ### Properties
 * **id**: string (ReadOnly): Resource ID.
@@ -390,113 +499,4 @@ The list of SKUs may vary by region and support offer. To determine the service 
 ## TransparentDataEncryptionProperties
 ### Properties
 * **status**: 'Disabled' | 'Enabled': The status of the database transparent data encryption.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## DatabaseTableAuditingPolicyProperties
-### Properties
-* **auditingState**: string: The state of the policy.
-* **auditLogsTableName**: string: The audit logs table name.
-* **eventTypesToAudit**: string: Comma-separated list of event types to audit.
-* **fullAuditLogsTableName**: string: The full audit logs table name.
-* **retentionDays**: string: The number of days to keep in the audit logs.
-* **storageAccountKey**: string: The key of the auditing storage account.
-* **storageAccountName**: string: The table storage account name
-* **storageAccountResourceGroupName**: string: The table storage account resource group name
-* **storageAccountSecondaryKey**: string: The secondary key of the auditing storage account.
-* **storageAccountSubscriptionId**: string: The table storage subscription Id.
-* **storageTableEndpoint**: string: The storage table endpoint.
-* **useServerDefault**: string: Whether server default is enabled or disabled.
-
-## DatabaseConnectionPolicyProperties
-### Properties
-* **proxyDnsName**: string: The fully qualified host name of the auditing proxy.
-* **proxyPort**: string: The port number of the auditing proxy.
-* **redirectionState**: string: The state of proxy redirection.
-* **securityEnabledAccess**: string: The state of security access.
-* **state**: string: The connection policy state.
-* **useServerDefault**: string: Whether server default is enabled or disabled.
-* **visibility**: string: The visibility of the auditing proxy.
-
-## DataMaskingPolicyProperties
-### Properties
-* **applicationPrincipals**: string (ReadOnly): The list of the application principals. This is a legacy parameter and is no longer used.
-* **dataMaskingState**: 'Disabled' | 'Enabled' (Required): The state of the data masking policy.
-* **exemptPrincipals**: string: The list of the exempt principals. Specifies the semicolon-separated list of database users for which the data masking policy does not apply. The specified users receive data results without masking for all of the database queries.
-* **maskingLevel**: string (ReadOnly): The masking level. This is a legacy parameter and is no longer used.
-
-## DataMaskingRuleProperties
-### Properties
-* **aliasName**: string: The alias name. This is a legacy parameter and is no longer used.
-* **columnName**: string (Required): The column name on which the data masking rule is applied.
-* **id**: string (ReadOnly): The rule Id.
-* **maskingFunction**: 'CCN' | 'Default' | 'Email' | 'Number' | 'SSN' | 'Text' (Required): The masking function that is used for the data masking rule.
-* **numberFrom**: string: The numberFrom property of the masking rule. Required if maskingFunction is set to Number, otherwise this parameter will be ignored.
-* **numberTo**: string: The numberTo property of the data masking rule. Required if maskingFunction is set to Number, otherwise this parameter will be ignored.
-* **prefixSize**: string: If maskingFunction is set to Text, the number of characters to show unmasked in the beginning of the string. Otherwise, this parameter will be ignored.
-* **replacementString**: string: If maskingFunction is set to Text, the character to use for masking the unexposed part of the string. Otherwise, this parameter will be ignored.
-* **ruleState**: 'Disabled' | 'Enabled': The rule state. Used to delete a rule. To delete an existing rule, specify the schemaName, tableName, columnName, maskingFunction, and specify ruleState as disabled. However, if the rule doesn't already exist, the rule will be created with ruleState set to enabled, regardless of the provided value of ruleState.
-* **schemaName**: string (Required): The schema name on which the data masking rule is applied.
-* **suffixSize**: string: If maskingFunction is set to Text, the number of characters to show unmasked at the end of the string. Otherwise, this parameter will be ignored.
-* **tableName**: string (Required): The table name on which the data masking rule is applied.
-
-## ImportExtensionProperties
-### Properties
-* **administratorLogin**: string (Required, WriteOnly): The name of the SQL administrator.
-* **administratorLoginPassword**: string (Required, WriteOnly): The password of the SQL administrator.
-* **authenticationType**: 'ADPassword' | 'SQL' (WriteOnly): The authentication type.
-* **operationMode**: 'Import' (Required, WriteOnly): The type of import operation being performed. This is always Import.
-* **storageKey**: string (Required, WriteOnly): The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?."
-* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required, WriteOnly): The type of the storage key to use.
-* **storageUri**: string (Required, WriteOnly): The storage uri to use.
-
-## GeoBackupPolicyProperties
-### Properties
-* **state**: 'Disabled' | 'Enabled' (Required): The state of the geo backup policy.
-* **storageType**: string (ReadOnly): The storage type of the geo backup policy.
-
-## DatabaseSecurityAlertPolicyProperties
-### Properties
-* **disabledAlerts**: string: Specifies the semicolon-separated list of alerts that are disabled, or empty string to disable no alerts. Possible values: Sql_Injection; Sql_Injection_Vulnerability; Access_Anomaly; Data_Exfiltration; Unsafe_Action.
-* **emailAccountAdmins**: 'Disabled' | 'Enabled': Specifies that the alert is sent to the account administrators.
-* **emailAddresses**: string: Specifies the semicolon-separated list of e-mail addresses to which the alert is sent.
-* **retentionDays**: int: Specifies the number of days to keep in the Threat Detection audit logs.
-* **state**: 'Disabled' | 'Enabled' | 'New' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint and storageAccountAccessKey are required.
-* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the Threat Detection audit storage account. If state is Enabled, storageAccountAccessKey is required.
-* **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs. If state is Enabled, storageEndpoint is required.
-* **useServerDefault**: 'Disabled' | 'Enabled': Specifies whether to use the default server policy.
-
-## DisasterRecoveryConfigurationProperties
-### Properties
-* **autoFailover**: 'Off' | 'On' | string (ReadOnly): Whether or not failover can be done automatically.
-* **failoverPolicy**: 'Automatic' | 'Manual' | string (ReadOnly): How aggressive the automatic failover should be.
-* **logicalServerName**: string (ReadOnly): Logical name of the server.
-* **partnerLogicalServerName**: string (ReadOnly): Logical name of the partner server.
-* **partnerServerId**: string (ReadOnly): Id of the partner server.
-* **role**: 'None' | 'Primary' | 'Secondary' | string (ReadOnly): The role of the current server in the disaster recovery configuration.
-* **status**: 'Creating' | 'Dropping' | 'FailingOver' | 'Ready' | string (ReadOnly): The status of the disaster recovery configuration.
-
-## ElasticPoolProperties
-### Properties
-* **creationDate**: string (ReadOnly): The creation date of the elastic pool (ISO8601 format).
-* **databaseDtuMax**: int: The maximum DTU any one database can consume.
-* **databaseDtuMin**: int: The minimum DTU all databases are guaranteed.
-* **dtu**: int: The total shared DTU for the database elastic pool.
-* **edition**: 'Basic' | 'BusinessCritical' | 'GeneralPurpose' | 'Premium' | 'Standard' | string: The edition of the recommended elastic pool. The ElasticPoolEdition enumeration contains all the valid editions.
-* **state**: 'Creating' | 'Disabled' | 'Ready' | string (ReadOnly): The state of the elastic pool.
-* **storageMB**: int: Gets storage limit for the database elastic pool in MB.
-* **zoneRedundant**: bool: Whether or not this database elastic pool is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## FirewallRuleProperties
-### Properties
-* **endIpAddress**: string (Required): The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value '0.0.0.0' to represent all Azure-internal IP addresses.
-* **startIpAddress**: string (Required): The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses.
 

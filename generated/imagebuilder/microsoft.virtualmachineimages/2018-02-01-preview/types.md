@@ -11,15 +11,6 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.VirtualMachineImages/imageTemplates' (ReadOnly, DeployTimeConstant): The resource type
 
-## ImageTemplateProperties
-### Properties
-* **customize**: [ImageTemplateCustomizer](#imagetemplatecustomizer)[]: Specifies the properties used to describe the customization steps of the image, like Image source etc
-* **distribute**: [ImageTemplateDistributor](#imagetemplatedistributor)[] (Required): The distribution targets where the image output needs to go to.
-* **lastRunStatus**: [ImageTemplateLastRunStatus](#imagetemplatelastrunstatus) (ReadOnly)
-* **provisioningError**: [ProvisioningError](#provisioningerror) (ReadOnly)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource
-* **source**: [ImageTemplateSource](#imagetemplatesource) (Required)
-
 ## ImageTemplateCustomizer
 * **Discriminator**: type
 
@@ -63,10 +54,14 @@
 * **runSubState**: 'building' | 'customizing' | 'distributing' | 'queued' | string: Sub state of the last run
 * **startTime**: string: Start time of the last run (UTC)
 
-## ProvisioningError
+## ImageTemplateProperties
 ### Properties
-* **message**: string: Verbose error message about the provisioning failure
-* **provisioningErrorCode**: 'BadCustomizerType' | 'BadISOSource' | 'BadPIRSource' | 'BadSourceType' | 'NoCustomizerShellScript' | 'Other' | 'ServerError' | string: Error code of the provisioning failure
+* **customize**: [ImageTemplateCustomizer](#imagetemplatecustomizer)[]: Specifies the properties used to describe the customization steps of the image, like Image source etc
+* **distribute**: [ImageTemplateDistributor](#imagetemplatedistributor)[] (Required): The distribution targets where the image output needs to go to.
+* **lastRunStatus**: [ImageTemplateLastRunStatus](#imagetemplatelastrunstatus) (ReadOnly)
+* **provisioningError**: [ProvisioningError](#provisioningerror) (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource
+* **source**: [ImageTemplateSource](#imagetemplatesource) (Required)
 
 ## ImageTemplateSource
 * **Discriminator**: type
@@ -86,6 +81,11 @@
 * **type**: 'PlatformImage' (Required): Specifies the type of source image you want to start with.
 * **version**: string: Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
 
+
+## ProvisioningError
+### Properties
+* **message**: string: Verbose error message about the provisioning failure
+* **provisioningErrorCode**: 'BadCustomizerType' | 'BadISOSource' | 'BadPIRSource' | 'BadSourceType' | 'NoCustomizerShellScript' | 'Other' | 'ServerError' | string: Error code of the provisioning failure
 
 ## ResourceTags
 ### Properties

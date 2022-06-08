@@ -60,12 +60,29 @@
 * **status**: string: Status of the Active Directory
 * **username**: string: Username of Active Directory domain administrator
 
+## ExportPolicyRule
+### Properties
+* **allowedClients**: string: Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names
+* **cifs**: bool: Allows CIFS protocol
+* **nfsv3**: bool: Allows NFSv3 protocol
+* **nfsv4**: bool: Allows NFSv4 protocol
+* **ruleIndex**: int: Order index
+* **unixReadOnly**: bool: Read only access
+* **unixReadWrite**: bool: Read and write access
+
 ## PoolProperties
 ### Properties
 * **poolId**: string (ReadOnly): UUID v4 used to identify the Pool
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' | string: The service level of the file system
 * **size**: int: Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
+
+## SnapshotProperties
+### Properties
+* **creationDate**: string (ReadOnly): The creation date of the snapshot
+* **fileSystemId**: string (Required): UUID v4 used to identify the FileSystem
+* **provisioningState**: string (ReadOnly): Azure lifecycle management
+* **snapshotId**: string (ReadOnly): UUID v4 used to identify the Snapshot
 
 ## VolumeProperties
 ### Properties
@@ -80,21 +97,4 @@
 ## VolumePropertiesExportPolicy
 ### Properties
 * **rules**: [ExportPolicyRule](#exportpolicyrule)[]: Array of exportPolicyRule
-
-## ExportPolicyRule
-### Properties
-* **allowedClients**: string: Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names
-* **cifs**: bool: Allows CIFS protocol
-* **nfsv3**: bool: Allows NFSv3 protocol
-* **nfsv4**: bool: Allows NFSv4 protocol
-* **ruleIndex**: int: Order index
-* **unixReadOnly**: bool: Read only access
-* **unixReadWrite**: bool: Read and write access
-
-## SnapshotProperties
-### Properties
-* **creationDate**: string (ReadOnly): The creation date of the snapshot
-* **fileSystemId**: string (Required): UUID v4 used to identify the FileSystem
-* **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **snapshotId**: string (ReadOnly): UUID v4 used to identify the Snapshot
 

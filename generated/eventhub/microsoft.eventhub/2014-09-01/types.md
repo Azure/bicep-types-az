@@ -52,30 +52,12 @@
 * **properties**: [ConsumerGroupProperties](#consumergroupproperties): Properties supplied to the Create Or Update Consumer Group operation.
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## NamespaceProperties
+## ConsumerGroupProperties
 ### Properties
-* **createdAt**: string: The time the Namespace was created.
-* **enabled**: bool: Specifies whether this instance is enabled.
-* **metricId**: string (ReadOnly): Identifier for Azure Insights metrics
-* **provisioningState**: string: Provisioning state of the Namespace.
-* **serviceBusEndpoint**: string: Endpoint you can use to perform Service Bus operations.
-* **status**: 'Activating' | 'Active' | 'Created' | 'Creating' | 'Disabled' | 'Disabling' | 'Enabling' | 'Failed' | 'Removed' | 'Removing' | 'SoftDeleted' | 'SoftDeleting' | 'Unknown': State of the Namespace.
-* **updatedAt**: string: The time the Namespace was updated.
-
-## Sku
-### Properties
-* **capacity**: int: The Event Hubs throughput units.
-* **name**: 'Basic' | 'Standard' | string: Name of this SKU.
-* **tier**: 'Basic' | 'Premium' | 'Standard' | string (Required): The billing tier of this particular SKU.
-
-## NamespaceCreateOrUpdateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## SharedAccessAuthorizationRuleProperties
-### Properties
-* **rights**: 'Listen' | 'Manage' | 'Send'[] (Required): The rights associated with the rule.
+* **createdAt**: string (ReadOnly): Exact time the message was created.
+* **eventHubPath**: string (ReadOnly): The path of the Event Hub.
+* **updatedAt**: string (ReadOnly): The exact time the message was updated.
+* **userMetadata**: string: The user metadata.
 
 ## EventHubProperties
 ### Properties
@@ -86,10 +68,28 @@
 * **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of the Event Hub.
 * **updatedAt**: string (ReadOnly): The exact time the message was updated.
 
-## ConsumerGroupProperties
+## NamespaceCreateOrUpdateParametersTags
 ### Properties
-* **createdAt**: string (ReadOnly): Exact time the message was created.
-* **eventHubPath**: string (ReadOnly): The path of the Event Hub.
-* **updatedAt**: string (ReadOnly): The exact time the message was updated.
-* **userMetadata**: string: The user metadata.
+### Additional Properties
+* **Additional Properties Type**: string
+
+## NamespaceProperties
+### Properties
+* **createdAt**: string: The time the Namespace was created.
+* **enabled**: bool: Specifies whether this instance is enabled.
+* **metricId**: string (ReadOnly): Identifier for Azure Insights metrics
+* **provisioningState**: string: Provisioning state of the Namespace.
+* **serviceBusEndpoint**: string: Endpoint you can use to perform Service Bus operations.
+* **status**: 'Activating' | 'Active' | 'Created' | 'Creating' | 'Disabled' | 'Disabling' | 'Enabling' | 'Failed' | 'Removed' | 'Removing' | 'SoftDeleted' | 'SoftDeleting' | 'Unknown': State of the Namespace.
+* **updatedAt**: string: The time the Namespace was updated.
+
+## SharedAccessAuthorizationRuleProperties
+### Properties
+* **rights**: 'Listen' | 'Manage' | 'Send'[] (Required): The rights associated with the rule.
+
+## Sku
+### Properties
+* **capacity**: int: The Event Hubs throughput units.
+* **name**: 'Basic' | 'Standard' | string: Name of this SKU.
+* **tier**: 'Basic' | 'Premium' | 'Standard' | string (Required): The billing tier of this particular SKU.
 

@@ -28,11 +28,6 @@
 * **timeCreated**: string (ReadOnly): Creation Date for the Log Analytics QueryPack, in ISO 8601 format.
 * **timeModified**: string (ReadOnly): Last modified date of the Log Analytics QueryPack, in ISO 8601 format.
 
-## QueryPacksResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## LogAnalyticsQueryPackQueryProperties
 ### Properties
 * **author**: string (ReadOnly): Object Id of user creating the query.
@@ -56,6 +51,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
+
+## QueryPacksResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## SystemData
 ### Properties

@@ -16,17 +16,6 @@
 * **ApiVersion**: 2021-09-30-preview
 * **Output**: [AssociatedResourcesListResult](#associatedresourceslistresult)
 
-## UserAssignedIdentityProperties
-### Properties
-* **clientId**: string (ReadOnly): The id of the app associated with the identity. This is a random generated UUID by MSI.
-* **principalId**: string (ReadOnly): The id of the service principal object associated with the created identity.
-* **tenantId**: string (ReadOnly): The id of the tenant which the identity belongs to.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## AssociatedResourcesListResult
 ### Properties
 * **nextLink**: string (ReadOnly): The url to get the next page of results, if any.
@@ -41,4 +30,15 @@
 * **subscriptionDisplayName**: string (ReadOnly): The name of the subscription this resource belongs to.
 * **subscriptionId**: string (ReadOnly): The ID of the subscription this resource belongs to.
 * **type**: string (ReadOnly): The type of this resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## UserAssignedIdentityProperties
+### Properties
+* **clientId**: string (ReadOnly): The id of the app associated with the identity. This is a random generated UUID by MSI.
+* **principalId**: string (ReadOnly): The id of the service principal object associated with the created identity.
+* **tenantId**: string (ReadOnly): The id of the tenant which the identity belongs to.
 

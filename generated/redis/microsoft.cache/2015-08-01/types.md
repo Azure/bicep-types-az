@@ -16,6 +16,11 @@
 * **ApiVersion**: 2015-08-01
 * **Output**: [RedisListKeysResult](#redislistkeysresult)
 
+## RedisListKeysResult
+### Properties
+* **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
+* **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
+
 ## RedisProperties
 ### Properties
 * **enableNonSslPort**: bool: If the value is true, then the non-SLL Redis server port (6379) will be enabled.
@@ -37,12 +42,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Sku
-### Properties
-* **capacity**: int (Required): What size of Redis cache to deploy. Valid values: for C family (0, 1, 2, 3, 4, 5, 6), for P family (1, 2, 3, 4).
-* **family**: 'C' | 'P' | string (Required): Which family to use. Valid values: (C, P).
-* **name**: 'Basic' | 'Premium' | 'Standard' | string (Required): What type of Redis cache to deploy. Valid values: (Basic, Standard, Premium).
-
 ## RedisPropertiesTenantSettings
 ### Properties
 ### Additional Properties
@@ -53,8 +52,9 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## RedisListKeysResult
+## Sku
 ### Properties
-* **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
-* **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
+* **capacity**: int (Required): What size of Redis cache to deploy. Valid values: for C family (0, 1, 2, 3, 4, 5, 6), for P family (1, 2, 3, 4).
+* **family**: 'C' | 'P' | string (Required): Which family to use. Valid values: (C, P).
+* **name**: 'Basic' | 'Premium' | 'Standard' | string (Required): What type of Redis cache to deploy. Valid values: (Basic, Standard, Premium).
 

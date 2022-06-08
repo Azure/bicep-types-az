@@ -22,18 +22,6 @@
 * **ApiVersion**: 2022-04-01
 * **Output**: [OpenShiftClusterCredentials](#openshiftclustercredentials)
 
-## OpenShiftClusterProperties
-### Properties
-* **apiserverProfile**: [APIServerProfile](#apiserverprofile): APIServerProfile represents an API server profile.
-* **clusterProfile**: [ClusterProfile](#clusterprofile): ClusterProfile represents a cluster profile.
-* **consoleProfile**: [ConsoleProfile](#consoleprofile): ConsoleProfile represents a console profile.
-* **ingressProfiles**: [IngressProfile](#ingressprofile)[]: The cluster ingress profiles.
-* **masterProfile**: [MasterProfile](#masterprofile): MasterProfile represents a master profile.
-* **networkProfile**: [NetworkProfile](#networkprofile): NetworkProfile represents a network profile.
-* **provisioningState**: 'AdminUpdating' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ProvisioningState represents a provisioning state.
-* **servicePrincipalProfile**: [ServicePrincipalProfile](#serviceprincipalprofile): ServicePrincipalProfile represents a service principal profile.
-* **workerProfiles**: [WorkerProfile](#workerprofile)[]: The cluster worker profiles.
-
 ## APIServerProfile
 ### Properties
 * **ip**: string: The IP of the cluster API server.
@@ -72,22 +60,31 @@ For more details on restricted VM sizes, see: https://docs.microsoft.com/en-us/a
 * **podCidr**: string: The CIDR used for OpenShift/Kubernetes Pods.
 * **serviceCidr**: string: The CIDR used for OpenShift/Kubernetes Services.
 
+## OpenShiftClusterAdminKubeconfig
+### Properties
+* **kubeconfig**: string (ReadOnly): The base64-encoded kubeconfig file.
+
+## OpenShiftClusterCredentials
+### Properties
+* **kubeadminPassword**: string (ReadOnly): The password for the kubeadmin user.
+* **kubeadminUsername**: string (ReadOnly): The username for the kubeadmin user.
+
+## OpenShiftClusterProperties
+### Properties
+* **apiserverProfile**: [APIServerProfile](#apiserverprofile): APIServerProfile represents an API server profile.
+* **clusterProfile**: [ClusterProfile](#clusterprofile): ClusterProfile represents a cluster profile.
+* **consoleProfile**: [ConsoleProfile](#consoleprofile): ConsoleProfile represents a console profile.
+* **ingressProfiles**: [IngressProfile](#ingressprofile)[]: The cluster ingress profiles.
+* **masterProfile**: [MasterProfile](#masterprofile): MasterProfile represents a master profile.
+* **networkProfile**: [NetworkProfile](#networkprofile): NetworkProfile represents a network profile.
+* **provisioningState**: 'AdminUpdating' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ProvisioningState represents a provisioning state.
+* **servicePrincipalProfile**: [ServicePrincipalProfile](#serviceprincipalprofile): ServicePrincipalProfile represents a service principal profile.
+* **workerProfiles**: [WorkerProfile](#workerprofile)[]: The cluster worker profiles.
+
 ## ServicePrincipalProfile
 ### Properties
 * **clientId**: string: The client ID used for the cluster.
 * **clientSecret**: string: The client secret used for the cluster.
-
-## WorkerProfile
-### Properties
-* **count**: int: The number of worker VMs.
-* **diskEncryptionSetId**: string: The resource ID of an associated DiskEncryptionSet, if applicable.
-* **diskSizeGB**: int: The disk size of the worker VMs.
-* **encryptionAtHost**: 'Disabled' | 'Enabled' | string: EncryptionAtHost represents encryption at host state
-* **name**: string: The worker profile name.
-* **subnetId**: string: The Azure resource ID of the worker subnet.
-* **vmSize**: string: VM size availability varies by region.
-If a node contains insufficient compute resources (memory, cpu, etc.), pods might fail to run correctly.
-For more details on restricted VM sizes, see: https://docs.microsoft.com/en-us/azure/openshift/support-policies-v4#supported-virtual-machine-sizes
 
 ## SystemData
 ### Properties
@@ -103,12 +100,15 @@ For more details on restricted VM sizes, see: https://docs.microsoft.com/en-us/a
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## OpenShiftClusterAdminKubeconfig
+## WorkerProfile
 ### Properties
-* **kubeconfig**: string (ReadOnly): The base64-encoded kubeconfig file.
-
-## OpenShiftClusterCredentials
-### Properties
-* **kubeadminPassword**: string (ReadOnly): The password for the kubeadmin user.
-* **kubeadminUsername**: string (ReadOnly): The username for the kubeadmin user.
+* **count**: int: The number of worker VMs.
+* **diskEncryptionSetId**: string: The resource ID of an associated DiskEncryptionSet, if applicable.
+* **diskSizeGB**: int: The disk size of the worker VMs.
+* **encryptionAtHost**: 'Disabled' | 'Enabled' | string: EncryptionAtHost represents encryption at host state
+* **name**: string: The worker profile name.
+* **subnetId**: string: The Azure resource ID of the worker subnet.
+* **vmSize**: string: VM size availability varies by region.
+If a node contains insufficient compute resources (memory, cpu, etc.), pods might fail to run correctly.
+For more details on restricted VM sizes, see: https://docs.microsoft.com/en-us/azure/openshift/support-policies-v4#supported-virtual-machine-sizes
 

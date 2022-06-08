@@ -38,19 +38,15 @@
 * **name**: string (Required): Name of the SKU level.
 * **tier**: 'AutoScale' | string: The name of the Azure pricing tier to which the SKU applies.
 
-## SystemData
+## CapacitySku
 ### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC)
-* **createdBy**: string: An identifier for the identity that created the resource
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created/modified the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: An identifier for the identity that last modified the resource
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created/modified the resource.
+* **capacity**: int: The capacity of the SKU.
+* **name**: string (Required): Name of the SKU level.
+* **tier**: 'AutoPremiumHost' | 'PBIE_Azure' | 'Premium' | string: The name of the Azure pricing tier to which the SKU applies.
 
-## ResourceTags
+## DedicatedCapacityAdministrators
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **members**: string[]: An array of administrator user identities.
 
 ## DedicatedCapacityProperties
 ### Properties
@@ -61,18 +57,22 @@
 * **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' | string (ReadOnly): The current state of PowerBI Dedicated resource. The state is to indicate more states outside of resource provisioning.
 * **tenantId**: string (ReadOnly): Tenant ID for the capacity. Used for creating Pro Plus capacity.
 
-## DedicatedCapacityAdministrators
+## ResourceTags
 ### Properties
-* **members**: string[]: An array of administrator user identities.
-
-## CapacitySku
-### Properties
-* **capacity**: int: The capacity of the SKU.
-* **name**: string (Required): Name of the SKU level.
-* **tier**: 'AutoPremiumHost' | 'PBIE_Azure' | 'Premium' | string: The name of the Azure pricing tier to which the SKU applies.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC)
+* **createdBy**: string: An identifier for the identity that created the resource
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created/modified the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: An identifier for the identity that last modified the resource
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created/modified the resource.
 

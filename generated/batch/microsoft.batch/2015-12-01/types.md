@@ -42,25 +42,6 @@
 * **ApiVersion**: 2015-12-01
 * **Output**: [BatchAccountKeys](#batchaccountkeys)
 
-## BatchAccountBaseProperties
-### Properties
-* **accountEndpoint**: string (ReadOnly): The endpoint used by this account to interact with the Batch services.
-* **activeJobAndJobScheduleQuota**: int (ReadOnly): The active job and job schedule quota for this Batch account.
-* **autoStorage**: [AutoStorageBaseProperties](#autostoragebaseproperties): The properties related to auto storage account.
-* **coreQuota**: int (ReadOnly): The core quota for this Batch account.
-* **poolQuota**: int (ReadOnly): The pool quota for this Batch account.
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Succeeded' (ReadOnly): The provisioned state of the resource
-
-## AutoStorageBaseProperties
-### Properties
-* **lastKeySync**: string (ReadOnly): The UTC time at which storage keys were last synchronized with the Batch account.
-* **storageAccountId**: string (Required): The resource ID of the storage account to be used for auto storage account.
-
-## BatchAccountCreateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ApplicationPackage
 ### Properties
 * **format**: string (ReadOnly): The format of the application package, if the package is active.
@@ -70,6 +51,25 @@
 * **storageUrl**: string (ReadOnly): The storage URL at which the application package is stored.
 * **storageUrlExpiry**: string (ReadOnly): The UTC time at which the storage URL will expire.
 * **version**: string (ReadOnly): The version of the application package.
+
+## AutoStorageBaseProperties
+### Properties
+* **lastKeySync**: string (ReadOnly): The UTC time at which storage keys were last synchronized with the Batch account.
+* **storageAccountId**: string (Required): The resource ID of the storage account to be used for auto storage account.
+
+## BatchAccountBaseProperties
+### Properties
+* **accountEndpoint**: string (ReadOnly): The endpoint used by this account to interact with the Batch services.
+* **activeJobAndJobScheduleQuota**: int (ReadOnly): The active job and job schedule quota for this Batch account.
+* **autoStorage**: [AutoStorageBaseProperties](#autostoragebaseproperties): The properties related to auto storage account.
+* **coreQuota**: int (ReadOnly): The core quota for this Batch account.
+* **poolQuota**: int (ReadOnly): The pool quota for this Batch account.
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Succeeded' (ReadOnly): The provisioned state of the resource
+
+## BatchAccountCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## BatchAccountKeys
 ### Properties

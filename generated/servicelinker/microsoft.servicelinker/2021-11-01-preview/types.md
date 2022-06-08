@@ -15,15 +15,6 @@
 * **ApiVersion**: 2021-11-01-preview
 * **Output**: [SourceConfigurationResult](#sourceconfigurationresult)
 
-## LinkerProperties
-### Properties
-* **authInfo**: [AuthInfoBase](#authinfobase): The authentication info
-* **clientType**: 'django' | 'dotnet' | 'go' | 'java' | 'nodejs' | 'none' | 'php' | 'python' | 'ruby' | 'springBoot' | string: The application client type
-* **provisioningState**: string (ReadOnly): The provisioning state.
-* **secretStore**: [SecretStore](#secretstore): An option to store secret value in secure place
-* **targetId**: string: The resource Id of target service.
-* **vNetSolution**: [VNetSolution](#vnetsolution): The VNet solution for linker
-
 ## AuthInfoBase
 * **Discriminator**: authType
 
@@ -59,13 +50,27 @@
 * **subscriptionId**: string (Required): Subscription id for userAssignedIdentity.
 
 
+## LinkerProperties
+### Properties
+* **authInfo**: [AuthInfoBase](#authinfobase): The authentication info
+* **clientType**: 'django' | 'dotnet' | 'go' | 'java' | 'nodejs' | 'none' | 'php' | 'python' | 'ruby' | 'springBoot' | string: The application client type
+* **provisioningState**: string (ReadOnly): The provisioning state.
+* **secretStore**: [SecretStore](#secretstore): An option to store secret value in secure place
+* **targetId**: string: The resource Id of target service.
+* **vNetSolution**: [VNetSolution](#vnetsolution): The VNet solution for linker
+
 ## SecretStore
 ### Properties
 * **keyVaultId**: string: The key vault id to store secret
 
-## VNetSolution
+## SourceConfiguration
 ### Properties
-* **type**: 'privateLink' | 'serviceEndpoint' | string: Type of VNet solution.
+* **name**: string (ReadOnly): The name of setting.
+* **value**: string (ReadOnly): The value of setting
+
+## SourceConfigurationResult
+### Properties
+* **configurations**: [SourceConfiguration](#sourceconfiguration)[] (ReadOnly): The configuration properties for source resource.
 
 ## SystemData
 ### Properties
@@ -76,12 +81,7 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
-## SourceConfigurationResult
+## VNetSolution
 ### Properties
-* **configurations**: [SourceConfiguration](#sourceconfiguration)[] (ReadOnly): The configuration properties for source resource.
-
-## SourceConfiguration
-### Properties
-* **name**: string (ReadOnly): The name of setting.
-* **value**: string (ReadOnly): The value of setting
+* **type**: 'privateLink' | 'serviceEndpoint' | string: Type of VNet solution.
 

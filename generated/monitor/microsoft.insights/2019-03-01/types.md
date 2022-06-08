@@ -57,6 +57,11 @@
 * **name**: string (Required): The name of the azure function receiver. Names must be unique across all receivers within an action group.
 * **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
 
+## AzureResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## EmailReceiver
 ### Properties
 * **emailAddress**: string (Required): The email address of this receiver.
@@ -97,9 +102,4 @@
 * **name**: string (Required): The name of the webhook receiver. Names must be unique across all receivers within an action group.
 * **serviceUri**: string (Required): The URI where webhooks should be sent.
 * **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
-
-## AzureResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

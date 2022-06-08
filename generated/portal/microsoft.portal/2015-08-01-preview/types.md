@@ -11,16 +11,6 @@
 * **tags**: [DashboardTags](#dashboardtags): Resource tags
 * **type**: 'Microsoft.Portal/dashboards' (ReadOnly, DeployTimeConstant): The resource type
 
-## DashboardProperties
-### Properties
-* **lenses**: [DashboardPropertiesLenses](#dashboardpropertieslenses): The dashboard lenses.
-* **metadata**: [DashboardPropertiesMetadata](#dashboardpropertiesmetadata): The dashboard metadata.
-
-## DashboardPropertiesLenses
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [DashboardLens](#dashboardlens)
-
 ## DashboardLens
 ### Properties
 * **metadata**: [DashboardLensMetadata](#dashboardlensmetadata): The dashboard len's metadata.
@@ -37,15 +27,15 @@
 ### Additional Properties
 * **Additional Properties Type**: [DashboardParts](#dashboardparts)
 
-## DashboardParts
-### Properties
-* **metadata**: [DashboardPartMetadata](#dashboardpartmetadata): A dashboard part metadata.
-* **position**: [DashboardPartsPosition](#dashboardpartsposition) (Required): The dashboard's part position.
-
 ## DashboardPartMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## DashboardParts
+### Properties
+* **metadata**: [DashboardPartMetadata](#dashboardpartmetadata): A dashboard part metadata.
+* **position**: [DashboardPartsPosition](#dashboardpartsposition) (Required): The dashboard's part position.
 
 ## DashboardPartsPosition
 ### Properties
@@ -59,6 +49,16 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## DashboardProperties
+### Properties
+* **lenses**: [DashboardPropertiesLenses](#dashboardpropertieslenses): The dashboard lenses.
+* **metadata**: [DashboardPropertiesMetadata](#dashboardpropertiesmetadata): The dashboard metadata.
+
+## DashboardPropertiesLenses
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [DashboardLens](#dashboardlens)
 
 ## DashboardPropertiesMetadata
 ### Properties

@@ -47,10 +47,17 @@
 * **properties**: [ServerEndpointCreateParametersProperties](#serverendpointcreateparametersproperties): ServerEndpoint Properties object.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## StorageSyncServiceCreateParametersTags
+## CloudEndpointCreateParametersProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **azureFileShareName**: string: Azure file share name
+* **backupEnabled**: string (ReadOnly): Backup Enabled
+* **friendlyName**: string: Friendly Name
+* **lastOperationName**: string (ReadOnly): Resource Last Operation Name
+* **lastWorkflowId**: string (ReadOnly): CloudEndpoint lastWorkflowId
+* **partnershipId**: string (ReadOnly): Partnership Id
+* **provisioningState**: string (ReadOnly): CloudEndpoint Provisioning State
+* **storageAccountResourceId**: string: Storage Account Resource Id
+* **storageAccountTenantId**: string: Storage Account Tenant Id
 
 ## RegisteredServerCreateParametersProperties
 ### Properties
@@ -74,17 +81,12 @@
 * **serviceLocation**: string (ReadOnly): Service Location
 * **storageSyncServiceUid**: string (ReadOnly): Registered Server storageSyncServiceUid
 
-## CloudEndpointCreateParametersProperties
+## ServerEndpointCloudTieringStatus
 ### Properties
-* **azureFileShareName**: string: Azure file share name
-* **backupEnabled**: string (ReadOnly): Backup Enabled
-* **friendlyName**: string: Friendly Name
-* **lastOperationName**: string (ReadOnly): Resource Last Operation Name
-* **lastWorkflowId**: string (ReadOnly): CloudEndpoint lastWorkflowId
-* **partnershipId**: string (ReadOnly): Partnership Id
-* **provisioningState**: string (ReadOnly): CloudEndpoint Provisioning State
-* **storageAccountResourceId**: string: Storage Account Resource Id
-* **storageAccountTenantId**: string: Storage Account Tenant Id
+* **health**: 'Error' | 'Healthy' | string (ReadOnly): Type of the cloud tiering health state
+* **lastCloudTieringResult**: int (ReadOnly): Last cloud tiering result (HResult)
+* **lastSuccessTimestamp**: string (ReadOnly): Last cloud tiering success timestamp
+* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
 
 ## ServerEndpointCreateParametersProperties
 ### Properties
@@ -105,37 +107,22 @@
 * **tierFilesOlderThanDays**: int: Tier files older than days.
 * **volumeFreeSpacePercent**: int: Level of free space to be maintained by Cloud Tiering if it is enabled.
 
-## ServerEndpointCloudTieringStatus
+## ServerEndpointFilesNotSyncingError
 ### Properties
-* **health**: 'Error' | 'Healthy' | string (ReadOnly): Type of the cloud tiering health state
-* **lastCloudTieringResult**: int (ReadOnly): Last cloud tiering result (HResult)
-* **lastSuccessTimestamp**: string (ReadOnly): Last cloud tiering success timestamp
-* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
-
-## ServerEndpointRecallStatus
-### Properties
-* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
-* **recallErrors**: [ServerEndpointRecallError](#serverendpointrecallerror)[] (ReadOnly): Array of recall errors
-* **totalRecallErrorsCount**: int (ReadOnly): Total count of recall errors.
+* **errorCode**: int (ReadOnly): Error code (HResult)
+* **persistentCount**: int (ReadOnly): Count of persistent files not syncing with the specified error code
+* **transientCount**: int (ReadOnly): Count of transient files not syncing with the specified error code
 
 ## ServerEndpointRecallError
 ### Properties
 * **count**: int (ReadOnly): Count of occurences of the error
 * **errorCode**: int (ReadOnly): Error code (HResult)
 
-## ServerEndpointSyncStatus
+## ServerEndpointRecallStatus
 ### Properties
-* **combinedHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string (ReadOnly): Type of the sync health state
-* **downloadActivity**: [ServerEndpointSyncActivityStatus](#serverendpointsyncactivitystatus) (ReadOnly): Sync Session status object.
-* **downloadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string (ReadOnly): Type of the sync health state
-* **downloadStatus**: [ServerEndpointSyncSessionStatus](#serverendpointsyncsessionstatus) (ReadOnly): Sync Session status object.
-* **lastUpdatedTimestamp**: string (ReadOnly): Last Updated Timestamp
-* **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' | string (ReadOnly): Type of the Health state
-* **syncActivity**: 'Download' | 'Upload' | 'UploadAndDownload' | string (ReadOnly): Type of the sync activity state
-* **totalPersistentFilesNotSyncingCount**: int (ReadOnly): Total count of persistent files not syncing (combined upload + download).
-* **uploadActivity**: [ServerEndpointSyncActivityStatus](#serverendpointsyncactivitystatus) (ReadOnly): Sync Session status object.
-* **uploadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string (ReadOnly): Type of the sync health state
-* **uploadStatus**: [ServerEndpointSyncSessionStatus](#serverendpointsyncsessionstatus) (ReadOnly): Sync Session status object.
+* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
+* **recallErrors**: [ServerEndpointRecallError](#serverendpointrecallerror)[] (ReadOnly): Array of recall errors
+* **totalRecallErrorsCount**: int (ReadOnly): Total count of recall errors.
 
 ## ServerEndpointSyncActivityStatus
 ### Properties
@@ -156,9 +143,22 @@
 * **persistentFilesNotSyncingCount**: int (ReadOnly): Count of persistent files not syncing.
 * **transientFilesNotSyncingCount**: int (ReadOnly): Count of transient files not syncing.
 
-## ServerEndpointFilesNotSyncingError
+## ServerEndpointSyncStatus
 ### Properties
-* **errorCode**: int (ReadOnly): Error code (HResult)
-* **persistentCount**: int (ReadOnly): Count of persistent files not syncing with the specified error code
-* **transientCount**: int (ReadOnly): Count of transient files not syncing with the specified error code
+* **combinedHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string (ReadOnly): Type of the sync health state
+* **downloadActivity**: [ServerEndpointSyncActivityStatus](#serverendpointsyncactivitystatus) (ReadOnly): Sync Session status object.
+* **downloadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string (ReadOnly): Type of the sync health state
+* **downloadStatus**: [ServerEndpointSyncSessionStatus](#serverendpointsyncsessionstatus) (ReadOnly): Sync Session status object.
+* **lastUpdatedTimestamp**: string (ReadOnly): Last Updated Timestamp
+* **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' | string (ReadOnly): Type of the Health state
+* **syncActivity**: 'Download' | 'Upload' | 'UploadAndDownload' | string (ReadOnly): Type of the sync activity state
+* **totalPersistentFilesNotSyncingCount**: int (ReadOnly): Total count of persistent files not syncing (combined upload + download).
+* **uploadActivity**: [ServerEndpointSyncActivityStatus](#serverendpointsyncactivitystatus) (ReadOnly): Sync Session status object.
+* **uploadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string (ReadOnly): Type of the sync health state
+* **uploadStatus**: [ServerEndpointSyncSessionStatus](#serverendpointsyncsessionstatus) (ReadOnly): Sync Session status object.
+
+## StorageSyncServiceCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

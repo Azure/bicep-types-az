@@ -496,52 +496,20 @@
 * **ApiVersion**: 2020-06-01-preview
 * **Output**: [NamedValueSecretContract](#namedvaluesecretcontract)
 
-## ApiManagementServiceIdentity
+## AccessInformationCreateParameterProperties
 ### Properties
-* **principalId**: string (ReadOnly): The principal id of the identity.
-* **tenantId**: string (ReadOnly): The client tenant id of the identity.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string (Required): The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
-* **userAssignedIdentities**: [ApiManagementServiceIdentityUserAssignedIdentities](#apimanagementserviceidentityuserassignedidentities): The list of user identities associated with the resource. The user identity 
-dictionary key references will be ARM resource ids in the form: 
-'/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **enabled**: bool: Determines whether direct access is enabled.
+* **primaryKey**: string (WriteOnly): Primary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+* **principalId**: string: Principal (User) Identifier.
+* **secondaryKey**: string (WriteOnly): Secondary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
 
-## ApiManagementServiceIdentityUserAssignedIdentities
+## AccessInformationSecretsContract
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
-
-## UserIdentityProperties
-### Properties
-* **clientId**: string: The client id of user assigned identity.
-* **principalId**: string: The principal id of user assigned identity.
-
-## ApiManagementServiceProperties
-### Properties
-* **additionalLocations**: [AdditionalLocation](#additionallocation)[]: Additional datacenter locations of the API Management service.
-* **apiVersionConstraint**: [ApiVersionConstraint](#apiversionconstraint): Control Plane Apis version constraint for the API Management service.
-* **certificates**: [CertificateConfiguration](#certificateconfiguration)[]: List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.
-* **createdAtUtc**: string (ReadOnly): Creation UTC date of the API Management service.The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-* **customProperties**: [ApiManagementServiceBasePropertiesCustomProperties](#apimanagementservicebasepropertiescustomproperties): Custom properties of the API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be used to disable just TLS 1.1 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH operation will reset omitted properties' values to their defaults. For all the settings except Http2 the default value is `True` if the service was created on or before April 1st 2018 and `False` otherwise. Http2 setting's default value is `False`.</br></br>You can disable any of next ciphers by using settings `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.[cipher_name]`: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA. For example, `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256`:`false`. The default value is `true` for them.  Note: next ciphers can't be disabled since they are required by Azure CloudService internal components: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384
-* **developerPortalUrl**: string (ReadOnly): DEveloper Portal endpoint URL of the API Management service.
-* **disableGateway**: bool: Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in master region.
-* **enableClientCertificate**: bool: Property only meant to be used for Consumption SKU Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.
-* **gatewayRegionalUrl**: string (ReadOnly): Gateway URL of the API Management service in the Default Region.
-* **gatewayUrl**: string (ReadOnly): Gateway URL of the API Management service.
-* **hostnameConfigurations**: [HostnameConfiguration](#hostnameconfiguration)[]: Custom hostname configuration of the API Management service.
-* **managementApiUrl**: string (ReadOnly): Management API endpoint URL of the API Management service.
-* **notificationSenderEmail**: string: Email address from which the notification will be sent.
-* **portalUrl**: string (ReadOnly): Publisher portal endpoint Url of the API Management service.
-* **privateIPAddresses**: string[] (ReadOnly): Private Static Load Balanced IP addresses of the API Management service in Primary region which is deployed in an Internal Virtual Network. Available only for Basic, Standard, Premium and Isolated SKU.
-* **provisioningState**: string (ReadOnly): The current provisioning state of the API Management service which can be one of the following: Created/Activating/Succeeded/Updating/Failed/Stopped/Terminating/TerminationFailed/Deleted.
-* **publicIPAddresses**: string[] (ReadOnly): Public Static Load Balanced IP addresses of the API Management service in Primary region. Available only for Basic, Standard, Premium and Isolated SKU.
-* **publisherEmail**: string (Required): Publisher email.
-* **publisherName**: string (Required): Publisher name.
-* **restore**: bool: Undelete Api Management Service if it was previously soft-deleted. If this flag is specified and set to True all other properties will be ignored.
-* **scmUrl**: string (ReadOnly): SCM endpoint URL of the API Management service.
-* **targetProvisioningState**: string (ReadOnly): The provisioning state of the API Management service, which is targeted by the long running operation started on the service.
-* **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Configuration of a virtual network to which API Management service is deployed.
-* **virtualNetworkType**: 'External' | 'Internal' | 'None' | string: The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.
+* **enabled**: bool (ReadOnly): Determines whether direct access is enabled.
+* **id**: string (ReadOnly): Access Information type ('access' or 'gitAccess')
+* **primaryKey**: string (ReadOnly): Primary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+* **principalId**: string (ReadOnly): Principal (User) Identifier.
+* **secondaryKey**: string (ReadOnly): Secondary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
 
 ## AdditionalLocation
 ### Properties
@@ -553,56 +521,6 @@ dictionary key references will be ARM resource ids in the form:
 * **sku**: [ApiManagementServiceSkuProperties](#apimanagementserviceskuproperties) (Required): API Management service resource SKU properties.
 * **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Configuration of a virtual network to which API Management service is deployed.
 * **zones**: string[]: A list of availability zones denoting where the resource needs to come from.
-
-## ApiManagementServiceSkuProperties
-### Properties
-* **capacity**: int (Required): Capacity of the SKU (number of deployed units of the SKU). For Consumption SKU capacity must be specified as 0.
-* **name**: 'Basic' | 'Consumption' | 'Developer' | 'Isolated' | 'Premium' | 'Standard' | string (Required): Name of the Sku.
-
-## VirtualNetworkConfiguration
-### Properties
-* **subnetname**: string (ReadOnly): The name of the subnet.
-* **subnetResourceId**: string: The full resource ID of a subnet in a virtual network to deploy the API Management service in.
-* **vnetid**: string (ReadOnly): The virtual network ID. This is typically a GUID. Expect a null GUID by default.
-
-## ApiVersionConstraint
-### Properties
-* **minApiVersion**: string: Limit control plane API calls to API Management service with version equal to or newer than this value.
-
-## CertificateConfiguration
-### Properties
-* **certificate**: [CertificateInformation](#certificateinformation): SSL certificate information.
-* **certificatePassword**: string: Certificate Password.
-* **encodedCertificate**: string: Base64 Encoded certificate.
-* **storeName**: 'CertificateAuthority' | 'Root' | string (Required): The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.
-
-## CertificateInformation
-### Properties
-* **expiry**: string (Required): Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-* **subject**: string (Required): Subject of the certificate.
-* **thumbprint**: string (Required): Thumbprint of the certificate.
-
-## ApiManagementServiceBasePropertiesCustomProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## HostnameConfiguration
-### Properties
-* **certificate**: [CertificateInformation](#certificateinformation): SSL certificate information.
-* **certificatePassword**: string: Certificate Password.
-* **defaultSslBinding**: bool: Specify true to setup the certificate associated with this Hostname as the Default SSL Certificate. If a client does not send the SNI header, then this will be the certificate that will be challenged. The property is useful if a service has multiple custom hostname enabled and it needs to decide on the default ssl certificate. The setting only applied to Proxy Hostname Type.
-* **encodedCertificate**: string: Base64 Encoded certificate.
-* **hostName**: string (Required): Hostname to configure on the Api Management service.
-* **identityClientId**: string: System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.
-* **keyVaultId**: string: Url to the KeyVault Secret containing the Ssl Certificate. If absolute Url containing version is provided, auto-update of ssl certificate will not work. This requires Api Management service to be configured with aka.ms/apimmsi. The secret should be of type *application/x-pkcs12*
-* **negotiateClientCertificate**: bool: Specify true to always negotiate client certificate on the hostname. Default Value is false.
-* **type**: 'DeveloperPortal' | 'Management' | 'Portal' | 'Proxy' | 'Scm' | string (Required): Hostname type.
-
-## ApimResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## ApiCreateOrUpdateProperties
 ### Properties
@@ -631,35 +549,6 @@ dictionary key references will be ARM resource ids in the form:
 * **value**: string (WriteOnly): Content value when Importing an API.
 * **wsdlSelector**: [ApiCreateOrUpdatePropertiesWsdlSelector](#apicreateorupdatepropertieswsdlselector) (WriteOnly): Criteria to limit import of WSDL to a subset of the document.
 
-## ApiVersionSetContractDetails
-### Properties
-* **description**: string (WriteOnly): Description of API Version Set.
-* **id**: string (WriteOnly): Identifier for existing API Version Set. Omit this value to create a new Version Set.
-* **name**: string (WriteOnly): The display Name of the API Version Set.
-* **versionHeaderName**: string (WriteOnly): Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
-* **versioningScheme**: 'Header' | 'Query' | 'Segment' | string (WriteOnly): An value that determines where the API Version identifier will be located in a HTTP request.
-* **versionQueryName**: string (WriteOnly): Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
-
-## AuthenticationSettingsContract
-### Properties
-* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract) (WriteOnly): API OAuth2 Authentication settings details.
-* **openid**: [OpenIdAuthenticationSettingsContract](#openidauthenticationsettingscontract) (WriteOnly): API OAuth2 Authentication settings details.
-
-## OAuth2AuthenticationSettingsContract
-### Properties
-* **authorizationServerId**: string (WriteOnly): OAuth authorization server identifier.
-* **scope**: string (WriteOnly): operations scope.
-
-## OpenIdAuthenticationSettingsContract
-### Properties
-* **bearerTokenSendingMethods**: 'authorizationHeader' | 'query' | string[] (WriteOnly): How to send token to the server.
-* **openidProviderId**: string (WriteOnly): OAuth authorization server identifier.
-
-## SubscriptionKeyParameterNamesContract
-### Properties
-* **header**: string (WriteOnly): Subscription key header name.
-* **query**: string (WriteOnly): Subscription key query string parameter name.
-
 ## ApiCreateOrUpdatePropertiesWsdlSelector
 ### Properties
 * **wsdlEndpointName**: string (WriteOnly): Name of endpoint(port) to import from WSDL
@@ -669,119 +558,62 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **link**: string (ReadOnly): Link to the Storage Blob containing the result of the export operation. The Blob Uri is only valid for 5 minutes.
 
-## DiagnosticContractProperties
+## ApiManagementServiceBasePropertiesCustomProperties
 ### Properties
-* **alwaysLog**: 'allErrors' | string: Specifies for what type of messages sampling settings should not apply.
-* **backend**: [PipelineDiagnosticSettings](#pipelinediagnosticsettings): Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
-* **frontend**: [PipelineDiagnosticSettings](#pipelinediagnosticsettings): Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
-* **httpCorrelationProtocol**: 'Legacy' | 'None' | 'W3C' | string: Sets correlation protocol to use for Application Insights diagnostics.
-* **logClientIp**: bool: Log the ClientIP. Default is false.
-* **loggerId**: string (Required): Resource Id of a target logger.
-* **operationNameFormat**: 'Name' | 'Url' | string: The format of the Operation Name for Application Insights telemetries. Default is Name.
-* **sampling**: [SamplingSettings](#samplingsettings): Sampling settings for Diagnostic.
-* **verbosity**: 'error' | 'information' | 'verbose' | string: The verbosity level applied to traces emitted by trace policies.
+### Additional Properties
+* **Additional Properties Type**: string
 
-## PipelineDiagnosticSettings
+## ApiManagementServiceIdentity
 ### Properties
-* **request**: [HttpMessageDiagnostic](#httpmessagediagnostic): Http message diagnostic settings.
-* **response**: [HttpMessageDiagnostic](#httpmessagediagnostic): Http message diagnostic settings.
+* **principalId**: string (ReadOnly): The principal id of the identity.
+* **tenantId**: string (ReadOnly): The client tenant id of the identity.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string (Required): The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
+* **userAssignedIdentities**: [ApiManagementServiceIdentityUserAssignedIdentities](#apimanagementserviceidentityuserassignedidentities): The list of user identities associated with the resource. The user identity 
+dictionary key references will be ARM resource ids in the form: 
+'/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
+    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## HttpMessageDiagnostic
+## ApiManagementServiceIdentityUserAssignedIdentities
 ### Properties
-* **body**: [BodyDiagnosticSettings](#bodydiagnosticsettings): Body logging settings.
-* **dataMasking**: [DataMasking](#datamasking)
-* **headers**: string[]: Array of HTTP Headers to log.
+### Additional Properties
+* **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
 
-## BodyDiagnosticSettings
+## ApiManagementServiceProperties
 ### Properties
-* **bytes**: int: Number of request body bytes to log.
+* **additionalLocations**: [AdditionalLocation](#additionallocation)[]: Additional datacenter locations of the API Management service.
+* **apiVersionConstraint**: [ApiVersionConstraint](#apiversionconstraint): Control Plane Apis version constraint for the API Management service.
+* **certificates**: [CertificateConfiguration](#certificateconfiguration)[]: List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.
+* **createdAtUtc**: string (ReadOnly): Creation UTC date of the API Management service.The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+* **customProperties**: [ApiManagementServiceBasePropertiesCustomProperties](#apimanagementservicebasepropertiescustomproperties): Custom properties of the API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be used to disable just TLS 1.1 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH operation will reset omitted properties' values to their defaults. For all the settings except Http2 the default value is `True` if the service was created on or before April 1st 2018 and `False` otherwise. Http2 setting's default value is `False`.</br></br>You can disable any of next ciphers by using settings `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.[cipher_name]`: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA. For example, `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256`:`false`. The default value is `true` for them.  Note: next ciphers can't be disabled since they are required by Azure CloudService internal components: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384
+* **developerPortalUrl**: string (ReadOnly): DEveloper Portal endpoint URL of the API Management service.
+* **disableGateway**: bool: Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in master region.
+* **enableClientCertificate**: bool: Property only meant to be used for Consumption SKU Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.
+* **gatewayRegionalUrl**: string (ReadOnly): Gateway URL of the API Management service in the Default Region.
+* **gatewayUrl**: string (ReadOnly): Gateway URL of the API Management service.
+* **hostnameConfigurations**: [HostnameConfiguration](#hostnameconfiguration)[]: Custom hostname configuration of the API Management service.
+* **managementApiUrl**: string (ReadOnly): Management API endpoint URL of the API Management service.
+* **notificationSenderEmail**: string: Email address from which the notification will be sent.
+* **portalUrl**: string (ReadOnly): Publisher portal endpoint Url of the API Management service.
+* **privateIPAddresses**: string[] (ReadOnly): Private Static Load Balanced IP addresses of the API Management service in Primary region which is deployed in an Internal Virtual Network. Available only for Basic, Standard, Premium and Isolated SKU.
+* **provisioningState**: string (ReadOnly): The current provisioning state of the API Management service which can be one of the following: Created/Activating/Succeeded/Updating/Failed/Stopped/Terminating/TerminationFailed/Deleted.
+* **publicIPAddresses**: string[] (ReadOnly): Public Static Load Balanced IP addresses of the API Management service in Primary region. Available only for Basic, Standard, Premium and Isolated SKU.
+* **publisherEmail**: string (Required): Publisher email.
+* **publisherName**: string (Required): Publisher name.
+* **restore**: bool: Undelete Api Management Service if it was previously soft-deleted. If this flag is specified and set to True all other properties will be ignored.
+* **scmUrl**: string (ReadOnly): SCM endpoint URL of the API Management service.
+* **targetProvisioningState**: string (ReadOnly): The provisioning state of the API Management service, which is targeted by the long running operation started on the service.
+* **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Configuration of a virtual network to which API Management service is deployed.
+* **virtualNetworkType**: 'External' | 'Internal' | 'None' | string: The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.
 
-## DataMasking
+## ApiManagementServiceSkuProperties
 ### Properties
-* **headers**: [DataMaskingEntity](#datamaskingentity)[]: Masking settings for headers
-* **queryParams**: [DataMaskingEntity](#datamaskingentity)[]: Masking settings for Url query parameters
+* **capacity**: int (Required): Capacity of the SKU (number of deployed units of the SKU). For Consumption SKU capacity must be specified as 0.
+* **name**: 'Basic' | 'Consumption' | 'Developer' | 'Isolated' | 'Premium' | 'Standard' | string (Required): Name of the Sku.
 
-## DataMaskingEntity
+## ApimResourceTags
 ### Properties
-* **mode**: 'Hide' | 'Mask' | string: Data masking mode.
-* **value**: string: The name of an entity to mask (e.g. a name of a header or a query parameter).
-
-## SamplingSettings
-### Properties
-* **percentage**: int: Rate of sampling for fixed-rate sampling.
-* **samplingType**: 'fixed' | string: Sampling type.
-
-## IssueContractProperties
-### Properties
-* **apiId**: string: A resource identifier for the API the issue was created for.
-* **createdDate**: string: Date and time when the issue was created.
-* **description**: string (Required): Text describing the issue.
-* **state**: 'closed' | 'open' | 'proposed' | 'removed' | 'resolved' | string: Status of the issue.
-* **title**: string (Required): The issue title.
-* **userId**: string (Required): A resource identifier for the user created the issue.
-
-## IssueAttachmentContractProperties
-### Properties
-* **content**: string (Required): An HTTP link or Base64-encoded binary data.
-* **contentFormat**: string (Required): Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.
-* **title**: string (Required): Filename by which the binary data will be saved.
-
-## IssueCommentContractProperties
-### Properties
-* **createdDate**: string: Date and time when the comment was created.
-* **text**: string (Required): Comment text.
-* **userId**: string (Required): A resource identifier for the user who left the comment.
-
-## OperationContractProperties
-### Properties
-* **description**: string: Description of the operation. May include HTML formatting tags.
-* **displayName**: string (Required): Operation Name.
-* **method**: string (Required): A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
-* **policies**: string: Operation Policies
-* **request**: [RequestContract](#requestcontract): Operation request details.
-* **responses**: [ResponseContract](#responsecontract)[]: Array of Operation responses.
-* **templateParameters**: [ParameterContract](#parametercontract)[]: Collection of URL template parameters.
-* **urlTemplate**: string (Required): Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
-
-## RequestContract
-### Properties
-* **description**: string: Operation request description.
-* **headers**: [ParameterContract](#parametercontract)[]: Collection of operation request headers.
-* **queryParameters**: [ParameterContract](#parametercontract)[]: Collection of operation request query parameters.
-* **representations**: [RepresentationContract](#representationcontract)[]: Collection of operation request representations.
-
-## ParameterContract
-### Properties
-* **defaultValue**: string: Default parameter value.
-* **description**: string: Parameter description.
-* **name**: string (Required): Parameter name.
-* **required**: bool: Specifies whether parameter is required or not.
-* **type**: string (Required): Parameter type.
-* **values**: string[]: Parameter values.
-
-## RepresentationContract
-### Properties
-* **contentType**: string (Required): Specifies a registered or custom content type for this representation, e.g. application/xml.
-* **formParameters**: [ParameterContract](#parametercontract)[]: Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..
-* **sample**: string: An example of the representation.
-* **schemaId**: string: Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
-* **typeName**: string: Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
-
-## ResponseContract
-### Properties
-* **description**: string: Operation response description.
-* **headers**: [ParameterContract](#parametercontract)[]: Collection of operation response headers.
-* **representations**: [RepresentationContract](#representationcontract)[]: Collection of operation response representations.
-* **statusCode**: int (Required): Operation response HTTP status code.
-
-## PolicyContractProperties
-### Properties
-* **format**: 'rawxml' | 'rawxml-link' | 'xml' | 'xml-link' | string: Format of the policyContent.
-* **value**: string (Required): Contents of the Policy as defined by the format.
-
-## TagContractProperties
-### Properties
-* **displayName**: string (ReadOnly): Tag name.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ApiReleaseContractProperties
 ### Properties
@@ -790,23 +622,18 @@ dictionary key references will be ARM resource ids in the form:
 * **notes**: string: Release Notes
 * **updatedDateTime**: string (ReadOnly): The time the API release was updated.
 
-## SchemaContractProperties
+## ApiVersionConstraint
 ### Properties
-* **contentType**: string (Required): Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml). </br> - `Swagger` Schema use `application/vnd.ms-azure-apim.swagger.definitions+json` </br> - `WSDL` Schema use `application/vnd.ms-azure-apim.xsd+xml` </br> - `OpenApi` Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`.
-* **document**: [SchemaDocumentProperties](#schemadocumentproperties): Schema Document Properties.
+* **minApiVersion**: string: Limit control plane API calls to API Management service with version equal to or newer than this value.
 
-## SchemaDocumentProperties
+## ApiVersionSetContractDetails
 ### Properties
-* **definitions**: any: Any object
-* **value**: string: Json escaped string defining the document representing the Schema. Used for schemas other than Swagger/OpenAPI.
-
-## TagDescriptionBaseProperties
-### Properties
-* **description**: string: Description of the Tag.
-* **displayName**: string (ReadOnly): Tag name.
-* **externalDocsDescription**: string: Description of the external resources describing the tag.
-* **externalDocsUrl**: string: Absolute URL of external resources describing the tag.
-* **tagId**: string (ReadOnly): Identifier of the tag in the form of /tags/{tagId}
+* **description**: string (WriteOnly): Description of API Version Set.
+* **id**: string (WriteOnly): Identifier for existing API Version Set. Omit this value to create a new Version Set.
+* **name**: string (WriteOnly): The display Name of the API Version Set.
+* **versionHeaderName**: string (WriteOnly): Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
+* **versioningScheme**: 'Header' | 'Query' | 'Segment' | string (WriteOnly): An value that determines where the API Version identifier will be located in a HTTP request.
+* **versionQueryName**: string (WriteOnly): Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
 
 ## ApiVersionSetContractProperties
 ### Properties
@@ -815,6 +642,15 @@ dictionary key references will be ARM resource ids in the form:
 * **versionHeaderName**: string: Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
 * **versioningScheme**: 'Header' | 'Query' | 'Segment' | string (Required): An value that determines where the API Version identifier will be located in a HTTP request.
 * **versionQueryName**: string: Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
+
+## AssociationContractProperties
+### Properties
+* **provisioningState**: 'created': Provisioning state.
+
+## AuthenticationSettingsContract
+### Properties
+* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract) (WriteOnly): API OAuth2 Authentication settings details.
+* **openid**: [OpenIdAuthenticationSettingsContract](#openidauthenticationsettingscontract) (WriteOnly): API OAuth2 Authentication settings details.
 
 ## AuthorizationServerContractProperties
 ### Properties
@@ -835,10 +671,16 @@ dictionary key references will be ARM resource ids in the form:
 * **tokenBodyParameters**: [TokenBodyParameterContract](#tokenbodyparametercontract)[]: Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.
 * **tokenEndpoint**: string: OAuth token endpoint. Contains absolute URI to entity being referenced.
 
-## TokenBodyParameterContract
+## AuthorizationServerSecretsContract
 ### Properties
-* **name**: string (Required): body parameter name.
-* **value**: string (Required): body parameter value.
+* **clientSecret**: string (ReadOnly): oAuth Authorization Server Secrets.
+* **resourceOwnerPassword**: string (ReadOnly): Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
+* **resourceOwnerUsername**: string (ReadOnly): Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
+
+## BackendAuthorizationHeaderCredentials
+### Properties
+* **parameter**: string (Required): Authentication Parameter value.
+* **scheme**: string (Required): Authentication Scheme name.
 
 ## BackendContractProperties
 ### Properties
@@ -860,11 +702,6 @@ dictionary key references will be ARM resource ids in the form:
 * **header**: [BackendCredentialsContractHeader](#backendcredentialscontractheader): Header Parameter description.
 * **query**: [BackendCredentialsContractQuery](#backendcredentialscontractquery): Query Parameter description.
 
-## BackendAuthorizationHeaderCredentials
-### Properties
-* **parameter**: string (Required): Authentication Parameter value.
-* **scheme**: string (Required): Authentication Scheme name.
-
 ## BackendCredentialsContractHeader
 ### Properties
 ### Additional Properties
@@ -879,6 +716,12 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **serviceFabricCluster**: [BackendServiceFabricClusterProperties](#backendservicefabricclusterproperties): Properties of the Service Fabric Type Backend.
 
+## BackendProxyContract
+### Properties
+* **password**: string: Password to connect to the WebProxy Server
+* **url**: string (Required): WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
+* **username**: string: Username to connect to the WebProxy server
+
 ## BackendServiceFabricClusterProperties
 ### Properties
 * **clientCertificateId**: string: The client certificate id for the management endpoint.
@@ -888,21 +731,14 @@ dictionary key references will be ARM resource ids in the form:
 * **serverCertificateThumbprints**: string[]: Thumbprints of certificates cluster management service uses for tls communication
 * **serverX509Names**: [X509CertificateName](#x509certificatename)[]: Server X509 Certificate Names Collection
 
-## X509CertificateName
-### Properties
-* **issuerCertificateThumbprint**: string: Thumbprint for the Issuer of the Certificate.
-* **name**: string: Common Name of the Certificate.
-
-## BackendProxyContract
-### Properties
-* **password**: string: Password to connect to the WebProxy Server
-* **url**: string (Required): WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
-* **username**: string: Username to connect to the WebProxy server
-
 ## BackendTlsProperties
 ### Properties
 * **validateCertificateChain**: bool: Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.
 * **validateCertificateName**: bool: Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.
+
+## BodyDiagnosticSettings
+### Properties
+* **bytes**: int: Number of request body bytes to log.
 
 ## CacheContractProperties
 ### Properties
@@ -910,6 +746,13 @@ dictionary key references will be ARM resource ids in the form:
 * **description**: string: Cache description
 * **resourceId**: string: Original uri of entity in external system cache points to
 * **useFromLocation**: string (Required): Location identifier to use cache from (should be either 'default' or valid Azure region identifier)
+
+## CertificateConfiguration
+### Properties
+* **certificate**: [CertificateInformation](#certificateinformation): SSL certificate information.
+* **certificatePassword**: string: Certificate Password.
+* **encodedCertificate**: string: Base64 Encoded certificate.
+* **storeName**: 'CertificateAuthority' | 'Root' | string (Required): The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.
 
 ## CertificateCreateOrUpdateProperties
 ### Properties
@@ -920,17 +763,24 @@ dictionary key references will be ARM resource ids in the form:
 * **subject**: string (ReadOnly): Subject attribute of the certificate.
 * **thumbprint**: string (ReadOnly): Thumbprint of the certificate.
 
-## KeyVaultContractCreateProperties
+## CertificateInformation
 ### Properties
-* **identityClientId**: string: Null for SystemAssignedIdentity or Client Id for UserAssignedIdentity , which will be used to access key vault secret.
-* **lastStatus**: [KeyVaultLastAccessStatusContractProperties](#keyvaultlastaccessstatuscontractproperties) (ReadOnly): Issue contract Update Properties.
-* **secretIdentifier**: string: Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi
+* **expiry**: string (Required): Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+* **subject**: string (Required): Subject of the certificate.
+* **thumbprint**: string (Required): Thumbprint of the certificate.
 
-## KeyVaultLastAccessStatusContractProperties
+## ClientSecretContract
 ### Properties
-* **code**: string (ReadOnly): Last status code for sync and refresh of secret from key vault.
-* **message**: string (ReadOnly): Details of the error else empty.
-* **timeStampUtc**: string (ReadOnly): Last time secret was accessed. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+* **clientSecret**: string (ReadOnly): Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+
+## ClientSecretContract
+### Properties
+* **clientSecret**: string (ReadOnly): Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+
+## ContentItemContractProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## ContentTypeContractProperties
 ### Properties
@@ -940,30 +790,51 @@ dictionary key references will be ARM resource ids in the form:
 * **schema**: any (ReadOnly): Any object
 * **version**: string (ReadOnly): Content type version.
 
-## ContentItemContractProperties
+## DataMasking
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: any
+* **headers**: [DataMaskingEntity](#datamaskingentity)[]: Masking settings for headers
+* **queryParams**: [DataMaskingEntity](#datamaskingentity)[]: Masking settings for Url query parameters
+
+## DataMaskingEntity
+### Properties
+* **mode**: 'Hide' | 'Mask' | string: Data masking mode.
+* **value**: string: The name of an entity to mask (e.g. a name of a header or a query parameter).
+
+## DiagnosticContractProperties
+### Properties
+* **alwaysLog**: 'allErrors' | string: Specifies for what type of messages sampling settings should not apply.
+* **backend**: [PipelineDiagnosticSettings](#pipelinediagnosticsettings): Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
+* **frontend**: [PipelineDiagnosticSettings](#pipelinediagnosticsettings): Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
+* **httpCorrelationProtocol**: 'Legacy' | 'None' | 'W3C' | string: Sets correlation protocol to use for Application Insights diagnostics.
+* **logClientIp**: bool: Log the ClientIP. Default is false.
+* **loggerId**: string (Required): Resource Id of a target logger.
+* **operationNameFormat**: 'Name' | 'Url' | string: The format of the Operation Name for Application Insights telemetries. Default is Name.
+* **sampling**: [SamplingSettings](#samplingsettings): Sampling settings for Diagnostic.
+* **verbosity**: 'error' | 'information' | 'verbose' | string: The verbosity level applied to traces emitted by trace policies.
+
+## EmailTemplateParametersContractProperties
+### Properties
+* **description**: string: Template parameter description.
+* **name**: string: Template parameter name.
+* **title**: string: Template parameter title.
+
+## EmailTemplateUpdateParameterProperties
+### Properties
+* **body**: string: Email Template Body. This should be a valid XDocument
+* **description**: string: Description of the Email Template.
+* **isDefault**: bool (ReadOnly): Whether the template is the default template provided by Api Management or has been edited.
+* **parameters**: [EmailTemplateParametersContractProperties](#emailtemplateparameterscontractproperties)[]: Email Template Parameter values.
+* **subject**: string: Subject of the Template.
+* **title**: string: Title of the Template.
+
+## GatewayCertificateAuthorityContractProperties
+### Properties
+* **isTrusted**: bool: Determines whether certificate authority is trusted.
 
 ## GatewayContractProperties
 ### Properties
 * **description**: string: Gateway description
 * **locationData**: [ResourceLocationDataContract](#resourcelocationdatacontract): Resource location data properties.
-
-## ResourceLocationDataContract
-### Properties
-* **city**: string: The city or locality where the resource is located.
-* **countryOrRegion**: string: The country or region where the resource is located.
-* **district**: string: The district, state, or province where the resource is located.
-* **name**: string (Required): A canonical name for the geographic or physical location.
-
-## AssociationContractProperties
-### Properties
-* **provisioningState**: 'created': Provisioning state.
-
-## GatewayCertificateAuthorityContractProperties
-### Properties
-* **isTrusted**: bool: Determines whether certificate authority is trusted.
 
 ## GatewayHostnameConfigurationContractProperties
 ### Properties
@@ -974,6 +845,19 @@ dictionary key references will be ARM resource ids in the form:
 * **tls10Enabled**: bool: Specifies if TLS 1.0 is supported
 * **tls11Enabled**: bool: Specifies if TLS 1.1 is supported
 
+## GatewayKeysContract
+### Properties
+* **primary**: string (ReadOnly): Primary gateway key.
+* **secondary**: string (ReadOnly): Secondary gateway key.
+
+## GroupContractProperties
+### Properties
+* **builtIn**: bool (ReadOnly): true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
+* **description**: string (ReadOnly): Group description. Can contain HTML formatting tags.
+* **displayName**: string (ReadOnly): Group name.
+* **externalId**: string (ReadOnly): For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
+* **type**: 'custom' | 'external' | 'system' (ReadOnly): Group type.
+
 ## GroupCreateParametersProperties
 ### Properties
 * **builtIn**: bool (ReadOnly): true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
@@ -981,6 +865,24 @@ dictionary key references will be ARM resource ids in the form:
 * **displayName**: string (Required): Group name.
 * **externalId**: string: Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
 * **type**: 'custom' | 'external' | 'system': Group type.
+
+## HostnameConfiguration
+### Properties
+* **certificate**: [CertificateInformation](#certificateinformation): SSL certificate information.
+* **certificatePassword**: string: Certificate Password.
+* **defaultSslBinding**: bool: Specify true to setup the certificate associated with this Hostname as the Default SSL Certificate. If a client does not send the SNI header, then this will be the certificate that will be challenged. The property is useful if a service has multiple custom hostname enabled and it needs to decide on the default ssl certificate. The setting only applied to Proxy Hostname Type.
+* **encodedCertificate**: string: Base64 Encoded certificate.
+* **hostName**: string (Required): Hostname to configure on the Api Management service.
+* **identityClientId**: string: System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.
+* **keyVaultId**: string: Url to the KeyVault Secret containing the Ssl Certificate. If absolute Url containing version is provided, auto-update of ssl certificate will not work. This requires Api Management service to be configured with aka.ms/apimmsi. The secret should be of type *application/x-pkcs12*
+* **negotiateClientCertificate**: bool: Specify true to always negotiate client certificate on the hostname. Default Value is false.
+* **type**: 'DeveloperPortal' | 'Management' | 'Portal' | 'Proxy' | 'Scm' | string (Required): Hostname type.
+
+## HttpMessageDiagnostic
+### Properties
+* **body**: [BodyDiagnosticSettings](#bodydiagnosticsettings): Body logging settings.
+* **dataMasking**: [DataMasking](#datamasking)
+* **headers**: string[]: Array of HTTP Headers to log.
 
 ## IdentityProviderCreateContractProperties
 ### Properties
@@ -994,6 +896,39 @@ dictionary key references will be ARM resource ids in the form:
 * **signinTenant**: string: The TenantId to use instead of Common when logging into Active Directory
 * **signupPolicyName**: string: Signup Policy Name. Only applies to AAD B2C Identity Provider.
 * **type**: 'aad' | 'aadB2C' | 'facebook' | 'google' | 'microsoft' | 'twitter' | string
+
+## IssueAttachmentContractProperties
+### Properties
+* **content**: string (Required): An HTTP link or Base64-encoded binary data.
+* **contentFormat**: string (Required): Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.
+* **title**: string (Required): Filename by which the binary data will be saved.
+
+## IssueCommentContractProperties
+### Properties
+* **createdDate**: string: Date and time when the comment was created.
+* **text**: string (Required): Comment text.
+* **userId**: string (Required): A resource identifier for the user who left the comment.
+
+## IssueContractProperties
+### Properties
+* **apiId**: string: A resource identifier for the API the issue was created for.
+* **createdDate**: string: Date and time when the issue was created.
+* **description**: string (Required): Text describing the issue.
+* **state**: 'closed' | 'open' | 'proposed' | 'removed' | 'resolved' | string: Status of the issue.
+* **title**: string (Required): The issue title.
+* **userId**: string (Required): A resource identifier for the user created the issue.
+
+## KeyVaultContractCreateProperties
+### Properties
+* **identityClientId**: string: Null for SystemAssignedIdentity or Client Id for UserAssignedIdentity , which will be used to access key vault secret.
+* **lastStatus**: [KeyVaultLastAccessStatusContractProperties](#keyvaultlastaccessstatuscontractproperties) (ReadOnly): Issue contract Update Properties.
+* **secretIdentifier**: string: Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi
+
+## KeyVaultLastAccessStatusContractProperties
+### Properties
+* **code**: string (ReadOnly): Last status code for sync and refresh of secret from key vault.
+* **message**: string (ReadOnly): Details of the error else empty.
+* **timeStampUtc**: string (ReadOnly): Last time secret was accessed. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 
 ## LoggerContractProperties
 ### Properties
@@ -1017,16 +952,25 @@ Instrumentation key for applicationInsights logger.
 * **tags**: string[]: Optional tags that when provided can be used to filter the NamedValue list.
 * **value**: string: Value of the NamedValue. Can contain policy expressions. It may not be empty or consist only of whitespace. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
 
+## NamedValueSecretContract
+### Properties
+* **value**: string (ReadOnly): This is secret value of the NamedValue entity.
+
 ## NotificationContractProperties
 ### Properties
 * **description**: string (ReadOnly): Description of the Notification.
 * **recipients**: [RecipientsContractProperties](#recipientscontractproperties) (ReadOnly): Notification Parameter contract.
 * **title**: string (ReadOnly): Title of the Notification.
 
-## RecipientsContractProperties
+## OAuth2AuthenticationSettingsContract
 ### Properties
-* **emails**: string[] (ReadOnly): List of Emails subscribed for the notification.
-* **users**: string[] (ReadOnly): List of Users subscribed for the notification.
+* **authorizationServerId**: string (WriteOnly): OAuth authorization server identifier.
+* **scope**: string (WriteOnly): operations scope.
+
+## OpenIdAuthenticationSettingsContract
+### Properties
+* **bearerTokenSendingMethods**: 'authorizationHeader' | 'query' | string[] (WriteOnly): How to send token to the server.
+* **openidProviderId**: string (WriteOnly): OAuth authorization server identifier.
 
 ## OpenidConnectProviderContractProperties
 ### Properties
@@ -1035,6 +979,43 @@ Instrumentation key for applicationInsights logger.
 * **description**: string: User-friendly description of OpenID Connect Provider.
 * **displayName**: string (Required): User-friendly OpenID Connect Provider name.
 * **metadataEndpoint**: string (Required): Metadata endpoint URI.
+
+## OperationContractProperties
+### Properties
+* **description**: string: Description of the operation. May include HTML formatting tags.
+* **displayName**: string (Required): Operation Name.
+* **method**: string (Required): A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
+* **policies**: string: Operation Policies
+* **request**: [RequestContract](#requestcontract): Operation request details.
+* **responses**: [ResponseContract](#responsecontract)[]: Array of Operation responses.
+* **templateParameters**: [ParameterContract](#parametercontract)[]: Collection of URL template parameters.
+* **urlTemplate**: string (Required): Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
+
+## ParameterContract
+### Properties
+* **defaultValue**: string: Default parameter value.
+* **description**: string: Parameter description.
+* **name**: string (Required): Parameter name.
+* **required**: bool: Specifies whether parameter is required or not.
+* **type**: string (Required): Parameter type.
+* **values**: string[]: Parameter values.
+
+## PipelineDiagnosticSettings
+### Properties
+* **request**: [HttpMessageDiagnostic](#httpmessagediagnostic): Http message diagnostic settings.
+* **response**: [HttpMessageDiagnostic](#httpmessagediagnostic): Http message diagnostic settings.
+
+## PolicyContractProperties
+### Properties
+* **format**: 'rawxml' | 'rawxml-link' | 'xml' | 'xml-link' | string: Format of the policyContent.
+* **value**: string (Required): Contents of the Policy as defined by the format.
+
+## PortalDelegationSettingsProperties
+### Properties
+* **subscriptions**: [SubscriptionsDelegationSettingsProperties](#subscriptionsdelegationsettingsproperties): Subscriptions delegation settings properties.
+* **url**: string: A delegation Url.
+* **userRegistration**: [RegistrationDelegationSettingsProperties](#registrationdelegationsettingsproperties): User registration delegation settings properties.
+* **validationKey**: string: A base64-encoded validation key to validate, that a request is coming from Azure API Management.
 
 ## PortalRevisionContractProperties
 ### Properties
@@ -1045,20 +1026,9 @@ Instrumentation key for applicationInsights logger.
 * **statusDetails**: string (ReadOnly): Portal revision publishing status details.
 * **updatedDateTime**: string (ReadOnly): Last updated date and time.
 
-## PortalDelegationSettingsProperties
+## PortalSettingValidationKeyContract
 ### Properties
-* **subscriptions**: [SubscriptionsDelegationSettingsProperties](#subscriptionsdelegationsettingsproperties): Subscriptions delegation settings properties.
-* **url**: string: A delegation Url.
-* **userRegistration**: [RegistrationDelegationSettingsProperties](#registrationdelegationsettingsproperties): User registration delegation settings properties.
-* **validationKey**: string: A base64-encoded validation key to validate, that a request is coming from Azure API Management.
-
-## SubscriptionsDelegationSettingsProperties
-### Properties
-* **enabled**: bool: Enable or disable delegation for subscriptions.
-
-## RegistrationDelegationSettingsProperties
-### Properties
-* **enabled**: bool: Enable or disable delegation for user registration.
+* **validationKey**: string (ReadOnly): This is secret value of the validation key in portal settings.
 
 ## PortalSigninSettingProperties
 ### Properties
@@ -1069,12 +1039,6 @@ Instrumentation key for applicationInsights logger.
 * **enabled**: bool: Allow users to sign up on a developer portal.
 * **termsOfService**: [TermsOfServiceProperties](#termsofserviceproperties): Terms of service contract properties.
 
-## TermsOfServiceProperties
-### Properties
-* **consentRequired**: bool: Ask user for consent to the terms of service.
-* **enabled**: bool: Display terms of service during a sign-up process.
-* **text**: string: A terms of service text.
-
 ## ProductContractProperties
 ### Properties
 * **approvalRequired**: bool: whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of false.
@@ -1084,6 +1048,59 @@ Instrumentation key for applicationInsights logger.
 * **subscriptionRequired**: bool: Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as "protected" and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as "open" and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it's value is assumed to be true.
 * **subscriptionsLimit**: int: Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false.
 * **terms**: string: Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
+
+## RecipientsContractProperties
+### Properties
+* **emails**: string[] (ReadOnly): List of Emails subscribed for the notification.
+* **users**: string[] (ReadOnly): List of Users subscribed for the notification.
+
+## RegistrationDelegationSettingsProperties
+### Properties
+* **enabled**: bool: Enable or disable delegation for user registration.
+
+## RepresentationContract
+### Properties
+* **contentType**: string (Required): Specifies a registered or custom content type for this representation, e.g. application/xml.
+* **formParameters**: [ParameterContract](#parametercontract)[]: Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..
+* **sample**: string: An example of the representation.
+* **schemaId**: string: Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
+* **typeName**: string: Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
+
+## RequestContract
+### Properties
+* **description**: string: Operation request description.
+* **headers**: [ParameterContract](#parametercontract)[]: Collection of operation request headers.
+* **queryParameters**: [ParameterContract](#parametercontract)[]: Collection of operation request query parameters.
+* **representations**: [RepresentationContract](#representationcontract)[]: Collection of operation request representations.
+
+## ResourceLocationDataContract
+### Properties
+* **city**: string: The city or locality where the resource is located.
+* **countryOrRegion**: string: The country or region where the resource is located.
+* **district**: string: The district, state, or province where the resource is located.
+* **name**: string (Required): A canonical name for the geographic or physical location.
+
+## ResponseContract
+### Properties
+* **description**: string: Operation response description.
+* **headers**: [ParameterContract](#parametercontract)[]: Collection of operation response headers.
+* **representations**: [RepresentationContract](#representationcontract)[]: Collection of operation response representations.
+* **statusCode**: int (Required): Operation response HTTP status code.
+
+## SamplingSettings
+### Properties
+* **percentage**: int: Rate of sampling for fixed-rate sampling.
+* **samplingType**: 'fixed' | string: Sampling type.
+
+## SchemaContractProperties
+### Properties
+* **contentType**: string (Required): Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml). </br> - `Swagger` Schema use `application/vnd.ms-azure-apim.swagger.definitions+json` </br> - `WSDL` Schema use `application/vnd.ms-azure-apim.xsd+xml` </br> - `OpenApi` Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`.
+* **document**: [SchemaDocumentProperties](#schemadocumentproperties): Schema Document Properties.
+
+## SchemaDocumentProperties
+### Properties
+* **definitions**: any: Any object
+* **value**: string: Json escaped string defining the document representing the Schema. Used for schemas other than Swagger/OpenAPI.
 
 ## SubscriptionCreateParameterProperties
 ### Properties
@@ -1101,27 +1118,42 @@ Instrumentation key for applicationInsights logger.
 * **state**: 'active' | 'cancelled' | 'expired' | 'rejected' | 'submitted' | 'suspended': Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
 * **stateComment**: string (ReadOnly): Optional subscription comment added by an administrator when the state is changed to the 'rejected'.
 
-## EmailTemplateUpdateParameterProperties
+## SubscriptionKeyParameterNamesContract
 ### Properties
-* **body**: string: Email Template Body. This should be a valid XDocument
-* **description**: string: Description of the Email Template.
-* **isDefault**: bool (ReadOnly): Whether the template is the default template provided by Api Management or has been edited.
-* **parameters**: [EmailTemplateParametersContractProperties](#emailtemplateparameterscontractproperties)[]: Email Template Parameter values.
-* **subject**: string: Subject of the Template.
-* **title**: string: Title of the Template.
+* **header**: string (WriteOnly): Subscription key header name.
+* **query**: string (WriteOnly): Subscription key query string parameter name.
 
-## EmailTemplateParametersContractProperties
+## SubscriptionKeysContract
 ### Properties
-* **description**: string: Template parameter description.
-* **name**: string: Template parameter name.
-* **title**: string: Template parameter title.
+* **primaryKey**: string (ReadOnly): Subscription primary key.
+* **secondaryKey**: string (ReadOnly): Subscription secondary key.
 
-## AccessInformationCreateParameterProperties
+## SubscriptionsDelegationSettingsProperties
 ### Properties
-* **enabled**: bool: Determines whether direct access is enabled.
-* **primaryKey**: string (WriteOnly): Primary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
-* **principalId**: string: Principal (User) Identifier.
-* **secondaryKey**: string (WriteOnly): Secondary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+* **enabled**: bool: Enable or disable delegation for subscriptions.
+
+## TagContractProperties
+### Properties
+* **displayName**: string (ReadOnly): Tag name.
+
+## TagDescriptionBaseProperties
+### Properties
+* **description**: string: Description of the Tag.
+* **displayName**: string (ReadOnly): Tag name.
+* **externalDocsDescription**: string: Description of the external resources describing the tag.
+* **externalDocsUrl**: string: Absolute URL of external resources describing the tag.
+* **tagId**: string (ReadOnly): Identifier of the tag in the form of /tags/{tagId}
+
+## TermsOfServiceProperties
+### Properties
+* **consentRequired**: bool: Ask user for consent to the terms of service.
+* **enabled**: bool: Display terms of service during a sign-up process.
+* **text**: string: A terms of service text.
+
+## TokenBodyParameterContract
+### Properties
+* **name**: string (Required): body parameter name.
+* **value**: string (Required): body parameter value.
 
 ## UserCreateParameterProperties
 ### Properties
@@ -1137,56 +1169,24 @@ Instrumentation key for applicationInsights logger.
 * **registrationDate**: string (ReadOnly): Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **state**: 'active' | 'blocked' | 'deleted' | 'pending' | string: Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
 
-## GroupContractProperties
-### Properties
-* **builtIn**: bool (ReadOnly): true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
-* **description**: string (ReadOnly): Group description. Can contain HTML formatting tags.
-* **displayName**: string (ReadOnly): Group name.
-* **externalId**: string (ReadOnly): For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
-* **type**: 'custom' | 'external' | 'system' (ReadOnly): Group type.
-
 ## UserIdentityContract
 ### Properties
 * **id**: string: Identifier value within provider.
 * **provider**: string: Identity provider name.
 
-## GatewayKeysContract
+## UserIdentityProperties
 ### Properties
-* **primary**: string (ReadOnly): Primary gateway key.
-* **secondary**: string (ReadOnly): Secondary gateway key.
+* **clientId**: string: The client id of user assigned identity.
+* **principalId**: string: The principal id of user assigned identity.
 
-## AuthorizationServerSecretsContract
+## VirtualNetworkConfiguration
 ### Properties
-* **clientSecret**: string (ReadOnly): oAuth Authorization Server Secrets.
-* **resourceOwnerPassword**: string (ReadOnly): Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
-* **resourceOwnerUsername**: string (ReadOnly): Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
+* **subnetname**: string (ReadOnly): The name of the subnet.
+* **subnetResourceId**: string: The full resource ID of a subnet in a virtual network to deploy the API Management service in.
+* **vnetid**: string (ReadOnly): The virtual network ID. This is typically a GUID. Expect a null GUID by default.
 
-## ClientSecretContract
+## X509CertificateName
 ### Properties
-* **clientSecret**: string (ReadOnly): Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
-
-## ClientSecretContract
-### Properties
-* **clientSecret**: string (ReadOnly): Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
-
-## PortalSettingValidationKeyContract
-### Properties
-* **validationKey**: string (ReadOnly): This is secret value of the validation key in portal settings.
-
-## SubscriptionKeysContract
-### Properties
-* **primaryKey**: string (ReadOnly): Subscription primary key.
-* **secondaryKey**: string (ReadOnly): Subscription secondary key.
-
-## AccessInformationSecretsContract
-### Properties
-* **enabled**: bool (ReadOnly): Determines whether direct access is enabled.
-* **id**: string (ReadOnly): Access Information type ('access' or 'gitAccess')
-* **primaryKey**: string (ReadOnly): Primary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
-* **principalId**: string (ReadOnly): Principal (User) Identifier.
-* **secondaryKey**: string (ReadOnly): Secondary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
-
-## NamedValueSecretContract
-### Properties
-* **value**: string (ReadOnly): This is secret value of the NamedValue entity.
+* **issuerCertificateThumbprint**: string: Thumbprint for the Issuer of the Certificate.
+* **name**: string: Common Name of the Certificate.
 

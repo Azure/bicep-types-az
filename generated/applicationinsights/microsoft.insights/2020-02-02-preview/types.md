@@ -41,13 +41,13 @@
 * **TenantId**: string (ReadOnly): Azure Tenant Id.
 * **WorkspaceResourceId**: string: Resource Id of the log analytics workspace which the data will be ingested to. This property is required to create an application with this API version. Applications from older versions will not have this property.
 
-## PrivateLinkScopedResource
-### Properties
-* **ResourceId**: string: The full resource Id of the private link scope resource.
-* **ScopeId**: string: The private link scope unique Identifier.
-
 ## ComponentsResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## PrivateLinkScopedResource
+### Properties
+* **ResourceId**: string: The full resource Id of the private link scope resource.
+* **ScopeId**: string: The private link scope unique Identifier.
 

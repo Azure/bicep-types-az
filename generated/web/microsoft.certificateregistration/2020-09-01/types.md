@@ -26,6 +26,12 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.CertificateRegistration/certificateOrders/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
+## AppServiceCertificate
+### Properties
+* **keyVaultId**: string: Key Vault resource Id.
+* **keyVaultSecretName**: string: Key Vault secret name.
+* **provisioningState**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'ExternalPrivateKey' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder' (ReadOnly): Status of the Key Vault secret.
+
 ## AppServiceCertificateOrderProperties
 ### Properties
 * **appServiceCertificateNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive' | string[] (ReadOnly): Reasons why App Service Certificate is not renewable at the current moment.
@@ -53,12 +59,6 @@
 ### Additional Properties
 * **Additional Properties Type**: [AppServiceCertificate](#appservicecertificate)
 
-## AppServiceCertificate
-### Properties
-* **keyVaultId**: string: Key Vault resource Id.
-* **keyVaultSecretName**: string: Key Vault secret name.
-* **provisioningState**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'ExternalPrivateKey' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder' (ReadOnly): Status of the Key Vault secret.
-
 ## CertificateDetails
 ### Properties
 * **issuer**: string (ReadOnly): Certificate Issuer.
@@ -71,6 +71,16 @@
 * **thumbprint**: string (ReadOnly): Certificate Thumbprint.
 * **version**: int (ReadOnly): Certificate Version.
 
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -79,14 +89,4 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

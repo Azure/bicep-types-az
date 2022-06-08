@@ -27,41 +27,37 @@
 * **ApiVersion**: 2019-04-01
 * **Output**: [RunGetLogResult](#rungetlogresult)
 
-## IdentityProperties
-### Properties
-* **principalId**: string: The principal ID of resource identity.
-* **tenantId**: string: The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The identity type.
-* **userAssignedIdentities**: [IdentityPropertiesUserAssignedIdentities](#identitypropertiesuserassignedidentities): The list of user identities associated with the resource. The user identity 
-dictionary key references will be ARM resource ids in the form: 
-'/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-
-## IdentityPropertiesUserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
-
-## UserIdentityProperties
-### Properties
-* **clientId**: string: The client id of user assigned identity.
-* **principalId**: string: The principal id of user assigned identity.
-
-## TaskProperties
-### Properties
-* **agentConfiguration**: [AgentProperties](#agentproperties): The properties that determine the run agent configuration.
-* **creationDate**: string (ReadOnly): The creation date of task.
-* **credentials**: [Credentials](#credentials): The parameters that describes a set of credentials that will be used when a run is invoked.
-* **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the run has to happen.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of a run.
-* **status**: 'Disabled' | 'Enabled' | string: The current status of task.
-* **step**: [TaskStepProperties](#taskstepproperties) (Required): Base properties for any task step.
-* **timeout**: int: Run timeout in seconds.
-* **trigger**: [TriggerProperties](#triggerproperties): The properties of a trigger.
-
 ## AgentProperties
 ### Properties
 * **cpu**: int: The CPU configuration in terms of number of cores required for the run.
+
+## Argument
+### Properties
+* **isSecret**: bool: Flag to indicate whether the argument represents a secret and want to be removed from build logs.
+* **name**: string (Required): The name of the argument.
+* **value**: string (Required): The value of the argument.
+
+## AuthInfo
+### Properties
+* **expiresIn**: int: Time in seconds that the token remains valid
+* **refreshToken**: string: The refresh token used to refresh the access token.
+* **scope**: string: The scope of the access token.
+* **token**: string (Required): The access token used to access the source control provider.
+* **tokenType**: 'OAuth' | 'PAT' | string (Required): The type of Auth token.
+
+## BaseImageDependency
+### Properties
+* **digest**: string: The sha256-based digest of the image manifest.
+* **registry**: string: The registry login server.
+* **repository**: string: The repository name.
+* **tag**: string: The tag name.
+* **type**: 'BuildTime' | 'RunTime' | string: The type of the base image dependency.
+
+## BaseImageTrigger
+### Properties
+* **baseImageTriggerType**: 'All' | 'Runtime' | string (Required): The type of the auto trigger for base image dependency updates.
+* **name**: string (Required): The name of the trigger.
+* **status**: 'Disabled' | 'Enabled' | string: The current status of trigger.
 
 ## Credentials
 ### Properties
@@ -85,6 +81,41 @@ source of authentication used for accessing the registry.
 * **password**: [SecretObject](#secretobject): Describes the properties of a secret object value.
 * **userName**: [SecretObject](#secretobject): Describes the properties of a secret object value.
 
+## IdentityProperties
+### Properties
+* **principalId**: string: The principal ID of resource identity.
+* **tenantId**: string: The tenant ID of resource.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The identity type.
+* **userAssignedIdentities**: [IdentityPropertiesUserAssignedIdentities](#identitypropertiesuserassignedidentities): The list of user identities associated with the resource. The user identity 
+dictionary key references will be ARM resource ids in the form: 
+'/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
+    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+
+## IdentityPropertiesUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
+
+## PlatformProperties
+### Properties
+* **architecture**: 'amd64' | 'arm' | 'x86' | string: The OS architecture.
+* **os**: 'Linux' | 'Windows' | string (Required): The operating system type required for the run.
+* **variant**: 'v6' | 'v7' | 'v8' | string: Variant of the CPU.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RunGetLogResult
+### Properties
+* **logLink**: string (ReadOnly): The link to logs for a run on a azure container registry.
+
 ## SecretObject
 ### Properties
 * **type**: 'Opaque' | 'Vaultsecret' | string: The type of the secret object which determines how the value of the secret object has to be
@@ -93,17 +124,58 @@ interpreted.
 based on the type of the secret object. If the type is Opaque, the value will be
 used as is without any modification.
 
+## SetValue
+### Properties
+* **isSecret**: bool: Flag to indicate whether the value represents a secret or not.
+* **name**: string (Required): The name of the overridable value.
+* **value**: string (Required): The overridable value.
+
+## SourceProperties
+### Properties
+* **branch**: string: The branch name of the source code.
+* **repositoryUrl**: string (Required): The full URL to the source code repository
+* **sourceControlAuthProperties**: [AuthInfo](#authinfo): The authorization properties for accessing the source code repository.
+* **sourceControlType**: 'Github' | 'VisualStudioTeamService' | string (Required): The type of source control service.
+
 ## SourceRegistryCredentials
 ### Properties
 * **loginMode**: 'Default' | 'None' | string: The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
 the source registry during the run.
 
-## PlatformProperties
+## SourceTrigger
 ### Properties
-* **architecture**: 'amd64' | 'arm' | 'x86' | string: The OS architecture.
-* **os**: 'Linux' | 'Windows' | string (Required): The operating system type required for the run.
-* **variant**: 'v6' | 'v7' | 'v8' | string: Variant of the CPU.
+* **name**: string (Required): The name of the trigger.
+* **sourceRepository**: [SourceProperties](#sourceproperties) (Required): The properties of the source code repository.
+* **sourceTriggerEvents**: 'commit' | 'pullrequest' | string[] (Required): The source event corresponding to the trigger.
+* **status**: 'Disabled' | 'Enabled' | string: The current status of trigger.
+
+## SourceUploadDefinition
+### Properties
+* **relativePath**: string (ReadOnly): The relative path to the source. This is used to submit the subsequent queue build request.
+* **uploadUrl**: string (ReadOnly): The URL where the client can upload the source.
+
+## Task
+### Properties
+* **id**: string (ReadOnly): The resource ID.
+* **identity**: [IdentityProperties](#identityproperties) (ReadOnly): Managed identity for the resource.
+* **location**: string (ReadOnly): The location of the resource. This cannot be changed after the resource is created.
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [TaskProperties](#taskproperties) (ReadOnly): The properties of a task.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The tags of the resource.
+* **type**: string (ReadOnly): The type of the resource.
+
+## TaskProperties
+### Properties
+* **agentConfiguration**: [AgentProperties](#agentproperties): The properties that determine the run agent configuration.
+* **creationDate**: string (ReadOnly): The creation date of task.
+* **credentials**: [Credentials](#credentials): The parameters that describes a set of credentials that will be used when a run is invoked.
+* **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the run has to happen.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of a run.
+* **status**: 'Disabled' | 'Enabled' | string: The current status of task.
+* **step**: [TaskStepProperties](#taskstepproperties) (Required): Base properties for any task step.
+* **timeout**: int: Run timeout in seconds.
+* **trigger**: [TriggerProperties](#triggerproperties): The properties of a trigger.
 
 ## TaskStepProperties
 * **Discriminator**: type
@@ -137,25 +209,11 @@ the source registry during the run.
 * **valuesFilePath**: string: The task values/parameters file path relative to the source context.
 
 
-## BaseImageDependency
+## TimerTrigger
 ### Properties
-* **digest**: string: The sha256-based digest of the image manifest.
-* **registry**: string: The registry login server.
-* **repository**: string: The repository name.
-* **tag**: string: The tag name.
-* **type**: 'BuildTime' | 'RunTime' | string: The type of the base image dependency.
-
-## Argument
-### Properties
-* **isSecret**: bool: Flag to indicate whether the argument represents a secret and want to be removed from build logs.
-* **name**: string (Required): The name of the argument.
-* **value**: string (Required): The value of the argument.
-
-## SetValue
-### Properties
-* **isSecret**: bool: Flag to indicate whether the value represents a secret or not.
-* **name**: string (Required): The name of the overridable value.
-* **value**: string (Required): The overridable value.
+* **name**: string (Required): The name of the trigger.
+* **schedule**: string (Required): The CRON expression for the task schedule
+* **status**: 'Disabled' | 'Enabled' | string: The current status of trigger.
 
 ## TriggerProperties
 ### Properties
@@ -163,66 +221,8 @@ the source registry during the run.
 * **sourceTriggers**: [SourceTrigger](#sourcetrigger)[]: The collection of triggers based on source code repository.
 * **timerTriggers**: [TimerTrigger](#timertrigger)[]: The collection of timer triggers.
 
-## BaseImageTrigger
+## UserIdentityProperties
 ### Properties
-* **baseImageTriggerType**: 'All' | 'Runtime' | string (Required): The type of the auto trigger for base image dependency updates.
-* **name**: string (Required): The name of the trigger.
-* **status**: 'Disabled' | 'Enabled' | string: The current status of trigger.
-
-## SourceTrigger
-### Properties
-* **name**: string (Required): The name of the trigger.
-* **sourceRepository**: [SourceProperties](#sourceproperties) (Required): The properties of the source code repository.
-* **sourceTriggerEvents**: 'commit' | 'pullrequest' | string[] (Required): The source event corresponding to the trigger.
-* **status**: 'Disabled' | 'Enabled' | string: The current status of trigger.
-
-## SourceProperties
-### Properties
-* **branch**: string: The branch name of the source code.
-* **repositoryUrl**: string (Required): The full URL to the source code repository
-* **sourceControlAuthProperties**: [AuthInfo](#authinfo): The authorization properties for accessing the source code repository.
-* **sourceControlType**: 'Github' | 'VisualStudioTeamService' | string (Required): The type of source control service.
-
-## AuthInfo
-### Properties
-* **expiresIn**: int: Time in seconds that the token remains valid
-* **refreshToken**: string: The refresh token used to refresh the access token.
-* **scope**: string: The scope of the access token.
-* **token**: string (Required): The access token used to access the source control provider.
-* **tokenType**: 'OAuth' | 'PAT' | string (Required): The type of Auth token.
-
-## TimerTrigger
-### Properties
-* **name**: string (Required): The name of the trigger.
-* **schedule**: string (Required): The CRON expression for the task schedule
-* **status**: 'Disabled' | 'Enabled' | string: The current status of trigger.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## SourceUploadDefinition
-### Properties
-* **relativePath**: string (ReadOnly): The relative path to the source. This is used to submit the subsequent queue build request.
-* **uploadUrl**: string (ReadOnly): The URL where the client can upload the source.
-
-## Task
-### Properties
-* **id**: string (ReadOnly): The resource ID.
-* **identity**: [IdentityProperties](#identityproperties) (ReadOnly): Managed identity for the resource.
-* **location**: string (ReadOnly): The location of the resource. This cannot be changed after the resource is created.
-* **name**: string (ReadOnly): The name of the resource.
-* **properties**: [TaskProperties](#taskproperties) (ReadOnly): The properties of a task.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The tags of the resource.
-* **type**: string (ReadOnly): The type of the resource.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## RunGetLogResult
-### Properties
-* **logLink**: string (ReadOnly): The link to logs for a run on a azure container registry.
+* **clientId**: string: The client id of user assigned identity.
+* **principalId**: string: The principal id of user assigned identity.
 

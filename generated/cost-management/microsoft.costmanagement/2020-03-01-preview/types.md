@@ -9,6 +9,16 @@
 * **properties**: [CostAllocationRuleProperties](#costallocationruleproperties): The properties of a cost allocation rule
 * **type**: 'Microsoft.CostManagement/costAllocationRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## CostAllocationProportion
+### Properties
+* **name**: string (Required): Target resource for cost allocation
+* **percentage**: int (Required): Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.
+
+## CostAllocationRuleDetails
+### Properties
+* **sourceResources**: [SourceCostAllocationResource](#sourcecostallocationresource)[]: Source resources for cost allocation. At this time, this list can contain no more than one element.
+* **targetResources**: [TargetCostAllocationResource](#targetcostallocationresource)[]: Target resources for cost allocation. At this time, this list can contain no more than one element.
+
 ## CostAllocationRuleProperties
 ### Properties
 * **createdDate**: string (ReadOnly): Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.
@@ -16,11 +26,6 @@
 * **details**: [CostAllocationRuleDetails](#costallocationruledetails) (Required): Resource details of the cost allocation rule
 * **status**: 'Active' | 'NotActive' | 'Processing' | string (Required): Current status of the rule.
 * **updatedDate**: string (ReadOnly): Time at which the rule was last updated.
-
-## CostAllocationRuleDetails
-### Properties
-* **sourceResources**: [SourceCostAllocationResource](#sourcecostallocationresource)[]: Source resources for cost allocation. At this time, this list can contain no more than one element.
-* **targetResources**: [TargetCostAllocationResource](#targetcostallocationresource)[]: Target resources for cost allocation. At this time, this list can contain no more than one element.
 
 ## SourceCostAllocationResource
 ### Properties
@@ -34,9 +39,4 @@
 * **policyType**: 'FixedProportion' | string (Required): Method to use for allocating cost. FixedProportion indicates that cost will be split based on specified percentage values.
 * **resourceType**: 'Dimension' | 'Tag' | string (Required): Category of resource to use for allocation.
 * **values**: [CostAllocationProportion](#costallocationproportion)[] (Required): Target resources for cost allocation. This list cannot contain more than 25 values.
-
-## CostAllocationProportion
-### Properties
-* **name**: string (Required): Target resource for cost allocation
-* **percentage**: int (Required): Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.
 

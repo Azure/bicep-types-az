@@ -26,6 +26,16 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools' (ReadOnly, DeployTimeConstant): The resource type
 
+## SkuV3
+### Properties
+* **name**: string (Required): The name of the SKU, typically, a letter + Number code, e.g. P3.
+* **tier**: string: The tier or edition of the particular SKU, e.g. Basic, Premium.
+
+## SqlDatabaseDataRetention
+### Properties
+* **dropRetentionPeriod**: string: Specifies the dropped database retention period (ISO8601 format).
+* **retentionPeriod**: string: Specifies the data retention period (ISO8601 format).
+
 ## SqlDatabaseProperties
 ### Properties
 * **collation**: string: The collation of the database.
@@ -34,10 +44,15 @@
 * **status**: 'AutoClosed' | 'Copying' | 'Creating' | 'Disabled' | 'EmergencyMode' | 'Inaccessible' | 'Offline' | 'OfflineChangingDwPerformanceTiers' | 'OfflineSecondary' | 'Online' | 'OnlineChangingDwPerformanceTiers' | 'Paused' | 'Pausing' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Resuming' | 'Scaling' | 'Shutdown' | 'Standby' | 'Suspect' | string (ReadOnly): The status of the database.
 * **storageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone' | string: The storage redundancy of the database.
 
-## SqlDatabaseDataRetention
+## SqlPoolProperties
 ### Properties
-* **dropRetentionPeriod**: string: Specifies the dropped database retention period (ISO8601 format).
-* **retentionPeriod**: string: Specifies the data retention period (ISO8601 format).
+* **autoPauseTimer**: int: The period of inactivity in minutes before automatically pausing the sql pool.
+* **autoResume**: bool: Indicates whether the sql pool can automatically resume when connection attempts are made.
+* **currentServiceObjectiveName**: string (ReadOnly): The current service level objective name of the sql pool.
+* **maxServiceObjectiveName**: string: The max service level objective name of the sql pool.
+* **requestedServiceObjectiveName**: string (ReadOnly): The requested service level objective name of the sql pool.
+* **sqlPoolGuid**: string (ReadOnly): The Guid of the sql pool.
+* **status**: 'Creating' | 'Dropping' | 'Error' | 'Inaccessible' | 'Invisible' | 'Offline' | 'Online' | 'Paused' | 'Pausing' | 'Resuming' | 'Scaling' | 'Unknown' | string (ReadOnly): The status of the sql pool.
 
 ## SystemData
 ### Properties
@@ -52,21 +67,6 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## SqlPoolProperties
-### Properties
-* **autoPauseTimer**: int: The period of inactivity in minutes before automatically pausing the sql pool.
-* **autoResume**: bool: Indicates whether the sql pool can automatically resume when connection attempts are made.
-* **currentServiceObjectiveName**: string (ReadOnly): The current service level objective name of the sql pool.
-* **maxServiceObjectiveName**: string: The max service level objective name of the sql pool.
-* **requestedServiceObjectiveName**: string (ReadOnly): The requested service level objective name of the sql pool.
-* **sqlPoolGuid**: string (ReadOnly): The Guid of the sql pool.
-* **status**: 'Creating' | 'Dropping' | 'Error' | 'Inaccessible' | 'Invisible' | 'Offline' | 'Online' | 'Paused' | 'Pausing' | 'Resuming' | 'Scaling' | 'Unknown' | string (ReadOnly): The status of the sql pool.
-
-## SkuV3
-### Properties
-* **name**: string (Required): The name of the SKU, typically, a letter + Number code, e.g. P3.
-* **tier**: string: The tier or edition of the particular SKU, e.g. Basic, Premium.
 
 ## TrackedResourceTags
 ### Properties

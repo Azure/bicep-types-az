@@ -9,6 +9,17 @@
 * **properties**: [QuotaProperties](#quotaproperties): Quota properties for the specified resource.
 * **type**: 'Microsoft.Quota/quotas' (ReadOnly, DeployTimeConstant): The resource type
 
+## LimitJsonObject
+* **Discriminator**: limitObjectType
+
+### Base Properties
+### LimitObject
+#### Properties
+* **limitObjectType**: 'LimitValue' (Required): The limit object type.
+* **limitType**: 'Independent' | 'Shared' | string: The quota or usages limit types.
+* **value**: int (Required): The quota/limit value
+
+
 ## QuotaProperties
 ### Properties
 * **isQuotaApplicable**: bool (ReadOnly): States if quota can be requested for this resource.
@@ -22,17 +33,6 @@
 This parameter is optional because, for some resources like compute, the period is irrelevant.
 * **resourceType**: string: Resource types. For extensibility, it is a string.
 * **unit**: string (ReadOnly): The quota units, such as Count and Bytes. When requesting quota, use the **unit** value returned in the GET response in the request body of your PUT operation.
-
-## LimitJsonObject
-* **Discriminator**: limitObjectType
-
-### Base Properties
-### LimitObject
-#### Properties
-* **limitObjectType**: 'LimitValue' (Required): The limit object type.
-* **limitType**: 'Independent' | 'Shared' | string: The quota or usages limit types.
-* **value**: int (Required): The quota/limit value
-
 
 ## ResourceName
 ### Properties

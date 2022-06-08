@@ -25,14 +25,6 @@
 * **ApiVersion**: 2017-06-15-preview
 * **Output**: [TopicSharedAccessKeys](#topicsharedaccesskeys)
 
-## EventSubscriptionProperties
-### Properties
-* **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination): Information about the destination for an event subscription
-* **filter**: [EventSubscriptionFilter](#eventsubscriptionfilter): Filter for the Event Subscription
-* **labels**: string[]: List of user defined labels.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the event subscription.
-* **topic**: string (ReadOnly): Name of the topic of the event subscription.
-
 ## EventSubscriptionDestination
 ### Properties
 * **endpointType**: 'WebHook' | string: Type of the endpoint for the event subscription destination
@@ -55,18 +47,26 @@ Wildcard characters are not supported in this path.
 * **subjectEndsWith**: string: An optional string to filter events for an event subscription based on a resource path suffix.
 Wildcard characters are not supported in this path.
 
+## EventSubscriptionProperties
+### Properties
+* **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination): Information about the destination for an event subscription
+* **filter**: [EventSubscriptionFilter](#eventsubscriptionfilter): Filter for the Event Subscription
+* **labels**: string[]: List of user defined labels.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the event subscription.
+* **topic**: string (ReadOnly): Name of the topic of the event subscription.
+
 ## TopicProperties
 ### Properties
 * **endpoint**: string (ReadOnly): Endpoint for the topic.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the topic.
 
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## TopicSharedAccessKeys
 ### Properties
 * **key1**: string (ReadOnly): Shared access key1 for the topic.
 * **key2**: string (ReadOnly): Shared access key2 for the topic.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

@@ -11,15 +11,6 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/trafficmanagerprofiles' (ReadOnly, DeployTimeConstant): The resource type
 
-## ProfileProperties
-### Properties
-* **dnsConfig**: [DnsConfig](#dnsconfig): Class containing DNS settings in a Traffic Manager profile.
-* **endpoints**: [Endpoint](#endpoint)[]: The list of endpoints in the Traffic Manager profile.
-* **monitorConfig**: [MonitorConfig](#monitorconfig): Class containing endpoint monitoring settings in a Traffic Manager profile.
-* **profileStatus**: 'Disabled' | 'Enabled' | string: The status of the Traffic Manager profile.
-* **trafficRoutingMethod**: 'Geographic' | 'Performance' | 'Priority' | 'Weighted' | string: The traffic routing method of the Traffic Manager profile.
-* **trafficViewEnrollmentStatus**: 'Disabled' | 'Enabled' | string: Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.
-
 ## DnsConfig
 ### Properties
 * **fqdn**: string (ReadOnly): The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.
@@ -72,6 +63,15 @@
 ### Properties
 * **max**: int: Max status code.
 * **min**: int: Min status code.
+
+## ProfileProperties
+### Properties
+* **dnsConfig**: [DnsConfig](#dnsconfig): Class containing DNS settings in a Traffic Manager profile.
+* **endpoints**: [Endpoint](#endpoint)[]: The list of endpoints in the Traffic Manager profile.
+* **monitorConfig**: [MonitorConfig](#monitorconfig): Class containing endpoint monitoring settings in a Traffic Manager profile.
+* **profileStatus**: 'Disabled' | 'Enabled' | string: The status of the Traffic Manager profile.
+* **trafficRoutingMethod**: 'Geographic' | 'Performance' | 'Priority' | 'Weighted' | string: The traffic routing method of the Traffic Manager profile.
+* **trafficViewEnrollmentStatus**: 'Disabled' | 'Enabled' | string: Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.
 
 ## TrackedResourceTags
 ### Properties

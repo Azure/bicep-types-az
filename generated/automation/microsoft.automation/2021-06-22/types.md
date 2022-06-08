@@ -41,22 +41,10 @@
 * **ApiVersion**: 2021-06-22
 * **Output**: [KeyListResult](#keylistresult)
 
-## Identity
-### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The identity type.
-* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-
-## IdentityUserAssignedIdentities
+## AutomationAccountCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties](#componentssgqdofschemasidentitypropertiesuserassignedidentitiesadditionalproperties)
-
-## ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
-### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+* **Additional Properties Type**: string
 
 ## AutomationAccountCreateOrUpdateProperties
 ### Properties
@@ -72,6 +60,11 @@
 * **sku**: [Sku](#sku): The account SKU.
 * **state**: 'Ok' | 'Suspended' | 'Unavailable' | string (ReadOnly): Gets status of account.
 
+## ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
+### Properties
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+
 ## EncryptionProperties
 ### Properties
 * **identity**: [EncryptionPropertiesIdentity](#encryptionpropertiesidentity): User identity used for CMK.
@@ -81,6 +74,44 @@
 ## EncryptionPropertiesIdentity
 ### Properties
 * **userAssignedIdentity**: any: Any object
+
+## HybridRunbookWorkerCreateOrUpdateParameters
+### Properties
+* **ip**: string (ReadOnly): Gets or sets the assigned machine IP address.
+* **lastSeenDateTime**: string (ReadOnly): Last Heartbeat from the Worker
+* **registeredDateTime**: string (ReadOnly): Gets or sets the registration time of the worker machine.
+* **vmResourceId**: string: Azure Resource Manager Id for a virtual machine.
+* **workerName**: string (ReadOnly): Name of the HybridWorker.
+* **workerType**: 'HybridV1' | 'HybridV2' | string (ReadOnly): Type of the HybridWorker.
+
+## HybridRunbookWorkerLegacy
+### Properties
+* **ip**: string (ReadOnly): Gets or sets the assigned machine IP address.
+* **lastSeenDateTime**: string (ReadOnly): Last Heartbeat from the Worker
+* **name**: string (ReadOnly): Gets or sets the worker machine name.
+* **registrationTime**: string (ReadOnly): Gets or sets the registration time of the worker machine.
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The identity type.
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+
+## IdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties](#componentssgqdofschemasidentitypropertiesuserassignedidentitiesadditionalproperties)
+
+## Key
+### Properties
+* **KeyName**: 'Primary' | 'Secondary' | string (ReadOnly): Automation key name.
+* **Permissions**: 'Full' | 'Read' | string (ReadOnly): Automation key permissions.
+* **Value**: string (ReadOnly): Value of the Automation Key used for registration.
+
+## KeyListResult
+### Properties
+* **keys**: [Key](#key)[] (ReadOnly): Lists the automation keys.
 
 ## KeyVaultProperties
 ### Properties
@@ -111,6 +142,10 @@
 * **description**: string (ReadOnly): The private link service connection description.
 * **status**: string (ReadOnly): The private link service connection status.
 
+## RunAsCredentialAssociationProperty
+### Properties
+* **name**: string: Gets or sets the name of the credential.
+
 ## Sku
 ### Properties
 * **capacity**: int: Gets or sets the SKU capacity.
@@ -125,39 +160,4 @@
 * **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
-
-## AutomationAccountCreateOrUpdateParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## RunAsCredentialAssociationProperty
-### Properties
-* **name**: string: Gets or sets the name of the credential.
-
-## HybridRunbookWorkerLegacy
-### Properties
-* **ip**: string (ReadOnly): Gets or sets the assigned machine IP address.
-* **lastSeenDateTime**: string (ReadOnly): Last Heartbeat from the Worker
-* **name**: string (ReadOnly): Gets or sets the worker machine name.
-* **registrationTime**: string (ReadOnly): Gets or sets the registration time of the worker machine.
-
-## HybridRunbookWorkerCreateOrUpdateParameters
-### Properties
-* **ip**: string (ReadOnly): Gets or sets the assigned machine IP address.
-* **lastSeenDateTime**: string (ReadOnly): Last Heartbeat from the Worker
-* **registeredDateTime**: string (ReadOnly): Gets or sets the registration time of the worker machine.
-* **vmResourceId**: string: Azure Resource Manager Id for a virtual machine.
-* **workerName**: string (ReadOnly): Name of the HybridWorker.
-* **workerType**: 'HybridV1' | 'HybridV2' | string (ReadOnly): Type of the HybridWorker.
-
-## KeyListResult
-### Properties
-* **keys**: [Key](#key)[] (ReadOnly): Lists the automation keys.
-
-## Key
-### Properties
-* **KeyName**: 'Primary' | 'Secondary' | string (ReadOnly): Automation key name.
-* **Permissions**: 'Full' | 'Read' | string (ReadOnly): Automation key permissions.
-* **Value**: string (ReadOnly): Value of the Automation Key used for registration.
 

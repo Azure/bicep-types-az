@@ -54,22 +54,11 @@
 * **properties**: [PublishedBlueprintProperties](#publishedblueprintproperties) (Required): Schema for published blueprint definition properties.
 * **type**: 'Microsoft.Blueprint/blueprints/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## ManagedServiceIdentity
+## AssignmentLockSettings
 ### Properties
-* **principalId**: string: Azure Active Directory principal ID associated with this Identity.
-* **tenantId**: string: ID of the Azure Active Directory.
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string (Required): Type of the managed identity.
-* **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities): The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
-
-## ManagedServiceIdentityUserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
-
-## UserAssignedIdentity
-### Properties
-* **clientId**: string: Client App Id associated with this identity.
-* **principalId**: string: Azure Active Directory principal ID associated with this Identity.
+* **excludedActions**: string[]: List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to 'AllResourcesReadOnly', then the following actions are automatically appended to 'excludedActions': '*/read', 'Microsoft.Network/virtualNetworks/subnets/join/action' and 'Microsoft.Authorization/locks/delete'. If the lock mode is set to 'AllResourcesDoNotDelete', then the following actions are automatically appended to 'excludedActions': 'Microsoft.Authorization/locks/delete'. Duplicate actions will get removed.
+* **excludedPrincipals**: string[]: List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.
+* **mode**: 'AllResourcesDoNotDelete' | 'AllResourcesReadOnly' | 'None' | string: Lock mode.
 
 ## AssignmentProperties
 ### Properties
@@ -83,41 +72,15 @@
 * **scope**: string: The target subscription scope of the blueprint assignment (format: '/subscriptions/{subscriptionId}'). For management group level assignments, the property is required.
 * **status**: [AssignmentStatus](#assignmentstatus) (ReadOnly): The status of a blueprint assignment. This field is readonly.
 
-## AssignmentLockSettings
-### Properties
-* **excludedActions**: string[]: List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to 'AllResourcesReadOnly', then the following actions are automatically appended to 'excludedActions': '*/read', 'Microsoft.Network/virtualNetworks/subnets/join/action' and 'Microsoft.Authorization/locks/delete'. If the lock mode is set to 'AllResourcesDoNotDelete', then the following actions are automatically appended to 'excludedActions': 'Microsoft.Authorization/locks/delete'. Duplicate actions will get removed.
-* **excludedPrincipals**: string[]: List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.
-* **mode**: 'AllResourcesDoNotDelete' | 'AllResourcesReadOnly' | 'None' | string: Lock mode.
-
 ## AssignmentPropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterValue](#parametervalue)
 
-## ParameterValue
-### Properties
-* **reference**: [SecretValueReference](#secretvaluereference): Reference to a Key Vault secret.
-* **value**: any: Any object
-
-## SecretValueReference
-### Properties
-* **keyVault**: [KeyVaultReference](#keyvaultreference) (Required): Specifies the link to a Key Vault.
-* **secretName**: string (Required): Name of the secret.
-* **secretVersion**: string: The version of the secret to use. If left blank, the latest version of the secret is used.
-
-## KeyVaultReference
-### Properties
-* **id**: string (Required): Azure resource ID of the Key Vault.
-
 ## AssignmentPropertiesResourceGroups
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ResourceGroupValue](#resourcegroupvalue)
-
-## ResourceGroupValue
-### Properties
-* **location**: string: Location of the resource group.
-* **name**: string: Name of the resource group.
 
 ## AssignmentStatus
 ### Properties
@@ -136,10 +99,26 @@
 * **targetScope**: 'managementGroup' | 'subscription' | string: The scope where this blueprint definition can be assigned.
 * **versions**: any: Any object
 
-## SharedBlueprintPropertiesParameters
+## BlueprintStatus
+### Properties
+* **lastModified**: string (ReadOnly): Last modified time of this blueprint definition.
+* **timeCreated**: string (ReadOnly): Creation time of this blueprint definition.
+
+## KeyVaultReference
+### Properties
+* **id**: string (Required): Azure resource ID of the Key Vault.
+
+## ManagedServiceIdentity
+### Properties
+* **principalId**: string: Azure Active Directory principal ID associated with this Identity.
+* **tenantId**: string: ID of the Azure Active Directory.
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string (Required): Type of the managed identity.
+* **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities): The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
+
+## ManagedServiceIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [ParameterDefinition](#parameterdefinition)
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
 
 ## ParameterDefinition
 ### Properties
@@ -154,28 +133,10 @@
 * **displayName**: string: DisplayName of this parameter/resourceGroup.
 * **strongType**: string: StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
 
-## SharedBlueprintPropertiesResourceGroups
+## ParameterValue
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: [ResourceGroupDefinition](#resourcegroupdefinition)
-
-## ResourceGroupDefinition
-### Properties
-* **dependsOn**: string[]: Artifacts which need to be deployed before this resource group.
-* **location**: string: Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.
-* **metadata**: [ParameterDefinitionMetadata](#parameterdefinitionmetadata): User-friendly properties for this parameter.
-* **name**: string: Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.
-* **tags**: [ResourceGroupDefinitionTags](#resourcegroupdefinitiontags): Tags to be assigned to this resource group.
-
-## ResourceGroupDefinitionTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## BlueprintStatus
-### Properties
-* **lastModified**: string (ReadOnly): Last modified time of this blueprint definition.
-* **timeCreated**: string (ReadOnly): Creation time of this blueprint definition.
+* **reference**: [SecretValueReference](#secretvaluereference): Reference to a Key Vault secret.
+* **value**: any: Any object
 
 ## PolicyAssignmentArtifactProperties
 ### Properties
@@ -191,6 +152,35 @@
 ### Additional Properties
 * **Additional Properties Type**: [ParameterValue](#parametervalue)
 
+## PublishedBlueprintProperties
+### Properties
+* **blueprintName**: string: Name of the published blueprint definition.
+* **changeNotes**: string: Version-specific change notes.
+* **description**: string: Multi-line explain this resource.
+* **displayName**: string: One-liner string explain this resource.
+* **parameters**: [SharedBlueprintPropertiesParameters](#sharedblueprintpropertiesparameters): Parameters required by this blueprint definition.
+* **resourceGroups**: [SharedBlueprintPropertiesResourceGroups](#sharedblueprintpropertiesresourcegroups): Resource group placeholders defined by this blueprint definition.
+* **status**: [BlueprintStatus](#blueprintstatus) (ReadOnly): The status of the blueprint. This field is readonly.
+* **targetScope**: 'managementGroup' | 'subscription' | string: The scope where this blueprint definition can be assigned.
+
+## ResourceGroupDefinition
+### Properties
+* **dependsOn**: string[]: Artifacts which need to be deployed before this resource group.
+* **location**: string: Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.
+* **metadata**: [ParameterDefinitionMetadata](#parameterdefinitionmetadata): User-friendly properties for this parameter.
+* **name**: string: Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.
+* **tags**: [ResourceGroupDefinitionTags](#resourcegroupdefinitiontags): Tags to be assigned to this resource group.
+
+## ResourceGroupDefinitionTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceGroupValue
+### Properties
+* **location**: string: Location of the resource group.
+* **name**: string: Name of the resource group.
+
 ## RoleAssignmentArtifactProperties
 ### Properties
 * **dependsOn**: string[]: Artifacts which need to be deployed before the specified artifact.
@@ -199,6 +189,32 @@
 * **principalIds**: any (Required): Anything
 * **resourceGroup**: string: RoleAssignment will be scope to this resourceGroup. If empty, it scopes to the subscription.
 * **roleDefinitionId**: string (Required): Azure resource ID of the RoleDefinition.
+
+## SecretValueReference
+### Properties
+* **keyVault**: [KeyVaultReference](#keyvaultreference) (Required): Specifies the link to a Key Vault.
+* **secretName**: string (Required): Name of the secret.
+* **secretVersion**: string: The version of the secret to use. If left blank, the latest version of the secret is used.
+
+## SharedBlueprintPropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ParameterDefinition](#parameterdefinition)
+
+## SharedBlueprintPropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ParameterDefinition](#parameterdefinition)
+
+## SharedBlueprintPropertiesResourceGroups
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ResourceGroupDefinition](#resourcegroupdefinition)
+
+## SharedBlueprintPropertiesResourceGroups
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ResourceGroupDefinition](#resourcegroupdefinition)
 
 ## TemplateArtifactProperties
 ### Properties
@@ -214,24 +230,8 @@
 ### Additional Properties
 * **Additional Properties Type**: [ParameterValue](#parametervalue)
 
-## PublishedBlueprintProperties
+## UserAssignedIdentity
 ### Properties
-* **blueprintName**: string: Name of the published blueprint definition.
-* **changeNotes**: string: Version-specific change notes.
-* **description**: string: Multi-line explain this resource.
-* **displayName**: string: One-liner string explain this resource.
-* **parameters**: [SharedBlueprintPropertiesParameters](#sharedblueprintpropertiesparameters): Parameters required by this blueprint definition.
-* **resourceGroups**: [SharedBlueprintPropertiesResourceGroups](#sharedblueprintpropertiesresourcegroups): Resource group placeholders defined by this blueprint definition.
-* **status**: [BlueprintStatus](#blueprintstatus) (ReadOnly): The status of the blueprint. This field is readonly.
-* **targetScope**: 'managementGroup' | 'subscription' | string: The scope where this blueprint definition can be assigned.
-
-## SharedBlueprintPropertiesParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [ParameterDefinition](#parameterdefinition)
-
-## SharedBlueprintPropertiesResourceGroups
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [ResourceGroupDefinition](#resourcegroupdefinition)
+* **clientId**: string: Client App Id associated with this identity.
+* **principalId**: string: Azure Active Directory principal ID associated with this Identity.
 

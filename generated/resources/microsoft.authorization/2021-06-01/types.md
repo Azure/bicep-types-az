@@ -44,55 +44,15 @@
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentitiesValue](#userassignedidentitiesvalue)
 
-## UserAssignedIdentitiesValue
-### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
-
-## PolicyAssignmentProperties
-### Properties
-* **description**: string: This message will be part of response in case of policy violation.
-* **displayName**: string: The display name of the policy assignment.
-* **enforcementMode**: 'Default' | 'DoNotEnforce' | string: The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
-* **metadata**: any: Any object
-* **nonComplianceMessages**: [NonComplianceMessage](#noncompliancemessage)[]: The messages that describe why a resource is non-compliant with the policy.
-* **notScopes**: string[]: The policy's excluded scopes.
-* **parameters**: [ParameterValues](#parametervalues): The parameter values for the policy rule. The keys are the parameter names.
-* **policyDefinitionId**: string: The ID of the policy definition or policy set definition being assigned.
-* **scope**: string (ReadOnly): The scope for the policy assignment.
-
 ## NonComplianceMessage
 ### Properties
 * **message**: string (Required): A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.
 * **policyDefinitionReferenceId**: string: The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.
 
-## ParameterValues
+## ParameterDefinitions
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [ParameterValuesValue](#parametervaluesvalue)
-
-## ParameterValuesValue
-### Properties
-* **value**: any: Any object
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## PolicyDefinitionProperties
-### Properties
-* **description**: string: The policy definition description.
-* **displayName**: string: The display name of the policy definition.
-* **metadata**: any: Any object
-* **mode**: string: The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
-* **parameters**: [ParameterDefinitions](#parameterdefinitions): The parameter definitions for parameters used in the policy. The keys are the parameter names.
-* **policyRule**: any: Any object
-* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static' | string: The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
+* **Additional Properties Type**: [ParameterDefinitionsValue](#parameterdefinitionsvalue)
 
 ## ParameterDefinitions
 ### Properties
@@ -115,6 +75,57 @@
 ### Additional Properties
 * **Additional Properties Type**: any
 
+## ParameterValues
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ParameterValuesValue](#parametervaluesvalue)
+
+## ParameterValues
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ParameterValuesValue](#parametervaluesvalue)
+
+## ParameterValuesValue
+### Properties
+* **value**: any: Any object
+
+## PolicyAssignmentProperties
+### Properties
+* **description**: string: This message will be part of response in case of policy violation.
+* **displayName**: string: The display name of the policy assignment.
+* **enforcementMode**: 'Default' | 'DoNotEnforce' | string: The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
+* **metadata**: any: Any object
+* **nonComplianceMessages**: [NonComplianceMessage](#noncompliancemessage)[]: The messages that describe why a resource is non-compliant with the policy.
+* **notScopes**: string[]: The policy's excluded scopes.
+* **parameters**: [ParameterValues](#parametervalues): The parameter values for the policy rule. The keys are the parameter names.
+* **policyDefinitionId**: string: The ID of the policy definition or policy set definition being assigned.
+* **scope**: string (ReadOnly): The scope for the policy assignment.
+
+## PolicyDefinitionGroup
+### Properties
+* **additionalMetadataId**: string: A resource ID of a resource that contains additional metadata about the group.
+* **category**: string: The group's category.
+* **description**: string: The group's description.
+* **displayName**: string: The group's display name.
+* **name**: string (Required): The name of the group.
+
+## PolicyDefinitionProperties
+### Properties
+* **description**: string: The policy definition description.
+* **displayName**: string: The display name of the policy definition.
+* **metadata**: any: Any object
+* **mode**: string: The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
+* **parameters**: [ParameterDefinitions](#parameterdefinitions): The parameter definitions for parameters used in the policy. The keys are the parameter names.
+* **policyRule**: any: Any object
+* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static' | string: The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
+
+## PolicyDefinitionReference
+### Properties
+* **groupNames**: string[]: The name of the groups that this policy definition reference belongs to.
+* **parameters**: [ParameterValues](#parametervalues): The parameter values for the policy rule. The keys are the parameter names.
+* **policyDefinitionId**: string (Required): The ID of the policy definition or policy set definition.
+* **policyDefinitionReferenceId**: string: A unique id (within the policy set definition) for this policy definition reference.
+
 ## PolicySetDefinitionProperties
 ### Properties
 * **description**: string: The policy set definition description.
@@ -125,28 +136,17 @@
 * **policyDefinitions**: [PolicyDefinitionReference](#policydefinitionreference)[] (Required): An array of policy definition references.
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static' | string: The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
 
-## ParameterDefinitions
+## SystemData
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: [ParameterDefinitionsValue](#parameterdefinitionsvalue)
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
-## PolicyDefinitionGroup
+## UserAssignedIdentitiesValue
 ### Properties
-* **additionalMetadataId**: string: A resource ID of a resource that contains additional metadata about the group.
-* **category**: string: The group's category.
-* **description**: string: The group's description.
-* **displayName**: string: The group's display name.
-* **name**: string (Required): The name of the group.
-
-## PolicyDefinitionReference
-### Properties
-* **groupNames**: string[]: The name of the groups that this policy definition reference belongs to.
-* **parameters**: [ParameterValues](#parametervalues): The parameter values for the policy rule. The keys are the parameter names.
-* **policyDefinitionId**: string (Required): The ID of the policy definition or policy set definition.
-* **policyDefinitionReferenceId**: string: A unique id (within the policy set definition) for this policy definition reference.
-
-## ParameterValues
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [ParameterValuesValue](#parametervaluesvalue)
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
 

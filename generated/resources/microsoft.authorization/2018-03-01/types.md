@@ -38,11 +38,6 @@
 * **policyDefinitionId**: string: The ID of the policy definition or policy set definition being assigned.
 * **scope**: string: The scope for the policy assignment.
 
-## PolicySku
-### Properties
-* **name**: string (Required): The name of the policy sku. Possible values are A0 and A1.
-* **tier**: string: The policy sku tier. Possible values are Free and Standard.
-
 ## PolicyDefinitionProperties
 ### Properties
 * **description**: string: The policy definition description.
@@ -53,6 +48,11 @@
 * **policyRule**: any: Any object
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | string: The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom.
 
+## PolicyDefinitionReference
+### Properties
+* **parameters**: any: Any object
+* **policyDefinitionId**: string: The ID of the policy definition or policy set definition.
+
 ## PolicySetDefinitionProperties
 ### Properties
 * **description**: string: The policy set definition description.
@@ -62,8 +62,8 @@
 * **policyDefinitions**: [PolicyDefinitionReference](#policydefinitionreference)[] (Required): An array of policy definition references.
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | string: The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom.
 
-## PolicyDefinitionReference
+## PolicySku
 ### Properties
-* **parameters**: any: Any object
-* **policyDefinitionId**: string: The ID of the policy definition or policy set definition.
+* **name**: string (Required): The name of the policy sku. Possible values are A0 and A1.
+* **tier**: string: The policy sku tier. Possible values are Free and Standard.
 

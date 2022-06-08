@@ -36,18 +36,6 @@
 * **properties**: [LineOfCreditProperties](#lineofcreditproperties): The properties of the line of credit.
 * **type**: 'Microsoft.Billing/billingAccounts/lineOfCredit' (ReadOnly, DeployTimeConstant): The resource type
 
-## BillingProfileProperties
-### Properties
-* **address**: [Address](#address): Address details.
-* **currency**: string (ReadOnly): The currency associated with the billing profile.
-* **displayName**: string: The billing profile name.
-* **enabledAzureSKUs**: [EnabledAzureSKUs](#enabledazureskus)[]: Information about the product.
-* **invoiceDay**: int (ReadOnly): Invoice day.
-* **invoiceEmailOptIn**: bool (ReadOnly): If the billing profile is opted in to receive invoices via email.
-* **invoiceSections**: [InvoiceSection](#invoicesection)[]: The invoice sections associated to the billing profile.
-* **isClassic**: bool (ReadOnly): Is OMS bootstrapped billing profile.
-* **poNumber**: string: Purchase order number.
-
 ## Address
 ### Properties
 * **addressLine1**: string: Address Line1.
@@ -60,6 +48,30 @@
 * **lastName**: string: Last Name.
 * **postalCode**: string: Address Postal Code.
 * **region**: string: Address Region.
+
+## Amount
+### Properties
+* **currency**: string (ReadOnly): The currency for the amount value.
+* **value**: int: Amount value.
+
+## BillingProfile
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [BillingProfileProperties](#billingprofileproperties): The properties of the billing profile.
+* **type**: string (ReadOnly): Resource type.
+
+## BillingProfileProperties
+### Properties
+* **address**: [Address](#address): Address details.
+* **currency**: string (ReadOnly): The currency associated with the billing profile.
+* **displayName**: string: The billing profile name.
+* **enabledAzureSKUs**: [EnabledAzureSKUs](#enabledazureskus)[]: Information about the product.
+* **invoiceDay**: int (ReadOnly): Invoice day.
+* **invoiceEmailOptIn**: bool (ReadOnly): If the billing profile is opted in to receive invoices via email.
+* **invoiceSections**: [InvoiceSection](#invoicesection)[]: The invoice sections associated to the billing profile.
+* **isClassic**: bool (ReadOnly): Is OMS bootstrapped billing profile.
+* **poNumber**: string: Purchase order number.
 
 ## EnabledAzureSKUs
 ### Properties
@@ -78,19 +90,6 @@
 * **billingProfiles**: [BillingProfile](#billingprofile)[]: The billing profiles associated to the billing account.
 * **displayName**: string: The name of the InvoiceSection.
 
-## BillingProfile
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **name**: string (ReadOnly): Resource name.
-* **properties**: [BillingProfileProperties](#billingprofileproperties): The properties of the billing profile.
-* **type**: string (ReadOnly): Resource type.
-
-## PolicyProperties
-### Properties
-* **marketplacePurchasesAllowed**: bool: The marketplacePurchasesAllowed flag.
-* **reservationPurchasesAllowed**: bool: The reservationPurchasesAllowed flag.
-* **subscriptionOwnerCanViewCharges**: bool: The subscriptionOwnerCanViewCharges flag.
-
 ## LineOfCreditProperties
 ### Properties
 * **creditLimit**: [Amount](#amount): The Amount.
@@ -98,8 +97,9 @@
 * **remainingBalance**: [Amount](#amount) (ReadOnly): The Amount.
 * **status**: 'Approved' | 'Rejected' | string: The line of credit status.
 
-## Amount
+## PolicyProperties
 ### Properties
-* **currency**: string (ReadOnly): The currency for the amount value.
-* **value**: int: Amount value.
+* **marketplacePurchasesAllowed**: bool: The marketplacePurchasesAllowed flag.
+* **reservationPurchasesAllowed**: bool: The reservationPurchasesAllowed flag.
+* **subscriptionOwnerCanViewCharges**: bool: The subscriptionOwnerCanViewCharges flag.
 

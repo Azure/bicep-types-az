@@ -22,18 +22,6 @@
 * **ApiVersion**: 2021-09-01-preview
 * **Output**: [OpenShiftClusterCredentials](#openshiftclustercredentials)
 
-## OpenShiftClusterProperties
-### Properties
-* **apiserverProfile**: [APIServerProfile](#apiserverprofile): APIServerProfile represents an API server profile.
-* **clusterProfile**: [ClusterProfile](#clusterprofile): ClusterProfile represents a cluster profile.
-* **consoleProfile**: [ConsoleProfile](#consoleprofile): ConsoleProfile represents a console profile.
-* **ingressProfiles**: [IngressProfile](#ingressprofile)[]: The cluster ingress profiles.
-* **masterProfile**: [MasterProfile](#masterprofile): MasterProfile represents a master profile.
-* **networkProfile**: [NetworkProfile](#networkprofile): NetworkProfile represents a network profile.
-* **provisioningState**: 'AdminUpdating' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ProvisioningState represents a provisioning state.
-* **servicePrincipalProfile**: [ServicePrincipalProfile](#serviceprincipalprofile): ServicePrincipalProfile represents a service principal profile.
-* **workerProfiles**: [WorkerProfile](#workerprofile)[]: The cluster worker profiles.
-
 ## APIServerProfile
 ### Properties
 * **ip**: string: The IP of the cluster API server.
@@ -70,20 +58,31 @@
 * **serviceCidr**: string: The CIDR used for OpenShift/Kubernetes Services.
 * **softwareDefinedNetwork**: 'OVNKubernetes' | 'OpenShiftSDN' | string: SoftwareDefinedNetwork constants.
 
+## OpenShiftClusterAdminKubeconfig
+### Properties
+* **kubeconfig**: string (ReadOnly): The base64-encoded kubeconfig file.
+
+## OpenShiftClusterCredentials
+### Properties
+* **kubeadminPassword**: string (ReadOnly): The password for the kubeadmin user.
+* **kubeadminUsername**: string (ReadOnly): The username for the kubeadmin user.
+
+## OpenShiftClusterProperties
+### Properties
+* **apiserverProfile**: [APIServerProfile](#apiserverprofile): APIServerProfile represents an API server profile.
+* **clusterProfile**: [ClusterProfile](#clusterprofile): ClusterProfile represents a cluster profile.
+* **consoleProfile**: [ConsoleProfile](#consoleprofile): ConsoleProfile represents a console profile.
+* **ingressProfiles**: [IngressProfile](#ingressprofile)[]: The cluster ingress profiles.
+* **masterProfile**: [MasterProfile](#masterprofile): MasterProfile represents a master profile.
+* **networkProfile**: [NetworkProfile](#networkprofile): NetworkProfile represents a network profile.
+* **provisioningState**: 'AdminUpdating' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ProvisioningState represents a provisioning state.
+* **servicePrincipalProfile**: [ServicePrincipalProfile](#serviceprincipalprofile): ServicePrincipalProfile represents a service principal profile.
+* **workerProfiles**: [WorkerProfile](#workerprofile)[]: The cluster worker profiles.
+
 ## ServicePrincipalProfile
 ### Properties
 * **clientId**: string: The client ID used for the cluster.
 * **clientSecret**: string: The client secret used for the cluster.
-
-## WorkerProfile
-### Properties
-* **count**: int: The number of worker VMs.
-* **diskEncryptionSetId**: string: The resource ID of an associated DiskEncryptionSet, if applicable.
-* **diskSizeGB**: int: The disk size of the worker VMs.
-* **encryptionAtHost**: 'Disabled' | 'Enabled' | string: EncryptionAtHost represents encryption at host state
-* **name**: string: The worker profile name.
-* **subnetId**: string: The Azure resource ID of the worker subnet.
-* **vmSize**: 'Standard_D16as_v4' | 'Standard_D16s_v3' | 'Standard_D2s_v3' | 'Standard_D32as_v4' | 'Standard_D32s_v3' | 'Standard_D4as_v4' | 'Standard_D4s_v3' | 'Standard_D8as_v4' | 'Standard_D8s_v3' | 'Standard_E16s_v3' | 'Standard_E32s_v3' | 'Standard_E4s_v3' | 'Standard_E64i_v3' | 'Standard_E64is_v3' | 'Standard_E8s_v3' | 'Standard_F16s_v2' | 'Standard_F32s_v2' | 'Standard_F4s_v2' | 'Standard_F72s_v2' | 'Standard_F8s_v2' | 'Standard_G5' | 'Standard_GS5' | 'Standard_M128ms' | string: VMSize represents a VM size.
 
 ## SystemData
 ### Properties
@@ -99,12 +98,13 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## OpenShiftClusterAdminKubeconfig
+## WorkerProfile
 ### Properties
-* **kubeconfig**: string (ReadOnly): The base64-encoded kubeconfig file.
-
-## OpenShiftClusterCredentials
-### Properties
-* **kubeadminPassword**: string (ReadOnly): The password for the kubeadmin user.
-* **kubeadminUsername**: string (ReadOnly): The username for the kubeadmin user.
+* **count**: int: The number of worker VMs.
+* **diskEncryptionSetId**: string: The resource ID of an associated DiskEncryptionSet, if applicable.
+* **diskSizeGB**: int: The disk size of the worker VMs.
+* **encryptionAtHost**: 'Disabled' | 'Enabled' | string: EncryptionAtHost represents encryption at host state
+* **name**: string: The worker profile name.
+* **subnetId**: string: The Azure resource ID of the worker subnet.
+* **vmSize**: 'Standard_D16as_v4' | 'Standard_D16s_v3' | 'Standard_D2s_v3' | 'Standard_D32as_v4' | 'Standard_D32s_v3' | 'Standard_D4as_v4' | 'Standard_D4s_v3' | 'Standard_D8as_v4' | 'Standard_D8s_v3' | 'Standard_E16s_v3' | 'Standard_E32s_v3' | 'Standard_E4s_v3' | 'Standard_E64i_v3' | 'Standard_E64is_v3' | 'Standard_E8s_v3' | 'Standard_F16s_v2' | 'Standard_F32s_v2' | 'Standard_F4s_v2' | 'Standard_F72s_v2' | 'Standard_F8s_v2' | 'Standard_G5' | 'Standard_GS5' | 'Standard_M128ms' | string: VMSize represents a VM size.
 

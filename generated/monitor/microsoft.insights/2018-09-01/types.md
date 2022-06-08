@@ -72,6 +72,11 @@
 * **name**: string (Required): The name of the logic app receiver. Names must be unique across all receivers within an action group.
 * **resourceId**: string (Required): The azure resource id of the logic app receiver.
 
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## SmsReceiver
 ### Properties
 * **countryCode**: string (Required): The country code of the SMS receiver.
@@ -89,9 +94,4 @@
 ### Properties
 * **name**: string (Required): The name of the webhook receiver. Names must be unique across all receivers within an action group.
 * **serviceUri**: string (Required): The URI where webhooks should be sent.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

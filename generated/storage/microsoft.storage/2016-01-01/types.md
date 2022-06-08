@@ -18,21 +18,6 @@
 * **ApiVersion**: 2016-01-01
 * **Output**: [StorageAccountListKeysResult](#storageaccountlistkeysresult)
 
-## StorageAccountPropertiesCreateParameters
-### Properties
-* **accessTier**: 'Cool' | 'Hot': Required for storage accounts where kind = BlobStorage. The access tier used for billing.
-* **creationTime**: string (ReadOnly): Gets the creation date and time of the storage account in UTC.
-* **customDomain**: [CustomDomain](#customdomain): The custom domain assigned to this storage account. This can be set via Update.
-* **encryption**: [Encryption](#encryption): The encryption settings on the storage account.
-* **lastGeoFailoverTime**: string (ReadOnly): Gets the timestamp of the most recent instance of a failover to the secondary location. Only the most recent timestamp is retained. This element is not returned if there has never been a failover instance. Only available if the accountType is Standard_GRS or Standard_RAGRS.
-* **primaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): The URIs that are used to perform a retrieval of a public blob, queue, or table object.
-* **primaryLocation**: string (ReadOnly): Gets the location of the primary data center for the storage account.
-* **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly): Gets the status of the storage account at the time the operation was called.
-* **secondaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): The URIs that are used to perform a retrieval of a public blob, queue, or table object.
-* **secondaryLocation**: string (ReadOnly): Gets the location of the geo-replicated secondary for the storage account. Only available if the accountType is Standard_GRS or Standard_RAGRS.
-* **statusOfPrimary**: 'Available' | 'Unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable.
-* **statusOfSecondary**: 'Available' | 'Unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable.
-
 ## CustomDomain
 ### Properties
 * **name**: string (Required): Gets or sets the custom domain name assigned to the storage account. Name is the CNAME source.
@@ -43,14 +28,14 @@
 * **keySource**: 'Microsoft.Storage' | string (Required): The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage
 * **services**: [EncryptionServices](#encryptionservices): A list of services that support encryption.
 
-## EncryptionServices
-### Properties
-* **blob**: [EncryptionService](#encryptionservice): A service that allows server-side encryption to be used.
-
 ## EncryptionService
 ### Properties
 * **enabled**: bool: A boolean indicating whether or not the service encrypts the data as it is stored.
 * **lastEnabledTime**: string (ReadOnly): Gets a rough estimate of the date/time when the encryption was last enabled by the user. Only returned when encryption is enabled. There might be some unencrypted blobs which were written after this time, as it is just a rough estimate.
+
+## EncryptionServices
+### Properties
+* **blob**: [EncryptionService](#encryptionservice): A service that allows server-side encryption to be used.
 
 ## Endpoints
 ### Properties
@@ -69,13 +54,28 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## StorageAccountListKeysResult
-### Properties
-* **keys**: [StorageAccountKey](#storageaccountkey)[] (ReadOnly): Gets the list of storage account keys and their properties for the specified storage account.
-
 ## StorageAccountKey
 ### Properties
 * **keyName**: string (ReadOnly): Name of the key.
 * **permissions**: 'FULL' | 'READ' (ReadOnly): Permissions for the key -- read-only or full permissions.
 * **value**: string (ReadOnly): Base 64-encoded value of the key.
+
+## StorageAccountListKeysResult
+### Properties
+* **keys**: [StorageAccountKey](#storageaccountkey)[] (ReadOnly): Gets the list of storage account keys and their properties for the specified storage account.
+
+## StorageAccountPropertiesCreateParameters
+### Properties
+* **accessTier**: 'Cool' | 'Hot': Required for storage accounts where kind = BlobStorage. The access tier used for billing.
+* **creationTime**: string (ReadOnly): Gets the creation date and time of the storage account in UTC.
+* **customDomain**: [CustomDomain](#customdomain): The custom domain assigned to this storage account. This can be set via Update.
+* **encryption**: [Encryption](#encryption): The encryption settings on the storage account.
+* **lastGeoFailoverTime**: string (ReadOnly): Gets the timestamp of the most recent instance of a failover to the secondary location. Only the most recent timestamp is retained. This element is not returned if there has never been a failover instance. Only available if the accountType is Standard_GRS or Standard_RAGRS.
+* **primaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): The URIs that are used to perform a retrieval of a public blob, queue, or table object.
+* **primaryLocation**: string (ReadOnly): Gets the location of the primary data center for the storage account.
+* **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly): Gets the status of the storage account at the time the operation was called.
+* **secondaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): The URIs that are used to perform a retrieval of a public blob, queue, or table object.
+* **secondaryLocation**: string (ReadOnly): Gets the location of the geo-replicated secondary for the storage account. Only available if the accountType is Standard_GRS or Standard_RAGRS.
+* **statusOfPrimary**: 'Available' | 'Unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable.
+* **statusOfSecondary**: 'Available' | 'Unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable.
 

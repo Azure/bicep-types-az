@@ -23,15 +23,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/NetworkExperimentProfiles/Experiments' (ReadOnly, DeployTimeConstant): The resource type
 
-## ProfileProperties
+## Endpoint
 ### Properties
-* **enabledState**: 'Disabled' | 'Enabled' | string: The state of the Experiment
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Defines the server side resource status
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **endpoint**: string: The endpoint URL
+* **name**: string: The name of the endpoint
 
 ## ExperimentProperties
 ### Properties
@@ -43,10 +38,15 @@
 * **scriptFileUri**: string (ReadOnly): The uri to the Script used in the Experiment
 * **status**: string (ReadOnly): The description of Experiment status from the server side
 
-## Endpoint
+## ProfileProperties
 ### Properties
-* **endpoint**: string: The endpoint URL
-* **name**: string: The name of the endpoint
+* **enabledState**: 'Disabled' | 'Enabled' | string: The state of the Experiment
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Defines the server side resource status
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

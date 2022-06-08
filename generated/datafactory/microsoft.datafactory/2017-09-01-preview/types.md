@@ -67,33 +67,440 @@
 * **ApiVersion**: 2017-09-01-preview
 * **Output**: [IntegrationRuntimeAuthKeys](#integrationruntimeauthkeys)
 
-## FactoryIdentity
-### Properties
-* **principalId**: string (ReadOnly): The principal id of the identity.
-* **tenantId**: string (ReadOnly): The client tenant id of the identity.
-* **type**: 'SystemAssigned' (Required): The identity type. Currently the only supported type is 'SystemAssigned'.
+## Activity
+* **Discriminator**: type
 
-## FactoryProperties
-### Properties
-* **createTime**: string (ReadOnly): Time the factory was created in ISO8601 format.
-* **provisioningState**: string (ReadOnly): Factory provisioning state, example Succeeded.
-* **version**: string (ReadOnly): Version of the factory.
-* **vstsConfiguration**: [FactoryVstsConfiguration](#factoryvstsconfiguration): Factory's VSTS repo information.
+### Base Properties
+* **dependsOn**: [ActivityDependency](#activitydependency)[]: Activity depends on condition.
+* **description**: string: Activity description.
+* **name**: string (Required): Activity name.
+### AzureMLBatchExecutionActivity
+#### Properties
+* **type**: 'AzureMLBatchExecution' (Required): Type of activity.
+* **typeProperties**: [AzureMLBatchExecutionActivityTypeProperties](#azuremlbatchexecutionactivitytypeproperties) (Required): Azure ML Batch Execution activity properties.
 
-## FactoryVstsConfiguration
-### Properties
-* **accountName**: string: VSTS account name.
-* **collaborationBranch**: string: VSTS collaboration branch.
-* **lastCommitId**: string: VSTS last commit id.
-* **projectName**: string: VSTS project name.
-* **repositoryName**: string: VSTS repository name.
-* **rootFolder**: string: VSTS root folder.
-* **tenantId**: string: VSTS tenant id.
+### AzureMLUpdateResourceActivity
+#### Properties
+* **type**: 'AzureMLUpdateResource' (Required): Type of activity.
+* **typeProperties**: [AzureMLUpdateResourceActivityTypeProperties](#azuremlupdateresourceactivitytypeproperties) (Required): Azure ML Update Resource activity properties.
 
-## ResourceTags
+### CopyActivity
+#### Properties
+* **inputs**: [DatasetReference](#datasetreference)[]: List of inputs for the activity.
+* **outputs**: [DatasetReference](#datasetreference)[]: List of outputs for the activity.
+* **type**: 'Copy' (Required): Type of activity.
+* **typeProperties**: [CopyActivityTypeProperties](#copyactivitytypeproperties) (Required): Copy activity properties.
+
+### CustomActivity
+#### Properties
+* **type**: 'Custom' (Required): Type of activity.
+* **typeProperties**: [CustomActivityTypeProperties](#customactivitytypeproperties) (Required): Custom activity properties.
+
+### DatabricksNotebookActivity
+#### Properties
+* **type**: 'DatabricksNotebook' (Required): Type of activity.
+* **typeProperties**: [DatabricksNotebookActivityTypeProperties](#databricksnotebookactivitytypeproperties) (Required): Databricks Notebook activity properties.
+
+### DataLakeAnalyticsUsqlActivity
+#### Properties
+* **type**: 'DataLakeAnalyticsU-SQL' (Required): Type of activity.
+* **typeProperties**: [DataLakeAnalyticsUsqlActivityTypeProperties](#datalakeanalyticsusqlactivitytypeproperties) (Required): DataLakeAnalyticsU-SQL activity properties.
+
+### ExecutePipelineActivity
+#### Properties
+* **type**: 'ExecutePipeline' (Required): Type of activity.
+* **typeProperties**: [ExecutePipelineActivityTypeProperties](#executepipelineactivitytypeproperties) (Required): Execute pipeline activity properties.
+
+### ExecuteSsisPackageActivity
+#### Properties
+* **type**: 'ExecuteSSISPackage' (Required): Type of activity.
+* **typeProperties**: [ExecuteSsisPackageActivityTypeProperties](#executessispackageactivitytypeproperties) (Required): Execute SSIS package activity properties.
+
+### FilterActivity
+#### Properties
+* **type**: 'Filter' (Required): Type of activity.
+* **typeProperties**: [FilterActivityTypeProperties](#filteractivitytypeproperties) (Required): Filter activity properties.
+
+### ForEachActivity
+#### Properties
+* **type**: 'ForEach' (Required): Type of activity.
+* **typeProperties**: [ForEachActivityTypeProperties](#foreachactivitytypeproperties) (Required): ForEach activity properties.
+
+### GetMetadataActivity
+#### Properties
+* **type**: 'GetMetadata' (Required): Type of activity.
+* **typeProperties**: [GetMetadataActivityTypeProperties](#getmetadataactivitytypeproperties) (Required): GetMetadata activity properties.
+
+### HDInsightHiveActivity
+#### Properties
+* **type**: 'HDInsightHive' (Required): Type of activity.
+* **typeProperties**: [HDInsightHiveActivityTypeProperties](#hdinsighthiveactivitytypeproperties) (Required): HDInsight Hive activity properties.
+
+### HDInsightMapReduceActivity
+#### Properties
+* **type**: 'HDInsightMapReduce' (Required): Type of activity.
+* **typeProperties**: [HDInsightMapReduceActivityTypeProperties](#hdinsightmapreduceactivitytypeproperties) (Required): HDInsight MapReduce activity properties.
+
+### HDInsightPigActivity
+#### Properties
+* **type**: 'HDInsightPig' (Required): Type of activity.
+* **typeProperties**: [HDInsightPigActivityTypeProperties](#hdinsightpigactivitytypeproperties) (Required): HDInsight Pig activity properties.
+
+### HDInsightSparkActivity
+#### Properties
+* **type**: 'HDInsightSpark' (Required): Type of activity.
+* **typeProperties**: [HDInsightSparkActivityTypeProperties](#hdinsightsparkactivitytypeproperties) (Required): HDInsight spark activity properties.
+
+### HDInsightStreamingActivity
+#### Properties
+* **type**: 'HDInsightStreaming' (Required): Type of activity.
+* **typeProperties**: [HDInsightStreamingActivityTypeProperties](#hdinsightstreamingactivitytypeproperties) (Required): HDInsight streaming activity properties.
+
+### IfConditionActivity
+#### Properties
+* **type**: 'IfCondition' (Required): Type of activity.
+* **typeProperties**: [IfConditionActivityTypeProperties](#ifconditionactivitytypeproperties) (Required): IfCondition activity properties.
+
+### LookupActivity
+#### Properties
+* **type**: 'Lookup' (Required): Type of activity.
+* **typeProperties**: [LookupActivityTypeProperties](#lookupactivitytypeproperties) (Required): Lookup activity properties.
+
+### SqlServerStoredProcedureActivity
+#### Properties
+* **type**: 'SqlServerStoredProcedure' (Required): Type of activity.
+* **typeProperties**: [SqlServerStoredProcedureActivityTypeProperties](#sqlserverstoredprocedureactivitytypeproperties) (Required): SQL stored procedure activity properties.
+
+### UntilActivity
+#### Properties
+* **type**: 'Until' (Required): Type of activity.
+* **typeProperties**: [UntilActivityTypeProperties](#untilactivitytypeproperties) (Required): Until activity properties.
+
+### WaitActivity
+#### Properties
+* **type**: 'Wait' (Required): Type of activity.
+* **typeProperties**: [WaitActivityTypeProperties](#waitactivitytypeproperties) (Required): Wait activity properties.
+
+### WebActivity
+#### Properties
+* **type**: 'WebActivity' (Required): Type of activity.
+* **typeProperties**: [WebActivityTypeProperties](#webactivitytypeproperties) (Required): Web activity type properties.
+
+
+## ActivityDependency
+### Properties
+* **activity**: string (Required): Activity name.
+* **dependencyConditions**: 'Completed' | 'Failed' | 'Skipped' | 'Succeeded' | string[] (Required): Match-Condition for the dependency.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## AmazonMWSLinkedServiceTypeProperties
+### Properties
+* **accessKeyId**: any (Required): Any object
+* **encryptedCredential**: any: Any object
+* **endpoint**: any (Required): Any object
+* **marketplaceID**: any (Required): Any object
+* **mwsAuthToken**: [SecretBase](#secretbase): The base definition of a secret type.
+* **secretKey**: [SecretBase](#secretbase): The base definition of a secret type.
+* **sellerID**: any (Required): Any object
+* **useEncryptedEndpoints**: any: Any object
+* **useHostVerification**: any: Any object
+* **usePeerVerification**: any: Any object
+
+## AmazonRedshiftLinkedServiceTypeProperties
+### Properties
+* **database**: any (Required): Any object
+* **encryptedCredential**: any: Any object
+* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **port**: any: Any object
+* **server**: any (Required): Any object
+* **username**: any: Any object
+
+## AmazonS3DatasetTypeProperties
+### Properties
+* **bucketName**: any (Required): Any object
+* **compression**: [DatasetCompression](#datasetcompression): The compression method used on a dataset.
+* **format**: [DatasetStorageFormat](#datasetstorageformat): The format definition of a storage.
+* **key**: any: Any object
+* **prefix**: any: Any object
+* **version**: any: Any object
+
+## AmazonS3LinkedServiceTypeProperties
+### Properties
+* **accessKeyId**: any: Any object
+* **encryptedCredential**: any: Any object
+* **secretAccessKey**: [SecretBase](#secretbase): The base definition of a secret type.
+
+## AzureBatchLinkedServiceTypeProperties
+### Properties
+* **accessKey**: [SecretBase](#secretbase): The base definition of a secret type.
+* **accountName**: any (Required): Any object
+* **batchUri**: any (Required): Any object
+* **encryptedCredential**: any: Any object
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
+* **poolName**: any (Required): Any object
+
+## AzureBlobDatasetTypeProperties
+### Properties
+* **compression**: [DatasetCompression](#datasetcompression): The compression method used on a dataset.
+* **fileName**: any: Any object
+* **folderPath**: any: Any object
+* **format**: [DatasetStorageFormat](#datasetstorageformat): The format definition of a storage.
+* **tableRootLocation**: any: Any object
+
+## AzureDatabricksLinkedServiceTypeProperties
+### Properties
+* **accessToken**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
+* **domain**: any (Required): Any object
+* **encryptedCredential**: any: Any object
+* **existingClusterId**: any: Any object
+* **newClusterNodeType**: any: Any object
+* **newClusterNumOfWorker**: any: Any object
+* **newClusterSparkConf**: [AzureDatabricksLinkedServiceTypePropertiesNewClusterSparkConf](#azuredatabrickslinkedservicetypepropertiesnewclustersparkconf): a set of optional, user-specified Spark configuration key-value pairs.
+* **newClusterVersion**: any: Any object
+
+## AzureDatabricksLinkedServiceTypePropertiesNewClusterSparkConf
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: string
+* **Additional Properties Type**: any
+
+## AzureDataLakeAnalyticsLinkedServiceTypeProperties
+### Properties
+* **accountName**: any (Required): Any object
+* **dataLakeAnalyticsUri**: any: Any object
+* **encryptedCredential**: any: Any object
+* **resourceGroupName**: any: Any object
+* **servicePrincipalId**: any: Any object
+* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
+* **subscriptionId**: any: Any object
+* **tenant**: any (Required): Any object
+
+## AzureDataLakeStoreDatasetTypeProperties
+### Properties
+* **compression**: [DatasetCompression](#datasetcompression): The compression method used on a dataset.
+* **fileName**: any: Any object
+* **folderPath**: any (Required): Any object
+* **format**: [DatasetStorageFormat](#datasetstorageformat): The format definition of a storage.
+
+## AzureDataLakeStoreLinkedServiceTypeProperties
+### Properties
+* **accountName**: any: Any object
+* **dataLakeStoreUri**: any (Required): Any object
+* **encryptedCredential**: any: Any object
+* **resourceGroupName**: any: Any object
+* **servicePrincipalId**: any: Any object
+* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
+* **subscriptionId**: any: Any object
+* **tenant**: any: Any object
+
+## AzureKeyVaultLinkedServiceTypeProperties
+### Properties
+* **baseUrl**: any (Required): Any object
+
+## AzureMLBatchExecutionActivityTypeProperties
+### Properties
+* **globalParameters**: [AzureMLBatchExecutionActivityTypePropertiesGlobalParameters](#azuremlbatchexecutionactivitytypepropertiesglobalparameters): Key,Value pairs to be passed to the Azure ML Batch Execution Service endpoint. Keys must match the names of web service parameters defined in the published Azure ML web service. Values will be passed in the GlobalParameters property of the Azure ML batch execution request.
+* **webServiceInputs**: [AzureMLBatchExecutionActivityTypePropertiesWebServiceInputs](#azuremlbatchexecutionactivitytypepropertieswebserviceinputs): Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Inputs to AzureMLWebServiceFile objects specifying the input Blob locations.. This information will be passed in the WebServiceInputs property of the Azure ML batch execution request.
+* **webServiceOutputs**: [AzureMLBatchExecutionActivityTypePropertiesWebServiceOutputs](#azuremlbatchexecutionactivitytypepropertieswebserviceoutputs): Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Outputs to AzureMLWebServiceFile objects specifying the output Blob locations. This information will be passed in the WebServiceOutputs property of the Azure ML batch execution request.
+
+## AzureMLBatchExecutionActivityTypePropertiesGlobalParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## AzureMLBatchExecutionActivityTypePropertiesWebServiceInputs
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [AzureMLWebServiceFile](#azuremlwebservicefile)
+
+## AzureMLBatchExecutionActivityTypePropertiesWebServiceOutputs
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [AzureMLWebServiceFile](#azuremlwebservicefile)
+
+## AzureMLLinkedServiceTypeProperties
+### Properties
+* **apiKey**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
+* **encryptedCredential**: any: Any object
+* **mlEndpoint**: any (Required): Any object
+* **servicePrincipalId**: any: Any object
+* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
+* **tenant**: any: Any object
+* **updateResourceEndpoint**: any: Any object
+
+## AzureMLUpdateResourceActivityTypeProperties
+### Properties
+* **trainedModelFilePath**: any (Required): Any object
+* **trainedModelLinkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
+* **trainedModelName**: any (Required): Any object
+
+## AzureMLWebServiceFile
+### Properties
+* **filePath**: any (Required): Any object
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
+
+## AzureMySqlLinkedServiceTypeProperties
+### Properties
+* **connectionString**: any (Required): Any object
+* **encryptedCredential**: any: Any object
+
+## AzureMySqlTableDatasetTypeProperties
+### Properties
+* **tableName**: any: Any object
+
+## AzurePostgreSqlLinkedServiceTypeProperties
+### Properties
+* **connectionString**: any: Any object
+* **encryptedCredential**: any: Any object
+
+## AzureSearchIndexDatasetTypeProperties
+### Properties
+* **indexName**: any (Required): Any object
+
+## AzureSearchLinkedServiceTypeProperties
+### Properties
+* **encryptedCredential**: any: Any object
+* **key**: [SecretBase](#secretbase): The base definition of a secret type.
+* **url**: any (Required): Any object
+
+## AzureSqlDatabaseLinkedServiceTypeProperties
+### Properties
+* **connectionString**: any (Required): Any object
+* **encryptedCredential**: any: Any object
+* **servicePrincipalId**: any: Any object
+* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
+* **tenant**: any: Any object
+
+## AzureSqlDWLinkedServiceTypeProperties
+### Properties
+* **connectionString**: any (Required): Any object
+* **encryptedCredential**: any: Any object
+* **servicePrincipalId**: any: Any object
+* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
+* **tenant**: any: Any object
+
+## AzureSqlDWTableDatasetTypeProperties
+### Properties
+* **tableName**: any (Required): Any object
+
+## AzureSqlTableDatasetTypeProperties
+### Properties
+* **tableName**: any (Required): Any object
+
+## AzureStorageLinkedServiceTypeProperties
+### Properties
+* **connectionString**: any: Any object
+* **encryptedCredential**: any: Any object
+* **sasUri**: [SecretBase](#secretbase): The base definition of a secret type.
+
+## AzureTableDatasetTypeProperties
+### Properties
+* **tableName**: any (Required): Any object
+
+## CassandraLinkedServiceTypeProperties
+### Properties
+* **authenticationType**: any: Any object
+* **encryptedCredential**: any: Any object
+* **host**: any (Required): Any object
+* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **port**: any: Any object
+* **username**: any: Any object
+
+## CassandraTableDatasetTypeProperties
+### Properties
+* **keyspace**: any: Any object
+* **tableName**: any: Any object
+
+## ConcurLinkedServiceTypeProperties
+### Properties
+* **clientId**: any (Required): Any object
+* **encryptedCredential**: any: Any object
+* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **useEncryptedEndpoints**: any: Any object
+* **useHostVerification**: any: Any object
+* **usePeerVerification**: any: Any object
+* **username**: any (Required): Any object
+
+## CopyActivityTypeProperties
+### Properties
+* **cloudDataMovementUnits**: any: Any object
+* **enableSkipIncompatibleRow**: any: Any object
+* **enableStaging**: any: Any object
+* **parallelCopies**: any: Any object
+* **redirectIncompatibleRowSettings**: [RedirectIncompatibleRowSettings](#redirectincompatiblerowsettings): Redirect incompatible row settings
+* **sink**: [CopySink](#copysink) (Required): A copy activity sink.
+* **source**: [CopySource](#copysource) (Required): A copy activity source.
+* **stagingSettings**: [StagingSettings](#stagingsettings): Staging settings.
+* **translator**: any: Any object
+
+## CopySink
+* **Discriminator**: type
+
+### Base Properties
+* **sinkRetryCount**: any: Any object
+* **sinkRetryWait**: any: Any object
+* **writeBatchSize**: any: Any object
+* **writeBatchTimeout**: any: Any object
+
+## CopySource
+* **Discriminator**: type
+
+### Base Properties
+* **sourceRetryCount**: any: Any object
+* **sourceRetryWait**: any: Any object
+
+## CosmosDbLinkedServiceTypeProperties
+### Properties
+* **connectionString**: any (Required): Any object
+* **encryptedCredential**: any: Any object
+
+## CouchbaseLinkedServiceTypeProperties
+### Properties
+* **connectionString**: any: Any object
+* **encryptedCredential**: any: Any object
+
+## CustomActivityReferenceObject
+### Properties
+* **datasets**: [DatasetReference](#datasetreference)[]: Dataset references.
+* **linkedServices**: [LinkedServiceReference](#linkedservicereference)[]: Linked service references.
+
+## CustomActivityTypeProperties
+### Properties
+* **command**: any (Required): Any object
+* **extendedProperties**: [CustomActivityTypePropertiesExtendedProperties](#customactivitytypepropertiesextendedproperties): User defined property bag. There is no restriction on the keys or values that can be used. The user specified custom activity has the full responsibility to consume and interpret the content defined.
+* **folderPath**: any: Any object
+* **referenceObjects**: [CustomActivityReferenceObject](#customactivityreferenceobject): Reference objects for custom activity
+* **resourceLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+
+## CustomActivityTypePropertiesExtendedProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DatabricksNotebookActivityTypeProperties
+### Properties
+* **baseParameters**: [DatabricksNotebookActivityTypePropertiesBaseParameters](#databricksnotebookactivitytypepropertiesbaseparameters): Base parameters to be used for each run of this job.If the notebook takes a parameter that is not specified, the default value from the notebook will be used.
+* **notebookPath**: any (Required): Any object
+
+## DatabricksNotebookActivityTypePropertiesBaseParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DataLakeAnalyticsUsqlActivityTypeProperties
+### Properties
+* **compilationMode**: any: Any object
+* **degreeOfParallelism**: any: Any object
+* **parameters**: [DataLakeAnalyticsUsqlActivityTypePropertiesParameters](#datalakeanalyticsusqlactivitytypepropertiesparameters): Parameters for U-SQL job request.
+* **priority**: any: Any object
+* **runtimeVersion**: any: Any object
+* **scriptLinkedService**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
+* **scriptPath**: any (Required): Any object
+
+## DataLakeAnalyticsUsqlActivityTypePropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## Dataset
 * **Discriminator**: type
@@ -335,36 +742,6 @@
 * **type**: 'ZohoObject' (Required): Type of dataset.
 
 
-## LinkedServiceReference
-### Properties
-* **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
-* **referenceName**: string (Required): Reference LinkedService name.
-* **type**: 'LinkedServiceReference' | string (Required): Linked service reference type.
-
-## ParameterValueSpecification
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## ParameterDefinitionSpecification
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [ParameterSpecification](#parameterspecification)
-
-## ParameterSpecification
-### Properties
-* **defaultValue**: any: Any object
-* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'Object' | 'SecureString' | 'String' | string (Required): Parameter type.
-
-## AmazonS3DatasetTypeProperties
-### Properties
-* **bucketName**: any (Required): Any object
-* **compression**: [DatasetCompression](#datasetcompression): The compression method used on a dataset.
-* **format**: [DatasetStorageFormat](#datasetstorageformat): The format definition of a storage.
-* **key**: any: Any object
-* **prefix**: any: Any object
-* **version**: any: Any object
-
 ## DatasetCompression
 * **Discriminator**: type
 
@@ -389,6 +766,12 @@
 * **type**: 'ZipDeflate' (Required): Type of dataset compression.
 
 
+## DatasetReference
+### Properties
+* **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
+* **referenceName**: string (Required): Reference dataset name.
+* **type**: 'DatasetReference' | string (Required): Dataset reference type.
+
 ## DatasetStorageFormat
 * **Discriminator**: type
 
@@ -396,53 +779,135 @@
 * **deserializer**: any: Any object
 * **serializer**: any: Any object
 
-## AzureBlobDatasetTypeProperties
+## Db2LinkedServiceTypeProperties
 ### Properties
-* **compression**: [DatasetCompression](#datasetcompression): The compression method used on a dataset.
-* **fileName**: any: Any object
-* **folderPath**: any: Any object
-* **format**: [DatasetStorageFormat](#datasetstorageformat): The format definition of a storage.
-* **tableRootLocation**: any: Any object
-
-## AzureDataLakeStoreDatasetTypeProperties
-### Properties
-* **compression**: [DatasetCompression](#datasetcompression): The compression method used on a dataset.
-* **fileName**: any: Any object
-* **folderPath**: any (Required): Any object
-* **format**: [DatasetStorageFormat](#datasetstorageformat): The format definition of a storage.
-
-## AzureMySqlTableDatasetTypeProperties
-### Properties
-* **tableName**: any: Any object
-
-## AzureSearchIndexDatasetTypeProperties
-### Properties
-* **indexName**: any (Required): Any object
-
-## AzureSqlDWTableDatasetTypeProperties
-### Properties
-* **tableName**: any (Required): Any object
-
-## AzureSqlTableDatasetTypeProperties
-### Properties
-* **tableName**: any (Required): Any object
-
-## AzureTableDatasetTypeProperties
-### Properties
-* **tableName**: any (Required): Any object
-
-## CassandraTableDatasetTypeProperties
-### Properties
-* **keyspace**: any: Any object
-* **tableName**: any: Any object
+* **authenticationType**: 'Basic' | string: AuthenticationType to be used for connection.
+* **database**: any (Required): Any object
+* **encryptedCredential**: any: Any object
+* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **server**: any (Required): Any object
+* **username**: any: Any object
 
 ## DocumentDbCollectionDatasetTypeProperties
 ### Properties
 * **collectionName**: any (Required): Any object
 
+## DrillLinkedServiceTypeProperties
+### Properties
+* **connectionString**: any: Any object
+* **encryptedCredential**: any: Any object
+
 ## DynamicsEntityDatasetTypeProperties
 ### Properties
 * **entityName**: any: Any object
+
+## DynamicsLinkedServiceTypeProperties
+### Properties
+* **authenticationType**: 'Ifd' | 'Office365' | string (Required): The authentication type to connect to Dynamics server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario. Type: string (or Expression with resultType string).
+* **deploymentType**: 'OnPremisesWithIfd' | 'Online' | string (Required): The deployment type of the Dynamics instance. 'Online' for Dynamics Online and 'OnPremisesWithIfd' for Dynamics on-premises with Ifd. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: Any object
+* **hostName**: any: Any object
+* **organizationName**: any: Any object
+* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **port**: any: Any object
+* **serviceUri**: any: Any object
+* **username**: any (Required): Any object
+
+## EloquaLinkedServiceTypeProperties
+### Properties
+* **encryptedCredential**: any: Any object
+* **endpoint**: any (Required): Any object
+* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **useEncryptedEndpoints**: any: Any object
+* **useHostVerification**: any: Any object
+* **usePeerVerification**: any: Any object
+* **username**: any (Required): Any object
+
+## EntityReference
+### Properties
+* **referenceName**: string: The name of this referenced entity.
+* **type**: 'IntegrationRuntimeReference' | 'LinkedServiceReference' | string: The type of this referenced entity.
+
+## ExecutePipelineActivityTypeProperties
+### Properties
+* **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
+* **pipeline**: [PipelineReference](#pipelinereference) (Required): Pipeline reference type.
+* **waitOnCompletion**: bool: Defines whether activity execution will wait for the dependent pipeline execution to finish. Default is false.
+
+## ExecuteSsisPackageActivityTypeProperties
+### Properties
+* **connectVia**: [IntegrationRuntimeReference](#integrationruntimereference) (Required): Integration runtime reference type.
+* **environmentPath**: any: Any object
+* **executionCredential**: [SsisExecutionCredential](#ssisexecutioncredential): SSIS package execution credential.
+* **loggingLevel**: any: Any object
+* **logLocation**: [SsisLogLocation](#ssisloglocation): SSIS package execution log location
+* **packageConnectionManagers**: [ExecuteSsisPackageActivityTypePropertiesPackageConnectionManagers](#executessispackageactivitytypepropertiespackageconnectionmanagers): The package level connection managers to execute the SSIS package.
+* **packageLocation**: [SsisPackageLocation](#ssispackagelocation) (Required): SSIS package location.
+* **packageParameters**: [ExecuteSsisPackageActivityTypePropertiesPackageParameters](#executessispackageactivitytypepropertiespackageparameters): The package level parameters to execute the SSIS package.
+* **projectConnectionManagers**: [ExecuteSsisPackageActivityTypePropertiesProjectConnectionManagers](#executessispackageactivitytypepropertiesprojectconnectionmanagers): The project level connection managers to execute the SSIS package.
+* **projectParameters**: [ExecuteSsisPackageActivityTypePropertiesProjectParameters](#executessispackageactivitytypepropertiesprojectparameters): The project level parameters to execute the SSIS package.
+* **propertyOverrides**: [ExecuteSsisPackageActivityTypePropertiesPropertyOverrides](#executessispackageactivitytypepropertiespropertyoverrides): The property overrides to execute the SSIS package.
+* **runtime**: any: Any object
+
+## ExecuteSsisPackageActivityTypePropertiesPackageConnectionManagers
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [SsisConnectionManager](#ssisconnectionmanager)
+
+## ExecuteSsisPackageActivityTypePropertiesPackageParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [SsisExecutionParameter](#ssisexecutionparameter)
+
+## ExecuteSsisPackageActivityTypePropertiesProjectConnectionManagers
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [SsisConnectionManager](#ssisconnectionmanager)
+
+## ExecuteSsisPackageActivityTypePropertiesProjectParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [SsisExecutionParameter](#ssisexecutionparameter)
+
+## ExecuteSsisPackageActivityTypePropertiesPropertyOverrides
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [SsisPropertyOverride](#ssispropertyoverride)
+
+## Expression
+### Properties
+* **type**: 'Expression' | string (Required): Expression type.
+* **value**: string (Required): Expression value.
+
+## FactoryIdentity
+### Properties
+* **principalId**: string (ReadOnly): The principal id of the identity.
+* **tenantId**: string (ReadOnly): The client tenant id of the identity.
+* **type**: 'SystemAssigned' (Required): The identity type. Currently the only supported type is 'SystemAssigned'.
+
+## FactoryProperties
+### Properties
+* **createTime**: string (ReadOnly): Time the factory was created in ISO8601 format.
+* **provisioningState**: string (ReadOnly): Factory provisioning state, example Succeeded.
+* **version**: string (ReadOnly): Version of the factory.
+* **vstsConfiguration**: [FactoryVstsConfiguration](#factoryvstsconfiguration): Factory's VSTS repo information.
+
+## FactoryVstsConfiguration
+### Properties
+* **accountName**: string: VSTS account name.
+* **collaborationBranch**: string: VSTS collaboration branch.
+* **lastCommitId**: string: VSTS last commit id.
+* **projectName**: string: VSTS project name.
+* **repositoryName**: string: VSTS repository name.
+* **rootFolder**: string: VSTS root folder.
+* **tenantId**: string: VSTS tenant id.
+
+## FileServerLinkedServiceTypeProperties
+### Properties
+* **encryptedCredential**: any: Any object
+* **host**: any (Required): Any object
+* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **userId**: any: Any object
 
 ## FileShareDatasetTypeProperties
 ### Properties
@@ -451,6 +916,218 @@
 * **fileName**: any: Any object
 * **folderPath**: any: Any object
 * **format**: [DatasetStorageFormat](#datasetstorageformat): The format definition of a storage.
+
+## FilterActivityTypeProperties
+### Properties
+* **condition**: [Expression](#expression) (Required): Azure Data Factory expression definition.
+* **items**: [Expression](#expression) (Required): Azure Data Factory expression definition.
+
+## ForEachActivityTypeProperties
+### Properties
+* **activities**: [Activity](#activity)[] (Required): List of activities to execute .
+* **batchCount**: int: Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
+* **isSequential**: bool: Should the loop be executed in sequence or in parallel (max 50)
+* **items**: [Expression](#expression) (Required): Azure Data Factory expression definition.
+
+## FtpServerLinkedServiceTypeProperties
+### Properties
+* **authenticationType**: 'Anonymous' | 'Basic' | string: The authentication type to be used to connect to the FTP server.
+* **enableServerCertificateValidation**: any: Any object
+* **enableSsl**: any: Any object
+* **encryptedCredential**: any: Any object
+* **host**: any (Required): Any object
+* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **port**: any: Any object
+* **userName**: any: Any object
+
+## GetMetadataActivityTypeProperties
+### Properties
+* **dataset**: [DatasetReference](#datasetreference) (Required): Dataset reference type.
+* **fieldList**: any[]: Fields of metadata to get from dataset.
+
+## GoogleBigQueryLinkedServiceTypeProperties
+### Properties
+* **additionalProjects**: any: Any object
+* **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication' | string (Required): The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
+* **clientId**: [SecretBase](#secretbase): The base definition of a secret type.
+* **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
+* **email**: any: Any object
+* **encryptedCredential**: any: Any object
+* **keyFilePath**: any: Any object
+* **project**: any (Required): Any object
+* **refreshToken**: [SecretBase](#secretbase): The base definition of a secret type.
+* **requestGoogleDriveScope**: any: Any object
+* **trustedCertPath**: any: Any object
+* **useSystemTrustStore**: any: Any object
+
+## GreenplumLinkedServiceTypeProperties
+### Properties
+* **connectionString**: any: Any object
+* **encryptedCredential**: any: Any object
+
+## HBaseLinkedServiceTypeProperties
+### Properties
+* **allowHostNameCNMismatch**: any: Any object
+* **allowSelfSignedServerCert**: any: Any object
+* **authenticationType**: 'Anonymous' | 'Basic' | string (Required): The authentication mechanism to use to connect to the HBase server.
+* **enableSsl**: any: Any object
+* **encryptedCredential**: any: Any object
+* **host**: any (Required): Any object
+* **httpPath**: any: Any object
+* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **port**: any: Any object
+* **trustedCertPath**: any: Any object
+* **username**: any: Any object
+
+## HdfsLinkedServiceTypeProperties
+### Properties
+* **authenticationType**: any: Any object
+* **encryptedCredential**: any: Any object
+* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **url**: any (Required): Any object
+* **userName**: any: Any object
+
+## HDInsightHiveActivityTypeProperties
+### Properties
+* **arguments**: any[]: User specified arguments to HDInsightActivity.
+* **defines**: [HDInsightHiveActivityTypePropertiesDefines](#hdinsighthiveactivitytypepropertiesdefines): Allows user to specify defines for Hive job request.
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
+* **scriptLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **scriptPath**: any: Any object
+* **storageLinkedServices**: [LinkedServiceReference](#linkedservicereference)[]: Storage linked service references.
+
+## HDInsightHiveActivityTypePropertiesDefines
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## HDInsightLinkedServiceTypeProperties
+### Properties
+* **clusterUri**: any (Required): Any object
+* **encryptedCredential**: any: Any object
+* **hcatalogLinkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **userName**: any: Any object
+
+## HDInsightMapReduceActivityTypeProperties
+### Properties
+* **arguments**: any[]: User specified arguments to HDInsightActivity.
+* **className**: any (Required): Any object
+* **defines**: [HDInsightMapReduceActivityTypePropertiesDefines](#hdinsightmapreduceactivitytypepropertiesdefines): Allows user to specify defines for the MapReduce job request.
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
+* **jarFilePath**: any (Required): Any object
+* **jarLibs**: any[]: Jar libs.
+* **jarLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **storageLinkedServices**: [LinkedServiceReference](#linkedservicereference)[]: Storage linked service references.
+
+## HDInsightMapReduceActivityTypePropertiesDefines
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## HDInsightOnDemandLinkedServiceTypeProperties
+### Properties
+* **additionalLinkedServiceNames**: [LinkedServiceReference](#linkedservicereference)[]: Specifies additional storage accounts for the HDInsight linked service so that the Data Factory service can register them on your behalf.
+* **clusterNamePrefix**: any: Any object
+* **clusterPassword**: [SecretBase](#secretbase): The base definition of a secret type.
+* **clusterResourceGroup**: any (Required): Any object
+* **clusterSize**: any (Required): Any object
+* **clusterSshPassword**: [SecretBase](#secretbase): The base definition of a secret type.
+* **clusterSshUserName**: any: Any object
+* **clusterType**: any: Any object
+* **clusterUserName**: any: Any object
+* **coreConfiguration**: any: Any object
+* **dataNodeSize**: any: Any object
+* **encryptedCredential**: any: Any object
+* **hBaseConfiguration**: any: Any object
+* **hcatalogLinkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **hdfsConfiguration**: any: Any object
+* **headNodeSize**: any: Any object
+* **hiveConfiguration**: any: Any object
+* **hostSubscriptionId**: any (Required): Any object
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
+* **mapReduceConfiguration**: any: Any object
+* **oozieConfiguration**: any: Any object
+* **servicePrincipalId**: any: Any object
+* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
+* **sparkVersion**: any: Any object
+* **stormConfiguration**: any: Any object
+* **tenant**: any (Required): Any object
+* **timeToLive**: any (Required): Any object
+* **version**: any (Required): Any object
+* **yarnConfiguration**: any: Any object
+* **zookeeperNodeSize**: any: Any object
+
+## HDInsightPigActivityTypeProperties
+### Properties
+* **arguments**: any[]: User specified arguments to HDInsightActivity.
+* **defines**: [HDInsightPigActivityTypePropertiesDefines](#hdinsightpigactivitytypepropertiesdefines): Allows user to specify defines for Pig job request.
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
+* **scriptLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **scriptPath**: any: Any object
+* **storageLinkedServices**: [LinkedServiceReference](#linkedservicereference)[]: Storage linked service references.
+
+## HDInsightPigActivityTypePropertiesDefines
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## HDInsightSparkActivityTypeProperties
+### Properties
+* **arguments**: any[]: The user-specified arguments to HDInsightSparkActivity.
+* **className**: string: The application's Java/Spark main class.
+* **entryFilePath**: any (Required): Any object
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
+* **proxyUser**: any: Any object
+* **rootPath**: any (Required): Any object
+* **sparkConfig**: [HDInsightSparkActivityTypePropertiesSparkConfig](#hdinsightsparkactivitytypepropertiessparkconfig): Spark configuration property.
+* **sparkJobLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+
+## HDInsightSparkActivityTypePropertiesSparkConfig
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## HDInsightStreamingActivityTypeProperties
+### Properties
+* **arguments**: any[]: User specified arguments to HDInsightActivity.
+* **combiner**: any: Any object
+* **commandEnvironment**: any[]: Command line environment values.
+* **defines**: [HDInsightStreamingActivityTypePropertiesDefines](#hdinsightstreamingactivitytypepropertiesdefines): Allows user to specify defines for streaming job request.
+* **fileLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **filePaths**: any[] (Required): Paths to streaming job files. Can be directories.
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
+* **input**: any (Required): Any object
+* **mapper**: any (Required): Any object
+* **output**: any (Required): Any object
+* **reducer**: any (Required): Any object
+* **storageLinkedServices**: [LinkedServiceReference](#linkedservicereference)[]: Storage linked service references.
+
+## HDInsightStreamingActivityTypePropertiesDefines
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## HiveLinkedServiceTypeProperties
+### Properties
+* **allowHostNameCNMismatch**: any: Any object
+* **allowSelfSignedServerCert**: any: Any object
+* **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' | string (Required): The authentication method used to access the Hive server.
+* **enableSsl**: any: Any object
+* **encryptedCredential**: any: Any object
+* **host**: any (Required): Any object
+* **httpPath**: any: Any object
+* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **port**: any: Any object
+* **serverType**: 'HiveServer1' | 'HiveServer2' | 'HiveThriftServer' | string: The type of Hive server.
+* **serviceDiscoveryMode**: any: Any object
+* **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL' | string: The transport protocol to use in the Thrift layer.
+* **trustedCertPath**: any: Any object
+* **useNativeQuery**: any: Any object
+* **username**: any: Any object
+* **useSystemTrustStore**: any: Any object
+* **zooKeeperNameSpace**: any: Any object
 
 ## HttpDatasetTypeProperties
 ### Properties
@@ -461,42 +1138,47 @@
 * **requestBody**: any: Any object
 * **requestMethod**: any: Any object
 
-## MongoDbCollectionDatasetTypeProperties
+## HttpLinkedServiceTypeProperties
 ### Properties
-* **collectionName**: any (Required): Any object
+* **authenticationType**: 'Anonymous' | 'Basic' | 'ClientCertificate' | 'Digest' | 'Windows' | string: The authentication type to be used to connect to the HTTP server.
+* **certThumbprint**: any: Any object
+* **embeddedCertData**: any: Any object
+* **enableServerCertificateValidation**: any: Any object
+* **encryptedCredential**: any: Any object
+* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **url**: any (Required): Any object
+* **userName**: any: Any object
 
-## ODataResourceDatasetTypeProperties
+## HubspotLinkedServiceTypeProperties
 ### Properties
-* **path**: any: Any object
+* **accessToken**: [SecretBase](#secretbase): The base definition of a secret type.
+* **clientId**: any (Required): Any object
+* **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
+* **encryptedCredential**: any: Any object
+* **refreshToken**: [SecretBase](#secretbase): The base definition of a secret type.
+* **useEncryptedEndpoints**: any: Any object
+* **useHostVerification**: any: Any object
+* **usePeerVerification**: any: Any object
 
-## OracleTableDatasetTypeProperties
+## IfConditionActivityTypeProperties
 ### Properties
-* **tableName**: any (Required): Any object
+* **expression**: [Expression](#expression) (Required): Azure Data Factory expression definition.
+* **ifFalseActivities**: [Activity](#activity)[]: List of activities to execute if expression is evaluated to false. This is an optional property and if not provided, the activity will exit without any action.
+* **ifTrueActivities**: [Activity](#activity)[]: List of activities to execute if expression is evaluated to true. This is an optional property and if not provided, the activity will exit without any action.
 
-## RelationalTableDatasetTypeProperties
+## ImpalaLinkedServiceTypeProperties
 ### Properties
-* **tableName**: any: Any object
-
-## SalesforceObjectDatasetTypeProperties
-### Properties
-* **objectApiName**: any: Any object
-
-## SapCloudForCustomerResourceDatasetTypeProperties
-### Properties
-* **path**: any (Required): Any object
-
-## SapEccResourceDatasetTypeProperties
-### Properties
-* **path**: any (Required): Any object
-
-## SqlServerTableDatasetTypeProperties
-### Properties
-* **tableName**: any (Required): Any object
-
-## WebTableDatasetTypeProperties
-### Properties
-* **index**: any (Required): Any object
-* **path**: any: Any object
+* **allowHostNameCNMismatch**: any: Any object
+* **allowSelfSignedServerCert**: any: Any object
+* **authenticationType**: 'Anonymous' | 'SASLUsername' | 'UsernameAndPassword' | string (Required): The authentication type to use.
+* **enableSsl**: any: Any object
+* **encryptedCredential**: any: Any object
+* **host**: any (Required): Any object
+* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **port**: any: Any object
+* **trustedCertPath**: any: Any object
+* **username**: any: Any object
+* **useSystemTrustStore**: any: Any object
 
 ## IntegrationRuntime
 * **Discriminator**: type
@@ -515,10 +1197,10 @@
 * **typeProperties**: [LinkedIntegrationRuntimeTypeProperties](#linkedintegrationruntimetypeproperties) (Required): The base definition of a secret type.
 
 
-## ManagedIntegrationRuntimeTypeProperties
+## IntegrationRuntimeAuthKeys
 ### Properties
-* **computeProperties**: [IntegrationRuntimeComputeProperties](#integrationruntimecomputeproperties): The compute resource properties for managed integration runtime.
-* **ssisProperties**: [IntegrationRuntimeSsisProperties](#integrationruntimessisproperties): SSIS properties for managed integration runtime.
+* **authKey1**: string (ReadOnly): The primary integration runtime authentication key.
+* **authKey2**: string (ReadOnly): The secondary integration runtime authentication key.
 
 ## IntegrationRuntimeComputeProperties
 ### Properties
@@ -530,10 +1212,29 @@
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## IntegrationRuntimeVNetProperties
+## IntegrationRuntimeCustomSetupScriptProperties
 ### Properties
-* **subnet**: string: The name of the subnet this integration runtime will join.
-* **vNetId**: string: The ID of the VNet that this integration runtime will join.
+* **blobContainerUri**: string: The URI of the Azure blob container that contains the custom setup script.
+* **sasToken**: [SecureString](#securestring): Azure Data Factory secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
+
+## IntegrationRuntimeDataProxyProperties
+### Properties
+* **connectVia**: [EntityReference](#entityreference): The entity reference.
+* **path**: string: The path to contain the staged data in the Blob storage.
+* **stagingLinkedService**: [EntityReference](#entityreference): The entity reference.
+
+## IntegrationRuntimeReference
+### Properties
+* **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
+* **referenceName**: string (Required): Reference integration runtime name.
+* **type**: 'IntegrationRuntimeReference' | string (Required): Type of integration runtime.
+
+## IntegrationRuntimeSsisCatalogInfo
+### Properties
+* **catalogAdminPassword**: [SecureString](#securestring): Azure Data Factory secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
+* **catalogAdminUserName**: string: The administrator user name of catalog database.
+* **catalogPricingTier**: string: The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
+* **catalogServerEndpoint**: string: The catalog database server URL.
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -547,39 +1248,23 @@
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## IntegrationRuntimeSsisCatalogInfo
+## IntegrationRuntimeVNetProperties
 ### Properties
-* **catalogAdminPassword**: [SecureString](#securestring): Azure Data Factory secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
-* **catalogAdminUserName**: string: The administrator user name of catalog database.
-* **catalogPricingTier**: string: The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
-* **catalogServerEndpoint**: string: The catalog database server URL.
+* **subnet**: string: The name of the subnet this integration runtime will join.
+* **vNetId**: string: The ID of the VNet that this integration runtime will join.
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## SecureString
+## JiraLinkedServiceTypeProperties
 ### Properties
-* **type**: string (Required): Type of the secret.
-* **value**: string (Required): Value of secure string.
-
-## IntegrationRuntimeCustomSetupScriptProperties
-### Properties
-* **blobContainerUri**: string: The URI of the Azure blob container that contains the custom setup script.
-* **sasToken**: [SecureString](#securestring): Azure Data Factory secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
-
-## IntegrationRuntimeDataProxyProperties
-### Properties
-* **connectVia**: [EntityReference](#entityreference): The entity reference.
-* **path**: string: The path to contain the staged data in the Blob storage.
-* **stagingLinkedService**: [EntityReference](#entityreference): The entity reference.
-
-## EntityReference
-### Properties
-* **referenceName**: string: The name of this referenced entity.
-* **type**: 'IntegrationRuntimeReference' | 'LinkedServiceReference' | string: The type of this referenced entity.
-
-## LinkedIntegrationRuntimeTypeProperties
-### Properties
-* **linkedInfo**: [LinkedIntegrationRuntimeProperties](#linkedintegrationruntimeproperties): The base definition of a secret type.
+* **encryptedCredential**: any: Any object
+* **host**: any (Required): Any object
+* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **port**: any: Any object
+* **useEncryptedEndpoints**: any: Any object
+* **useHostVerification**: any: Any object
+* **usePeerVerification**: any: Any object
+* **username**: any (Required): Any object
 
 ## LinkedIntegrationRuntimeProperties
 * **Discriminator**: authorizationType
@@ -595,6 +1280,10 @@
 * **authorizationType**: 'RBAC' (Required): Type of the secret.
 * **resourceId**: string (Required): The resource ID of the integration runtime to be shared.
 
+
+## LinkedIntegrationRuntimeTypeProperties
+### Properties
+* **linkedInfo**: [LinkedIntegrationRuntimeProperties](#linkedintegrationruntimeproperties): The base definition of a secret type.
 
 ## LinkedService
 * **Discriminator**: type
@@ -955,399 +1644,17 @@
 * **typeProperties**: [ZohoLinkedServiceTypeProperties](#zoholinkedservicetypeproperties) (Required): Zoho server linked service properties.
 
 
-## IntegrationRuntimeReference
+## LinkedServiceReference
 ### Properties
 * **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
-* **referenceName**: string (Required): Reference integration runtime name.
-* **type**: 'IntegrationRuntimeReference' | string (Required): Type of integration runtime.
+* **referenceName**: string (Required): Reference LinkedService name.
+* **type**: 'LinkedServiceReference' | string (Required): Linked service reference type.
 
-## ParameterValueSpecification
+## LookupActivityTypeProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## ParameterDefinitionSpecification
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [ParameterSpecification](#parameterspecification)
-
-## AmazonMWSLinkedServiceTypeProperties
-### Properties
-* **accessKeyId**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **endpoint**: any (Required): Any object
-* **marketplaceID**: any (Required): Any object
-* **mwsAuthToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **secretKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **sellerID**: any (Required): Any object
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
-
-## SecretBase
-* **Discriminator**: type
-
-### Base Properties
-### AzureKeyVaultSecretReference
-#### Properties
-* **secretName**: any (Required): Any object
-* **secretVersion**: any: Any object
-* **store**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
-* **type**: 'AzureKeyVaultSecret' (Required): Type of the secret.
-
-### SecureString
-#### Properties
-* **type**: 'SecureString' (Required): Type of the secret.
-* **value**: string (Required): Value of secure string.
-
-
-## AmazonRedshiftLinkedServiceTypeProperties
-### Properties
-* **database**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **server**: any (Required): Any object
-* **username**: any: Any object
-
-## AmazonS3LinkedServiceTypeProperties
-### Properties
-* **accessKeyId**: any: Any object
-* **encryptedCredential**: any: Any object
-* **secretAccessKey**: [SecretBase](#secretbase): The base definition of a secret type.
-
-## AzureBatchLinkedServiceTypeProperties
-### Properties
-* **accessKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **accountName**: any (Required): Any object
-* **batchUri**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
-* **poolName**: any (Required): Any object
-
-## AzureDatabricksLinkedServiceTypeProperties
-### Properties
-* **accessToken**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
-* **domain**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **existingClusterId**: any: Any object
-* **newClusterNodeType**: any: Any object
-* **newClusterNumOfWorker**: any: Any object
-* **newClusterSparkConf**: [AzureDatabricksLinkedServiceTypePropertiesNewClusterSparkConf](#azuredatabrickslinkedservicetypepropertiesnewclustersparkconf): a set of optional, user-specified Spark configuration key-value pairs.
-* **newClusterVersion**: any: Any object
-
-## AzureDatabricksLinkedServiceTypePropertiesNewClusterSparkConf
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## AzureDataLakeAnalyticsLinkedServiceTypeProperties
-### Properties
-* **accountName**: any (Required): Any object
-* **dataLakeAnalyticsUri**: any: Any object
-* **encryptedCredential**: any: Any object
-* **resourceGroupName**: any: Any object
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **subscriptionId**: any: Any object
-* **tenant**: any (Required): Any object
-
-## AzureDataLakeStoreLinkedServiceTypeProperties
-### Properties
-* **accountName**: any: Any object
-* **dataLakeStoreUri**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **resourceGroupName**: any: Any object
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **subscriptionId**: any: Any object
-* **tenant**: any: Any object
-
-## AzureKeyVaultLinkedServiceTypeProperties
-### Properties
-* **baseUrl**: any (Required): Any object
-
-## AzureMLLinkedServiceTypeProperties
-### Properties
-* **apiKey**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
-* **encryptedCredential**: any: Any object
-* **mlEndpoint**: any (Required): Any object
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **tenant**: any: Any object
-* **updateResourceEndpoint**: any: Any object
-
-## AzureMySqlLinkedServiceTypeProperties
-### Properties
-* **connectionString**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-
-## AzurePostgreSqlLinkedServiceTypeProperties
-### Properties
-* **connectionString**: any: Any object
-* **encryptedCredential**: any: Any object
-
-## AzureSearchLinkedServiceTypeProperties
-### Properties
-* **encryptedCredential**: any: Any object
-* **key**: [SecretBase](#secretbase): The base definition of a secret type.
-* **url**: any (Required): Any object
-
-## AzureSqlDatabaseLinkedServiceTypeProperties
-### Properties
-* **connectionString**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **tenant**: any: Any object
-
-## AzureSqlDWLinkedServiceTypeProperties
-### Properties
-* **connectionString**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **tenant**: any: Any object
-
-## AzureStorageLinkedServiceTypeProperties
-### Properties
-* **connectionString**: any: Any object
-* **encryptedCredential**: any: Any object
-* **sasUri**: [SecretBase](#secretbase): The base definition of a secret type.
-
-## CassandraLinkedServiceTypeProperties
-### Properties
-* **authenticationType**: any: Any object
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **username**: any: Any object
-
-## ConcurLinkedServiceTypeProperties
-### Properties
-* **clientId**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
-* **username**: any (Required): Any object
-
-## CosmosDbLinkedServiceTypeProperties
-### Properties
-* **connectionString**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-
-## CouchbaseLinkedServiceTypeProperties
-### Properties
-* **connectionString**: any: Any object
-* **encryptedCredential**: any: Any object
-
-## Db2LinkedServiceTypeProperties
-### Properties
-* **authenticationType**: 'Basic' | string: AuthenticationType to be used for connection.
-* **database**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **server**: any (Required): Any object
-* **username**: any: Any object
-
-## DrillLinkedServiceTypeProperties
-### Properties
-* **connectionString**: any: Any object
-* **encryptedCredential**: any: Any object
-
-## DynamicsLinkedServiceTypeProperties
-### Properties
-* **authenticationType**: 'Ifd' | 'Office365' | string (Required): The authentication type to connect to Dynamics server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario. Type: string (or Expression with resultType string).
-* **deploymentType**: 'OnPremisesWithIfd' | 'Online' | string (Required): The deployment type of the Dynamics instance. 'Online' for Dynamics Online and 'OnPremisesWithIfd' for Dynamics on-premises with Ifd. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: Any object
-* **hostName**: any: Any object
-* **organizationName**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **serviceUri**: any: Any object
-* **username**: any (Required): Any object
-
-## EloquaLinkedServiceTypeProperties
-### Properties
-* **encryptedCredential**: any: Any object
-* **endpoint**: any (Required): Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
-* **username**: any (Required): Any object
-
-## FileServerLinkedServiceTypeProperties
-### Properties
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **userId**: any: Any object
-
-## FtpServerLinkedServiceTypeProperties
-### Properties
-* **authenticationType**: 'Anonymous' | 'Basic' | string: The authentication type to be used to connect to the FTP server.
-* **enableServerCertificateValidation**: any: Any object
-* **enableSsl**: any: Any object
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **userName**: any: Any object
-
-## GoogleBigQueryLinkedServiceTypeProperties
-### Properties
-* **additionalProjects**: any: Any object
-* **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication' | string (Required): The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
-* **clientId**: [SecretBase](#secretbase): The base definition of a secret type.
-* **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
-* **email**: any: Any object
-* **encryptedCredential**: any: Any object
-* **keyFilePath**: any: Any object
-* **project**: any (Required): Any object
-* **refreshToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **requestGoogleDriveScope**: any: Any object
-* **trustedCertPath**: any: Any object
-* **useSystemTrustStore**: any: Any object
-
-## GreenplumLinkedServiceTypeProperties
-### Properties
-* **connectionString**: any: Any object
-* **encryptedCredential**: any: Any object
-
-## HBaseLinkedServiceTypeProperties
-### Properties
-* **allowHostNameCNMismatch**: any: Any object
-* **allowSelfSignedServerCert**: any: Any object
-* **authenticationType**: 'Anonymous' | 'Basic' | string (Required): The authentication mechanism to use to connect to the HBase server.
-* **enableSsl**: any: Any object
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **httpPath**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **trustedCertPath**: any: Any object
-* **username**: any: Any object
-
-## HdfsLinkedServiceTypeProperties
-### Properties
-* **authenticationType**: any: Any object
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **url**: any (Required): Any object
-* **userName**: any: Any object
-
-## HDInsightLinkedServiceTypeProperties
-### Properties
-* **clusterUri**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **hcatalogLinkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
-* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **userName**: any: Any object
-
-## HDInsightOnDemandLinkedServiceTypeProperties
-### Properties
-* **additionalLinkedServiceNames**: [LinkedServiceReference](#linkedservicereference)[]: Specifies additional storage accounts for the HDInsight linked service so that the Data Factory service can register them on your behalf.
-* **clusterNamePrefix**: any: Any object
-* **clusterPassword**: [SecretBase](#secretbase): The base definition of a secret type.
-* **clusterResourceGroup**: any (Required): Any object
-* **clusterSize**: any (Required): Any object
-* **clusterSshPassword**: [SecretBase](#secretbase): The base definition of a secret type.
-* **clusterSshUserName**: any: Any object
-* **clusterType**: any: Any object
-* **clusterUserName**: any: Any object
-* **coreConfiguration**: any: Any object
-* **dataNodeSize**: any: Any object
-* **encryptedCredential**: any: Any object
-* **hBaseConfiguration**: any: Any object
-* **hcatalogLinkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
-* **hdfsConfiguration**: any: Any object
-* **headNodeSize**: any: Any object
-* **hiveConfiguration**: any: Any object
-* **hostSubscriptionId**: any (Required): Any object
-* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
-* **mapReduceConfiguration**: any: Any object
-* **oozieConfiguration**: any: Any object
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **sparkVersion**: any: Any object
-* **stormConfiguration**: any: Any object
-* **tenant**: any (Required): Any object
-* **timeToLive**: any (Required): Any object
-* **version**: any (Required): Any object
-* **yarnConfiguration**: any: Any object
-* **zookeeperNodeSize**: any: Any object
-
-## HiveLinkedServiceTypeProperties
-### Properties
-* **allowHostNameCNMismatch**: any: Any object
-* **allowSelfSignedServerCert**: any: Any object
-* **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' | string (Required): The authentication method used to access the Hive server.
-* **enableSsl**: any: Any object
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **httpPath**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **serverType**: 'HiveServer1' | 'HiveServer2' | 'HiveThriftServer' | string: The type of Hive server.
-* **serviceDiscoveryMode**: any: Any object
-* **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL' | string: The transport protocol to use in the Thrift layer.
-* **trustedCertPath**: any: Any object
-* **useNativeQuery**: any: Any object
-* **username**: any: Any object
-* **useSystemTrustStore**: any: Any object
-* **zooKeeperNameSpace**: any: Any object
-
-## HttpLinkedServiceTypeProperties
-### Properties
-* **authenticationType**: 'Anonymous' | 'Basic' | 'ClientCertificate' | 'Digest' | 'Windows' | string: The authentication type to be used to connect to the HTTP server.
-* **certThumbprint**: any: Any object
-* **embeddedCertData**: any: Any object
-* **enableServerCertificateValidation**: any: Any object
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **url**: any (Required): Any object
-* **userName**: any: Any object
-
-## HubspotLinkedServiceTypeProperties
-### Properties
-* **accessToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **clientId**: any (Required): Any object
-* **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
-* **encryptedCredential**: any: Any object
-* **refreshToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
-
-## ImpalaLinkedServiceTypeProperties
-### Properties
-* **allowHostNameCNMismatch**: any: Any object
-* **allowSelfSignedServerCert**: any: Any object
-* **authenticationType**: 'Anonymous' | 'SASLUsername' | 'UsernameAndPassword' | string (Required): The authentication type to use.
-* **enableSsl**: any: Any object
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **trustedCertPath**: any: Any object
-* **username**: any: Any object
-* **useSystemTrustStore**: any: Any object
-
-## JiraLinkedServiceTypeProperties
-### Properties
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
-* **username**: any (Required): Any object
+* **dataset**: [DatasetReference](#datasetreference) (Required): Dataset reference type.
+* **firstRowOnly**: any: Any object
+* **source**: [CopySource](#copysource) (Required): A copy activity source.
 
 ## MagentoLinkedServiceTypeProperties
 ### Properties
@@ -1357,6 +1664,11 @@
 * **useEncryptedEndpoints**: any: Any object
 * **useHostVerification**: any: Any object
 * **usePeerVerification**: any: Any object
+
+## ManagedIntegrationRuntimeTypeProperties
+### Properties
+* **computeProperties**: [IntegrationRuntimeComputeProperties](#integrationruntimecomputeproperties): The compute resource properties for managed integration runtime.
+* **ssisProperties**: [IntegrationRuntimeSsisProperties](#integrationruntimessisproperties): SSIS properties for managed integration runtime.
 
 ## MariaDBLinkedServiceTypeProperties
 ### Properties
@@ -1372,6 +1684,10 @@
 * **useEncryptedEndpoints**: any: Any object
 * **useHostVerification**: any: Any object
 * **usePeerVerification**: any: Any object
+
+## MongoDbCollectionDatasetTypeProperties
+### Properties
+* **collectionName**: any (Required): Any object
 
 ## MongoDbLinkedServiceTypeProperties
 ### Properties
@@ -1404,6 +1720,10 @@
 * **url**: any (Required): Any object
 * **userName**: any: Any object
 
+## ODataResourceDatasetTypeProperties
+### Properties
+* **path**: any: Any object
+
 ## OdbcLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: any: Any object
@@ -1417,6 +1737,55 @@
 ### Properties
 * **connectionString**: any (Required): Any object
 * **encryptedCredential**: any: Any object
+
+## OracleTableDatasetTypeProperties
+### Properties
+* **tableName**: any (Required): Any object
+
+## ParameterDefinitionSpecification
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ParameterSpecification](#parameterspecification)
+
+## ParameterDefinitionSpecification
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ParameterSpecification](#parameterspecification)
+
+## ParameterDefinitionSpecification
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ParameterSpecification](#parameterspecification)
+
+## ParameterSpecification
+### Properties
+* **defaultValue**: any: Any object
+* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'Object' | 'SecureString' | 'String' | string (Required): Parameter type.
+
+## ParameterValueSpecification
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ParameterValueSpecification
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ParameterValueSpecification
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ParameterValueSpecification
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ParameterValueSpecification
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## PaypalLinkedServiceTypeProperties
 ### Properties
@@ -1442,6 +1811,20 @@
 * **trustedCertPath**: any: Any object
 * **username**: any: Any object
 * **useSystemTrustStore**: any: Any object
+
+## Pipeline
+### Properties
+* **activities**: [Activity](#activity)[]: List of activities in pipeline.
+* **annotations**: any[]: List of tags that can be used for describing the Pipeline.
+* **concurrency**: int: The max number of concurrent runs for the pipeline.
+* **description**: string: The description of the pipeline.
+* **parameters**: [ParameterDefinitionSpecification](#parameterdefinitionspecification): Definition of all parameters for an entity.
+
+## PipelineReference
+### Properties
+* **name**: string: Reference name.
+* **referenceName**: string (Required): Reference pipeline name.
+* **type**: 'PipelineReference' | string (Required): Pipeline reference type.
 
 ## PostgreSqlLinkedServiceTypeProperties
 ### Properties
@@ -1476,6 +1859,22 @@
 * **endpoint**: any (Required): Any object
 * **useEncryptedEndpoints**: any: Any object
 
+## RedirectIncompatibleRowSettings
+### Properties
+* **linkedServiceName**: any (Required): Any object
+* **path**: any: Any object
+### Additional Properties
+* **Additional Properties Type**: any
+
+## RelationalTableDatasetTypeProperties
+### Properties
+* **tableName**: any: Any object
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ResponsysLinkedServiceTypeProperties
 ### Properties
 * **clientId**: any (Required): Any object
@@ -1503,6 +1902,10 @@
 * **useHostVerification**: any: Any object
 * **usePeerVerification**: any: Any object
 
+## SalesforceObjectDatasetTypeProperties
+### Properties
+* **objectApiName**: any: Any object
+
 ## SapBWLinkedServiceTypeProperties
 ### Properties
 * **clientId**: any (Required): Any object
@@ -1519,12 +1922,20 @@
 * **url**: any (Required): Any object
 * **username**: any: Any object
 
+## SapCloudForCustomerResourceDatasetTypeProperties
+### Properties
+* **path**: any (Required): Any object
+
 ## SapEccLinkedServiceTypeProperties
 ### Properties
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
 * **url**: string (Required): The URL of SAP ECC OData API. For example, '[https://hostname:port/sap/opu/odata/sap/servicename/]'. Type: string (or Expression with resultType string).
 * **username**: string: The username for Basic authentication. Type: string (or Expression with resultType string).
+
+## SapEccResourceDatasetTypeProperties
+### Properties
+* **path**: any (Required): Any object
 
 ## SapHanaLinkedServiceProperties
 ### Properties
@@ -1533,6 +1944,28 @@
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
 * **server**: any (Required): Any object
 * **userName**: any: Any object
+
+## SecretBase
+* **Discriminator**: type
+
+### Base Properties
+### AzureKeyVaultSecretReference
+#### Properties
+* **secretName**: any (Required): Any object
+* **secretVersion**: any: Any object
+* **store**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
+* **type**: 'AzureKeyVaultSecret' (Required): Type of the secret.
+
+### SecureString
+#### Properties
+* **type**: 'SecureString' (Required): Type of the secret.
+* **value**: string (Required): Value of secure string.
+
+
+## SecureString
+### Properties
+* **type**: string (Required): Type of the secret.
+* **value**: string (Required): Value of secure string.
 
 ## ServiceNowLinkedServiceTypeProperties
 ### Properties
@@ -1594,6 +2027,20 @@
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
 * **userName**: any: Any object
 
+## SqlServerStoredProcedureActivityTypeProperties
+### Properties
+* **storedProcedureName**: any (Required): Any object
+* **storedProcedureParameters**: [SqlServerStoredProcedureActivityTypePropertiesStoredProcedureParameters](#sqlserverstoredprocedureactivitytypepropertiesstoredprocedureparameters): Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
+
+## SqlServerStoredProcedureActivityTypePropertiesStoredProcedureParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [StoredProcedureParameter](#storedprocedureparameter)
+
+## SqlServerTableDatasetTypeProperties
+### Properties
+* **tableName**: any (Required): Any object
+
 ## SquareLinkedServiceTypeProperties
 ### Properties
 * **clientId**: any (Required): Any object
@@ -1604,6 +2051,73 @@
 * **useEncryptedEndpoints**: any: Any object
 * **useHostVerification**: any: Any object
 * **usePeerVerification**: any: Any object
+
+## SsisAccessCredential
+### Properties
+* **domain**: any (Required): Any object
+* **password**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
+* **userName**: any (Required): Any object
+
+## SsisConnectionManager
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [SsisExecutionParameter](#ssisexecutionparameter)
+
+## SsisConnectionManager
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [SsisExecutionParameter](#ssisexecutionparameter)
+
+## SsisExecutionCredential
+### Properties
+* **domain**: any (Required): Any object
+* **password**: [SecureString](#securestring) (Required): Azure Data Factory secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
+* **userName**: any (Required): Any object
+
+## SsisExecutionParameter
+### Properties
+* **value**: any (Required): Any object
+
+## SsisLogLocation
+### Properties
+* **logPath**: any (Required): Any object
+* **type**: 'File' | string (Required): The type of SSIS log location.
+* **typeProperties**: [SsisLogLocationTypeProperties](#ssisloglocationtypeproperties) (Required): SSIS package execution log location properties.
+
+## SsisLogLocationTypeProperties
+### Properties
+* **accessCredential**: [SsisAccessCredential](#ssisaccesscredential): SSIS access credential.
+* **logRefreshInterval**: any: Any object
+
+## SsisPackageLocation
+### Properties
+* **packagePath**: any (Required): Any object
+* **type**: 'File' | 'SSISDB' | string: The type of SSIS package location.
+* **typeProperties**: [SsisPackageLocationTypeProperties](#ssispackagelocationtypeproperties): SSIS package location properties.
+
+## SsisPackageLocationTypeProperties
+### Properties
+* **accessCredential**: [SsisAccessCredential](#ssisaccesscredential): SSIS access credential.
+* **configurationPath**: any: Any object
+* **packagePassword**: [SecretBase](#secretbase): The base definition of a secret type.
+
+## SsisPropertyOverride
+### Properties
+* **isSensitive**: bool: Whether SSIS package property override value is sensitive data. Value will be encrypted in SSISDB if it is true
+* **value**: any (Required): Any object
+
+## StagingSettings
+### Properties
+* **enableCompression**: any: Any object
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
+* **path**: any: Any object
+### Additional Properties
+* **Additional Properties Type**: any
+
+## StoredProcedureParameter
+### Properties
+* **type**: 'Boolean' | 'Date' | 'Decimal' | 'Guid' | 'Int' | 'Int64' | 'String' | string: Stored procedure parameter type.
+* **value**: any (Required): Any object
 
 ## SybaseLinkedServiceTypeProperties
 ### Properties
@@ -1623,10 +2137,56 @@
 * **server**: any (Required): Any object
 * **username**: any: Any object
 
+## Trigger
+* **Discriminator**: type
+
+### Base Properties
+* **description**: string: Trigger description.
+* **runtimeState**: 'Disabled' | 'Started' | 'Stopped' | string (ReadOnly): Enumerates possible state of Triggers.
+### MultiplePipelineTrigger
+#### Properties
+* **pipelines**: [TriggerPipelineReference](#triggerpipelinereference)[]: Pipelines that need to be started.
+* **type**: 'MultiplePipelineTrigger' (Required): Trigger type.
+
+
+## TriggerPipelineReference
+### Properties
+* **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
+* **pipelineReference**: [PipelineReference](#pipelinereference): Pipeline reference type.
+
+## UntilActivityTypeProperties
+### Properties
+* **activities**: [Activity](#activity)[] (Required): List of activities to execute.
+* **expression**: [Expression](#expression) (Required): Azure Data Factory expression definition.
+* **timeout**: any: Any object
+
 ## VerticaLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any: Any object
 * **encryptedCredential**: any: Any object
+
+## WaitActivityTypeProperties
+### Properties
+* **waitTimeInSeconds**: int (Required): Duration in seconds.
+
+## WebActivityAuthentication
+### Properties
+* **password**: [SecureString](#securestring): Azure Data Factory secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
+* **pfx**: [SecureString](#securestring): Azure Data Factory secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
+* **resource**: string: Resource for which Azure Auth token will be requested when using MSI Authentication.
+* **type**: string (Required): Web activity authentication (Basic/ClientCertificate/MSI)
+* **username**: string: Web activity authentication user name for basic authentication.
+
+## WebActivityTypeProperties
+### Properties
+* **authentication**: [WebActivityAuthentication](#webactivityauthentication): Web activity authentication properties.
+* **body**: any: Any object
+* **datasets**: [DatasetReference](#datasetreference)[]: List of datasets passed to web endpoint.
+* **disableCertValidation**: bool: When set to true, Certificate validation will be disabled.
+* **headers**: any: Any object
+* **linkedServices**: [LinkedServiceReference](#linkedservicereference)[]: List of linked services passed to web endpoint.
+* **method**: 'DELETE' | 'GET' | 'POST' | 'PUT' | string (Required): The list of HTTP methods supported by a WebActivity.
+* **url**: any (Required): Any object
 
 ## WebLinkedServiceTypeProperties
 * **Discriminator**: authenticationType
@@ -1650,6 +2210,11 @@
 * **pfx**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
 
 
+## WebTableDatasetTypeProperties
+### Properties
+* **index**: any (Required): Any object
+* **path**: any: Any object
+
 ## XeroLinkedServiceTypeProperties
 ### Properties
 * **consumerKey**: [SecretBase](#secretbase): The base definition of a secret type.
@@ -1668,569 +2233,4 @@
 * **useEncryptedEndpoints**: any: Any object
 * **useHostVerification**: any: Any object
 * **usePeerVerification**: any: Any object
-
-## Pipeline
-### Properties
-* **activities**: [Activity](#activity)[]: List of activities in pipeline.
-* **annotations**: any[]: List of tags that can be used for describing the Pipeline.
-* **concurrency**: int: The max number of concurrent runs for the pipeline.
-* **description**: string: The description of the pipeline.
-* **parameters**: [ParameterDefinitionSpecification](#parameterdefinitionspecification): Definition of all parameters for an entity.
-
-## Activity
-* **Discriminator**: type
-
-### Base Properties
-* **dependsOn**: [ActivityDependency](#activitydependency)[]: Activity depends on condition.
-* **description**: string: Activity description.
-* **name**: string (Required): Activity name.
-### AzureMLBatchExecutionActivity
-#### Properties
-* **type**: 'AzureMLBatchExecution' (Required): Type of activity.
-* **typeProperties**: [AzureMLBatchExecutionActivityTypeProperties](#azuremlbatchexecutionactivitytypeproperties) (Required): Azure ML Batch Execution activity properties.
-
-### AzureMLUpdateResourceActivity
-#### Properties
-* **type**: 'AzureMLUpdateResource' (Required): Type of activity.
-* **typeProperties**: [AzureMLUpdateResourceActivityTypeProperties](#azuremlupdateresourceactivitytypeproperties) (Required): Azure ML Update Resource activity properties.
-
-### CopyActivity
-#### Properties
-* **inputs**: [DatasetReference](#datasetreference)[]: List of inputs for the activity.
-* **outputs**: [DatasetReference](#datasetreference)[]: List of outputs for the activity.
-* **type**: 'Copy' (Required): Type of activity.
-* **typeProperties**: [CopyActivityTypeProperties](#copyactivitytypeproperties) (Required): Copy activity properties.
-
-### CustomActivity
-#### Properties
-* **type**: 'Custom' (Required): Type of activity.
-* **typeProperties**: [CustomActivityTypeProperties](#customactivitytypeproperties) (Required): Custom activity properties.
-
-### DatabricksNotebookActivity
-#### Properties
-* **type**: 'DatabricksNotebook' (Required): Type of activity.
-* **typeProperties**: [DatabricksNotebookActivityTypeProperties](#databricksnotebookactivitytypeproperties) (Required): Databricks Notebook activity properties.
-
-### DataLakeAnalyticsUsqlActivity
-#### Properties
-* **type**: 'DataLakeAnalyticsU-SQL' (Required): Type of activity.
-* **typeProperties**: [DataLakeAnalyticsUsqlActivityTypeProperties](#datalakeanalyticsusqlactivitytypeproperties) (Required): DataLakeAnalyticsU-SQL activity properties.
-
-### ExecutePipelineActivity
-#### Properties
-* **type**: 'ExecutePipeline' (Required): Type of activity.
-* **typeProperties**: [ExecutePipelineActivityTypeProperties](#executepipelineactivitytypeproperties) (Required): Execute pipeline activity properties.
-
-### ExecuteSsisPackageActivity
-#### Properties
-* **type**: 'ExecuteSSISPackage' (Required): Type of activity.
-* **typeProperties**: [ExecuteSsisPackageActivityTypeProperties](#executessispackageactivitytypeproperties) (Required): Execute SSIS package activity properties.
-
-### FilterActivity
-#### Properties
-* **type**: 'Filter' (Required): Type of activity.
-* **typeProperties**: [FilterActivityTypeProperties](#filteractivitytypeproperties) (Required): Filter activity properties.
-
-### ForEachActivity
-#### Properties
-* **type**: 'ForEach' (Required): Type of activity.
-* **typeProperties**: [ForEachActivityTypeProperties](#foreachactivitytypeproperties) (Required): ForEach activity properties.
-
-### GetMetadataActivity
-#### Properties
-* **type**: 'GetMetadata' (Required): Type of activity.
-* **typeProperties**: [GetMetadataActivityTypeProperties](#getmetadataactivitytypeproperties) (Required): GetMetadata activity properties.
-
-### HDInsightHiveActivity
-#### Properties
-* **type**: 'HDInsightHive' (Required): Type of activity.
-* **typeProperties**: [HDInsightHiveActivityTypeProperties](#hdinsighthiveactivitytypeproperties) (Required): HDInsight Hive activity properties.
-
-### HDInsightMapReduceActivity
-#### Properties
-* **type**: 'HDInsightMapReduce' (Required): Type of activity.
-* **typeProperties**: [HDInsightMapReduceActivityTypeProperties](#hdinsightmapreduceactivitytypeproperties) (Required): HDInsight MapReduce activity properties.
-
-### HDInsightPigActivity
-#### Properties
-* **type**: 'HDInsightPig' (Required): Type of activity.
-* **typeProperties**: [HDInsightPigActivityTypeProperties](#hdinsightpigactivitytypeproperties) (Required): HDInsight Pig activity properties.
-
-### HDInsightSparkActivity
-#### Properties
-* **type**: 'HDInsightSpark' (Required): Type of activity.
-* **typeProperties**: [HDInsightSparkActivityTypeProperties](#hdinsightsparkactivitytypeproperties) (Required): HDInsight spark activity properties.
-
-### HDInsightStreamingActivity
-#### Properties
-* **type**: 'HDInsightStreaming' (Required): Type of activity.
-* **typeProperties**: [HDInsightStreamingActivityTypeProperties](#hdinsightstreamingactivitytypeproperties) (Required): HDInsight streaming activity properties.
-
-### IfConditionActivity
-#### Properties
-* **type**: 'IfCondition' (Required): Type of activity.
-* **typeProperties**: [IfConditionActivityTypeProperties](#ifconditionactivitytypeproperties) (Required): IfCondition activity properties.
-
-### LookupActivity
-#### Properties
-* **type**: 'Lookup' (Required): Type of activity.
-* **typeProperties**: [LookupActivityTypeProperties](#lookupactivitytypeproperties) (Required): Lookup activity properties.
-
-### SqlServerStoredProcedureActivity
-#### Properties
-* **type**: 'SqlServerStoredProcedure' (Required): Type of activity.
-* **typeProperties**: [SqlServerStoredProcedureActivityTypeProperties](#sqlserverstoredprocedureactivitytypeproperties) (Required): SQL stored procedure activity properties.
-
-### UntilActivity
-#### Properties
-* **type**: 'Until' (Required): Type of activity.
-* **typeProperties**: [UntilActivityTypeProperties](#untilactivitytypeproperties) (Required): Until activity properties.
-
-### WaitActivity
-#### Properties
-* **type**: 'Wait' (Required): Type of activity.
-* **typeProperties**: [WaitActivityTypeProperties](#waitactivitytypeproperties) (Required): Wait activity properties.
-
-### WebActivity
-#### Properties
-* **type**: 'WebActivity' (Required): Type of activity.
-* **typeProperties**: [WebActivityTypeProperties](#webactivitytypeproperties) (Required): Web activity type properties.
-
-
-## ActivityDependency
-### Properties
-* **activity**: string (Required): Activity name.
-* **dependencyConditions**: 'Completed' | 'Failed' | 'Skipped' | 'Succeeded' | string[] (Required): Match-Condition for the dependency.
-### Additional Properties
-* **Additional Properties Type**: any
-
-## AzureMLBatchExecutionActivityTypeProperties
-### Properties
-* **globalParameters**: [AzureMLBatchExecutionActivityTypePropertiesGlobalParameters](#azuremlbatchexecutionactivitytypepropertiesglobalparameters): Key,Value pairs to be passed to the Azure ML Batch Execution Service endpoint. Keys must match the names of web service parameters defined in the published Azure ML web service. Values will be passed in the GlobalParameters property of the Azure ML batch execution request.
-* **webServiceInputs**: [AzureMLBatchExecutionActivityTypePropertiesWebServiceInputs](#azuremlbatchexecutionactivitytypepropertieswebserviceinputs): Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Inputs to AzureMLWebServiceFile objects specifying the input Blob locations.. This information will be passed in the WebServiceInputs property of the Azure ML batch execution request.
-* **webServiceOutputs**: [AzureMLBatchExecutionActivityTypePropertiesWebServiceOutputs](#azuremlbatchexecutionactivitytypepropertieswebserviceoutputs): Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Outputs to AzureMLWebServiceFile objects specifying the output Blob locations. This information will be passed in the WebServiceOutputs property of the Azure ML batch execution request.
-
-## AzureMLBatchExecutionActivityTypePropertiesGlobalParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## AzureMLBatchExecutionActivityTypePropertiesWebServiceInputs
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [AzureMLWebServiceFile](#azuremlwebservicefile)
-
-## AzureMLWebServiceFile
-### Properties
-* **filePath**: any (Required): Any object
-* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
-
-## AzureMLBatchExecutionActivityTypePropertiesWebServiceOutputs
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [AzureMLWebServiceFile](#azuremlwebservicefile)
-
-## AzureMLUpdateResourceActivityTypeProperties
-### Properties
-* **trainedModelFilePath**: any (Required): Any object
-* **trainedModelLinkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
-* **trainedModelName**: any (Required): Any object
-
-## DatasetReference
-### Properties
-* **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
-* **referenceName**: string (Required): Reference dataset name.
-* **type**: 'DatasetReference' | string (Required): Dataset reference type.
-
-## ParameterValueSpecification
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## CopyActivityTypeProperties
-### Properties
-* **cloudDataMovementUnits**: any: Any object
-* **enableSkipIncompatibleRow**: any: Any object
-* **enableStaging**: any: Any object
-* **parallelCopies**: any: Any object
-* **redirectIncompatibleRowSettings**: [RedirectIncompatibleRowSettings](#redirectincompatiblerowsettings): Redirect incompatible row settings
-* **sink**: [CopySink](#copysink) (Required): A copy activity sink.
-* **source**: [CopySource](#copysource) (Required): A copy activity source.
-* **stagingSettings**: [StagingSettings](#stagingsettings): Staging settings.
-* **translator**: any: Any object
-
-## RedirectIncompatibleRowSettings
-### Properties
-* **linkedServiceName**: any (Required): Any object
-* **path**: any: Any object
-### Additional Properties
-* **Additional Properties Type**: any
-
-## CopySink
-* **Discriminator**: type
-
-### Base Properties
-* **sinkRetryCount**: any: Any object
-* **sinkRetryWait**: any: Any object
-* **writeBatchSize**: any: Any object
-* **writeBatchTimeout**: any: Any object
-
-## CopySource
-* **Discriminator**: type
-
-### Base Properties
-* **sourceRetryCount**: any: Any object
-* **sourceRetryWait**: any: Any object
-
-## StagingSettings
-### Properties
-* **enableCompression**: any: Any object
-* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
-* **path**: any: Any object
-### Additional Properties
-* **Additional Properties Type**: any
-
-## CustomActivityTypeProperties
-### Properties
-* **command**: any (Required): Any object
-* **extendedProperties**: [CustomActivityTypePropertiesExtendedProperties](#customactivitytypepropertiesextendedproperties): User defined property bag. There is no restriction on the keys or values that can be used. The user specified custom activity has the full responsibility to consume and interpret the content defined.
-* **folderPath**: any: Any object
-* **referenceObjects**: [CustomActivityReferenceObject](#customactivityreferenceobject): Reference objects for custom activity
-* **resourceLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
-
-## CustomActivityTypePropertiesExtendedProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## CustomActivityReferenceObject
-### Properties
-* **datasets**: [DatasetReference](#datasetreference)[]: Dataset references.
-* **linkedServices**: [LinkedServiceReference](#linkedservicereference)[]: Linked service references.
-
-## DatabricksNotebookActivityTypeProperties
-### Properties
-* **baseParameters**: [DatabricksNotebookActivityTypePropertiesBaseParameters](#databricksnotebookactivitytypepropertiesbaseparameters): Base parameters to be used for each run of this job.If the notebook takes a parameter that is not specified, the default value from the notebook will be used.
-* **notebookPath**: any (Required): Any object
-
-## DatabricksNotebookActivityTypePropertiesBaseParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## DataLakeAnalyticsUsqlActivityTypeProperties
-### Properties
-* **compilationMode**: any: Any object
-* **degreeOfParallelism**: any: Any object
-* **parameters**: [DataLakeAnalyticsUsqlActivityTypePropertiesParameters](#datalakeanalyticsusqlactivitytypepropertiesparameters): Parameters for U-SQL job request.
-* **priority**: any: Any object
-* **runtimeVersion**: any: Any object
-* **scriptLinkedService**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
-* **scriptPath**: any (Required): Any object
-
-## DataLakeAnalyticsUsqlActivityTypePropertiesParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## ExecutePipelineActivityTypeProperties
-### Properties
-* **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
-* **pipeline**: [PipelineReference](#pipelinereference) (Required): Pipeline reference type.
-* **waitOnCompletion**: bool: Defines whether activity execution will wait for the dependent pipeline execution to finish. Default is false.
-
-## ParameterValueSpecification
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## PipelineReference
-### Properties
-* **name**: string: Reference name.
-* **referenceName**: string (Required): Reference pipeline name.
-* **type**: 'PipelineReference' | string (Required): Pipeline reference type.
-
-## ExecuteSsisPackageActivityTypeProperties
-### Properties
-* **connectVia**: [IntegrationRuntimeReference](#integrationruntimereference) (Required): Integration runtime reference type.
-* **environmentPath**: any: Any object
-* **executionCredential**: [SsisExecutionCredential](#ssisexecutioncredential): SSIS package execution credential.
-* **loggingLevel**: any: Any object
-* **logLocation**: [SsisLogLocation](#ssisloglocation): SSIS package execution log location
-* **packageConnectionManagers**: [ExecuteSsisPackageActivityTypePropertiesPackageConnectionManagers](#executessispackageactivitytypepropertiespackageconnectionmanagers): The package level connection managers to execute the SSIS package.
-* **packageLocation**: [SsisPackageLocation](#ssispackagelocation) (Required): SSIS package location.
-* **packageParameters**: [ExecuteSsisPackageActivityTypePropertiesPackageParameters](#executessispackageactivitytypepropertiespackageparameters): The package level parameters to execute the SSIS package.
-* **projectConnectionManagers**: [ExecuteSsisPackageActivityTypePropertiesProjectConnectionManagers](#executessispackageactivitytypepropertiesprojectconnectionmanagers): The project level connection managers to execute the SSIS package.
-* **projectParameters**: [ExecuteSsisPackageActivityTypePropertiesProjectParameters](#executessispackageactivitytypepropertiesprojectparameters): The project level parameters to execute the SSIS package.
-* **propertyOverrides**: [ExecuteSsisPackageActivityTypePropertiesPropertyOverrides](#executessispackageactivitytypepropertiespropertyoverrides): The property overrides to execute the SSIS package.
-* **runtime**: any: Any object
-
-## SsisExecutionCredential
-### Properties
-* **domain**: any (Required): Any object
-* **password**: [SecureString](#securestring) (Required): Azure Data Factory secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
-* **userName**: any (Required): Any object
-
-## SsisLogLocation
-### Properties
-* **logPath**: any (Required): Any object
-* **type**: 'File' | string (Required): The type of SSIS log location.
-* **typeProperties**: [SsisLogLocationTypeProperties](#ssisloglocationtypeproperties) (Required): SSIS package execution log location properties.
-
-## SsisLogLocationTypeProperties
-### Properties
-* **accessCredential**: [SsisAccessCredential](#ssisaccesscredential): SSIS access credential.
-* **logRefreshInterval**: any: Any object
-
-## SsisAccessCredential
-### Properties
-* **domain**: any (Required): Any object
-* **password**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
-* **userName**: any (Required): Any object
-
-## ExecuteSsisPackageActivityTypePropertiesPackageConnectionManagers
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [SsisConnectionManager](#ssisconnectionmanager)
-
-## SsisConnectionManager
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [SsisExecutionParameter](#ssisexecutionparameter)
-
-## SsisExecutionParameter
-### Properties
-* **value**: any (Required): Any object
-
-## SsisPackageLocation
-### Properties
-* **packagePath**: any (Required): Any object
-* **type**: 'File' | 'SSISDB' | string: The type of SSIS package location.
-* **typeProperties**: [SsisPackageLocationTypeProperties](#ssispackagelocationtypeproperties): SSIS package location properties.
-
-## SsisPackageLocationTypeProperties
-### Properties
-* **accessCredential**: [SsisAccessCredential](#ssisaccesscredential): SSIS access credential.
-* **configurationPath**: any: Any object
-* **packagePassword**: [SecretBase](#secretbase): The base definition of a secret type.
-
-## ExecuteSsisPackageActivityTypePropertiesPackageParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [SsisExecutionParameter](#ssisexecutionparameter)
-
-## ExecuteSsisPackageActivityTypePropertiesProjectConnectionManagers
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [SsisConnectionManager](#ssisconnectionmanager)
-
-## SsisConnectionManager
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [SsisExecutionParameter](#ssisexecutionparameter)
-
-## ExecuteSsisPackageActivityTypePropertiesProjectParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [SsisExecutionParameter](#ssisexecutionparameter)
-
-## ExecuteSsisPackageActivityTypePropertiesPropertyOverrides
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [SsisPropertyOverride](#ssispropertyoverride)
-
-## SsisPropertyOverride
-### Properties
-* **isSensitive**: bool: Whether SSIS package property override value is sensitive data. Value will be encrypted in SSISDB if it is true
-* **value**: any (Required): Any object
-
-## FilterActivityTypeProperties
-### Properties
-* **condition**: [Expression](#expression) (Required): Azure Data Factory expression definition.
-* **items**: [Expression](#expression) (Required): Azure Data Factory expression definition.
-
-## Expression
-### Properties
-* **type**: 'Expression' | string (Required): Expression type.
-* **value**: string (Required): Expression value.
-
-## ForEachActivityTypeProperties
-### Properties
-* **activities**: [Activity](#activity)[] (Required): List of activities to execute .
-* **batchCount**: int: Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
-* **isSequential**: bool: Should the loop be executed in sequence or in parallel (max 50)
-* **items**: [Expression](#expression) (Required): Azure Data Factory expression definition.
-
-## GetMetadataActivityTypeProperties
-### Properties
-* **dataset**: [DatasetReference](#datasetreference) (Required): Dataset reference type.
-* **fieldList**: any[]: Fields of metadata to get from dataset.
-
-## HDInsightHiveActivityTypeProperties
-### Properties
-* **arguments**: any[]: User specified arguments to HDInsightActivity.
-* **defines**: [HDInsightHiveActivityTypePropertiesDefines](#hdinsighthiveactivitytypepropertiesdefines): Allows user to specify defines for Hive job request.
-* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
-* **scriptLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
-* **scriptPath**: any: Any object
-* **storageLinkedServices**: [LinkedServiceReference](#linkedservicereference)[]: Storage linked service references.
-
-## HDInsightHiveActivityTypePropertiesDefines
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## HDInsightMapReduceActivityTypeProperties
-### Properties
-* **arguments**: any[]: User specified arguments to HDInsightActivity.
-* **className**: any (Required): Any object
-* **defines**: [HDInsightMapReduceActivityTypePropertiesDefines](#hdinsightmapreduceactivitytypepropertiesdefines): Allows user to specify defines for the MapReduce job request.
-* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
-* **jarFilePath**: any (Required): Any object
-* **jarLibs**: any[]: Jar libs.
-* **jarLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
-* **storageLinkedServices**: [LinkedServiceReference](#linkedservicereference)[]: Storage linked service references.
-
-## HDInsightMapReduceActivityTypePropertiesDefines
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## HDInsightPigActivityTypeProperties
-### Properties
-* **arguments**: any[]: User specified arguments to HDInsightActivity.
-* **defines**: [HDInsightPigActivityTypePropertiesDefines](#hdinsightpigactivitytypepropertiesdefines): Allows user to specify defines for Pig job request.
-* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
-* **scriptLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
-* **scriptPath**: any: Any object
-* **storageLinkedServices**: [LinkedServiceReference](#linkedservicereference)[]: Storage linked service references.
-
-## HDInsightPigActivityTypePropertiesDefines
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## HDInsightSparkActivityTypeProperties
-### Properties
-* **arguments**: any[]: The user-specified arguments to HDInsightSparkActivity.
-* **className**: string: The application's Java/Spark main class.
-* **entryFilePath**: any (Required): Any object
-* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
-* **proxyUser**: any: Any object
-* **rootPath**: any (Required): Any object
-* **sparkConfig**: [HDInsightSparkActivityTypePropertiesSparkConfig](#hdinsightsparkactivitytypepropertiessparkconfig): Spark configuration property.
-* **sparkJobLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
-
-## HDInsightSparkActivityTypePropertiesSparkConfig
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## HDInsightStreamingActivityTypeProperties
-### Properties
-* **arguments**: any[]: User specified arguments to HDInsightActivity.
-* **combiner**: any: Any object
-* **commandEnvironment**: any[]: Command line environment values.
-* **defines**: [HDInsightStreamingActivityTypePropertiesDefines](#hdinsightstreamingactivitytypepropertiesdefines): Allows user to specify defines for streaming job request.
-* **fileLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
-* **filePaths**: any[] (Required): Paths to streaming job files. Can be directories.
-* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
-* **input**: any (Required): Any object
-* **mapper**: any (Required): Any object
-* **output**: any (Required): Any object
-* **reducer**: any (Required): Any object
-* **storageLinkedServices**: [LinkedServiceReference](#linkedservicereference)[]: Storage linked service references.
-
-## HDInsightStreamingActivityTypePropertiesDefines
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## IfConditionActivityTypeProperties
-### Properties
-* **expression**: [Expression](#expression) (Required): Azure Data Factory expression definition.
-* **ifFalseActivities**: [Activity](#activity)[]: List of activities to execute if expression is evaluated to false. This is an optional property and if not provided, the activity will exit without any action.
-* **ifTrueActivities**: [Activity](#activity)[]: List of activities to execute if expression is evaluated to true. This is an optional property and if not provided, the activity will exit without any action.
-
-## LookupActivityTypeProperties
-### Properties
-* **dataset**: [DatasetReference](#datasetreference) (Required): Dataset reference type.
-* **firstRowOnly**: any: Any object
-* **source**: [CopySource](#copysource) (Required): A copy activity source.
-
-## SqlServerStoredProcedureActivityTypeProperties
-### Properties
-* **storedProcedureName**: any (Required): Any object
-* **storedProcedureParameters**: [SqlServerStoredProcedureActivityTypePropertiesStoredProcedureParameters](#sqlserverstoredprocedureactivitytypepropertiesstoredprocedureparameters): Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
-
-## SqlServerStoredProcedureActivityTypePropertiesStoredProcedureParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [StoredProcedureParameter](#storedprocedureparameter)
-
-## StoredProcedureParameter
-### Properties
-* **type**: 'Boolean' | 'Date' | 'Decimal' | 'Guid' | 'Int' | 'Int64' | 'String' | string: Stored procedure parameter type.
-* **value**: any (Required): Any object
-
-## UntilActivityTypeProperties
-### Properties
-* **activities**: [Activity](#activity)[] (Required): List of activities to execute.
-* **expression**: [Expression](#expression) (Required): Azure Data Factory expression definition.
-* **timeout**: any: Any object
-
-## WaitActivityTypeProperties
-### Properties
-* **waitTimeInSeconds**: int (Required): Duration in seconds.
-
-## WebActivityTypeProperties
-### Properties
-* **authentication**: [WebActivityAuthentication](#webactivityauthentication): Web activity authentication properties.
-* **body**: any: Any object
-* **datasets**: [DatasetReference](#datasetreference)[]: List of datasets passed to web endpoint.
-* **disableCertValidation**: bool: When set to true, Certificate validation will be disabled.
-* **headers**: any: Any object
-* **linkedServices**: [LinkedServiceReference](#linkedservicereference)[]: List of linked services passed to web endpoint.
-* **method**: 'DELETE' | 'GET' | 'POST' | 'PUT' | string (Required): The list of HTTP methods supported by a WebActivity.
-* **url**: any (Required): Any object
-
-## WebActivityAuthentication
-### Properties
-* **password**: [SecureString](#securestring): Azure Data Factory secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
-* **pfx**: [SecureString](#securestring): Azure Data Factory secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
-* **resource**: string: Resource for which Azure Auth token will be requested when using MSI Authentication.
-* **type**: string (Required): Web activity authentication (Basic/ClientCertificate/MSI)
-* **username**: string: Web activity authentication user name for basic authentication.
-
-## ParameterDefinitionSpecification
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [ParameterSpecification](#parameterspecification)
-
-## Trigger
-* **Discriminator**: type
-
-### Base Properties
-* **description**: string: Trigger description.
-* **runtimeState**: 'Disabled' | 'Started' | 'Stopped' | string (ReadOnly): Enumerates possible state of Triggers.
-### MultiplePipelineTrigger
-#### Properties
-* **pipelines**: [TriggerPipelineReference](#triggerpipelinereference)[]: Pipelines that need to be started.
-* **type**: 'MultiplePipelineTrigger' (Required): Trigger type.
-
-
-## TriggerPipelineReference
-### Properties
-* **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
-* **pipelineReference**: [PipelineReference](#pipelinereference): Pipeline reference type.
-
-## ParameterValueSpecification
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## IntegrationRuntimeAuthKeys
-### Properties
-* **authKey1**: string (ReadOnly): The primary integration runtime authentication key.
-* **authKey2**: string (ReadOnly): The secondary integration runtime authentication key.
 

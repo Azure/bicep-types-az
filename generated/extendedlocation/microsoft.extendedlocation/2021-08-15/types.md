@@ -13,12 +13,6 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ExtendedLocation/customLocations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Identity
-### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' | string: The identity type.
-
 ## CustomLocationProperties
 ### Properties
 * **authentication**: [CustomLocationPropertiesAuthentication](#customlocationpropertiesauthentication): This is optional input that contains the authentication that should be used to generate the namespace.
@@ -33,6 +27,12 @@
 ### Properties
 * **type**: string: The type of the Custom Locations authentication
 * **value**: string (WriteOnly): The kubeconfig value.
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'None' | 'SystemAssigned' | string: The identity type.
 
 ## SystemData
 ### Properties

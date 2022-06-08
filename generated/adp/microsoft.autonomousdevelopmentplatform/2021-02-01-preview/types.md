@@ -26,6 +26,25 @@
 * **accountId**: string (ReadOnly): The account's data-plane ID
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Gets the status of the account at the time the operation was called
 
+## DataPoolEncryption
+### Properties
+* **keyName**: string (Required): The name of Key Vault key
+* **keyVaultUri**: string (Required): The URI of a soft delete-enabled Key Vault that is in the same location as the Data Pool location
+* **keyVersion**: string: The version of Key Vault key
+* **userAssignedIdentity**: string (Required): The resource ID of a user-assigned Managed Identity used to access the encryption key in the Key Vault. Requires access to the key operations get, wrap, unwrap, and recover
+
+## DataPoolLocation
+### Properties
+* **encryption**: [DataPoolEncryption](#datapoolencryption): Encryption properties of a Data Pool
+* **name**: string (Required): The location name
+
+## DataPoolProperties
+### Properties
+* **dataPoolId**: string (ReadOnly): The Data Pool's data-plane ID
+* **locations**: [DataPoolLocation](#datapoollocation)[]: Gets or sets the collection of locations where Data Pool resources should be created
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Gets the status of the account at the time the operation was called
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -39,23 +58,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## DataPoolProperties
-### Properties
-* **dataPoolId**: string (ReadOnly): The Data Pool's data-plane ID
-* **locations**: [DataPoolLocation](#datapoollocation)[]: Gets or sets the collection of locations where Data Pool resources should be created
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Gets the status of the account at the time the operation was called
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-
-## DataPoolLocation
-### Properties
-* **encryption**: [DataPoolEncryption](#datapoolencryption): Encryption properties of a Data Pool
-* **name**: string (Required): The location name
-
-## DataPoolEncryption
-### Properties
-* **keyName**: string (Required): The name of Key Vault key
-* **keyVaultUri**: string (Required): The URI of a soft delete-enabled Key Vault that is in the same location as the Data Pool location
-* **keyVersion**: string: The version of Key Vault key
-* **userAssignedIdentity**: string (Required): The resource ID of a user-assigned Managed Identity used to access the encryption key in the Key Vault. Requires access to the key operations get, wrap, unwrap, and recover
 

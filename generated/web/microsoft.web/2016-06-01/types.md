@@ -48,28 +48,6 @@
 * **Input**: [WsdlDefinition](#wsdldefinition)
 * **Output**: [WsdlServiceCollection](#wsdlservicecollection)
 
-## ConnectionGatewayDefinitionProperties
-### Properties
-* **backendUri**: string: The URI of the backend
-* **connectionGatewayInstallation**: [ConnectionGatewayReference](#connectiongatewayreference): The gateway installation reference
-* **contactInformation**: string[]: The gateway admin
-* **description**: string: The gateway description
-* **displayName**: string: The gateway display name
-* **machineName**: string: The machine name of the gateway
-* **status**: any: Any object
-
-## ConnectionGatewayReference
-### Properties
-* **id**: string: Resource reference id
-* **location**: string: Resource reference location
-* **name**: string: Resource reference name
-* **type**: string: Resource reference type
-
-## TagsDictionary
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ApiConnectionDefinitionProperties
 ### Properties
 * **api**: [ApiReference](#apireference)
@@ -81,17 +59,6 @@
 * **parameterValues**: [ApiConnectionDefinitionPropertiesParameterValues](#apiconnectiondefinitionpropertiesparametervalues): Dictionary of parameter values
 * **statuses**: [ConnectionStatusDefinition](#connectionstatusdefinition)[]: Status of the connection
 * **testLinks**: [ApiConnectionTestLink](#apiconnectiontestlink)[]: Links to test the API connection
-
-## ApiReference
-### Properties
-* **brandColor**: string: Brand color
-* **description**: string: The custom API description
-* **displayName**: string: The display name
-* **iconUri**: string: The icon URI
-* **id**: string: Resource reference id
-* **name**: string: The name of the API
-* **swagger**: any: Any object
-* **type**: string: Resource reference type
 
 ## ApiConnectionDefinitionPropertiesCustomParameterValues
 ### Properties
@@ -108,75 +75,10 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ConnectionStatusDefinition
-### Properties
-* **error**: [ConnectionError](#connectionerror): Connection error
-* **status**: string: The gateway status
-* **target**: string: Target of the error
-
-## ConnectionError
-### Properties
-* **etag**: string: Resource ETag
-* **id**: string (ReadOnly): Resource id
-* **location**: string: Resource location
-* **name**: string (ReadOnly): Resource name
-* **properties**: [ConnectionErrorProperties](#connectionerrorproperties)
-* **tags**: [TagsDictionary](#tagsdictionary): Resource tags
-* **type**: string (ReadOnly): Resource type
-
-## ConnectionErrorProperties
-### Properties
-* **code**: string: Code of the status
-* **message**: string: Description of the status
-
-## TagsDictionary
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ApiConnectionTestLink
 ### Properties
 * **method**: string: HTTP Method
 * **requestUri**: string: Test link request URI
-
-## TagsDictionary
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## CustomApiPropertiesDefinition
-### Properties
-* **apiDefinitions**: [ApiResourceDefinitions](#apiresourcedefinitions): API Definitions
-* **apiType**: 'NotSpecified' | 'Rest' | 'Soap' | string: The API type
-* **backendService**: [ApiResourceBackendService](#apiresourcebackendservice): The API backend service
-* **brandColor**: string: Brand color
-* **capabilities**: string[]: The custom API capabilities
-* **connectionParameters**: [CustomApiPropertiesDefinitionConnectionParameters](#customapipropertiesdefinitionconnectionparameters): Connection parameters
-* **description**: string: The custom API description
-* **displayName**: string: The display name
-* **iconUri**: string: The icon URI
-* **runtimeUrls**: string[]: Runtime URLs
-* **swagger**: any: Any object
-* **wsdlDefinition**: [WsdlDefinition](#wsdldefinition): The WSDL definition
-
-## ApiResourceDefinitions
-### Properties
-* **modifiedSwaggerUrl**: string: The modified swagger URL
-* **originalSwaggerUrl**: string: The original swagger URL
-
-## ApiResourceBackendService
-### Properties
-* **serviceUrl**: string: The service URL
-
-## CustomApiPropertiesDefinitionConnectionParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [ConnectionParameter](#connectionparameter)
-
-## ConnectionParameter
-### Properties
-* **oAuthSettings**: [ApiOAuthSettings](#apioauthsettings): OAuth settings for the connection provider
-* **type**: 'array' | 'bool' | 'connection' | 'int' | 'oauthSetting' | 'object' | 'secureobject' | 'securestring' | 'string': Type of the parameter
 
 ## ApiOAuthSettings
 ### Properties
@@ -199,33 +101,68 @@
 * **uiDefinition**: any: Any object
 * **value**: string: Value of the setting
 
-## WsdlDefinition
+## ApiReference
 ### Properties
-* **content**: string: The WSDL content
-* **importMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest' | string: The WSDL import method
-* **service**: [WsdlService](#wsdlservice): The service with name and endpoint names
-* **url**: string: The WSDL URL
+* **brandColor**: string: Brand color
+* **description**: string: The custom API description
+* **displayName**: string: The display name
+* **iconUri**: string: The icon URI
+* **id**: string: Resource reference id
+* **name**: string: The name of the API
+* **swagger**: any: Any object
+* **type**: string: Resource reference type
 
-## WsdlService
+## ApiResourceBackendService
 ### Properties
-* **endpointQualifiedNames**: string[]: List of the endpoints' qualified names
-* **qualifiedName**: string (Required): The service's qualified name
+* **serviceUrl**: string: The service URL
 
-## TagsDictionary
+## ApiResourceDefinitions
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **modifiedSwaggerUrl**: string: The modified swagger URL
+* **originalSwaggerUrl**: string: The original swagger URL
 
-## ListConsentLinksDefinition
+## ConnectionError
 ### Properties
-* **parameters**: [ConsentLinkParameterDefinition](#consentlinkparameterdefinition)[] (WriteOnly): Collection of resources
+* **etag**: string: Resource ETag
+* **id**: string (ReadOnly): Resource id
+* **location**: string: Resource location
+* **name**: string (ReadOnly): Resource name
+* **properties**: [ConnectionErrorProperties](#connectionerrorproperties)
+* **tags**: [TagsDictionary](#tagsdictionary): Resource tags
+* **type**: string (ReadOnly): Resource type
 
-## ConsentLinkParameterDefinition
+## ConnectionErrorProperties
 ### Properties
-* **objectId**: string (WriteOnly): AAD OID (user or group) if the principal type is ActiveDirectory. MSA PUID if the principal type is MicrosoftAccount
-* **parameterName**: string (WriteOnly): Name of the parameter in the connection provider's OAuth settings
-* **redirectUrl**: string (WriteOnly): Name of the parameter in the connection provider's OAuth settings
-* **tenantId**: string (WriteOnly): The tenant id
+* **code**: string: Code of the status
+* **message**: string: Description of the status
+
+## ConnectionGatewayDefinitionProperties
+### Properties
+* **backendUri**: string: The URI of the backend
+* **connectionGatewayInstallation**: [ConnectionGatewayReference](#connectiongatewayreference): The gateway installation reference
+* **contactInformation**: string[]: The gateway admin
+* **description**: string: The gateway description
+* **displayName**: string: The gateway display name
+* **machineName**: string: The machine name of the gateway
+* **status**: any: Any object
+
+## ConnectionGatewayReference
+### Properties
+* **id**: string: Resource reference id
+* **location**: string: Resource reference location
+* **name**: string: Resource reference name
+* **type**: string: Resource reference type
+
+## ConnectionParameter
+### Properties
+* **oAuthSettings**: [ApiOAuthSettings](#apioauthsettings): OAuth settings for the connection provider
+* **type**: 'array' | 'bool' | 'connection' | 'int' | 'oauthSetting' | 'object' | 'secureobject' | 'securestring' | 'string': Type of the parameter
+
+## ConnectionStatusDefinition
+### Properties
+* **error**: [ConnectionError](#connectionerror): Connection error
+* **status**: string: The gateway status
+* **target**: string: Target of the error
 
 ## ConsentLinkCollection
 ### Properties
@@ -238,12 +175,75 @@
 * **link**: string (ReadOnly): URI for the consent link
 * **status**: 'Authenticated' | 'Error' | 'Unauthenticated' | string (ReadOnly): Status of the link
 
+## ConsentLinkParameterDefinition
+### Properties
+* **objectId**: string (WriteOnly): AAD OID (user or group) if the principal type is ActiveDirectory. MSA PUID if the principal type is MicrosoftAccount
+* **parameterName**: string (WriteOnly): Name of the parameter in the connection provider's OAuth settings
+* **redirectUrl**: string (WriteOnly): Name of the parameter in the connection provider's OAuth settings
+* **tenantId**: string (WriteOnly): The tenant id
+
+## CustomApiPropertiesDefinition
+### Properties
+* **apiDefinitions**: [ApiResourceDefinitions](#apiresourcedefinitions): API Definitions
+* **apiType**: 'NotSpecified' | 'Rest' | 'Soap' | string: The API type
+* **backendService**: [ApiResourceBackendService](#apiresourcebackendservice): The API backend service
+* **brandColor**: string: Brand color
+* **capabilities**: string[]: The custom API capabilities
+* **connectionParameters**: [CustomApiPropertiesDefinitionConnectionParameters](#customapipropertiesdefinitionconnectionparameters): Connection parameters
+* **description**: string: The custom API description
+* **displayName**: string: The display name
+* **iconUri**: string: The icon URI
+* **runtimeUrls**: string[]: Runtime URLs
+* **swagger**: any: Any object
+* **wsdlDefinition**: [WsdlDefinition](#wsdldefinition): The WSDL definition
+
+## CustomApiPropertiesDefinitionConnectionParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ConnectionParameter](#connectionparameter)
+
+## ListConsentLinksDefinition
+### Properties
+* **parameters**: [ConsentLinkParameterDefinition](#consentlinkparameterdefinition)[] (WriteOnly): Collection of resources
+
+## TagsDictionary
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TagsDictionary
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TagsDictionary
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TagsDictionary
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## WsdlDefinition
 ### Properties
 * **content**: string: The WSDL content
 * **importMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest' | string: The WSDL import method
 * **service**: [WsdlService](#wsdlservice): The service with name and endpoint names
 * **url**: string: The WSDL URL
+
+## WsdlDefinition
+### Properties
+* **content**: string: The WSDL content
+* **importMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest' | string: The WSDL import method
+* **service**: [WsdlService](#wsdlservice): The service with name and endpoint names
+* **url**: string: The WSDL URL
+
+## WsdlService
+### Properties
+* **endpointQualifiedNames**: string[]: List of the endpoints' qualified names
+* **qualifiedName**: string (Required): The service's qualified name
 
 ## WsdlServiceCollection
 ### Properties

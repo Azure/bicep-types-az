@@ -16,20 +16,15 @@
 * **ApiVersion**: 2015-10-01
 * **Output**: [ServiceKeys](#servicekeys)
 
-## MediaServiceProperties
-### Properties
-* **apiEndpoints**: [ApiEndpoint](#apiendpoint)[] (ReadOnly): Read-only property that lists the Media Services REST API endpoints for this resource. If supplied on a PUT or PATCH, the value will be ignored.
-* **storageAccounts**: [StorageAccount](#storageaccount)[]: The storage accounts for this resource.
-
 ## ApiEndpoint
 ### Properties
 * **endpoint**: string: The Media Services REST endpoint.
 * **majorVersion**: string: The version of Media Services REST API.
 
-## StorageAccount
+## MediaServiceProperties
 ### Properties
-* **id**: string (Required): The id of the storage account resource. Media Services relies on tables and queues as well as blobs, so the primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage). Blob only storage accounts can be added as secondary storage accounts (isPrimary false).
-* **isPrimary**: bool (Required): Is this storage account resource the primary storage account for the Media Service resource. Blob only storage must set this to false.
+* **apiEndpoints**: [ApiEndpoint](#apiendpoint)[] (ReadOnly): Read-only property that lists the Media Services REST API endpoints for this resource. If supplied on a PUT or PATCH, the value will be ignored.
+* **storageAccounts**: [StorageAccount](#storageaccount)[]: The storage accounts for this resource.
 
 ## ResourceTags
 ### Properties
@@ -43,4 +38,9 @@
 * **scope**: string (ReadOnly): The authorization scope.
 * **secondaryAuthEndpoint**: string (ReadOnly): The secondary authorization endpoint.
 * **secondaryKey**: string (ReadOnly): The secondary key for the Media Service resource.
+
+## StorageAccount
+### Properties
+* **id**: string (Required): The id of the storage account resource. Media Services relies on tables and queues as well as blobs, so the primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage). Blob only storage accounts can be added as secondary storage accounts (isPrimary false).
+* **isPrimary**: bool (Required): Is this storage account resource the primary storage account for the Media Service resource. Blob only storage must set this to false.
 

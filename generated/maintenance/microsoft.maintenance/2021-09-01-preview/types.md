@@ -36,14 +36,25 @@
 * **maintenanceConfigurationId**: string: The maintenance configuration Id
 * **resourceId**: string: The unique resourceId
 
-## SystemData
+## InputLinuxParameters
 ### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **classificationsToInclude**: string[]: Classification category of patches to be patched
+* **packageNameMasksToExclude**: string[]: Package names to be excluded for patching.
+* **packageNameMasksToInclude**: string[]: Package names to be included for patching.
+
+## InputPatchConfiguration
+### Properties
+* **linuxParameters**: [InputLinuxParameters](#inputlinuxparameters): Input properties for patching a Linux machine.
+* **rebootSetting**: 'Always' | 'IfRequired' | 'Never' | string: Possible reboot preference as defined by the user based on which it would be decided to reboot the machine or not after the patch operation is completed.
+* **tasks**: [SoftwareUpdateConfigurationTasks](#softwareupdateconfigurationtasks): Task properties of the software update configuration.
+* **windowsParameters**: [InputWindowsParameters](#inputwindowsparameters): Input properties for patching a Windows machine.
+
+## InputWindowsParameters
+### Properties
+* **classificationsToInclude**: string[]: Classification category of patches to be patched
+* **excludeKbsRequiringReboot**: bool: Exclude patches which need reboot
+* **kbNumbersToExclude**: string[]: Windows KBID to be excluded for patching.
+* **kbNumbersToInclude**: string[]: Windows KBID to be included for patching.
 
 ## MaintenanceConfigurationProperties
 ### Properties
@@ -59,41 +70,10 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## InputPatchConfiguration
-### Properties
-* **linuxParameters**: [InputLinuxParameters](#inputlinuxparameters): Input properties for patching a Linux machine.
-* **rebootSetting**: 'Always' | 'IfRequired' | 'Never' | string: Possible reboot preference as defined by the user based on which it would be decided to reboot the machine or not after the patch operation is completed.
-* **tasks**: [SoftwareUpdateConfigurationTasks](#softwareupdateconfigurationtasks): Task properties of the software update configuration.
-* **windowsParameters**: [InputWindowsParameters](#inputwindowsparameters): Input properties for patching a Windows machine.
-
-## InputLinuxParameters
-### Properties
-* **classificationsToInclude**: string[]: Classification category of patches to be patched
-* **packageNameMasksToExclude**: string[]: Package names to be excluded for patching.
-* **packageNameMasksToInclude**: string[]: Package names to be included for patching.
-
-## SoftwareUpdateConfigurationTasks
-### Properties
-* **postTasks**: [TaskProperties](#taskproperties)[]: List of post tasks. e.g. [{'source' :'runbook', 'taskScope': 'Resource', 'parameters': { 'arg1': 'value1'}}]
-* **preTasks**: [TaskProperties](#taskproperties)[]: List of pre tasks. e.g. [{'source' :'runbook', 'taskScope': 'Global', 'parameters': { 'arg1': 'value1'}}]
-
-## TaskProperties
-### Properties
-* **parameters**: [TaskPropertiesParameters](#taskpropertiesparameters): Gets or sets the parameters of the task.
-* **source**: string: Gets or sets the name of the runbook.
-* **taskScope**: 'Global' | 'Resource' | string: Global Task execute once when schedule trigger. Resource task execute for each VM.
-
-## TaskPropertiesParameters
+## MaintenanceConfigurationTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## InputWindowsParameters
-### Properties
-* **classificationsToInclude**: string[]: Classification category of patches to be patched
-* **excludeKbsRequiringReboot**: bool: Exclude patches which need reboot
-* **kbNumbersToExclude**: string[]: Windows KBID to be excluded for patching.
-* **kbNumbersToInclude**: string[]: Windows KBID to be included for patching.
 
 ## MaintenanceWindow
 ### Properties
@@ -103,7 +83,27 @@
 * **startDateTime**: string: Effective start date of the maintenance window in YYYY-MM-DD hh:mm format. The start date can be set to either the current date or future date. The window will be created in the time zone provided and adjusted to daylight savings according to that time zone.
 * **timeZone**: string: Name of the timezone. List of timezones can be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell. Example: Pacific Standard Time, UTC, W. Europe Standard Time, Korea Standard Time, Cen. Australia Standard Time.
 
-## MaintenanceConfigurationTags
+## SoftwareUpdateConfigurationTasks
+### Properties
+* **postTasks**: [TaskProperties](#taskproperties)[]: List of post tasks. e.g. [{'source' :'runbook', 'taskScope': 'Resource', 'parameters': { 'arg1': 'value1'}}]
+* **preTasks**: [TaskProperties](#taskproperties)[]: List of pre tasks. e.g. [{'source' :'runbook', 'taskScope': 'Global', 'parameters': { 'arg1': 'value1'}}]
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+
+## TaskProperties
+### Properties
+* **parameters**: [TaskPropertiesParameters](#taskpropertiesparameters): Gets or sets the parameters of the task.
+* **source**: string: Gets or sets the name of the runbook.
+* **taskScope**: 'Global' | 'Resource' | string: Global Task execute once when schedule trigger. Resource task execute for each VM.
+
+## TaskPropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

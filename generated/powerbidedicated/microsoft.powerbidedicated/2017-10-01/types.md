@@ -12,6 +12,10 @@
 * **tags**: [ResourceTags](#resourcetags): Key-value pairs of additional resource provisioning properties.
 * **type**: 'Microsoft.PowerBIDedicated/capacities' (ReadOnly, DeployTimeConstant): The resource type
 
+## DedicatedCapacityAdministrators
+### Properties
+* **members**: string[]: An array of administrator user identities.
+
 ## DedicatedCapacityProperties
 ### Properties
 * **administration**: [DedicatedCapacityAdministrators](#dedicatedcapacityadministrators): An array of administrator user identities
@@ -20,10 +24,6 @@
 * **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' | string (ReadOnly): The current deployment state of PowerBI Dedicated resource. The provisioningState is to indicate states for resource provisioning.
 * **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' | string (ReadOnly): The current state of PowerBI Dedicated resource. The state is to indicate more states outside of resource provisioning.
 * **tenantId**: string (ReadOnly): Tenant ID for the capacity. Used for creating Pro Plus capacity.
-
-## DedicatedCapacityAdministrators
-### Properties
-* **members**: string[]: An array of administrator user identities.
 
 ## ResourceSku
 ### Properties

@@ -45,6 +45,28 @@
 * **properties**: [CustomDomainPropertiesParameters](#customdomainpropertiesparameters): The JSON object that contains the properties of the custom domain to create.
 * **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant): The resource type
 
+## CacheExpirationActionParameters
+### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters' | string (Required)
+* **cacheBehavior**: 'BypassCache' | 'Override' | 'SetIfMissing' | string (Required): Caching behavior for the requests
+* **cacheDuration**: string: The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
+* **cacheType**: 'All' | string (Required): The level at which the content needs to be cached.
+
+## CacheKeyQueryStringActionParameters
+### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheKeyQueryStringBehaviorActionParameters' | string (Required)
+* **queryParameters**: string: query parameters to include or exclude (comma separated).
+* **queryStringBehavior**: 'Exclude' | 'ExcludeAll' | 'Include' | 'IncludeAll' | string (Required): Caching behavior for the requests
+
+## CdnCertificateSourceParameters
+### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.CdnCertificateSourceParameters' | string (ReadOnly)
+* **certificateType**: 'Dedicated' | 'Shared' | string (ReadOnly): Type of certificate used
+
+## CdnEndpoint
+### Properties
+* **id**: string: ARM Resource ID string.
+
 ## CdnWebApplicationFirewallPolicyProperties
 ### Properties
 * **customRules**: [CustomRuleList](#customrulelist): Defines contents of custom rules
@@ -55,9 +77,41 @@
 * **rateLimitRules**: [RateLimitRuleList](#ratelimitrulelist): Defines contents of rate limit rules
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the policy.
 
-## CustomRuleList
+## CookiesMatchConditionParameters
 ### Properties
-* **rules**: [CustomRule](#customrule)[]: List of rules
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleCookiesConditionParameters' | string (Required)
+* **matchValues**: string[]: The match value for the condition of the delivery rule
+* **negateCondition**: bool: Describes if this is negate condition or not
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string (Required): Describes operator to be matched
+* **selector**: string: Name of Cookies to be matched
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+
+## CustomDomainHttpsParameters
+* **Discriminator**: certificateSource
+
+### Base Properties
+* **minimumTlsVersion**: 'None' | 'TLS10' | 'TLS12' (ReadOnly): TLS protocol version that will be used for Https
+* **protocolType**: 'IPBased' | 'ServerNameIndication' | string (ReadOnly): Defines the TLS extension protocol that is used for secure delivery.
+### UserManagedHttpsParameters
+#### Properties
+* **certificateSource**: 'AzureKeyVault' (Required): Defines the source of the SSL certificate.
+* **certificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters) (ReadOnly): Describes the parameters for using a user's KeyVault certificate for securing custom domain.
+
+### CdnManagedHttpsParameters
+#### Properties
+* **certificateSource**: 'Cdn' (Required): Defines the source of the SSL certificate.
+* **certificateSourceParameters**: [CdnCertificateSourceParameters](#cdncertificatesourceparameters) (ReadOnly): Defines the parameters for using CDN managed certificate for securing custom domain.
+
+
+## CustomDomainPropertiesParameters
+### Properties
+* **customHttpsParameters**: [CustomDomainHttpsParameters](#customdomainhttpsparameters) (ReadOnly): The JSON object that contains the properties to secure a custom domain.
+* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' | string (ReadOnly): Provisioning status of Custom Https of the custom domain.
+* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' | string (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
+* **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
+* **provisioningState**: string (ReadOnly): Provisioning status of the custom domain.
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' | string (ReadOnly): Resource status of the custom domain.
+* **validationData**: string (ReadOnly): Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
 
 ## CustomRule
 ### Properties
@@ -67,105 +121,20 @@
 * **name**: string (Required): Defines the name of the custom rule
 * **priority**: int (Required): Defines in what order this rule be evaluated in the overall list of custom rules
 
-## MatchCondition
+## CustomRuleList
 ### Properties
-* **matchValue**: string[] (Required): List of possible match values.
-* **matchVariable**: 'Cookies' | 'HttpVersion' | 'IsDevice' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RemoteAddress' | 'RequestBody' | 'RequestHeader' | 'RequestMethod' | 'RequestScheme' | 'RequestUri' | 'SocketAddr' | 'UrlFileExtension' | 'UrlFileName' | 'UrlPath' | string (Required): The name of the condition for the delivery rule.
-* **negateCondition**: bool: Describes if the result of this condition should be negated.
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
-* **selector**: string: Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms.
+* **rules**: [CustomRule](#customrule)[]: List of rules
 
-## CdnEndpoint
+## DeepCreatedOrigin
 ### Properties
-* **id**: string: ARM Resource ID string.
+* **name**: string (Required): Origin name
+* **properties**: [DeepCreatedOriginProperties](#deepcreatedoriginproperties): Properties of the origin created on the CDN endpoint.
 
-## ManagedRuleSetList
+## DeepCreatedOriginProperties
 ### Properties
-* **managedRuleSets**: [ManagedRuleSet](#managedruleset)[]: List of rule sets.
-
-## ManagedRuleSet
-### Properties
-* **anomalyScore**: int: Verizon only : If the rule set supports anomaly detection mode, this describes the threshold for blocking requests.
-* **ruleGroupOverrides**: [ManagedRuleGroupOverride](#managedrulegroupoverride)[]: Defines the rule overrides to apply to the rule set.
-* **ruleSetType**: string (Required): Defines the rule set type to use.
-* **ruleSetVersion**: string (Required): Defines the version of the rule set to use.
-
-## ManagedRuleGroupOverride
-### Properties
-* **ruleGroupName**: string (Required): Describes the managed rule group within the rule set to override
-* **rules**: [ManagedRuleOverride](#managedruleoverride)[]: List of rules that will be disabled. If none specified, all rules in the group will be disabled.
-
-## ManagedRuleOverride
-### Properties
-* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' | string: Defines the action to take on rule match.
-* **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
-* **ruleId**: string (Required): Identifier for the managed rule.
-
-## PolicySettings
-### Properties
-* **defaultCustomBlockResponseBody**: string: If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
-* **defaultCustomBlockResponseStatusCode**: int: If the action type is block, this field defines the default customer overridable http response status code.
-* **defaultRedirectUrl**: string: If action type is redirect, this field represents the default redirect URL for the client.
-* **enabledState**: 'Disabled' | 'Enabled' | string: describes if the policy is in enabled state or disabled state
-* **mode**: 'Detection' | 'Prevention' | string: Describes if it is in detection mode or prevention mode at policy level.
-
-## RateLimitRuleList
-### Properties
-* **rules**: [RateLimitRule](#ratelimitrule)[]: List of rules
-
-## RateLimitRule
-### Properties
-* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' | string (Required): Defines the action to take on rule match.
-* **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
-* **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions.
-* **name**: string (Required): Defines the name of the custom rule
-* **priority**: int (Required): Defines in what order this rule be evaluated in the overall list of custom rules
-* **rateLimitDurationInMinutes**: int (Required): Defines rate limit duration. Default is 1 minute.
-* **rateLimitThreshold**: int (Required): Defines rate limit threshold.
-
-## Sku
-### Properties
-* **name**: 'Custom_Verizon' | 'Premium_ChinaCdn' | 'Premium_Verizon' | 'Standard_Akamai' | 'Standard_ChinaCdn' | 'Standard_Microsoft' | 'Standard_Verizon' | string: Name of the pricing tier.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ProfileProperties
-### Properties
-* **provisioningState**: string (ReadOnly): Provisioning status of the profile.
-* **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | string (ReadOnly): Resource status of the profile.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## EndpointProperties
-### Properties
-* **contentTypesToCompress**: string[]: List of content types on which compression applies. The value should be a valid MIME type.
-* **deliveryPolicy**: [EndpointPropertiesUpdateParametersDeliveryPolicy](#endpointpropertiesupdateparametersdeliverypolicy): A policy that specifies the delivery rules to be used for an endpoint.
-* **geoFilters**: [GeoFilter](#geofilter)[]: List of rules defining the user's geo access within a CDN endpoint. Each geo filter defines an access rule to a specified path or content, e.g. block APAC for path /pictures/
-* **hostName**: string (ReadOnly): The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
-* **isCompressionEnabled**: bool: Indicates whether content compression is enabled on CDN. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB.
-* **isHttpAllowed**: bool: Indicates whether HTTP traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
-* **isHttpsAllowed**: bool: Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
-* **optimizationType**: 'DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming' | string: Specifies what scenario the customer wants this CDN endpoint to optimize, e.g. Download, Media services. With this information we can apply scenario driven optimization.
-* **originHostHeader**: string: The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
-* **originPath**: string: A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
-* **origins**: [DeepCreatedOrigin](#deepcreatedorigin)[] (Required): The source of the content being delivered via CDN.
-* **probePath**: string: Path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the origin path.
-* **provisioningState**: string (ReadOnly): Provisioning status of the endpoint.
-* **queryStringCachingBehavior**: 'BypassCaching' | 'IgnoreQueryString' | 'NotSet' | 'UseQueryString': Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
-* **resourceState**: 'Creating' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): Resource status of the endpoint.
-* **webApplicationFirewallPolicyLink**: [EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLink](#endpointpropertiesupdateparameterswebapplicationfirewallpolicylink): Defines the Web Application Firewall policy for the endpoint (if applicable)
-
-## EndpointPropertiesUpdateParametersDeliveryPolicy
-### Properties
-* **description**: string: User-friendly description of the policy.
-* **rules**: [DeliveryRule](#deliveryrule)[] (Required): A list of the delivery rules.
+* **hostName**: string (Required): The address of the origin. It can be a domain name, IPv4 address, or IPv6 address.
+* **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535
+* **httpsPort**: int: The value of the HTTPS port. Must be between 1 and 65535
 
 ## DeliveryRule
 ### Properties
@@ -208,43 +177,6 @@
 * **name**: 'UrlRewrite' (Required): The name of the action for the delivery rule.
 * **parameters**: [UrlRewriteActionParameters](#urlrewriteactionparameters) (Required): Defines the parameters for the url rewrite action.
 
-
-## CacheExpirationActionParameters
-### Properties
-* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters' | string (Required)
-* **cacheBehavior**: 'BypassCache' | 'Override' | 'SetIfMissing' | string (Required): Caching behavior for the requests
-* **cacheDuration**: string: The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
-* **cacheType**: 'All' | string (Required): The level at which the content needs to be cached.
-
-## CacheKeyQueryStringActionParameters
-### Properties
-* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheKeyQueryStringBehaviorActionParameters' | string (Required)
-* **queryParameters**: string: query parameters to include or exclude (comma separated).
-* **queryStringBehavior**: 'Exclude' | 'ExcludeAll' | 'Include' | 'IncludeAll' | string (Required): Caching behavior for the requests
-
-## HeaderActionParameters
-### Properties
-* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters' | string (Required)
-* **headerAction**: 'Append' | 'Delete' | 'Overwrite' | string (Required): Action to perform
-* **headerName**: string (Required): Name of the header to modify
-* **value**: string: Value for the specified action
-
-## UrlRedirectActionParameters
-### Properties
-* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlRedirectActionParameters' | string (Required)
-* **customFragment**: string: Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
-* **customHostname**: string: Host to redirect. Leave empty to use the incoming host as the destination host.
-* **customPath**: string: The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
-* **customQueryString**: string: The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.
-* **destinationProtocol**: 'Http' | 'Https' | 'MatchRequest' | string: Protocol to use for the redirect. The default value is MatchRequest
-* **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect' | string (Required): The redirect type the rule will use when redirecting traffic.
-
-## UrlRewriteActionParameters
-### Properties
-* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlRewriteActionParameters' | string (Required)
-* **destination**: string (Required): Define the destination path for be used in the rewrite. This will overwrite the source pattern
-* **preserveUnmatchedPath**: bool: If True, the remaining path after the source pattern will be appended to the new destination path.
-* **sourcePattern**: string (Required): define a request URI pattern that identifies the type of requests that may be rewritten. Currently, source pattern uses a prefix-based match. To match all URL paths, use "/" as the source pattern value. To match only the root directory and re-write this path, use the origin path field
 
 ## DeliveryRuleCondition
 * **Discriminator**: name
@@ -321,14 +253,46 @@
 * **parameters**: [UrlPathMatchConditionParameters](#urlpathmatchconditionparameters) (Required): Defines the parameters for UrlPath match conditions
 
 
-## CookiesMatchConditionParameters
+## EndpointProperties
 ### Properties
-* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleCookiesConditionParameters' | string (Required)
-* **matchValues**: string[]: The match value for the condition of the delivery rule
-* **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string (Required): Describes operator to be matched
-* **selector**: string: Name of Cookies to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **contentTypesToCompress**: string[]: List of content types on which compression applies. The value should be a valid MIME type.
+* **deliveryPolicy**: [EndpointPropertiesUpdateParametersDeliveryPolicy](#endpointpropertiesupdateparametersdeliverypolicy): A policy that specifies the delivery rules to be used for an endpoint.
+* **geoFilters**: [GeoFilter](#geofilter)[]: List of rules defining the user's geo access within a CDN endpoint. Each geo filter defines an access rule to a specified path or content, e.g. block APAC for path /pictures/
+* **hostName**: string (ReadOnly): The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
+* **isCompressionEnabled**: bool: Indicates whether content compression is enabled on CDN. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB.
+* **isHttpAllowed**: bool: Indicates whether HTTP traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
+* **isHttpsAllowed**: bool: Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
+* **optimizationType**: 'DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming' | string: Specifies what scenario the customer wants this CDN endpoint to optimize, e.g. Download, Media services. With this information we can apply scenario driven optimization.
+* **originHostHeader**: string: The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
+* **originPath**: string: A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
+* **origins**: [DeepCreatedOrigin](#deepcreatedorigin)[] (Required): The source of the content being delivered via CDN.
+* **probePath**: string: Path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the origin path.
+* **provisioningState**: string (ReadOnly): Provisioning status of the endpoint.
+* **queryStringCachingBehavior**: 'BypassCaching' | 'IgnoreQueryString' | 'NotSet' | 'UseQueryString': Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
+* **resourceState**: 'Creating' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): Resource status of the endpoint.
+* **webApplicationFirewallPolicyLink**: [EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLink](#endpointpropertiesupdateparameterswebapplicationfirewallpolicylink): Defines the Web Application Firewall policy for the endpoint (if applicable)
+
+## EndpointPropertiesUpdateParametersDeliveryPolicy
+### Properties
+* **description**: string: User-friendly description of the policy.
+* **rules**: [DeliveryRule](#deliveryrule)[] (Required): A list of the delivery rules.
+
+## EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLink
+### Properties
+* **id**: string: Resource ID.
+
+## GeoFilter
+### Properties
+* **action**: 'Allow' | 'Block' (Required): Action of the geo filter, i.e. allow or block access.
+* **countryCodes**: string[] (Required): Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
+* **relativePath**: string (Required): Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.)
+
+## HeaderActionParameters
+### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters' | string (Required)
+* **headerAction**: 'Append' | 'Delete' | 'Overwrite' | string (Required): Action to perform
+* **headerName**: string (Required): Name of the header to modify
+* **value**: string: Value for the specified action
 
 ## HttpVersionMatchConditionParameters
 ### Properties
@@ -345,6 +309,56 @@
 * **operator**: 'Equal' | string (Required): Describes operator to be matched
 * **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
 
+## KeyVaultCertificateSourceParameters
+### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.KeyVaultCertificateSourceParameters' | string (ReadOnly)
+* **deleteRule**: 'NoAction' | string (ReadOnly): Describes the action that shall be taken when the certificate is removed from Key Vault.
+* **resourceGroupName**: string (ReadOnly): Resource group of the user's Key Vault containing the SSL certificate
+* **secretName**: string (ReadOnly): The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.
+* **secretVersion**: string (ReadOnly): The version(GUID) of Key Vault Secret in Key Vault.
+* **subscriptionId**: string (ReadOnly): Subscription Id of the user's Key Vault containing the SSL certificate
+* **updateRule**: 'NoAction' | string (ReadOnly): Describes the action that shall be taken when the certificate is updated in Key Vault.
+* **vaultName**: string (ReadOnly): The name of the user's Key Vault containing the SSL certificate
+
+## ManagedRuleGroupOverride
+### Properties
+* **ruleGroupName**: string (Required): Describes the managed rule group within the rule set to override
+* **rules**: [ManagedRuleOverride](#managedruleoverride)[]: List of rules that will be disabled. If none specified, all rules in the group will be disabled.
+
+## ManagedRuleOverride
+### Properties
+* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' | string: Defines the action to take on rule match.
+* **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
+* **ruleId**: string (Required): Identifier for the managed rule.
+
+## ManagedRuleSet
+### Properties
+* **anomalyScore**: int: Verizon only : If the rule set supports anomaly detection mode, this describes the threshold for blocking requests.
+* **ruleGroupOverrides**: [ManagedRuleGroupOverride](#managedrulegroupoverride)[]: Defines the rule overrides to apply to the rule set.
+* **ruleSetType**: string (Required): Defines the rule set type to use.
+* **ruleSetVersion**: string (Required): Defines the version of the rule set to use.
+
+## ManagedRuleSetList
+### Properties
+* **managedRuleSets**: [ManagedRuleSet](#managedruleset)[]: List of rule sets.
+
+## MatchCondition
+### Properties
+* **matchValue**: string[] (Required): List of possible match values.
+* **matchVariable**: 'Cookies' | 'HttpVersion' | 'IsDevice' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RemoteAddress' | 'RequestBody' | 'RequestHeader' | 'RequestMethod' | 'RequestScheme' | 'RequestUri' | 'SocketAddr' | 'UrlFileExtension' | 'UrlFileName' | 'UrlPath' | string (Required): The name of the condition for the delivery rule.
+* **negateCondition**: bool: Describes if the result of this condition should be negated.
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
+* **selector**: string: Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms.
+
+## PolicySettings
+### Properties
+* **defaultCustomBlockResponseBody**: string: If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
+* **defaultCustomBlockResponseStatusCode**: int: If the action type is block, this field defines the default customer overridable http response status code.
+* **defaultRedirectUrl**: string: If action type is redirect, this field represents the default redirect URL for the client.
+* **enabledState**: 'Disabled' | 'Enabled' | string: describes if the policy is in enabled state or disabled state
+* **mode**: 'Detection' | 'Prevention' | string: Describes if it is in detection mode or prevention mode at policy level.
+
 ## PostArgsMatchConditionParameters
 ### Properties
 * **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRulePostArgsConditionParameters' | string (Required)
@@ -354,6 +368,11 @@
 * **selector**: string: Name of PostArg to be matched
 * **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
 
+## ProfileProperties
+### Properties
+* **provisioningState**: string (ReadOnly): Provisioning status of the profile.
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | string (ReadOnly): Resource status of the profile.
+
 ## QueryStringMatchConditionParameters
 ### Properties
 * **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleQueryStringConditionParameters' | string (Required)
@@ -361,6 +380,20 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string (Required): Describes operator to be matched
 * **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+
+## RateLimitRule
+### Properties
+* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' | string (Required): Defines the action to take on rule match.
+* **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
+* **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions.
+* **name**: string (Required): Defines the name of the custom rule
+* **priority**: int (Required): Defines in what order this rule be evaluated in the overall list of custom rules
+* **rateLimitDurationInMinutes**: int (Required): Defines rate limit duration. Default is 1 minute.
+* **rateLimitThreshold**: int (Required): Defines rate limit threshold.
+
+## RateLimitRuleList
+### Properties
+* **rules**: [RateLimitRule](#ratelimitrule)[]: List of rules
 
 ## RemoteAddressMatchConditionParameters
 ### Properties
@@ -409,6 +442,25 @@
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string (Required): Describes operator to be matched
 * **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
 
+## Sku
+### Properties
+* **name**: 'Custom_Verizon' | 'Premium_ChinaCdn' | 'Premium_Verizon' | 'Standard_Akamai' | 'Standard_ChinaCdn' | 'Standard_Microsoft' | 'Standard_Verizon' | string: Name of the pricing tier.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## UrlFileExtensionMatchConditionParameters
 ### Properties
 * **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlFileExtensionMatchConditionParameters' | string (Required)
@@ -433,72 +485,20 @@
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'Wildcard' | string (Required): Describes operator to be matched
 * **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
 
-## GeoFilter
+## UrlRedirectActionParameters
 ### Properties
-* **action**: 'Allow' | 'Block' (Required): Action of the geo filter, i.e. allow or block access.
-* **countryCodes**: string[] (Required): Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
-* **relativePath**: string (Required): Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.)
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlRedirectActionParameters' | string (Required)
+* **customFragment**: string: Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
+* **customHostname**: string: Host to redirect. Leave empty to use the incoming host as the destination host.
+* **customPath**: string: The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
+* **customQueryString**: string: The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.
+* **destinationProtocol**: 'Http' | 'Https' | 'MatchRequest' | string: Protocol to use for the redirect. The default value is MatchRequest
+* **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect' | string (Required): The redirect type the rule will use when redirecting traffic.
 
-## DeepCreatedOrigin
+## UrlRewriteActionParameters
 ### Properties
-* **name**: string (Required): Origin name
-* **properties**: [DeepCreatedOriginProperties](#deepcreatedoriginproperties): Properties of the origin created on the CDN endpoint.
-
-## DeepCreatedOriginProperties
-### Properties
-* **hostName**: string (Required): The address of the origin. It can be a domain name, IPv4 address, or IPv6 address.
-* **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535
-* **httpsPort**: int: The value of the HTTPS port. Must be between 1 and 65535
-
-## EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLink
-### Properties
-* **id**: string: Resource ID.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## CustomDomainPropertiesParameters
-### Properties
-* **customHttpsParameters**: [CustomDomainHttpsParameters](#customdomainhttpsparameters) (ReadOnly): The JSON object that contains the properties to secure a custom domain.
-* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' | string (ReadOnly): Provisioning status of Custom Https of the custom domain.
-* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' | string (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
-* **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
-* **provisioningState**: string (ReadOnly): Provisioning status of the custom domain.
-* **resourceState**: 'Active' | 'Creating' | 'Deleting' | string (ReadOnly): Resource status of the custom domain.
-* **validationData**: string (ReadOnly): Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
-
-## CustomDomainHttpsParameters
-* **Discriminator**: certificateSource
-
-### Base Properties
-* **minimumTlsVersion**: 'None' | 'TLS10' | 'TLS12' (ReadOnly): TLS protocol version that will be used for Https
-* **protocolType**: 'IPBased' | 'ServerNameIndication' | string (ReadOnly): Defines the TLS extension protocol that is used for secure delivery.
-### UserManagedHttpsParameters
-#### Properties
-* **certificateSource**: 'AzureKeyVault' (Required): Defines the source of the SSL certificate.
-* **certificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters) (ReadOnly): Describes the parameters for using a user's KeyVault certificate for securing custom domain.
-
-### CdnManagedHttpsParameters
-#### Properties
-* **certificateSource**: 'Cdn' (Required): Defines the source of the SSL certificate.
-* **certificateSourceParameters**: [CdnCertificateSourceParameters](#cdncertificatesourceparameters) (ReadOnly): Defines the parameters for using CDN managed certificate for securing custom domain.
-
-
-## KeyVaultCertificateSourceParameters
-### Properties
-* **@odata.type**: '#Microsoft.Azure.Cdn.Models.KeyVaultCertificateSourceParameters' | string (ReadOnly)
-* **deleteRule**: 'NoAction' | string (ReadOnly): Describes the action that shall be taken when the certificate is removed from Key Vault.
-* **resourceGroupName**: string (ReadOnly): Resource group of the user's Key Vault containing the SSL certificate
-* **secretName**: string (ReadOnly): The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.
-* **secretVersion**: string (ReadOnly): The version(GUID) of Key Vault Secret in Key Vault.
-* **subscriptionId**: string (ReadOnly): Subscription Id of the user's Key Vault containing the SSL certificate
-* **updateRule**: 'NoAction' | string (ReadOnly): Describes the action that shall be taken when the certificate is updated in Key Vault.
-* **vaultName**: string (ReadOnly): The name of the user's Key Vault containing the SSL certificate
-
-## CdnCertificateSourceParameters
-### Properties
-* **@odata.type**: '#Microsoft.Azure.Cdn.Models.CdnCertificateSourceParameters' | string (ReadOnly)
-* **certificateType**: 'Dedicated' | 'Shared' | string (ReadOnly): Type of certificate used
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlRewriteActionParameters' | string (Required)
+* **destination**: string (Required): Define the destination path for be used in the rewrite. This will overwrite the source pattern
+* **preserveUnmatchedPath**: bool: If True, the remaining path after the source pattern will be appended to the new destination path.
+* **sourcePattern**: string (Required): define a request URI pattern that identifies the type of requests that may be rewritten. Currently, source pattern uses a prefix-based match. To match all URL paths, use "/" as the source pattern value. To match only the root directory and re-write this path, use the origin path field
 

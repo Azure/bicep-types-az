@@ -14,6 +14,10 @@
 * **type**: 'Microsoft.HardwareSecurityModules/dedicatedHSMs' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The Dedicated Hsm zones.
 
+## ApiEntityReference
+### Properties
+* **id**: string: The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
+
 ## DedicatedHsmProperties
 ### Properties
 * **managementNetworkProfile**: [NetworkProfile](#networkprofile): The network profile definition.
@@ -22,19 +26,20 @@
 * **stampId**: string: This field will be used when RP does not support Availability zones.
 * **statusMessage**: string (ReadOnly): Resource Status Message.
 
-## NetworkProfile
-### Properties
-* **networkInterfaces**: [NetworkInterface](#networkinterface)[]: Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
-* **subnet**: [ApiEntityReference](#apientityreference): The API entity reference.
-
 ## NetworkInterface
 ### Properties
 * **id**: string (ReadOnly): The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
 * **privateIpAddress**: string: Private Ip address of the interface
 
-## ApiEntityReference
+## NetworkProfile
 ### Properties
-* **id**: string: The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
+* **networkInterfaces**: [NetworkInterface](#networkinterface)[]: Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
+* **subnet**: [ApiEntityReference](#apientityreference): The API entity reference.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Sku
 ### Properties
@@ -48,9 +53,4 @@
 * **lastModifiedAt**: string: The timestamp of dedicated hsm resource last modification (UTC).
 * **lastModifiedBy**: string: The identity that last modified dedicated hsm resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

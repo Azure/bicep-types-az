@@ -13,12 +13,6 @@
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.IoTCentral/iotApps' (ReadOnly, DeployTimeConstant): The resource type
 
-## SystemAssignedServiceIdentity
-### Properties
-* **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **tenantId**: string (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' | string (Required): Type of managed service identity (either system assigned, or none).
-
 ## AppProperties
 ### Properties
 * **applicationId**: string (ReadOnly): The ID of the application.
@@ -35,4 +29,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SystemAssignedServiceIdentity
+### Properties
+* **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **tenantId**: string (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **type**: 'None' | 'SystemAssigned' | string (Required): Type of managed service identity (either system assigned, or none).
 

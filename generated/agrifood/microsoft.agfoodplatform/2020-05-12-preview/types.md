@@ -23,6 +23,14 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AgFoodPlatform/farmBeats/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
+## ExtensionProperties
+### Properties
+* **extensionApiDocsLink**: string (ReadOnly): Extension api docs link.
+* **extensionAuthLink**: string (ReadOnly): Extension auth link.
+* **extensionCategory**: string (ReadOnly): Extension category. e.g. weather/sensor/satellite.
+* **extensionId**: string (ReadOnly): Extension Id.
+* **installedExtensionVersion**: string (ReadOnly): Installed extension version.
+
 ## FarmBeatsProperties
 ### Properties
 * **instanceUri**: string (ReadOnly): Uri of the FarmBeats instance.
@@ -41,12 +49,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## ExtensionProperties
-### Properties
-* **extensionApiDocsLink**: string (ReadOnly): Extension api docs link.
-* **extensionAuthLink**: string (ReadOnly): Extension auth link.
-* **extensionCategory**: string (ReadOnly): Extension category. e.g. weather/sensor/satellite.
-* **extensionId**: string (ReadOnly): Extension Id.
-* **installedExtensionVersion**: string (ReadOnly): Installed extension version.
 

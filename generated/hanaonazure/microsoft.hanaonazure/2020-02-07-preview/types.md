@@ -20,6 +20,13 @@
 * **properties**: [ProviderInstanceProperties](#providerinstanceproperties): Describes the properties of a provider instance.
 * **type**: 'Microsoft.HanaOnAzure/sapMonitors/providerInstances' (ReadOnly, DeployTimeConstant): The resource type
 
+## ProviderInstanceProperties
+### Properties
+* **metadata**: string: A JSON string containing metadata of the provider instance.
+* **properties**: string: A JSON string containing the properties of the provider instance.
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' | string (ReadOnly): State of provisioning of the HanaInstance
+* **type**: string: The type of provider instance.
+
 ## SapMonitorProperties
 ### Properties
 * **enableCustomerAnalytics**: bool: The value indicating whether to send analytics to Microsoft
@@ -35,11 +42,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## ProviderInstanceProperties
-### Properties
-* **metadata**: string: A JSON string containing metadata of the provider instance.
-* **properties**: string: A JSON string containing the properties of the provider instance.
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' | string (ReadOnly): State of provisioning of the HanaInstance
-* **type**: string: The type of provider instance.
 

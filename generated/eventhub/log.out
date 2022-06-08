@@ -87,7 +87,7 @@ warning | PreCheck/SchemaMissingType | The schema 'MessagingRegionsListResult' w
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 14ms
+info    | autorest.bicep took 16ms
 info    | Processing batch task - {"tag":"microsoft.eventhub-2015-08-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -298,7 +298,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityResult' 
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.eventhub-2021-06-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -516,7 +516,7 @@ warning | PreCheck/SchemaMissingType | The schema 'MessagingRegionsListResult' w
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.eventhub-2021-11-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -607,5 +607,5 @@ warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityResult' 
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 8ms
-info    | Autorest completed in 25.31s. 14 files generated.
+info    | autorest.bicep took 10ms
+info    | Autorest completed in 26.11s. 14 files generated.

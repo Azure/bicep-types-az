@@ -9,6 +9,11 @@
 * **properties**: [BillingSubscriptionAliasProperties](#billingsubscriptionaliasproperties): Billing subscription alias properties.
 * **type**: 'Microsoft.Billing/billingAccounts/billingSubscriptionAliases' (ReadOnly, DeployTimeConstant): The resource type
 
+## Amount
+### Properties
+* **currency**: string (ReadOnly): The currency for the amount value.
+* **value**: int (ReadOnly): Amount value.
+
 ## BillingSubscriptionAliasProperties
 ### Properties
 * **autoRenew**: 'Off' | 'On' | string: Indicates whether auto renewal is turned on or off for a subscription.
@@ -58,11 +63,6 @@
 ### Properties
 * **enrollmentAccountStartDate**: string (ReadOnly): The enrollment Account and the subscription association start date. This field is available only for the Enterprise Agreement billing accounts.
 * **subscriptionEnrollmentAccountStatus**: 'Active' | 'Cancelled' | 'Deleted' | 'Expired' | 'TransferredOut' | 'Transferring' | string (ReadOnly): The current enrollment account status of the subscription. This field is available only for the Enterprise Agreement billing accounts.
-
-## Amount
-### Properties
-* **currency**: string (ReadOnly): The currency for the amount value.
-* **value**: int (ReadOnly): Amount value.
 
 ## NextBillingCycleDetails
 ### Properties

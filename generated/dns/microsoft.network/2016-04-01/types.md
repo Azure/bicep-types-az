@@ -102,18 +102,30 @@
 * **properties**: [RecordSetProperties](#recordsetproperties): Represents the properties of the records in the record set.
 * **type**: 'Microsoft.Network/dnsZones/TXT' (ReadOnly, DeployTimeConstant): The resource type
 
-## ZoneProperties
+## AaaaRecord
 ### Properties
-* **maxNumberOfRecordSets**: int: The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
-* **maxNumberOfRecordsPerRecordSet**: int (ReadOnly): The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
-* **nameServers**: string[] (ReadOnly): The name servers for this DNS zone. This is a read-only property and any attempt to set this value will be ignored.
-* **numberOfRecordSets**: int: The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
-* **zoneType**: 'Private' | 'Public': The type of this DNS zone (Public or Private).
+* **ipv6Address**: string: The IPv6 address of this AAAA record.
 
-## TrackedResourceTags
+## ARecord
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **ipv4Address**: string: The IPv4 address of this A record.
+
+## CnameRecord
+### Properties
+* **cname**: string: The canonical name for this CNAME record.
+
+## MxRecord
+### Properties
+* **exchange**: string: The domain name of the mail host for this MX record.
+* **preference**: int: The preference value for this MX record.
+
+## NsRecord
+### Properties
+* **nsdname**: string: The name server name for this NS record.
+
+## PtrRecord
+### Properties
+* **ptrdname**: string: The PTR target domain name for this PTR record.
 
 ## RecordSetProperties
 ### Properties
@@ -130,35 +142,10 @@
 * **TTL**: int: The TTL (time-to-live) of the records in the record set.
 * **TXTRecords**: [TxtRecord](#txtrecord)[]: The list of TXT records in the record set.
 
-## AaaaRecord
-### Properties
-* **ipv6Address**: string: The IPv6 address of this AAAA record.
-
-## ARecord
-### Properties
-* **ipv4Address**: string: The IPv4 address of this A record.
-
-## CnameRecord
-### Properties
-* **cname**: string: The canonical name for this CNAME record.
-
 ## RecordSetPropertiesMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## MxRecord
-### Properties
-* **exchange**: string: The domain name of the mail host for this MX record.
-* **preference**: int: The preference value for this MX record.
-
-## NsRecord
-### Properties
-* **nsdname**: string: The name server name for this NS record.
-
-## PtrRecord
-### Properties
-* **ptrdname**: string: The PTR target domain name for this PTR record.
 
 ## SoaRecord
 ### Properties
@@ -177,7 +164,20 @@
 * **target**: string: The target domain name for this SRV record.
 * **weight**: int: The weight value for this SRV record.
 
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## TxtRecord
 ### Properties
 * **value**: string[]: The text value of this TXT record.
+
+## ZoneProperties
+### Properties
+* **maxNumberOfRecordSets**: int: The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
+* **maxNumberOfRecordsPerRecordSet**: int (ReadOnly): The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
+* **nameServers**: string[] (ReadOnly): The name servers for this DNS zone. This is a read-only property and any attempt to set this value will be ignored.
+* **numberOfRecordSets**: int: The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
+* **zoneType**: 'Private' | 'Public': The type of this DNS zone (Public or Private).
 

@@ -39,49 +39,6 @@
 * **ApiVersion**: 2021-06-01-preview
 * **Output**: [WebPubSubKeys](#webpubsubkeys)
 
-## ManagedIdentity
-### Properties
-* **principalId**: string (ReadOnly): Get the principal id for the system assigned identity.
-Only be used in response.
-* **tenantId**: string (ReadOnly): Get the tenant id for the system assigned identity.
-Only be used in response
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string: Represent the identity type: systemAssigned, userAssigned, None
-* **userAssignedIdentities**: [ManagedIdentityUserAssignedIdentities](#managedidentityuserassignedidentities): Get or set the user assigned identities
-
-## ManagedIdentityUserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentityProperty](#userassignedidentityproperty)
-
-## UserAssignedIdentityProperty
-### Properties
-* **clientId**: string (ReadOnly): Get the client id for the user assigned identity
-* **principalId**: string (ReadOnly): Get the principal id for the user assigned identity
-
-## WebPubSubProperties
-### Properties
-* **diagnosticConfiguration**: [DiagnosticConfiguration](#diagnosticconfiguration): Diagnostic configuration of a Microsoft.SignalRService resource. Used together with Azure monitor DiagnosticSettings.
-* **disableAadAuth**: bool: DisableLocalAuth
-Enable or disable aad auth
-When set as true, connection with AuthType=aad won't work.
-* **disableLocalAuth**: bool: DisableLocalAuth
-Enable or disable local auth with AccessKey
-When set as true, connection with AccessKey=xxx won't work.
-* **eventHandler**: [EventHandlerSettings](#eventhandlersettings): The settings for event handler in webpubsub service
-* **externalIP**: string (ReadOnly): The publicly accessible IP of the resource.
-* **hostName**: string (ReadOnly): FQDN of the service instance.
-* **networkACLs**: [WebPubSubNetworkACLs](#webpubsubnetworkacls): Network ACLs for the resource
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Private endpoint connections to the resource.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
-* **publicNetworkAccess**: string: Enable or disable public network access. Default to "Enabled".
-When it's Enabled, network ACLs still apply.
-When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
-* **publicPort**: int (ReadOnly): The publicly accessible port of the resource which is designed for browser/client side usage.
-* **serverPort**: int (ReadOnly): The publicly accessible port of the resource which is designed for customer server side usage.
-* **sharedPrivateLinkResources**: [SharedPrivateLinkResource](#sharedprivatelinkresource)[] (ReadOnly): The list of shared private link resources.
-* **tls**: [WebPubSubTlsSettings](#webpubsubtlssettings): TLS settings for the resource
-* **version**: string (ReadOnly): Version of the resource. Probably you need the same or higher version of client SDKs.
-
 ## DiagnosticConfiguration
 ### Properties
 * **enableConnectivityLogs**: string: Indicate whether or not enable Connectivity logs.
@@ -119,32 +76,39 @@ There are 3 kind of patterns supported:
     2. Combine multiple events with ",", for example "event1,event2", it matches event "event1" and "event2"
     3. The single event name, for example, "event1", it matches "event1"
 
-## UpstreamAuthSettings
+## ManagedIdentity
 ### Properties
-* **managedIdentity**: [ManagedIdentitySettings](#managedidentitysettings): Managed identity settings for upstream.
-* **type**: 'ManagedIdentity' | 'None' | string: Gets or sets the type of auth. None or ManagedIdentity is supported now.
+* **principalId**: string (ReadOnly): Get the principal id for the system assigned identity.
+Only be used in response.
+* **tenantId**: string (ReadOnly): Get the tenant id for the system assigned identity.
+Only be used in response
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string: Represent the identity type: systemAssigned, userAssigned, None
+* **userAssignedIdentities**: [ManagedIdentityUserAssignedIdentities](#managedidentityuserassignedidentities): Get or set the user assigned identities
 
 ## ManagedIdentitySettings
 ### Properties
 * **resource**: string: The Resource indicating the App ID URI of the target resource.
 It also appears in the aud (audience) claim of the issued token.
 
-## WebPubSubNetworkACLs
+## ManagedIdentityUserAssignedIdentities
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny' | string: Default action when no other rule matches
-* **privateEndpoints**: [PrivateEndpointACL](#privateendpointacl)[]: ACLs for requests from private endpoints
-* **publicNetwork**: [NetworkACL](#networkacl): Network ACL
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentityProperty](#userassignedidentityproperty)
+
+## NetworkACL
+### Properties
+* **allow**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **deny**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+
+## PrivateEndpoint
+### Properties
+* **id**: string: Full qualified Id of the private endpoint
 
 ## PrivateEndpointACL
 ### Properties
 * **allow**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
 * **deny**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
 * **name**: string (Required): Name of the private endpoint connection
-
-## NetworkACL
-### Properties
-* **allow**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
-* **deny**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
 
 ## PrivateEndpointConnection
 ### Properties
@@ -160,44 +124,11 @@ It also appears in the aud (audience) claim of the issued token.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Connection state of the private endpoint connection
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 
-## PrivateEndpoint
-### Properties
-* **id**: string: Full qualified Id of the private endpoint
-
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## SharedPrivateLinkResource
-### Properties
-* **id**: string (ReadOnly): Fully qualified resource Id for the resource.
-* **name**: string (ReadOnly): The name of the resource.
-* **properties**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): Describes the properties of an existing Shared Private Link Resource
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **type**: string (ReadOnly): The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
-
-## SharedPrivateLinkResourceProperties
-### Properties
-* **groupId**: string (Required): The group id from the provider of resource the shared private link resource is for
-* **privateLinkResourceId**: string (Required): The resource id of the resource the shared private link resource is for
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
-* **requestMessage**: string: The request message for requesting approval of the shared private link resource
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string (ReadOnly): Status of the shared private link resource
-
-## WebPubSubTlsSettings
-### Properties
-* **clientCertEnabled**: bool: Request client certificate during TLS handshake if enabled
 
 ## ResourceSku
 ### Properties
@@ -215,10 +146,45 @@ Allowed values: Standard_S1, Free_F1
 
 `Basic` is deprecated, use `Standard` instead.
 
+## SharedPrivateLinkResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource Id for the resource.
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): Describes the properties of an existing Shared Private Link Resource
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: string (ReadOnly): The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+
+## SharedPrivateLinkResourceProperties
+### Properties
+* **groupId**: string (Required): The group id from the provider of resource the shared private link resource is for
+* **privateLinkResourceId**: string (Required): The resource id of the resource the shared private link resource is for
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
+* **requestMessage**: string: The request message for requesting approval of the shared private link resource
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string (ReadOnly): Status of the shared private link resource
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UpstreamAuthSettings
+### Properties
+* **managedIdentity**: [ManagedIdentitySettings](#managedidentitysettings): Managed identity settings for upstream.
+* **type**: 'ManagedIdentity' | 'None' | string: Gets or sets the type of auth. None or ManagedIdentity is supported now.
+
+## UserAssignedIdentityProperty
+### Properties
+* **clientId**: string (ReadOnly): Get the client id for the user assigned identity
+* **principalId**: string (ReadOnly): Get the principal id for the user assigned identity
 
 ## WebPubSubKeys
 ### Properties
@@ -226,4 +192,38 @@ Allowed values: Standard_S1, Free_F1
 * **primaryKey**: string (ReadOnly): The primary access key.
 * **secondaryConnectionString**: string (ReadOnly): Connection string constructed via the secondaryKey
 * **secondaryKey**: string (ReadOnly): The secondary access key.
+
+## WebPubSubNetworkACLs
+### Properties
+* **defaultAction**: 'Allow' | 'Deny' | string: Default action when no other rule matches
+* **privateEndpoints**: [PrivateEndpointACL](#privateendpointacl)[]: ACLs for requests from private endpoints
+* **publicNetwork**: [NetworkACL](#networkacl): Network ACL
+
+## WebPubSubProperties
+### Properties
+* **diagnosticConfiguration**: [DiagnosticConfiguration](#diagnosticconfiguration): Diagnostic configuration of a Microsoft.SignalRService resource. Used together with Azure monitor DiagnosticSettings.
+* **disableAadAuth**: bool: DisableLocalAuth
+Enable or disable aad auth
+When set as true, connection with AuthType=aad won't work.
+* **disableLocalAuth**: bool: DisableLocalAuth
+Enable or disable local auth with AccessKey
+When set as true, connection with AccessKey=xxx won't work.
+* **eventHandler**: [EventHandlerSettings](#eventhandlersettings): The settings for event handler in webpubsub service
+* **externalIP**: string (ReadOnly): The publicly accessible IP of the resource.
+* **hostName**: string (ReadOnly): FQDN of the service instance.
+* **networkACLs**: [WebPubSubNetworkACLs](#webpubsubnetworkacls): Network ACLs for the resource
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Private endpoint connections to the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
+* **publicNetworkAccess**: string: Enable or disable public network access. Default to "Enabled".
+When it's Enabled, network ACLs still apply.
+When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
+* **publicPort**: int (ReadOnly): The publicly accessible port of the resource which is designed for browser/client side usage.
+* **serverPort**: int (ReadOnly): The publicly accessible port of the resource which is designed for customer server side usage.
+* **sharedPrivateLinkResources**: [SharedPrivateLinkResource](#sharedprivatelinkresource)[] (ReadOnly): The list of shared private link resources.
+* **tls**: [WebPubSubTlsSettings](#webpubsubtlssettings): TLS settings for the resource
+* **version**: string (ReadOnly): Version of the resource. Probably you need the same or higher version of client SDKs.
+
+## WebPubSubTlsSettings
+### Properties
+* **clientCertEnabled**: bool: Request client certificate during TLS handshake if enabled
 

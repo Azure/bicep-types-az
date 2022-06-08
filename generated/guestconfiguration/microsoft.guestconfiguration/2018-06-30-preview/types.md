@@ -10,6 +10,20 @@
 * **properties**: [GuestConfigurationAssignmentProperties](#guestconfigurationassignmentproperties): Guest configuration assignment properties.
 * **type**: 'Microsoft.GuestConfiguration/guestConfigurationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
+## ConfigurationParameter
+### Properties
+* **name**: string (ReadOnly): Name of the configuration parameter.
+* **value**: string (ReadOnly): Value of the configuration parameter.
+
+## ConfigurationSetting
+### Properties
+* **actionAfterReboot**: 'ContinueConfiguration' | 'StopConfiguration' | string: Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration
+* **allowModuleOverwrite**: bool: If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false
+* **configurationMode**: 'ApplyAndAutoCorrect' | 'ApplyAndMonitor' | 'ApplyOnly' | string: Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.
+* **configurationModeFrequencyMins**: int: How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.
+* **rebootIfNeeded**: bool: Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.
+* **refreshFrequencyMins**: int: The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.
+
 ## GuestConfigurationAssignmentProperties
 ### Properties
 * **assignmentHash**: string (ReadOnly): Combined hash of the configuration package and parameters.
@@ -29,18 +43,4 @@
 * **kind**: 'DSC' | string: Kind of the guest configuration. For example:DSC
 * **name**: string: Name of the guest configuration.
 * **version**: string: Version of the guest configuration.
-
-## ConfigurationParameter
-### Properties
-* **name**: string (ReadOnly): Name of the configuration parameter.
-* **value**: string (ReadOnly): Value of the configuration parameter.
-
-## ConfigurationSetting
-### Properties
-* **actionAfterReboot**: 'ContinueConfiguration' | 'StopConfiguration' | string: Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration
-* **allowModuleOverwrite**: bool: If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false
-* **configurationMode**: 'ApplyAndAutoCorrect' | 'ApplyAndMonitor' | 'ApplyOnly' | string: Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.
-* **configurationModeFrequencyMins**: int: How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.
-* **rebootIfNeeded**: bool: Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.
-* **refreshFrequencyMins**: int: The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.
 

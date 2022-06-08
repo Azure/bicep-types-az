@@ -38,6 +38,11 @@
 * **type**: 'Suppression' (Required): Indicates type of action rule
 
 
+## Condition
+### Properties
+* **operator**: 'Contains' | 'DoesNotContain' | 'Equals' | 'NotEquals' | string: operator for a given condition
+* **values**: string[]: list of values to match for a given condition.
+
 ## Conditions
 ### Properties
 * **alertContext**: [Condition](#condition): condition to trigger an action rule
@@ -48,10 +53,10 @@
 * **severity**: [Condition](#condition): condition to trigger an action rule
 * **targetResourceType**: [Condition](#condition): condition to trigger an action rule
 
-## Condition
+## ManagedResourceTags
 ### Properties
-* **operator**: 'Contains' | 'DoesNotContain' | 'Equals' | 'NotEquals' | string: operator for a given condition
-* **values**: string[]: list of values to match for a given condition.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Scope
 ### Properties
@@ -70,9 +75,4 @@
 * **recurrenceValues**: int[]: Specifies the values for recurrence pattern
 * **startDate**: string: Start date for suppression
 * **startTime**: string: Start time for suppression
-
-## ManagedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

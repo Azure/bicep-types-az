@@ -55,6 +55,13 @@
 * **ApiVersion**: 2021-03-01
 * **Output**: [ConnectionSetting](#connectionsetting)
 
+## AlexaChannelProperties
+### Properties
+* **alexaSkillId**: string (Required): The Alexa skill Id
+* **isEnabled**: bool (Required): Whether this channel is enabled for the bot
+* **serviceEndpointUri**: string (ReadOnly): Full Uri used to configured the skill in Alexa
+* **urlFragment**: string (ReadOnly): Url fragment used in part of the Uri configured in Alexa
+
 ## BotProperties
 ### Properties
 * **allSettings**: [BotPropertiesAllSettings](#botpropertiesallsettings): Contains resource all settings defined as key/value pairs.
@@ -97,16 +104,6 @@
 * **Additional Properties Type**: string
 
 ## BotPropertiesParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Sku
-### Properties
-* **name**: 'F0' | 'S1' | string (Required): The name of SKU.
-* **tier**: 'Free' | 'Standard' | string (ReadOnly): Gets the sku tier. This is based on the SKU name.
-
-## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -184,12 +181,48 @@
 * **properties**: [WebChatChannelProperties](#webchatchannelproperties): The parameters to provide for the Web Chat channel.
 
 
-## AlexaChannelProperties
+## ChannelSettings
 ### Properties
-* **alexaSkillId**: string (Required): The Alexa skill Id
-* **isEnabled**: bool (Required): Whether this channel is enabled for the bot
-* **serviceEndpointUri**: string (ReadOnly): Full Uri used to configured the skill in Alexa
-* **urlFragment**: string (ReadOnly): Url fragment used in part of the Uri configured in Alexa
+* **botIconUrl**: string (ReadOnly): The bot icon url
+* **botId**: string (ReadOnly): The bot id
+* **channelDisplayName**: string (ReadOnly): The channel display name
+* **channelId**: string (ReadOnly): The channel id
+* **disableLocalAuth**: bool (ReadOnly): Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
+* **extensionKey1**: string (ReadOnly): The extensionKey1
+* **extensionKey2**: string (ReadOnly): The extensionKey2
+* **isEnabled**: bool (ReadOnly): Whether this channel is enabled for the bot
+* **sites**: [Site](#site)[] (ReadOnly): The list of sites
+
+## ConnectionSetting
+### Properties
+* **etag**: string (ReadOnly): Entity Tag
+* **id**: string (ReadOnly): Specifies the resource ID.
+* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Indicates the type of bot service
+* **location**: string (ReadOnly): Specifies the location of the resource.
+* **name**: string (ReadOnly): Specifies the name of the resource.
+* **properties**: [ConnectionSettingProperties](#connectionsettingproperties) (ReadOnly): Properties for a Connection Setting Item
+* **sku**: [Sku](#sku) (ReadOnly): The SKU of the cognitive services account.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
+* **type**: string (ReadOnly): Specifies the type of the resource.
+* **zones**: string[] (ReadOnly): Entity zones
+
+## ConnectionSettingParameter
+### Properties
+* **key**: string: Key for the Connection Setting Parameter.
+* **value**: string: Value associated with the Connection Setting Parameter.
+
+## ConnectionSettingProperties
+### Properties
+* **clientId**: string: Client Id associated with the Connection Setting.
+* **clientSecret**: string: Client Secret associated with the Connection Setting
+* **id**: string: Id associated with the Connection Setting.
+* **name**: string: Name associated with the Connection Setting.
+* **parameters**: [ConnectionSettingParameter](#connectionsettingparameter)[]: Service Provider Parameters associated with the Connection Setting
+* **provisioningState**: string: Provisioning state of the resource
+* **scopes**: string: Scopes associated with the Connection Setting
+* **serviceProviderDisplayName**: string: Service Provider Display Name associated with the Connection Setting
+* **serviceProviderId**: string: Service Provider Id associated with the Connection Setting
+* **settingId**: string (ReadOnly): Setting Id set by the service for the Connection Setting.
 
 ## DirectLineChannelProperties
 ### Properties
@@ -257,6 +290,24 @@
 * **channelSecret**: string: Secret for the line channel registration
 * **generatedId**: string (ReadOnly): Id generated for the line channel registration
 
+## ListChannelWithKeysResponse
+### Properties
+* **changedTime**: string (ReadOnly): Changed time of the resource
+* **entityTag**: string (ReadOnly): Entity tag of the resource
+* **etag**: string (ReadOnly): Entity Tag
+* **id**: string (ReadOnly): Specifies the resource ID.
+* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Indicates the type of bot service
+* **location**: string (ReadOnly): Specifies the location of the resource.
+* **name**: string (ReadOnly): Specifies the name of the resource.
+* **properties**: [Channel](#channel) (ReadOnly): Channel definition
+* **provisioningState**: string (ReadOnly): Provisioning state of the resource
+* **resource**: [Channel](#channel) (ReadOnly): Channel definition
+* **setting**: [ChannelSettings](#channelsettings) (ReadOnly): Channel settings definition
+* **sku**: [Sku](#sku) (ReadOnly): The SKU of the cognitive services account.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
+* **type**: string (ReadOnly): Specifies the type of the resource.
+* **zones**: string[] (ReadOnly): Entity zones
+
 ## MsTeamsChannelProperties
 ### Properties
 * **acceptedTerms**: bool: Whether this channel accepted terms
@@ -265,6 +316,52 @@
 * **enableCalling**: bool: Enable calling for Microsoft Teams channel
 * **incomingCallRoute**: string: Webhook for Microsoft Teams channel calls
 * **isEnabled**: bool (Required): Whether this channel is enabled for the bot
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Site
+### Properties
+* **eTag**: string (ReadOnly): Entity Tag
+* **isBlockUserUploadEnabled**: bool (ReadOnly): Whether this site is enabled for block user upload.
+* **isEnabled**: bool (ReadOnly): Whether this site is enabled for DirectLine channel.
+* **isSecureSiteEnabled**: bool (ReadOnly): Whether this site is enabled for authentication with Bot Framework.
+* **isTokenEnabled**: bool (ReadOnly): Whether this site is token enabled for channel
+* **isV1Enabled**: bool (ReadOnly): Whether this site is enabled for Bot Framework V1 protocol.
+* **isV3Enabled**: bool (ReadOnly): Whether this site is enabled for Bot Framework V1 protocol.
+* **isWebchatPreviewEnabled**: bool (ReadOnly): Whether this site is enabled for preview versions of Webchat
+* **key**: string (ReadOnly): Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
+* **key2**: string (ReadOnly): Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
+* **siteId**: string (ReadOnly): Site Id
+* **siteName**: string (ReadOnly): Site name
+* **trustedOrigins**: string[] (ReadOnly): List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
+
+## Sku
+### Properties
+* **name**: 'F0' | 'S1' | string (Required): The name of SKU.
+* **tier**: 'Free' | 'Standard' | string (ReadOnly): Gets the sku tier. This is based on the SKU name.
 
 ## SkypeChannelProperties
 ### Properties
@@ -319,101 +416,4 @@
 * **key2**: string (ReadOnly): Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
 * **siteId**: string (ReadOnly): Site Id
 * **siteName**: string (Required): Site name
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ConnectionSettingProperties
-### Properties
-* **clientId**: string: Client Id associated with the Connection Setting.
-* **clientSecret**: string: Client Secret associated with the Connection Setting
-* **id**: string: Id associated with the Connection Setting.
-* **name**: string: Name associated with the Connection Setting.
-* **parameters**: [ConnectionSettingParameter](#connectionsettingparameter)[]: Service Provider Parameters associated with the Connection Setting
-* **provisioningState**: string: Provisioning state of the resource
-* **scopes**: string: Scopes associated with the Connection Setting
-* **serviceProviderDisplayName**: string: Service Provider Display Name associated with the Connection Setting
-* **serviceProviderId**: string: Service Provider Id associated with the Connection Setting
-* **settingId**: string (ReadOnly): Setting Id set by the service for the Connection Setting.
-
-## ConnectionSettingParameter
-### Properties
-* **key**: string: Key for the Connection Setting Parameter.
-* **value**: string: Value associated with the Connection Setting Parameter.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ListChannelWithKeysResponse
-### Properties
-* **changedTime**: string (ReadOnly): Changed time of the resource
-* **entityTag**: string (ReadOnly): Entity tag of the resource
-* **etag**: string (ReadOnly): Entity Tag
-* **id**: string (ReadOnly): Specifies the resource ID.
-* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Indicates the type of bot service
-* **location**: string (ReadOnly): Specifies the location of the resource.
-* **name**: string (ReadOnly): Specifies the name of the resource.
-* **properties**: [Channel](#channel) (ReadOnly): Channel definition
-* **provisioningState**: string (ReadOnly): Provisioning state of the resource
-* **resource**: [Channel](#channel) (ReadOnly): Channel definition
-* **setting**: [ChannelSettings](#channelsettings) (ReadOnly): Channel settings definition
-* **sku**: [Sku](#sku) (ReadOnly): The SKU of the cognitive services account.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
-* **type**: string (ReadOnly): Specifies the type of the resource.
-* **zones**: string[] (ReadOnly): Entity zones
-
-## ChannelSettings
-### Properties
-* **botIconUrl**: string (ReadOnly): The bot icon url
-* **botId**: string (ReadOnly): The bot id
-* **channelDisplayName**: string (ReadOnly): The channel display name
-* **channelId**: string (ReadOnly): The channel id
-* **disableLocalAuth**: bool (ReadOnly): Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
-* **extensionKey1**: string (ReadOnly): The extensionKey1
-* **extensionKey2**: string (ReadOnly): The extensionKey2
-* **isEnabled**: bool (ReadOnly): Whether this channel is enabled for the bot
-* **sites**: [Site](#site)[] (ReadOnly): The list of sites
-
-## Site
-### Properties
-* **eTag**: string (ReadOnly): Entity Tag
-* **isBlockUserUploadEnabled**: bool (ReadOnly): Whether this site is enabled for block user upload.
-* **isEnabled**: bool (ReadOnly): Whether this site is enabled for DirectLine channel.
-* **isSecureSiteEnabled**: bool (ReadOnly): Whether this site is enabled for authentication with Bot Framework.
-* **isTokenEnabled**: bool (ReadOnly): Whether this site is token enabled for channel
-* **isV1Enabled**: bool (ReadOnly): Whether this site is enabled for Bot Framework V1 protocol.
-* **isV3Enabled**: bool (ReadOnly): Whether this site is enabled for Bot Framework V1 protocol.
-* **isWebchatPreviewEnabled**: bool (ReadOnly): Whether this site is enabled for preview versions of Webchat
-* **key**: string (ReadOnly): Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
-* **key2**: string (ReadOnly): Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
-* **siteId**: string (ReadOnly): Site Id
-* **siteName**: string (ReadOnly): Site name
-* **trustedOrigins**: string[] (ReadOnly): List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ConnectionSetting
-### Properties
-* **etag**: string (ReadOnly): Entity Tag
-* **id**: string (ReadOnly): Specifies the resource ID.
-* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Indicates the type of bot service
-* **location**: string (ReadOnly): Specifies the location of the resource.
-* **name**: string (ReadOnly): Specifies the name of the resource.
-* **properties**: [ConnectionSettingProperties](#connectionsettingproperties) (ReadOnly): Properties for a Connection Setting Item
-* **sku**: [Sku](#sku) (ReadOnly): The SKU of the cognitive services account.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
-* **type**: string (ReadOnly): Specifies the type of the resource.
-* **zones**: string[] (ReadOnly): Entity zones
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

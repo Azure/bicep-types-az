@@ -18,6 +18,55 @@
 * **properties**: [SecurityAssessmentProperties](#securityassessmentproperties): Describes properties of an assessment.
 * **type**: 'Microsoft.Security/assessments' (ReadOnly, DeployTimeConstant): The resource type
 
+## AssessmentLinks
+### Properties
+* **azurePortalUri**: string (ReadOnly): Link to assessment in Azure Portal
+
+## AssessmentStatus
+### Properties
+* **cause**: string: Programmatic code for the cause of the assessment status
+* **code**: 'Healthy' | 'NotApplicable' | 'Unhealthy' | string (Required): Programmatic code for the status of the assessment
+* **description**: string: Human readable description of the assessment status
+* **firstEvaluationDate**: string (ReadOnly): The time that the assessment was created and first evaluated. Returned as UTC time in ISO 8601 format
+* **statusChangeDate**: string (ReadOnly): The time that the status of the assessment last changed. Returned as UTC time in ISO 8601 format
+
+## ResourceDetails
+* **Discriminator**: source
+
+### Base Properties
+### AzureResourceDetails
+#### Properties
+* **id**: string (ReadOnly): Azure resource Id of the assessed resource
+* **source**: 'Azure' (Required): The platform where the assessed resource resides
+
+### OnPremiseSqlResourceDetails
+#### Properties
+* **databaseName**: string (Required): The Sql database name installed on the machine
+* **serverName**: string (Required): The Sql server name installed on the machine
+* **source**: 'OnPremiseSql' (Required): The platform where the assessed resource resides
+
+
+## SecurityAssessmentMetadataPartnerData
+### Properties
+* **partnerName**: string (Required): Name of the company of the partner
+* **productName**: string: Name of the product of the partner that created the assessment
+* **secret**: string (Required): Secret to authenticate the partner and verify it created the assessment - write only
+
+## SecurityAssessmentMetadataProperties
+### Properties
+* **assessmentType**: 'BuiltIn' | 'CustomPolicy' | 'CustomerManaged' | 'VerifiedPartner' | string (Required): BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
+* **categories**: 'Compute' | 'Data' | 'IdentityAndAccess' | 'IoT' | 'Networking' | string[]: Array of categories
+* **description**: string: Human readable description of the assessment
+* **displayName**: string (Required): User friendly display name of the assessment
+* **implementationEffort**: 'High' | 'Low' | 'Moderate' | string: The implementation effort required to remediate this assessment
+* **partnerData**: [SecurityAssessmentMetadataPartnerData](#securityassessmentmetadatapartnerdata): Describes the partner that created the assessment
+* **policyDefinitionId**: string (ReadOnly): Azure resource ID of the policy definition that turns this assessment calculation on
+* **preview**: bool: True if this assessment is in preview release status
+* **remediationDescription**: string: Human readable description of what you should do to mitigate this security issue
+* **severity**: 'High' | 'Low' | 'Medium' | string (Required): The severity level of the assessment
+* **threats**: 'accountBreach' | 'dataExfiltration' | 'dataSpillage' | 'denialOfService' | 'elevationOfPrivilege' | 'maliciousInsider' | 'missingCoverage' | 'threatResistance' | string[]: Array of threats
+* **userImpact**: 'High' | 'Low' | 'Moderate' | string: The user impact of the assessment
+
 ## SecurityAssessmentMetadataPropertiesResponse
 ### Properties
 * **assessmentType**: 'BuiltIn' | 'CustomPolicy' | 'CustomerManaged' | 'VerifiedPartner' | string (Required): BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
@@ -37,16 +86,15 @@
 * **threats**: 'accountBreach' | 'dataExfiltration' | 'dataSpillage' | 'denialOfService' | 'elevationOfPrivilege' | 'maliciousInsider' | 'missingCoverage' | 'threatResistance' | string[]: Array of threats
 * **userImpact**: 'High' | 'Low' | 'Moderate' | string: The user impact of the assessment
 
-## SecurityAssessmentMetadataPartnerData
-### Properties
-* **partnerName**: string (Required): Name of the company of the partner
-* **productName**: string: Name of the product of the partner that created the assessment
-* **secret**: string (Required): Secret to authenticate the partner and verify it created the assessment - write only
-
 ## SecurityAssessmentMetadataPropertiesResponsePublishDates
 ### Properties
 * **GA**: string
 * **public**: string (Required)
+
+## SecurityAssessmentPartnerData
+### Properties
+* **partnerName**: string (Required): Name of the company of the partner
+* **secret**: string (Required): secret to authenticate the partner - write only
 
 ## SecurityAssessmentProperties
 ### Properties
@@ -62,52 +110,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## AssessmentLinks
-### Properties
-* **azurePortalUri**: string (ReadOnly): Link to assessment in Azure Portal
-
-## SecurityAssessmentMetadataProperties
-### Properties
-* **assessmentType**: 'BuiltIn' | 'CustomPolicy' | 'CustomerManaged' | 'VerifiedPartner' | string (Required): BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
-* **categories**: 'Compute' | 'Data' | 'IdentityAndAccess' | 'IoT' | 'Networking' | string[]: Array of categories
-* **description**: string: Human readable description of the assessment
-* **displayName**: string (Required): User friendly display name of the assessment
-* **implementationEffort**: 'High' | 'Low' | 'Moderate' | string: The implementation effort required to remediate this assessment
-* **partnerData**: [SecurityAssessmentMetadataPartnerData](#securityassessmentmetadatapartnerdata): Describes the partner that created the assessment
-* **policyDefinitionId**: string (ReadOnly): Azure resource ID of the policy definition that turns this assessment calculation on
-* **preview**: bool: True if this assessment is in preview release status
-* **remediationDescription**: string: Human readable description of what you should do to mitigate this security issue
-* **severity**: 'High' | 'Low' | 'Medium' | string (Required): The severity level of the assessment
-* **threats**: 'accountBreach' | 'dataExfiltration' | 'dataSpillage' | 'denialOfService' | 'elevationOfPrivilege' | 'maliciousInsider' | 'missingCoverage' | 'threatResistance' | string[]: Array of threats
-* **userImpact**: 'High' | 'Low' | 'Moderate' | string: The user impact of the assessment
-
-## SecurityAssessmentPartnerData
-### Properties
-* **partnerName**: string (Required): Name of the company of the partner
-* **secret**: string (Required): secret to authenticate the partner - write only
-
-## ResourceDetails
-* **Discriminator**: source
-
-### Base Properties
-### AzureResourceDetails
-#### Properties
-* **id**: string (ReadOnly): Azure resource Id of the assessed resource
-* **source**: 'Azure' (Required): The platform where the assessed resource resides
-
-### OnPremiseSqlResourceDetails
-#### Properties
-* **databaseName**: string (Required): The Sql database name installed on the machine
-* **serverName**: string (Required): The Sql server name installed on the machine
-* **source**: 'OnPremiseSql' (Required): The platform where the assessed resource resides
-
-
-## AssessmentStatus
-### Properties
-* **cause**: string: Programmatic code for the cause of the assessment status
-* **code**: 'Healthy' | 'NotApplicable' | 'Unhealthy' | string (Required): Programmatic code for the status of the assessment
-* **description**: string: Human readable description of the assessment status
-* **firstEvaluationDate**: string (ReadOnly): The time that the assessment was created and first evaluated. Returned as UTC time in ISO 8601 format
-* **statusChangeDate**: string (ReadOnly): The time that the status of the assessment last changed. Returned as UTC time in ISO 8601 format
 

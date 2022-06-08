@@ -12,6 +12,17 @@
 * **tags**: [Tags](#tags): Additional tags for Confidential Ledger
 * **type**: 'Microsoft.ConfidentialLedger/ledgers' (ReadOnly, DeployTimeConstant): The resource type
 
+## AADBasedSecurityPrincipal
+### Properties
+* **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader' | string: LedgerRole associated with the Security Principal of Ledger
+* **principalId**: string: UUID/GUID based Principal Id of the Security Principal
+* **tenantId**: string: UUID/GUID based Tenant Id of the Security Principal
+
+## CertBasedSecurityPrincipal
+### Properties
+* **cert**: string: Public key of the user cert (.pem or .cer)
+* **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader' | string: LedgerRole associated with the Security Principal of Ledger
+
 ## LedgerProperties
 ### Properties
 * **aadBasedSecurityPrincipals**: [AADBasedSecurityPrincipal](#aadbasedsecurityprincipal)[]: Array of all AAD based Security Principals.
@@ -23,17 +34,6 @@
 * **ledgerType**: 'Private' | 'Public' | 'Unknown' | string: Type of the ledger. Private means transaction data is encrypted.
 * **ledgerUri**: string (ReadOnly): Endpoint for calling Ledger Service.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Object representing ProvisioningState for Confidential Ledger.
-
-## AADBasedSecurityPrincipal
-### Properties
-* **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader' | string: LedgerRole associated with the Security Principal of Ledger
-* **principalId**: string: UUID/GUID based Principal Id of the Security Principal
-* **tenantId**: string: UUID/GUID based Tenant Id of the Security Principal
-
-## CertBasedSecurityPrincipal
-### Properties
-* **cert**: string: Public key of the user cert (.pem or .cer)
-* **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader' | string: LedgerRole associated with the Security Principal of Ledger
 
 ## SystemData
 ### Properties

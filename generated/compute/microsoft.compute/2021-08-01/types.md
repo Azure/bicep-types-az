@@ -63,70 +63,6 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
-## ExtendedLocation
-### Properties
-* **name**: string: The name of the extended location.
-* **type**: 'EdgeZone' | string: The type of extendedLocation.
-
-## DiskAccessProperties
-### Properties
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): A readonly collection of private endpoint connections created on the disk. Currently only one endpoint connection is supported.
-* **provisioningState**: string (ReadOnly): The disk access resource provisioning state.
-* **timeCreated**: string (ReadOnly): The time when the disk access was created.
-
-## PrivateEndpointConnection
-### Properties
-* **id**: string (ReadOnly): private endpoint connection Id
-* **name**: string (ReadOnly): private endpoint connection name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
-* **type**: string (ReadOnly): private endpoint connection type
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The Private Endpoint resource.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
-
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
-* **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## EncryptionSetIdentity
-### Properties
-* **principalId**: string (ReadOnly): The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity
-* **tenantId**: string (ReadOnly): The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity
-* **type**: 'None' | 'SystemAssigned' | string: The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.
-
-## EncryptionSetProperties
-### Properties
-* **activeKey**: [KeyForDiskEncryptionSet](#keyfordiskencryptionset): Key Vault Key Url to be used for server side encryption of Managed Disks and Snapshots
-* **autoKeyRotationError**: [ApiError](#apierror) (ReadOnly): Api error.
-* **encryptionType**: 'ConfidentialVmEncryptedWithCustomerKey' | 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys' | string: The type of key used to encrypt the data of the disk.
-* **lastKeyRotationTimestamp**: string (ReadOnly): The time when the active key of this disk encryption set was updated.
-* **previousKeys**: [KeyForDiskEncryptionSet](#keyfordiskencryptionset)[] (ReadOnly): A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.
-* **provisioningState**: string (ReadOnly): The disk encryption set provisioning state.
-* **rotationToLatestKeyVersionEnabled**: bool: Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.
-
-## KeyForDiskEncryptionSet
-### Properties
-* **keyUrl**: string (Required): Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.
-* **sourceVault**: [SourceVault](#sourcevault): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
-
-## SourceVault
-### Properties
-* **id**: string: Resource Id
-
 ## ApiError
 ### Properties
 * **code**: string: The error code.
@@ -141,15 +77,24 @@
 * **message**: string: The error message.
 * **target**: string: The target of the particular error.
 
-## InnerError
+## CreationData
 ### Properties
-* **errordetail**: string: The internal error message or exception dump.
-* **exceptiontype**: string: The exception type.
+* **createOption**: 'Attach' | 'Copy' | 'CopyStart' | 'Empty' | 'FromImage' | 'Import' | 'ImportSecure' | 'Restore' | 'Upload' | 'UploadPreparedSecure' | string (Required): This enumerates the possible sources of a disk's creation.
+* **galleryImageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
+* **imageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
+* **logicalSectorSize**: int: Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.
+* **securityDataUri**: string: If createOption is ImportSecure, this is the URI of a blob to be imported into VM guest state.
+* **sourceResourceId**: string: If createOption is Copy, this is the ARM id of the source snapshot or disk.
+* **sourceUniqueId**: string (ReadOnly): If this field is set, this is the unique id identifying the source of this resource.
+* **sourceUri**: string: If createOption is Import, this is the URI of a blob to be imported into a managed disk.
+* **storageAccountId**: string: Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.
+* **uploadSizeBytes**: int: If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).
 
-## ResourceTags
+## DiskAccessProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): A readonly collection of private endpoint connections created on the disk. Currently only one endpoint connection is supported.
+* **provisioningState**: string (ReadOnly): The disk access resource provisioning state.
+* **timeCreated**: string (ReadOnly): The time when the disk access was created.
 
 ## DiskProperties
 ### Properties
@@ -182,28 +127,36 @@
 * **timeCreated**: string (ReadOnly): The time when the disk was created.
 * **uniqueId**: string (ReadOnly): Unique Guid identifying the resource.
 
-## CreationData
+## DiskSecurityProfile
 ### Properties
-* **createOption**: 'Attach' | 'Copy' | 'CopyStart' | 'Empty' | 'FromImage' | 'Import' | 'ImportSecure' | 'Restore' | 'Upload' | 'UploadPreparedSecure' | string (Required): This enumerates the possible sources of a disk's creation.
-* **galleryImageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
-* **imageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
-* **logicalSectorSize**: int: Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.
-* **securityDataUri**: string: If createOption is ImportSecure, this is the URI of a blob to be imported into VM guest state.
-* **sourceResourceId**: string: If createOption is Copy, this is the ARM id of the source snapshot or disk.
-* **sourceUniqueId**: string (ReadOnly): If this field is set, this is the unique id identifying the source of this resource.
-* **sourceUri**: string: If createOption is Import, this is the URI of a blob to be imported into a managed disk.
-* **storageAccountId**: string: Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.
-* **uploadSizeBytes**: int: If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).
+* **secureVMDiskEncryptionSetId**: string: ResourceId of the disk encryption set associated to Confidential VM supported disk encrypted with customer managed key
+* **securityType**: 'ConfidentialVM_DiskEncryptedWithCustomerKey' | 'ConfidentialVM_DiskEncryptedWithPlatformKey' | 'ConfidentialVM_VMGuestStateOnlyEncryptedWithPlatformKey' | 'TrustedLaunch' | string: Specifies the SecurityType of the VM. Applicable for OS disks only.
 
-## ImageDiskReference
+## DiskSku
 ### Properties
-* **id**: string (Required): A relative uri containing either a Platform Image Repository or user image reference.
-* **lun**: int: If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.
+* **name**: 'Premium_LRS' | 'Premium_ZRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'Standard_LRS' | 'UltraSSD_LRS' | string: The sku name.
+* **tier**: string (ReadOnly): The sku tier.
 
 ## Encryption
 ### Properties
 * **diskEncryptionSetId**: string: ResourceId of the disk encryption set to use for enabling encryption at rest.
 * **type**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys' | 'EncryptionAtRestWithPlatformKey' | string: The type of key used to encrypt the data of the disk.
+
+## EncryptionSetIdentity
+### Properties
+* **principalId**: string (ReadOnly): The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity
+* **tenantId**: string (ReadOnly): The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity
+* **type**: 'None' | 'SystemAssigned' | string: The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.
+
+## EncryptionSetProperties
+### Properties
+* **activeKey**: [KeyForDiskEncryptionSet](#keyfordiskencryptionset): Key Vault Key Url to be used for server side encryption of Managed Disks and Snapshots
+* **autoKeyRotationError**: [ApiError](#apierror) (ReadOnly): Api error.
+* **encryptionType**: 'ConfidentialVmEncryptedWithCustomerKey' | 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys' | string: The type of key used to encrypt the data of the disk.
+* **lastKeyRotationTimestamp**: string (ReadOnly): The time when the active key of this disk encryption set was updated.
+* **previousKeys**: [KeyForDiskEncryptionSet](#keyfordiskencryptionset)[] (ReadOnly): A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.
+* **provisioningState**: string (ReadOnly): The disk encryption set provisioning state.
+* **rotationToLatestKeyVersionEnabled**: bool: Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.
 
 ## EncryptionSettingsCollection
 ### Properties
@@ -216,15 +169,58 @@
 * **diskEncryptionKey**: [KeyVaultAndSecretReference](#keyvaultandsecretreference): Key Vault Secret Url and vault id of the encryption key
 * **keyEncryptionKey**: [KeyVaultAndKeyReference](#keyvaultandkeyreference): Key Vault Key Url and vault id of KeK, KeK is optional and when provided is used to unwrap the encryptionKey
 
-## KeyVaultAndSecretReference
+## ExtendedLocation
 ### Properties
-* **secretUrl**: string (Required): Url pointing to a key or secret in KeyVault
-* **sourceVault**: [SourceVault](#sourcevault) (Required): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
+* **name**: string: The name of the extended location.
+* **type**: 'EdgeZone' | string: The type of extendedLocation.
+
+## ImageDiskReference
+### Properties
+* **id**: string (Required): A relative uri containing either a Platform Image Repository or user image reference.
+* **lun**: int: If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.
+
+## InnerError
+### Properties
+* **errordetail**: string: The internal error message or exception dump.
+* **exceptiontype**: string: The exception type.
+
+## KeyForDiskEncryptionSet
+### Properties
+* **keyUrl**: string (Required): Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.
+* **sourceVault**: [SourceVault](#sourcevault): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
 
 ## KeyVaultAndKeyReference
 ### Properties
 * **keyUrl**: string (Required): Url pointing to a key or secret in KeyVault
 * **sourceVault**: [SourceVault](#sourcevault) (Required): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
+
+## KeyVaultAndSecretReference
+### Properties
+* **secretUrl**: string (Required): Url pointing to a key or secret in KeyVault
+* **sourceVault**: [SourceVault](#sourcevault) (Required): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly): private endpoint connection Id
+* **name**: string (ReadOnly): private endpoint connection name
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **type**: string (ReadOnly): private endpoint connection type
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The Private Endpoint resource.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
+* **description**: string: The reason for approval/rejection of the connection.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
 
 ## PropertyUpdatesInProgress
 ### Properties
@@ -237,28 +233,29 @@
 * **promotionCode**: string: The Offer Promotion Code.
 * **publisher**: string (Required): The publisher ID.
 
-## DiskSecurityProfile
+## ResourceTags
 ### Properties
-* **secureVMDiskEncryptionSetId**: string: ResourceId of the disk encryption set associated to Confidential VM supported disk encrypted with customer managed key
-* **securityType**: 'ConfidentialVM_DiskEncryptedWithCustomerKey' | 'ConfidentialVM_DiskEncryptedWithPlatformKey' | 'ConfidentialVM_VMGuestStateOnlyEncryptedWithPlatformKey' | 'TrustedLaunch' | string: Specifies the SecurityType of the VM. Applicable for OS disks only.
-
-## ShareInfoElement
-### Properties
-* **vmUri**: string (ReadOnly): A relative URI containing the ID of the VM that has the disk attached.
-
-## SupportedCapabilities
-### Properties
-* **acceleratedNetwork**: bool: True if the image from which the OS disk is created supports accelerated networking.
-
-## DiskSku
-### Properties
-* **name**: 'Premium_LRS' | 'Premium_ZRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'Standard_LRS' | 'UltraSSD_LRS' | string: The sku name.
-* **tier**: string (ReadOnly): The sku tier.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ShareInfoElement
+### Properties
+* **vmUri**: string (ReadOnly): A relative URI containing the ID of the VM that has the disk attached.
 
 ## SnapshotProperties
 ### Properties
@@ -288,8 +285,11 @@
 * **name**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: The sku name.
 * **tier**: string (ReadOnly): The sku tier.
 
-## ResourceTags
+## SourceVault
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **id**: string: Resource Id
+
+## SupportedCapabilities
+### Properties
+* **acceleratedNetwork**: bool: True if the image from which the OS disk is created supports accelerated networking.
 

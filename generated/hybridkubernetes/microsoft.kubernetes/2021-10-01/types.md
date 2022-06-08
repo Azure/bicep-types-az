@@ -40,24 +40,10 @@
 * **totalCoreCount**: int (ReadOnly): Number of CPU cores present in the connected cluster resource
 * **totalNodeCount**: int (ReadOnly): Number of nodes present in the connected cluster resource
 
-## SystemData
+## CredentialResult
 ### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource modification (UTC).
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ListClusterUserCredentialProperties
-### Properties
-* **authenticationMethod**: 'AAD' | 'Token' | string (Required, WriteOnly): The mode of client authentication.
-* **clientProxy**: bool (Required, WriteOnly): Boolean value to indicate whether the request is for client side proxy or not
+* **name**: string (ReadOnly): The name of the credential.
+* **value**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
 
 ## CredentialResults
 ### Properties
@@ -71,8 +57,22 @@
 * **relay**: string (ReadOnly): Name of the relay.
 * **token**: string (ReadOnly): Sender access token
 
-## CredentialResult
+## ListClusterUserCredentialProperties
 ### Properties
-* **name**: string (ReadOnly): The name of the credential.
-* **value**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
+* **authenticationMethod**: 'AAD' | 'Token' | string (Required, WriteOnly): The mode of client authentication.
+* **clientProxy**: bool (Required, WriteOnly): Boolean value to indicate whether the request is for client side proxy or not
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource modification (UTC).
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

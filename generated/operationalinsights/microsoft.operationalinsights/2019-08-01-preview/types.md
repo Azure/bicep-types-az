@@ -40,34 +40,12 @@
 * **properties**: [LinkedStorageAccountsProperties](#linkedstorageaccountsproperties) (Required): Linked storage accounts properties.
 * **type**: 'Microsoft.OperationalInsights/workspaces/linkedStorageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Identity
-### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' (Required): The identity type.
-
 ## ClusterProperties
 ### Properties
 * **clusterId**: string (ReadOnly): The ID associated with the cluster.
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
 * **nextLink**: string: The link used to get the next page of recommendations.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | string (ReadOnly): The provisioning state of the cluster.
-
-## KeyVaultProperties
-### Properties
-* **keyName**: string: The name of the key associated with the Log Analytics cluster.
-* **keyVaultUri**: string: The Key Vault uri which holds they key associated with the Log Analytics cluster.
-* **keyVersion**: string: The version of the key associated with the Log Analytics cluster.
-
-## Sku
-### Properties
-* **capacity**: int: The capacity value
-* **name**: 'CapacityReservation' | string: The name of the SKU.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## DataExportProperties
 ### Properties
@@ -88,6 +66,18 @@
 ### Properties
 * **eventHubName**: string: Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
 
+## Identity
+### Properties
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'None' | 'SystemAssigned' (Required): The identity type.
+
+## KeyVaultProperties
+### Properties
+* **keyName**: string: The name of the key associated with the Log Analytics cluster.
+* **keyVaultUri**: string: The Key Vault uri which holds they key associated with the Log Analytics cluster.
+* **keyVersion**: string: The version of the key associated with the Log Analytics cluster.
+
 ## LinkedServiceProperties
 ### Properties
 * **resourceId**: string: The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require read access
@@ -97,4 +87,14 @@
 ### Properties
 * **dataSourceType**: 'AzureWatson' | 'CustomLogs' (ReadOnly): Linked storage accounts type.
 * **storageAccountIds**: string[]: Linked storage accounts resources ids.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Sku
+### Properties
+* **capacity**: int: The capacity value
+* **name**: 'CapacityReservation' | string: The name of the SKU.
 

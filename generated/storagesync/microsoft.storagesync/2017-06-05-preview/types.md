@@ -47,10 +47,18 @@
 * **properties**: [ServerEndpointProperties](#serverendpointproperties): ServerEndpoint Properties object.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## StorageSyncServiceProperties
+## CloudEndpointProperties
 ### Properties
-* **storageSyncServiceStatus**: int (ReadOnly): Storage Sync service status.
-* **storageSyncServiceUid**: string (ReadOnly): Storage Sync service Uid
+* **backupEnabled**: bool (ReadOnly): Backup Enabled
+* **friendlyName**: string: Friendly Name
+* **lastWorkflowId**: string: CloudEndpoint lastWorkflowId
+* **partnershipId**: string: Partnership Id
+* **provisioningState**: string: CloudEndpoint Provisioning State
+* **storageAccount**: string: Storage Account name.
+* **storageAccountKey**: string: Storage Account access key.
+* **storageAccountResourceId**: string: Storage Account Resource Id
+* **storageAccountShareName**: string: Storage Account Share name
+* **storageAccountTenantId**: string: Storage Account Tenant Id
 
 ## RegisteredServerProperties
 ### Properties
@@ -66,24 +74,6 @@
 * **serverOSVersion**: string: Registered Server OS Version
 * **serverRole**: string: Registered Server serverRole
 * **storageSyncServiceUid**: string: Registered Server storageSyncServiceUid
-
-## SyncGroupProperties
-### Properties
-* **syncGroupStatus**: string (ReadOnly): Sync group status
-* **uniqueId**: string: Unique Id
-
-## CloudEndpointProperties
-### Properties
-* **backupEnabled**: bool (ReadOnly): Backup Enabled
-* **friendlyName**: string: Friendly Name
-* **lastWorkflowId**: string: CloudEndpoint lastWorkflowId
-* **partnershipId**: string: Partnership Id
-* **provisioningState**: string: CloudEndpoint Provisioning State
-* **storageAccount**: string: Storage Account name.
-* **storageAccountKey**: string: Storage Account access key.
-* **storageAccountResourceId**: string: Storage Account Resource Id
-* **storageAccountShareName**: string: Storage Account Share name
-* **storageAccountTenantId**: string: Storage Account Tenant Id
 
 ## ServerEndpointProperties
 ### Properties
@@ -107,4 +97,14 @@
 * **syncErrorStateTimestamp**: string: Sync Error State Timestamp
 * **totalProgress**: int: Total progress
 * **volumeFreeSpacePercent**: int: Level of free space to be maintained by Cloud Tiering if it is enabled.
+
+## StorageSyncServiceProperties
+### Properties
+* **storageSyncServiceStatus**: int (ReadOnly): Storage Sync service status.
+* **storageSyncServiceUid**: string (ReadOnly): Storage Sync service Uid
+
+## SyncGroupProperties
+### Properties
+* **syncGroupStatus**: string (ReadOnly): Sync group status
+* **uniqueId**: string: Unique Id
 

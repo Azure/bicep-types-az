@@ -35,6 +35,10 @@
 ### Additional Properties
 * **Additional Properties Type**: [ProjectSummary](#projectsummary)
 
+## MigrateProjectTags
+### Properties
+* **additionalProperties**: string
+
 ## ProjectSummary
 * **Discriminator**: instanceType
 
@@ -61,20 +65,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## MigrateProjectTags
-### Properties
-* **additionalProperties**: string
-
-## SolutionProperties
-### Properties
-* **cleanupState**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Started' | string: Gets or sets the cleanup state of the solution.
-* **details**: [SolutionDetails](#solutiondetails): Class representing the details of the solution.
-* **goal**: 'Databases' | 'Servers' | string: Gets or sets the goal of the solution.
-* **purpose**: 'Assessment' | 'Discovery' | 'Migration' | string: Gets or sets the purpose of the solution.
-* **status**: 'Active' | 'Inactive' | string: Gets or sets the current status of the solution.
-* **summary**: [SolutionSummary](#solutionsummary): The solution summary class.
-* **tool**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration' | 'ServerMigration_Replication' | 'Turbonomic' | 'Zerto' | string: Gets or sets the tool being used in the solution.
-
 ## SolutionDetails
 ### Properties
 * **assessmentCount**: int: Gets or sets the count of assessments reported by the solution.
@@ -85,6 +75,16 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SolutionProperties
+### Properties
+* **cleanupState**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Started' | string: Gets or sets the cleanup state of the solution.
+* **details**: [SolutionDetails](#solutiondetails): Class representing the details of the solution.
+* **goal**: 'Databases' | 'Servers' | string: Gets or sets the goal of the solution.
+* **purpose**: 'Assessment' | 'Discovery' | 'Migration' | string: Gets or sets the purpose of the solution.
+* **status**: 'Active' | 'Inactive' | string: Gets or sets the current status of the solution.
+* **summary**: [SolutionSummary](#solutionsummary): The solution summary class.
+* **tool**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration' | 'ServerMigration_Replication' | 'Turbonomic' | 'Zerto' | string: Gets or sets the tool being used in the solution.
 
 ## SolutionSummary
 * **Discriminator**: instanceType

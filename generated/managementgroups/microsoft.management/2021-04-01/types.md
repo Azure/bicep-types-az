@@ -27,13 +27,6 @@
 * **properties**: [SubscriptionUnderManagementGroupProperties](#subscriptionundermanagementgroupproperties) (ReadOnly): The generic properties of subscription under a management group.
 * **type**: 'Microsoft.Management/managementGroups/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
-## CreateManagementGroupProperties
-### Properties
-* **children**: [CreateManagementGroupChildInfo](#createmanagementgroupchildinfo)[] (ReadOnly): The list of children.
-* **details**: [CreateManagementGroupDetails](#createmanagementgroupdetails): The details of a management group used during creation.
-* **displayName**: string: The friendly name of the management group. If no value is passed then this  field will be set to the groupId.
-* **tenantId**: string (ReadOnly): The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
-
 ## CreateManagementGroupChildInfo
 ### Properties
 * **children**: [CreateManagementGroupChildInfo](#createmanagementgroupchildinfo)[] (ReadOnly): The list of children.
@@ -52,16 +45,12 @@
 * **updatedTime**: string (ReadOnly): The date and time when this object was last updated.
 * **version**: int (ReadOnly): The version number of the object.
 
-## ManagementGroupPathElement
+## CreateManagementGroupProperties
 ### Properties
-* **displayName**: string (ReadOnly): The friendly name of the group.
-* **name**: string (ReadOnly): The name of the group.
-
-## CreateParentGroupInfo
-### Properties
-* **displayName**: string (ReadOnly): The friendly name of the parent management group.
-* **id**: string: The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
-* **name**: string (ReadOnly): The name of the parent management group
+* **children**: [CreateManagementGroupChildInfo](#createmanagementgroupchildinfo)[] (ReadOnly): The list of children.
+* **details**: [CreateManagementGroupDetails](#createmanagementgroupdetails): The details of a management group used during creation.
+* **displayName**: string: The friendly name of the management group. If no value is passed then this  field will be set to the groupId.
+* **tenantId**: string (ReadOnly): The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
 
 ## CreateOrUpdateSettingsProperties
 ### Properties
@@ -69,14 +58,25 @@
 * **requireAuthorizationForGroupCreation**: bool: Indicates whether RBAC access is required upon group creation under the root Management Group. If set to true, user will require Microsoft.Management/managementGroups/write action on the root Management Group scope in order to create new Groups directly under the root. This will prevent new users from creating new Management Groups, unless they are given access.
 * **tenantId**: string (ReadOnly): The AAD Tenant ID associated with the hierarchy settings. For example, 00000000-0000-0000-0000-000000000000
 
+## CreateParentGroupInfo
+### Properties
+* **displayName**: string (ReadOnly): The friendly name of the parent management group.
+* **id**: string: The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+* **name**: string (ReadOnly): The name of the parent management group
+
+## DescendantParentGroupInfo
+### Properties
+* **id**: string (ReadOnly): The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+
+## ManagementGroupPathElement
+### Properties
+* **displayName**: string (ReadOnly): The friendly name of the group.
+* **name**: string (ReadOnly): The name of the group.
+
 ## SubscriptionUnderManagementGroupProperties
 ### Properties
 * **displayName**: string (ReadOnly): The friendly name of the subscription.
 * **parent**: [DescendantParentGroupInfo](#descendantparentgroupinfo) (ReadOnly): The ID of the parent management group.
 * **state**: string (ReadOnly): The state of the subscription.
 * **tenant**: string (ReadOnly): The AAD Tenant ID associated with the subscription. For example, 00000000-0000-0000-0000-000000000000
-
-## DescendantParentGroupInfo
-### Properties
-* **id**: string (ReadOnly): The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
 

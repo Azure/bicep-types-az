@@ -13,6 +13,17 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.FluidRelay/fluidRelayServers' (ReadOnly, DeployTimeConstant): The resource type
 
+## FluidRelayEndpoints
+### Properties
+* **ordererEndpoints**: string[] (ReadOnly): The Fluid Relay Orderer endpoints.
+* **storageEndpoints**: string[] (ReadOnly): The Fluid Relay storage endpoints.
+
+## FluidRelayServerProperties
+### Properties
+* **fluidRelayEndpoints**: [FluidRelayEndpoints](#fluidrelayendpoints) (ReadOnly): The Fluid Relay endpoints for this server
+* **frsTenantId**: string (ReadOnly): The Fluid tenantId for this server
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string: Provision states for FluidRelay RP
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -24,22 +35,6 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentitiesValue](#userassignedidentitiesvalue)
-
-## UserAssignedIdentitiesValue
-### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
-
-## FluidRelayServerProperties
-### Properties
-* **fluidRelayEndpoints**: [FluidRelayEndpoints](#fluidrelayendpoints) (ReadOnly): The Fluid Relay endpoints for this server
-* **frsTenantId**: string (ReadOnly): The Fluid tenantId for this server
-* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string: Provision states for FluidRelay RP
-
-## FluidRelayEndpoints
-### Properties
-* **ordererEndpoints**: string[] (ReadOnly): The Fluid Relay Orderer endpoints.
-* **storageEndpoints**: string[] (ReadOnly): The Fluid Relay storage endpoints.
 
 ## SystemData
 ### Properties
@@ -54,4 +49,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UserAssignedIdentitiesValue
+### Properties
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
 

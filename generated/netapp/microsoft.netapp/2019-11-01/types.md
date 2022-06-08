@@ -60,10 +60,27 @@
 * **status**: string: Status of the Active Directory
 * **username**: string: Username of Active Directory domain administrator
 
-## ResourceTags
+## ExportPolicyRule
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **allowedClients**: string: Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names
+* **cifs**: bool: Allows CIFS protocol
+* **nfsv3**: bool: Allows NFSv3 protocol
+* **nfsv41**: bool: Allows NFSv4.1 protocol
+* **ruleIndex**: int: Order index
+* **unixReadOnly**: bool: Read only access
+* **unixReadWrite**: bool: Read and write access
+
+## MountTargetProperties
+### Properties
+* **endIp**: string: The end of IPv4 address range to use when creating a new mount target
+* **fileSystemId**: string (Required): UUID v4 used to identify the MountTarget
+* **gateway**: string: The gateway of the IPv4 address range to use when creating a new mount target
+* **ipAddress**: string (ReadOnly): The mount target's IPv4 address
+* **mountTargetId**: string (ReadOnly): UUID v4 used to identify the MountTarget
+* **netmask**: string: The netmask of the IPv4 address range to use when creating a new mount target
+* **smbServerFqdn**: string: The SMB server's Fully Qualified Domain Name, FQDN
+* **startIp**: string: The start of IPv4 address range to use when creating a new mount target
+* **subnet**: string: The subnet
 
 ## PoolProperties
 ### Properties
@@ -72,10 +89,35 @@
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' | string (Required): The service level of the file system
 * **size**: int (Required): Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
 
+## ReplicationObject
+### Properties
+* **endpointType**: 'dst' | 'src' | string: Indicates whether the local volume is the source or destination for the Volume Replication
+* **remoteVolumeRegion**: string: The remote region for the other end of the Volume Replication.
+* **remoteVolumeResourceId**: string (Required): The resource ID of the remote volume.
+* **replicationId**: string: Id
+* **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' | string (Required): Schedule
+
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SnapshotProperties
+### Properties
+* **created**: string (ReadOnly): The creation date of the snapshot
+* **fileSystemId**: string: UUID v4 used to identify the FileSystem
+* **provisioningState**: string (ReadOnly): Azure lifecycle management
+* **snapshotId**: string (ReadOnly): UUID v4 used to identify the Snapshot
 
 ## VolumeProperties
 ### Properties
@@ -99,49 +141,7 @@
 ### Properties
 * **replication**: [ReplicationObject](#replicationobject): Replication properties
 
-## ReplicationObject
-### Properties
-* **endpointType**: 'dst' | 'src' | string: Indicates whether the local volume is the source or destination for the Volume Replication
-* **remoteVolumeRegion**: string: The remote region for the other end of the Volume Replication.
-* **remoteVolumeResourceId**: string (Required): The resource ID of the remote volume.
-* **replicationId**: string: Id
-* **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' | string (Required): Schedule
-
 ## VolumePropertiesExportPolicy
 ### Properties
 * **rules**: [ExportPolicyRule](#exportpolicyrule)[]: Export policy rule
-
-## ExportPolicyRule
-### Properties
-* **allowedClients**: string: Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names
-* **cifs**: bool: Allows CIFS protocol
-* **nfsv3**: bool: Allows NFSv3 protocol
-* **nfsv41**: bool: Allows NFSv4.1 protocol
-* **ruleIndex**: int: Order index
-* **unixReadOnly**: bool: Read only access
-* **unixReadWrite**: bool: Read and write access
-
-## MountTargetProperties
-### Properties
-* **endIp**: string: The end of IPv4 address range to use when creating a new mount target
-* **fileSystemId**: string (Required): UUID v4 used to identify the MountTarget
-* **gateway**: string: The gateway of the IPv4 address range to use when creating a new mount target
-* **ipAddress**: string (ReadOnly): The mount target's IPv4 address
-* **mountTargetId**: string (ReadOnly): UUID v4 used to identify the MountTarget
-* **netmask**: string: The netmask of the IPv4 address range to use when creating a new mount target
-* **smbServerFqdn**: string: The SMB server's Fully Qualified Domain Name, FQDN
-* **startIp**: string: The start of IPv4 address range to use when creating a new mount target
-* **subnet**: string: The subnet
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## SnapshotProperties
-### Properties
-* **created**: string (ReadOnly): The creation date of the snapshot
-* **fileSystemId**: string: UUID v4 used to identify the FileSystem
-* **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **snapshotId**: string (ReadOnly): UUID v4 used to identify the Snapshot
 

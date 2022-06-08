@@ -12,11 +12,10 @@
 * **tags**: [CreateTenantRequestBodyTags](#createtenantrequestbodytags): Resource Tags
 * **type**: 'Microsoft.AzureActiveDirectory/b2cDirectories' (ReadOnly, DeployTimeConstant): The resource type
 
-## CreateTenantRequestBodyProperties
+## B2CResourceSKU
 ### Properties
-* **billingConfig**: [B2CTenantResourcePropertiesBillingConfig](#b2ctenantresourcepropertiesbillingconfig) (ReadOnly): The billing configuration for the tenant.
-* **createTenantProperties**: [CreateTenantProperties](#createtenantproperties) (WriteOnly): These properties are used to create the Azure AD B2C tenant. These properties are not part of the Azure resource.
-* **tenantId**: string (ReadOnly): An identifier of the B2C tenant.
+* **name**: 'PremiumP1' | 'PremiumP2' | 'Standard': The name of the SKU for the tenant.
+* **tier**: 'A0': The tier of the tenant.
 
 ## B2CTenantResourcePropertiesBillingConfig
 ### Properties
@@ -28,10 +27,11 @@
 * **countryCode**: string (WriteOnly): Country code of Azure tenant (e.g. 'US'). Refer to [aka.ms/B2CDataResidency](https://aka.ms/B2CDataResidency) to see valid country codes and corresponding data residency locations. If you do not see a country code in an valid data residency location, choose one from the list.
 * **displayName**: string (WriteOnly): The display name of the B2C tenant.
 
-## B2CResourceSKU
+## CreateTenantRequestBodyProperties
 ### Properties
-* **name**: 'PremiumP1' | 'PremiumP2' | 'Standard': The name of the SKU for the tenant.
-* **tier**: 'A0': The tier of the tenant.
+* **billingConfig**: [B2CTenantResourcePropertiesBillingConfig](#b2ctenantresourcepropertiesbillingconfig) (ReadOnly): The billing configuration for the tenant.
+* **createTenantProperties**: [CreateTenantProperties](#createtenantproperties) (WriteOnly): These properties are used to create the Azure AD B2C tenant. These properties are not part of the Azure resource.
+* **tenantId**: string (ReadOnly): An identifier of the B2C tenant.
 
 ## CreateTenantRequestBodyTags
 ### Properties

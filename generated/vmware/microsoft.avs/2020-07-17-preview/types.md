@@ -117,22 +117,18 @@
 * **ApiVersion**: 2020-07-17-preview
 * **Output**: [AdminCredentials](#admincredentials)
 
-## PrivateCloudProperties
+## AddonProperties
 ### Properties
-* **circuit**: [Circuit](#circuit): An ExpressRoute Circuit
-* **endpoints**: [Endpoints](#endpoints) (ReadOnly): Endpoint addresses
-* **identitySources**: [IdentitySource](#identitysource)[]: vCenter Single Sign On Identity Sources
-* **internet**: 'Disabled' | 'Enabled' | string: Connectivity to internet is enabled or disabled
-* **managementCluster**: [ManagementCluster](#managementcluster): The properties of a management cluster
-* **managementNetwork**: string (ReadOnly): Network used to access vCenter Server and NSX-T Manager
-* **networkBlock**: string (Required): The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
-* **nsxtCertificateThumbprint**: string (ReadOnly): Thumbprint of the NSX-T Manager SSL certificate
-* **nsxtPassword**: string: Optionally, set the NSX-T Manager password when the private cloud is created
-* **provisioningNetwork**: string (ReadOnly): Used for virtual machine cold migration, cloning, and snapshot migration
-* **provisioningState**: 'Building' | 'Cancelled' | 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state
-* **vcenterCertificateThumbprint**: string (ReadOnly): Thumbprint of the vCenter Server SSL certificate
-* **vcenterPassword**: string: Optionally, set the vCenter admin password when the private cloud is created
-* **vmotionNetwork**: string (ReadOnly): Used for live migration of virtual machines
+* **addonType**: 'SRM' | 'VR' | string: The type of private cloud addon
+* **licenseKey**: string: The SRM license
+* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The state of the addon provisioning
+
+## AdminCredentials
+### Properties
+* **nsxtPassword**: string (ReadOnly): NSX-T Manager password
+* **nsxtUsername**: string (ReadOnly): NSX-T Manager username
+* **vcenterPassword**: string (ReadOnly): vCenter admin password
+* **vcenterUsername**: string (ReadOnly): vCenter admin username
 
 ## Circuit
 ### Properties
@@ -141,11 +137,37 @@
 * **primarySubnet**: string (ReadOnly): CIDR of primary subnet
 * **secondarySubnet**: string (ReadOnly): CIDR of secondary subnet
 
+## ClusterProperties
+### Properties
+* **clusterId**: int (ReadOnly): The identity
+* **clusterSize**: int: The cluster size
+* **hosts**: string[] (ReadOnly): The hosts
+* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The state of the cluster provisioning
+
 ## Endpoints
 ### Properties
 * **hcxCloudManager**: string (ReadOnly): Endpoint for the HCX Cloud Manager
 * **nsxtManager**: string (ReadOnly): Endpoint for the NSX-T Data Center manager
 * **vcsa**: string (ReadOnly): Endpoint for Virtual Center Server Appliance
+
+## ExpressRouteAuthorizationProperties
+### Properties
+* **expressRouteAuthorizationId**: string (ReadOnly): The ID of the ExpressRoute Circuit Authorization
+* **expressRouteAuthorizationKey**: string (ReadOnly): The key of the ExpressRoute Circuit Authorization
+* **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The state of the  ExpressRoute Circuit Authorization provisioning
+
+## GlobalReachConnectionProperties
+### Properties
+* **addressPrefix**: string (ReadOnly): The network used for global reach carved out from the original network block provided for the private cloud
+* **authorizationKey**: string: Authorization key from the peer express route used for the global reach connection
+* **circuitConnectionStatus**: 'Connected' | 'Connecting' | 'Disconnected' | string (ReadOnly): The connection status of the global reach connection
+* **peerExpressRouteCircuit**: string: Identifier of the ExpressRoute Circuit to peer with in the global reach connection
+* **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The state of the  ExpressRoute Circuit Authorization provisioning
+
+## HcxEnterpriseSiteProperties
+### Properties
+* **activationKey**: string (ReadOnly): The activation key
+* **status**: 'Available' | 'Consumed' | 'Deactivated' | 'Deleted' | string (ReadOnly): The status of the HCX Enterprise Site
 
 ## IdentitySource
 ### Properties
@@ -167,46 +189,31 @@
 * **hosts**: string[] (ReadOnly): The hosts
 * **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The state of the cluster provisioning
 
-## Sku
+## PrivateCloudProperties
 ### Properties
-* **name**: string (Required): The name of the SKU.
+* **circuit**: [Circuit](#circuit): An ExpressRoute Circuit
+* **endpoints**: [Endpoints](#endpoints) (ReadOnly): Endpoint addresses
+* **identitySources**: [IdentitySource](#identitysource)[]: vCenter Single Sign On Identity Sources
+* **internet**: 'Disabled' | 'Enabled' | string: Connectivity to internet is enabled or disabled
+* **managementCluster**: [ManagementCluster](#managementcluster): The properties of a management cluster
+* **managementNetwork**: string (ReadOnly): Network used to access vCenter Server and NSX-T Manager
+* **networkBlock**: string (Required): The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
+* **nsxtCertificateThumbprint**: string (ReadOnly): Thumbprint of the NSX-T Manager SSL certificate
+* **nsxtPassword**: string: Optionally, set the NSX-T Manager password when the private cloud is created
+* **provisioningNetwork**: string (ReadOnly): Used for virtual machine cold migration, cloning, and snapshot migration
+* **provisioningState**: 'Building' | 'Cancelled' | 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state
+* **vcenterCertificateThumbprint**: string (ReadOnly): Thumbprint of the vCenter Server SSL certificate
+* **vcenterPassword**: string: Optionally, set the vCenter admin password when the private cloud is created
+* **vmotionNetwork**: string (ReadOnly): Used for live migration of virtual machines
 
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## AddonProperties
+## Sku
 ### Properties
-* **addonType**: 'SRM' | 'VR' | string: The type of private cloud addon
-* **licenseKey**: string: The SRM license
-* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The state of the addon provisioning
-
-## ExpressRouteAuthorizationProperties
-### Properties
-* **expressRouteAuthorizationId**: string (ReadOnly): The ID of the ExpressRoute Circuit Authorization
-* **expressRouteAuthorizationKey**: string (ReadOnly): The key of the ExpressRoute Circuit Authorization
-* **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The state of the  ExpressRoute Circuit Authorization provisioning
-
-## ClusterProperties
-### Properties
-* **clusterId**: int (ReadOnly): The identity
-* **clusterSize**: int: The cluster size
-* **hosts**: string[] (ReadOnly): The hosts
-* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The state of the cluster provisioning
-
-## GlobalReachConnectionProperties
-### Properties
-* **addressPrefix**: string (ReadOnly): The network used for global reach carved out from the original network block provided for the private cloud
-* **authorizationKey**: string: Authorization key from the peer express route used for the global reach connection
-* **circuitConnectionStatus**: 'Connected' | 'Connecting' | 'Disconnected' | string (ReadOnly): The connection status of the global reach connection
-* **peerExpressRouteCircuit**: string: Identifier of the ExpressRoute Circuit to peer with in the global reach connection
-* **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The state of the  ExpressRoute Circuit Authorization provisioning
-
-## HcxEnterpriseSiteProperties
-### Properties
-* **activationKey**: string (ReadOnly): The activation key
-* **status**: 'Available' | 'Consumed' | 'Deactivated' | 'Deleted' | string (ReadOnly): The status of the HCX Enterprise Site
+* **name**: string (Required): The name of the SKU.
 
 ## WorkloadNetworkDhcpEntity
 * **Discriminator**: dhcpType
@@ -259,6 +266,10 @@
 * **source**: string: Source VM Group.
 * **status**: 'SUCCESS, FAILURE' | string (ReadOnly): Port Mirroring Status.
 
+## WorkloadNetworkSegmentPortVif
+### Properties
+* **portName**: string: Name of port or VIF attached to segment.
+
 ## WorkloadNetworkSegmentProperties
 ### Properties
 * **connectedGateway**: string: Gateway which to connect segment to.
@@ -268,10 +279,6 @@
 * **revision**: int: NSX revision number.
 * **status**: 'SUCCESS, FAILURE' | string (ReadOnly): Segment status.
 * **subnet**: [WorkloadNetworkSegmentSubnet](#workloadnetworksegmentsubnet): Subnet configuration for segment
-
-## WorkloadNetworkSegmentPortVif
-### Properties
-* **portName**: string: Name of port or VIF attached to segment.
 
 ## WorkloadNetworkSegmentSubnet
 ### Properties
@@ -285,11 +292,4 @@
 * **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state
 * **revision**: int: NSX revision number.
 * **status**: 'SUCCESS, FAILURE' | string (ReadOnly): VM Group status.
-
-## AdminCredentials
-### Properties
-* **nsxtPassword**: string (ReadOnly): NSX-T Manager password
-* **nsxtUsername**: string (ReadOnly): NSX-T Manager username
-* **vcenterPassword**: string (ReadOnly): vCenter admin password
-* **vcenterUsername**: string (ReadOnly): vCenter admin username
 

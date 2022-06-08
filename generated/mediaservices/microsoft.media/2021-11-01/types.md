@@ -145,43 +145,24 @@
 * **ApiVersion**: 2021-11-01
 * **Output**: [ListStreamingLocatorsResponse](#liststreaminglocatorsresponse)
 
-## MediaFilterProperties
+## AkamaiAccessControl
 ### Properties
-* **firstQuality**: [FirstQuality](#firstquality): Filter First Quality
-* **presentationTimeRange**: [PresentationTimeRange](#presentationtimerange): The presentation time range, this is asset related and not recommended for Account Filter.
-* **tracks**: [FilterTrackSelection](#filtertrackselection)[]: The tracks selection conditions.
+* **akamaiSignatureHeaderAuthenticationKeyList**: [AkamaiSignatureHeaderAuthenticationKey](#akamaisignatureheaderauthenticationkey)[]: authentication key list
 
-## FirstQuality
+## AkamaiSignatureHeaderAuthenticationKey
 ### Properties
-* **bitrate**: int (Required): The first quality bitrate.
+* **base64Key**: string: authentication key
+* **expiration**: string: The expiration time of the authentication key.
+* **identifier**: string: identifier of the key
 
-## PresentationTimeRange
+## ArmStreamingEndpointCurrentSku
 ### Properties
-* **endTimestamp**: int: The absolute end time boundary.
-* **forceEndTimestamp**: bool: The indicator of forcing existing of end time stamp.
-* **liveBackoffDuration**: int: The relative to end right edge.
-* **presentationWindowDuration**: int: The relative to end sliding window.
-* **startTimestamp**: int: The absolute start time boundary.
-* **timescale**: int: The time scale of time stamps.
+* **capacity**: int: The streaming endpoint sku capacity.
+* **name**: string (ReadOnly): The streaming endpoint sku name.
 
-## FilterTrackSelection
+## AssetContainerSas
 ### Properties
-* **trackSelections**: [FilterTrackPropertyCondition](#filtertrackpropertycondition)[] (Required): The track selections.
-
-## FilterTrackPropertyCondition
-### Properties
-* **operation**: 'Equal' | 'NotEqual' | string (Required): The track property condition operation.
-* **property**: 'Bitrate' | 'FourCC' | 'Language' | 'Name' | 'Type' | 'Unknown' | string (Required): The track property type.
-* **value**: string (Required): The track property value.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **assetContainerSasUrls**: string[] (ReadOnly): The list of Asset container SAS URLs.
 
 ## AssetProperties
 ### Properties
@@ -194,53 +175,106 @@
 * **storageAccountName**: string: The name of the storage account.
 * **storageEncryptionFormat**: 'MediaStorageClientEncryption' | 'None' | string (ReadOnly): The Asset encryption format. One of None or MediaStorageEncryption.
 
+## AssetStreamingLocator
+### Properties
+* **assetName**: string (ReadOnly): Asset Name.
+* **created**: string (ReadOnly): The creation time of the Streaming Locator.
+* **defaultContentKeyPolicyName**: string (ReadOnly): Name of the default ContentKeyPolicy used by this Streaming Locator.
+* **endTime**: string (ReadOnly): The end time of the Streaming Locator.
+* **name**: string (ReadOnly): Streaming Locator name.
+* **startTime**: string (ReadOnly): The start time of the Streaming Locator.
+* **streamingLocatorId**: string (ReadOnly): StreamingLocatorId of the Streaming Locator.
+* **streamingPolicyName**: string (ReadOnly): Name of the Streaming Policy used by this Streaming Locator.
+
 ## AssetTrackProperties
 ### Properties
 * **provisioningState**: 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the asset track.
 * **track**: [TrackBase](#trackbase): Base type for concrete track types. A derived type must be used to represent the Track.
 
-## TrackBase
+## CbcsDrmConfiguration
+### Properties
+* **fairPlay**: [StreamingPolicyFairPlayConfiguration](#streamingpolicyfairplayconfiguration): Class to specify configurations of FairPlay in Streaming Policy
+* **playReady**: [StreamingPolicyPlayReadyConfiguration](#streamingpolicyplayreadyconfiguration): Class to specify configurations of PlayReady in Streaming Policy
+* **widevine**: [StreamingPolicyWidevineConfiguration](#streamingpolicywidevineconfiguration): Class to specify configurations of Widevine in Streaming Policy
+
+## CencDrmConfiguration
+### Properties
+* **playReady**: [StreamingPolicyPlayReadyConfiguration](#streamingpolicyplayreadyconfiguration): Class to specify configurations of PlayReady in Streaming Policy
+* **widevine**: [StreamingPolicyWidevineConfiguration](#streamingpolicywidevineconfiguration): Class to specify configurations of Widevine in Streaming Policy
+
+## ClipTime
 * **Discriminator**: @odata.type
 
 ### Base Properties
-### AudioTrack
+### AbsoluteClipTime
 #### Properties
-* **@odata.type**: '#Microsoft.Media.AudioTrack' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.AbsoluteClipTime' (Required): The discriminator for derived types.
+* **time**: string (Required): The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.
 
-### TextTrack
+### UtcClipTime
 #### Properties
-* **@odata.type**: '#Microsoft.Media.TextTrack' (Required): The discriminator for derived types.
-* **displayName**: string: The display name of the text track on a video player. In HLS, this maps to the NAME attribute of EXT-X-MEDIA.
-* **fileName**: string: The file name to the source file. This file is located in the storage container of the asset.
-* **hlsSettings**: [HlsSettings](#hlssettings): The HLS setting for a text track.
-* **languageCode**: string (ReadOnly): The RFC5646 language code for the text track.
-* **playerVisibility**: 'Hidden' | 'Visible' | string: When PlayerVisibility is set to "Visible", the text track will be present in the DASH manifest or HLS playlist when requested by a client. When the PlayerVisibility is set to "Hidden", the text will not be available to the client. The default value is "Visible".
+* **@odata.type**: '#Microsoft.Media.UtcClipTime' (Required): The discriminator for derived types.
+* **time**: string (Required): The time position on the timeline of the input media based on Utc time.
 
-### VideoTrack
+
+## Codec
+* **Discriminator**: @odata.type
+
+### Base Properties
+* **label**: string: An optional label for the codec. The label can be used to control muxing behavior.
+### AacAudio
 #### Properties
-* **@odata.type**: '#Microsoft.Media.VideoTrack' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.AacAudio' (Required): The discriminator for derived types.
+* **profile**: 'AacLc' | 'HeAacV1' | 'HeAacV2' | string: The encoding profile to be used when encoding audio with AAC.
+
+### CopyAudio
+#### Properties
+* **@odata.type**: '#Microsoft.Media.CopyAudio' (Required): The discriminator for derived types.
+
+### CopyVideo
+#### Properties
+* **@odata.type**: '#Microsoft.Media.CopyVideo' (Required): The discriminator for derived types.
+
+### H264Video
+#### Properties
+* **@odata.type**: '#Microsoft.Media.H264Video' (Required): The discriminator for derived types.
+* **complexity**: 'Balanced' | 'Quality' | 'Speed' | string: Tells the encoder how to choose its encoding settings. The default value is Balanced.
+* **layers**: [H264Layer](#h264layer)[]: The collection of output H.264 layers to be produced by the encoder.
+* **rateControlMode**: 'ABR' | 'CBR' | 'CRF' | string: The video rate control mode
+* **sceneChangeDetection**: bool: Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.
+
+### H265Video
+#### Properties
+* **@odata.type**: '#Microsoft.Media.H265Video' (Required): The discriminator for derived types.
+* **complexity**: 'Balanced' | 'Quality' | 'Speed' | string: Tells the encoder how to choose its encoding settings.  Quality will provide for a higher compression ratio but at a higher cost and longer compute time.  Speed will produce a relatively larger file but is faster and more economical. The default value is Balanced.
+* **layers**: [H265Layer](#h265layer)[]: The collection of output H.265 layers to be produced by the encoder.
+* **sceneChangeDetection**: bool: Specifies whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.
+
+### JpgImage
+#### Properties
+* **@odata.type**: '#Microsoft.Media.JpgImage' (Required): The discriminator for derived types.
+* **layers**: [JpgLayer](#jpglayer)[]: A collection of output JPEG image layers to be produced by the encoder.
+* **spriteColumn**: int: Sets the number of columns used in thumbnail sprite image.  The number of rows are automatically calculated and a VTT file is generated with the coordinate mappings for each thumbnail in the sprite. Note: this value should be a positive integer and a proper value is recommended so that the output image resolution will not go beyond JPEG maximum pixel resolution limit 65535x65535.
+
+### PngImage
+#### Properties
+* **@odata.type**: '#Microsoft.Media.PngImage' (Required): The discriminator for derived types.
+* **layers**: [PngLayer](#pnglayer)[]: A collection of output PNG image layers to be produced by the encoder.
 
 
-## HlsSettings
+## CommonEncryptionCbcs
 ### Properties
-* **characteristics**: string: The characteristics for the HLS setting.
-* **default**: bool: The default for the HLS setting.
-* **forced**: bool: The forced for the HLS setting.
+* **clearTracks**: [TrackSelection](#trackselection)[]: Representing which tracks should not be encrypted
+* **contentKeys**: [StreamingPolicyContentKeys](#streamingpolicycontentkeys): Class to specify properties of all content keys in Streaming Policy
+* **drm**: [CbcsDrmConfiguration](#cbcsdrmconfiguration): Class to specify DRM configurations of CommonEncryptionCbcs scheme in Streaming Policy
+* **enabledProtocols**: [EnabledProtocols](#enabledprotocols): Class to specify which protocols are enabled
 
-## ContentKeyPolicyProperties
+## CommonEncryptionCenc
 ### Properties
-* **created**: string (ReadOnly): The creation date of the Policy
-* **description**: string: A description for the Policy.
-* **lastModified**: string (ReadOnly): The last modified date of the Policy
-* **options**: [ContentKeyPolicyOption](#contentkeypolicyoption)[] (Required): The Key Policy options.
-* **policyId**: string (ReadOnly): The legacy Policy ID.
-
-## ContentKeyPolicyOption
-### Properties
-* **configuration**: [ContentKeyPolicyConfiguration](#contentkeypolicyconfiguration) (Required): Base class for Content Key Policy configuration. A derived class must be used to create a configuration.
-* **name**: string: The Policy Option description.
-* **policyOptionId**: string (ReadOnly): The legacy Policy Option ID.
-* **restriction**: [ContentKeyPolicyRestriction](#contentkeypolicyrestriction) (Required): Base class for Content Key Policy restrictions. A derived class must be used to create a restriction.
+* **clearTracks**: [TrackSelection](#trackselection)[]: Representing which tracks should not be encrypted
+* **contentKeys**: [StreamingPolicyContentKeys](#streamingpolicycontentkeys): Class to specify properties of all content keys in Streaming Policy
+* **drm**: [CencDrmConfiguration](#cencdrmconfiguration): Class to specify DRM configurations of CommonEncryptionCenc scheme in Streaming Policy
+* **enabledProtocols**: [EnabledProtocols](#enabledprotocols): Class to specify which protocols are enabled
 
 ## ContentKeyPolicyConfiguration
 * **Discriminator**: @odata.type
@@ -281,18 +315,12 @@
 * **playbackDurationSeconds**: int (Required): Playback duration
 * **storageDurationSeconds**: int (Required): Storage duration
 
-## ContentKeyPolicyPlayReadyLicense
+## ContentKeyPolicyOption
 ### Properties
-* **allowTestDevices**: bool (Required): A flag indicating whether test devices can use the license.
-* **beginDate**: string: The begin date of license
-* **contentKeyLocation**: [ContentKeyPolicyPlayReadyContentKeyLocation](#contentkeypolicyplayreadycontentkeylocation) (Required): Base class for content key ID location. A derived class must be used to represent the location.
-* **contentType**: 'UltraVioletDownload' | 'UltraVioletStreaming' | 'Unknown' | 'Unspecified' | string (Required): The PlayReady content type.
-* **expirationDate**: string: The expiration date of license.
-* **gracePeriod**: string: The grace period of license.
-* **licenseType**: 'NonPersistent' | 'Persistent' | 'Unknown' | string (Required): The license type.
-* **playRight**: [ContentKeyPolicyPlayReadyPlayRight](#contentkeypolicyplayreadyplayright): Configures the Play Right in the PlayReady license.
-* **relativeBeginDate**: string: The relative begin date of license.
-* **relativeExpirationDate**: string: The relative expiration date of license.
+* **configuration**: [ContentKeyPolicyConfiguration](#contentkeypolicyconfiguration) (Required): Base class for Content Key Policy configuration. A derived class must be used to create a configuration.
+* **name**: string: The Policy Option description.
+* **policyOptionId**: string (ReadOnly): The legacy Policy Option ID.
+* **restriction**: [ContentKeyPolicyRestriction](#contentkeypolicyrestriction) (Required): Base class for Content Key Policy restrictions. A derived class must be used to create a restriction.
 
 ## ContentKeyPolicyPlayReadyContentKeyLocation
 * **Discriminator**: @odata.type
@@ -307,6 +335,24 @@
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier' (Required): The discriminator for derived types.
 * **keyId**: string (Required): The content key ID.
 
+
+## ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestriction
+### Properties
+* **bestEffort**: bool (Required): Indicates whether this restriction is enforced on a Best Effort basis.
+* **configurationData**: int (Required): Configures the restriction control bits. Must be between 0 and 3 inclusive.
+
+## ContentKeyPolicyPlayReadyLicense
+### Properties
+* **allowTestDevices**: bool (Required): A flag indicating whether test devices can use the license.
+* **beginDate**: string: The begin date of license
+* **contentKeyLocation**: [ContentKeyPolicyPlayReadyContentKeyLocation](#contentkeypolicyplayreadycontentkeylocation) (Required): Base class for content key ID location. A derived class must be used to represent the location.
+* **contentType**: 'UltraVioletDownload' | 'UltraVioletStreaming' | 'Unknown' | 'Unspecified' | string (Required): The PlayReady content type.
+* **expirationDate**: string: The expiration date of license.
+* **gracePeriod**: string: The grace period of license.
+* **licenseType**: 'NonPersistent' | 'Persistent' | 'Unknown' | string (Required): The license type.
+* **playRight**: [ContentKeyPolicyPlayReadyPlayRight](#contentkeypolicyplayreadyplayright): Configures the Play Right in the PlayReady license.
+* **relativeBeginDate**: string: The relative begin date of license.
+* **relativeExpirationDate**: string: The relative expiration date of license.
 
 ## ContentKeyPolicyPlayReadyPlayRight
 ### Properties
@@ -324,10 +370,13 @@
 * **uncompressedDigitalAudioOpl**: int: Specifies the output protection level for uncompressed digital audio.
 * **uncompressedDigitalVideoOpl**: int: Specifies the output protection level for uncompressed digital video.
 
-## ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestriction
+## ContentKeyPolicyProperties
 ### Properties
-* **bestEffort**: bool (Required): Indicates whether this restriction is enforced on a Best Effort basis.
-* **configurationData**: int (Required): Configures the restriction control bits. Must be between 0 and 3 inclusive.
+* **created**: string (ReadOnly): The creation date of the Policy
+* **description**: string: A description for the Policy.
+* **lastModified**: string (ReadOnly): The last modified date of the Policy
+* **options**: [ContentKeyPolicyOption](#contentkeypolicyoption)[] (Required): The Key Policy options.
+* **policyId**: string (ReadOnly): The legacy Policy ID.
 
 ## ContentKeyPolicyRestriction
 * **Discriminator**: @odata.type
@@ -379,238 +428,20 @@
 * **claimType**: string: Token claim type.
 * **claimValue**: string: Token claim value.
 
-## LiveEventProperties
-### Properties
-* **created**: string (ReadOnly): The creation time for the live event
-* **crossSiteAccessPolicies**: [CrossSiteAccessPolicies](#crosssiteaccesspolicies): The client access policy.
-* **description**: string: A description for the live event.
-* **encoding**: [LiveEventEncoding](#liveeventencoding): Specifies the live event type and optional encoding settings for encoding live events.
-* **hostnamePrefix**: string: When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
-* **input**: [LiveEventInput](#liveeventinput) (Required): The live event input.
-* **lastModified**: string (ReadOnly): The last modified time of the live event.
-* **preview**: [LiveEventPreview](#liveeventpreview): Live event preview settings.
-* **provisioningState**: string (ReadOnly): The provisioning state of the live event.
-* **resourceState**: 'Allocating' | 'Deleting' | 'Running' | 'StandBy' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): The resource state of the live event. See https://go.microsoft.com/fwlink/?linkid=2139012 for more information.
-* **streamOptions**: 'Default' | 'LowLatency' | 'LowLatencyV2' | string[]: The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.
-* **transcriptions**: [LiveEventTranscription](#liveeventtranscription)[]: Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.
-* **useStaticHostname**: bool: Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state
-
 ## CrossSiteAccessPolicies
 ### Properties
 * **clientAccessPolicy**: string: The content of clientaccesspolicy.xml used by Silverlight.
 * **crossDomainPolicy**: string: The content of crossdomain.xml used by Silverlight.
-
-## LiveEventEncoding
-### Properties
-* **encodingType**: 'None' | 'PassthroughBasic' | 'PassthroughStandard' | 'Premium1080p' | 'Standard' | string: Live event type. When encodingType is set to PassthroughBasic or PassthroughStandard, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bitrates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. This property cannot be modified after the live event is created.
-* **keyFrameInterval**: string: Use an ISO 8601 time value between 0.5 to 20 seconds to specify the output fragment length for the video and audio tracks of an encoding live event. For example, use PT2S to indicate 2 seconds. For the video track it also defines the key frame interval, or the length of a GoP (group of pictures).   If this value is not set for an encoding live event, the fragment duration defaults to 2 seconds. The value cannot be set for pass-through live events.
-* **presetName**: string: The optional encoding preset name, used when encodingType is not None. This value is specified at creation time and cannot be updated. If the encodingType is set to Standard, then the default preset name is ‘Default720p’. Else if the encodingType is set to Premium1080p, the default preset is ‘Default1080p’.
-* **stretchMode**: 'AutoFit' | 'AutoSize' | 'None' | string: The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
-
-## LiveEventInput
-### Properties
-* **accessControl**: [LiveEventInputAccessControl](#liveeventinputaccesscontrol): The IP access control for live event input.
-* **accessToken**: string: A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated. If omitted, the service will generate a unique value.
-* **endpoints**: [LiveEventEndpoint](#liveeventendpoint)[]: The input endpoints for the live event.
-* **keyFrameIntervalDuration**: string: ISO 8601 time duration of the key frame interval duration of the input. This value sets the EXT-X-TARGETDURATION property in the HLS output. For example, use PT2S to indicate 2 seconds. Leave the value empty for encoding live events.
-* **streamingProtocol**: 'FragmentedMP4' | 'RTMP' | string (Required): The input protocol for the live event. This is specified at creation time and cannot be updated.
-
-## LiveEventInputAccessControl
-### Properties
-* **ip**: [IPAccessControl](#ipaccesscontrol): The IP access control.
-
-## IPAccessControl
-### Properties
-* **allow**: [IPRange](#iprange)[]: The IP allow list.
-
-## IPRange
-### Properties
-* **address**: string: The IP address.
-* **name**: string: The friendly name for the IP address range.
-* **subnetPrefixLength**: int: The subnet mask prefix length (see CIDR notation).
-
-## LiveEventEndpoint
-### Properties
-* **protocol**: string: The endpoint protocol.
-* **url**: string: The endpoint URL.
-
-## LiveEventPreview
-### Properties
-* **accessControl**: [LiveEventPreviewAccessControl](#liveeventpreviewaccesscontrol): The IP access control for the live event preview endpoint.
-* **alternativeMediaId**: string: An alternative media identifier associated with the streaming locator created for the preview. This value is specified at creation time and cannot be updated. The identifier can be used in the CustomLicenseAcquisitionUrlTemplate or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in the StreamingPolicyName field.
-* **endpoints**: [LiveEventEndpoint](#liveeventendpoint)[]: The endpoints for preview. Do not share the preview URL with the live event audience.
-* **previewLocator**: string: The identifier of the preview locator in Guid format. Specifying this at creation time allows the caller to know the preview locator url before the event is created. If omitted, the service will generate a random identifier. This value cannot be updated once the live event is created.
-* **streamingPolicyName**: string: The name of streaming policy used for the live event preview. This value is specified at creation time and cannot be updated.
-
-## LiveEventPreviewAccessControl
-### Properties
-* **ip**: [IPAccessControl](#ipaccesscontrol): The IP access control.
-
-## LiveEventTranscription
-### Properties
-* **inputTrackSelection**: [LiveEventInputTrackSelection](#liveeventinputtrackselection)[]: Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.
-* **language**: string: Specifies the language (locale) to be used for speech-to-text transcription – it should match the spoken language in the audio track. The value should be in BCP-47 format (e.g: 'en-US'). See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature and the list of supported languages.
-* **outputTranscriptionTrack**: [LiveEventOutputTranscriptionTrack](#liveeventoutputtranscriptiontrack): Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.
-
-## LiveEventInputTrackSelection
-### Properties
-* **operation**: string: Comparing operation. This property is reserved for future use, any value set on this property will be ignored.
-* **property**: string: Property name to select. This property is reserved for future use, any value set on this property will be ignored.
-* **value**: string: Property value to select. This property is reserved for future use, any value set on this property will be ignored.
-
-## LiveEventOutputTranscriptionTrack
-### Properties
-* **trackName**: string (Required): The output track name. This property is reserved for future use, any value set on this property will be ignored.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## LiveOutputProperties
-### Properties
-* **archiveWindowLength**: string (Required): ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.
-* **assetName**: string (Required): The asset that the live output will write to.
-* **created**: string (ReadOnly): The creation time the live output.
-* **description**: string: The description of the live output.
-* **hls**: [Hls](#hls): HTTP Live Streaming (HLS) packing setting for the live output.
-* **lastModified**: string (ReadOnly): The time the live output was last modified.
-* **manifestName**: string: The manifest file name. If not provided, the service will generate one automatically.
-* **outputSnapTime**: int: The initial timestamp that the live output will start at, any content before this value will not be archived.
-* **provisioningState**: string (ReadOnly): The provisioning state of the live output.
-* **resourceState**: 'Creating' | 'Deleting' | 'Running' | string (ReadOnly): The resource state of the live output.
-
-## Hls
-### Properties
-* **fragmentsPerTsSegment**: int: The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.
-
-## StreamingEndpointProperties
-### Properties
-* **accessControl**: [StreamingEndpointAccessControl](#streamingendpointaccesscontrol): Streaming endpoint access control definition.
-* **availabilitySetName**: string: This feature is deprecated, do not set a value for this property.
-* **cdnEnabled**: bool: The CDN enabled flag.
-* **cdnProfile**: string: The CDN profile name.
-* **cdnProvider**: string: The CDN provider name.
-* **created**: string (ReadOnly): The exact time the streaming endpoint was created.
-* **crossSiteAccessPolicies**: [CrossSiteAccessPolicies](#crosssiteaccesspolicies): The client access policy.
-* **customHostNames**: string[]: The custom host names of the streaming endpoint
-* **description**: string: The streaming endpoint description.
-* **freeTrialEndTime**: string (ReadOnly): The free trial expiration time.
-* **hostName**: string (ReadOnly): The streaming endpoint host name.
-* **lastModified**: string (ReadOnly): The exact time the streaming endpoint was last modified.
-* **maxCacheAge**: int: Max cache age
-* **provisioningState**: string (ReadOnly): The provisioning state of the streaming endpoint.
-* **resourceState**: 'Deleting' | 'Running' | 'Scaling' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): The resource state of the streaming endpoint.
-* **scaleUnits**: int (Required): The number of scale units. Use the Scale operation to adjust this value.
-
-## StreamingEndpointAccessControl
-### Properties
-* **akamai**: [AkamaiAccessControl](#akamaiaccesscontrol): Akamai access control
-* **ip**: [IPAccessControl](#ipaccesscontrol): The IP access control.
-
-## AkamaiAccessControl
-### Properties
-* **akamaiSignatureHeaderAuthenticationKeyList**: [AkamaiSignatureHeaderAuthenticationKey](#akamaisignatureheaderauthenticationkey)[]: authentication key list
-
-## AkamaiSignatureHeaderAuthenticationKey
-### Properties
-* **base64Key**: string: authentication key
-* **expiration**: string: The expiration time of the authentication key.
-* **identifier**: string: identifier of the key
-
-## ArmStreamingEndpointCurrentSku
-### Properties
-* **capacity**: int: The streaming endpoint sku capacity.
-* **name**: string (ReadOnly): The streaming endpoint sku name.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## StreamingLocatorProperties
-### Properties
-* **alternativeMediaId**: string: Alternative Media ID of this Streaming Locator
-* **assetName**: string (Required): Asset Name
-* **contentKeys**: [StreamingLocatorContentKey](#streaminglocatorcontentkey)[]: The ContentKeys used by this Streaming Locator.
-* **created**: string (ReadOnly): The creation time of the Streaming Locator.
-* **defaultContentKeyPolicyName**: string: Name of the default ContentKeyPolicy used by this Streaming Locator.
-* **endTime**: string: The end time of the Streaming Locator.
-* **filters**: string[]: A list of asset or account filters which apply to this streaming locator
-* **startTime**: string: The start time of the Streaming Locator.
-* **streamingLocatorId**: string: The StreamingLocatorId of the Streaming Locator.
-* **streamingPolicyName**: string (Required): Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: 'Predefined_DownloadOnly', 'Predefined_ClearStreamingOnly', 'Predefined_DownloadAndClearStreaming', 'Predefined_ClearKey', 'Predefined_MultiDrmCencStreaming' and 'Predefined_MultiDrmStreaming'
-
-## StreamingLocatorContentKey
-### Properties
-* **id**: string (Required): ID of Content Key
-* **labelReferenceInStreamingPolicy**: string: Label of Content Key as specified in the Streaming Policy
-* **policyName**: string (ReadOnly): ContentKeyPolicy used by Content Key
-* **tracks**: [TrackSelection](#trackselection)[] (ReadOnly): Tracks which use this Content Key
-* **type**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' | string (ReadOnly): Encryption type of Content Key
-* **value**: string: Value of Content Key
-
-## TrackSelection
-### Properties
-* **trackSelections**: [TrackPropertyCondition](#trackpropertycondition)[]: TrackSelections is a track property condition list which can specify track(s)
-
-## TrackPropertyCondition
-### Properties
-* **operation**: 'Equal' | 'Unknown' | string (Required): Track property condition operation
-* **property**: 'FourCC' | 'Unknown' | string (Required): Track property type
-* **value**: string: Track property value
-
-## StreamingPolicyProperties
-### Properties
-* **commonEncryptionCbcs**: [CommonEncryptionCbcs](#commonencryptioncbcs): Class for CommonEncryptionCbcs encryption scheme
-* **commonEncryptionCenc**: [CommonEncryptionCenc](#commonencryptioncenc): Class for envelope encryption scheme
-* **created**: string (ReadOnly): Creation time of Streaming Policy
-* **defaultContentKeyPolicyName**: string: Default ContentKey used by current Streaming Policy
-* **envelopeEncryption**: [EnvelopeEncryption](#envelopeencryption): Class for EnvelopeEncryption encryption scheme
-* **noEncryption**: [NoEncryption](#noencryption): Class for NoEncryption scheme
-
-## CommonEncryptionCbcs
-### Properties
-* **clearTracks**: [TrackSelection](#trackselection)[]: Representing which tracks should not be encrypted
-* **contentKeys**: [StreamingPolicyContentKeys](#streamingpolicycontentkeys): Class to specify properties of all content keys in Streaming Policy
-* **drm**: [CbcsDrmConfiguration](#cbcsdrmconfiguration): Class to specify DRM configurations of CommonEncryptionCbcs scheme in Streaming Policy
-* **enabledProtocols**: [EnabledProtocols](#enabledprotocols): Class to specify which protocols are enabled
-
-## StreamingPolicyContentKeys
-### Properties
-* **defaultKey**: [DefaultKey](#defaultkey): Class to specify properties of default content key for each encryption scheme
-* **keyToTrackMappings**: [StreamingPolicyContentKey](#streamingpolicycontentkey)[]: Representing tracks needs separate content key
 
 ## DefaultKey
 ### Properties
 * **label**: string: Label can be used to specify Content Key when creating a Streaming Locator
 * **policyName**: string: Policy used by Default Key
 
-## StreamingPolicyContentKey
+## Deinterlace
 ### Properties
-* **label**: string: Label can be used to specify Content Key when creating a Streaming Locator
-* **policyName**: string: Policy used by Content Key
-* **tracks**: [TrackSelection](#trackselection)[]: Tracks which use this content key
-
-## CbcsDrmConfiguration
-### Properties
-* **fairPlay**: [StreamingPolicyFairPlayConfiguration](#streamingpolicyfairplayconfiguration): Class to specify configurations of FairPlay in Streaming Policy
-* **playReady**: [StreamingPolicyPlayReadyConfiguration](#streamingpolicyplayreadyconfiguration): Class to specify configurations of PlayReady in Streaming Policy
-* **widevine**: [StreamingPolicyWidevineConfiguration](#streamingpolicywidevineconfiguration): Class to specify configurations of Widevine in Streaming Policy
-
-## StreamingPolicyFairPlayConfiguration
-### Properties
-* **allowPersistentLicense**: bool (Required): All license to be persistent or not
-* **customLicenseAcquisitionUrlTemplate**: string: Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
-
-## StreamingPolicyPlayReadyConfiguration
-### Properties
-* **customLicenseAcquisitionUrlTemplate**: string: Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
-* **playReadyCustomAttributes**: string: Custom attributes for PlayReady
-
-## StreamingPolicyWidevineConfiguration
-### Properties
-* **customLicenseAcquisitionUrlTemplate**: string: Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
+* **mode**: 'AutoPixelAdaptive' | 'Off' | string: The deinterlacing mode. Defaults to AutoPixelAdaptive.
+* **parity**: 'Auto' | 'BottomFieldFirst' | 'TopFieldFirst' | string: The field parity for de-interlacing, defaults to Auto.
 
 ## EnabledProtocols
 ### Properties
@@ -619,18 +450,6 @@
 * **hls**: bool (Required): Enable HLS protocol or not
 * **smoothStreaming**: bool (Required): Enable SmoothStreaming protocol or not
 
-## CommonEncryptionCenc
-### Properties
-* **clearTracks**: [TrackSelection](#trackselection)[]: Representing which tracks should not be encrypted
-* **contentKeys**: [StreamingPolicyContentKeys](#streamingpolicycontentkeys): Class to specify properties of all content keys in Streaming Policy
-* **drm**: [CencDrmConfiguration](#cencdrmconfiguration): Class to specify DRM configurations of CommonEncryptionCenc scheme in Streaming Policy
-* **enabledProtocols**: [EnabledProtocols](#enabledprotocols): Class to specify which protocols are enabled
-
-## CencDrmConfiguration
-### Properties
-* **playReady**: [StreamingPolicyPlayReadyConfiguration](#streamingpolicyplayreadyconfiguration): Class to specify configurations of PlayReady in Streaming Policy
-* **widevine**: [StreamingPolicyWidevineConfiguration](#streamingpolicywidevineconfiguration): Class to specify configurations of Widevine in Streaming Policy
-
 ## EnvelopeEncryption
 ### Properties
 * **clearTracks**: [TrackSelection](#trackselection)[]: Representing which tracks should not be encrypted
@@ -638,113 +457,52 @@
 * **customKeyAcquisitionUrlTemplate**: string: Template for the URL of the custom service delivering keys to end user players.  Not required when using Azure Media Services for issuing keys.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
 * **enabledProtocols**: [EnabledProtocols](#enabledprotocols): Class to specify which protocols are enabled
 
-## NoEncryption
-### Properties
-* **enabledProtocols**: [EnabledProtocols](#enabledprotocols): Class to specify which protocols are enabled
-
-## TransformProperties
-### Properties
-* **created**: string (ReadOnly): The UTC date and time when the Transform was created, in 'YYYY-MM-DDThh:mm:ssZ' format.
-* **description**: string: An optional verbose description of the Transform.
-* **lastModified**: string (ReadOnly): The UTC date and time when the Transform was last updated, in 'YYYY-MM-DDThh:mm:ssZ' format.
-* **outputs**: [TransformOutput](#transformoutput)[] (Required): An array of one or more TransformOutputs that the Transform should generate.
-
-## TransformOutput
-### Properties
-* **onError**: 'ContinueJob' | 'StopProcessingJob' | string: A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.
-* **preset**: [Preset](#preset) (Required): Base type for all Presets, which define the recipe or instructions on how the input media files should be processed.
-* **relativePriority**: 'High' | 'Low' | 'Normal' | string: Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.
-
-## Preset
-* **Discriminator**: @odata.type
-
-### Base Properties
-### BuiltInStandardEncoderPreset
-#### Properties
-* **@odata.type**: '#Microsoft.Media.BuiltInStandardEncoderPreset' (Required): The discriminator for derived types.
-* **configurations**: [PresetConfigurations](#presetconfigurations): An object of optional configuration settings for encoder.
-* **presetName**: 'AACGoodQualityAudio' | 'AdaptiveStreaming' | 'ContentAwareEncoding' | 'ContentAwareEncodingExperimental' | 'CopyAllBitrateNonInterleaved' | 'H264MultipleBitrate1080p' | 'H264MultipleBitrate720p' | 'H264MultipleBitrateSD' | 'H264SingleBitrate1080p' | 'H264SingleBitrate720p' | 'H264SingleBitrateSD' | 'H265AdaptiveStreaming' | 'H265ContentAwareEncoding' | 'H265SingleBitrate1080p' | 'H265SingleBitrate4K' | 'H265SingleBitrate720p' | string (Required): The built-in preset to be used for encoding videos.
-
-### FaceDetectorPreset
-#### Properties
-* **@odata.type**: '#Microsoft.Media.FaceDetectorPreset' (Required): The discriminator for derived types.
-* **blurType**: 'Black' | 'Box' | 'High' | 'Low' | 'Med' | string: Blur type
-* **experimentalOptions**: [FaceDetectorPresetExperimentalOptions](#facedetectorpresetexperimentaloptions): Dictionary containing key value pairs for parameters not exposed in the preset itself
-* **mode**: 'Analyze' | 'Combined' | 'Redact' | string: This mode provides the ability to choose between the following settings: 1) Analyze - For detection only.This mode generates a metadata JSON file marking appearances of faces throughout the video.Where possible, appearances of the same person are assigned the same ID. 2) Combined - Additionally redacts(blurs) detected faces. 3) Redact - This enables a 2-pass process, allowing for selective redaction of a subset of detected faces.It takes in the metadata file from a prior analyze pass, along with the source video, and a user-selected subset of IDs that require redaction.
-* **resolution**: 'SourceResolution' | 'StandardDefinition' | string: Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.
-
-### StandardEncoderPreset
-#### Properties
-* **@odata.type**: '#Microsoft.Media.StandardEncoderPreset' (Required): The discriminator for derived types.
-* **codecs**: [Codec](#codec)[] (Required): The list of codecs to be used when encoding the input video.
-* **filters**: [Filters](#filters): Describes all the filtering operations, such as de-interlacing, rotation etc. that are to be applied to the input media before encoding.
-* **formats**: [Format](#format)[] (Required): The list of outputs to be produced by the encoder.
-
-### VideoAnalyzerPreset
-#### Properties
-* **@odata.type**: '#Microsoft.Media.VideoAnalyzerPreset' (Required): The discriminator for derived types.
-* **insightsToExtract**: 'AllInsights' | 'AudioInsightsOnly' | 'VideoInsightsOnly' | string: Defines the type of insights that you want the service to generate. The allowed values are 'AudioInsightsOnly', 'VideoInsightsOnly', and 'AllInsights'. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.
-
-
-## PresetConfigurations
-### Properties
-* **complexity**: 'Balanced' | 'Quality' | 'Speed' | string: Allows you to configure the encoder settings to control the balance between speed and quality. Example: set Complexity as Speed for faster encoding but less compression efficiency.
-* **interleaveOutput**: 'InterleavedOutput' | 'NonInterleavedOutput' | string: Sets the interleave mode of the output to control how audio and video are stored in the container format. Example: set InterleavedOutput as NonInterleavedOutput to produce audio-only and video-only outputs in separate MP4 files.
-* **keyFrameIntervalInSeconds**: int: The key frame interval in seconds. Example: set KeyFrameIntervalInSeconds as 2 to reduce the playback buffering for some players.
-* **maxBitrateBps**: int: The maximum bitrate in bits per second (threshold for the top video layer). Example: set MaxBitrateBps as 6000000 to avoid producing very high bitrate outputs for contents with high complexity.
-* **maxHeight**: int: The maximum height of output video layers. Example: set MaxHeight as 720 to produce output layers up to 720P even if the input is 4K.
-* **maxLayers**: int: The maximum number of output video layers. Example: set MaxLayers as 4 to make sure at most 4 output layers are produced to control the overall cost of the encoding job.
-* **minBitrateBps**: int: The minimum bitrate in bits per second (threshold for the bottom video layer). Example: set MinBitrateBps as 200000 to have a bottom layer that covers users with low network bandwidth.
-* **minHeight**: int: The minimum height of output video layers. Example: set MinHeight as 360 to avoid output layers of smaller resolutions like 180P.
-
 ## FaceDetectorPresetExperimentalOptions
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Codec
+## Filters
+### Properties
+* **crop**: [Rectangle](#rectangle): Describes the properties of a rectangular window applied to the input media before processing it.
+* **deinterlace**: [Deinterlace](#deinterlace): Describes the de-interlacing settings.
+* **overlays**: [Overlay](#overlay)[]: The properties of overlays to be applied to the input video. These could be audio, image or video overlays.
+* **rotation**: 'Auto' | 'None' | 'Rotate0' | 'Rotate180' | 'Rotate270' | 'Rotate90' | string: The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto
+
+## FilterTrackPropertyCondition
+### Properties
+* **operation**: 'Equal' | 'NotEqual' | string (Required): The track property condition operation.
+* **property**: 'Bitrate' | 'FourCC' | 'Language' | 'Name' | 'Type' | 'Unknown' | string (Required): The track property type.
+* **value**: string (Required): The track property value.
+
+## FilterTrackSelection
+### Properties
+* **trackSelections**: [FilterTrackPropertyCondition](#filtertrackpropertycondition)[] (Required): The track selections.
+
+## FirstQuality
+### Properties
+* **bitrate**: int (Required): The first quality bitrate.
+
+## Format
 * **Discriminator**: @odata.type
 
 ### Base Properties
-* **label**: string: An optional label for the codec. The label can be used to control muxing behavior.
-### AacAudio
+* **filenamePattern**: string (Required): The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.
+### JpgFormat
 #### Properties
-* **@odata.type**: '#Microsoft.Media.AacAudio' (Required): The discriminator for derived types.
-* **profile**: 'AacLc' | 'HeAacV1' | 'HeAacV2' | string: The encoding profile to be used when encoding audio with AAC.
+* **@odata.type**: '#Microsoft.Media.JpgFormat' (Required): The discriminator for derived types.
 
-### CopyAudio
+### Mp4Format
 #### Properties
-* **@odata.type**: '#Microsoft.Media.CopyAudio' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.Mp4Format' (Required): The discriminator for derived types.
 
-### CopyVideo
+### PngFormat
 #### Properties
-* **@odata.type**: '#Microsoft.Media.CopyVideo' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.PngFormat' (Required): The discriminator for derived types.
 
-### H264Video
+### TransportStreamFormat
 #### Properties
-* **@odata.type**: '#Microsoft.Media.H264Video' (Required): The discriminator for derived types.
-* **complexity**: 'Balanced' | 'Quality' | 'Speed' | string: Tells the encoder how to choose its encoding settings. The default value is Balanced.
-* **layers**: [H264Layer](#h264layer)[]: The collection of output H.264 layers to be produced by the encoder.
-* **rateControlMode**: 'ABR' | 'CBR' | 'CRF' | string: The video rate control mode
-* **sceneChangeDetection**: bool: Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.
-
-### H265Video
-#### Properties
-* **@odata.type**: '#Microsoft.Media.H265Video' (Required): The discriminator for derived types.
-* **complexity**: 'Balanced' | 'Quality' | 'Speed' | string: Tells the encoder how to choose its encoding settings.  Quality will provide for a higher compression ratio but at a higher cost and longer compute time.  Speed will produce a relatively larger file but is faster and more economical. The default value is Balanced.
-* **layers**: [H265Layer](#h265layer)[]: The collection of output H.265 layers to be produced by the encoder.
-* **sceneChangeDetection**: bool: Specifies whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.
-
-### JpgImage
-#### Properties
-* **@odata.type**: '#Microsoft.Media.JpgImage' (Required): The discriminator for derived types.
-* **layers**: [JpgLayer](#jpglayer)[]: A collection of output JPEG image layers to be produced by the encoder.
-* **spriteColumn**: int: Sets the number of columns used in thumbnail sprite image.  The number of rows are automatically calculated and a VTT file is generated with the coordinate mappings for each thumbnail in the sprite. Note: this value should be a positive integer and a proper value is recommended so that the output image resolution will not go beyond JPEG maximum pixel resolution limit 65535x65535.
-
-### PngImage
-#### Properties
-* **@odata.type**: '#Microsoft.Media.PngImage' (Required): The discriminator for derived types.
-* **layers**: [PngLayer](#pnglayer)[]: A collection of output PNG image layers to be produced by the encoder.
+* **@odata.type**: '#Microsoft.Media.TransportStreamFormat' (Required): The discriminator for derived types.
 
 
 ## H264Layer
@@ -782,99 +540,57 @@
 * **slices**: int: The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.
 * **width**: string: The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
 
-## JpgLayer
+## Hls
 ### Properties
-* **height**: string: The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
-* **label**: string: The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
-* **quality**: int: The compression quality of the JPEG output. Range is from 0-100 and the default is 70.
-* **width**: string: The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
+* **fragmentsPerTsSegment**: int: The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.
 
-## PngLayer
+## HlsSettings
 ### Properties
-* **height**: string: The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
-* **label**: string: The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
-* **width**: string: The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
+* **characteristics**: string: The characteristics for the HLS setting.
+* **default**: bool: The default for the HLS setting.
+* **forced**: bool: The forced for the HLS setting.
 
-## Filters
-### Properties
-* **crop**: [Rectangle](#rectangle): Describes the properties of a rectangular window applied to the input media before processing it.
-* **deinterlace**: [Deinterlace](#deinterlace): Describes the de-interlacing settings.
-* **overlays**: [Overlay](#overlay)[]: The properties of overlays to be applied to the input video. These could be audio, image or video overlays.
-* **rotation**: 'Auto' | 'None' | 'Rotate0' | 'Rotate180' | 'Rotate270' | 'Rotate90' | string: The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto
-
-## Rectangle
-### Properties
-* **height**: string: The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
-* **left**: string: The number of pixels from the left-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
-* **top**: string: The number of pixels from the top-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
-* **width**: string: The width of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
-
-## Deinterlace
-### Properties
-* **mode**: 'AutoPixelAdaptive' | 'Off' | string: The deinterlacing mode. Defaults to AutoPixelAdaptive.
-* **parity**: 'Auto' | 'BottomFieldFirst' | 'TopFieldFirst' | string: The field parity for de-interlacing, defaults to Auto.
-
-## Overlay
+## InputDefinition
 * **Discriminator**: @odata.type
 
 ### Base Properties
-* **audioGainLevel**: int: The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.
-* **end**: string: The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.
-* **fadeInDuration**: string: The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).
-* **fadeOutDuration**: string: The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).
-* **inputLabel**: string (Required): The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.
-* **start**: string: The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.
-### AudioOverlay
+* **includedTracks**: [TrackDescriptor](#trackdescriptor)[]: The list of TrackDescriptors which define the metadata and selection of tracks in the input.
+### FromAllInputFile
 #### Properties
-* **@odata.type**: '#Microsoft.Media.AudioOverlay' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.FromAllInputFile' (Required): The discriminator for derived types.
 
-### VideoOverlay
+### FromEachInputFile
 #### Properties
-* **@odata.type**: '#Microsoft.Media.VideoOverlay' (Required): The discriminator for derived types.
-* **cropRectangle**: [Rectangle](#rectangle): Describes the properties of a rectangular window applied to the input media before processing it.
-* **opacity**: int: The opacity of the overlay. This is a value in the range [0 - 1.0]. Default is 1.0 which mean the overlay is opaque.
-* **position**: [Rectangle](#rectangle): Describes the properties of a rectangular window applied to the input media before processing it.
+* **@odata.type**: '#Microsoft.Media.FromEachInputFile' (Required): The discriminator for derived types.
 
-
-## Format
-* **Discriminator**: @odata.type
-
-### Base Properties
-* **filenamePattern**: string (Required): The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.
-### JpgFormat
+### InputFile
 #### Properties
-* **@odata.type**: '#Microsoft.Media.JpgFormat' (Required): The discriminator for derived types.
-
-### Mp4Format
-#### Properties
-* **@odata.type**: '#Microsoft.Media.Mp4Format' (Required): The discriminator for derived types.
-
-### PngFormat
-#### Properties
-* **@odata.type**: '#Microsoft.Media.PngFormat' (Required): The discriminator for derived types.
-
-### TransportStreamFormat
-#### Properties
-* **@odata.type**: '#Microsoft.Media.TransportStreamFormat' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.InputFile' (Required): The discriminator for derived types.
+* **filename**: string: Name of the file that this input definition applies to.
 
 
-## JobProperties
+## IPAccessControl
 ### Properties
-* **correlationData**: [JobPropertiesCorrelationData](#jobpropertiescorrelationdata): Customer provided key, value pairs that will be returned in Job and JobOutput state events.
-* **created**: string (ReadOnly): The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.
-* **description**: string: Optional customer supplied description of the Job.
-* **endTime**: string (ReadOnly): The UTC date and time at which this Job finished processing.
-* **input**: [JobInput](#jobinput) (Required): Base class for inputs to a Job.
-* **lastModified**: string (ReadOnly): The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.
-* **outputs**: [JobOutput](#joboutput)[] (Required): The outputs for the Job.
-* **priority**: 'High' | 'Low' | 'Normal' | string: Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.
-* **startTime**: string (ReadOnly): The UTC date and time at which this Job began processing.
-* **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' | string (ReadOnly): Describes the state of the JobOutput.
+* **allow**: [IPRange](#iprange)[]: The IP allow list.
 
-## JobPropertiesCorrelationData
+## IPRange
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **address**: string: The IP address.
+* **name**: string: The friendly name for the IP address range.
+* **subnetPrefixLength**: int: The subnet mask prefix length (see CIDR notation).
+
+## JobError
+### Properties
+* **category**: 'Configuration' | 'Content' | 'Download' | 'Service' | 'Upload' | string (ReadOnly): Helps with categorization of errors.
+* **code**: 'ConfigurationUnsupported' | 'ContentMalformed' | 'ContentUnsupported' | 'DownloadNotAccessible' | 'DownloadTransientError' | 'ServiceError' | 'ServiceTransientError' | 'UploadNotAccessible' | 'UploadTransientError' | string (ReadOnly): Error code describing the error.
+* **details**: [JobErrorDetail](#joberrordetail)[] (ReadOnly): An array of details about specific errors that led to this reported error.
+* **message**: string (ReadOnly): A human-readable language-dependent representation of the error.
+* **retry**: 'DoNotRetry' | 'MayRetry' | string (ReadOnly): Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.
+
+## JobErrorDetail
+### Properties
+* **code**: string (ReadOnly): Code describing the error detail.
+* **message**: string (ReadOnly): A human-readable representation of the error.
 
 ## JobInput
 * **Discriminator**: @odata.type
@@ -921,38 +637,358 @@
 * **baseUri**: string: Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters. The query strings will not be returned in service responses to prevent sensitive data exposure.
 
 
-## ClipTime
+## JobOutput
 * **Discriminator**: @odata.type
 
 ### Base Properties
-### AbsoluteClipTime
+* **endTime**: string (ReadOnly): The UTC date and time at which this Job Output finished processing.
+* **error**: [JobError](#joberror) (ReadOnly): Details of JobOutput errors.
+* **label**: string: A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.
+* **presetOverride**: [Preset](#preset): Base type for all Presets, which define the recipe or instructions on how the input media files should be processed.
+* **progress**: int (ReadOnly): If the JobOutput is in a Processing state, this contains the Job completion percentage. The value is an estimate and not intended to be used to predict Job completion times. To determine if the JobOutput is complete, use the State property.
+* **startTime**: string (ReadOnly): The UTC date and time at which this Job Output began processing.
+* **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' | string (ReadOnly): Describes the state of the JobOutput.
+### JobOutputAsset
 #### Properties
-* **@odata.type**: '#Microsoft.Media.AbsoluteClipTime' (Required): The discriminator for derived types.
-* **time**: string (Required): The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.
-
-### UtcClipTime
-#### Properties
-* **@odata.type**: '#Microsoft.Media.UtcClipTime' (Required): The discriminator for derived types.
-* **time**: string (Required): The time position on the timeline of the input media based on Utc time.
+* **@odata.type**: '#Microsoft.Media.JobOutputAsset' (Required): The discriminator for derived types.
+* **assetName**: string (Required): The name of the output Asset.
 
 
-## InputDefinition
+## JobProperties
+### Properties
+* **correlationData**: [JobPropertiesCorrelationData](#jobpropertiescorrelationdata): Customer provided key, value pairs that will be returned in Job and JobOutput state events.
+* **created**: string (ReadOnly): The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.
+* **description**: string: Optional customer supplied description of the Job.
+* **endTime**: string (ReadOnly): The UTC date and time at which this Job finished processing.
+* **input**: [JobInput](#jobinput) (Required): Base class for inputs to a Job.
+* **lastModified**: string (ReadOnly): The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.
+* **outputs**: [JobOutput](#joboutput)[] (Required): The outputs for the Job.
+* **priority**: 'High' | 'Low' | 'Normal' | string: Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.
+* **startTime**: string (ReadOnly): The UTC date and time at which this Job began processing.
+* **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' | string (ReadOnly): Describes the state of the JobOutput.
+
+## JobPropertiesCorrelationData
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## JpgLayer
+### Properties
+* **height**: string: The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
+* **label**: string: The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
+* **quality**: int: The compression quality of the JPEG output. Range is from 0-100 and the default is 70.
+* **width**: string: The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
+
+## ListContainerSasInput
+### Properties
+* **expiryTime**: string (WriteOnly): The SAS URL expiration time.  This must be less than 24 hours from the current time.
+* **permissions**: 'Read' | 'ReadWrite' | 'ReadWriteDelete' | string (WriteOnly): The permissions to set on the SAS URL.
+
+## ListContentKeysResponse
+### Properties
+* **contentKeys**: [StreamingLocatorContentKey](#streaminglocatorcontentkey)[] (ReadOnly): ContentKeys used by current Streaming Locator
+
+## ListPathsResponse
+### Properties
+* **downloadPaths**: string[] (ReadOnly): Download Paths supported by current Streaming Locator
+* **streamingPaths**: [StreamingPath](#streamingpath)[] (ReadOnly): Streaming Paths supported by current Streaming Locator
+
+## ListStreamingLocatorsResponse
+### Properties
+* **streamingLocators**: [AssetStreamingLocator](#assetstreaminglocator)[] (ReadOnly): The list of Streaming Locators.
+
+## LiveEventEncoding
+### Properties
+* **encodingType**: 'None' | 'PassthroughBasic' | 'PassthroughStandard' | 'Premium1080p' | 'Standard' | string: Live event type. When encodingType is set to PassthroughBasic or PassthroughStandard, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bitrates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. This property cannot be modified after the live event is created.
+* **keyFrameInterval**: string: Use an ISO 8601 time value between 0.5 to 20 seconds to specify the output fragment length for the video and audio tracks of an encoding live event. For example, use PT2S to indicate 2 seconds. For the video track it also defines the key frame interval, or the length of a GoP (group of pictures).   If this value is not set for an encoding live event, the fragment duration defaults to 2 seconds. The value cannot be set for pass-through live events.
+* **presetName**: string: The optional encoding preset name, used when encodingType is not None. This value is specified at creation time and cannot be updated. If the encodingType is set to Standard, then the default preset name is ‘Default720p’. Else if the encodingType is set to Premium1080p, the default preset is ‘Default1080p’.
+* **stretchMode**: 'AutoFit' | 'AutoSize' | 'None' | string: The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
+
+## LiveEventEndpoint
+### Properties
+* **protocol**: string: The endpoint protocol.
+* **url**: string: The endpoint URL.
+
+## LiveEventInput
+### Properties
+* **accessControl**: [LiveEventInputAccessControl](#liveeventinputaccesscontrol): The IP access control for live event input.
+* **accessToken**: string: A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated. If omitted, the service will generate a unique value.
+* **endpoints**: [LiveEventEndpoint](#liveeventendpoint)[]: The input endpoints for the live event.
+* **keyFrameIntervalDuration**: string: ISO 8601 time duration of the key frame interval duration of the input. This value sets the EXT-X-TARGETDURATION property in the HLS output. For example, use PT2S to indicate 2 seconds. Leave the value empty for encoding live events.
+* **streamingProtocol**: 'FragmentedMP4' | 'RTMP' | string (Required): The input protocol for the live event. This is specified at creation time and cannot be updated.
+
+## LiveEventInputAccessControl
+### Properties
+* **ip**: [IPAccessControl](#ipaccesscontrol): The IP access control.
+
+## LiveEventInputTrackSelection
+### Properties
+* **operation**: string: Comparing operation. This property is reserved for future use, any value set on this property will be ignored.
+* **property**: string: Property name to select. This property is reserved for future use, any value set on this property will be ignored.
+* **value**: string: Property value to select. This property is reserved for future use, any value set on this property will be ignored.
+
+## LiveEventOutputTranscriptionTrack
+### Properties
+* **trackName**: string (Required): The output track name. This property is reserved for future use, any value set on this property will be ignored.
+
+## LiveEventPreview
+### Properties
+* **accessControl**: [LiveEventPreviewAccessControl](#liveeventpreviewaccesscontrol): The IP access control for the live event preview endpoint.
+* **alternativeMediaId**: string: An alternative media identifier associated with the streaming locator created for the preview. This value is specified at creation time and cannot be updated. The identifier can be used in the CustomLicenseAcquisitionUrlTemplate or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in the StreamingPolicyName field.
+* **endpoints**: [LiveEventEndpoint](#liveeventendpoint)[]: The endpoints for preview. Do not share the preview URL with the live event audience.
+* **previewLocator**: string: The identifier of the preview locator in Guid format. Specifying this at creation time allows the caller to know the preview locator url before the event is created. If omitted, the service will generate a random identifier. This value cannot be updated once the live event is created.
+* **streamingPolicyName**: string: The name of streaming policy used for the live event preview. This value is specified at creation time and cannot be updated.
+
+## LiveEventPreviewAccessControl
+### Properties
+* **ip**: [IPAccessControl](#ipaccesscontrol): The IP access control.
+
+## LiveEventProperties
+### Properties
+* **created**: string (ReadOnly): The creation time for the live event
+* **crossSiteAccessPolicies**: [CrossSiteAccessPolicies](#crosssiteaccesspolicies): The client access policy.
+* **description**: string: A description for the live event.
+* **encoding**: [LiveEventEncoding](#liveeventencoding): Specifies the live event type and optional encoding settings for encoding live events.
+* **hostnamePrefix**: string: When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
+* **input**: [LiveEventInput](#liveeventinput) (Required): The live event input.
+* **lastModified**: string (ReadOnly): The last modified time of the live event.
+* **preview**: [LiveEventPreview](#liveeventpreview): Live event preview settings.
+* **provisioningState**: string (ReadOnly): The provisioning state of the live event.
+* **resourceState**: 'Allocating' | 'Deleting' | 'Running' | 'StandBy' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): The resource state of the live event. See https://go.microsoft.com/fwlink/?linkid=2139012 for more information.
+* **streamOptions**: 'Default' | 'LowLatency' | 'LowLatencyV2' | string[]: The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.
+* **transcriptions**: [LiveEventTranscription](#liveeventtranscription)[]: Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.
+* **useStaticHostname**: bool: Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state
+
+## LiveEventTranscription
+### Properties
+* **inputTrackSelection**: [LiveEventInputTrackSelection](#liveeventinputtrackselection)[]: Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.
+* **language**: string: Specifies the language (locale) to be used for speech-to-text transcription – it should match the spoken language in the audio track. The value should be in BCP-47 format (e.g: 'en-US'). See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature and the list of supported languages.
+* **outputTranscriptionTrack**: [LiveEventOutputTranscriptionTrack](#liveeventoutputtranscriptiontrack): Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.
+
+## LiveOutputProperties
+### Properties
+* **archiveWindowLength**: string (Required): ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.
+* **assetName**: string (Required): The asset that the live output will write to.
+* **created**: string (ReadOnly): The creation time the live output.
+* **description**: string: The description of the live output.
+* **hls**: [Hls](#hls): HTTP Live Streaming (HLS) packing setting for the live output.
+* **lastModified**: string (ReadOnly): The time the live output was last modified.
+* **manifestName**: string: The manifest file name. If not provided, the service will generate one automatically.
+* **outputSnapTime**: int: The initial timestamp that the live output will start at, any content before this value will not be archived.
+* **provisioningState**: string (ReadOnly): The provisioning state of the live output.
+* **resourceState**: 'Creating' | 'Deleting' | 'Running' | string (ReadOnly): The resource state of the live output.
+
+## MediaFilterProperties
+### Properties
+* **firstQuality**: [FirstQuality](#firstquality): Filter First Quality
+* **presentationTimeRange**: [PresentationTimeRange](#presentationtimerange): The presentation time range, this is asset related and not recommended for Account Filter.
+* **tracks**: [FilterTrackSelection](#filtertrackselection)[]: The tracks selection conditions.
+
+## NoEncryption
+### Properties
+* **enabledProtocols**: [EnabledProtocols](#enabledprotocols): Class to specify which protocols are enabled
+
+## Overlay
 * **Discriminator**: @odata.type
 
 ### Base Properties
-* **includedTracks**: [TrackDescriptor](#trackdescriptor)[]: The list of TrackDescriptors which define the metadata and selection of tracks in the input.
-### FromAllInputFile
+* **audioGainLevel**: int: The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.
+* **end**: string: The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.
+* **fadeInDuration**: string: The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).
+* **fadeOutDuration**: string: The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).
+* **inputLabel**: string (Required): The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.
+* **start**: string: The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.
+### AudioOverlay
 #### Properties
-* **@odata.type**: '#Microsoft.Media.FromAllInputFile' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.AudioOverlay' (Required): The discriminator for derived types.
 
-### FromEachInputFile
+### VideoOverlay
 #### Properties
-* **@odata.type**: '#Microsoft.Media.FromEachInputFile' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.VideoOverlay' (Required): The discriminator for derived types.
+* **cropRectangle**: [Rectangle](#rectangle): Describes the properties of a rectangular window applied to the input media before processing it.
+* **opacity**: int: The opacity of the overlay. This is a value in the range [0 - 1.0]. Default is 1.0 which mean the overlay is opaque.
+* **position**: [Rectangle](#rectangle): Describes the properties of a rectangular window applied to the input media before processing it.
 
-### InputFile
+
+## PngLayer
+### Properties
+* **height**: string: The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
+* **label**: string: The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
+* **width**: string: The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
+
+## PresentationTimeRange
+### Properties
+* **endTimestamp**: int: The absolute end time boundary.
+* **forceEndTimestamp**: bool: The indicator of forcing existing of end time stamp.
+* **liveBackoffDuration**: int: The relative to end right edge.
+* **presentationWindowDuration**: int: The relative to end sliding window.
+* **startTimestamp**: int: The absolute start time boundary.
+* **timescale**: int: The time scale of time stamps.
+
+## Preset
+* **Discriminator**: @odata.type
+
+### Base Properties
+### BuiltInStandardEncoderPreset
 #### Properties
-* **@odata.type**: '#Microsoft.Media.InputFile' (Required): The discriminator for derived types.
-* **filename**: string: Name of the file that this input definition applies to.
+* **@odata.type**: '#Microsoft.Media.BuiltInStandardEncoderPreset' (Required): The discriminator for derived types.
+* **configurations**: [PresetConfigurations](#presetconfigurations): An object of optional configuration settings for encoder.
+* **presetName**: 'AACGoodQualityAudio' | 'AdaptiveStreaming' | 'ContentAwareEncoding' | 'ContentAwareEncodingExperimental' | 'CopyAllBitrateNonInterleaved' | 'H264MultipleBitrate1080p' | 'H264MultipleBitrate720p' | 'H264MultipleBitrateSD' | 'H264SingleBitrate1080p' | 'H264SingleBitrate720p' | 'H264SingleBitrateSD' | 'H265AdaptiveStreaming' | 'H265ContentAwareEncoding' | 'H265SingleBitrate1080p' | 'H265SingleBitrate4K' | 'H265SingleBitrate720p' | string (Required): The built-in preset to be used for encoding videos.
+
+### FaceDetectorPreset
+#### Properties
+* **@odata.type**: '#Microsoft.Media.FaceDetectorPreset' (Required): The discriminator for derived types.
+* **blurType**: 'Black' | 'Box' | 'High' | 'Low' | 'Med' | string: Blur type
+* **experimentalOptions**: [FaceDetectorPresetExperimentalOptions](#facedetectorpresetexperimentaloptions): Dictionary containing key value pairs for parameters not exposed in the preset itself
+* **mode**: 'Analyze' | 'Combined' | 'Redact' | string: This mode provides the ability to choose between the following settings: 1) Analyze - For detection only.This mode generates a metadata JSON file marking appearances of faces throughout the video.Where possible, appearances of the same person are assigned the same ID. 2) Combined - Additionally redacts(blurs) detected faces. 3) Redact - This enables a 2-pass process, allowing for selective redaction of a subset of detected faces.It takes in the metadata file from a prior analyze pass, along with the source video, and a user-selected subset of IDs that require redaction.
+* **resolution**: 'SourceResolution' | 'StandardDefinition' | string: Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.
+
+### StandardEncoderPreset
+#### Properties
+* **@odata.type**: '#Microsoft.Media.StandardEncoderPreset' (Required): The discriminator for derived types.
+* **codecs**: [Codec](#codec)[] (Required): The list of codecs to be used when encoding the input video.
+* **filters**: [Filters](#filters): Describes all the filtering operations, such as de-interlacing, rotation etc. that are to be applied to the input media before encoding.
+* **formats**: [Format](#format)[] (Required): The list of outputs to be produced by the encoder.
+
+### VideoAnalyzerPreset
+#### Properties
+* **@odata.type**: '#Microsoft.Media.VideoAnalyzerPreset' (Required): The discriminator for derived types.
+* **insightsToExtract**: 'AllInsights' | 'AudioInsightsOnly' | 'VideoInsightsOnly' | string: Defines the type of insights that you want the service to generate. The allowed values are 'AudioInsightsOnly', 'VideoInsightsOnly', and 'AllInsights'. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.
+
+
+## PresetConfigurations
+### Properties
+* **complexity**: 'Balanced' | 'Quality' | 'Speed' | string: Allows you to configure the encoder settings to control the balance between speed and quality. Example: set Complexity as Speed for faster encoding but less compression efficiency.
+* **interleaveOutput**: 'InterleavedOutput' | 'NonInterleavedOutput' | string: Sets the interleave mode of the output to control how audio and video are stored in the container format. Example: set InterleavedOutput as NonInterleavedOutput to produce audio-only and video-only outputs in separate MP4 files.
+* **keyFrameIntervalInSeconds**: int: The key frame interval in seconds. Example: set KeyFrameIntervalInSeconds as 2 to reduce the playback buffering for some players.
+* **maxBitrateBps**: int: The maximum bitrate in bits per second (threshold for the top video layer). Example: set MaxBitrateBps as 6000000 to avoid producing very high bitrate outputs for contents with high complexity.
+* **maxHeight**: int: The maximum height of output video layers. Example: set MaxHeight as 720 to produce output layers up to 720P even if the input is 4K.
+* **maxLayers**: int: The maximum number of output video layers. Example: set MaxLayers as 4 to make sure at most 4 output layers are produced to control the overall cost of the encoding job.
+* **minBitrateBps**: int: The minimum bitrate in bits per second (threshold for the bottom video layer). Example: set MinBitrateBps as 200000 to have a bottom layer that covers users with low network bandwidth.
+* **minHeight**: int: The minimum height of output video layers. Example: set MinHeight as 360 to avoid output layers of smaller resolutions like 180P.
+
+## Rectangle
+### Properties
+* **height**: string: The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
+* **left**: string: The number of pixels from the left-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
+* **top**: string: The number of pixels from the top-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
+* **width**: string: The width of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
+
+## StreamingEndpointAccessControl
+### Properties
+* **akamai**: [AkamaiAccessControl](#akamaiaccesscontrol): Akamai access control
+* **ip**: [IPAccessControl](#ipaccesscontrol): The IP access control.
+
+## StreamingEndpointProperties
+### Properties
+* **accessControl**: [StreamingEndpointAccessControl](#streamingendpointaccesscontrol): Streaming endpoint access control definition.
+* **availabilitySetName**: string: This feature is deprecated, do not set a value for this property.
+* **cdnEnabled**: bool: The CDN enabled flag.
+* **cdnProfile**: string: The CDN profile name.
+* **cdnProvider**: string: The CDN provider name.
+* **created**: string (ReadOnly): The exact time the streaming endpoint was created.
+* **crossSiteAccessPolicies**: [CrossSiteAccessPolicies](#crosssiteaccesspolicies): The client access policy.
+* **customHostNames**: string[]: The custom host names of the streaming endpoint
+* **description**: string: The streaming endpoint description.
+* **freeTrialEndTime**: string (ReadOnly): The free trial expiration time.
+* **hostName**: string (ReadOnly): The streaming endpoint host name.
+* **lastModified**: string (ReadOnly): The exact time the streaming endpoint was last modified.
+* **maxCacheAge**: int: Max cache age
+* **provisioningState**: string (ReadOnly): The provisioning state of the streaming endpoint.
+* **resourceState**: 'Deleting' | 'Running' | 'Scaling' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): The resource state of the streaming endpoint.
+* **scaleUnits**: int (Required): The number of scale units. Use the Scale operation to adjust this value.
+
+## StreamingLocatorContentKey
+### Properties
+* **id**: string (Required): ID of Content Key
+* **labelReferenceInStreamingPolicy**: string: Label of Content Key as specified in the Streaming Policy
+* **policyName**: string (ReadOnly): ContentKeyPolicy used by Content Key
+* **tracks**: [TrackSelection](#trackselection)[] (ReadOnly): Tracks which use this Content Key
+* **type**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' | string (ReadOnly): Encryption type of Content Key
+* **value**: string: Value of Content Key
+
+## StreamingLocatorProperties
+### Properties
+* **alternativeMediaId**: string: Alternative Media ID of this Streaming Locator
+* **assetName**: string (Required): Asset Name
+* **contentKeys**: [StreamingLocatorContentKey](#streaminglocatorcontentkey)[]: The ContentKeys used by this Streaming Locator.
+* **created**: string (ReadOnly): The creation time of the Streaming Locator.
+* **defaultContentKeyPolicyName**: string: Name of the default ContentKeyPolicy used by this Streaming Locator.
+* **endTime**: string: The end time of the Streaming Locator.
+* **filters**: string[]: A list of asset or account filters which apply to this streaming locator
+* **startTime**: string: The start time of the Streaming Locator.
+* **streamingLocatorId**: string: The StreamingLocatorId of the Streaming Locator.
+* **streamingPolicyName**: string (Required): Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: 'Predefined_DownloadOnly', 'Predefined_ClearStreamingOnly', 'Predefined_DownloadAndClearStreaming', 'Predefined_ClearKey', 'Predefined_MultiDrmCencStreaming' and 'Predefined_MultiDrmStreaming'
+
+## StreamingPath
+### Properties
+* **encryptionScheme**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' | 'NoEncryption' | string (ReadOnly): Encryption scheme
+* **paths**: string[] (ReadOnly): Streaming paths for each protocol and encryptionScheme pair
+* **streamingProtocol**: 'Dash' | 'Download' | 'Hls' | 'SmoothStreaming' | string (ReadOnly): Streaming protocol
+
+## StreamingPolicyContentKey
+### Properties
+* **label**: string: Label can be used to specify Content Key when creating a Streaming Locator
+* **policyName**: string: Policy used by Content Key
+* **tracks**: [TrackSelection](#trackselection)[]: Tracks which use this content key
+
+## StreamingPolicyContentKeys
+### Properties
+* **defaultKey**: [DefaultKey](#defaultkey): Class to specify properties of default content key for each encryption scheme
+* **keyToTrackMappings**: [StreamingPolicyContentKey](#streamingpolicycontentkey)[]: Representing tracks needs separate content key
+
+## StreamingPolicyFairPlayConfiguration
+### Properties
+* **allowPersistentLicense**: bool (Required): All license to be persistent or not
+* **customLicenseAcquisitionUrlTemplate**: string: Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
+
+## StreamingPolicyPlayReadyConfiguration
+### Properties
+* **customLicenseAcquisitionUrlTemplate**: string: Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
+* **playReadyCustomAttributes**: string: Custom attributes for PlayReady
+
+## StreamingPolicyProperties
+### Properties
+* **commonEncryptionCbcs**: [CommonEncryptionCbcs](#commonencryptioncbcs): Class for CommonEncryptionCbcs encryption scheme
+* **commonEncryptionCenc**: [CommonEncryptionCenc](#commonencryptioncenc): Class for envelope encryption scheme
+* **created**: string (ReadOnly): Creation time of Streaming Policy
+* **defaultContentKeyPolicyName**: string: Default ContentKey used by current Streaming Policy
+* **envelopeEncryption**: [EnvelopeEncryption](#envelopeencryption): Class for EnvelopeEncryption encryption scheme
+* **noEncryption**: [NoEncryption](#noencryption): Class for NoEncryption scheme
+
+## StreamingPolicyWidevineConfiguration
+### Properties
+* **customLicenseAcquisitionUrlTemplate**: string: Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+
+## TrackBase
+* **Discriminator**: @odata.type
+
+### Base Properties
+### AudioTrack
+#### Properties
+* **@odata.type**: '#Microsoft.Media.AudioTrack' (Required): The discriminator for derived types.
+
+### TextTrack
+#### Properties
+* **@odata.type**: '#Microsoft.Media.TextTrack' (Required): The discriminator for derived types.
+* **displayName**: string: The display name of the text track on a video player. In HLS, this maps to the NAME attribute of EXT-X-MEDIA.
+* **fileName**: string: The file name to the source file. This file is located in the storage container of the asset.
+* **hlsSettings**: [HlsSettings](#hlssettings): The HLS setting for a text track.
+* **languageCode**: string (ReadOnly): The RFC5646 language code for the text track.
+* **playerVisibility**: 'Hidden' | 'Visible' | string: When PlayerVisibility is set to "Visible", the text track will be present in the DASH manifest or HLS playlist when requested by a client. When the PlayerVisibility is set to "Hidden", the text will not be available to the client. The default value is "Visible".
+
+### VideoTrack
+#### Properties
+* **@odata.type**: '#Microsoft.Media.VideoTrack' (Required): The discriminator for derived types.
 
 
 ## TrackDescriptor
@@ -984,72 +1020,36 @@
 * **trackId**: int (Required): Track identifier to select
 
 
-## JobOutput
-* **Discriminator**: @odata.type
-
-### Base Properties
-* **endTime**: string (ReadOnly): The UTC date and time at which this Job Output finished processing.
-* **error**: [JobError](#joberror) (ReadOnly): Details of JobOutput errors.
-* **label**: string: A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.
-* **presetOverride**: [Preset](#preset): Base type for all Presets, which define the recipe or instructions on how the input media files should be processed.
-* **progress**: int (ReadOnly): If the JobOutput is in a Processing state, this contains the Job completion percentage. The value is an estimate and not intended to be used to predict Job completion times. To determine if the JobOutput is complete, use the State property.
-* **startTime**: string (ReadOnly): The UTC date and time at which this Job Output began processing.
-* **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' | string (ReadOnly): Describes the state of the JobOutput.
-### JobOutputAsset
-#### Properties
-* **@odata.type**: '#Microsoft.Media.JobOutputAsset' (Required): The discriminator for derived types.
-* **assetName**: string (Required): The name of the output Asset.
-
-
-## JobError
+## TrackedResourceTags
 ### Properties
-* **category**: 'Configuration' | 'Content' | 'Download' | 'Service' | 'Upload' | string (ReadOnly): Helps with categorization of errors.
-* **code**: 'ConfigurationUnsupported' | 'ContentMalformed' | 'ContentUnsupported' | 'DownloadNotAccessible' | 'DownloadTransientError' | 'ServiceError' | 'ServiceTransientError' | 'UploadNotAccessible' | 'UploadTransientError' | string (ReadOnly): Error code describing the error.
-* **details**: [JobErrorDetail](#joberrordetail)[] (ReadOnly): An array of details about specific errors that led to this reported error.
-* **message**: string (ReadOnly): A human-readable language-dependent representation of the error.
-* **retry**: 'DoNotRetry' | 'MayRetry' | string (ReadOnly): Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.
+### Additional Properties
+* **Additional Properties Type**: string
 
-## JobErrorDetail
+## TrackedResourceTags
 ### Properties
-* **code**: string (ReadOnly): Code describing the error detail.
-* **message**: string (ReadOnly): A human-readable representation of the error.
+### Additional Properties
+* **Additional Properties Type**: string
 
-## ListContainerSasInput
+## TrackPropertyCondition
 ### Properties
-* **expiryTime**: string (WriteOnly): The SAS URL expiration time.  This must be less than 24 hours from the current time.
-* **permissions**: 'Read' | 'ReadWrite' | 'ReadWriteDelete' | string (WriteOnly): The permissions to set on the SAS URL.
+* **operation**: 'Equal' | 'Unknown' | string (Required): Track property condition operation
+* **property**: 'FourCC' | 'Unknown' | string (Required): Track property type
+* **value**: string: Track property value
 
-## AssetContainerSas
+## TrackSelection
 ### Properties
-* **assetContainerSasUrls**: string[] (ReadOnly): The list of Asset container SAS URLs.
+* **trackSelections**: [TrackPropertyCondition](#trackpropertycondition)[]: TrackSelections is a track property condition list which can specify track(s)
 
-## ListContentKeysResponse
+## TransformOutput
 ### Properties
-* **contentKeys**: [StreamingLocatorContentKey](#streaminglocatorcontentkey)[] (ReadOnly): ContentKeys used by current Streaming Locator
+* **onError**: 'ContinueJob' | 'StopProcessingJob' | string: A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.
+* **preset**: [Preset](#preset) (Required): Base type for all Presets, which define the recipe or instructions on how the input media files should be processed.
+* **relativePriority**: 'High' | 'Low' | 'Normal' | string: Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.
 
-## ListPathsResponse
+## TransformProperties
 ### Properties
-* **downloadPaths**: string[] (ReadOnly): Download Paths supported by current Streaming Locator
-* **streamingPaths**: [StreamingPath](#streamingpath)[] (ReadOnly): Streaming Paths supported by current Streaming Locator
-
-## StreamingPath
-### Properties
-* **encryptionScheme**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' | 'NoEncryption' | string (ReadOnly): Encryption scheme
-* **paths**: string[] (ReadOnly): Streaming paths for each protocol and encryptionScheme pair
-* **streamingProtocol**: 'Dash' | 'Download' | 'Hls' | 'SmoothStreaming' | string (ReadOnly): Streaming protocol
-
-## ListStreamingLocatorsResponse
-### Properties
-* **streamingLocators**: [AssetStreamingLocator](#assetstreaminglocator)[] (ReadOnly): The list of Streaming Locators.
-
-## AssetStreamingLocator
-### Properties
-* **assetName**: string (ReadOnly): Asset Name.
-* **created**: string (ReadOnly): The creation time of the Streaming Locator.
-* **defaultContentKeyPolicyName**: string (ReadOnly): Name of the default ContentKeyPolicy used by this Streaming Locator.
-* **endTime**: string (ReadOnly): The end time of the Streaming Locator.
-* **name**: string (ReadOnly): Streaming Locator name.
-* **startTime**: string (ReadOnly): The start time of the Streaming Locator.
-* **streamingLocatorId**: string (ReadOnly): StreamingLocatorId of the Streaming Locator.
-* **streamingPolicyName**: string (ReadOnly): Name of the Streaming Policy used by this Streaming Locator.
+* **created**: string (ReadOnly): The UTC date and time when the Transform was created, in 'YYYY-MM-DDThh:mm:ssZ' format.
+* **description**: string: An optional verbose description of the Transform.
+* **lastModified**: string (ReadOnly): The UTC date and time when the Transform was last updated, in 'YYYY-MM-DDThh:mm:ssZ' format.
+* **outputs**: [TransformOutput](#transformoutput)[] (Required): An array of one or more TransformOutputs that the Transform should generate.
 

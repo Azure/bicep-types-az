@@ -23,6 +23,32 @@
 * **tags**: [ManagedProxyResourceTags](#managedproxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedClusters/nodeTypes' (ReadOnly, DeployTimeConstant): The resource type
 
+## AzureActiveDirectory
+### Properties
+* **clientApplication**: string: Azure active directory client application id.
+* **clusterApplication**: string: Azure active directory cluster application id.
+* **tenantId**: string: Azure active directory tenant id.
+
+## ClientCertificate
+### Properties
+* **commonName**: string: Certificate Common name.
+* **isAdmin**: bool (Required): Whether the certificate is admin or not.
+* **issuerThumbprint**: string: Issuer thumbprint for the certificate. Only used together with CommonName.
+* **thumbprint**: string: Certificate Thumbprint.
+
+## EndpointRangeDescription
+### Properties
+* **endPort**: int (Required): End port of a range of ports
+* **startPort**: int (Required): Starting port of a range of ports
+
+## LoadBalancingRule
+### Properties
+* **backendPort**: int (Required): The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
+* **frontendPort**: int (Required): The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
+* **probeProtocol**: 'http' | 'https' | 'tcp' | string (Required): the reference to the load balancer probe used by the load balancing rule.
+* **probeRequestPath**: string: The probe request path. Only supported for HTTP/HTTPS probes.
+* **protocol**: 'tcp' | 'udp' | string (Required): The reference to the transport protocol used by the load balancing rule.
+
 ## ManagedClusterProperties
 ### Properties
 * **addonFeatures**: 'BackupRestoreService' | 'DnsService' | 'ResourceMonitorService' | string[]: client certificates for the cluster.
@@ -53,42 +79,7 @@
 * **loadBalancingRules**: [LoadBalancingRule](#loadbalancingrule)[]: Describes load balancing rules.
 * **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the managed resource.
 
-## AzureActiveDirectory
-### Properties
-* **clientApplication**: string: Azure active directory client application id.
-* **clusterApplication**: string: Azure active directory cluster application id.
-* **tenantId**: string: Azure active directory tenant id.
-
-## ClientCertificate
-### Properties
-* **commonName**: string: Certificate Common name.
-* **isAdmin**: bool (Required): Whether the certificate is admin or not.
-* **issuerThumbprint**: string: Issuer thumbprint for the certificate. Only used together with CommonName.
-* **thumbprint**: string: Certificate Thumbprint.
-
-## SettingsSectionDescription
-### Properties
-* **name**: string (Required): The section name of the fabric settings.
-* **parameters**: [SettingsParameterDescription](#settingsparameterdescription)[] (Required): The collection of parameters in the section.
-
-## SettingsParameterDescription
-### Properties
-* **name**: string (Required): The parameter name of fabric setting.
-* **value**: string (Required): The parameter value of fabric setting.
-
-## LoadBalancingRule
-### Properties
-* **backendPort**: int (Required): The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
-* **frontendPort**: int (Required): The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
-* **probeProtocol**: 'http' | 'https' | 'tcp' | string (Required): the reference to the load balancer probe used by the load balancing rule.
-* **probeRequestPath**: string: The probe request path. Only supported for HTTP/HTTPS probes.
-* **protocol**: 'tcp' | 'udp' | string (Required): The reference to the transport protocol used by the load balancing rule.
-
-## Sku
-### Properties
-* **name**: 'Basic' | 'Standard' | string (Required): Sku Name. Basic will have a minimum of 3 seed nodes and Standard a minimum of 5. Basic only allows 1 node type.
-
-## ResourceTags
+## ManagedProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -111,11 +102,6 @@
 * **vmSecrets**: [VaultSecretGroup](#vaultsecretgroup)[]: The secrets to install in the virtual machines.
 * **vmSize**: string: The size of virtual machines in the pool. All virtual machines in a pool are the same size. For example, Standard_D3.
 
-## EndpointRangeDescription
-### Properties
-* **endPort**: int (Required): End port of a range of ports
-* **startPort**: int (Required): Starting port of a range of ports
-
 ## NodeTypePropertiesCapacities
 ### Properties
 ### Additional Properties
@@ -125,6 +111,39 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SettingsParameterDescription
+### Properties
+* **name**: string (Required): The parameter name of fabric setting.
+* **value**: string (Required): The parameter value of fabric setting.
+
+## SettingsSectionDescription
+### Properties
+* **name**: string (Required): The section name of the fabric settings.
+* **parameters**: [SettingsParameterDescription](#settingsparameterdescription)[] (Required): The collection of parameters in the section.
+
+## Sku
+### Properties
+* **name**: 'Basic' | 'Standard' | string (Required): Sku Name. Basic will have a minimum of 3 seed nodes and Standard a minimum of 5. Basic only allows 1 node type.
+
+## SubResource
+### Properties
+* **id**: string: Azure resource identifier.
+
+## VaultCertificate
+### Properties
+* **certificateStore**: string (Required): For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added. The specified certificate store is implicitly in the LocalMachine account. <br><br>For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name <UppercaseThumbprint>.crt for the X509 certificate file and <UppercaseThumbprint>.prv for private key. Both of these files are .pem formatted.
+* **certificateUrl**: string (Required): This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>  "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>}
+
+## VaultSecretGroup
+### Properties
+* **sourceVault**: [SubResource](#subresource) (Required): Azure resource identifier.
+* **vaultCertificates**: [VaultCertificate](#vaultcertificate)[] (Required): The list of key vault references in SourceVault which contain certificates.
 
 ## VmssExtension
 ### Properties
@@ -142,23 +161,4 @@
 * **settings**: any: Any object
 * **type**: string (Required): Specifies the type of the extension; an example is "CustomScriptExtension".
 * **typeHandlerVersion**: string (Required): Specifies the version of the script handler.
-
-## VaultSecretGroup
-### Properties
-* **sourceVault**: [SubResource](#subresource) (Required): Azure resource identifier.
-* **vaultCertificates**: [VaultCertificate](#vaultcertificate)[] (Required): The list of key vault references in SourceVault which contain certificates.
-
-## SubResource
-### Properties
-* **id**: string: Azure resource identifier.
-
-## VaultCertificate
-### Properties
-* **certificateStore**: string (Required): For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added. The specified certificate store is implicitly in the LocalMachine account. <br><br>For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name <UppercaseThumbprint>.crt for the X509 certificate file and <UppercaseThumbprint>.prv for private key. Both of these files are .pem formatted.
-* **certificateUrl**: string (Required): This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>  "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>}
-
-## ManagedProxyResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

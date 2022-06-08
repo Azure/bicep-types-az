@@ -189,14 +189,147 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SecurityInsights/watchlists/watchlistItems' (ReadOnly, DeployTimeConstant): The resource type
 
-## SystemData
+## AADDataConnectorProperties
 ### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
+* **tenantId**: string: The tenant id to connect to, and get the data from.
+
+## AatpDataConnectorProperties
+### Properties
+* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
+* **tenantId**: string: The tenant id to connect to, and get the data from.
+
+## ActionRequestProperties
+### Properties
+* **logicAppResourceId**: string (Required): Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
+* **triggerUri**: string (Required, WriteOnly): Logic App Callback URL for this specific workflow.
+* **workflowId**: string (ReadOnly): The name of the logic app's workflow.
+
+## AlertDetailsOverride
+### Properties
+* **alertDescriptionFormat**: string: the format containing columns name(s) to override the alert description
+* **alertDisplayNameFormat**: string: the format containing columns name(s) to override the alert name
+* **alertSeverityColumnName**: string: the column name to take the alert severity from
+* **alertTacticsColumnName**: string: the column name to take the alert tactics from
+
+## AlertsDataTypeOfDataConnector
+### Properties
+* **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Common field for data type in data connectors.
+
+## ASCDataConnectorProperties
+### Properties
+* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
+* **subscriptionId**: string: The subscription id to connect to, and get the data from.
+
+## AutomationRuleAction
+* **Discriminator**: actionType
+
+### Base Properties
+* **order**: int (Required)
+### AutomationRuleModifyPropertiesAction
+#### Properties
+* **actionConfiguration**: [IncidentPropertiesAction](#incidentpropertiesaction)
+* **actionType**: 'ModifyProperties' (Required): The type of the automation rule action
+
+### AutomationRuleRunPlaybookAction
+#### Properties
+* **actionConfiguration**: [PlaybookActionProperties](#playbookactionproperties)
+* **actionType**: 'RunPlaybook' (Required): The type of the automation rule action
+
+
+## AutomationRuleCondition
+* **Discriminator**: conditionType
+
+### Base Properties
+### PropertyConditionProperties
+#### Properties
+* **conditionProperties**: [AutomationRulePropertyValuesCondition](#automationrulepropertyvaluescondition)
+* **conditionType**: 'Property' (Required)
+
+
+## AutomationRuleProperties
+### Properties
+* **actions**: [AutomationRuleAction](#automationruleaction)[] (Required): The actions to execute when the automation rule is triggered
+* **createdBy**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
+* **createdTimeUtc**: string (ReadOnly): The time the automation rule was created
+* **displayName**: string (Required): The display name of the automation rule
+* **lastModifiedBy**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
+* **lastModifiedTimeUtc**: string (ReadOnly): The last time the automation rule was updated
+* **order**: int (Required): The order of execution of the automation rule
+* **triggeringLogic**: [AutomationRuleTriggeringLogic](#automationruletriggeringlogic) (Required): Describes automation rule triggering logic
+
+## AutomationRulePropertyValuesCondition
+### Properties
+* **operator**: 'Contains' | 'EndsWith' | 'Equals' | 'NotContains' | 'NotEndsWith' | 'NotEquals' | 'NotStartsWith' | 'StartsWith' | string
+* **propertyName**: 'AccountAadTenantId' | 'AccountAadUserId' | 'AccountNTDomain' | 'AccountName' | 'AccountObjectGuid' | 'AccountPUID' | 'AccountSid' | 'AccountUPNSuffix' | 'AlertProductNames' | 'AzureResourceResourceId' | 'AzureResourceSubscriptionId' | 'CloudApplicationAppId' | 'CloudApplicationAppName' | 'DNSDomainName' | 'FileDirectory' | 'FileHashValue' | 'FileName' | 'HostAzureID' | 'HostNTDomain' | 'HostName' | 'HostNetBiosName' | 'HostOSVersion' | 'IPAddress' | 'IncidentDescription' | 'IncidentLabel' | 'IncidentProviderName' | 'IncidentRelatedAnalyticRuleIds' | 'IncidentSeverity' | 'IncidentStatus' | 'IncidentTactics' | 'IncidentTitle' | 'IoTDeviceId' | 'IoTDeviceModel' | 'IoTDeviceName' | 'IoTDeviceOperatingSystem' | 'IoTDeviceType' | 'IoTDeviceVendor' | 'MailMessageDeliveryAction' | 'MailMessageDeliveryLocation' | 'MailMessageP1Sender' | 'MailMessageP2Sender' | 'MailMessageRecipient' | 'MailMessageSenderIP' | 'MailMessageSubject' | 'MailboxDisplayName' | 'MailboxPrimaryAddress' | 'MailboxUPN' | 'MalwareCategory' | 'MalwareName' | 'ProcessCommandLine' | 'ProcessId' | 'RegistryKey' | 'RegistryValueData' | 'Url' | string: The property to evaluate in an automation rule property condition
+* **propertyValues**: string[]: Array of AutomationRulePropertyValuesConditionPropertyValuesItem
+
+## AutomationRuleTriggeringLogic
+### Properties
+* **conditions**: [AutomationRuleCondition](#automationrulecondition)[]: The conditions to evaluate to determine if the automation rule should be triggered on a given object
+* **expirationTimeUtc**: string: Determines when the automation rule should automatically expire and be disabled.
+* **isEnabled**: bool (Required): Determines whether the automation rule is enabled or disabled
+* **triggersOn**: 'Incidents' | string (Required)
+* **triggersWhen**: 'Created' | string (Required)
+
+## AwsCloudTrailDataConnectorDataTypes
+### Properties
+* **logs**: [AwsCloudTrailDataConnectorDataTypesLogs](#awscloudtraildataconnectordatatypeslogs): Logs data type.
+
+## AwsCloudTrailDataConnectorDataTypesLogs
+### Properties
+* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
+
+## AwsCloudTrailDataConnectorProperties
+### Properties
+* **awsRoleArn**: string: The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
+* **dataTypes**: [AwsCloudTrailDataConnectorDataTypes](#awscloudtraildataconnectordatatypes): The available data types for Amazon Web Services CloudTrail data connector.
+
+## BookmarkProperties
+### Properties
+* **created**: string: The time the bookmark was created
+* **createdBy**: [UserInfo](#userinfo): User information that made some action
+* **displayName**: string (Required): The display name of the bookmark
+* **eventTime**: string: The bookmark event time
+* **incidentInfo**: [IncidentInfo](#incidentinfo): Describes related incident information for the bookmark
+* **labels**: string[]: List of labels relevant to this bookmark
+* **notes**: string: The notes of the bookmark
+* **query**: string (Required): The query of the bookmark.
+* **queryEndTime**: string: The end time for the query
+* **queryResult**: string: The query result of the bookmark.
+* **queryStartTime**: string: The start time for the query
+* **updated**: string: The last time the bookmark was updated
+* **updatedBy**: [UserInfo](#userinfo): User information that made some action
+
+## ClientInfo
+### Properties
+* **email**: string: The email of the client.
+* **name**: string: The name of the client.
+* **objectId**: string: The object id of the client.
+* **userPrincipalName**: string: The user principal name of the client.
+
+## DataConnectorDataTypeCommon
+### Properties
+* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
+
+## EntityCommonPropertiesAdditionalData
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## EntityMapping
+### Properties
+* **entityType**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'IP' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityGroup' | 'SubmissionMail' | 'URL' | string: The V3 type of the mapped entity
+* **fieldMappings**: [FieldMapping](#fieldmapping)[]: array of field mappings for the given entity mapping
+
+## EventGroupingSettings
+### Properties
+* **aggregationKind**: 'AlertPerResult' | 'SingleAlert' | string: The event grouping aggregation kinds
+
+## FieldMapping
+### Properties
+* **columnName**: string: the column name to be mapped to the identifier
+* **identifier**: string: the V3 identifier of the entity
 
 ## FusionAlertRuleProperties
 ### Properties
@@ -207,6 +340,108 @@
 * **lastModifiedUtc**: string (ReadOnly): The last time that this alert has been modified.
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (ReadOnly): The severity of the alert
 * **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string[] (ReadOnly): The tactics of the alert rule
+
+## GroupingConfiguration
+### Properties
+* **enabled**: bool (Required): Grouping enabled
+* **groupByAlertDetails**: 'DisplayName' | 'Severity' | string[]: A list of alert details to group by (when matchingMethod is Selected)
+* **groupByCustomDetails**: string[]: A list of custom details keys to group by (when matchingMethod is Selected). Only keys defined in the current alert rule may be used.
+* **groupByEntities**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'IP' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityGroup' | 'SubmissionMail' | 'URL' | string[]: A list of entity types to group by (when matchingMethod is Selected). Only entities defined in the current alert rule may be used.
+* **lookbackDuration**: string (Required): Limit the group to alerts created within the lookback duration (in ISO 8601 duration format)
+* **matchingMethod**: 'AllEntities' | 'AnyAlert' | 'Selected' | string (Required): Grouping matching method. When method is Selected at least one of groupByEntities, groupByAlertDetails, groupByCustomDetails must be provided and not empty.
+* **reopenClosedIncident**: bool (Required): Re-open closed matching incidents
+
+## IncidentAdditionalData
+### Properties
+* **alertProductNames**: string[] (ReadOnly): List of product names of alerts in the incident
+* **alertsCount**: int (ReadOnly): The number of alerts in the incident
+* **bookmarksCount**: int (ReadOnly): The number of bookmarks in the incident
+* **commentsCount**: int (ReadOnly): The number of comments in the incident
+* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string[] (ReadOnly): The tactics associated with incident
+
+## IncidentCommentProperties
+### Properties
+* **author**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
+* **createdTimeUtc**: string (ReadOnly): The time the comment was created
+* **lastModifiedTimeUtc**: string (ReadOnly): The time the comment was updated
+* **message**: string (Required): The comment message
+
+## IncidentConfiguration
+### Properties
+* **createIncident**: bool (Required): Create incidents from alerts triggered by this analytics rule
+* **groupingConfiguration**: [GroupingConfiguration](#groupingconfiguration): Grouping configuration property bag.
+
+## IncidentInfo
+### Properties
+* **incidentId**: string: Incident Id
+* **relationName**: string: Relation Name
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string: The severity of the incident
+* **title**: string: The title of the incident
+
+## IncidentLabel
+### Properties
+* **labelName**: string (Required): The name of the label
+* **labelType**: 'AutoAssigned' | 'User' | string (ReadOnly): The type of the label
+
+## IncidentOwnerInfo
+### Properties
+* **assignedTo**: string: The name of the user the incident is assigned to.
+* **email**: string: The email of the user the incident is assigned to.
+* **objectId**: string: The object id of the user the incident is assigned to.
+* **userPrincipalName**: string: The user principal name of the user the incident is assigned to.
+
+## IncidentOwnerInfoAutoGenerated
+### Properties
+* **assignedTo**: string: The name of the user the incident is assigned to.
+* **email**: string: The email of the user the incident is assigned to.
+* **objectId**: string: The object id of the user the incident is assigned to.
+* **ownerType**: 'Group' | 'Unknown' | 'User' | string: The type of the owner the incident is assigned to.
+* **userPrincipalName**: string: The user principal name of the user the incident is assigned to.
+
+## IncidentProperties
+### Properties
+* **additionalData**: [IncidentAdditionalData](#incidentadditionaldata) (ReadOnly): Incident additional data property bag.
+* **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined' | string: The reason the incident was closed
+* **classificationComment**: string: Describes the reason the incident was closed
+* **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected' | string: The classification reason the incident was closed with
+* **createdTimeUtc**: string (ReadOnly): The time the incident was created
+* **description**: string: The description of the incident
+* **firstActivityTimeUtc**: string: The time of the first activity in the incident
+* **incidentNumber**: int (ReadOnly): A sequential number
+* **incidentUrl**: string (ReadOnly): The deep-link url to the incident in Azure portal
+* **labels**: [IncidentLabel](#incidentlabel)[]: List of labels relevant to this incident
+* **lastActivityTimeUtc**: string: The time of the last activity in the incident
+* **lastModifiedTimeUtc**: string (ReadOnly): The last time the incident was updated
+* **owner**: [IncidentOwnerInfo](#incidentownerinfo): Information on the user an incident is assigned to
+* **relatedAnalyticRuleIds**: string[] (ReadOnly): List of resource ids of Analytic rules related to the incident
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (Required): The severity of the incident
+* **status**: 'Active' | 'Closed' | 'New' | string (Required): The status of the incident
+* **title**: string (Required): The title of the incident
+
+## IncidentPropertiesAction
+### Properties
+* **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined' | string: The reason the incident was closed
+* **classificationComment**: string: Describes the reason the incident was closed
+* **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected' | string: The classification reason the incident was closed with
+* **labels**: [IncidentLabel](#incidentlabel)[]: List of labels to add to the incident
+* **owner**: [IncidentOwnerInfoAutoGenerated](#incidentownerinfoautogenerated): Information on the user an incident is assigned to
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string: The severity of the incident
+* **status**: 'Active' | 'Closed' | 'New' | string: The status of the incident
+
+## McasDataConnectorDataTypes
+### Properties
+* **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Common field for data type in data connectors.
+* **discoveryLogs**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Common field for data type in data connectors.
+
+## McasDataConnectorProperties
+### Properties
+* **dataTypes**: [McasDataConnectorDataTypes](#mcasdataconnectordatatypes): The available data types for MCAS (Microsoft Cloud App Security) data connector.
+* **tenantId**: string: The tenant id to connect to, and get the data from.
+
+## MdatpDataConnectorProperties
+### Properties
+* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
+* **tenantId**: string: The tenant id to connect to, and get the data from.
 
 ## MicrosoftSecurityIncidentCreationAlertRuleProperties
 ### Properties
@@ -219,6 +454,46 @@
 * **lastModifiedUtc**: string (ReadOnly): The last time that this alert has been modified.
 * **productFilter**: 'Azure Active Directory Identity Protection' | 'Azure Advanced Threat Protection' | 'Azure Security Center for IoT' | 'Azure Security Center' | 'Microsoft Cloud App Security' | string (Required): The alerts' productName on which the cases will be generated
 * **severitiesFilter**: 'High' | 'Informational' | 'Low' | 'Medium' | string[]: the alerts' severities on which the cases will be generated
+
+## OfficeDataConnectorDataTypes
+### Properties
+* **exchange**: [OfficeDataConnectorDataTypesExchange](#officedataconnectordatatypesexchange): Exchange data type connection.
+* **sharePoint**: [OfficeDataConnectorDataTypesSharePoint](#officedataconnectordatatypessharepoint): SharePoint data type connection.
+* **teams**: [OfficeDataConnectorDataTypesTeams](#officedataconnectordatatypesteams): Teams data type connection.
+
+## OfficeDataConnectorDataTypesExchange
+### Properties
+* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
+
+## OfficeDataConnectorDataTypesSharePoint
+### Properties
+* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
+
+## OfficeDataConnectorDataTypesTeams
+### Properties
+* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
+
+## OfficeDataConnectorProperties
+### Properties
+* **dataTypes**: [OfficeDataConnectorDataTypes](#officedataconnectordatatypes): The available data types for office data connector.
+* **tenantId**: string: The tenant id to connect to, and get the data from.
+
+## PlaybookActionProperties
+### Properties
+* **logicAppResourceId**: string (Required): The resource id of the playbook resource
+* **tenantId**: string: The tenant id of the playbook resource
+
+## RelationProperties
+### Properties
+* **relatedResourceId**: string (Required): The resource ID of the related resource
+* **relatedResourceKind**: string (ReadOnly): The resource kind of the related resource
+* **relatedResourceName**: string (ReadOnly): The name of the related resource
+* **relatedResourceType**: string (ReadOnly): The resource type of the related resource
+
+## ScheduledAlertRuleCommonPropertiesCustomDetails
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ScheduledAlertRuleProperties
 ### Properties
@@ -243,308 +518,37 @@
 * **triggerOperator**: 'Equal' | 'GreaterThan' | 'LessThan' | 'NotEqual': The operation against the threshold that triggers alert rule.
 * **triggerThreshold**: int: The threshold triggers this alert rule.
 
-## AlertDetailsOverride
+## SentinelOnboardingStateProperties
 ### Properties
-* **alertDescriptionFormat**: string: the format containing columns name(s) to override the alert description
-* **alertDisplayNameFormat**: string: the format containing columns name(s) to override the alert name
-* **alertSeverityColumnName**: string: the column name to take the alert severity from
-* **alertTacticsColumnName**: string: the column name to take the alert tactics from
+* **customerManagedKey**: bool: Flag that indicates the status of the CMK setting
 
-## ScheduledAlertRuleCommonPropertiesCustomDetails
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+
+## ThreatIntelligenceExternalReference
+### Properties
+* **description**: string (WriteOnly): External reference description
+* **externalId**: string (WriteOnly): External reference ID
+* **hashes**: [ThreatIntelligenceExternalReferenceHashes](#threatintelligenceexternalreferencehashes) (WriteOnly): External reference hashes
+* **sourceName**: string (WriteOnly): External reference source name
+* **url**: string (WriteOnly): External reference URL
+
+## ThreatIntelligenceExternalReferenceHashes
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## EntityMapping
+## ThreatIntelligenceGranularMarkingModel
 ### Properties
-* **entityType**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'IP' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityGroup' | 'SubmissionMail' | 'URL' | string: The V3 type of the mapped entity
-* **fieldMappings**: [FieldMapping](#fieldmapping)[]: array of field mappings for the given entity mapping
-
-## FieldMapping
-### Properties
-* **columnName**: string: the column name to be mapped to the identifier
-* **identifier**: string: the V3 identifier of the entity
-
-## EventGroupingSettings
-### Properties
-* **aggregationKind**: 'AlertPerResult' | 'SingleAlert' | string: The event grouping aggregation kinds
-
-## IncidentConfiguration
-### Properties
-* **createIncident**: bool (Required): Create incidents from alerts triggered by this analytics rule
-* **groupingConfiguration**: [GroupingConfiguration](#groupingconfiguration): Grouping configuration property bag.
-
-## GroupingConfiguration
-### Properties
-* **enabled**: bool (Required): Grouping enabled
-* **groupByAlertDetails**: 'DisplayName' | 'Severity' | string[]: A list of alert details to group by (when matchingMethod is Selected)
-* **groupByCustomDetails**: string[]: A list of custom details keys to group by (when matchingMethod is Selected). Only keys defined in the current alert rule may be used.
-* **groupByEntities**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'IP' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityGroup' | 'SubmissionMail' | 'URL' | string[]: A list of entity types to group by (when matchingMethod is Selected). Only entities defined in the current alert rule may be used.
-* **lookbackDuration**: string (Required): Limit the group to alerts created within the lookback duration (in ISO 8601 duration format)
-* **matchingMethod**: 'AllEntities' | 'AnyAlert' | 'Selected' | string (Required): Grouping matching method. When method is Selected at least one of groupByEntities, groupByAlertDetails, groupByCustomDetails must be provided and not empty.
-* **reopenClosedIncident**: bool (Required): Re-open closed matching incidents
-
-## ActionRequestProperties
-### Properties
-* **logicAppResourceId**: string (Required): Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
-* **triggerUri**: string (Required, WriteOnly): Logic App Callback URL for this specific workflow.
-* **workflowId**: string (ReadOnly): The name of the logic app's workflow.
-
-## AutomationRuleProperties
-### Properties
-* **actions**: [AutomationRuleAction](#automationruleaction)[] (Required): The actions to execute when the automation rule is triggered
-* **createdBy**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
-* **createdTimeUtc**: string (ReadOnly): The time the automation rule was created
-* **displayName**: string (Required): The display name of the automation rule
-* **lastModifiedBy**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
-* **lastModifiedTimeUtc**: string (ReadOnly): The last time the automation rule was updated
-* **order**: int (Required): The order of execution of the automation rule
-* **triggeringLogic**: [AutomationRuleTriggeringLogic](#automationruletriggeringlogic) (Required): Describes automation rule triggering logic
-
-## AutomationRuleAction
-* **Discriminator**: actionType
-
-### Base Properties
-* **order**: int (Required)
-### AutomationRuleModifyPropertiesAction
-#### Properties
-* **actionConfiguration**: [IncidentPropertiesAction](#incidentpropertiesaction)
-* **actionType**: 'ModifyProperties' (Required): The type of the automation rule action
-
-### AutomationRuleRunPlaybookAction
-#### Properties
-* **actionConfiguration**: [PlaybookActionProperties](#playbookactionproperties)
-* **actionType**: 'RunPlaybook' (Required): The type of the automation rule action
-
-
-## IncidentPropertiesAction
-### Properties
-* **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined' | string: The reason the incident was closed
-* **classificationComment**: string: Describes the reason the incident was closed
-* **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected' | string: The classification reason the incident was closed with
-* **labels**: [IncidentLabel](#incidentlabel)[]: List of labels to add to the incident
-* **owner**: [IncidentOwnerInfoAutoGenerated](#incidentownerinfoautogenerated): Information on the user an incident is assigned to
-* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string: The severity of the incident
-* **status**: 'Active' | 'Closed' | 'New' | string: The status of the incident
-
-## IncidentLabel
-### Properties
-* **labelName**: string (Required): The name of the label
-* **labelType**: 'AutoAssigned' | 'User' | string (ReadOnly): The type of the label
-
-## IncidentOwnerInfoAutoGenerated
-### Properties
-* **assignedTo**: string: The name of the user the incident is assigned to.
-* **email**: string: The email of the user the incident is assigned to.
-* **objectId**: string: The object id of the user the incident is assigned to.
-* **ownerType**: 'Group' | 'Unknown' | 'User' | string: The type of the owner the incident is assigned to.
-* **userPrincipalName**: string: The user principal name of the user the incident is assigned to.
-
-## PlaybookActionProperties
-### Properties
-* **logicAppResourceId**: string (Required): The resource id of the playbook resource
-* **tenantId**: string: The tenant id of the playbook resource
-
-## ClientInfo
-### Properties
-* **email**: string: The email of the client.
-* **name**: string: The name of the client.
-* **objectId**: string: The object id of the client.
-* **userPrincipalName**: string: The user principal name of the client.
-
-## AutomationRuleTriggeringLogic
-### Properties
-* **conditions**: [AutomationRuleCondition](#automationrulecondition)[]: The conditions to evaluate to determine if the automation rule should be triggered on a given object
-* **expirationTimeUtc**: string: Determines when the automation rule should automatically expire and be disabled.
-* **isEnabled**: bool (Required): Determines whether the automation rule is enabled or disabled
-* **triggersOn**: 'Incidents' | string (Required)
-* **triggersWhen**: 'Created' | string (Required)
-
-## AutomationRuleCondition
-* **Discriminator**: conditionType
-
-### Base Properties
-### PropertyConditionProperties
-#### Properties
-* **conditionProperties**: [AutomationRulePropertyValuesCondition](#automationrulepropertyvaluescondition)
-* **conditionType**: 'Property' (Required)
-
-
-## AutomationRulePropertyValuesCondition
-### Properties
-* **operator**: 'Contains' | 'EndsWith' | 'Equals' | 'NotContains' | 'NotEndsWith' | 'NotEquals' | 'NotStartsWith' | 'StartsWith' | string
-* **propertyName**: 'AccountAadTenantId' | 'AccountAadUserId' | 'AccountNTDomain' | 'AccountName' | 'AccountObjectGuid' | 'AccountPUID' | 'AccountSid' | 'AccountUPNSuffix' | 'AlertProductNames' | 'AzureResourceResourceId' | 'AzureResourceSubscriptionId' | 'CloudApplicationAppId' | 'CloudApplicationAppName' | 'DNSDomainName' | 'FileDirectory' | 'FileHashValue' | 'FileName' | 'HostAzureID' | 'HostNTDomain' | 'HostName' | 'HostNetBiosName' | 'HostOSVersion' | 'IPAddress' | 'IncidentDescription' | 'IncidentLabel' | 'IncidentProviderName' | 'IncidentRelatedAnalyticRuleIds' | 'IncidentSeverity' | 'IncidentStatus' | 'IncidentTactics' | 'IncidentTitle' | 'IoTDeviceId' | 'IoTDeviceModel' | 'IoTDeviceName' | 'IoTDeviceOperatingSystem' | 'IoTDeviceType' | 'IoTDeviceVendor' | 'MailMessageDeliveryAction' | 'MailMessageDeliveryLocation' | 'MailMessageP1Sender' | 'MailMessageP2Sender' | 'MailMessageRecipient' | 'MailMessageSenderIP' | 'MailMessageSubject' | 'MailboxDisplayName' | 'MailboxPrimaryAddress' | 'MailboxUPN' | 'MalwareCategory' | 'MalwareName' | 'ProcessCommandLine' | 'ProcessId' | 'RegistryKey' | 'RegistryValueData' | 'Url' | string: The property to evaluate in an automation rule property condition
-* **propertyValues**: string[]: Array of AutomationRulePropertyValuesConditionPropertyValuesItem
-
-## BookmarkProperties
-### Properties
-* **created**: string: The time the bookmark was created
-* **createdBy**: [UserInfo](#userinfo): User information that made some action
-* **displayName**: string (Required): The display name of the bookmark
-* **eventTime**: string: The bookmark event time
-* **incidentInfo**: [IncidentInfo](#incidentinfo): Describes related incident information for the bookmark
-* **labels**: string[]: List of labels relevant to this bookmark
-* **notes**: string: The notes of the bookmark
-* **query**: string (Required): The query of the bookmark.
-* **queryEndTime**: string: The end time for the query
-* **queryResult**: string: The query result of the bookmark.
-* **queryStartTime**: string: The start time for the query
-* **updated**: string: The last time the bookmark was updated
-* **updatedBy**: [UserInfo](#userinfo): User information that made some action
-
-## UserInfo
-### Properties
-* **email**: string (ReadOnly): The email of the user.
-* **name**: string (ReadOnly): The name of the user.
-* **objectId**: string: The object id of the user.
-
-## IncidentInfo
-### Properties
-* **incidentId**: string: Incident Id
-* **relationName**: string: Relation Name
-* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string: The severity of the incident
-* **title**: string: The title of the incident
-
-## AwsCloudTrailDataConnectorProperties
-### Properties
-* **awsRoleArn**: string: The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
-* **dataTypes**: [AwsCloudTrailDataConnectorDataTypes](#awscloudtraildataconnectordatatypes): The available data types for Amazon Web Services CloudTrail data connector.
-
-## AwsCloudTrailDataConnectorDataTypes
-### Properties
-* **logs**: [AwsCloudTrailDataConnectorDataTypesLogs](#awscloudtraildataconnectordatatypeslogs): Logs data type.
-
-## AwsCloudTrailDataConnectorDataTypesLogs
-### Properties
-* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
-
-## AADDataConnectorProperties
-### Properties
-* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
-
-## AlertsDataTypeOfDataConnector
-### Properties
-* **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Common field for data type in data connectors.
-
-## DataConnectorDataTypeCommon
-### Properties
-* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
-
-## AatpDataConnectorProperties
-### Properties
-* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
-
-## ASCDataConnectorProperties
-### Properties
-* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
-* **subscriptionId**: string: The subscription id to connect to, and get the data from.
-
-## McasDataConnectorProperties
-### Properties
-* **dataTypes**: [McasDataConnectorDataTypes](#mcasdataconnectordatatypes): The available data types for MCAS (Microsoft Cloud App Security) data connector.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
-
-## McasDataConnectorDataTypes
-### Properties
-* **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Common field for data type in data connectors.
-* **discoveryLogs**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Common field for data type in data connectors.
-
-## MdatpDataConnectorProperties
-### Properties
-* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
-
-## OfficeDataConnectorProperties
-### Properties
-* **dataTypes**: [OfficeDataConnectorDataTypes](#officedataconnectordatatypes): The available data types for office data connector.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
-
-## OfficeDataConnectorDataTypes
-### Properties
-* **exchange**: [OfficeDataConnectorDataTypesExchange](#officedataconnectordatatypesexchange): Exchange data type connection.
-* **sharePoint**: [OfficeDataConnectorDataTypesSharePoint](#officedataconnectordatatypessharepoint): SharePoint data type connection.
-* **teams**: [OfficeDataConnectorDataTypesTeams](#officedataconnectordatatypesteams): Teams data type connection.
-
-## OfficeDataConnectorDataTypesExchange
-### Properties
-* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
-
-## OfficeDataConnectorDataTypesSharePoint
-### Properties
-* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
-
-## OfficeDataConnectorDataTypesTeams
-### Properties
-* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
-
-## TIDataConnectorProperties
-### Properties
-* **dataTypes**: [TIDataConnectorDataTypes](#tidataconnectordatatypes): The available data types for TI (Threat Intelligence) data connector.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
-* **tipLookbackPeriod**: string: The lookback period for the feed to be imported.
-
-## TIDataConnectorDataTypes
-### Properties
-* **indicators**: [TIDataConnectorDataTypesIndicators](#tidataconnectordatatypesindicators): Data type for indicators connection.
-
-## TIDataConnectorDataTypesIndicators
-### Properties
-* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
-
-## IncidentProperties
-### Properties
-* **additionalData**: [IncidentAdditionalData](#incidentadditionaldata) (ReadOnly): Incident additional data property bag.
-* **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined' | string: The reason the incident was closed
-* **classificationComment**: string: Describes the reason the incident was closed
-* **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected' | string: The classification reason the incident was closed with
-* **createdTimeUtc**: string (ReadOnly): The time the incident was created
-* **description**: string: The description of the incident
-* **firstActivityTimeUtc**: string: The time of the first activity in the incident
-* **incidentNumber**: int (ReadOnly): A sequential number
-* **incidentUrl**: string (ReadOnly): The deep-link url to the incident in Azure portal
-* **labels**: [IncidentLabel](#incidentlabel)[]: List of labels relevant to this incident
-* **lastActivityTimeUtc**: string: The time of the last activity in the incident
-* **lastModifiedTimeUtc**: string (ReadOnly): The last time the incident was updated
-* **owner**: [IncidentOwnerInfo](#incidentownerinfo): Information on the user an incident is assigned to
-* **relatedAnalyticRuleIds**: string[] (ReadOnly): List of resource ids of Analytic rules related to the incident
-* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (Required): The severity of the incident
-* **status**: 'Active' | 'Closed' | 'New' | string (Required): The status of the incident
-* **title**: string (Required): The title of the incident
-
-## IncidentAdditionalData
-### Properties
-* **alertProductNames**: string[] (ReadOnly): List of product names of alerts in the incident
-* **alertsCount**: int (ReadOnly): The number of alerts in the incident
-* **bookmarksCount**: int (ReadOnly): The number of bookmarks in the incident
-* **commentsCount**: int (ReadOnly): The number of comments in the incident
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string[] (ReadOnly): The tactics associated with incident
-
-## IncidentOwnerInfo
-### Properties
-* **assignedTo**: string: The name of the user the incident is assigned to.
-* **email**: string: The email of the user the incident is assigned to.
-* **objectId**: string: The object id of the user the incident is assigned to.
-* **userPrincipalName**: string: The user principal name of the user the incident is assigned to.
-
-## IncidentCommentProperties
-### Properties
-* **author**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
-* **createdTimeUtc**: string (ReadOnly): The time the comment was created
-* **lastModifiedTimeUtc**: string (ReadOnly): The time the comment was updated
-* **message**: string (Required): The comment message
-
-## RelationProperties
-### Properties
-* **relatedResourceId**: string (Required): The resource ID of the related resource
-* **relatedResourceKind**: string (ReadOnly): The resource kind of the related resource
-* **relatedResourceName**: string (ReadOnly): The name of the related resource
-* **relatedResourceType**: string (ReadOnly): The resource type of the related resource
-
-## SentinelOnboardingStateProperties
-### Properties
-* **customerManagedKey**: bool: Flag that indicates the status of the CMK setting
+* **language**: string (WriteOnly): Language granular marking model
+* **markingRef**: int (WriteOnly): marking reference granular marking model
+* **selectors**: string[] (WriteOnly): granular marking model selectors
 
 ## ThreatIntelligenceIndicatorProperties
 ### Properties
@@ -579,34 +583,10 @@
 * **validFrom**: string (WriteOnly): Valid from
 * **validUntil**: string (WriteOnly): Valid until
 
-## EntityCommonPropertiesAdditionalData
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
 ## ThreatIntelligenceIndicatorPropertiesExtensions
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
-
-## ThreatIntelligenceExternalReference
-### Properties
-* **description**: string (WriteOnly): External reference description
-* **externalId**: string (WriteOnly): External reference ID
-* **hashes**: [ThreatIntelligenceExternalReferenceHashes](#threatintelligenceexternalreferencehashes) (WriteOnly): External reference hashes
-* **sourceName**: string (WriteOnly): External reference source name
-* **url**: string (WriteOnly): External reference URL
-
-## ThreatIntelligenceExternalReferenceHashes
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ThreatIntelligenceGranularMarkingModel
-### Properties
-* **language**: string (WriteOnly): Language granular marking model
-* **markingRef**: int (WriteOnly): marking reference granular marking model
-* **selectors**: string[] (WriteOnly): granular marking model selectors
 
 ## ThreatIntelligenceKillChainPhase
 ### Properties
@@ -622,6 +602,39 @@
 ### Properties
 * **value**: string (WriteOnly): Value of parsed pattern
 * **valueType**: string (WriteOnly): Type of the value
+
+## TIDataConnectorDataTypes
+### Properties
+* **indicators**: [TIDataConnectorDataTypesIndicators](#tidataconnectordatatypesindicators): Data type for indicators connection.
+
+## TIDataConnectorDataTypesIndicators
+### Properties
+* **state**: 'Disabled' | 'Enabled' | string: Describe whether this data type connection is enabled or not.
+
+## TIDataConnectorProperties
+### Properties
+* **dataTypes**: [TIDataConnectorDataTypes](#tidataconnectordatatypes): The available data types for TI (Threat Intelligence) data connector.
+* **tenantId**: string: The tenant id to connect to, and get the data from.
+* **tipLookbackPeriod**: string: The lookback period for the feed to be imported.
+
+## UserInfo
+### Properties
+* **email**: string (ReadOnly): The email of the user.
+* **name**: string (ReadOnly): The name of the user.
+* **objectId**: string: The object id of the user.
+
+## WatchlistItemProperties
+### Properties
+* **created**: string: The time the watchlist item was created
+* **createdBy**: [UserInfo](#userinfo): User information that made some action
+* **entityMapping**: any: Any object
+* **isDeleted**: bool: A flag that indicates if the watchlist item is deleted or not
+* **itemsKeyValue**: any (Required): Any object
+* **tenantId**: string: The tenantId to which the watchlist item belongs to
+* **updated**: string: The last time the watchlist item was updated
+* **updatedBy**: [UserInfo](#userinfo): User information that made some action
+* **watchlistItemId**: string: The id (a Guid) of the watchlist item
+* **watchlistItemType**: string: The type of the watchlist item
 
 ## WatchlistProperties
 ### Properties
@@ -647,17 +660,4 @@ value1,value2
 * **watchlistAlias**: string: The alias of the watchlist
 * **watchlistId**: string: The id (a Guid) of the watchlist
 * **watchlistType**: string: The type of the watchlist
-
-## WatchlistItemProperties
-### Properties
-* **created**: string: The time the watchlist item was created
-* **createdBy**: [UserInfo](#userinfo): User information that made some action
-* **entityMapping**: any: Any object
-* **isDeleted**: bool: A flag that indicates if the watchlist item is deleted or not
-* **itemsKeyValue**: any (Required): Any object
-* **tenantId**: string: The tenantId to which the watchlist item belongs to
-* **updated**: string: The last time the watchlist item was updated
-* **updatedBy**: [UserInfo](#userinfo): User information that made some action
-* **watchlistItemId**: string: The id (a Guid) of the watchlist item
-* **watchlistItemType**: string: The type of the watchlist item
 

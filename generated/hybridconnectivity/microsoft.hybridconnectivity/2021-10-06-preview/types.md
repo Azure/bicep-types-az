@@ -15,11 +15,23 @@
 * **ApiVersion**: 2021-10-06-preview
 * **Output**: [EndpointAccessResource](#endpointaccessresource)
 
+## EndpointAccessResource
+### Properties
+* **relay**: [RelayNamespaceAccessProperties](#relaynamespaceaccessproperties) (ReadOnly): Azure relay hybrid connection access properties
+
 ## EndpointProperties
 ### Properties
 * **provisioningState**: string (ReadOnly)
 * **resourceId**: string: The resource Id of the connectivity endpoint (optional).
 * **type**: 'custom' | 'default' | string (Required): The type of endpoint.
+
+## RelayNamespaceAccessProperties
+### Properties
+* **accessKey**: string (ReadOnly): Access key for hybrid connection.
+* **expiresOn**: int (ReadOnly): The expiration of access key in unix time.
+* **hybridConnectionName**: string (ReadOnly): Azure Relay hybrid connection name for the resource.
+* **namespaceName**: string (ReadOnly): The namespace name.
+* **namespaceNameSuffix**: string (ReadOnly): The suffix domain name of relay namespace.
 
 ## SystemData
 ### Properties
@@ -29,16 +41,4 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## EndpointAccessResource
-### Properties
-* **relay**: [RelayNamespaceAccessProperties](#relaynamespaceaccessproperties) (ReadOnly): Azure relay hybrid connection access properties
-
-## RelayNamespaceAccessProperties
-### Properties
-* **accessKey**: string (ReadOnly): Access key for hybrid connection.
-* **expiresOn**: int (ReadOnly): The expiration of access key in unix time.
-* **hybridConnectionName**: string (ReadOnly): Azure Relay hybrid connection name for the resource.
-* **namespaceName**: string (ReadOnly): The namespace name.
-* **namespaceNameSuffix**: string (ReadOnly): The suffix domain name of relay namespace.
 

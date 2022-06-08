@@ -57,6 +57,28 @@
 * **startDateTime**: string (WriteOnly): The DateTime when the review instance is scheduled to be start.
 * **status**: 'Applied' | 'Applying' | 'AutoReviewed' | 'AutoReviewing' | 'Completed' | 'Completing' | 'InProgress' | 'Initializing' | 'NotStarted' | 'Scheduled' | 'Starting' | string (ReadOnly, WriteOnly): This read-only field specifies the status of an access review instance.
 
+## AccessReviewRecurrencePattern
+### Properties
+* **interval**: int (WriteOnly): The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
+* **type**: 'absoluteMonthly' | 'weekly' | string (WriteOnly): The recurrence type : weekly, monthly, etc.
+
+## AccessReviewRecurrenceRange
+### Properties
+* **endDate**: string (WriteOnly): The DateTime when the review is scheduled to end. Required if type is endDate
+* **numberOfOccurrences**: int (WriteOnly): The number of times to repeat the access review. Required and must be positive if type is numbered.
+* **startDate**: string (WriteOnly): The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
+* **type**: 'endDate' | 'noEnd' | 'numbered' | string (WriteOnly): The recurrence range type. The possible values are: endDate, noEnd, numbered.
+
+## AccessReviewRecurrenceSettings
+### Properties
+* **pattern**: [AccessReviewRecurrencePattern](#accessreviewrecurrencepattern) (WriteOnly): Recurrence Pattern of an Access Review Schedule Definition.
+* **range**: [AccessReviewRecurrenceRange](#accessreviewrecurrencerange) (WriteOnly): Recurrence Range of an Access Review Schedule Definition.
+
+## AccessReviewReviewer
+### Properties
+* **principalId**: string (WriteOnly): The id of the reviewer(user/servicePrincipal)
+* **principalType**: 'servicePrincipal' | 'user' | string (ReadOnly, WriteOnly): The identity type : user/servicePrincipal
+
 ## AccessReviewScheduleDefinitionProperties
 ### Properties
 * **createdBy**: [AccessReviewActorIdentity](#accessreviewactoridentity) (ReadOnly): Details of the actor identity
@@ -70,17 +92,6 @@
 * **settings**: [AccessReviewScheduleSettings](#accessreviewschedulesettings) (ReadOnly): Settings of an Access Review.
 * **status**: 'Applied' | 'Applying' | 'AutoReviewed' | 'AutoReviewing' | 'Completed' | 'Completing' | 'InProgress' | 'Initializing' | 'NotStarted' | 'Scheduled' | 'Starting' | string (ReadOnly): This read-only field specifies the status of an accessReview.
 
-## AccessReviewReviewer
-### Properties
-* **principalId**: string (WriteOnly): The id of the reviewer(user/servicePrincipal)
-* **principalType**: 'servicePrincipal' | 'user' | string (ReadOnly, WriteOnly): The identity type : user/servicePrincipal
-
-## AccessReviewScope
-### Properties
-* **principalType**: 'servicePrincipal' | 'user' | string (ReadOnly, WriteOnly): The identity type user/servicePrincipal to review
-* **resourceId**: string (ReadOnly, WriteOnly): ResourceId in which this review is getting created
-* **roleDefinitionId**: string (ReadOnly, WriteOnly): This is used to indicate the role being reviewed
-
 ## AccessReviewScheduleSettings
 ### Properties
 * **autoApplyDecisionsEnabled**: bool (WriteOnly): Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.
@@ -93,20 +104,9 @@
 * **recurrence**: [AccessReviewRecurrenceSettings](#accessreviewrecurrencesettings) (WriteOnly): Recurrence Settings of an Access Review Schedule Definition.
 * **reminderNotificationsEnabled**: bool (WriteOnly): Flag to indicate whether sending reminder emails to reviewers are enabled.
 
-## AccessReviewRecurrenceSettings
+## AccessReviewScope
 ### Properties
-* **pattern**: [AccessReviewRecurrencePattern](#accessreviewrecurrencepattern) (WriteOnly): Recurrence Pattern of an Access Review Schedule Definition.
-* **range**: [AccessReviewRecurrenceRange](#accessreviewrecurrencerange) (WriteOnly): Recurrence Range of an Access Review Schedule Definition.
-
-## AccessReviewRecurrencePattern
-### Properties
-* **interval**: int (WriteOnly): The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
-* **type**: 'absoluteMonthly' | 'weekly' | string (WriteOnly): The recurrence type : weekly, monthly, etc.
-
-## AccessReviewRecurrenceRange
-### Properties
-* **endDate**: string (WriteOnly): The DateTime when the review is scheduled to end. Required if type is endDate
-* **numberOfOccurrences**: int (WriteOnly): The number of times to repeat the access review. Required and must be positive if type is numbered.
-* **startDate**: string (WriteOnly): The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
-* **type**: 'endDate' | 'noEnd' | 'numbered' | string (WriteOnly): The recurrence range type. The possible values are: endDate, noEnd, numbered.
+* **principalType**: 'servicePrincipal' | 'user' | string (ReadOnly, WriteOnly): The identity type user/servicePrincipal to review
+* **resourceId**: string (ReadOnly, WriteOnly): ResourceId in which this review is getting created
+* **roleDefinitionId**: string (ReadOnly, WriteOnly): This is used to indicate the role being reviewed
 

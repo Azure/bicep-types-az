@@ -34,6 +34,16 @@
 * **ApiVersion**: 2020-01-01
 * **Output**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)
 
+## CertificateProperties
+### Properties
+* **certificate**: any (ReadOnly): base-64 representation of X509 certificate .cer file or just .pem file content.
+* **created**: string (ReadOnly): The certificate's creation date and time.
+* **expiry**: string (ReadOnly): The certificate's expiration date and time.
+* **isVerified**: bool (ReadOnly): Determines whether certificate has been verified.
+* **subject**: string (ReadOnly): The certificate's subject name.
+* **thumbprint**: string (ReadOnly): The certificate's thumbprint.
+* **updated**: string (ReadOnly): The certificate's last update date and time.
+
 ## IotDpsPropertiesDescription
 ### Properties
 * **allocationPolicy**: 'GeoLatency' | 'Hashed' | 'Static' | string: Allocation policy to be used by this provisioning service.
@@ -46,12 +56,11 @@
 * **serviceOperationsHostName**: string (ReadOnly): Service endpoint for provisioning service.
 * **state**: 'Activating' | 'ActivationFailed' | 'Active' | 'Deleted' | 'Deleting' | 'DeletionFailed' | 'FailingOver' | 'FailoverFailed' | 'Resuming' | 'Suspended' | 'Suspending' | 'Transitioning' | string: Current state of the provisioning service.
 
-## SharedAccessSignatureAuthorizationRuleAccessRightsDescription
+## IotDpsSkuInfo
 ### Properties
-* **keyName**: string (Required): Name of the key.
-* **primaryKey**: string: Primary SAS key value.
-* **rights**: 'DeviceConnect' | 'EnrollmentRead' | 'EnrollmentWrite' | 'RegistrationStatusRead' | 'RegistrationStatusWrite' | 'ServiceConfig' | string (Required): Rights that this key has.
-* **secondaryKey**: string: Secondary SAS key value.
+* **capacity**: int: The number of units to provision
+* **name**: 'S1' | string: Sku name.
+* **tier**: string (ReadOnly): Pricing tier name of the provisioning service.
 
 ## IotHubDefinitionDescription
 ### Properties
@@ -68,31 +77,10 @@
 * **ipMask**: string (Required): A string that contains the IP address range in CIDR notation for the rule.
 * **target**: 'all' | 'deviceApi' | 'serviceApi': Target for requests captured by this rule.
 
-## IotDpsSkuInfo
-### Properties
-* **capacity**: int: The number of units to provision
-* **name**: 'S1' | string: Sku name.
-* **tier**: string (ReadOnly): Pricing tier name of the provisioning service.
-
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## CertificateProperties
-### Properties
-* **certificate**: any (ReadOnly): base-64 representation of X509 certificate .cer file or just .pem file content.
-* **created**: string (ReadOnly): The certificate's creation date and time.
-* **expiry**: string (ReadOnly): The certificate's expiration date and time.
-* **isVerified**: bool (ReadOnly): Determines whether certificate has been verified.
-* **subject**: string (ReadOnly): The certificate's subject name.
-* **thumbprint**: string (ReadOnly): The certificate's thumbprint.
-* **updated**: string (ReadOnly): The certificate's last update date and time.
-
-## SharedAccessSignatureAuthorizationRuleListResult
-### Properties
-* **nextLink**: string (ReadOnly): The next link.
-* **value**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[] (ReadOnly): The list of shared access policies.
 
 ## SharedAccessSignatureAuthorizationRuleAccessRightsDescription
 ### Properties
@@ -100,4 +88,16 @@
 * **primaryKey**: string: Primary SAS key value.
 * **rights**: 'DeviceConnect' | 'EnrollmentRead' | 'EnrollmentWrite' | 'RegistrationStatusRead' | 'RegistrationStatusWrite' | 'ServiceConfig' | string (Required): Rights that this key has.
 * **secondaryKey**: string: Secondary SAS key value.
+
+## SharedAccessSignatureAuthorizationRuleAccessRightsDescription
+### Properties
+* **keyName**: string (Required): Name of the key.
+* **primaryKey**: string: Primary SAS key value.
+* **rights**: 'DeviceConnect' | 'EnrollmentRead' | 'EnrollmentWrite' | 'RegistrationStatusRead' | 'RegistrationStatusWrite' | 'ServiceConfig' | string (Required): Rights that this key has.
+* **secondaryKey**: string: Secondary SAS key value.
+
+## SharedAccessSignatureAuthorizationRuleListResult
+### Properties
+* **nextLink**: string (ReadOnly): The next link.
+* **value**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[] (ReadOnly): The list of shared access policies.
 

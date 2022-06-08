@@ -14,13 +14,13 @@
 * **ApiVersion**: 2018-03-01
 * **Output**: [CanonicalSupportPlanInfoDefinition](#canonicalsupportplaninfodefinition)[]
 
-## CanonicalSupportPlanProperties
-### Properties
-* **provisioningState**: 'Cancelled' | 'Cancelling' | 'Downgrading' | 'Failed' | 'Purchasing' | 'Succeeded' | 'Upgrading' | string (ReadOnly): The provisioning state of the resource.
-
 ## CanonicalSupportPlanInfoDefinition
 ### Properties
 * **enabled**: bool (ReadOnly): Flag to indicate if this support plan type is currently enabled for the subscription.
 * **oneTimeCharge**: 'no' | 'onEnabled' | 'onReenabled' | string (ReadOnly): The one time charge status for the subscription.
 * **supportPlanType**: 'advanced' | 'essential' | 'standard' | string (ReadOnly): Support plan type.
+
+## CanonicalSupportPlanProperties
+### Properties
+* **provisioningState**: 'Cancelled' | 'Cancelling' | 'Downgrading' | 'Failed' | 'Purchasing' | 'Succeeded' | 'Upgrading' | string (ReadOnly): The provisioning state of the resource.
 

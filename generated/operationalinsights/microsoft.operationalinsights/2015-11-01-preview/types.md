@@ -33,6 +33,24 @@
 * **properties**: [LinkedServiceProperties](#linkedserviceproperties) (Required): Linked service properties.
 * **type**: 'Microsoft.OperationalInsights/workspaces/linkedServices' (ReadOnly, DeployTimeConstant): The resource type
 
+## LinkedServiceProperties
+### Properties
+* **resourceId**: string (Required): The resource id of the resource that will be linked to the workspace.
+
+## ProxyResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Sku
+### Properties
+* **name**: 'CapacityReservation' | 'Free' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' | string (Required): The name of the SKU.
+
 ## WorkspaceProperties
 ### Properties
 * **customerId**: string (ReadOnly): This is a read-only property. Represents the ID associated with the workspace.
@@ -41,22 +59,4 @@
 * **retentionInDays**: int: The workspace data retention in days. -1 means Unlimited retention for the Unlimited Sku. 730 days is the maximum allowed for all other Skus.
 * **sku**: [Sku](#sku): The SKU (tier) of a workspace.
 * **source**: string (ReadOnly): This is a read-only legacy property. It is always set to 'Azure' by the service. Kept here for backward compatibility.
-
-## Sku
-### Properties
-* **name**: 'CapacityReservation' | 'Free' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' | string (Required): The name of the SKU.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ProxyResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## LinkedServiceProperties
-### Properties
-* **resourceId**: string (Required): The resource id of the resource that will be linked to the workspace.
 

@@ -9,6 +9,12 @@
 * **properties**: [AlertRuleProperties](#alertruleproperties): The alert rule properties.
 * **type**: 'microsoft.alertsManagement/smartDetectorAlertRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## ActionGroupsInformation
+### Properties
+* **customEmailSubject**: string: An optional custom email subject to use in email notifications.
+* **customWebhookPayload**: string: An optional custom web-hook payload to use in web-hook notifications.
+* **groupIds**: string[] (Required): The Action Group resource IDs.
+
 ## AlertRuleProperties
 ### Properties
 * **actionGroups**: [ActionGroupsInformation](#actiongroupsinformation) (Required): The Action Groups information, used by the alert rule.
@@ -19,12 +25,6 @@
 * **severity**: 'Sev0' | 'Sev1' | 'Sev2' | 'Sev3' | 'Sev4' | string (Required)
 * **state**: 'Disabled' | 'Enabled' | string (Required): The alert rule state.
 * **throttling**: [ThrottlingInformation](#throttlinginformation): Optional throttling information for the alert rule.
-
-## ActionGroupsInformation
-### Properties
-* **customEmailSubject**: string: An optional custom email subject to use in email notifications.
-* **customWebhookPayload**: string: An optional custom web-hook payload to use in web-hook notifications.
-* **groupIds**: string[] (Required): The Action Group resource IDs.
 
 ## Detector
 ### Properties

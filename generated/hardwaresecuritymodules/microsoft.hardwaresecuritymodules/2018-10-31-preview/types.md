@@ -13,6 +13,10 @@
 * **type**: 'Microsoft.HardwareSecurityModules/dedicatedHSMs' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The Dedicated Hsm zones.
 
+## ApiEntityReference
+### Properties
+* **id**: string: The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
+
 ## DedicatedHsmProperties
 ### Properties
 * **networkProfile**: [NetworkProfile](#networkprofile)
@@ -20,26 +24,22 @@
 * **stampId**: string: This field will be used when RP does not support Availability zones.
 * **statusMessage**: string (ReadOnly): Resource Status Message.
 
-## NetworkProfile
-### Properties
-* **networkInterfaces**: [NetworkInterface](#networkinterface)[]: Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
-* **subnet**: [ApiEntityReference](#apientityreference): The API entity reference.
-
 ## NetworkInterface
 ### Properties
 * **id**: string (ReadOnly): The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
 * **privateIpAddress**: string: Private Ip address of the interface
 
-## ApiEntityReference
+## NetworkProfile
 ### Properties
-* **id**: string: The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
-
-## Sku
-### Properties
-* **name**: 'SafeNet Luna Network HSM A790' | 'payShield10K_LMK1_CPS250' | 'payShield10K_LMK1_CPS2500' | 'payShield10K_LMK1_CPS60' | 'payShield10K_LMK2_CPS250' | 'payShield10K_LMK2_CPS2500' | 'payShield10K_LMK2_CPS60' | string: SKU of the dedicated HSM
+* **networkInterfaces**: [NetworkInterface](#networkinterface)[]: Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
+* **subnet**: [ApiEntityReference](#apientityreference): The API entity reference.
 
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Sku
+### Properties
+* **name**: 'SafeNet Luna Network HSM A790' | 'payShield10K_LMK1_CPS250' | 'payShield10K_LMK1_CPS2500' | 'payShield10K_LMK1_CPS60' | 'payShield10K_LMK2_CPS250' | 'payShield10K_LMK2_CPS2500' | 'payShield10K_LMK2_CPS60' | string: SKU of the dedicated HSM
 

@@ -24,23 +24,6 @@
 * **tags**: [TemplateSpecVersionTags](#templatespecversiontags): Resource tags.
 * **type**: 'Microsoft.Resources/templateSpecs/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## TemplateSpecProperties
-### Properties
-* **description**: string: Template Spec description.
-* **displayName**: string: Template Spec display name.
-* **versions**: [TemplateSpecPropertiesVersions](#templatespecpropertiesversions) (ReadOnly): High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to 'versions'.
-
-## TemplateSpecPropertiesVersions
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [TemplateSpecVersionInfo](#templatespecversioninfo)
-
-## TemplateSpecVersionInfo
-### Properties
-* **description**: string (ReadOnly): Template Spec version description.
-* **timeCreated**: string (ReadOnly): The timestamp of when the version was created.
-* **timeModified**: string (ReadOnly): The timestamp of when the version was last modified.
-
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -49,17 +32,6 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## TemplateSpecTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TemplateSpecVersionProperties
-### Properties
-* **artifacts**: [TemplateSpecArtifact](#templatespecartifact)[]: An array of Template Spec artifacts.
-* **description**: string: Template Spec version description.
-* **template**: any: Any object
 
 ## TemplateSpecArtifact
 * **Discriminator**: kind
@@ -71,6 +43,34 @@
 * **kind**: 'template' (Required): The kind of artifact.
 * **template**: any (Required): Any object
 
+
+## TemplateSpecProperties
+### Properties
+* **description**: string: Template Spec description.
+* **displayName**: string: Template Spec display name.
+* **versions**: [TemplateSpecPropertiesVersions](#templatespecpropertiesversions) (ReadOnly): High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to 'versions'.
+
+## TemplateSpecPropertiesVersions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [TemplateSpecVersionInfo](#templatespecversioninfo)
+
+## TemplateSpecTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TemplateSpecVersionInfo
+### Properties
+* **description**: string (ReadOnly): Template Spec version description.
+* **timeCreated**: string (ReadOnly): The timestamp of when the version was created.
+* **timeModified**: string (ReadOnly): The timestamp of when the version was last modified.
+
+## TemplateSpecVersionProperties
+### Properties
+* **artifacts**: [TemplateSpecArtifact](#templatespecartifact)[]: An array of Template Spec artifacts.
+* **description**: string: Template Spec version description.
+* **template**: any: Any object
 
 ## TemplateSpecVersionTags
 ### Properties

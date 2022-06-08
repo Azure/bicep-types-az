@@ -46,30 +46,6 @@
 * **storageAccount**: [StorageAccountProperties](#storageaccountproperties) (Required): The properties of a storage account for a machine learning team account.
 * **vsoAccountId**: string (Required): The fully qualified arm id of the vso account to be used for this team account.
 
-## StorageAccountProperties
-### Properties
-* **accessKey**: string (Required): The access key to the storage account.
-* **storageAccountId**: string (Required): The fully qualified arm Id of the storage account.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## WorkspaceProperties
-### Properties
-* **accountId**: string (ReadOnly): The immutable id of the team account which contains this workspace.
-* **creationDate**: string (ReadOnly): The creation date of the machine learning workspace in ISO8601 format.
-* **description**: string: The description of this workspace.
-* **friendlyName**: string (Required): The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current deployment state of team account workspace resource. The provisioningState is to indicate states for resource provisioning.
-* **workspaceId**: string (ReadOnly): The immutable id of this workspace.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ProjectProperties
 ### Properties
 * **accountId**: string (ReadOnly): The immutable id of the team account which contains this project.
@@ -85,4 +61,28 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## StorageAccountProperties
+### Properties
+* **accessKey**: string (Required): The access key to the storage account.
+* **storageAccountId**: string (Required): The fully qualified arm Id of the storage account.
+
+## WorkspaceProperties
+### Properties
+* **accountId**: string (ReadOnly): The immutable id of the team account which contains this workspace.
+* **creationDate**: string (ReadOnly): The creation date of the machine learning workspace in ISO8601 format.
+* **description**: string: The description of this workspace.
+* **friendlyName**: string (Required): The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current deployment state of team account workspace resource. The provisioningState is to indicate states for resource provisioning.
+* **workspaceId**: string (ReadOnly): The immutable id of this workspace.
 

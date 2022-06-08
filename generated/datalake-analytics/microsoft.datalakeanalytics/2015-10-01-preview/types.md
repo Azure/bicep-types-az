@@ -52,6 +52,36 @@
 * **ApiVersion**: 2015-10-01-preview
 * **Output**: [SasTokenInformationListResult](#sastokeninformationlistresult)
 
+## AddDataLakeStoreProperties
+### Properties
+* **suffix**: string: The optional suffix for the Data Lake Store account.
+
+## AddDataLakeStoreWithAccountParameters
+### Properties
+* **id**: string (ReadOnly): The resource identifier.
+* **name**: string (Required): The unique name of the Data Lake Store account to add.
+* **properties**: [AddDataLakeStoreProperties](#adddatalakestoreproperties): The Data Lake Store account properties to use when adding a new Data Lake Store account.
+* **type**: string (ReadOnly): The resource type.
+
+## AddStorageAccountWithAccountParameters
+### Properties
+* **id**: string (ReadOnly): The resource identifier.
+* **name**: string (Required): The unique name of the Azure Storage account to add.
+* **properties**: [StorageAccountProperties](#storageaccountproperties) (Required): The Azure Storage account properties to use when adding a new Azure Storage account.
+* **type**: string (ReadOnly): The resource type.
+
+## CreateComputePolicyWithAccountParameters
+### Properties
+* **id**: string (ReadOnly): The resource identifier.
+* **name**: string (Required): The unique name of the compute policy to create.
+* **properties**: [CreateOrUpdateComputePolicyProperties](#createorupdatecomputepolicyproperties) (Required): The compute policy properties to use when creating a new compute policy.
+* **type**: string (ReadOnly): The resource type.
+
+## CreateDataLakeAnalyticsAccountParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## CreateDataLakeAnalyticsAccountProperties
 ### Properties
 * **accountId**: string (ReadOnly): The unique identifier associated with this Data Lake Analytics account.
@@ -82,11 +112,11 @@
 * **systemMaxJobCount**: int (ReadOnly): The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[] (ReadOnly): The list of virtualNetwork rules associated with this account.
 
-## CreateComputePolicyWithAccountParameters
+## CreateFirewallRuleWithAccountParameters
 ### Properties
 * **id**: string (ReadOnly): The resource identifier.
-* **name**: string (Required): The unique name of the compute policy to create.
-* **properties**: [CreateOrUpdateComputePolicyProperties](#createorupdatecomputepolicyproperties) (Required): The compute policy properties to use when creating a new compute policy.
+* **name**: string (Required): The unique name of the firewall rule to create.
+* **properties**: [CreateOrUpdateFirewallRuleProperties](#createorupdatefirewallruleproperties) (Required): The firewall rule properties to use when creating a new firewall rule.
 * **type**: string (ReadOnly): The resource type.
 
 ## CreateOrUpdateComputePolicyProperties
@@ -96,28 +126,21 @@
 * **objectId**: string (Required): The AAD object identifier for the entity to create a policy for.
 * **objectType**: 'Group' | 'ServicePrincipal' | 'User' | string (Required): The type of AAD object the object identifier refers to.
 
-## AddDataLakeStoreWithAccountParameters
-### Properties
-* **id**: string (ReadOnly): The resource identifier.
-* **name**: string (Required): The unique name of the Data Lake Store account to add.
-* **properties**: [AddDataLakeStoreProperties](#adddatalakestoreproperties): The Data Lake Store account properties to use when adding a new Data Lake Store account.
-* **type**: string (ReadOnly): The resource type.
-
-## AddDataLakeStoreProperties
-### Properties
-* **suffix**: string: The optional suffix for the Data Lake Store account.
-
-## CreateFirewallRuleWithAccountParameters
-### Properties
-* **id**: string (ReadOnly): The resource identifier.
-* **name**: string (Required): The unique name of the firewall rule to create.
-* **properties**: [CreateOrUpdateFirewallRuleProperties](#createorupdatefirewallruleproperties) (Required): The firewall rule properties to use when creating a new firewall rule.
-* **type**: string (ReadOnly): The resource type.
-
 ## CreateOrUpdateFirewallRuleProperties
 ### Properties
 * **endIpAddress**: string (Required): The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
 * **startIpAddress**: string (Required): The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
+
+## DataLakeStoreAccountInfoProperties
+### Properties
+* **suffix**: string (ReadOnly): The optional suffix for the Data Lake Store account.
+
+## DataLakeStoreAccountInformation
+### Properties
+* **id**: string (ReadOnly): The resource identifier.
+* **name**: string (ReadOnly): The resource name.
+* **properties**: [DataLakeStoreAccountInfoProperties](#datalakestoreaccountinfoproperties) (ReadOnly): The Data Lake Store account properties.
+* **type**: string (ReadOnly): The resource type.
 
 ## HiveMetastore
 ### Properties
@@ -135,23 +158,14 @@
 * **serverUri**: string (ReadOnly): The serverUri for the Hive MetaStore
 * **userName**: string (ReadOnly): The userName for the Hive MetaStore
 
-## DataLakeStoreAccountInformation
+## SasTokenInformation
 ### Properties
-* **id**: string (ReadOnly): The resource identifier.
-* **name**: string (ReadOnly): The resource name.
-* **properties**: [DataLakeStoreAccountInfoProperties](#datalakestoreaccountinfoproperties) (ReadOnly): The Data Lake Store account properties.
-* **type**: string (ReadOnly): The resource type.
+* **accessToken**: string (ReadOnly): The access token for the associated Azure Storage Container.
 
-## DataLakeStoreAccountInfoProperties
+## SasTokenInformationListResult
 ### Properties
-* **suffix**: string (ReadOnly): The optional suffix for the Data Lake Store account.
-
-## AddStorageAccountWithAccountParameters
-### Properties
-* **id**: string (ReadOnly): The resource identifier.
-* **name**: string (Required): The unique name of the Azure Storage account to add.
-* **properties**: [StorageAccountProperties](#storageaccountproperties) (Required): The Azure Storage account properties to use when adding a new Azure Storage account.
-* **type**: string (ReadOnly): The resource type.
+* **nextLink**: string (ReadOnly): The link (url) to the next page of results.
+* **value**: [SasTokenInformation](#sastokeninformation)[] (ReadOnly): The results of the list operation.
 
 ## StorageAccountProperties
 ### Properties
@@ -169,18 +183,4 @@
 ### Properties
 * **subnetId**: string (ReadOnly): The resource identifier for the subnet
 * **virtualNetworkRuleState**: 'Active' | 'Failed' | 'NetworkSourceDeleted' (ReadOnly): The current state of the VirtualNetworkRule for this account.
-
-## CreateDataLakeAnalyticsAccountParametersTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## SasTokenInformationListResult
-### Properties
-* **nextLink**: string (ReadOnly): The link (url) to the next page of results.
-* **value**: [SasTokenInformation](#sastokeninformation)[] (ReadOnly): The results of the list operation.
-
-## SasTokenInformation
-### Properties
-* **accessToken**: string (ReadOnly): The access token for the associated Azure Storage Container.
 

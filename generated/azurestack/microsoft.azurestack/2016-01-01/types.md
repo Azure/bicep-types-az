@@ -17,17 +17,10 @@
 * **ApiVersion**: 2016-01-01
 * **Output**: [ExtendedProduct](#extendedproduct)
 
-## RegistrationParameterProperties
+## DataDiskImage
 ### Properties
-* **billingModel**: string (ReadOnly): Specifies the billing mode for the Azure Stack registration.
-* **cloudId**: string (ReadOnly): The identifier of the registered Azure Stack.
-* **objectId**: string (ReadOnly): The object identifier associated with the Azure Stack connecting to Azure.
-* **registrationToken**: string (Required, WriteOnly): The token identifying registered Azure Stack
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **lun**: int (ReadOnly): The LUN.
+* **sourceBlobSasUri**: string (ReadOnly): SAS key for source blob.
 
 ## ExtendedProduct
 ### Properties
@@ -47,15 +40,22 @@
 * **vmOsType**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): Operating system type (Windows or Linux).
 * **vmScaleSetEnabled**: bool (ReadOnly): Indicates if virtual machine Scale Set is enabled in the specified product.
 
-## DataDiskImage
-### Properties
-* **lun**: int (ReadOnly): The LUN.
-* **sourceBlobSasUri**: string (ReadOnly): SAS key for source blob.
-
 ## OsDiskImage
 ### Properties
 * **operatingSystem**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): Operating system type (Windows or Linux).
 * **sourceBlobSasUri**: string (ReadOnly): SAS key for source blob.
+
+## RegistrationParameterProperties
+### Properties
+* **billingModel**: string (ReadOnly): Specifies the billing mode for the Azure Stack registration.
+* **cloudId**: string (ReadOnly): The identifier of the registered Azure Stack.
+* **objectId**: string (ReadOnly): The object identifier associated with the Azure Stack connecting to Azure.
+* **registrationToken**: string (Required, WriteOnly): The token identifying registered Azure Stack
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Uri
 ### Properties

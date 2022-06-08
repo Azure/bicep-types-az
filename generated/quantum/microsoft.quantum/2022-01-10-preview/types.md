@@ -13,20 +13,6 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Quantum/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## QuantumWorkspaceIdentity
-### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' | string: The identity type.
-
-## WorkspaceResourceProperties
-### Properties
-* **endpointUri**: string (ReadOnly): The URI of the workspace endpoint.
-* **providers**: [Provider](#provider)[]: List of Providers selected for this Workspace
-* **provisioningState**: 'Failed' | 'ProviderDeleting' | 'ProviderLaunching' | 'ProviderProvisioning' | 'ProviderUpdating' | 'Succeeded' | string (ReadOnly): Provisioning status field
-* **storageAccount**: string: ARM Resource Id of the storage account associated with this workspace.
-* **usable**: 'No' | 'Partial' | 'Yes' | string (ReadOnly): Whether the current workspace is ready to accept Jobs.
-
 ## Provider
 ### Properties
 * **applicationName**: string: The provider's marketplace application display name.
@@ -35,6 +21,12 @@
 * **providerSku**: string: The sku associated with pricing information for this provider.
 * **provisioningState**: 'Deleted' | 'Deleting' | 'Failed' | 'Launching' | 'Succeeded' | 'Updating' | string: Provisioning status field
 * **resourceUsageId**: string: Id to track resource usage for the provider.
+
+## QuantumWorkspaceIdentity
+### Properties
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'None' | 'SystemAssigned' | string: The identity type.
 
 ## SystemData
 ### Properties
@@ -49,4 +41,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## WorkspaceResourceProperties
+### Properties
+* **endpointUri**: string (ReadOnly): The URI of the workspace endpoint.
+* **providers**: [Provider](#provider)[]: List of Providers selected for this Workspace
+* **provisioningState**: 'Failed' | 'ProviderDeleting' | 'ProviderLaunching' | 'ProviderProvisioning' | 'ProviderUpdating' | 'Succeeded' | string (ReadOnly): Provisioning status field
+* **storageAccount**: string: ARM Resource Id of the storage account associated with this workspace.
+* **usable**: 'No' | 'Partial' | 'Yes' | string (ReadOnly): Whether the current workspace is ready to accept Jobs.
 

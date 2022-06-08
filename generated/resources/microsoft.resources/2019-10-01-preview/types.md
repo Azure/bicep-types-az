@@ -24,36 +24,6 @@
 * **properties**: [AzurePowerShellScriptProperties](#azurepowershellscriptproperties) (Required): Properties of the Azure PowerShell script object.
 
 
-## ManagedServiceIdentity
-### Properties
-* **tenantId**: string (ReadOnly): ID of the Azure Active Directory.
-* **type**: 'UserAssigned' | string: Type of the managed identity.
-* **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities): The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
-
-## ManagedServiceIdentityUserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
-
-## UserAssignedIdentity
-### Properties
-* **clientId**: string (ReadOnly): Client App Id associated with this identity.
-* **principalId**: string (ReadOnly): Azure Active Directory principal ID associated with this identity.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-
-## DeploymentScriptTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## AzureCliScriptProperties
 ### Properties
 * **arguments**: string: Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2'
@@ -71,48 +41,6 @@
 * **storageAccountSettings**: [StorageAccountConfiguration](#storageaccountconfiguration): Settings to use an existing storage account. Valid storage account kinds are: Storage, StorageV2 and FileStorage
 * **supportingScriptUris**: string[]: Supporting files for the external script.
 * **timeout**: string: Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
-
-## ContainerConfiguration
-### Properties
-* **containerGroupName**: string: Container group name, if not specified then the name will get auto-generated. Not specifying a 'containerGroupName' indicates the system to generate a unique name which might end up flagging an Azure Policy as non-compliant. Use 'containerGroupName' when you have an Azure Policy that expects a specific naming convention or when you want to fully control the name. 'containerGroupName' property must be between 1 and 63 characters long, must contain only lowercase letters, numbers, and dashes and it cannot start or end with a dash and consecutive dashes are not allowed. To specify a 'containerGroupName', add the following object to properties: { "containerSettings": { "containerGroupName": "contoso-container" } }. If you do not want to specify a 'containerGroupName' then do not add 'containerSettings' property.
-
-## EnvironmentVariable
-### Properties
-* **name**: string (Required): The name of the environment variable.
-* **secureValue**: string: The value of the secure environment variable.
-* **value**: string: The value of the environment variable.
-
-## DeploymentScriptPropertiesBaseOutputs
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## ScriptStatus
-### Properties
-* **containerInstanceId**: string (ReadOnly): ACI resource Id.
-* **endTime**: string (ReadOnly): End time of the script execution.
-* **error**: [ErrorResponse](#errorresponse): Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.)
-* **expirationTime**: string (ReadOnly): Time the deployment script resource will expire.
-* **startTime**: string (ReadOnly): Start time of the script execution.
-* **storageAccountId**: string (ReadOnly): Storage account resource Id.
-
-## ErrorResponse
-### Properties
-* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
-* **code**: string (ReadOnly): The error code.
-* **details**: [ErrorResponse](#errorresponse)[] (ReadOnly): The error details.
-* **message**: string (ReadOnly): The error message.
-* **target**: string (ReadOnly): The error target.
-
-## ErrorAdditionalInfo
-### Properties
-* **info**: any (ReadOnly): Any object
-* **type**: string (ReadOnly): The additional info type.
-
-## StorageAccountConfiguration
-### Properties
-* **storageAccountKey**: string: The storage account access key.
-* **storageAccountName**: string: The storage account name.
 
 ## AzurePowerShellScriptProperties
 ### Properties
@@ -132,8 +60,80 @@
 * **supportingScriptUris**: string[]: Supporting files for the external script.
 * **timeout**: string: Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
 
+## ContainerConfiguration
+### Properties
+* **containerGroupName**: string: Container group name, if not specified then the name will get auto-generated. Not specifying a 'containerGroupName' indicates the system to generate a unique name which might end up flagging an Azure Policy as non-compliant. Use 'containerGroupName' when you have an Azure Policy that expects a specific naming convention or when you want to fully control the name. 'containerGroupName' property must be between 1 and 63 characters long, must contain only lowercase letters, numbers, and dashes and it cannot start or end with a dash and consecutive dashes are not allowed. To specify a 'containerGroupName', add the following object to properties: { "containerSettings": { "containerGroupName": "contoso-container" } }. If you do not want to specify a 'containerGroupName' then do not add 'containerSettings' property.
+
 ## DeploymentScriptPropertiesBaseOutputs
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## DeploymentScriptPropertiesBaseOutputs
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DeploymentScriptTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## EnvironmentVariable
+### Properties
+* **name**: string (Required): The name of the environment variable.
+* **secureValue**: string: The value of the secure environment variable.
+* **value**: string: The value of the environment variable.
+
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): Any object
+* **type**: string (ReadOnly): The additional info type.
+
+## ErrorResponse
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorResponse](#errorresponse)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
+
+## ManagedServiceIdentity
+### Properties
+* **tenantId**: string (ReadOnly): ID of the Azure Active Directory.
+* **type**: 'UserAssigned' | string: Type of the managed identity.
+* **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities): The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
+
+## ManagedServiceIdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## ScriptStatus
+### Properties
+* **containerInstanceId**: string (ReadOnly): ACI resource Id.
+* **endTime**: string (ReadOnly): End time of the script execution.
+* **error**: [ErrorResponse](#errorresponse): Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.)
+* **expirationTime**: string (ReadOnly): Time the deployment script resource will expire.
+* **startTime**: string (ReadOnly): Start time of the script execution.
+* **storageAccountId**: string (ReadOnly): Storage account resource Id.
+
+## StorageAccountConfiguration
+### Properties
+* **storageAccountKey**: string: The storage account access key.
+* **storageAccountName**: string: The storage account name.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+
+## UserAssignedIdentity
+### Properties
+* **clientId**: string (ReadOnly): Client App Id associated with this identity.
+* **principalId**: string (ReadOnly): Azure Active Directory principal ID associated with this identity.
 

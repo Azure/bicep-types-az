@@ -184,53 +184,11 @@
 * **ApiVersion**: 2018-07-01-preview
 * **Output**: any
 
-## IntegrationAccountSku
-### Properties
-* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Standard' | string (Required)
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## IntegrationAccountAgreementProperties
-### Properties
-* **agreementType**: 'AS2' | 'Edifact' | 'NotSpecified' | 'X12' (Required)
-* **changedTime**: string (ReadOnly): The changed time.
-* **content**: [AgreementContent](#agreementcontent) (Required): The integration account agreement content.
-* **createdTime**: string (ReadOnly): The created time.
-* **guestIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
-* **guestPartner**: string (Required): The integration account partner that is set as guest partner for this agreement.
-* **hostIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
-* **hostPartner**: string (Required): The integration account partner that is set as host partner for this agreement.
-* **metadata**: any: Any object
-
 ## AgreementContent
 ### Properties
 * **aS2**: [AS2AgreementContent](#as2agreementcontent): The integration account AS2 agreement content.
 * **edifact**: [EdifactAgreementContent](#edifactagreementcontent): The Edifact agreement content.
 * **x12**: [X12AgreementContent](#x12agreementcontent): The X12 agreement content.
-
-## AS2AgreementContent
-### Properties
-* **receiveAgreement**: [AS2OneWayAgreement](#as2onewayagreement) (Required): The integration account AS2 one-way agreement.
-* **sendAgreement**: [AS2OneWayAgreement](#as2onewayagreement) (Required): The integration account AS2 one-way agreement.
-
-## AS2OneWayAgreement
-### Properties
-* **protocolSettings**: [AS2ProtocolSettings](#as2protocolsettings) (Required): The AS2 agreement protocol settings.
-* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
-* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
-
-## AS2ProtocolSettings
-### Properties
-* **acknowledgementConnectionSettings**: [AS2AcknowledgementConnectionSettings](#as2acknowledgementconnectionsettings) (Required): The AS2 agreement acknowledgement connection settings.
-* **envelopeSettings**: [AS2EnvelopeSettings](#as2envelopesettings) (Required): The AS2 agreement envelope settings.
-* **errorSettings**: [AS2ErrorSettings](#as2errorsettings) (Required): The AS2 agreement error settings.
-* **mdnSettings**: [AS2MdnSettings](#as2mdnsettings) (Required): The AS2 agreement mdn settings.
-* **messageConnectionSettings**: [AS2MessageConnectionSettings](#as2messageconnectionsettings) (Required): The AS2 agreement message connection settings.
-* **securitySettings**: [AS2SecuritySettings](#as2securitysettings) (Required): The AS2 agreement security settings.
-* **validationSettings**: [AS2ValidationSettings](#as2validationsettings) (Required): The AS2 agreement validation settings.
 
 ## AS2AcknowledgementConnectionSettings
 ### Properties
@@ -238,6 +196,11 @@
 * **keepHttpConnectionAlive**: bool (Required): The value indicating whether to keep the connection alive.
 * **supportHttpStatusCodeContinue**: bool (Required): The value indicating whether to support HTTP status code 'CONTINUE'.
 * **unfoldHttpHeaders**: bool (Required): The value indicating whether to unfold the HTTP headers.
+
+## AS2AgreementContent
+### Properties
+* **receiveAgreement**: [AS2OneWayAgreement](#as2onewayagreement) (Required): The integration account AS2 one-way agreement.
+* **sendAgreement**: [AS2OneWayAgreement](#as2onewayagreement) (Required): The integration account AS2 one-way agreement.
 
 ## AS2EnvelopeSettings
 ### Properties
@@ -271,6 +234,22 @@
 * **supportHttpStatusCodeContinue**: bool (Required): The value indicating whether to support HTTP status code 'CONTINUE'.
 * **unfoldHttpHeaders**: bool (Required): The value indicating whether to unfold the HTTP headers.
 
+## AS2OneWayAgreement
+### Properties
+* **protocolSettings**: [AS2ProtocolSettings](#as2protocolsettings) (Required): The AS2 agreement protocol settings.
+* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
+* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
+
+## AS2ProtocolSettings
+### Properties
+* **acknowledgementConnectionSettings**: [AS2AcknowledgementConnectionSettings](#as2acknowledgementconnectionsettings) (Required): The AS2 agreement acknowledgement connection settings.
+* **envelopeSettings**: [AS2EnvelopeSettings](#as2envelopesettings) (Required): The AS2 agreement envelope settings.
+* **errorSettings**: [AS2ErrorSettings](#as2errorsettings) (Required): The AS2 agreement error settings.
+* **mdnSettings**: [AS2MdnSettings](#as2mdnsettings) (Required): The AS2 agreement mdn settings.
+* **messageConnectionSettings**: [AS2MessageConnectionSettings](#as2messageconnectionsettings) (Required): The AS2 agreement message connection settings.
+* **securitySettings**: [AS2SecuritySettings](#as2securitysettings) (Required): The AS2 agreement security settings.
+* **validationSettings**: [AS2ValidationSettings](#as2validationsettings) (Required): The AS2 agreement validation settings.
+
 ## AS2SecuritySettings
 ### Properties
 * **enableNRRForInboundDecodedMessages**: bool (Required): The value indicating whether to enable NRR for inbound decoded messages.
@@ -297,35 +276,64 @@
 * **signingAlgorithm**: 'Default' | 'NotSpecified' | 'SHA1' | 'SHA2256' | 'SHA2384' | 'SHA2512' | string
 * **signMessage**: bool (Required): The value indicating whether the message has to be signed.
 
+## AssemblyProperties
+### Properties
+* **assemblyCulture**: string: The assembly culture.
+* **assemblyName**: string (Required): The assembly name.
+* **assemblyPublicKeyToken**: string: The assembly public key token.
+* **assemblyVersion**: string: The assembly version.
+* **changedTime**: string: The artifact changed time.
+* **content**: any: Anything
+* **contentLink**: [ContentLink](#contentlink): The content link.
+* **contentType**: string: The content type.
+* **createdTime**: string: The artifact creation time.
+* **metadata**: any: Anything
+
+## AzureResourceErrorInfo
+### Properties
+* **code**: string (ReadOnly): The error code.
+* **details**: [AzureResourceErrorInfo](#azureresourceerrorinfo)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+
+## B2BPartnerContent
+### Properties
+* **businessIdentities**: [BusinessIdentity](#businessidentity)[]: The list of partner business identities.
+
+## BatchConfigurationProperties
+### Properties
+* **batchGroupName**: string (Required): The name of the batch group.
+* **changedTime**: string: The artifact changed time.
+* **createdTime**: string: The artifact creation time.
+* **metadata**: any: Anything
+* **releaseCriteria**: [BatchReleaseCriteria](#batchreleasecriteria) (Required): The batch release criteria.
+
+## BatchReleaseCriteria
+### Properties
+* **batchSize**: int: The batch size in bytes.
+* **messageCount**: int: The message count.
+* **recurrence**: [WorkflowTriggerRecurrence](#workflowtriggerrecurrence): The workflow trigger recurrence.
+
 ## BusinessIdentity
 ### Properties
 * **qualifier**: string (Required): The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32
 * **value**: string (Required): The user defined business identity value.
 
-## EdifactAgreementContent
+## CallbackUrl
 ### Properties
-* **receiveAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement) (Required): The Edifact one way agreement.
-* **sendAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement) (Required): The Edifact one way agreement.
+* **value**: string (ReadOnly): The URL value.
 
-## EdifactOneWayAgreement
+## ContentHash
 ### Properties
-* **protocolSettings**: [EdifactProtocolSettings](#edifactprotocolsettings) (Required): The Edifact agreement protocol settings.
-* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
-* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
+* **algorithm**: string: The algorithm of the content hash.
+* **value**: string: The value of the content hash.
 
-## EdifactProtocolSettings
+## ContentLink
 ### Properties
-* **acknowledgementSettings**: [EdifactAcknowledgementSettings](#edifactacknowledgementsettings) (Required): The Edifact agreement acknowledgement settings.
-* **edifactDelimiterOverrides**: [EdifactDelimiterOverride](#edifactdelimiteroverride)[]: The EDIFACT delimiter override settings.
-* **envelopeOverrides**: [EdifactEnvelopeOverride](#edifactenvelopeoverride)[]: The EDIFACT envelope override settings.
-* **envelopeSettings**: [EdifactEnvelopeSettings](#edifactenvelopesettings) (Required): The Edifact agreement envelope settings.
-* **framingSettings**: [EdifactFramingSettings](#edifactframingsettings) (Required): The Edifact agreement framing settings.
-* **messageFilter**: [EdifactMessageFilter](#edifactmessagefilter) (Required): The Edifact message filter for odata query.
-* **messageFilterList**: [EdifactMessageIdentifier](#edifactmessageidentifier)[]: The EDIFACT message filter list.
-* **processingSettings**: [EdifactProcessingSettings](#edifactprocessingsettings) (Required): The Edifact agreement protocol settings.
-* **schemaReferences**: [EdifactSchemaReference](#edifactschemareference)[] (Required): The EDIFACT schema references.
-* **validationOverrides**: [EdifactValidationOverride](#edifactvalidationoverride)[]: The EDIFACT validation override settings.
-* **validationSettings**: [EdifactValidationSettings](#edifactvalidationsettings) (Required): The Edifact agreement validation settings.
+* **contentHash**: [ContentHash](#contenthash): The content hash.
+* **contentSize**: int: The content size.
+* **contentVersion**: string: The content version.
+* **metadata**: any: Any object
+* **uri**: string: The content link URI.
 
 ## EdifactAcknowledgementSettings
 ### Properties
@@ -340,6 +348,11 @@
 * **needTechnicalAcknowledgement**: bool (Required): The value indicating whether technical acknowledgement is needed.
 * **rolloverAcknowledgementControlNumber**: bool (Required): The value indicating whether to rollover acknowledgement control number.
 * **sendSynchronousAcknowledgement**: bool (Required): The value indicating whether to send synchronous acknowledgement.
+
+## EdifactAgreementContent
+### Properties
+* **receiveAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement) (Required): The Edifact one way agreement.
+* **sendAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement) (Required): The Edifact one way agreement.
 
 ## EdifactDelimiterOverride
 ### Properties
@@ -440,6 +453,12 @@
 ### Properties
 * **messageId**: string (Required): The message id on which this envelope settings has to be applied.
 
+## EdifactOneWayAgreement
+### Properties
+* **protocolSettings**: [EdifactProtocolSettings](#edifactprotocolsettings) (Required): The Edifact agreement protocol settings.
+* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
+* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
+
 ## EdifactProcessingSettings
 ### Properties
 * **createEmptyXmlTagsForTrailingSeparators**: bool (Required): The value indicating whether to create empty xml tags for trailing separators.
@@ -447,6 +466,20 @@
 * **preserveInterchange**: bool (Required): The value indicating whether to preserve interchange.
 * **suspendInterchangeOnError**: bool (Required): The value indicating whether to suspend interchange on error.
 * **useDotAsDecimalSeparator**: bool (Required): The value indicating whether to use dot as decimal separator.
+
+## EdifactProtocolSettings
+### Properties
+* **acknowledgementSettings**: [EdifactAcknowledgementSettings](#edifactacknowledgementsettings) (Required): The Edifact agreement acknowledgement settings.
+* **edifactDelimiterOverrides**: [EdifactDelimiterOverride](#edifactdelimiteroverride)[]: The EDIFACT delimiter override settings.
+* **envelopeOverrides**: [EdifactEnvelopeOverride](#edifactenvelopeoverride)[]: The EDIFACT envelope override settings.
+* **envelopeSettings**: [EdifactEnvelopeSettings](#edifactenvelopesettings) (Required): The Edifact agreement envelope settings.
+* **framingSettings**: [EdifactFramingSettings](#edifactframingsettings) (Required): The Edifact agreement framing settings.
+* **messageFilter**: [EdifactMessageFilter](#edifactmessagefilter) (Required): The Edifact message filter for odata query.
+* **messageFilterList**: [EdifactMessageIdentifier](#edifactmessageidentifier)[]: The EDIFACT message filter list.
+* **processingSettings**: [EdifactProcessingSettings](#edifactprocessingsettings) (Required): The Edifact agreement protocol settings.
+* **schemaReferences**: [EdifactSchemaReference](#edifactschemareference)[] (Required): The EDIFACT schema references.
+* **validationOverrides**: [EdifactValidationOverride](#edifactvalidationoverride)[]: The EDIFACT validation override settings.
+* **validationSettings**: [EdifactValidationSettings](#edifactvalidationsettings) (Required): The Edifact agreement validation settings.
 
 ## EdifactSchemaReference
 ### Properties
@@ -481,31 +514,360 @@
 * **validateEDITypes**: bool (Required): The value indicating whether to Whether to validate EDI types.
 * **validateXSDTypes**: bool (Required): The value indicating whether to Whether to validate XSD types.
 
-## X12AgreementContent
+## Expression
 ### Properties
-* **receiveAgreement**: [X12OneWayAgreement](#x12onewayagreement) (Required): The X12 one-way agreement.
-* **sendAgreement**: [X12OneWayAgreement](#x12onewayagreement) (Required): The X12 one-way agreement.
+* **error**: [AzureResourceErrorInfo](#azureresourceerrorinfo) (ReadOnly): The azure resource error info.
+* **subexpressions**: [Expression](#expression)[] (ReadOnly): Array of Expression
+* **text**: string (ReadOnly)
+* **value**: any (ReadOnly): Anything
 
-## X12OneWayAgreement
+## ExpressionRoot
 ### Properties
-* **protocolSettings**: [X12ProtocolSettings](#x12protocolsettings) (Required): The X12 agreement protocol settings.
-* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
-* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
+* **error**: [AzureResourceErrorInfo](#azureresourceerrorinfo) (ReadOnly): The azure resource error info.
+* **path**: string (ReadOnly): The path.
+* **subexpressions**: [Expression](#expression)[] (ReadOnly): Array of Expression
+* **text**: string (ReadOnly)
+* **value**: any (ReadOnly): Anything
 
-## X12ProtocolSettings
+## ExpressionTraces
 ### Properties
-* **acknowledgementSettings**: [X12AcknowledgementSettings](#x12acknowledgementsettings) (Required): The X12 agreement acknowledgement settings.
-* **envelopeOverrides**: [X12EnvelopeOverride](#x12envelopeoverride)[]: The X12 envelope override settings.
-* **envelopeSettings**: [X12EnvelopeSettings](#x12envelopesettings) (Required): The X12 agreement envelope settings.
-* **framingSettings**: [X12FramingSettings](#x12framingsettings) (Required): The X12 agreement framing settings.
-* **messageFilter**: [X12MessageFilter](#x12messagefilter) (Required): The X12 message filter for odata query.
-* **messageFilterList**: [X12MessageIdentifier](#x12messageidentifier)[]: The X12 message filter list.
-* **processingSettings**: [X12ProcessingSettings](#x12processingsettings) (Required): The X12 processing settings.
-* **schemaReferences**: [X12SchemaReference](#x12schemareference)[] (Required): The X12 schema references.
-* **securitySettings**: [X12SecuritySettings](#x12securitysettings) (Required): The X12 agreement security settings.
-* **validationOverrides**: [X12ValidationOverride](#x12validationoverride)[]: The X12 validation override settings.
-* **validationSettings**: [X12ValidationSettings](#x12validationsettings) (Required): The X12 agreement validation settings.
-* **x12DelimiterOverrides**: [X12DelimiterOverrides](#x12delimiteroverrides)[]: The X12 delimiter override settings.
+* **inputs**: [ExpressionRoot](#expressionroot)[] (ReadOnly): Array of ExpressionRoot
+
+## ExpressionTraces
+### Properties
+* **inputs**: [ExpressionRoot](#expressionroot)[] (ReadOnly): Array of ExpressionRoot
+
+## GetCallbackUrlParameters
+### Properties
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
+* **notAfter**: string (WriteOnly): The expiry time.
+
+## GetCallbackUrlParameters
+### Properties
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
+* **notAfter**: string (WriteOnly): The expiry time.
+
+## GetCallbackUrlParameters
+### Properties
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
+* **notAfter**: string (WriteOnly): The expiry time.
+
+## GetCallbackUrlParameters
+### Properties
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
+* **notAfter**: string (WriteOnly): The expiry time.
+
+## GetCallbackUrlParameters
+### Properties
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
+* **notAfter**: string (WriteOnly): The expiry time.
+
+## GetCallbackUrlParameters
+### Properties
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
+* **notAfter**: string (WriteOnly): The expiry time.
+
+## GetCallbackUrlParameters
+### Properties
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
+* **notAfter**: string (WriteOnly): The expiry time.
+
+## IntegrationAccountAgreementProperties
+### Properties
+* **agreementType**: 'AS2' | 'Edifact' | 'NotSpecified' | 'X12' (Required)
+* **changedTime**: string (ReadOnly): The changed time.
+* **content**: [AgreementContent](#agreementcontent) (Required): The integration account agreement content.
+* **createdTime**: string (ReadOnly): The created time.
+* **guestIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
+* **guestPartner**: string (Required): The integration account partner that is set as guest partner for this agreement.
+* **hostIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
+* **hostPartner**: string (Required): The integration account partner that is set as host partner for this agreement.
+* **metadata**: any: Any object
+
+## IntegrationAccountCertificateProperties
+### Properties
+* **changedTime**: string (ReadOnly): The changed time.
+* **createdTime**: string (ReadOnly): The created time.
+* **key**: [KeyVaultKeyReference](#keyvaultkeyreference): The reference to the key vault key.
+* **metadata**: any: Any object
+* **publicCertificate**: string: The public certificate.
+
+## IntegrationAccountMapProperties
+### Properties
+* **changedTime**: string (ReadOnly): The changed time.
+* **content**: string: The content.
+* **contentLink**: [ContentLink](#contentlink) (ReadOnly): The content link.
+* **contentType**: string: The content type.
+* **createdTime**: string (ReadOnly): The created time.
+* **mapType**: 'Liquid' | 'NotSpecified' | 'Xslt' | 'Xslt20' | 'Xslt30' | string (Required)
+* **metadata**: any: Any object
+* **parametersSchema**: [IntegrationAccountMapPropertiesParametersSchema](#integrationaccountmappropertiesparametersschema): The parameters schema of integration account map.
+
+## IntegrationAccountMapPropertiesParametersSchema
+### Properties
+* **ref**: string: The reference name.
+
+## IntegrationAccountPartnerProperties
+### Properties
+* **changedTime**: string (ReadOnly): The changed time.
+* **content**: [PartnerContent](#partnercontent) (Required): The integration account partner content.
+* **createdTime**: string (ReadOnly): The created time.
+* **metadata**: any: Any object
+* **partnerType**: 'B2B' | 'NotSpecified' | string (Required)
+
+## IntegrationAccountSchemaProperties
+### Properties
+* **changedTime**: string (ReadOnly): The changed time.
+* **content**: string: The content.
+* **contentLink**: [ContentLink](#contentlink) (ReadOnly): The content link.
+* **contentType**: string: The content type.
+* **createdTime**: string (ReadOnly): The created time.
+* **documentName**: string: The document name.
+* **fileName**: string: The file name.
+* **metadata**: any: Any object
+* **schemaType**: 'NotSpecified' | 'Xml' | string (Required)
+* **targetNamespace**: string: The target namespace of the schema.
+
+## IntegrationAccountSessionProperties
+### Properties
+* **changedTime**: string (ReadOnly): The changed time.
+* **content**: any: Any object
+* **createdTime**: string (ReadOnly): The created time.
+
+## IntegrationAccountSku
+### Properties
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Standard' | string (Required)
+
+## KeyVaultKey
+### Properties
+* **attributes**: [KeyVaultKeyAttributes](#keyvaultkeyattributes) (ReadOnly): The key attributes.
+* **kid**: string (ReadOnly): The key id.
+
+## KeyVaultKeyAttributes
+### Properties
+* **created**: int (ReadOnly): When the key was created.
+* **enabled**: bool (ReadOnly): Whether the key is enabled or not.
+* **updated**: int (ReadOnly): When the key was updated.
+
+## KeyVaultKeyCollection
+### Properties
+* **skipToken**: string (ReadOnly): The skip token.
+* **value**: [KeyVaultKey](#keyvaultkey)[] (ReadOnly): The key vault keys.
+
+## KeyVaultKeyReference
+### Properties
+* **keyName**: string (Required): The private key name in key vault.
+* **keyVault**: [KeyVaultKeyReferenceKeyVault](#keyvaultkeyreferencekeyvault) (Required): The key vault reference.
+* **keyVersion**: string: The private key version in key vault.
+
+## KeyVaultKeyReferenceKeyVault
+### Properties
+* **id**: string: The resource id.
+* **name**: string (ReadOnly): The resource name.
+* **type**: string (ReadOnly): The resource type.
+
+## KeyVaultReference
+### Properties
+* **id**: string (WriteOnly): The resource id.
+* **name**: string (ReadOnly, WriteOnly): Gets the resource name.
+* **type**: string (ReadOnly, WriteOnly): Gets the resource type.
+
+## ListKeyVaultKeysDefinition
+### Properties
+* **keyVault**: [KeyVaultReference](#keyvaultreference) (Required, WriteOnly): The key vault reference.
+* **skipToken**: string (WriteOnly): The skip token.
+
+## PartnerContent
+### Properties
+* **b2b**: [B2BPartnerContent](#b2bpartnercontent): The B2B partner content.
+
+## RecurrenceSchedule
+### Properties
+* **hours**: int[]: The hours.
+* **minutes**: int[]: The minutes.
+* **monthDays**: int[]: The month days.
+* **monthlyOccurrences**: [RecurrenceScheduleOccurrence](#recurrencescheduleoccurrence)[]: The monthly occurrences.
+* **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: The days of the week.
+
+## RecurrenceScheduleOccurrence
+### Properties
+* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'
+* **occurrence**: int: The occurrence.
+
+## ResourceReference
+### Properties
+* **id**: string: The resource id.
+* **name**: string (ReadOnly): Gets the resource name.
+* **type**: string (ReadOnly): Gets the resource type.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Sku
+### Properties
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard' | string (Required): The sku name.
+* **plan**: [ResourceReference](#resourcereference): The resource reference.
+
+## WorkflowParameter
+### Properties
+* **description**: string: The description.
+* **metadata**: any: Any object
+* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String' | string
+* **value**: any: Any object
+
+## WorkflowProperties
+### Properties
+* **accessEndpoint**: string (ReadOnly): Gets the access endpoint.
+* **changedTime**: string (ReadOnly): Gets the changed time.
+* **createdTime**: string (ReadOnly): Gets the created time.
+* **definition**: any: Any object
+* **integrationAccount**: [ResourceReference](#resourcereference): The resource reference.
+* **parameters**: [WorkflowPropertiesParameters](#workflowpropertiesparameters): The parameters.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'NotSpecified' | 'Ready' | 'Registered' | 'Registering' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | string (ReadOnly)
+* **sku**: [Sku](#sku): The sku type.
+* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended' | string
+* **version**: string (ReadOnly): Gets the version.
+
+## WorkflowPropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [WorkflowParameter](#workflowparameter)
+
+## WorkflowTriggerCallbackUrl
+### Properties
+* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
+* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
+* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
+* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
+* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
+* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
+
+## WorkflowTriggerCallbackUrl
+### Properties
+* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
+* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
+* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
+* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
+* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
+* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
+
+## WorkflowTriggerCallbackUrl
+### Properties
+* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
+* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
+* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
+* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
+* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
+* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
+
+## WorkflowTriggerCallbackUrl
+### Properties
+* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
+* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
+* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
+* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
+* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
+* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
+
+## WorkflowTriggerCallbackUrl
+### Properties
+* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
+* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
+* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
+* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
+* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
+* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
+
+## WorkflowTriggerCallbackUrl
+### Properties
+* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
+* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
+* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
+* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
+* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
+* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
+
+## WorkflowTriggerCallbackUrl
+### Properties
+* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
+* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
+* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
+* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
+* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
+* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
+
+## WorkflowTriggerCallbackUrl
+### Properties
+* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
+* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
+* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
+* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
+* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
+* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
+
+## WorkflowTriggerListCallbackUrlQueries
+### Properties
+* **api-version**: string (ReadOnly): The api version.
+* **se**: string (ReadOnly): The SAS timestamp.
+* **sig**: string (ReadOnly): The SAS signature.
+* **sp**: string (ReadOnly): The SAS permissions.
+* **sv**: string (ReadOnly): The SAS version.
+
+## WorkflowTriggerRecurrence
+### Properties
+* **endTime**: string: The end time.
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'NotSpecified' | 'Second' | 'Week' | 'Year' | string
+* **interval**: int: The interval.
+* **schedule**: [RecurrenceSchedule](#recurrenceschedule): The recurrence schedule.
+* **startTime**: string: The start time.
+* **timeZone**: string: The time zone.
 
 ## X12AcknowledgementSettings
 ### Properties
@@ -524,6 +886,23 @@
 * **needTechnicalAcknowledgement**: bool (Required): The value indicating whether technical acknowledgement is needed.
 * **rolloverAcknowledgementControlNumber**: bool (Required): The value indicating whether to rollover acknowledgement control number.
 * **sendSynchronousAcknowledgement**: bool (Required): The value indicating whether to send synchronous acknowledgement.
+
+## X12AgreementContent
+### Properties
+* **receiveAgreement**: [X12OneWayAgreement](#x12onewayagreement) (Required): The X12 one-way agreement.
+* **sendAgreement**: [X12OneWayAgreement](#x12onewayagreement) (Required): The X12 one-way agreement.
+
+## X12DelimiterOverrides
+### Properties
+* **componentSeparator**: int (Required): The component separator.
+* **dataElementSeparator**: int (Required): The data element separator.
+* **messageId**: string: The message id.
+* **protocolVersion**: string: The protocol version.
+* **replaceCharacter**: int (Required): The replacement character.
+* **replaceSeparatorsInPayload**: bool (Required): The value indicating whether to replace separators in payload.
+* **segmentTerminator**: int (Required): The segment terminator.
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required)
+* **targetNamespace**: string: The target namespace on which this delimiter settings has to be applied.
 
 ## X12EnvelopeOverride
 ### Properties
@@ -583,6 +962,12 @@
 ### Properties
 * **messageId**: string (Required): The message id.
 
+## X12OneWayAgreement
+### Properties
+* **protocolSettings**: [X12ProtocolSettings](#x12protocolsettings) (Required): The X12 agreement protocol settings.
+* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
+* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
+
 ## X12ProcessingSettings
 ### Properties
 * **convertImpliedDecimal**: bool (Required): The value indicating whether to convert numerical type to implied decimal.
@@ -591,6 +976,21 @@
 * **preserveInterchange**: bool (Required): The value indicating whether to preserve interchange.
 * **suspendInterchangeOnError**: bool (Required): The value indicating whether to suspend interchange on error.
 * **useDotAsDecimalSeparator**: bool (Required): The value indicating whether to use dot as decimal separator.
+
+## X12ProtocolSettings
+### Properties
+* **acknowledgementSettings**: [X12AcknowledgementSettings](#x12acknowledgementsettings) (Required): The X12 agreement acknowledgement settings.
+* **envelopeOverrides**: [X12EnvelopeOverride](#x12envelopeoverride)[]: The X12 envelope override settings.
+* **envelopeSettings**: [X12EnvelopeSettings](#x12envelopesettings) (Required): The X12 agreement envelope settings.
+* **framingSettings**: [X12FramingSettings](#x12framingsettings) (Required): The X12 agreement framing settings.
+* **messageFilter**: [X12MessageFilter](#x12messagefilter) (Required): The X12 message filter for odata query.
+* **messageFilterList**: [X12MessageIdentifier](#x12messageidentifier)[]: The X12 message filter list.
+* **processingSettings**: [X12ProcessingSettings](#x12processingsettings) (Required): The X12 processing settings.
+* **schemaReferences**: [X12SchemaReference](#x12schemareference)[] (Required): The X12 schema references.
+* **securitySettings**: [X12SecuritySettings](#x12securitysettings) (Required): The X12 agreement security settings.
+* **validationOverrides**: [X12ValidationOverride](#x12validationoverride)[]: The X12 validation override settings.
+* **validationSettings**: [X12ValidationSettings](#x12validationsettings) (Required): The X12 agreement validation settings.
+* **x12DelimiterOverrides**: [X12DelimiterOverrides](#x12delimiteroverrides)[]: The X12 delimiter override settings.
 
 ## X12SchemaReference
 ### Properties
@@ -628,404 +1028,4 @@
 * **validateCharacterSet**: bool (Required): The value indicating whether to validate character set in the message.
 * **validateEDITypes**: bool (Required): The value indicating whether to Whether to validate EDI types.
 * **validateXSDTypes**: bool (Required): The value indicating whether to Whether to validate XSD types.
-
-## X12DelimiterOverrides
-### Properties
-* **componentSeparator**: int (Required): The component separator.
-* **dataElementSeparator**: int (Required): The data element separator.
-* **messageId**: string: The message id.
-* **protocolVersion**: string: The protocol version.
-* **replaceCharacter**: int (Required): The replacement character.
-* **replaceSeparatorsInPayload**: bool (Required): The value indicating whether to replace separators in payload.
-* **segmentTerminator**: int (Required): The segment terminator.
-* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required)
-* **targetNamespace**: string: The target namespace on which this delimiter settings has to be applied.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## AssemblyProperties
-### Properties
-* **assemblyCulture**: string: The assembly culture.
-* **assemblyName**: string (Required): The assembly name.
-* **assemblyPublicKeyToken**: string: The assembly public key token.
-* **assemblyVersion**: string: The assembly version.
-* **changedTime**: string: The artifact changed time.
-* **content**: any: Anything
-* **contentLink**: [ContentLink](#contentlink): The content link.
-* **contentType**: string: The content type.
-* **createdTime**: string: The artifact creation time.
-* **metadata**: any: Anything
-
-## ContentLink
-### Properties
-* **contentHash**: [ContentHash](#contenthash): The content hash.
-* **contentSize**: int: The content size.
-* **contentVersion**: string: The content version.
-* **metadata**: any: Any object
-* **uri**: string: The content link URI.
-
-## ContentHash
-### Properties
-* **algorithm**: string: The algorithm of the content hash.
-* **value**: string: The value of the content hash.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## BatchConfigurationProperties
-### Properties
-* **batchGroupName**: string (Required): The name of the batch group.
-* **changedTime**: string: The artifact changed time.
-* **createdTime**: string: The artifact creation time.
-* **metadata**: any: Anything
-* **releaseCriteria**: [BatchReleaseCriteria](#batchreleasecriteria) (Required): The batch release criteria.
-
-## BatchReleaseCriteria
-### Properties
-* **batchSize**: int: The batch size in bytes.
-* **messageCount**: int: The message count.
-* **recurrence**: [WorkflowTriggerRecurrence](#workflowtriggerrecurrence): The workflow trigger recurrence.
-
-## WorkflowTriggerRecurrence
-### Properties
-* **endTime**: string: The end time.
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'NotSpecified' | 'Second' | 'Week' | 'Year' | string
-* **interval**: int: The interval.
-* **schedule**: [RecurrenceSchedule](#recurrenceschedule): The recurrence schedule.
-* **startTime**: string: The start time.
-* **timeZone**: string: The time zone.
-
-## RecurrenceSchedule
-### Properties
-* **hours**: int[]: The hours.
-* **minutes**: int[]: The minutes.
-* **monthDays**: int[]: The month days.
-* **monthlyOccurrences**: [RecurrenceScheduleOccurrence](#recurrencescheduleoccurrence)[]: The monthly occurrences.
-* **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: The days of the week.
-
-## RecurrenceScheduleOccurrence
-### Properties
-* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'
-* **occurrence**: int: The occurrence.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## IntegrationAccountCertificateProperties
-### Properties
-* **changedTime**: string (ReadOnly): The changed time.
-* **createdTime**: string (ReadOnly): The created time.
-* **key**: [KeyVaultKeyReference](#keyvaultkeyreference): The reference to the key vault key.
-* **metadata**: any: Any object
-* **publicCertificate**: string: The public certificate.
-
-## KeyVaultKeyReference
-### Properties
-* **keyName**: string (Required): The private key name in key vault.
-* **keyVault**: [KeyVaultKeyReferenceKeyVault](#keyvaultkeyreferencekeyvault) (Required): The key vault reference.
-* **keyVersion**: string: The private key version in key vault.
-
-## KeyVaultKeyReferenceKeyVault
-### Properties
-* **id**: string: The resource id.
-* **name**: string (ReadOnly): The resource name.
-* **type**: string (ReadOnly): The resource type.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## IntegrationAccountMapProperties
-### Properties
-* **changedTime**: string (ReadOnly): The changed time.
-* **content**: string: The content.
-* **contentLink**: [ContentLink](#contentlink) (ReadOnly): The content link.
-* **contentType**: string: The content type.
-* **createdTime**: string (ReadOnly): The created time.
-* **mapType**: 'Liquid' | 'NotSpecified' | 'Xslt' | 'Xslt20' | 'Xslt30' | string (Required)
-* **metadata**: any: Any object
-* **parametersSchema**: [IntegrationAccountMapPropertiesParametersSchema](#integrationaccountmappropertiesparametersschema): The parameters schema of integration account map.
-
-## IntegrationAccountMapPropertiesParametersSchema
-### Properties
-* **ref**: string: The reference name.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## IntegrationAccountPartnerProperties
-### Properties
-* **changedTime**: string (ReadOnly): The changed time.
-* **content**: [PartnerContent](#partnercontent) (Required): The integration account partner content.
-* **createdTime**: string (ReadOnly): The created time.
-* **metadata**: any: Any object
-* **partnerType**: 'B2B' | 'NotSpecified' | string (Required)
-
-## PartnerContent
-### Properties
-* **b2b**: [B2BPartnerContent](#b2bpartnercontent): The B2B partner content.
-
-## B2BPartnerContent
-### Properties
-* **businessIdentities**: [BusinessIdentity](#businessidentity)[]: The list of partner business identities.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## IntegrationAccountSchemaProperties
-### Properties
-* **changedTime**: string (ReadOnly): The changed time.
-* **content**: string: The content.
-* **contentLink**: [ContentLink](#contentlink) (ReadOnly): The content link.
-* **contentType**: string: The content type.
-* **createdTime**: string (ReadOnly): The created time.
-* **documentName**: string: The document name.
-* **fileName**: string: The file name.
-* **metadata**: any: Any object
-* **schemaType**: 'NotSpecified' | 'Xml' | string (Required)
-* **targetNamespace**: string: The target namespace of the schema.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## IntegrationAccountSessionProperties
-### Properties
-* **changedTime**: string (ReadOnly): The changed time.
-* **content**: any: Any object
-* **createdTime**: string (ReadOnly): The created time.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## WorkflowProperties
-### Properties
-* **accessEndpoint**: string (ReadOnly): Gets the access endpoint.
-* **changedTime**: string (ReadOnly): Gets the changed time.
-* **createdTime**: string (ReadOnly): Gets the created time.
-* **definition**: any: Any object
-* **integrationAccount**: [ResourceReference](#resourcereference): The resource reference.
-* **parameters**: [WorkflowPropertiesParameters](#workflowpropertiesparameters): The parameters.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'NotSpecified' | 'Ready' | 'Registered' | 'Registering' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | string (ReadOnly)
-* **sku**: [Sku](#sku): The sku type.
-* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended' | string
-* **version**: string (ReadOnly): Gets the version.
-
-## ResourceReference
-### Properties
-* **id**: string: The resource id.
-* **name**: string (ReadOnly): Gets the resource name.
-* **type**: string (ReadOnly): Gets the resource type.
-
-## WorkflowPropertiesParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [WorkflowParameter](#workflowparameter)
-
-## WorkflowParameter
-### Properties
-* **description**: string: The description.
-* **metadata**: any: Any object
-* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String' | string
-* **value**: any: Any object
-
-## Sku
-### Properties
-* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard' | string (Required): The sku name.
-* **plan**: [ResourceReference](#resourcereference): The resource reference.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## GetCallbackUrlParameters
-### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
-* **notAfter**: string (WriteOnly): The expiry time.
-
-## WorkflowTriggerCallbackUrl
-### Properties
-* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
-* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
-* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
-* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
-
-## WorkflowTriggerListCallbackUrlQueries
-### Properties
-* **api-version**: string (ReadOnly): The api version.
-* **se**: string (ReadOnly): The SAS timestamp.
-* **sig**: string (ReadOnly): The SAS signature.
-* **sp**: string (ReadOnly): The SAS permissions.
-* **sv**: string (ReadOnly): The SAS version.
-
-## WorkflowTriggerCallbackUrl
-### Properties
-* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
-* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
-* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
-* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
-
-## GetCallbackUrlParameters
-### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
-* **notAfter**: string (WriteOnly): The expiry time.
-
-## WorkflowTriggerCallbackUrl
-### Properties
-* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
-* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
-* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
-* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
-
-## GetCallbackUrlParameters
-### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
-* **notAfter**: string (WriteOnly): The expiry time.
-
-## CallbackUrl
-### Properties
-* **value**: string (ReadOnly): The URL value.
-
-## WorkflowTriggerCallbackUrl
-### Properties
-* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
-* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
-* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
-* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
-
-## GetCallbackUrlParameters
-### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
-* **notAfter**: string (WriteOnly): The expiry time.
-
-## WorkflowTriggerCallbackUrl
-### Properties
-* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
-* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
-* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
-* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
-
-## GetCallbackUrlParameters
-### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
-* **notAfter**: string (WriteOnly): The expiry time.
-
-## WorkflowTriggerCallbackUrl
-### Properties
-* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
-* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
-* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
-* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
-
-## GetCallbackUrlParameters
-### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
-* **notAfter**: string (WriteOnly): The expiry time.
-
-## WorkflowTriggerCallbackUrl
-### Properties
-* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
-* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
-* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
-* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
-
-## GetCallbackUrlParameters
-### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
-* **notAfter**: string (WriteOnly): The expiry time.
-
-## WorkflowTriggerCallbackUrl
-### Properties
-* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
-* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
-* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
-* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
-
-## ExpressionTraces
-### Properties
-* **inputs**: [ExpressionRoot](#expressionroot)[] (ReadOnly): Array of ExpressionRoot
-
-## ExpressionRoot
-### Properties
-* **error**: [AzureResourceErrorInfo](#azureresourceerrorinfo) (ReadOnly): The azure resource error info.
-* **path**: string (ReadOnly): The path.
-* **subexpressions**: [Expression](#expression)[] (ReadOnly): Array of Expression
-* **text**: string (ReadOnly)
-* **value**: any (ReadOnly): Anything
-
-## AzureResourceErrorInfo
-### Properties
-* **code**: string (ReadOnly): The error code.
-* **details**: [AzureResourceErrorInfo](#azureresourceerrorinfo)[] (ReadOnly): The error details.
-* **message**: string (ReadOnly): The error message.
-
-## Expression
-### Properties
-* **error**: [AzureResourceErrorInfo](#azureresourceerrorinfo) (ReadOnly): The azure resource error info.
-* **subexpressions**: [Expression](#expression)[] (ReadOnly): Array of Expression
-* **text**: string (ReadOnly)
-* **value**: any (ReadOnly): Anything
-
-## ExpressionTraces
-### Properties
-* **inputs**: [ExpressionRoot](#expressionroot)[] (ReadOnly): Array of ExpressionRoot
-
-## ListKeyVaultKeysDefinition
-### Properties
-* **keyVault**: [KeyVaultReference](#keyvaultreference) (Required, WriteOnly): The key vault reference.
-* **skipToken**: string (WriteOnly): The skip token.
-
-## KeyVaultReference
-### Properties
-* **id**: string (WriteOnly): The resource id.
-* **name**: string (ReadOnly, WriteOnly): Gets the resource name.
-* **type**: string (ReadOnly, WriteOnly): Gets the resource type.
-
-## KeyVaultKeyCollection
-### Properties
-* **skipToken**: string (ReadOnly): The skip token.
-* **value**: [KeyVaultKey](#keyvaultkey)[] (ReadOnly): The key vault keys.
-
-## KeyVaultKey
-### Properties
-* **attributes**: [KeyVaultKeyAttributes](#keyvaultkeyattributes) (ReadOnly): The key attributes.
-* **kid**: string (ReadOnly): The key id.
-
-## KeyVaultKeyAttributes
-### Properties
-* **created**: int (ReadOnly): When the key was created.
-* **enabled**: bool (ReadOnly): Whether the key is enabled or not.
-* **updated**: int (ReadOnly): When the key was updated.
 

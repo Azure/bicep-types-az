@@ -40,31 +40,16 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
-## EncryptionSetIdentity
+## CreationData
 ### Properties
-* **principalId**: string (ReadOnly): The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity
-* **tenantId**: string (ReadOnly): The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity
-* **type**: 'SystemAssigned' | string: The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported.
-
-## EncryptionSetProperties
-### Properties
-* **activeKey**: [KeyVaultAndKeyReference](#keyvaultandkeyreference): Key Vault Key Url and vault id of KeK, KeK is optional and when provided is used to unwrap the encryptionKey
-* **previousKeys**: [KeyVaultAndKeyReference](#keyvaultandkeyreference)[] (ReadOnly): A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.
-* **provisioningState**: string (ReadOnly): The disk encryption set provisioning state.
-
-## KeyVaultAndKeyReference
-### Properties
-* **keyUrl**: string (Required): Url pointing to a key or secret in KeyVault
-* **sourceVault**: [SourceVault](#sourcevault) (Required): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
-
-## SourceVault
-### Properties
-* **id**: string: Resource Id
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Import' | 'Restore' | 'Upload' | string (Required): This enumerates the possible sources of a disk's creation.
+* **galleryImageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
+* **imageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
+* **sourceResourceId**: string: If createOption is Copy, this is the ARM id of the source snapshot or disk.
+* **sourceUniqueId**: string (ReadOnly): If this field is set, this is the unique id identifying the source of this resource.
+* **sourceUri**: string: If createOption is Import, this is the URI of a blob to be imported into a managed disk.
+* **storageAccountId**: string: Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.
+* **uploadSizeBytes**: int: If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).
 
 ## DiskProperties
 ### Properties
@@ -86,26 +71,27 @@
 * **timeCreated**: string (ReadOnly): The time when the disk was created.
 * **uniqueId**: string (ReadOnly): Unique Guid identifying the resource.
 
-## CreationData
+## DiskSku
 ### Properties
-* **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Import' | 'Restore' | 'Upload' | string (Required): This enumerates the possible sources of a disk's creation.
-* **galleryImageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
-* **imageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
-* **sourceResourceId**: string: If createOption is Copy, this is the ARM id of the source snapshot or disk.
-* **sourceUniqueId**: string (ReadOnly): If this field is set, this is the unique id identifying the source of this resource.
-* **sourceUri**: string: If createOption is Import, this is the URI of a blob to be imported into a managed disk.
-* **storageAccountId**: string: Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.
-* **uploadSizeBytes**: int: If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).
-
-## ImageDiskReference
-### Properties
-* **id**: string (Required): A relative uri containing either a Platform Image Repository or user image reference.
-* **lun**: int: If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.
+* **name**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | 'UltraSSD_LRS' | string: The sku name.
+* **tier**: string (ReadOnly): The sku tier.
 
 ## Encryption
 ### Properties
 * **diskEncryptionSetId**: string: ResourceId of the disk encryption set to use for enabling encryption at rest.
 * **type**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformKey' | string: The type of key used to encrypt the data of the disk.
+
+## EncryptionSetIdentity
+### Properties
+* **principalId**: string (ReadOnly): The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity
+* **tenantId**: string (ReadOnly): The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity
+* **type**: 'SystemAssigned' | string: The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported.
+
+## EncryptionSetProperties
+### Properties
+* **activeKey**: [KeyVaultAndKeyReference](#keyvaultandkeyreference): Key Vault Key Url and vault id of KeK, KeK is optional and when provided is used to unwrap the encryptionKey
+* **previousKeys**: [KeyVaultAndKeyReference](#keyvaultandkeyreference)[] (ReadOnly): A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.
+* **provisioningState**: string (ReadOnly): The disk encryption set provisioning state.
 
 ## EncryptionSettingsCollection
 ### Properties
@@ -118,24 +104,39 @@
 * **diskEncryptionKey**: [KeyVaultAndSecretReference](#keyvaultandsecretreference): Key Vault Secret Url and vault id of the encryption key
 * **keyEncryptionKey**: [KeyVaultAndKeyReference](#keyvaultandkeyreference): Key Vault Key Url and vault id of KeK, KeK is optional and when provided is used to unwrap the encryptionKey
 
+## ImageDiskReference
+### Properties
+* **id**: string (Required): A relative uri containing either a Platform Image Repository or user image reference.
+* **lun**: int: If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.
+
+## KeyVaultAndKeyReference
+### Properties
+* **keyUrl**: string (Required): Url pointing to a key or secret in KeyVault
+* **sourceVault**: [SourceVault](#sourcevault) (Required): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
+
 ## KeyVaultAndSecretReference
 ### Properties
 * **secretUrl**: string (Required): Url pointing to a key or secret in KeyVault
 * **sourceVault**: [SourceVault](#sourcevault) (Required): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
 
-## ShareInfoElement
+## ResourceTags
 ### Properties
-* **vmUri**: string (ReadOnly): A relative URI containing the ID of the VM that has the disk attached.
-
-## DiskSku
-### Properties
-* **name**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | 'UltraSSD_LRS' | string: The sku name.
-* **tier**: string (ReadOnly): The sku tier.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ShareInfoElement
+### Properties
+* **vmUri**: string (ReadOnly): A relative URI containing the ID of the VM that has the disk attached.
 
 ## SnapshotProperties
 ### Properties
@@ -156,8 +157,7 @@
 * **name**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: The sku name.
 * **tier**: string (ReadOnly): The sku tier.
 
-## ResourceTags
+## SourceVault
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **id**: string: Resource Id
 
