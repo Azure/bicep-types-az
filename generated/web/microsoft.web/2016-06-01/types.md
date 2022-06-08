@@ -147,7 +147,7 @@
 ## CustomApiPropertiesDefinition
 ### Properties
 * **apiDefinitions**: [ApiResourceDefinitions](#apiresourcedefinitions): API Definitions
-* **apiType**: 'NotSpecified' | 'Rest' | 'Soap': The API type
+* **apiType**: 'NotSpecified' | 'Rest' | 'Soap' | string: The API type
 * **backendService**: [ApiResourceBackendService](#apiresourcebackendservice): The API backend service
 * **brandColor**: string: Brand color
 * **capabilities**: string[]: The custom API capabilities
@@ -202,7 +202,7 @@
 ## WsdlDefinition
 ### Properties
 * **content**: string: The WSDL content
-* **importMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest': The WSDL import method
+* **importMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest' | string: The WSDL import method
 * **service**: [WsdlService](#wsdlservice): The service with name and endpoint names
 * **url**: string: The WSDL URL
 
@@ -236,12 +236,12 @@
 * **displayName**: string (ReadOnly): Display name of the parameter in the connection provider's OAuth settings
 * **firstPartyLoginUri**: string (ReadOnly): URI for first party login
 * **link**: string (ReadOnly): URI for the consent link
-* **status**: 'Authenticated' | 'Error' | 'Unauthenticated' (ReadOnly): Status of the link
+* **status**: 'Authenticated' | 'Error' | 'Unauthenticated' | string (ReadOnly): Status of the link
 
 ## WsdlDefinition
 ### Properties
 * **content**: string: The WSDL content
-* **importMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest': The WSDL import method
+* **importMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest' | string: The WSDL import method
 * **service**: [WsdlService](#wsdlservice): The service with name and endpoint names
 * **url**: string: The WSDL URL
 

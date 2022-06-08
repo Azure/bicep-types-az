@@ -39,7 +39,7 @@
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'indicator' (Required): The kind of the threat intelligence entity
+* **kind**: 'indicator' | string (Required): The kind of the threat intelligence entity
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ThreatIntelligenceIndicatorProperties](#threatintelligenceindicatorproperties) (WriteOnly): Describes threat intelligence entity properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
@@ -70,9 +70,9 @@
 ## IncidentProperties
 ### Properties
 * **additionalData**: [IncidentAdditionalData](#incidentadditionaldata) (ReadOnly): Incident additional data property bag.
-* **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined': The reason the incident was closed
+* **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined' | string: The reason the incident was closed
 * **classificationComment**: string: Describes the reason the incident was closed
-* **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected': The classification reason the incident was closed with
+* **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected' | string: The classification reason the incident was closed with
 * **createdTimeUtc**: string (ReadOnly): The time the incident was created
 * **description**: string: The description of the incident
 * **firstActivityTimeUtc**: string: The time of the first activity in the incident
@@ -83,8 +83,8 @@
 * **lastModifiedTimeUtc**: string (ReadOnly): The last time the incident was updated
 * **owner**: [IncidentOwnerInfo](#incidentownerinfo): Information on the user an incident is assigned to
 * **relatedAnalyticRuleIds**: string[] (ReadOnly): List of resource ids of Analytic rules related to the incident
-* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (Required): The severity of the incident
-* **status**: 'Active' | 'Closed' | 'New' (Required): The status of the incident
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (Required): The severity of the incident
+* **status**: 'Active' | 'Closed' | 'New' | string (Required): The status of the incident
 * **title**: string (Required): The title of the incident
 
 ## IncidentAdditionalData
@@ -93,12 +93,12 @@
 * **alertsCount**: int (ReadOnly): The number of alerts in the incident
 * **bookmarksCount**: int (ReadOnly): The number of bookmarks in the incident
 * **commentsCount**: int (ReadOnly): The number of comments in the incident
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PrivilegeEscalation'[] (ReadOnly): The tactics associated with incident
+* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PrivilegeEscalation' | string[] (ReadOnly): The tactics associated with incident
 
 ## IncidentLabel
 ### Properties
 * **labelName**: string (Required): The name of the label
-* **labelType**: 'System' | 'User' (ReadOnly): The type of the label
+* **labelType**: 'System' | 'User' | string (ReadOnly): The type of the label
 
 ## IncidentOwnerInfo
 ### Properties
@@ -111,10 +111,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## IncidentCommentProperties
 ### Properties
@@ -230,7 +230,7 @@
 * **rawContent**: string: The raw content that represents to watchlist items to create. Example : This line will be skipped
 header1,header2
 value1,value2
-* **source**: 'Local file' | 'Remote storage' (Required): The source of the watchlist
+* **source**: 'Local file' | 'Remote storage' | string (Required): The source of the watchlist
 * **tenantId**: string: The tenantId where the watchlist belongs to
 * **updated**: string: The last time the watchlist was updated
 * **updatedBy**: [UserInfo](#userinfo): User information that made some action
