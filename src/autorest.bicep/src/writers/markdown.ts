@@ -186,7 +186,7 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
 
     const resourceTypes = orderBy(types.filter(t => t instanceof ResourceType) as ResourceType[], x => x.Name.split('@')[0].toLowerCase());
     const resourceFunctionTypes = orderBy(types.filter(t => t instanceof ResourceFunctionType) as ResourceFunctionType[], x => x.Name.split('@')[0].toLowerCase());
-    const typesToWrite: TypeBase[] = [...resourceTypes, ...resourceFunctionTypes];
+    const typesToWrite: TypeBase[] = []
 
     for (const resourceType of resourceTypes) {
       findTypesToWrite(types, typesToWrite, resourceType.Body);
@@ -202,7 +202,19 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
       findTypesToWrite(types, typesToWrite, resourceFunctionType.Output);
     }
 
-    for (const type of typesToWrite) {
+    typesToWrite.sort((a, b) => {
+      const aName = (a as ObjectType).Name?.toLowerCase();
+      const bName = (b as ObjectType).Name?.toLowerCase();
+
+      if (aName === undefined) {
+        return bName === undefined ? 0 : 1;
+      }
+      if (bName === undefined || aName < bName) return -1;
+      if (bName > aName) return 1;
+      return 0;
+    });
+
+    for (const type of (resourceTypes as TypeBase[]).concat(resourceFunctionTypes).concat(typesToWrite)) {
       writeComplexType(types, type, 2, true);
     }
 
