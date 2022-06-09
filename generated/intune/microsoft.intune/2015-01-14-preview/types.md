@@ -17,7 +17,7 @@
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MAMPolicyAppOrGroupIdProperties](#mampolicyapporgroupidproperties): Android Policy request body for Intune MAM.
+* **properties**: [MAMPolicyAppOrGroupIdProperties](#mampolicyapporgroupidproperties) (WriteOnly): Android Policy request body for Intune MAM.
 * **type**: 'Microsoft.Intune/locations/androidPolicies/apps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Intune/locations/androidPolicies/groups@2015-01-14-preview
@@ -26,7 +26,7 @@
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MAMPolicyAppOrGroupIdProperties](#mampolicyapporgroupidproperties): Android Policy request body for Intune MAM.
+* **properties**: [MAMPolicyAppOrGroupIdProperties](#mampolicyapporgroupidproperties) (WriteOnly): Android Policy request body for Intune MAM.
 * **type**: 'Microsoft.Intune/locations/androidPolicies/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Intune/locations/iosPolicies@2015-01-14-preview
@@ -46,7 +46,7 @@
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MAMPolicyAppOrGroupIdProperties](#mampolicyapporgroupidproperties): Android Policy request body for Intune MAM.
+* **properties**: [MAMPolicyAppOrGroupIdProperties](#mampolicyapporgroupidproperties) (WriteOnly): Android Policy request body for Intune MAM.
 * **type**: 'Microsoft.Intune/locations/iosPolicies/apps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Intune/locations/iosPolicies/groups@2015-01-14-preview
@@ -55,7 +55,7 @@
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MAMPolicyAppOrGroupIdProperties](#mampolicyapporgroupidproperties): Android Policy request body for Intune MAM.
+* **properties**: [MAMPolicyAppOrGroupIdProperties](#mampolicyapporgroupidproperties) (WriteOnly): Android Policy request body for Intune MAM.
 * **type**: 'Microsoft.Intune/locations/iosPolicies/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AndroidMAMPolicyProperties
@@ -106,7 +106,7 @@
 
 ## MAMPolicyAppOrGroupIdProperties
 ### Properties
-* **url**: string (Required)
+* **url**: string (Required, WriteOnly)
 
 ## ResourceTags
 ### Properties

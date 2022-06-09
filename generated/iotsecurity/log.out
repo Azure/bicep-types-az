@@ -33,4 +33,4 @@ info    | Resource type microsoft.iotsecurity/onpremisesensors under path '/subs
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 17ms
-info    | Autorest completed in 4.79s. 2 files generated.
+info    | Autorest completed in 6.16s. 2 files generated.

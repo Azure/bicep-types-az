@@ -257,6 +257,7 @@
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [UserContractProperties](#usercontractproperties) (ReadOnly): User profile.
 * **type**: 'Microsoft.ApiManagement/service/groups/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/identityProviders@2020-12-01
@@ -301,6 +302,7 @@
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecipientEmailContractProperties](#recipientemailcontractproperties) (ReadOnly): Recipient Email Contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/notifications/recipientEmails' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/notifications/recipientUsers@2020-12-01
@@ -309,6 +311,7 @@
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecipientUsersContractProperties](#recipientuserscontractproperties) (ReadOnly): Recipient User Contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/notifications/recipientUsers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/openidConnectProviders@2020-12-01
@@ -383,6 +386,7 @@
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ApiContractProperties](#apicontractproperties) (ReadOnly): Api Entity Properties
 * **type**: 'Microsoft.ApiManagement/service/products/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/groups@2020-12-01
@@ -391,6 +395,7 @@
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [GroupContractProperties](#groupcontractproperties) (ReadOnly): Group contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/products/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/policies@2020-12-01
@@ -523,6 +528,27 @@
 * **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Configuration of a virtual network to which API Management service is deployed.
 * **zones**: string[]: A list of availability zones denoting where the resource needs to come from.
 
+## ApiContractProperties
+### Properties
+* **apiRevision**: string (ReadOnly): Describes the Revision of the Api. If no value is provided, default revision 1 is created
+* **apiRevisionDescription**: string (ReadOnly): Description of the Api Revision.
+* **apiVersion**: string (ReadOnly): Indicates the Version identifier of the API if the API is versioned
+* **apiVersionDescription**: string (ReadOnly): Description of the Api Version.
+* **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails) (ReadOnly): An API Version Set contains the common configuration for a set of API Versions relating
+* **apiVersionSetId**: string (ReadOnly): A resource identifier for the related ApiVersionSet.
+* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (ReadOnly): API Authentication Settings.
+* **description**: string (ReadOnly): Description of the API. May include HTML formatting tags.
+* **displayName**: string (ReadOnly): API name. Must be 1 to 300 characters long.
+* **isCurrent**: bool (ReadOnly): Indicates if API revision is current api revision.
+* **isOnline**: bool (ReadOnly): Indicates if API revision is accessible via the gateway.
+* **path**: string (ReadOnly): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
+* **protocols**: 'http' | 'https'[] (ReadOnly): Describes on which protocols the operations in this API can be invoked.
+* **serviceUrl**: string (ReadOnly): Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
+* **sourceApiId**: string (ReadOnly): API identifier of the source API.
+* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (ReadOnly): Subscription key parameter names details.
+* **subscriptionRequired**: bool (ReadOnly): Specifies whether an API or Product subscription is required for accessing the API.
+* **type**: 'http' | 'soap' | string (ReadOnly): Type of API.
+
 ## ApiCreateOrUpdateProperties
 ### Properties
 * **apiRevision**: string (WriteOnly): Describes the Revision of the Api. If no value is provided, default revision 1 is created
@@ -646,7 +672,25 @@ dictionary key references will be ARM resource ids in the form:
 
 ## AssociationContractProperties
 ### Properties
-* **provisioningState**: 'created': Provisioning state.
+* **apiRevision**: string (ReadOnly): Describes the Revision of the Api. If no value is provided, default revision 1 is created
+* **apiRevisionDescription**: string (ReadOnly): Description of the Api Revision.
+* **apiVersion**: string (ReadOnly): Indicates the Version identifier of the API if the API is versioned
+* **apiVersionDescription**: string (ReadOnly): Description of the Api Version.
+* **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails) (ReadOnly): An API Version Set contains the common configuration for a set of API Versions relating
+* **apiVersionSetId**: string (ReadOnly): A resource identifier for the related ApiVersionSet.
+* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (ReadOnly): API Authentication Settings.
+* **description**: string (ReadOnly): Description of the API. May include HTML formatting tags.
+* **displayName**: string (ReadOnly): API name. Must be 1 to 300 characters long.
+* **isCurrent**: bool (ReadOnly): Indicates if API revision is current api revision.
+* **isOnline**: bool (ReadOnly): Indicates if API revision is accessible via the gateway.
+* **path**: string (ReadOnly): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
+* **protocols**: 'http' | 'https'[] (ReadOnly): Describes on which protocols the operations in this API can be invoked.
+* **provisioningState**: 'created' (WriteOnly): Provisioning state.
+* **serviceUrl**: string (ReadOnly): Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
+* **sourceApiId**: string (ReadOnly): API identifier of the source API.
+* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (ReadOnly): Subscription key parameter names details.
+* **subscriptionRequired**: bool (ReadOnly): Specifies whether an API or Product subscription is required for accessing the API.
+* **type**: 'http' | 'soap' | string (ReadOnly): Type of API.
 
 ## AuthenticationSettingsContract
 ### Properties
@@ -1050,10 +1094,18 @@ Instrumentation key for applicationInsights logger.
 * **subscriptionsLimit**: int: Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false.
 * **terms**: string: Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
 
+## RecipientEmailContractProperties
+### Properties
+* **email**: string (ReadOnly): User Email subscribed to notification.
+
 ## RecipientsContractProperties
 ### Properties
 * **emails**: string[] (ReadOnly): List of Emails subscribed for the notification.
 * **users**: string[] (ReadOnly): List of Users subscribed for the notification.
+
+## RecipientUsersContractProperties
+### Properties
+* **userId**: string (ReadOnly): API Management UserId subscribed to notification.
 
 ## RegistrationDelegationSettingsProperties
 ### Properties
@@ -1156,6 +1208,17 @@ Instrumentation key for applicationInsights logger.
 * **name**: string (Required): body parameter name.
 * **value**: string (Required): body parameter value.
 
+## UserContractProperties
+### Properties
+* **email**: string (ReadOnly): Email address.
+* **firstName**: string (ReadOnly): First name.
+* **groups**: [GroupContractProperties](#groupcontractproperties)[] (ReadOnly): Collection of groups user is part of.
+* **identities**: [UserIdentityContract](#useridentitycontract)[] (ReadOnly): Collection of user identities.
+* **lastName**: string (ReadOnly): Last name.
+* **note**: string (ReadOnly): Optional note about a user set by the administrator.
+* **registrationDate**: string (ReadOnly): Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+* **state**: 'active' | 'blocked' | 'deleted' | 'pending' | string (ReadOnly): Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
+
 ## UserCreateParameterProperties
 ### Properties
 * **appType**: 'developerPortal' | 'portal' | string (WriteOnly)
@@ -1172,8 +1235,8 @@ Instrumentation key for applicationInsights logger.
 
 ## UserIdentityContract
 ### Properties
-* **id**: string: Identifier value within provider.
-* **provider**: string: Identity provider name.
+* **id**: string (ReadOnly): Identifier value within provider.
+* **provider**: string (ReadOnly): Identity provider name.
 
 ## UserIdentityProperties
 ### Properties

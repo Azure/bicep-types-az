@@ -6,6 +6,8 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [ApplyUpdateProperties](#applyupdateproperties) (ReadOnly): Properties for apply update
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Maintenance/applyUpdates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Maintenance/configurationAssignments@2021-04-01-preview
@@ -30,6 +32,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [MaintenanceConfigurationTags](#maintenanceconfigurationtags): Gets or sets tags of the resource
 * **type**: 'Microsoft.Maintenance/maintenanceConfigurations' (ReadOnly, DeployTimeConstant): The resource type
+
+## ApplyUpdateProperties
+### Properties
+* **lastUpdateTime**: string (ReadOnly): Last Update time
+* **resourceId**: string (ReadOnly): The resourceId
+* **status**: 'Completed' | 'InProgress' | 'Pending' | 'RetryLater' | 'RetryNow' | string (ReadOnly): The status
 
 ## ConfigurationAssignmentProperties
 ### Properties
@@ -90,12 +98,12 @@
 
 ## SystemData
 ### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
+* **createdBy**: string (ReadOnly): The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
+* **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 
 ## TaskProperties
 ### Properties

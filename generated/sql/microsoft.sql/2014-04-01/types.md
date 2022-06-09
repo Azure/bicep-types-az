@@ -138,7 +138,7 @@
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'import' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [ImportExtensionProperties](#importextensionproperties) (WriteOnly): Represents the properties for an import operation
+* **properties**: [ImportExtensionProperties](#importextensionproperties): Represents the properties for an import operation
 * **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/geoBackupPolicies@2014-04-01
@@ -364,7 +364,16 @@ The list of SKUs may vary by region and support offer. To determine the service 
 * **administratorLogin**: string (Required, WriteOnly): The name of the SQL administrator.
 * **administratorLoginPassword**: string (Required, WriteOnly): The password of the SQL administrator.
 * **authenticationType**: 'ADPassword' | 'SQL' (WriteOnly): The authentication type.
+* **blobUri**: string (ReadOnly): The blob uri.
+* **databaseName**: string (ReadOnly): The name of the database.
+* **errorMessage**: string (ReadOnly): The error message returned from the server.
+* **lastModifiedTime**: string (ReadOnly): The operation status last modified time.
 * **operationMode**: 'Import' (Required, WriteOnly): The type of import operation being performed. This is always Import.
+* **queuedTime**: string (ReadOnly): The operation queued time.
+* **requestId**: string (ReadOnly): The request type of the operation.
+* **requestType**: string (ReadOnly): The request type of the operation.
+* **serverName**: string (ReadOnly): The name of the server.
+* **status**: string (ReadOnly): The status message returned from the server.
 * **storageKey**: string (Required, WriteOnly): The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?."
 * **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required, WriteOnly): The type of the storage key to use.
 * **storageUri**: string (Required, WriteOnly): The storage uri to use.

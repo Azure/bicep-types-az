@@ -118,9 +118,9 @@
 ### Properties
 * **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (WriteOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VnetRouteProperties](#vnetrouteproperties) (WriteOnly): VnetRoute resource specific properties
+* **properties**: [VnetRouteProperties](#vnetrouteproperties): VnetRoute resource specific properties
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/routes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites@2021-01-01
@@ -2645,14 +2645,14 @@ Point-To-Site VPN connection.
 
 ## VnetRouteProperties
 ### Properties
-* **endAddress**: string (WriteOnly): The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
-* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC' | string (WriteOnly): The type of route this is:
+* **endAddress**: string: The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
+* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC' | string: The type of route this is:
 DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
 INHERITED - Routes inherited from the real Virtual Network routes
 STATIC - Static route set on the app only
 
 These values will be used for syncing an app's routes with those from a Virtual Network.
-* **startAddress**: string (WriteOnly): The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
+* **startAddress**: string: The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
 
 ## WorkerPool
 ### Properties
