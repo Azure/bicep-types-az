@@ -10,5 +10,5 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The enum schema 'AccountResourceRequestOperationType' with an undefined type and enum values is ambiguous. This has been auto-corrected to 'type:string'
-info    | autorest.bicep took 12ms
-info    | Autorest completed in 4.06s. 2 files generated.
+info    | autorest.bicep took 16ms
+info    | Autorest completed in 4.95s. 2 files generated.

@@ -84,9 +84,9 @@
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (WriteOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VnetRouteProperties](#vnetrouteproperties) (WriteOnly): VnetRoute resource specific properties
+* **properties**: [VnetRouteProperties](#vnetrouteproperties): VnetRoute resource specific properties
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/routes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites@2019-08-01
@@ -724,7 +724,9 @@ This is valid for all deployment slots in an app.
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [StaticSiteCustomDomainOverviewARMResourceProperties](#staticsitecustomdomainoverviewarmresourceproperties) (ReadOnly): StaticSiteCustomDomainOverviewARMResource resource specific properties
 * **type**: 'Microsoft.Web/staticSites/customDomains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function list (Microsoft.Web/sites/backups@2019-08-01)
@@ -1824,6 +1826,11 @@ Basic apps are not used for capacity allocation.
 * **apiLocation**: string: The path to the api code within the repository.
 * **appArtifactLocation**: string: The path of the app artifacts after building.
 * **appLocation**: string: The path to the app code within the repository.
+
+## StaticSiteCustomDomainOverviewARMResourceProperties
+### Properties
+* **createdOn**: string (ReadOnly): The date and time on which the custom domain was created for the static site.
+* **domainName**: string (ReadOnly): The domain name for the static site custom domain.
 
 ## StaticSiteUserARMResource
 ### Properties

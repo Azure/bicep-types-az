@@ -116,11 +116,11 @@
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (WriteOnly): Kind of resource
-* **location**: string (Required, WriteOnly): Resource Location
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VnetRouteProperties](#vnetrouteproperties) (WriteOnly)
-* **tags**: [ResourceTags](#resourcetags) (WriteOnly): Resource tags
+* **properties**: [VnetRouteProperties](#vnetrouteproperties)
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/routes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites@2015-08-01
@@ -625,11 +625,11 @@
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (WriteOnly): Kind of resource
-* **location**: string (Required, WriteOnly): Resource Location
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VnetGatewayProperties](#vnetgatewayproperties) (WriteOnly)
-* **tags**: [ResourceTags](#resourcetags) (WriteOnly): Resource tags
+* **properties**: [VnetGatewayProperties](#vnetgatewayproperties)
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/sourcecontrols@2015-08-01
@@ -661,11 +661,11 @@
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (WriteOnly): Kind of resource
-* **location**: string (Required, WriteOnly): Resource Location
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VnetGatewayProperties](#vnetgatewayproperties) (WriteOnly)
-* **tags**: [ResourceTags](#resourcetags) (WriteOnly): Resource tags
+* **properties**: [VnetGatewayProperties](#vnetgatewayproperties)
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Web/sites/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sourcecontrols@2015-08-01
@@ -1628,16 +1628,16 @@
 
 ## VnetRouteProperties
 ### Properties
-* **endAddress**: string (WriteOnly): The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
-* **name**: string (WriteOnly): The name of this route. This is only returned by the server and does not need to be set by the client.
-* **routeType**: string (WriteOnly): The type of route this is:
+* **endAddress**: string: The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
+* **name**: string: The name of this route. This is only returned by the server and does not need to be set by the client.
+* **routeType**: string: The type of route this is:
             DEFAULT - By default, every web app has routes to the local address ranges specified by RFC1918
             INHERITED - Routes inherited from the real Virtual Network routes
             STATIC - Static route set on the web app only
             
             These values will be used for syncing a Web App's routes with those from a Virtual Network. This operation will clear all DEFAULT and INHERITED routes and replace them
             with new INHERITED routes.
-* **startAddress**: string (WriteOnly): The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
+* **startAddress**: string: The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
 
 ## WorkerPool
 ### Properties

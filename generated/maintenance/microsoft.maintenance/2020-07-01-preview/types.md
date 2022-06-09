@@ -6,6 +6,7 @@
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [ApplyUpdateProperties](#applyupdateproperties) (ReadOnly): Properties for apply update
 * **type**: 'Microsoft.Maintenance/applyUpdates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Maintenance/configurationAssignments@2020-07-01-preview
@@ -28,6 +29,12 @@
 * **properties**: [MaintenanceConfigurationProperties](#maintenanceconfigurationproperties): Properties for maintenance configuration
 * **tags**: [MaintenanceConfigurationTags](#maintenanceconfigurationtags): Gets or sets tags of the resource
 * **type**: 'Microsoft.Maintenance/maintenanceConfigurations' (ReadOnly, DeployTimeConstant): The resource type
+
+## ApplyUpdateProperties
+### Properties
+* **lastUpdateTime**: string (ReadOnly): Last Update time
+* **resourceId**: string (ReadOnly): The resourceId
+* **status**: 'Completed' | 'InProgress' | 'Pending' | 'RetryLater' | 'RetryNow' | string (ReadOnly): The status
 
 ## ConfigurationAssignmentProperties
 ### Properties

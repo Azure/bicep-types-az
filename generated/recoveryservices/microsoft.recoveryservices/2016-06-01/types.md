@@ -62,8 +62,14 @@
 
 ## RawCertificateData
 ### Properties
-* **authType**: 'AAD' | 'ACS' | 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid' | string: Specifies the authentication type.
 * **certificate**: any: The base64 encoded certificate raw data string
+* **friendlyName**: string (ReadOnly): Certificate friendly name.
+* **issuer**: string (ReadOnly): Certificate issuer.
+* **resourceId**: int (ReadOnly): Resource ID of the vault.
+* **subject**: string (ReadOnly): Certificate Subject Name.
+* **thumbprint**: string (ReadOnly): Certificate thumbprint.
+* **validFrom**: string (ReadOnly): Certificate Validity start Date time.
+* **validTo**: string (ReadOnly): Certificate Validity End Date time.
 
 ## Sku
 ### Properties

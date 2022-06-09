@@ -29,8 +29,11 @@
 ## SearchServiceProperties
 ### Properties
 * **partitionCount**: int: The number of partitions in the Search service; if specified, it can be 1, 2, 3, 4, 6, or 12.
+* **provisioningState**: 'failed' | 'provisioning' | 'succeeded' (ReadOnly): The state of the last provisioning operation performed on the Search service.
 * **replicaCount**: int: The number of replicas in the Search service. If specified, it must be a value between 1 and 6 inclusive.
 * **sku**: [Sku](#sku): Defines the SKU of an Azure Search Service, which determines price tier and capacity limits.
+* **status**: 'degraded' | 'deleting' | 'disabled' | 'error' | 'provisioning' | 'running' (ReadOnly): The status of the Search service.
+* **statusDetails**: string (ReadOnly): The details of the Search service status.
 
 ## Sku
 ### Properties
