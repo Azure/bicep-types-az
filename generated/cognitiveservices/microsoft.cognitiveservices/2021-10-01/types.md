@@ -153,7 +153,7 @@
 ## DeploymentScaleSettings
 ### Properties
 * **capacity**: int: Deployment capacity.
-* **scaleType**: 'Manual' | string: Deployment scale type.
+* **scaleType**: 'Manual' | 'Standard' | string: Deployment scale type.
 
 ## Encryption
 ### Properties

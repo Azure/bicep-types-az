@@ -33,6 +33,16 @@
 * **properties**: [Dataset](#dataset) (Required): The Azure Data Factory nested object which identifies data within different data stores, such as tables, files, folders, and documents.
 * **type**: 'Microsoft.DataFactory/factories/datasets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DataFactory/factories/globalParameters@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Etag identifies change in the resource.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [GlobalParameter](#globalparameter) (Required): Global parameters associated with the Azure Data Factory
+* **type**: 'Microsoft.DataFactory/factories/globalParameters' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DataFactory/factories/integrationRuntimes@2018-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -2033,6 +2043,7 @@
 * **flowlet**: [DataFlowReference](#dataflowreference): Data flow reference type.
 * **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **name**: string (Required): Transformation name.
+* **rejectedDataLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 
 ## DataFlowSource
@@ -2891,6 +2902,7 @@
 * **dataFlow**: [DataFlowReference](#dataflowreference) (Required): Data flow reference type.
 * **integrationRuntime**: [IntegrationRuntimeReference](#integrationruntimereference): Integration runtime reference type.
 * **runConcurrently**: any: Any object
+* **sourceStagingConcurrency**: any: Any object
 * **staging**: [DataFlowStagingInfo](#dataflowstaginginfo): Staging info for execute data flow activity.
 * **traceLevel**: any: Any object
 
@@ -2920,6 +2932,7 @@
 * **queries**: [PowerQuerySinkMapping](#powerquerysinkmapping)[]: List of mapping for Power Query mashup query to sink dataset(s).
 * **runConcurrently**: any: Any object
 * **sinks**: [ExecutePowerQueryActivityTypePropertiesSinks](#executepowerqueryactivitytypepropertiessinks): (Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.
+* **sourceStagingConcurrency**: any: Any object
 * **staging**: [DataFlowStagingInfo](#dataflowstaginginfo): Staging info for execute data flow activity.
 * **traceLevel**: any: Any object
 
@@ -2987,6 +3000,7 @@
 * **globalParameters**: [GlobalParameterDefinitionSpecification](#globalparameterdefinitionspecification): Definition of all parameters for an entity.
 * **provisioningState**: string (ReadOnly): Factory provisioning state, example Succeeded.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public network access is allowed for the data factory.
+* **purviewConfiguration**: [PurviewConfiguration](#purviewconfiguration): Purview configuration.
 * **repoConfiguration**: [FactoryRepoConfiguration](#factoryrepoconfiguration): Factory's git repo information.
 * **version**: string (ReadOnly): Version of the factory.
 
@@ -3003,7 +3017,7 @@
 #### Properties
 * **clientId**: string: GitHub bring your own app client id.
 * **clientSecret**: [GitHubClientSecret](#githubclientsecret): Client secret information for factory's bring your own app repository configuration.
-* **hostName**: string: GitHub Enterprise host name. For example: https://github.mydomain.com
+* **hostName**: string: GitHub Enterprise host name. For example: `https://github.mydomain.com`
 * **type**: 'FactoryGitHubConfiguration' (Required): Type of repo configuration.
 
 ### FactoryVstsConfiguration
@@ -3111,6 +3125,11 @@
 ### Properties
 * **byoaSecretAkvUrl**: string: Bring your own app client secret AKV URL.
 * **byoaSecretName**: string: Bring your own app client secret name in AKV.
+
+## GlobalParameter
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [GlobalParameterSpecification](#globalparameterspecification)
 
 ## GlobalParameterDefinitionSpecification
 ### Properties
@@ -4575,6 +4594,7 @@
 * **flowlet**: [DataFlowReference](#dataflowreference): Data flow reference type.
 * **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **name**: string (Required): Transformation name.
+* **rejectedDataLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **script**: string: sink script.
 
@@ -4637,6 +4657,10 @@
 * **actionsRequired**: string: ActionsRequired for a private link connection
 * **description**: string: Description of a private link connection
 * **status**: string: Status of a private link connection
+
+## PurviewConfiguration
+### Properties
+* **purviewResourceId**: string: Purview resource id.
 
 ## QuickbaseLinkedServiceTypeProperties
 ### Properties
@@ -4722,16 +4746,21 @@
 ## RestServiceLinkedServiceTypeProperties
 ### Properties
 * **aadResourceId**: any: Any object
-* **authenticationType**: 'AadServicePrincipal' | 'Anonymous' | 'Basic' | 'ManagedServiceIdentity' | string (Required): Type of authentication used to connect to the REST service.
+* **authenticationType**: 'AadServicePrincipal' | 'Anonymous' | 'Basic' | 'ManagedServiceIdentity' | 'OAuth2ClientCredential' | string (Required): Type of authentication used to connect to the REST service.
 * **authHeaders**: any: Any object
 * **azureCloudType**: any: Any object
+* **clientId**: any: Any object
+* **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
 * **credential**: [CredentialReference](#credentialreference): Credential reference type.
 * **enableServerCertificateValidation**: any: Any object
 * **encryptedCredential**: any: Any object
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **resource**: any: Any object
+* **scope**: any: Any object
 * **servicePrincipalId**: any: Any object
 * **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
 * **tenant**: any: Any object
+* **tokenEndpoint**: any: Any object
 * **url**: any (Required): Any object
 * **userName**: any: Any object
 

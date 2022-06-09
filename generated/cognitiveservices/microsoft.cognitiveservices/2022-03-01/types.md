@@ -157,7 +157,7 @@
 ### Properties
 * **activeCapacity**: int (ReadOnly): Deployment active capacity. This value might be different from `capacity` if customer recently updated `capacity`.
 * **capacity**: int: Deployment capacity.
-* **scaleType**: 'Manual' | string: Deployment scale type.
+* **scaleType**: 'Manual' | 'Standard' | string: Deployment scale type.
 
 ## Encryption
 ### Properties

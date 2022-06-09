@@ -1379,6 +1379,7 @@
 * **backendAddressPool**: [SubResource](#subresource): Reference to another subresource.
 * **backendSettings**: [SubResource](#subresource): Reference to another subresource.
 * **listener**: [SubResource](#subresource): Reference to another subresource.
+* **priority**: int (Required): Priority of the routing rule.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
 * **ruleType**: 'Basic' | 'PathBasedRouting' | string: Rule type.
 

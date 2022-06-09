@@ -243,11 +243,11 @@
 
 ## OperationsDefinition
 ### Properties
-* **actionType**: 'Internal' | 'NotSpecified' | string (WriteOnly)
+* **actionType**: 'Internal' | 'NotSpecified' (WriteOnly)
 * **display**: [OperationsDefinitionDisplay](#operationsdefinitiondisplay) (Required, WriteOnly): Display information of the operation.
 * **isDataAction**: bool (WriteOnly): Indicates whether the operation applies to data-plane.
 * **name**: string (Required, WriteOnly): Name of the operation.
-* **origin**: 'NotSpecified' | 'System' | 'User' | string (WriteOnly)
+* **origin**: 'NotSpecified' | 'System' | 'User' (WriteOnly)
 * **properties**: any (WriteOnly): Anything
 
 ## OperationsDefinitionDisplay
@@ -317,7 +317,7 @@
 * **incidentRoutingService**: string
 * **incidentRoutingTeam**: string
 * **manifestOwners**: string[]: Array of ResourceProviderManagementManifestOwnersItem
-* **resourceAccessPolicy**: 'AcisActionAllowed' | 'AcisReadAllowed' | 'NotSpecified' | string
+* **resourceAccessPolicy**: 'AcisActionAllowed' | 'AcisReadAllowed' | 'NotSpecified'
 * **resourceAccessRoles**: any[]: Array of any
 * **schemaOwners**: string[]: Array of ResourceProviderManagementSchemaOwnersItem
 * **serviceTreeInfos**: [ServiceTreeInfo](#servicetreeinfo)[]: Array of ServiceTreeInfo
@@ -384,7 +384,7 @@
 * **isPureProxy**: bool
 * **linkedAccessChecks**: [LinkedAccessCheck](#linkedaccesscheck)[]: Array of LinkedAccessCheck
 * **loggingRules**: [LoggingRule](#loggingrule)[]: Array of LoggingRule
-* **marketplaceType**: 'AddOn' | 'Bypass' | 'NotSpecified' | 'Store' | string
+* **marketplaceType**: 'AddOn' | 'Bypass' | 'NotSpecified' | 'Store'
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' | string
 * **regionality**: 'Global' | 'NotSpecified' | 'Regional' | string
 * **requestHeaderOptions**: [ResourceTypeRegistrationPropertiesRequestHeaderOptions](#resourcetyperegistrationpropertiesrequestheaderoptions)
@@ -462,7 +462,7 @@
 ### Properties
 * **extendedLocations**: string[]: Array of SkuLocationInfoExtendedLocationsItem
 * **location**: string (Required)
-* **type**: 'ArcZone' | 'EdgeZone' | 'NotSpecified' | string
+* **type**: 'ArcZone' | 'EdgeZone' | 'NotSpecified'
 * **zoneDetails**: [SkuZoneDetail](#skuzonedetail)[]: Array of SkuZoneDetail
 * **zones**: string[]: Array of SkuLocationInfoZonesItem
 

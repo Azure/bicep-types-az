@@ -418,7 +418,7 @@
 * **landingPageUrl**: string: The Slack landing page Url
 * **lastSubmissionId**: string (ReadOnly): The Sms auth token
 * **redirectAction**: string (ReadOnly): The Slack redirect action
-* **registerBeforeOAuthFlow**: bool (ReadOnly): Whether to register the settings before OAuth validation is performed. Recommended to True.
+* **registerBeforeOAuthFlow**: bool: Whether to register the settings before OAuth validation is performed. Recommended to True.
 * **scopes**: string: The Slack permission scopes.
 * **signingSecret**: string: The Slack signing secret.
 * **verificationToken**: string: The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.

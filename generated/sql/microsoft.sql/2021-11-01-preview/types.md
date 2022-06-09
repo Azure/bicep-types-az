@@ -1428,6 +1428,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 ## ManagedServerDnsAliasProperties
 ### Properties
 * **azureDnsRecord**: string (ReadOnly): The fully qualified DNS record for managed server alias
+* **publicAzureDnsRecord**: string (ReadOnly): The fully qualified public DNS record for managed server alias
 
 ## ManagedTransparentDataEncryptionProperties
 ### Properties

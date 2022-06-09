@@ -127,7 +127,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -156,6 +155,17 @@
 * **properties**: [NspAccessRuleProperties](#nspaccessruleproperties): Properties of NSP access rule.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkSecurityPerimeters/profiles/accessRules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Network/networkSecurityPerimeters/resourceAssociationProxies@2021-02-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NspAssociationProperties](#nspassociationproperties)
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: 'Microsoft.Network/networkSecurityPerimeters/resourceAssociationProxies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkSecurityPerimeters/resourceAssociations@2021-02-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -430,10 +440,6 @@
 * **resourceId**: string: Resource Id.
 * **resourceType**: string: Resource Type.
 
-## LoggingCategory
-### Properties
-* **name**: string: The name of the logging category.
-
 ## NetworkGroupProperties
 ### Properties
 * **conditionalMembership**: string: Network group conditional filter.
@@ -492,8 +498,7 @@
 
 ## NetworkSecurityPerimeterProperties
 ### Properties
-* **description**: string: A description of the network security perimeter.
-* **displayName**: string: A friendly name for the network security perimeter.
+* **perimeterGuid**: string: perimeter guid of the network security perimeter.
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
 
 ## NspAccessRuleProperties
@@ -516,7 +521,6 @@
 ## NspProfileProperties
 ### Properties
 * **accessRulesVersion**: string (ReadOnly): Version number that increases with every update to access rules within the profile.
-* **enabledLogCategories**: [LoggingCategory](#loggingcategory)[]: Gets the enabled log categories.
 
 ## PerimeterBasedAccessRule
 ### Properties
@@ -535,6 +539,11 @@
 ## QueryRequestOptions
 ### Properties
 * **skipToken**: string (WriteOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
