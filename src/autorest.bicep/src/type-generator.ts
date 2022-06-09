@@ -20,7 +20,14 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
   }
 
   function processResourceBody(fullyQualifiedType: string, definition: ResourceDefinition) {
-    const { descriptor, putRequest, putParameters, putSchema, getSchema, } = definition;
+    const { descriptor, putOperation, getOperation } = definition;
+    const {
+      request: putRequest,
+      parameters: putParameters,
+      requestSchema: putSchema,
+    } = putOperation;
+    const getSchema = getOperation?.responseSchema ?? putOperation.responseSchema;
+
     const nameSchemaResult = parseNameSchema(
       putRequest,
       putParameters,
@@ -73,7 +80,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     if (definitions.length > 1) {
       for (const definition of definitions) {
         if (!definition.descriptor.constantName) {
-          logWarning(`Skipping resource type ${fullyQualifiedType} under path '${definitions[0].putRequest.path}': Found multiple definitions for the same type`);
+          logWarning(`Skipping resource type ${fullyQualifiedType} under path '${definitions[0].putOperation.request.path}': Found multiple definitions for the same type`);
           return null;
         }
       }

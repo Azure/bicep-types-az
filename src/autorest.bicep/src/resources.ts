@@ -30,12 +30,18 @@ export interface ProviderDefinition {
   resourceActions: ResourceListActionDefinition[];
 }
 
+export interface ResourceOperationDefintion {
+  request: HttpRequest;
+  response?: HttpResponse;
+  parameters: Parameter[];
+  requestSchema?: ObjectSchema;
+  responseSchema?: ObjectSchema;
+}
+
 export interface ResourceDefinition {
   descriptor: ResourceDescriptor;
-  putRequest: HttpRequest;
-  putParameters: Parameter[];
-  putSchema?: ObjectSchema;
-  getSchema?: ObjectSchema;
+  putOperation: ResourceOperationDefintion;
+  getOperation?: ResourceOperationDefintion;
 }
 
 export interface ResourceListActionDefinition {
@@ -90,13 +96,13 @@ function getHttpRequests(requests: Request[] | undefined) {
   return requests?.map(x => x.protocol.http as HttpRequest).filter(x => !!x) ?? [];
 }
 
-function hasStatusCode(response: Response, statusCode: string) {
+function hasStatusCode(response: Response, ...statusCodesSought: string[]) {
   const statusCodes = (response.protocol.http as HttpResponse)?.statusCodes;
   if (!statusCodes) {
     return;
   }
 
-  return (statusCodes as string[]).includes(statusCode);
+  return statusCodesSought.filter(s => (statusCodes as string[]).includes(s)).length > 0;
 }
 
 function getNormalizedMethodPath(path: string) {
@@ -108,7 +114,7 @@ function getNormalizedMethodPath(path: string) {
   return path;
 }
 
-export function getSerializedName(metadata: Metadata) { 
+export function getSerializedName(metadata: Metadata) {
   return metadata.language.default.serializedName ?? metadata.language.default.name;
 }
 
@@ -191,7 +197,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
       if (putRequest) {
         putOperationsByPath[putRequest.path.toLowerCase()] = operation;
       }
-      const postListRequest = requests.filter(r => { 
+      const postListRequest = requests.filter(r => {
         if (r.method !== HttpMethod.Post) {
           return false;
         }
@@ -232,10 +238,18 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
 
         const resource: ResourceDefinition = {
           descriptor,
-          putRequest: putData.request,
-          putParameters: putData.parameters,
-          putSchema: (putData.schema instanceof ObjectSchema) ? putData.schema : undefined,
-          getSchema: (getData.schema instanceof ObjectSchema) ? getData.schema : undefined,
+          putOperation: {
+            ...putData,
+            requestSchema: (putData?.requestSchema instanceof ObjectSchema) ? putData.requestSchema : undefined,
+            responseSchema: (putData?.responseSchema instanceof ObjectSchema) ? putData.responseSchema : undefined,
+          },
+          getOperation: getData
+            ? {
+              ...getData,
+              requestSchema: (getData?.requestSchema instanceof ObjectSchema) ? getData.requestSchema : undefined,
+              responseSchema: (getData?.responseSchema instanceof ObjectSchema) ? getData.responseSchema : undefined,
+            }
+            : undefined
         };
 
         const lcNamespace = descriptor.namespace.toLowerCase();
@@ -289,7 +303,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
 
     return values(providerDefinitions);
   }
-  
+
   function getRequestSchema(operation: Operation | undefined, requests: Request[]) {
     if (!operation || requests.length === 0) {
       return;
@@ -318,8 +332,8 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
   function getResponseSchema(operation?: Operation) {
     const responses = operation?.responses ?? [];
     const validResponses = [
-      // order 200 responses before default
-      ...responses.filter(r => hasStatusCode(r, "200")),
+      // order 20x responses before default
+      ...responses.filter(r => hasStatusCode(r, "200", "201", "202")),
       ...responses.filter(r => hasStatusCode(r, "default")),
     ];
 
@@ -346,14 +360,41 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
   }
 
   function getGetSchema(operation?: Operation) {
-    return getResponseSchema(operation);
+    const requestSchema = getRequestSchema(
+      operation,
+      operation?.requests?.filter(r => r.protocol.http?.method === HttpMethod.Get) ?? []
+    );
+    const responseSchema = getResponseSchema(operation);
+
+    if (!requestSchema || !responseSchema) {
+      return;
+    }
+
+    return {
+      request: requestSchema.request,
+      response: responseSchema.response,
+      parameters: requestSchema.parameters,
+      requestSchema: requestSchema.schema,
+      responseSchema: responseSchema.schema,
+    };
   }
 
   function getPutSchema(operation?: Operation) {
     const requests = operation?.requests ?? [];
     const validRequests = requests.filter(r => (r.protocol.http as HttpRequest)?.method === HttpMethod.Put);
+    const requestSchema = getRequestSchema(operation, validRequests);
+    const responseSchema = getResponseSchema(operation);
+    if (!requestSchema) {
+      return;
+    }
 
-    return getRequestSchema(operation, validRequests);
+    return {
+      request: requestSchema.request,
+      response: responseSchema?.response,
+      parameters: requestSchema.parameters,
+      requestSchema: requestSchema.schema,
+      responseSchema: responseSchema?.schema,
+    };
   }
 
   function getPostSchema(operation?: Operation) {
@@ -369,6 +410,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
 
     return {
       request: request.request,
+      response: response.response,
       parameters: request.parameters,
       requestSchema: request.schema,
       responseSchema: response.schema,
@@ -445,7 +487,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
       return failure(resourceDescriptorsResult.error);
     }
 
-    return success({ 
+    return success({
       descriptors: resourceDescriptorsResult.value,
       actionName: actionName,
     });
@@ -478,7 +520,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
         const choiceSchema = parameter.schema;
         if (!(choiceSchema instanceof ChoiceSchema || choiceSchema instanceof SealedChoiceSchema)) {
           return failure(`Parameter reference ${typeSegment} is not defined as an enum`);
-        }        
+        }
 
         if (choiceSchema.choices.length === 0) {
           return failure(`Parameter reference ${typeSegment} is defined as an enum, but doesn't have any specified values`);
