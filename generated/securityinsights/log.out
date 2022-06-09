@@ -1,4 +1,4 @@
-AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
+AutoRest code generation utility [cli version: 3.6.1; node: v16.15.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.4)
@@ -6,6 +6,84 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
+info    | Processing batch task - {"tag":"microsoft.securityinsights-2022-06-01-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'CodelessUiConnectorConfigProperties-graphQueriesItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-06-01-preview/dataConnectors.json:2141:11
+warning | PreCheck/SchemaMissingType | The schema 'CodelessUiConnectorConfigProperties-sampleQueriesItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-06-01-preview/dataConnectors.json:2153:11
+warning | PreCheck/SchemaMissingType | The schema 'CodelessUiConnectorConfigProperties-dataTypesItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-06-01-preview/dataConnectors.json:2165:11
+warning | PreCheck/SchemaMissingType | The schema 'CodelessUiConnectorConfigProperties-connectivityCriteriaItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-06-01-preview/dataConnectors.json:2177:11
+warning | PreCheck/SchemaMissingType | The schema 'CodelessUiConnectorConfigProperties-instructionStepsItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-06-01-preview/dataConnectors.json:2197:11
+warning | PreCheck/SchemaMissingType | The schema 'Permissions-resourceProviderItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-06-01-preview/dataConnectors.json:2573:11
+warning | PreCheck/SchemaMissingType | The schema 'Permissions-customsItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-06-01-preview/dataConnectors.json:2585:11
+warning | PreCheck/SchemaMissingType | The schema 'InstructionSteps-instructionsItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-06-01-preview/dataConnectors.json:2681:11
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-06-01-preview/ThreatIntelligence.json#/components/schemas/components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties
+warning | Modeler/MissingType | The schema 'components·2sbdb2·schemas·watchlistitemproperties·properties·itemskeyvalue·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-06-01-preview/Watchlists.json#/components/schemas/components·2sbdb2·schemas·watchlistitemproperties·properties·itemskeyvalue·additionalproperties
+warning | Modeler/MissingType | The schema 'components·84fvid·schemas·watchlistitemproperties·properties·entitymapping·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-06-01-preview/Watchlists.json#/components/schemas/components·84fvid·schemas·watchlistitemproperties·properties·entitymapping·additionalproperties
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/listRepositories': Unable to find type segments
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 37ms
+info    | Processing batch task - {"tag":"microsoft.securityinsights-2022-05-01-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'CodelessUiConnectorConfigProperties-graphQueriesItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-05-01-preview/dataConnectors.json:2136:11
+warning | PreCheck/SchemaMissingType | The schema 'CodelessUiConnectorConfigProperties-sampleQueriesItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-05-01-preview/dataConnectors.json:2147:11
+warning | PreCheck/SchemaMissingType | The schema 'CodelessUiConnectorConfigProperties-dataTypesItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-05-01-preview/dataConnectors.json:2158:11
+warning | PreCheck/SchemaMissingType | The schema 'CodelessUiConnectorConfigProperties-connectivityCriteriaItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-05-01-preview/dataConnectors.json:2169:11
+warning | PreCheck/SchemaMissingType | The schema 'CodelessUiConnectorConfigProperties-instructionStepsItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-05-01-preview/dataConnectors.json:2188:11
+warning | PreCheck/SchemaMissingType | The schema 'Permissions-resourceProviderItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-05-01-preview/dataConnectors.json:2547:11
+warning | PreCheck/SchemaMissingType | The schema 'Permissions-customsItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-05-01-preview/dataConnectors.json:2558:11
+warning | PreCheck/SchemaMissingType | The schema 'InstructionSteps-instructionsItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-05-01-preview/dataConnectors.json:2653:11
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-05-01-preview/ThreatIntelligence.json#/components/schemas/components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties
+warning | Modeler/MissingType | The schema 'components·2sbdb2·schemas·watchlistitemproperties·properties·itemskeyvalue·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-05-01-preview/Watchlists.json#/components/schemas/components·2sbdb2·schemas·watchlistitemproperties·properties·itemskeyvalue·additionalproperties
+warning | Modeler/MissingType | The schema 'components·84fvid·schemas·watchlistitemproperties·properties·entitymapping·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2022-05-01-preview/Watchlists.json#/components/schemas/components·84fvid·schemas·watchlistitemproperties·properties·entitymapping·additionalproperties
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/listRepositories': Unable to find type segments
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 32ms
 info    | Processing batch task - {"tag":"microsoft.securityinsights-2022-04-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -43,7 +121,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 42ms
+info    | autorest.bicep took 31ms
 info    | Processing batch task - {"tag":"microsoft.securityinsights-2022-01-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -81,7 +159,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 34ms
+info    | autorest.bicep took 22ms
 info    | Processing batch task - {"tag":"microsoft.securityinsights-2021-10-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -117,7 +195,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 38ms
+info    | autorest.bicep took 22ms
 info    | Processing batch task - {"tag":"microsoft.securityinsights-2021-09-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -156,7 +234,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 29ms
+info    | autorest.bicep took 20ms
 info    | Processing batch task - {"tag":"microsoft.securityinsights-2021-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -173,7 +251,7 @@ warning | PreNamer/DeduplicateName | Deduplicating schema name: 'IncidentOwnerIn
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 17ms
+info    | autorest.bicep took 15ms
 info    | Processing batch task - {"tag":"microsoft.securityinsights-2021-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -190,7 +268,7 @@ warning | Modeler/MissingType | The schema 'components·1qaufw0·schemas·threat
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.securityinsights-2020-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -238,7 +316,7 @@ warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/re
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 19ms
+info    | autorest.bicep took 13ms
 info    | Processing batch task - {"tag":"microsoft.securityinsights-2019-01-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -387,5 +465,5 @@ warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ResourceWithEta
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 12ms
-info    | Autorest completed in 98.79s. 18 files generated.
+info    | autorest.bicep took 8ms
+info    | Autorest completed in 103.97s. 22 files generated.

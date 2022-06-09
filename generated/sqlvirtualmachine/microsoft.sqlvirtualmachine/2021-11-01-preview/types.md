@@ -76,7 +76,7 @@
 
 ## AutoPatchingSettings
 ### Properties
-* **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of week to apply the patch on.
+* **dayOfWeek**: 'Everyday' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of week to apply the patch on.
 * **enable**: bool: Enable or disable autopatching on SQL virtual machine.
 * **maintenanceWindowDuration**: int: Duration of patching.
 * **maintenanceWindowStartingHour**: int: Hour of the day when patching is initiated. Local VM time.
@@ -119,7 +119,7 @@
 
 ## Schedule
 ### Properties
-* **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of week to apply the patch on.
+* **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of the week to run assessment.
 * **enable**: bool: Enable or disable assessment schedule on SQL virtual machine.
 * **monthlyOccurrence**: int: Occurrence of the DayOfWeek day within a month to schedule assessment. Takes values: 1,2,3,4 and -1. Use -1 for last DayOfWeek day of the month
 * **startTime**: string: Time of the day in HH:mm format. Eg. 17:30

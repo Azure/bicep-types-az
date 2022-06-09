@@ -3,7 +3,7 @@ WARNING: Unable to parse swagger path "Microsoft.DBforMySQL/preview/2018-06-01-p
 WARNING: Unable to parse swagger path "Microsoft.DBforMySQL/preview/2018-06-01-privatepreview/PrivateLinkResources.json"
 WARNING: Unable to parse swagger path "Microsoft.DBforMySQL/preview/2020-01-01-privatepreview/DataEncryptionKeys.json"
 WARNING: Unable to parse swagger path "Microsoft.DBforMySQL/preview/2020-07-01-privatepreview/mysql.json"
-AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
+AutoRest code generation utility [cli version: 3.6.1; node: v16.15.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.4)
@@ -95,7 +95,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ServerAdministratorResourceLi
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/mysql/resource-manager/Microsoft.DBforMySQL/preview/2017-12-01-preview/mysql.json:3034:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'LogFile' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from LogFile
-info    | autorest.bicep took 22ms
+info    | autorest.bicep took 15ms
 info    | Processing batch task - {"tag":"microsoft.dbformysql-2017-12-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -178,7 +178,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ServerAdministratorResourceLi
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/mysql/resource-manager/Microsoft.DBforMySQL/stable/2017-12-01/mysql.json:2804:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'LogFile' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from LogFile
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.dbformysql-2018-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -297,7 +297,7 @@ warning | PreCheck/SchemaMissingType | The schema 'NameAvailability' with an und
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/mysql/resource-manager/Microsoft.DBforMySQL/preview/2020-07-01-preview/mysql.json:2524:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.dbformysql-2021-05-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -318,5 +318,5 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/mysql/resource-manager/Microsoft.DBforMySQL/stable/2021-05-01/mysql.json:2646:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
-info    | Autorest completed in 22.01s. 14 files generated.
+info    | autorest.bicep took 4ms
+info    | Autorest completed in 17.29s. 14 files generated.

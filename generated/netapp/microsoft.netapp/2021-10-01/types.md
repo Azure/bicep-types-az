@@ -19,11 +19,11 @@
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupPolicyProperties](#backuppolicyproperties) (Required): Backup policy properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetApp/netAppAccounts/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2021-10-01
@@ -32,11 +32,11 @@
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PoolProperties](#poolproperties) (Required): Pool properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2021-10-01
@@ -45,11 +45,11 @@
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VolumeProperties](#volumeproperties) (Required): Volume properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups@2021-10-01
@@ -88,11 +88,11 @@
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SnapshotPolicyProperties](#snapshotpolicyproperties) (Required): Snapshot policy properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetApp/netAppAccounts/snapshotPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/volumeGroups@2021-10-01
@@ -256,26 +256,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## SnapshotPolicyProperties
 ### Properties
 * **dailySchedule**: [DailySchedule](#dailyschedule): Daily Schedule properties
@@ -306,6 +286,26 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## VolumeBackupProperties
 ### Properties

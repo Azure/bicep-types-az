@@ -80,7 +80,7 @@
 
 ## ContainerHttpGet
 ### Properties
-* **httpHeaders**: [HttpHeaders](#httpheaders): The HTTP headers.
+* **httpHeaders**: [HttpHeader](#httpheader)[]: The HTTP headers.
 * **path**: string: The path to probe.
 * **port**: int (Required): The port number to probe.
 * **scheme**: 'http' | 'https' | string: The scheme.
@@ -165,7 +165,7 @@
 * **count**: int (Required): The count of the GPU resource.
 * **sku**: 'K80' | 'P100' | 'V100' | string (Required): The SKU of the GPU resource.
 
-## HttpHeaders
+## HttpHeader
 ### Properties
 * **name**: string: The header name.
 * **value**: string: The header value.

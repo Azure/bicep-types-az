@@ -219,7 +219,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 
 ## Configuration
 ### Properties
-* **activeRevisionsMode**: 'multiple' | 'single' | string: ActiveRevisionsMode controls how active revisions are handled for the Container app:
+* **activeRevisionsMode**: 'Multiple' | 'Single' | string: ActiveRevisionsMode controls how active revisions are handled for the Container app:
 <list><item>Multiple: multiple revisions can be active.</item><item>Single: Only one revision can be active at a time. Revision weights can not be used in this mode. If no value if provided, this is the default.</item></list>
 * **dapr**: [Dapr](#dapr): Container App Dapr configuration.
 * **ingress**: [Ingress](#ingress): Container App Ingress configuration.
@@ -247,7 +247,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **tcpSocket**: [ContainerAppProbeTcpSocket](#containerappprobetcpsocket): TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported.
 * **terminationGracePeriodSeconds**: int: Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is an alpha field and requires enabling ProbeTerminationGracePeriod feature gate. Maximum value is 3600 seconds (1 hour)
 * **timeoutSeconds**: int: Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 240.
-* **type**: 'liveness' | 'readiness' | 'startup' | string: The type of probe.
+* **type**: 'Liveness' | 'Readiness' | 'Startup' | string: The type of probe.
 
 ## ContainerAppProbeHttpGet
 ### Properties
@@ -255,7 +255,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **httpHeaders**: [ContainerAppProbeHttpGetHttpHeadersItem](#containerappprobehttpgethttpheadersitem)[]: Custom headers to set in the request. HTTP allows repeated headers.
 * **path**: string: Path to access on the HTTP server.
 * **port**: int (Required): Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
-* **scheme**: string: Scheme to use for connecting to the host. Defaults to HTTP.
+* **scheme**: 'HTTP' | 'HTTPS' | string: Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## ContainerAppProbeHttpGetHttpHeadersItem
 ### Properties
@@ -688,7 +688,7 @@ application used for sign-in.
 ### Properties
 * **dockerBridgeCidr**: string: CIDR notation IP range assigned to the Docker bridge, network. Must not overlap with any other provided IP ranges.
 * **infrastructureSubnetId**: string: Resource ID of a subnet for infrastructure components. This subnet must be in the same VNET as the subnet defined in runtimeSubnetId. Must not overlap with any other provided IP ranges.
-* **internal**: bool: Boolean indicating the environment only has an internal load balancer. These environments do not have a public static IP resource, must provide ControlPlaneSubnetResourceId and AppSubnetResourceId if enabling this property
+* **internal**: bool: Boolean indicating the environment only has an internal load balancer. These environments do not have a public static IP resource. They must provide runtimeSubnetId and infrastructureSubnetId if enabling this property
 * **platformReservedCidr**: string: IP range in CIDR notation that can be reserved for environment infrastructure IP addresses. Must not overlap with any other provided IP ranges.
 * **platformReservedDnsIP**: string: An IP address from the IP range defined by platformReservedCidr that will be reserved for the internal DNS server.
 * **runtimeSubnetId**: string: Resource ID of a subnet that Container App containers are injected into. This subnet must be in the same VNET as the subnet defined in infrastructureSubnetId. Must not overlap with any other provided IP ranges.

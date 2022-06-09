@@ -15,7 +15,7 @@
 
 ## AccountPropertiesForPutRequest
 ### Properties
-* **accountId**: string: The account's data-plane ID
+* **accountId**: string: The account's data-plane ID. This can be set only when connecting an existing classic account
 * **accountName**: string (ReadOnly): The account's name
 * **mediaServices**: [MediaServicesForPutRequest](#mediaservicesforputrequest): The media services details
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Gets the status of the account at the time the operation was called.

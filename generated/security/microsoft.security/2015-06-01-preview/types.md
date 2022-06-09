@@ -9,7 +9,7 @@
 * **location**: string (ReadOnly): Location where the resource is stored
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **pathRecommendations**: [PathRecommendation](#pathrecommendation)[] (WriteOnly): Array of PathRecommendation
-* **properties**: [AppWhitelistingGroupData](#appwhitelistinggroupdata) (ReadOnly): Represents a VM/server group and set of rules that are Recommended by Azure Security Center to be allowed
+* **properties**: [AppWhitelistingGroupData](#appwhitelistinggroupdata) (ReadOnly): Represents a VM/server group and set of rules that are Recommended by Microsoft Defender for Cloud to be allowed
 * **protectionMode**: [ProtectionMode](#protectionmode) (WriteOnly): The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
 * **type**: 'Microsoft.Security/locations/applicationWhitelistings' (ReadOnly, DeployTimeConstant): The resource type
 * **vmRecommendations**: [VmRecommendation](#vmrecommendation)[] (WriteOnly): Array of VmRecommendation

@@ -114,10 +114,10 @@
 
 ## AgentUpdateProperties
 ### Properties
-* **maintenanceWindows**: [MaintenanceWindowProperties](#maintenancewindowproperties)[]: List of maintenance windows. Maintenance windows are 2 hours long.
-* **maintenanceWindowTimeZone**: string: Time zone for maintenance as defined in https://docs.microsoft.com/en-us/dotnet/api/system.timezoneinfo.findsystemtimezonebyid?view=net-5.0. Must be set if useLocalTime is true.
-* **type**: 'Default' | 'Scheduled' | string: The type of maintenance for session host components.
-* **useSessionHostLocalTime**: bool: Whether to use localTime of the virtual machine.
+* **maintenanceWindows**: [MaintenanceWindowProperties](#maintenancewindowproperties)[]: The maintenance windows (day and time) for updating the agent components. At least 1 window must be specified. Optionally, a 2nd window can be specified.
+* **maintenanceWindowTimeZone**: string: The time zone for updating the agent components. Valid time zones can be found here: https://docs.microsoft.com/en-us/dotnet/api/system.timezoneinfo.findsystemtimezonebyid?view=net-5.0. A time zone must be specified if useSessionHostLocalTime is false.
+* **type**: 'Default' | 'Scheduled' | string: The preferred mechanism for updating the agent components. This is either Scheduled or Default.
+* **useSessionHostLocalTime**: bool: Boolean indicating whether to update the agent components in the local time zone of each session host in the host pool. By default, this is false.
 
 ## ApplicationGroupProperties
 ### Properties
@@ -149,7 +149,7 @@
 
 ## HostPoolProperties
 ### Properties
-* **agentUpdate**: [AgentUpdateProperties](#agentupdateproperties): The session host configuration for updating agent, monitoring agent, and stack component.
+* **agentUpdate**: [AgentUpdateProperties](#agentupdateproperties): The preferred settings for updating the agent components (RDAgent, Geneva Monitoring agent, and side-by-side stack) on session hosts.
 * **applicationGroupReferences**: string[] (ReadOnly): List of applicationGroup links.
 * **cloudPcResource**: bool (ReadOnly): Is cloud pc resource.
 * **customRdpProperty**: string: Custom rdp property of HostPool.
@@ -176,8 +176,8 @@
 
 ## MaintenanceWindowProperties
 ### Properties
-* **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of the week.
-* **hour**: int: The update start hour of the day. (0 - 23)
+* **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': The day of the week (Monday-Sunday).
+* **hour**: int: The starting hour of the maintenance window (0-23). Note that maintenance windows are 2 hours long. This means that updates can be applied anytime from the specified start hour to 2 hours after.
 
 ## MigrationRequestProperties
 ### Properties

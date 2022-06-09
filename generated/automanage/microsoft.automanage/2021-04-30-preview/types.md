@@ -44,7 +44,7 @@
 * **configurationProfile**: string: The Automanage configurationProfile ARM Resource URI.
 * **profileOverrides**: [ConfigurationProfileAssignmentProfileOverrides](#configurationprofileassignmentprofileoverrides): Data related to configuration profile assignment profile overrides.
 * **status**: string (ReadOnly): The status of onboarding, which only appears in the response.
-* **targetId**: string: The target VM resource URI
+* **targetId**: string (ReadOnly): The target VM resource URI
 
 ## ConfigurationProfileProperties
 ### Properties
