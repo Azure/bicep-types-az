@@ -12,7 +12,7 @@
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **plan**: [ResourceModelWithAllowedPropertySetPlan](#resourcemodelwithallowedpropertysetplan)
-* **properties**: [ApplicationGroupProperties](#applicationgroupproperties) (Required): Schema for ApplicationGroup properties.
+* **properties**: [ApplicationGroupProperties](#applicationgroupproperties) (Required): Detailed properties for ApplicationGroup
 * **sku**: [ResourceModelWithAllowedPropertySetSku](#resourcemodelwithallowedpropertysetsku)
 * **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups' (ReadOnly, DeployTimeConstant): The resource type
@@ -23,7 +23,7 @@
 * **apiVersion**: '2021-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApplicationProperties](#applicationproperties) (Required): Schema for Application properties.
+* **properties**: [ApplicationProperties](#applicationproperties) (Required): Detailed properties for Application
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups/applications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/hostPools@2021-01-14-preview
@@ -38,7 +38,7 @@
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **plan**: [ResourceModelWithAllowedPropertySetPlan](#resourcemodelwithallowedpropertysetplan)
-* **properties**: [HostPoolProperties](#hostpoolproperties) (Required): Properties of HostPool.
+* **properties**: [HostPoolProperties](#hostpoolproperties) (Required): Detailed properties for HostPool
 * **sku**: [ResourceModelWithAllowedPropertySetSku](#resourcemodelwithallowedpropertysetsku)
 * **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/hostPools' (ReadOnly, DeployTimeConstant): The resource type
@@ -49,7 +49,7 @@
 * **apiVersion**: '2021-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MsixPackageProperties](#msixpackageproperties) (Required): Schema for MSIX Package properties.
+* **properties**: [MsixPackageProperties](#msixpackageproperties) (Required): Detailed properties for MSIX Package
 * **type**: 'Microsoft.DesktopVirtualization/hostPools/msixPackages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/scalingPlans@2021-01-14-preview
@@ -64,7 +64,7 @@
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **plan**: [ResourceModelWithAllowedPropertySetPlan](#resourcemodelwithallowedpropertysetplan)
-* **properties**: [ScalingPlanProperties](#scalingplanproperties): Scaling plan properties.
+* **properties**: [ScalingPlanProperties](#scalingplanproperties): Detailed properties for scaling plan.
 * **sku**: [ResourceModelWithAllowedPropertySetSku](#resourcemodelwithallowedpropertysetsku)
 * **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/scalingPlans' (ReadOnly, DeployTimeConstant): The resource type
@@ -81,7 +81,7 @@
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **plan**: [ResourceModelWithAllowedPropertySetPlan](#resourcemodelwithallowedpropertysetplan)
-* **properties**: [WorkspaceProperties](#workspaceproperties): Schema for Workspace properties.
+* **properties**: [WorkspaceProperties](#workspaceproperties): Detailed properties for Workspace
 * **sku**: [ResourceModelWithAllowedPropertySetSku](#resourcemodelwithallowedpropertysetsku)
 * **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/workspaces' (ReadOnly, DeployTimeConstant): The resource type
@@ -93,7 +93,7 @@
 * **description**: string: Description of ApplicationGroup.
 * **friendlyName**: string: Friendly name of ApplicationGroup.
 * **hostPoolArmPath**: string (Required): HostPool arm path of ApplicationGroup.
-* **migrationRequest**: [MigrationRequestProperties](#migrationrequestproperties): Properties for arm migration.
+* **migrationRequest**: [MigrationRequestProperties](#migrationrequestproperties): The registration info of HostPool.
 * **objectId**: string (ReadOnly): ObjectId of ApplicationGroup. (internal use)
 * **workspaceArmPath**: string (ReadOnly): Workspace arm path of ApplicationGroup.
 
@@ -124,11 +124,11 @@
 * **hostPoolType**: 'BYODesktop' | 'Personal' | 'Pooled' | string (Required): HostPool type for desktop.
 * **loadBalancerType**: 'BreadthFirst' | 'DepthFirst' | 'Persistent' | string (Required): The type of the load balancer.
 * **maxSessionLimit**: int: The max session limit of HostPool.
-* **migrationRequest**: [MigrationRequestProperties](#migrationrequestproperties): Properties for arm migration.
+* **migrationRequest**: [MigrationRequestProperties](#migrationrequestproperties): The registration info of HostPool.
 * **objectId**: string (ReadOnly): ObjectId of HostPool. (internal use)
 * **personalDesktopAssignmentType**: 'Automatic' | 'Direct' | string: PersonalDesktopAssignment type for HostPool.
 * **preferredAppGroupType**: 'Desktop' | 'None' | 'RailApplications' | string (Required): The type of preferred application group type, default to Desktop Application Group
-* **registrationInfo**: [RegistrationInfo](#registrationinfo): Represents a RegistrationInfo definition.
+* **registrationInfo**: [RegistrationInfo](#registrationinfo): The registration info of HostPool.
 * **ring**: int: The ring number of HostPool.
 * **ssoadfsAuthority**: string: URL to customer ADFS server for signing WVD SSO certificates.
 * **ssoClientId**: string: ClientId for the registered Relying Party used to issue WVD SSO certificates.
@@ -242,13 +242,13 @@
 ### Properties
 * **daysOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[]: Set of days of the week on which this schedule is active.
 * **name**: string: Name of the scaling schedule.
-* **offPeakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for ramp up period.
+* **offPeakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for off-peak period.
 * **offPeakStartTime**: string: Starting time for off-peak period.
-* **peakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for ramp up period.
+* **peakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for peak period.
 * **peakStartTime**: string: Starting time for peak period.
 * **rampDownCapacityThresholdPct**: int: Capacity threshold for ramp down period.
 * **rampDownForceLogoffUsers**: bool: Should users be logged off forcefully from hosts.
-* **rampDownLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for ramp up period.
+* **rampDownLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for ramp down period.
 * **rampDownMinimumHostsPct**: int: Minimum host percentage for ramp down period.
 * **rampDownNotificationMessage**: string: Notification message for users during ramp down period.
 * **rampDownStartTime**: string: Starting time for ramp down period.

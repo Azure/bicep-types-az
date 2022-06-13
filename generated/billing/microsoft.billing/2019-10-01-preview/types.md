@@ -3,7 +3,7 @@
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles@2019-10-01-preview
 * **Valid Scope(s)**: Tenant
 ### Properties
-* **address**: [AddressDetails](#addressdetails) (WriteOnly): Address details.
+* **address**: [AddressDetails](#addressdetails) (WriteOnly): Billing address.
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **displayName**: string (WriteOnly): The name of the billing profile.
 * **enabledAzurePlans**: [AzurePlan](#azureplan)[] (WriteOnly): Enabled azure plans for the billing profile.
@@ -103,12 +103,12 @@
 
 ## BillingProfileProperties
 ### Properties
-* **address**: [AddressDetails](#addressdetails) (ReadOnly): Address details.
+* **address**: [AddressDetails](#addressdetails) (ReadOnly): Billing address.
 * **billingRelationshipType**: 'CSPPartner' | 'Direct' | 'IndirectCustomer' | 'IndirectPartner' | string (ReadOnly): Identifies which services and purchases are paid by a billing profile.
 * **currency**: string (ReadOnly): The currency in which the charges for the billing profile are billed.
 * **displayName**: string (ReadOnly): The name of the billing profile.
 * **enabledAzurePlans**: [AzurePlan](#azureplan)[] (ReadOnly): Information about the enabled azure plans.
-* **indirectRelationshipInfo**: [IndirectRelationshipInfo](#indirectrelationshipinfo) (ReadOnly): The billing profile details of the partner of the customer for an indirect motion.
+* **indirectRelationshipInfo**: [IndirectRelationshipInfo](#indirectrelationshipinfo) (ReadOnly): Identifies the billing profile that is linked to another billing profile in indirect purchase motion.
 * **invoiceDay**: int (ReadOnly): The day of the month when the invoice for the billing profile is generated.
 * **invoiceEmailOptIn**: bool (ReadOnly): Flag controlling whether the invoices for the billing profile are sent through email.
 * **invoiceSections**: [InvoiceSection](#invoicesection)[] (ReadOnly): The invoice sections associated to the billing profile.
@@ -165,7 +165,7 @@
 ### Properties
 * **displayName**: string (ReadOnly): The name of the invoice section.
 * **state**: 'Active' | 'Restricted' | string (ReadOnly): Identifies the state of an invoice section.
-* **targetCloud**: 'USGov' | 'USNat' | 'USSec' | string (ReadOnly): Possible cloud environments.
+* **targetCloud**: 'USGov' | 'USNat' | 'USSec' | string (ReadOnly): Identifies the cloud environments that are associated with an invoice section. This is a system managed optional field and gets updated as the invoice section gets associated with accounts in various clouds.
 
 ## InvoiceSectionWithCreateSubPermission
 ### Properties

@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DiagnosticSettings](#diagnosticsettings): The diagnostic settings.
+* **properties**: [DiagnosticSettings](#diagnosticsettings): Properties of a Diagnostic Settings Resource.
 * **type**: 'microsoft.aadiam/diagnosticSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DiagnosticSettings
@@ -22,7 +22,7 @@
 ### Properties
 * **category**: 'AuditLogs' | 'SignInLogs' | string: Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
 * **enabled**: bool (Required): A value indicating whether this log is enabled.
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Specifies the retention policy for the log.
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): The retention policy for this log.
 
 ## RetentionPolicy
 ### Properties

@@ -7,11 +7,11 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterProperties](#clusterproperties): Class representing the Kusto cluster properties.
-* **sku**: [AzureSku](#azuresku) (Required): Azure SKU definition.
+* **properties**: [ClusterProperties](#clusterproperties): The cluster properties.
+* **sku**: [AzureSku](#azuresku) (Required): The SKU of the cluster.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant): The resource type
-* **zones**: string[]: An array represents the availability zones of the cluster.
+* **zones**: string[]: The availability zones of the cluster.
 
 ## Resource Microsoft.Kusto/clusters/databases@2019-05-15
 * **Valid Scope(s)**: ResourceGroup
@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabaseProperties](#databaseproperties): Class representing the Kusto database properties.
+* **properties**: [DatabaseProperties](#databaseproperties): The database properties.
 * **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Kusto/clusters/databases/dataConnections@2019-05-15
@@ -36,17 +36,17 @@
 ### EventGridDataConnection
 #### Properties
 * **kind**: 'EventGrid' (Required): Kind of the endpoint for the data connection
-* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties): Class representing the Kusto event grid connection properties.
+* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties): The properties of the Event Grid data connection.
 
 ### EventHubDataConnection
 #### Properties
 * **kind**: 'EventHub' (Required): Kind of the endpoint for the data connection
-* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties): Class representing the Kusto event hub connection properties.
+* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties): The Event Hub data connection properties to validate.
 
 ### IotHubDataConnection
 #### Properties
 * **kind**: 'IotHub' (Required): Kind of the endpoint for the data connection
-* **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): Class representing the Kusto iot hub connection properties.
+* **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): The Iot Hub data connection properties.
 
 
 ## Function listPrincipals (Microsoft.Kusto/clusters/databases@2019-05-15)
@@ -65,12 +65,12 @@
 * **dataIngestionUri**: string (ReadOnly): The cluster data ingestion URI.
 * **enableDiskEncryption**: bool: A boolean value that indicates if the cluster's disks are encrypted.
 * **enableStreamingIngest**: bool: A boolean value that indicates if the streaming ingest is enabled.
-* **optimizedAutoscale**: [OptimizedAutoscale](#optimizedautoscale): A class that contains the optimized auto scale definition.
+* **optimizedAutoscale**: [OptimizedAutoscale](#optimizedautoscale): Optimized auto scale definition.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
 * **state**: 'Creating' | 'Deleted' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Unavailable' | 'Updating' | string (ReadOnly): The state of the resource.
 * **trustedExternalTenants**: [TrustedExternalTenant](#trustedexternaltenant)[]: The cluster's external tenants.
 * **uri**: string (ReadOnly): The cluster URI.
-* **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): A class that contains virtual network definition.
+* **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Virtual network definition.
 
 ## DatabasePrincipal
 ### Properties
@@ -91,7 +91,7 @@
 * **hotCachePeriod**: string: The time the data should be kept in cache for fast queries in TimeSpan.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
 * **softDeletePeriod**: string: The time the data should be kept before it stops being accessible to queries in TimeSpan.
-* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): A class that contains database statistics information.
+* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): The statistics of the database.
 
 ## DatabaseStatistics
 ### Properties

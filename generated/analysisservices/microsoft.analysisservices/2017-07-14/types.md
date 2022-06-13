@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Location of the Analysis Services resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AnalysisServicesServerProperties](#analysisservicesserverproperties): Properties of Analysis Services resource.
-* **sku**: [ResourceSku](#resourcesku) (Required): Represents the SKU name and Azure pricing tier for Analysis Services resource.
+* **properties**: [AnalysisServicesServerProperties](#analysisservicesserverproperties): Properties of the provision operation request.
+* **sku**: [ResourceSku](#resourcesku) (Required): The SKU of the Analysis Services resource.
 * **tags**: [ResourceTags](#resourcetags): Key-value pairs of additional resource provisioning properties.
 * **type**: 'Microsoft.AnalysisServices/servers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,9 +19,9 @@
 
 ## AnalysisServicesServerProperties
 ### Properties
-* **asAdministrators**: [ServerAdministrators](#serveradministrators): An array of administrator user identities
+* **asAdministrators**: [ServerAdministrators](#serveradministrators): A collection of AS server administrators
 * **backupBlobContainerUri**: string: The SAS container URI to the backup container.
-* **gatewayDetails**: [GatewayDetails](#gatewaydetails): The gateway details.
+* **gatewayDetails**: [GatewayDetails](#gatewaydetails): The gateway details configured for the AS server.
 * **managedMode**: int: The managed mode of the server (0 = not managed, 1 = managed).
 * **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' | string (ReadOnly): The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.
 * **serverFullName**: string (ReadOnly): The full name of the Analysis Services resource.

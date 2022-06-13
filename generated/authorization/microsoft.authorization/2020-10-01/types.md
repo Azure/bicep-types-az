@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RoleAssignmentScheduleRequestProperties](#roleassignmentschedulerequestproperties): Role assignment schedule request properties with scope.
+* **properties**: [RoleAssignmentScheduleRequestProperties](#roleassignmentschedulerequestproperties): Role assignment schedule request properties.
 * **type**: 'Microsoft.Authorization/roleAssignmentScheduleRequests' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/roleEligibilityScheduleRequests@2020-10-01
@@ -15,7 +15,7 @@
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RoleEligibilityScheduleRequestProperties](#roleeligibilityschedulerequestproperties): Role eligibility schedule request properties with scope.
+* **properties**: [RoleEligibilityScheduleRequestProperties](#roleeligibilityschedulerequestproperties): Role eligibility schedule request properties.
 * **type**: 'Microsoft.Authorization/roleEligibilityScheduleRequests' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/roleManagementPolicyAssignments@2020-10-01
@@ -24,7 +24,7 @@
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RoleManagementPolicyAssignmentProperties](#rolemanagementpolicyassignmentproperties): Role management policy assignment properties with scope.
+* **properties**: [RoleManagementPolicyAssignmentProperties](#rolemanagementpolicyassignmentproperties): Role management policy properties.
 * **type**: 'Microsoft.Authorization/roleManagementPolicyAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ApprovalSettings
@@ -106,7 +106,7 @@
 * **condition**: string: The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
 * **conditionVersion**: string: Version of the condition. Currently accepted value is '2.0'
 * **createdOn**: string (ReadOnly): DateTime when role assignment schedule request was created
-* **expandedProperties**: [ExpandedProperties](#expandedproperties) (ReadOnly)
+* **expandedProperties**: [ExpandedProperties](#expandedproperties) (ReadOnly): Additional properties of principal, scope and role definition
 * **justification**: string: Justification for the role assignment
 * **linkedRoleEligibilityScheduleId**: string: The linked role eligibility schedule id - to activate an eligibility.
 * **principalId**: string (Required): The principal ID.
@@ -116,7 +116,7 @@
 * **roleDefinitionId**: string (Required): The role definition ID.
 * **scheduleInfo**: [RoleAssignmentScheduleRequestPropertiesScheduleInfo](#roleassignmentschedulerequestpropertiesscheduleinfo): Schedule info of the role assignment schedule
 * **scope**: string (ReadOnly): The role assignment schedule request scope.
-* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' | string (ReadOnly): The status of the role assignment schedule.
+* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' | string (ReadOnly): The status of the role assignment schedule request.
 * **targetRoleAssignmentScheduleId**: string: The resultant role assignment schedule id or the role assignment schedule id being updated
 * **targetRoleAssignmentScheduleInstanceId**: string: The role assignment schedule instance id being updated
 * **ticketInfo**: [RoleAssignmentScheduleRequestPropertiesTicketInfo](#roleassignmentschedulerequestpropertiesticketinfo): Ticket Info of the role assignment
@@ -143,7 +143,7 @@
 * **condition**: string: The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
 * **conditionVersion**: string: Version of the condition. Currently accepted value is '2.0'
 * **createdOn**: string (ReadOnly): DateTime when role eligibility schedule request was created
-* **expandedProperties**: [ExpandedProperties](#expandedproperties) (ReadOnly)
+* **expandedProperties**: [ExpandedProperties](#expandedproperties) (ReadOnly): Additional properties of principal, scope and role definition
 * **justification**: string: Justification for the role eligibility
 * **principalId**: string (Required): The principal ID.
 * **principalType**: 'Device' | 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User' | string (ReadOnly): The principal type of the assigned principal ID.
@@ -152,7 +152,7 @@
 * **roleDefinitionId**: string (Required): The role definition ID.
 * **scheduleInfo**: [RoleEligibilityScheduleRequestPropertiesScheduleInfo](#roleeligibilityschedulerequestpropertiesscheduleinfo): Schedule info of the role eligibility schedule
 * **scope**: string (ReadOnly): The role eligibility schedule request scope.
-* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' | string (ReadOnly): The status of the role assignment schedule.
+* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' | string (ReadOnly): The status of the role eligibility schedule request.
 * **targetRoleEligibilityScheduleId**: string: The resultant role eligibility schedule id or the role eligibility schedule id being updated
 * **targetRoleEligibilityScheduleInstanceId**: string: The role eligibility schedule instance id being updated
 * **ticketInfo**: [RoleEligibilityScheduleRequestPropertiesTicketInfo](#roleeligibilityschedulerequestpropertiesticketinfo): Ticket Info of the role eligibility
@@ -166,7 +166,7 @@
 ### Properties
 * **duration**: string: Duration of the role eligibility schedule in TimeSpan.
 * **endDateTime**: string: End DateTime of the role eligibility schedule.
-* **type**: 'AfterDateTime' | 'AfterDuration' | 'NoExpiration' | string: Type of the role assignment schedule expiration
+* **type**: 'AfterDateTime' | 'AfterDuration' | 'NoExpiration' | string: Type of the role eligibility schedule expiration
 
 ## RoleEligibilityScheduleRequestPropertiesTicketInfo
 ### Properties
@@ -176,7 +176,7 @@
 ## RoleManagementPolicyAssignmentProperties
 ### Properties
 * **effectiveRules**: [RoleManagementPolicyRule](#rolemanagementpolicyrule)[] (ReadOnly): The readonly computed rule applied to the policy.
-* **policyAssignmentProperties**: [PolicyAssignmentProperties](#policyassignmentproperties) (ReadOnly): Expanded info of resource scope, role definition and policy
+* **policyAssignmentProperties**: [PolicyAssignmentProperties](#policyassignmentproperties) (ReadOnly): Additional properties of scope, role definition and policy
 * **policyId**: string: The policy id role management policy assignment.
 * **roleDefinitionId**: string: The role definition of management policy assignment.
 * **scope**: string: The role management policy scope.
@@ -186,11 +186,11 @@
 
 ### Base Properties
 * **id**: string: The id of the rule.
-* **target**: [RoleManagementPolicyRuleTarget](#rolemanagementpolicyruletarget): The role management policy rule target.
+* **target**: [RoleManagementPolicyRuleTarget](#rolemanagementpolicyruletarget): The target of the current rule.
 ### RoleManagementPolicyApprovalRule
 #### Properties
 * **ruleType**: 'RoleManagementPolicyApprovalRule' (Required): The type of rule
-* **setting**: [ApprovalSettings](#approvalsettings): The approval settings.
+* **setting**: [ApprovalSettings](#approvalsettings): The approval setting
 
 ### RoleManagementPolicyAuthenticationContextRule
 #### Properties

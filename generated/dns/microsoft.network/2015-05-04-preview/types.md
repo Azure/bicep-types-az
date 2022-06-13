@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ZoneProperties](#zoneproperties): Represents the properties of the zone.
+* **properties**: [ZoneProperties](#zoneproperties): Gets or sets the properties of the zone.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/dnszones' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,7 +19,7 @@
 * **etag**: string: The etag of the record set.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RecordSetProperties](#recordsetproperties): Represents the properties of the records in the RecordSet.
+* **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
 * **type**: 'Microsoft.Network/dnszones/A' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnszones/AAAA@2015-05-04-preview
@@ -29,7 +29,7 @@
 * **etag**: string: The etag of the record set.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RecordSetProperties](#recordsetproperties): Represents the properties of the records in the RecordSet.
+* **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
 * **type**: 'Microsoft.Network/dnszones/AAAA' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnszones/CNAME@2015-05-04-preview
@@ -39,7 +39,7 @@
 * **etag**: string: The etag of the record set.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RecordSetProperties](#recordsetproperties): Represents the properties of the records in the RecordSet.
+* **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
 * **type**: 'Microsoft.Network/dnszones/CNAME' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnszones/MX@2015-05-04-preview
@@ -49,7 +49,7 @@
 * **etag**: string: The etag of the record set.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RecordSetProperties](#recordsetproperties): Represents the properties of the records in the RecordSet.
+* **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
 * **type**: 'Microsoft.Network/dnszones/MX' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnszones/NS@2015-05-04-preview
@@ -59,7 +59,7 @@
 * **etag**: string: The etag of the record set.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RecordSetProperties](#recordsetproperties): Represents the properties of the records in the RecordSet.
+* **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
 * **type**: 'Microsoft.Network/dnszones/NS' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnszones/PTR@2015-05-04-preview
@@ -69,7 +69,7 @@
 * **etag**: string: The etag of the record set.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RecordSetProperties](#recordsetproperties): Represents the properties of the records in the RecordSet.
+* **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
 * **type**: 'Microsoft.Network/dnszones/PTR' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnszones/SOA@2015-05-04-preview
@@ -79,7 +79,7 @@
 * **etag**: string: The etag of the record set.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RecordSetProperties](#recordsetproperties): Represents the properties of the records in the RecordSet.
+* **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
 * **type**: 'Microsoft.Network/dnszones/SOA' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnszones/SRV@2015-05-04-preview
@@ -89,7 +89,7 @@
 * **etag**: string: The etag of the record set.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RecordSetProperties](#recordsetproperties): Represents the properties of the records in the RecordSet.
+* **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
 * **type**: 'Microsoft.Network/dnszones/SRV' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnszones/TXT@2015-05-04-preview
@@ -99,7 +99,7 @@
 * **etag**: string: The etag of the record set.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RecordSetProperties](#recordsetproperties): Represents the properties of the records in the RecordSet.
+* **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
 * **type**: 'Microsoft.Network/dnszones/TXT' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AaaaRecord
@@ -131,12 +131,12 @@
 ### Properties
 * **AAAARecords**: [AaaaRecord](#aaaarecord)[]: Gets or sets the list of AAAA records in the RecordSet.
 * **ARecords**: [ARecord](#arecord)[]: Gets or sets the list of A records in the RecordSet.
-* **CNAMERecord**: [CnameRecord](#cnamerecord): A CNAME record.
+* **CNAMERecord**: [CnameRecord](#cnamerecord): Gets or sets the CNAME record in the RecordSet.
 * **fqdn**: string (ReadOnly): Fully qualified domain name of the record set.
 * **MXRecords**: [MxRecord](#mxrecord)[]: Gets or sets the list of MX records in the RecordSet.
 * **NSRecords**: [NsRecord](#nsrecord)[]: Gets or sets the list of NS records in the RecordSet.
 * **PTRRecords**: [PtrRecord](#ptrrecord)[]: Gets or sets the list of PTR records in the RecordSet.
-* **SOARecord**: [SoaRecord](#soarecord): An SOA record.
+* **SOARecord**: [SoaRecord](#soarecord): Gets or sets the SOA record in the RecordSet.
 * **SRVRecords**: [SrvRecord](#srvrecord)[]: Gets or sets the list of SRV records in the RecordSet.
 * **TTL**: int: Gets or sets the TTL of the records in the RecordSet.
 * **TXTRecords**: [TxtRecord](#txtrecord)[]: Gets or sets the list of TXT records in the RecordSet.

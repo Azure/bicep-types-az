@@ -8,8 +8,8 @@
 * **kind**: 'RawWebSockets' | 'SignalR' | string: The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
 * **location**: string: The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SignalRProperties](#signalrproperties): A class that describes the properties of the SignalR service that should contain more read-only properties than AzSignalR.Models.SignalRCreateOrUpdateProperties
-* **sku**: [ResourceSku](#resourcesku): The billing information of the SignalR resource.
+* **properties**: [SignalRProperties](#signalrproperties): Settings used to provision or configure the resource
+* **sku**: [ResourceSku](#resourcesku): The billing information of the resource.(e.g. Free, Standard)
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the service which is a list of key value pairs that describe the resource.
 * **type**: 'Microsoft.SignalRService/signalR' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,7 +19,7 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Private endpoint connection properties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection
 * **type**: 'Microsoft.SignalRService/signalR/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.SignalRService/signalR@2020-05-01)
@@ -46,14 +46,14 @@
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource Id for the resource.
 * **name**: string (ReadOnly): The name of the resource.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Private endpoint connection properties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection
 * **type**: string (ReadOnly): The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Connection state of the private endpoint connection
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint associated with the private endpoint connection
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Connection state
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the private endpoint connection
 
 ## PrivateLinkServiceConnectionState
 ### Properties
@@ -109,7 +109,7 @@ Allowed values: Standard_S1, Free_F1
 ### Properties
 * **defaultAction**: 'Allow' | 'Deny' | string: Default action when no other rule matches
 * **privateEndpoints**: [PrivateEndpointACL](#privateendpointacl)[]: ACLs for requests from private endpoints
-* **publicNetwork**: [NetworkACL](#networkacl): Network ACL
+* **publicNetwork**: [NetworkACL](#networkacl): ACL for requests from public network
 
 ## SignalRProperties
 ### Properties
@@ -124,12 +124,12 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 * **hostName**: string (ReadOnly): FQDN of the SignalR service instance. Format: xxx.service.signalr.net
 * **hostNamePrefix**: string (ReadOnly): Prefix for the hostName of the SignalR service. Retained for future use.
 The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
-* **networkACLs**: [SignalRNetworkACLs](#signalrnetworkacls): Network ACLs for SignalR
+* **networkACLs**: [SignalRNetworkACLs](#signalrnetworkacls): Network ACLs
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Private endpoint connections to the SignalR resource.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **publicPort**: int (ReadOnly): The publicly accessible port of the SignalR service which is designed for browser/client side usage.
 * **serverPort**: int (ReadOnly): The publicly accessible port of the SignalR service which is designed for customer server side usage.
-* **upstream**: [ServerlessUpstreamSettings](#serverlessupstreamsettings): The settings for the Upstream when the Azure SignalR is in server-less mode.
+* **upstream**: [ServerlessUpstreamSettings](#serverlessupstreamsettings): Upstream settings when the Azure SignalR is in server-less mode.
 * **version**: string (ReadOnly): Version of the SignalR resource. Probably you need the same or higher version of client SDKs.
 
 ## TrackedResourceTags

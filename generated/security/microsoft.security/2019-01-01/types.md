@@ -21,7 +21,7 @@
 ### DataExportSettings
 #### Properties
 * **kind**: 'DataExportSettings' (Required): the kind of the settings string (DataExportSettings)
-* **properties**: [DataExportSettingProperties](#dataexportsettingproperties): The data export setting properties
+* **properties**: [DataExportSettingProperties](#dataexportsettingproperties): Data export setting data
 
 
 ## AdvancedThreatProtectionProperties

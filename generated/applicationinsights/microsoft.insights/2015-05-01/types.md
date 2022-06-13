@@ -117,7 +117,7 @@
 * **kind**: 'shared' | 'user' | string: The kind of workbook. Choices are user and shared.
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MyWorkbookProperties](#myworkbookproperties): Properties that contain a private workbook.
+* **properties**: [MyWorkbookProperties](#myworkbookproperties): Metadata describing a workbook for an Azure resource.
 * **tags**: [MyWorkbookResourceTags](#myworkbookresourcetags): Resource tags
 * **type**: 'Microsoft.Insights/myWorkbooks' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -141,7 +141,7 @@
 * **kind**: 'shared' | 'user' | string: The kind of workbook. Choices are user and shared.
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkbookProperties](#workbookproperties): Properties that contain a workbook.
+* **properties**: [WorkbookProperties](#workbookproperties): Metadata describing a web test for an Azure resource.
 * **tags**: [WorkbookResourceTags](#workbookresourcetags): Resource tags
 * **type**: 'microsoft.insights/workbooks' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -217,7 +217,7 @@
 * **Description**: string: Purpose/user defined descriptive test for this WebTest.
 * **Enabled**: bool: Is the test actively being monitored.
 * **Frequency**: int: Interval in seconds between test runs for this WebTest. Default value is 300.
-* **Kind**: 'multistep' | 'ping' (Required): The kind of web test that this web test watches. Choices are ping and multistep.
+* **Kind**: 'multistep' | 'ping' (Required): The kind of web test this is, valid choices are ping and multistep.
 * **Locations**: [WebTestGeolocation](#webtestgeolocation)[] (Required): A list of where to physically run the tests from to give global coverage for accessibility of your application.
 * **Name**: string (Required): User defined name if this WebTest.
 * **provisioningState**: string (ReadOnly): Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
@@ -237,7 +237,7 @@
 ## WorkbookProperties
 ### Properties
 * **category**: string (Required): Workbook category, as defined by the user at creation time.
-* **kind**: 'shared' | 'user' | string (Required): The kind of workbook. Choices are user and shared.
+* **kind**: 'shared' | 'user' | string (Required): Enum indicating if this workbook definition is owned by a specific user or is shared between all users with access to the Application Insights component.
 * **name**: string (Required): The user-defined name of the workbook.
 * **serializedData**: string (Required): Configuration of this particular workbook. Configuration data is a string containing valid JSON
 * **sourceResourceId**: string: Optional resourceId for a source resource.

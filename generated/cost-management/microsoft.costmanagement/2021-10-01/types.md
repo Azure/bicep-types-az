@@ -22,12 +22,12 @@
 
 ## CommonExportProperties
 ### Properties
-* **definition**: [ExportDefinition](#exportdefinition) (Required): The definition of an export.
-* **deliveryInfo**: [ExportDeliveryInfo](#exportdeliveryinfo) (Required): The delivery information associated with a export.
+* **definition**: [ExportDefinition](#exportdefinition) (Required): Has the definition for the export.
+* **deliveryInfo**: [ExportDeliveryInfo](#exportdeliveryinfo) (Required): Has delivery information for the export.
 * **format**: 'Csv' | string: The format of the export being delivered. Currently only 'Csv' is supported.
 * **nextRunTimeEstimate**: string (ReadOnly): If the export has an active schedule, provides an estimate of the next execution time.
 * **partitionData**: bool: If set to true, exported data will be partitioned by size and placed in a blob directory together with a manifest file. Note: this option is currently available only for modern commerce scopes.
-* **runHistory**: [ExportExecutionListResult](#exportexecutionlistresult): Result of listing the execution history of an export.
+* **runHistory**: [ExportExecutionListResult](#exportexecutionlistresult): If requested, has the most recent execution history for the export.
 
 ## ErrorDetails
 ### Properties
@@ -36,8 +36,8 @@
 
 ## ExportDataset
 ### Properties
-* **configuration**: [ExportDatasetConfiguration](#exportdatasetconfiguration): The export dataset configuration. Allows columns to be selected for the export. If not provided then the export will include all available columns.
-* **granularity**: 'Daily' | string: The granularity of rows in the forecast.
+* **configuration**: [ExportDatasetConfiguration](#exportdatasetconfiguration): The export dataset configuration.
+* **granularity**: 'Daily' | string: The granularity of rows in the export. Currently only 'Daily' is supported.
 
 ## ExportDatasetConfiguration
 ### Properties
@@ -46,9 +46,9 @@
 ## ExportDefinition
 ### Properties
 * **dataSet**: [ExportDataset](#exportdataset): The definition for data in the export.
-* **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'WeekToDate' | string (Required): The time frame for pulling data for the query. If custom, then a specific time period must be provided.
-* **timePeriod**: [ExportTimePeriod](#exporttimeperiod): The date range for data in the export. This should only be specified with timeFrame set to 'Custom'. The maximum date range is 3 months.
-* **type**: 'ActualCost' | 'AmortizedCost' | 'Usage' | string (Required): The type of the query.
+* **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'WeekToDate' | string (Required): The time frame for pulling data for the export. If custom, then a specific time period must be provided.
+* **timePeriod**: [ExportTimePeriod](#exporttimeperiod): Has time period for pulling data for the export.
+* **type**: 'ActualCost' | 'AmortizedCost' | 'Usage' | string (Required): The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
 
 ## ExportDeliveryDestination
 ### Properties
@@ -60,7 +60,7 @@
 
 ## ExportDeliveryInfo
 ### Properties
-* **destination**: [ExportDeliveryDestination](#exportdeliverydestination) (Required): This represents the blob storage account location where exports of costs will be delivered. There are two ways to configure the destination. The approach recommended for most customers is to specify the resourceId of the storage account. This requires a one-time registration of the account's subscription with the Microsoft.CostManagementExports resource provider in order to give Cost Management services access to the storage. When creating an export in the Azure portal this registration is performed automatically but API users may need to register the subscription explicitly (for more information see https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-supported-services ). Another way to configure the destination is available ONLY to Partners with a Microsoft Partner Agreement plan who are global admins of their billing account. These Partners, instead of specifying the resourceId of a storage account, can specify the storage account name along with a SAS token for the account. This allows exports of costs to a storage account in any tenant. The SAS token should be created for the blob service with Service/Container/Object resource types and with Read/Write/Delete/List/Add/Create permissions (for more information see https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/export-cost-data-storage-account-sas-key ).
+* **destination**: [ExportDeliveryDestination](#exportdeliverydestination) (Required): Has destination for the export being delivered.
 
 ## ExportExecution
 ### Properties
@@ -76,25 +76,25 @@
 
 ## ExportExecutionProperties
 ### Properties
-* **error**: [ErrorDetails](#errordetails): The details of the error.
+* **error**: [ErrorDetails](#errordetails): The details of any error.
 * **executionType**: 'OnDemand' | 'Scheduled' | string: The type of the export execution.
 * **fileName**: string: The name of the exported file.
 * **processingEndTime**: string: The time when the export execution finished.
 * **processingStartTime**: string: The time when export was picked up to be executed.
-* **runSettings**: [CommonExportProperties](#commonexportproperties): The common properties of the export.
+* **runSettings**: [CommonExportProperties](#commonexportproperties): The export settings that were in effect for this execution.
 * **status**: 'Completed' | 'DataNotAvailable' | 'Failed' | 'InProgress' | 'NewDataNotAvailable' | 'Queued' | 'Timeout' | string: The last known status of the export execution.
 * **submittedBy**: string: The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.
 * **submittedTime**: string: The time when export was queued to be executed.
 
 ## ExportProperties
 ### Properties
-* **definition**: [ExportDefinition](#exportdefinition) (Required): The definition of an export.
-* **deliveryInfo**: [ExportDeliveryInfo](#exportdeliveryinfo) (Required): The delivery information associated with a export.
+* **definition**: [ExportDefinition](#exportdefinition) (Required): Has the definition for the export.
+* **deliveryInfo**: [ExportDeliveryInfo](#exportdeliveryinfo) (Required): Has delivery information for the export.
 * **format**: 'Csv' | string: The format of the export being delivered. Currently only 'Csv' is supported.
 * **nextRunTimeEstimate**: string (ReadOnly): If the export has an active schedule, provides an estimate of the next execution time.
 * **partitionData**: bool: If set to true, exported data will be partitioned by size and placed in a blob directory together with a manifest file. Note: this option is currently available only for modern commerce scopes.
-* **runHistory**: [ExportExecutionListResult](#exportexecutionlistresult): Result of listing the execution history of an export.
-* **schedule**: [ExportSchedule](#exportschedule): The schedule associated with the export.
+* **runHistory**: [ExportExecutionListResult](#exportexecutionlistresult): If requested, has the most recent execution history for the export.
+* **schedule**: [ExportSchedule](#exportschedule): Has schedule information for the export.
 
 ## ExportRecurrencePeriod
 ### Properties
@@ -104,7 +104,7 @@
 ## ExportSchedule
 ### Properties
 * **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' | string: The schedule recurrence.
-* **recurrencePeriod**: [ExportRecurrencePeriod](#exportrecurrenceperiod): The start and end date for recurrence schedule.
+* **recurrencePeriod**: [ExportRecurrencePeriod](#exportrecurrenceperiod): Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
 * **status**: 'Active' | 'Inactive' | string: The status of the export's schedule. If 'Inactive', the export's schedule is paused.
 
 ## ExportTimePeriod
@@ -137,8 +137,8 @@
 ## ReportConfigDataset
 ### Properties
 * **aggregation**: [ReportConfigDatasetAggregation](#reportconfigdatasetaggregation): Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
-* **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration): The configuration of dataset in the report.
-* **filter**: [ReportConfigFilter](#reportconfigfilter): The filter expression to be used in the report.
+* **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration): Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
+* **filter**: [ReportConfigFilter](#reportconfigfilter): Has filter expression to use in the report.
 * **granularity**: 'Daily' | 'Monthly' | string: The granularity of rows in the report.
 * **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[]: Array of group by expression to use in the report. Report can have up to 2 group by clauses.
 * **sorting**: [ReportConfigSorting](#reportconfigsorting)[]: Array of order by expression to use in the report.
@@ -154,23 +154,23 @@
 
 ## ReportConfigDefinition
 ### Properties
-* **dataSet**: [ReportConfigDataset](#reportconfigdataset): The definition of data present in the report.
+* **dataSet**: [ReportConfigDataset](#reportconfigdataset): Has definition for data in this report config.
 * **includeMonetaryCommitment**: bool: If true, report includes monetary commitment.
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' | string (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided.
-* **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod): The start and end date for pulling data for the report.
+* **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod): Has time period for pulling data for the report.
 * **type**: 'Usage' | string (Required): The type of the report. Usage represents actual usage, forecast represents forecasted data and UsageAndForecast represents both usage and forecasted data. Actual usage and forecasted data can be differentiated based on dates.
 
 ## ReportConfigFilter
 ### Properties
 * **and**: [ReportConfigFilter](#reportconfigfilter)[]: The logical "AND" expression. Must have at least 2 items.
-* **dimensions**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): The comparison expression to be used in the report.
+* **dimensions**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): Has comparison expression for a dimension
 * **or**: [ReportConfigFilter](#reportconfigfilter)[]: The logical "OR" expression. Must have at least 2 items.
-* **tags**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): The comparison expression to be used in the report.
+* **tags**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): Has comparison expression for a tag
 
 ## ReportConfigGrouping
 ### Properties
 * **name**: string (Required): The name of the column to group. This version supports subscription lowest possible grain.
-* **type**: 'Dimension' | 'Tag' | string (Required): The type of the column in the report.
+* **type**: 'Dimension' | 'Tag' | string (Required): Has type of the column to group.
 
 ## ReportConfigSorting
 ### Properties
@@ -194,6 +194,6 @@
 * **metric**: 'AHUB' | 'ActualCost' | 'AmortizedCost' | string: Metric to use when displaying costs.
 * **modifiedOn**: string (ReadOnly): Date when the user last modified this view.
 * **pivots**: [PivotProperties](#pivotproperties)[]: Configuration of 3 sub-views in the Cost Analysis UI.
-* **query**: [ReportConfigDefinition](#reportconfigdefinition): The definition of a report config.
+* **query**: [ReportConfigDefinition](#reportconfigdefinition): Query body configuration. Required.
 * **scope**: string: Cost Management scope to save the view on. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.
 

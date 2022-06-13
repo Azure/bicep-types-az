@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LinkerProperties](#linkerproperties) (Required): The properties of the linker.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system data.
 * **type**: 'Microsoft.ServiceLinker/linkers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listConfigurations (Microsoft.ServiceLinker/linkers@2022-05-01)
@@ -23,7 +23,7 @@
 #### Properties
 * **authType**: 'secret' (Required): The authentication type.
 * **name**: string: Username or account name for secret auth.
-* **secretInfo**: [SecretInfoBase](#secretinfobase): The secret info
+* **secretInfo**: [SecretInfoBase](#secretinfobase): Password or key vault secret for secret auth.
 
 ### ServicePrincipalCertificateAuthInfo
 #### Properties
@@ -62,13 +62,13 @@
 
 ## LinkerProperties
 ### Properties
-* **authInfo**: [AuthInfoBase](#authinfobase): The authentication info
+* **authInfo**: [AuthInfoBase](#authinfobase): The authentication type.
 * **clientType**: 'django' | 'dotnet' | 'go' | 'java' | 'nodejs' | 'none' | 'php' | 'python' | 'ruby' | 'springBoot' | string: The application client type
 * **provisioningState**: string (ReadOnly): The provisioning state.
 * **scope**: string: connection scope in source service.
 * **secretStore**: [SecretStore](#secretstore): An option to store secret value in secure place
 * **targetService**: [TargetServiceBase](#targetservicebase): The target service properties
-* **vNetSolution**: [VNetSolution](#vnetsolution): The VNet solution for linker
+* **vNetSolution**: [VNetSolution](#vnetsolution): The VNet solution.
 
 ## SecretInfoBase
 * **Discriminator**: secretType
@@ -111,7 +111,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TargetServiceBase
 * **Discriminator**: type
@@ -120,7 +120,7 @@
 ### AzureResource
 #### Properties
 * **id**: string: The Id of azure resource.
-* **resourceProperties**: [AzureResourcePropertiesBase](#azureresourcepropertiesbase): The azure resource properties
+* **resourceProperties**: [AzureResourcePropertiesBase](#azureresourcepropertiesbase): The azure resource connection related properties.
 * **type**: 'AzureResource' (Required): The target service type.
 
 ### ConfluentBootstrapServer

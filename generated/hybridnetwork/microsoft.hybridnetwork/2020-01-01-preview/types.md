@@ -17,7 +17,7 @@
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VendorNetworkFunctionPropertiesFormat](#vendornetworkfunctionpropertiesformat): Vendor network function properties.
+* **properties**: [VendorNetworkFunctionPropertiesFormat](#vendornetworkfunctionpropertiesformat): Network function details.
 * **type**: 'Microsoft.HybridNetwork/locations/vendors/networkFunctions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/networkFunctions@2020-01-01-preview
@@ -47,7 +47,7 @@
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VendorSkuPropertiesFormat](#vendorskupropertiesformat): Sku properties
+* **properties**: [VendorSkuPropertiesFormat](#vendorskupropertiesformat): Vendor sku details.
 * **type**: 'Microsoft.HybridNetwork/vendors/vendorSkus' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/vendors/vendorSkus/previewSubscriptions@2020-01-01-preview
@@ -78,11 +78,11 @@
 
 ### Base Properties
 * **networkFunctions**: [SubResource](#subresource)[] (ReadOnly): The list of network functions deployed on the device.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The provisioning state of the device resource.
 * **status**: 'Deleted' | 'NotRegistered' | 'Registered' | 'Unknown' | string (ReadOnly): The current device status.
 ### AzureStackEdgeFormat
 #### Properties
-* **azureStackEdge**: [SubResource](#subresource) (Required): Reference to another sub resource.
+* **azureStackEdge**: [SubResource](#subresource) (Required): The reference to the Azure stack edge device.
 * **deviceType**: 'AzureStackEdge' (Required): The type of the device.
 
 
@@ -100,31 +100,31 @@
 
 ## LinuxConfiguration
 ### Properties
-* **ssh**: [SshConfiguration](#sshconfiguration): SSH configuration for Linux based VMs running on Azure
+* **ssh**: [SshConfiguration](#sshconfiguration): Specifies the ssh key configuration for a Linux OS.
 
 ## NetworkFunctionPropertiesFormat
 ### Properties
-* **device**: [SubResource](#subresource): Reference to another sub resource.
-* **managedApplication**: [SubResource](#subresource) (ReadOnly): Reference to another sub resource.
-* **managedApplicationParameters**: any: Any object
+* **device**: [SubResource](#subresource): The reference to the device resource.
+* **managedApplication**: [SubResource](#subresource) (ReadOnly): The resource URI of the managed application.
+* **managedApplicationParameters**: any: The parameters for the managed application.
 * **networkFunctionUserConfigurations**: [NetworkFunctionUserConfiguration](#networkfunctionuserconfiguration)[]: The network function configurations from the user.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The provisioning state of the network function resource.
 * **serviceKey**: string (ReadOnly): The service key for the network function resource.
 * **skuName**: string: The sku name for the network function.
-* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown' | string (ReadOnly): Sku type.
+* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown' | string (ReadOnly): The sku type for the network function.
 * **vendorName**: string: The vendor name for the network function.
-* **vendorProvisioningState**: 'Deprovisioned' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | 'Unknown' | 'UserDataValidationFailed' | string (ReadOnly): The current vendor provisioning state.
+* **vendorProvisioningState**: 'Deprovisioned' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | 'Unknown' | 'UserDataValidationFailed' | string (ReadOnly): The vendor provisioning state for the network function resource.
 
 ## NetworkFunctionRoleConfiguration
 ### Properties
 * **customProfile**: [CustomProfile](#customprofile): Specifies the custom settings for the virtual machine.
 * **networkInterfaces**: [NetworkInterface](#networkinterface)[]: The network interface configurations.
-* **osProfile**: [OsProfile](#osprofile): Specifies the operating system settings for the role instance.
+* **osProfile**: [OsProfile](#osprofile): Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.
 * **roleName**: string: The name of the network function role.
 * **roleType**: 'Unknown' | 'VirtualMachine' | string: Role type.
 * **storageProfile**: [StorageProfile](#storageprofile): Specifies the storage settings for the virtual machine disks.
-* **userDataParameters**: any: Any object
-* **userDataTemplate**: any: Any object
+* **userDataParameters**: any: The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.
+* **userDataTemplate**: any: The user data template for customers. This is a json schema template describing the format and data type of user data parameters.
 * **virtualMachineSize**: 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D1_v2' | 'Standard_D2_v2' | 'Standard_D3_v2' | 'Standard_D4_v2' | 'Standard_D5_v2' | 'Standard_DS11_v2' | 'Standard_DS12_v2' | 'Standard_DS13_v2' | 'Standard_DS1_v2' | 'Standard_DS2_v2' | 'Standard_DS3_v2' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_F1' | 'Standard_F16' | 'Standard_F16s' | 'Standard_F1s' | 'Standard_F2' | 'Standard_F2s' | 'Standard_F4' | 'Standard_F4s' | 'Standard_F8' | 'Standard_F8s' | 'Unknown' | string: The size of the virtual machine.
 
 ## NetworkFunctionTemplate
@@ -136,7 +136,7 @@
 * **networkInterfaces**: [NetworkInterface](#networkinterface)[]: The network interface configuration.
 * **osProfile**: [NetworkFunctionUserConfigurationOsProfile](#networkfunctionuserconfigurationosprofile): Specifies the operating system settings for the role instance.
 * **roleName**: string: The name of the network function role.
-* **userDataParameters**: any: Any object
+* **userDataParameters**: any: The user data parameters from the customer.
 
 ## NetworkFunctionUserConfigurationOsProfile
 ### Properties
@@ -147,7 +147,7 @@
 * **networkInterfaces**: [NetworkInterface](#networkinterface)[]: The network interface configurations.
 * **osProfile**: [OsProfile](#osprofile): Specifies the operating system settings for the role instance.
 * **roleName**: string: The name of the vendor network function role.
-* **userDataParameters**: any (ReadOnly): Any object
+* **userDataParameters**: any (ReadOnly): The user parameters from the customer.
 
 ## NetworkInterface
 ### Properties
@@ -170,14 +170,14 @@
 * **diskSizeGB**: int: Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.
 * **name**: string: The VHD name.
 * **osType**: 'Linux' | 'Unknown' | 'Windows' | string: The OS type.
-* **vhd**: [VirtualHardDisk](#virtualharddisk): Describes the uri of a disk.
+* **vhd**: [VirtualHardDisk](#virtualharddisk): The virtual hard disk.
 
 ## OsProfile
 ### Properties
 * **adminUsername**: string: Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
 * **customData**: string: Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
 * **customDataRequired**: bool: Indicates if custom data is required to deploy this role.
-* **linuxConfiguration**: [LinuxConfiguration](#linuxconfiguration): Specifies the Linux operating system settings on the virtual machine.
+* **linuxConfiguration**: [LinuxConfiguration](#linuxconfiguration): Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
 
 ## SshConfiguration
 ### Properties
@@ -192,7 +192,7 @@
 ### Properties
 * **dataDisks**: [DataDisk](#datadisk)[]: Specifies the parameters that are used to add a data disk to a virtual machine.
 * **imageReference**: [ImageReference](#imagereference): The image reference properties.
-* **osDisk**: [OsDisk](#osdisk): Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+* **osDisk**: [OsDisk](#osdisk): Specifies information about the operating system disk used by the virtual machine.
 
 ## SubResource
 ### Properties
@@ -211,25 +211,25 @@
 ## VendorNetworkFunctionPropertiesFormat
 ### Properties
 * **networkFunctionVendorConfigurations**: [NetworkFunctionVendorConfiguration](#networkfunctionvendorconfiguration)[]: An array of network function vendor configurations.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The provisioning state of the vendor network function sub resource.
 * **skuName**: string (ReadOnly): The name of the sku.
-* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown' | string (ReadOnly): Sku type.
-* **vendorProvisioningState**: 'Deprovisioned' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | 'Unknown' | 'UserDataValidationFailed' | string: The current vendor provisioning state.
+* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown' | string (ReadOnly): The sku type.
+* **vendorProvisioningState**: 'Deprovisioned' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | 'Unknown' | 'UserDataValidationFailed' | string: The vendor controlled provisioning state of the vendor network function.
 
 ## VendorPropertiesFormat
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The provisioning state of the vendor resource.
 * **skus**: [SubResource](#subresource)[] (ReadOnly): A list of IDs of the vendor skus offered by the vendor.
 
 ## VendorSkuPropertiesFormat
 ### Properties
 * **deploymentMode**: 'Azure' | 'PrivateEdgeZone' | 'Unknown' | string: The sku deployment mode.
-* **managedApplicationParameters**: any: Any object
-* **managedApplicationTemplate**: any: Any object
-* **networkFunctionTemplate**: [NetworkFunctionTemplate](#networkfunctiontemplate): The network function template.
+* **managedApplicationParameters**: any: The parameters for the managed application to be supplied by the vendor.
+* **managedApplicationTemplate**: any: The template for the managed application deployment.
+* **networkFunctionTemplate**: [NetworkFunctionTemplate](#networkfunctiontemplate): The template definition of the network function.
 * **preview**: bool: Indicates if the vendor sku is in preview mode.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
-* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown' | string: Sku type.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The provisioning state of the vendor sku sub resource.
+* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown' | string: The sku type.
 
 ## VirtualHardDisk
 ### Properties

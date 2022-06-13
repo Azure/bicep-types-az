@@ -7,8 +7,8 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IncidentProperties](#incidentproperties): Describes incident properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [IncidentProperties](#incidentproperties): Incident properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/incidents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/incidents/comments@2021-04-01
@@ -18,8 +18,8 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IncidentCommentProperties](#incidentcommentproperties): Incident comment property bag.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [IncidentCommentProperties](#incidentcommentproperties): Incident comment properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/incidents/comments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/incidents/relations@2021-04-01
@@ -29,8 +29,8 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RelationProperties](#relationproperties): Relation property bag.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [RelationProperties](#relationproperties): Relation properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/incidents/relations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/threatIntelligence/indicators@2021-04-01
@@ -39,10 +39,10 @@
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'indicator' | string (Required): The kind of the threat intelligence entity
+* **kind**: 'indicator' | string (Required): The kind of the entity.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ThreatIntelligenceIndicatorProperties](#threatintelligenceindicatorproperties) (WriteOnly): Describes threat intelligence entity properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ThreatIntelligenceIndicatorProperties](#threatintelligenceindicatorproperties) (WriteOnly): Threat Intelligence Entity properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/threatIntelligence/indicators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/watchlists@2021-04-01
@@ -52,8 +52,8 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WatchlistProperties](#watchlistproperties): Describes watchlist properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [WatchlistProperties](#watchlistproperties): Watchlist properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/watchlists' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/watchlists/watchlistItems@2021-04-01
@@ -63,8 +63,8 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WatchlistItemProperties](#watchlistitemproperties): Describes watchlist item properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [WatchlistItemProperties](#watchlistitemproperties): Watchlist Item properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/watchlists/watchlistItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ClientInfo
@@ -89,7 +89,7 @@
 
 ## IncidentCommentProperties
 ### Properties
-* **author**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
+* **author**: [ClientInfo](#clientinfo) (ReadOnly): Describes the client that created the comment
 * **createdTimeUtc**: string (ReadOnly): The time the comment was created
 * **lastModifiedTimeUtc**: string (ReadOnly): The time the comment was updated
 * **message**: string (Required): The comment message
@@ -108,7 +108,7 @@
 
 ## IncidentProperties
 ### Properties
-* **additionalData**: [IncidentAdditionalData](#incidentadditionaldata) (ReadOnly): Incident additional data property bag.
+* **additionalData**: [IncidentAdditionalData](#incidentadditionaldata) (ReadOnly): Additional data on the incident
 * **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined' | string: The reason the incident was closed
 * **classificationComment**: string: Describes the reason the incident was closed
 * **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected' | string: The classification reason the incident was closed with
@@ -120,7 +120,7 @@
 * **labels**: [IncidentLabel](#incidentlabel)[]: List of labels relevant to this incident
 * **lastActivityTimeUtc**: string: The time of the last activity in the incident
 * **lastModifiedTimeUtc**: string (ReadOnly): The last time the incident was updated
-* **owner**: [IncidentOwnerInfo](#incidentownerinfo): Information on the user an incident is assigned to
+* **owner**: [IncidentOwnerInfo](#incidentownerinfo): Describes a user that the incident is assigned to
 * **relatedAnalyticRuleIds**: string[] (ReadOnly): List of resource ids of Analytic rules related to the incident
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (Required): The severity of the incident
 * **status**: 'Active' | 'Closed' | 'New' | string (Required): The status of the incident
@@ -140,7 +140,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## ThreatIntelligenceExternalReference
 ### Properties
@@ -223,13 +223,13 @@
 ## WatchlistItemProperties
 ### Properties
 * **created**: string: The time the watchlist item was created
-* **createdBy**: [UserInfo](#userinfo): User information that made some action
-* **entityMapping**: any: Any object
+* **createdBy**: [UserInfo](#userinfo): Describes a user that created the watchlist item
+* **entityMapping**: any: key-value pairs for a watchlist item entity mapping
 * **isDeleted**: bool: A flag that indicates if the watchlist item is deleted or not
-* **itemsKeyValue**: any (Required): Any object
+* **itemsKeyValue**: any (Required): key-value pairs for a watchlist item
 * **tenantId**: string: The tenantId to which the watchlist item belongs to
 * **updated**: string: The last time the watchlist item was updated
-* **updatedBy**: [UserInfo](#userinfo): User information that made some action
+* **updatedBy**: [UserInfo](#userinfo): Describes a user that updated the watchlist item
 * **watchlistItemId**: string: The id (a Guid) of the watchlist item
 * **watchlistItemType**: string: The type of the watchlist item
 
@@ -237,7 +237,7 @@
 ### Properties
 * **contentType**: string: The content type of the raw content. For now, only text/csv is valid
 * **created**: string: The time the watchlist was created
-* **createdBy**: [UserInfo](#userinfo): User information that made some action
+* **createdBy**: [UserInfo](#userinfo): Describes a user that created the watchlist
 * **defaultDuration**: string: The default duration of a watchlist (in ISO 8601 duration format)
 * **description**: string: A description of the watchlist
 * **displayName**: string (Required): The display name of the watchlist
@@ -252,7 +252,7 @@ value1,value2
 * **source**: 'Local file' | 'Remote storage' | string (Required): The source of the watchlist
 * **tenantId**: string: The tenantId where the watchlist belongs to
 * **updated**: string: The last time the watchlist was updated
-* **updatedBy**: [UserInfo](#userinfo): User information that made some action
+* **updatedBy**: [UserInfo](#userinfo): Describes a user that updated the watchlist
 * **uploadStatus**: string: The status of the Watchlist upload : New, InProgress or Complete. **Note** : When a Watchlist upload status is InProgress, the Watchlist cannot be deleted
 * **watchlistAlias**: string: The alias of the watchlist
 * **watchlistId**: string: The id (a Guid) of the watchlist

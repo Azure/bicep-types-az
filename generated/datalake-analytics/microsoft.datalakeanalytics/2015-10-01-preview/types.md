@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateDataLakeAnalyticsAccountProperties](#createdatalakeanalyticsaccountproperties) (Required)
+* **properties**: [CreateDataLakeAnalyticsAccountProperties](#createdatalakeanalyticsaccountproperties) (Required): The Data Lake Analytics account properties to use for creating.
 * **tags**: [CreateDataLakeAnalyticsAccountParametersTags](#createdatalakeanalyticsaccountparameterstags): The resource tags.
 * **type**: 'Microsoft.DataLakeAnalytics/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -87,7 +87,7 @@
 * **accountId**: string (ReadOnly): The unique identifier associated with this Data Lake Analytics account.
 * **computePolicies**: [CreateComputePolicyWithAccountParameters](#createcomputepolicywithaccountparameters)[]: The list of compute policies associated with this account.
 * **creationTime**: string (ReadOnly): The account creation time.
-* **currentTier**: 'Commitment_100000AUHours' | 'Commitment_10000AUHours' | 'Commitment_1000AUHours' | 'Commitment_100AUHours' | 'Commitment_500000AUHours' | 'Commitment_50000AUHours' | 'Commitment_5000AUHours' | 'Commitment_500AUHours' | 'Consumption' (ReadOnly): The commitment tier for the next month.
+* **currentTier**: 'Commitment_100000AUHours' | 'Commitment_10000AUHours' | 'Commitment_1000AUHours' | 'Commitment_100AUHours' | 'Commitment_500000AUHours' | 'Commitment_50000AUHours' | 'Commitment_5000AUHours' | 'Commitment_500AUHours' | 'Consumption' (ReadOnly): The commitment tier in use for the current month.
 * **dataLakeStoreAccounts**: [AddDataLakeStoreWithAccountParameters](#adddatalakestorewithaccountparameters)[] (Required): The list of Data Lake Store accounts associated with this account.
 * **debugDataAccessLevel**: 'All' | 'Customer' | 'None' (ReadOnly): The current state of the DebugDataAccessLevel for this account.
 * **defaultDataLakeStoreAccount**: string (Required): The default Data Lake Store account associated with this account.
@@ -146,13 +146,13 @@
 ### Properties
 * **id**: string (ReadOnly): The resource identifier.
 * **name**: string (ReadOnly): The resource name.
-* **properties**: [HiveMetastoreProperties](#hivemetastoreproperties) (ReadOnly): The HiveMetastore  properties.
+* **properties**: [HiveMetastoreProperties](#hivemetastoreproperties) (ReadOnly): The  HiveMetastoreProperties rule properties.
 * **type**: string (ReadOnly): The resource type.
 
 ## HiveMetastoreProperties
 ### Properties
 * **databaseName**: string (ReadOnly): The databaseName for the Hive MetaStore
-* **nestedResourceProvisioningState**: 'Canceled' | 'Failed' | 'Succeeded' (ReadOnly): The current state of the NestedResourceProvisioning for this account.
+* **nestedResourceProvisioningState**: 'Canceled' | 'Failed' | 'Succeeded' (ReadOnly): The current state of the NestedResource
 * **password**: string (ReadOnly): The password for the Hive MetaStore
 * **runtimeVersion**: string (ReadOnly): The runtimeVersion for the Hive MetaStore
 * **serverUri**: string (ReadOnly): The serverUri for the Hive MetaStore
@@ -176,11 +176,11 @@
 ### Properties
 * **id**: string (ReadOnly): The resource identifier.
 * **name**: string (ReadOnly): The resource name.
-* **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties) (ReadOnly): The VirtualNetwork Rule properties.
+* **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties) (ReadOnly): The  VirtualNetwork rule properties.
 * **type**: string (ReadOnly): The resource type.
 
 ## VirtualNetworkRuleProperties
 ### Properties
 * **subnetId**: string (ReadOnly): The resource identifier for the subnet
-* **virtualNetworkRuleState**: 'Active' | 'Failed' | 'NetworkSourceDeleted' (ReadOnly): The current state of the VirtualNetworkRule for this account.
+* **virtualNetworkRuleState**: 'Active' | 'Failed' | 'NetworkSourceDeleted' (ReadOnly): The current state of the VirtualNetwork Rule
 

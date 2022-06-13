@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The region in which to create the account.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BatchAccountBaseProperties](#batchaccountbaseproperties): The properties of a Batch account.
+* **properties**: [BatchAccountBaseProperties](#batchaccountbaseproperties): The properties of the Batch account.
 * **tags**: [BatchAccountCreateParametersTags](#batchaccountcreateparameterstags): The user specified tags associated with the account.
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -63,8 +63,8 @@
 * **activeJobAndJobScheduleQuota**: int (ReadOnly): The active job and job schedule quota for this Batch account.
 * **autoStorage**: [AutoStorageBaseProperties](#autostoragebaseproperties): The properties related to auto storage account.
 * **coreQuota**: int (ReadOnly): The core quota for this Batch account.
-* **keyVaultReference**: [KeyVaultReference](#keyvaultreference): Identifies the Azure key vault associated with a Batch account.
-* **poolAllocationMode**: 'BatchService' | 'UserSubscription': The allocation mode for creating pools in the Batch account.
+* **keyVaultReference**: [KeyVaultReference](#keyvaultreference): A reference to the Azure key vault associated with the Batch account.
+* **poolAllocationMode**: 'BatchService' | 'UserSubscription': The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.
 * **poolQuota**: int (ReadOnly): The pool quota for this Batch account.
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Succeeded' (ReadOnly): The provisioned state of the resource
 

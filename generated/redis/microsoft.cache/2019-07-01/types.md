@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisCreateProperties](#rediscreateproperties) (Required): Properties supplied to Create Redis operation.
+* **properties**: [RedisCreateProperties](#rediscreateproperties) (Required): Redis cache properties.
 * **tags**: [RedisCreateParametersTags](#rediscreateparameterstags): Resource tags.
 * **type**: 'Microsoft.Cache/Redis' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: A list of availability zones denoting where the resource needs to come from.
@@ -18,7 +18,7 @@
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisFirewallRuleProperties](#redisfirewallruleproperties) (Required): Specifies a range of IP addresses permitted to connect to the cache
+* **properties**: [RedisFirewallRuleProperties](#redisfirewallruleproperties) (Required): Properties required to create a firewall rule .
 * **type**: 'Microsoft.Cache/Redis/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Cache/Redis/linkedServers@2019-07-01
@@ -27,7 +27,7 @@
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisLinkedServerCreateProperties](#redislinkedservercreateproperties) (Required): Create properties for a linked server
+* **properties**: [RedisLinkedServerCreateProperties](#redislinkedservercreateproperties) (Required): Properties required to create a linked server.
 * **type**: 'Microsoft.Cache/Redis/linkedServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Cache/Redis/patchSchedules@2019-07-01
@@ -71,7 +71,7 @@
 
 ## RedisCreateProperties
 ### Properties
-* **accessKeys**: [RedisAccessKeys](#redisaccesskeys) (ReadOnly): Redis cache access keys.
+* **accessKeys**: [RedisAccessKeys](#redisaccesskeys) (ReadOnly): The keys of the Redis cache - not set if this object is not the response to Create or Update redis cache
 * **enableNonSslPort**: bool: Specifies whether the non-ssl Redis server port (6379) is enabled.
 * **hostName**: string (ReadOnly): Redis host name.
 * **instances**: [RedisInstanceDetails](#redisinstancedetails)[] (ReadOnly): List of the Redis instances associated with the cache
@@ -83,7 +83,7 @@
 * **redisVersion**: string (ReadOnly): Redis version.
 * **replicasPerMaster**: int: The number of replicas to be created per master.
 * **shardCount**: int: The number of shards to be created on a Premium Cluster Cache.
-* **sku**: [Sku](#sku) (Required): SKU parameters supplied to the create Redis operation.
+* **sku**: [Sku](#sku) (Required): The SKU of the Redis cache to deploy.
 * **sslPort**: int (ReadOnly): Redis SSL port.
 * **staticIP**: string: Static IP address. Required when deploying a Redis cache inside an existing Azure Virtual Network.
 * **subnetId**: string: The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1

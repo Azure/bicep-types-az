@@ -32,7 +32,7 @@
 * **kind**: string: Kind of resource.
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AppServiceEnvironment](#appserviceenvironment): Description of an App Service Environment.
+* **properties**: [AppServiceEnvironment](#appserviceenvironment): Core resource properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/hostingEnvironments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -53,7 +53,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkerPool](#workerpool): Worker pool of an App Service Environment.
+* **properties**: [WorkerPool](#workerpool): Core resource properties
 * **sku**: [SkuDescription](#skudescription): Description of a SKU for a scalable resource.
 * **type**: 'Microsoft.Web/hostingEnvironments/multiRolePools' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -64,7 +64,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): A request to approve or reject a private endpoint connection
+* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): Core resource properties
 * **type**: 'Microsoft.Web/hostingEnvironments/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/hostingEnvironments/workerPools@2021-03-01
@@ -74,7 +74,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkerPool](#workerpool): Worker pool of an App Service Environment.
+* **properties**: [WorkerPool](#workerpool): Core resource properties
 * **sku**: [SkuDescription](#skudescription): Description of a SKU for a scalable resource.
 * **type**: 'Microsoft.Web/hostingEnvironments/workerPools' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -265,9 +265,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'slotConfigNames' (Required, DeployTimeConstant): The resource name
-* **properties**: [SlotConfigNames](#slotconfignames): Names for connection strings, application settings, and external Azure storage account configuration
-identifiers to be marked as sticky to the deployment slot and not moved during a swap operation.
-This is valid for all deployment slots in an app.
+* **properties**: [SlotConfigNames](#slotconfignames): Core resource properties
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -276,7 +274,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteConfig](#siteconfig): Configuration of an App Service app.
+* **properties**: [SiteConfig](#siteconfig): Core resource properties
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 
@@ -311,7 +309,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
+* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
 * **type**: 'Microsoft.Web/sites/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/extensions
@@ -378,7 +376,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
+* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
 * **type**: 'Microsoft.Web/sites/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/networkConfig@2021-03-01
@@ -420,7 +418,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): A request to approve or reject a private endpoint connection
+* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): Core resource properties
 * **type**: 'Microsoft.Web/sites/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/publicCertificates@2021-03-01
@@ -573,7 +571,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteConfig](#siteconfig): Configuration of an App Service app.
+* **properties**: [SiteConfig](#siteconfig): Core resource properties
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 
@@ -604,7 +602,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
+* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
 * **type**: 'Microsoft.Web/sites/slots/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/functions@2021-03-01
@@ -663,7 +661,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
+* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
 * **type**: 'Microsoft.Web/sites/slots/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/networkConfig@2021-03-01
@@ -705,7 +703,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): A request to approve or reject a private endpoint connection
+* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): Core resource properties
 * **type**: 'Microsoft.Web/sites/slots/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/publicCertificates@2021-03-01
@@ -745,7 +743,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VnetInfo](#vnetinfo): Virtual Network information contract.
+* **properties**: [VnetInfo](#vnetinfo): Core resource properties
 * **type**: 'Microsoft.Web/sites/slots/virtualNetworkConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/virtualNetworkConnections/gateways@2021-03-01
@@ -775,7 +773,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VnetInfo](#vnetinfo): Virtual Network information contract.
+* **properties**: [VnetInfo](#vnetinfo): Core resource properties
 * **type**: 'Microsoft.Web/sites/virtualNetworkConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/virtualNetworkConnections/gateways@2021-03-01
@@ -807,7 +805,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [StaticSite](#staticsite): A static site.
+* **properties**: [StaticSite](#staticsite): Core resource properties
 * **sku**: [SkuDescription](#skudescription): Description of a SKU for a scalable resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/staticSites' (ReadOnly, DeployTimeConstant): The resource type
@@ -887,7 +885,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): A request to approve or reject a private endpoint connection
+* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): Core resource properties
 * **type**: 'Microsoft.Web/staticSites/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/staticSites/userProvidedFunctionApps@2021-03-01
@@ -1037,8 +1035,8 @@ This is valid for all deployment slots in an app.
 ## Apple
 ### Properties
 * **enabled**: bool: <code>false</code> if the Apple provider should not be enabled despite the set registration; otherwise, <code>true</code>.
-* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
-* **registration**: [AppleRegistration](#appleregistration): The configuration settings of the registration for the Apple provider
+* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow.
+* **registration**: [AppleRegistration](#appleregistration): The configuration settings of the Apple registration.
 
 ## AppleRegistration
 ### Properties
@@ -1047,8 +1045,8 @@ This is valid for all deployment slots in an app.
 
 ## ApplicationLogsConfig
 ### Properties
-* **azureBlobStorage**: [AzureBlobStorageApplicationLogsConfig](#azureblobstorageapplicationlogsconfig): Application logs azure blob storage configuration.
-* **azureTableStorage**: [AzureTableStorageApplicationLogsConfig](#azuretablestorageapplicationlogsconfig): Application logs to Azure table storage configuration.
+* **azureBlobStorage**: [AzureBlobStorageApplicationLogsConfig](#azureblobstorageapplicationlogsconfig): Application logs to blob storage configuration.
+* **azureTableStorage**: [AzureTableStorageApplicationLogsConfig](#azuretablestorageapplicationlogsconfig): Application logs to azure table storage configuration.
 * **fileSystem**: [FileSystemApplicationLogsConfig](#filesystemapplicationlogsconfig): Application logs to file system configuration.
 
 ## AppLogsConfiguration
@@ -1073,12 +1071,12 @@ This is valid for all deployment slots in an app.
 * **maximumNumberOfMachines**: int (ReadOnly): Maximum number of VMs in the App Service Environment.
 * **multiRoleCount**: int (ReadOnly): Number of front-end instances.
 * **multiSize**: string: Front-end VM size, e.g. "Medium", "Large".
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Provisioning state of the App Service Plan.
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Provisioning state of the App Service Environment.
 * **status**: 'Deleting' | 'Preparing' | 'Ready' | 'Scaling' (ReadOnly): Current status of the App Service Environment.
 * **suspended**: bool (ReadOnly): <code>true</code> if the App Service Environment is suspended; otherwise, <code>false</code>. The environment can be suspended, e.g. when the management endpoint is no longer available
  (most likely because NSG blocked the incoming traffic).
 * **userWhitelistedIpRanges**: string[]: User added ip ranges to whitelist on ASE db
-* **virtualNetwork**: [VirtualNetworkProfile](#virtualnetworkprofile) (Required): Specification for using a Virtual Network.
+* **virtualNetwork**: [VirtualNetworkProfile](#virtualnetworkprofile) (Required): Description of the Virtual Network.
 * **zoneRedundant**: bool: Whether or not this App Service Environment is zone-redundant.
 
 ## AppServicePlanProperties
@@ -1086,11 +1084,11 @@ This is valid for all deployment slots in an app.
 * **elasticScaleEnabled**: bool: ServerFarm supports ElasticScale. Apps in this plan will scale as if the ServerFarm was ElasticPremium sku
 * **freeOfferExpirationTime**: string: The time when the server farm free offer expires.
 * **geoRegion**: string (ReadOnly): Geographical location for the App Service plan.
-* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): Specification for an App Service Environment to use for this resource.
+* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): Specification for the App Service Environment to use for the App Service plan.
 * **hyperV**: bool: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
 * **isSpot**: bool: If <code>true</code>, this App Service Plan owns spot instances.
 * **isXenon**: bool: Obsolete: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
-* **kubeEnvironmentProfile**: [KubeEnvironmentProfile](#kubeenvironmentprofile): Specification for a Kubernetes Environment to use for this resource.
+* **kubeEnvironmentProfile**: [KubeEnvironmentProfile](#kubeenvironmentprofile): Specification for the Kubernetes Environment to use for the App Service plan.
 * **maximumElasticWorkerCount**: int: Maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan
 * **maximumNumberOfWorkers**: int (ReadOnly): Maximum number of instances that can be assigned to this App Service plan.
 * **numberOfSites**: int (ReadOnly): Number of apps assigned to this App Service plan.
@@ -1133,10 +1131,10 @@ If <code>false</code>, this App Service Plan will not perform availability zone 
 ## AseV3NetworkingConfigurationProperties
 ### Properties
 * **allowNewPrivateEndpointConnections**: bool: Property to enable and disable new private endpoint connection creation on ASE
-* **externalInboundIpAddresses**: string[] (ReadOnly): Array of AseV3NetworkingConfigurationPropertiesExternalInboundIpAddressesItem
-* **internalInboundIpAddresses**: string[] (ReadOnly): Array of AseV3NetworkingConfigurationPropertiesInternalInboundIpAddressesItem
-* **linuxOutboundIpAddresses**: string[] (ReadOnly): Array of AseV3NetworkingConfigurationPropertiesLinuxOutboundIpAddressesItem
-* **windowsOutboundIpAddresses**: string[] (ReadOnly): Array of AseV3NetworkingConfigurationPropertiesWindowsOutboundIpAddressesItem
+* **externalInboundIpAddresses**: string[] (ReadOnly)
+* **internalInboundIpAddresses**: string[] (ReadOnly)
+* **linuxOutboundIpAddresses**: string[] (ReadOnly)
+* **windowsOutboundIpAddresses**: string[] (ReadOnly)
 
 ## AuthPlatform
 ### Properties
@@ -1149,8 +1147,7 @@ The setting in this value can control the behavior of certain features in the Au
 ## AutoHealActions
 ### Properties
 * **actionType**: 'CustomAction' | 'LogEvent' | 'Recycle': Predefined action to be taken.
-* **customAction**: [AutoHealCustomAction](#autohealcustomaction): Custom action to be executed
-when an auto heal rule is triggered.
+* **customAction**: [AutoHealCustomAction](#autohealcustomaction): Custom action to be taken.
 * **minProcessExecutionTime**: string: Minimum time the process must execute
 before taking the action
 
@@ -1161,14 +1158,14 @@ before taking the action
 
 ## AutoHealRules
 ### Properties
-* **actions**: [AutoHealActions](#autohealactions): Actions which to take by the auto-heal module when a rule is triggered.
-* **triggers**: [AutoHealTriggers](#autohealtriggers): Triggers for auto-heal.
+* **actions**: [AutoHealActions](#autohealactions): Actions to be executed when a rule is triggered.
+* **triggers**: [AutoHealTriggers](#autohealtriggers): Conditions that describe when to execute the auto-heal actions.
 
 ## AutoHealTriggers
 ### Properties
 * **privateBytesInKB**: int: A rule based on private bytes.
-* **requests**: [RequestsBasedTrigger](#requestsbasedtrigger): Trigger based on total requests.
-* **slowRequests**: [SlowRequestsBasedTrigger](#slowrequestsbasedtrigger): Trigger based on request execution time.
+* **requests**: [RequestsBasedTrigger](#requestsbasedtrigger): A rule based on total requests.
+* **slowRequests**: [SlowRequestsBasedTrigger](#slowrequestsbasedtrigger): A rule based on request execution time.
 * **slowRequestsWithPath**: [SlowRequestsBasedTrigger](#slowrequestsbasedtrigger)[]: A rule based on multiple Slow Requests Rule with path
 * **statusCodes**: [StatusCodesBasedTrigger](#statuscodesbasedtrigger)[]: A rule based on status codes.
 * **statusCodesRange**: [StatusCodesRangeBasedTrigger](#statuscodesrangebasedtrigger)[]: A rule based on status codes ranges.
@@ -1210,7 +1207,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 ## AzureActiveDirectoryValidation
 ### Properties
 * **allowedAudiences**: string[]: The list of audiences that can make successful authentication/authorization requests.
-* **defaultAuthorizationPolicy**: [DefaultAuthorizationPolicy](#defaultauthorizationpolicy): The configuration settings of the Azure Active Directory default authorization policy.
+* **defaultAuthorizationPolicy**: [DefaultAuthorizationPolicy](#defaultauthorizationpolicy): The configuration settings of the default authorization policy.
 * **jwtClaimChecks**: [JwtClaimChecks](#jwtclaimchecks): The configuration settings of the checks that should be made while validating the JWT Claims.
 
 ## AzureBlobStorageApplicationLogsConfig
@@ -1232,7 +1229,7 @@ Remove blobs older than X days.
 ## AzureStaticWebApps
 ### Properties
 * **enabled**: bool: <code>false</code> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, <code>true</code>.
-* **registration**: [AzureStaticWebAppsRegistration](#azurestaticwebappsregistration): The configuration settings of the registration for the Azure Static Web Apps provider
+* **registration**: [AzureStaticWebAppsRegistration](#azurestaticwebappsregistration): The configuration settings of the Azure Static Web Apps registration.
 
 ## AzureStaticWebAppsRegistration
 ### Properties
@@ -1324,7 +1321,7 @@ Remove blobs older than X days.
 ## BackupRequestProperties
 ### Properties
 * **backupName**: string: Name of the backup.
-* **backupSchedule**: [BackupSchedule](#backupschedule): Description of a backup schedule. Describes how often should be the backup performed and what should be the retention policy.
+* **backupSchedule**: [BackupSchedule](#backupschedule): Schedule for the backup if it is executed periodically.
 * **databases**: [DatabaseBackupSetting](#databasebackupsetting)[]: Databases included in the backup.
 * **enabled**: bool: True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
 * **storageAccountUrl**: string (Required): SAS URL to the container.
@@ -1355,7 +1352,7 @@ Remove blobs older than X days.
 * **domainValidationMethod**: string: Method of domain validation for free cert
 * **expirationDate**: string (ReadOnly): Certificate expiration date.
 * **friendlyName**: string (ReadOnly): Friendly name of the certificate.
-* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile) (ReadOnly): Specification for an App Service Environment to use for this resource.
+* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile) (ReadOnly): Specification for the App Service Environment to use for the certificate.
 * **hostNames**: string[]: Host names the certificate applies to.
 * **issueDate**: string (ReadOnly): Certificate issue Date.
 * **issuer**: string (ReadOnly): Certificate issuer.
@@ -1405,7 +1402,7 @@ together to use the same snapshot.
 ### Properties
 * **activeRevisionsMode**: 'multiple' | 'single' | string: ActiveRevisionsMode controls how active revisions are handled for the Container app:
 <list><item>Multiple: multiple revisions can be active. If no value if provided, this is the default</item><item>Single: Only one revision can be active at a time. Revision weights can not be used in this mode</item></list>
-* **ingress**: [Ingress](#ingress): Container App Ingress configuration.
+* **ingress**: [Ingress](#ingress): Ingress configurations.
 * **registries**: [RegistryCredentials](#registrycredentials)[]: Collection of private container registry credentials for containers used by the Container app
 * **secrets**: [Secret](#secret)[]: Collection of secrets used by a Container app
 
@@ -1437,18 +1434,16 @@ together to use the same snapshot.
 * **env**: [EnvironmentVar](#environmentvar)[]: Container environment variables.
 * **image**: string: Container image tag.
 * **name**: string: Custom container name.
-* **resources**: [ContainerResources](#containerresources): Container App container resource requirements.
+* **resources**: [ContainerResources](#containerresources): Container resource requirements.
 
 ## ContainerAppProperties
 ### Properties
-* **configuration**: [Configuration](#configuration): Non versioned Container App configuration properties that define the mutable settings of a Container app
+* **configuration**: [Configuration](#configuration): Non versioned Container App configuration properties.
 * **kubeEnvironmentId**: string: Resource ID of the Container App's KubeEnvironment.
 * **latestRevisionFqdn**: string (ReadOnly): Fully Qualified Domain Name of the latest revision of the Container App.
 * **latestRevisionName**: string (ReadOnly): Name of the latest revision of the Container App.
 * **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the Container App.
 * **template**: [Template](#template): Container App versioned application definition.
-Defines the desired state of an immutable revision.
-Any changes to this section Will result in a new revision being created
 
 ## ContainerAppsConfiguration
 ### Properties
@@ -1583,8 +1578,8 @@ This is used during restore with overwrite connection strings options.
 ### Properties
 * **enabled**: bool: <code>false</code> if the Facebook provider should not be enabled despite the set registration; otherwise, <code>true</code>.
 * **graphApiVersion**: string: The version of the Facebook api to be used while logging in.
-* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
-* **registration**: [AppRegistration](#appregistration): The configuration settings of the app registration for providers that have app ids and app secrets
+* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow.
+* **registration**: [AppRegistration](#appregistration): The configuration settings of the app registration for the Facebook provider.
 
 ## FileSystemApplicationLogsConfig
 ### Properties
@@ -1616,7 +1611,7 @@ Value can range between 25 and 100.
 
 ## FunctionEnvelopeProperties
 ### Properties
-* **config**: any: Any object
+* **config**: any: Config information.
 * **config_href**: string: Config URI.
 * **files**: [FunctionEnvelopePropertiesFiles](#functionenvelopepropertiesfiles): File list.
 * **function_app_id**: string: Function App ID.
@@ -1658,8 +1653,8 @@ Value can range between 25 and 100.
 ## GitHub
 ### Properties
 * **enabled**: bool: <code>false</code> if the GitHub provider should not be enabled despite the set registration; otherwise, <code>true</code>.
-* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
-* **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for providers that have client ids and client secrets
+* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow.
+* **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for the GitHub provider.
 
 ## GitHubActionCodeConfiguration
 ### Properties
@@ -1668,8 +1663,8 @@ Value can range between 25 and 100.
 
 ## GitHubActionConfiguration
 ### Properties
-* **codeConfiguration**: [GitHubActionCodeConfiguration](#githubactioncodeconfiguration): The GitHub action code configuration.
-* **containerConfiguration**: [GitHubActionContainerConfiguration](#githubactioncontainerconfiguration): The GitHub action container configuration.
+* **codeConfiguration**: [GitHubActionCodeConfiguration](#githubactioncodeconfiguration): GitHub Action code configuration.
+* **containerConfiguration**: [GitHubActionContainerConfiguration](#githubactioncontainerconfiguration): GitHub Action container configuration.
 * **generateWorkflowFile**: bool: Workflow option to determine whether the workflow file should be generated and written to the repository.
 * **isLinux**: bool: This will help determine the workflow configuration to select.
 
@@ -1692,9 +1687,9 @@ action is set to "RedirectToLoginPage".
 ## Google
 ### Properties
 * **enabled**: bool: <code>false</code> if the Google provider should not be enabled despite the set registration; otherwise, <code>true</code>.
-* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
-* **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for providers that have client ids and client secrets
-* **validation**: [AllowedAudiencesValidation](#allowedaudiencesvalidation): The configuration settings of the Allowed Audiences validation flow.
+* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow.
+* **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for the Google provider.
+* **validation**: [AllowedAudiencesValidation](#allowedaudiencesvalidation): The configuration settings of the Azure Active Directory token validation flow.
 
 ## HandlerMapping
 ### Properties
@@ -1746,7 +1741,7 @@ action is set to "RedirectToLoginPage".
 ### Properties
 * **hostType**: 'Repository' | 'Standard': Indicates whether the hostname is a standard or repository hostname.
 * **name**: string: Hostname.
-* **sslState**: 'Disabled' | 'IpBasedEnabled' | 'SniEnabled': SSL type
+* **sslState**: 'Disabled' | 'IpBasedEnabled' | 'SniEnabled': SSL type.
 * **thumbprint**: string: SSL certificate thumbprint.
 * **toUpdate**: bool: Set to <code>true</code> to update existing hostname.
 * **virtualIP**: string: Virtual IP address assigned to the hostname if IP based SSL is enabled.
@@ -1829,7 +1824,7 @@ configuration settings of the custom Open ID Connect provider.
 * **external**: bool: Bool indicating if app exposes an external http endpoint
 * **fqdn**: string (ReadOnly): Hostname.
 * **targetPort**: int: Target Port in containers for traffic from ingress
-* **traffic**: [TrafficWeight](#trafficweight)[]: Array of TrafficWeight
+* **traffic**: [TrafficWeight](#trafficweight)[]
 * **transport**: 'auto' | 'http' | 'http2' | string: Ingress transport protocol
 
 ## IpSecurityRestriction
@@ -1883,9 +1878,13 @@ SubnetMask property must not be specified.
 ## KubeEnvironmentProperties
 ### Properties
 * **aksResourceID**: string
-* **appLogsConfiguration**: [AppLogsConfiguration](#applogsconfiguration)
-* **arcConfiguration**: [ArcConfiguration](#arcconfiguration)
-* **containerAppsConfiguration**: [ContainerAppsConfiguration](#containerappsconfiguration)
+* **appLogsConfiguration**: [AppLogsConfiguration](#applogsconfiguration): Cluster configuration which enables the log daemon to export
+app logs to a destination. Currently only "log-analytics" is
+supported
+* **arcConfiguration**: [ArcConfiguration](#arcconfiguration): Cluster configuration which determines the ARC cluster
+components types. Eg: Choosing between BuildService kind,
+FrontEnd Service ArtifactsStorageType etc.
+* **containerAppsConfiguration**: [ContainerAppsConfiguration](#containerappsconfiguration): Cluster configuration for Container Apps Environments to configure Dapr Instrumentation Key and VNET Configuration
 * **defaultDomain**: string (ReadOnly): Default Domain Name for the cluster
 * **deploymentErrors**: string (ReadOnly): Any errors that occurred during deployment or deployment validation
 * **environmentType**: string: Type of Kubernetes Environment. Only supported for Container App Environments with value as Managed
@@ -1896,9 +1895,9 @@ SubnetMask property must not be specified.
 ## LegacyMicrosoftAccount
 ### Properties
 * **enabled**: bool: <code>false</code> if the legacy Microsoft Account provider should not be enabled despite the set registration; otherwise, <code>true</code>.
-* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
-* **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for providers that have client ids and client secrets
-* **validation**: [AllowedAudiencesValidation](#allowedaudiencesvalidation): The configuration settings of the Allowed Audiences validation flow.
+* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow.
+* **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for the legacy Microsoft Account provider.
+* **validation**: [AllowedAudiencesValidation](#allowedaudiencesvalidation): The configuration settings of the legacy Microsoft Account provider token validation flow.
 
 ## LogAnalyticsConfiguration
 ### Properties
@@ -1990,7 +1989,7 @@ Setting is <code>false</code> by default.
 
 ## OpenIdConnectRegistration
 ### Properties
-* **clientCredential**: [OpenIdConnectClientCredential](#openidconnectclientcredential): The authentication client credentials of the custom Open ID Connect provider.
+* **clientCredential**: [OpenIdConnectClientCredential](#openidconnectclientcredential): The authentication credentials of the custom Open ID Connect provider.
 * **clientId**: string: The client id of the custom Open ID Connect provider.
 * **openIdConnectConfiguration**: [OpenIdConnectConfig](#openidconnectconfig): The configuration settings of the endpoints used for the custom Open ID Connect provider.
 
@@ -2022,7 +2021,7 @@ Setting is <code>false</code> by default.
 ## PrivateLinkConnectionApprovalRequest
 ### Properties
 * **ipAddresses**: string[] (ReadOnly): Private IPAddresses mapped to the remote private endpoint
-* **privateEndpoint**: [ArmIdWrapper](#armidwrapper) (ReadOnly): A wrapper for an ARM resource id
+* **privateEndpoint**: [ArmIdWrapper](#armidwrapper) (ReadOnly): PrivateEndpoint of a remote private endpoint connection
 * **privateLinkServiceConnectionState**: [PrivateLinkConnectionState](#privatelinkconnectionstate): The state of a private link connection
 * **provisioningState**: string (ReadOnly)
 
@@ -2103,7 +2102,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 ## RemotePrivateEndpointConnectionProperties
 ### Properties
 * **ipAddresses**: string[]: Private IPAddresses mapped to the remote private endpoint
-* **privateEndpoint**: [ArmIdWrapper](#armidwrapper): A wrapper for an ARM resource id
+* **privateEndpoint**: [ArmIdWrapper](#armidwrapper): PrivateEndpoint of a remote private endpoint connection
 * **privateLinkServiceConnectionState**: [PrivateLinkConnectionState](#privatelinkconnectionstate): The state of a private link connection
 * **provisioningState**: string (ReadOnly)
 
@@ -2164,16 +2163,16 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 
 ## ResponseMessageEnvelopeRemotePrivateEndpointConnection
 ### Properties
-* **error**: [ErrorEntity](#errorentity): Body of the error response returned from the API.
+* **error**: [ErrorEntity](#errorentity): Azure-AsyncOperation Error info.
 * **id**: string: Resource Id. Typically ID is populated only for responses to GET requests. Caller is responsible for passing in this
 value for GET requests only.
 For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/providers/Microsoft.Web/sites/{sitename}
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): MSI resource
 * **location**: string: Geographical region resource belongs to e.g. SouthCentralUS, SouthEastAsia.
 * **name**: string: Name of resource.
-* **plan**: [ArmPlan](#armplan): The plan object in Azure Resource Manager, represents a marketplace plan.
-* **properties**: [RemotePrivateEndpointConnection](#remoteprivateendpointconnection): A remote private endpoint connection
-* **sku**: [SkuDescription](#skudescription): Description of a SKU for a scalable resource.
+* **plan**: [ArmPlan](#armplan): Azure resource manager plan.
+* **properties**: [RemotePrivateEndpointConnection](#remoteprivateendpointconnection): Resource specific properties.
+* **sku**: [SkuDescription](#skudescription): SKU description of the resource.
 * **status**: string: Azure-AsyncOperation Status info.
 * **tags**: [ResponseMessageEnvelopeRemotePrivateEndpointConnectionTags](#responsemessageenveloperemoteprivateendpointconnectiontags): Tags associated with resource.
 * **type**: string: Type of resource e.g "Microsoft.Web/sites".
@@ -2192,9 +2191,9 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 
 ## ScaleRule
 ### Properties
-* **azureQueue**: [QueueScaleRule](#queuescalerule): Container App container Azure Queue based scaling rule.
-* **custom**: [CustomScaleRule](#customscalerule): Container App container Custom scaling rule.
-* **http**: [HttpScaleRule](#httpscalerule): Container App container Custom scaling rule.
+* **azureQueue**: [QueueScaleRule](#queuescalerule): Azure Queue based scaling.
+* **custom**: [CustomScaleRule](#customscalerule): Custom scale rule.
+* **http**: [HttpScaleRule](#httpscalerule): HTTP requests based scaling.
 * **name**: string: Scale Rule Name
 
 ## ScaleRuleAuth
@@ -2318,19 +2317,19 @@ application used for sign-in.
 * **acrUserManagedIdentityID**: string: If using user managed identity, the user managed identity ClientId
 * **alwaysOn**: bool: <code>true</code> if Always On is enabled; otherwise, <code>false</code>.
 * **apiDefinition**: [ApiDefinitionInfo](#apidefinitioninfo): Information about the formal API definition for the app.
-* **apiManagementConfig**: [ApiManagementConfig](#apimanagementconfig): Azure API management (APIM) configuration linked to the app.
+* **apiManagementConfig**: [ApiManagementConfig](#apimanagementconfig): Azure API management settings linked to the app.
 * **appCommandLine**: string: App command line to launch.
 * **appSettings**: [NameValuePair](#namevaluepair)[]: Application settings.
 * **autoHealEnabled**: bool: <code>true</code> if Auto Heal is enabled; otherwise, <code>false</code>.
-* **autoHealRules**: [AutoHealRules](#autohealrules): Rules that can be defined for auto-heal.
+* **autoHealRules**: [AutoHealRules](#autohealrules): Auto Heal rules.
 * **autoSwapSlotName**: string: Auto-swap slot name.
 * **azureStorageAccounts**: [SiteConfigAzureStorageAccounts](#siteconfigazurestorageaccounts): List of Azure Storage Accounts.
 * **connectionStrings**: [ConnStringInfo](#connstringinfo)[]: Connection strings.
-* **cors**: [CorsSettings](#corssettings): Cross-Origin Resource Sharing (CORS) settings for the app.
+* **cors**: [CorsSettings](#corssettings): Cross-Origin Resource Sharing (CORS) settings.
 * **defaultDocuments**: string[]: Default documents.
 * **detailedErrorLoggingEnabled**: bool: <code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.
 * **documentRoot**: string: Document root.
-* **experiments**: [Experiments](#experiments): Routing rules in production experiments.
+* **experiments**: [Experiments](#experiments): This is work around for polymorphic types.
 * **ftpsState**: 'AllAllowed' | 'Disabled' | 'FtpsOnly' | string: State of FTP / FTPS service
 * **functionAppScaleLimit**: int: Maximum number of workers that a site can scale out to.
 This setting only applies to the Consumption and Elastic Premium Plans
@@ -2346,12 +2345,12 @@ runtime to get scale status.
 * **javaContainerVersion**: string: Java container version.
 * **javaVersion**: string: Java version.
 * **keyVaultReferenceIdentity**: string: Identity to use for Key Vault Reference authentication.
-* **limits**: [SiteLimits](#sitelimits): Metric limits set on an app.
+* **limits**: [SiteLimits](#sitelimits): Site limits.
 * **linuxFxVersion**: string: Linux App Framework and version
 * **loadBalancing**: 'LeastRequests' | 'LeastResponseTime' | 'PerSiteRoundRobin' | 'RequestHash' | 'WeightedRoundRobin' | 'WeightedTotalTraffic': Site load balancing.
 * **localMySqlEnabled**: bool: <code>true</code> to enable local MySQL; otherwise, <code>false</code>.
 * **logsDirectorySizeLimit**: int: HTTP logs directory size limit.
-* **machineKey**: [SiteMachineKey](#sitemachinekey) (ReadOnly): MachineKey of an app.
+* **machineKey**: [SiteMachineKey](#sitemachinekey) (ReadOnly): Site MachineKey.
 * **managedPipelineMode**: 'Classic' | 'Integrated': Managed pipeline mode.
 * **managedServiceIdentityId**: int: Managed Service Identity Id
 * **minimumElasticInstanceCount**: int: Number of minimum instance count for a site
@@ -2366,7 +2365,7 @@ This setting only applies to the Elastic Plans
 This setting only applies to the Consumption and Elastic Plans
 * **publicNetworkAccess**: string: Property to allow or block all public traffic.
 * **publishingUsername**: string: Publishing user name.
-* **push**: [PushSettings](#pushsettings): Push settings for the App.
+* **push**: [PushSettings](#pushsettings): Push endpoint settings.
 * **pythonVersion**: string: Version of Python.
 * **remoteDebuggingEnabled**: bool: <code>true</code> if remote debugging is enabled; otherwise, <code>false</code>.
 * **remoteDebuggingVersion**: string: Remote debugging version.
@@ -2374,7 +2373,7 @@ This setting only applies to the Consumption and Elastic Plans
 * **requestTracingExpirationTime**: string: Request tracing expiration time.
 * **scmIpSecurityRestrictions**: [IpSecurityRestriction](#ipsecurityrestriction)[]: IP security restrictions for scm.
 * **scmIpSecurityRestrictionsUseMain**: bool: IP security restrictions for scm to use main.
-* **scmMinTlsVersion**: '1.0' | '1.1' | '1.2' | string: MinTlsVersion: configures the minimum version of TLS required for SSL requests
+* **scmMinTlsVersion**: '1.0' | '1.1' | '1.2' | string: ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site
 * **scmType**: 'BitbucketGit' | 'BitbucketHg' | 'CodePlexGit' | 'CodePlexHg' | 'Dropbox' | 'ExternalGit' | 'ExternalHg' | 'GitHub' | 'LocalGit' | 'None' | 'OneDrive' | 'Tfs' | 'VSO' | 'VSTSRM' | string: SCM type.
 * **tracingOptions**: string: Tracing options.
 * **use32BitWorkerProcess**: bool: <code>true</code> to use 32-bit worker process; otherwise, <code>false</code>.
@@ -2424,9 +2423,9 @@ This setting only applies to the Consumption and Elastic Plans
 ## SiteLogsConfigProperties
 ### Properties
 * **applicationLogs**: [ApplicationLogsConfig](#applicationlogsconfig): Application logs configuration.
-* **detailedErrorMessages**: [EnabledConfig](#enabledconfig): Enabled configuration.
-* **failedRequestsTracing**: [EnabledConfig](#enabledconfig): Enabled configuration.
-* **httpLogs**: [HttpLogsConfig](#httplogsconfig): Http logs configuration.
+* **detailedErrorMessages**: [EnabledConfig](#enabledconfig): Detailed error messages configuration.
+* **failedRequestsTracing**: [EnabledConfig](#enabledconfig): Failed requests tracing configuration.
+* **httpLogs**: [HttpLogsConfig](#httplogsconfig): HTTP logs configuration.
 
 ## SiteMachineKey
 ### Properties
@@ -2445,7 +2444,7 @@ This setting only applies to the Consumption and Elastic Plans
 - ClientCertEnabled: false means ClientCert is ignored.
 - ClientCertEnabled: true and ClientCertMode: Required means ClientCert is required.
 - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.
-* **cloningInfo**: [CloningInfo](#cloninginfo) (WriteOnly): Information needed for cloning operation.
+* **cloningInfo**: [CloningInfo](#cloninginfo) (WriteOnly): If specified during app creation, the app is cloned from a source app.
 * **containerSize**: int: Size of the function container.
 * **customDomainVerificationId**: string: Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.
 * **dailyMemoryTimeQuota**: int: Maximum allowed daily memory-time quota (applicable on dynamic apps only).
@@ -2453,7 +2452,7 @@ This setting only applies to the Consumption and Elastic Plans
 * **enabled**: bool: <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).
 * **enabledHostNames**: string[] (ReadOnly): Enabled hostnames for the app.Hostnames need to be assigned (see HostNames) AND enabled. Otherwise,
 the app is not served on those hostnames.
-* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): Specification for an App Service Environment to use for this resource.
+* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): App Service Environment to use for the app.
 * **hostNames**: string[] (ReadOnly): Hostnames associated with the app.
 * **hostNamesDisabled**: bool: <code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>.
  If <code>true</code>, the app is only accessible via API management process.
@@ -2476,8 +2475,8 @@ This only applies to Functions container.
 * **resourceGroup**: string (ReadOnly): Name of the resource group the app belongs to. Read-only.
 * **scmSiteAlsoStopped**: bool: <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.
 * **serverFarmId**: string: Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
-* **siteConfig**: [SiteConfig](#siteconfig): Configuration of an App Service app.
-* **slotSwapStatus**: [SlotSwapStatus](#slotswapstatus) (ReadOnly): The status of the last successful slot swap operation.
+* **siteConfig**: [SiteConfig](#siteconfig): Configuration of the app.
+* **slotSwapStatus**: [SlotSwapStatus](#slotswapstatus) (ReadOnly): Status of the last deployment slot swap operation.
 * **state**: string (ReadOnly): Current state of the app.
 * **storageAccountRequired**: bool: Checks if Customer provided storage account is required
 * **suspendedTill**: string (ReadOnly): App suspended till in case memory-time quota is exceeded.
@@ -2491,7 +2490,7 @@ This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resou
 ### Properties
 * **branch**: string: Name of branch to use for deployment.
 * **deploymentRollbackEnabled**: bool: <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
-* **gitHubActionConfiguration**: [GitHubActionConfiguration](#githubactionconfiguration): The GitHub action configuration.
+* **gitHubActionConfiguration**: [GitHubActionConfiguration](#githubactionconfiguration): If GitHub Action is selected, than the associated configuration.
 * **isGitHubAction**: bool: <code>true</code> if this is deployed via GitHub action.
 * **isManualIntegration**: bool: <code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).
 * **isMercurial**: bool: <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
@@ -2513,7 +2512,7 @@ This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resou
 * **locations**: string[]: Locations of the SKU.
 * **name**: string: Name of the resource SKU.
 * **size**: string: Size specifier of the resource SKU.
-* **skuCapacity**: [SkuCapacity](#skucapacity): Description of the App Service plan scale options.
+* **skuCapacity**: [SkuCapacity](#skucapacity): Min, max, and default scale values of the SKU.
 * **tier**: string: Service tier of the resource SKU.
 
 ## SlotConfigNames
@@ -2546,7 +2545,7 @@ This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resou
 ### Properties
 * **allowConfigFileUpdates**: bool: <code>false</code> if config file is locked for this static web app; otherwise, <code>true</code>.
 * **branch**: string: The target branch in the repository.
-* **buildProperties**: [StaticSiteBuildProperties](#staticsitebuildproperties): Build properties for the static site.
+* **buildProperties**: [StaticSiteBuildProperties](#staticsitebuildproperties): Build properties to configure on the repository.
 * **contentDistributionEndpoint**: string (ReadOnly): The content distribution endpoint for the static site.
 * **customDomains**: string[] (ReadOnly): The custom domains associated with this static site.
 * **defaultHostname**: string (ReadOnly): The default autogenerated hostname for the static site.
@@ -2557,7 +2556,7 @@ This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resou
 * **repositoryToken**: string: A user's github repository token. This is used to setup the Github Actions workflow file and API secrets.
 * **repositoryUrl**: string: URL for the repository of the static site.
 * **stagingEnvironmentPolicy**: 'Disabled' | 'Enabled': State indicating whether staging environments are allowed or not allowed for a static web app.
-* **templateProperties**: [StaticSiteTemplateOptions](#staticsitetemplateoptions): Template Options for the static site.
+* **templateProperties**: [StaticSiteTemplateOptions](#staticsitetemplateoptions): Template options for generating a new repository.
 * **userProvidedFunctionApps**: [StaticSiteUserProvidedFunctionApp](#staticsiteuserprovidedfunctionapp)[] (ReadOnly): User provided function apps registered with the static site
 
 ## StaticSiteBuildProperties
@@ -2777,9 +2776,9 @@ This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resou
 ## Template
 ### Properties
 * **containers**: [Container](#container)[]: List of container definitions for the Container App.
-* **dapr**: [Dapr](#dapr): Container App Dapr configuration.
+* **dapr**: [Dapr](#dapr): Dapr configuration for the Container App.
 * **revisionSuffix**: string: User friendly suffix that is appended to the revision name
-* **scale**: [Scale](#scale): Container App scaling configurations.
+* **scale**: [Scale](#scale): Scaling properties for the Container App.
 
 ## TokenStore
 ### Properties
@@ -2878,7 +2877,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 
 ## WorkerPool
 ### Properties
-* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared/dedicated workers.
+* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared or dedicated app hosting.
 * **instanceNames**: string[] (ReadOnly): Names of all instances in the worker pool (read only).
 * **workerCount**: int: Number of instances in the worker pool.
 * **workerSize**: string: VM size of the worker pool instances.

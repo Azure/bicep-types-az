@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AutoscaleSetting](#autoscalesetting) (Required): A setting that contains all of the configuration for the automatic scaling of a resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [AutoscaleSetting](#autoscalesetting) (Required): The autoscale setting of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata related to the response.
 * **tags**: [AutoscaleSettingResourceTags](#autoscalesettingresourcetags): Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater in length than 128 characters and a value no greater in length than 256 characters.
 * **type**: 'Microsoft.Insights/autoscalesettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,22 +18,22 @@
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DiagnosticSettings](#diagnosticsettings): The diagnostic settings.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [DiagnosticSettings](#diagnosticsettings): Properties of a Diagnostic Settings Resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata related to this resource.
 * **type**: 'Microsoft.Insights/diagnosticSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AutoscaleNotification
 ### Properties
-* **email**: [EmailNotification](#emailnotification): Email notification of an autoscale event.
+* **email**: [EmailNotification](#emailnotification): the email notification.
 * **operation**: 'Scale' (Required): the operation associated with the notification and its value must be "scale"
 * **webhooks**: [WebhookNotification](#webhooknotification)[]: the collection of webhook notifications.
 
 ## AutoscaleProfile
 ### Properties
-* **capacity**: [ScaleCapacity](#scalecapacity) (Required): The number of instances that can be used during this profile.
-* **fixedDate**: [TimeWindow](#timewindow): A specific date-time for the profile.
+* **capacity**: [ScaleCapacity](#scalecapacity) (Required): the number of instances that can be used during this profile.
+* **fixedDate**: [TimeWindow](#timewindow): the specific date-time for the profile. This element is not used if the Recurrence element is used.
 * **name**: string (Required): the name of the profile.
-* **recurrence**: [Recurrence](#recurrence): The repeating times at which this profile begins. This element is not used if the FixedDate element is used.
+* **recurrence**: [Recurrence](#recurrence): the repeating times at which this profile begins. This element is not used if the FixedDate element is used.
 * **rules**: [ScaleRule](#scalerule)[] (Required): the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.
 
 ## AutoscaleSetting
@@ -41,7 +41,7 @@
 * **enabled**: bool: the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.
 * **name**: string: the name of the autoscale setting.
 * **notifications**: [AutoscaleNotification](#autoscalenotification)[]: the collection of notifications.
-* **predictiveAutoscalePolicy**: [PredictiveAutoscalePolicy](#predictiveautoscalepolicy): The parameters for enabling predictive autoscale.
+* **predictiveAutoscalePolicy**: [PredictiveAutoscalePolicy](#predictiveautoscalepolicy): the predictive autoscale policy mode.
 * **profiles**: [AutoscaleProfile](#autoscaleprofile)[] (Required): the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.
 * **targetResourceLocation**: string: the location of the resource that the autoscale setting should be added to.
 * **targetResourceUri**: string: the resource identifier of the resource that the autoscale setting should be added to.
@@ -74,13 +74,13 @@
 * **category**: string: Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
 * **categoryGroup**: string: Name of a Diagnostic Log category group for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
 * **enabled**: bool (Required): a value indicating whether this log is enabled.
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Specifies the retention policy for the log.
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): the retention policy for this log.
 
 ## MetricSettings
 ### Properties
 * **category**: string: Name of a Diagnostic Metric category for a resource type this setting is applied to. To obtain the list of Diagnostic metric categories for a resource, first perform a GET diagnostic settings operation.
 * **enabled**: bool (Required): a value indicating whether this category is enabled.
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Specifies the retention policy for the log.
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): the retention policy for this category.
 * **timeGrain**: string: the timegrain of the metric in ISO8601 format.
 
 ## MetricTrigger
@@ -106,7 +106,7 @@
 ## Recurrence
 ### Properties
 * **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'None' | 'Second' | 'Week' | 'Year' (Required): the recurrence frequency. How often the schedule profile should take effect. This value must be Week, meaning each week will have the same set of profiles. For example, to set a daily schedule, set **schedule** to every day of the week. The frequency property specifies that the schedule is repeated weekly.
-* **schedule**: [RecurrentSchedule](#recurrentschedule) (Required): The scheduling constraints for when the profile begins.
+* **schedule**: [RecurrentSchedule](#recurrentschedule) (Required): the scheduling constraints for when the profile begins.
 
 ## RecurrentSchedule
 ### Properties
@@ -135,8 +135,8 @@
 
 ## ScaleRule
 ### Properties
-* **metricTrigger**: [MetricTrigger](#metrictrigger) (Required): The trigger that results in a scaling action.
-* **scaleAction**: [ScaleAction](#scaleaction) (Required): The parameters for the scaling action.
+* **metricTrigger**: [MetricTrigger](#metrictrigger) (Required): the trigger that results in a scaling action.
+* **scaleAction**: [ScaleAction](#scaleaction) (Required): the parameters for the scaling action.
 
 ## ScaleRuleMetricDimension
 ### Properties
@@ -151,7 +151,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TimeWindow
 ### Properties

@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity) (Required): Managed identity generic object.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity) (Required): Managed identity for this blueprint assignment.
 * **location**: string (Required): The location of this blueprint assignment.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AssignmentProperties](#assignmentproperties) (Required): Detailed properties for a blueprint assignment.
+* **properties**: [AssignmentProperties](#assignmentproperties) (Required): Properties for blueprint assignment object.
 * **type**: 'Microsoft.Blueprint/blueprintAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Blueprint/blueprints@2018-11-01-preview
@@ -17,7 +17,7 @@
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BlueprintProperties](#blueprintproperties) (Required): Schema for blueprint definition properties.
+* **properties**: [BlueprintProperties](#blueprintproperties) (Required): Detailed properties for blueprint definition.
 * **type**: 'Microsoft.Blueprint/blueprints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Blueprint/blueprints/artifacts@2018-11-01-preview
@@ -32,17 +32,17 @@
 ### PolicyAssignmentArtifact
 #### Properties
 * **kind**: 'policyAssignment' (Required): Specifies the kind of blueprint artifact.
-* **properties**: [PolicyAssignmentArtifactProperties](#policyassignmentartifactproperties) (Required): Properties of a Policy assignment blueprint artifact.
+* **properties**: [PolicyAssignmentArtifactProperties](#policyassignmentartifactproperties) (Required): properties for policyAssignment Artifact
 
 ### RoleAssignmentArtifact
 #### Properties
 * **kind**: 'roleAssignment' (Required): Specifies the kind of blueprint artifact.
-* **properties**: [RoleAssignmentArtifactProperties](#roleassignmentartifactproperties) (Required): Properties of a Role assignment blueprint artifact.
+* **properties**: [RoleAssignmentArtifactProperties](#roleassignmentartifactproperties) (Required): Properties for a Role assignment blueprint artifact.
 
 ### TemplateArtifact
 #### Properties
 * **kind**: 'template' (Required): Specifies the kind of blueprint artifact.
-* **properties**: [TemplateArtifactProperties](#templateartifactproperties) (Required): Properties of a Resource Manager template blueprint artifact.
+* **properties**: [TemplateArtifactProperties](#templateartifactproperties) (Required): Properties for a Resource Manager template blueprint artifact.
 
 
 ## Resource Microsoft.Blueprint/blueprints/versions@2018-11-01-preview
@@ -51,7 +51,7 @@
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PublishedBlueprintProperties](#publishedblueprintproperties) (Required): Schema for published blueprint definition properties.
+* **properties**: [PublishedBlueprintProperties](#publishedblueprintproperties) (Required): Detailed properties for published blueprint.
 * **type**: 'Microsoft.Blueprint/blueprints/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AssignmentLockSettings
@@ -70,7 +70,7 @@
 * **provisioningState**: 'canceled' | 'cancelling' | 'creating' | 'deleting' | 'deploying' | 'failed' | 'locking' | 'succeeded' | 'validating' | 'waiting' | string (ReadOnly): State of the blueprint assignment.
 * **resourceGroups**: [AssignmentPropertiesResourceGroups](#assignmentpropertiesresourcegroups) (Required): Names and locations of resource group placeholders.
 * **scope**: string: The target subscription scope of the blueprint assignment (format: '/subscriptions/{subscriptionId}'). For management group level assignments, the property is required.
-* **status**: [AssignmentStatus](#assignmentstatus) (ReadOnly): The status of a blueprint assignment. This field is readonly.
+* **status**: [AssignmentStatus](#assignmentstatus) (ReadOnly): Status of blueprint assignment. This field is readonly.
 
 ## AssignmentPropertiesParameters
 ### Properties
@@ -92,12 +92,12 @@
 ### Properties
 * **description**: string: Multi-line explain this resource.
 * **displayName**: string: One-liner string explain this resource.
-* **layout**: any (ReadOnly): Any object
+* **layout**: any (ReadOnly): Layout view of the blueprint definition for UI reference.
 * **parameters**: [SharedBlueprintPropertiesParameters](#sharedblueprintpropertiesparameters): Parameters required by this blueprint definition.
 * **resourceGroups**: [SharedBlueprintPropertiesResourceGroups](#sharedblueprintpropertiesresourcegroups): Resource group placeholders defined by this blueprint definition.
-* **status**: [BlueprintStatus](#blueprintstatus) (ReadOnly): The status of the blueprint. This field is readonly.
+* **status**: [BlueprintStatus](#blueprintstatus) (ReadOnly): Status of the blueprint. This field is readonly.
 * **targetScope**: 'managementGroup' | 'subscription' | string: The scope where this blueprint definition can be assigned.
-* **versions**: any: Any object
+* **versions**: any: Published versions of this blueprint definition.
 
 ## BlueprintStatus
 ### Properties
@@ -123,7 +123,7 @@
 ## ParameterDefinition
 ### Properties
 * **allowedValues**: any[]: Array of allowed values for this parameter.
-* **defaultValue**: any: Anything
+* **defaultValue**: any: Default Value for this parameter.
 * **metadata**: [ParameterDefinitionMetadata](#parameterdefinitionmetadata): User-friendly properties for this parameter.
 * **type**: 'array' | 'bool' | 'int' | 'object' | 'secureObject' | 'secureString' | 'string' | string (Required): Allowed data types for Resource Manager template parameters.
 
@@ -135,8 +135,8 @@
 
 ## ParameterValue
 ### Properties
-* **reference**: [SecretValueReference](#secretvaluereference): Reference to a Key Vault secret.
-* **value**: any: Any object
+* **reference**: [SecretValueReference](#secretvaluereference): Parameter value as reference type.
+* **value**: any: Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.
 
 ## PolicyAssignmentArtifactProperties
 ### Properties
@@ -160,14 +160,14 @@
 * **displayName**: string: One-liner string explain this resource.
 * **parameters**: [SharedBlueprintPropertiesParameters](#sharedblueprintpropertiesparameters): Parameters required by this blueprint definition.
 * **resourceGroups**: [SharedBlueprintPropertiesResourceGroups](#sharedblueprintpropertiesresourcegroups): Resource group placeholders defined by this blueprint definition.
-* **status**: [BlueprintStatus](#blueprintstatus) (ReadOnly): The status of the blueprint. This field is readonly.
+* **status**: [BlueprintStatus](#blueprintstatus) (ReadOnly): Status of the blueprint. This field is readonly.
 * **targetScope**: 'managementGroup' | 'subscription' | string: The scope where this blueprint definition can be assigned.
 
 ## ResourceGroupDefinition
 ### Properties
 * **dependsOn**: string[]: Artifacts which need to be deployed before this resource group.
 * **location**: string: Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.
-* **metadata**: [ParameterDefinitionMetadata](#parameterdefinitionmetadata): User-friendly properties for this parameter.
+* **metadata**: [ParameterDefinitionMetadata](#parameterdefinitionmetadata): User-friendly properties for this resource group.
 * **name**: string: Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.
 * **tags**: [ResourceGroupDefinitionTags](#resourcegroupdefinitiontags): Tags to be assigned to this resource group.
 
@@ -186,13 +186,13 @@
 * **dependsOn**: string[]: Artifacts which need to be deployed before the specified artifact.
 * **description**: string: Multi-line explain this resource.
 * **displayName**: string: One-liner string explain this resource.
-* **principalIds**: any (Required): Anything
+* **principalIds**: any (Required): Array of user or group identities in Azure Active Directory. The roleDefinition will apply to each identity.
 * **resourceGroup**: string: RoleAssignment will be scope to this resourceGroup. If empty, it scopes to the subscription.
 * **roleDefinitionId**: string (Required): Azure resource ID of the RoleDefinition.
 
 ## SecretValueReference
 ### Properties
-* **keyVault**: [KeyVaultReference](#keyvaultreference) (Required): Specifies the link to a Key Vault.
+* **keyVault**: [KeyVaultReference](#keyvaultreference) (Required): Specifies the reference to a given Azure Key Vault.
 * **secretName**: string (Required): Name of the secret.
 * **secretVersion**: string: The version of the secret to use. If left blank, the latest version of the secret is used.
 
@@ -223,7 +223,7 @@
 * **displayName**: string: One-liner string explain this resource.
 * **parameters**: [TemplateArtifactPropertiesParameters](#templateartifactpropertiesparameters) (Required): Resource Manager template blueprint artifact parameter values.
 * **resourceGroup**: string: If applicable, the name of the resource group placeholder to which the Resource Manager template blueprint artifact will be deployed.
-* **template**: any (Required): Any object
+* **template**: any (Required): The Resource Manager template blueprint artifact body.
 
 ## TemplateArtifactPropertiesParameters
 ### Properties

@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The supported Azure location where the dedicated HSM should be created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DedicatedHsmProperties](#dedicatedhsmproperties) (Required): Properties of the dedicated hsm
-* **sku**: [Sku](#sku): SKU of the dedicated HSM
+* **properties**: [DedicatedHsmProperties](#dedicatedhsmproperties) (Required): Properties of the dedicated HSM
+* **sku**: [Sku](#sku): SKU details
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.HardwareSecurityModules/dedicatedHSMs' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The Dedicated Hsm zones.
@@ -19,7 +19,7 @@
 
 ## DedicatedHsmProperties
 ### Properties
-* **networkProfile**: [NetworkProfile](#networkprofile)
+* **networkProfile**: [NetworkProfile](#networkprofile): Specifies the network interfaces of the dedicated hsm.
 * **provisioningState**: 'Allocating' | 'CheckingQuota' | 'Connecting' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state.
 * **stampId**: string: This field will be used when RP does not support Availability zones.
 * **statusMessage**: string (ReadOnly): Resource Status Message.
@@ -32,7 +32,7 @@
 ## NetworkProfile
 ### Properties
 * **networkInterfaces**: [NetworkInterface](#networkinterface)[]: Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
-* **subnet**: [ApiEntityReference](#apientityreference): The API entity reference.
+* **subnet**: [ApiEntityReference](#apientityreference): Specifies the identifier of the subnet.
 
 ## ResourceTags
 ### Properties

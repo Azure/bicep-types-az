@@ -6,7 +6,7 @@
 * **apiVersion**: '2016-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PolicyAssignmentProperties](#policyassignmentproperties): The policy assignment properties.
+* **properties**: [PolicyAssignmentProperties](#policyassignmentproperties): Properties for the policy assignment.
 * **type**: 'Microsoft.Authorization/policyassignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/policydefinitions@2016-04-01
@@ -28,6 +28,6 @@
 ### Properties
 * **description**: string: The policy definition description.
 * **displayName**: string: The display name of the policy definition.
-* **policyRule**: any: Any object
+* **policyRule**: any: The policy rule.
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | string: The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom.
 

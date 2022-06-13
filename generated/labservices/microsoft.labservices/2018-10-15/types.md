@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [LabAccountProperties](#labaccountproperties): Properties of a Lab Account.
+* **properties**: [LabAccountProperties](#labaccountproperties): The properties of the resource.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.LabServices/labaccounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -29,7 +29,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [LabProperties](#labproperties): Properties of a Lab.
+* **properties**: [LabProperties](#labproperties): The properties of the resource.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.LabServices/labaccounts/labs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -40,7 +40,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EnvironmentSettingProperties](#environmentsettingproperties): Properties of an environment setting
+* **properties**: [EnvironmentSettingProperties](#environmentsettingproperties): The properties of the Environment Setting resource
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.LabServices/labaccounts/labs/environmentsettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -51,7 +51,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EnvironmentProperties](#environmentproperties): Properties of an environment
+* **properties**: [EnvironmentProperties](#environmentproperties): The properties of the Environment resource
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.LabServices/labaccounts/labs/environmentsettings/environments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -62,7 +62,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [UserProperties](#userproperties): Lab User properties
+* **properties**: [UserProperties](#userproperties): These are the properties for the user registered under a lab.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.LabServices/labaccounts/labs/users' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -82,12 +82,12 @@
 * **description**: string (ReadOnly): Description of the Environment
 * **environmentState**: string (ReadOnly): Publishing state of the environment setting Possible values are Creating, Created, Failed
 * **id**: string (ReadOnly): Resource Id of the environment
-* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): Details of the status of an operation.
+* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): The details of the latest operation. ex: status, error
 * **name**: string (ReadOnly): Name of the Environment
 * **passwordLastReset**: string (ReadOnly): When the password was last reset on the environment.
 * **provisioningState**: string (ReadOnly): The provisioning state of the environment. This also includes LabIsFull and NotYetProvisioned status.
 * **totalUsage**: string (ReadOnly): How long the environment has been used by a lab user
-* **virtualMachineDetails**: [VirtualMachineDetails](#virtualmachinedetails) (ReadOnly): Details of the backing virtual machine.
+* **virtualMachineDetails**: [VirtualMachineDetails](#virtualmachinedetails) (ReadOnly): Details of backing DTL virtual machine with compute and network details.
 
 ## EnvironmentProperties
 ### Properties
@@ -96,11 +96,11 @@
 * **claimedByUserPrincipalId**: string (ReadOnly): The user principal Id of the user who has claimed the environment
 * **isClaimed**: bool (ReadOnly): Is the environment claimed or not
 * **lastKnownPowerState**: string (ReadOnly): Last known power state of the environment
-* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): Details of the status of an operation.
+* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): The details of the latest operation. ex: status, error
 * **networkInterface**: [NetworkInterface](#networkinterface) (ReadOnly): Network details of the environment
 * **passwordLastReset**: string (ReadOnly): When the password was last reset on the environment.
 * **provisioningState**: string: The provisioning status of the resource.
-* **resourceSets**: [ResourceSet](#resourceset): Represents a VM and the setting Id it was created for.
+* **resourceSets**: [ResourceSet](#resourceset): The set of a VM and the setting id it was created for
 * **totalUsage**: string (ReadOnly): How long the environment has been used by a lab user
 * **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
 
@@ -110,10 +110,10 @@
 * **description**: string: Describes the environment and its resource settings
 * **lastChanged**: string (ReadOnly): Time when the template VM was last changed.
 * **lastPublished**: string (ReadOnly): Time when the template VM was last sent for publishing.
-* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): Details of the status of an operation.
+* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): The details of the latest operation. ex: status, error
 * **provisioningState**: string: The provisioning status of the resource.
 * **publishingState**: 'Draft' | 'PublishFailed' | 'Published' | 'Publishing' | 'Scaling' | string (ReadOnly): Describes the readiness of this environment setting
-* **resourceSettings**: [ResourceSettings](#resourcesettings) (Required): Represents resource specific settings
+* **resourceSettings**: [ResourceSettings](#resourcesettings) (Required): The resource specific settings
 * **title**: string: Brief title describing the environment and its resource settings
 * **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
 
@@ -131,11 +131,11 @@
 * **createdDate**: string (ReadOnly): The creation date of the gallery image.
 * **description**: string (ReadOnly): The description of the gallery image.
 * **icon**: string (ReadOnly): The icon of the gallery image.
-* **imageReference**: [GalleryImageReference](#galleryimagereference) (ReadOnly): The reference information for an Azure Marketplace image.
+* **imageReference**: [GalleryImageReference](#galleryimagereference) (ReadOnly): The image reference of the gallery image.
 * **isEnabled**: bool: Indicates whether this gallery image is enabled.
 * **isOverride**: bool: Indicates whether this gallery has been overridden for this lab account
 * **isPlanAuthorized**: bool: Indicates if the plan has been authorized for programmatic deployment.
-* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): Details of the status of an operation.
+* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): The details of the latest operation. ex: status, error
 * **planId**: string (ReadOnly): The third party plan that applies to this image
 * **provisioningState**: string: The provisioning status of the resource.
 * **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
@@ -151,7 +151,7 @@
 ## LabAccountProperties
 ### Properties
 * **enabledRegionSelection**: bool: Represents if region selection is enabled
-* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): Details of the status of an operation.
+* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): The details of the latest operation. ex: status, error
 * **provisioningState**: string: The provisioning status of the resource.
 * **sizeConfiguration**: [SizeConfigurationProperties](#sizeconfigurationproperties) (ReadOnly): Represents the size configuration under the lab account
 * **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
@@ -169,7 +169,7 @@
 * **createdByUserPrincipalName**: string (ReadOnly): Lab creator name
 * **createdDate**: string (ReadOnly): Creation date for the lab
 * **invitationCode**: string (ReadOnly): Invitation code that users can use to join a lab.
-* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): Details of the status of an operation.
+* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): The details of the latest operation. ex: status, error
 * **maxUsersInLab**: int: Maximum number of users allowed in the lab.
 * **provisioningState**: string: The provisioning status of the resource.
 * **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
@@ -210,7 +210,7 @@
 * **password**: string: The password of the virtual machine. This will be set to null in GET resource API
 * **userName**: string (Required): The username of the virtual machine
 * **vmResourceId**: string (ReadOnly): VM resource Id for the environment
-* **vmStateDetails**: [VmStateDetails](#vmstatedetails) (ReadOnly): Details about the state of the reference virtual machine.
+* **vmStateDetails**: [VmStateDetails](#vmstatedetails) (ReadOnly): The state details for the reference virtual machine.
 
 ## ResourceSet
 ### Properties
@@ -223,8 +223,8 @@
 * **galleryImageResourceId**: string: The resource id of the gallery image used for creating the virtual machine
 * **id**: string (ReadOnly): The unique id of the resource setting
 * **imageName**: string (ReadOnly): The name of the image used to created the environment setting
-* **referenceVm**: [ReferenceVm](#referencevm) (Required): Details of a Reference Vm
-* **size**: 'Basic' | 'Performance' | 'Standard' | string: The size category
+* **referenceVm**: [ReferenceVm](#referencevm) (Required): Details specific to Reference Vm
+* **size**: 'Basic' | 'Performance' | 'Standard' | string: The size of the virtual machine
 
 ## ResourceTags
 ### Properties
@@ -272,7 +272,7 @@
 * **email**: string (ReadOnly): The user email address, as it was specified during registration.
 * **familyName**: string (ReadOnly): The user family name, as it was specified during registration.
 * **givenName**: string (ReadOnly): The user given name, as it was specified during registration.
-* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): Details of the status of an operation.
+* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): The details of the latest operation. ex: status, error
 * **provisioningState**: string: The provisioning status of the resource.
 * **tenantId**: string (ReadOnly): The user tenant ID, as it was specified during registration.
 * **totalUsage**: string (ReadOnly): How long the user has used his VMs in this lab

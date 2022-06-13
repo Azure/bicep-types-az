@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterProperties](#clusterproperties): Cluster properties.
-* **sku**: [ClusterSku](#clustersku): The cluster sku definition.
+* **properties**: [ClusterProperties](#clusterproperties): Log Analytics cluster properties.
+* **sku**: [ClusterSku](#clustersku): The sku properties.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.OperationalInsights/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -31,7 +31,7 @@
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DataExportProperties](#dataexportproperties): Data Export properties.
+* **properties**: [DataExportProperties](#dataexportproperties): data export properties.
 * **type**: 'Microsoft.OperationalInsights/workspaces/dataExports' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationalInsights/workspaces/dataSources@2020-03-01-preview
@@ -42,7 +42,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'ApplicationInsights' | 'AzureActivityLog' | 'AzureAuditLog' | 'ChangeTrackingContentLocation' | 'ChangeTrackingCustomPath' | 'ChangeTrackingDataTypeConfiguration' | 'ChangeTrackingDefaultRegistry' | 'ChangeTrackingLinuxPath' | 'ChangeTrackingPath' | 'ChangeTrackingRegistry' | 'ChangeTrackingServices' | 'CustomLog' | 'CustomLogCollection' | 'DnsAnalytics' | 'GenericDataSource' | 'IISLogs' | 'ImportComputerGroup' | 'Itsm' | 'LinuxChangeTrackingPath' | 'LinuxPerformanceCollection' | 'LinuxPerformanceObject' | 'LinuxSyslog' | 'LinuxSyslogCollection' | 'NetworkMonitoring' | 'Office365' | 'SecurityCenterSecurityWindowsBaselineConfiguration' | 'SecurityEventCollectionConfiguration' | 'SecurityInsightsSecurityEventCollectionConfiguration' | 'SecurityWindowsBaselineConfiguration' | 'SqlDataClassification' | 'WindowsEvent' | 'WindowsPerformanceCounter' | 'WindowsTelemetry' | string (Required): The kind of the DataSource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: any (Required): Any object
+* **properties**: any (Required): The data source properties in raw json format, each kind of data source have it's own schema.
 * **tags**: [DataSourceTags](#datasourcetags): Resource tags.
 * **type**: 'Microsoft.OperationalInsights/workspaces/dataSources' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -52,7 +52,7 @@
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [LinkedServiceProperties](#linkedserviceproperties) (Required): Linked service properties.
+* **properties**: [LinkedServiceProperties](#linkedserviceproperties) (Required): The properties of the linked service.
 * **tags**: [LinkedServiceTags](#linkedservicetags): Resource tags.
 * **type**: 'Microsoft.OperationalInsights/workspaces/linkedServices' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -72,7 +72,7 @@
 * **etag**: string: The ETag of the saved search.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SavedSearchProperties](#savedsearchproperties) (Required): Value object for saved search results.
+* **properties**: [SavedSearchProperties](#savedsearchproperties) (Required): The properties of the saved search.
 * **type**: 'Microsoft.OperationalInsights/workspaces/savedSearches' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationalInsights/workspaces/storageInsightConfigs@2020-03-01-preview
@@ -89,7 +89,7 @@
 ## ClusterProperties
 ### Properties
 * **clusterId**: string (ReadOnly): The ID associated with the cluster.
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): The key vault properties.
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): The associated key properties.
 * **nextLink**: string: The link used to get the next page of recommendations.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the cluster.
 
@@ -102,7 +102,7 @@
 ### Properties
 * **createdDate**: string: The latest data export rule modification time.
 * **dataExportId**: string: The data export rule ID.
-* **destination**: [Destination](#destination): Destination properties.
+* **destination**: [Destination](#destination): destination properties.
 * **enable**: bool: Active when enabled.
 * **lastModifiedDate**: string: Date and time when the export was last modified.
 * **tableNames**: string[] (Required): An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
@@ -114,7 +114,7 @@
 
 ## Destination
 ### Properties
-* **metaData**: [DestinationMetaData](#destinationmetadata): Destination meta data.
+* **metaData**: [DestinationMetaData](#destinationmetadata): destination meta data.
 * **resourceId**: string (Required): The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
 * **type**: 'EventHub' | 'StorageAccount' | string (ReadOnly): The type of the destination resource
 
@@ -173,8 +173,8 @@
 ## StorageInsightProperties
 ### Properties
 * **containers**: string[]: The names of the blob containers that the workspace should read
-* **status**: [StorageInsightStatus](#storageinsightstatus) (ReadOnly): The status of the storage insight.
-* **storageAccount**: [StorageAccount](#storageaccount) (Required): Describes a storage account connection.
+* **status**: [StorageInsightStatus](#storageinsightstatus) (ReadOnly): The status of the storage insight
+* **storageAccount**: [StorageAccount](#storageaccount) (Required): The storage account connection details
 * **tables**: string[]: The names of the Azure tables that the workspace should read
 
 ## StorageInsightStatus
@@ -213,10 +213,10 @@
 * **customerId**: string (ReadOnly): This is a read-only property. Represents the ID associated with the workspace.
 * **privateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly): List of linked private link scope resources.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' | string: The provisioning state of the workspace.
-* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled' | string: The network access type for operating on the Log Analytics Workspace. By default it is Enabled
-* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled' | string: The network access type for operating on the Log Analytics Workspace. By default it is Enabled
+* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled' | string: The network access type for accessing Log Analytics ingestion.
+* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled' | string: The network access type for accessing Log Analytics query.
 * **retentionInDays**: int: The workspace data retention in days. -1 means Unlimited retention for the Unlimited Sku. 730 days is the maximum allowed for all other Skus.
-* **sku**: [WorkspaceSku](#workspacesku): The SKU (tier) of a workspace.
+* **sku**: [WorkspaceSku](#workspacesku): The SKU of the workspace.
 * **workspaceCapping**: [WorkspaceCapping](#workspacecapping): The daily volume cap for ingestion.
 
 ## WorkspaceSku

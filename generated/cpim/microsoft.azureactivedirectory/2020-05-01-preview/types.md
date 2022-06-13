@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Location of the Guest Usages resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GuestUsagesResourceProperties](#guestusagesresourceproperties): Guest Usages Resource Properties
+* **properties**: [GuestUsagesResourceProperties](#guestusagesresourceproperties): The Guest Usages Resource Properties
 * **tags**: [GuestUsagesResourceTags](#guestusagesresourcetags): Key-value pairs of additional resource provisioning properties.
 * **type**: 'Microsoft.AzureActiveDirectory/guestUsages' (ReadOnly, DeployTimeConstant): The resource type
 

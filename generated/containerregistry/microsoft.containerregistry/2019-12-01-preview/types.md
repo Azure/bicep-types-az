@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [IdentityProperties](#identityproperties): Managed identity for the resource.
+* **identity**: [IdentityProperties](#identityproperties): The identity of the container registry.
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RegistryProperties](#registryproperties): The properties of a container registry.
-* **sku**: [Sku](#sku) (Required): The SKU of a container registry.
+* **properties**: [RegistryProperties](#registryproperties): The properties of the container registry.
+* **sku**: [Sku](#sku) (Required): The SKU of the container registry.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries' (ReadOnly, DeployTimeConstant): The resource type
@@ -19,10 +19,10 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [IdentityProperties](#identityproperties): Managed identity for the resource.
+* **identity**: [IdentityProperties](#identityproperties): The identity of the export pipeline.
 * **location**: string: The location of the export pipeline.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ExportPipelineProperties](#exportpipelineproperties): The properties of an export pipeline.
+* **properties**: [ExportPipelineProperties](#exportpipelineproperties): The properties of the export pipeline.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/exportPipelines' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -31,10 +31,10 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [IdentityProperties](#identityproperties): Managed identity for the resource.
+* **identity**: [IdentityProperties](#identityproperties): The identity of the import pipeline.
 * **location**: string: The location of the import pipeline.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ImportPipelineProperties](#importpipelineproperties): The properties of an import pipeline.
+* **properties**: [ImportPipelineProperties](#importpipelineproperties): The properties of the import pipeline.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/importPipelines' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -65,7 +65,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ReplicationProperties](#replicationproperties): The properties of a replication.
+* **properties**: [ReplicationProperties](#replicationproperties): The properties of the replication.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/replications' (ReadOnly, DeployTimeConstant): The resource type
@@ -77,7 +77,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the webhook. This cannot be changed after the resource is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WebhookPropertiesCreateParameters](#webhookpropertiescreateparameters): The parameters for creating the properties of a webhook.
+* **properties**: [WebhookPropertiesCreateParameters](#webhookpropertiescreateparameters): The properties that the webhook will be created with.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [WebhookCreateParametersTags](#webhookcreateparameterstags): The tags for the webhook.
 * **type**: 'Microsoft.ContainerRegistry/registries/webhooks' (ReadOnly, DeployTimeConstant): The resource type
@@ -98,7 +98,7 @@
 
 ## EncryptionProperty
 ### Properties
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): Key vault properties.
 * **status**: 'disabled' | 'enabled' | string: Indicates whether or not the encryption is enabled for container registry.
 
 ## Event
@@ -152,7 +152,7 @@
 ### Properties
 * **options**: 'ContinueOnErrors' | 'DeleteSourceBlobOnSuccess' | 'OverwriteBlobs' | 'OverwriteTags' | string[]: The list of all options configured for the pipeline.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the pipeline at the time the operation was called.
-* **target**: [ExportPipelineTargetProperties](#exportpipelinetargetproperties) (Required): The properties of the export pipeline target.
+* **target**: [ExportPipelineTargetProperties](#exportpipelinetargetproperties) (Required): The target properties of the export pipeline.
 
 ## ExportPipelineTargetProperties
 ### Properties
@@ -181,8 +181,8 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **options**: 'ContinueOnErrors' | 'DeleteSourceBlobOnSuccess' | 'OverwriteBlobs' | 'OverwriteTags' | string[]: The list of all options configured for the pipeline.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the pipeline at the time the operation was called.
-* **source**: [ImportPipelineSourceProperties](#importpipelinesourceproperties) (Required): The properties of the import pipeline source.
-* **trigger**: [PipelineTriggerProperties](#pipelinetriggerproperties)
+* **source**: [ImportPipelineSourceProperties](#importpipelinesourceproperties) (Required): The source properties of the import pipeline.
+* **trigger**: [PipelineTriggerProperties](#pipelinetriggerproperties): The properties that describe the trigger of the import pipeline.
 
 ## ImportPipelineSourceProperties
 ### Properties
@@ -194,7 +194,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 
 ## IPRule
 ### Properties
-* **action**: 'Allow' | string: The action of virtual network rule.
+* **action**: 'Allow' | string: The action of IP ACL rule.
 * **value**: string (Required): Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
 
 ## KeyVaultProperties
@@ -214,9 +214,9 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 ## PipelineRunProperties
 ### Properties
 * **forceUpdateTag**: string: How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the pipeline at the time the operation was called.
-* **request**: [PipelineRunRequest](#pipelinerunrequest): The request properties provided for a pipeline run.
-* **response**: [PipelineRunResponse](#pipelinerunresponse) (ReadOnly): The response properties returned for a pipeline run.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of a pipeline run.
+* **request**: [PipelineRunRequest](#pipelinerunrequest): The request parameters for a pipeline run.
+* **response**: [PipelineRunResponse](#pipelinerunresponse) (ReadOnly): The response of a pipeline run.
 
 ## PipelineRunRequest
 ### Properties
@@ -226,8 +226,8 @@ Specify an image by tag ('hello-world:latest').
 Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
 * **catalogDigest**: string: The digest of the tar used to transfer the artifacts.
 * **pipelineResourceId**: string: The resource ID of the pipeline to run.
-* **source**: [PipelineRunSourceProperties](#pipelinerunsourceproperties)
-* **target**: [PipelineRunTargetProperties](#pipelineruntargetproperties)
+* **source**: [PipelineRunSourceProperties](#pipelinerunsourceproperties): The source properties of the pipeline run.
+* **target**: [PipelineRunTargetProperties](#pipelineruntargetproperties): The target properties of the pipeline run.
 
 ## PipelineRunResponse
 ### Properties
@@ -235,12 +235,12 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
 * **finishTime**: string: The time the pipeline run finished.
 * **importedArtifacts**: string[]: The artifacts imported in the pipeline run.
 * **pipelineRunErrorMessage**: string: The detailed error message for the pipeline run in the case of failure.
-* **progress**: [ProgressProperties](#progressproperties)
-* **source**: [ImportPipelineSourceProperties](#importpipelinesourceproperties): The properties of the import pipeline source.
+* **progress**: [ProgressProperties](#progressproperties): The current progress of the copy operation.
+* **source**: [ImportPipelineSourceProperties](#importpipelinesourceproperties): The source of the pipeline run.
 * **startTime**: string: The time the pipeline run started.
 * **status**: string: The current status of the pipeline run.
-* **target**: [ExportPipelineTargetProperties](#exportpipelinetargetproperties): The properties of the export pipeline target.
-* **trigger**: [PipelineTriggerDescriptor](#pipelinetriggerdescriptor)
+* **target**: [ExportPipelineTargetProperties](#exportpipelinetargetproperties): The target of the pipeline run.
+* **trigger**: [PipelineTriggerDescriptor](#pipelinetriggerdescriptor): The trigger that caused the pipeline run.
 
 ## PipelineRunSourceProperties
 ### Properties
@@ -262,11 +262,11 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
 
 ## PipelineTriggerDescriptor
 ### Properties
-* **sourceTrigger**: [PipelineSourceTriggerDescriptor](#pipelinesourcetriggerdescriptor)
+* **sourceTrigger**: [PipelineSourceTriggerDescriptor](#pipelinesourcetriggerdescriptor): The source trigger that caused the pipeline run.
 
 ## PipelineTriggerProperties
 ### Properties
-* **sourceTrigger**: [PipelineSourceTriggerProperties](#pipelinesourcetriggerproperties)
+* **sourceTrigger**: [PipelineSourceTriggerProperties](#pipelinesourcetriggerproperties): The source trigger properties of the pipeline.
 
 ## Policies
 ### Properties
@@ -288,9 +288,9 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): The state of a private link service connection.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the pipeline at the time the operation was called.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The resource of private endpoint.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): A collection of information about the state of the connection between service consumer and provider.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of private endpoint connection resource.
 
 ## PrivateLinkServiceConnectionState
 ### Properties
@@ -322,21 +322,21 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
 * **creationDate**: string (ReadOnly): The creation date of the container registry in ISO8601 format.
 * **dataEndpointEnabled**: bool: Enable a single data endpoint per region for serving data.
 * **dataEndpointHostNames**: string[] (ReadOnly): List of host names that will serve data when dataEndpointEnabled is true.
-* **encryption**: [EncryptionProperty](#encryptionproperty)
+* **encryption**: [EncryptionProperty](#encryptionproperty): The encryption settings of container registry.
 * **loginServer**: string (ReadOnly): The URL that can be used to log into the container registry.
 * **networkRuleBypassOptions**: 'AzureServices' | 'None' | string: Whether to allow trusted Azure services to access a network restricted registry.
 * **networkRuleSet**: [NetworkRuleSet](#networkruleset): The network rule set for a container registry.
 * **policies**: [Policies](#policies): The policies for a container registry.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections for a container registry.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the pipeline at the time the operation was called.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the container registry at the time the operation was called.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public network access is allowed for the container registry.
-* **status**: [Status](#status) (ReadOnly): The status of an Azure resource at the time the operation was called.
+* **status**: [Status](#status) (ReadOnly): The status of the container registry at the time the operation was called.
 
 ## ReplicationProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the pipeline at the time the operation was called.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the replication at the time the operation was called.
 * **regionEndpointEnabled**: bool: Specifies whether the replication's regional endpoint is enabled. Requests will not be routed to a replication whose regional endpoint is disabled, however its data will continue to be synced with other replications.
-* **status**: [Status](#status) (ReadOnly): The status of an Azure resource at the time the operation was called.
+* **status**: [Status](#status) (ReadOnly): The status of the replication at the time the operation was called.
 
 ## Request
 ### Properties
@@ -423,7 +423,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
 ### Properties
 * **actions**: 'chart_delete' | 'chart_push' | 'delete' | 'push' | 'quarantine' | string[] (Required): The list of actions that trigger the webhook to post notifications.
 * **customHeaders**: [WebhookPropertiesCreateParametersCustomHeaders](#webhookpropertiescreateparameterscustomheaders) (WriteOnly): Custom headers that will be added to the webhook notifications.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the pipeline at the time the operation was called.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the webhook at the time the operation was called.
 * **scope**: string: The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means all events.
 * **serviceUri**: string (Required, WriteOnly): The service URI for the webhook to post notifications.
 * **status**: 'disabled' | 'enabled' | string: The status of the webhook at the time the operation was called.

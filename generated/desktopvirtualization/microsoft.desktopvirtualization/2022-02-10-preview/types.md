@@ -12,7 +12,7 @@
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **plan**: [ResourceModelWithAllowedPropertySetPlan](#resourcemodelwithallowedpropertysetplan)
-* **properties**: [ApplicationGroupProperties](#applicationgroupproperties) (Required): Schema for ApplicationGroup properties.
+* **properties**: [ApplicationGroupProperties](#applicationgroupproperties) (Required): Detailed properties for ApplicationGroup
 * **sku**: [ResourceModelWithAllowedPropertySetSku](#resourcemodelwithallowedpropertysetsku)
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags): Resource tags.
@@ -24,7 +24,7 @@
 * **apiVersion**: '2022-02-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApplicationProperties](#applicationproperties) (Required): Schema for Application properties.
+* **properties**: [ApplicationProperties](#applicationproperties) (Required): Detailed properties for Application
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups/applications' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -40,7 +40,7 @@
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **plan**: [ResourceModelWithAllowedPropertySetPlan](#resourcemodelwithallowedpropertysetplan)
-* **properties**: [HostPoolProperties](#hostpoolproperties) (Required): Properties of HostPool.
+* **properties**: [HostPoolProperties](#hostpoolproperties) (Required): Detailed properties for HostPool
 * **sku**: [ResourceModelWithAllowedPropertySetSku](#resourcemodelwithallowedpropertysetsku)
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags): Resource tags.
@@ -52,7 +52,7 @@
 * **apiVersion**: '2022-02-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MsixPackageProperties](#msixpackageproperties) (Required): Schema for MSIX Package properties.
+* **properties**: [MsixPackageProperties](#msixpackageproperties) (Required): Detailed properties for MSIX Package
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DesktopVirtualization/hostPools/msixPackages' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -62,7 +62,7 @@
 * **apiVersion**: '2022-02-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DesktopVirtualization/hostPools/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -78,7 +78,7 @@
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **plan**: [ResourceModelWithAllowedPropertySetPlan](#resourcemodelwithallowedpropertysetplan)
-* **properties**: [ScalingPlanProperties](#scalingplanproperties): Scaling plan properties.
+* **properties**: [ScalingPlanProperties](#scalingplanproperties): Detailed properties for scaling plan.
 * **sku**: [ResourceModelWithAllowedPropertySetSku](#resourcemodelwithallowedpropertysetsku)
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags): Resource tags.
@@ -96,7 +96,7 @@
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **plan**: [ResourceModelWithAllowedPropertySetPlan](#resourcemodelwithallowedpropertysetplan)
-* **properties**: [WorkspaceProperties](#workspaceproperties): Schema for Workspace properties.
+* **properties**: [WorkspaceProperties](#workspaceproperties): Detailed properties for Workspace
 * **sku**: [ResourceModelWithAllowedPropertySetSku](#resourcemodelwithallowedpropertysetsku)
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags): Resource tags.
@@ -108,7 +108,7 @@
 * **apiVersion**: '2022-02-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DesktopVirtualization/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -126,7 +126,7 @@
 * **description**: string: Description of ApplicationGroup.
 * **friendlyName**: string: Friendly name of ApplicationGroup.
 * **hostPoolArmPath**: string (Required): HostPool arm path of ApplicationGroup.
-* **migrationRequest**: [MigrationRequestProperties](#migrationrequestproperties): Properties for arm migration.
+* **migrationRequest**: [MigrationRequestProperties](#migrationrequestproperties): The registration info of HostPool.
 * **objectId**: string (ReadOnly): ObjectId of ApplicationGroup. (internal use)
 * **workspaceArmPath**: string (ReadOnly): Workspace arm path of ApplicationGroup.
 
@@ -158,13 +158,13 @@
 * **hostPoolType**: 'BYODesktop' | 'Personal' | 'Pooled' | string (Required): HostPool type for desktop.
 * **loadBalancerType**: 'BreadthFirst' | 'DepthFirst' | 'Persistent' | string (Required): The type of the load balancer.
 * **maxSessionLimit**: int: The max session limit of HostPool.
-* **migrationRequest**: [MigrationRequestProperties](#migrationrequestproperties): Properties for arm migration.
+* **migrationRequest**: [MigrationRequestProperties](#migrationrequestproperties): The registration info of HostPool.
 * **objectId**: string (ReadOnly): ObjectId of HostPool. (internal use)
 * **personalDesktopAssignmentType**: 'Automatic' | 'Direct' | string: PersonalDesktopAssignment type for HostPool.
 * **preferredAppGroupType**: 'Desktop' | 'None' | 'RailApplications' | string (Required): The type of preferred application group type, default to Desktop Application Group
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connection associated with the specified resource
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'EnabledForClientsOnly' | 'EnabledForSessionHostsOnly' | string: Enabled allows this resource to be accessed from both public and private networks, Disabled allows this resource to only be accessed via private endpoints
-* **registrationInfo**: [RegistrationInfo](#registrationinfo): Represents a RegistrationInfo definition.
+* **registrationInfo**: [RegistrationInfo](#registrationinfo): The registration info of HostPool.
 * **ring**: int: The ring number of HostPool.
 * **ssoadfsAuthority**: string: URL to customer ADFS server for signing WVD SSO certificates.
 * **ssoClientId**: string: ClientId for the registered Relying Party used to issue WVD SSO certificates.
@@ -222,20 +222,20 @@
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **name**: string (ReadOnly): The name of the resource
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The resource of private end point.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string: The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string: The provisioning state of the private endpoint connection resource.
 
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## RegistrationInfo
 ### Properties
@@ -305,22 +305,22 @@
 ### Properties
 * **daysOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[]: Set of days of the week on which this schedule is active.
 * **name**: string: Name of the scaling schedule.
-* **offPeakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for ramp up period.
-* **offPeakStartTime**: [Time](#time): The time for a scaling action to occur.
-* **peakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for ramp up period.
-* **peakStartTime**: [Time](#time): The time for a scaling action to occur.
+* **offPeakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for off-peak period.
+* **offPeakStartTime**: [Time](#time): Starting time for off-peak period.
+* **peakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for peak period.
+* **peakStartTime**: [Time](#time): Starting time for peak period.
 * **rampDownCapacityThresholdPct**: int: Capacity threshold for ramp down period.
 * **rampDownForceLogoffUsers**: bool: Should users be logged off forcefully from hosts.
-* **rampDownLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for ramp up period.
+* **rampDownLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for ramp down period.
 * **rampDownMinimumHostsPct**: int: Minimum host percentage for ramp down period.
 * **rampDownNotificationMessage**: string: Notification message for users during ramp down period.
-* **rampDownStartTime**: [Time](#time): The time for a scaling action to occur.
+* **rampDownStartTime**: [Time](#time): Starting time for ramp down period.
 * **rampDownStopHostsWhen**: 'ZeroActiveSessions' | 'ZeroSessions' | string: Specifies when to stop hosts during ramp down period.
 * **rampDownWaitTimeMinutes**: int: Number of minutes to wait to stop hosts during ramp down period.
 * **rampUpCapacityThresholdPct**: int: Capacity threshold for ramp up period.
 * **rampUpLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for ramp up period.
 * **rampUpMinimumHostsPct**: int: Minimum host percentage for ramp up period.
-* **rampUpStartTime**: [Time](#time): The time for a scaling action to occur.
+* **rampUpStartTime**: [Time](#time): Starting time for ramp up period.
 
 ## SystemData
 ### Properties
@@ -329,7 +329,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## Time
 ### Properties

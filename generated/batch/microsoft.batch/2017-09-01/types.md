@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The region in which to create the account.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BatchAccountCreateProperties](#batchaccountcreateproperties): The properties of a Batch account.
+* **properties**: [BatchAccountCreateProperties](#batchaccountcreateproperties): The properties of the Batch account.
 * **tags**: [BatchAccountCreateParametersTags](#batchaccountcreateparameterstags): The user-specified tags associated with the account.
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -44,7 +44,7 @@
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CertificateCreateOrUpdateProperties](#certificatecreateorupdateproperties): Certificate properties for create operations
+* **properties**: [CertificateCreateOrUpdateProperties](#certificatecreateorupdateproperties): The properties associated with the certificate.
 * **type**: 'Microsoft.Batch/batchAccounts/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Batch/batchAccounts/pools@2017-09-01
@@ -54,7 +54,7 @@
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PoolProperties](#poolproperties): Pool properties.
+* **properties**: [PoolProperties](#poolproperties): The properties associated with the pool.
 * **type**: 'Microsoft.Batch/batchAccounts/pools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.Batch/batchAccounts@2017-09-01)
@@ -101,10 +101,7 @@
 
 ## AutoUserSpecification
 ### Properties
-* **elevationLevel**: 'Admin' | 'NonAdmin': Values are:
-
- NonAdmin - The user is a standard user without elevated access.
- Admin - The user is a user with elevated access and operates with full Administrator permissions.
+* **elevationLevel**: 'Admin' | 'NonAdmin': nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.
 * **scope**: 'Pool' | 'Task': pool - specifies that the task runs as the common auto user account which is created on every node in a pool. task - specifies that the service should create a new user for the task. The default value is task.
 
 ## BatchAccountCreateParametersTags
@@ -118,9 +115,9 @@
 * **activeJobAndJobScheduleQuota**: int (ReadOnly): The active job and job schedule quota for this Batch account.
 * **autoStorage**: [AutoStorageBaseProperties](#autostoragebaseproperties): The properties related to the auto-storage account.
 * **dedicatedCoreQuota**: int (ReadOnly): The dedicated core quota for this Batch account.
-* **keyVaultReference**: [KeyVaultReference](#keyvaultreference): Identifies the Azure key vault associated with a Batch account.
+* **keyVaultReference**: [KeyVaultReference](#keyvaultreference): A reference to the Azure key vault associated with the Batch account.
 * **lowPriorityCoreQuota**: int (ReadOnly): The low-priority core quota for this Batch account.
-* **poolAllocationMode**: 'BatchService' | 'UserSubscription': The allocation mode for creating pools in the Batch account.
+* **poolAllocationMode**: 'BatchService' | 'UserSubscription': The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.
 * **poolQuota**: int (ReadOnly): The pool quota for this Batch account.
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Succeeded' (ReadOnly): The provisioned state of the resource
 
@@ -133,14 +130,10 @@
 ## CertificateCreateOrUpdateProperties
 ### Properties
 * **data**: string (Required, WriteOnly): The maximum size is 10KB.
-* **deleteCertificateError**: [DeleteCertificateError](#deletecertificateerror) (ReadOnly): An error response from the Batch service.
+* **deleteCertificateError**: [DeleteCertificateError](#deletecertificateerror) (ReadOnly): This is only returned when the certificate provisioningState is 'Failed'.
 * **format**: 'Cer' | 'Pfx': The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.
 * **password**: string (WriteOnly): This is required if the certificate format is pfx and must be omitted if the certificate format is cer.
-* **previousProvisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): Values are:
-
- Succeeded - The certificate is available for use in pools.
- Deleting - The user has requested that the certificate be deleted, but the delete operation has not yet completed. You may not reference the certificate when creating or updating pools.
- Failed - The user requested that the certificate be deleted, but there are pools that still have references to the certificate, or it is still installed on one or more compute nodes. (The latter can occur if the certificate has been removed from the pool, but the node has not yet restarted. Nodes refresh their certificates only when they restart.) You may use the cancel certificate delete operation to cancel the delete, or the delete certificate operation to retry the delete.
+* **previousProvisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The previous provisioned state of the resource
 * **previousProvisioningStateTransitionTime**: string (ReadOnly): The time at which the certificate entered its previous state.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): Values are:
 
@@ -175,12 +168,17 @@
 ### Properties
 * **caching**: 'None' | 'ReadOnly' | 'ReadWrite': Values are:
 
- None - The caching mode for the disk is not enabled.
- ReadOnly - The caching mode for the disk is read only.
- ReadWrite - The caching mode for the disk is read and write. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
+ none - The caching mode for the disk is not enabled.
+ readOnly - The caching mode for the disk is read only.
+ readWrite - The caching mode for the disk is read and write.
+
+ The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
 * **diskSizeGB**: int (Required): The initial disk size in GB when creating new data disk.
 * **lun**: int (Required): The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun.
-* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS': The storage account type for use in creating data disks.
+* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS': If omitted, the default is "Standard_LRS". Values are:
+
+ Standard_LRS - The data disk should use standard locally redundant storage.
+ Premium_LRS - The data disk should use premium locally redundant storage.
 
 ## DeleteCertificateError
 ### Properties
@@ -191,8 +189,8 @@
 
 ## DeploymentConfiguration
 ### Properties
-* **cloudServiceConfiguration**: [CloudServiceConfiguration](#cloudserviceconfiguration): The configuration for nodes in a pool based on the Azure Cloud Services platform.
-* **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration): The configuration for compute nodes in a pool based on the Azure Virtual Machines infrastructure.
+* **cloudServiceConfiguration**: [CloudServiceConfiguration](#cloudserviceconfiguration): This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.
+* **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration): This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.
 
 ## EnvironmentSetting
 ### Properties
@@ -201,12 +199,7 @@
 
 ## FixedScaleSettings
 ### Properties
-* **nodeDeallocationOption**: 'Requeue' | 'RetainedData' | 'TaskCompletion' | 'Terminate': Values are:
-
- Requeue - Terminate running tasks and requeue them. The tasks will run again when the job is enabled. Remove nodes as soon as tasks have been terminated.
- Terminate - Terminate running tasks. The tasks will not run again. Remove nodes as soon as tasks have been terminated.
- TaskCompletion - Allow currently running tasks to complete. Schedule no new tasks while waiting. Remove nodes when all tasks have completed.
- RetainedData - Allow currently running tasks to complete, then wait for all task data retention periods to expire. Schedule no new tasks while waiting. Remove nodes when all task retention periods have expired.
+* **nodeDeallocationOption**: 'Requeue' | 'RetainedData' | 'TaskCompletion' | 'Terminate': If omitted, the default value is Requeue.
 * **resizeTimeout**: string: The default value is 15 minutes. Timeout values use ISO 8601 format. For example, use PT10M for 10 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service rejects the request with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
 * **targetDedicatedNodes**: int: At least one of targetDedicatedNodes, targetLowPriority nodes must be set.
 * **targetLowPriorityNodes**: int: At least one of targetDedicatedNodes, targetLowPriority nodes must be set.
@@ -246,7 +239,7 @@
 
 ## NetworkConfiguration
 ### Properties
-* **endpointConfiguration**: [PoolEndpointConfiguration](#poolendpointconfiguration): The endpoint configuration for a pool.
+* **endpointConfiguration**: [PoolEndpointConfiguration](#poolendpointconfiguration): Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.
 * **subnetId**: string: The virtual network must be in the same region and subscription as the Azure Batch account. The specified subnet should have enough free IP addresses to accommodate the number of nodes in the pool. If the subnet doesn't have enough free IP addresses, the pool will partially allocate compute nodes, and a resize error will occur. The 'MicrosoftAzureBatch' service principal must have the 'Classic Virtual Machine Contributor' Role-Based Access Control (RBAC) role for the specified VNet. The specified subnet must allow communication from the Azure Batch service to be able to schedule tasks on the compute nodes. This can be verified by checking if the specified VNet has any associated Network Security Groups (NSG). If communication to the compute nodes in the specified subnet is denied by an NSG, then the Batch service will set the state of the compute nodes to unusable. For pools created via virtualMachineConfiguration the Batch account must have poolAllocationMode userSubscription in order to use a VNet. If the specified VNet has any associated Network Security Groups (NSG), then a few reserved system ports must be enabled for inbound communication. For pools created with a virtual machine configuration, enable ports 29876 and 29877, as well as port 22 for Linux and port 3389 for Windows. For pools created with a cloud service configuration, enable ports 10100, 20100, and 30100. Also enable outbound connections to Azure Storage on port 443. For more details see: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
 
 ## NetworkSecurityGroupRule
@@ -257,11 +250,7 @@
 
 ## OSDisk
 ### Properties
-* **caching**: 'None' | 'ReadOnly' | 'ReadWrite': Values are:
-
- None - The caching mode for the disk is not enabled.
- ReadOnly - The caching mode for the disk is read only.
- ReadWrite - The caching mode for the disk is read and write. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite': Default value is none.
 
 ## PoolEndpointConfiguration
 ### Properties
@@ -277,12 +266,12 @@
 * **allocationStateTransitionTime**: string (ReadOnly): The time at which the pool entered its current allocation state.
 * **applicationLicenses**: string[]: The list of application licenses must be a subset of available Batch service application licenses. If a license is requested which is not supported, pool creation will fail.
 * **applicationPackages**: [ApplicationPackageReference](#applicationpackagereference)[]: Changes to application packages affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged.
-* **autoScaleRun**: [AutoScaleRun](#autoscalerun) (ReadOnly): The results and errors from an execution of a pool autoscale formula.
+* **autoScaleRun**: [AutoScaleRun](#autoscalerun) (ReadOnly): This property is set only if the pool automatically scales, i.e. autoScaleSettings are used.
 * **certificates**: [CertificateReference](#certificatereference)[]: For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
 * **creationTime**: string (ReadOnly): The creation time of the pool.
 * **currentDedicatedNodes**: int (ReadOnly): The number of compute nodes currently in the pool.
 * **currentLowPriorityNodes**: int (ReadOnly): The number of low priority compute nodes currently in the pool.
-* **deploymentConfiguration**: [DeploymentConfiguration](#deploymentconfiguration): Deployment configuration properties.
+* **deploymentConfiguration**: [DeploymentConfiguration](#deploymentconfiguration): Using CloudServiceConfiguration specifies that the nodes should be creating using Azure Cloud Services (PaaS), while VirtualMachineConfiguration uses Azure Virtual Machines (IaaS).
 * **displayName**: string: The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.
 * **interNodeCommunication**: 'Disabled' | 'Enabled': This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'.
 * **lastModified**: string (ReadOnly): This is the last time at which the pool level data, such as the targetDedicatedNodes or autoScaleSettings, changed. It does not factor in node-level changes such as a compute node changing state.
@@ -296,7 +285,7 @@
 * **provisioningStateTransitionTime**: string (ReadOnly): The time at which the pool entered its current state.
 * **resizeOperationStatus**: [ResizeOperationStatus](#resizeoperationstatus) (ReadOnly): Describes either the current operation (if the pool AllocationState is Resizing) or the previously completed operation (if the AllocationState is Steady).
 * **scaleSettings**: [ScaleSettings](#scalesettings): Defines the desired size of the pool. This can either be 'fixedScale' where the requested targetDedicatedNodes is specified, or 'autoScale' which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
-* **startTask**: [StartTask](#starttask): A task which is run when a compute node joins a pool in the Azure Batch service, or when the compute node is rebooted or reimaged.
+* **startTask**: [StartTask](#starttask): In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool.
 * **taskSchedulingPolicy**: [TaskSchedulingPolicy](#taskschedulingpolicy): Specifies how tasks should be distributed across compute nodes.
 * **userAccounts**: [UserAccount](#useraccount)[]: The list of user accounts to be created on each node in the pool.
 * **vmSize**: string: For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/). Batch supports all Cloud Services VM sizes except ExtraSmall. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) or Sizes for Virtual Machines (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).
@@ -310,12 +299,7 @@
 ## ResizeOperationStatus
 ### Properties
 * **errors**: [ResizeError](#resizeerror)[]: This property is set only if an error occurred during the last pool resize, and only when the pool allocationState is Steady.
-* **nodeDeallocationOption**: 'Requeue' | 'RetainedData' | 'TaskCompletion' | 'Terminate': Values are:
-
- Requeue - Terminate running tasks and requeue them. The tasks will run again when the job is enabled. Remove nodes as soon as tasks have been terminated.
- Terminate - Terminate running tasks. The tasks will not run again. Remove nodes as soon as tasks have been terminated.
- TaskCompletion - Allow currently running tasks to complete. Schedule no new tasks while waiting. Remove nodes when all tasks have completed.
- RetainedData - Allow currently running tasks to complete, then wait for all task data retention periods to expire. Schedule no new tasks while waiting. Remove nodes when all task retention periods have expired.
+* **nodeDeallocationOption**: 'Requeue' | 'RetainedData' | 'TaskCompletion' | 'Terminate': The default value is requeue.
 * **resizeTimeout**: string: The default value is 15 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
 * **startTime**: string: The time when this resize operation was started.
 * **targetDedicatedNodes**: int: The desired number of dedicated compute nodes in the pool.
@@ -329,8 +313,8 @@
 
 ## ScaleSettings
 ### Properties
-* **autoScale**: [AutoScaleSettings](#autoscalesettings): AutoScale settings for the pool.
-* **fixedScale**: [FixedScaleSettings](#fixedscalesettings): Fixed scale settings for the pool.
+* **autoScale**: [AutoScaleSettings](#autoscalesettings): This property and fixedScale are mutually exclusive and one of the properties must be specified.
+* **fixedScale**: [FixedScaleSettings](#fixedscalesettings): This property and autoScale are mutually exclusive and one of the properties must be specified.
 
 ## StartTask
 ### Properties
@@ -338,7 +322,7 @@
 * **environmentSettings**: [EnvironmentSetting](#environmentsetting)[]: A list of environment variable settings for the start task.
 * **maxTaskRetryCount**: int: The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task. If the maximum retry count is -1, the Batch service retries the task without limit.
 * **resourceFiles**: [ResourceFile](#resourcefile)[]: A list of files that the Batch service will download to the compute node before running the command line.
-* **userIdentity**: [UserIdentity](#useridentity): Specify either the userName or autoUser property, but not both.
+* **userIdentity**: [UserIdentity](#useridentity): If omitted, the task runs as a non-administrative user unique to the task.
 * **waitForSuccess**: bool: If true and the start task fails on a compute node, the Batch service retries the start task up to its maximum retry count (maxTaskRetryCount). If the task has still not completed successfully after all retries, then the Batch service marks the compute node unusable, and will not schedule tasks to it. This condition can be detected via the node state and scheduling error detail. If false, the Batch service will not wait for the start task to complete. In this case, other tasks can start executing on the compute node while the start task is still running; and even if the start task fails, new tasks will continue to be scheduled on the node. The default is false.
 
 ## TaskSchedulingPolicy
@@ -347,17 +331,14 @@
 
 ## UserAccount
 ### Properties
-* **elevationLevel**: 'Admin' | 'NonAdmin': Values are:
-
- NonAdmin - The user is a standard user without elevated access.
- Admin - The user is a user with elevated access and operates with full Administrator permissions.
-* **linuxUserConfiguration**: [LinuxUserConfiguration](#linuxuserconfiguration): Properties used to create a user account on a Linux node.
+* **elevationLevel**: 'Admin' | 'NonAdmin': nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.
+* **linuxUserConfiguration**: [LinuxUserConfiguration](#linuxuserconfiguration): This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.
 * **name**: string (Required): The name of the user account.
 * **password**: string (Required): The password for the user account.
 
 ## UserIdentity
 ### Properties
-* **autoUser**: [AutoUserSpecification](#autouserspecification): Specifies the parameters for the auto user that runs a task on the Batch service.
+* **autoUser**: [AutoUserSpecification](#autouserspecification): The userName and autoUser properties are mutually exclusive; you must specify one but not both.
 * **userName**: string: The userName and autoUser properties are mutually exclusive; you must specify one but not both.
 
 ## VirtualMachineConfiguration
@@ -370,7 +351,7 @@
  Windows_Client - The on-premises license is for Windows Client.
 * **nodeAgentSkuId**: string (Required): The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the 'List supported node agent SKUs' operation.
 * **osDisk**: [OSDisk](#osdisk): Settings for the operating system disk of the virtual machine.
-* **windowsConfiguration**: [WindowsConfiguration](#windowsconfiguration): Windows operating system settings to apply to the virtual machine.
+* **windowsConfiguration**: [WindowsConfiguration](#windowsconfiguration): This property must not be specified if the imageReference specifies a Linux OS image.
 
 ## WindowsConfiguration
 ### Properties

@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2021-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ContainerGroupIdentity](#containergroupidentity): Identity for the container group.
+* **identity**: [ContainerGroupIdentity](#containergroupidentity): The identity of the container group, if configured.
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ContainerGroupProperties](#containergroupproperties) (Required): The container group properties
@@ -27,7 +27,7 @@
 ## Container
 ### Properties
 * **name**: string (Required): The user-provided name of the container instance.
-* **properties**: [ContainerProperties](#containerproperties) (Required): The container instance properties.
+* **properties**: [ContainerProperties](#containerproperties) (Required): The properties of the container instance.
 
 ## ContainerExec
 ### Properties
@@ -52,20 +52,20 @@
 ## ContainerGroupProperties
 ### Properties
 * **containers**: [Container](#container)[] (Required): The containers within the container group.
-* **diagnostics**: [ContainerGroupDiagnostics](#containergroupdiagnostics): Container group diagnostic information.
-* **dnsConfig**: [DnsConfiguration](#dnsconfiguration): DNS configuration for the container group.
-* **encryptionProperties**: [EncryptionProperties](#encryptionproperties): The container group encryption properties.
+* **diagnostics**: [ContainerGroupDiagnostics](#containergroupdiagnostics): The diagnostic information for a container group.
+* **dnsConfig**: [DnsConfiguration](#dnsconfiguration): The DNS config information for a container group.
+* **encryptionProperties**: [EncryptionProperties](#encryptionproperties): The encryption properties for a container group.
 * **imageRegistryCredentials**: [ImageRegistryCredential](#imageregistrycredential)[]: The image registry credentials by which the container group is created from.
 * **initContainers**: [InitContainerDefinition](#initcontainerdefinition)[]: The init containers for a container group.
 * **instanceView**: [ContainerGroupPropertiesInstanceView](#containergrouppropertiesinstanceview) (ReadOnly): The instance view of the container group. Only valid in response.
-* **ipAddress**: [IpAddress](#ipaddress): IP address for the container group.
+* **ipAddress**: [IpAddress](#ipaddress): The IP address type of the container group.
 * **osType**: 'Linux' | 'Windows' | string (Required): The operating system type required by the containers in the container group.
 * **provisioningState**: string (ReadOnly): The provisioning state of the container group. This only appears in the response.
 * **restartPolicy**: 'Always' | 'Never' | 'OnFailure' | string: Restart policy for all containers within the container group. 
 - `Always` Always restart
 - `OnFailure` Restart on failure
 - `Never` Never restart
-* **sku**: 'Dedicated' | 'Standard' | string: The container group SKU.
+* **sku**: 'Dedicated' | 'Standard' | string: The SKU for a container group.
 * **subnetIds**: [ContainerGroupSubnetId](#containergroupsubnetid)[]: The subnet resource IDs for a container group.
 * **volumes**: [Volume](#volume)[]: The list of volumes that can be mounted by containers in this container group.
 
@@ -93,9 +93,9 @@
 
 ## ContainerProbe
 ### Properties
-* **exec**: [ContainerExec](#containerexec): The container execution command, for liveness or readiness probe
+* **exec**: [ContainerExec](#containerexec): The execution command to probe
 * **failureThreshold**: int: The failure threshold.
-* **httpGet**: [ContainerHttpGet](#containerhttpget): The container Http Get settings, for liveness or readiness probe
+* **httpGet**: [ContainerHttpGet](#containerhttpget): The Http Get settings to probe
 * **initialDelaySeconds**: int: The initial delay seconds.
 * **periodSeconds**: int: The period seconds.
 * **successThreshold**: int: The success threshold.
@@ -107,17 +107,17 @@
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: The environment variables to set in the container instance.
 * **image**: string (Required): The name of the image used to create the container instance.
 * **instanceView**: [ContainerPropertiesInstanceView](#containerpropertiesinstanceview) (ReadOnly): The instance view of the container instance. Only valid in response.
-* **livenessProbe**: [ContainerProbe](#containerprobe): The container probe, for liveness or readiness
+* **livenessProbe**: [ContainerProbe](#containerprobe): The liveness probe.
 * **ports**: [ContainerPort](#containerport)[]: The exposed ports on the container instance.
-* **readinessProbe**: [ContainerProbe](#containerprobe): The container probe, for liveness or readiness
-* **resources**: [ResourceRequirements](#resourcerequirements) (Required): The resource requirements.
+* **readinessProbe**: [ContainerProbe](#containerprobe): The readiness probe.
+* **resources**: [ResourceRequirements](#resourcerequirements) (Required): The resource requirements of the container instance.
 * **volumeMounts**: [VolumeMount](#volumemount)[]: The volume mounts available to the container instance.
 
 ## ContainerPropertiesInstanceView
 ### Properties
-* **currentState**: [ContainerState](#containerstate) (ReadOnly): The container instance state.
+* **currentState**: [ContainerState](#containerstate) (ReadOnly): Current container instance state.
 * **events**: [Event](#event)[] (ReadOnly): The events of the container instance.
-* **previousState**: [ContainerState](#containerstate) (ReadOnly): The container instance state.
+* **previousState**: [ContainerState](#containerstate) (ReadOnly): Previous container instance state.
 * **restartCount**: int (ReadOnly): The number of times that the container instance has been restarted.
 
 ## ContainerState
@@ -182,7 +182,7 @@
 ## InitContainerDefinition
 ### Properties
 * **name**: string (Required): The name for the init container.
-* **properties**: [InitContainerPropertiesDefinition](#initcontainerpropertiesdefinition) (Required): The init container definition properties.
+* **properties**: [InitContainerPropertiesDefinition](#initcontainerpropertiesdefinition) (Required): The properties for the init container.
 
 ## InitContainerPropertiesDefinition
 ### Properties
@@ -194,9 +194,9 @@
 
 ## InitContainerPropertiesDefinitionInstanceView
 ### Properties
-* **currentState**: [ContainerState](#containerstate) (ReadOnly): The container instance state.
+* **currentState**: [ContainerState](#containerstate) (ReadOnly): The current state of the init container.
 * **events**: [Event](#event)[] (ReadOnly): The events of the init container.
-* **previousState**: [ContainerState](#containerstate) (ReadOnly): The container instance state.
+* **previousState**: [ContainerState](#containerstate) (ReadOnly): The previous state of the init container.
 * **restartCount**: int (ReadOnly): The number of times that the init container has been restarted.
 
 ## IpAddress
@@ -228,19 +228,19 @@
 ## ResourceLimits
 ### Properties
 * **cpu**: int: The CPU limit of this container instance.
-* **gpu**: [GpuResource](#gpuresource): The GPU resource.
+* **gpu**: [GpuResource](#gpuresource): The GPU limit of this container instance.
 * **memoryInGB**: int: The memory limit in GB of this container instance.
 
 ## ResourceRequests
 ### Properties
 * **cpu**: int (Required): The CPU request of this container instance.
-* **gpu**: [GpuResource](#gpuresource): The GPU resource.
+* **gpu**: [GpuResource](#gpuresource): The GPU request of this container instance.
 * **memoryInGB**: int (Required): The memory request in GB of this container instance.
 
 ## ResourceRequirements
 ### Properties
-* **limits**: [ResourceLimits](#resourcelimits): The resource limits.
-* **requests**: [ResourceRequests](#resourcerequests) (Required): The resource requests.
+* **limits**: [ResourceLimits](#resourcelimits): The resource limits of this container instance.
+* **requests**: [ResourceRequests](#resourcerequests) (Required): The resource requests of this container instance.
 
 ## ResourceTags
 ### Properties
@@ -254,9 +254,9 @@
 
 ## Volume
 ### Properties
-* **azureFile**: [AzureFileVolume](#azurefilevolume): The properties of the Azure File volume. Azure File shares are mounted as volumes.
-* **emptyDir**: any: Any object
-* **gitRepo**: [GitRepoVolume](#gitrepovolume): Represents a volume that is populated with the contents of a git repository
+* **azureFile**: [AzureFileVolume](#azurefilevolume): The Azure File volume.
+* **emptyDir**: any: The empty directory volume.
+* **gitRepo**: [GitRepoVolume](#gitrepovolume): The git repo volume.
 * **name**: string (Required): The name of the volume.
 * **secret**: [SecretVolume](#secretvolume): The secret volume.
 

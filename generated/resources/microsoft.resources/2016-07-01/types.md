@@ -6,7 +6,7 @@
 * **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DeploymentProperties](#deploymentproperties): Deployment properties.
+* **properties**: [DeploymentProperties](#deploymentproperties): The deployment properties.
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Resources/resourceGroups@2016-07-01
@@ -50,22 +50,22 @@
 ## DeploymentProperties
 ### Properties
 * **correlationId**: string (ReadOnly): The correlation ID of the deployment.
-* **debugSetting**: [DebugSetting](#debugsetting)
+* **debugSetting**: [DebugSetting](#debugsetting): The debug setting of the deployment.
 * **dependencies**: [Dependency](#dependency)[] (ReadOnly): The list of deployment dependencies.
-* **error**: [ErrorResponse](#errorresponse) (ReadOnly): Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.)
+* **error**: [ErrorResponse](#errorresponse) (ReadOnly): The deployment error.
 * **mode**: 'Complete' | 'Incremental' (Required): The deployment mode.
-* **outputs**: any (ReadOnly): Any object
-* **parameters**: any: Any object
-* **parametersLink**: [ParametersLink](#parameterslink): Entity representing the reference to the deployment parameters.
+* **outputs**: any (ReadOnly): Key/value pairs that represent deployment output.
+* **parameters**: any: Deployment parameters. It can be a JObject or a well formed JSON string. Use only one of Parameters or ParametersLink.
+* **parametersLink**: [ParametersLink](#parameterslink): The parameters URI. Use only one of Parameters or ParametersLink.
 * **providers**: [Provider](#provider)[] (ReadOnly): The list of resource providers needed for the deployment.
 * **provisioningState**: string (ReadOnly): The state of the provisioning.
-* **template**: any: Any object
-* **templateLink**: [TemplateLink](#templatelink): Entity representing the reference to the template.
+* **template**: any: The template content. It can be a JObject or a well formed JSON string. Use only one of Template or TemplateLink.
+* **templateLink**: [TemplateLink](#templatelink): The template URI. Use only one of Template or TemplateLink.
 * **timestamp**: string (ReadOnly): The timestamp of the template deployment.
 
 ## ErrorAdditionalInfo
 ### Properties
-* **info**: any (ReadOnly): Any object
+* **info**: any (ReadOnly): The additional info.
 * **type**: string (ReadOnly): The additional info type.
 
 ## ErrorResponse
@@ -95,7 +95,7 @@
 * **locations**: string[] (ReadOnly): The collection of locations where this resource type can be created in.
 * **properties**: [ProviderResourceTypeProperties](#providerresourcetypeproperties) (ReadOnly): The properties.
 * **resourceType**: string (ReadOnly): The resource type.
-* **zoneMappings**: [ZoneMapping](#zonemapping)[] (ReadOnly): Array of ZoneMapping
+* **zoneMappings**: [ZoneMapping](#zonemapping)[] (ReadOnly)
 
 ## ProviderResourceTypeProperties
 ### Properties
@@ -119,5 +119,5 @@
 ## ZoneMapping
 ### Properties
 * **location**: string (ReadOnly): The location of the zone mapping.
-* **zones**: string[] (ReadOnly): Array of ZoneMappingZonesItem
+* **zones**: string[] (ReadOnly)
 

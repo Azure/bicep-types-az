@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'current' (Required, DeployTimeConstant): The resource name
-* **properties**: [PricingPlanProperties](#pricingplanproperties): An Application Insights component daily data volume cap
+* **properties**: [PricingPlanProperties](#pricingplanproperties): The properties of the suppression.
 * **type**: 'microsoft.insights/components/pricingPlans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## PricingPlanProperties

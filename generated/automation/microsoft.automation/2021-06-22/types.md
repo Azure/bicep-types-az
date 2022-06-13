@@ -6,11 +6,11 @@
 * **apiVersion**: '2021-06-22' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets or sets the etag of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): Sets the identity property for automation account
 * **location**: string: Gets or sets the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AutomationAccountCreateOrUpdateProperties](#automationaccountcreateorupdateproperties): The parameters supplied to the create or update account properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [AutomationAccountCreateOrUpdateProperties](#automationaccountcreateorupdateproperties): Gets or sets account create or update properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Resource system metadata.
 * **tags**: [AutomationAccountCreateOrUpdateParametersTags](#automationaccountcreateorupdateparameterstags): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,12 +18,12 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-22' (ReadOnly, DeployTimeConstant): The resource api version
-* **credential**: [RunAsCredentialAssociationProperty](#runascredentialassociationproperty): Definition of RunAs credential to use for hybrid worker.
+* **credential**: [RunAsCredentialAssociationProperty](#runascredentialassociationproperty): Sets the credential of a worker group.
 * **groupType**: 'System' | 'User' | string (ReadOnly): Type of the HybridWorkerGroup.
 * **hybridRunbookWorkers**: [HybridRunbookWorkerLegacy](#hybridrunbookworkerlegacy)[] (ReadOnly): Gets or sets the list of hybrid runbook workers.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Resource system metadata.
 * **type**: 'Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups/hybridRunbookWorkers@2021-06-22
@@ -32,8 +32,8 @@
 * **apiVersion**: '2021-06-22' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [HybridRunbookWorkerCreateOrUpdateParameters](#hybridrunbookworkercreateorupdateparameters) (Required): The parameters supplied to the create or update hybrid runbook worker operation.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [HybridRunbookWorkerCreateOrUpdateParameters](#hybridrunbookworkercreateorupdateparameters) (Required): Gets or sets hybrid runbook worker group create or update properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Resource system metadata.
 * **type**: 'Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups/hybridRunbookWorkers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.Automation/automationAccounts@2021-06-22)
@@ -52,12 +52,12 @@
 * **creationTime**: string (ReadOnly): Gets the creation time.
 * **description**: string (ReadOnly): Gets or sets the description.
 * **disableLocalAuth**: bool: Indicates whether requests using non-AAD authentication are blocked
-* **encryption**: [EncryptionProperties](#encryptionproperties): The encryption settings for automation account
+* **encryption**: [EncryptionProperties](#encryptionproperties): Set the encryption properties for the automation account
 * **lastModifiedBy**: string (ReadOnly): Gets or sets the last modified by.
 * **lastModifiedTime**: string (ReadOnly): Gets the last modified time.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of Automation operations supported by the Automation resource provider.
 * **publicNetworkAccess**: bool: Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
-* **sku**: [Sku](#sku): The account SKU.
+* **sku**: [Sku](#sku): Gets or sets account SKU.
 * **state**: 'Ok' | 'Suspended' | 'Unavailable' | string (ReadOnly): Gets status of account.
 
 ## ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
@@ -69,11 +69,11 @@
 ### Properties
 * **identity**: [EncryptionPropertiesIdentity](#encryptionpropertiesidentity): User identity used for CMK.
 * **keySource**: 'Microsoft.Automation' | 'Microsoft.Keyvault': Encryption Key Source
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): Settings concerning key vault encryption for a configuration store.
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): Key vault properties.
 
 ## EncryptionPropertiesIdentity
 ### Properties
-* **userAssignedIdentity**: any: Any object
+* **userAssignedIdentity**: any: The user identity used for CMK. It will be an ARM resource id in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## HybridRunbookWorkerCreateOrUpdateParameters
 ### Properties
@@ -123,7 +123,7 @@
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource Id for the resource
 * **name**: string (ReadOnly): The name of the resource
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Properties of a private endpoint connection.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Resource properties.
 * **type**: string (ReadOnly): The type of the resource.
 
 ## PrivateEndpointConnectionProperties
@@ -159,5 +159,5 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 * **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that last modified the resource.
 

@@ -33,8 +33,8 @@
 * **Name**: string (ReadOnly): Application name.
 * **PrivateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly): List of linked private link scope resources.
 * **provisioningState**: string (ReadOnly): Current state of this component: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
-* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled' | string: The network access type for operating on the Application Insights Component. By default it is Enabled
-* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled' | string: The network access type for operating on the Application Insights Component. By default it is Enabled
+* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled' | string: The network access type for accessing Application Insights ingestion.
+* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled' | string: The network access type for accessing Application Insights query.
 * **Request_Source**: 'rest' | string: Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.
 * **RetentionInDays**: int: Retention period in days.
 * **SamplingPercentage**: int: Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.

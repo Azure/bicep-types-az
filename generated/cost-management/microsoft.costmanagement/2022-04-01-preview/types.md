@@ -9,7 +9,7 @@
 * **kind**: 'Email' | string: Kind of the scheduled action.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduledActionProperties](#scheduledactionproperties): The properties of the scheduled action.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CostManagement/scheduledActions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## FileDestination
@@ -25,9 +25,9 @@
 ## ScheduledActionProperties
 ### Properties
 * **displayName**: string (Required): Scheduled action name.
-* **fileDestination**: [FileDestination](#filedestination): Destination of the view data. Currently only csv format is supported.
-* **notification**: [NotificationProperties](#notificationproperties) (Required): The properties of the scheduled action notification.
-* **schedule**: [ScheduleProperties](#scheduleproperties) (Required): The properties of the schedule.
+* **fileDestination**: [FileDestination](#filedestination): Destination format of the view data.
+* **notification**: [NotificationProperties](#notificationproperties) (Required): Notification properties based on scheduled action kind.
+* **schedule**: [ScheduleProperties](#scheduleproperties) (Required): Schedule of the scheduled action.
 * **scope**: string: Cost Management scope like 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.
 * **status**: 'Disabled' | 'Enabled' | string (Required): Status of the scheduled action.
 * **viewId**: string (Required): Cost analysis viewId used for scheduled action. For example, '/providers/Microsoft.CostManagement/views/swaggerExample'
@@ -49,5 +49,5 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 

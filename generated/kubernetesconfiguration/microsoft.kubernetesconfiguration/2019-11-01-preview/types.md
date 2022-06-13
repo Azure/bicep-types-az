@@ -23,7 +23,7 @@
 
 ## SourceControlConfigurationProperties
 ### Properties
-* **complianceStatus**: [ComplianceStatus](#compliancestatus) (ReadOnly): Compliance Status details
+* **complianceStatus**: [ComplianceStatus](#compliancestatus) (ReadOnly): Compliance Status of the Configuration
 * **enableHelmOperator**: 'false' | 'true' | string: Option to enable Helm Operator for this git configuration.
 * **helmOperatorProperties**: [HelmOperatorProperties](#helmoperatorproperties): Properties for Helm operator.
 * **operatorInstanceName**: string: Instance name of the operator - identifying the specific configuration.

@@ -6,7 +6,7 @@
 * **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagementLockProperties](#managementlockproperties) (Required): The lock properties.
+* **properties**: [ManagementLockProperties](#managementlockproperties) (Required): The properties of the lock.
 * **type**: 'Microsoft.Authorization/locks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ManagementLockOwner

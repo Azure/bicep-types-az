@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The GEO location of the blockchain service.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BlockchainMemberProperties](#blockchainmemberproperties): Payload of the blockchain member properties for a blockchain member.
-* **sku**: [Sku](#sku): Blockchain member Sku in payload
+* **properties**: [BlockchainMemberProperties](#blockchainmemberproperties): Gets or sets the blockchain member properties.
+* **sku**: [Sku](#sku): Gets or sets the blockchain member Sku.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the service which is a list of key value pairs that describes the resource.
 * **type**: 'Microsoft.Blockchain/blockchainMembers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Gets or sets the transaction node location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TransactionNodeProperties](#transactionnodeproperties): Payload of transaction node properties payload in the transaction node payload.
+* **properties**: [TransactionNodeProperties](#transactionnodeproperties): Gets or sets the blockchain member properties.
 * **type**: 'Microsoft.Blockchain/blockchainMembers/transactionNodes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listApiKeys (Microsoft.Blockchain/blockchainMembers@2018-06-01-preview)
@@ -69,12 +69,12 @@
 * **publicKey**: string (ReadOnly): Gets the public key of the blockchain member (default transaction node).
 * **rootContractAddress**: string (ReadOnly): Gets the Ethereum root contract address of the blockchain.
 * **userName**: string (ReadOnly): Gets the auth user name of the blockchain member.
-* **validatorNodesSku**: [BlockchainMemberNodesSku](#blockchainmembernodessku): Payload of the blockchain member nodes Sku for a blockchain member.
+* **validatorNodesSku**: [BlockchainMemberNodesSku](#blockchainmembernodessku): Gets or sets the blockchain validator nodes Sku.
 
 ## Consortium
 ### Properties
 * **name**: string (ReadOnly): Gets or sets the blockchain member name.
-* **protocol**: 'Corda' | 'NotSpecified' | 'Parity' | 'Quorum' | string (ReadOnly): Gets or sets the blockchain protocol.
+* **protocol**: 'Corda' | 'NotSpecified' | 'Parity' | 'Quorum' | string (ReadOnly): Gets or sets the protocol for the consortium.
 
 ## ConsortiumCollection
 ### Properties

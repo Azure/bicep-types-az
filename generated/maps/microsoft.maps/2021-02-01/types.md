@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2021-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'Gen1' | 'Gen2' | string: The Kind of the Maps Account.
+* **kind**: 'Gen1' | 'Gen2' | string: Get or Set Kind property.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MapsAccountProperties](#mapsaccountproperties): Additional Map account properties
-* **sku**: [Sku](#sku) (Required): The SKU of the Maps Account.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [MapsAccountProperties](#mapsaccountproperties): The map account properties.
+* **sku**: [Sku](#sku) (Required): The SKU of this account.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Maps/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -21,7 +21,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreatorProperties](#creatorproperties) (Required): Creator resource properties
+* **properties**: [CreatorProperties](#creatorproperties) (Required): The Creator resource properties.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Maps/accounts/creators' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -60,7 +60,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties

@@ -6,7 +6,7 @@
 * **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PricingProperties](#pricingproperties): Pricing properties for the relevant scope
+* **properties**: [PricingProperties](#pricingproperties): Pricing data
 * **type**: 'Microsoft.Security/pricings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## PricingProperties

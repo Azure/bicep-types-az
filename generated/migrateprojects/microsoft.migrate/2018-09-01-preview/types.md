@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Gets or sets the Azure location in which migrate project is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MigrateProjectProperties](#migrateprojectproperties): Class for migrate project properties.
+* **properties**: [MigrateProjectProperties](#migrateprojectproperties): Gets or sets the nested properties.
 * **tags**: [MigrateProjectTags](#migrateprojecttags): Gets or sets the tags.
 * **type**: 'Microsoft.Migrate/migrateProjects' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,7 +19,7 @@
 * **etag**: string: Gets or sets the ETAG for optimistic concurrency control.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SolutionProperties](#solutionproperties): Class for solution properties.
+* **properties**: [SolutionProperties](#solutionproperties): Gets or sets the properties of the solution.
 * **type**: 'Microsoft.Migrate/migrateProjects/solutions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## MigrateProjectProperties
@@ -79,11 +79,11 @@
 ## SolutionProperties
 ### Properties
 * **cleanupState**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Started' | string: Gets or sets the cleanup state of the solution.
-* **details**: [SolutionDetails](#solutiondetails): Class representing the details of the solution.
+* **details**: [SolutionDetails](#solutiondetails): Gets or sets the details of the solution.
 * **goal**: 'Databases' | 'Servers' | string: Gets or sets the goal of the solution.
 * **purpose**: 'Assessment' | 'Discovery' | 'Migration' | string: Gets or sets the purpose of the solution.
 * **status**: 'Active' | 'Inactive' | string: Gets or sets the current status of the solution.
-* **summary**: [SolutionSummary](#solutionsummary): The solution summary class.
+* **summary**: [SolutionSummary](#solutionsummary): Gets or sets the summary of the solution.
 * **tool**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration' | 'ServerMigration_Replication' | 'Turbonomic' | 'Zerto' | string: Gets or sets the tool being used in the solution.
 
 ## SolutionSummary

@@ -86,7 +86,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.
 
 ## MoveCollectionPropertiesErrors
 ### Properties
-* **properties**: [MoveResourceErrorBody](#moveresourceerrorbody): An error response from the Azure Migrate service.
+* **properties**: [MoveResourceErrorBody](#moveresourceerrorbody): The move resource error body.
 
 ## MoveCollectionTags
 ### Properties
@@ -111,7 +111,7 @@ the dependent resource.
 
 ## MoveResourceError
 ### Properties
-* **properties**: [MoveResourceErrorBody](#moveresourceerrorbody): An error response from the Azure Migrate service.
+* **properties**: [MoveResourceErrorBody](#moveresourceerrorbody): The move resource error body.
 
 ## MoveResourceErrorBody
 ### Properties
@@ -131,12 +131,12 @@ the dependent resource.
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Defines the provisioning states.
 * **resourceSettings**: [ResourceSettings](#resourcesettings): Gets or sets the resource settings.
 * **sourceId**: string (Required): Gets or sets the Source ARM Id of the resource.
-* **sourceResourceSettings**: [ResourceSettings](#resourcesettings) (ReadOnly): Gets or sets the resource settings.
+* **sourceResourceSettings**: [ResourceSettings](#resourcesettings) (ReadOnly): Gets or sets the source resource settings.
 * **targetId**: string (ReadOnly): Gets or sets the Target ARM Id of the resource.
 
 ## MoveResourcePropertiesErrors
 ### Properties
-* **properties**: [MoveResourceErrorBody](#moveresourceerrorbody): An error response from the Azure Migrate service.
+* **properties**: [MoveResourceErrorBody](#moveresourceerrorbody): The move resource error body.
 
 ## MoveResourcePropertiesMoveStatus
 ### Properties
@@ -324,7 +324,7 @@ DDOS protection should be switched on.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## VirtualMachineResourceSettingsTags
 ### Properties

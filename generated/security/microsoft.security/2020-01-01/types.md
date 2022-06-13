@@ -52,12 +52,12 @@
 ### Properties
 * **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' | string (ReadOnly): The configuration status of the machines group or machine or rule
 * **enforcementMode**: 'Audit' | 'Enforce' | 'None' | string: The application control policy enforcement/protection mode of the machine group
-* **issues**: [AdaptiveApplicationControlIssueSummary](#adaptiveapplicationcontrolissuesummary)[] (ReadOnly): Array of AdaptiveApplicationControlIssueSummary
-* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[]: Array of PathRecommendation
+* **issues**: [AdaptiveApplicationControlIssueSummary](#adaptiveapplicationcontrolissuesummary)[] (ReadOnly)
+* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[]
 * **protectionMode**: [ProtectionMode](#protectionmode): The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
 * **recommendationStatus**: 'NoStatus' | 'NotAvailable' | 'NotRecommended' | 'Recommended' | string (ReadOnly): The initial recommendation status of the machine group or machine
 * **sourceSystem**: 'Azure_AppLocker' | 'Azure_AuditD' | 'NonAzure_AppLocker' | 'NonAzure_AuditD' | 'None' | string (ReadOnly): The source type of the machine group
-* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[]: Array of VmRecommendation
+* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[]
 
 ## AdaptiveApplicationControlIssueSummary
 ### Properties
@@ -77,7 +77,7 @@
 ## JitNetworkAccessPolicyProperties
 ### Properties
 * **provisioningState**: string (ReadOnly): Gets the provisioning state of the Just-in-Time policy.
-* **requests**: [JitNetworkAccessRequest](#jitnetworkaccessrequest)[]: Array of JitNetworkAccessRequest
+* **requests**: [JitNetworkAccessRequest](#jitnetworkaccessrequest)[]
 * **virtualMachines**: [JitNetworkAccessPolicyVirtualMachine](#jitnetworkaccesspolicyvirtualmachine)[] (Required): Configurations for Microsoft.Compute/virtualMachines resource type.
 
 ## JitNetworkAccessPolicyVirtualMachine
@@ -99,7 +99,7 @@
 * **justification**: string: The justification for making the initiate request
 * **requestor**: string (Required): The identity of the person who made the request
 * **startTimeUtc**: string (Required): The start time of the request in UTC
-* **virtualMachines**: [JitNetworkAccessRequestVirtualMachine](#jitnetworkaccessrequestvirtualmachine)[] (Required): Array of JitNetworkAccessRequestVirtualMachine
+* **virtualMachines**: [JitNetworkAccessRequestVirtualMachine](#jitnetworkaccessrequestvirtualmachine)[] (Required)
 
 ## JitNetworkAccessRequestPort
 ### Properties
@@ -125,8 +125,8 @@
 * **path**: string: The full path of the file, or an identifier of the application
 * **publisherInfo**: [PublisherInfo](#publisherinfo): Represents the publisher information of a process/rule
 * **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature' | string: The type of the rule to be allowed
-* **usernames**: [UserRecommendation](#userrecommendation)[]: Array of UserRecommendation
-* **userSids**: string[]: Array of PathRecommendationUserSidsItem
+* **usernames**: [UserRecommendation](#userrecommendation)[]
+* **userSids**: string[]
 
 ## ProtectionMode
 ### Properties
@@ -167,7 +167,7 @@
 ## SecurityAssessmentMetadataProperties
 ### Properties
 * **assessmentType**: 'BuiltIn' | 'CustomPolicy' | 'CustomerManaged' | 'VerifiedPartner' | string (Required): BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
-* **categories**: 'Compute' | 'Data' | 'IdentityAndAccess' | 'IoT' | 'Networking' | string[]: Array of categories
+* **categories**: 'Compute' | 'Data' | 'IdentityAndAccess' | 'IoT' | 'Networking' | string[]
 * **description**: string: Human readable description of the assessment
 * **displayName**: string (Required): User friendly display name of the assessment
 * **implementationEffort**: 'High' | 'Low' | 'Moderate' | string: The implementation effort required to remediate this assessment
@@ -176,7 +176,7 @@
 * **preview**: bool: True if this assessment is in preview release status
 * **remediationDescription**: string: Human readable description of what you should do to mitigate this security issue
 * **severity**: 'High' | 'Low' | 'Medium' | string (Required): The severity level of the assessment
-* **threats**: 'accountBreach' | 'dataExfiltration' | 'dataSpillage' | 'denialOfService' | 'elevationOfPrivilege' | 'maliciousInsider' | 'missingCoverage' | 'threatResistance' | string[]: Array of threats
+* **threats**: 'accountBreach' | 'dataExfiltration' | 'dataSpillage' | 'denialOfService' | 'elevationOfPrivilege' | 'maliciousInsider' | 'missingCoverage' | 'threatResistance' | string[]
 * **userImpact**: 'High' | 'Low' | 'Moderate' | string: The user impact of the assessment
 
 ## SecurityAssessmentPartnerData

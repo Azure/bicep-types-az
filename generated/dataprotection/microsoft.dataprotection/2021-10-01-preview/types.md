@@ -6,10 +6,10 @@
 * **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [DppIdentityDetails](#dppidentitydetails): Identity details
+* **identity**: [DppIdentityDetails](#dppidentitydetails): Input Managed Identity Details
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BackupVault](#backupvault) (Required): Backup Vault
+* **properties**: [BackupVault](#backupvault) (Required): BackupVaultResource properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [DppTrackedResourceTags](#dpptrackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DataProtection/backupVaults' (ReadOnly, DeployTimeConstant): The resource type
@@ -20,7 +20,7 @@
 * **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BackupInstance](#backupinstance): Backup Instance
+* **properties**: [BackupInstance](#backupinstance): BackupInstanceResource properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupInstances' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -30,7 +30,7 @@
 * **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BaseBackupPolicy](#basebackuppolicy): BackupPolicy base
+* **properties**: [BaseBackupPolicy](#basebackuppolicy): BaseBackupPolicyResource properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -40,17 +40,17 @@
 * **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [DppIdentityDetails](#dppidentitydetails): Identity details
+* **identity**: [DppIdentityDetails](#dppidentitydetails): Input Managed Identity Details
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ResourceGuard](#resourceguard)
+* **properties**: [ResourceGuard](#resourceguard): ResourceGuardResource properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [DppTrackedResourceTags](#dpptrackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DataProtection/resourceGuards' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AdhocBasedTaggingCriteria
 ### Properties
-* **tagInfo**: [RetentionTag](#retentiontag): Retention tag
+* **tagInfo**: [RetentionTag](#retentiontag): Retention tag information
 
 ## AuthCredentials
 * **Discriminator**: objectType
@@ -59,7 +59,7 @@
 ### SecretStoreBasedAuthCredentials
 #### Properties
 * **objectType**: 'SecretStoreBasedAuthCredentials' (Required): Type of the specific object - used for deserializing
-* **secretStoreResource**: [SecretStoreResource](#secretstoreresource): Class representing a secret store resource.
+* **secretStoreResource**: [SecretStoreResource](#secretstoreresource): Secret store resource
 
 
 ## BackupCriteria
@@ -81,14 +81,14 @@ and should be part of AbsoluteMarker enum
 ## BackupInstance
 ### Properties
 * **currentProtectionState**: 'BackupSchedulesSuspended' | 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'Invalid' | 'NotProtected' | 'ProtectionConfigured' | 'ProtectionError' | 'ProtectionStopped' | 'RetentionSchedulesSuspended' | 'SoftDeleted' | 'SoftDeleting' | 'UpdatingProtection' | string (ReadOnly): Specifies the current protection state of the resource
-* **datasourceAuthCredentials**: [AuthCredentials](#authcredentials): Base class for different types of authentication credentials.
-* **dataSourceInfo**: [Datasource](#datasource) (Required): Datasource to be backed up
-* **dataSourceSetInfo**: [DatasourceSet](#datasourceset): DatasourceSet details of datasource to be backed up
+* **datasourceAuthCredentials**: [AuthCredentials](#authcredentials): Credentials to use to authenticate with data source provider.
+* **dataSourceInfo**: [Datasource](#datasource) (Required): Gets or sets the data source information.
+* **dataSourceSetInfo**: [DatasourceSet](#datasourceset): Gets or sets the data source set information.
 * **friendlyName**: string: Gets or sets the Backup Instance friendly name.
 * **objectType**: string (Required)
-* **policyInfo**: [PolicyInfo](#policyinfo) (Required): Policy Info in backupInstance
-* **protectionErrorDetails**: [UserFacingError](#userfacingerror) (ReadOnly): Error object used by layers that have access to localized content, and propagate that to user
-* **protectionStatus**: [ProtectionStatusDetails](#protectionstatusdetails) (ReadOnly): Protection status details
+* **policyInfo**: [PolicyInfo](#policyinfo) (Required): Gets or sets the policy information.
+* **protectionErrorDetails**: [UserFacingError](#userfacingerror) (ReadOnly): Specifies the protection error of the resource
+* **protectionStatus**: [ProtectionStatusDetails](#protectionstatusdetails) (ReadOnly): Specifies the protection status of the resource
 * **provisioningState**: string (ReadOnly): Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed
 
 ## BackupParameters
@@ -109,7 +109,7 @@ and should be part of AbsoluteMarker enum
 ## BackupVault
 ### Properties
 * **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the BackupVault resource
-* **resourceMoveDetails**: [ResourceMoveDetails](#resourcemovedetails) (ReadOnly): ResourceMoveDetails will be returned in response to GetResource call from ARM
+* **resourceMoveDetails**: [ResourceMoveDetails](#resourcemovedetails) (ReadOnly): Resource move details for backup vault
 * **resourceMoveState**: 'CommitFailed' | 'CommitTimedout' | 'CriticalFailure' | 'Failed' | 'InProgress' | 'MoveSucceeded' | 'PartialSuccess' | 'PrepareFailed' | 'PrepareTimedout' | 'Unknown' | string (ReadOnly): Resource move state for backup vault
 * **storageSettings**: [StorageSetting](#storagesetting)[] (Required): Storage Settings
 
@@ -139,7 +139,7 @@ and should be part of AbsoluteMarker enum
 ### AzureRetentionRule
 #### Properties
 * **isDefault**: bool
-* **lifecycles**: [SourceLifeCycle](#sourcelifecycle)[] (Required): Array of SourceLifeCycle
+* **lifecycles**: [SourceLifeCycle](#sourcelifecycle)[] (Required)
 * **objectType**: 'AzureRetentionRule' (Required)
 
 
@@ -178,7 +178,7 @@ and should be part of AbsoluteMarker enum
 * **resourceID**: string (Required): Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault.
 * **resourceLocation**: string: Location of datasource.
 * **resourceName**: string: Unique identifier of the resource in the context of parent.
-* **resourceProperties**: [BaseResourceProperties](#baseresourceproperties): Properties which are specific to datasource/datasourcesets/backupinstanceref/backupsettings
+* **resourceProperties**: [BaseResourceProperties](#baseresourceproperties): Properties specific to data source
 * **resourceType**: string: Resource Type of Datasource.
 * **resourceUri**: string: Uri of the resource.
 
@@ -189,7 +189,7 @@ and should be part of AbsoluteMarker enum
 * **resourceID**: string (Required): Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault.
 * **resourceLocation**: string: Location of datasource.
 * **resourceName**: string: Unique identifier of the resource in the context of parent.
-* **resourceProperties**: [BaseResourceProperties](#baseresourceproperties): Properties which are specific to datasource/datasourcesets/backupinstanceref/backupsettings
+* **resourceProperties**: [BaseResourceProperties](#baseresourceproperties): Properties specific to data source set
 * **resourceType**: string: Resource Type of Datasource.
 * **resourceUri**: string: Uri of the resource.
 
@@ -244,7 +244,7 @@ and should be part of AbsoluteMarker enum
 ### Properties
 * **additionalInfo**: [InnerErrorAdditionalInfo](#innererroradditionalinfo): Any Key value pairs that can be provided to the client for additional  verbose information.
 * **code**: string: Unique code for this error
-* **embeddedInnerError**: [InnerError](#innererror): Inner Error
+* **embeddedInnerError**: [InnerError](#innererror): Child Inner Error, to allow Nesting.
 
 ## InnerErrorAdditionalInfo
 ### Properties
@@ -254,7 +254,7 @@ and should be part of AbsoluteMarker enum
 ## PolicyInfo
 ### Properties
 * **policyId**: string (Required)
-* **policyParameters**: [PolicyParameters](#policyparameters): Parameters in Policy
+* **policyParameters**: [PolicyParameters](#policyparameters): Policy parameters for the backup instance
 * **policyVersion**: string (ReadOnly)
 
 ## PolicyParameters
@@ -263,7 +263,7 @@ and should be part of AbsoluteMarker enum
 
 ## ProtectionStatusDetails
 ### Properties
-* **errorDetails**: [UserFacingError](#userfacingerror): Error object used by layers that have access to localized content, and propagate that to user
+* **errorDetails**: [UserFacingError](#userfacingerror): Specifies the protection status error of the resource
 * **status**: 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'ProtectionConfigured' | 'ProtectionStopped' | 'SoftDeleted' | 'SoftDeleting' | string: Specifies the protection status of the resource
 
 ## ResourceGuard
@@ -302,7 +302,7 @@ and should be part of AbsoluteMarker enum
 ### Properties
 * **deleteAfter**: [DeleteOption](#deleteoption) (Required): Delete Option
 * **sourceDataStore**: [DataStoreInfoBase](#datastoreinfobase) (Required): DataStoreInfo base
-* **targetDataStoreCopySettings**: [TargetCopySetting](#targetcopysetting)[]: Array of TargetCopySetting
+* **targetDataStoreCopySettings**: [TargetCopySetting](#targetcopysetting)[]
 
 ## StorageSetting
 ### Properties
@@ -316,19 +316,19 @@ and should be part of AbsoluteMarker enum
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TaggingCriteria
 ### Properties
 * **criteria**: [BackupCriteria](#backupcriteria)[]: Criteria which decides whether the tag can be applied to a triggered backup.
 * **isDefault**: bool (Required): Specifies if tag is default.
 * **taggingPriority**: int (Required): Retention Tag priority.
-* **tagInfo**: [RetentionTag](#retentiontag) (Required): Retention tag
+* **tagInfo**: [RetentionTag](#retentiontag) (Required): Retention tag information
 
 ## TargetCopySetting
 ### Properties
-* **copyAfter**: [CopyOption](#copyoption) (Required): Options to copy
-* **dataStore**: [DataStoreInfoBase](#datastoreinfobase) (Required): DataStoreInfo base
+* **copyAfter**: [CopyOption](#copyoption) (Required): It can be CustomCopyOption or ImmediateCopyOption.
+* **dataStore**: [DataStoreInfoBase](#datastoreinfobase) (Required): Info of target datastore
 
 ## TriggerContext
 * **Discriminator**: objectType
@@ -337,12 +337,12 @@ and should be part of AbsoluteMarker enum
 ### AdhocBasedTriggerContext
 #### Properties
 * **objectType**: 'AdhocBasedTriggerContext' (Required): Type of the specific object - used for deserializing
-* **taggingCriteria**: [AdhocBasedTaggingCriteria](#adhocbasedtaggingcriteria) (Required): Adhoc backup tagging criteria
+* **taggingCriteria**: [AdhocBasedTaggingCriteria](#adhocbasedtaggingcriteria) (Required): Tagging Criteria containing retention tag for adhoc backup.
 
 ### ScheduleBasedTriggerContext
 #### Properties
 * **objectType**: 'ScheduleBasedTriggerContext' (Required): Type of the specific object - used for deserializing
-* **schedule**: [BackupSchedule](#backupschedule) (Required): Schedule for backup
+* **schedule**: [BackupSchedule](#backupschedule) (Required): Schedule for this backup
 * **taggingCriteria**: [TaggingCriteria](#taggingcriteria)[] (Required): List of tags that can be applicable for given schedule.
 
 

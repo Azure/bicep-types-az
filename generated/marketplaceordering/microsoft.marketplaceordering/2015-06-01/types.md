@@ -6,7 +6,7 @@
 * **apiVersion**: '2015-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'current' (Required, DeployTimeConstant): The resource name
-* **properties**: [AgreementProperties](#agreementproperties): Agreement Terms definition
+* **properties**: [AgreementProperties](#agreementproperties): Represents the properties of the resource.
 * **type**: 'Microsoft.MarketplaceOrdering/offerTypes/publishers/offers/plans/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AgreementProperties

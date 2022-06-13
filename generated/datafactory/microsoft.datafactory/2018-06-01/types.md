@@ -6,10 +6,10 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [FactoryIdentity](#factoryidentity): Identity properties of the factory resource.
+* **identity**: [FactoryIdentity](#factoryidentity): Managed service identity of the factory.
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [FactoryProperties](#factoryproperties): Factory resource properties.
+* **properties**: [FactoryProperties](#factoryproperties): Properties of the factory.
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.DataFactory/factories' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,7 +20,7 @@
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DataFlow](#dataflow) (Required): Azure Data Factory nested object which contains a flow with data movements and transformations.
+* **properties**: [DataFlow](#dataflow) (Required): Data flow properties.
 * **type**: 'Microsoft.DataFactory/factories/dataflows' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/datasets@2018-06-01
@@ -30,7 +30,7 @@
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [Dataset](#dataset) (Required): The Azure Data Factory nested object which identifies data within different data stores, such as tables, files, folders, and documents.
+* **properties**: [Dataset](#dataset) (Required): Dataset properties.
 * **type**: 'Microsoft.DataFactory/factories/datasets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/globalParameters@2018-06-01
@@ -40,7 +40,7 @@
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GlobalParameter](#globalparameter) (Required): Global parameters associated with the Azure Data Factory
+* **properties**: [GlobalParameter](#globalparameter) (Required): Properties of the global parameter.
 * **type**: 'Microsoft.DataFactory/factories/globalParameters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/integrationRuntimes@2018-06-01
@@ -50,7 +50,7 @@
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IntegrationRuntime](#integrationruntime) (Required): Azure Data Factory nested object which serves as a compute resource for activities.
+* **properties**: [IntegrationRuntime](#integrationruntime) (Required): Integration runtime properties.
 * **type**: 'Microsoft.DataFactory/factories/integrationRuntimes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/linkedservices@2018-06-01
@@ -60,7 +60,7 @@
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [LinkedService](#linkedservice) (Required): The Azure Data Factory nested object which contains the information and credential which can be used to connect with related store or compute resource.
+* **properties**: [LinkedService](#linkedservice) (Required): Properties of linked service.
 * **type**: 'Microsoft.DataFactory/factories/linkedservices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/managedVirtualNetworks@2018-06-01
@@ -70,7 +70,7 @@
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagedVirtualNetwork](#managedvirtualnetwork) (Required): A managed Virtual Network associated with the Azure Data Factory
+* **properties**: [ManagedVirtualNetwork](#managedvirtualnetwork) (Required): Managed Virtual Network properties.
 * **type**: 'Microsoft.DataFactory/factories/managedVirtualNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints@2018-06-01
@@ -80,7 +80,7 @@
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagedPrivateEndpoint](#managedprivateendpoint) (Required): Properties of a managed private endpoint
+* **properties**: [ManagedPrivateEndpoint](#managedprivateendpoint) (Required): Managed private endpoint properties.
 * **type**: 'Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/pipelines@2018-06-01
@@ -90,7 +90,7 @@
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [Pipeline](#pipeline) (Required): A data factory pipeline.
+* **properties**: [Pipeline](#pipeline) (Required): Properties of the pipeline.
 * **type**: 'Microsoft.DataFactory/factories/pipelines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/privateEndpointConnections@2018-06-01
@@ -100,7 +100,7 @@
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): A request to approve or reject a private endpoint connection
+* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): Core resource properties
 * **type**: 'Microsoft.DataFactory/factories/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/triggers@2018-06-01
@@ -110,7 +110,7 @@
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [Trigger](#trigger) (Required): Azure data factory nested object which contains information about creating pipeline run
+* **properties**: [Trigger](#trigger) (Required): Properties of the trigger.
 * **type**: 'Microsoft.DataFactory/factories/triggers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listAuthKeys (Microsoft.DataFactory/factories/integrationRuntimes@2018-06-01)
@@ -129,7 +129,7 @@
 ### AppendVariableActivity
 #### Properties
 * **type**: 'AppendVariable' (Required): Type of activity.
-* **typeProperties**: [AppendVariableActivityTypeProperties](#appendvariableactivitytypeproperties) (Required): AppendVariable activity properties.
+* **typeProperties**: [AppendVariableActivityTypeProperties](#appendvariableactivitytypeproperties) (Required): Append Variable activity properties.
 
 ### AzureDataExplorerCommandActivity
 #### Properties
@@ -139,7 +139,7 @@
 ### AzureFunctionActivity
 #### Properties
 * **type**: 'AzureFunctionActivity' (Required): Type of activity.
-* **typeProperties**: [AzureFunctionActivityTypeProperties](#azurefunctionactivitytypeproperties) (Required): Azure Function activity type properties.
+* **typeProperties**: [AzureFunctionActivityTypeProperties](#azurefunctionactivitytypeproperties) (Required): Azure Function activity properties.
 
 ### AzureMLBatchExecutionActivity
 #### Properties
@@ -154,7 +154,7 @@
 ### AzureMLUpdateResourceActivity
 #### Properties
 * **type**: 'AzureMLUpdateResource' (Required): Type of activity.
-* **typeProperties**: [AzureMLUpdateResourceActivityTypeProperties](#azuremlupdateresourceactivitytypeproperties) (Required): Azure ML Update Resource activity properties.
+* **typeProperties**: [AzureMLUpdateResourceActivityTypeProperties](#azuremlupdateresourceactivitytypeproperties) (Required): Azure ML Update Resource management activity properties.
 
 ### CopyActivity
 #### Properties
@@ -186,7 +186,7 @@
 ### DataLakeAnalyticsUsqlActivity
 #### Properties
 * **type**: 'DataLakeAnalyticsU-SQL' (Required): Type of activity.
-* **typeProperties**: [DataLakeAnalyticsUsqlActivityTypeProperties](#datalakeanalyticsusqlactivitytypeproperties) (Required): DataLakeAnalyticsU-SQL activity properties.
+* **typeProperties**: [DataLakeAnalyticsUsqlActivityTypeProperties](#datalakeanalyticsusqlactivitytypeproperties) (Required): Data Lake Analytics U-SQL activity properties.
 
 ### DeleteActivity
 #### Properties
@@ -200,7 +200,7 @@
 
 ### ExecutePipelineActivity
 #### Properties
-* **policy**: [ExecutePipelineActivityPolicy](#executepipelineactivitypolicy): Execution policy for an execute pipeline activity.
+* **policy**: [ExecutePipelineActivityPolicy](#executepipelineactivitypolicy): Execute pipeline activity policy.
 * **type**: 'ExecutePipeline' (Required): Type of activity.
 * **typeProperties**: [ExecutePipelineActivityTypeProperties](#executepipelineactivitytypeproperties) (Required): Execute pipeline activity properties.
 
@@ -211,9 +211,9 @@
 
 ### ExecuteWranglingDataflowActivity
 #### Properties
-* **policy**: [ActivityPolicy](#activitypolicy): Execution policy for an activity.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'ExecuteWranglingDataflow' (Required): Type of activity.
-* **typeProperties**: [ExecutePowerQueryActivityTypeProperties](#executepowerqueryactivitytypeproperties) (Required): Execute power query data flow activity properties.
+* **typeProperties**: [ExecutePowerQueryActivityTypeProperties](#executepowerqueryactivitytypeproperties) (Required): Execute power query activity properties.
 
 ### FailActivity
 #### Properties
@@ -278,7 +278,7 @@
 ### SetVariableActivity
 #### Properties
 * **type**: 'SetVariable' (Required): Type of activity.
-* **typeProperties**: [SetVariableActivityTypeProperties](#setvariableactivitytypeproperties) (Required): SetVariable activity properties.
+* **typeProperties**: [SetVariableActivityTypeProperties](#setvariableactivitytypeproperties) (Required): Set Variable activity properties.
 
 ### SqlServerStoredProcedureActivity
 #### Properties
@@ -308,12 +308,12 @@
 ### WebActivity
 #### Properties
 * **type**: 'WebActivity' (Required): Type of activity.
-* **typeProperties**: [WebActivityTypeProperties](#webactivitytypeproperties) (Required): Web activity type properties.
+* **typeProperties**: [WebActivityTypeProperties](#webactivitytypeproperties) (Required): Web activity properties.
 
 ### WebHookActivity
 #### Properties
 * **type**: 'WebHook' (Required): Type of activity.
-* **typeProperties**: [WebHookActivityTypeProperties](#webhookactivitytypeproperties) (Required): WebHook activity type properties.
+* **typeProperties**: [WebHookActivityTypeProperties](#webhookactivitytypeproperties) (Required): WebHook activity properties.
 
 
 ## ActivityDependency
@@ -325,52 +325,52 @@
 
 ## ActivityPolicy
 ### Properties
-* **retry**: any: Any object
+* **retry**: any: Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
 * **retryIntervalInSeconds**: int: Interval between each retry attempt (in seconds). The default is 30 sec.
 * **secureInput**: bool: When set to true, Input from activity is considered as secure and will not be logged to monitoring.
 * **secureOutput**: bool: When set to true, Output from activity is considered as secure and will not be logged to monitoring.
-* **timeout**: any: Any object
+* **timeout**: any: Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## AmazonMWSLinkedServiceTypeProperties
 ### Properties
-* **accessKeyId**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **endpoint**: any (Required): Any object
-* **marketplaceID**: any (Required): Any object
-* **mwsAuthToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **secretKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **sellerID**: any (Required): Any object
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
+* **accessKeyId**: any (Required): The access key id used to access data.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **endpoint**: any (Required): The endpoint of the Amazon MWS server, (i.e. mws.amazonservices.com)
+* **marketplaceID**: any (Required): The Amazon Marketplace ID you want to retrieve data from. To retrieve data from multiple Marketplace IDs, separate them with a comma (,). (i.e. A2EUQ1WTGCTBG2)
+* **mwsAuthToken**: [SecretBase](#secretbase): The Amazon MWS authentication token.
+* **secretKey**: [SecretBase](#secretbase): The secret key used to access data.
+* **sellerID**: any (Required): The Amazon seller ID.
+* **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+* **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+* **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
 
 ## AmazonRdsForLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): The Azure key vault secret reference of password in connection string.
 
 ## AmazonRdsForOraclePartitionSettings
 ### Properties
-* **partitionColumnName**: any: Any object
-* **partitionLowerBound**: any: Any object
-* **partitionNames**: any: Any object
-* **partitionUpperBound**: any: Any object
+* **partitionColumnName**: any: The name of the column in integer type that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+* **partitionLowerBound**: any: The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+* **partitionNames**: any: Names of the physical partitions of AmazonRdsForOracle table.
+* **partitionUpperBound**: any: The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
 
 ## AmazonRdsForOracleTableDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
+* **schema**: any: The schema name of the AmazonRdsForOracle database. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the AmazonRdsForOracle database. Type: string (or Expression with resultType string).
 
 ## AmazonRdsForSqlServerLinkedServiceTypeProperties
 ### Properties
 * **alwaysEncryptedSettings**: [SqlAlwaysEncryptedProperties](#sqlalwaysencryptedproperties): Sql always encrypted properties.
-* **connectionString**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **userName**: any: Any object
+* **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): The on-premises Windows authentication password.
+* **userName**: any: The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
 
 ## AmazonRdsForSqlServerSourceStoredProcedureParameters
 ### Properties
@@ -379,78 +379,78 @@
 
 ## AmazonRdsForSqlServerTableDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
+* **schema**: any: The schema name of the SQL Server dataset. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the SQL Server dataset. Type: string (or Expression with resultType string).
 
 ## AmazonRedshiftLinkedServiceTypeProperties
 ### Properties
-* **database**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **server**: any (Required): Any object
-* **username**: any: Any object
+* **database**: any (Required): The database name of the Amazon Redshift source. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): The password of the Amazon Redshift source.
+* **port**: any: The TCP port number that the Amazon Redshift server uses to listen for client connections. The default value is 5439. Type: integer (or Expression with resultType integer).
+* **server**: any (Required): The name of the Amazon Redshift server. Type: string (or Expression with resultType string).
+* **username**: any: The username of the Amazon Redshift source. Type: string (or Expression with resultType string).
 
 ## AmazonRedshiftTableDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **schema**: any: The Amazon Redshift schema name. Type: string (or Expression with resultType string).
+* **table**: any: The Amazon Redshift table name. Type: string (or Expression with resultType string).
+* **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
 
 ## AmazonS3CompatibleLinkedServiceTypeProperties
 ### Properties
-* **accessKeyId**: any: Any object
-* **encryptedCredential**: any: Any object
-* **forcePathStyle**: any: Any object
-* **secretAccessKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **serviceUrl**: any: Any object
+* **accessKeyId**: any: The access key identifier of the Amazon S3 Compatible Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **forcePathStyle**: any: If true, use S3 path-style access instead of virtual hosted-style access. Default value is false. Type: boolean (or Expression with resultType boolean).
+* **secretAccessKey**: [SecretBase](#secretbase): The secret access key of the Amazon S3 Compatible Identity and Access Management (IAM) user.
+* **serviceUrl**: any: This value specifies the endpoint to access with the Amazon S3 Compatible Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).
 
 ## AmazonS3DatasetTypeProperties
 ### Properties
-* **bucketName**: any (Required): Any object
-* **compression**: [DatasetCompression](#datasetcompression): The compression method used on a dataset.
-* **format**: [DatasetStorageFormat](#datasetstorageformat): The format definition of a storage.
-* **key**: any: Any object
-* **modifiedDatetimeEnd**: any: Any object
-* **modifiedDatetimeStart**: any: Any object
-* **prefix**: any: Any object
-* **version**: any: Any object
+* **bucketName**: any (Required): The name of the Amazon S3 bucket. Type: string (or Expression with resultType string).
+* **compression**: [DatasetCompression](#datasetcompression): The data compression method used for the Amazon S3 object.
+* **format**: [DatasetStorageFormat](#datasetstorageformat): The format of files.
+* **key**: any: The key of the Amazon S3 object. Type: string (or Expression with resultType string).
+* **modifiedDatetimeEnd**: any: The end of S3 object's modified datetime. Type: string (or Expression with resultType string).
+* **modifiedDatetimeStart**: any: The start of S3 object's modified datetime. Type: string (or Expression with resultType string).
+* **prefix**: any: The prefix filter for the S3 object name. Type: string (or Expression with resultType string).
+* **version**: any: The version for the S3 object. Type: string (or Expression with resultType string).
 
 ## AmazonS3LinkedServiceTypeProperties
 ### Properties
-* **accessKeyId**: any: Any object
-* **authenticationType**: any: Any object
-* **encryptedCredential**: any: Any object
-* **secretAccessKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **serviceUrl**: any: Any object
-* **sessionToken**: [SecretBase](#secretbase): The base definition of a secret type.
+* **accessKeyId**: any: The access key identifier of the Amazon S3 Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).
+* **authenticationType**: any: The authentication type of S3. Allowed value: AccessKey (default) or TemporarySecurityCredentials. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **secretAccessKey**: [SecretBase](#secretbase): The secret access key of the Amazon S3 Identity and Access Management (IAM) user.
+* **serviceUrl**: any: This value specifies the endpoint to access with the S3 Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).
+* **sessionToken**: [SecretBase](#secretbase): The session token for the S3 temporary security credential.
 
 ## AppendVariableActivityTypeProperties
 ### Properties
-* **value**: any: Any object
+* **value**: any: Value to be appended. Could be a static value or Expression
 * **variableName**: string: Name of the variable whose value needs to be appended to.
 
 ## AppFiguresLinkedServiceTypeProperties
 ### Properties
-* **clientKey**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
-* **password**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
-* **userName**: any (Required): Any object
+* **clientKey**: [SecretBase](#secretbase) (Required): The client key for the AppFigures source.
+* **password**: [SecretBase](#secretbase) (Required): The password of the AppFigures source.
+* **userName**: any (Required): The username of the Appfigures source.
 
 ## AsanaLinkedServiceTypeProperties
 ### Properties
-* **apiToken**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
-* **encryptedCredential**: any: Any object
+* **apiToken**: [SecretBase](#secretbase) (Required): The api token for the Asana source.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 
 ## AvroDatasetTypeProperties
 ### Properties
-* **avroCompressionCodec**: any: Any object
+* **avroCompressionCodec**: any: The data avroCompressionCodec. Type: string (or Expression with resultType string).
 * **avroCompressionLevel**: int
-* **location**: [DatasetLocation](#datasetlocation) (Required): Dataset location.
+* **location**: [DatasetLocation](#datasetlocation) (Required): The location of the avro storage.
 
 ## AvroWriteSettings
 ### Properties
-* **fileNamePrefix**: any: Any object
-* **maxRowsPerFile**: any: Any object
+* **fileNamePrefix**: any: Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+* **maxRowsPerFile**: any: Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
 * **recordName**: string: Top level record name in write result, which is required in AVRO spec.
 * **recordNamespace**: string: Record namespace in the write result.
 * **type**: string (Required): The write setting type.
@@ -463,110 +463,110 @@
 
 ## AzureBatchLinkedServiceTypeProperties
 ### Properties
-* **accessKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **accountName**: any (Required): Any object
-* **batchUri**: any (Required): Any object
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
-* **encryptedCredential**: any: Any object
-* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
-* **poolName**: any (Required): Any object
+* **accessKey**: [SecretBase](#secretbase): The Azure Batch account access key.
+* **accountName**: any (Required): The Azure Batch account name. Type: string (or Expression with resultType string).
+* **batchUri**: any (Required): The Azure Batch URI. Type: string (or Expression with resultType string).
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): The Azure Storage linked service reference.
+* **poolName**: any (Required): The Azure Batch pool name. Type: string (or Expression with resultType string).
 
 ## AzureBlobDatasetTypeProperties
 ### Properties
-* **compression**: [DatasetCompression](#datasetcompression): The compression method used on a dataset.
-* **fileName**: any: Any object
-* **folderPath**: any: Any object
-* **format**: [DatasetStorageFormat](#datasetstorageformat): The format definition of a storage.
-* **modifiedDatetimeEnd**: any: Any object
-* **modifiedDatetimeStart**: any: Any object
-* **tableRootLocation**: any: Any object
+* **compression**: [DatasetCompression](#datasetcompression): The data compression method used for the blob storage.
+* **fileName**: any: The name of the Azure Blob. Type: string (or Expression with resultType string).
+* **folderPath**: any: The path of the Azure Blob storage. Type: string (or Expression with resultType string).
+* **format**: [DatasetStorageFormat](#datasetstorageformat): The format of the Azure Blob storage.
+* **modifiedDatetimeEnd**: any: The end of Azure Blob's modified datetime. Type: string (or Expression with resultType string).
+* **modifiedDatetimeStart**: any: The start of Azure Blob's modified datetime. Type: string (or Expression with resultType string).
+* **tableRootLocation**: any: The root of blob path. Type: string (or Expression with resultType string).
 
 ## AzureBlobFSDatasetTypeProperties
 ### Properties
-* **compression**: [DatasetCompression](#datasetcompression): The compression method used on a dataset.
-* **fileName**: any: Any object
-* **folderPath**: any: Any object
-* **format**: [DatasetStorageFormat](#datasetstorageformat): The format definition of a storage.
+* **compression**: [DatasetCompression](#datasetcompression): The data compression method used for the blob storage.
+* **fileName**: any: The name of the Azure Data Lake Storage Gen2. Type: string (or Expression with resultType string).
+* **folderPath**: any: The path of the Azure Data Lake Storage Gen2 storage. Type: string (or Expression with resultType string).
+* **format**: [DatasetStorageFormat](#datasetstorageformat): The format of the Azure Data Lake Storage Gen2 storage.
 
 ## AzureBlobFSLinkedServiceTypeProperties
 ### Properties
-* **accountKey**: any: Any object
-* **azureCloudType**: any: Any object
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
-* **encryptedCredential**: any: Any object
-* **servicePrincipalCredential**: [SecretBase](#secretbase): The base definition of a secret type.
-* **servicePrincipalCredentialType**: any: Any object
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **tenant**: any: Any object
-* **url**: any (Required): Any object
+* **accountKey**: any: Account key for the Azure Data Lake Storage Gen2 service. Type: string (or Expression with resultType string).
+* **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **servicePrincipalCredential**: [SecretBase](#secretbase): The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
+* **servicePrincipalCredentialType**: any: The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
+* **servicePrincipalId**: any: The ID of the application used to authenticate against the Azure Data Lake Storage Gen2 account. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase): The Key of the application used to authenticate against the Azure Data Lake Storage Gen2 account.
+* **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+* **url**: any (Required): Endpoint for the Azure Data Lake Storage Gen2 service. Type: string (or Expression with resultType string).
 
 ## AzureBlobStorageLinkedServiceTypeProperties
 ### Properties
-* **accountKey**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
+* **accountKey**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of accountKey in connection string.
 * **accountKind**: string: Specify the kind of your storage account. Allowed values are: Storage (general purpose v1), StorageV2 (general purpose v2), BlobStorage, or BlockBlobStorage. Type: string (or Expression with resultType string).
-* **azureCloudType**: any: Any object
-* **connectionString**: any: Any object
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
+* **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+* **connectionString**: any: The connection string. It is mutually exclusive with sasUri, serviceEndpoint property. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-* **sasToken**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
-* **sasUri**: any: Any object
+* **sasToken**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of sasToken in sas uri.
+* **sasUri**: any: SAS URI of the Azure Blob Storage resource. It is mutually exclusive with connectionString, serviceEndpoint property. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **serviceEndpoint**: string: Blob service endpoint of the Azure Blob Storage resource. It is mutually exclusive with connectionString, sasUri property.
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **tenant**: any: Any object
+* **servicePrincipalId**: any: The ID of the service principal used to authenticate against Azure SQL Data Warehouse. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase): The key of the service principal used to authenticate against Azure SQL Data Warehouse.
+* **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
 
 ## AzureDatabricksDeltaLakeDatasetTypeProperties
 ### Properties
-* **database**: any: Any object
-* **table**: any: Any object
+* **database**: any: The database name of delta table. Type: string (or Expression with resultType string).
+* **table**: any: The name of delta table. Type: string (or Expression with resultType string).
 
 ## AzureDatabricksDeltaLakeExportCommand
 ### Properties
-* **dateFormat**: any: Any object
-* **timestampFormat**: any: Any object
+* **dateFormat**: any: Specify the date format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+* **timestampFormat**: any: Specify the timestamp format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
 * **type**: string (Required): The export setting type.
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## AzureDatabricksDeltaLakeImportCommand
 ### Properties
-* **dateFormat**: any: Any object
-* **timestampFormat**: any: Any object
+* **dateFormat**: any: Specify the date format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+* **timestampFormat**: any: Specify the timestamp format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
 * **type**: string (Required): The import setting type.
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## AzureDatabricksDetltaLakeLinkedServiceTypeProperties
 ### Properties
-* **accessToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **clusterId**: any: Any object
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
-* **domain**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **workspaceResourceId**: any: Any object
+* **accessToken**: [SecretBase](#secretbase): Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **clusterId**: any: The id of an existing interactive cluster that will be used for all runs of this job. Type: string (or Expression with resultType string).
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **domain**: any (Required): <REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **workspaceResourceId**: any: Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
 
 ## AzureDatabricksLinkedServiceTypeProperties
 ### Properties
-* **accessToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **authentication**: any: Any object
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
-* **domain**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **existingClusterId**: any: Any object
-* **instancePoolId**: any: Any object
+* **accessToken**: [SecretBase](#secretbase): Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).
+* **authentication**: any: Required to specify MSI, if using Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **domain**: any (Required): <REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **existingClusterId**: any: The id of an existing interactive cluster that will be used for all runs of this activity. Type: string (or Expression with resultType string).
+* **instancePoolId**: any: The id of an existing instance pool that will be used for all runs of this activity. Type: string (or Expression with resultType string).
 * **newClusterCustomTags**: [AzureDatabricksLinkedServiceTypePropertiesNewClusterCustomTags](#azuredatabrickslinkedservicetypepropertiesnewclustercustomtags): Additional tags for cluster resources. This property is ignored in instance pool configurations.
-* **newClusterDriverNodeType**: any: Any object
-* **newClusterEnableElasticDisk**: any: Any object
-* **newClusterInitScripts**: any: Any object
-* **newClusterLogDestination**: any: Any object
-* **newClusterNodeType**: any: Any object
-* **newClusterNumOfWorker**: any: Any object
+* **newClusterDriverNodeType**: any: The driver node type for the new job cluster. This property is ignored in instance pool configurations. Type: string (or Expression with resultType string).
+* **newClusterEnableElasticDisk**: any: Enable the elastic disk on the new cluster. This property is now ignored, and takes the default elastic disk behavior in Databricks (elastic disks are always enabled). Type: boolean (or Expression with resultType boolean).
+* **newClusterInitScripts**: any: User-defined initialization scripts for the new cluster. Type: array of strings (or Expression with resultType array of strings).
+* **newClusterLogDestination**: any: Specify a location to deliver Spark driver, worker, and event logs. Type: string (or Expression with resultType string).
+* **newClusterNodeType**: any: The node type of the new job cluster. This property is required if newClusterVersion is specified and instancePoolId is not specified. If instancePoolId is specified, this property is ignored. Type: string (or Expression with resultType string).
+* **newClusterNumOfWorker**: any: If not using an existing interactive cluster, this specifies the number of worker nodes to use for the new job cluster or instance pool. For new job clusters, this a string-formatted Int32, like '1' means numOfWorker is 1 or '1:10' means auto-scale from 1 (min) to 10 (max). For instance pools, this is a string-formatted Int32, and can only specify a fixed number of worker nodes, such as '2'. Required if newClusterVersion is specified. Type: string (or Expression with resultType string).
 * **newClusterSparkConf**: [AzureDatabricksLinkedServiceTypePropertiesNewClusterSparkConf](#azuredatabrickslinkedservicetypepropertiesnewclustersparkconf): A set of optional, user-specified Spark configuration key-value pairs.
 * **newClusterSparkEnvVars**: [AzureDatabricksLinkedServiceTypePropertiesNewClusterSparkEnvVars](#azuredatabrickslinkedservicetypepropertiesnewclustersparkenvvars): A set of optional, user-specified Spark environment variables key-value pairs.
-* **newClusterVersion**: any: Any object
-* **policyId**: any: Any object
-* **workspaceResourceId**: any: Any object
+* **newClusterVersion**: any: If not using an existing interactive cluster, this specifies the Spark version of a new job cluster or instance pool nodes created for each run of this activity. Required if instancePoolId is specified. Type: string (or Expression with resultType string).
+* **policyId**: any: The policy id for limiting the ability to configure clusters based on a user defined set of rules. Type: string (or Expression with resultType string).
+* **workspaceResourceId**: any: Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
 
 ## AzureDatabricksLinkedServiceTypePropertiesNewClusterCustomTags
 ### Properties
@@ -585,99 +585,99 @@
 
 ## AzureDataExplorerCommandActivityTypeProperties
 ### Properties
-* **command**: any (Required): Any object
-* **commandTimeout**: any: Any object
+* **command**: any (Required): A control command, according to the Azure Data Explorer command syntax. Type: string (or Expression with resultType string).
+* **commandTimeout**: any: Control command timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9]))..)
 
 ## AzureDataExplorerDatasetTypeProperties
 ### Properties
-* **table**: any: Any object
+* **table**: any: The table name of the Azure Data Explorer database. Type: string (or Expression with resultType string).
 
 ## AzureDataExplorerLinkedServiceTypeProperties
 ### Properties
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
-* **database**: any (Required): Any object
-* **endpoint**: any (Required): Any object
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **tenant**: any: Any object
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **database**: any (Required): Database name for connection. Type: string (or Expression with resultType string).
+* **endpoint**: any (Required): The endpoint of Azure Data Explorer (the engine's endpoint). URL will be in the format https://<clusterName>.<regionName>.kusto.windows.net. Type: string (or Expression with resultType string)
+* **servicePrincipalId**: any: The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase): The key of the service principal used to authenticate against Kusto.
+* **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
 
 ## AzureDataLakeAnalyticsLinkedServiceTypeProperties
 ### Properties
-* **accountName**: any (Required): Any object
-* **dataLakeAnalyticsUri**: any: Any object
-* **encryptedCredential**: any: Any object
-* **resourceGroupName**: any: Any object
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **subscriptionId**: any: Any object
-* **tenant**: any (Required): Any object
+* **accountName**: any (Required): The Azure Data Lake Analytics account name. Type: string (or Expression with resultType string).
+* **dataLakeAnalyticsUri**: any: Azure Data Lake Analytics URI Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **resourceGroupName**: any: Data Lake Analytics account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).
+* **servicePrincipalId**: any: The ID of the application used to authenticate against the Azure Data Lake Analytics account. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase): The Key of the application used to authenticate against the Azure Data Lake Analytics account.
+* **subscriptionId**: any: Data Lake Analytics account subscription ID (if different from Data Factory account). Type: string (or Expression with resultType string).
+* **tenant**: any (Required): The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
 
 ## AzureDataLakeStoreDatasetTypeProperties
 ### Properties
-* **compression**: [DatasetCompression](#datasetcompression): The compression method used on a dataset.
-* **fileName**: any: Any object
-* **folderPath**: any: Any object
-* **format**: [DatasetStorageFormat](#datasetstorageformat): The format definition of a storage.
+* **compression**: [DatasetCompression](#datasetcompression): The data compression method used for the item(s) in the Azure Data Lake Store.
+* **fileName**: any: The name of the file in the Azure Data Lake Store. Type: string (or Expression with resultType string).
+* **folderPath**: any: Path to the folder in the Azure Data Lake Store. Type: string (or Expression with resultType string).
+* **format**: [DatasetStorageFormat](#datasetstorageformat): The format of the Data Lake Store.
 
 ## AzureDataLakeStoreLinkedServiceTypeProperties
 ### Properties
-* **accountName**: any: Any object
-* **azureCloudType**: any: Any object
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
-* **dataLakeStoreUri**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **resourceGroupName**: any: Any object
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **subscriptionId**: any: Any object
-* **tenant**: any: Any object
+* **accountName**: any: Data Lake Store account name. Type: string (or Expression with resultType string).
+* **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **dataLakeStoreUri**: any (Required): Data Lake Store service URI. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **resourceGroupName**: any: Data Lake Store account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).
+* **servicePrincipalId**: any: The ID of the application used to authenticate against the Azure Data Lake Store account. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase): The Key of the application used to authenticate against the Azure Data Lake Store account.
+* **subscriptionId**: any: Data Lake Store account subscription ID (if different from Data Factory account). Type: string (or Expression with resultType string).
+* **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
 
 ## AzureFileStorageLinkedServiceTypeProperties
 ### Properties
-* **accountKey**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
-* **connectionString**: any: Any object
-* **encryptedCredential**: any: Any object
-* **fileShare**: any: Any object
-* **host**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **sasToken**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
-* **sasUri**: any: Any object
-* **snapshot**: any: Any object
-* **userId**: any: Any object
+* **accountKey**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of accountKey in connection string.
+* **connectionString**: any: The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **fileShare**: any: The azure file share name. It is required when auth with accountKey/sasToken. Type: string (or Expression with resultType string).
+* **host**: any: Host name of the server. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password to logon the server.
+* **sasToken**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of sasToken in sas uri.
+* **sasUri**: any: SAS URI of the Azure File resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **snapshot**: any: The azure file share snapshot version. Type: string (or Expression with resultType string).
+* **userId**: any: User ID to logon the server. Type: string (or Expression with resultType string).
 
 ## AzureFunctionActivityTypeProperties
 ### Properties
-* **body**: any: Any object
-* **functionName**: any (Required): Any object
-* **headers**: any: Any object
-* **method**: 'DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'POST' | 'PUT' | 'TRACE' | string (Required): The list of HTTP methods supported by a AzureFunctionActivity.
+* **body**: any: Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
+* **functionName**: any (Required): Name of the Function that the Azure Function Activity will call. Type: string (or Expression with resultType string)
+* **headers**: any: Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
+* **method**: 'DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'POST' | 'PUT' | 'TRACE' | string (Required): Rest API method for target endpoint.
 
 ## AzureFunctionLinkedServiceTypeProperties
 ### Properties
-* **authentication**: any: Any object
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
-* **encryptedCredential**: any: Any object
-* **functionAppUrl**: any (Required): Any object
-* **functionKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **resourceId**: any: Any object
+* **authentication**: any: Type of authentication (Required to specify MSI) used to connect to AzureFunction. Type: string (or Expression with resultType string).
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **functionAppUrl**: any (Required): The endpoint of the Azure Function App. URL will be in the format https://<accountName>.azurewebsites.net.
+* **functionKey**: [SecretBase](#secretbase): Function or Host key for Azure Function App.
+* **resourceId**: any: Allowed token audiences for azure function.
 
 ## AzureKeyVaultLinkedServiceTypeProperties
 ### Properties
-* **baseUrl**: any (Required): Any object
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
+* **baseUrl**: any (Required): The base URL of the Azure Key Vault. e.g. https://myakv.vault.azure.net Type: string (or Expression with resultType string).
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 
 ## AzureKeyVaultSecretReference
 ### Properties
-* **secretName**: any (Required): Any object
-* **secretVersion**: any: Any object
-* **store**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
+* **secretName**: any (Required): The name of the secret in Azure Key Vault. Type: string (or Expression with resultType string).
+* **secretVersion**: any: The version of the secret in Azure Key Vault. The default value is the latest version of the secret. Type: string (or Expression with resultType string).
+* **store**: [LinkedServiceReference](#linkedservicereference) (Required): The Azure Key Vault linked service reference.
 * **type**: string (Required): Type of the secret.
 
 ## AzureMariaDBLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any: Any object
-* **encryptedCredential**: any: Any object
-* **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
+* **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## AzureMLBatchExecutionActivityTypeProperties
 ### Properties
@@ -702,126 +702,126 @@
 
 ## AzureMLExecutePipelineActivityTypeProperties
 ### Properties
-* **continueOnStepFailure**: any: Any object
-* **dataPathAssignments**: any: Any object
-* **experimentName**: any: Any object
-* **mlParentRunId**: any: Any object
-* **mlPipelineEndpointId**: any: Any object
-* **mlPipelineId**: any: Any object
-* **mlPipelineParameters**: any: Any object
-* **version**: any: Any object
+* **continueOnStepFailure**: any: Whether to continue execution of other steps in the PipelineRun if a step fails. This information will be passed in the continueOnStepFailure property of the published pipeline execution request. Type: boolean (or Expression with resultType boolean).
+* **dataPathAssignments**: any: Dictionary used for changing data path assignments without retraining. Values will be passed in the dataPathAssignments property of the published pipeline execution request. Type: object with key value pairs (or Expression with resultType object).
+* **experimentName**: any: Run history experiment name of the pipeline run. This information will be passed in the ExperimentName property of the published pipeline execution request. Type: string (or Expression with resultType string).
+* **mlParentRunId**: any: The parent Azure ML Service pipeline run id. This information will be passed in the ParentRunId property of the published pipeline execution request. Type: string (or Expression with resultType string).
+* **mlPipelineEndpointId**: any: ID of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).
+* **mlPipelineId**: any: ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).
+* **mlPipelineParameters**: any: Key,Value pairs to be passed to the published Azure ML pipeline endpoint. Keys must match the names of pipeline parameters defined in the published pipeline. Values will be passed in the ParameterAssignments property of the published pipeline execution request. Type: object with key value pairs (or Expression with resultType object).
+* **version**: any: Version of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).
 
 ## AzureMLLinkedServiceTypeProperties
 ### Properties
-* **apiKey**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
-* **authentication**: any: Any object
-* **encryptedCredential**: any: Any object
-* **mlEndpoint**: any (Required): Any object
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **tenant**: any: Any object
-* **updateResourceEndpoint**: any: Any object
+* **apiKey**: [SecretBase](#secretbase) (Required): The API key for accessing the Azure ML model endpoint.
+* **authentication**: any: Type of authentication (Required to specify MSI) used to connect to AzureML. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **mlEndpoint**: any (Required): The Batch Execution REST URL for an Azure ML Studio Web Service endpoint. Type: string (or Expression with resultType string).
+* **servicePrincipalId**: any: The ID of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase): The key of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service.
+* **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+* **updateResourceEndpoint**: any: The Update Resource REST URL for an Azure ML Studio Web Service endpoint. Type: string (or Expression with resultType string).
 
 ## AzureMLServiceLinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: Any object
-* **mlWorkspaceName**: any (Required): Any object
-* **resourceGroupName**: any (Required): Any object
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **subscriptionId**: any (Required): Any object
-* **tenant**: any: Any object
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **mlWorkspaceName**: any (Required): Azure ML Service workspace name. Type: string (or Expression with resultType string).
+* **resourceGroupName**: any (Required): Azure ML Service workspace resource group name. Type: string (or Expression with resultType string).
+* **servicePrincipalId**: any: The ID of the service principal used to authenticate against the endpoint of a published Azure ML Service pipeline. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase): The key of the service principal used to authenticate against the endpoint of a published Azure ML Service pipeline.
+* **subscriptionId**: any (Required): Azure ML Service workspace subscription ID. Type: string (or Expression with resultType string).
+* **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
 
 ## AzureMLUpdateResourceActivityTypeProperties
 ### Properties
-* **trainedModelFilePath**: any (Required): Any object
-* **trainedModelLinkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
-* **trainedModelName**: any (Required): Any object
+* **trainedModelFilePath**: any (Required): The relative file path in trainedModelLinkedService to represent the .ilearner file that will be uploaded by the update operation.  Type: string (or Expression with resultType string).
+* **trainedModelLinkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Name of Azure Storage linked service holding the .ilearner file that will be uploaded by the update operation.
+* **trainedModelName**: any (Required): Name of the Trained Model module in the Web Service experiment to be updated. Type: string (or Expression with resultType string).
 
 ## AzureMLWebServiceFile
 ### Properties
-* **filePath**: any (Required): Any object
-* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
+* **filePath**: any (Required): The relative file path, including container name, in the Azure Blob Storage specified by the LinkedService. Type: string (or Expression with resultType string).
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Reference to an Azure Storage LinkedService, where Azure ML WebService Input/Output file located.
 
 ## AzureMySqlLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
+* **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## AzureMySqlTableDatasetTypeProperties
 ### Properties
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **table**: any: The name of Azure MySQL database table. Type: string (or Expression with resultType string).
+* **tableName**: any: The Azure MySQL database table name. Type: string (or Expression with resultType string).
 
 ## AzurePostgreSqlLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any: Any object
-* **encryptedCredential**: any: Any object
-* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
+* **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## AzurePostgreSqlTableDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **schema**: any: The schema name of the Azure PostgreSQL database. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the Azure PostgreSQL database. Type: string (or Expression with resultType string).
+* **tableName**: any: The table name of the Azure PostgreSQL database which includes both schema and table. Type: string (or Expression with resultType string).
 
 ## AzureSearchIndexDatasetTypeProperties
 ### Properties
-* **indexName**: any (Required): Any object
+* **indexName**: any (Required): The name of the Azure Search Index. Type: string (or Expression with resultType string).
 
 ## AzureSearchLinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: Any object
-* **key**: [SecretBase](#secretbase): The base definition of a secret type.
-* **url**: any (Required): Any object
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **key**: [SecretBase](#secretbase): Admin Key for Azure Search service
+* **url**: any (Required): URL for Azure Search service. Type: string (or Expression with resultType string).
 
 ## AzureSqlDatabaseLinkedServiceTypeProperties
 ### Properties
 * **alwaysEncryptedSettings**: [SqlAlwaysEncryptedProperties](#sqlalwaysencryptedproperties): Sql always encrypted properties.
-* **azureCloudType**: any: Any object
-* **connectionString**: any (Required): Any object
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
-* **encryptedCredential**: any: Any object
-* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **tenant**: any: Any object
+* **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+* **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
+* **servicePrincipalId**: any: The ID of the service principal used to authenticate against Azure SQL Database. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase): The key of the service principal used to authenticate against Azure SQL Database.
+* **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
 
 ## AzureSqlDWLinkedServiceTypeProperties
 ### Properties
-* **azureCloudType**: any: Any object
-* **connectionString**: any (Required): Any object
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
-* **encryptedCredential**: any: Any object
-* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **tenant**: any: Any object
+* **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+* **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
+* **servicePrincipalId**: any: The ID of the service principal used to authenticate against Azure SQL Data Warehouse. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase): The key of the service principal used to authenticate against Azure SQL Data Warehouse.
+* **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
 
 ## AzureSqlDWTableDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **schema**: any: The schema name of the Azure SQL Data Warehouse. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the Azure SQL Data Warehouse. Type: string (or Expression with resultType string).
+* **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
 
 ## AzureSqlMILinkedServiceTypeProperties
 ### Properties
 * **alwaysEncryptedSettings**: [SqlAlwaysEncryptedProperties](#sqlalwaysencryptedproperties): Sql always encrypted properties.
-* **azureCloudType**: any: Any object
-* **connectionString**: any (Required): Any object
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
-* **encryptedCredential**: any: Any object
-* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **tenant**: any: Any object
+* **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+* **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
+* **servicePrincipalId**: any: The ID of the service principal used to authenticate against Azure SQL Managed Instance. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase): The key of the service principal used to authenticate against Azure SQL Managed Instance.
+* **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
 
 ## AzureSqlMITableDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **schema**: any: The schema name of the Azure SQL Managed Instance. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the Azure SQL Managed Instance dataset. Type: string (or Expression with resultType string).
+* **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
 
 ## AzureSqlSinkStoredProcedureParameters
 ### Properties
@@ -835,30 +835,30 @@
 
 ## AzureSqlTableDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **schema**: any: The schema name of the Azure SQL database. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the Azure SQL database. Type: string (or Expression with resultType string).
+* **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
 
 ## AzureStorageLinkedServiceTypeProperties
 ### Properties
-* **accountKey**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
-* **connectionString**: any: Any object
+* **accountKey**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of accountKey in connection string.
+* **connectionString**: any: The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-* **sasToken**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
-* **sasUri**: any: Any object
+* **sasToken**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of sasToken in sas uri.
+* **sasUri**: any: SAS URI of the Azure Storage resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
 
 ## AzureTableDatasetTypeProperties
 ### Properties
-* **tableName**: any (Required): Any object
+* **tableName**: any (Required): The table name of the Azure Table storage. Type: string (or Expression with resultType string).
 
 ## BinaryDatasetTypeProperties
 ### Properties
-* **compression**: [DatasetCompression](#datasetcompression): The compression method used on a dataset.
-* **location**: [DatasetLocation](#datasetlocation) (Required): Dataset location.
+* **compression**: [DatasetCompression](#datasetcompression): The data compression method used for the binary dataset.
+* **location**: [DatasetLocation](#datasetlocation) (Required): The location of the Binary storage.
 
 ## BinaryReadSettings
 ### Properties
-* **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression read settings.
+* **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression settings.
 * **type**: string (Required): The read setting type.
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -867,29 +867,29 @@
 ### Properties
 * **blobPathBeginsWith**: string: The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
 * **blobPathEndsWith**: string: The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
-* **events**: 'Microsoft.Storage.BlobCreated' | 'Microsoft.Storage.BlobDeleted' | string[] (Required): Blob event types.
+* **events**: 'Microsoft.Storage.BlobCreated' | 'Microsoft.Storage.BlobDeleted' | string[] (Required): The type of events that cause this trigger to fire.
 * **ignoreEmptyBlobs**: bool: If set to true, blobs with zero bytes will be ignored.
 * **scope**: string (Required): The ARM resource ID of the Storage Account.
 
 ## BlobTriggerTypeProperties
 ### Properties
 * **folderPath**: string (Required): The path of the container/folder that will trigger the pipeline.
-* **linkedService**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
+* **linkedService**: [LinkedServiceReference](#linkedservicereference) (Required): The Azure Storage linked service reference.
 * **maxConcurrency**: int (Required): The max number of parallel files to handle when it is triggered.
 
 ## CassandraLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: any: Any object
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **username**: any: Any object
+* **authenticationType**: any: AuthenticationType to be used for connection. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **host**: any (Required): Host name for connection. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password for authentication.
+* **port**: any: The port for the connection. Type: integer (or Expression with resultType integer).
+* **username**: any: Username for authentication. Type: string (or Expression with resultType string).
 
 ## CassandraTableDatasetTypeProperties
 ### Properties
-* **keyspace**: any: Any object
-* **tableName**: any: Any object
+* **keyspace**: any: The keyspace of the Cassandra database. Type: string (or Expression with resultType string).
+* **tableName**: any: The table name of the Cassandra database. Type: string (or Expression with resultType string).
 
 ## ChainingTriggerTypeProperties
 ### Properties
@@ -898,9 +898,9 @@
 
 ## CmdkeySetupTypeProperties
 ### Properties
-* **password**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
-* **targetName**: any (Required): Any object
-* **userName**: any (Required): Any object
+* **password**: [SecretBase](#secretbase) (Required): The password of data source access.
+* **targetName**: any (Required): The server name of data source access.
+* **userName**: any (Required): The user name of data source access.
 
 ## CMKIdentityDefinition
 ### Properties
@@ -908,22 +908,22 @@
 
 ## CommonDataServiceForAppsEntityDatasetTypeProperties
 ### Properties
-* **entityName**: any: Any object
+* **entityName**: any: The logical name of the entity. Type: string (or Expression with resultType string).
 
 ## CommonDataServiceForAppsLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: any (Required): Any object
-* **deploymentType**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **hostName**: any: Any object
-* **organizationName**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **servicePrincipalCredential**: [SecretBase](#secretbase): The base definition of a secret type.
-* **servicePrincipalCredentialType**: any: Any object
-* **servicePrincipalId**: any: Any object
-* **serviceUri**: any: Any object
-* **username**: any: Any object
+* **authenticationType**: any (Required): The authentication type to connect to Common Data Service for Apps server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario. 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
+* **deploymentType**: any (Required): The deployment type of the Common Data Service for Apps instance. 'Online' for Common Data Service for Apps Online and 'OnPremisesWithIfd' for Common Data Service for Apps on-premises with Ifd. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **hostName**: any: The host name of the on-premises Common Data Service for Apps server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
+* **organizationName**: any: The organization name of the Common Data Service for Apps instance. The property is required for on-prem and required for online when there are more than one Common Data Service for Apps instances associated with the user. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password to access the Common Data Service for Apps instance.
+* **port**: any: The port of on-premises Common Data Service for Apps server. The property is required for on-prem and not allowed for online. Default is 443. Type: integer (or Expression with resultType integer), minimum: 0.
+* **servicePrincipalCredential**: [SecretBase](#secretbase): The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
+* **servicePrincipalCredentialType**: any: The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
+* **servicePrincipalId**: any: The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).
+* **serviceUri**: any: The URL to the Microsoft Common Data Service for Apps server. The property is required for on-line and not allowed for on-prem. Type: string (or Expression with resultType string).
+* **username**: any: User name to access the Common Data Service for Apps instance. Type: string (or Expression with resultType string).
 
 ## CompressionReadSettings
 * **Discriminator**: type
@@ -931,30 +931,30 @@
 ### Base Properties
 ### TarGZipReadSettings
 #### Properties
-* **preserveCompressionFileNameAsFolder**: any: Any object
+* **preserveCompressionFileNameAsFolder**: any: Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
 * **type**: 'TarGZipReadSettings' (Required): The Compression setting type.
 
 ### TarReadSettings
 #### Properties
-* **preserveCompressionFileNameAsFolder**: any: Any object
+* **preserveCompressionFileNameAsFolder**: any: Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
 * **type**: 'TarReadSettings' (Required): The Compression setting type.
 
 ### ZipDeflateReadSettings
 #### Properties
-* **preserveZipFileNameAsFolder**: any: Any object
+* **preserveZipFileNameAsFolder**: any: Preserve the zip file name as folder path. Type: boolean (or Expression with resultType boolean).
 * **type**: 'ZipDeflateReadSettings' (Required): The Compression setting type.
 
 
 ## ConcurLinkedServiceTypeProperties
 ### Properties
-* **clientId**: any (Required): Any object
-* **connectionProperties**: any: Any object
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
-* **username**: any (Required): Any object
+* **clientId**: any (Required): Application client_id supplied by Concur App Management.
+* **connectionProperties**: any: Properties used to connect to Concur. It is mutually exclusive with any other properties in the linked service. Type: object.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): The password corresponding to the user name that you provided in the username field.
+* **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+* **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+* **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+* **username**: any (Required): The user name that you use to access Concur Service.
 
 ## ConnectionStateProperties
 ### Properties
@@ -964,76 +964,76 @@
 
 ## CopyActivityLogSettings
 ### Properties
-* **enableReliableLogging**: any: Any object
-* **logLevel**: any: Any object
+* **enableReliableLogging**: any: Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
+* **logLevel**: any: Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
 
 ## CopyActivityTypeProperties
 ### Properties
-* **dataIntegrationUnits**: any: Any object
-* **enableSkipIncompatibleRow**: any: Any object
-* **enableStaging**: any: Any object
-* **logSettings**: [LogSettings](#logsettings): Log settings.
-* **logStorageSettings**: [LogStorageSettings](#logstoragesettings): (Deprecated. Please use LogSettings) Log storage settings.
-* **parallelCopies**: any: Any object
+* **dataIntegrationUnits**: any: Maximum number of data integration units that can be used to perform this data movement. Type: integer (or Expression with resultType integer), minimum: 0.
+* **enableSkipIncompatibleRow**: any: Whether to skip incompatible row. Default value is false. Type: boolean (or Expression with resultType boolean).
+* **enableStaging**: any: Specifies whether to copy data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
+* **logSettings**: [LogSettings](#logsettings): Log settings customer needs provide when enabling log.
+* **logStorageSettings**: [LogStorageSettings](#logstoragesettings): (Deprecated. Please use LogSettings) Log storage settings customer need to provide when enabling session log.
+* **parallelCopies**: any: Maximum number of concurrent sessions opened on the source or sink to avoid overloading the data store. Type: integer (or Expression with resultType integer), minimum: 0.
 * **preserve**: any[]: Preserve rules.
 * **preserveRules**: any[]: Preserve Rules.
-* **redirectIncompatibleRowSettings**: [RedirectIncompatibleRowSettings](#redirectincompatiblerowsettings): Redirect incompatible row settings
-* **sink**: [CopySink](#copysink) (Required): A copy activity sink.
-* **skipErrorFile**: [SkipErrorFile](#skiperrorfile): Skip error file.
-* **source**: [CopySource](#copysource) (Required): A copy activity source.
-* **stagingSettings**: [StagingSettings](#stagingsettings): Staging settings.
-* **translator**: any: Any object
-* **validateDataConsistency**: any: Any object
+* **redirectIncompatibleRowSettings**: [RedirectIncompatibleRowSettings](#redirectincompatiblerowsettings): Redirect incompatible row settings when EnableSkipIncompatibleRow is true.
+* **sink**: [CopySink](#copysink) (Required): Copy activity sink.
+* **skipErrorFile**: [SkipErrorFile](#skiperrorfile): Specify the fault tolerance for data consistency.
+* **source**: [CopySource](#copysource) (Required): Copy activity source.
+* **stagingSettings**: [StagingSettings](#stagingsettings): Specifies interim staging settings when EnableStaging is true.
+* **translator**: any: Copy activity translator. If not specified, tabular translator is used.
+* **validateDataConsistency**: any: Whether to enable Data Consistency validation. Type: boolean (or Expression with resultType boolean).
 
 ## CopySink
 * **Discriminator**: type
 
 ### Base Properties
-* **disableMetricsCollection**: any: Any object
-* **maxConcurrentConnections**: any: Any object
-* **sinkRetryCount**: any: Any object
-* **sinkRetryWait**: any: Any object
-* **writeBatchSize**: any: Any object
-* **writeBatchTimeout**: any: Any object
+* **disableMetricsCollection**: any: If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+* **maxConcurrentConnections**: any: The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+* **sinkRetryCount**: any: Sink retry count. Type: integer (or Expression with resultType integer).
+* **sinkRetryWait**: any: Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+* **writeBatchSize**: any: Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+* **writeBatchTimeout**: any: Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 ### AvroSink
 #### Properties
-* **formatSettings**: [AvroWriteSettings](#avrowritesettings): Avro write settings.
-* **storeSettings**: [StoreWriteSettings](#storewritesettings): Connector write settings.
+* **formatSettings**: [AvroWriteSettings](#avrowritesettings): Avro format settings.
+* **storeSettings**: [StoreWriteSettings](#storewritesettings): Avro store settings.
 * **type**: 'AvroSink' (Required): Copy sink type.
 
 ### AzureBlobFSSink
 #### Properties
-* **copyBehavior**: any: Any object
+* **copyBehavior**: any: The type of copy behavior for copy sink.
 * **metadata**: [MetadataItem](#metadataitem)[]: Specify the custom metadata to be added to sink data. Type: array of objects (or Expression with resultType array of objects).
 * **type**: 'AzureBlobFSSink' (Required): Copy sink type.
 
 ### AzureDatabricksDeltaLakeSink
 #### Properties
-* **importSettings**: [AzureDatabricksDeltaLakeImportCommand](#azuredatabricksdeltalakeimportcommand): Azure Databricks Delta Lake import command settings.
-* **preCopyScript**: any: Any object
+* **importSettings**: [AzureDatabricksDeltaLakeImportCommand](#azuredatabricksdeltalakeimportcommand): Azure Databricks Delta Lake import settings.
+* **preCopyScript**: any: SQL pre-copy script. Type: string (or Expression with resultType string).
 * **type**: 'AzureDatabricksDeltaLakeSink' (Required): Copy sink type.
 
 ### AzureDataExplorerSink
 #### Properties
-* **flushImmediately**: any: Any object
-* **ingestionMappingAsJson**: any: Any object
-* **ingestionMappingName**: any: Any object
+* **flushImmediately**: any: If set to true, any aggregation will be skipped. Default is false. Type: boolean.
+* **ingestionMappingAsJson**: any: An explicit column mapping description provided in a json format. Type: string.
+* **ingestionMappingName**: any: A name of a pre-created csv mapping that was defined on the target Kusto table. Type: string.
 * **type**: 'AzureDataExplorerSink' (Required): Copy sink type.
 
 ### AzureDataLakeStoreSink
 #### Properties
-* **copyBehavior**: any: Any object
-* **enableAdlsSingleFileParallel**: any: Any object
+* **copyBehavior**: any: The type of copy behavior for copy sink.
+* **enableAdlsSingleFileParallel**: any: Single File Parallel.
 * **type**: 'AzureDataLakeStoreSink' (Required): Copy sink type.
 
 ### AzureMySqlSink
 #### Properties
-* **preCopyScript**: any: Any object
+* **preCopyScript**: any: A query to execute before starting the copy. Type: string (or Expression with resultType string).
 * **type**: 'AzureMySqlSink' (Required): Copy sink type.
 
 ### AzurePostgreSqlSink
 #### Properties
-* **preCopyScript**: any: Any object
+* **preCopyScript**: any: A query to execute before starting the copy. Type: string (or Expression with resultType string).
 * **type**: 'AzurePostgreSqlSink' (Required): Copy sink type.
 
 ### AzureQueueSink
@@ -1047,861 +1047,869 @@
 
 ### AzureSqlSink
 #### Properties
-* **preCopyScript**: any: Any object
-* **sqlWriterStoredProcedureName**: any: Any object
-* **sqlWriterTableType**: any: Any object
-* **sqlWriterUseTableLock**: any: Any object
+* **preCopyScript**: any: SQL pre-copy script. Type: string (or Expression with resultType string).
+* **sqlWriterStoredProcedureName**: any: SQL writer stored procedure name. Type: string (or Expression with resultType string).
+* **sqlWriterTableType**: any: SQL writer table type. Type: string (or Expression with resultType string).
+* **sqlWriterUseTableLock**: any: Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
 * **storedProcedureParameters**: [AzureSqlSinkStoredProcedureParameters](#azuresqlsinkstoredprocedureparameters): SQL stored procedure parameters.
-* **storedProcedureTableTypeParameterName**: any: Any object
-* **tableOption**: any: Any object
+* **storedProcedureTableTypeParameterName**: any: The stored procedure parameter name of the table type. Type: string (or Expression with resultType string).
+* **tableOption**: any: The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
 * **type**: 'AzureSqlSink' (Required): Copy sink type.
-* **upsertSettings**: [SqlUpsertSettings](#sqlupsertsettings): Sql upsert option settings
-* **writeBehavior**: any: Any object
+* **upsertSettings**: [SqlUpsertSettings](#sqlupsertsettings): SQL upsert settings.
+* **writeBehavior**: any: Write behavior when copying data into Azure SQL. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum)
 
 ### AzureTableSink
 #### Properties
-* **azureTableDefaultPartitionKeyValue**: any: Any object
-* **azureTableInsertType**: any: Any object
-* **azureTablePartitionKeyName**: any: Any object
-* **azureTableRowKeyName**: any: Any object
+* **azureTableDefaultPartitionKeyValue**: any: Azure Table default partition key value. Type: string (or Expression with resultType string).
+* **azureTableInsertType**: any: Azure Table insert type. Type: string (or Expression with resultType string).
+* **azureTablePartitionKeyName**: any: Azure Table partition key name. Type: string (or Expression with resultType string).
+* **azureTableRowKeyName**: any: Azure Table row key name. Type: string (or Expression with resultType string).
 * **type**: 'AzureTableSink' (Required): Copy sink type.
 
 ### BinarySink
 #### Properties
-* **storeSettings**: [StoreWriteSettings](#storewritesettings): Connector write settings.
+* **storeSettings**: [StoreWriteSettings](#storewritesettings): Binary store settings.
 * **type**: 'BinarySink' (Required): Copy sink type.
 
 ### BlobSink
 #### Properties
-* **blobWriterAddHeader**: any: Any object
-* **blobWriterDateTimeFormat**: any: Any object
-* **blobWriterOverwriteFiles**: any: Any object
-* **copyBehavior**: any: Any object
+* **blobWriterAddHeader**: any: Blob writer add header. Type: boolean (or Expression with resultType boolean).
+* **blobWriterDateTimeFormat**: any: Blob writer date time format. Type: string (or Expression with resultType string).
+* **blobWriterOverwriteFiles**: any: Blob writer overwrite files. Type: boolean (or Expression with resultType boolean).
+* **copyBehavior**: any: The type of copy behavior for copy sink.
 * **metadata**: [MetadataItem](#metadataitem)[]: Specify the custom metadata to be added to sink data. Type: array of objects (or Expression with resultType array of objects).
 * **type**: 'BlobSink' (Required): Copy sink type.
 
 ### CommonDataServiceForAppsSink
 #### Properties
-* **alternateKeyName**: any: Any object
-* **ignoreNullValues**: any: Any object
+* **alternateKeyName**: any: The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).
+* **ignoreNullValues**: any: The flag indicating whether to ignore null values from input dataset (except key fields) during write operation. Default is false. Type: boolean (or Expression with resultType boolean).
 * **type**: 'CommonDataServiceForAppsSink' (Required): Copy sink type.
-* **writeBehavior**: 'Upsert' | string (Required): Defines values for DynamicsSinkWriteBehavior.
+* **writeBehavior**: 'Upsert' | string (Required): The write behavior for the operation.
 
 ### CosmosDbMongoDbApiSink
 #### Properties
 * **type**: 'CosmosDbMongoDbApiSink' (Required): Copy sink type.
-* **writeBehavior**: any: Any object
+* **writeBehavior**: any: Specifies whether the document with same key to be overwritten (upsert) rather than throw exception (insert). The default value is "insert". Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
 
 ### CosmosDbSqlApiSink
 #### Properties
 * **type**: 'CosmosDbSqlApiSink' (Required): Copy sink type.
-* **writeBehavior**: any: Any object
+* **writeBehavior**: any: Describes how to write data to Azure Cosmos DB. Type: string (or Expression with resultType string). Allowed values: insert and upsert.
 
 ### DelimitedTextSink
 #### Properties
-* **formatSettings**: [DelimitedTextWriteSettings](#delimitedtextwritesettings): Delimited text write settings.
-* **storeSettings**: [StoreWriteSettings](#storewritesettings): Connector write settings.
+* **formatSettings**: [DelimitedTextWriteSettings](#delimitedtextwritesettings): DelimitedText format settings.
+* **storeSettings**: [StoreWriteSettings](#storewritesettings): DelimitedText store settings.
 * **type**: 'DelimitedTextSink' (Required): Copy sink type.
 
 ### DocumentDbCollectionSink
 #### Properties
-* **nestingSeparator**: any: Any object
+* **nestingSeparator**: any: Nested properties separator. Default is . (dot). Type: string (or Expression with resultType string).
 * **type**: 'DocumentDbCollectionSink' (Required): Copy sink type.
-* **writeBehavior**: any: Any object
+* **writeBehavior**: any: Describes how to write data to Azure Cosmos DB. Type: string (or Expression with resultType string). Allowed values: insert and upsert.
 
 ### DynamicsCrmSink
 #### Properties
-* **alternateKeyName**: any: Any object
-* **ignoreNullValues**: any: Any object
+* **alternateKeyName**: any: The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).
+* **ignoreNullValues**: any: The flag indicating whether to ignore null values from input dataset (except key fields) during write operation. Default is false. Type: boolean (or Expression with resultType boolean).
 * **type**: 'DynamicsCrmSink' (Required): Copy sink type.
-* **writeBehavior**: 'Upsert' | string (Required): Defines values for DynamicsSinkWriteBehavior.
+* **writeBehavior**: 'Upsert' | string (Required): The write behavior for the operation.
 
 ### DynamicsSink
 #### Properties
-* **alternateKeyName**: any: Any object
-* **ignoreNullValues**: any: Any object
+* **alternateKeyName**: any: The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).
+* **ignoreNullValues**: any: The flag indicating whether ignore null values from input dataset (except key fields) during write operation. Default is false. Type: boolean (or Expression with resultType boolean).
 * **type**: 'DynamicsSink' (Required): Copy sink type.
-* **writeBehavior**: 'Upsert' | string (Required): Defines values for DynamicsSinkWriteBehavior.
+* **writeBehavior**: 'Upsert' | string (Required): The write behavior for the operation.
 
 ### FileSystemSink
 #### Properties
-* **copyBehavior**: any: Any object
+* **copyBehavior**: any: The type of copy behavior for copy sink.
 * **type**: 'FileSystemSink' (Required): Copy sink type.
 
 ### InformixSink
 #### Properties
-* **preCopyScript**: any: Any object
+* **preCopyScript**: any: A query to execute before starting the copy. Type: string (or Expression with resultType string).
 * **type**: 'InformixSink' (Required): Copy sink type.
 
 ### JsonSink
 #### Properties
-* **formatSettings**: [JsonWriteSettings](#jsonwritesettings): Json write settings.
-* **storeSettings**: [StoreWriteSettings](#storewritesettings): Connector write settings.
+* **formatSettings**: [JsonWriteSettings](#jsonwritesettings): Json format settings.
+* **storeSettings**: [StoreWriteSettings](#storewritesettings): Json store settings.
 * **type**: 'JsonSink' (Required): Copy sink type.
 
 ### MicrosoftAccessSink
 #### Properties
-* **preCopyScript**: any: Any object
+* **preCopyScript**: any: A query to execute before starting the copy. Type: string (or Expression with resultType string).
 * **type**: 'MicrosoftAccessSink' (Required): Copy sink type.
 
 ### MongoDbAtlasSink
 #### Properties
 * **type**: 'MongoDbAtlasSink' (Required): Copy sink type.
-* **writeBehavior**: any: Any object
+* **writeBehavior**: any: Specifies whether the document with same key to be overwritten (upsert) rather than throw exception (insert). The default value is "insert". Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
 
 ### MongoDbV2Sink
 #### Properties
 * **type**: 'MongoDbV2Sink' (Required): Copy sink type.
-* **writeBehavior**: any: Any object
+* **writeBehavior**: any: Specifies whether the document with same key to be overwritten (upsert) rather than throw exception (insert). The default value is "insert". Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
 
 ### OdbcSink
 #### Properties
-* **preCopyScript**: any: Any object
+* **preCopyScript**: any: A query to execute before starting the copy. Type: string (or Expression with resultType string).
 * **type**: 'OdbcSink' (Required): Copy sink type.
 
 ### OracleSink
 #### Properties
-* **preCopyScript**: any: Any object
+* **preCopyScript**: any: SQL pre-copy script. Type: string (or Expression with resultType string).
 * **type**: 'OracleSink' (Required): Copy sink type.
 
 ### OrcSink
 #### Properties
-* **formatSettings**: [OrcWriteSettings](#orcwritesettings): Orc write settings.
-* **storeSettings**: [StoreWriteSettings](#storewritesettings): Connector write settings.
+* **formatSettings**: [OrcWriteSettings](#orcwritesettings): ORC format settings.
+* **storeSettings**: [StoreWriteSettings](#storewritesettings): ORC store settings.
 * **type**: 'OrcSink' (Required): Copy sink type.
 
 ### ParquetSink
 #### Properties
-* **formatSettings**: [ParquetWriteSettings](#parquetwritesettings): Parquet write settings.
-* **storeSettings**: [StoreWriteSettings](#storewritesettings): Connector write settings.
+* **formatSettings**: [ParquetWriteSettings](#parquetwritesettings): Parquet format settings.
+* **storeSettings**: [StoreWriteSettings](#storewritesettings): Parquet store settings.
 * **type**: 'ParquetSink' (Required): Copy sink type.
 
 ### RestSink
 #### Properties
-* **additionalHeaders**: any: Any object
-* **httpCompressionType**: any: Any object
-* **httpRequestTimeout**: any: Any object
-* **requestInterval**: any: Any object
-* **requestMethod**: any: Any object
+* **additionalHeaders**: any: The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
+* **httpCompressionType**: any: Http Compression Type to Send data in compressed format with Optimal Compression Level, Default is None. And The Only Supported option is Gzip.
+* **httpRequestTimeout**: any: The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:01:40. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+* **requestInterval**: any: The time to await before sending next request, in milliseconds
+* **requestMethod**: any: The HTTP method used to call the RESTful API. The default is POST. Type: string (or Expression with resultType string).
 * **type**: 'RestSink' (Required): Copy sink type.
 
 ### SalesforceServiceCloudSink
 #### Properties
-* **externalIdFieldName**: any: Any object
-* **ignoreNullValues**: any: Any object
+* **externalIdFieldName**: any: The name of the external ID field for upsert operation. Default value is 'Id' column. Type: string (or Expression with resultType string).
+* **ignoreNullValues**: any: The flag indicating whether or not to ignore null values from input dataset (except key fields) during write operation. Default value is false. If set it to true, it means ADF will leave the data in the destination object unchanged when doing upsert/update operation and insert defined default value when doing insert operation, versus ADF will update the data in the destination object to NULL when doing upsert/update operation and insert NULL value when doing insert operation. Type: boolean (or Expression with resultType boolean).
 * **type**: 'SalesforceServiceCloudSink' (Required): Copy sink type.
 * **writeBehavior**: 'Insert' | 'Upsert' | string: The write behavior for the operation. Default is Insert.
 
 ### SalesforceSink
 #### Properties
-* **externalIdFieldName**: any: Any object
-* **ignoreNullValues**: any: Any object
+* **externalIdFieldName**: any: The name of the external ID field for upsert operation. Default value is 'Id' column. Type: string (or Expression with resultType string).
+* **ignoreNullValues**: any: The flag indicating whether or not to ignore null values from input dataset (except key fields) during write operation. Default value is false. If set it to true, it means ADF will leave the data in the destination object unchanged when doing upsert/update operation and insert defined default value when doing insert operation, versus ADF will update the data in the destination object to NULL when doing upsert/update operation and insert NULL value when doing insert operation. Type: boolean (or Expression with resultType boolean).
 * **type**: 'SalesforceSink' (Required): Copy sink type.
 * **writeBehavior**: 'Insert' | 'Upsert' | string: The write behavior for the operation. Default is Insert.
 
 ### SapCloudForCustomerSink
 #### Properties
-* **httpRequestTimeout**: any: Any object
+* **httpRequestTimeout**: any: The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:05:00. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'SapCloudForCustomerSink' (Required): Copy sink type.
 * **writeBehavior**: 'Insert' | 'Update' | string: The write behavior for the operation. Default is 'Insert'.
 
 ### SnowflakeSink
 #### Properties
-* **importSettings**: [SnowflakeImportCopyCommand](#snowflakeimportcopycommand): Snowflake import command settings.
-* **preCopyScript**: any: Any object
+* **importSettings**: [SnowflakeImportCopyCommand](#snowflakeimportcopycommand): Snowflake import settings.
+* **preCopyScript**: any: SQL pre-copy script. Type: string (or Expression with resultType string).
 * **type**: 'SnowflakeSink' (Required): Copy sink type.
 
 ### SqlDWSink
 #### Properties
-* **allowCopyCommand**: any: Any object
-* **allowPolyBase**: any: Any object
-* **copyCommandSettings**: [DWCopyCommandSettings](#dwcopycommandsettings): DW Copy Command settings.
-* **polyBaseSettings**: [PolybaseSettings](#polybasesettings): PolyBase settings.
-* **preCopyScript**: any: Any object
-* **sqlWriterUseTableLock**: any: Any object
-* **tableOption**: any: Any object
+* **allowCopyCommand**: any: Indicates to use Copy Command to copy data into SQL Data Warehouse. Type: boolean (or Expression with resultType boolean).
+* **allowPolyBase**: any: Indicates to use PolyBase to copy data into SQL Data Warehouse when applicable. Type: boolean (or Expression with resultType boolean).
+* **copyCommandSettings**: [DWCopyCommandSettings](#dwcopycommandsettings): Specifies Copy Command related settings when allowCopyCommand is true.
+* **polyBaseSettings**: [PolybaseSettings](#polybasesettings): Specifies PolyBase-related settings when allowPolyBase is true.
+* **preCopyScript**: any: SQL pre-copy script. Type: string (or Expression with resultType string).
+* **sqlWriterUseTableLock**: any: Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
+* **tableOption**: any: The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
 * **type**: 'SqlDWSink' (Required): Copy sink type.
-* **upsertSettings**: [SqlDWUpsertSettings](#sqldwupsertsettings): Sql DW upsert option settings
-* **writeBehavior**: any: Any object
+* **upsertSettings**: [SqlDWUpsertSettings](#sqldwupsertsettings): SQL DW upsert settings.
+* **writeBehavior**: any: Write behavior when copying data into azure SQL DW. Type: SqlDWWriteBehaviorEnum (or Expression with resultType SqlDWWriteBehaviorEnum)
 
 ### SqlMISink
 #### Properties
-* **preCopyScript**: any: Any object
-* **sqlWriterStoredProcedureName**: any: Any object
-* **sqlWriterTableType**: any: Any object
-* **sqlWriterUseTableLock**: any: Any object
+* **preCopyScript**: any: SQL pre-copy script. Type: string (or Expression with resultType string).
+* **sqlWriterStoredProcedureName**: any: SQL writer stored procedure name. Type: string (or Expression with resultType string).
+* **sqlWriterTableType**: any: SQL writer table type. Type: string (or Expression with resultType string).
+* **sqlWriterUseTableLock**: any: Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
 * **storedProcedureParameters**: [SqlMISinkStoredProcedureParameters](#sqlmisinkstoredprocedureparameters): SQL stored procedure parameters.
-* **storedProcedureTableTypeParameterName**: any: Any object
-* **tableOption**: any: Any object
+* **storedProcedureTableTypeParameterName**: any: The stored procedure parameter name of the table type. Type: string (or Expression with resultType string).
+* **tableOption**: any: The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
 * **type**: 'SqlMISink' (Required): Copy sink type.
-* **upsertSettings**: [SqlUpsertSettings](#sqlupsertsettings): Sql upsert option settings
-* **writeBehavior**: any: Any object
+* **upsertSettings**: [SqlUpsertSettings](#sqlupsertsettings): SQL upsert settings.
+* **writeBehavior**: any: White behavior when copying data into azure SQL MI. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum)
 
 ### SqlServerSink
 #### Properties
-* **preCopyScript**: any: Any object
-* **sqlWriterStoredProcedureName**: any: Any object
-* **sqlWriterTableType**: any: Any object
-* **sqlWriterUseTableLock**: any: Any object
+* **preCopyScript**: any: SQL pre-copy script. Type: string (or Expression with resultType string).
+* **sqlWriterStoredProcedureName**: any: SQL writer stored procedure name. Type: string (or Expression with resultType string).
+* **sqlWriterTableType**: any: SQL writer table type. Type: string (or Expression with resultType string).
+* **sqlWriterUseTableLock**: any: Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
 * **storedProcedureParameters**: [SqlServerSinkStoredProcedureParameters](#sqlserversinkstoredprocedureparameters): SQL stored procedure parameters.
-* **storedProcedureTableTypeParameterName**: any: Any object
-* **tableOption**: any: Any object
+* **storedProcedureTableTypeParameterName**: any: The stored procedure parameter name of the table type. Type: string (or Expression with resultType string).
+* **tableOption**: any: The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
 * **type**: 'SqlServerSink' (Required): Copy sink type.
-* **upsertSettings**: [SqlUpsertSettings](#sqlupsertsettings): Sql upsert option settings
-* **writeBehavior**: any: Any object
+* **upsertSettings**: [SqlUpsertSettings](#sqlupsertsettings): SQL upsert settings.
+* **writeBehavior**: any: Write behavior when copying data into sql server. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum)
 
 ### SqlSink
 #### Properties
-* **preCopyScript**: any: Any object
-* **sqlWriterStoredProcedureName**: any: Any object
-* **sqlWriterTableType**: any: Any object
-* **sqlWriterUseTableLock**: any: Any object
+* **preCopyScript**: any: SQL pre-copy script. Type: string (or Expression with resultType string).
+* **sqlWriterStoredProcedureName**: any: SQL writer stored procedure name. Type: string (or Expression with resultType string).
+* **sqlWriterTableType**: any: SQL writer table type. Type: string (or Expression with resultType string).
+* **sqlWriterUseTableLock**: any: Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
 * **storedProcedureParameters**: [SqlSinkStoredProcedureParameters](#sqlsinkstoredprocedureparameters): SQL stored procedure parameters.
-* **storedProcedureTableTypeParameterName**: any: Any object
-* **tableOption**: any: Any object
+* **storedProcedureTableTypeParameterName**: any: The stored procedure parameter name of the table type. Type: string (or Expression with resultType string).
+* **tableOption**: any: The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
 * **type**: 'SqlSink' (Required): Copy sink type.
-* **upsertSettings**: [SqlUpsertSettings](#sqlupsertsettings): Sql upsert option settings
-* **writeBehavior**: any: Any object
+* **upsertSettings**: [SqlUpsertSettings](#sqlupsertsettings): SQL upsert settings.
+* **writeBehavior**: any: Write behavior when copying data into sql. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum)
 
 
 ## CopySource
 * **Discriminator**: type
 
 ### Base Properties
-* **disableMetricsCollection**: any: Any object
-* **maxConcurrentConnections**: any: Any object
-* **sourceRetryCount**: any: Any object
-* **sourceRetryWait**: any: Any object
+* **disableMetricsCollection**: any: If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+* **maxConcurrentConnections**: any: The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+* **sourceRetryCount**: any: Source retry count. Type: integer (or Expression with resultType integer).
+* **sourceRetryWait**: any: Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 ### AmazonMWSSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'AmazonMWSSource' (Required): Copy source type.
 
 ### AmazonRdsForOracleSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **oracleReaderQuery**: any: Any object
-* **partitionOption**: any: Any object
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **oracleReaderQuery**: any: AmazonRdsForOracle reader query. Type: string (or Expression with resultType string).
+* **partitionOption**: any: The partition mechanism that will be used for AmazonRdsForOracle read in parallel. Type: string (or Expression with resultType string).
 * **partitionSettings**: [AmazonRdsForOraclePartitionSettings](#amazonrdsfororaclepartitionsettings): The settings that will be leveraged for AmazonRdsForOracle source partitioning.
-* **queryTimeout**: any: Any object
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'AmazonRdsForOracleSource' (Required): Copy source type.
 
 ### AmazonRdsForSqlServerSource
 #### Properties
-* **partitionOption**: any: Any object
+* **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
-* **produceAdditionalTypes**: any: Any object
-* **sqlReaderQuery**: any: Any object
-* **sqlReaderStoredProcedureName**: any: Any object
+* **produceAdditionalTypes**: any: Which additional types to produce.
+* **sqlReaderQuery**: any: SQL reader query. Type: string (or Expression with resultType string).
+* **sqlReaderStoredProcedureName**: any: Name of the stored procedure for a SQL Database source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
 * **storedProcedureParameters**: [AmazonRdsForSqlServerSourceStoredProcedureParameters](#amazonrdsforsqlserversourcestoredprocedureparameters): Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
 * **type**: 'AmazonRdsForSqlServerSource' (Required): Copy source type.
 
 ### AmazonRedshiftSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: Database query. Type: string (or Expression with resultType string).
 * **redshiftUnloadSettings**: [RedshiftUnloadSettings](#redshiftunloadsettings): The Amazon S3 settings needed for the interim Amazon S3 when copying from Amazon Redshift with unload. With this, data from Amazon Redshift source will be unloaded into S3 first and then copied into the targeted sink from the interim S3.
 * **type**: 'AmazonRedshiftSource' (Required): Copy source type.
 
 ### AvroSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **storeSettings**: [StoreReadSettings](#storereadsettings): Connector read setting.
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **storeSettings**: [StoreReadSettings](#storereadsettings): Avro store settings.
 * **type**: 'AvroSource' (Required): Copy source type.
 
 ### AzureBlobFSSource
 #### Properties
-* **recursive**: any: Any object
-* **skipHeaderLineCount**: any: Any object
-* **treatEmptyAsNull**: any: Any object
+* **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
+* **skipHeaderLineCount**: any: Number of header lines to skip from each blob. Type: integer (or Expression with resultType integer).
+* **treatEmptyAsNull**: any: Treat empty as null. Type: boolean (or Expression with resultType boolean).
 * **type**: 'AzureBlobFSSource' (Required): Copy source type.
 
 ### AzureDatabricksDeltaLakeSource
 #### Properties
-* **exportSettings**: [AzureDatabricksDeltaLakeExportCommand](#azuredatabricksdeltalakeexportcommand): Azure Databricks Delta Lake export command settings.
-* **query**: any: Any object
+* **exportSettings**: [AzureDatabricksDeltaLakeExportCommand](#azuredatabricksdeltalakeexportcommand): Azure Databricks Delta Lake export settings.
+* **query**: any: Azure Databricks Delta Lake Sql query. Type: string (or Expression with resultType string).
 * **type**: 'AzureDatabricksDeltaLakeSource' (Required): Copy source type.
 
 ### AzureDataExplorerSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **noTruncation**: any: Any object
-* **query**: any (Required): Any object
-* **queryTimeout**: any: Any object
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **noTruncation**: any: The name of the Boolean option that controls whether truncation is applied to result-sets that go beyond a certain row-count limit.
+* **query**: any (Required): Database query. Should be a Kusto Query Language (KQL) query. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9]))..
 * **type**: 'AzureDataExplorerSource' (Required): Copy source type.
 
 ### AzureDataLakeStoreSource
 #### Properties
-* **recursive**: any: Any object
+* **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
 * **type**: 'AzureDataLakeStoreSource' (Required): Copy source type.
 
 ### AzureMariaDBSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'AzureMariaDBSource' (Required): Copy source type.
 
 ### AzureMySqlSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: Database query. Type: string (or Expression with resultType string).
 * **type**: 'AzureMySqlSource' (Required): Copy source type.
 
 ### AzurePostgreSqlSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'AzurePostgreSqlSource' (Required): Copy source type.
 
 ### AzureSqlSource
 #### Properties
-* **partitionOption**: any: Any object
+* **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
-* **produceAdditionalTypes**: any: Any object
-* **sqlReaderQuery**: any: Any object
-* **sqlReaderStoredProcedureName**: any: Any object
+* **produceAdditionalTypes**: any: Which additional types to produce.
+* **sqlReaderQuery**: any: SQL reader query. Type: string (or Expression with resultType string).
+* **sqlReaderStoredProcedureName**: any: Name of the stored procedure for a SQL Database source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
 * **storedProcedureParameters**: [AzureSqlSourceStoredProcedureParameters](#azuresqlsourcestoredprocedureparameters): Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
 * **type**: 'AzureSqlSource' (Required): Copy source type.
 
 ### AzureTableSource
 #### Properties
-* **azureTableSourceIgnoreTableNotFound**: any: Any object
-* **azureTableSourceQuery**: any: Any object
+* **azureTableSourceIgnoreTableNotFound**: any: Azure Table source ignore table not found. Type: boolean (or Expression with resultType boolean).
+* **azureTableSourceQuery**: any: Azure Table source query. Type: string (or Expression with resultType string).
 * **type**: 'AzureTableSource' (Required): Copy source type.
 
 ### BinarySource
 #### Properties
-* **formatSettings**: [BinaryReadSettings](#binaryreadsettings): Binary read settings.
-* **storeSettings**: [StoreReadSettings](#storereadsettings): Connector read setting.
+* **formatSettings**: [BinaryReadSettings](#binaryreadsettings): Binary format settings.
+* **storeSettings**: [StoreReadSettings](#storereadsettings): Binary store settings.
 * **type**: 'BinarySource' (Required): Copy source type.
 
 ### BlobSource
 #### Properties
-* **recursive**: any: Any object
-* **skipHeaderLineCount**: any: Any object
-* **treatEmptyAsNull**: any: Any object
+* **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
+* **skipHeaderLineCount**: any: Number of header lines to skip from each blob. Type: integer (or Expression with resultType integer).
+* **treatEmptyAsNull**: any: Treat empty as null. Type: boolean (or Expression with resultType boolean).
 * **type**: 'BlobSource' (Required): Copy source type.
 
 ### CassandraSource
 #### Properties
 * **consistencyLevel**: 'ALL' | 'EACH_QUORUM' | 'LOCAL_ONE' | 'LOCAL_QUORUM' | 'LOCAL_SERIAL' | 'ONE' | 'QUORUM' | 'SERIAL' | 'THREE' | 'TWO' | string: The consistency level specifies how many Cassandra servers must respond to a read request before returning data to the client application. Cassandra checks the specified number of Cassandra servers for data to satisfy the read request. Must be one of cassandraSourceReadConsistencyLevels. The default value is 'ONE'. It is case-insensitive.
-* **query**: any: Any object
+* **query**: any: Database query. Should be a SQL-92 query expression or Cassandra Query Language (CQL) command. Type: string (or Expression with resultType string).
 * **type**: 'CassandraSource' (Required): Copy source type.
 
 ### CommonDataServiceForAppsSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **query**: any: Any object
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **query**: any: FetchXML is a proprietary query language that is used in Microsoft Common Data Service for Apps (online & on-premises). Type: string (or Expression with resultType string).
 * **type**: 'CommonDataServiceForAppsSource' (Required): Copy source type.
 
 ### ConcurSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'ConcurSource' (Required): Copy source type.
 
 ### CosmosDbMongoDbApiSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **batchSize**: any: Any object
-* **cursorMethods**: [MongoDbCursorMethodsProperties](#mongodbcursormethodsproperties): Cursor methods for Mongodb query
-* **filter**: any: Any object
-* **queryTimeout**: any: Any object
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **batchSize**: any: Specifies the number of documents to return in each batch of the response from MongoDB instance. In most cases, modifying the batch size will not affect the user or the application. This property's main purpose is to avoid hit the limitation of response size. Type: integer (or Expression with resultType integer).
+* **cursorMethods**: [MongoDbCursorMethodsProperties](#mongodbcursormethodsproperties): Cursor methods for Mongodb query.
+* **filter**: any: Specifies selection filter using query operators. To return all documents in a collection, omit this parameter or pass an empty document ({}). Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'CosmosDbMongoDbApiSource' (Required): Copy source type.
 
 ### CosmosDbSqlApiSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **detectDatetime**: any: Any object
-* **pageSize**: any: Any object
-* **preferredRegions**: any: Any object
-* **query**: any: Any object
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **detectDatetime**: any: Whether detect primitive values as datetime values. Type: boolean (or Expression with resultType boolean).
+* **pageSize**: any: Page size of the result. Type: integer (or Expression with resultType integer).
+* **preferredRegions**: any: Preferred regions. Type: array of strings (or Expression with resultType array of strings).
+* **query**: any: SQL API query. Type: string (or Expression with resultType string).
 * **type**: 'CosmosDbSqlApiSource' (Required): Copy source type.
 
 ### CouchbaseSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'CouchbaseSource' (Required): Copy source type.
 
 ### Db2Source
 #### Properties
-* **query**: any: Any object
+* **query**: any: Database query. Type: string (or Expression with resultType string).
 * **type**: 'Db2Source' (Required): Copy source type.
 
 ### DelimitedTextSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **formatSettings**: [DelimitedTextReadSettings](#delimitedtextreadsettings): Delimited text read settings.
-* **storeSettings**: [StoreReadSettings](#storereadsettings): Connector read setting.
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **formatSettings**: [DelimitedTextReadSettings](#delimitedtextreadsettings): DelimitedText format settings.
+* **storeSettings**: [StoreReadSettings](#storereadsettings): DelimitedText store settings.
 * **type**: 'DelimitedTextSource' (Required): Copy source type.
 
 ### DocumentDbCollectionSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **nestingSeparator**: any: Any object
-* **query**: any: Any object
-* **queryTimeout**: any: Any object
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **nestingSeparator**: any: Nested properties separator. Type: string (or Expression with resultType string).
+* **query**: any: Documents query. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'DocumentDbCollectionSource' (Required): Copy source type.
 
 ### DrillSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'DrillSource' (Required): Copy source type.
 
 ### DynamicsAXSource
 #### Properties
-* **httpRequestTimeout**: any: Any object
-* **query**: any: Any object
+* **httpRequestTimeout**: any: The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:05:00. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'DynamicsAXSource' (Required): Copy source type.
 
 ### DynamicsCrmSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **query**: any: Any object
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **query**: any: FetchXML is a proprietary query language that is used in Microsoft Dynamics CRM (online & on-premises). Type: string (or Expression with resultType string).
 * **type**: 'DynamicsCrmSource' (Required): Copy source type.
 
 ### DynamicsSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **query**: any: Any object
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **query**: any: FetchXML is a proprietary query language that is used in Microsoft Dynamics (online & on-premises). Type: string (or Expression with resultType string).
 * **type**: 'DynamicsSource' (Required): Copy source type.
 
 ### EloquaSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'EloquaSource' (Required): Copy source type.
 
 ### ExcelSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **storeSettings**: [StoreReadSettings](#storereadsettings): Connector read setting.
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **storeSettings**: [StoreReadSettings](#storereadsettings): Excel store settings.
 * **type**: 'ExcelSource' (Required): Copy source type.
 
 ### FileSystemSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **recursive**: any: Any object
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
 * **type**: 'FileSystemSource' (Required): Copy source type.
 
 ### GoogleAdWordsSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'GoogleAdWordsSource' (Required): Copy source type.
 
 ### GoogleBigQuerySource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'GoogleBigQuerySource' (Required): Copy source type.
 
 ### GreenplumSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'GreenplumSource' (Required): Copy source type.
 
 ### HBaseSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'HBaseSource' (Required): Copy source type.
 
 ### HdfsSource
 #### Properties
-* **distcpSettings**: [DistcpSettings](#distcpsettings): Distcp settings.
-* **recursive**: any: Any object
+* **distcpSettings**: [DistcpSettings](#distcpsettings): Specifies Distcp-related settings.
+* **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
 * **type**: 'HdfsSource' (Required): Copy source type.
 
 ### HiveSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'HiveSource' (Required): Copy source type.
 
 ### HttpSource
 #### Properties
-* **httpRequestTimeout**: any: Any object
+* **httpRequestTimeout**: any: Specifies the timeout for a HTTP client to get HTTP response from HTTP server. The default value is equivalent to System.Net.HttpWebRequest.Timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'HttpSource' (Required): Copy source type.
 
 ### HubspotSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'HubspotSource' (Required): Copy source type.
 
 ### ImpalaSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'ImpalaSource' (Required): Copy source type.
 
 ### InformixSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: Database query. Type: string (or Expression with resultType string).
 * **type**: 'InformixSource' (Required): Copy source type.
 
 ### JiraSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'JiraSource' (Required): Copy source type.
 
 ### JsonSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **formatSettings**: [JsonReadSettings](#jsonreadsettings): Json read settings.
-* **storeSettings**: [StoreReadSettings](#storereadsettings): Connector read setting.
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **formatSettings**: [JsonReadSettings](#jsonreadsettings): Json format settings.
+* **storeSettings**: [StoreReadSettings](#storereadsettings): Json store settings.
 * **type**: 'JsonSource' (Required): Copy source type.
 
 ### MagentoSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'MagentoSource' (Required): Copy source type.
 
 ### MariaDBSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'MariaDBSource' (Required): Copy source type.
 
 ### MarketoSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'MarketoSource' (Required): Copy source type.
 
 ### MicrosoftAccessSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **query**: any: Any object
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **query**: any: Database query. Type: string (or Expression with resultType string).
 * **type**: 'MicrosoftAccessSource' (Required): Copy source type.
 
 ### MongoDbAtlasSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **batchSize**: any: Any object
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **batchSize**: any: Specifies the number of documents to return in each batch of the response from MongoDB Atlas instance. In most cases, modifying the batch size will not affect the user or the application. This property's main purpose is to avoid hit the limitation of response size. Type: integer (or Expression with resultType integer).
 * **cursorMethods**: [MongoDbCursorMethodsProperties](#mongodbcursormethodsproperties): Cursor methods for Mongodb query
-* **filter**: any: Any object
-* **queryTimeout**: any: Any object
+* **filter**: any: Specifies selection filter using query operators. To return all documents in a collection, omit this parameter or pass an empty document ({}). Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'MongoDbAtlasSource' (Required): Copy source type.
 
 ### MongoDbSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **query**: any: Any object
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **query**: any: Database query. Should be a SQL-92 query expression. Type: string (or Expression with resultType string).
 * **type**: 'MongoDbSource' (Required): Copy source type.
 
 ### MongoDbV2Source
 #### Properties
-* **additionalColumns**: any: Any object
-* **batchSize**: any: Any object
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **batchSize**: any: Specifies the number of documents to return in each batch of the response from MongoDB instance. In most cases, modifying the batch size will not affect the user or the application. This property's main purpose is to avoid hit the limitation of response size. Type: integer (or Expression with resultType integer).
 * **cursorMethods**: [MongoDbCursorMethodsProperties](#mongodbcursormethodsproperties): Cursor methods for Mongodb query
-* **filter**: any: Any object
-* **queryTimeout**: any: Any object
+* **filter**: any: Specifies selection filter using query operators. To return all documents in a collection, omit this parameter or pass an empty document ({}). Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'MongoDbV2Source' (Required): Copy source type.
 
 ### MySqlSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: Database query. Type: string (or Expression with resultType string).
 * **type**: 'MySqlSource' (Required): Copy source type.
 
 ### NetezzaSource
 #### Properties
-* **partitionOption**: any: Any object
+* **partitionOption**: any: The partition mechanism that will be used for Netezza read in parallel. Possible values include: "None", "DataSlice", "DynamicRange".
 * **partitionSettings**: [NetezzaPartitionSettings](#netezzapartitionsettings): The settings that will be leveraged for Netezza source partitioning.
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'NetezzaSource' (Required): Copy source type.
 
 ### ODataSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **httpRequestTimeout**: any: Any object
-* **query**: any: Any object
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **httpRequestTimeout**: any: The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:05:00. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+* **query**: any: OData query. For example, "$top=1". Type: string (or Expression with resultType string).
 * **type**: 'ODataSource' (Required): Copy source type.
 
 ### OdbcSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: Database query. Type: string (or Expression with resultType string).
 * **type**: 'OdbcSource' (Required): Copy source type.
 
 ### Office365Source
 #### Properties
-* **allowedGroups**: any: Any object
-* **dateFilterColumn**: any: Any object
-* **endTime**: any: Any object
-* **outputColumns**: any: Any object
-* **startTime**: any: Any object
+* **allowedGroups**: any: The groups containing all the users. Type: array of strings (or Expression with resultType array of strings).
+* **dateFilterColumn**: any: The Column to apply the <paramref name="StartTime"/> and <paramref name="EndTime"/>. Type: string (or Expression with resultType string).
+* **endTime**: any: End time of the requested range for this dataset. Type: string (or Expression with resultType string).
+* **outputColumns**: any: The columns to be read out from the Office 365 table. Type: array of objects (or Expression with resultType array of objects). Example: [ { "name": "Id" }, { "name": "CreatedDateTime" } ]
+* **startTime**: any: Start time of the requested range for this dataset. Type: string (or Expression with resultType string).
 * **type**: 'Office365Source' (Required): Copy source type.
-* **userScopeFilterUri**: any: Any object
+* **userScopeFilterUri**: any: The user scope uri. Type: string (or Expression with resultType string).
 
 ### OracleServiceCloudSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'OracleServiceCloudSource' (Required): Copy source type.
 
 ### OracleSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **oracleReaderQuery**: any: Any object
-* **partitionOption**: any: Any object
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **oracleReaderQuery**: any: Oracle reader query. Type: string (or Expression with resultType string).
+* **partitionOption**: any: The partition mechanism that will be used for Oracle read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [OraclePartitionSettings](#oraclepartitionsettings): The settings that will be leveraged for Oracle source partitioning.
-* **queryTimeout**: any: Any object
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'OracleSource' (Required): Copy source type.
 
 ### OrcSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **storeSettings**: [StoreReadSettings](#storereadsettings): Connector read setting.
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **storeSettings**: [StoreReadSettings](#storereadsettings): ORC store settings.
 * **type**: 'OrcSource' (Required): Copy source type.
 
 ### ParquetSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **storeSettings**: [StoreReadSettings](#storereadsettings): Connector read setting.
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **storeSettings**: [StoreReadSettings](#storereadsettings): Parquet store settings.
 * **type**: 'ParquetSource' (Required): Copy source type.
 
 ### PaypalSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'PaypalSource' (Required): Copy source type.
 
 ### PhoenixSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'PhoenixSource' (Required): Copy source type.
 
 ### PostgreSqlSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: Database query. Type: string (or Expression with resultType string).
 * **type**: 'PostgreSqlSource' (Required): Copy source type.
 
 ### PrestoSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'PrestoSource' (Required): Copy source type.
 
 ### QuickBooksSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'QuickBooksSource' (Required): Copy source type.
 
 ### RelationalSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **query**: any: Any object
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **query**: any: Database query. Type: string (or Expression with resultType string).
 * **type**: 'RelationalSource' (Required): Copy source type.
 
 ### ResponsysSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'ResponsysSource' (Required): Copy source type.
 
 ### RestSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **additionalHeaders**: any: Any object
-* **httpRequestTimeout**: any: Any object
-* **paginationRules**: any: Any object
-* **requestBody**: any: Any object
-* **requestInterval**: any: Any object
-* **requestMethod**: any: Any object
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **additionalHeaders**: any: The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
+* **httpRequestTimeout**: any: The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:01:40. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+* **paginationRules**: any: The pagination rules to compose next page requests. Type: string (or Expression with resultType string).
+* **requestBody**: any: The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
+* **requestInterval**: any: The time to await before sending next page request.
+* **requestMethod**: any: The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
 * **type**: 'RestSource' (Required): Copy source type.
 
 ### SalesforceMarketingCloudSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'SalesforceMarketingCloudSource' (Required): Copy source type.
 
 ### SalesforceServiceCloudSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **query**: any: Any object
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **query**: any: Database query. Type: string (or Expression with resultType string).
 * **readBehavior**: 'Query' | 'QueryAll' | string: The read behavior for the operation. Default is Query.
 * **type**: 'SalesforceServiceCloudSource' (Required): Copy source type.
 
 ### SalesforceSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: Database query. Type: string (or Expression with resultType string).
 * **readBehavior**: 'Query' | 'QueryAll' | string: The read behavior for the operation. Default is Query.
 * **type**: 'SalesforceSource' (Required): Copy source type.
 
 ### SapBwSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: MDX query. Type: string (or Expression with resultType string).
 * **type**: 'SapBwSource' (Required): Copy source type.
 
 ### SapCloudForCustomerSource
 #### Properties
-* **httpRequestTimeout**: any: Any object
-* **query**: any: Any object
+* **httpRequestTimeout**: any: The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:05:00. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+* **query**: any: SAP Cloud for Customer OData query. For example, "$top=1". Type: string (or Expression with resultType string).
 * **type**: 'SapCloudForCustomerSource' (Required): Copy source type.
 
 ### SapEccSource
 #### Properties
-* **httpRequestTimeout**: any: Any object
-* **query**: any: Any object
+* **httpRequestTimeout**: any: The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:05:00. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+* **query**: any: SAP ECC OData query. For example, "$top=1". Type: string (or Expression with resultType string).
 * **type**: 'SapEccSource' (Required): Copy source type.
 
 ### SapHanaSource
 #### Properties
-* **packetSize**: any: Any object
-* **partitionOption**: any: Any object
+* **packetSize**: any: The packet size of data read from SAP HANA. Type: integer(or Expression with resultType integer).
+* **partitionOption**: any: The partition mechanism that will be used for SAP HANA read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "SapHanaDynamicRange".
 * **partitionSettings**: [SapHanaPartitionSettings](#saphanapartitionsettings): The settings that will be leveraged for SAP HANA source partitioning.
-* **query**: any: Any object
+* **query**: any: SAP HANA Sql query. Type: string (or Expression with resultType string).
 * **type**: 'SapHanaSource' (Required): Copy source type.
+
+### SapOdpSource
+#### Properties
+* **extractionMode**: any: The extraction mode. Allowed value include: Full, Delta and Recovery. The default value is Full. Type: string (or Expression with resultType string).
+* **projection**: any: Specifies the columns to be selected from source data. Type: array of objects(projection) (or Expression with resultType array of objects).
+* **selection**: any: Specifies the selection conditions from source data. Type: array of objects(selection) (or Expression with resultType array of objects).
+* **subscriberProcess**: any: The subscriber process to manage the delta process. Type: string (or Expression with resultType string).
+* **type**: 'SapOdpSource' (Required): Copy source type.
 
 ### SapOpenHubSource
 #### Properties
-* **baseRequestId**: any: Any object
-* **customRfcReadTableFunctionModule**: any: Any object
-* **excludeLastRequest**: any: Any object
-* **sapDataColumnDelimiter**: any: Any object
+* **baseRequestId**: any: The ID of request for delta loading. Once it is set, only data with requestId larger than the value of this property will be retrieved. The default value is 0. Type: integer (or Expression with resultType integer ).
+* **customRfcReadTableFunctionModule**: any: Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).
+* **excludeLastRequest**: any: Whether to exclude the records of the last request. The default value is true. Type: boolean (or Expression with resultType boolean).
+* **sapDataColumnDelimiter**: any: The single character that will be used as delimiter passed to SAP RFC as well as splitting the output data retrieved. Type: string (or Expression with resultType string).
 * **type**: 'SapOpenHubSource' (Required): Copy source type.
 
 ### SapTableSource
 #### Properties
-* **batchSize**: any: Any object
-* **customRfcReadTableFunctionModule**: any: Any object
-* **partitionOption**: any: Any object
+* **batchSize**: any: Specifies the maximum number of rows that will be retrieved at a time when retrieving data from SAP Table. Type: integer (or Expression with resultType integer).
+* **customRfcReadTableFunctionModule**: any: Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).
+* **partitionOption**: any: The partition mechanism that will be used for SAP table read in parallel. Possible values include: "None", "PartitionOnInt", "PartitionOnCalendarYear", "PartitionOnCalendarMonth", "PartitionOnCalendarDate", "PartitionOnTime".
 * **partitionSettings**: [SapTablePartitionSettings](#saptablepartitionsettings): The settings that will be leveraged for SAP table source partitioning.
-* **rfcTableFields**: any: Any object
-* **rfcTableOptions**: any: Any object
-* **rowCount**: any: Any object
-* **rowSkips**: any: Any object
-* **sapDataColumnDelimiter**: any: Any object
+* **rfcTableFields**: any: The fields of the SAP table that will be retrieved. For example, column0, column1. Type: string (or Expression with resultType string).
+* **rfcTableOptions**: any: The options for the filtering of the SAP Table. For example, COLUMN0 EQ SOME VALUE. Type: string (or Expression with resultType string).
+* **rowCount**: any: The number of rows to be retrieved. Type: integer(or Expression with resultType integer).
+* **rowSkips**: any: The number of rows that will be skipped. Type: integer (or Expression with resultType integer).
+* **sapDataColumnDelimiter**: any: The single character that will be used as delimiter passed to SAP RFC as well as splitting the output data retrieved. Type: string (or Expression with resultType string).
 * **type**: 'SapTableSource' (Required): Copy source type.
 
 ### ServiceNowSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'ServiceNowSource' (Required): Copy source type.
 
 ### SharePointOnlineListSource
 #### Properties
-* **httpRequestTimeout**: any: Any object
-* **query**: any: Any object
+* **httpRequestTimeout**: any: The wait time to get a response from SharePoint Online. Default value is 5 minutes (00:05:00). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+* **query**: any: The OData query to filter the data in SharePoint Online list. For example, "$top=1". Type: string (or Expression with resultType string).
 * **type**: 'SharePointOnlineListSource' (Required): Copy source type.
 
 ### ShopifySource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'ShopifySource' (Required): Copy source type.
 
 ### SnowflakeSource
 #### Properties
-* **exportSettings**: [SnowflakeExportCopyCommand](#snowflakeexportcopycommand): Snowflake export command settings.
-* **query**: any: Any object
+* **exportSettings**: [SnowflakeExportCopyCommand](#snowflakeexportcopycommand): Snowflake export settings.
+* **query**: any: Snowflake Sql query. Type: string (or Expression with resultType string).
 * **type**: 'SnowflakeSource' (Required): Copy source type.
 
 ### SparkSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'SparkSource' (Required): Copy source type.
 
 ### SqlDWSource
 #### Properties
-* **partitionOption**: any: Any object
+* **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
-* **sqlReaderQuery**: any: Any object
-* **sqlReaderStoredProcedureName**: any: Any object
-* **storedProcedureParameters**: any: Any object
+* **sqlReaderQuery**: any: SQL Data Warehouse reader query. Type: string (or Expression with resultType string).
+* **sqlReaderStoredProcedureName**: any: Name of the stored procedure for a SQL Data Warehouse source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
+* **storedProcedureParameters**: any: Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}". Type: object (or Expression with resultType object), itemType: StoredProcedureParameter.
 * **type**: 'SqlDWSource' (Required): Copy source type.
 
 ### SqlMISource
 #### Properties
-* **partitionOption**: any: Any object
+* **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
-* **produceAdditionalTypes**: any: Any object
-* **sqlReaderQuery**: any: Any object
-* **sqlReaderStoredProcedureName**: any: Any object
+* **produceAdditionalTypes**: any: Which additional types to produce.
+* **sqlReaderQuery**: any: SQL reader query. Type: string (or Expression with resultType string).
+* **sqlReaderStoredProcedureName**: any: Name of the stored procedure for a Azure SQL Managed Instance source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
 * **storedProcedureParameters**: [SqlMISourceStoredProcedureParameters](#sqlmisourcestoredprocedureparameters): Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
 * **type**: 'SqlMISource' (Required): Copy source type.
 
 ### SqlServerSource
 #### Properties
-* **partitionOption**: any: Any object
+* **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
-* **produceAdditionalTypes**: any: Any object
-* **sqlReaderQuery**: any: Any object
-* **sqlReaderStoredProcedureName**: any: Any object
+* **produceAdditionalTypes**: any: Which additional types to produce.
+* **sqlReaderQuery**: any: SQL reader query. Type: string (or Expression with resultType string).
+* **sqlReaderStoredProcedureName**: any: Name of the stored procedure for a SQL Database source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
 * **storedProcedureParameters**: [SqlServerSourceStoredProcedureParameters](#sqlserversourcestoredprocedureparameters): Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
 * **type**: 'SqlServerSource' (Required): Copy source type.
 
 ### SqlSource
 #### Properties
-* **isolationLevel**: any: Any object
-* **partitionOption**: any: Any object
+* **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
+* **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
-* **sqlReaderQuery**: any: Any object
-* **sqlReaderStoredProcedureName**: any: Any object
+* **sqlReaderQuery**: any: SQL reader query. Type: string (or Expression with resultType string).
+* **sqlReaderStoredProcedureName**: any: Name of the stored procedure for a SQL Database source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
 * **storedProcedureParameters**: [SqlSourceStoredProcedureParameters](#sqlsourcestoredprocedureparameters): Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
 * **type**: 'SqlSource' (Required): Copy source type.
 
 ### SquareSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'SquareSource' (Required): Copy source type.
 
 ### SybaseSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: Database query. Type: string (or Expression with resultType string).
 * **type**: 'SybaseSource' (Required): Copy source type.
 
 ### TeradataSource
 #### Properties
-* **partitionOption**: any: Any object
+* **partitionOption**: any: The partition mechanism that will be used for teradata read in parallel. Possible values include: "None", "Hash", "DynamicRange".
 * **partitionSettings**: [TeradataPartitionSettings](#teradatapartitionsettings): The settings that will be leveraged for teradata source partitioning.
-* **query**: any: Any object
+* **query**: any: Teradata query. Type: string (or Expression with resultType string).
 * **type**: 'TeradataSource' (Required): Copy source type.
 
 ### VerticaSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'VerticaSource' (Required): Copy source type.
 
 ### WebSource
 #### Properties
-* **additionalColumns**: any: Any object
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **type**: 'WebSource' (Required): Copy source type.
 
 ### XeroSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'XeroSource' (Required): Copy source type.
 
 ### XmlSource
 #### Properties
-* **additionalColumns**: any: Any object
-* **formatSettings**: [XmlReadSettings](#xmlreadsettings): Xml read settings.
-* **storeSettings**: [StoreReadSettings](#storereadsettings): Connector read setting.
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **formatSettings**: [XmlReadSettings](#xmlreadsettings): Xml format settings.
+* **storeSettings**: [StoreReadSettings](#storereadsettings): Xml store settings.
 * **type**: 'XmlSource' (Required): Copy source type.
 
 ### ZohoSource
 #### Properties
-* **query**: any: Any object
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **type**: 'ZohoSource' (Required): Copy source type.
 
 
 ## CosmosDbLinkedServiceTypeProperties
 ### Properties
-* **accountEndpoint**: any: Any object
-* **accountKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **azureCloudType**: any: Any object
+* **accountEndpoint**: any: The endpoint of the Azure CosmosDB account. Type: string (or Expression with resultType string)
+* **accountKey**: [SecretBase](#secretbase): The account key of the Azure CosmosDB account. Type: SecureString or AzureKeyVaultSecretReference.
+* **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
 * **connectionMode**: 'Direct' | 'Gateway' | string: The connection mode used to access CosmosDB account. Type: string (or Expression with resultType string).
-* **connectionString**: any: Any object
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
-* **database**: any: Any object
-* **encryptedCredential**: any: Any object
-* **servicePrincipalCredential**: [SecretBase](#secretbase): The base definition of a secret type.
+* **connectionString**: any: The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **database**: any: The name of the database. Type: string (or Expression with resultType string)
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **servicePrincipalCredential**: [SecretBase](#secretbase): The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
 * **servicePrincipalCredentialType**: 'ServicePrincipalCert' | 'ServicePrincipalKey' | string: The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
-* **servicePrincipalId**: any: Any object
-* **tenant**: any: Any object
+* **servicePrincipalId**: any: The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).
+* **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
 
 ## CosmosDbMongoDbApiCollectionDatasetTypeProperties
 ### Properties
-* **collection**: any (Required): Any object
+* **collection**: any (Required): The collection name of the CosmosDB (MongoDB API) database. Type: string (or Expression with resultType string).
 
 ## CosmosDbMongoDbApiLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any (Required): Any object
-* **database**: any (Required): Any object
-* **isServerVersionAbove32**: any: Any object
+* **connectionString**: any (Required): The CosmosDB (MongoDB API) connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **database**: any (Required): The name of the CosmosDB (MongoDB API) database that you want to access. Type: string (or Expression with resultType string).
+* **isServerVersionAbove32**: any: Whether the CosmosDB (MongoDB API) server version is higher than 3.2. The default value is false. Type: boolean (or Expression with resultType boolean).
 
 ## CosmosDbSqlApiCollectionDatasetTypeProperties
 ### Properties
-* **collectionName**: any (Required): Any object
+* **collectionName**: any (Required): CosmosDB (SQL API) collection name. Type: string (or Expression with resultType string).
 
 ## CouchbaseLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any: Any object
-* **credString**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
-* **encryptedCredential**: any: Any object
+* **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **credString**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of credString in connection string.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 
 ## CredentialReference
 ### Properties
@@ -1917,13 +1925,13 @@
 
 ## CustomActivityTypeProperties
 ### Properties
-* **autoUserSpecification**: any: Any object
-* **command**: any (Required): Any object
+* **autoUserSpecification**: any: Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).
+* **command**: any (Required): Command for custom activity Type: string (or Expression with resultType string).
 * **extendedProperties**: [CustomActivityTypePropertiesExtendedProperties](#customactivitytypepropertiesextendedproperties): User defined property bag. There is no restriction on the keys or values that can be used. The user specified custom activity has the full responsibility to consume and interpret the content defined.
-* **folderPath**: any: Any object
-* **referenceObjects**: [CustomActivityReferenceObject](#customactivityreferenceobject): Reference objects for custom activity
-* **resourceLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
-* **retentionTimeInDays**: any: Any object
+* **folderPath**: any: Folder path for resource files Type: string (or Expression with resultType string).
+* **referenceObjects**: [CustomActivityReferenceObject](#customactivityreferenceobject): Reference objects
+* **resourceLinkedService**: [LinkedServiceReference](#linkedservicereference): Resource linked service reference.
+* **retentionTimeInDays**: any: The retention time for the files submitted for custom activity. Type: double (or Expression with resultType double).
 
 ## CustomActivityTypePropertiesExtendedProperties
 ### Properties
@@ -1944,7 +1952,7 @@
 ### AzPowerShellSetup
 #### Properties
 * **type**: 'AzPowerShellSetup' (Required): The type of custom setup.
-* **typeProperties**: [AzPowerShellSetupTypeProperties](#azpowershellsetuptypeproperties) (Required): Installation of Azure PowerShell type properties.
+* **typeProperties**: [AzPowerShellSetupTypeProperties](#azpowershellsetuptypeproperties) (Required): Install Azure PowerShell type properties.
 
 ### CmdkeySetup
 #### Properties
@@ -1954,19 +1962,19 @@
 ### ComponentSetup
 #### Properties
 * **type**: 'ComponentSetup' (Required): The type of custom setup.
-* **typeProperties**: [LicensedComponentSetupTypeProperties](#licensedcomponentsetuptypeproperties) (Required): Installation of licensed component setup type properties.
+* **typeProperties**: [LicensedComponentSetupTypeProperties](#licensedcomponentsetuptypeproperties) (Required): Install 3rd party component type properties.
 
 ### EnvironmentVariableSetup
 #### Properties
 * **type**: 'EnvironmentVariableSetup' (Required): The type of custom setup.
-* **typeProperties**: [EnvironmentVariableSetupTypeProperties](#environmentvariablesetuptypeproperties) (Required): Environment variable custom setup type properties.
+* **typeProperties**: [EnvironmentVariableSetupTypeProperties](#environmentvariablesetuptypeproperties) (Required): Add environment variable type properties.
 
 
 ## DatabricksNotebookActivityTypeProperties
 ### Properties
 * **baseParameters**: [DatabricksNotebookActivityTypePropertiesBaseParameters](#databricksnotebookactivitytypepropertiesbaseparameters): Base parameters to be used for each run of this job.If the notebook takes a parameter that is not specified, the default value from the notebook will be used.
 * **libraries**: [DatabricksNotebookActivityTypePropertiesLibrariesItem](#databricksnotebookactivitytypepropertieslibrariesitem)[]: A list of libraries to be installed on the cluster that will execute the job.
-* **notebookPath**: any (Required): Any object
+* **notebookPath**: any (Required): The absolute path of the notebook to be run in the Databricks Workspace. This path must begin with a slash. Type: string (or Expression with resultType string).
 
 ## DatabricksNotebookActivityTypePropertiesBaseParameters
 ### Properties
@@ -1981,7 +1989,7 @@
 ## DatabricksSparkJarActivityTypeProperties
 ### Properties
 * **libraries**: [DatabricksSparkJarActivityTypePropertiesLibrariesItem](#databrickssparkjaractivitytypepropertieslibrariesitem)[]: A list of libraries to be installed on the cluster that will execute the job.
-* **mainClassName**: any (Required): Any object
+* **mainClassName**: any (Required): The full name of the class containing the main method to be executed. This class must be contained in a JAR provided as a library. Type: string (or Expression with resultType string).
 * **parameters**: any[]: Parameters that will be passed to the main method.
 
 ## DatabricksSparkJarActivityTypePropertiesLibrariesItem
@@ -1993,7 +2001,7 @@
 ### Properties
 * **libraries**: [DatabricksSparkPythonActivityTypePropertiesLibrariesItem](#databrickssparkpythonactivitytypepropertieslibrariesitem)[]: A list of libraries to be installed on the cluster that will execute the job.
 * **parameters**: any[]: Command line parameters that will be passed to the Python file.
-* **pythonFile**: any (Required): Any object
+* **pythonFile**: any (Required): The URI of the Python file to be executed. DBFS paths are supported. Type: string (or Expression with resultType string).
 
 ## DatabricksSparkPythonActivityTypePropertiesLibrariesItem
 ### Properties
@@ -2020,7 +2028,7 @@
 ### WranglingDataFlow
 #### Properties
 * **type**: 'WranglingDataFlow' (Required): Type of data flow.
-* **typeProperties**: [PowerQueryTypeProperties](#powerquerytypeproperties): Power Query data flow type properties.
+* **typeProperties**: [PowerQueryTypeProperties](#powerquerytypeproperties): PowerQuery data flow type properties.
 
 
 ## DataFlowFolder
@@ -2029,8 +2037,8 @@
 
 ## DataFlowReference
 ### Properties
-* **datasetParameters**: any: Any object
-* **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
+* **datasetParameters**: any: Reference data flow parameters from dataset.
+* **parameters**: [ParameterValueSpecification](#parametervaluespecification): Data flow parameters
 * **referenceName**: string (Required): Reference data flow name.
 * **type**: 'DataFlowReference' | string (Required): Data flow reference type.
 ### Additional Properties
@@ -2038,37 +2046,37 @@
 
 ## DataFlowSink
 ### Properties
-* **dataset**: [DatasetReference](#datasetreference): Dataset reference type.
+* **dataset**: [DatasetReference](#datasetreference): Dataset reference.
 * **description**: string: Transformation description.
-* **flowlet**: [DataFlowReference](#dataflowreference): Data flow reference type.
-* **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **flowlet**: [DataFlowReference](#dataflowreference): Flowlet Reference
+* **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
 * **name**: string (Required): Transformation name.
-* **rejectedDataLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
-* **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **rejectedDataLinkedService**: [LinkedServiceReference](#linkedservicereference): Rejected data linked service reference.
+* **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference): Schema linked service reference.
 
 ## DataFlowSource
 ### Properties
-* **dataset**: [DatasetReference](#datasetreference): Dataset reference type.
+* **dataset**: [DatasetReference](#datasetreference): Dataset reference.
 * **description**: string: Transformation description.
-* **flowlet**: [DataFlowReference](#dataflowreference): Data flow reference type.
-* **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **flowlet**: [DataFlowReference](#dataflowreference): Flowlet Reference
+* **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
 * **name**: string (Required): Transformation name.
-* **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference): Schema linked service reference.
 
 ## DataFlowStagingInfo
 ### Properties
-* **folderPath**: any: Any object
-* **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **folderPath**: any: Folder path for staging blob. Type: string (or Expression with resultType string)
+* **linkedService**: [LinkedServiceReference](#linkedservicereference): Staging linked service reference.
 
 ## DataLakeAnalyticsUsqlActivityTypeProperties
 ### Properties
-* **compilationMode**: any: Any object
-* **degreeOfParallelism**: any: Any object
+* **compilationMode**: any: Compilation mode of U-SQL. Must be one of these values : Semantic, Full and SingleBox. Type: string (or Expression with resultType string).
+* **degreeOfParallelism**: any: The maximum number of nodes simultaneously used to run the job. Default value is 1. Type: integer (or Expression with resultType integer), minimum: 1.
 * **parameters**: [DataLakeAnalyticsUsqlActivityTypePropertiesParameters](#datalakeanalyticsusqlactivitytypepropertiesparameters): Parameters for U-SQL job request.
-* **priority**: any: Any object
-* **runtimeVersion**: any: Any object
-* **scriptLinkedService**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
-* **scriptPath**: any (Required): Any object
+* **priority**: any: Determines which jobs out of all that are queued should be selected to run first. The lower the number, the higher the priority. Default value is 1000. Type: integer (or Expression with resultType integer), minimum: 1.
+* **runtimeVersion**: any: Runtime version of the U-SQL engine to use. Type: string (or Expression with resultType string).
+* **scriptLinkedService**: [LinkedServiceReference](#linkedservicereference) (Required): Script linked service reference.
+* **scriptPath**: any (Required): Case-sensitive path to folder that contains the U-SQL script. Type: string (or Expression with resultType string).
 
 ## DataLakeAnalyticsUsqlActivityTypePropertiesParameters
 ### Properties
@@ -2082,10 +2090,10 @@
 * **annotations**: any[]: List of tags that can be used for describing the Dataset.
 * **description**: string: Dataset description.
 * **folder**: [DatasetFolder](#datasetfolder): The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
-* **parameters**: [ParameterDefinitionSpecification](#parameterdefinitionspecification): Definition of all parameters for an entity.
-* **schema**: any: Any object
-* **structure**: any: Any object
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference.
+* **parameters**: [ParameterDefinitionSpecification](#parameterdefinitionspecification): Parameters for dataset.
+* **schema**: any: Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+* **structure**: any: Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
 ### AmazonMWSObjectDataset
 #### Properties
 * **type**: 'AmazonMWSObject' (Required): Type of dataset.
@@ -2129,7 +2137,7 @@
 ### AzureDatabricksDeltaLakeDataset
 #### Properties
 * **type**: 'AzureDatabricksDeltaLakeDataset' (Required): Type of dataset.
-* **typeProperties**: [AzureDatabricksDeltaLakeDatasetTypeProperties](#azuredatabricksdeltalakedatasettypeproperties): Azure Databricks Delta Lake Dataset Properties
+* **typeProperties**: [AzureDatabricksDeltaLakeDatasetTypeProperties](#azuredatabricksdeltalakedatasettypeproperties): Properties specific to this dataset type.
 
 ### AzureDataExplorerTableDataset
 #### Properties
@@ -2154,7 +2162,7 @@
 ### AzurePostgreSqlTableDataset
 #### Properties
 * **type**: 'AzurePostgreSqlTable' (Required): Type of dataset.
-* **typeProperties**: [AzurePostgreSqlTableDatasetTypeProperties](#azurepostgresqltabledatasettypeproperties): Azure PostgreSQL dataset properties.
+* **typeProperties**: [AzurePostgreSqlTableDatasetTypeProperties](#azurepostgresqltabledatasettypeproperties): Properties specific to this dataset type.
 
 ### AzureSearchIndexDataset
 #### Properties
@@ -2219,7 +2227,7 @@
 ### CustomDataset
 #### Properties
 * **type**: 'CustomDataset' (Required): Type of dataset.
-* **typeProperties**: any: Any object
+* **typeProperties**: any: Custom dataset properties.
 
 ### Db2TableDataset
 #### Properties
@@ -2229,7 +2237,7 @@
 ### DelimitedTextDataset
 #### Properties
 * **type**: 'DelimitedText' (Required): Type of dataset.
-* **typeProperties**: [DelimitedTextDatasetTypeProperties](#delimitedtextdatasettypeproperties): DelimitedText dataset properties.
+* **typeProperties**: [DelimitedTextDatasetTypeProperties](#delimitedtextdatasettypeproperties): Delimited text dataset properties.
 
 ### DocumentDbCollectionDataset
 #### Properties
@@ -2239,7 +2247,7 @@
 ### DrillTableDataset
 #### Properties
 * **type**: 'DrillTable' (Required): Type of dataset.
-* **typeProperties**: [DrillDatasetTypeProperties](#drilldatasettypeproperties): Drill Dataset Properties
+* **typeProperties**: [DrillDatasetTypeProperties](#drilldatasettypeproperties): Properties specific to this dataset type.
 
 ### DynamicsAXResourceDataset
 #### Properties
@@ -2279,12 +2287,12 @@
 ### GoogleBigQueryObjectDataset
 #### Properties
 * **type**: 'GoogleBigQueryObject' (Required): Type of dataset.
-* **typeProperties**: [GoogleBigQueryDatasetTypeProperties](#googlebigquerydatasettypeproperties): Google BigQuery Dataset Properties
+* **typeProperties**: [GoogleBigQueryDatasetTypeProperties](#googlebigquerydatasettypeproperties): Properties specific to this dataset type.
 
 ### GreenplumTableDataset
 #### Properties
 * **type**: 'GreenplumTable' (Required): Type of dataset.
-* **typeProperties**: [GreenplumDatasetTypeProperties](#greenplumdatasettypeproperties): Greenplum Dataset Properties
+* **typeProperties**: [GreenplumDatasetTypeProperties](#greenplumdatasettypeproperties): Properties specific to this dataset type.
 
 ### HBaseObjectDataset
 #### Properties
@@ -2294,7 +2302,7 @@
 ### HiveObjectDataset
 #### Properties
 * **type**: 'HiveObject' (Required): Type of dataset.
-* **typeProperties**: [HiveDatasetTypeProperties](#hivedatasettypeproperties): Hive Properties
+* **typeProperties**: [HiveDatasetTypeProperties](#hivedatasettypeproperties): Properties specific to this dataset type.
 
 ### HttpDataset
 #### Properties
@@ -2309,7 +2317,7 @@
 ### ImpalaObjectDataset
 #### Properties
 * **type**: 'ImpalaObject' (Required): Type of dataset.
-* **typeProperties**: [ImpalaDatasetTypeProperties](#impaladatasettypeproperties): Impala Dataset Properties
+* **typeProperties**: [ImpalaDatasetTypeProperties](#impaladatasettypeproperties): Properties specific to this dataset type.
 
 ### InformixTableDataset
 #### Properties
@@ -2364,12 +2372,12 @@
 ### MySqlTableDataset
 #### Properties
 * **type**: 'MySqlTable' (Required): Type of dataset.
-* **typeProperties**: [MySqlTableDatasetTypeProperties](#mysqltabledatasettypeproperties): MySql table dataset properties.
+* **typeProperties**: [MySqlTableDatasetTypeProperties](#mysqltabledatasettypeproperties): MySQL table dataset properties.
 
 ### NetezzaTableDataset
 #### Properties
 * **type**: 'NetezzaTable' (Required): Type of dataset.
-* **typeProperties**: [NetezzaTableDatasetTypeProperties](#netezzatabledatasettypeproperties): Netezza dataset properties.
+* **typeProperties**: [NetezzaTableDatasetTypeProperties](#netezzatabledatasettypeproperties): Properties specific to this dataset type.
 
 ### ODataResourceDataset
 #### Properties
@@ -2414,7 +2422,7 @@
 ### PhoenixObjectDataset
 #### Properties
 * **type**: 'PhoenixObject' (Required): Type of dataset.
-* **typeProperties**: [PhoenixDatasetTypeProperties](#phoenixdatasettypeproperties): Phoenix Dataset Properties
+* **typeProperties**: [PhoenixDatasetTypeProperties](#phoenixdatasettypeproperties): Properties specific to this dataset type.
 
 ### PostgreSqlTableDataset
 #### Properties
@@ -2424,7 +2432,7 @@
 ### PrestoObjectDataset
 #### Properties
 * **type**: 'PrestoObject' (Required): Type of dataset.
-* **typeProperties**: [PrestoDatasetTypeProperties](#prestodatasettypeproperties): Presto Dataset Properties
+* **typeProperties**: [PrestoDatasetTypeProperties](#prestodatasettypeproperties): Properties specific to this dataset type.
 
 ### QuickBooksObjectDataset
 #### Properties
@@ -2468,17 +2476,22 @@
 ### SapCloudForCustomerResourceDataset
 #### Properties
 * **type**: 'SapCloudForCustomerResource' (Required): Type of dataset.
-* **typeProperties**: [SapCloudForCustomerResourceDatasetTypeProperties](#sapcloudforcustomerresourcedatasettypeproperties) (Required): Sap Cloud For Customer OData resource dataset properties.
+* **typeProperties**: [SapCloudForCustomerResourceDatasetTypeProperties](#sapcloudforcustomerresourcedatasettypeproperties) (Required): SAP Cloud For Customer OData resource dataset properties.
 
 ### SapEccResourceDataset
 #### Properties
 * **type**: 'SapEccResource' (Required): Type of dataset.
-* **typeProperties**: [SapEccResourceDatasetTypeProperties](#sapeccresourcedatasettypeproperties) (Required): Sap ECC OData resource dataset properties.
+* **typeProperties**: [SapEccResourceDatasetTypeProperties](#sapeccresourcedatasettypeproperties) (Required): SAP ECC OData resource dataset properties.
 
 ### SapHanaTableDataset
 #### Properties
 * **type**: 'SapHanaTable' (Required): Type of dataset.
 * **typeProperties**: [SapHanaTableDatasetTypeProperties](#saphanatabledatasettypeproperties): SAP HANA Table properties.
+
+### SapOdpResourceDataset
+#### Properties
+* **type**: 'SapOdpResource' (Required): Type of dataset.
+* **typeProperties**: [SapOdpResourceDatasetTypeProperties](#sapodpresourcedatasettypeproperties) (Required): SAP ODP Resource properties.
 
 ### SapOpenHubTableDataset
 #### Properties
@@ -2513,7 +2526,7 @@
 ### SparkObjectDataset
 #### Properties
 * **type**: 'SparkObject' (Required): Type of dataset.
-* **typeProperties**: [SparkDatasetTypeProperties](#sparkdatasettypeproperties): Spark Properties
+* **typeProperties**: [SparkDatasetTypeProperties](#sparkdatasettypeproperties): Properties specific to this dataset type.
 
 ### SqlServerTableDataset
 #### Properties
@@ -2538,7 +2551,7 @@
 ### VerticaTableDataset
 #### Properties
 * **type**: 'VerticaTable' (Required): Type of dataset.
-* **typeProperties**: [VerticaDatasetTypeProperties](#verticadatasettypeproperties): Vertica Properties
+* **typeProperties**: [VerticaDatasetTypeProperties](#verticadatasettypeproperties): Properties specific to this dataset type.
 
 ### WebTableDataset
 #### Properties
@@ -2563,8 +2576,8 @@
 
 ## DatasetCompression
 ### Properties
-* **level**: any: Any object
-* **type**: any (Required): Any object
+* **level**: any: The dataset compression level. Type: string (or Expression with resultType string).
+* **type**: any (Required): Type of dataset compression. Type: string (or Expression with resultType string).
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -2576,28 +2589,28 @@
 * **Discriminator**: type
 
 ### Base Properties
-* **fileName**: any: Any object
-* **folderPath**: any: Any object
+* **fileName**: any: Specify the file name of dataset. Type: string (or Expression with resultType string).
+* **folderPath**: any: Specify the folder path of dataset. Type: string (or Expression with resultType string)
 ### AmazonS3CompatibleLocation
 #### Properties
-* **bucketName**: any: Any object
+* **bucketName**: any: Specify the bucketName of Amazon S3 Compatible. Type: string (or Expression with resultType string)
 * **type**: 'AmazonS3CompatibleLocation' (Required): Type of dataset storage location.
-* **version**: any: Any object
+* **version**: any: Specify the version of Amazon S3 Compatible. Type: string (or Expression with resultType string).
 
 ### AmazonS3Location
 #### Properties
-* **bucketName**: any: Any object
+* **bucketName**: any: Specify the bucketName of amazon S3. Type: string (or Expression with resultType string)
 * **type**: 'AmazonS3Location' (Required): Type of dataset storage location.
-* **version**: any: Any object
+* **version**: any: Specify the version of amazon S3. Type: string (or Expression with resultType string).
 
 ### AzureBlobFSLocation
 #### Properties
-* **fileSystem**: any: Any object
+* **fileSystem**: any: Specify the fileSystem of azure blobFS. Type: string (or Expression with resultType string).
 * **type**: 'AzureBlobFSLocation' (Required): Type of dataset storage location.
 
 ### AzureBlobStorageLocation
 #### Properties
-* **container**: any: Any object
+* **container**: any: Specify the container of azure blob. Type: string (or Expression with resultType string).
 * **type**: 'AzureBlobStorageLocation' (Required): Type of dataset storage location.
 
 ### AzureDataLakeStoreLocation
@@ -2618,9 +2631,9 @@
 
 ### GoogleCloudStorageLocation
 #### Properties
-* **bucketName**: any: Any object
+* **bucketName**: any: Specify the bucketName of Google Cloud Storage. Type: string (or Expression with resultType string)
 * **type**: 'GoogleCloudStorageLocation' (Required): Type of dataset storage location.
-* **version**: any: Any object
+* **version**: any: Specify the version of Google Cloud Storage. Type: string (or Expression with resultType string).
 
 ### HdfsLocation
 #### Properties
@@ -2628,14 +2641,14 @@
 
 ### HttpServerLocation
 #### Properties
-* **relativeUrl**: any: Any object
+* **relativeUrl**: any: Specify the relativeUrl of http server. Type: string (or Expression with resultType string)
 * **type**: 'HttpServerLocation' (Required): Type of dataset storage location.
 
 ### OracleCloudStorageLocation
 #### Properties
-* **bucketName**: any: Any object
+* **bucketName**: any: Specify the bucketName of Oracle Cloud Storage. Type: string (or Expression with resultType string)
 * **type**: 'OracleCloudStorageLocation' (Required): Type of dataset storage location.
-* **version**: any: Any object
+* **version**: any: Specify the version of Oracle Cloud Storage. Type: string (or Expression with resultType string).
 
 ### SftpLocation
 #### Properties
@@ -2644,7 +2657,7 @@
 
 ## DatasetReference
 ### Properties
-* **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
+* **parameters**: [ParameterValueSpecification](#parametervaluespecification): Arguments for dataset.
 * **referenceName**: string (Required): Reference dataset name.
 * **type**: 'DatasetReference' | string (Required): Dataset reference type.
 
@@ -2652,19 +2665,19 @@
 * **Discriminator**: type
 
 ### Base Properties
-* **deserializer**: any: Any object
-* **serializer**: any: Any object
+* **deserializer**: any: Deserializer. Type: string (or Expression with resultType string).
+* **serializer**: any: Serializer. Type: string (or Expression with resultType string).
 ### AvroFormat
 #### Properties
 * **type**: 'AvroFormat' (Required): Type of dataset storage format.
 
 ### JsonFormat
 #### Properties
-* **encodingName**: any: Any object
-* **filePattern**: any: Any object
-* **jsonNodeReference**: any: Any object
-* **jsonPathDefinition**: any: Any object
-* **nestingSeparator**: any: Any object
+* **encodingName**: any: The code page name of the preferred encoding. If not provided, the default value is 'utf-8', unless the byte order mark (BOM) denotes another Unicode encoding. The full list of supported values can be found in the 'Name' column of the table of encodings in the following reference: https://go.microsoft.com/fwlink/?linkid=861078. Type: string (or Expression with resultType string).
+* **filePattern**: any: File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.
+* **jsonNodeReference**: any: The JSONPath of the JSON array element to be flattened. Example: "$.ArrayPath". Type: string (or Expression with resultType string).
+* **jsonPathDefinition**: any: The JSONPath definition for each column mapping with a customized column name to extract data from JSON file. For fields under root object, start with "$"; for fields inside the array chosen by jsonNodeReference property, start from the array element. Example: {"Column1": "$.Column1Path", "Column2": "Column2PathInArray"}. Type: object (or Expression with resultType object).
+* **nestingSeparator**: any: The character used to separate nesting levels. Default value is '.' (dot). Type: string (or Expression with resultType string).
 * **type**: 'JsonFormat' (Required): Type of dataset storage format.
 
 ### OrcFormat
@@ -2677,77 +2690,77 @@
 
 ### TextFormat
 #### Properties
-* **columnDelimiter**: any: Any object
-* **encodingName**: any: Any object
-* **escapeChar**: any: Any object
-* **firstRowAsHeader**: any: Any object
-* **nullValue**: any: Any object
-* **quoteChar**: any: Any object
-* **rowDelimiter**: any: Any object
-* **skipLineCount**: any: Any object
-* **treatEmptyAsNull**: any: Any object
+* **columnDelimiter**: any: The column delimiter. Type: string (or Expression with resultType string).
+* **encodingName**: any: The code page name of the preferred encoding. If miss, the default value is ΓÇ£utf-8ΓÇ¥, unless BOM denotes another Unicode encoding. Refer to the ΓÇ£NameΓÇ¥ column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
+* **escapeChar**: any: The escape character. Type: string (or Expression with resultType string).
+* **firstRowAsHeader**: any: When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
+* **nullValue**: any: The null value string. Type: string (or Expression with resultType string).
+* **quoteChar**: any: The quote character. Type: string (or Expression with resultType string).
+* **rowDelimiter**: any: The row delimiter. Type: string (or Expression with resultType string).
+* **skipLineCount**: any: The number of lines/rows to be skipped when parsing text files. The default value is 0. Type: integer (or Expression with resultType integer).
+* **treatEmptyAsNull**: any: Treat empty column values in the text file as null. The default value is true. Type: boolean (or Expression with resultType boolean).
 * **type**: 'TextFormat' (Required): Type of dataset storage format.
 
 
 ## DataworldLinkedServiceTypeProperties
 ### Properties
-* **apiToken**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
-* **encryptedCredential**: any: Any object
+* **apiToken**: [SecretBase](#secretbase) (Required): The api token for the Dataworld source.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 
 ## Db2LinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'Basic' | string: AuthenticationType to be used for connection. It is mutually exclusive with connectionString property.
-* **certificateCommonName**: any: Any object
-* **connectionString**: any: Any object
-* **database**: any: Any object
-* **encryptedCredential**: any: Any object
-* **packageCollection**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **server**: any: Any object
-* **username**: any: Any object
+* **certificateCommonName**: any: Certificate Common Name when TLS is enabled. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+* **connectionString**: any: The connection string. It is mutually exclusive with server, database, authenticationType, userName, packageCollection and certificateCommonName property. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **database**: any: Database name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+* **packageCollection**: any: Under where packages are created when querying database. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password for authentication.
+* **server**: any: Server name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+* **username**: any: Username for authentication. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
 
 ## Db2TableDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **schema**: any: The Db2 schema name. Type: string (or Expression with resultType string).
+* **table**: any: The Db2 table name. Type: string (or Expression with resultType string).
+* **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
 
 ## DeleteActivityTypeProperties
 ### Properties
-* **dataset**: [DatasetReference](#datasetreference) (Required): Dataset reference type.
-* **enableLogging**: any: Any object
-* **logStorageSettings**: [LogStorageSettings](#logstoragesettings): (Deprecated. Please use LogSettings) Log storage settings.
+* **dataset**: [DatasetReference](#datasetreference) (Required): Delete activity dataset reference.
+* **enableLogging**: any: Whether to record detailed logs of delete-activity execution. Default value is false. Type: boolean (or Expression with resultType boolean).
+* **logStorageSettings**: [LogStorageSettings](#logstoragesettings): Log storage settings customer need to provide when enableLogging is true.
 * **maxConcurrentConnections**: int: The max concurrent connections to connect data source at the same time.
-* **recursive**: any: Any object
-* **storeSettings**: [StoreReadSettings](#storereadsettings): Connector read setting.
+* **recursive**: any: If true, files or sub-folders under current folder path will be deleted recursively. Default is false. Type: boolean (or Expression with resultType boolean).
+* **storeSettings**: [StoreReadSettings](#storereadsettings): Delete activity store settings.
 
 ## DelimitedTextDatasetTypeProperties
 ### Properties
-* **columnDelimiter**: any: Any object
-* **compressionCodec**: any: Any object
-* **compressionLevel**: any: Any object
-* **encodingName**: any: Any object
-* **escapeChar**: any: Any object
-* **firstRowAsHeader**: any: Any object
-* **location**: [DatasetLocation](#datasetlocation) (Required): Dataset location.
-* **nullValue**: any: Any object
-* **quoteChar**: any: Any object
-* **rowDelimiter**: any: Any object
+* **columnDelimiter**: any: The column delimiter. Type: string (or Expression with resultType string).
+* **compressionCodec**: any: The data compressionCodec. Type: string (or Expression with resultType string).
+* **compressionLevel**: any: The data compression method used for DelimitedText.
+* **encodingName**: any: The code page name of the preferred encoding. If miss, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
+* **escapeChar**: any: The escape character. Type: string (or Expression with resultType string).
+* **firstRowAsHeader**: any: When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
+* **location**: [DatasetLocation](#datasetlocation) (Required): The location of the delimited text storage.
+* **nullValue**: any: The null value string. Type: string (or Expression with resultType string).
+* **quoteChar**: any: The quote character. Type: string (or Expression with resultType string).
+* **rowDelimiter**: any: The row delimiter. Type: string (or Expression with resultType string).
 
 ## DelimitedTextReadSettings
 ### Properties
-* **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression read settings.
-* **skipLineCount**: any: Any object
+* **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression settings.
+* **skipLineCount**: any: Indicates the number of non-empty rows to skip when reading data from input files. Type: integer (or Expression with resultType integer).
 * **type**: string (Required): The read setting type.
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## DelimitedTextWriteSettings
 ### Properties
-* **fileExtension**: any (Required): Any object
-* **fileNamePrefix**: any: Any object
-* **maxRowsPerFile**: any: Any object
-* **quoteAllText**: any: Any object
+* **fileExtension**: any (Required): The file extension used to create the files. Type: string (or Expression with resultType string).
+* **fileNamePrefix**: any: Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+* **maxRowsPerFile**: any: Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+* **quoteAllText**: any: Indicates whether string values should always be enclosed with quotes. Type: boolean (or Expression with resultType boolean).
 * **type**: string (Required): The write setting type.
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -2771,30 +2784,30 @@
 
 ## DistcpSettings
 ### Properties
-* **distcpOptions**: any: Any object
-* **resourceManagerEndpoint**: any (Required): Any object
-* **tempScriptPath**: any (Required): Any object
+* **distcpOptions**: any: Specifies the Distcp options. Type: string (or Expression with resultType string).
+* **resourceManagerEndpoint**: any (Required): Specifies the Yarn ResourceManager endpoint. Type: string (or Expression with resultType string).
+* **tempScriptPath**: any (Required): Specifies an existing folder path which will be used to store temp Distcp command script. The script file is generated by ADF and will be removed after Copy job finished. Type: string (or Expression with resultType string).
 
 ## DocumentDbCollectionDatasetTypeProperties
 ### Properties
-* **collectionName**: any (Required): Any object
+* **collectionName**: any (Required): Document Database collection name. Type: string (or Expression with resultType string).
 
 ## DrillDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **schema**: any: The schema name of the Drill. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the Drill. Type: string (or Expression with resultType string).
+* **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
 
 ## DrillLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any: Any object
-* **encryptedCredential**: any: Any object
-* **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
+* **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## DWCopyCommandDefaultValue
 ### Properties
-* **columnName**: any: Any object
-* **defaultValue**: any: Any object
+* **columnName**: any: Column name. Type: object (or Expression with resultType string).
+* **defaultValue**: any: The default value of the column. Type: object (or Expression with resultType string).
 
 ## DWCopyCommandSettings
 ### Properties
@@ -2808,69 +2821,69 @@
 
 ## DynamicsAXLinkedServiceTypeProperties
 ### Properties
-* **aadResourceId**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **servicePrincipalId**: any (Required): Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
-* **tenant**: any (Required): Any object
-* **url**: any (Required): Any object
+* **aadResourceId**: any (Required): Specify the resource you are requesting authorization. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **servicePrincipalId**: any (Required): Specify the application's client ID. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase) (Required): Specify the application's key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).
+* **tenant**: any (Required): Specify the tenant information (domain name or tenant ID) under which your application resides. Retrieve it by hovering the mouse in the top-right corner of the Azure portal. Type: string (or Expression with resultType string).
+* **url**: any (Required): The Dynamics AX (or Dynamics 365 Finance and Operations) instance OData endpoint.
 
 ## DynamicsAXResourceDatasetTypeProperties
 ### Properties
-* **path**: any (Required): Any object
+* **path**: any (Required): The path of the Dynamics AX OData entity. Type: string (or Expression with resultType string).
 
 ## DynamicsCrmEntityDatasetTypeProperties
 ### Properties
-* **entityName**: any: Any object
+* **entityName**: any: The logical name of the entity. Type: string (or Expression with resultType string).
 
 ## DynamicsCrmLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: any (Required): Any object
-* **deploymentType**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **hostName**: any: Any object
-* **organizationName**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **servicePrincipalCredential**: [SecretBase](#secretbase): The base definition of a secret type.
-* **servicePrincipalCredentialType**: any: Any object
-* **servicePrincipalId**: any: Any object
-* **serviceUri**: any: Any object
-* **username**: any: Any object
+* **authenticationType**: any (Required): The authentication type to connect to Dynamics CRM server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario, 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
+* **deploymentType**: any (Required): The deployment type of the Dynamics CRM instance. 'Online' for Dynamics CRM Online and 'OnPremisesWithIfd' for Dynamics CRM on-premises with Ifd. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **hostName**: any: The host name of the on-premises Dynamics CRM server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
+* **organizationName**: any: The organization name of the Dynamics CRM instance. The property is required for on-prem and required for online when there are more than one Dynamics CRM instances associated with the user. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password to access the Dynamics CRM instance.
+* **port**: any: The port of on-premises Dynamics CRM server. The property is required for on-prem and not allowed for online. Default is 443. Type: integer (or Expression with resultType integer), minimum: 0.
+* **servicePrincipalCredential**: [SecretBase](#secretbase): The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
+* **servicePrincipalCredentialType**: any: The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
+* **servicePrincipalId**: any: The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).
+* **serviceUri**: any: The URL to the Microsoft Dynamics CRM server. The property is required for on-line and not allowed for on-prem. Type: string (or Expression with resultType string).
+* **username**: any: User name to access the Dynamics CRM instance. Type: string (or Expression with resultType string).
 
 ## DynamicsEntityDatasetTypeProperties
 ### Properties
-* **entityName**: any: Any object
+* **entityName**: any: The logical name of the entity. Type: string (or Expression with resultType string).
 
 ## DynamicsLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: any (Required): Any object
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
-* **deploymentType**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **hostName**: any: Any object
-* **organizationName**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **servicePrincipalCredential**: [SecretBase](#secretbase): The base definition of a secret type.
-* **servicePrincipalCredentialType**: any: Any object
-* **servicePrincipalId**: any: Any object
-* **serviceUri**: any: Any object
-* **username**: any: Any object
+* **authenticationType**: any (Required): The authentication type to connect to Dynamics server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario, 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **deploymentType**: any (Required): The deployment type of the Dynamics instance. 'Online' for Dynamics Online and 'OnPremisesWithIfd' for Dynamics on-premises with Ifd. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **hostName**: any: The host name of the on-premises Dynamics server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
+* **organizationName**: any: The organization name of the Dynamics instance. The property is required for on-prem and required for online when there are more than one Dynamics instances associated with the user. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password to access the Dynamics instance.
+* **port**: any: The port of on-premises Dynamics server. The property is required for on-prem and not allowed for online. Default is 443. Type: integer (or Expression with resultType integer), minimum: 0.
+* **servicePrincipalCredential**: [SecretBase](#secretbase): The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
+* **servicePrincipalCredentialType**: any: The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
+* **servicePrincipalId**: any: The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).
+* **serviceUri**: any: The URL to the Microsoft Dynamics server. The property is required for on-line and not allowed for on-prem. Type: string (or Expression with resultType string).
+* **username**: any: User name to access the Dynamics instance. Type: string (or Expression with resultType string).
 
 ## EloquaLinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: Any object
-* **endpoint**: any (Required): Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
-* **username**: any (Required): Any object
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **endpoint**: any (Required): The endpoint of the Eloqua server. (i.e. eloqua.example.com)
+* **password**: [SecretBase](#secretbase): The password corresponding to the user name.
+* **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+* **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+* **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+* **username**: any (Required): The site name and user name of your Eloqua account in the form: sitename/username. (i.e. Eloqua/Alice)
 
 ## EncryptionConfiguration
 ### Properties
-* **identity**: [CMKIdentityDefinition](#cmkidentitydefinition): Managed Identity used for CMK.
+* **identity**: [CMKIdentityDefinition](#cmkidentitydefinition): User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.
 * **keyName**: string (Required): The name of the key in Azure Key Vault to use as Customer Managed Key.
 * **keyVersion**: string: The version of the key used for CMK. If not provided, latest version will be used.
 * **vaultBaseUrl**: string (Required): The url of the Azure Key Vault used for CMK.
@@ -2887,29 +2900,29 @@
 
 ## ExcelDatasetTypeProperties
 ### Properties
-* **compression**: [DatasetCompression](#datasetcompression): The compression method used on a dataset.
-* **firstRowAsHeader**: any: Any object
-* **location**: [DatasetLocation](#datasetlocation) (Required): Dataset location.
-* **nullValue**: any: Any object
-* **range**: any: Any object
-* **sheetIndex**: any: Any object
-* **sheetName**: any: Any object
+* **compression**: [DatasetCompression](#datasetcompression): The data compression method used for the json dataset.
+* **firstRowAsHeader**: any: When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
+* **location**: [DatasetLocation](#datasetlocation) (Required): The location of the excel storage.
+* **nullValue**: any: The null value string. Type: string (or Expression with resultType string).
+* **range**: any: The partial data of one sheet. Type: string (or Expression with resultType string).
+* **sheetIndex**: any: The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer)
+* **sheetName**: any: The sheet name of excel file. Type: string (or Expression with resultType string).
 
 ## ExecuteDataFlowActivityTypeProperties
 ### Properties
 * **compute**: [ExecuteDataFlowActivityTypePropertiesCompute](#executedataflowactivitytypepropertiescompute): Compute properties for data flow activity.
-* **continueOnError**: any: Any object
-* **dataFlow**: [DataFlowReference](#dataflowreference) (Required): Data flow reference type.
-* **integrationRuntime**: [IntegrationRuntimeReference](#integrationruntimereference): Integration runtime reference type.
-* **runConcurrently**: any: Any object
-* **sourceStagingConcurrency**: any: Any object
+* **continueOnError**: any: Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
+* **dataFlow**: [DataFlowReference](#dataflowreference) (Required): Data flow reference.
+* **integrationRuntime**: [IntegrationRuntimeReference](#integrationruntimereference): The integration runtime reference.
+* **runConcurrently**: any: Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
+* **sourceStagingConcurrency**: any: Specify number of parallel staging for sources applicable to the sink. Type: integer (or Expression with resultType integer)
 * **staging**: [DataFlowStagingInfo](#dataflowstaginginfo): Staging info for execute data flow activity.
-* **traceLevel**: any: Any object
+* **traceLevel**: any: Trace level setting used for data flow monitoring output. Supported values are: 'coarse', 'fine', and 'none'. Type: string (or Expression with resultType string)
 
 ## ExecuteDataFlowActivityTypePropertiesCompute
 ### Properties
-* **computeType**: any: Any object
-* **coreCount**: any: Any object
+* **computeType**: any: Compute type of the cluster which will execute data flow job. Possible values include: 'General', 'MemoryOptimized', 'ComputeOptimized'. Type: string (or Expression with resultType string)
+* **coreCount**: any: Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272. Type: integer (or Expression with resultType integer)
 
 ## ExecutePipelineActivityPolicy
 ### Properties
@@ -2919,22 +2932,22 @@
 
 ## ExecutePipelineActivityTypeProperties
 ### Properties
-* **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
-* **pipeline**: [PipelineReference](#pipelinereference) (Required): Pipeline reference type.
+* **parameters**: [ParameterValueSpecification](#parametervaluespecification): Pipeline parameters.
+* **pipeline**: [PipelineReference](#pipelinereference) (Required): Pipeline reference.
 * **waitOnCompletion**: bool: Defines whether activity execution will wait for the dependent pipeline execution to finish. Default is false.
 
 ## ExecutePowerQueryActivityTypeProperties
 ### Properties
 * **compute**: [ExecuteDataFlowActivityTypePropertiesCompute](#executedataflowactivitytypepropertiescompute): Compute properties for data flow activity.
-* **continueOnError**: any: Any object
-* **dataFlow**: [DataFlowReference](#dataflowreference) (Required): Data flow reference type.
-* **integrationRuntime**: [IntegrationRuntimeReference](#integrationruntimereference): Integration runtime reference type.
+* **continueOnError**: any: Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
+* **dataFlow**: [DataFlowReference](#dataflowreference) (Required): Data flow reference.
+* **integrationRuntime**: [IntegrationRuntimeReference](#integrationruntimereference): The integration runtime reference.
 * **queries**: [PowerQuerySinkMapping](#powerquerysinkmapping)[]: List of mapping for Power Query mashup query to sink dataset(s).
-* **runConcurrently**: any: Any object
+* **runConcurrently**: any: Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
 * **sinks**: [ExecutePowerQueryActivityTypePropertiesSinks](#executepowerqueryactivitytypepropertiessinks): (Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.
-* **sourceStagingConcurrency**: any: Any object
+* **sourceStagingConcurrency**: any: Specify number of parallel staging for sources applicable to the sink. Type: integer (or Expression with resultType integer)
 * **staging**: [DataFlowStagingInfo](#dataflowstaginginfo): Staging info for execute data flow activity.
-* **traceLevel**: any: Any object
+* **traceLevel**: any: Trace level setting used for data flow monitoring output. Supported values are: 'coarse', 'fine', and 'none'. Type: string (or Expression with resultType string)
 
 ## ExecutePowerQueryActivityTypePropertiesSinks
 ### Properties
@@ -2943,18 +2956,18 @@
 
 ## ExecuteSsisPackageActivityTypeProperties
 ### Properties
-* **connectVia**: [IntegrationRuntimeReference](#integrationruntimereference) (Required): Integration runtime reference type.
-* **environmentPath**: any: Any object
-* **executionCredential**: [SsisExecutionCredential](#ssisexecutioncredential): SSIS package execution credential.
-* **loggingLevel**: any: Any object
-* **logLocation**: [SsisLogLocation](#ssisloglocation): SSIS package execution log location
+* **connectVia**: [IntegrationRuntimeReference](#integrationruntimereference) (Required): The integration runtime reference.
+* **environmentPath**: any: The environment path to execute the SSIS package. Type: string (or Expression with resultType string).
+* **executionCredential**: [SsisExecutionCredential](#ssisexecutioncredential): The package execution credential.
+* **loggingLevel**: any: The logging level of SSIS package execution. Type: string (or Expression with resultType string).
+* **logLocation**: [SsisLogLocation](#ssisloglocation): SSIS package execution log location.
 * **packageConnectionManagers**: [ExecuteSsisPackageActivityTypePropertiesPackageConnectionManagers](#executessispackageactivitytypepropertiespackageconnectionmanagers): The package level connection managers to execute the SSIS package.
 * **packageLocation**: [SsisPackageLocation](#ssispackagelocation) (Required): SSIS package location.
 * **packageParameters**: [ExecuteSsisPackageActivityTypePropertiesPackageParameters](#executessispackageactivitytypepropertiespackageparameters): The package level parameters to execute the SSIS package.
 * **projectConnectionManagers**: [ExecuteSsisPackageActivityTypePropertiesProjectConnectionManagers](#executessispackageactivitytypepropertiesprojectconnectionmanagers): The project level connection managers to execute the SSIS package.
 * **projectParameters**: [ExecuteSsisPackageActivityTypePropertiesProjectParameters](#executessispackageactivitytypepropertiesprojectparameters): The project level parameters to execute the SSIS package.
 * **propertyOverrides**: [ExecuteSsisPackageActivityTypePropertiesPropertyOverrides](#executessispackageactivitytypepropertiespropertyoverrides): The property overrides to execute the SSIS package.
-* **runtime**: any: Any object
+* **runtime**: any: Specifies the runtime to execute SSIS package. The value should be "x86" or "x64". Type: string (or Expression with resultType string).
 
 ## ExecuteSsisPackageActivityTypePropertiesPackageConnectionManagers
 ### Properties
@@ -2991,17 +3004,17 @@
 * **principalId**: string (ReadOnly): The principal id of the identity.
 * **tenantId**: string (ReadOnly): The client tenant id of the identity.
 * **type**: 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): The identity type.
-* **userAssignedIdentities**: [UserAssignedIdentitiesDefinitionSpecification](#userassignedidentitiesdefinitionspecification): Definition of all user assigned identities for a factory.
+* **userAssignedIdentities**: [UserAssignedIdentitiesDefinitionSpecification](#userassignedidentitiesdefinitionspecification): List of user assigned identities for the factory.
 
 ## FactoryProperties
 ### Properties
 * **createTime**: string (ReadOnly): Time the factory was created in ISO8601 format.
-* **encryption**: [EncryptionConfiguration](#encryptionconfiguration): Definition of CMK for the factory.
-* **globalParameters**: [GlobalParameterDefinitionSpecification](#globalparameterdefinitionspecification): Definition of all parameters for an entity.
+* **encryption**: [EncryptionConfiguration](#encryptionconfiguration): Properties to enable Customer Managed Key for the factory.
+* **globalParameters**: [GlobalParameterDefinitionSpecification](#globalparameterdefinitionspecification): List of parameters for factory.
 * **provisioningState**: string (ReadOnly): Factory provisioning state, example Succeeded.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public network access is allowed for the data factory.
-* **purviewConfiguration**: [PurviewConfiguration](#purviewconfiguration): Purview configuration.
-* **repoConfiguration**: [FactoryRepoConfiguration](#factoryrepoconfiguration): Factory's git repo information.
+* **purviewConfiguration**: [PurviewConfiguration](#purviewconfiguration): Purview information of the factory.
+* **repoConfiguration**: [FactoryRepoConfiguration](#factoryrepoconfiguration): Git repo information of the factory.
 * **version**: string (ReadOnly): Version of the factory.
 
 ## FactoryRepoConfiguration
@@ -3016,7 +3029,7 @@
 ### FactoryGitHubConfiguration
 #### Properties
 * **clientId**: string: GitHub bring your own app client id.
-* **clientSecret**: [GitHubClientSecret](#githubclientsecret): Client secret information for factory's bring your own app repository configuration.
+* **clientSecret**: [GitHubClientSecret](#githubclientsecret): GitHub bring your own app client secret information.
 * **hostName**: string: GitHub Enterprise host name. For example: `https://github.mydomain.com`
 * **type**: 'FactoryGitHubConfiguration' (Required): Type of repo configuration.
 
@@ -3029,30 +3042,30 @@
 
 ## FailActivityTypeProperties
 ### Properties
-* **errorCode**: any (Required): Any object
-* **message**: any (Required): Any object
+* **errorCode**: any (Required): The error code that categorizes the error type of the Fail activity. It can be dynamic content that's evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+* **message**: any (Required): The error message that surfaced in the Fail activity. It can be dynamic content that's evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
 
 ## FileServerLinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **userId**: any: Any object
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **host**: any (Required): Host name of the server. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password to logon the server.
+* **userId**: any: User ID to logon the server. Type: string (or Expression with resultType string).
 
 ## FileShareDatasetTypeProperties
 ### Properties
-* **compression**: [DatasetCompression](#datasetcompression): The compression method used on a dataset.
-* **fileFilter**: any: Any object
-* **fileName**: any: Any object
-* **folderPath**: any: Any object
-* **format**: [DatasetStorageFormat](#datasetstorageformat): The format definition of a storage.
-* **modifiedDatetimeEnd**: any: Any object
-* **modifiedDatetimeStart**: any: Any object
+* **compression**: [DatasetCompression](#datasetcompression): The data compression method used for the file system.
+* **fileFilter**: any: Specify a filter to be used to select a subset of files in the folderPath rather than all files. Type: string (or Expression with resultType string).
+* **fileName**: any: The name of the on-premises file system. Type: string (or Expression with resultType string).
+* **folderPath**: any: The path of the on-premises file system. Type: string (or Expression with resultType string).
+* **format**: [DatasetStorageFormat](#datasetstorageformat): The format of the files.
+* **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
+* **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
 
 ## FilterActivityTypeProperties
 ### Properties
-* **condition**: [Expression](#expression) (Required): Azure Data Factory expression definition.
-* **items**: [Expression](#expression) (Required): Azure Data Factory expression definition.
+* **condition**: [Expression](#expression) (Required): Condition to be used for filtering the input.
+* **items**: [Expression](#expression) (Required): Input array on which filter should be applied.
 
 ## FlowletTypeProperties
 ### Properties
@@ -3067,7 +3080,7 @@
 * **activities**: [Activity](#activity)[] (Required): List of activities to execute .
 * **batchCount**: int: Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
 * **isSequential**: bool: Should the loop be executed in sequence or in parallel (max 50)
-* **items**: [Expression](#expression) (Required): Azure Data Factory expression definition.
+* **items**: [Expression](#expression) (Required): Collection to iterate.
 
 ## FormatReadSettings
 * **Discriminator**: type
@@ -3075,51 +3088,51 @@
 ### Base Properties
 ### BinaryReadSettings
 #### Properties
-* **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression read settings.
+* **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression settings.
 * **type**: 'BinaryReadSettings' (Required): The read setting type.
 
 ### DelimitedTextReadSettings
 #### Properties
-* **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression read settings.
-* **skipLineCount**: any: Any object
+* **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression settings.
+* **skipLineCount**: any: Indicates the number of non-empty rows to skip when reading data from input files. Type: integer (or Expression with resultType integer).
 * **type**: 'DelimitedTextReadSettings' (Required): The read setting type.
 
 ### JsonReadSettings
 #### Properties
-* **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression read settings.
+* **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression settings.
 * **type**: 'JsonReadSettings' (Required): The read setting type.
 
 ### XmlReadSettings
 #### Properties
-* **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression read settings.
-* **detectDataType**: any: Any object
-* **namespacePrefixes**: any: Any object
-* **namespaces**: any: Any object
+* **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression settings.
+* **detectDataType**: any: Indicates whether type detection is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
+* **namespacePrefixes**: any: Namespace uri to prefix mappings to override the prefixes in column names when namespace is enabled, if no prefix is defined for a namespace uri, the prefix of xml element/attribute name in the xml data file will be used. Example: "{"http://www.example.com/xml":"prefix"}" Type: object (or Expression with resultType object).
+* **namespaces**: any: Indicates whether namespace is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
 * **type**: 'XmlReadSettings' (Required): The read setting type.
-* **validationMode**: any: Any object
+* **validationMode**: any: Indicates what validation method is used when reading the xml files. Allowed values: 'none', 'xsd', or 'dtd'. Type: string (or Expression with resultType string).
 
 
 ## FtpServerLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'Anonymous' | 'Basic' | string: The authentication type to be used to connect to the FTP server.
-* **enableServerCertificateValidation**: any: Any object
-* **enableSsl**: any: Any object
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **userName**: any: Any object
+* **enableServerCertificateValidation**: any: If true, validate the FTP server SSL certificate when connect over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
+* **enableSsl**: any: If true, connect to the FTP server over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **host**: any (Required): Host name of the FTP server. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password to logon the FTP server.
+* **port**: any: The TCP port number that the FTP server uses to listen for client connections. Default value is 21. Type: integer (or Expression with resultType integer), minimum: 0.
+* **userName**: any: Username to logon the FTP server. Type: string (or Expression with resultType string).
 
 ## GenericDatasetTypeProperties
 ### Properties
-* **tableName**: any: Any object
+* **tableName**: any: The table name. Type: string (or Expression with resultType string).
 
 ## GetMetadataActivityTypeProperties
 ### Properties
-* **dataset**: [DatasetReference](#datasetreference) (Required): Dataset reference type.
+* **dataset**: [DatasetReference](#datasetreference) (Required): GetMetadata activity dataset reference.
 * **fieldList**: any[]: Fields of metadata to get from dataset.
-* **formatSettings**: [FormatReadSettings](#formatreadsettings): Format read settings.
-* **storeSettings**: [StoreReadSettings](#storereadsettings): Connector read setting.
+* **formatSettings**: [FormatReadSettings](#formatreadsettings): GetMetadata activity format settings.
+* **storeSettings**: [StoreReadSettings](#storereadsettings): GetMetadata activity store settings.
 
 ## GitHubClientSecret
 ### Properties
@@ -3139,93 +3152,93 @@
 ## GlobalParameterSpecification
 ### Properties
 * **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'Object' | 'String' | string (Required): Global Parameter type.
-* **value**: any (Required): Any object
+* **value**: any (Required): Value of parameter.
 
 ## GoogleAdWordsLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication' | string: The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
-* **clientCustomerID**: any: Any object
-* **clientId**: any: Any object
-* **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
-* **connectionProperties**: any: Any object
-* **developerToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **email**: any: Any object
-* **encryptedCredential**: any: Any object
-* **keyFilePath**: any: Any object
-* **refreshToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **trustedCertPath**: any: Any object
-* **useSystemTrustStore**: any: Any object
+* **clientCustomerID**: any: The Client customer ID of the AdWords account that you want to fetch report data for.
+* **clientId**: any: The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
+* **clientSecret**: [SecretBase](#secretbase): The client secret of the google application used to acquire the refresh token.
+* **connectionProperties**: any: Properties used to connect to GoogleAds. It is mutually exclusive with any other properties in the linked service. Type: object.
+* **developerToken**: [SecretBase](#secretbase): The developer token associated with the manager account that you use to grant access to the AdWords API.
+* **email**: any: The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **keyFilePath**: any: The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR.
+* **refreshToken**: [SecretBase](#secretbase): The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.
+* **trustedCertPath**: any: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+* **useSystemTrustStore**: any: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
 
 ## GoogleBigQueryDatasetTypeProperties
 ### Properties
-* **dataset**: any: Any object
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **dataset**: any: The database name of the Google BigQuery. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the Google BigQuery. Type: string (or Expression with resultType string).
+* **tableName**: any: This property will be retired. Please consider using database + table properties instead.
 
 ## GoogleBigQueryLinkedServiceTypeProperties
 ### Properties
-* **additionalProjects**: any: Any object
+* **additionalProjects**: any: A comma-separated list of public BigQuery projects to access.
 * **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication' | string (Required): The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
-* **clientId**: any: Any object
-* **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
-* **email**: any: Any object
-* **encryptedCredential**: any: Any object
-* **keyFilePath**: any: Any object
-* **project**: any (Required): Any object
-* **refreshToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **requestGoogleDriveScope**: any: Any object
-* **trustedCertPath**: any: Any object
-* **useSystemTrustStore**: any: Any object
+* **clientId**: any: The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
+* **clientSecret**: [SecretBase](#secretbase): The client secret of the google application used to acquire the refresh token.
+* **email**: any: The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **keyFilePath**: any: The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR.
+* **project**: any (Required): The default BigQuery project to query against.
+* **refreshToken**: [SecretBase](#secretbase): The refresh token obtained from Google for authorizing access to BigQuery for UserAuthentication.
+* **requestGoogleDriveScope**: any: Whether to request access to Google Drive. Allowing Google Drive access enables support for federated tables that combine BigQuery data with data from Google Drive. The default value is false.
+* **trustedCertPath**: any: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+* **useSystemTrustStore**: any: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
 
 ## GoogleCloudStorageLinkedServiceTypeProperties
 ### Properties
-* **accessKeyId**: any: Any object
-* **encryptedCredential**: any: Any object
-* **secretAccessKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **serviceUrl**: any: Any object
+* **accessKeyId**: any: The access key identifier of the Google Cloud Storage Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **secretAccessKey**: [SecretBase](#secretbase): The secret access key of the Google Cloud Storage Identity and Access Management (IAM) user.
+* **serviceUrl**: any: This value specifies the endpoint to access with the Google Cloud Storage Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).
 
 ## GreenplumDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **schema**: any: The schema name of Greenplum. Type: string (or Expression with resultType string).
+* **table**: any: The table name of Greenplum. Type: string (or Expression with resultType string).
+* **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
 
 ## GreenplumLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any: Any object
-* **encryptedCredential**: any: Any object
-* **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
+* **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## HBaseLinkedServiceTypeProperties
 ### Properties
-* **allowHostNameCNMismatch**: any: Any object
-* **allowSelfSignedServerCert**: any: Any object
+* **allowHostNameCNMismatch**: any: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
+* **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
 * **authenticationType**: 'Anonymous' | 'Basic' | string (Required): The authentication mechanism to use to connect to the HBase server.
-* **enableSsl**: any: Any object
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **httpPath**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **trustedCertPath**: any: Any object
-* **username**: any: Any object
+* **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **host**: any (Required): The IP address or host name of the HBase server. (i.e. 192.168.222.160)
+* **httpPath**: any: The partial URL corresponding to the HBase server. (i.e. /gateway/sandbox/hbase/version)
+* **password**: [SecretBase](#secretbase): The password corresponding to the user name.
+* **port**: any: The TCP port that the HBase instance uses to listen for client connections. The default value is 9090.
+* **trustedCertPath**: any: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+* **username**: any: The user name used to connect to the HBase instance.
 
 ## HdfsLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: any: Any object
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **url**: any (Required): Any object
-* **userName**: any: Any object
+* **authenticationType**: any: Type of authentication used to connect to the HDFS. Possible values are: Anonymous and Windows. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password for Windows authentication.
+* **url**: any (Required): The URL of the HDFS service endpoint, e.g. http://myhostname:50070/webhdfs/v1 . Type: string (or Expression with resultType string).
+* **userName**: any: User name for Windows authentication. Type: string (or Expression with resultType string).
 
 ## HDInsightHiveActivityTypeProperties
 ### Properties
 * **arguments**: any[]: User specified arguments to HDInsightActivity.
 * **defines**: [HDInsightHiveActivityTypePropertiesDefines](#hdinsighthiveactivitytypepropertiesdefines): Allows user to specify defines for Hive job request.
-* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: Debug info option.
 * **queryTimeout**: int: Query timeout value (in minutes).  Effective when the HDInsight cluster is with ESP (Enterprise Security Package)
-* **scriptLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
-* **scriptPath**: any: Any object
+* **scriptLinkedService**: [LinkedServiceReference](#linkedservicereference): Script linked service reference.
+* **scriptPath**: any: Script path. Type: string (or Expression with resultType string).
 * **storageLinkedServices**: [LinkedServiceReference](#linkedservicereference)[]: Storage linked service references.
 * **variables**: any[]: User specified arguments under hivevar namespace.
 
@@ -3236,24 +3249,24 @@
 
 ## HDInsightLinkedServiceTypeProperties
 ### Properties
-* **clusterUri**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **fileSystem**: any: Any object
-* **hcatalogLinkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
-* **isEspEnabled**: any: Any object
-* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **userName**: any: Any object
+* **clusterUri**: any (Required): HDInsight cluster URI. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **fileSystem**: any: Specify the FileSystem if the main storage for the HDInsight is ADLS Gen2. Type: string (or Expression with resultType string).
+* **hcatalogLinkedServiceName**: [LinkedServiceReference](#linkedservicereference): A reference to the Azure SQL linked service that points to the HCatalog database.
+* **isEspEnabled**: any: Specify if the HDInsight is created with ESP (Enterprise Security Package). Type: Boolean.
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): The Azure Storage linked service reference.
+* **password**: [SecretBase](#secretbase): HDInsight cluster password.
+* **userName**: any: HDInsight cluster user name. Type: string (or Expression with resultType string).
 
 ## HDInsightMapReduceActivityTypeProperties
 ### Properties
 * **arguments**: any[]: User specified arguments to HDInsightActivity.
-* **className**: any (Required): Any object
+* **className**: any (Required): Class name. Type: string (or Expression with resultType string).
 * **defines**: [HDInsightMapReduceActivityTypePropertiesDefines](#hdinsightmapreduceactivitytypepropertiesdefines): Allows user to specify defines for the MapReduce job request.
-* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
-* **jarFilePath**: any (Required): Any object
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: Debug info option.
+* **jarFilePath**: any (Required): Jar path. Type: string (or Expression with resultType string).
 * **jarLibs**: any[]: Jar libs.
-* **jarLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **jarLinkedService**: [LinkedServiceReference](#linkedservicereference): Jar linked service reference.
 * **storageLinkedServices**: [LinkedServiceReference](#linkedservicereference)[]: Storage linked service references.
 
 ## HDInsightMapReduceActivityTypePropertiesDefines
@@ -3264,47 +3277,47 @@
 ## HDInsightOnDemandLinkedServiceTypeProperties
 ### Properties
 * **additionalLinkedServiceNames**: [LinkedServiceReference](#linkedservicereference)[]: Specifies additional storage accounts for the HDInsight linked service so that the Data Factory service can register them on your behalf.
-* **clusterNamePrefix**: any: Any object
-* **clusterPassword**: [SecretBase](#secretbase): The base definition of a secret type.
-* **clusterResourceGroup**: any (Required): Any object
-* **clusterSize**: any (Required): Any object
-* **clusterSshPassword**: [SecretBase](#secretbase): The base definition of a secret type.
-* **clusterSshUserName**: any: Any object
-* **clusterType**: any: Any object
-* **clusterUserName**: any: Any object
-* **coreConfiguration**: any: Any object
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
-* **dataNodeSize**: any: Any object
-* **encryptedCredential**: any: Any object
-* **hBaseConfiguration**: any: Any object
-* **hcatalogLinkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
-* **hdfsConfiguration**: any: Any object
-* **headNodeSize**: any: Any object
-* **hiveConfiguration**: any: Any object
-* **hostSubscriptionId**: any (Required): Any object
-* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
-* **mapReduceConfiguration**: any: Any object
-* **oozieConfiguration**: any: Any object
+* **clusterNamePrefix**: any: The prefix of cluster name, postfix will be distinct with timestamp. Type: string (or Expression with resultType string).
+* **clusterPassword**: [SecretBase](#secretbase): The password to access the cluster.
+* **clusterResourceGroup**: any (Required): The resource group where the cluster belongs. Type: string (or Expression with resultType string).
+* **clusterSize**: any (Required): Number of worker/data nodes in the cluster. Suggestion value: 4. Type: string (or Expression with resultType string).
+* **clusterSshPassword**: [SecretBase](#secretbase): The password to SSH remotely connect cluster’s node (for Linux).
+* **clusterSshUserName**: any: The username to SSH remotely connect to cluster’s node (for Linux). Type: string (or Expression with resultType string).
+* **clusterType**: any: The cluster type. Type: string (or Expression with resultType string).
+* **clusterUserName**: any: The username to access the cluster. Type: string (or Expression with resultType string).
+* **coreConfiguration**: any: Specifies the core configuration parameters (as in core-site.xml) for the HDInsight cluster to be created.
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **dataNodeSize**: any: Specifies the size of the data node for the HDInsight cluster.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **hBaseConfiguration**: any: Specifies the HBase configuration parameters (hbase-site.xml) for the HDInsight cluster.
+* **hcatalogLinkedServiceName**: [LinkedServiceReference](#linkedservicereference): The name of Azure SQL linked service that point to the HCatalog database. The on-demand HDInsight cluster is created by using the Azure SQL database as the metastore.
+* **hdfsConfiguration**: any: Specifies the HDFS configuration parameters (hdfs-site.xml) for the HDInsight cluster.
+* **headNodeSize**: any: Specifies the size of the head node for the HDInsight cluster.
+* **hiveConfiguration**: any: Specifies the hive configuration parameters (hive-site.xml) for the HDInsight cluster.
+* **hostSubscriptionId**: any (Required): The customer’s subscription to host the cluster. Type: string (or Expression with resultType string).
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Azure Storage linked service to be used by the on-demand cluster for storing and processing data.
+* **mapReduceConfiguration**: any: Specifies the MapReduce configuration parameters (mapred-site.xml) for the HDInsight cluster.
+* **oozieConfiguration**: any: Specifies the Oozie configuration parameters (oozie-site.xml) for the HDInsight cluster.
 * **scriptActions**: [ScriptAction](#scriptaction)[]: Custom script actions to run on HDI ondemand cluster once it's up. Please refer to https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **sparkVersion**: any: Any object
-* **stormConfiguration**: any: Any object
-* **subnetName**: any: Any object
-* **tenant**: any (Required): Any object
-* **timeToLive**: any (Required): Any object
-* **version**: any (Required): Any object
-* **virtualNetworkId**: any: Any object
-* **yarnConfiguration**: any: Any object
-* **zookeeperNodeSize**: any: Any object
+* **servicePrincipalId**: any: The service principal id for the hostSubscriptionId. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase): The key for the service principal id.
+* **sparkVersion**: any: The version of spark if the cluster type is 'spark'. Type: string (or Expression with resultType string).
+* **stormConfiguration**: any: Specifies the Storm configuration parameters (storm-site.xml) for the HDInsight cluster.
+* **subnetName**: any: The ARM resource ID for the subnet in the vNet. If virtualNetworkId was specified, then this property is required. Type: string (or Expression with resultType string).
+* **tenant**: any (Required): The Tenant id/name to which the service principal belongs. Type: string (or Expression with resultType string).
+* **timeToLive**: any (Required): The allowed idle time for the on-demand HDInsight cluster. Specifies how long the on-demand HDInsight cluster stays alive after completion of an activity run if there are no other active jobs in the cluster. The minimum value is 5 mins. Type: string (or Expression with resultType string).
+* **version**: any (Required): Version of the HDInsight cluster.  Type: string (or Expression with resultType string).
+* **virtualNetworkId**: any: The ARM resource ID for the vNet to which the cluster should be joined after creation. Type: string (or Expression with resultType string).
+* **yarnConfiguration**: any: Specifies the Yarn configuration parameters (yarn-site.xml) for the HDInsight cluster.
+* **zookeeperNodeSize**: any: Specifies the size of the Zoo Keeper node for the HDInsight cluster.
 
 ## HDInsightPigActivityTypeProperties
 ### Properties
-* **arguments**: any: Any object
+* **arguments**: any: User specified arguments to HDInsightActivity. Type: array (or Expression with resultType array).
 * **defines**: [HDInsightPigActivityTypePropertiesDefines](#hdinsightpigactivitytypepropertiesdefines): Allows user to specify defines for Pig job request.
-* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
-* **scriptLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
-* **scriptPath**: any: Any object
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: Debug info option.
+* **scriptLinkedService**: [LinkedServiceReference](#linkedservicereference): Script linked service reference.
+* **scriptPath**: any: Script path. Type: string (or Expression with resultType string).
 * **storageLinkedServices**: [LinkedServiceReference](#linkedservicereference)[]: Storage linked service references.
 
 ## HDInsightPigActivityTypePropertiesDefines
@@ -3316,12 +3329,12 @@
 ### Properties
 * **arguments**: any[]: The user-specified arguments to HDInsightSparkActivity.
 * **className**: string: The application's Java/Spark main class.
-* **entryFilePath**: any (Required): Any object
-* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
-* **proxyUser**: any: Any object
-* **rootPath**: any (Required): Any object
+* **entryFilePath**: any (Required): The relative path to the root folder of the code/package to be executed. Type: string (or Expression with resultType string).
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: Debug info option.
+* **proxyUser**: any: The user to impersonate that will execute the job. Type: string (or Expression with resultType string).
+* **rootPath**: any (Required): The root path in 'sparkJobLinkedService' for all the job’s files. Type: string (or Expression with resultType string).
 * **sparkConfig**: [HDInsightSparkActivityTypePropertiesSparkConfig](#hdinsightsparkactivitytypepropertiessparkconfig): Spark configuration property.
-* **sparkJobLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **sparkJobLinkedService**: [LinkedServiceReference](#linkedservicereference): The storage linked service for uploading the entry file and dependencies, and for receiving logs.
 
 ## HDInsightSparkActivityTypePropertiesSparkConfig
 ### Properties
@@ -3331,16 +3344,16 @@
 ## HDInsightStreamingActivityTypeProperties
 ### Properties
 * **arguments**: any[]: User specified arguments to HDInsightActivity.
-* **combiner**: any: Any object
+* **combiner**: any: Combiner executable name. Type: string (or Expression with resultType string).
 * **commandEnvironment**: any[]: Command line environment values.
 * **defines**: [HDInsightStreamingActivityTypePropertiesDefines](#hdinsightstreamingactivitytypepropertiesdefines): Allows user to specify defines for streaming job request.
-* **fileLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **fileLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference where the files are located.
 * **filePaths**: any[] (Required): Paths to streaming job files. Can be directories.
-* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
-* **input**: any (Required): Any object
-* **mapper**: any (Required): Any object
-* **output**: any (Required): Any object
-* **reducer**: any (Required): Any object
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: Debug info option.
+* **input**: any (Required): Input blob path. Type: string (or Expression with resultType string).
+* **mapper**: any (Required): Mapper executable name. Type: string (or Expression with resultType string).
+* **output**: any (Required): Output blob path. Type: string (or Expression with resultType string).
+* **reducer**: any (Required): Reducer executable name. Type: string (or Expression with resultType string).
 * **storageLinkedServices**: [LinkedServiceReference](#linkedservicereference)[]: Storage linked service references.
 
 ## HDInsightStreamingActivityTypePropertiesDefines
@@ -3350,100 +3363,102 @@
 
 ## HiveDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **schema**: any: The schema name of the Hive. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the Hive. Type: string (or Expression with resultType string).
+* **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
 
 ## HiveLinkedServiceTypeProperties
 ### Properties
-* **allowHostNameCNMismatch**: any: Any object
-* **allowSelfSignedServerCert**: any: Any object
+* **allowHostNameCNMismatch**: any: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
+* **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
 * **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' | string (Required): The authentication method used to access the Hive server.
-* **enableSsl**: any: Any object
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **httpPath**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
+* **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **host**: any (Required): IP address or host name of the Hive server, separated by ';' for multiple hosts (only when serviceDiscoveryMode is enable).
+* **httpPath**: any: The partial URL corresponding to the Hive server.
+* **password**: [SecretBase](#secretbase): The password corresponding to the user name that you provided in the Username field
+* **port**: any: The TCP port that the Hive server uses to listen for client connections.
 * **serverType**: 'HiveServer1' | 'HiveServer2' | 'HiveThriftServer' | string: The type of Hive server.
-* **serviceDiscoveryMode**: any: Any object
+* **serviceDiscoveryMode**: any: true to indicate using the ZooKeeper service, false not.
 * **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL' | string: The transport protocol to use in the Thrift layer.
-* **trustedCertPath**: any: Any object
-* **useNativeQuery**: any: Any object
-* **username**: any: Any object
-* **useSystemTrustStore**: any: Any object
-* **zooKeeperNameSpace**: any: Any object
+* **trustedCertPath**: any: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+* **useNativeQuery**: any: Specifies whether the driver uses native HiveQL queries,or converts them into an equivalent form in HiveQL.
+* **username**: any: The user name that you use to access Hive Server.
+* **useSystemTrustStore**: any: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+* **zooKeeperNameSpace**: any: The namespace on ZooKeeper under which Hive Server 2 nodes are added.
 
 ## HttpDatasetTypeProperties
 ### Properties
-* **additionalHeaders**: any: Any object
-* **compression**: [DatasetCompression](#datasetcompression): The compression method used on a dataset.
-* **format**: [DatasetStorageFormat](#datasetstorageformat): The format definition of a storage.
-* **relativeUrl**: any: Any object
-* **requestBody**: any: Any object
-* **requestMethod**: any: Any object
+* **additionalHeaders**: any: The headers for the HTTP Request. e.g. request-header-name-1:request-header-value-1
+...
+request-header-name-n:request-header-value-n Type: string (or Expression with resultType string).
+* **compression**: [DatasetCompression](#datasetcompression): The data compression method used on files.
+* **format**: [DatasetStorageFormat](#datasetstorageformat): The format of files.
+* **relativeUrl**: any: The relative URL based on the URL in the HttpLinkedService refers to an HTTP file Type: string (or Expression with resultType string).
+* **requestBody**: any: The body for the HTTP request. Type: string (or Expression with resultType string).
+* **requestMethod**: any: The HTTP method for the HTTP request. Type: string (or Expression with resultType string).
 
 ## HttpLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'Anonymous' | 'Basic' | 'ClientCertificate' | 'Digest' | 'Windows' | string: The authentication type to be used to connect to the HTTP server.
-* **authHeaders**: any: Any object
-* **certThumbprint**: any: Any object
-* **embeddedCertData**: any: Any object
-* **enableServerCertificateValidation**: any: Any object
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **url**: any (Required): Any object
-* **userName**: any: Any object
+* **authHeaders**: any: The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
+* **certThumbprint**: any: Thumbprint of certificate for ClientCertificate authentication. Only valid for on-premises copy. For on-premises copy with ClientCertificate authentication, either CertThumbprint or EmbeddedCertData/Password should be specified. Type: string (or Expression with resultType string).
+* **embeddedCertData**: any: Base64 encoded certificate data for ClientCertificate authentication. For on-premises copy with ClientCertificate authentication, either CertThumbprint or EmbeddedCertData/Password should be specified. Type: string (or Expression with resultType string).
+* **enableServerCertificateValidation**: any: If true, validate the HTTPS server SSL certificate. Default value is true. Type: boolean (or Expression with resultType boolean).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password for Basic, Digest, Windows, or ClientCertificate with EmbeddedCertData authentication.
+* **url**: any (Required): The base URL of the HTTP endpoint, e.g. http://www.microsoft.com. Type: string (or Expression with resultType string).
+* **userName**: any: User name for Basic, Digest, or Windows authentication. Type: string (or Expression with resultType string).
 
 ## HubspotLinkedServiceTypeProperties
 ### Properties
-* **accessToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **clientId**: any (Required): Any object
-* **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
-* **encryptedCredential**: any: Any object
-* **refreshToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
+* **accessToken**: [SecretBase](#secretbase): The access token obtained when initially authenticating your OAuth integration.
+* **clientId**: any (Required): The client ID associated with your Hubspot application.
+* **clientSecret**: [SecretBase](#secretbase): The client secret associated with your Hubspot application.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **refreshToken**: [SecretBase](#secretbase): The refresh token obtained when initially authenticating your OAuth integration.
+* **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+* **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+* **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
 
 ## IfConditionActivityTypeProperties
 ### Properties
-* **expression**: [Expression](#expression) (Required): Azure Data Factory expression definition.
+* **expression**: [Expression](#expression) (Required): An expression that would evaluate to Boolean. This is used to determine the block of activities (ifTrueActivities or ifFalseActivities) that will be executed.
 * **ifFalseActivities**: [Activity](#activity)[]: List of activities to execute if expression is evaluated to false. This is an optional property and if not provided, the activity will exit without any action.
 * **ifTrueActivities**: [Activity](#activity)[]: List of activities to execute if expression is evaluated to true. This is an optional property and if not provided, the activity will exit without any action.
 
 ## ImpalaDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **schema**: any: The schema name of the Impala. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the Impala. Type: string (or Expression with resultType string).
+* **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
 
 ## ImpalaLinkedServiceTypeProperties
 ### Properties
-* **allowHostNameCNMismatch**: any: Any object
-* **allowSelfSignedServerCert**: any: Any object
+* **allowHostNameCNMismatch**: any: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
+* **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
 * **authenticationType**: 'Anonymous' | 'SASLUsername' | 'UsernameAndPassword' | string (Required): The authentication type to use.
-* **enableSsl**: any: Any object
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **trustedCertPath**: any: Any object
-* **username**: any: Any object
-* **useSystemTrustStore**: any: Any object
+* **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **host**: any (Required): The IP address or host name of the Impala server. (i.e. 192.168.222.160)
+* **password**: [SecretBase](#secretbase): The password corresponding to the user name when using UsernameAndPassword.
+* **port**: any: The TCP port that the Impala server uses to listen for client connections. The default value is 21050.
+* **trustedCertPath**: any: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+* **username**: any: The user name used to access the Impala server. The default value is anonymous when using SASLUsername.
+* **useSystemTrustStore**: any: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
 
 ## InformixLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: any: Any object
-* **connectionString**: any (Required): Any object
-* **credential**: [SecretBase](#secretbase): The base definition of a secret type.
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **userName**: any: Any object
+* **authenticationType**: any: Type of authentication used to connect to the Informix as ODBC data store. Possible values are: Anonymous and Basic. Type: string (or Expression with resultType string).
+* **connectionString**: any (Required): The non-access credential portion of the connection string as well as an optional encrypted credential. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **credential**: [SecretBase](#secretbase): The access credential portion of the connection string specified in driver-specific property-value format.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password for Basic authentication.
+* **userName**: any: User name for Basic authentication. Type: string (or Expression with resultType string).
 
 ## InformixTableDatasetTypeProperties
 ### Properties
-* **tableName**: any: Any object
+* **tableName**: any: The Informix table name. Type: string (or Expression with resultType string).
 
 ## IntegrationRuntime
 * **Discriminator**: type
@@ -3452,15 +3467,15 @@
 * **description**: string: Integration runtime description.
 ### ManagedIntegrationRuntime
 #### Properties
-* **managedVirtualNetwork**: [ManagedVirtualNetworkReference](#managedvirtualnetworkreference): Managed Virtual Network reference type.
-* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): The state of integration runtime.
+* **managedVirtualNetwork**: [ManagedVirtualNetworkReference](#managedvirtualnetworkreference): Managed Virtual Network reference.
+* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): Integration runtime state, only valid for managed dedicated integration runtime.
 * **type**: 'Managed' (Required): Type of integration runtime.
-* **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required): Managed integration runtime type properties.
+* **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required): Managed integration runtime properties.
 
 ### SelfHostedIntegrationRuntime
 #### Properties
 * **type**: 'SelfHosted' (Required): Type of integration runtime.
-* **typeProperties**: [SelfHostedIntegrationRuntimeTypeProperties](#selfhostedintegrationruntimetypeproperties): The self-hosted integration runtime properties.
+* **typeProperties**: [SelfHostedIntegrationRuntimeTypeProperties](#selfhostedintegrationruntimetypeproperties): When this property is not null, means this is a linked integration runtime. The property is used to access original integration runtime.
 
 
 ## IntegrationRuntimeAuthKeys
@@ -3486,7 +3501,7 @@
 ## IntegrationRuntimeCustomSetupScriptProperties
 ### Properties
 * **blobContainerUri**: string: The URI of the Azure blob container that contains the custom setup script.
-* **sasToken**: [SecureString](#securestring): Azure Data Factory secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
+* **sasToken**: [SecureString](#securestring): The SAS token of the Azure blob container.
 
 ## IntegrationRuntimeDataFlowProperties
 ### Properties
@@ -3499,19 +3514,19 @@
 
 ## IntegrationRuntimeDataProxyProperties
 ### Properties
-* **connectVia**: [EntityReference](#entityreference): The entity reference.
+* **connectVia**: [EntityReference](#entityreference): The self-hosted integration runtime reference.
 * **path**: string: The path to contain the staged data in the Blob storage.
-* **stagingLinkedService**: [EntityReference](#entityreference): The entity reference.
+* **stagingLinkedService**: [EntityReference](#entityreference): The staging linked service reference.
 
 ## IntegrationRuntimeReference
 ### Properties
-* **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
+* **parameters**: [ParameterValueSpecification](#parametervaluespecification): Arguments for integration runtime.
 * **referenceName**: string (Required): Reference integration runtime name.
 * **type**: 'IntegrationRuntimeReference' | string (Required): Type of integration runtime.
 
 ## IntegrationRuntimeSsisCatalogInfo
 ### Properties
-* **catalogAdminPassword**: [SecureString](#securestring): Azure Data Factory secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
+* **catalogAdminPassword**: [SecureString](#securestring): The password of the administrator user account of the catalog database.
 * **catalogAdminUserName**: string: The administrator user name of catalog database.
 * **catalogPricingTier**: 'Basic' | 'Premium' | 'PremiumRS' | 'Standard' | string: The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
 * **catalogServerEndpoint**: string: The catalog database server URL.
@@ -3522,7 +3537,7 @@
 ## IntegrationRuntimeSsisProperties
 ### Properties
 * **catalogInfo**: [IntegrationRuntimeSsisCatalogInfo](#integrationruntimessiscataloginfo): Catalog information for managed dedicated integration runtime.
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **customSetupScriptProperties**: [IntegrationRuntimeCustomSetupScriptProperties](#integrationruntimecustomsetupscriptproperties): Custom setup script properties for a managed dedicated integration runtime.
 * **dataProxyProperties**: [IntegrationRuntimeDataProxyProperties](#integrationruntimedataproxyproperties): Data proxy properties for a managed dedicated integration runtime.
 * **edition**: 'Enterprise' | 'Standard' | string: The edition for the SSIS Integration Runtime
@@ -3543,31 +3558,31 @@
 
 ## JiraLinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
-* **username**: any (Required): Any object
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **host**: any (Required): The IP address or host name of the Jira service. (e.g. jira.example.com)
+* **password**: [SecretBase](#secretbase): The password corresponding to the user name that you provided in the username field.
+* **port**: any: The TCP port that the Jira server uses to listen for client connections. The default value is 443 if connecting through HTTPS, or 8080 if connecting through HTTP.
+* **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+* **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+* **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+* **username**: any (Required): The user name that you use to access Jira Service.
 
 ## JsonDatasetTypeProperties
 ### Properties
-* **compression**: [DatasetCompression](#datasetcompression): The compression method used on a dataset.
-* **encodingName**: any: Any object
-* **location**: [DatasetLocation](#datasetlocation) (Required): Dataset location.
+* **compression**: [DatasetCompression](#datasetcompression): The data compression method used for the json dataset.
+* **encodingName**: any: The code page name of the preferred encoding. If not specified, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
+* **location**: [DatasetLocation](#datasetlocation) (Required): The location of the json data storage.
 
 ## JsonReadSettings
 ### Properties
-* **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression read settings.
+* **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression settings.
 * **type**: string (Required): The read setting type.
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## JsonWriteSettings
 ### Properties
-* **filePattern**: any: Any object
+* **filePattern**: any: File pattern of JSON. This setting controls the way a collection of JSON objects will be treated. The default value is 'setOfObjects'. It is case-sensitive.
 * **type**: string (Required): The write setting type.
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -3575,7 +3590,7 @@
 ## LicensedComponentSetupTypeProperties
 ### Properties
 * **componentName**: string (Required): The name of the 3rd party component.
-* **licenseKey**: [SecretBase](#secretbase): The base definition of a secret type.
+* **licenseKey**: [SecretBase](#secretbase): The license key to activate the component.
 
 ## LinkedIntegrationRuntimeType
 * **Discriminator**: authorizationType
@@ -3584,12 +3599,12 @@
 ### LinkedIntegrationRuntimeKeyAuthorization
 #### Properties
 * **authorizationType**: 'Key' (Required): The authorization type for integration runtime sharing.
-* **key**: [SecureString](#securestring) (Required): Azure Data Factory secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
+* **key**: [SecureString](#securestring) (Required): The key used for authorization.
 
 ### LinkedIntegrationRuntimeRbacAuthorization
 #### Properties
 * **authorizationType**: 'RBAC' (Required): The authorization type for integration runtime sharing.
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **resourceId**: string (Required): The resource identifier of the integration runtime to be shared.
 
 
@@ -3598,9 +3613,9 @@
 
 ### Base Properties
 * **annotations**: any[]: List of tags that can be used for describing the linked service.
-* **connectVia**: [IntegrationRuntimeReference](#integrationruntimereference): Integration runtime reference type.
+* **connectVia**: [IntegrationRuntimeReference](#integrationruntimereference): The integration runtime reference.
 * **description**: string: Linked service description.
-* **parameters**: [ParameterDefinitionSpecification](#parameterdefinitionspecification): Definition of all parameters for an entity.
+* **parameters**: [ParameterDefinitionSpecification](#parameterdefinitionspecification): Parameters for linked service.
 ### AmazonMWSLinkedService
 #### Properties
 * **type**: 'AmazonMWS' (Required): Type of linked service.
@@ -3614,7 +3629,7 @@
 ### AmazonRdsForSqlServerLinkedService
 #### Properties
 * **type**: 'AmazonRdsForSqlServer' (Required): Type of linked service.
-* **typeProperties**: [AmazonRdsForSqlServerLinkedServiceTypeProperties](#amazonrdsforsqlserverlinkedservicetypeproperties) (Required): Amazon Rds for SQL Server linked service properties.
+* **typeProperties**: [AmazonRdsForSqlServerLinkedServiceTypeProperties](#amazonrdsforsqlserverlinkedservicetypeproperties) (Required): Amazon RDS for SQL Server linked service properties.
 
 ### AmazonRedshiftLinkedService
 #### Properties
@@ -3634,12 +3649,12 @@
 ### AppFiguresLinkedService
 #### Properties
 * **type**: 'AppFigures' (Required): Type of linked service.
-* **typeProperties**: [AppFiguresLinkedServiceTypeProperties](#appfigureslinkedservicetypeproperties) (Required): AppFigures linked service type properties.
+* **typeProperties**: [AppFiguresLinkedServiceTypeProperties](#appfigureslinkedservicetypeproperties) (Required): AppFigures linked service properties.
 
 ### AsanaLinkedService
 #### Properties
 * **type**: 'Asana' (Required): Type of linked service.
-* **typeProperties**: [AsanaLinkedServiceTypeProperties](#asanalinkedservicetypeproperties) (Required): Asana linked service type properties.
+* **typeProperties**: [AsanaLinkedServiceTypeProperties](#asanalinkedservicetypeproperties) (Required): Asana linked service properties.
 
 ### AzureBatchLinkedService
 #### Properties
@@ -3749,7 +3764,7 @@
 ### AzureTableStorageLinkedService
 #### Properties
 * **type**: 'AzureTableStorage' (Required): Type of linked service.
-* **typeProperties**: [AzureStorageLinkedServiceTypeProperties](#azurestoragelinkedservicetypeproperties) (Required): Azure Storage linked service properties.
+* **typeProperties**: [AzureStorageLinkedServiceTypeProperties](#azurestoragelinkedservicetypeproperties) (Required): Azure Table Storage linked service properties.
 
 ### CassandraLinkedService
 #### Properties
@@ -3784,12 +3799,12 @@
 ### CustomDataSourceLinkedService
 #### Properties
 * **type**: 'CustomDataSource' (Required): Type of linked service.
-* **typeProperties**: any (Required): Any object
+* **typeProperties**: any (Required): Custom linked service properties.
 
 ### DataworldLinkedService
 #### Properties
 * **type**: 'Dataworld' (Required): Type of linked service.
-* **typeProperties**: [DataworldLinkedServiceTypeProperties](#dataworldlinkedservicetypeproperties) (Required): Dataworld linked service type properties.
+* **typeProperties**: [DataworldLinkedServiceTypeProperties](#dataworldlinkedservicetypeproperties) (Required): Dataworld linked service properties.
 
 ### Db2LinkedService
 #### Properties
@@ -3999,7 +4014,7 @@
 ### QuickbaseLinkedService
 #### Properties
 * **type**: 'Quickbase' (Required): Type of linked service.
-* **typeProperties**: [QuickbaseLinkedServiceTypeProperties](#quickbaselinkedservicetypeproperties) (Required): Quickbase linked service type properties.
+* **typeProperties**: [QuickbaseLinkedServiceTypeProperties](#quickbaselinkedservicetypeproperties) (Required): Quickbase linked service properties.
 
 ### QuickBooksLinkedService
 #### Properties
@@ -4051,6 +4066,11 @@
 * **type**: 'SapHana' (Required): Type of linked service.
 * **typeProperties**: [SapHanaLinkedServiceProperties](#saphanalinkedserviceproperties) (Required): Properties specific to this linked service type.
 
+### SapOdpLinkedService
+#### Properties
+* **type**: 'SapOdp' (Required): Type of linked service.
+* **typeProperties**: [SapOdpLinkedServiceTypeProperties](#sapodplinkedservicetypeproperties) (Required): Properties specific to SAP ODP linked service type.
+
 ### SapOpenHubLinkedService
 #### Properties
 * **type**: 'SapOpenHub' (Required): Type of linked service.
@@ -4084,7 +4104,7 @@
 ### SmartsheetLinkedService
 #### Properties
 * **type**: 'Smartsheet' (Required): Type of linked service.
-* **typeProperties**: [SmartsheetLinkedServiceTypeProperties](#smartsheetlinkedservicetypeproperties) (Required): Smartsheet linked service type properties.
+* **typeProperties**: [SmartsheetLinkedServiceTypeProperties](#smartsheetlinkedservicetypeproperties) (Required): Smartsheet linked service properties.
 
 ### SnowflakeLinkedService
 #### Properties
@@ -4114,7 +4134,7 @@
 ### TeamDeskLinkedService
 #### Properties
 * **type**: 'TeamDesk' (Required): Type of linked service.
-* **typeProperties**: [TeamDeskLinkedServiceTypeProperties](#teamdesklinkedservicetypeproperties) (Required): TeamDesk linked service type properties.
+* **typeProperties**: [TeamDeskLinkedServiceTypeProperties](#teamdesklinkedservicetypeproperties) (Required): TeamDesk linked service properties.
 
 ### TeradataLinkedService
 #### Properties
@@ -4124,7 +4144,7 @@
 ### TwilioLinkedService
 #### Properties
 * **type**: 'Twilio' (Required): Type of linked service.
-* **typeProperties**: [TwilioLinkedServiceTypeProperties](#twiliolinkedservicetypeproperties) (Required): Twilio linked service type properties.
+* **typeProperties**: [TwilioLinkedServiceTypeProperties](#twiliolinkedservicetypeproperties) (Required): Twilio linked service properties.
 
 ### VerticaLinkedService
 #### Properties
@@ -4134,7 +4154,7 @@
 ### WebLinkedService
 #### Properties
 * **type**: 'Web' (Required): Type of linked service.
-* **typeProperties**: [WebLinkedServiceTypeProperties](#weblinkedservicetypeproperties) (Required): Base definition of WebLinkedServiceTypeProperties, this typeProperties is polymorphic based on authenticationType, so not flattened in SDK models.
+* **typeProperties**: [WebLinkedServiceTypeProperties](#weblinkedservicetypeproperties) (Required): Web linked service properties.
 
 ### XeroLinkedService
 #### Properties
@@ -4144,7 +4164,7 @@
 ### ZendeskLinkedService
 #### Properties
 * **type**: 'Zendesk' (Required): Type of linked service.
-* **typeProperties**: [ZendeskLinkedServiceTypeProperties](#zendesklinkedservicetypeproperties) (Required): Zendesk linked service type properties.
+* **typeProperties**: [ZendeskLinkedServiceTypeProperties](#zendesklinkedservicetypeproperties) (Required): Zendesk linked service properties.
 
 ### ZohoLinkedService
 #### Properties
@@ -4154,54 +4174,54 @@
 
 ## LinkedServiceReference
 ### Properties
-* **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
+* **parameters**: [ParameterValueSpecification](#parametervaluespecification): Arguments for LinkedService.
 * **referenceName**: string (Required): Reference LinkedService name.
 * **type**: 'LinkedServiceReference' | string (Required): Linked service reference type.
 
 ## LogLocationSettings
 ### Properties
-* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
-* **path**: any: Any object
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Log storage linked service reference.
+* **path**: any: The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
 
 ## LogSettings
 ### Properties
-* **copyActivityLogSettings**: [CopyActivityLogSettings](#copyactivitylogsettings): Settings for copy activity log.
-* **enableCopyActivityLog**: any: Any object
-* **logLocationSettings**: [LogLocationSettings](#loglocationsettings) (Required): Log location settings.
+* **copyActivityLogSettings**: [CopyActivityLogSettings](#copyactivitylogsettings): Specifies settings for copy activity log.
+* **enableCopyActivityLog**: any: Specifies whether to enable copy activity log. Type: boolean (or Expression with resultType boolean).
+* **logLocationSettings**: [LogLocationSettings](#loglocationsettings) (Required): Log location settings customer needs to provide when enabling log.
 
 ## LogStorageSettings
 ### Properties
-* **enableReliableLogging**: any: Any object
-* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
-* **logLevel**: any: Any object
-* **path**: any: Any object
+* **enableReliableLogging**: any: Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Log storage linked service reference.
+* **logLevel**: any: Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
+* **path**: any: The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## LookupActivityTypeProperties
 ### Properties
-* **dataset**: [DatasetReference](#datasetreference) (Required): Dataset reference type.
-* **firstRowOnly**: any: Any object
-* **source**: [CopySource](#copysource) (Required): A copy activity source.
+* **dataset**: [DatasetReference](#datasetreference) (Required): Lookup activity dataset reference.
+* **firstRowOnly**: any: Whether to return first row or all rows. Default value is true. Type: boolean (or Expression with resultType boolean).
+* **source**: [CopySource](#copysource) (Required): Dataset-specific source properties, same as copy activity source.
 
 ## MagentoLinkedServiceTypeProperties
 ### Properties
-* **accessToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
+* **accessToken**: [SecretBase](#secretbase): The access token from Magento.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **host**: any (Required): The URL of the Magento instance. (i.e. 192.168.222.110/magento3)
+* **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+* **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+* **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
 
 ## ManagedIntegrationRuntimeTypeProperties
 ### Properties
-* **computeProperties**: [IntegrationRuntimeComputeProperties](#integrationruntimecomputeproperties): The compute resource properties for managed integration runtime.
-* **customerVirtualNetwork**: [IntegrationRuntimeCustomerVirtualNetwork](#integrationruntimecustomervirtualnetwork): The definition and properties of virtual network to which Azure-SSIS integration runtime will join.
+* **computeProperties**: [IntegrationRuntimeComputeProperties](#integrationruntimecomputeproperties): The compute resource for managed integration runtime.
+* **customerVirtualNetwork**: [IntegrationRuntimeCustomerVirtualNetwork](#integrationruntimecustomervirtualnetwork): The name of virtual network to which Azure-SSIS integration runtime will join
 * **ssisProperties**: [IntegrationRuntimeSsisProperties](#integrationruntimessisproperties): SSIS properties for managed integration runtime.
 
 ## ManagedPrivateEndpoint
 ### Properties
-* **connectionState**: [ConnectionStateProperties](#connectionstateproperties): The connection state of a managed private endpoint
+* **connectionState**: [ConnectionStateProperties](#connectionstateproperties): The managed private endpoint connection state
 * **fqdns**: string[]: Fully qualified domain names
 * **groupId**: string: The groupId to which the managed private endpoint is created
 * **isReserved**: bool (ReadOnly): Denotes whether the managed private endpoint is reserved
@@ -4232,202 +4252,202 @@
 
 ## MariaDBLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any: Any object
-* **encryptedCredential**: any: Any object
-* **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
+* **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## MarketoLinkedServiceTypeProperties
 ### Properties
-* **clientId**: any (Required): Any object
-* **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
-* **encryptedCredential**: any: Any object
-* **endpoint**: any (Required): Any object
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
+* **clientId**: any (Required): The client Id of your Marketo service.
+* **clientSecret**: [SecretBase](#secretbase): The client secret of your Marketo service.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **endpoint**: any (Required): The endpoint of the Marketo server. (i.e. 123-ABC-321.mktorest.com)
+* **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+* **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+* **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
 
 ## MetadataItem
 ### Properties
-* **name**: any: Any object
-* **value**: any: Any object
+* **name**: any: Metadata item key name. Type: string (or Expression with resultType string).
+* **value**: any: Metadata item value. Type: string (or Expression with resultType string).
 
 ## MicrosoftAccessLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: any: Any object
-* **connectionString**: any (Required): Any object
-* **credential**: [SecretBase](#secretbase): The base definition of a secret type.
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **userName**: any: Any object
+* **authenticationType**: any: Type of authentication used to connect to the Microsoft Access as ODBC data store. Possible values are: Anonymous and Basic. Type: string (or Expression with resultType string).
+* **connectionString**: any (Required): The non-access credential portion of the connection string as well as an optional encrypted credential. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **credential**: [SecretBase](#secretbase): The access credential portion of the connection string specified in driver-specific property-value format.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password for Basic authentication.
+* **userName**: any: User name for Basic authentication. Type: string (or Expression with resultType string).
 
 ## MicrosoftAccessTableDatasetTypeProperties
 ### Properties
-* **tableName**: any: Any object
+* **tableName**: any: The Microsoft Access table name. Type: string (or Expression with resultType string).
 
 ## MongoDbAtlasCollectionDatasetTypeProperties
 ### Properties
-* **collection**: any (Required): Any object
+* **collection**: any (Required): The collection name of the MongoDB Atlas database. Type: string (or Expression with resultType string).
 
 ## MongoDbAtlasLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any (Required): Any object
-* **database**: any (Required): Any object
+* **connectionString**: any (Required): The MongoDB Atlas connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **database**: any (Required): The name of the MongoDB Atlas database that you want to access. Type: string (or Expression with resultType string).
 
 ## MongoDbCollectionDatasetTypeProperties
 ### Properties
-* **collectionName**: any (Required): Any object
+* **collectionName**: any (Required): The table name of the MongoDB database. Type: string (or Expression with resultType string).
 
 ## MongoDbCursorMethodsProperties
 ### Properties
-* **limit**: any: Any object
-* **project**: any: Any object
-* **skip**: any: Any object
-* **sort**: any: Any object
+* **limit**: any: Specifies the maximum number of documents the server returns. limit() is analogous to the LIMIT statement in a SQL database. Type: integer (or Expression with resultType integer).
+* **project**: any: Specifies the fields to return in the documents that match the query filter. To return all fields in the matching documents, omit this parameter. Type: string (or Expression with resultType string).
+* **skip**: any: Specifies the how many documents skipped and where MongoDB begins returning results. This approach may be useful in implementing paginated results. Type: integer (or Expression with resultType integer).
+* **sort**: any: Specifies the order in which the query returns matching documents. Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## MongoDbLinkedServiceTypeProperties
 ### Properties
-* **allowSelfSignedServerCert**: any: Any object
+* **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false. Type: boolean (or Expression with resultType boolean).
 * **authenticationType**: 'Anonymous' | 'Basic' | string: The authentication type to be used to connect to the MongoDB database.
-* **authSource**: any: Any object
-* **databaseName**: any (Required): Any object
-* **enableSsl**: any: Any object
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **server**: any (Required): Any object
-* **username**: any: Any object
+* **authSource**: any: Database to verify the username and password. Type: string (or Expression with resultType string).
+* **databaseName**: any (Required): The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).
+* **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false. Type: boolean (or Expression with resultType boolean).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password for authentication.
+* **port**: any: The TCP port number that the MongoDB server uses to listen for client connections. The default value is 27017. Type: integer (or Expression with resultType integer), minimum: 0.
+* **server**: any (Required): The IP address or server name of the MongoDB server. Type: string (or Expression with resultType string).
+* **username**: any: Username for authentication. Type: string (or Expression with resultType string).
 
 ## MongoDbV2CollectionDatasetTypeProperties
 ### Properties
-* **collection**: any (Required): Any object
+* **collection**: any (Required): The collection name of the MongoDB database. Type: string (or Expression with resultType string).
 
 ## MongoDbV2LinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any (Required): Any object
-* **database**: any (Required): Any object
+* **connectionString**: any (Required): The MongoDB connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **database**: any (Required): The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).
 
 ## MySqlLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
+* **connectionString**: any (Required): The connection string.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## MySqlTableDatasetTypeProperties
 ### Properties
-* **tableName**: any: Any object
+* **tableName**: any: The MySQL table name. Type: string (or Expression with resultType string).
 
 ## NetezzaLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any: Any object
-* **encryptedCredential**: any: Any object
-* **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
+* **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## NetezzaPartitionSettings
 ### Properties
-* **partitionColumnName**: any: Any object
-* **partitionLowerBound**: any: Any object
-* **partitionUpperBound**: any: Any object
+* **partitionColumnName**: any: The name of the column in integer type that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+* **partitionLowerBound**: any: The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+* **partitionUpperBound**: any: The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
 
 ## NetezzaTableDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **schema**: any: The schema name of the Netezza. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the Netezza. Type: string (or Expression with resultType string).
+* **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
 
 ## ODataLinkedServiceTypeProperties
 ### Properties
-* **aadResourceId**: any: Any object
+* **aadResourceId**: any: Specify the resource you are requesting authorization to use Directory. Type: string (or Expression with resultType string).
 * **aadServicePrincipalCredentialType**: 'ServicePrincipalCert' | 'ServicePrincipalKey' | string: Specify the credential type (key or cert) is used for service principal.
 * **authenticationType**: 'AadServicePrincipal' | 'Anonymous' | 'Basic' | 'ManagedServiceIdentity' | 'Windows' | string: Type of authentication used to connect to the OData service.
-* **authHeaders**: any: Any object
-* **azureCloudType**: any: Any object
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **servicePrincipalEmbeddedCert**: [SecretBase](#secretbase): The base definition of a secret type.
-* **servicePrincipalEmbeddedCertPassword**: [SecretBase](#secretbase): The base definition of a secret type.
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **tenant**: any: Any object
-* **url**: any (Required): Any object
-* **userName**: any: Any object
+* **authHeaders**: any: The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
+* **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password of the OData service.
+* **servicePrincipalEmbeddedCert**: [SecretBase](#secretbase): Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+* **servicePrincipalEmbeddedCertPassword**: [SecretBase](#secretbase): Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).
+* **servicePrincipalId**: any: Specify the application id of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase): Specify the secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+* **tenant**: any: Specify the tenant information (domain name or tenant ID) under which your application resides. Type: string (or Expression with resultType string).
+* **url**: any (Required): The URL of the OData service endpoint. Type: string (or Expression with resultType string).
+* **userName**: any: User name of the OData service. Type: string (or Expression with resultType string).
 
 ## ODataResourceDatasetTypeProperties
 ### Properties
-* **path**: any: Any object
+* **path**: any: The OData resource path. Type: string (or Expression with resultType string).
 
 ## OdbcLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: any: Any object
-* **connectionString**: any (Required): Any object
-* **credential**: [SecretBase](#secretbase): The base definition of a secret type.
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **userName**: any: Any object
+* **authenticationType**: any: Type of authentication used to connect to the ODBC data store. Possible values are: Anonymous and Basic. Type: string (or Expression with resultType string).
+* **connectionString**: any (Required): The non-access credential portion of the connection string as well as an optional encrypted credential. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **credential**: [SecretBase](#secretbase): The access credential portion of the connection string specified in driver-specific property-value format.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password for Basic authentication.
+* **userName**: any: User name for Basic authentication. Type: string (or Expression with resultType string).
 
 ## OdbcTableDatasetTypeProperties
 ### Properties
-* **tableName**: any: Any object
+* **tableName**: any: The ODBC table name. Type: string (or Expression with resultType string).
 
 ## Office365DatasetTypeProperties
 ### Properties
-* **predicate**: any: Any object
-* **tableName**: any (Required): Any object
+* **predicate**: any: A predicate expression that can be used to filter the specific rows to extract from Office 365. Type: string (or Expression with resultType string).
+* **tableName**: any (Required): Name of the dataset to extract from Office 365. Type: string (or Expression with resultType string).
 
 ## Office365LinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: Any object
-* **office365TenantId**: any (Required): Any object
-* **servicePrincipalId**: any (Required): Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
-* **servicePrincipalTenantId**: any (Required): Any object
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **office365TenantId**: any (Required): Azure tenant ID to which the Office 365 account belongs. Type: string (or Expression with resultType string).
+* **servicePrincipalId**: any (Required): Specify the application's client ID. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase) (Required): Specify the application's key.
+* **servicePrincipalTenantId**: any (Required): Specify the tenant information under which your Azure AD web application resides. Type: string (or Expression with resultType string).
 
 ## OracleCloudStorageLinkedServiceTypeProperties
 ### Properties
-* **accessKeyId**: any: Any object
-* **encryptedCredential**: any: Any object
-* **secretAccessKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **serviceUrl**: any: Any object
+* **accessKeyId**: any: The access key identifier of the Oracle Cloud Storage Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **secretAccessKey**: [SecretBase](#secretbase): The secret access key of the Oracle Cloud Storage Identity and Access Management (IAM) user.
+* **serviceUrl**: any: This value specifies the endpoint to access with the Oracle Cloud Storage Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).
 
 ## OracleLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
+* **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## OraclePartitionSettings
 ### Properties
-* **partitionColumnName**: any: Any object
-* **partitionLowerBound**: any: Any object
-* **partitionNames**: any: Any object
-* **partitionUpperBound**: any: Any object
+* **partitionColumnName**: any: The name of the column in integer type that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+* **partitionLowerBound**: any: The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+* **partitionNames**: any: Names of the physical partitions of Oracle table.
+* **partitionUpperBound**: any: The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
 
 ## OracleServiceCloudLinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **password**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
-* **username**: any (Required): Any object
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **host**: any (Required): The URL of the Oracle Service Cloud instance.
+* **password**: [SecretBase](#secretbase) (Required): The password corresponding to the user name that you provided in the username key.
+* **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).
+* **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
+* **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
+* **username**: any (Required): The user name that you use to access Oracle Service Cloud server.
 
 ## OracleTableDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **schema**: any: The schema name of the on-premises Oracle database. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the on-premises Oracle database. Type: string (or Expression with resultType string).
+* **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
 
 ## OrcDatasetTypeProperties
 ### Properties
-* **location**: [DatasetLocation](#datasetlocation) (Required): Dataset location.
-* **orcCompressionCodec**: any: Any object
+* **location**: [DatasetLocation](#datasetlocation) (Required): The location of the ORC data storage.
+* **orcCompressionCodec**: any: The data orcCompressionCodec. Type: string (or Expression with resultType string).
 
 ## OrcWriteSettings
 ### Properties
-* **fileNamePrefix**: any: Any object
-* **maxRowsPerFile**: any: Any object
+* **fileNamePrefix**: any: Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+* **maxRowsPerFile**: any: Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
 * **type**: string (Required): The write setting type.
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -4435,7 +4455,7 @@
 ## PackageStore
 ### Properties
 * **name**: string (Required): The name of the package store
-* **packageStoreLinkedService**: [EntityReference](#entityreference) (Required): The entity reference.
+* **packageStoreLinkedService**: [EntityReference](#entityreference) (Required): The package store linked service reference.
 
 ## ParameterDefinitionSpecification
 ### Properties
@@ -4454,7 +4474,7 @@
 
 ## ParameterSpecification
 ### Properties
-* **defaultValue**: any: Any object
+* **defaultValue**: any: Default value of parameter.
 * **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'Object' | 'SecureString' | 'String' | string (Required): Parameter type.
 
 ## ParameterValueSpecification
@@ -4489,47 +4509,47 @@
 
 ## ParquetDatasetTypeProperties
 ### Properties
-* **compressionCodec**: any: Any object
-* **location**: [DatasetLocation](#datasetlocation) (Required): Dataset location.
+* **compressionCodec**: any: The data compressionCodec. Type: string (or Expression with resultType string).
+* **location**: [DatasetLocation](#datasetlocation) (Required): The location of the parquet storage.
 
 ## ParquetWriteSettings
 ### Properties
-* **fileNamePrefix**: any: Any object
-* **maxRowsPerFile**: any: Any object
+* **fileNamePrefix**: any: Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+* **maxRowsPerFile**: any: Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
 * **type**: string (Required): The write setting type.
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## PaypalLinkedServiceTypeProperties
 ### Properties
-* **clientId**: any (Required): Any object
-* **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
+* **clientId**: any (Required): The client ID associated with your PayPal application.
+* **clientSecret**: [SecretBase](#secretbase): The client secret associated with your PayPal application.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **host**: any (Required): The URL of the PayPal instance. (i.e. api.sandbox.paypal.com)
+* **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+* **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+* **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
 
 ## PhoenixDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **schema**: any: The schema name of the Phoenix. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the Phoenix. Type: string (or Expression with resultType string).
+* **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
 
 ## PhoenixLinkedServiceTypeProperties
 ### Properties
-* **allowHostNameCNMismatch**: any: Any object
-* **allowSelfSignedServerCert**: any: Any object
+* **allowHostNameCNMismatch**: any: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
+* **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
 * **authenticationType**: 'Anonymous' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' | string (Required): The authentication mechanism used to connect to the Phoenix server.
-* **enableSsl**: any: Any object
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **httpPath**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **trustedCertPath**: any: Any object
-* **username**: any: Any object
-* **useSystemTrustStore**: any: Any object
+* **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **host**: any (Required): The IP address or host name of the Phoenix server. (i.e. 192.168.222.160)
+* **httpPath**: any: The partial URL corresponding to the Phoenix server. (i.e. /gateway/sandbox/phoenix/version). The default value is hbasephoenix if using WindowsAzureHDInsightService.
+* **password**: [SecretBase](#secretbase): The password corresponding to the user name.
+* **port**: any: The TCP port that the Phoenix server uses to listen for client connections. The default value is 8765.
+* **trustedCertPath**: any: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+* **username**: any: The user name used to connect to the Phoenix server.
+* **useSystemTrustStore**: any: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
 
 ## Pipeline
 ### Properties
@@ -4538,14 +4558,14 @@
 * **concurrency**: int: The max number of concurrent runs for the pipeline.
 * **description**: string: The description of the pipeline.
 * **folder**: [PipelineFolder](#pipelinefolder): The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
-* **parameters**: [ParameterDefinitionSpecification](#parameterdefinitionspecification): Definition of all parameters for an entity.
+* **parameters**: [ParameterDefinitionSpecification](#parameterdefinitionspecification): List of parameters for pipeline.
 * **policy**: [PipelinePolicy](#pipelinepolicy): Pipeline Policy.
 * **runDimensions**: [PipelineRunDimensions](#pipelinerundimensions): Dimensions emitted by Pipeline.
-* **variables**: [VariableDefinitionSpecification](#variabledefinitionspecification): Definition of variable for a Pipeline.
+* **variables**: [VariableDefinitionSpecification](#variabledefinitionspecification): List of variables for pipeline.
 
 ## PipelineElapsedTimeMetricPolicy
 ### Properties
-* **duration**: any: Any object
+* **duration**: any: TimeSpan value, after which an Azure Monitoring Metric is fired.
 
 ## PipelineFolder
 ### Properties
@@ -4568,34 +4588,34 @@
 
 ## PolybaseSettings
 ### Properties
-* **rejectSampleValue**: any: Any object
-* **rejectType**: 'percentage' | 'value' | string: Indicates whether the RejectValue property is specified as a literal value or a percentage.
-* **rejectValue**: any: Any object
-* **useTypeDefault**: any: Any object
+* **rejectSampleValue**: any: Determines the number of rows to attempt to retrieve before the PolyBase recalculates the percentage of rejected rows. Type: integer (or Expression with resultType integer), minimum: 0.
+* **rejectType**: 'percentage' | 'value' | string: Reject type.
+* **rejectValue**: any: Specifies the value or the percentage of rows that can be rejected before the query fails. Type: number (or Expression with resultType number), minimum: 0.
+* **useTypeDefault**: any: Specifies how to handle missing values in delimited text files when PolyBase retrieves data from the text file. Type: boolean (or Expression with resultType boolean).
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## PostgreSqlLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
+* **connectionString**: any (Required): The connection string.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## PostgreSqlTableDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **schema**: any: The PostgreSQL schema name. Type: string (or Expression with resultType string).
+* **table**: any: The PostgreSQL table name. Type: string (or Expression with resultType string).
+* **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
 
 ## PowerQuerySink
 ### Properties
-* **dataset**: [DatasetReference](#datasetreference): Dataset reference type.
+* **dataset**: [DatasetReference](#datasetreference): Dataset reference.
 * **description**: string: Transformation description.
-* **flowlet**: [DataFlowReference](#dataflowreference): Data flow reference type.
-* **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **flowlet**: [DataFlowReference](#dataflowreference): Flowlet Reference
+* **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
 * **name**: string (Required): Transformation name.
-* **rejectedDataLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
-* **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **rejectedDataLinkedService**: [LinkedServiceReference](#linkedservicereference): Rejected data linked service reference.
+* **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference): Schema linked service reference.
 * **script**: string: sink script.
 
 ## PowerQuerySinkMapping
@@ -4605,12 +4625,12 @@
 
 ## PowerQuerySource
 ### Properties
-* **dataset**: [DatasetReference](#datasetreference): Dataset reference type.
+* **dataset**: [DatasetReference](#datasetreference): Dataset reference.
 * **description**: string: Transformation description.
-* **flowlet**: [DataFlowReference](#dataflowreference): Data flow reference type.
-* **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **flowlet**: [DataFlowReference](#dataflowreference): Flowlet Reference
+* **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
 * **name**: string (Required): Transformation name.
-* **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference): Schema linked service reference.
 * **script**: string: source script.
 
 ## PowerQueryTypeProperties
@@ -4621,26 +4641,26 @@
 
 ## PrestoDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **schema**: any: The schema name of the Presto. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the Presto. Type: string (or Expression with resultType string).
+* **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
 
 ## PrestoLinkedServiceTypeProperties
 ### Properties
-* **allowHostNameCNMismatch**: any: Any object
-* **allowSelfSignedServerCert**: any: Any object
+* **allowHostNameCNMismatch**: any: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
+* **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
 * **authenticationType**: 'Anonymous' | 'LDAP' | string (Required): The authentication mechanism used to connect to the Presto server.
-* **catalog**: any (Required): Any object
-* **enableSsl**: any: Any object
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **serverVersion**: any (Required): Any object
-* **timeZoneID**: any: Any object
-* **trustedCertPath**: any: Any object
-* **username**: any: Any object
-* **useSystemTrustStore**: any: Any object
+* **catalog**: any (Required): The catalog context for all request against the server.
+* **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **host**: any (Required): The IP address or host name of the Presto server. (i.e. 192.168.222.160)
+* **password**: [SecretBase](#secretbase): The password corresponding to the user name.
+* **port**: any: The TCP port that the Presto server uses to listen for client connections. The default value is 8080.
+* **serverVersion**: any (Required): The version of the Presto server. (i.e. 0.148-t)
+* **timeZoneID**: any: The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value is the system time zone.
+* **trustedCertPath**: any: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+* **username**: any: The user name used to connect to the Presto server.
+* **useSystemTrustStore**: any: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
 
 ## PrivateEndpoint
 ### Properties
@@ -4648,7 +4668,7 @@
 
 ## PrivateLinkConnectionApprovalRequest
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint which a connection belongs to.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The resource of private endpoint.
 * **privateLinkServiceConnectionState**: [PrivateLinkConnectionState](#privatelinkconnectionstate): The state of a private link connection
 * **provisioningState**: string (ReadOnly)
 
@@ -4664,21 +4684,21 @@
 
 ## QuickbaseLinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: Any object
-* **url**: any (Required): Any object
-* **userToken**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **url**: any (Required): The url to connect Quickbase source. Type: string (or Expression with resultType string).
+* **userToken**: [SecretBase](#secretbase) (Required): The user token for the Quickbase source.
 
 ## QuickBooksLinkedServiceTypeProperties
 ### Properties
-* **accessToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **accessTokenSecret**: [SecretBase](#secretbase): The base definition of a secret type.
-* **companyId**: any: Any object
-* **connectionProperties**: any: Any object
-* **consumerKey**: any: Any object
-* **consumerSecret**: [SecretBase](#secretbase): The base definition of a secret type.
-* **encryptedCredential**: any: Any object
-* **endpoint**: any: Any object
-* **useEncryptedEndpoints**: any: Any object
+* **accessToken**: [SecretBase](#secretbase): The access token for OAuth 1.0 authentication.
+* **accessTokenSecret**: [SecretBase](#secretbase): The access token secret for OAuth 1.0 authentication.
+* **companyId**: any: The company ID of the QuickBooks company to authorize.
+* **connectionProperties**: any: Properties used to connect to QuickBooks. It is mutually exclusive with any other properties in the linked service. Type: object.
+* **consumerKey**: any: The consumer key for OAuth 1.0 authentication.
+* **consumerSecret**: [SecretBase](#secretbase): The consumer secret for OAuth 1.0 authentication.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **endpoint**: any: The endpoint of the QuickBooks server. (i.e. quickbooks.api.intuit.com)
+* **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
 
 ## RecurrenceSchedule
 ### Properties
@@ -4692,30 +4712,30 @@
 
 ## RecurrenceScheduleOccurrence
 ### Properties
-* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': The days of the week.
+* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': The day of the week.
 * **occurrence**: int: The occurrence.
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## RedirectIncompatibleRowSettings
 ### Properties
-* **linkedServiceName**: any (Required): Any object
-* **path**: any: Any object
+* **linkedServiceName**: any (Required): Name of the Azure Storage, Storage SAS, or Azure Data Lake Store linked service used for redirecting incompatible row. Must be specified if redirectIncompatibleRowSettings is specified. Type: string (or Expression with resultType string).
+* **path**: any: The path for storing the redirect incompatible row data. Type: string (or Expression with resultType string).
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## RedshiftUnloadSettings
 ### Properties
-* **bucketName**: any (Required): Any object
-* **s3LinkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
+* **bucketName**: any (Required): The bucket of the interim Amazon S3 which will be used to store the unloaded data from Amazon Redshift source. The bucket must be in the same region as the Amazon Redshift source. Type: string (or Expression with resultType string).
+* **s3LinkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): The name of the Amazon S3 linked service which will be used for the unload operation when copying from the Amazon Redshift source.
 
 ## RelationalTableDatasetTypeProperties
 ### Properties
-* **tableName**: any: Any object
+* **tableName**: any: The relational table name. Type: string (or Expression with resultType string).
 
 ## RerunTumblingWindowTriggerTypeProperties
 ### Properties
-* **parentTrigger**: any (Required): Any object
+* **parentTrigger**: any (Required): The parent trigger reference.
 * **requestedEndTime**: string (Required): The end time for the time period for which restatement is initiated. Only UTC time is currently supported.
 * **requestedStartTime**: string (Required): The start time for the time period for which restatement is initiated. Only UTC time is currently supported.
 * **rerunConcurrency**: int (Required): The max number of parallel time windows (ready for execution) for which a rerun is triggered.
@@ -4727,188 +4747,214 @@
 
 ## ResponsysLinkedServiceTypeProperties
 ### Properties
-* **clientId**: any (Required): Any object
-* **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
-* **encryptedCredential**: any: Any object
-* **endpoint**: any (Required): Any object
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
+* **clientId**: any (Required): The client ID associated with the Responsys application. Type: string (or Expression with resultType string).
+* **clientSecret**: [SecretBase](#secretbase): The client secret associated with the Responsys application. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **endpoint**: any (Required): The endpoint of the Responsys server.
+* **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).
+* **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
+* **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
 
 ## RestResourceDatasetTypeProperties
 ### Properties
-* **additionalHeaders**: any: Any object
-* **paginationRules**: any: Any object
-* **relativeUrl**: any: Any object
-* **requestBody**: any: Any object
-* **requestMethod**: any: Any object
+* **additionalHeaders**: any: The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
+* **paginationRules**: any: The pagination rules to compose next page requests. Type: string (or Expression with resultType string).
+* **relativeUrl**: any: The relative URL to the resource that the RESTful API provides. Type: string (or Expression with resultType string).
+* **requestBody**: any: The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
+* **requestMethod**: any: The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
 
 ## RestServiceLinkedServiceTypeProperties
 ### Properties
-* **aadResourceId**: any: Any object
+* **aadResourceId**: any: The resource you are requesting authorization to use.
 * **authenticationType**: 'AadServicePrincipal' | 'Anonymous' | 'Basic' | 'ManagedServiceIdentity' | 'OAuth2ClientCredential' | string (Required): Type of authentication used to connect to the REST service.
-* **authHeaders**: any: Any object
-* **azureCloudType**: any: Any object
-* **clientId**: any: Any object
-* **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
-* **enableServerCertificateValidation**: any: Any object
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **resource**: any: Any object
-* **scope**: any: Any object
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **tenant**: any: Any object
-* **tokenEndpoint**: any: Any object
-* **url**: any (Required): Any object
-* **userName**: any: Any object
+* **authHeaders**: any: The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
+* **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+* **clientId**: any: The client ID associated with your application. Type: string (or Expression with resultType string).
+* **clientSecret**: [SecretBase](#secretbase): The client secret associated with your application.
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **enableServerCertificateValidation**: any: Whether to validate server side SSL certificate when connecting to the endpoint.The default value is true. Type: boolean (or Expression with resultType boolean).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): The password used in Basic authentication type.
+* **resource**: any: The target service or resource to which the access will be requested. Type: string (or Expression with resultType string).
+* **scope**: any: The scope of the access required. It describes what kind of access will be requested. Type: string (or Expression with resultType string).
+* **servicePrincipalId**: any: The application's client ID used in AadServicePrincipal authentication type.
+* **servicePrincipalKey**: [SecretBase](#secretbase): The application's key used in AadServicePrincipal authentication type.
+* **tenant**: any: The tenant information (domain name or tenant ID) used in AadServicePrincipal authentication type under which your application resides.
+* **tokenEndpoint**: any: The token endpoint of the authorization server to acquire access token. Type: string (or Expression with resultType string).
+* **url**: any (Required): The base URL of the REST service.
+* **userName**: any: The user name used in Basic authentication type.
 
 ## RetryPolicy
 ### Properties
-* **count**: any: Any object
+* **count**: any: Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
 * **intervalInSeconds**: int: Interval between retries in seconds. Default is 30.
 
 ## SalesforceLinkedServiceTypeProperties
 ### Properties
-* **apiVersion**: any: Any object
-* **encryptedCredential**: any: Any object
-* **environmentUrl**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **securityToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **username**: any: Any object
+* **apiVersion**: any: The Salesforce API version used in ADF. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **environmentUrl**: any: The URL of Salesforce instance. Default is 'https://login.salesforce.com'. To copy data from sandbox, specify 'https://test.salesforce.com'. To copy data from custom domain, specify, for example, 'https://[domain].my.salesforce.com'. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): The password for Basic authentication of the Salesforce instance.
+* **securityToken**: [SecretBase](#secretbase): The security token is optional to remotely access Salesforce instance.
+* **username**: any: The username for Basic authentication of the Salesforce instance. Type: string (or Expression with resultType string).
 
 ## SalesforceMarketingCloudLinkedServiceTypeProperties
 ### Properties
-* **clientId**: any: Any object
-* **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
-* **connectionProperties**: any: Any object
-* **encryptedCredential**: any: Any object
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
+* **clientId**: any: The client ID associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).
+* **clientSecret**: [SecretBase](#secretbase): The client secret associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).
+* **connectionProperties**: any: Properties used to connect to Salesforce Marketing Cloud. It is mutually exclusive with any other properties in the linked service. Type: object.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).
+* **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
+* **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
 
 ## SalesforceObjectDatasetTypeProperties
 ### Properties
-* **objectApiName**: any: Any object
+* **objectApiName**: any: The Salesforce object API name. Type: string (or Expression with resultType string).
 
 ## SalesforceServiceCloudLinkedServiceTypeProperties
 ### Properties
-* **apiVersion**: any: Any object
-* **encryptedCredential**: any: Any object
-* **environmentUrl**: any: Any object
-* **extendedProperties**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **securityToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **username**: any: Any object
+* **apiVersion**: any: The Salesforce API version used in ADF. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **environmentUrl**: any: The URL of Salesforce Service Cloud instance. Default is 'https://login.salesforce.com'. To copy data from sandbox, specify 'https://test.salesforce.com'. To copy data from custom domain, specify, for example, 'https://[domain].my.salesforce.com'. Type: string (or Expression with resultType string).
+* **extendedProperties**: any: Extended properties appended to the connection string. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): The password for Basic authentication of the Salesforce instance.
+* **securityToken**: [SecretBase](#secretbase): The security token is optional to remotely access Salesforce instance.
+* **username**: any: The username for Basic authentication of the Salesforce instance. Type: string (or Expression with resultType string).
 
 ## SalesforceServiceCloudObjectDatasetTypeProperties
 ### Properties
-* **objectApiName**: any: Any object
+* **objectApiName**: any: The Salesforce Service Cloud object API name. Type: string (or Expression with resultType string).
 
 ## SapBWLinkedServiceTypeProperties
 ### Properties
-* **clientId**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **server**: any (Required): Any object
-* **systemNumber**: any (Required): Any object
-* **userName**: any: Any object
+* **clientId**: any (Required): Client ID of the client on the BW system. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password to access the SAP BW server.
+* **server**: any (Required): Host name of the SAP BW instance. Type: string (or Expression with resultType string).
+* **systemNumber**: any (Required): System number of the BW system. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
+* **userName**: any: Username to access the SAP BW server. Type: string (or Expression with resultType string).
 
 ## SapCloudForCustomerLinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **url**: any (Required): Any object
-* **username**: any: Any object
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): The password for Basic authentication.
+* **url**: any (Required): The URL of SAP Cloud for Customer OData API. For example, '[https://[tenantname].crm.ondemand.com/sap/c4c/odata/v1]'. Type: string (or Expression with resultType string).
+* **username**: any: The username for Basic authentication. Type: string (or Expression with resultType string).
 
 ## SapCloudForCustomerResourceDatasetTypeProperties
 ### Properties
-* **path**: any (Required): Any object
+* **path**: any (Required): The path of the SAP Cloud for Customer OData entity. Type: string (or Expression with resultType string).
 
 ## SapEccLinkedServiceTypeProperties
 ### Properties
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **password**: [SecretBase](#secretbase): The password for Basic authentication.
 * **url**: string (Required): The URL of SAP ECC OData API. For example, '[https://hostname:port/sap/opu/odata/sap/servicename/]'. Type: string (or Expression with resultType string).
 * **username**: string: The username for Basic authentication. Type: string (or Expression with resultType string).
 
 ## SapEccResourceDatasetTypeProperties
 ### Properties
-* **path**: any (Required): Any object
+* **path**: any (Required): The path of the SAP ECC OData entity. Type: string (or Expression with resultType string).
 
 ## SapHanaLinkedServiceProperties
 ### Properties
 * **authenticationType**: 'Basic' | 'Windows' | string: The authentication type to be used to connect to the SAP HANA server.
-* **connectionString**: any: Any object
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **server**: any: Any object
-* **userName**: any: Any object
+* **connectionString**: any: SAP HANA ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password to access the SAP HANA server.
+* **server**: any: Host name of the SAP HANA server. Type: string (or Expression with resultType string).
+* **userName**: any: Username to access the SAP HANA server. Type: string (or Expression with resultType string).
 
 ## SapHanaPartitionSettings
 ### Properties
-* **partitionColumnName**: any: Any object
+* **partitionColumnName**: any: The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
 
 ## SapHanaTableDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
+* **schema**: any: The schema name of SAP HANA. Type: string (or Expression with resultType string).
+* **table**: any: The table name of SAP HANA. Type: string (or Expression with resultType string).
+
+## SapOdpLinkedServiceTypeProperties
+### Properties
+* **clientId**: any: Client ID of the client on the SAP system where the table is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **language**: any: Language of the SAP system where the table is located. The default value is EN. Type: string (or Expression with resultType string).
+* **logonGroup**: any: The Logon Group for the SAP System. Type: string (or Expression with resultType string).
+* **messageServer**: any: The hostname of the SAP Message Server. Type: string (or Expression with resultType string).
+* **messageServerService**: any: The service name or port number of the Message Server. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password to access the SAP server where the table is located.
+* **server**: any: Host name of the SAP instance where the table is located. Type: string (or Expression with resultType string).
+* **sncLibraryPath**: any: External security product's library to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+* **sncMode**: any: SNC activation indicator to access the SAP server where the table is located. Must be either 0 (off) or 1 (on). Type: string (or Expression with resultType string).
+* **sncMyName**: any: Initiator's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+* **sncPartnerName**: any: Communication partner's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+* **sncQop**: any: SNC Quality of Protection. Allowed value include: 1, 2, 3, 8, 9. Type: string (or Expression with resultType string).
+* **subscriberName**: any: The subscriber name. Type: string (or Expression with resultType string).
+* **systemId**: any: SystemID of the SAP system where the table is located. Type: string (or Expression with resultType string).
+* **systemNumber**: any: System number of the SAP system where the table is located. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
+* **userName**: any: Username to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+* **x509CertificatePath**: any: SNC X509 certificate file path. Type: string (or Expression with resultType string).
+
+## SapOdpResourceDatasetTypeProperties
+### Properties
+* **context**: any (Required): The context of the SAP ODP Object. Type: string (or Expression with resultType string).
+* **objectName**: any (Required): The name of the SAP ODP Object. Type: string (or Expression with resultType string).
 
 ## SapOpenHubLinkedServiceTypeProperties
 ### Properties
-* **clientId**: any: Any object
-* **encryptedCredential**: any: Any object
-* **language**: any: Any object
-* **logonGroup**: any: Any object
-* **messageServer**: any: Any object
-* **messageServerService**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **server**: any: Any object
-* **systemId**: any: Any object
-* **systemNumber**: any: Any object
-* **userName**: any: Any object
+* **clientId**: any: Client ID of the client on the BW system where the open hub destination is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **language**: any: Language of the BW system where the open hub destination is located. The default value is EN. Type: string (or Expression with resultType string).
+* **logonGroup**: any: The Logon Group for the SAP System. Type: string (or Expression with resultType string).
+* **messageServer**: any: The hostname of the SAP Message Server. Type: string (or Expression with resultType string).
+* **messageServerService**: any: The service name or port number of the Message Server. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password to access the SAP BW server where the open hub destination is located.
+* **server**: any: Host name of the SAP BW instance where the open hub destination is located. Type: string (or Expression with resultType string).
+* **systemId**: any: SystemID of the SAP system where the table is located. Type: string (or Expression with resultType string).
+* **systemNumber**: any: System number of the BW system where the open hub destination is located. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
+* **userName**: any: Username to access the SAP BW server where the open hub destination is located. Type: string (or Expression with resultType string).
 
 ## SapOpenHubTableDatasetTypeProperties
 ### Properties
-* **baseRequestId**: any: Any object
-* **excludeLastRequest**: any: Any object
-* **openHubDestinationName**: any (Required): Any object
+* **baseRequestId**: any: The ID of request for delta loading. Once it is set, only data with requestId larger than the value of this property will be retrieved. The default value is 0. Type: integer (or Expression with resultType integer ).
+* **excludeLastRequest**: any: Whether to exclude the records of the last request. The default value is true. Type: boolean (or Expression with resultType boolean).
+* **openHubDestinationName**: any (Required): The name of the Open Hub Destination with destination type as Database Table. Type: string (or Expression with resultType string).
 
 ## SapTableLinkedServiceTypeProperties
 ### Properties
-* **clientId**: any: Any object
-* **encryptedCredential**: any: Any object
-* **language**: any: Any object
-* **logonGroup**: any: Any object
-* **messageServer**: any: Any object
-* **messageServerService**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **server**: any: Any object
-* **sncLibraryPath**: any: Any object
-* **sncMode**: any: Any object
-* **sncMyName**: any: Any object
-* **sncPartnerName**: any: Any object
-* **sncQop**: any: Any object
-* **systemId**: any: Any object
-* **systemNumber**: any: Any object
-* **userName**: any: Any object
+* **clientId**: any: Client ID of the client on the SAP system where the table is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **language**: any: Language of the SAP system where the table is located. The default value is EN. Type: string (or Expression with resultType string).
+* **logonGroup**: any: The Logon Group for the SAP System. Type: string (or Expression with resultType string).
+* **messageServer**: any: The hostname of the SAP Message Server. Type: string (or Expression with resultType string).
+* **messageServerService**: any: The service name or port number of the Message Server. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password to access the SAP server where the table is located.
+* **server**: any: Host name of the SAP instance where the table is located. Type: string (or Expression with resultType string).
+* **sncLibraryPath**: any: External security product's library to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+* **sncMode**: any: SNC activation indicator to access the SAP server where the table is located. Must be either 0 (off) or 1 (on). Type: string (or Expression with resultType string).
+* **sncMyName**: any: Initiator's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+* **sncPartnerName**: any: Communication partner's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+* **sncQop**: any: SNC Quality of Protection. Allowed value include: 1, 2, 3, 8, 9. Type: string (or Expression with resultType string).
+* **systemId**: any: SystemID of the SAP system where the table is located. Type: string (or Expression with resultType string).
+* **systemNumber**: any: System number of the SAP system where the table is located. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
+* **userName**: any: Username to access the SAP server where the table is located. Type: string (or Expression with resultType string).
 
 ## SapTablePartitionSettings
 ### Properties
-* **maxPartitionsNumber**: any: Any object
-* **partitionColumnName**: any: Any object
-* **partitionLowerBound**: any: Any object
-* **partitionUpperBound**: any: Any object
+* **maxPartitionsNumber**: any: The maximum value of partitions the table will be split into. Type: integer (or Expression with resultType string).
+* **partitionColumnName**: any: The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+* **partitionLowerBound**: any: The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+* **partitionUpperBound**: any: The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
 
 ## SapTableResourceDatasetTypeProperties
 ### Properties
-* **tableName**: any (Required): Any object
+* **tableName**: any (Required): The name of the SAP Table. Type: string (or Expression with resultType string).
 
 ## ScheduleTriggerRecurrence
 ### Properties
 * **endTime**: string: The end time.
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'NotSpecified' | 'Week' | 'Year' | string: Enumerates possible frequency option for the schedule trigger.
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'NotSpecified' | 'Week' | 'Year' | string: The frequency.
 * **interval**: int: The interval.
 * **schedule**: [RecurrenceSchedule](#recurrenceschedule): The recurrence schedule.
 * **startTime**: string: The start time.
@@ -4918,27 +4964,27 @@
 
 ## ScheduleTriggerTypeProperties
 ### Properties
-* **recurrence**: [ScheduleTriggerRecurrence](#scheduletriggerrecurrence) (Required): The workflow trigger recurrence.
+* **recurrence**: [ScheduleTriggerRecurrence](#scheduletriggerrecurrence) (Required): Recurrence schedule configuration.
 
 ## ScriptAction
 ### Properties
 * **name**: string (Required): The user provided name of the script action.
 * **parameters**: string: The parameters for the script action.
-* **roles**: any (Required): Any object
+* **roles**: any (Required): The node types on which the script action should be executed.
 * **uri**: string (Required): The URI for the script action.
 
 ## ScriptActivityParameter
 ### Properties
 * **direction**: 'Input' | 'InputOutput' | 'Output' | string: The direction of the parameter.
-* **name**: any: Any object
+* **name**: any: The name of the parameter. Type: string (or Expression with resultType string).
 * **size**: int: The size of the output direction parameter.
 * **type**: 'Boolean' | 'DateTime' | 'DateTimeOffset' | 'Decimal' | 'Double' | 'Guid' | 'Int16' | 'Int32' | 'Int64' | 'Single' | 'String' | 'Timespan' | string: The type of the parameter.
-* **value**: any: Any object
+* **value**: any: The value of the parameter.
 
 ## ScriptActivityScriptBlock
 ### Properties
 * **parameters**: [ScriptActivityParameter](#scriptactivityparameter)[]: Array of script parameters. Type: array.
-* **text**: any (Required): Any object
+* **text**: any (Required): The query text. Type: string (or Expression with resultType string).
 * **type**: 'NonQuery' | 'Query' | string (Required): The type of the query. Type: string.
 
 ## ScriptActivityTypeProperties
@@ -4949,7 +4995,7 @@
 ## ScriptActivityTypePropertiesLogSettings
 ### Properties
 * **logDestination**: 'ActivityOutput' | 'ExternalStore' | string (Required): The destination of logs. Type: string.
-* **logLocationSettings**: [LogLocationSettings](#loglocationsettings): Log location settings.
+* **logLocationSettings**: [LogLocationSettings](#loglocationsettings): Log location settings customer needs to provide when enabling log.
 
 ## SecretBase
 * **Discriminator**: type
@@ -4957,9 +5003,9 @@
 ### Base Properties
 ### AzureKeyVaultSecretReference
 #### Properties
-* **secretName**: any (Required): Any object
-* **secretVersion**: any: Any object
-* **store**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
+* **secretName**: any (Required): The name of the secret in Azure Key Vault. Type: string (or Expression with resultType string).
+* **secretVersion**: any: The version of the secret in Azure Key Vault. The default value is the latest version of the secret. Type: string (or Expression with resultType string).
+* **store**: [LinkedServiceReference](#linkedservicereference) (Required): The Azure Key Vault linked service reference.
 * **type**: 'AzureKeyVaultSecret' (Required): Type of the secret.
 
 ### SecureString
@@ -4980,70 +5026,70 @@
 ## ServiceNowLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'Basic' | 'OAuth2' | string (Required): The authentication type to use.
-* **clientId**: any: Any object
-* **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
-* **encryptedCredential**: any: Any object
-* **endpoint**: any (Required): Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
-* **username**: any: Any object
+* **clientId**: any: The client id for OAuth2 authentication.
+* **clientSecret**: [SecretBase](#secretbase): The client secret for OAuth2 authentication.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **endpoint**: any (Required): The endpoint of the ServiceNow server. (i.e. <instance>.service-now.com)
+* **password**: [SecretBase](#secretbase): The password corresponding to the user name for Basic and OAuth2 authentication.
+* **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+* **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+* **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+* **username**: any: The user name used to connect to the ServiceNow server for Basic and OAuth2 authentication.
 
 ## SetVariableActivityTypeProperties
 ### Properties
-* **value**: any: Any object
+* **value**: any: Value to be set. Could be a static value or Expression
 * **variableName**: string: Name of the variable whose value needs to be set.
 
 ## SftpServerLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'Basic' | 'MultiFactor' | 'SshPublicKey' | string: The authentication type to be used to connect to the FTP server.
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **hostKeyFingerprint**: any: Any object
-* **passPhrase**: [SecretBase](#secretbase): The base definition of a secret type.
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any: Any object
-* **privateKeyContent**: [SecretBase](#secretbase): The base definition of a secret type.
-* **privateKeyPath**: any: Any object
-* **skipHostKeyValidation**: any: Any object
-* **userName**: any: Any object
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **host**: any (Required): The SFTP server host name. Type: string (or Expression with resultType string).
+* **hostKeyFingerprint**: any: The host key finger-print of the SFTP server. When SkipHostKeyValidation is false, HostKeyFingerprint should be specified. Type: string (or Expression with resultType string).
+* **passPhrase**: [SecretBase](#secretbase): The password to decrypt the SSH private key if the SSH private key is encrypted.
+* **password**: [SecretBase](#secretbase): Password to logon the SFTP server for Basic authentication.
+* **port**: any: The TCP port number that the SFTP server uses to listen for client connections. Default value is 22. Type: integer (or Expression with resultType integer), minimum: 0.
+* **privateKeyContent**: [SecretBase](#secretbase): Base64 encoded SSH private key content for SshPublicKey authentication. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format.
+* **privateKeyPath**: any: The SSH private key file path for SshPublicKey authentication. Only valid for on-premises copy. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format. Type: string (or Expression with resultType string).
+* **skipHostKeyValidation**: any: If true, skip the SSH host key validation. Default value is false. Type: boolean (or Expression with resultType boolean).
+* **userName**: any: The username used to log on to the SFTP server. Type: string (or Expression with resultType string).
 
 ## SharePointOnlineListDatasetTypeProperties
 ### Properties
-* **listName**: any: Any object
+* **listName**: any: The name of the SharePoint Online list. Type: string (or Expression with resultType string).
 
 ## SharePointOnlineListLinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: Any object
-* **servicePrincipalId**: any (Required): Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
-* **siteUrl**: any (Required): Any object
-* **tenantId**: any (Required): Any object
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **servicePrincipalId**: any (Required): The application (client) ID of your application registered in Azure Active Directory. Make sure to grant SharePoint site permission to this application. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase) (Required): The client secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+* **siteUrl**: any (Required): The URL of the SharePoint Online site. For example, https://contoso.sharepoint.com/sites/siteName. Type: string (or Expression with resultType string).
+* **tenantId**: any (Required): The tenant ID under which your application resides. You can find it from Azure portal Active Directory overview page. Type: string (or Expression with resultType string).
 
 ## ShopifyLinkedServiceTypeProperties
 ### Properties
-* **accessToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
+* **accessToken**: [SecretBase](#secretbase): The API access token that can be used to access Shopify’s data. The token won't expire if it is offline mode.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **host**: any (Required): The endpoint of the Shopify server. (i.e. mystore.myshopify.com)
+* **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+* **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+* **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
 
 ## SkipErrorFile
 ### Properties
-* **dataInconsistency**: any: Any object
-* **fileMissing**: any: Any object
+* **dataInconsistency**: any: Skip if source/sink file changed by other concurrent write. Default is false. Type: boolean (or Expression with resultType boolean).
+* **fileMissing**: any: Skip if file is deleted by other client during copy. Default is true. Type: boolean (or Expression with resultType boolean).
 
 ## SmartsheetLinkedServiceTypeProperties
 ### Properties
-* **apiToken**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
-* **encryptedCredential**: any: Any object
+* **apiToken**: [SecretBase](#secretbase) (Required): The api token for the Smartsheet source.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 
 ## SnowflakeDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
+* **schema**: any: The schema name of the Snowflake database. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the Snowflake database. Type: string (or Expression with resultType string).
 
 ## SnowflakeExportCopyCommand
 ### Properties
@@ -5083,44 +5129,44 @@
 
 ## SnowflakeLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
+* **connectionString**: any (Required): The connection string of snowflake. Type: string, SecureString.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## SparkDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **schema**: any: The schema name of the Spark. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the Spark. Type: string (or Expression with resultType string).
+* **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
 
 ## SparkLinkedServiceTypeProperties
 ### Properties
-* **allowHostNameCNMismatch**: any: Any object
-* **allowSelfSignedServerCert**: any: Any object
+* **allowHostNameCNMismatch**: any: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
+* **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
 * **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' | string (Required): The authentication method used to access the Spark server.
-* **enableSsl**: any: Any object
-* **encryptedCredential**: any: Any object
-* **host**: any (Required): Any object
-* **httpPath**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **port**: any (Required): Any object
+* **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **host**: any (Required): IP address or host name of the Spark server
+* **httpPath**: any: The partial URL corresponding to the Spark server.
+* **password**: [SecretBase](#secretbase): The password corresponding to the user name that you provided in the Username field
+* **port**: any (Required): The TCP port that the Spark server uses to listen for client connections.
 * **serverType**: 'SharkServer' | 'SharkServer2' | 'SparkThriftServer' | string: The type of Spark server.
 * **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL' | string: The transport protocol to use in the Thrift layer.
-* **trustedCertPath**: any: Any object
-* **username**: any: Any object
-* **useSystemTrustStore**: any: Any object
+* **trustedCertPath**: any: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+* **username**: any: The user name that you use to access Spark Server.
+* **useSystemTrustStore**: any: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
 
 ## SqlAlwaysEncryptedProperties
 ### Properties
 * **alwaysEncryptedAkvAuthType**: 'ManagedIdentity' | 'ServicePrincipal' | 'UserAssignedManagedIdentity' | string (Required): Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **servicePrincipalId**: any: The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase): The key of the service principal used to authenticate against Azure Key Vault.
 
 ## SqlDWUpsertSettings
 ### Properties
-* **interimSchemaName**: any: Any object
-* **keys**: any: Any object
+* **interimSchemaName**: any: Schema name for interim table. Type: string (or Expression with resultType string).
+* **keys**: any: Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
 
 ## SqlMISinkStoredProcedureParameters
 ### Properties
@@ -5134,17 +5180,17 @@
 
 ## SqlPartitionSettings
 ### Properties
-* **partitionColumnName**: any: Any object
-* **partitionLowerBound**: any: Any object
-* **partitionUpperBound**: any: Any object
+* **partitionColumnName**: any: The name of the column in integer or datetime type that will be used for proceeding partitioning. If not specified, the primary key of the table is auto-detected and used as the partition column. Type: string (or Expression with resultType string).
+* **partitionLowerBound**: any: The minimum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
+* **partitionUpperBound**: any: The maximum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
 
 ## SqlServerLinkedServiceTypeProperties
 ### Properties
 * **alwaysEncryptedSettings**: [SqlAlwaysEncryptedProperties](#sqlalwaysencryptedproperties): Sql always encrypted properties.
-* **connectionString**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **userName**: any: Any object
+* **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): The on-premises Windows authentication password.
+* **userName**: any: The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
 
 ## SqlServerSinkStoredProcedureParameters
 ### Properties
@@ -5158,14 +5204,14 @@
 
 ## SqlServerStoredProcedureActivityTypeProperties
 ### Properties
-* **storedProcedureName**: any (Required): Any object
-* **storedProcedureParameters**: any: Any object
+* **storedProcedureName**: any (Required): Stored procedure name. Type: string (or Expression with resultType string).
+* **storedProcedureParameters**: any: Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
 
 ## SqlServerTableDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **schema**: any: The schema name of the SQL Server dataset. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the SQL Server dataset. Type: string (or Expression with resultType string).
+* **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
 
 ## SqlSinkStoredProcedureParameters
 ### Properties
@@ -5179,34 +5225,34 @@
 
 ## SqlUpsertSettings
 ### Properties
-* **interimSchemaName**: any: Any object
-* **keys**: any: Any object
-* **useTempDB**: any: Any object
+* **interimSchemaName**: any: Schema name for interim table. Type: string (or Expression with resultType string).
+* **keys**: any: Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
+* **useTempDB**: any: Specifies whether to use temp db for upsert interim table. Type: boolean (or Expression with resultType boolean).
 
 ## SquareLinkedServiceTypeProperties
 ### Properties
-* **clientId**: any: Any object
-* **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
-* **connectionProperties**: any: Any object
-* **encryptedCredential**: any: Any object
-* **host**: any: Any object
-* **redirectUri**: any: Any object
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
+* **clientId**: any: The client ID associated with your Square application.
+* **clientSecret**: [SecretBase](#secretbase): The client secret associated with your Square application.
+* **connectionProperties**: any: Properties used to connect to Square. It is mutually exclusive with any other properties in the linked service. Type: object.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **host**: any: The URL of the Square instance. (i.e. mystore.mysquare.com)
+* **redirectUri**: any: The redirect URL assigned in the Square application dashboard. (i.e. http://localhost:2500)
+* **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+* **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+* **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
 
 ## SsisAccessCredential
 ### Properties
-* **domain**: any (Required): Any object
-* **password**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
-* **userName**: any (Required): Any object
+* **domain**: any (Required): Domain for windows authentication.
+* **password**: [SecretBase](#secretbase) (Required): Password for windows authentication.
+* **userName**: any (Required): UseName for windows authentication.
 
 ## SsisChildPackage
 ### Properties
-* **packageContent**: any (Required): Any object
+* **packageContent**: any (Required): Content for embedded child package. Type: string (or Expression with resultType string).
 * **packageLastModifiedDate**: string: Last modified date for embedded child package.
 * **packageName**: string: Name for embedded child package.
-* **packagePath**: any (Required): Any object
+* **packagePath**: any (Required): Path for embedded child package. Type: string (or Expression with resultType string).
 
 ## SsisConnectionManager
 ### Properties
@@ -5220,264 +5266,264 @@
 
 ## SsisExecutionCredential
 ### Properties
-* **domain**: any (Required): Any object
-* **password**: [SecureString](#securestring) (Required): Azure Data Factory secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
-* **userName**: any (Required): Any object
+* **domain**: any (Required): Domain for windows authentication.
+* **password**: [SecureString](#securestring) (Required): Password for windows authentication.
+* **userName**: any (Required): UseName for windows authentication.
 
 ## SsisExecutionParameter
 ### Properties
-* **value**: any (Required): Any object
+* **value**: any (Required): SSIS package execution parameter value. Type: string (or Expression with resultType string).
 
 ## SsisLogLocation
 ### Properties
-* **logPath**: any (Required): Any object
+* **logPath**: any (Required): The SSIS package execution log path. Type: string (or Expression with resultType string).
 * **type**: 'File' | string (Required): The type of SSIS log location.
 * **typeProperties**: [SsisLogLocationTypeProperties](#ssisloglocationtypeproperties) (Required): SSIS package execution log location properties.
 
 ## SsisLogLocationTypeProperties
 ### Properties
-* **accessCredential**: [SsisAccessCredential](#ssisaccesscredential): SSIS access credential.
-* **logRefreshInterval**: any: Any object
+* **accessCredential**: [SsisAccessCredential](#ssisaccesscredential): The package execution log access credential.
+* **logRefreshInterval**: any: Specifies the interval to refresh log. The default interval is 5 minutes. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 
 ## SsisPackageLocation
 ### Properties
-* **packagePath**: any: Any object
+* **packagePath**: any: The SSIS package path. Type: string (or Expression with resultType string).
 * **type**: 'File' | 'InlinePackage' | 'PackageStore' | 'SSISDB' | string: The type of SSIS package location.
 * **typeProperties**: [SsisPackageLocationTypeProperties](#ssispackagelocationtypeproperties): SSIS package location properties.
 
 ## SsisPackageLocationTypeProperties
 ### Properties
-* **accessCredential**: [SsisAccessCredential](#ssisaccesscredential): SSIS access credential.
+* **accessCredential**: [SsisAccessCredential](#ssisaccesscredential): The package access credential.
 * **childPackages**: [SsisChildPackage](#ssischildpackage)[]: The embedded child package list.
-* **configurationAccessCredential**: [SsisAccessCredential](#ssisaccesscredential): SSIS access credential.
-* **configurationPath**: any: Any object
-* **packageContent**: any: Any object
+* **configurationAccessCredential**: [SsisAccessCredential](#ssisaccesscredential): The configuration file access credential.
+* **configurationPath**: any: The configuration file of the package execution. Type: string (or Expression with resultType string).
+* **packageContent**: any: The embedded package content. Type: string (or Expression with resultType string).
 * **packageLastModifiedDate**: string: The embedded package last modified date.
 * **packageName**: string: The package name.
-* **packagePassword**: [SecretBase](#secretbase): The base definition of a secret type.
+* **packagePassword**: [SecretBase](#secretbase): Password of the package.
 
 ## SsisPropertyOverride
 ### Properties
 * **isSensitive**: bool: Whether SSIS package property override value is sensitive data. Value will be encrypted in SSISDB if it is true
-* **value**: any (Required): Any object
+* **value**: any (Required): SSIS package property override value. Type: string (or Expression with resultType string).
 
 ## StagingSettings
 ### Properties
-* **enableCompression**: any: Any object
-* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
-* **path**: any: Any object
+* **enableCompression**: any: Specifies whether to use compression when copying data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Staging linked service reference.
+* **path**: any: The path to storage for storing the interim data. Type: string (or Expression with resultType string).
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## StoredProcedureParameter
 ### Properties
 * **type**: 'Boolean' | 'Date' | 'Decimal' | 'Guid' | 'Int' | 'Int64' | 'String' | string: Stored procedure parameter type.
-* **value**: any: Any object
+* **value**: any: Stored procedure parameter value. Type: string (or Expression with resultType string).
 
 ## StoreReadSettings
 * **Discriminator**: type
 
 ### Base Properties
-* **disableMetricsCollection**: any: Any object
-* **maxConcurrentConnections**: any: Any object
+* **disableMetricsCollection**: any: If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+* **maxConcurrentConnections**: any: The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
 ### AmazonS3CompatibleReadSettings
 #### Properties
-* **deleteFilesAfterCompletion**: any: Any object
+* **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
 * **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
-* **fileListPath**: any: Any object
-* **modifiedDatetimeEnd**: any: Any object
-* **modifiedDatetimeStart**: any: Any object
-* **partitionRootPath**: any: Any object
-* **prefix**: any: Any object
-* **recursive**: any: Any object
+* **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+* **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
+* **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
+* **partitionRootPath**: any: Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+* **prefix**: any: The prefix filter for the S3 Compatible object name. Type: string (or Expression with resultType string).
+* **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
 * **type**: 'AmazonS3CompatibleReadSettings' (Required): The read setting type.
-* **wildcardFileName**: any: Any object
-* **wildcardFolderPath**: any: Any object
+* **wildcardFileName**: any: Amazon S3 Compatible wildcardFileName. Type: string (or Expression with resultType string).
+* **wildcardFolderPath**: any: Amazon S3 Compatible wildcardFolderPath. Type: string (or Expression with resultType string).
 
 ### AmazonS3ReadSettings
 #### Properties
-* **deleteFilesAfterCompletion**: any: Any object
+* **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
 * **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
-* **fileListPath**: any: Any object
-* **modifiedDatetimeEnd**: any: Any object
-* **modifiedDatetimeStart**: any: Any object
-* **partitionRootPath**: any: Any object
-* **prefix**: any: Any object
-* **recursive**: any: Any object
+* **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+* **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
+* **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
+* **partitionRootPath**: any: Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+* **prefix**: any: The prefix filter for the S3 object name. Type: string (or Expression with resultType string).
+* **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
 * **type**: 'AmazonS3ReadSettings' (Required): The read setting type.
-* **wildcardFileName**: any: Any object
-* **wildcardFolderPath**: any: Any object
+* **wildcardFileName**: any: AmazonS3 wildcardFileName. Type: string (or Expression with resultType string).
+* **wildcardFolderPath**: any: AmazonS3 wildcardFolderPath. Type: string (or Expression with resultType string).
 
 ### AzureBlobFSReadSettings
 #### Properties
-* **deleteFilesAfterCompletion**: any: Any object
+* **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
 * **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
-* **fileListPath**: any: Any object
-* **modifiedDatetimeEnd**: any: Any object
-* **modifiedDatetimeStart**: any: Any object
-* **partitionRootPath**: any: Any object
-* **recursive**: any: Any object
+* **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+* **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
+* **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
+* **partitionRootPath**: any: Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+* **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
 * **type**: 'AzureBlobFSReadSettings' (Required): The read setting type.
-* **wildcardFileName**: any: Any object
-* **wildcardFolderPath**: any: Any object
+* **wildcardFileName**: any: Azure blobFS wildcardFileName. Type: string (or Expression with resultType string).
+* **wildcardFolderPath**: any: Azure blobFS wildcardFolderPath. Type: string (or Expression with resultType string).
 
 ### AzureBlobStorageReadSettings
 #### Properties
-* **deleteFilesAfterCompletion**: any: Any object
+* **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
 * **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
-* **fileListPath**: any: Any object
-* **modifiedDatetimeEnd**: any: Any object
-* **modifiedDatetimeStart**: any: Any object
-* **partitionRootPath**: any: Any object
-* **prefix**: any: Any object
-* **recursive**: any: Any object
+* **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+* **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
+* **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
+* **partitionRootPath**: any: Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+* **prefix**: any: The prefix filter for the Azure Blob name. Type: string (or Expression with resultType string).
+* **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
 * **type**: 'AzureBlobStorageReadSettings' (Required): The read setting type.
-* **wildcardFileName**: any: Any object
-* **wildcardFolderPath**: any: Any object
+* **wildcardFileName**: any: Azure blob wildcardFileName. Type: string (or Expression with resultType string).
+* **wildcardFolderPath**: any: Azure blob wildcardFolderPath. Type: string (or Expression with resultType string).
 
 ### AzureDataLakeStoreReadSettings
 #### Properties
-* **deleteFilesAfterCompletion**: any: Any object
+* **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
 * **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
-* **fileListPath**: any: Any object
-* **listAfter**: any: Any object
-* **listBefore**: any: Any object
-* **modifiedDatetimeEnd**: any: Any object
-* **modifiedDatetimeStart**: any: Any object
-* **partitionRootPath**: any: Any object
-* **recursive**: any: Any object
+* **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+* **listAfter**: any: Lists files after the value (exclusive) based on file/folder names’ lexicographical order. Applies under the folderPath in data set, and filter files/sub-folders under the folderPath. Type: string (or Expression with resultType string).
+* **listBefore**: any: Lists files before the value (inclusive) based on file/folder names’ lexicographical order. Applies under the folderPath in data set, and filter files/sub-folders under the folderPath. Type: string (or Expression with resultType string).
+* **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
+* **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
+* **partitionRootPath**: any: Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+* **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
 * **type**: 'AzureDataLakeStoreReadSettings' (Required): The read setting type.
-* **wildcardFileName**: any: Any object
-* **wildcardFolderPath**: any: Any object
+* **wildcardFileName**: any: ADLS wildcardFileName. Type: string (or Expression with resultType string).
+* **wildcardFolderPath**: any: ADLS wildcardFolderPath. Type: string (or Expression with resultType string).
 
 ### AzureFileStorageReadSettings
 #### Properties
-* **deleteFilesAfterCompletion**: any: Any object
+* **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
 * **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
-* **fileListPath**: any: Any object
-* **modifiedDatetimeEnd**: any: Any object
-* **modifiedDatetimeStart**: any: Any object
-* **partitionRootPath**: any: Any object
-* **prefix**: any: Any object
-* **recursive**: any: Any object
+* **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+* **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
+* **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
+* **partitionRootPath**: any: Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+* **prefix**: any: The prefix filter for the Azure File name starting from root path. Type: string (or Expression with resultType string).
+* **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
 * **type**: 'AzureFileStorageReadSettings' (Required): The read setting type.
-* **wildcardFileName**: any: Any object
-* **wildcardFolderPath**: any: Any object
+* **wildcardFileName**: any: Azure File Storage wildcardFileName. Type: string (or Expression with resultType string).
+* **wildcardFolderPath**: any: Azure File Storage wildcardFolderPath. Type: string (or Expression with resultType string).
 
 ### FileServerReadSettings
 #### Properties
-* **deleteFilesAfterCompletion**: any: Any object
+* **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
 * **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
-* **fileFilter**: any: Any object
-* **fileListPath**: any: Any object
-* **modifiedDatetimeEnd**: any: Any object
-* **modifiedDatetimeStart**: any: Any object
-* **partitionRootPath**: any: Any object
-* **recursive**: any: Any object
+* **fileFilter**: any: Specify a filter to be used to select a subset of files in the folderPath rather than all files. Type: string (or Expression with resultType string).
+* **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+* **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
+* **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
+* **partitionRootPath**: any: Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+* **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
 * **type**: 'FileServerReadSettings' (Required): The read setting type.
-* **wildcardFileName**: any: Any object
-* **wildcardFolderPath**: any: Any object
+* **wildcardFileName**: any: FileServer wildcardFileName. Type: string (or Expression with resultType string).
+* **wildcardFolderPath**: any: FileServer wildcardFolderPath. Type: string (or Expression with resultType string).
 
 ### FtpReadSettings
 #### Properties
-* **deleteFilesAfterCompletion**: any: Any object
-* **disableChunking**: any: Any object
+* **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
+* **disableChunking**: any: If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).
 * **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
-* **fileListPath**: any: Any object
-* **partitionRootPath**: any: Any object
-* **recursive**: any: Any object
+* **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+* **partitionRootPath**: any: Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+* **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
 * **type**: 'FtpReadSettings' (Required): The read setting type.
 * **useBinaryTransfer**: bool: Specify whether to use binary transfer mode for FTP stores.
-* **wildcardFileName**: any: Any object
-* **wildcardFolderPath**: any: Any object
+* **wildcardFileName**: any: Ftp wildcardFileName. Type: string (or Expression with resultType string).
+* **wildcardFolderPath**: any: Ftp wildcardFolderPath. Type: string (or Expression with resultType string).
 
 ### GoogleCloudStorageReadSettings
 #### Properties
-* **deleteFilesAfterCompletion**: any: Any object
+* **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
 * **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
-* **fileListPath**: any: Any object
-* **modifiedDatetimeEnd**: any: Any object
-* **modifiedDatetimeStart**: any: Any object
-* **partitionRootPath**: any: Any object
-* **prefix**: any: Any object
-* **recursive**: any: Any object
+* **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+* **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
+* **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
+* **partitionRootPath**: any: Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+* **prefix**: any: The prefix filter for the Google Cloud Storage object name. Type: string (or Expression with resultType string).
+* **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
 * **type**: 'GoogleCloudStorageReadSettings' (Required): The read setting type.
-* **wildcardFileName**: any: Any object
-* **wildcardFolderPath**: any: Any object
+* **wildcardFileName**: any: Google Cloud Storage wildcardFileName. Type: string (or Expression with resultType string).
+* **wildcardFolderPath**: any: Google Cloud Storage wildcardFolderPath. Type: string (or Expression with resultType string).
 
 ### HdfsReadSettings
 #### Properties
-* **deleteFilesAfterCompletion**: any: Any object
-* **distcpSettings**: [DistcpSettings](#distcpsettings): Distcp settings.
+* **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
+* **distcpSettings**: [DistcpSettings](#distcpsettings): Specifies Distcp-related settings.
 * **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
-* **fileListPath**: any: Any object
-* **modifiedDatetimeEnd**: any: Any object
-* **modifiedDatetimeStart**: any: Any object
-* **partitionRootPath**: any: Any object
-* **recursive**: any: Any object
+* **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+* **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
+* **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
+* **partitionRootPath**: any: Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+* **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
 * **type**: 'HdfsReadSettings' (Required): The read setting type.
-* **wildcardFileName**: any: Any object
-* **wildcardFolderPath**: any: Any object
+* **wildcardFileName**: any: HDFS wildcardFileName. Type: string (or Expression with resultType string).
+* **wildcardFolderPath**: any: HDFS wildcardFolderPath. Type: string (or Expression with resultType string).
 
 ### HttpReadSettings
 #### Properties
-* **additionalHeaders**: any: Any object
+* **additionalHeaders**: any: The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
 * **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
-* **partitionRootPath**: any: Any object
-* **requestBody**: any: Any object
-* **requestMethod**: any: Any object
-* **requestTimeout**: any: Any object
+* **partitionRootPath**: any: Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+* **requestBody**: any: The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
+* **requestMethod**: any: The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
+* **requestTimeout**: any: Specifies the timeout for a HTTP client to get HTTP response from HTTP server.
 * **type**: 'HttpReadSettings' (Required): The read setting type.
 
 ### OracleCloudStorageReadSettings
 #### Properties
-* **deleteFilesAfterCompletion**: any: Any object
+* **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
 * **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
-* **fileListPath**: any: Any object
-* **modifiedDatetimeEnd**: any: Any object
-* **modifiedDatetimeStart**: any: Any object
-* **partitionRootPath**: any: Any object
-* **prefix**: any: Any object
-* **recursive**: any: Any object
+* **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+* **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
+* **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
+* **partitionRootPath**: any: Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+* **prefix**: any: The prefix filter for the Oracle Cloud Storage object name. Type: string (or Expression with resultType string).
+* **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
 * **type**: 'OracleCloudStorageReadSettings' (Required): The read setting type.
-* **wildcardFileName**: any: Any object
-* **wildcardFolderPath**: any: Any object
+* **wildcardFileName**: any: Oracle Cloud Storage wildcardFileName. Type: string (or Expression with resultType string).
+* **wildcardFolderPath**: any: Oracle Cloud Storage wildcardFolderPath. Type: string (or Expression with resultType string).
 
 ### SftpReadSettings
 #### Properties
-* **deleteFilesAfterCompletion**: any: Any object
-* **disableChunking**: any: Any object
+* **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
+* **disableChunking**: any: If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).
 * **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
-* **fileListPath**: any: Any object
-* **modifiedDatetimeEnd**: any: Any object
-* **modifiedDatetimeStart**: any: Any object
-* **partitionRootPath**: any: Any object
-* **recursive**: any: Any object
+* **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+* **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
+* **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
+* **partitionRootPath**: any: Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+* **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
 * **type**: 'SftpReadSettings' (Required): The read setting type.
-* **wildcardFileName**: any: Any object
-* **wildcardFolderPath**: any: Any object
+* **wildcardFileName**: any: Sftp wildcardFileName. Type: string (or Expression with resultType string).
+* **wildcardFolderPath**: any: Sftp wildcardFolderPath. Type: string (or Expression with resultType string).
 
 
 ## StoreWriteSettings
 * **Discriminator**: type
 
 ### Base Properties
-* **copyBehavior**: any: Any object
-* **disableMetricsCollection**: any: Any object
-* **maxConcurrentConnections**: any: Any object
+* **copyBehavior**: any: The type of copy behavior for copy sink.
+* **disableMetricsCollection**: any: If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+* **maxConcurrentConnections**: any: The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
 ### AzureBlobFSWriteSettings
 #### Properties
-* **blockSizeInMB**: any: Any object
+* **blockSizeInMB**: any: Indicates the block size(MB) when writing data to blob. Type: integer (or Expression with resultType integer).
 * **type**: 'AzureBlobFSWriteSettings' (Required): The write setting type.
 
 ### AzureBlobStorageWriteSettings
 #### Properties
-* **blockSizeInMB**: any: Any object
+* **blockSizeInMB**: any: Indicates the block size(MB) when writing data to blob. Type: integer (or Expression with resultType integer).
 * **type**: 'AzureBlobStorageWriteSettings' (Required): The write setting type.
 
 ### AzureDataLakeStoreWriteSettings
 #### Properties
-* **expiryDateTime**: any: Any object
+* **expiryDateTime**: any: Specifies the expiry time of the written files. The time is applied to the UTC time zone in the format of "2018-12-01T05:00:00Z". Default value is NULL. Type: integer (or Expression with resultType integer).
 * **type**: 'AzureDataLakeStoreWriteSettings' (Required): The write setting type.
 
 ### AzureFileStorageWriteSettings
@@ -5490,16 +5536,16 @@
 
 ### SftpWriteSettings
 #### Properties
-* **operationTimeout**: any: Any object
+* **operationTimeout**: any: Specifies the timeout for writing each chunk to SFTP server. Default value: 01:00:00 (one hour). Type: string (or Expression with resultType string).
 * **type**: 'SftpWriteSettings' (Required): The write setting type.
-* **useTempFileRename**: any: Any object
+* **useTempFileRename**: any: Upload to temporary file(s) and rename. Disable this option if your SFTP server doesn't support rename operation. Type: boolean (or Expression with resultType boolean).
 
 
 ## SwitchActivityTypeProperties
 ### Properties
 * **cases**: [SwitchCase](#switchcase)[]: List of cases that correspond to expected values of the 'on' property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.
 * **defaultActivities**: [Activity](#activity)[]: List of activities to execute if no case condition is satisfied. This is an optional property and if not provided, the activity will exit without any action.
-* **on**: [Expression](#expression) (Required): Azure Data Factory expression definition.
+* **on**: [Expression](#expression) (Required): An expression that would evaluate to a string or integer. This is used to determine the block of activities in cases that will be executed.
 
 ## SwitchCase
 ### Properties
@@ -5509,52 +5555,52 @@
 ## SybaseLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'Basic' | 'Windows' | string: AuthenticationType to be used for connection.
-* **database**: any (Required): Any object
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **schema**: any: Any object
-* **server**: any (Required): Any object
-* **username**: any: Any object
+* **database**: any (Required): Database name for connection. Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password for authentication.
+* **schema**: any: Schema name for connection. Type: string (or Expression with resultType string).
+* **server**: any (Required): Server name for connection. Type: string (or Expression with resultType string).
+* **username**: any: Username for authentication. Type: string (or Expression with resultType string).
 
 ## SybaseTableDatasetTypeProperties
 ### Properties
-* **tableName**: any: Any object
+* **tableName**: any: The Sybase table name. Type: string (or Expression with resultType string).
 
 ## TeamDeskLinkedServiceTypeProperties
 ### Properties
-* **apiToken**: [SecretBase](#secretbase): The base definition of a secret type.
+* **apiToken**: [SecretBase](#secretbase): The api token for the TeamDesk source.
 * **authenticationType**: 'Basic' | 'Token' | string (Required): The authentication type to use.
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **url**: any (Required): Any object
-* **userName**: any: Any object
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): The password of the TeamDesk source.
+* **url**: any (Required): The url to connect TeamDesk source. Type: string (or Expression with resultType string).
+* **userName**: any: The username of the TeamDesk source. Type: string (or Expression with resultType string).
 
 ## TeradataLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'Basic' | 'Windows' | string: AuthenticationType to be used for connection.
-* **connectionString**: any: Any object
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **server**: any: Any object
-* **username**: any: Any object
+* **connectionString**: any: Teradata ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password for authentication.
+* **server**: any: Server name for connection. Type: string (or Expression with resultType string).
+* **username**: any: Username for authentication. Type: string (or Expression with resultType string).
 
 ## TeradataPartitionSettings
 ### Properties
-* **partitionColumnName**: any: Any object
-* **partitionLowerBound**: any: Any object
-* **partitionUpperBound**: any: Any object
+* **partitionColumnName**: any: The name of the column that will be used for proceeding range or hash partitioning. Type: string (or Expression with resultType string).
+* **partitionLowerBound**: any: The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+* **partitionUpperBound**: any: The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
 
 ## TeradataTableDatasetTypeProperties
 ### Properties
-* **database**: any: Any object
-* **table**: any: Any object
+* **database**: any: The database name of Teradata. Type: string (or Expression with resultType string).
+* **table**: any: The table name of Teradata. Type: string (or Expression with resultType string).
 
 ## Transformation
 ### Properties
-* **dataset**: [DatasetReference](#datasetreference): Dataset reference type.
+* **dataset**: [DatasetReference](#datasetreference): Dataset reference.
 * **description**: string: Transformation description.
-* **flowlet**: [DataFlowReference](#dataflowreference): Data flow reference type.
-* **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **flowlet**: [DataFlowReference](#dataflowreference): Flowlet Reference
+* **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
 * **name**: string (Required): Transformation name.
 
 ## Trigger
@@ -5563,7 +5609,7 @@
 ### Base Properties
 * **annotations**: any[]: List of tags that can be used for describing the trigger.
 * **description**: string: Trigger description.
-* **runtimeState**: 'Disabled' | 'Started' | 'Stopped' | string (ReadOnly): Enumerates possible state of Triggers.
+* **runtimeState**: 'Disabled' | 'Started' | 'Stopped' | string (ReadOnly): Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
 ### BlobEventsTrigger
 #### Properties
 * **type**: 'BlobEventsTrigger' (Required): Trigger type.
@@ -5576,7 +5622,7 @@
 
 ### ChainingTrigger
 #### Properties
-* **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required): Pipeline that needs to be triggered with the given parameters.
+* **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required): Pipeline for which runs are created when all upstream pipelines complete successfully.
 * **type**: 'ChainingTrigger' (Required): Trigger type.
 * **typeProperties**: [ChainingTriggerTypeProperties](#chainingtriggertypeproperties) (Required): Chaining Trigger properties.
 
@@ -5597,37 +5643,37 @@
 
 ### TumblingWindowTrigger
 #### Properties
-* **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required): Pipeline that needs to be triggered with the given parameters.
+* **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required): Pipeline for which runs are created when an event is fired for trigger window that is ready.
 * **type**: 'TumblingWindowTrigger' (Required): Trigger type.
 * **typeProperties**: [TumblingWindowTriggerTypeProperties](#tumblingwindowtriggertypeproperties) (Required): Tumbling Window Trigger properties.
 
 
 ## TriggerPipelineReference
 ### Properties
-* **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
-* **pipelineReference**: [PipelineReference](#pipelinereference): Pipeline reference type.
+* **parameters**: [ParameterValueSpecification](#parametervaluespecification): Pipeline parameters.
+* **pipelineReference**: [PipelineReference](#pipelinereference): Pipeline reference.
 
 ## TumblingWindowTriggerTypeProperties
 ### Properties
-* **delay**: any: Any object
+* **delay**: any: Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **dependsOn**: [DependencyReference](#dependencyreference)[]: Triggers that this trigger depends on. Only tumbling window triggers are supported.
 * **endTime**: string: The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
-* **frequency**: 'Hour' | 'Minute' | 'Month' | string (Required): Enumerates possible frequency option for the tumbling window trigger.
+* **frequency**: 'Hour' | 'Minute' | 'Month' | string (Required): The frequency of the time windows.
 * **interval**: int (Required): The interval of the time windows. The minimum interval allowed is 15 Minutes.
 * **maxConcurrency**: int (Required): The max number of parallel time windows (ready for execution) for which a new run is triggered.
-* **retryPolicy**: [RetryPolicy](#retrypolicy): Execution policy for an activity.
+* **retryPolicy**: [RetryPolicy](#retrypolicy): Retry policy that will be applied for failed pipeline runs.
 * **startTime**: string (Required): The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
 
 ## TwilioLinkedServiceTypeProperties
 ### Properties
-* **password**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
-* **userName**: any (Required): Any object
+* **password**: [SecretBase](#secretbase) (Required): The auth token of Twilio service.
+* **userName**: any (Required): The Account SID of Twilio service.
 
 ## UntilActivityTypeProperties
 ### Properties
 * **activities**: [Activity](#activity)[] (Required): List of activities to execute.
-* **expression**: [Expression](#expression) (Required): Azure Data Factory expression definition.
-* **timeout**: any: Any object
+* **expression**: [Expression](#expression) (Required): An expression that would evaluate to Boolean. The loop will continue until this expression evaluates to true
+* **timeout**: any: Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 
 ## UserAssignedIdentitiesDefinitionSpecification
 ### Properties
@@ -5637,15 +5683,15 @@
 ## UserProperty
 ### Properties
 * **name**: string (Required): User property name.
-* **value**: any (Required): Any object
+* **value**: any (Required): User property value. Type: string (or Expression with resultType string).
 
 ## ValidationActivityTypeProperties
 ### Properties
-* **childItems**: any: Any object
-* **dataset**: [DatasetReference](#datasetreference) (Required): Dataset reference type.
-* **minimumSize**: any: Any object
-* **sleep**: any: Any object
-* **timeout**: any: Any object
+* **childItems**: any: Can be used if dataset points to a folder. If set to true, the folder must have at least one file. If set to false, the folder must be empty. Type: boolean (or Expression with resultType boolean).
+* **dataset**: [DatasetReference](#datasetreference) (Required): Validation activity dataset reference.
+* **minimumSize**: any: Can be used if dataset points to a file. The file must be greater than or equal in size to the value specified. Type: integer (or Expression with resultType integer).
+* **sleep**: any: A delay in seconds between validation attempts. If no value is specified, 10 seconds will be used as the default. Type: integer (or Expression with resultType integer).
+* **timeout**: any: Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 
 ## VariableDefinitionSpecification
 ### Properties
@@ -5654,62 +5700,62 @@
 
 ## VariableSpecification
 ### Properties
-* **defaultValue**: any: Any object
+* **defaultValue**: any: Default value of variable.
 * **type**: 'Array' | 'Bool' | 'String' | string (Required): Variable type.
 
 ## VerticaDatasetTypeProperties
 ### Properties
-* **schema**: any: Any object
-* **table**: any: Any object
-* **tableName**: any: Any object
+* **schema**: any: The schema name of the Vertica. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the Vertica. Type: string (or Expression with resultType string).
+* **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
 
 ## VerticaLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any: Any object
-* **encryptedCredential**: any: Any object
-* **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
+* **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## WaitActivityTypeProperties
 ### Properties
-* **waitTimeInSeconds**: any (Required): Any object
+* **waitTimeInSeconds**: any (Required): Duration in seconds.
 
 ## WebActivityAuthentication
 ### Properties
-* **credential**: [CredentialReference](#credentialreference): Credential reference type.
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **pfx**: [SecretBase](#secretbase): The base definition of a secret type.
-* **resource**: any: Any object
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **password**: [SecretBase](#secretbase): Password for the PFX file or basic authentication / Secret when used for ServicePrincipal
+* **pfx**: [SecretBase](#secretbase): Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal
+* **resource**: any: Resource for which Azure Auth token will be requested when using MSI Authentication. Type: string (or Expression with resultType string).
 * **type**: string: Web activity authentication (Basic/ClientCertificate/MSI/ServicePrincipal)
-* **username**: any: Any object
-* **userTenant**: any: Any object
+* **username**: any: Web activity authentication user name for basic authentication or ClientID when used for ServicePrincipal. Type: string (or Expression with resultType string).
+* **userTenant**: any: TenantId for which Azure Auth token will be requested when using ServicePrincipal Authentication. Type: string (or Expression with resultType string).
 
 ## WebActivityTypeProperties
 ### Properties
-* **authentication**: [WebActivityAuthentication](#webactivityauthentication): Web activity authentication properties.
-* **body**: any: Any object
-* **connectVia**: [IntegrationRuntimeReference](#integrationruntimereference): Integration runtime reference type.
+* **authentication**: [WebActivityAuthentication](#webactivityauthentication): Authentication method used for calling the endpoint.
+* **body**: any: Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
+* **connectVia**: [IntegrationRuntimeReference](#integrationruntimereference): The integration runtime reference.
 * **datasets**: [DatasetReference](#datasetreference)[]: List of datasets passed to web endpoint.
 * **disableCertValidation**: bool: When set to true, Certificate validation will be disabled.
-* **headers**: any: Any object
+* **headers**: any: Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
 * **linkedServices**: [LinkedServiceReference](#linkedservicereference)[]: List of linked services passed to web endpoint.
-* **method**: 'DELETE' | 'GET' | 'POST' | 'PUT' | string (Required): The list of HTTP methods supported by a WebActivity.
-* **url**: any (Required): Any object
+* **method**: 'DELETE' | 'GET' | 'POST' | 'PUT' | string (Required): Rest API method for target endpoint.
+* **url**: any (Required): Web activity target endpoint and path. Type: string (or Expression with resultType string).
 
 ## WebHookActivityTypeProperties
 ### Properties
-* **authentication**: [WebActivityAuthentication](#webactivityauthentication): Web activity authentication properties.
-* **body**: any: Any object
-* **headers**: any: Any object
-* **method**: 'POST' | string (Required): The list of HTTP methods supported by a WebHook activity.
-* **reportStatusOnCallBack**: any: Any object
+* **authentication**: [WebActivityAuthentication](#webactivityauthentication): Authentication method used for calling the endpoint.
+* **body**: any: Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
+* **headers**: any: Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
+* **method**: 'POST' | string (Required): Rest API method for target endpoint.
+* **reportStatusOnCallBack**: any: When set to true, statusCode, output and error in callback request body will be consumed by activity. The activity can be marked as failed by setting statusCode >= 400 in callback request. Default is false. Type: boolean (or Expression with resultType boolean).
 * **timeout**: string: The timeout within which the webhook should be called back. If there is no value specified, it defaults to 10 minutes. Type: string. Pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-* **url**: any (Required): Any object
+* **url**: any (Required): WebHook activity target endpoint and path. Type: string (or Expression with resultType string).
 
 ## WebLinkedServiceTypeProperties
 * **Discriminator**: authenticationType
 
 ### Base Properties
-* **url**: any (Required): Any object
+* **url**: any (Required): The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
 ### WebAnonymousAuthentication
 #### Properties
 * **authenticationType**: 'Anonymous' (Required): Type of authentication used to connect to the web table source.
@@ -5717,66 +5763,67 @@
 ### WebBasicAuthentication
 #### Properties
 * **authenticationType**: 'Basic' (Required): Type of authentication used to connect to the web table source.
-* **password**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
-* **username**: any (Required): Any object
+* **password**: [SecretBase](#secretbase) (Required): The password for Basic authentication.
+* **username**: any (Required): User name for Basic authentication. Type: string (or Expression with resultType string).
 
 ### WebClientCertificateAuthentication
 #### Properties
 * **authenticationType**: 'ClientCertificate' (Required): Type of authentication used to connect to the web table source.
-* **password**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
-* **pfx**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
+* **password**: [SecretBase](#secretbase) (Required): Password for the PFX file.
+* **pfx**: [SecretBase](#secretbase) (Required): Base64-encoded contents of a PFX file.
 
 
 ## WebTableDatasetTypeProperties
 ### Properties
-* **index**: any (Required): Any object
-* **path**: any: Any object
+* **index**: any (Required): The zero-based index of the table in the web page. Type: integer (or Expression with resultType integer), minimum: 0.
+* **path**: any: The relative URL to the web page from the linked service URL. Type: string (or Expression with resultType string).
 
 ## XeroLinkedServiceTypeProperties
 ### Properties
-* **connectionProperties**: any: Any object
-* **consumerKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **encryptedCredential**: any: Any object
-* **host**: any: Any object
-* **privateKey**: [SecretBase](#secretbase): The base definition of a secret type.
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
+* **connectionProperties**: any: Properties used to connect to Xero. It is mutually exclusive with any other properties in the linked service. Type: object.
+* **consumerKey**: [SecretBase](#secretbase): The consumer key associated with the Xero application.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **host**: any: The endpoint of the Xero server. (i.e. api.xero.com)
+* **privateKey**: [SecretBase](#secretbase): The private key from the .pem file that was generated for your Xero private application. You must include all the text from the .pem file, including the Unix line endings(
+).
+* **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+* **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+* **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
 
 ## XmlDatasetTypeProperties
 ### Properties
-* **compression**: [DatasetCompression](#datasetcompression): The compression method used on a dataset.
-* **encodingName**: any: Any object
-* **location**: [DatasetLocation](#datasetlocation) (Required): Dataset location.
-* **nullValue**: any: Any object
+* **compression**: [DatasetCompression](#datasetcompression): The data compression method used for the json dataset.
+* **encodingName**: any: The code page name of the preferred encoding. If not specified, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
+* **location**: [DatasetLocation](#datasetlocation) (Required): The location of the json data storage.
+* **nullValue**: any: The null value string. Type: string (or Expression with resultType string).
 
 ## XmlReadSettings
 ### Properties
-* **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression read settings.
-* **detectDataType**: any: Any object
-* **namespacePrefixes**: any: Any object
-* **namespaces**: any: Any object
+* **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression settings.
+* **detectDataType**: any: Indicates whether type detection is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
+* **namespacePrefixes**: any: Namespace uri to prefix mappings to override the prefixes in column names when namespace is enabled, if no prefix is defined for a namespace uri, the prefix of xml element/attribute name in the xml data file will be used. Example: "{"http://www.example.com/xml":"prefix"}" Type: object (or Expression with resultType object).
+* **namespaces**: any: Indicates whether namespace is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
 * **type**: string (Required): The read setting type.
-* **validationMode**: any: Any object
+* **validationMode**: any: Indicates what validation method is used when reading the xml files. Allowed values: 'none', 'xsd', or 'dtd'. Type: string (or Expression with resultType string).
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## ZendeskLinkedServiceTypeProperties
 ### Properties
-* **apiToken**: [SecretBase](#secretbase): The base definition of a secret type.
+* **apiToken**: [SecretBase](#secretbase): The api token for the Zendesk source.
 * **authenticationType**: 'Basic' | 'Token' | string (Required): The authentication type to use.
-* **encryptedCredential**: any: Any object
-* **password**: [SecretBase](#secretbase): The base definition of a secret type.
-* **url**: any (Required): Any object
-* **userName**: any: Any object
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): The password of the Zendesk source.
+* **url**: any (Required): The url to connect Zendesk source. Type: string (or Expression with resultType string).
+* **userName**: any: The username of the Zendesk source. Type: string (or Expression with resultType string).
 
 ## ZohoLinkedServiceTypeProperties
 ### Properties
-* **accessToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **connectionProperties**: any: Any object
-* **encryptedCredential**: any: Any object
-* **endpoint**: any: Any object
-* **useEncryptedEndpoints**: any: Any object
-* **useHostVerification**: any: Any object
-* **usePeerVerification**: any: Any object
+* **accessToken**: [SecretBase](#secretbase): The access token for Zoho authentication.
+* **connectionProperties**: any: Properties used to connect to Zoho. It is mutually exclusive with any other properties in the linked service. Type: object.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **endpoint**: any: The endpoint of the Zoho server. (i.e. crm.zoho.com/crm/private)
+* **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+* **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+* **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
 

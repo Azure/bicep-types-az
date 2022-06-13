@@ -32,5 +32,5 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 info    | Resource type microsoft.iotsecurity/onpremisesensors under path '/subscriptions/{subscriptionId}/providers/Microsoft.IoTSecurity/onPremiseSensors/{onPremiseSensorName}' has no body defined.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 17ms
-info    | Autorest completed in 4.79s. 2 files generated.
+info    | autorest.bicep took 12ms
+info    | Autorest completed in 4.86s. 2 files generated.

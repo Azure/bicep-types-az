@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkspaceProperties](#workspaceproperties): The properties of a machine learning workspace.
+* **properties**: [WorkspaceProperties](#workspaceproperties): The properties of the machine learning workspace.
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -17,10 +17,10 @@
 ### Properties
 * **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [Compute](#compute): Machine Learning compute object.
+* **properties**: [Compute](#compute): Compute properties
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -39,12 +39,12 @@
 * **agentCount**: int: Number of agents
 * **agentVMSize**: string: Agent virtual machine size
 * **clusterFqdn**: string: Cluster full qualified domain name
-* **sslConfiguration**: [SslConfiguration](#sslconfiguration): The SSL configuration for scoring
+* **sslConfiguration**: [SslConfiguration](#sslconfiguration): SSL configuration
 * **systemServices**: [SystemService](#systemservice)[]: System services
 
 ## BatchAIProperties
 ### Properties
-* **scaleSettings**: [ScaleSettings](#scalesettings): scale settings for BatchAI Compute
+* **scaleSettings**: [ScaleSettings](#scalesettings): Scale settings for BatchAI
 * **vmPriority**: string: Virtual Machine priority
 * **vmSize**: string: Virtual Machine Size
 
@@ -57,7 +57,7 @@
 * **description**: string: The description of the Machine Learning compute.
 * **modifiedOn**: string (ReadOnly): The date and time when the compute was last modified.
 * **provisioningErrors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Errors during provisioning
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
 * **resourceId**: string: ARM resource id of the compute
 ### AKS
 #### Properties
@@ -97,7 +97,7 @@
 
 ### VirtualMachineSecrets
 #### Properties
-* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials) (ReadOnly): Admin credentials for virtual machine
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials) (ReadOnly): Admin credentials for virtual machine.
 * **computeType**: 'VirtualMachine' (Required): The type of compute
 
 
@@ -115,7 +115,7 @@
 ## HDInsightProperties
 ### Properties
 * **address**: string: Public IP address of the master node of the cluster.
-* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for master node of the cluster
 * **sshPort**: int: Port open for ssh connections on the master node of the cluster.
 
 ## Identity
@@ -133,7 +133,7 @@
 
 ## MachineLearningServiceError
 ### Properties
-* **error**: [ErrorResponse](#errorresponse): Error response information.
+* **error**: [ErrorResponse](#errorresponse): The error response.
 
 ## Password
 ### Properties
@@ -143,7 +143,7 @@
 ## RegistryListCredentialsResult
 ### Properties
 * **location**: string (ReadOnly)
-* **passwords**: [Password](#password)[] (ReadOnly): Array of Password
+* **passwords**: [Password](#password)[] (ReadOnly)
 * **username**: string (ReadOnly)
 
 ## ResourceTags

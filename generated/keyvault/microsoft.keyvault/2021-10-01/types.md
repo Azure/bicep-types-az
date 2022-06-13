@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The supported Azure location where the managed HSM Pool should be created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagedHsmProperties](#managedhsmproperties): Properties of the managed HSM Pool
+* **properties**: [ManagedHsmProperties](#managedhsmproperties): Properties of the managed HSM
 * **sku**: [ManagedHsmSku](#managedhsmsku): SKU details
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the key vault resource.
 * **tags**: [ManagedHsmResourceTags](#managedhsmresourcetags): Resource tags
@@ -21,7 +21,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The supported Azure location where the managed HSM Pool should be created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MhsmPrivateEndpointConnectionProperties](#mhsmprivateendpointconnectionproperties): Properties of the private endpoint connection resource.
+* **properties**: [MhsmPrivateEndpointConnectionProperties](#mhsmprivateendpointconnectionproperties): Resource properties.
 * **sku**: [ManagedHsmSku](#managedhsmsku): SKU details
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the key vault resource.
 * **tags**: [ManagedHsmResourceTags](#managedhsmresourcetags): Resource tags
@@ -35,7 +35,7 @@
 * **location**: string (Required): The supported Azure location where the key vault should be created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VaultProperties](#vaultproperties) (Required): Properties of the vault
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the key vault resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System metadata for the key vault.
 * **tags**: [VaultCreateOrUpdateParametersTags](#vaultcreateorupdateparameterstags): The tags that will be assigned to the key vault.
 * **type**: 'Microsoft.KeyVault/vaults' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -46,7 +46,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The resource type of the access policy.
 * **name**: 'add' | 'remove' | 'replace' (Required, DeployTimeConstant): The resource name
-* **properties**: [VaultAccessPolicyProperties](#vaultaccesspolicyproperties) (Required): Properties of the vault access policy
+* **properties**: [VaultAccessPolicyProperties](#vaultaccesspolicyproperties) (Required): Properties of the access policy
 * **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KeyVault/vaults/keys@2021-10-01
@@ -56,7 +56,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Azure location of the key vault resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [KeyProperties](#keyproperties) (Required): The properties of the key.
+* **properties**: [KeyProperties](#keyproperties) (Required): The properties of the key to be created.
 * **tags**: [KeyCreateParametersTags](#keycreateparameterstags): The tags that will be assigned to the key.
 * **type**: 'Microsoft.KeyVault/vaults/keys' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -68,7 +68,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Azure location of the key vault resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Tags assigned to the key vault resource.
 * **type**: 'Microsoft.KeyVault/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -87,7 +87,7 @@
 ### Properties
 * **applicationId**: string: Application ID of the client making request on behalf of a principal
 * **objectId**: string (Required): The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.
-* **permissions**: [Permissions](#permissions) (Required): Permissions the identity has for keys, secrets, certificates and storage.
+* **permissions**: [Permissions](#permissions) (Required): Permissions the identity has for keys, secrets and certificates.
 * **tenantId**: string (Required): The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
 
 ## IPRule
@@ -111,9 +111,9 @@
 
 ## KeyProperties
 ### Properties
-* **attributes**: [KeyAttributes](#keyattributes): The object attributes managed by the Azure Key Vault service.
+* **attributes**: [KeyAttributes](#keyattributes): The attributes of the key.
 * **curveName**: 'P-256' | 'P-256K' | 'P-384' | 'P-521' | string: The elliptic curve name. For valid values, see JsonWebKeyCurveName.
-* **keyOps**: 'decrypt' | 'encrypt' | 'import' | 'sign' | 'unwrapKey' | 'verify' | 'wrapKey' | string[]: Array of JsonWebKeyOperation
+* **keyOps**: 'decrypt' | 'encrypt' | 'import' | 'sign' | 'unwrapKey' | 'verify' | 'wrapKey' | string[]
 * **keySize**: int: The key size in bits. For example: 2048, 3072, or 4096 for RSA.
 * **keyUri**: string (ReadOnly): The URI to retrieve the current version of the key.
 * **keyUriWithVersion**: string (ReadOnly): The URI to retrieve the specific version of the key.
@@ -121,12 +121,12 @@
 
 ## ManagedHsmProperties
 ### Properties
-* **createMode**: 'default' | 'recover': The vault's create mode to indicate whether the vault need to be recovered or not.
+* **createMode**: 'default' | 'recover': The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.
 * **enablePurgeProtection**: bool: Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.
 * **enableSoftDelete**: bool: Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.
 * **hsmUri**: string (ReadOnly): The URI of the managed hsm pool for performing operations on keys.
 * **initialAdminObjectIds**: string[]: Array of initial administrators object ids for this managed hsm pool.
-* **networkAcls**: [MhsmNetworkRuleSet](#mhsmnetworkruleset): A set of rules governing the network accessibility of a managed hsm pool.
+* **networkAcls**: [MhsmNetworkRuleSet](#mhsmnetworkruleset): Rules governing the accessibility of the key vault from specific network locations.
 * **privateEndpointConnections**: [MhsmPrivateEndpointConnectionItem](#mhsmprivateendpointconnectionitem)[] (ReadOnly): List of private endpoint connections associated with the managed hsm pool.
 * **provisioningState**: 'Activated' | 'Deleting' | 'Failed' | 'Provisioning' | 'Restoring' | 'SecurityDomainRestore' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Control permission for data plane traffic coming from public networks while private endpoint is enabled.
@@ -167,19 +167,19 @@
 
 ## MhsmPrivateEndpointConnectionItem
 ### Properties
-* **properties**: [MhsmPrivateEndpointConnectionProperties](#mhsmprivateendpointconnectionproperties): Properties of the private endpoint connection resource.
+* **properties**: [MhsmPrivateEndpointConnectionProperties](#mhsmprivateendpointconnectionproperties): Private endpoint connection properties.
 
 ## MhsmPrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [MhsmPrivateEndpoint](#mhsmprivateendpoint): Private endpoint object properties.
-* **privateLinkServiceConnectionState**: [MhsmPrivateLinkServiceConnectionState](#mhsmprivatelinkserviceconnectionstate): An object that represents the approval state of the private link connection.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Disconnected' | 'Failed' | 'Succeeded' | 'Updating' | string: The current provisioning state.
+* **privateEndpoint**: [MhsmPrivateEndpoint](#mhsmprivateendpoint): Properties of the private endpoint object.
+* **privateLinkServiceConnectionState**: [MhsmPrivateLinkServiceConnectionState](#mhsmprivatelinkserviceconnectionstate): Approval state of the private link connection.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Disconnected' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the private endpoint connection.
 
 ## MhsmPrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: 'None' | string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval or rejection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been approved, rejected or removed by the key vault owner.
 
 ## MhsmVirtualNetworkRule
 ### Properties
@@ -207,19 +207,19 @@
 ### Properties
 * **etag**: string: Modified whenever there is a change in the state of private endpoint connection.
 * **id**: string: Id of private endpoint connection.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Private endpoint connection properties.
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint object properties.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): An object that represents the approval state of the private link connection.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Disconnected' | 'Failed' | 'Succeeded' | 'Updating' | string: The current provisioning state.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Properties of the private endpoint object.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Approval state of the private link connection.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Disconnected' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the private endpoint connection.
 
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: 'None' | string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval or rejection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been approved, rejected or removed by the key vault owner.
 
 ## ResourceTags
 ### Properties
@@ -241,7 +241,7 @@
 
 ## SecretProperties
 ### Properties
-* **attributes**: [SecretAttributes](#secretattributes): The secret management attributes.
+* **attributes**: [SecretAttributes](#secretattributes): The attributes of the secret.
 * **contentType**: string: The content type of the secret.
 * **secretUri**: string (ReadOnly): The URI to retrieve the current version of the secret.
 * **secretUriWithVersion**: string (ReadOnly): The URI to retrieve the specific version of the secret.
@@ -256,10 +256,10 @@
 ### Properties
 * **createdAt**: string (ReadOnly): The timestamp of the key vault resource creation (UTC).
 * **createdBy**: string (ReadOnly): The identity that created the key vault resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the key vault resource.
 * **lastModifiedAt**: string (ReadOnly): The timestamp of the key vault resource last modification (UTC).
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the key vault resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that last modified the key vault resource.
 
 ## VaultAccessPolicyProperties
 ### Properties
@@ -281,7 +281,7 @@
 * **enableRbacAuthorization**: bool: Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored. When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.
 * **enableSoftDelete**: bool: Property to specify whether the 'soft delete' functionality is enabled for this key vault. If it's not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.
 * **hsmPoolResourceId**: string (ReadOnly): The resource id of HSM Pool.
-* **networkAcls**: [NetworkRuleSet](#networkruleset): A set of rules governing the network accessibility of a vault.
+* **networkAcls**: [NetworkRuleSet](#networkruleset): Rules governing the accessibility of the key vault from specific network locations.
 * **privateEndpointConnections**: [PrivateEndpointConnectionItem](#privateendpointconnectionitem)[] (ReadOnly): List of private endpoint connections associated with the key vault.
 * **provisioningState**: 'RegisteringDns' | 'Succeeded' | string: Provisioning state of the vault.
 * **publicNetworkAccess**: string: Property to specify whether the vault will accept traffic from public internet. If set to 'disabled' all traffic except private endpoint traffic and that that originates from trusted services will be blocked. This will override the set firewall rules, meaning that even if the firewall rules are present we will not honor the rules.

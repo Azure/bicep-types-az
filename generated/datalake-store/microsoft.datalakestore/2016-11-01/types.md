@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [EncryptionIdentity](#encryptionidentity): The encryption identity properties.
+* **identity**: [EncryptionIdentity](#encryptionidentity): The Key Vault encryption identity, if any.
 * **location**: string (Required): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateDataLakeStoreAccountProperties](#createdatalakestoreaccountproperties)
+* **properties**: [CreateDataLakeStoreAccountProperties](#createdatalakestoreaccountproperties): The Data Lake Store account properties to use for creating.
 * **tags**: [CreateDataLakeStoreAccountParametersTags](#createdatalakestoreaccountparameterstags): The resource tags.
 * **type**: 'Microsoft.DataLakeStore/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -48,9 +48,9 @@
 ### Properties
 * **accountId**: string (ReadOnly): The unique identifier associated with this Data Lake Store account.
 * **creationTime**: string (ReadOnly): The account creation time.
-* **currentTier**: 'Commitment_100TB' | 'Commitment_10TB' | 'Commitment_1PB' | 'Commitment_1TB' | 'Commitment_500TB' | 'Commitment_5PB' | 'Consumption' (ReadOnly): The commitment tier to use for next month.
+* **currentTier**: 'Commitment_100TB' | 'Commitment_10TB' | 'Commitment_1PB' | 'Commitment_1TB' | 'Commitment_500TB' | 'Commitment_5PB' | 'Consumption' (ReadOnly): The commitment tier in use for the current month.
 * **defaultGroup**: string: The default owner group for all new folders and files created in the Data Lake Store account.
-* **encryptionConfig**: [EncryptionConfig](#encryptionconfig): The encryption configuration for the account.
+* **encryptionConfig**: [EncryptionConfig](#encryptionconfig): The Key Vault encryption configuration.
 * **encryptionProvisioningState**: 'Creating' | 'Succeeded' (ReadOnly): The current state of encryption provisioning for this Data Lake Store account.
 * **encryptionState**: 'Disabled' | 'Enabled': The current state of encryption for this Data Lake Store account.
 * **endpoint**: string (ReadOnly): The full CName endpoint for this account.
@@ -101,7 +101,7 @@
 
 ## EncryptionConfig
 ### Properties
-* **keyVaultMetaInfo**: [KeyVaultMetaInfo](#keyvaultmetainfo): Metadata information used by account encryption.
+* **keyVaultMetaInfo**: [KeyVaultMetaInfo](#keyvaultmetainfo): The Key Vault information for connecting to user managed encryption keys.
 * **type**: 'ServiceManaged' | 'UserManaged' (Required): The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.
 
 ## EncryptionIdentity

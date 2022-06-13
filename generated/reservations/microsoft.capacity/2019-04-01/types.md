@@ -26,11 +26,11 @@
 ## PaymentDetail
 ### Properties
 * **billingAccount**: string (ReadOnly): Shows the Account that is charged for this payment.
-* **billingCurrencyTotal**: [Price](#price) (ReadOnly)
+* **billingCurrencyTotal**: [Price](#price) (ReadOnly): Amount charged in Billing currency. Tax not included. Is null for future payments
 * **dueDate**: string (ReadOnly): Date when the payment needs to be done.
 * **extendedStatusInfo**: [ExtendedStatusInfo](#extendedstatusinfo) (ReadOnly)
 * **paymentDate**: string (ReadOnly): Date when the transaction is completed. Is null when it is scheduled.
-* **pricingCurrencyTotal**: [Price](#price) (ReadOnly)
+* **pricingCurrencyTotal**: [Price](#price) (ReadOnly): Amount in pricing currency. Tax not included.
 * **status**: 'Cancelled' | 'Failed' | 'Scheduled' | 'Succeeded' | string (ReadOnly): Describes whether the payment is completed, failed, cancelled or scheduled in the future.
 
 ## Price
@@ -60,7 +60,7 @@
 * **quantity**: int (WriteOnly): Quantity of the SKUs that are part of the Reservation. Must be greater than zero.
 * **renew**: bool (WriteOnly): Setting this to true will automatically purchase a new reservation on the expiration date time.
 * **requestDateTime**: string (ReadOnly): This is the DateTime when the reservation was initially requested for purchase.
-* **reservations**: [ReservationResponse](#reservationresponse)[] (ReadOnly): Array of ReservationResponse
+* **reservations**: [ReservationResponse](#reservationresponse)[] (ReadOnly)
 * **reservedResourceProperties**: [PurchaseRequestPropertiesReservedResourceProperties](#purchaserequestpropertiesreservedresourceproperties) (WriteOnly): Properties specific to each reserved resource type. Not required if not applicable.
 * **reservedResourceType**: 'AppService' | 'AzureDataExplorer' | 'BlockBlob' | 'CosmosDb' | 'Databricks' | 'DedicatedHost' | 'ManagedDisk' | 'MariaDb' | 'MySql' | 'PostgreSql' | 'RedHat' | 'RedHatOsa' | 'RedisCache' | 'SapHana' | 'SqlAzureHybridBenefit' | 'SqlDataWarehouse' | 'SqlDatabases' | 'SuseLinux' | 'VMwareCloudSimple' | 'VirtualMachines' | string (WriteOnly): The type of the resource that is being reserved.
 * **term**: 'P1Y' | 'P3Y' | string: Represent the term of Reservation.
@@ -93,9 +93,9 @@
 ## ReservationOrderBillingPlanInformation
 ### Properties
 * **nextPaymentDueDate**: string (ReadOnly): For recurring billing plans, indicates the date when next payment will be processed. Null when total is paid off.
-* **pricingCurrencyTotal**: [Price](#price) (ReadOnly)
+* **pricingCurrencyTotal**: [Price](#price) (ReadOnly): Amount of money to be paid for the Order. Tax is not included.
 * **startDate**: string (ReadOnly): Date when the billing plan has started.
-* **transactions**: [PaymentDetail](#paymentdetail)[] (ReadOnly): Array of PaymentDetail
+* **transactions**: [PaymentDetail](#paymentdetail)[] (ReadOnly)
 
 ## ReservationProperties
 ### Properties

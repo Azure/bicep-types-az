@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The Azure region of the Visual Studio account associated with this request (i.e 'southcentralus'.)
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **plan**: [ExtensionResourcePlan](#extensionresourceplan): Plan data for an extension resource.
+* **plan**: [ExtensionResourcePlan](#extensionresourceplan): Extended information about the plan being purchased for this extension resource.
 * **properties**: [ExtensionResourceRequestProperties](#extensionresourcerequestproperties): A dictionary of extended properties. This property is currently unused.
 * **tags**: [ExtensionResourceRequestTags](#extensionresourcerequesttags): A dictionary of user-defined tags to be stored with the extension resource.
 * **type**: 'microsoft.visualstudio/account/extension' (ReadOnly, DeployTimeConstant): The resource type

@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2022-02-14' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ImageTemplateIdentity](#imagetemplateidentity) (Required): Identity for the image template.
+* **identity**: [ImageTemplateIdentity](#imagetemplateidentity) (Required): The identity of the image template, if configured.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ImageTemplateProperties](#imagetemplateproperties): Describes the properties of an image template
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ImageTemplateProperties](#imagetemplateproperties): The properties of the image template
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.VirtualMachineImages/imageTemplates' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -139,13 +139,13 @@
 * **customize**: [ImageTemplateCustomizer](#imagetemplatecustomizer)[]: Specifies the properties used to describe the customization steps of the image, like Image source etc
 * **distribute**: [ImageTemplateDistributor](#imagetemplatedistributor)[] (Required): The distribution targets where the image output needs to go to.
 * **exactStagingResourceGroup**: string (ReadOnly): The staging resource group id in the same subscription as the image template that will be used to build the image. This read-only field differs from 'stagingResourceGroup' only if the value specified in the 'stagingResourceGroup' field is empty.
-* **lastRunStatus**: [ImageTemplateLastRunStatus](#imagetemplatelastrunstatus) (ReadOnly): Describes the latest status of running an image template
-* **provisioningError**: [ProvisioningError](#provisioningerror) (ReadOnly): Describes the error happened when create or update an image template
+* **lastRunStatus**: [ImageTemplateLastRunStatus](#imagetemplatelastrunstatus) (ReadOnly): State of 'run' that is currently executing or was last executed.
+* **provisioningError**: [ProvisioningError](#provisioningerror) (ReadOnly): Provisioning error, if any
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource
-* **source**: [ImageTemplateSource](#imagetemplatesource) (Required): Describes a virtual machine image source for building, customizing and distributing
+* **source**: [ImageTemplateSource](#imagetemplatesource) (Required): Specifies the properties used to describe the source image.
 * **stagingResourceGroup**: string: The staging resource group id in the same subscription as the image template that will be used to build the image. If this field is empty, a resource group with a random name will be created. If the resource group specified in this field doesn't exist, it will be created with the same name. If the resource group specified exists, it must be empty and in the same region as the image template. The resource group created will be deleted during template deletion if this field is empty or the resource group specified doesn't exist, but if the resource group specified exists the resources created in the resource group will be deleted during template deletion and the resource group itself will remain.
 * **validate**: [ImageTemplatePropertiesValidate](#imagetemplatepropertiesvalidate): Configuration options and list of validations to be performed on the resulting image.
-* **vmProfile**: [ImageTemplateVmProfile](#imagetemplatevmprofile): Describes the virtual machines used to build and validate images
+* **vmProfile**: [ImageTemplateVmProfile](#imagetemplatevmprofile): Describes how virtual machine is set up to build images
 
 ## ImageTemplatePropertiesValidate
 ### Properties
@@ -166,7 +166,7 @@
 #### Properties
 * **exactVersion**: string (ReadOnly): Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). This readonly field differs from 'version', only if the value specified in 'version' field is 'latest'.
 * **offer**: string: Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
-* **planInfo**: [PlatformImagePurchasePlan](#platformimagepurchaseplan): Purchase plan configuration for platform image.
+* **planInfo**: [PlatformImagePurchasePlan](#platformimagepurchaseplan): Optional configuration of purchase plan for platform image.
 * **publisher**: string: Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
 * **sku**: string: Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
 * **type**: 'PlatformImage' (Required): Specifies the type of source image you want to start with.
@@ -183,7 +183,7 @@
 * **osDiskSizeGB**: int: Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.
 * **userAssignedIdentities**: string[]: Optional array of resource IDs of user assigned managed identities to be configured on the build VM and validation VM. This may include the identity of the image template.
 * **vmSize**: string: Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2 for Gen1 images and Standard_D2ds_v4 for Gen2 images).
-* **vnetConfig**: [VirtualNetworkConfig](#virtualnetworkconfig): Virtual Network configuration.
+* **vnetConfig**: [VirtualNetworkConfig](#virtualnetworkconfig): Optional configuration of the virtual network to use to deploy the build VM and validation VM in. Omit if no specific virtual network needs to be used.
 
 ## PlatformImagePurchasePlan
 ### Properties
@@ -203,7 +203,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties

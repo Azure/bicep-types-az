@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [HanaInstanceProperties](#hanainstanceproperties): Describes the properties of a HANA instance.
+* **properties**: [HanaInstanceProperties](#hanainstanceproperties): HANA instance properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.HanaOnAzure/hanaInstances' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -22,7 +22,7 @@
 * **hanaInstanceId**: string (ReadOnly): Specifies the HANA instance unique ID.
 * **hardwareProfile**: [HardwareProfile](#hardwareprofile): Specifies the hardware settings for the HANA instance.
 * **hwRevision**: string (ReadOnly): Hardware revision of a HANA instance
-* **networkProfile**: [NetworkProfile](#networkprofile): Specifies the network settings for the HANA instance disks.
+* **networkProfile**: [NetworkProfile](#networkprofile): Specifies the network settings for the HANA instance.
 * **osProfile**: [OSProfile](#osprofile): Specifies the operating system settings for the HANA instance.
 * **partnerNodeId**: string: ARM ID of another HanaInstance that will share a network with this HanaInstance
 * **powerState**: 'restarting' | 'started' | 'starting' | 'stopped' | 'stopping' | 'unknown' | string (ReadOnly): Resource power state

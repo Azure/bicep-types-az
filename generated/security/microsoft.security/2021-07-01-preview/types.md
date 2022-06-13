@@ -6,8 +6,8 @@
 * **apiVersion**: '2021-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CustomAssessmentAutomationRequestProperties](#customassessmentautomationrequestproperties): describes the Custom Assessment Automation properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [CustomAssessmentAutomationRequestProperties](#customassessmentautomationrequestproperties): describes Custom Assessment Automation request properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/customAssessmentAutomations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/customEntityStoreAssignments@2021-07-01-preview
@@ -17,7 +17,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CustomEntityStoreAssignmentRequestProperties](#customentitystoreassignmentrequestproperties): describes properties of custom entity store assignment request
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/customEntityStoreAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/securityConnectors@2021-07-01-preview
@@ -29,8 +29,8 @@
 * **kind**: string: Kind of the resource
 * **location**: string: Location where the resource is stored
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SecurityConnectorProperties](#securityconnectorproperties): A set of properties that defines the security connector configuration.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [SecurityConnectorProperties](#securityconnectorproperties): Security connector data
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [Tags](#tags): A list of key value pairs that describe the resource.
 * **type**: 'Microsoft.Security/securityConnectors' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -139,7 +139,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 * **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that last modified the resource.
 
 ## Tags
 ### Properties

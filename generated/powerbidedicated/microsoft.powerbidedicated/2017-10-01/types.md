@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Location of the PowerBI Dedicated resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DedicatedCapacityProperties](#dedicatedcapacityproperties): Properties of Dedicated Capacity resource.
-* **sku**: [ResourceSku](#resourcesku) (Required): Represents the SKU name and Azure pricing tier for PowerBI Dedicated resource.
+* **properties**: [DedicatedCapacityProperties](#dedicatedcapacityproperties): Properties of the provision operation request.
+* **sku**: [ResourceSku](#resourcesku) (Required): The SKU of the PowerBI Dedicated resource.
 * **tags**: [ResourceTags](#resourcetags): Key-value pairs of additional resource provisioning properties.
 * **type**: 'Microsoft.PowerBIDedicated/capacities' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,7 +18,7 @@
 
 ## DedicatedCapacityProperties
 ### Properties
-* **administration**: [DedicatedCapacityAdministrators](#dedicatedcapacityadministrators): An array of administrator user identities
+* **administration**: [DedicatedCapacityAdministrators](#dedicatedcapacityadministrators): A collection of Dedicated capacity administrators
 * **friendlyName**: string (ReadOnly): Capacity name
 * **mode**: string (ReadOnly): The capacity mode.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' | string (ReadOnly): The current deployment state of PowerBI Dedicated resource. The provisioningState is to indicate states for resource provisioning.

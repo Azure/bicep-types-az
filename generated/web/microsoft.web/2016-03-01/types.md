@@ -38,7 +38,7 @@
 * **expirationDate**: string (ReadOnly): Certificate expiration date.
 * **friendlyName**: string (ReadOnly): Friendly name of the certificate.
 * **geoRegion**: string (ReadOnly): Region of the certificate.
-* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile) (ReadOnly): Specification for an App Service Environment to use for this resource.
+* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile) (ReadOnly): Specification for the App Service Environment to use for the certificate.
 * **hostNames**: string[]: Host names the certificate applies to.
 * **issueDate**: string (ReadOnly): Certificate issue Date.
 * **issuer**: string (ReadOnly): Certificate issuer.

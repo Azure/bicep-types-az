@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ResourceIdentity](#resourceidentity): Azure Active Directory identity configuration for a resource.
+* **identity**: [ResourceIdentity](#resourceidentity): The Azure Active Directory identity of the server.
 * **location**: string (Required): The location the resource resides in.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required): The properties used to create a new server.
-* **sku**: [Sku](#sku): Billing information related properties of a server.
+* **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required): Properties of the server.
+* **sku**: [Sku](#sku): The SKU (pricing tier) of the server.
 * **tags**: [ServerForCreateTags](#serverforcreatetags): Application-specific metadata in the form of key-value pairs.
 * **type**: 'Microsoft.DBforMySQL/servers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,7 +19,7 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'activeDirectory' (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerAdministratorProperties](#serveradministratorproperties): The properties of an server Administrator.
+* **properties**: [ServerAdministratorProperties](#serveradministratorproperties): Properties of the server AAD administrator.
 * **type**: 'Microsoft.DBforMySQL/servers/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMySQL/servers/configurations@2017-12-01
@@ -46,7 +46,7 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a server firewall rule.
+* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a firewall rule.
 * **type**: 'Microsoft.DBforMySQL/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMySQL/servers/securityAlertPolicies@2017-12-01
@@ -55,7 +55,7 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Properties of a security alert policy.
+* **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Resource properties.
 * **type**: 'Microsoft.DBforMySQL/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMySQL/servers/virtualNetworkRules@2017-12-01
@@ -64,7 +64,7 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Properties of a virtual network rule.
+* **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Resource properties.
 * **type**: 'Microsoft.DBforMySQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ConfigurationProperties
@@ -121,12 +121,12 @@
 ## ServerPrivateEndpointConnection
 ### Properties
 * **id**: string (ReadOnly): Resource Id of the private endpoint connection.
-* **properties**: [ServerPrivateEndpointConnectionProperties](#serverprivateendpointconnectionproperties) (ReadOnly): Properties of a private endpoint connection.
+* **properties**: [ServerPrivateEndpointConnectionProperties](#serverprivateendpointconnectionproperties) (ReadOnly): Private endpoint connection properties
 
 ## ServerPrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty) (ReadOnly)
-* **privateLinkServiceConnectionState**: [ServerPrivateLinkServiceConnectionStateProperty](#serverprivatelinkserviceconnectionstateproperty) (ReadOnly)
+* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty) (ReadOnly): Private endpoint which the connection belongs to.
+* **privateLinkServiceConnectionState**: [ServerPrivateLinkServiceConnectionStateProperty](#serverprivatelinkserviceconnectionstateproperty) (ReadOnly): Connection state of the private endpoint connection.
 * **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' | string (ReadOnly): State of the private endpoint connection.
 
 ## ServerPrivateLinkServiceConnectionStateProperty
@@ -143,7 +143,7 @@
 * **byokEnforcement**: string (ReadOnly): Status showing whether the server data encryption is enabled with customer-managed keys.
 * **earliestRestoreDate**: string (ReadOnly): Earliest restore point creation time (ISO8601 format)
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
-* **infrastructureEncryption**: 'Disabled' | 'Enabled' | string: Add a second layer of encryption for your data using new encryption algorithm which gives additional data protection. Value is optional but if passed in, must be 'Disabled' or 'Enabled'.
+* **infrastructureEncryption**: 'Disabled' | 'Enabled' | string: Status showing whether the server enabled infrastructure encryption.
 * **masterServerId**: string (ReadOnly): The master server id of a replica server.
 * **minimalTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2' | 'TLSEnforcementDisabled' | string: Enforce a minimal Tls version for the server.
 * **privateEndpointConnections**: [ServerPrivateEndpointConnection](#serverprivateendpointconnection)[] (ReadOnly): List of private endpoint connections on a server
@@ -151,9 +151,9 @@
 * **replicaCapacity**: int (ReadOnly): The maximum number of replicas that a master server can have.
 * **replicationRole**: string (ReadOnly): The replication role of the server.
 * **sslEnforcement**: 'Disabled' | 'Enabled': Enable ssl enforcement or not when connect to server.
-* **storageProfile**: [StorageProfile](#storageprofile): Storage Profile properties of a server
+* **storageProfile**: [StorageProfile](#storageprofile): Storage profile of a server.
 * **userVisibleState**: 'Disabled' | 'Dropping' | 'Inaccessible' | 'Ready' | string (ReadOnly): A state of a server that is visible to user.
-* **version**: '5.6' | '5.7' | '8.0' | string: The version of a server.
+* **version**: '5.6' | '5.7' | '8.0' | string: Server version.
 ### ServerPropertiesForDefaultCreate
 #### Properties
 * **administratorLogin**: string (Required, WriteOnly): The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation). The login name is required when updating password.

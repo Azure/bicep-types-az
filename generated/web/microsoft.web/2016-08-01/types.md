@@ -97,8 +97,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'slotConfigNames' (Required, DeployTimeConstant): The resource name
-* **properties**: [SlotConfigNames](#slotconfignames): Names for connection strings and application settings to be marked as sticky to the deployment slot and not moved during a swap operation.
-This is valid for all deployment slots in an app.
+* **properties**: [SlotConfigNames](#slotconfignames): Core resource properties
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -107,7 +106,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteConfig](#siteconfig): Configuration of an App Service app.
+* **properties**: [SiteConfig](#siteconfig): Core resource properties
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 
@@ -138,7 +137,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
+* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
 * **type**: 'Microsoft.Web/sites/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/functions@2016-08-01
@@ -188,7 +187,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
+* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
 * **type**: 'Microsoft.Web/sites/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/premieraddons@2016-08-01
@@ -320,7 +319,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteConfig](#siteconfig): Configuration of an App Service app.
+* **properties**: [SiteConfig](#siteconfig): Core resource properties
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 
@@ -351,7 +350,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
+* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
 * **type**: 'Microsoft.Web/sites/slots/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/functions@2016-08-01
@@ -401,7 +400,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
+* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
 * **type**: 'Microsoft.Web/sites/slots/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/premieraddons@2016-08-01
@@ -554,15 +553,14 @@ This is valid for all deployment slots in an app.
 
 ## ApplicationLogsConfig
 ### Properties
-* **azureBlobStorage**: [AzureBlobStorageApplicationLogsConfig](#azureblobstorageapplicationlogsconfig): Application logs azure blob storage configuration.
-* **azureTableStorage**: [AzureTableStorageApplicationLogsConfig](#azuretablestorageapplicationlogsconfig): Application logs to Azure table storage configuration.
+* **azureBlobStorage**: [AzureBlobStorageApplicationLogsConfig](#azureblobstorageapplicationlogsconfig): Application logs to blob storage configuration.
+* **azureTableStorage**: [AzureTableStorageApplicationLogsConfig](#azuretablestorageapplicationlogsconfig): Application logs to azure table storage configuration.
 * **fileSystem**: [FileSystemApplicationLogsConfig](#filesystemapplicationlogsconfig): Application logs to file system configuration.
 
 ## AutoHealActions
 ### Properties
 * **actionType**: 'CustomAction' | 'LogEvent' | 'Recycle': Predefined action to be taken.
-* **customAction**: [AutoHealCustomAction](#autohealcustomaction): Custom action to be executed
-when an auto heal rule is triggered.
+* **customAction**: [AutoHealCustomAction](#autohealcustomaction): Custom action to be taken.
 * **minProcessExecutionTime**: string: Minimum time the process must execute
 before taking the action
 
@@ -573,14 +571,14 @@ before taking the action
 
 ## AutoHealRules
 ### Properties
-* **actions**: [AutoHealActions](#autohealactions): Actions which to take by the auto-heal module when a rule is triggered.
-* **triggers**: [AutoHealTriggers](#autohealtriggers): Triggers for auto-heal.
+* **actions**: [AutoHealActions](#autohealactions): Actions to be executed when a rule is triggered.
+* **triggers**: [AutoHealTriggers](#autohealtriggers): Conditions that describe when to execute the auto-heal actions.
 
 ## AutoHealTriggers
 ### Properties
 * **privateBytesInKB**: int: A rule based on private bytes.
-* **requests**: [RequestsBasedTrigger](#requestsbasedtrigger): Trigger based on total requests.
-* **slowRequests**: [SlowRequestsBasedTrigger](#slowrequestsbasedtrigger): Trigger based on request execution time.
+* **requests**: [RequestsBasedTrigger](#requestsbasedtrigger): A rule based on total requests.
+* **slowRequests**: [SlowRequestsBasedTrigger](#slowrequestsbasedtrigger): A rule based on request execution time.
 * **statusCodes**: [StatusCodesBasedTrigger](#statuscodesbasedtrigger)[]: A rule based on status codes.
 
 ## AzureBlobStorageApplicationLogsConfig
@@ -655,7 +653,7 @@ Remove blobs older than X days.
 
 ## BackupRequestProperties
 ### Properties
-* **backupSchedule**: [BackupSchedule](#backupschedule): Description of a backup schedule. Describes how often should be the backup performed and what should be the retention policy.
+* **backupSchedule**: [BackupSchedule](#backupschedule): Schedule for the backup if it is executed periodically.
 * **databases**: [DatabaseBackupSetting](#databasebackupsetting)[]: Databases included in the backup.
 * **enabled**: bool: True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
 * **name**: string (Required): Name of the backup.
@@ -766,7 +764,7 @@ Value can range between 25 and 100.
 
 ## FunctionEnvelopeProperties
 ### Properties
-* **config**: any: Any object
+* **config**: any: Config information.
 * **configHref**: string: Config URI.
 * **files**: [FunctionEnvelopePropertiesFiles](#functionenvelopepropertiesfiles): File list.
 * **functionAppId**: string (ReadOnly): Function App ID.
@@ -839,7 +837,7 @@ Value can range between 25 and 100.
 * **domainId**: string: Fully qualified ARM domain resource URI.
 * **hostNameType**: 'Managed' | 'Verified': Hostname type.
 * **siteName**: string: App Service app name.
-* **sslState**: 'Disabled' | 'IpBasedEnabled' | 'SniEnabled': SSL type.
+* **sslState**: 'Disabled' | 'IpBasedEnabled' | 'SniEnabled': SSL type
 * **thumbprint**: string: SSL certificate thumbprint
 * **virtualIP**: string (ReadOnly): Virtual IP address assigned to the hostname if IP based SSL is enabled.
 
@@ -1033,7 +1031,7 @@ Custom decision algorithm can be provided in TiPCallback site extension which UR
 * **ignoreConflictingHostNames**: bool: Changes a logic when restoring an app with custom domains. <code>true</code> to remove custom domains automatically. If <code>false</code>, custom domains are added to 
 the app's object when it is being restored, but that might fail due to conflicts during the operation.
 * **ignoreDatabases**: bool: Ignore the databases and only restore the site content
-* **operationType**: 'Clone' | 'Default' | 'Relocation' | 'Snapshot': Type of the backup.
+* **operationType**: 'Clone' | 'Default' | 'Relocation' | 'Snapshot': Operation type.
 * **overwrite**: bool (Required): <code>true</code> if the restore operation can overwrite target app; otherwise, <code>false</code>. <code>true</code> is needed if trying to restore over an existing app.
 * **siteName**: string: Name of an app.
 * **storageAccountUrl**: string (Required): SAS URL to the container.
@@ -1112,14 +1110,14 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **appCommandLine**: string: App command line to launch.
 * **appSettings**: [NameValuePair](#namevaluepair)[]: Application settings.
 * **autoHealEnabled**: bool: <code>true</code> if Auto Heal is enabled; otherwise, <code>false</code>.
-* **autoHealRules**: [AutoHealRules](#autohealrules): Rules that can be defined for auto-heal.
+* **autoHealRules**: [AutoHealRules](#autohealrules): Auto Heal rules.
 * **autoSwapSlotName**: string: Auto-swap slot name.
 * **connectionStrings**: [ConnStringInfo](#connstringinfo)[]: Connection strings.
-* **cors**: [CorsSettings](#corssettings): Cross-Origin Resource Sharing (CORS) settings for the app.
+* **cors**: [CorsSettings](#corssettings): Cross-Origin Resource Sharing (CORS) settings.
 * **defaultDocuments**: string[]: Default documents.
 * **detailedErrorLoggingEnabled**: bool: <code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.
 * **documentRoot**: string: Document root.
-* **experiments**: [Experiments](#experiments): Routing rules in production experiments.
+* **experiments**: [Experiments](#experiments): This is work around for polymorphic types.
 * **handlerMappings**: [HandlerMapping](#handlermapping)[]: Handler mappings.
 * **http20Enabled**: bool: Http20Enabled: configures a web site to allow clients to connect over http2.0
 * **httpLoggingEnabled**: bool: <code>true</code> if HTTP logging is enabled; otherwise, <code>false</code>.
@@ -1127,12 +1125,12 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **javaContainer**: string: Java container.
 * **javaContainerVersion**: string: Java container version.
 * **javaVersion**: string: Java version.
-* **limits**: [SiteLimits](#sitelimits): Metric limits set on an app.
+* **limits**: [SiteLimits](#sitelimits): Site limits.
 * **linuxFxVersion**: string: Linux App Framework and version
 * **loadBalancing**: 'LeastRequests' | 'LeastResponseTime' | 'RequestHash' | 'WeightedRoundRobin' | 'WeightedTotalTraffic': Site load balancing.
 * **localMySqlEnabled**: bool: <code>true</code> to enable local MySQL; otherwise, <code>false</code>.
 * **logsDirectorySizeLimit**: int: HTTP logs directory size limit.
-* **machineKey**: [SiteMachineKey](#sitemachinekey) (ReadOnly): MachineKey of an app.
+* **machineKey**: [SiteMachineKey](#sitemachinekey) (ReadOnly): Site MachineKey.
 * **managedPipelineMode**: 'Classic' | 'Integrated': Managed pipeline mode.
 * **minTlsVersion**: '1.0' | '1.1' | '1.2' | string: MinTlsVersion: configures the minimum version of TLS required for SSL requests
 * **netFrameworkVersion**: string: .NET Framework version.
@@ -1140,7 +1138,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **numberOfWorkers**: int: Number of workers.
 * **phpVersion**: string: Version of PHP.
 * **publishingUsername**: string: Publishing user name.
-* **push**: [PushSettings](#pushsettings): Push settings for the App.
+* **push**: [PushSettings](#pushsettings): Push endpoint settings.
 * **pythonVersion**: string: Version of Python.
 * **remoteDebuggingEnabled**: bool: <code>true</code> if remote debugging is enabled; otherwise, <code>false</code>.
 * **remoteDebuggingVersion**: string: Remote debugging version.
@@ -1185,9 +1183,9 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 ## SiteLogsConfigProperties
 ### Properties
 * **applicationLogs**: [ApplicationLogsConfig](#applicationlogsconfig): Application logs configuration.
-* **detailedErrorMessages**: [EnabledConfig](#enabledconfig): Enabled configuration.
-* **failedRequestsTracing**: [EnabledConfig](#enabledconfig): Enabled configuration.
-* **httpLogs**: [HttpLogsConfig](#httplogsconfig): Http logs configuration.
+* **detailedErrorMessages**: [EnabledConfig](#enabledconfig): Detailed error messages configuration.
+* **failedRequestsTracing**: [EnabledConfig](#enabledconfig): Failed requests tracing configuration.
+* **httpLogs**: [HttpLogsConfig](#httplogsconfig): HTTP logs configuration.
 
 ## SiteMachineKey
 ### Properties
@@ -1201,14 +1199,14 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **availabilityState**: 'DisasterRecoveryMode' | 'Limited' | 'Normal' (ReadOnly): Management information availability state for the app.
 * **clientAffinityEnabled**: bool: <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
 * **clientCertEnabled**: bool: <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.
-* **cloningInfo**: [CloningInfo](#cloninginfo) (WriteOnly): Information needed for cloning operation.
+* **cloningInfo**: [CloningInfo](#cloninginfo) (WriteOnly): If specified during app creation, the app is cloned from a source app.
 * **containerSize**: int: Size of the function container.
 * **dailyMemoryTimeQuota**: int: Maximum allowed daily memory-time quota (applicable on dynamic apps only).
 * **defaultHostName**: string (ReadOnly): Default hostname of the app. Read-only.
 * **enabled**: bool: <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).
 * **enabledHostNames**: string[] (ReadOnly): Enabled hostnames for the app.Hostnames need to be assigned (see HostNames) AND enabled. Otherwise,
 the app is not served on those hostnames.
-* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): Specification for an App Service Environment to use for this resource.
+* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): App Service Environment to use for the app.
 * **hostNames**: string[] (ReadOnly): Hostnames associated with the app.
 * **hostNamesDisabled**: bool: <code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>.
  If <code>true</code>, the app is only accessible via API management process.
@@ -1226,9 +1224,9 @@ This only applies to Functions container.
 * **resourceGroup**: string (ReadOnly): Name of the resource group the app belongs to. Read-only.
 * **scmSiteAlsoStopped**: bool: <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.
 * **serverFarmId**: string: Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
-* **siteConfig**: [SiteConfig](#siteconfig): Configuration of an App Service app.
-* **slotSwapStatus**: [SlotSwapStatus](#slotswapstatus) (ReadOnly): The status of the last successful slot swap operation.
-* **snapshotInfo**: [SnapshotRecoveryRequest](#snapshotrecoveryrequest) (WriteOnly): Details about app recovery operation.
+* **siteConfig**: [SiteConfig](#siteconfig): Configuration of the app.
+* **slotSwapStatus**: [SlotSwapStatus](#slotswapstatus) (ReadOnly): Status of the last deployment slot swap operation.
+* **snapshotInfo**: [SnapshotRecoveryRequest](#snapshotrecoveryrequest) (WriteOnly): If specified during app creation, the app is created from a previous snapshot.
 * **state**: string (ReadOnly): Current state of the app.
 * **suspendedTill**: string (ReadOnly): App suspended till in case memory-time quota is exceeded.
 * **targetSwapSlot**: string (ReadOnly): Specifies which deployment slot this app will swap into. Read-only.

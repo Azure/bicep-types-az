@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2021-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [IdentityInfo](#identityinfo): The identity information for the resource.
+* **identity**: [IdentityInfo](#identityinfo): Identity information for the Event Grid Domain resource.
 * **location**: string (Required): Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DomainProperties](#domainproperties): Properties of the Event Grid Domain Resource.
-* **sku**: [ResourceSku](#resourcesku): Describes an EventGrid Resource Sku.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [DomainProperties](#domainproperties): Properties of the Event Grid Domain resource.
+* **sku**: [ResourceSku](#resourcesku): The Sku pricing tier for the Event Grid Domain resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Event Grid Domain resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,8 +20,8 @@
 * **apiVersion**: '2021-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the Event Subscription.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the event subscription.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Event Subscription resource.
 * **type**: 'Microsoft.EventGrid/domains/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/domains/privateEndpointConnections@2021-10-15-preview
@@ -30,7 +30,7 @@
 * **apiVersion**: '2021-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
 * **type**: 'Microsoft.EventGrid/domains/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/domains/topics@2021-10-15-preview
@@ -40,7 +40,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DomainTopicProperties](#domaintopicproperties) (ReadOnly): Properties of the Domain Topic.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Domain Topic resource.
 * **type**: 'Microsoft.EventGrid/domains/topics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/domains/topics/eventSubscriptions@2021-10-15-preview
@@ -49,8 +49,8 @@
 * **apiVersion**: '2021-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the Event Subscription.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the event subscription.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Event Subscription resource.
 * **type**: 'Microsoft.EventGrid/domains/topics/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/eventSubscriptions@2021-10-15-preview
@@ -59,8 +59,8 @@
 * **apiVersion**: '2021-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the Event Subscription.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the event subscription.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Event Subscription resource.
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/partnerConfigurations@2021-10-15-preview
@@ -71,7 +71,7 @@
 * **location**: string: Location of the resource.
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [PartnerConfigurationProperties](#partnerconfigurationproperties): Properties of the partner configuration.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to partner configuration resource.
 * **tags**: [PartnerConfigurationTags](#partnerconfigurationtags): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/partnerConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -83,7 +83,7 @@
 * **location**: string (Required): Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PartnerDestinationProperties](#partnerdestinationproperties): Properties of the Partner Destination.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Partner Destination resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/partnerDestinations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -94,8 +94,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PartnerNamespaceProperties](#partnernamespaceproperties): Properties of the partner namespace.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [PartnerNamespaceProperties](#partnernamespaceproperties): Properties of the Partner Namespace.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Partner Namespace resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/partnerNamespaces' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -106,7 +106,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ChannelProperties](#channelproperties): Properties of the Channel.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Channel resource.
 * **type**: 'Microsoft.EventGrid/partnerNamespaces/channels' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/partnerNamespaces/eventChannels@2021-10-15-preview
@@ -115,8 +115,8 @@
 * **apiVersion**: '2021-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventChannelProperties](#eventchannelproperties): Properties of the Event Channel.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [EventChannelProperties](#eventchannelproperties): Properties of the EventChannel.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Event Channel resource.
 * **type**: 'Microsoft.EventGrid/partnerNamespaces/eventChannels' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/partnerNamespaces/privateEndpointConnections@2021-10-15-preview
@@ -125,7 +125,7 @@
 * **apiVersion**: '2021-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
 * **type**: 'Microsoft.EventGrid/partnerNamespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/partnerRegistrations@2021-10-15-preview
@@ -136,7 +136,7 @@
 * **location**: string (Required): Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PartnerRegistrationProperties](#partnerregistrationproperties): Properties of the partner registration.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Partner Registration resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/partnerRegistrations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -145,11 +145,11 @@
 ### Properties
 * **apiVersion**: '2021-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [IdentityInfo](#identityinfo): The identity information for the resource.
+* **identity**: [IdentityInfo](#identityinfo): Identity information for the Partner Topic resource.
 * **location**: string (Required): Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PartnerTopicProperties](#partnertopicproperties): Properties of the Partner Topic.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Partner Topic resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/partnerTopics' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -159,8 +159,8 @@
 * **apiVersion**: '2021-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the Event Subscription.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the event subscription.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Event Subscription resource.
 * **type**: 'Microsoft.EventGrid/partnerTopics/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/systemTopics@2021-10-15-preview
@@ -168,11 +168,11 @@
 ### Properties
 * **apiVersion**: '2021-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [IdentityInfo](#identityinfo): The identity information for the resource.
+* **identity**: [IdentityInfo](#identityinfo): Identity information for the resource.
 * **location**: string (Required): Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SystemTopicProperties](#systemtopicproperties): Properties of the System Topic.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [SystemTopicProperties](#systemtopicproperties): Properties of the system topic.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to System Topic resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/systemTopics' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -182,23 +182,23 @@
 * **apiVersion**: '2021-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the Event Subscription.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the event subscription.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Event Subscription resource.
 * **type**: 'Microsoft.EventGrid/systemTopics/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/topics@2021-10-15-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **extendedLocation**: [ExtendedLocation](#extendedlocation): Definition of an Extended Location
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): Extended location of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [IdentityInfo](#identityinfo): The identity information for the resource.
+* **identity**: [IdentityInfo](#identityinfo): Identity information for the resource.
 * **kind**: 'Azure' | 'AzureArc' | string: Kind of the resource.
 * **location**: string (Required): Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TopicProperties](#topicproperties): Properties of the Topic.
-* **sku**: [ResourceSku](#resourcesku): Describes an EventGrid Resource Sku.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [TopicProperties](#topicproperties): Properties of the topic.
+* **sku**: [ResourceSku](#resourcesku): The Sku pricing tier for the topic.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Topic resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -208,8 +208,8 @@
 * **apiVersion**: '2021-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the Event Subscription.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the event subscription.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Event Subscription resource.
 * **type**: 'Microsoft.EventGrid/topics/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/topics/privateEndpointConnections@2021-10-15-preview
@@ -218,7 +218,7 @@
 * **apiVersion**: '2021-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
 * **type**: 'Microsoft.EventGrid/topics/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.EventGrid/domains@2021-10-15-preview)
@@ -353,8 +353,8 @@
 * **expirationTimeIfNotActivatedUtc**: string: Expiration time of the channel. If this timer expires while the corresponding partner topic is never activated,
 the channel and corresponding partner topic are deleted.
 * **messageForActivation**: string: Context or helpful message that can be used during the approval process by the subscriber.
-* **partnerDestinationInfo**: [PartnerDestinationInfo](#partnerdestinationinfo): Properties of the corresponding partner destination of a Channel.
-* **partnerTopicInfo**: [PartnerTopicInfo](#partnertopicinfo): Properties of the corresponding partner topic of a Channel.
+* **partnerDestinationInfo**: [PartnerDestinationInfo](#partnerdestinationinfo): This property should be populated when channelType is PartnerDestination and represents information about the partner destination resource corresponding to the channel.
+* **partnerTopicInfo**: [PartnerTopicInfo](#partnertopicinfo): This property should be populated when channelType is PartnerTopic and represents information about the partner topic resource corresponding to the channel.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the channel.
 * **readinessState**: 'Activated' | 'NeverActivated' | string: The readiness state of the corresponding partner topic.
 
@@ -371,13 +371,14 @@ the channel and corresponding partner topic are deleted.
 ### StorageBlobDeadLetterDestination
 #### Properties
 * **endpointType**: 'StorageBlob' (Required): Type of the endpoint for the dead letter destination
-* **properties**: [StorageBlobDeadLetterDestinationProperties](#storageblobdeadletterdestinationproperties): Properties of the storage blob based dead letter destination.
+* **properties**: [StorageBlobDeadLetterDestinationProperties](#storageblobdeadletterdestinationproperties): The properties of the Storage Blob based deadletter destination
 
 
 ## DeadLetterWithResourceIdentity
 ### Properties
-* **deadLetterDestination**: [DeadLetterDestination](#deadletterdestination): Information about the dead letter destination for an event subscription. To configure a deadletter destination, do not directly instantiate an object of this class. Instead, instantiate an object of a derived class. Currently, StorageBlobDeadLetterDestination is the only class that derives from this class.
-* **identity**: [EventSubscriptionIdentity](#eventsubscriptionidentity): The identity information with the event subscription.
+* **deadLetterDestination**: [DeadLetterDestination](#deadletterdestination): Information about the destination where events have to be delivered for the event subscription.
+Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+* **identity**: [EventSubscriptionIdentity](#eventsubscriptionidentity): The identity to use when dead-lettering events.
 
 ## DeliveryAttributeMapping
 * **Discriminator**: type
@@ -397,8 +398,9 @@ the channel and corresponding partner topic are deleted.
 
 ## DeliveryWithResourceIdentity
 ### Properties
-* **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination): Information about the destination for an event subscription.
-* **identity**: [EventSubscriptionIdentity](#eventsubscriptionidentity): The identity information with the event subscription.
+* **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination): Information about the destination where events have to be delivered for the event subscription.
+Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+* **identity**: [EventSubscriptionIdentity](#eventsubscriptionidentity): The identity to use when delivering events.
 
 ## DomainProperties
 ### Properties
@@ -421,7 +423,7 @@ resources by the user.
 * **endpoint**: string (ReadOnly): Endpoint for the Event Grid Domain Resource which is used for publishing the events.
 * **inboundIpRules**: [InboundIpRule](#inboundiprule)[]: This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
 * **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema' | string: This determines the format that Event Grid should expect for incoming events published to the Event Grid Domain Resource.
-* **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping): By default, Event Grid expects events to be in the Event Grid event schema. Specifying an input schema mapping enables publishing to Event Grid using a custom input schema. Currently, the only supported type of InputSchemaMapping is 'JsonInputSchemaMapping'.
+* **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping): Information about the InputSchemaMapping which specified the info about mapping event payload.
 * **metricResourceId**: string (ReadOnly): Metric resource id for the Event Grid Domain Resource.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Event Grid Domain Resource.
@@ -456,15 +458,15 @@ associated with the event channel will be created under this resource group.
 
 ## EventChannelProperties
 ### Properties
-* **destination**: [EventChannelDestination](#eventchanneldestination): Properties of the destination of an event channel.
+* **destination**: [EventChannelDestination](#eventchanneldestination): Represents the destination of an event channel.
 * **expirationTimeIfNotActivatedUtc**: string: Expiration time of the event channel. If this timer expires while the corresponding partner topic is never activated,
 the event channel and corresponding partner topic are deleted.
-* **filter**: [EventChannelFilter](#eventchannelfilter): Filter for the Event Channel.
+* **filter**: [EventChannelFilter](#eventchannelfilter): Information about the filter for the event channel.
 * **partnerTopicFriendlyDescription**: string: Friendly description about the topic. This can be set by the publisher/partner to show custom description for the customer partner topic.
 This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.
 * **partnerTopicReadinessState**: 'ActivatedByUser' | 'DeactivatedByUser' | 'DeletedByUser' | 'NotActivatedByUserYet' | string (ReadOnly): The readiness state of the corresponding partner topic.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the event channel.
-* **source**: [EventChannelSource](#eventchannelsource): Properties of the source of an event channel.
+* **source**: [EventChannelSource](#eventchannelsource): Source of the event channel. This represents a unique resource in the partner's resource model.
 
 ## EventChannelSource
 ### Properties
@@ -483,42 +485,42 @@ This represents a unique resource in the partner's resource model.
 ### AzureFunctionEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'AzureFunction' (Required): Type of the endpoint for the event subscription destination.
-* **properties**: [AzureFunctionEventSubscriptionDestinationProperties](#azurefunctioneventsubscriptiondestinationproperties): The properties that represent the Azure Function destination of an event subscription.
+* **properties**: [AzureFunctionEventSubscriptionDestinationProperties](#azurefunctioneventsubscriptiondestinationproperties): Azure Function Properties of the event subscription destination.
 
 ### EventHubEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'EventHub' (Required): Type of the endpoint for the event subscription destination.
-* **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties): The properties for a event hub destination.
+* **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties): Event Hub Properties of the event subscription destination.
 
 ### HybridConnectionEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'HybridConnection' (Required): Type of the endpoint for the event subscription destination.
-* **properties**: [HybridConnectionEventSubscriptionDestinationProperties](#hybridconnectioneventsubscriptiondestinationproperties): The properties for a hybrid connection destination.
+* **properties**: [HybridConnectionEventSubscriptionDestinationProperties](#hybridconnectioneventsubscriptiondestinationproperties): Hybrid connection Properties of the event subscription destination.
 
 ### PartnerEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'PartnerDestination' (Required): Type of the endpoint for the event subscription destination.
-* **properties**: [PartnerEventSubscriptionDestinationProperties](#partnereventsubscriptiondestinationproperties)
+* **properties**: [PartnerEventSubscriptionDestinationProperties](#partnereventsubscriptiondestinationproperties): Partner Destination Properties of the event subscription destination.
 
 ### ServiceBusQueueEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'ServiceBusQueue' (Required): Type of the endpoint for the event subscription destination.
-* **properties**: [ServiceBusQueueEventSubscriptionDestinationProperties](#servicebusqueueeventsubscriptiondestinationproperties): The properties that represent the Service Bus destination of an event subscription.
+* **properties**: [ServiceBusQueueEventSubscriptionDestinationProperties](#servicebusqueueeventsubscriptiondestinationproperties): Service Bus Properties of the event subscription destination.
 
 ### ServiceBusTopicEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'ServiceBusTopic' (Required): Type of the endpoint for the event subscription destination.
-* **properties**: [ServiceBusTopicEventSubscriptionDestinationProperties](#servicebustopiceventsubscriptiondestinationproperties): The properties that represent the Service Bus Topic destination of an event subscription.
+* **properties**: [ServiceBusTopicEventSubscriptionDestinationProperties](#servicebustopiceventsubscriptiondestinationproperties): Service Bus Topic Properties of the event subscription destination.
 
 ### StorageQueueEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'StorageQueue' (Required): Type of the endpoint for the event subscription destination.
-* **properties**: [StorageQueueEventSubscriptionDestinationProperties](#storagequeueeventsubscriptiondestinationproperties): The properties for a storage queue destination.
+* **properties**: [StorageQueueEventSubscriptionDestinationProperties](#storagequeueeventsubscriptiondestinationproperties): Storage Queue Properties of the event subscription destination.
 
 ### WebHookEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'WebHook' (Required): Type of the endpoint for the event subscription destination.
-* **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties): Information about the webhook destination properties for an event subscription.
+* **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties): WebHook Properties of the event subscription destination.
 
 
 ## EventSubscriptionFilter
@@ -541,16 +543,20 @@ Wildcard characters are not supported in this path.
 
 ## EventSubscriptionProperties
 ### Properties
-* **deadLetterDestination**: [DeadLetterDestination](#deadletterdestination): Information about the dead letter destination for an event subscription. To configure a deadletter destination, do not directly instantiate an object of this class. Instead, instantiate an object of a derived class. Currently, StorageBlobDeadLetterDestination is the only class that derives from this class.
-* **deadLetterWithResourceIdentity**: [DeadLetterWithResourceIdentity](#deadletterwithresourceidentity): Information about the deadletter destination with resource identity.
-* **deliveryWithResourceIdentity**: [DeliveryWithResourceIdentity](#deliverywithresourceidentity): Information about the delivery for an event subscription with resource identity.
-* **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination): Information about the destination for an event subscription.
+* **deadLetterDestination**: [DeadLetterDestination](#deadletterdestination): The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
+Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+* **deadLetterWithResourceIdentity**: [DeadLetterWithResourceIdentity](#deadletterwithresourceidentity): The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
+Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+* **deliveryWithResourceIdentity**: [DeliveryWithResourceIdentity](#deliverywithresourceidentity): Information about the destination where events have to be delivered for the event subscription.
+Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+* **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination): Information about the destination where events have to be delivered for the event subscription.
+Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
 * **eventDeliverySchema**: 'CloudEventSchemaV1_0' | 'CustomInputSchema' | 'EventGridSchema' | string: The event delivery schema for the event subscription.
 * **expirationTimeUtc**: string: Expiration time of the event subscription.
-* **filter**: [EventSubscriptionFilter](#eventsubscriptionfilter): Filter for the Event Subscription.
+* **filter**: [EventSubscriptionFilter](#eventsubscriptionfilter): Information about the filter for the event subscription.
 * **labels**: string[]: List of user defined labels.
 * **provisioningState**: 'AwaitingManualAction' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the event subscription.
-* **retryPolicy**: [RetryPolicy](#retrypolicy): Information about the retry policy for an event subscription.
+* **retryPolicy**: [RetryPolicy](#retrypolicy): The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
 * **topic**: string (ReadOnly): Name of the topic of the event subscription.
 
 ## EventTypeInfo
@@ -607,7 +613,7 @@ This property is currently not used and reserved for future usage.
 ### JsonInputSchemaMapping
 #### Properties
 * **inputSchemaMappingType**: 'Json' (Required): Type of the custom mapping
-* **properties**: [JsonInputSchemaMappingProperties](#jsoninputschemamappingproperties): This can be used to map properties of a source schema (or default values, for certain supported properties) to properties of the EventGridEvent schema.
+* **properties**: [JsonInputSchemaMappingProperties](#jsoninputschemamappingproperties): JSON Properties of the input schema mapping
 
 
 ## JsonField
@@ -621,21 +627,12 @@ This property is currently not used and reserved for future usage.
 
 ## JsonInputSchemaMappingProperties
 ### Properties
-* **dataVersion**: [JsonFieldWithDefault](#jsonfieldwithdefault): This is used to express the source of an input schema mapping for a single target field
-in the Event Grid Event schema. This is currently used in the mappings for the 'subject',
-'eventtype' and 'dataversion' properties. This represents a field in the input event schema
-along with a default value to be used, and at least one of these two properties should be provided.
-* **eventTime**: [JsonField](#jsonfield): This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.
-* **eventType**: [JsonFieldWithDefault](#jsonfieldwithdefault): This is used to express the source of an input schema mapping for a single target field
-in the Event Grid Event schema. This is currently used in the mappings for the 'subject',
-'eventtype' and 'dataversion' properties. This represents a field in the input event schema
-along with a default value to be used, and at least one of these two properties should be provided.
-* **id**: [JsonField](#jsonfield): This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.
-* **subject**: [JsonFieldWithDefault](#jsonfieldwithdefault): This is used to express the source of an input schema mapping for a single target field
-in the Event Grid Event schema. This is currently used in the mappings for the 'subject',
-'eventtype' and 'dataversion' properties. This represents a field in the input event schema
-along with a default value to be used, and at least one of these two properties should be provided.
-* **topic**: [JsonField](#jsonfield): This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.
+* **dataVersion**: [JsonFieldWithDefault](#jsonfieldwithdefault): The mapping information for the DataVersion property of the Event Grid Event.
+* **eventTime**: [JsonField](#jsonfield): The mapping information for the EventTime property of the Event Grid Event.
+* **eventType**: [JsonFieldWithDefault](#jsonfieldwithdefault): The mapping information for the EventType property of the Event Grid Event.
+* **id**: [JsonField](#jsonfield): The mapping information for the Id property of the Event Grid Event.
+* **subject**: [JsonFieldWithDefault](#jsonfieldwithdefault): The mapping information for the Subject property of the Event Grid Event.
+* **topic**: [JsonField](#jsonfield): The mapping information for the Topic property of the Event Grid Event.
 
 ## Partner
 ### Properties
@@ -658,12 +655,12 @@ not specified, the default is 7 days. Otherwise, allowed values are between 1 an
 ### AzureADPartnerClientAuthentication
 #### Properties
 * **clientAuthenticationType**: 'AzureAD' (Required): Type of client authentication
-* **properties**: [AzureADPartnerClientAuthenticationProperties](#azureadpartnerclientauthenticationproperties): Properties of an Azure Active Directory Partner Client Authentication.
+* **properties**: [AzureADPartnerClientAuthenticationProperties](#azureadpartnerclientauthenticationproperties): AzureAD ClientAuthentication Properties
 
 
 ## PartnerConfigurationProperties
 ### Properties
-* **partnerAuthorization**: [PartnerAuthorization](#partnerauthorization): The partner authorization details.
+* **partnerAuthorization**: [PartnerAuthorization](#partnerauthorization): The details of authorized partners.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the partner configuration.
 
 ## PartnerConfigurationTags
@@ -685,7 +682,7 @@ created under this resource group.
 ### WebhookPartnerDestinationInfo
 #### Properties
 * **endpointType**: 'WebHook' (Required): Type of the endpoint for the partner destination
-* **properties**: [WebhookPartnerDestinationProperties](#webhookpartnerdestinationproperties): Properties of a partner destination webhook.
+* **properties**: [WebhookPartnerDestinationProperties](#webhookpartnerdestinationproperties): WebHook Properties of the partner destination.
 
 
 ## PartnerDestinationProperties
@@ -712,10 +709,10 @@ the partner destination and corresponding channel are deleted.
 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.
 * **partnerTopicRoutingMode**: 'ChannelNameHeader' | 'SourceEventAttribute' | string: This determines if events published to this partner namespace should use the source attribute in the event payload
 or use the channel name in the header when matching to the partner topic. If none is specified, source attribute routing will be used to match the partner topic.
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Array of PrivateEndpointConnection
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the partner namespace.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: This determines if traffic is allowed over public network. By default it is enabled.
-You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules" />
+You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules" />
 
 ## PartnerNamespaceSharedAccessKeys
 ### Properties
@@ -751,7 +748,8 @@ integration on an event source.
 ### Properties
 * **azureSubscriptionId**: string: Azure subscription ID of the subscriber. The partner topic associated with the channel will be
 created under this Azure subscription.
-* **eventTypeInfo**: [EventTypeInfo](#eventtypeinfo): The event type information for Channels.
+* **eventTypeInfo**: [EventTypeInfo](#eventtypeinfo): Event Type Information for the partner topic. This information is provided by the publisher and can be used by the 
+subscriber to view different types of events that are published.
 * **name**: string: Name of the partner topic associated with the channel.
 * **resourceGroupName**: string: Azure Resource Group of the subscriber. The partner topic associated with the channel will be
 created under this resource group.
@@ -762,7 +760,7 @@ created partner topic.
 ## PartnerTopicProperties
 ### Properties
 * **activationState**: 'Activated' | 'Deactivated' | 'NeverActivated' | string: Activation state of the partner topic.
-* **eventTypeInfo**: [EventTypeInfo](#eventtypeinfo): The event type information for Channels.
+* **eventTypeInfo**: [EventTypeInfo](#eventtypeinfo): Event Type information from the corresponding event channel.
 * **expirationTimeIfNotActivatedUtc**: string: Expiration time of the partner topic. If this timer expires while the partner topic is still never activated,
 the partner topic and corresponding event channel are deleted.
 * **messageForActivation**: string: Context or helpful message that can be used during the approval process by the subscriber.
@@ -780,14 +778,14 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 ### Properties
 * **id**: string (ReadOnly): Fully qualified identifier of the resource.
 * **name**: string (ReadOnly): Name of the resource.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
 * **type**: string (ReadOnly): Type of the resource.
 
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **groupIds**: string[]: GroupIds from the private link service resource.
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): PrivateEndpoint information.
-* **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate): ConnectionState information.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource for this Connection.
+* **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate): Details about the state of the connection.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the Private Endpoint Connection.
 
 ## ResourceMoveChangeHistory
@@ -838,12 +836,12 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## SystemTopicProperties
 ### Properties
 * **metricResourceId**: string (ReadOnly): Metric resource id for the system topic.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Private Endpoint Connection.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the system topic.
 * **source**: string: Source for the system topic.
 * **topicType**: string: TopicType for the system topic.
 
@@ -853,13 +851,13 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 * **disableLocalAuth**: bool: This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the topic.
 * **endpoint**: string (ReadOnly): Endpoint for the topic.
 * **inboundIpRules**: [InboundIpRule](#inboundiprule)[]: This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
-* **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema' | string: This determines the format that Event Grid should expect for incoming events published to the Event Grid Domain Resource.
-* **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping): By default, Event Grid expects events to be in the Event Grid event schema. Specifying an input schema mapping enables publishing to Event Grid using a custom input schema. Currently, the only supported type of InputSchemaMapping is 'JsonInputSchemaMapping'.
+* **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema' | string: This determines the format that Event Grid should expect for incoming events published to the topic.
+* **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping): This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.
 * **metricResourceId**: string (ReadOnly): Metric resource id for the topic.
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Array of PrivateEndpointConnection
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the topic.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: This determines if traffic is allowed over public network. By default it is enabled.
-You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules" />
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: This determines if traffic is allowed over public network. By default it is enabled. 
+You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules" />
 
 ## TopicSharedAccessKeys
 ### Properties

@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkspaceProperties](#workspaceproperties): The properties of a machine learning workspace.
-* **sku**: [Sku](#sku): Sku of the resource
+* **properties**: [WorkspaceProperties](#workspaceproperties): The properties of the machine learning workspace.
+* **sku**: [Sku](#sku): The sku of the workspace.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [WorkspaceTags](#workspacetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant): The resource type
@@ -23,8 +23,8 @@
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BatchEndpoint](#batchendpoint) (Required): Batch endpoint configuration.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [BatchEndpoint](#batchendpoint) (Required): [Required] Additional attributes of the entity.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/batchEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -37,8 +37,8 @@
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BatchDeployment](#batchdeployment) (Required): Batch inference settings per deployment.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [BatchDeployment](#batchdeployment) (Required): [Required] Additional attributes of the entity.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/batchEndpoints/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -48,8 +48,8 @@
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CodeContainer](#codecontainer) (Required): Container for code asset versions.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [CodeContainer](#codecontainer) (Required): [Required] Additional attributes of the entity.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **type**: 'Microsoft.MachineLearningServices/workspaces/codes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/codes/versions@2021-03-01-preview
@@ -58,8 +58,8 @@
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CodeVersion](#codeversion) (Required): Code asset version details.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [CodeVersion](#codeversion) (Required): [Required] Additional attributes of the entity.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **type**: 'Microsoft.MachineLearningServices/workspaces/codes/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/computes@2021-03-01-preview
@@ -67,11 +67,11 @@
 ### Properties
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [Compute](#compute): Machine Learning compute object.
-* **sku**: [Sku](#sku): Sku of the resource
+* **properties**: [Compute](#compute): Compute properties
+* **sku**: [Sku](#sku): The sku of the workspace.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ComputeResourceTags](#computeresourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant): The resource type
@@ -82,7 +82,7 @@
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkspaceConnectionProps](#workspaceconnectionprops): Workspace Connection specific properties.
+* **properties**: [WorkspaceConnectionProps](#workspaceconnectionprops): Properties of workspace connection.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/connections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/data@2021-03-01-preview
@@ -91,8 +91,8 @@
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DataContainer](#datacontainer) (Required): Container for data asset versions.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [DataContainer](#datacontainer) (Required): [Required] Additional attributes of the entity.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **type**: 'Microsoft.MachineLearningServices/workspaces/data' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/data/versions@2021-03-01-preview
@@ -101,8 +101,8 @@
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DataVersion](#dataversion) (Required): Data asset version details.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [DataVersion](#dataversion) (Required): [Required] Additional attributes of the entity.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **type**: 'Microsoft.MachineLearningServices/workspaces/data/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/datastores@2021-03-01-preview
@@ -111,8 +111,8 @@
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatastoreProperties](#datastoreproperties) (Required): Datastore definition.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [DatastoreProperties](#datastoreproperties) (Required): [Required] Additional attributes of the entity.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **type**: 'Microsoft.MachineLearningServices/workspaces/datastores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/environments@2021-03-01-preview
@@ -121,8 +121,8 @@
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EnvironmentContainer](#environmentcontainer) (Required): Container for environment specification versions.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [EnvironmentContainer](#environmentcontainer) (Required): [Required] Additional attributes of the entity.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **type**: 'Microsoft.MachineLearningServices/workspaces/environments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/environments/versions@2021-03-01-preview
@@ -131,9 +131,8 @@
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EnvironmentSpecificationVersion](#environmentspecificationversion) (Required): Environment specification version details.
-<see href="https://repo2docker.readthedocs.io/en/latest/specification.html" />
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [EnvironmentSpecificationVersion](#environmentspecificationversion) (Required): [Required] Additional attributes of the entity.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **type**: 'Microsoft.MachineLearningServices/workspaces/environments/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/jobs@2021-03-01-preview
@@ -142,8 +141,8 @@
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [JobBase](#jobbase) (Required): Base definition for a job.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [JobBase](#jobbase) (Required): [Required] Additional attributes of the entity.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **type**: 'Microsoft.MachineLearningServices/workspaces/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/labelingJobs@2021-03-01-preview
@@ -152,8 +151,8 @@
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [LabelingJob](#labelingjob) (Required): Labeling job definition
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [LabelingJob](#labelingjob) (Required): [Required] Additional attributes of the entity.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **type**: 'Microsoft.MachineLearningServices/workspaces/labelingJobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/models@2021-03-01-preview
@@ -162,8 +161,8 @@
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ModelContainer](#modelcontainer) (Required)
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ModelContainer](#modelcontainer) (Required): [Required] Additional attributes of the entity.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **type**: 'Microsoft.MachineLearningServices/workspaces/models' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/models/versions@2021-03-01-preview
@@ -172,8 +171,8 @@
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ModelVersion](#modelversion) (Required): Model asset version details.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ModelVersion](#modelversion) (Required): [Required] Additional attributes of the entity.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **type**: 'Microsoft.MachineLearningServices/workspaces/models/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2021-03-01-preview
@@ -185,8 +184,8 @@
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [OnlineEndpoint](#onlineendpoint) (Required): Online endpoint configuration
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [OnlineEndpoint](#onlineendpoint) (Required): [Required] Additional attributes of the entity.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/onlineEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -199,8 +198,8 @@
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [OnlineDeployment](#onlinedeployment) (Required)
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [OnlineDeployment](#onlinedeployment) (Required): [Required] Additional attributes of the entity.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/onlineEndpoints/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -209,11 +208,11 @@
 ### Properties
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
-* **sku**: [Sku](#sku): Sku of the resource
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
+* **sku**: [Sku](#sku): The sku of the workspace.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [PrivateEndpointConnectionTags](#privateendpointconnectiontags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
@@ -266,7 +265,7 @@
 ## AccountKeyDatastoreSecrets
 ### Properties
 * **key**: string: Storage account key.
-* **secretsType**: 'AccountKey' | 'Certificate' | 'None' | 'Sas' | 'ServicePrincipal' | 'SqlAdmin' | string (Required): Enum to determine the datastore secrets type.
+* **secretsType**: 'AccountKey' | 'Certificate' | 'None' | 'Sas' | 'ServicePrincipal' | 'SqlAdmin' | string (Required): [Required] Credential type used to authentication with storage.
 
 ## AksNetworkingConfiguration
 ### Properties
@@ -279,12 +278,12 @@
 ### Properties
 * **agentCount**: int: Number of agents
 * **agentVmSize**: string: Agent virtual machine size
-* **aksNetworkingConfiguration**: [AksNetworkingConfiguration](#aksnetworkingconfiguration): Advance configuration for AKS networking
+* **aksNetworkingConfiguration**: [AksNetworkingConfiguration](#aksnetworkingconfiguration): AKS networking configuration for vnet
 * **clusterFqdn**: string: Cluster full qualified domain name
 * **clusterPurpose**: 'DenseProd' | 'DevTest' | 'FastProd' | string: Intended usage of the cluster
 * **loadBalancerSubnet**: string: Load Balancer Subnet
 * **loadBalancerType**: 'InternalLoadBalancer' | 'PublicIp' | string: Load Balancer Type
-* **sslConfiguration**: [SslConfiguration](#sslconfiguration): The ssl configuration for scoring
+* **sslConfiguration**: [SslConfiguration](#sslconfiguration): SSL configuration
 * **systemServices**: [SystemService](#systemservice)[] (ReadOnly): System services
 
 ## AmlComputeNodeInformation
@@ -310,14 +309,14 @@
 * **enableNodePublicIp**: bool: Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
 * **errors**: [ErrorResponse](#errorresponse)[] (ReadOnly): Collection of errors encountered by various compute nodes during node setup.
 * **isolatedNetwork**: bool: Network is isolated or not
-* **nodeStateCounts**: [NodeStateCounts](#nodestatecounts) (ReadOnly): Counts of various compute node states on the amlCompute.
+* **nodeStateCounts**: [NodeStateCounts](#nodestatecounts) (ReadOnly): Counts of various node states on the compute.
 * **osType**: 'Linux' | 'Windows' | string: Compute OS Type
 * **remoteLoginPortPublicAccess**: 'Disabled' | 'Enabled' | 'NotSpecified' | string: State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
-* **scaleSettings**: [ScaleSettings](#scalesettings): scale settings for AML Compute
-* **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
+* **scaleSettings**: [ScaleSettings](#scalesettings): Scale settings for AML Compute
+* **subnet**: [ResourceId](#resourceid): Virtual network subnet resource ID the compute nodes belong to.
 * **targetNodeCount**: int (ReadOnly): The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
-* **userAccountCredentials**: [UserAccountCredentials](#useraccountcredentials): Settings for user account that gets created on each on the nodes of a compute.
-* **virtualMachineImage**: [VirtualMachineImage](#virtualmachineimage): Virtual Machine image for Windows AML Compute
+* **userAccountCredentials**: [UserAccountCredentials](#useraccountcredentials): Credentials for an administrator user account that will be created on each compute node.
+* **virtualMachineImage**: [VirtualMachineImage](#virtualmachineimage): Virtual Machine image for AML Compute - windows only
 * **vmPriority**: 'Dedicated' | 'LowPriority' | string: Virtual Machine priority
 * **vmSize**: string: Virtual Machine Size
 
@@ -350,7 +349,7 @@
 
 ## BatchDeployment
 ### Properties
-* **codeConfiguration**: [CodeConfiguration](#codeconfiguration): Configuration for a scoring code asset.
+* **codeConfiguration**: [CodeConfiguration](#codeconfiguration): Code configuration for the endpoint deployment.
 * **compute**: [ComputeConfiguration](#computeconfiguration): Configuration for compute binding.
 * **description**: string: Description of the endpoint deployment.
 * **environmentId**: string: ARM resource ID of the environment specification for the endpoint deployment.
@@ -360,17 +359,15 @@ the batch inference will be aborted. Range is [-1, int.MaxValue].
 For FileDataset, this value is the count of file failures.
 For TabularDataset, this value is the count of record failures.
 If set to -1 (the lower bound), all failures during batch inference will be ignored.
-* **loggingLevel**: 'Debug' | 'Info' | 'Warning' | string: Log verbosity for batch inferencing.
-Increasing verbosity order for logging is : Warning, Info and Debug.
-The default value is Info.
+* **loggingLevel**: 'Debug' | 'Info' | 'Warning' | string: Logging level for batch inference operation.
 * **miniBatchSize**: int: Size of the mini-batch passed to each batch invocation.
 For FileDataset, this is the number of files per mini-batch.
 For TabularDataset, this is the size of the records in bytes, per mini-batch.
-* **model**: [AssetReferenceBase](#assetreferencebase): Base definition for asset references.
-* **outputConfiguration**: [BatchOutputConfiguration](#batchoutputconfiguration): Batch inference output configuration.
+* **model**: [AssetReferenceBase](#assetreferencebase): Reference to the model asset for the endpoint deployment.
+* **outputConfiguration**: [BatchOutputConfiguration](#batchoutputconfiguration): Output configuration for the batch inference operation.
 * **partitionKeys**: string[]: Partition keys list used for Named partitioning.
 * **properties**: [BatchDeploymentProperties](#batchdeploymentproperties): Property dictionary. Properties can be added, but not removed or altered.
-* **retrySettings**: [BatchRetrySettings](#batchretrysettings): Retry settings for a batch inference operation.
+* **retrySettings**: [BatchRetrySettings](#batchretrysettings): Retry Settings for the batch inference operation.
 
 ## BatchDeploymentEnvironmentVariables
 ### Properties
@@ -384,9 +381,10 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
 
 ## BatchEndpoint
 ### Properties
-* **authMode**: 'AADToken' | 'AMLToken' | 'Key' | string: Enum to determine endpoint authentication mode.
+* **authMode**: 'AADToken' | 'AMLToken' | 'Key' | string: [Required] Inference endpoint authentication mode type
 * **description**: string: Description of the inference endpoint.
-* **keys**: [EndpointAuthKeys](#endpointauthkeys) (WriteOnly): Keys for endpoint authentication.
+* **keys**: [EndpointAuthKeys](#endpointauthkeys) (WriteOnly): EndpointAuthKeys to set initially on an Endpoint.
+This property will always be returned as null. AuthKey values must be retrieved using the ListKeys API.
 * **properties**: [BatchEndpointProperties](#batchendpointproperties): Property dictionary. Properties can be added, but not removed or altered.
 * **scoringUri**: string (ReadOnly): Endpoint URI.
 * **swaggerUri**: string (ReadOnly): Endpoint Swagger URI.
@@ -405,7 +403,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
 ## BatchOutputConfiguration
 ### Properties
 * **appendRowFileName**: string: Customized output file name for append_row output action.
-* **outputAction**: 'AppendRow' | 'SummaryOnly' | string: Enum to determine how batch inferencing will handle output
+* **outputAction**: 'AppendRow' | 'SummaryOnly' | string: Indicates how the output will be organized.
 
 ## BatchRetrySettings
 ### Properties
@@ -415,7 +413,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
 ## CertificateDatastoreSecrets
 ### Properties
 * **certificate**: string: Service principal certificate.
-* **secretsType**: 'AccountKey' | 'Certificate' | 'None' | 'Sas' | 'ServicePrincipal' | 'SqlAdmin' | string (Required): Enum to determine the datastore secrets type.
+* **secretsType**: 'AccountKey' | 'Certificate' | 'None' | 'Sas' | 'ServicePrincipal' | 'SqlAdmin' | string (Required): [Required] Credential type used to authentication with storage.
 
 ## CodeConfiguration
 ### Properties
@@ -488,7 +486,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
 * **isAttachedCompute**: bool (ReadOnly): Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
 * **modifiedOn**: string (ReadOnly): The time at which the compute was last modified.
 * **provisioningErrors**: [ErrorResponse](#errorresponse)[] (ReadOnly): Errors during provisioning
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
 * **resourceId**: string: ARM resource id of the underlying compute
 ### AKS
 #### Properties
@@ -575,17 +573,17 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
 * **applications**: [ComputeInstanceApplication](#computeinstanceapplication)[] (ReadOnly): Describes available applications and their endpoints on this ComputeInstance.
 * **applicationSharingPolicy**: 'Personal' | 'Shared' | string: Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
 * **computeInstanceAuthorizationType**: 'personal' | string: The Compute Instance Authorization type. Available values are personal (default).
-* **connectivityEndpoints**: [ComputeInstanceConnectivityEndpoints](#computeinstanceconnectivityendpoints) (ReadOnly): Defines all connectivity endpoints and properties for an ComputeInstance.
+* **connectivityEndpoints**: [ComputeInstanceConnectivityEndpoints](#computeinstanceconnectivityendpoints) (ReadOnly): Describes all connectivity endpoints available for this ComputeInstance.
 * **createdBy**: [ComputeInstanceCreatedBy](#computeinstancecreatedby) (ReadOnly): Describes information on user who created this ComputeInstance.
 * **enableNodePublicIp**: bool: Enable or disable node public IP address provisioning. Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
 * **errors**: [ErrorResponse](#errorresponse)[] (ReadOnly): Collection of errors encountered on this ComputeInstance.
 * **lastOperation**: [ComputeInstanceLastOperation](#computeinstancelastoperation) (ReadOnly): The last operation on ComputeInstance.
 * **personalComputeInstanceSettings**: [PersonalComputeInstanceSettings](#personalcomputeinstancesettings): Settings for a personal compute instance.
-* **schedules**: [ComputeSchedules](#computeschedules): The list of schedules to be applied on the computes
+* **schedules**: [ComputeSchedules](#computeschedules): The list of schedules to be applied on the compute instance.
 * **setupScripts**: [SetupScripts](#setupscripts): Details of customized scripts to execute for setting up the cluster.
 * **sshSettings**: [ComputeInstanceSshSettings](#computeinstancesshsettings): Specifies policy and settings for SSH access.
-* **state**: 'CreateFailed' | 'Creating' | 'Deleting' | 'JobRunning' | 'Restarting' | 'Running' | 'SettingUp' | 'SetupFailed' | 'Starting' | 'Stopped' | 'Stopping' | 'Unknown' | 'Unusable' | 'UserSettingUp' | 'UserSetupFailed' | string (ReadOnly): Current state of an ComputeInstance.
-* **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
+* **state**: 'CreateFailed' | 'Creating' | 'Deleting' | 'JobRunning' | 'Restarting' | 'Running' | 'SettingUp' | 'SetupFailed' | 'Starting' | 'Stopped' | 'Stopping' | 'Unknown' | 'Unusable' | 'UserSettingUp' | 'UserSetupFailed' | string (ReadOnly): The current state of this ComputeInstance.
+* **subnet**: [ResourceId](#resourceid): Virtual network subnet resource ID the compute nodes belong to.
 * **vmSize**: string: Virtual Machine Size
 
 ## ComputeInstanceSshSettings
@@ -622,7 +620,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
 
 ### VirtualMachineSecrets
 #### Properties
-* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials) (ReadOnly): Admin credentials for virtual machine
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials) (ReadOnly): Admin credentials for virtual machine.
 * **computeType**: 'VirtualMachine' (Required): The type of compute
 
 
@@ -693,14 +691,14 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **accountName**: string (Required): [Required] Storage account name.
 * **containerName**: string (Required): [Required] Storage account container name.
 * **contentsType**: 'AzureBlob' (Required): [Required] Storage type backing the datastore.
-* **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): Base definition for datastore credentials.
+* **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): [Required] Account credentials.
 * **endpoint**: string (Required): [Required] Azure cloud endpoint for the storage account.
 * **protocol**: string (Required): [Required] Protocol used to communicate with the storage account.
 
 ### AzureDataLakeGen1Contents
 #### Properties
 * **contentsType**: 'AzureDataLakeGen1' (Required): [Required] Storage type backing the datastore.
-* **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): Base definition for datastore credentials.
+* **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): [Required] Account credentials.
 * **storeName**: string (Required): [Required] Azure Data Lake store name.
 
 ### AzureDataLakeGen2Contents
@@ -708,7 +706,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **accountName**: string (Required): [Required] Storage account name.
 * **containerName**: string (Required): [Required] Storage account container name.
 * **contentsType**: 'AzureDataLakeGen2' (Required): [Required] Storage type backing the datastore.
-* **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): Base definition for datastore credentials.
+* **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): [Required] Account credentials.
 * **endpoint**: string (Required): [Required] Azure cloud endpoint for the storage account.
 * **protocol**: string (Required): [Required] Protocol used to communicate with the storage account.
 
@@ -717,14 +715,14 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **accountName**: string (Required): [Required] Storage account name.
 * **containerName**: string (Required): [Required] Storage account container name.
 * **contentsType**: 'AzureFile' (Required): [Required] Storage type backing the datastore.
-* **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): Base definition for datastore credentials.
+* **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): [Required] Account credentials.
 * **endpoint**: string (Required): [Required] Azure cloud endpoint for the storage account.
 * **protocol**: string (Required): [Required] Protocol used to communicate with the storage account.
 
 ### AzurePostgreSqlContents
 #### Properties
 * **contentsType**: 'AzurePostgreSql' (Required): [Required] Storage type backing the datastore.
-* **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): Base definition for datastore credentials.
+* **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): [Required] Account credentials.
 * **databaseName**: string (Required): [Required] Azure SQL database name.
 * **enableSSL**: bool: Whether the Azure PostgreSQL server requires SSL.
 * **endpoint**: string (Required): [Required] Azure cloud endpoint for the database.
@@ -734,7 +732,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ### AzureSqlDatabaseContents
 #### Properties
 * **contentsType**: 'AzureSqlDatabase' (Required): [Required] Storage type backing the datastore.
-* **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): Base definition for datastore credentials.
+* **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): [Required] Account credentials.
 * **databaseName**: string (Required): [Required] Azure SQL database name.
 * **endpoint**: string (Required): [Required] Azure cloud endpoint for the database.
 * **portNumber**: int (Required): [Required] Azure SQL server port.
@@ -754,7 +752,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ### AccountKeyDatastoreCredentials
 #### Properties
 * **credentialsType**: 'AccountKey' (Required): [Required] Credential type used to authentication with storage.
-* **secrets**: [AccountKeyDatastoreSecrets](#accountkeydatastoresecrets) (WriteOnly): Datastore account key secrets.
+* **secrets**: [AccountKeyDatastoreSecrets](#accountkeydatastoresecrets) (WriteOnly): Storage account secrets.
 
 ### CertificateDatastoreCredentials
 #### Properties
@@ -762,7 +760,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **clientId**: string (Required): [Required] Service principal client ID.
 * **credentialsType**: 'Certificate' (Required): [Required] Credential type used to authentication with storage.
 * **resourceUri**: string: Resource the service principal has access to.
-* **secrets**: [CertificateDatastoreSecrets](#certificatedatastoresecrets) (WriteOnly): Datastore certificate secrets.
+* **secrets**: [CertificateDatastoreSecrets](#certificatedatastoresecrets) (WriteOnly): Service principal secrets.
 * **tenantId**: string (Required): [Required] ID of the tenant to which the service principal belongs.
 * **thumbprint**: string (Required): [Required] Thumbprint of the certificate used for authentication.
 
@@ -774,7 +772,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ### SasDatastoreCredentials
 #### Properties
 * **credentialsType**: 'Sas' (Required): [Required] Credential type used to authentication with storage.
-* **secrets**: [SasDatastoreSecrets](#sasdatastoresecrets) (WriteOnly): Datastore SAS secrets.
+* **secrets**: [SasDatastoreSecrets](#sasdatastoresecrets) (WriteOnly): Storage container secrets.
 
 ### ServicePrincipalDatastoreCredentials
 #### Properties
@@ -782,23 +780,23 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **clientId**: string (Required): [Required] Service principal client ID.
 * **credentialsType**: 'ServicePrincipal' (Required): [Required] Credential type used to authentication with storage.
 * **resourceUri**: string: Resource the service principal has access to.
-* **secrets**: [ServicePrincipalDatastoreSecrets](#serviceprincipaldatastoresecrets) (WriteOnly): Datastore Service Principal secrets.
+* **secrets**: [ServicePrincipalDatastoreSecrets](#serviceprincipaldatastoresecrets) (WriteOnly): Service principal secrets.
 * **tenantId**: string (Required): [Required] ID of the tenant to which the service principal belongs.
 
 ### SqlAdminDatastoreCredentials
 #### Properties
 * **credentialsType**: 'SqlAdmin' (Required): [Required] Credential type used to authentication with storage.
-* **secrets**: [SqlAdminDatastoreSecrets](#sqladmindatastoresecrets) (WriteOnly): Datastore SQL Admin secrets.
+* **secrets**: [SqlAdminDatastoreSecrets](#sqladmindatastoresecrets) (WriteOnly): SQL database secrets.
 * **userId**: string (Required): [Required] SQL database user name.
 
 
 ## DatastoreProperties
 ### Properties
-* **contents**: [DatastoreContents](#datastorecontents) (Required): Base definition for datastore contents configuration.
+* **contents**: [DatastoreContents](#datastorecontents) (Required): [Required] Reference to the datastore storage contents.
 * **description**: string: The asset description text.
 * **hasBeenValidated**: bool (ReadOnly): Whether the service has validated access to the datastore with the provided credentials.
 * **isDefault**: bool: Whether this datastore is the default for the workspace.
-* **linkedInfo**: [LinkedInfo](#linkedinfo): Information about a datastore origin, if linked.
+* **linkedInfo**: [LinkedInfo](#linkedinfo): Information about the datastore origin, if linked.
 * **properties**: [DatastoreProperties](#datastoreproperties): The asset property dictionary.
 * **tags**: [DatastorePropertiesTags](#datastorepropertiestags): Tag dictionary. Tags can be added, removed, and updated.
 
@@ -848,7 +846,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 
 ## DataVersion
 ### Properties
-* **datasetType**: 'Dataflow' | 'Simple' | string
+* **datasetType**: 'Dataflow' | 'Simple' | string: The Format of dataset.
 * **datastoreId**: string: ARM resource ID of the datastore where the asset is located.
 * **description**: string: The asset description text.
 * **isAnonymous**: bool: If the name version are system generated (anonymous registration).
@@ -889,13 +887,13 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 
 ## DockerImagePlatform
 ### Properties
-* **operatingSystemType**: 'Linux' | 'Windows' | string: The type of operating system.
+* **operatingSystemType**: 'Linux' | 'Windows' | string: The OS type the Environment.
 
 ## DockerSpecification
 * **Discriminator**: dockerSpecificationType
 
 ### Base Properties
-* **platform**: [DockerImagePlatform](#dockerimageplatform)
+* **platform**: [DockerImagePlatform](#dockerimageplatform): The platform information of the docker image.
 ### DockerBuild
 #### Properties
 * **context**: string: Path to a snapshot of the Docker Context. This property is only valid if Dockerfile is specified.
@@ -936,8 +934,8 @@ The path is relative to the asset path which must contain a single Blob URI valu
 
 ## EncryptionProperty
 ### Properties
-* **identity**: [IdentityForCmk](#identityforcmk): Identity that will be used to access key vault for encryption at rest
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required)
+* **identity**: [IdentityForCmk](#identityforcmk): The identity that will be used to access the key vault for encryption at rest.
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required): Customer Key vault properties.
 * **status**: 'Disabled' | 'Enabled' | string (Required): Indicates whether or not the encryption is enabled for the workspace.
 
 ## EndpointAuthKeys
@@ -976,9 +974,10 @@ The path is relative to the asset path which must contain a single Blob URI valu
 * **condaFile**: string: Standard configuration file used by Conda that lets you install any kind of package, including Python, R, and C/C++ packages.
 <see href="https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment" />
 * **description**: string: The asset description text.
-* **docker**: [DockerSpecification](#dockerspecification): Configuration settings for Docker
-* **environmentSpecificationType**: 'Curated' | 'UserCreated' | string (ReadOnly): Environment specification is either user created or curated by Azure ML service
-* **inferenceContainerProperties**: [InferenceContainerProperties](#inferencecontainerproperties)
+* **docker**: [DockerSpecification](#dockerspecification): Configuration settings for Docker.
+* **environmentSpecificationType**: 'Curated' | 'UserCreated' | string (ReadOnly): Environment specification is either user managed or curated by the Azure ML service
+<see href="https://docs.microsoft.com/en-us/azure/machine-learning/resource-curated-environments" />
+* **inferenceContainerProperties**: [InferenceContainerProperties](#inferencecontainerproperties): Defines configuration specific to inference.
 * **isAnonymous**: bool: If the name version are system generated (anonymous registration).
 * **properties**: [EnvironmentSpecificationVersionProperties](#environmentspecificationversionproperties): The asset property dictionary.
 * **tags**: [EnvironmentSpecificationVersionTags](#environmentspecificationversiontags): Tag dictionary. Tags can be added, removed, and updated.
@@ -995,7 +994,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 
 ## ErrorAdditionalInfo
 ### Properties
-* **info**: any (ReadOnly): Any object
+* **info**: any (ReadOnly): The additional info.
 * **type**: string (ReadOnly): The additional info type.
 
 ## ErrorDetail
@@ -1008,7 +1007,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 
 ## ErrorResponse
 ### Properties
-* **error**: [ErrorDetail](#errordetail): The error detail.
+* **error**: [ErrorDetail](#errordetail): The error object.
 
 ## FlavorData
 ### Properties
@@ -1022,7 +1021,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 ## HDInsightProperties
 ### Properties
 * **address**: string: Public IP address of the master node of the cluster.
-* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for master node of the cluster
 * **sshPort**: int: Port open for ssh connections on the master node of the cluster.
 
 ## Identity
@@ -1030,7 +1029,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned': The identity type.
-* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): dictionary containing all the user assigned identities, with resourceId of the UAI as key.
+* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The user assigned identities associated with the resource.
 
 ## IdentityConfiguration
 * **Discriminator**: identityType
@@ -1054,14 +1053,14 @@ The path is relative to the asset path which must contain a single Blob URI valu
 
 ## InferenceContainerProperties
 ### Properties
-* **livenessRoute**: [Route](#route)
-* **readinessRoute**: [Route](#route)
-* **scoringRoute**: [Route](#route)
+* **livenessRoute**: [Route](#route): The route to check the liveness of the inference server container.
+* **readinessRoute**: [Route](#route): The route to check the readiness of the inference server container.
+* **scoringRoute**: [Route](#route): The port to send the scoring requests to, within the inference server container.
 
 ## InputDataBinding
 ### Properties
 * **dataId**: string: ARM resource ID of the registered dataVersion.
-* **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'Mount' | 'ReadOnlyMount' | 'ReadWriteMount' | 'Upload' | string: Describes how the data should be attached to the container.
+* **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'Mount' | 'ReadOnlyMount' | 'ReadWriteMount' | 'Upload' | string: Mechanism for accessing the data artifact.
 * **pathOnCompute**: string: Location of data inside the container process.
 
 ## JobBase
@@ -1072,40 +1071,42 @@ The path is relative to the asset path which must contain a single Blob URI valu
 * **interactionEndpoints**: [JobBaseInteractionEndpoints](#jobbaseinteractionendpoints) (ReadOnly): List of JobEndpoints.
 For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 * **properties**: [JobBaseProperties](#jobbaseproperties): The asset property dictionary.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly)
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Specifies the job provisioning state.
 * **tags**: [JobBaseTags](#jobbasetags): Tag dictionary. Tags can be added, removed, and updated.
 ### CommandJob
 #### Properties
 * **codeId**: string: ARM resource ID of the code asset.
 * **command**: string (Required): [Required] The command to execute on startup of the job. eg. "python train.py"
-* **compute**: [ComputeConfiguration](#computeconfiguration) (Required): Configuration for compute binding.
-* **distribution**: [DistributionConfiguration](#distributionconfiguration): Base definition for job distribution configuration.
+* **compute**: [ComputeConfiguration](#computeconfiguration) (Required): [Required] Compute binding for the job.
+* **distribution**: [DistributionConfiguration](#distributionconfiguration): Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
 * **environmentId**: string: The ARM resource ID of the Environment specification for the job.
 * **environmentVariables**: [CommandJobEnvironmentVariables](#commandjobenvironmentvariables): Environment variables included in the job.
 * **experimentName**: string: The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
-* **identity**: [IdentityConfiguration](#identityconfiguration): Base definition for identity configuration.
+* **identity**: [IdentityConfiguration](#identityconfiguration): Identity configuration. If set, this should be one of AmlToken, ManagedIdentity, or null.
+Defaults to AmlToken if null.
 * **inputDataBindings**: [CommandJobInputDataBindings](#commandjobinputdatabindings): Mapping of input data bindings used in the job.
 * **jobType**: 'Command' (Required): [Required] Specifies the type of job.
-* **output**: [JobOutput](#joboutput) (ReadOnly): Job output definition container information on where to find job output/logs.
+* **output**: [JobOutput](#joboutput) (ReadOnly): Location of the job output logs and artifacts.
 * **outputDataBindings**: [CommandJobOutputDataBindings](#commandjoboutputdatabindings): Mapping of output data bindings used in the job.
 * **parameters**: [CommandJobParameters](#commandjobparameters) (ReadOnly): Input parameters.
 * **priority**: int: Job priority for scheduling policy. Only applies to AMLCompute.
 Private preview feature and only available to users on the allow list.
-* **status**: 'CancelRequested' | 'Canceled' | 'Completed' | 'Failed' | 'Finalizing' | 'NotResponding' | 'NotStarted' | 'Paused' | 'Preparing' | 'Provisioning' | 'Queued' | 'Running' | 'Starting' | 'Unknown' | string (ReadOnly): The status of a job.
+* **status**: 'CancelRequested' | 'Canceled' | 'Completed' | 'Failed' | 'Finalizing' | 'NotResponding' | 'NotStarted' | 'Paused' | 'Preparing' | 'Provisioning' | 'Queued' | 'Running' | 'Starting' | 'Unknown' | string (ReadOnly): Status of the job.
 * **timeout**: string: The max run duration in ISO 8601 format, after which the job will be cancelled. Only supports duration with precision as low as Seconds.
 
 ### SweepJob
 #### Properties
-* **algorithm**: 'Bayesian' | 'Grid' | 'Random' | string (Required)
-* **compute**: [ComputeConfiguration](#computeconfiguration) (Required): Configuration for compute binding.
+* **algorithm**: 'Bayesian' | 'Grid' | 'Random' | string (Required): [Required] Type of the hyperparameter sampling algorithms
+* **compute**: [ComputeConfiguration](#computeconfiguration) (Required): [Required] Compute binding for the job.
 * **earlyTermination**: [EarlyTerminationPolicy](#earlyterminationpolicy): Early termination policies enable canceling poor-performing runs before they complete.
 * **experimentName**: string: The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
-* **identity**: [IdentityConfiguration](#identityconfiguration): Base definition for identity configuration.
+* **identity**: [IdentityConfiguration](#identityconfiguration): Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
+Defaults to AmlToken if null.
 * **jobType**: 'Sweep' (Required): [Required] Specifies the type of job.
 * **maxConcurrentTrials**: int: An upper bound on the number of trials performed in parallel.
 * **maxTotalTrials**: int: An upper bound on the number of trials to perform.
-* **objective**: [Objective](#objective) (Required): Optimization objective.
-* **output**: [JobOutput](#joboutput) (ReadOnly): Job output definition container information on where to find job output/logs.
+* **objective**: [Objective](#objective) (Required): [Required] Optimization objective.
+* **output**: [JobOutput](#joboutput) (ReadOnly): Location of the job output logs and artifacts.
 * **priority**: int: Job priority for scheduling policy. Only applies to AMLCompute.
 Private preview feature and only available to users on the allow list.
 * **searchSpace**: [SweepJobSearchSpace](#sweepjobsearchspace) (Required): [Required] A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
@@ -1182,20 +1183,20 @@ Private preview feature and only available to users on the allow list.
 ## LabelingJob
 ### Properties
 * **createdTimeUtc**: string (ReadOnly): Created time of the job in UTC timezone.
-* **datasetConfiguration**: [LabelingDatasetConfiguration](#labelingdatasetconfiguration): Labeling dataset configuration definition
+* **datasetConfiguration**: [LabelingDatasetConfiguration](#labelingdatasetconfiguration): Configuration of dataset used in the job.
 * **description**: string: The asset description text.
 * **interactionEndpoints**: [LabelingJobInteractionEndpoints](#labelingjobinteractionendpoints) (ReadOnly): List of JobEndpoints.
 For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
-* **jobInstructions**: [LabelingJobInstructions](#labelingjobinstructions): Instructions for labeling job
-* **jobType**: 'Command' | 'Labeling' | 'Sweep' | string (Required): Enum to determine the type of job.
+* **jobInstructions**: [LabelingJobInstructions](#labelingjobinstructions): Labeling instructions of the job.
+* **jobType**: 'Command' | 'Labeling' | 'Sweep' | string (Required): [Required] Specifies the type of job. This field should always be set to "Labeling".
 * **labelCategories**: [LabelingJobLabelCategories](#labelingjoblabelcategories): Label categories of the job.
-* **labelingJobMediaProperties**: [LabelingJobMediaProperties](#labelingjobmediaproperties): Properties of a labeling job
-* **mlAssistConfiguration**: [MLAssistConfiguration](#mlassistconfiguration): Labeling MLAssist configuration definition
-* **progressMetrics**: [ProgressMetrics](#progressmetrics) (ReadOnly): Progress metrics definition
+* **labelingJobMediaProperties**: [LabelingJobMediaProperties](#labelingjobmediaproperties): Media type specific properties in the job.
+* **mlAssistConfiguration**: [MLAssistConfiguration](#mlassistconfiguration): Configuration of MLAssist feature in the job.
+* **progressMetrics**: [ProgressMetrics](#progressmetrics) (ReadOnly): Progress metrics of the job.
 * **projectId**: string (ReadOnly): Internal id of the job(Previously called project).
 * **properties**: [LabelingJobProperties](#labelingjobproperties): The asset property dictionary.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly)
-* **status**: 'CancelRequested' | 'Canceled' | 'Completed' | 'Failed' | 'Finalizing' | 'NotResponding' | 'NotStarted' | 'Paused' | 'Preparing' | 'Provisioning' | 'Queued' | 'Running' | 'Starting' | 'Unknown' | string (ReadOnly): The status of a job.
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Specifies the labeling job provisioning state.
+* **status**: 'CancelRequested' | 'Canceled' | 'Completed' | 'Failed' | 'Finalizing' | 'NotResponding' | 'NotStarted' | 'Paused' | 'Preparing' | 'Provisioning' | 'Queued' | 'Running' | 'Starting' | 'Unknown' | string (ReadOnly): Status of the job.
 * **statusMessages**: [StatusMessage](#statusmessage)[] (ReadOnly): Status messages of the job.
 * **tags**: [LabelingJobTags](#labelingjobtags): Tag dictionary. Tags can be added, removed, and updated.
 
@@ -1219,12 +1220,12 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 ### Base Properties
 ### LabelingJobImageProperties
 #### Properties
-* **annotationType**: 'BoundingBox' | 'Classification' | 'InstanceSegmentation' | string: Annotation type of image data.
+* **annotationType**: 'BoundingBox' | 'Classification' | 'InstanceSegmentation' | string: Annotation type of image labeling job.
 * **mediaType**: 'Image' (Required): [Required] Media type of the job.
 
 ### LabelingJobTextProperties
 #### Properties
-* **annotationType**: 'Classification' | string: Annotation type of text data.
+* **annotationType**: 'Classification' | string: Annotation type of text labeling job.
 * **mediaType**: 'Text' (Required): [Required] Media type of the job.
 
 
@@ -1242,7 +1243,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 ### Properties
 * **linkedId**: string: Linked service ID.
 * **linkedResourceName**: string: Linked service resource name.
-* **origin**: 'Synapse' | string: Enum to determine the type of linked service.
+* **origin**: 'Synapse' | string: Type of the linked service.
 
 ## ListNotebookKeysResult
 ### Properties
@@ -1268,9 +1269,9 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 
 ## MLAssistConfiguration
 ### Properties
-* **inferencingComputeBinding**: [ComputeConfiguration](#computeconfiguration): Configuration for compute binding.
+* **inferencingComputeBinding**: [ComputeConfiguration](#computeconfiguration): AML compute binding used in inferencing.
 * **mlAssistEnabled**: bool: Indicates whether MLAssist feature is enabled.
-* **trainingComputeBinding**: [ComputeConfiguration](#computeconfiguration): Configuration for compute binding.
+* **trainingComputeBinding**: [ComputeConfiguration](#computeconfiguration): AML compute binding used in training.
 
 ## ModelContainer
 ### Properties
@@ -1324,7 +1325,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 
 ## NoneDatastoreSecrets
 ### Properties
-* **secretsType**: 'AccountKey' | 'Certificate' | 'None' | 'Sas' | 'ServicePrincipal' | 'SqlAdmin' | string (Required): Enum to determine the datastore secrets type.
+* **secretsType**: 'AccountKey' | 'Certificate' | 'None' | 'Sas' | 'ServicePrincipal' | 'SqlAdmin' | string (Required): [Required] Credential type used to authentication with storage.
 
 ## NotebookAccessTokenResult
 ### Properties
@@ -1345,12 +1346,12 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 ## NotebookResourceInfo
 ### Properties
 * **fqdn**: string
-* **notebookPreparationError**: [NotebookPreparationError](#notebookpreparationerror)
+* **notebookPreparationError**: [NotebookPreparationError](#notebookpreparationerror): The error that occurs when preparing notebook.
 * **resourceId**: string: the data plane resourceId that used to initialize notebook component
 
 ## Objective
 ### Properties
-* **goal**: 'Maximize' | 'Minimize' | string (Required): Defines supported metric goals for hyperparameter tuning
+* **goal**: 'Maximize' | 'Minimize' | string (Required): [Required] Defines supported metric goals for hyperparameter tuning
 * **primaryMetric**: string (Required): [Required] Name of the metric to optimize.
 
 ## OnlineDeployment
@@ -1358,19 +1359,19 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 
 ### Base Properties
 * **appInsightsEnabled**: bool: If true, enables Application Insights logging.
-* **codeConfiguration**: [CodeConfiguration](#codeconfiguration): Configuration for a scoring code asset.
+* **codeConfiguration**: [CodeConfiguration](#codeconfiguration): Code configuration for the endpoint deployment.
 * **description**: string: Description of the endpoint deployment.
 * **environmentId**: string: ARM resource ID of the environment specification for the endpoint deployment.
 * **environmentVariables**: [OnlineDeploymentEnvironmentVariables](#onlinedeploymentenvironmentvariables): Environment variables configuration for the deployment.
 * **livenessProbe**: [ProbeSettings](#probesettings): Deployment container liveness/readiness probe configuration.
-* **model**: [AssetReferenceBase](#assetreferencebase): Base definition for asset references.
+* **model**: [AssetReferenceBase](#assetreferencebase): Reference to the model asset for the endpoint deployment.
 * **properties**: [OnlineDeploymentProperties](#onlinedeploymentproperties): Property dictionary. Properties can be added, but not removed or altered.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Scaling' | 'Succeeded' | 'Updating' | string (ReadOnly)
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Scaling' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state for the endpoint deployment.
 * **requestSettings**: [OnlineRequestSettings](#onlinerequestsettings): Online deployment scoring requests configuration.
 * **scaleSettings**: [OnlineScaleSettings](#onlinescalesettings): Online deployment scaling configuration.
 ### K8SOnlineDeployment
 #### Properties
-* **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements): The resource requirements for the container (cpu and memory).
+* **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements): Resource requirements for each container instance within an online deployment.
 * **endpointComputeType**: 'K8S' (Required): [Required] The compute type of the endpoint.
 
 ### ManagedOnlineDeployment
@@ -1392,9 +1393,10 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 
 ## OnlineEndpoint
 ### Properties
-* **authMode**: 'AADToken' | 'AMLToken' | 'Key' | string (Required): Enum to determine endpoint authentication mode.
+* **authMode**: 'AADToken' | 'AMLToken' | 'Key' | string (Required): [Required] Inference endpoint authentication mode type
 * **description**: string: Description of the inference endpoint.
-* **keys**: [EndpointAuthKeys](#endpointauthkeys) (WriteOnly): Keys for endpoint authentication.
+* **keys**: [EndpointAuthKeys](#endpointauthkeys) (WriteOnly): EndpointAuthKeys to set initially on an Endpoint.
+This property will always be returned as null. AuthKey values must be retrieved using the ListKeys API.
 * **properties**: [OnlineEndpointProperties](#onlineendpointproperties): Property dictionary. Properties can be added, but not removed or altered.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): State of endpoint provisioning.
 * **scoringUri**: string (ReadOnly): Endpoint URI.
@@ -1440,7 +1442,7 @@ optional
 ## OutputDataBinding
 ### Properties
 * **datastoreId**: string: ARM resource ID of the datastore where the data output will be stored.
-* **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'Mount' | 'ReadOnlyMount' | 'ReadWriteMount' | 'Upload' | string: Describes how the data should be attached to the container.
+* **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'Mount' | 'ReadOnlyMount' | 'ReadWriteMount' | 'Upload' | string: Mechanism for data movement to datastore.
 * **pathOnCompute**: string: Location of data inside the container process.
 * **pathOnDatastore**: string: Path within the datastore to the data.
 
@@ -1451,7 +1453,7 @@ optional
 
 ## PersonalComputeInstanceSettings
 ### Properties
-* **assignedUser**: [AssignedUser](#assigneduser): A user that can be assigned to a compute instance.
+* **assignedUser**: [AssignedUser](#assigneduser): A user explicitly assigned to a personal compute instance.
 
 ## PrivateEndpoint
 ### Properties
@@ -1461,20 +1463,20 @@ optional
 ## PrivateEndpointConnection
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: string (ReadOnly): The name of the resource
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
-* **sku**: [Sku](#sku): Sku of the resource
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
+* **sku**: [Sku](#sku): The sku of the workspace.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [PrivateEndpointConnectionTags](#privateendpointconnectiontags): Contains resource tags defined as key/value pairs.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The resource of private end point.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the private endpoint connection resource.
 
 ## PrivateEndpointConnectionTags
 ### Properties
@@ -1490,7 +1492,7 @@ optional
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string: The private endpoint connection status.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## ProbeSettings
 ### Properties
@@ -1524,7 +1526,7 @@ optional
 ## RegistryListCredentialsResult
 ### Properties
 * **location**: string (ReadOnly)
-* **passwords**: [Password](#password)[] (ReadOnly): Array of Password
+* **passwords**: [Password](#password)[] (ReadOnly)
 * **username**: string (ReadOnly)
 
 ## ResourceId
@@ -1551,7 +1553,7 @@ optional
 ## SasDatastoreSecrets
 ### Properties
 * **sasToken**: string: Storage container SAS token.
-* **secretsType**: 'AccountKey' | 'Certificate' | 'None' | 'Sas' | 'ServicePrincipal' | 'SqlAdmin' | string (Required): Enum to determine the datastore secrets type.
+* **secretsType**: 'AccountKey' | 'Certificate' | 'None' | 'Sas' | 'ServicePrincipal' | 'SqlAdmin' | string (Required): [Required] Credential type used to authentication with storage.
 
 ## ScaleSettings
 ### Properties
@@ -1568,17 +1570,17 @@ optional
 
 ## ScriptsToExecute
 ### Properties
-* **creationScript**: [ScriptReference](#scriptreference): Script reference
-* **startupScript**: [ScriptReference](#scriptreference): Script reference
+* **creationScript**: [ScriptReference](#scriptreference): Script that's run only once during provision of the compute.
+* **startupScript**: [ScriptReference](#scriptreference): Script that's run every time the machine starts.
 
 ## ServiceManagedResourcesSettings
 ### Properties
-* **cosmosDb**: [CosmosDbSettings](#cosmosdbsettings)
+* **cosmosDb**: [CosmosDbSettings](#cosmosdbsettings): The settings for the service managed cosmosdb account.
 
 ## ServicePrincipalDatastoreSecrets
 ### Properties
 * **clientSecret**: string: Service principal secret.
-* **secretsType**: 'AccountKey' | 'Certificate' | 'None' | 'Sas' | 'ServicePrincipal' | 'SqlAdmin' | string (Required): Enum to determine the datastore secrets type.
+* **secretsType**: 'AccountKey' | 'Certificate' | 'None' | 'Sas' | 'ServicePrincipal' | 'SqlAdmin' | string (Required): [Required] Credential type used to authentication with storage.
 
 ## SetupScripts
 ### Properties
@@ -1587,14 +1589,14 @@ optional
 ## SharedPrivateLinkResource
 ### Properties
 * **name**: string: Unique name of the private link.
-* **properties**: [SharedPrivateLinkResourceProperty](#sharedprivatelinkresourceproperty): Properties of a shared private link resource.
+* **properties**: [SharedPrivateLinkResourceProperty](#sharedprivatelinkresourceproperty): Resource properties.
 
 ## SharedPrivateLinkResourceProperty
 ### Properties
 * **groupId**: string: The private link resource group id.
 * **privateLinkResourceId**: string: The resource id that private link links to.
 * **requestMessage**: string: Request message.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string: The private endpoint connection status.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## Sku
 ### Properties
@@ -1604,7 +1606,7 @@ optional
 ## SqlAdminDatastoreSecrets
 ### Properties
 * **password**: string: SQL database password.
-* **secretsType**: 'AccountKey' | 'Certificate' | 'None' | 'Sas' | 'ServicePrincipal' | 'SqlAdmin' | string (Required): Enum to determine the datastore secrets type.
+* **secretsType**: 'AccountKey' | 'Certificate' | 'None' | 'Sas' | 'ServicePrincipal' | 'SqlAdmin' | string (Required): [Required] Credential type used to authentication with storage.
 
 ## SslConfiguration
 ### Properties
@@ -1619,7 +1621,7 @@ optional
 ### Properties
 * **code**: string (ReadOnly): Service-defined message code.
 * **createdTimeUtc**: string (ReadOnly): Time in UTC at which the message was created.
-* **level**: 'Error' | 'Information' | 'Warning' | string (ReadOnly)
+* **level**: 'Error' | 'Information' | 'Warning' | string (ReadOnly): Severity level of message.
 * **message**: string (ReadOnly): A human-readable representation of the message code.
 
 ## SweepJobSearchSpace
@@ -1634,7 +1636,7 @@ optional
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## SystemService
 ### Properties
@@ -1666,7 +1668,7 @@ optional
 ### Properties
 * **codeId**: string: ARM resource ID of the code asset.
 * **command**: string (Required): [Required] The command to execute on startup of the job. eg. "python train.py"
-* **distribution**: [DistributionConfiguration](#distributionconfiguration): Base definition for job distribution configuration.
+* **distribution**: [DistributionConfiguration](#distributionconfiguration): Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
 * **environmentId**: string: The ARM resource ID of the Environment specification for the job.
 * **environmentVariables**: [TrialComponentEnvironmentVariables](#trialcomponentenvironmentvariables): Environment variables included in the job.
 * **inputDataBindings**: [TrialComponentInputDataBindings](#trialcomponentinputdatabindings): Mapping of input data bindings used in the job.
@@ -1745,17 +1747,17 @@ Only supports duration with precision as low as Seconds.
 * **containerRegistry**: string: ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
 * **description**: string: The description of this workspace.
 * **discoveryUrl**: string: Url for the discovery service to identify regional endpoints for machine learning experimentation services
-* **encryption**: [EncryptionProperty](#encryptionproperty)
+* **encryption**: [EncryptionProperty](#encryptionproperty): The encryption settings of Azure ML workspace.
 * **friendlyName**: string: The friendly name for this workspace. This name in mutable
 * **hbiWorkspace**: bool: The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
 * **imageBuildCompute**: string: The compute name for image build
 * **keyVault**: string: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
-* **notebookInfo**: [NotebookResourceInfo](#notebookresourceinfo) (ReadOnly)
+* **notebookInfo**: [NotebookResourceInfo](#notebookresourceinfo) (ReadOnly): The notebook info of Azure ML workspace.
 * **primaryUserAssignedIdentity**: string: The user assigned identity resource id that represents the workspace identity.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections in the workspace.
 * **privateLinkCount**: int (ReadOnly): Count of private connections in the workspace
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
-* **serviceManagedResourcesSettings**: [ServiceManagedResourcesSettings](#servicemanagedresourcessettings)
+* **serviceManagedResourcesSettings**: [ServiceManagedResourcesSettings](#servicemanagedresourcessettings): The service managed resource settings.
 * **serviceProvisionedResourceGroup**: string (ReadOnly): The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
 * **sharedPrivateLinkResources**: [SharedPrivateLinkResource](#sharedprivatelinkresource)[]: The list of shared private link resources in this workspace.
 * **storageAccount**: string: ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created

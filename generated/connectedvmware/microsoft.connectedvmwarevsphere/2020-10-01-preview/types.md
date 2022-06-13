@@ -4,13 +4,13 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): Gets or sets the extended location.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string (Required): Gets or sets the location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterProperties](#clusterproperties) (Required): Defines the resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ClusterProperties](#clusterproperties) (Required): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system data.
 * **tags**: [ClusterTags](#clustertags): Gets or sets the Resource tags.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,13 +18,13 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): Gets or sets the extended location.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string (Required): Gets or sets the location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatastoreProperties](#datastoreproperties) (Required): Defines the resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [DatastoreProperties](#datastoreproperties) (Required): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system data.
 * **tags**: [DatastoreTags](#datastoretags): Gets or sets the Resource tags.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/datastores' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -32,13 +32,13 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): Gets or sets the extended location.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string (Required): Gets or sets the location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [HostProperties](#hostproperties) (Required): Defines the resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [HostProperties](#hostproperties) (Required): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system data.
 * **tags**: [HostTags](#hosttags): Gets or sets the Resource tags.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/hosts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -46,13 +46,13 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): Gets or sets the extended location.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string (Required): Gets or sets the location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ResourcePoolProperties](#resourcepoolproperties) (Required): Defines the resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ResourcePoolProperties](#resourcepoolproperties) (Required): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system data.
 * **tags**: [ResourcePoolTags](#resourcepooltags): Gets or sets the Resource tags.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/resourcePools' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -60,13 +60,13 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): Gets or sets the extended location.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string (Required): Gets or sets the location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VCenterProperties](#vcenterproperties) (Required): Defines the resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [VCenterProperties](#vcenterproperties) (Required): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system data.
 * **tags**: [VCenterTags](#vcentertags): Gets or sets the Resource tags.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/vcenters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -77,22 +77,22 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [InventoryItemProperties](#inventoryitemproperties) (Required): Defines the resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [InventoryItemProperties](#inventoryitemproperties) (Required): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system data.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/vcenters/inventoryItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedVMwarevSphere/virtualMachines@2020-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): Gets or sets the extended location.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Managed service identity.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string (Required): Gets or sets the location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualMachineProperties](#virtualmachineproperties) (Required): Defines the resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties) (Required): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system data.
 * **tags**: [VirtualMachineTags](#virtualmachinetags): Gets or sets the Resource tags.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -103,8 +103,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Gets or sets the location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MachineExtensionProperties](#machineextensionproperties): Describes the properties of a Machine Extension.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [MachineExtensionProperties](#machineextensionproperties): Describes Machine Extension Properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system data.
 * **tags**: [MachineExtensionTags](#machineextensiontags): Gets or sets the Resource tags.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/virtualMachines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -114,8 +114,8 @@
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GuestAgentProperties](#guestagentproperties) (Required): Defines the resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [GuestAgentProperties](#guestagentproperties) (Required): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system data.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/virtualMachines/guestAgents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedVMwarevSphere/virtualMachines/hybridIdentityMetadata@2020-10-01-preview
@@ -124,21 +124,21 @@
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [HybridIdentityMetadataProperties](#hybrididentitymetadataproperties) (Required): Defines the resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [HybridIdentityMetadataProperties](#hybrididentitymetadataproperties) (Required): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system data.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/virtualMachines/hybridIdentityMetadata' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConnectedVMwarevSphere/virtualMachineTemplates@2020-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): Gets or sets the extended location.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string (Required): Gets or sets the location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualMachineTemplateProperties](#virtualmachinetemplateproperties) (Required): Defines the resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [VirtualMachineTemplateProperties](#virtualmachinetemplateproperties) (Required): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system data.
 * **tags**: [VirtualMachineTemplateTags](#virtualmachinetemplatetags): Gets or sets the Resource tags.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/virtualMachineTemplates' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -146,13 +146,13 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): Gets or sets the extended location.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string (Required): Gets or sets the location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualNetworkProperties](#virtualnetworkproperties) (Required): Defines the resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [VirtualNetworkProperties](#virtualnetworkproperties) (Required): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system data.
 * **tags**: [VirtualNetworkTags](#virtualnetworktags): Gets or sets the Resource tags.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/virtualNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -180,7 +180,7 @@
 * **inventoryItemId**: string: Gets or sets the inventory Item ID for the datastore.
 * **moName**: string (ReadOnly): Gets or sets the vCenter Managed Object name for the datastore.
 * **moRefId**: string: Gets or sets the vCenter MoRef (Managed Object Reference) ID for the datastore.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The current deployment state of resource.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **statuses**: [ResourceStatus](#resourcestatus)[] (ReadOnly): The resource status information.
 * **uuid**: string (ReadOnly): Gets or sets a unique identifier for this resource.
 * **vCenterId**: string: Gets or sets the ARM Id of the vCenter resource in which this datastore resides.
@@ -212,10 +212,10 @@
 
 ## GuestAgentProperties
 ### Properties
-* **credentials**: [GuestCredential](#guestcredential): Username / Password Credentials to connect to guest.
+* **credentials**: [GuestCredential](#guestcredential): Username / Password Credentials to provision guest agent.
 * **customResourceName**: string (ReadOnly): Gets the name of the corresponding resource in Kubernetes.
 * **httpProxyConfig**: [HttpProxyConfiguration](#httpproxyconfiguration): HTTP Proxy configuration for the VM.
-* **provisioningAction**: 'install' | 'repair' | 'uninstall' | string: Defines the different types of operations for guest agent.
+* **provisioningAction**: 'install' | 'repair' | 'uninstall' | string: Gets or sets the guest agent provisioning action.
 * **provisioningState**: string (ReadOnly): Gets or sets the provisioning state.
 * **status**: string (ReadOnly): Gets or sets the guest agent status.
 * **statuses**: [ResourceStatus](#resourcestatus)[] (ReadOnly): The resource status information.
@@ -257,7 +257,7 @@
 
 ## HybridIdentityMetadataProperties
 ### Properties
-* **identity**: [Identity](#identity) (ReadOnly): Managed service identity.
+* **identity**: [Identity](#identity) (ReadOnly): The identity of the resource.
 * **provisioningState**: string (ReadOnly): Gets or sets the provisioning state.
 * **publicKey**: string: Gets or sets the Public Key.
 * **vmId**: string: Gets or sets the Vm Id.
@@ -294,24 +294,24 @@
 ### HostInventoryItem
 #### Properties
 * **inventoryType**: 'Host' (Required): They inventory type.
-* **parent**: [InventoryItemDetails](#inventoryitemdetails): Defines the resource properties.
+* **parent**: [InventoryItemDetails](#inventoryitemdetails): Parent host inventory resource details.
 
 ### ResourcePoolInventoryItem
 #### Properties
 * **inventoryType**: 'ResourcePool' (Required): They inventory type.
-* **parent**: [InventoryItemDetails](#inventoryitemdetails): Defines the resource properties.
+* **parent**: [InventoryItemDetails](#inventoryitemdetails): Parent resourcePool inventory resource details.
 
 ### VirtualMachineInventoryItem
 #### Properties
 * **folderPath**: string: Gets or sets the folder path of the vm.
-* **host**: [InventoryItemDetails](#inventoryitemdetails): Defines the resource properties.
+* **host**: [InventoryItemDetails](#inventoryitemdetails): Host inventory resource details.
 * **instanceUuid**: string: Gets or sets the instance uuid of the vm.
 * **inventoryType**: 'VirtualMachine' (Required): They inventory type.
 * **ipAddresses**: string[]: Gets or sets the nic ip addresses.
 * **osName**: string: Gets or sets os name.
-* **osType**: 'Linux' | 'Other' | 'Windows' | string: Defines the different types of VM guest operating systems.
+* **osType**: 'Linux' | 'Other' | 'Windows' | string: Gets or sets the type of the os.
 * **powerState**: string (ReadOnly): Gets the power state of the virtual machine.
-* **resourcePool**: [InventoryItemDetails](#inventoryitemdetails): Defines the resource properties.
+* **resourcePool**: [InventoryItemDetails](#inventoryitemdetails): ResourcePool inventory resource details.
 * **smbiosUuid**: string: Gets or sets the SMBIOS UUID of the vm.
 * **toolsRunningStatus**: string (ReadOnly): Gets or sets the current running status of VMware Tools running in the guest operating system.
 * **toolsVersion**: string (ReadOnly): Gets or sets the current version of VMware Tools.
@@ -326,7 +326,7 @@
 Defaults to 1 if unspecified.
 * **numCPUs**: int: Gets or sets the number of vCPUs for the template.
 * **osName**: string: Gets or sets os name.
-* **osType**: 'Linux' | 'Other' | 'Windows' | string: Defines the different types of VM guest operating systems.
+* **osType**: 'Linux' | 'Other' | 'Windows' | string: Gets or sets the type of the os.
 
 ### VirtualNetworkInventoryItem
 #### Properties
@@ -346,10 +346,10 @@ Defaults to 1 if unspecified.
 * **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
 * **forceUpdateTag**: string: How the extension handler should be forced to update even if the extension configuration has not changed.
 * **instanceView**: [MachineExtensionPropertiesInstanceView](#machineextensionpropertiesinstanceview): The machine extension instance view.
-* **protectedSettings**: any: Any object
+* **protectedSettings**: any: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
 * **publisher**: string: The name of the extension handler publisher.
-* **settings**: any: Any object
+* **settings**: any: Json formatted public settings for the extension.
 * **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
 * **typeHandlerVersion**: string: Specifies the version of the script handler.
 
@@ -369,7 +369,7 @@ Defaults to 1 if unspecified.
 ### Properties
 * **deviceKey**: int: Gets or sets the device key value.
 * **ipAddresses**: string[] (ReadOnly): Gets or sets the nic ip addresses.
-* **ipSettings**: [NicIPSettings](#nicipsettings): Defines the network interface ip settings.
+* **ipSettings**: [NicIPSettings](#nicipsettings): Gets or sets the ipsettings.
 * **label**: string (ReadOnly): Gets or sets the label of the virtual network in vCenter that the nic is connected to.
 * **macAddress**: string (ReadOnly): Gets or sets the NIC MAC address.
 * **name**: string: Gets or sets the name of the network interface.
@@ -378,7 +378,7 @@ Defaults to 1 if unspecified.
 * **networkMoRefId**: string (ReadOnly): Gets or sets the vCenter MoRef (Managed Object Reference) ID of the virtual network
 that the nic is connected to.
 * **nicType**: 'e1000' | 'e1000e' | 'pcnet32' | 'vmxnet' | 'vmxnet2' | 'vmxnet3' | string: NIC type
-* **powerOnBoot**: 'disabled' | 'enabled' | string: Defines the options for power on boot.
+* **powerOnBoot**: 'disabled' | 'enabled' | string: Gets or sets the power on boot.
 
 ## NetworkProfile
 ### Properties
@@ -392,7 +392,7 @@ that the nic is connected to.
 
 ## NicIPSettings
 ### Properties
-* **allocationMethod**: 'dynamic' | 'linklayer' | 'other' | 'random' | 'static' | 'unset' | string: IP address allocation method.
+* **allocationMethod**: 'dynamic' | 'linklayer' | 'other' | 'random' | 'static' | 'unset' | string: Gets or sets the nic allocation method.
 * **dnsServers**: string[]: Gets or sets the dns servers.
 * **gateway**: string[]: Gets or sets the gateway.
 * **ipAddress**: string: Gets or sets the ip address for the nic.
@@ -407,7 +407,7 @@ that the nic is connected to.
 * **adminUsername**: string: Gets or sets administrator username.
 * **computerName**: string: Gets or sets computer name.
 * **osName**: string (ReadOnly): Gets or sets os name.
-* **osType**: 'Linux' | 'Other' | 'Windows' | string: Defines the different types of VM guest operating systems.
+* **osType**: 'Linux' | 'Other' | 'Windows' | string: Gets or sets the type of the os.
 * **toolsRunningStatus**: string (ReadOnly): Gets or sets the current running status of VMware Tools running in the guest operating system.
 * **toolsVersion**: string (ReadOnly): Gets or sets the current version of VMware Tools.
 * **toolsVersionStatus**: string (ReadOnly): Gets or sets the current version status of VMware Tools installed in the guest operating system.
@@ -468,7 +468,7 @@ This property is used in relative allocation between resource consumers.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## VCenterProperties
 ### Properties
@@ -498,10 +498,10 @@ This property is used in relative allocation between resource consumers.
 * **controllerKey**: int: Gets or sets the controller id.
 * **deviceKey**: int: Gets or sets the device key value.
 * **deviceName**: string: Gets or sets the device name.
-* **diskMode**: 'independent_nonpersistent' | 'independent_persistent' | 'persistent' | string: Defines the different types of disk modes.
+* **diskMode**: 'independent_nonpersistent' | 'independent_persistent' | 'persistent' | string: Gets or sets the disk mode.
 * **diskObjectId**: string (ReadOnly): Gets or sets the disk object id.
 * **diskSizeGB**: int: Gets or sets the disk total size.
-* **diskType**: 'flat' | 'pmem' | 'rawphysical' | 'rawvirtual' | 'sesparse' | 'sparse' | 'unknown' | string: Defines the different types of disks.
+* **diskType**: 'flat' | 'pmem' | 'rawphysical' | 'rawvirtual' | 'sesparse' | 'sparse' | 'unknown' | string: Gets or sets the disk backing type.
 * **label**: string (ReadOnly): Gets or sets the label of the virtual disk in vCenter.
 * **name**: string: Gets or sets the name of the virtual disk.
 * **unitNumber**: int: Gets or sets the unit number of the disk on the controller.
@@ -511,22 +511,22 @@ This property is used in relative allocation between resource consumers.
 * **customResourceName**: string (ReadOnly): Gets the name of the corresponding resource in Kubernetes.
 * **firmwareType**: 'bios' | 'efi' | string: Firmware type
 * **folderPath**: string (ReadOnly): Gets or sets the folder path of the vm.
-* **guestAgentProfile**: [GuestAgentProfile](#guestagentprofile): Defines the resource properties.
-* **hardwareProfile**: [HardwareProfile](#hardwareprofile): Defines the resource properties.
+* **guestAgentProfile**: [GuestAgentProfile](#guestagentprofile): Guest agent status properties.
+* **hardwareProfile**: [HardwareProfile](#hardwareprofile): Hardware properties.
 * **instanceUuid**: string (ReadOnly): Gets or sets the instance uuid of the vm.
 * **inventoryItemId**: string: Gets or sets the inventory Item ID for the virtual machine.
 * **moName**: string (ReadOnly): Gets or sets the vCenter Managed Object name for the virtual machine.
 * **moRefId**: string: Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual machine.
-* **networkProfile**: [NetworkProfile](#networkprofile): Defines the resource properties.
-* **osProfile**: [OsProfile](#osprofile): Defines the resource properties.
-* **placementProfile**: [PlacementProfile](#placementprofile): Defines the resource properties.
+* **networkProfile**: [NetworkProfile](#networkprofile): Network properties.
+* **osProfile**: [OsProfile](#osprofile): OS properties.
+* **placementProfile**: [PlacementProfile](#placementprofile): Placement properties.
 * **powerState**: string (ReadOnly): Gets the power state of the virtual machine.
 * **provisioningState**: string (ReadOnly): Gets or sets the provisioning state.
 * **resourcePoolId**: string: Gets or sets the ARM Id of the resourcePool resource on which this virtual machine will
 deploy.
 * **smbiosUuid**: string: Gets or sets the SMBIOS UUID of the vm.
 * **statuses**: [ResourceStatus](#resourcestatus)[] (ReadOnly): The resource status information.
-* **storageProfile**: [StorageProfile](#storageprofile): Defines the resource properties.
+* **storageProfile**: [StorageProfile](#storageprofile): Storage properties.
 * **templateId**: string: Gets or sets the ARM Id of the template resource to deploy the virtual machine.
 * **uuid**: string (ReadOnly): Gets or sets a unique identifier for this resource.
 * **vCenterId**: string: Gets or sets the ARM Id of the vCenter resource in which this resource pool resides.
@@ -553,7 +553,7 @@ template.
 Defaults to 1 if unspecified.
 * **numCPUs**: int (ReadOnly): Gets or sets the number of vCPUs for the template.
 * **osName**: string (ReadOnly): Gets or sets os name.
-* **osType**: 'Linux' | 'Other' | 'Windows' | string (ReadOnly): Defines the different types of VM guest operating systems.
+* **osType**: 'Linux' | 'Other' | 'Windows' | string (ReadOnly): Gets or sets the type of the os.
 * **provisioningState**: string (ReadOnly): Gets or sets the provisioning state.
 * **statuses**: [ResourceStatus](#resourcestatus)[] (ReadOnly): The resource status information.
 * **toolsVersion**: string (ReadOnly): Gets or sets the current version of VMware Tools.
@@ -587,6 +587,6 @@ Defaults to 1 if unspecified.
 * **busNumber**: int: Gets or sets the bus number of the controller.
 * **controllerKey**: int: Gets or sets the key of the controller.
 * **scsiCtlrUnitNumber**: int: Gets or sets the SCSI controller unit number.
-* **sharing**: 'noSharing' | 'physicalSharing' | 'virtualSharing' | string: Defines the sharing mode for sharing the SCSI bus.
-* **type**: 'buslogic' | 'lsilogic' | 'lsilogicsas' | 'pvscsi' | string: Defines the different types of SCSI controllers.
+* **sharing**: 'noSharing' | 'physicalSharing' | 'virtualSharing' | string: Gets or sets the sharing mode.
+* **type**: 'buslogic' | 'lsilogic' | 'lsilogicsas' | 'pvscsi' | string: Gets or sets the controller type.
 

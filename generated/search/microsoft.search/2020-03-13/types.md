@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2020-03-13' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string: The geographic location of the resource. This must be one of the supported and registered Azure Geo Regions (for example, West US, East US, Southeast Asia, and so forth). This property is required when creating a new resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SearchServiceProperties](#searchserviceproperties): Properties of the Search service.
-* **sku**: [Sku](#sku): Defines the SKU of an Azure Cognitive Search Service, which determines price tier and capacity limits.
+* **sku**: [Sku](#sku): The SKU of the Search Service, which determines price tier and capacity limits. This property is required when creating a new Search Service.
 * **tags**: [ResourceTags](#resourcetags): Tags to help categorize the resource in the Azure portal.
 * **type**: 'Microsoft.Search/searchServices' (ReadOnly, DeployTimeConstant): The resource type
 

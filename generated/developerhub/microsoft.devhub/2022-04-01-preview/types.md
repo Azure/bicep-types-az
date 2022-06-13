@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkflowProperties](#workflowproperties): Workflow properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [WorkflowProperties](#workflowproperties): Properties of a workflow.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DevHub/workflows' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -23,7 +23,7 @@
 ### Properties
 * **helmChartPath**: string: Helm chart directory path in repository.
 * **helmValues**: string: Helm Values.yaml file location in repository.
-* **kubeManifestLocations**: string[]: Array of DeploymentPropertiesKubeManifestLocationsItem
+* **kubeManifestLocations**: string[]
 * **manifestType**: 'helm' | 'kube' | string: Determines the type of manifests within the repository.
 * **overrides**: [DeploymentPropertiesOverrides](#deploymentpropertiesoverrides): Manifest override values.
 
@@ -62,7 +62,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -71,7 +71,7 @@
 
 ## WorkflowProperties
 ### Properties
-* **githubWorkflowProfile**: [GitHubWorkflowProfile](#githubworkflowprofile): GitHub Workflow Profile
+* **githubWorkflowProfile**: [GitHubWorkflowProfile](#githubworkflowprofile): Profile of a github workflow.
 
 ## WorkflowRun
 ### Properties

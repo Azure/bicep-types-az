@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ProfileProperties](#profileproperties): Defines the properties of an experiment
+* **properties**: [ProfileProperties](#profileproperties): The properties of a Profile
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/NetworkExperimentProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ExperimentProperties](#experimentproperties): Defines the properties of an experiment
+* **properties**: [ExperimentProperties](#experimentproperties): The properties of an Experiment
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/NetworkExperimentProfiles/Experiments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -32,16 +32,16 @@
 ### Properties
 * **description**: string: The description of the details or intents of the Experiment
 * **enabledState**: 'Disabled' | 'Enabled' | string: The state of the Experiment
-* **endpointA**: [Endpoint](#endpoint): Defines the endpoint properties
-* **endpointB**: [Endpoint](#endpoint): Defines the endpoint properties
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Defines the server side resource status
+* **endpointA**: [Endpoint](#endpoint): The endpoint A of an experiment
+* **endpointB**: [Endpoint](#endpoint): The endpoint B of an experiment
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status.
 * **scriptFileUri**: string (ReadOnly): The uri to the Script used in the Experiment
 * **status**: string (ReadOnly): The description of Experiment status from the server side
 
 ## ProfileProperties
 ### Properties
 * **enabledState**: 'Disabled' | 'Enabled' | string: The state of the Experiment
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Defines the server side resource status
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status.
 
 ## ResourceTags
 ### Properties

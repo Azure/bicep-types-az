@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [PrivateCloudIdentity](#privatecloudidentity): Identity for the virtual machine.
+* **identity**: [PrivateCloudIdentity](#privatecloudidentity): The identity of the private cloud, if configured.
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateCloudProperties](#privatecloudproperties): The properties of a private cloud resource
-* **sku**: [Sku](#sku) (Required): The resource model definition representing SKU
+* **sku**: [Sku](#sku) (Required): The private cloud SKU
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.AVS/privateClouds' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,7 +19,7 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AddonProperties](#addonproperties): The properties of an addon
+* **properties**: [AddonProperties](#addonproperties): The properties of an addon resource
 * **type**: 'Microsoft.AVS/privateClouds/addons' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AVS/privateClouds/authorizations@2021-12-01
@@ -46,8 +46,8 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterProperties](#clusterproperties): The properties of a cluster
-* **sku**: [Sku](#sku) (Required): The resource model definition representing SKU
+* **properties**: [ClusterProperties](#clusterproperties): The properties of a cluster resource
+* **sku**: [Sku](#sku) (Required): The cluster SKU
 * **type**: 'Microsoft.AVS/privateClouds/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AVS/privateClouds/clusters/datastores@2021-12-01
@@ -56,7 +56,7 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatastoreProperties](#datastoreproperties): The properties of a datastore
+* **properties**: [DatastoreProperties](#datastoreproperties): The properties of a datastore resource
 * **type**: 'Microsoft.AVS/privateClouds/clusters/datastores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AVS/privateClouds/clusters/placementPolicies@2021-12-01
@@ -65,7 +65,7 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PlacementPolicyProperties](#placementpolicyproperties): Abstract placement policy properties
+* **properties**: [PlacementPolicyProperties](#placementpolicyproperties): placement policy properties
 * **type**: 'Microsoft.AVS/privateClouds/clusters/placementPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AVS/privateClouds/globalReachConnections@2021-12-01
@@ -74,7 +74,7 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GlobalReachConnectionProperties](#globalreachconnectionproperties): The properties of a global reach connection
+* **properties**: [GlobalReachConnectionProperties](#globalreachconnectionproperties): The properties of a global reach connection resource
 * **type**: 'Microsoft.AVS/privateClouds/globalReachConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AVS/privateClouds/hcxEnterpriseSites@2021-12-01
@@ -83,7 +83,7 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [HcxEnterpriseSiteProperties](#hcxenterprisesiteproperties) (ReadOnly): The properties of an HCX Enterprise Site
+* **properties**: [HcxEnterpriseSiteProperties](#hcxenterprisesiteproperties) (ReadOnly): The properties of an HCX Enterprise Site resource
 * **type**: 'Microsoft.AVS/privateClouds/hcxEnterpriseSites' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AVS/privateClouds/scriptExecutions@2021-12-01
@@ -92,7 +92,7 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ScriptExecutionProperties](#scriptexecutionproperties): Properties of a user-invoked script
+* **properties**: [ScriptExecutionProperties](#scriptexecutionproperties): The properties of a script execution resource
 * **type**: 'Microsoft.AVS/privateClouds/scriptExecutions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AVS/privateClouds/workloadNetworks/dhcpConfigurations@2021-12-01
@@ -101,7 +101,7 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkloadNetworkDhcpEntity](#workloadnetworkdhcpentity): Base class for WorkloadNetworkDhcpServer and WorkloadNetworkDhcpRelay to inherit from
+* **properties**: [WorkloadNetworkDhcpEntity](#workloadnetworkdhcpentity): DHCP properties.
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/dhcpConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AVS/privateClouds/workloadNetworks/dnsServices@2021-12-01
@@ -110,7 +110,7 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkloadNetworkDnsServiceProperties](#workloadnetworkdnsserviceproperties): NSX DNS Service Properties
+* **properties**: [WorkloadNetworkDnsServiceProperties](#workloadnetworkdnsserviceproperties): DNS Service properties
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/dnsServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AVS/privateClouds/workloadNetworks/dnsZones@2021-12-01
@@ -119,7 +119,7 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkloadNetworkDnsZoneProperties](#workloadnetworkdnszoneproperties): NSX DNS Zone Properties
+* **properties**: [WorkloadNetworkDnsZoneProperties](#workloadnetworkdnszoneproperties): DNS Zone properties
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/dnsZones' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles@2021-12-01
@@ -128,7 +128,7 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkloadNetworkPortMirroringProperties](#workloadnetworkportmirroringproperties): NSX Port Mirroring Properties
+* **properties**: [WorkloadNetworkPortMirroringProperties](#workloadnetworkportmirroringproperties): Port Mirroring Properties.
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AVS/privateClouds/workloadNetworks/publicIPs@2021-12-01
@@ -137,7 +137,7 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkloadNetworkPublicIPProperties](#workloadnetworkpublicipproperties): NSX Public IP Block Properties
+* **properties**: [WorkloadNetworkPublicIPProperties](#workloadnetworkpublicipproperties): Public IP Block properties
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/publicIPs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AVS/privateClouds/workloadNetworks/segments@2021-12-01
@@ -146,7 +146,7 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkloadNetworkSegmentProperties](#workloadnetworksegmentproperties): NSX Segment Properties
+* **properties**: [WorkloadNetworkSegmentProperties](#workloadnetworksegmentproperties): The properties of a Workload Segment proxy resource.
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/segments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AVS/privateClouds/workloadNetworks/vmGroups@2021-12-01
@@ -155,7 +155,7 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkloadNetworkVMGroupProperties](#workloadnetworkvmgroupproperties): NSX VM Group Properties
+* **properties**: [WorkloadNetworkVMGroupProperties](#workloadnetworkvmgroupproperties): VM Group properties.
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/vmGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listAdminCredentials (Microsoft.AVS/privateClouds@2021-12-01)
@@ -218,8 +218,8 @@
 
 ## DatastoreProperties
 ### Properties
-* **diskPoolVolume**: [DiskPoolVolume](#diskpoolvolume): An iSCSI volume from Microsoft.StoragePool provider
-* **netAppVolume**: [NetAppVolume](#netappvolume): An Azure NetApp Files volume from Microsoft.NetApp provider
+* **diskPoolVolume**: [DiskPoolVolume](#diskpoolvolume): An iSCSI volume
+* **netAppVolume**: [NetAppVolume](#netappvolume): An Azure NetApp Files volume
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): The state of the datastore provisioning
 * **status**: 'Accessible' | 'Attached' | 'DeadOrError' | 'Detached' | 'Inaccessible' | 'LostCommunication' | 'Unknown' | string (ReadOnly): The operational status of the datastore
 
@@ -232,7 +232,7 @@
 
 ## Encryption
 ### Properties
-* **keyVaultProperties**: [EncryptionKeyVaultProperties](#encryptionkeyvaultproperties): An Encryption Key
+* **keyVaultProperties**: [EncryptionKeyVaultProperties](#encryptionkeyvaultproperties): The key vault where the encryption key is stored
 * **status**: 'Disabled' | 'Enabled' | string: Status of customer managed encryption key
 
 ## EncryptionKeyVaultProperties
@@ -303,14 +303,14 @@
 * **state**: 'Disabled' | 'Enabled' | string: Whether the placement policy is enabled or disabled
 ### VmHostPlacementPolicyProperties
 #### Properties
-* **affinityType**: 'Affinity' | 'AntiAffinity' | string (Required): Placement policy affinity type
+* **affinityType**: 'Affinity' | 'AntiAffinity' | string (Required): placement policy affinity type
 * **hostMembers**: string[] (Required): Host members list
 * **type**: 'VmHost' (Required): placement policy type
 * **vmMembers**: string[] (Required): Virtual machine members list
 
 ### VmPlacementPolicyProperties
 #### Properties
-* **affinityType**: 'Affinity' | 'AntiAffinity' | string (Required): Placement policy affinity type
+* **affinityType**: 'Affinity' | 'AntiAffinity' | string (Required): placement policy affinity type
 * **type**: 'VmVm' (Required): placement policy type
 * **vmMembers**: string[] (Required): Virtual machine members list
 
@@ -323,21 +323,21 @@
 
 ## PrivateCloudProperties
 ### Properties
-* **availability**: [AvailabilityProperties](#availabilityproperties): The properties describing private cloud availability zone distribution
+* **availability**: [AvailabilityProperties](#availabilityproperties): Properties describing how the cloud is distributed across availability zones
 * **circuit**: [Circuit](#circuit): An ExpressRoute Circuit
-* **encryption**: [Encryption](#encryption): The properties of customer managed encryption key
-* **endpoints**: [Endpoints](#endpoints) (ReadOnly): Endpoint addresses
+* **encryption**: [Encryption](#encryption): Customer managed key encryption, can be enabled or disabled
+* **endpoints**: [Endpoints](#endpoints) (ReadOnly): The endpoints
 * **externalCloudLinks**: string[] (ReadOnly): Array of cloud link IDs from other clouds that connect to this one
 * **identitySources**: [IdentitySource](#identitysource)[]: vCenter Single Sign On Identity Sources
 * **internet**: 'Disabled' | 'Enabled' | string: Connectivity to internet is enabled or disabled
-* **managementCluster**: [ManagementCluster](#managementcluster): The properties of a management cluster
+* **managementCluster**: [ManagementCluster](#managementcluster): The default cluster used for management
 * **managementNetwork**: string (ReadOnly): Network used to access vCenter Server and NSX-T Manager
 * **networkBlock**: string (Required): The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
 * **nsxtCertificateThumbprint**: string (ReadOnly): Thumbprint of the NSX-T Manager SSL certificate
 * **nsxtPassword**: string: Optionally, set the NSX-T Manager password when the private cloud is created
 * **provisioningNetwork**: string (ReadOnly): Used for virtual machine cold migration, cloning, and snapshot migration
 * **provisioningState**: 'Building' | 'Cancelled' | 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state
-* **secondaryCircuit**: [Circuit](#circuit): An ExpressRoute Circuit
+* **secondaryCircuit**: [Circuit](#circuit): A secondary expressRoute circuit from a separate AZ. Only present in a stretched private cloud
 * **vcenterCertificateThumbprint**: string (ReadOnly): Thumbprint of the vCenter Server SSL certificate
 * **vcenterPassword**: string: Optionally, set the vCenter admin password when the private cloud is created
 * **vmotionNetwork**: string (ReadOnly): Used for live migration of virtual machines
@@ -466,7 +466,7 @@
 * **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state
 * **revision**: int: NSX revision number.
 * **status**: 'FAILURE' | 'SUCCESS' | string (ReadOnly): Segment status.
-* **subnet**: [WorkloadNetworkSegmentSubnet](#workloadnetworksegmentsubnet): Subnet configuration for segment
+* **subnet**: [WorkloadNetworkSegmentSubnet](#workloadnetworksegmentsubnet): Subnet which to connect segment to.
 
 ## WorkloadNetworkSegmentSubnet
 ### Properties

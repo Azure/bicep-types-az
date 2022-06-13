@@ -75,12 +75,12 @@
 ## BillingProfileProperties
 ### Properties
 * **billingRelationshipType**: 'CSPPartner' | 'Direct' | 'IndirectCustomer' | 'IndirectPartner' | string (ReadOnly): Identifies which services and purchases are paid by a billing profile.
-* **billTo**: [AddressDetails](#addressdetails): Address details.
+* **billTo**: [AddressDetails](#addressdetails): Billing address.
 * **currency**: string (ReadOnly): The currency in which the charges for the billing profile are billed.
 * **displayName**: string: The name of the billing profile.
 * **enabledAzurePlans**: [AzurePlan](#azureplan)[]: Information about the enabled azure plans.
 * **hasReadAccess**: bool (ReadOnly): Indicates whether user has read access to the billing profile.
-* **indirectRelationshipInfo**: [IndirectRelationshipInfo](#indirectrelationshipinfo) (ReadOnly): The billing profile details of the partner of the customer for an indirect motion.
+* **indirectRelationshipInfo**: [IndirectRelationshipInfo](#indirectrelationshipinfo) (ReadOnly): Identifies the billing profile that is linked to another billing profile in indirect purchase motion.
 * **invoiceDay**: int (ReadOnly): The day of the month when the invoice for the billing profile is generated.
 * **invoiceEmailOptIn**: bool: Flag controlling whether the invoices for the billing profile are sent through email.
 * **invoiceSections**: [InvoiceSectionsOnExpand](#invoicesectionsonexpand): The invoice sections associated to the billing profile. By default this is not populated, unless it's specified in $expand.
@@ -133,7 +133,7 @@
 * **state**: 'Active' | 'Restricted' | string (ReadOnly): Identifies the state of an invoice section.
 * **systemId**: string (ReadOnly): The system generated unique identifier for an invoice section.
 * **tags**: [InvoiceSectionPropertiesTags](#invoicesectionpropertiestags): Dictionary of metadata associated with the invoice section. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
-* **targetCloud**: 'USGov' | 'USNat' | 'USSec' | string (ReadOnly): Possible cloud environments.
+* **targetCloud**: 'USGov' | 'USNat' | 'USSec' | string (ReadOnly): Identifies the cloud environments that are associated with an invoice section. This is a system managed optional field and gets updated as the invoice section gets associated with accounts in various clouds.
 
 ## InvoiceSectionPropertiesLabels
 ### Properties

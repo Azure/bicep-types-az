@@ -86,7 +86,7 @@
 * **clientSecret**: string: Client Secret needed for OAuth
 * **customParameters**: [ApiOAuthSettingsCustomParameters](#apioauthsettingscustomparameters): OAuth parameters key is the name of parameter
 * **identityProvider**: string: Identity provider
-* **properties**: any: Any object
+* **properties**: any: Read only properties for this oauth setting.
 * **redirectUrl**: string: Url
 * **scopes**: string[]: OAuth scopes
 
@@ -97,8 +97,8 @@
 
 ## ApiOAuthSettingsParameter
 ### Properties
-* **options**: any: Any object
-* **uiDefinition**: any: Any object
+* **options**: any: Options available to this parameter
+* **uiDefinition**: any: UI definitions per culture as caller can specify the culture
 * **value**: string: Value of the setting
 
 ## ApiReference
@@ -109,7 +109,7 @@
 * **iconUri**: string: The icon URI
 * **id**: string: Resource reference id
 * **name**: string: The name of the API
-* **swagger**: any: Any object
+* **swagger**: any: The JSON representation of the swagger
 * **type**: string: Resource reference type
 
 ## ApiResourceBackendService
@@ -144,7 +144,7 @@
 * **description**: string: The gateway description
 * **displayName**: string: The gateway display name
 * **machineName**: string: The machine name of the gateway
-* **status**: any: Any object
+* **status**: any: The gateway status
 
 ## ConnectionGatewayReference
 ### Properties
@@ -194,7 +194,7 @@
 * **displayName**: string: The display name
 * **iconUri**: string: The icon URI
 * **runtimeUrls**: string[]: Runtime URLs
-* **swagger**: any: Any object
+* **swagger**: any: The JSON representation of the swagger
 * **wsdlDefinition**: [WsdlDefinition](#wsdldefinition): The WSDL definition
 
 ## CustomApiPropertiesDefinitionConnectionParameters

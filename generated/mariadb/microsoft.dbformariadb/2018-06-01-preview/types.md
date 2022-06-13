@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ResourceIdentity](#resourceidentity) (ReadOnly): Azure Active Directory identity configuration for a resource.
+* **identity**: [ResourceIdentity](#resourceidentity) (ReadOnly): The Azure Active Directory identity of the server.
 * **location**: string (Required): The location the resource resides in.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required): The properties used to create a new server.
-* **sku**: [Sku](#sku): Billing information related properties of a server.
+* **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required): Properties of the server.
+* **sku**: [Sku](#sku): The SKU (pricing tier) of the server.
 * **tags**: [ServerForCreateTags](#serverforcreatetags): Application-specific metadata in the form of key-value pairs.
 * **type**: 'Microsoft.DBforMariaDB/servers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -37,7 +37,7 @@
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a server firewall rule.
+* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a firewall rule.
 * **type**: 'Microsoft.DBforMariaDB/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMariaDB/servers/securityAlertPolicies@2018-06-01-preview
@@ -46,7 +46,7 @@
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Properties of a security alert policy.
+* **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Resource properties.
 * **type**: 'Microsoft.DBforMariaDB/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMariaDB/servers/virtualNetworkRules@2018-06-01-preview
@@ -55,7 +55,7 @@
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Properties of a virtual network rule.
+* **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Resource properties.
 * **type**: 'Microsoft.DBforMariaDB/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ConfigurationProperties
@@ -110,9 +110,9 @@
 * **replicaCapacity**: int (ReadOnly): The maximum number of replicas that a master server can have.
 * **replicationRole**: string (ReadOnly): The replication role of the server.
 * **sslEnforcement**: 'Disabled' | 'Enabled': Enable ssl enforcement or not when connect to server.
-* **storageProfile**: [StorageProfile](#storageprofile): Storage Profile properties of a server
+* **storageProfile**: [StorageProfile](#storageprofile): Storage profile of a server.
 * **userVisibleState**: 'Disabled' | 'Dropping' | 'Ready' | string (ReadOnly): A state of a server that is visible to user.
-* **version**: '10.2' | '10.3' | string: The version of a server.
+* **version**: '10.2' | '10.3' | string: Server version.
 ### ServerPropertiesForDefaultCreate
 #### Properties
 * **administratorLogin**: string (Required, WriteOnly): The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).

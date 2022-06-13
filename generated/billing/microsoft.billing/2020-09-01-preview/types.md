@@ -13,7 +13,7 @@
 
 ## PromotionCreateRequestProperties
 ### Properties
-* **appliedScopes**: string[]: List of the subscriptions that the benefit will be applied.
+* **appliedScopes**: string[]: List of subscriptions getting the benefit of the promotion.
 * **displayName**: string: Friendly name for user to easily identified the promotion.
 * **effectiveDateTime**: string (ReadOnly): This is the DateTime when the promotion would come in effect
 * **expiryDate**: string (ReadOnly): This is the date when the Reservation will expire.

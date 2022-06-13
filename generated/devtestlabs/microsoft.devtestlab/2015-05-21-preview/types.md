@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [LabProperties](#labproperties): Properties of a lab.
+* **properties**: [LabProperties](#labproperties): The properties of the resource.
 * **tags**: [LabTags](#labtags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,7 +18,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ArtifactSourceProperties](#artifactsourceproperties): Properties of an artifact source.
+* **properties**: [ArtifactSourceProperties](#artifactsourceproperties): The properties of the resource.
 * **tags**: [ArtifactSourceTags](#artifactsourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/artifactsources' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -29,7 +29,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CustomImageProperties](#customimageproperties): Properties of a custom image.
+* **properties**: [CustomImageProperties](#customimageproperties): The properties of the resource.
 * **tags**: [CustomImageTags](#customimagetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/customimages' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -40,7 +40,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [FormulaProperties](#formulaproperties): Properties of a formula.
+* **properties**: [FormulaProperties](#formulaproperties): The properties of the resource.
 * **tags**: [FormulaTags](#formulatags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/formulas' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -51,7 +51,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PolicyProperties](#policyproperties): Properties of a Policy.
+* **properties**: [PolicyProperties](#policyproperties): The properties of the resource.
 * **tags**: [PolicyTags](#policytags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/policysets/policies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -62,7 +62,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ScheduleProperties](#scheduleproperties): Properties of a schedule.
+* **properties**: [ScheduleProperties](#scheduleproperties): The properties of the resource.
 * **tags**: [ScheduleTags](#scheduletags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -73,7 +73,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [LabVirtualMachineProperties](#labvirtualmachineproperties): Properties of a virtual machine.
+* **properties**: [LabVirtualMachineProperties](#labvirtualmachineproperties): The properties of the resource.
 * **tags**: [LabVirtualMachineTags](#labvirtualmachinetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/virtualmachines' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -84,7 +84,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualNetworkProperties](#virtualnetworkproperties): Properties of a virtual network.
+* **properties**: [VirtualNetworkProperties](#virtualnetworkproperties): The properties of the resource.
 * **tags**: [VirtualNetworkTags](#virtualnetworktags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/virtualnetworks' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -132,7 +132,7 @@
 * **description**: string: The description of the custom image.
 * **osType**: 'Linux' | 'None' | 'Windows' | string: The OS type of the custom image.
 * **provisioningState**: string: The provisioning status of the resource.
-* **vhd**: [CustomImagePropertiesCustom](#customimagepropertiescustom): Properties for creating a custom image from a VHD.
+* **vhd**: [CustomImagePropertiesCustom](#customimagepropertiescustom): The VHD from which the image is to be created.
 * **vm**: [CustomImagePropertiesFromVm](#customimagepropertiesfromvm): Properties for creating a custom image from a virtual machine.
 
 ## CustomImagePropertiesCustom
@@ -142,10 +142,10 @@
 
 ## CustomImagePropertiesFromVm
 ### Properties
-* **linuxOsInfo**: [LinuxOsInfo](#linuxosinfo): Information about a Linux OS.
+* **linuxOsInfo**: [LinuxOsInfo](#linuxosinfo): The Linux OS information of the VM.
 * **sourceVmId**: string: The source vm identifier.
 * **sysPrep**: bool: Indicates whether sysprep has been run on the VHD.
-* **windowsOsInfo**: [WindowsOsInfo](#windowsosinfo): Information about a Windows OS.
+* **windowsOsInfo**: [WindowsOsInfo](#windowsosinfo): The Windows OS information of the VM.
 
 ## CustomImageTags
 ### Properties
@@ -161,7 +161,7 @@
 * **author**: string: The author of the formula.
 * **creationDate**: string: The creation date of the formula.
 * **description**: string: The description of the formula.
-* **formulaContent**: [LabVirtualMachine](#labvirtualmachine): A virtual machine.
+* **formulaContent**: [LabVirtualMachine](#labvirtualmachine): The content of the formula.
 * **osType**: string: The OS type of the formula.
 * **provisioningState**: string: The provisioning status of the resource.
 * **vm**: [FormulaPropertiesFromVm](#formulapropertiesfromvm): Information about a VM from which a formula is to be created.
@@ -212,13 +212,13 @@
 * **id**: string: The identifier of the resource.
 * **location**: string: The location of the resource.
 * **name**: string: The name of the resource.
-* **properties**: [LabVirtualMachineProperties](#labvirtualmachineproperties): Properties of a virtual machine.
+* **properties**: [LabVirtualMachineProperties](#labvirtualmachineproperties): The properties of the resource.
 * **tags**: [LabVirtualMachineTags](#labvirtualmachinetags): The tags of the resource.
 * **type**: string: The type of the resource.
 
 ## LabVirtualMachineProperties
 ### Properties
-* **artifactDeploymentStatus**: [ArtifactDeploymentStatusProperties](#artifactdeploymentstatusproperties): Properties of an artifact deployment.
+* **artifactDeploymentStatus**: [ArtifactDeploymentStatusProperties](#artifactdeploymentstatusproperties): The artifact deployment status for the virtual machine.
 * **artifacts**: [ArtifactInstallProperties](#artifactinstallproperties)[]: The artifacts to be installed on the virtual machine.
 * **computeId**: string: The resource identifier (Microsoft.Compute) of the virtual machine.
 * **createdByUser**: string: The email address of creator of the virtual machine.
@@ -226,7 +226,7 @@
 * **customImageId**: string: The custom image identifier of the virtual machine.
 * **disallowPublicIpAddress**: bool: Indicates whether the virtual machine is to be created without a public IP address.
 * **fqdn**: string: The fully-qualified domain name of the virtual machine.
-* **galleryImageReference**: [GalleryImageReference](#galleryimagereference): The reference information for an Azure Marketplace image.
+* **galleryImageReference**: [GalleryImageReference](#galleryimagereference): The Microsoft Azure Marketplace image reference of the virtual machine.
 * **isAuthenticationWithSshKey**: bool: A value indicating whether this virtual machine uses an SSH key for authentication.
 * **labSubnetName**: string: The lab subnet name of the virtual machine.
 * **labVirtualNetworkId**: string: The lab virtual network identifier of the virtual machine.
@@ -275,13 +275,13 @@
 
 ## ScheduleProperties
 ### Properties
-* **dailyRecurrence**: [DayDetails](#daydetails): Properties of a daily schedule.
-* **hourlyRecurrence**: [HourDetails](#hourdetails): Properties of an hourly schedule.
+* **dailyRecurrence**: [DayDetails](#daydetails): The daily recurrence of the schedule.
+* **hourlyRecurrence**: [HourDetails](#hourdetails): The hourly recurrence of the schedule.
 * **provisioningState**: string: The provisioning status of the resource.
-* **status**: 'Disabled' | 'Enabled' | string: The status of the artifact source.
+* **status**: 'Disabled' | 'Enabled' | string: The status of the schedule.
 * **taskType**: 'LabBillingTask' | 'LabVmsShutdownTask' | 'LabVmsStartupTask' | string: The task type of the schedule.
 * **timeZoneId**: string: The time zone id.
-* **weeklyRecurrence**: [WeekDetails](#weekdetails): Properties of a weekly schedule.
+* **weeklyRecurrence**: [WeekDetails](#weekdetails): The weekly recurrence of the schedule.
 
 ## ScheduleTags
 ### Properties
@@ -298,8 +298,8 @@
 ### Properties
 * **labSubnetName**: string: The name given to the subnet within the lab.
 * **resourceId**: string: The resource identifier of the subnet.
-* **useInVmCreationPermission**: 'Allow' | 'Default' | 'Deny' | string
-* **usePublicIpAddressPermission**: 'Allow' | 'Default' | 'Deny' | string
+* **useInVmCreationPermission**: 'Allow' | 'Default' | 'Deny' | string: Indicates whether this subnet can be used during virtual machine creation.
+* **usePublicIpAddressPermission**: 'Allow' | 'Default' | 'Deny' | string: Indicates whether public IP addresses can be assigned to virtual machines on this subnet.
 
 ## VirtualNetworkProperties
 ### Properties

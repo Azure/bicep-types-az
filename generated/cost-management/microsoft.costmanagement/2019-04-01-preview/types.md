@@ -25,10 +25,10 @@
 * **amount**: int (Required): The total amount of cost to track with the budget
 * **category**: 'Cost' | 'Usage' | string (Required): The category of the budget, whether the budget tracks cost or usage.
 * **currentSpend**: [CurrentSpend](#currentspend) (ReadOnly): The current amount of cost which is being tracked for a budget.
-* **filter**: [ReportConfigFilter](#reportconfigfilter): The filter expression to be used in the report.
+* **filter**: [ReportConfigFilter](#reportconfigfilter): May be used to filter budgets.
 * **notifications**: [BudgetPropertiesNotifications](#budgetpropertiesnotifications): Dictionary of notifications associated with the budget. Budget can have up to five notifications.
 * **timeGrain**: 'Annually' | 'Monthly' | 'Quarterly' | string (Required): The time covered by a budget. Tracking of the amount will be reset based on the time grain.
-* **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required): The start and end date for a budget.
+* **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required): Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than three months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.
 
 ## BudgetPropertiesNotifications
 ### Properties
@@ -79,8 +79,8 @@
 ## ReportConfigDataset
 ### Properties
 * **aggregation**: [ReportConfigDatasetAggregation](#reportconfigdatasetaggregation): Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
-* **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration): The configuration of dataset in the report.
-* **filter**: [ReportConfigFilter](#reportconfigfilter): The filter expression to be used in the report.
+* **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration): Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
+* **filter**: [ReportConfigFilter](#reportconfigfilter): Has filter expression to use in the report.
 * **granularity**: 'Daily' | 'Monthly' | string: The granularity of rows in the report.
 * **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[]: Array of group by expression to use in the report. Report can have up to 2 group by clauses.
 * **sorting**: [ReportConfigSorting](#reportconfigsorting)[]: Array of order by expression to use in the report.
@@ -96,23 +96,23 @@
 
 ## ReportConfigDefinition
 ### Properties
-* **dataset**: [ReportConfigDataset](#reportconfigdataset): The definition of data present in the report.
+* **dataset**: [ReportConfigDataset](#reportconfigdataset): Has definition for data in this report config.
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' | string (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided.
-* **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod): The start and end date for pulling data for the report.
+* **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod): Has time period for pulling data for the report.
 * **type**: 'Usage' | string (Required): The type of the report. Usage represents actual usage, forecast represents forecasted data and UsageAndForecast represents both usage and forecasted data. Actual usage and forecasted data can be differentiated based on dates.
 
 ## ReportConfigFilter
 ### Properties
 * **and**: [ReportConfigFilter](#reportconfigfilter)[]: The logical "AND" expression. Must have at least 2 items.
-* **dimension**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): The comparison expression to be used in the report.
-* **not**: [ReportConfigFilter](#reportconfigfilter): The filter expression to be used in the report.
+* **dimension**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): Has comparison expression for a dimension
+* **not**: [ReportConfigFilter](#reportconfigfilter): The logical "NOT" expression.
 * **or**: [ReportConfigFilter](#reportconfigfilter)[]: The logical "OR" expression. Must have at least 2 items.
-* **tag**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): The comparison expression to be used in the report.
+* **tag**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): Has comparison expression for a tag
 
 ## ReportConfigGrouping
 ### Properties
 * **name**: string (Required): The name of the column to group. This version supports subscription lowest possible grain.
-* **type**: 'Dimension' | 'Tag' | string (Required): The type of the column in the report.
+* **type**: 'Dimension' | 'Tag' | string (Required): Has type of the column to group.
 
 ## ReportConfigSorting
 ### Properties
@@ -134,6 +134,6 @@
 * **metric**: 'AHUB' | 'ActualCost' | 'AmortizedCost' | string: Metric to use when displaying costs.
 * **modifiedOn**: string (ReadOnly): Date when the user last modified this view.
 * **pivots**: [PivotProperties](#pivotproperties)[]: Configuration of 3 sub-views in the Cost Analysis UI.
-* **query**: [ReportConfigDefinition](#reportconfigdefinition): The definition of a report config.
+* **query**: [ReportConfigDefinition](#reportconfigdefinition): Query body configuration. Required.
 * **scope**: string: Cost Management scope to save the view on. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.
 

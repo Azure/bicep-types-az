@@ -8,7 +8,7 @@
 * **location**: string (Required): Azure GEO region: e.g. West US | East US | North Central US | South Central US | West Europe | North Europe | East Asia | Southeast Asia | etc. 
 The geo region of a resource never changes after it is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SignalRCreateOrUpdateProperties](#signalrcreateorupdateproperties): Settings used to provision or configure the resource.
+* **properties**: [SignalRCreateOrUpdateProperties](#signalrcreateorupdateproperties): Settings used to provision or configure the resource
 * **sku**: [ResourceSku](#resourcesku): The billing information of the resource.(e.g. basic vs. standard)
 * **tags**: [SignalRUpdateParametersTags](#signalrupdateparameterstags): A list of key value pairs that describe the resource.
 * **type**: 'Microsoft.SignalRService/SignalR' (ReadOnly, DeployTimeConstant): The resource type

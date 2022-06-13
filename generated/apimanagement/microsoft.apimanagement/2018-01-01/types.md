@@ -6,11 +6,11 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): ETag of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ApiManagementServiceIdentity](#apimanagementserviceidentity): Identity properties of the Api Management service resource.
+* **identity**: [ApiManagementServiceIdentity](#apimanagementserviceidentity): Managed service identity of the Api Management service.
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApiManagementServiceProperties](#apimanagementserviceproperties) (Required): Properties of an API Management service resource description.
-* **sku**: [ApiManagementServiceSkuProperties](#apimanagementserviceskuproperties) (Required): API Management service resource SKU properties.
+* **properties**: [ApiManagementServiceProperties](#apimanagementserviceproperties) (Required): Properties of the API Management service.
+* **sku**: [ApiManagementServiceSkuProperties](#apimanagementserviceskuproperties) (Required): SKU properties of the API Management service.
 * **tags**: [ApimResourceTags](#apimresourcetags): Resource tags.
 * **type**: 'Microsoft.ApiManagement/service' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,7 +20,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApiVersionSetContractProperties](#apiversionsetcontractproperties): Properties of an API Version Set.
+* **properties**: [ApiVersionSetContractProperties](#apiversionsetcontractproperties): Api VersionSet contract properties.
 * **type**: 'Microsoft.ApiManagement/service/api-version-sets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis@2018-01-01
@@ -30,7 +30,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **link**: string (ReadOnly): Link to the Storage Blob containing the result of the export operation. The Blob Uri is only valid for 5 minutes.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApiCreateOrUpdateProperties](#apicreateorupdateproperties) (WriteOnly): Api Create or Update Properties.
+* **properties**: [ApiCreateOrUpdateProperties](#apicreateorupdateproperties) (WriteOnly): Api entity create of update properties.
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/diagnostics@2018-01-01
@@ -39,7 +39,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DiagnosticContractProperties](#diagnosticcontractproperties): Diagnostic Entity Properties
+* **properties**: [DiagnosticContractProperties](#diagnosticcontractproperties): Diagnostic entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/apis/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/diagnostics/loggers@2018-01-01
@@ -56,7 +56,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IssueContractProperties](#issuecontractproperties): Issue contract Properties.
+* **properties**: [IssueContractProperties](#issuecontractproperties): Properties of the Issue.
 * **type**: 'Microsoft.ApiManagement/service/apis/issues' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/issues/attachments@2018-01-01
@@ -65,7 +65,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IssueAttachmentContractProperties](#issueattachmentcontractproperties): Issue Attachment contract Properties.
+* **properties**: [IssueAttachmentContractProperties](#issueattachmentcontractproperties): Properties of the Issue Attachment.
 * **type**: 'Microsoft.ApiManagement/service/apis/issues/attachments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/issues/comments@2018-01-01
@@ -74,7 +74,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IssueCommentContractProperties](#issuecommentcontractproperties): Issue Comment contract Properties.
+* **properties**: [IssueCommentContractProperties](#issuecommentcontractproperties): Properties of the Issue Comment.
 * **type**: 'Microsoft.ApiManagement/service/apis/issues/comments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/operations@2018-01-01
@@ -83,7 +83,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [OperationContractProperties](#operationcontractproperties): Operation Contract Properties
+* **properties**: [OperationContractProperties](#operationcontractproperties): Properties of the Operation Contract.
 * **type**: 'Microsoft.ApiManagement/service/apis/operations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/operations/policies@2018-01-01
@@ -92,7 +92,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'policy' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [PolicyContractProperties](#policycontractproperties): Policy contract Properties.
+* **properties**: [PolicyContractProperties](#policycontractproperties): Properties of the Policy.
 * **type**: 'Microsoft.ApiManagement/service/apis/operations/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/operations/tags@2018-01-01
@@ -101,7 +101,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly): Tag contract Properties.
+* **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly): Tag entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/apis/operations/tags' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/policies@2018-01-01
@@ -110,7 +110,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'policy' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [PolicyContractProperties](#policycontractproperties): Policy contract Properties.
+* **properties**: [PolicyContractProperties](#policycontractproperties): Properties of the Policy.
 * **type**: 'Microsoft.ApiManagement/service/apis/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/releases@2018-01-01
@@ -119,7 +119,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApiReleaseContractProperties](#apireleasecontractproperties): API Release details
+* **properties**: [ApiReleaseContractProperties](#apireleasecontractproperties): Properties of the Api Release Contract.
 * **type**: 'Microsoft.ApiManagement/service/apis/releases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/schemas@2018-01-01
@@ -128,7 +128,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SchemaContractProperties](#schemacontractproperties): Schema contract Properties.
+* **properties**: [SchemaContractProperties](#schemacontractproperties): Properties of the Schema.
 * **type**: 'Microsoft.ApiManagement/service/apis/schemas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/tagDescriptions@2018-01-01
@@ -137,7 +137,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TagDescriptionBaseProperties](#tagdescriptionbaseproperties): Parameters supplied to the Create TagDescription operation.
+* **properties**: [TagDescriptionBaseProperties](#tagdescriptionbaseproperties): Properties supplied to Create TagDescription operation.
 * **type**: 'Microsoft.ApiManagement/service/apis/tagDescriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/tags@2018-01-01
@@ -146,7 +146,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly): Tag contract Properties.
+* **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly): Tag entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/apis/tags' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/authorizationServers@2018-01-01
@@ -155,7 +155,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AuthorizationServerContractProperties](#authorizationservercontractproperties): External OAuth authorization server settings Properties.
+* **properties**: [AuthorizationServerContractProperties](#authorizationservercontractproperties): Properties of the External OAuth authorization server Contract.
 * **type**: 'Microsoft.ApiManagement/service/authorizationServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/backends@2018-01-01
@@ -164,7 +164,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BackendContractProperties](#backendcontractproperties): Parameters supplied to the Create Backend operation.
+* **properties**: [BackendContractProperties](#backendcontractproperties): Backend entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/backends' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/certificates@2018-01-01
@@ -173,7 +173,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CertificateCreateOrUpdateProperties](#certificatecreateorupdateproperties): Parameters supplied to the CreateOrUpdate certificate operation.
+* **properties**: [CertificateCreateOrUpdateProperties](#certificatecreateorupdateproperties): Certificate create or update properties details.
 * **type**: 'Microsoft.ApiManagement/service/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/diagnostics@2018-01-01
@@ -182,7 +182,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DiagnosticContractProperties](#diagnosticcontractproperties): Diagnostic Entity Properties
+* **properties**: [DiagnosticContractProperties](#diagnosticcontractproperties): Diagnostic entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/diagnostics/loggers@2018-01-01
@@ -199,7 +199,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GroupCreateParametersProperties](#groupcreateparametersproperties): Parameters supplied to the Create Group operation.
+* **properties**: [GroupCreateParametersProperties](#groupcreateparametersproperties): Properties supplied to Create Group operation.
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/groups/users@2018-01-01
@@ -216,7 +216,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'aad' | 'aadB2C' | 'facebook' | 'google' | 'microsoft' | 'twitter' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [IdentityProviderContractProperties](#identityprovidercontractproperties): The external Identity Providers like Facebook, Google, Microsoft, Twitter or Azure Active Directory which can be used to enable access to the API Management service developer portal for all users.
+* **properties**: [IdentityProviderContractProperties](#identityprovidercontractproperties): Identity Provider contract properties.
 * **type**: 'Microsoft.ApiManagement/service/identityProviders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/loggers@2018-01-01
@@ -225,7 +225,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [LoggerContractProperties](#loggercontractproperties): The Logger entity in API Management represents an event sink that you can use to log API Management events. Currently the Logger entity supports logging API Management events to Azure Event Hubs.
+* **properties**: [LoggerContractProperties](#loggercontractproperties): Logger entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/loggers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/notifications@2018-01-01
@@ -234,7 +234,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'AccountClosedPublisher' | 'BCC' | 'NewApplicationNotificationMessage' | 'NewIssuePublisherNotificationMessage' | 'PurchasePublisherNotificationMessage' | 'QuotaLimitApproachingPublisherNotificationMessage' | 'RequestPublisherNotificationMessage' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [NotificationContractProperties](#notificationcontractproperties) (ReadOnly): Notification Contract properties.
+* **properties**: [NotificationContractProperties](#notificationcontractproperties) (ReadOnly): Notification entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/notifications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/notifications/recipientEmails@2018-01-01
@@ -259,7 +259,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [OpenidConnectProviderContractProperties](#openidconnectprovidercontractproperties): OpenID Connect Providers Contract.
+* **properties**: [OpenidConnectProviderContractProperties](#openidconnectprovidercontractproperties): OpenId Connect Provider contract properties.
 * **type**: 'Microsoft.ApiManagement/service/openidConnectProviders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/policies@2018-01-01
@@ -268,7 +268,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'policy' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [PolicyContractProperties](#policycontractproperties): Policy contract Properties.
+* **properties**: [PolicyContractProperties](#policycontractproperties): Properties of the Policy.
 * **type**: 'Microsoft.ApiManagement/service/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/portalsettings@2018-01-01
@@ -307,7 +307,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ProductContractProperties](#productcontractproperties): Product profile.
+* **properties**: [ProductContractProperties](#productcontractproperties): Product entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/apis@2018-01-01
@@ -332,7 +332,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'policy' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [PolicyContractProperties](#policycontractproperties): Policy contract Properties.
+* **properties**: [PolicyContractProperties](#policycontractproperties): Properties of the Policy.
 * **type**: 'Microsoft.ApiManagement/service/products/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/tags@2018-01-01
@@ -341,7 +341,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly): Tag contract Properties.
+* **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly): Tag entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/products/tags' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/properties@2018-01-01
@@ -350,7 +350,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PropertyContractProperties](#propertycontractproperties): Property Contract properties.
+* **properties**: [PropertyContractProperties](#propertycontractproperties): Property entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/properties' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/subscriptions@2018-01-01
@@ -359,7 +359,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SubscriptionCreateParameterProperties](#subscriptioncreateparameterproperties): Parameters supplied to the Create subscription operation.
+* **properties**: [SubscriptionCreateParameterProperties](#subscriptioncreateparameterproperties): Subscription contract properties.
 * **type**: 'Microsoft.ApiManagement/service/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/tags@2018-01-01
@@ -368,7 +368,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TagContractProperties](#tagcontractproperties): Tag contract Properties.
+* **properties**: [TagContractProperties](#tagcontractproperties): Properties supplied to Create Tag operation.
 * **type**: 'Microsoft.ApiManagement/service/tags' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/templates@2018-01-01
@@ -377,7 +377,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'accountClosedDeveloper' | 'applicationApprovedNotificationMessage' | 'confirmSignUpIdentityDefault' | 'emailChangeIdentityDefault' | 'inviteUserNotificationMessage' | 'newCommentNotificationMessage' | 'newDeveloperNotificationMessage' | 'newIssueNotificationMessage' | 'passwordResetByAdminNotificationMessage' | 'passwordResetIdentityDefault' | 'purchaseDeveloperNotificationMessage' | 'quotaLimitApproachingDeveloperNotificationMessage' | 'rejectDeveloperNotificationMessage' | 'requestDeveloperNotificationMessage' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [EmailTemplateUpdateParameterProperties](#emailtemplateupdateparameterproperties): Email Template Update Contract properties.
+* **properties**: [EmailTemplateUpdateParameterProperties](#emailtemplateupdateparameterproperties): Email Template Update contract properties.
 * **type**: 'Microsoft.ApiManagement/service/templates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/users@2018-01-01
@@ -386,7 +386,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [UserCreateParameterProperties](#usercreateparameterproperties): Parameters supplied to the Create User operation.
+* **properties**: [UserCreateParameterProperties](#usercreateparameterproperties): User entity create contract properties.
 * **type**: 'Microsoft.ApiManagement/service/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AdditionalLocation
@@ -395,8 +395,8 @@
 * **location**: string (Required): The location name of the additional region among Azure Data center regions.
 * **privateIPAddresses**: string[] (ReadOnly): Private Static Load Balanced IP addresses of the API Management service which is deployed in an Internal Virtual Network in a particular additional location. Available only for Basic, Standard and Premium SKU.
 * **publicIPAddresses**: string[] (ReadOnly): Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
-* **sku**: [ApiManagementServiceSkuProperties](#apimanagementserviceskuproperties) (Required): API Management service resource SKU properties.
-* **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Configuration of a virtual network to which API Management service is deployed.
+* **sku**: [ApiManagementServiceSkuProperties](#apimanagementserviceskuproperties) (Required): SKU properties of the API Management service.
+* **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Virtual network configuration for the location.
 
 ## ApiCreateOrUpdateProperties
 ### Properties
@@ -409,7 +409,7 @@
 * **apiVersionDescription**: string (WriteOnly): Description of the Api Version.
 * **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails) (WriteOnly): An API Version Set contains the common configuration for a set of API Versions relating
 * **apiVersionSetId**: string (WriteOnly): A resource identifier for the related ApiVersionSet.
-* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (WriteOnly): API Authentication Settings.
+* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (WriteOnly): Collection of authentication settings included into this API.
 * **contentFormat**: 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' | string (WriteOnly): Format of the Content in which the API is getting imported.
 * **contentValue**: string (WriteOnly): Content value when Importing an API.
 * **description**: string (WriteOnly): Description of the API. May include HTML formatting tags.
@@ -419,7 +419,7 @@
 * **path**: string (Required, WriteOnly): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
 * **protocols**: 'http' | 'https'[] (WriteOnly): Describes on which protocols the operations in this API can be invoked.
 * **serviceUrl**: string (WriteOnly): Absolute URL of the backend service implementing this API.
-* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (WriteOnly): Subscription key parameter names details.
+* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (WriteOnly): Protocols over which API is made available.
 * **type**: 'http' | 'soap' | string (WriteOnly): Type of API.
 * **wsdlSelector**: [ApiCreateOrUpdatePropertiesWsdlSelector](#apicreateorupdatepropertieswsdlselector) (WriteOnly): Criteria to limit import of WSDL to a subset of the document.
 
@@ -458,7 +458,7 @@
 * **publisherName**: string (Required): Publisher name.
 * **scmUrl**: string (ReadOnly): SCM endpoint URL of the API Management service.
 * **targetProvisioningState**: string (ReadOnly): The provisioning state of the API Management service, which is targeted by the long running operation started on the service.
-* **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Configuration of a virtual network to which API Management service is deployed.
+* **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Virtual network configuration of the API Management service.
 * **virtualNetworkType**: 'External' | 'Internal' | 'None' | string: The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.
 
 ## ApiManagementServiceSkuProperties
@@ -496,8 +496,8 @@
 
 ## AuthenticationSettingsContract
 ### Properties
-* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract) (WriteOnly): API OAuth2 Authentication settings details.
-* **openid**: [OpenIdAuthenticationSettingsContract](#openidauthenticationsettingscontract) (WriteOnly): API OAuth2 Authentication settings details.
+* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract) (WriteOnly): OAuth2 Authentication settings
+* **openid**: [OpenIdAuthenticationSettingsContract](#openidauthenticationsettingscontract) (WriteOnly): OpenID Connect Authentication Settings
 * **subscriptionKeyRequired**: bool (WriteOnly): Specifies whether subscription key is required during call to this API, true - API is included into closed products only, false - API is included into open products alone, null - there is a mix of products.
 
 ## AuthorizationServerContractProperties
@@ -526,19 +526,19 @@
 
 ## BackendContractProperties
 ### Properties
-* **credentials**: [BackendCredentialsContract](#backendcredentialscontract): Details of the Credentials used to connect to Backend.
+* **credentials**: [BackendCredentialsContract](#backendcredentialscontract): Backend Credentials Contract Properties
 * **description**: string: Backend Description.
-* **properties**: [BackendProperties](#backendproperties): Properties specific to the Backend Type.
+* **properties**: [BackendProperties](#backendproperties): Backend Properties contract
 * **protocol**: 'http' | 'soap' | string (Required): Backend communication protocol.
-* **proxy**: [BackendProxyContract](#backendproxycontract): Details of the Backend WebProxy Server to use in the Request to Backend.
+* **proxy**: [BackendProxyContract](#backendproxycontract): Backend Proxy Contract Properties
 * **resourceId**: string: Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
 * **title**: string: Backend Title.
-* **tls**: [BackendTlsProperties](#backendtlsproperties): Properties controlling TLS Certificate Validation.
+* **tls**: [BackendTlsProperties](#backendtlsproperties): Backend TLS Properties
 * **url**: string (Required): Runtime Url of the Backend.
 
 ## BackendCredentialsContract
 ### Properties
-* **authorization**: [BackendAuthorizationHeaderCredentials](#backendauthorizationheadercredentials): Authorization header information.
+* **authorization**: [BackendAuthorizationHeaderCredentials](#backendauthorizationheadercredentials): Authorization header authentication
 * **certificate**: string[]: List of Client Certificate Thumbprint.
 * **header**: [BackendCredentialsContractHeader](#backendcredentialscontractheader): Header Parameter description.
 * **query**: [BackendCredentialsContractQuery](#backendcredentialscontractquery): Query Parameter description.
@@ -555,7 +555,7 @@
 
 ## BackendProperties
 ### Properties
-* **serviceFabricCluster**: [BackendServiceFabricClusterProperties](#backendservicefabricclusterproperties): Properties of the Service Fabric Type Backend.
+* **serviceFabricCluster**: [BackendServiceFabricClusterProperties](#backendservicefabricclusterproperties): Backend Service Fabric Cluster Properties
 
 ## BackendProxyContract
 ### Properties
@@ -578,7 +578,7 @@
 
 ## CertificateConfiguration
 ### Properties
-* **certificate**: [CertificateInformation](#certificateinformation): SSL certificate information.
+* **certificate**: [CertificateInformation](#certificateinformation): Certificate information.
 * **certificatePassword**: string: Certificate Password.
 * **encodedCertificate**: string: Base64 Encoded certificate.
 * **storeName**: 'CertificateAuthority' | 'Root' | string (Required): The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.
@@ -634,7 +634,7 @@
 
 ## HostnameConfiguration
 ### Properties
-* **certificate**: [CertificateInformation](#certificateinformation): SSL certificate information.
+* **certificate**: [CertificateInformation](#certificateinformation): Certificate information.
 * **certificatePassword**: string: Certificate Password.
 * **defaultSslBinding**: bool: Specify true to setup the certificate associated with this Hostname as the Default SSL Certificate. If a client does not send the SNI header, then this will be the certificate that will be challenged. The property is useful if a service has multiple custom hostname enabled and it needs to decide on the default ssl certificate. The setting only applied to Proxy Hostname Type.
 * **encodedCertificate**: string: Base64 Encoded certificate.
@@ -691,7 +691,7 @@ Instrumentation key for applicationInsights logger.
 ## NotificationContractProperties
 ### Properties
 * **description**: string (ReadOnly): Description of the Notification.
-* **recipients**: [RecipientsContractProperties](#recipientscontractproperties) (ReadOnly): Notification Parameter contract.
+* **recipients**: [RecipientsContractProperties](#recipientscontractproperties) (ReadOnly): Recipient Parameter values.
 * **title**: string (ReadOnly): Title of the Notification.
 
 ## OAuth2AuthenticationSettingsContract
@@ -718,7 +718,7 @@ Instrumentation key for applicationInsights logger.
 * **displayName**: string (Required): Operation Name.
 * **method**: string (Required): A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
 * **policies**: string: Operation Policies
-* **request**: [RequestContract](#requestcontract): Operation request details.
+* **request**: [RequestContract](#requestcontract): An entity containing request details.
 * **responses**: [ResponseContract](#responsecontract)[]: Array of Operation responses.
 * **templateParameters**: [ParameterContract](#parametercontract)[]: Collection of URL template parameters.
 * **urlTemplate**: string (Required): Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
@@ -739,9 +739,9 @@ Instrumentation key for applicationInsights logger.
 
 ## PortalDelegationSettingsProperties
 ### Properties
-* **subscriptions**: [SubscriptionsDelegationSettingsProperties](#subscriptionsdelegationsettingsproperties): Subscriptions delegation settings properties.
+* **subscriptions**: [SubscriptionsDelegationSettingsProperties](#subscriptionsdelegationsettingsproperties): Subscriptions delegation settings.
 * **url**: string: A delegation Url.
-* **userRegistration**: [RegistrationDelegationSettingsProperties](#registrationdelegationsettingsproperties): User registration delegation settings properties.
+* **userRegistration**: [RegistrationDelegationSettingsProperties](#registrationdelegationsettingsproperties): User registration delegation settings.
 * **validationKey**: string: A base64-encoded validation key to validate, that a request is coming from Azure API Management.
 
 ## PortalSigninSettingProperties
@@ -804,7 +804,7 @@ Instrumentation key for applicationInsights logger.
 ## SchemaContractProperties
 ### Properties
 * **contentType**: string (Required): Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml).
-* **document**: [SchemaDocumentProperties](#schemadocumentproperties): Schema Document Properties.
+* **document**: [SchemaDocumentProperties](#schemadocumentproperties): Properties of the Schema Document.
 
 ## SchemaDocumentProperties
 ### Properties
@@ -821,7 +821,7 @@ Instrumentation key for applicationInsights logger.
 * **productId**: string (Required): Product (product id path) for which subscription is being created in form /products/{productId}
 * **secondaryKey**: string: Secondary subscription key. If not specified during request key will be generated automatically.
 * **startDate**: string (ReadOnly): Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-* **state**: 'active' | 'cancelled' | 'expired' | 'rejected' | 'submitted' | 'suspended': Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
+* **state**: 'active' | 'cancelled' | 'expired' | 'rejected' | 'submitted' | 'suspended': Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
 * **stateComment**: string (ReadOnly): Optional subscription comment added by an administrator.
 * **userId**: string (Required): User (user id path) for whom subscription is being created in form /users/{uid}
 

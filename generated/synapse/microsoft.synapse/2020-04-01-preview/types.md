@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SqlDatabaseProperties](#sqldatabaseproperties): The sql database's properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): ARM System Data.
+* **properties**: [SqlDatabaseProperties](#sqldatabaseproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of SqlDatabase.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/workspaces/sqlDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,9 +20,9 @@
 * **kind**: string (ReadOnly): Kind of SqlPool.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SqlPoolProperties](#sqlpoolproperties): The sql pool's properties.
-* **sku**: [SkuV3](#skuv3): An ARM Resource SKU.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): ARM System Data.
+* **properties**: [SqlPoolProperties](#sqlpoolproperties): Resource properties.
+* **sku**: [SkuV3](#skuv3): The sql pool SKU. The list of SKUs may vary by region and support offer.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of SqlPool.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools' (ReadOnly, DeployTimeConstant): The resource type
 

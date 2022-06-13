@@ -8,8 +8,8 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkspaceProperties](#workspaceproperties) (Required): The workspace properties.
-* **sku**: [Sku](#sku): SKU for the resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **sku**: [Sku](#sku): The SKU of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Databricks/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,7 +19,7 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The properties of a private endpoint connection
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The private endpoint connection properties.
 * **type**: 'Microsoft.Databricks/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Databricks/workspaces/virtualNetworkPeerings@2021-04-01-preview
@@ -28,7 +28,7 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualNetworkPeeringPropertiesFormat](#virtualnetworkpeeringpropertiesformat) (Required): Properties of the virtual network peering.
+* **properties**: [VirtualNetworkPeeringPropertiesFormat](#virtualnetworkpeeringpropertiesformat) (Required): List of properties for vNet Peering
 * **type**: 'Microsoft.Databricks/workspaces/virtualNetworkPeerings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AddressSpace
@@ -50,7 +50,7 @@
 
 ## EncryptionEntitiesDefinition
 ### Properties
-* **managedServices**: [EncryptionV2](#encryptionv2): The object that contains details of encryption used on the workspace.
+* **managedServices**: [EncryptionV2](#encryptionv2): Encryption properties for the databricks managed services.
 
 ## EncryptionV2
 ### Properties
@@ -77,14 +77,14 @@
 ### Properties
 * **id**: string (ReadOnly): The resource identifier.
 * **name**: string (ReadOnly): The resource name.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The properties of a private endpoint connection
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The private endpoint connection properties.
 * **type**: string (ReadOnly): The resource type.
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The private endpoint property of a private endpoint connection
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): The current state of a private endpoint connection
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): Private endpoint connection state
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the private endpoint connection.
 
 ## PrivateLinkServiceConnectionState
 ### Properties
@@ -104,7 +104,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -116,11 +116,11 @@
 * **allowForwardedTraffic**: bool: Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
 * **allowGatewayTransit**: bool: If gateway links can be used in remote virtual networking to link to this virtual network.
 * **allowVirtualNetworkAccess**: bool: Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
-* **databricksAddressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
+* **databricksAddressSpace**: [AddressSpace](#addressspace): The reference to the databricks virtual network address space.
 * **databricksVirtualNetwork**: [VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetwork](#virtualnetworkpeeringpropertiesformatdatabricksvirtualnetwork): The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
 * **peeringState**: 'Connected' | 'Disconnected' | 'Initiated' | string (ReadOnly): The status of the virtual network peering.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
-* **remoteAddressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the virtual network peering resource.
+* **remoteAddressSpace**: [AddressSpace](#addressspace): The reference to the remote virtual network address space.
 * **remoteVirtualNetwork**: [VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetwork](#virtualnetworkpeeringpropertiesformatremotevirtualnetwork) (Required): The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
 * **useRemoteGateways**: bool: If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
 
@@ -134,64 +134,64 @@
 
 ## WorkspaceCustomBooleanParameter
 ### Properties
-* **type**: 'Bool' | 'Object' | 'String' | string (ReadOnly): Provisioning status of the workspace.
+* **type**: 'Bool' | 'Object' | 'String' | string (ReadOnly): The type of variable that this is
 * **value**: bool (Required): The value which should be used for this field.
 
 ## WorkspaceCustomObjectParameter
 ### Properties
-* **type**: 'Bool' | 'Object' | 'String' | string (ReadOnly): Provisioning status of the workspace.
-* **value**: any (Required): Any object
+* **type**: 'Bool' | 'Object' | 'String' | string (ReadOnly): The type of variable that this is
+* **value**: any (Required): The value which should be used for this field.
 
 ## WorkspaceCustomParameters
 ### Properties
-* **amlWorkspaceId**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
-* **customPrivateSubnetName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
-* **customPublicSubnetName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
-* **customVirtualNetworkId**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
-* **enableNoPublicIp**: [WorkspaceCustomBooleanParameter](#workspacecustombooleanparameter): The value which should be used for this field.
-* **encryption**: [WorkspaceEncryptionParameter](#workspaceencryptionparameter): The object that contains details of encryption used on the workspace.
-* **loadBalancerBackendPoolName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
-* **loadBalancerId**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
-* **natGatewayName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
-* **prepareEncryption**: [WorkspaceCustomBooleanParameter](#workspacecustombooleanparameter): The value which should be used for this field.
-* **publicIpName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
-* **requireInfrastructureEncryption**: [WorkspaceCustomBooleanParameter](#workspacecustombooleanparameter): The value which should be used for this field.
-* **resourceTags**: [WorkspaceCustomObjectParameter](#workspacecustomobjectparameter) (ReadOnly): The value which should be used for this field.
-* **storageAccountName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
-* **storageAccountSkuName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
-* **vnetAddressPrefix**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
+* **amlWorkspaceId**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The ID of a Azure Machine Learning workspace to link with Databricks workspace
+* **customPrivateSubnetName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The name of the Private Subnet within the Virtual Network
+* **customPublicSubnetName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The name of a Public Subnet within the Virtual Network
+* **customVirtualNetworkId**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The ID of a Virtual Network where this Databricks Cluster should be created
+* **enableNoPublicIp**: [WorkspaceCustomBooleanParameter](#workspacecustombooleanparameter): Should the Public IP be Disabled?
+* **encryption**: [WorkspaceEncryptionParameter](#workspaceencryptionparameter): Contains the encryption details for Customer-Managed Key (CMK) enabled workspace.
+* **loadBalancerBackendPoolName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): Name of the outbound Load Balancer Backend Pool for Secure Cluster Connectivity (No Public IP).
+* **loadBalancerId**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): Resource URI of Outbound Load balancer for Secure Cluster Connectivity (No Public IP) workspace.
+* **natGatewayName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): Name of the NAT gateway for Secure Cluster Connectivity (No Public IP) workspace subnets.
+* **prepareEncryption**: [WorkspaceCustomBooleanParameter](#workspacecustombooleanparameter): Prepare the workspace for encryption. Enables the Managed Identity for managed storage account.
+* **publicIpName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): Name of the Public IP for No Public IP workspace with managed vNet.
+* **requireInfrastructureEncryption**: [WorkspaceCustomBooleanParameter](#workspacecustombooleanparameter): A boolean indicating whether or not the DBFS root file system will be enabled with secondary layer of encryption with platform managed keys for data at rest.
+* **resourceTags**: [WorkspaceCustomObjectParameter](#workspacecustomobjectparameter) (ReadOnly): Tags applied to resources under Managed resource group. These can be updated by updating tags at workspace level.
+* **storageAccountName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): Default DBFS storage account name.
+* **storageAccountSkuName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): Storage account SKU name, ex: Standard_GRS, Standard_LRS. Refer https://aka.ms/storageskus for valid inputs.
+* **vnetAddressPrefix**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): Address prefix for Managed virtual network. Default value for this input is 10.139.
 
 ## WorkspaceCustomStringParameter
 ### Properties
-* **type**: 'Bool' | 'Object' | 'String' | string (ReadOnly): Provisioning status of the workspace.
+* **type**: 'Bool' | 'Object' | 'String' | string (ReadOnly): The type of variable that this is
 * **value**: string (Required): The value which should be used for this field.
 
 ## WorkspaceEncryptionParameter
 ### Properties
-* **type**: 'Bool' | 'Object' | 'String' | string (ReadOnly): Provisioning status of the workspace.
-* **value**: [Encryption](#encryption): The object that contains details of encryption used on the workspace.
+* **type**: 'Bool' | 'Object' | 'String' | string (ReadOnly): The type of variable that this is
+* **value**: [Encryption](#encryption): The value which should be used for this field.
 
 ## WorkspaceProperties
 ### Properties
 * **authorizations**: [WorkspaceProviderAuthorization](#workspaceproviderauthorization)[]: The workspace provider authorizations.
-* **createdBy**: [CreatedBy](#createdby): Provides details of the entity that created/updated the workspace.
-* **createdDateTime**: string (ReadOnly): The date and time stamp when the workspace was created.
+* **createdBy**: [CreatedBy](#createdby): Indicates the Object ID, PUID and Application ID of entity that created the workspace.
+* **createdDateTime**: string (ReadOnly): Specifies the date and time when the workspace is created.
 * **encryption**: [WorkspacePropertiesEncryption](#workspacepropertiesencryption): Encryption properties for databricks workspace
 * **managedResourceGroupId**: string (Required): The managed resource group Id.
-* **parameters**: [WorkspaceCustomParameters](#workspacecustomparameters): Custom Parameters used for Cluster Creation.
+* **parameters**: [WorkspaceCustomParameters](#workspacecustomparameters): The workspace's custom parameters.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Private endpoint connections created on the workspace
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status of the workspace.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): The workspace provisioning state.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: The network access type for accessing workspace. Set value to disabled to access workspace only via private link.
 * **requiredNsgRules**: 'AllRules' | 'NoAzureDatabricksRules' | 'NoAzureServiceRules' | string: Gets or sets a value indicating whether data plane (clusters) to control plane communication happen over private endpoint. Supported values are 'AllRules' and 'NoAzureDatabricksRules'. 'NoAzureServiceRules' value is for internal use only.
-* **storageAccountIdentity**: [ManagedIdentityConfiguration](#managedidentityconfiguration): The Managed Identity details for storage account.
+* **storageAccountIdentity**: [ManagedIdentityConfiguration](#managedidentityconfiguration): The details of Managed Identity of Storage Account
 * **uiDefinitionUri**: string: The blob URI where the UI definition file is located.
-* **updatedBy**: [CreatedBy](#createdby): Provides details of the entity that created/updated the workspace.
+* **updatedBy**: [CreatedBy](#createdby): Indicates the Object ID, PUID and Application ID of entity that last updated the workspace.
 * **workspaceId**: string (ReadOnly): The unique identifier of the databricks workspace in databricks control plane.
 * **workspaceUrl**: string (ReadOnly): The workspace URL which is of the format 'adb-{workspaceId}.{random}.azuredatabricks.net'
 
 ## WorkspacePropertiesEncryption
 ### Properties
-* **entities**: [EncryptionEntitiesDefinition](#encryptionentitiesdefinition) (Required): Encryption entities for databricks workspace resource.
+* **entities**: [EncryptionEntitiesDefinition](#encryptionentitiesdefinition) (Required): Encryption entities definition for the workspace.
 
 ## WorkspaceProviderAuthorization
 ### Properties

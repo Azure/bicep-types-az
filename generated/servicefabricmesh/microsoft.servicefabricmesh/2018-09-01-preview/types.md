@@ -75,12 +75,12 @@
 ### Properties
 * **debugParams**: string: Internal - used by Visual Studio to setup the debugging session on the local development environment.
 * **description**: string: User readable description of the application.
-* **diagnostics**: [DiagnosticsDescription](#diagnosticsdescription): Describes the diagnostics options available
-* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' | string (ReadOnly): The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc.
+* **diagnostics**: [DiagnosticsDescription](#diagnosticsdescription): Describes the diagnostics definition and usage for an application resource.
+* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' | string (ReadOnly): Describes the health state of an application resource.
 * **provisioningState**: string (ReadOnly): State of the resource.
 * **serviceNames**: string[] (ReadOnly): Names of the services in the application.
 * **services**: [ServiceResourceDescription](#serviceresourcedescription)[]: Describes the services in the application. This property is used to create or modify services of the application. On get only the name of the service is returned. The service description can be obtained by querying for the service resource.
-* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' | string (ReadOnly): Status of the resource.
+* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' | string (ReadOnly): Status of the application.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the application.
 * **unhealthyEvaluation**: string (ReadOnly): When the application's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
 
@@ -121,14 +121,14 @@
 ### AutoScalingResourceMetric
 #### Properties
 * **kind**: 'Resource' (Required): The type of auto scaling metric
-* **name**: 'cpu' | 'memoryInGB' | string (Required): Enumerates the resources that are used for triggering auto scaling.
+* **name**: 'cpu' | 'memoryInGB' | string (Required): Name of the resource.
 
 
 ## AutoScalingPolicy
 ### Properties
-* **mechanism**: [AutoScalingMechanism](#autoscalingmechanism) (Required): Describes the mechanism for performing auto scaling operation. Derived classes will describe the actual mechanism.
+* **mechanism**: [AutoScalingMechanism](#autoscalingmechanism) (Required): The mechanism that is used to scale when auto scaling operation is invoked.
 * **name**: string (Required): The name of the auto scaling policy.
-* **trigger**: [AutoScalingTrigger](#autoscalingtrigger) (Required): Describes the trigger for performing auto scaling operation.
+* **trigger**: [AutoScalingTrigger](#autoscalingtrigger) (Required): Determines when auto scaling operation will be invoked.
 
 ## AutoScalingTrigger
 * **Discriminator**: kind
@@ -138,7 +138,7 @@
 #### Properties
 * **kind**: 'AverageLoad' (Required): The type of auto scaling trigger
 * **lowerLoadThreshold**: int (Required): Lower load threshold (if average load is below this threshold, service will scale down).
-* **metric**: [AutoScalingMetric](#autoscalingmetric) (Required): Describes the metric that is used for triggering auto scaling operation. Derived classes will describe resources or metrics.
+* **metric**: [AutoScalingMetric](#autoscalingmetric) (Required): Description of the metric that is used for scaling.
 * **scaleIntervalInSeconds**: int (Required): Scale interval that indicates how often will this trigger be checked.
 * **upperLoadThreshold**: int (Required): Upper load threshold (if average load is above this threshold, service will scale up).
 
@@ -156,7 +156,7 @@
 * **labels**: [ContainerLabel](#containerlabel)[]: The labels to set in this container.
 * **name**: string (Required): The name of the code package.
 * **reliableCollectionsRefs**: [ReliableCollectionsRef](#reliablecollectionsref)[]: A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.
-* **resources**: [ResourceRequirements](#resourcerequirements) (Required): This type describes the resource requirements for a container or a service.
+* **resources**: [ResourceRequirements](#resourcerequirements) (Required): The resources required by this container.
 * **settings**: [Setting](#setting)[]: The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".
 * **volumeRefs**: [VolumeReference](#volumereference)[]: Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.
 * **volumes**: [ApplicationScopedVolume](#applicationscopedvolume)[]: Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.
@@ -172,9 +172,9 @@
 
 ## ContainerInstanceView
 ### Properties
-* **currentState**: [ContainerState](#containerstate): The container state.
+* **currentState**: [ContainerState](#containerstate): Current container instance state.
 * **events**: [ContainerEvent](#containerevent)[]: The events of this container instance.
-* **previousState**: [ContainerState](#containerstate): The container state.
+* **previousState**: [ContainerState](#containerstate): Previous container instance state.
 * **restartCount**: int: The number of times the container has been restarted.
 
 ## ContainerLabel
@@ -211,7 +211,7 @@
 #### Properties
 * **accountName**: string: Azure Internal monitoring pipeline account.
 * **autoKeyConfigUrl**: string: Azure Internal monitoring pipeline autokey associated with the certificate.
-* **fluentdConfigUrl**: any: Anything
+* **fluentdConfigUrl**: any: Azure Internal monitoring agent fluentd configuration.
 * **kind**: 'AzureInternalMonitoringPipeline' (Required): The kind of DiagnosticsSink.
 * **maConfigUrl**: string: Azure Internal monitoring agent configuration.
 * **namespace**: string: Azure Internal monitoring pipeline account namespace.
@@ -240,11 +240,11 @@
 ## GatewayResourceProperties
 ### Properties
 * **description**: string: User readable description of the gateway.
-* **destinationNetwork**: [NetworkRef](#networkref) (Required): Describes a network reference in a service.
+* **destinationNetwork**: [NetworkRef](#networkref) (Required): Network that the Application is using.
 * **http**: [HttpConfig](#httpconfig)[]: Configuration for http connectivity for this gateway.
 * **ipAddress**: string (ReadOnly): IP address of the gateway. This is populated in the response and is ignored for incoming requests.
 * **provisioningState**: string (ReadOnly): State of the resource.
-* **sourceNetwork**: [NetworkRef](#networkref) (Required): Describes a network reference in a service.
+* **sourceNetwork**: [NetworkRef](#networkref) (Required): Network the gateway should listen on for requests.
 * **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' | string (ReadOnly): Status of the resource.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the gateway.
 * **tcp**: [TcpConfig](#tcpconfig)[]: Configuration for tcp connectivity for this gateway.
@@ -300,12 +300,12 @@
 ### Base Properties
 * **description**: string: User readable description of the network.
 * **provisioningState**: string (ReadOnly): State of the resource.
-* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' | string (ReadOnly): Status of the resource.
+* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' | string (ReadOnly): Status of the network.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the network.
 ### LocalNetworkResourceProperties
 #### Properties
 * **kind**: 'Local' (Required): The type of a Service Fabric container network.
-* **networkAddressPrefix**: string: Address space for a container network. This is expressed in CIDR notation.
+* **networkAddressPrefix**: string: Address space for the local container network.
 
 
 ## ReliableCollectionsRef
@@ -325,8 +325,8 @@
 
 ## ResourceRequirements
 ### Properties
-* **limits**: [ResourceLimits](#resourcelimits): This type describes the resource limits for a given container. It describes the most amount of resources a container is allowed to use before being restarted.
-* **requests**: [ResourceRequests](#resourcerequests) (Required): This type describes the requested resources for a given container. It describes the least amount of resources required for the container. A container can consume more than requested resources up to the specified limits before being restarted. Currently, the requested resources are treated as limits.
+* **limits**: [ResourceLimits](#resourcelimits): Describes the maximum limits on the resources for a given container.
+* **requests**: [ResourceRequests](#resourcerequests) (Required): Describes the requested resources for a given container.
 
 ## SecretResourceProperties
 * **Discriminator**: kind
@@ -364,12 +364,12 @@
 * **codePackages**: [ContainerCodePackageProperties](#containercodepackageproperties)[] (Required): Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).
 * **description**: string: User readable description of the service.
 * **diagnostics**: [DiagnosticsRef](#diagnosticsref): Reference to sinks in DiagnosticsDescription.
-* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' | string (ReadOnly): The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc.
+* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' | string (ReadOnly): Describes the health state of an application resource.
 * **networkRefs**: [NetworkRef](#networkref)[]: The names of the private networks that this service needs to be part of.
 * **osType**: 'Linux' | 'Windows' | string (Required): The operation system required by the code in service.
 * **provisioningState**: string (ReadOnly): State of the resource.
 * **replicaCount**: int: The number of replicas of the service to create. Defaults to 1 if not specified.
-* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' | string (ReadOnly): Status of the resource.
+* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' | string (ReadOnly): Status of the service.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the service.
 * **unhealthyEvaluation**: string (ReadOnly): When the service's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the service is marked unhealthy.
 
@@ -430,8 +430,8 @@
 ### Properties
 * **azureFileParameters**: [VolumeProviderParametersAzureFile](#volumeproviderparametersazurefile): This type describes a volume provided by an Azure Files file share.
 * **description**: string: User readable description of the volume.
-* **provider**: 'SFAzureFile' | string (Required): Describes the provider of the volume resource.
+* **provider**: 'SFAzureFile' | string (Required): Provider of the volume.
 * **provisioningState**: string (ReadOnly): State of the resource.
-* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' | string (ReadOnly): Status of the resource.
+* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' | string (ReadOnly): Status of the volume.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the volume.
 

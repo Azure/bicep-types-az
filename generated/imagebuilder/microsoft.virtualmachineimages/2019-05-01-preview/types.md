@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ImageTemplateIdentity](#imagetemplateidentity): Identity for the image template.
+* **identity**: [ImageTemplateIdentity](#imagetemplateidentity): The identity of the image template, if configured.
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ImageTemplateProperties](#imagetemplateproperties): Describes the properties of an image template
+* **properties**: [ImageTemplateProperties](#imagetemplateproperties): The properties of the image template
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.VirtualMachineImages/imageTemplates' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -104,11 +104,11 @@
 * **buildTimeoutInMinutes**: int: Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
 * **customize**: [ImageTemplateCustomizer](#imagetemplatecustomizer)[]: Specifies the properties used to describe the customization steps of the image, like Image source etc
 * **distribute**: [ImageTemplateDistributor](#imagetemplatedistributor)[] (Required): The distribution targets where the image output needs to go to.
-* **lastRunStatus**: [ImageTemplateLastRunStatus](#imagetemplatelastrunstatus) (ReadOnly): Describes the latest status of running an image template
-* **provisioningError**: [ProvisioningError](#provisioningerror) (ReadOnly): Describes the error happened when create or update an image template
+* **lastRunStatus**: [ImageTemplateLastRunStatus](#imagetemplatelastrunstatus) (ReadOnly): State of 'run' that is currently executing or was last executed.
+* **provisioningError**: [ProvisioningError](#provisioningerror) (ReadOnly): Provisioning error, if any
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource
-* **source**: [ImageTemplateSource](#imagetemplatesource) (Required): Describes a virtual machine image source for building, customizing and distributing
-* **vmProfile**: [ImageTemplateVmProfile](#imagetemplatevmprofile): Describes the virtual machine used to build, customize and capture images
+* **source**: [ImageTemplateSource](#imagetemplatesource) (Required): Specifies the properties used to describe the source image.
+* **vmProfile**: [ImageTemplateVmProfile](#imagetemplatevmprofile): Describes how virtual machine is set up to build images
 
 ## ImageTemplateSource
 * **Discriminator**: type

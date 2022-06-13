@@ -9,8 +9,8 @@
 * **kind**: string: Kind of the resource
 * **location**: string: Location where the resource is stored
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SecurityConnectorProperties](#securityconnectorproperties): A set of properties that defines the security connector configuration.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [SecurityConnectorProperties](#securityconnectorproperties): Security connector data
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [Tags](#tags): A list of key value pairs that describe the resource.
 * **type**: 'Microsoft.Security/securityConnectors' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -142,7 +142,7 @@
 
 ## DefenderForServersAwsOfferingMdeAutoProvisioning
 ### Properties
-* **configuration**: any: Any object
+* **configuration**: any: configuration for Microsoft Defender for Endpoint autoprovisioning
 * **enabled**: bool: Is Microsoft Defender for Endpoint auto provisioning enabled
 
 ## DefenderForServersAwsOfferingSubPlan
@@ -175,7 +175,7 @@
 
 ## DefenderForServersGcpOfferingMdeAutoProvisioning
 ### Properties
-* **configuration**: any: Any object
+* **configuration**: any: configuration for Microsoft Defender for Endpoint autoprovisioning
 * **enabled**: bool: Is Microsoft Defender for Endpoint auto provisioning enabled
 
 ## DefenderForServersGcpOfferingSubPlan
@@ -198,13 +198,13 @@
 ### AWSEnvironmentData
 #### Properties
 * **environmentType**: 'AwsAccount' (Required): The type of the environment data.
-* **organizationalData**: [AwsOrganizationalData](#awsorganizationaldata): The awsOrganization data
+* **organizationalData**: [AwsOrganizationalData](#awsorganizationaldata): The AWS account's organizational data
 
 ### GcpProjectEnvironmentData
 #### Properties
 * **environmentType**: 'GcpProject' (Required): The type of the environment data.
-* **organizationalData**: [GcpOrganizationalData](#gcporganizationaldata): The gcpOrganization data
-* **projectDetails**: [GcpProjectDetails](#gcpprojectdetails): The details about the project represented by the security connector
+* **organizationalData**: [GcpOrganizationalData](#gcporganizationaldata): The Gcp project's organizational data
+* **projectDetails**: [GcpProjectDetails](#gcpprojectdetails): The Gcp project's details
 
 ### GithubScopeEnvironmentData
 #### Properties
@@ -252,7 +252,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## Tags
 ### Properties

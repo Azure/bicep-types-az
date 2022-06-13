@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagedClusterProperties](#managedclusterproperties): Properties of the managed cluster.
+* **properties**: [ManagedClusterProperties](#managedclusterproperties): Properties of a managed cluster.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -77,7 +77,7 @@
 * **id**: string (ReadOnly): Resource Id
 * **location**: string (ReadOnly): Resource location
 * **name**: string (ReadOnly): Resource name
-* **properties**: [AccessProfile](#accessprofile) (ReadOnly): Profile for enabling a user to access a managed cluster.
+* **properties**: [AccessProfile](#accessprofile) (ReadOnly): AccessProfile of a managed cluster.
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: string (ReadOnly): Resource type
 
@@ -107,7 +107,7 @@
 
 ## ManagedClusterProperties
 ### Properties
-* **aadProfile**: [ManagedClusterAADProfile](#managedclusteraadprofile): AADProfile specifies attributes for Azure Active Directory integration.
+* **aadProfile**: [ManagedClusterAADProfile](#managedclusteraadprofile): Profile of Azure Active Directory configuration.
 * **addonProfiles**: [ManagedClusterPropertiesAddonProfiles](#managedclusterpropertiesaddonprofiles): Profile of managed cluster add-on.
 * **agentPoolProfiles**: [ManagedClusterAgentPoolProfile](#managedclusteragentpoolprofile)[]: Properties of the agent pool.
 * **dnsPrefix**: string: DNS prefix specified when creating the managed cluster.

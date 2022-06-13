@@ -21,12 +21,12 @@
 
 ## ContainerServiceDiagnosticsProfile
 ### Properties
-* **vmDiagnostics**: [ContainerServiceVMDiagnostics](#containerservicevmdiagnostics): Describes VM Diagnostics.
+* **vmDiagnostics**: [ContainerServiceVMDiagnostics](#containerservicevmdiagnostics): Profile for container service VM diagnostic agent
 
 ## ContainerServiceLinuxProfile
 ### Properties
 * **adminUsername**: string (Required): The administrator username to use for all Linux VMs
-* **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required): SSH configuration for Linux based VMs running on Azure
+* **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required): Specifies the ssh key configuration for Linux VMs
 
 ## ContainerServiceMasterProfile
 ### Properties
@@ -41,12 +41,12 @@
 ## ContainerServiceProperties
 ### Properties
 * **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[] (Required): Properties of agent pools
-* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile)
-* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile) (Required): Profile for Linux VM
-* **masterProfile**: [ContainerServiceMasterProfile](#containerservicemasterprofile) (Required): Profile for container service master
-* **orchestratorProfile**: [ContainerServiceOrchestratorProfile](#containerserviceorchestratorprofile): Profile for Orchestrator
+* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile): Properties for Diagnostic Agent
+* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile) (Required): Properties for Linux VMs
+* **masterProfile**: [ContainerServiceMasterProfile](#containerservicemasterprofile) (Required): Properties of master agents
+* **orchestratorProfile**: [ContainerServiceOrchestratorProfile](#containerserviceorchestratorprofile): Properties of orchestrator
 * **provisioningState**: string (ReadOnly): Gets the provisioning state, which only appears in the response.
-* **windowsProfile**: [ContainerServiceWindowsProfile](#containerservicewindowsprofile): Profile for Windows jumpbox
+* **windowsProfile**: [ContainerServiceWindowsProfile](#containerservicewindowsprofile): Properties of Windows VMs
 
 ## ContainerServiceSshConfiguration
 ### Properties

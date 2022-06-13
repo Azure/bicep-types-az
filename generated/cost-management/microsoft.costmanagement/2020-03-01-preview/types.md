@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CostAllocationRuleProperties](#costallocationruleproperties): The properties of a cost allocation rule
+* **properties**: [CostAllocationRuleProperties](#costallocationruleproperties): Cost allocation rule properties
 * **type**: 'Microsoft.CostManagement/costAllocationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## CostAllocationProportion
@@ -23,20 +23,20 @@
 ### Properties
 * **createdDate**: string (ReadOnly): Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.
 * **description**: string: Description of a cost allocation rule.
-* **details**: [CostAllocationRuleDetails](#costallocationruledetails) (Required): Resource details of the cost allocation rule
-* **status**: 'Active' | 'NotActive' | 'Processing' | string (Required): Current status of the rule.
+* **details**: [CostAllocationRuleDetails](#costallocationruledetails) (Required): Resource information for the cost allocation rule
+* **status**: 'Active' | 'NotActive' | 'Processing' | string (Required): Status of the rule
 * **updatedDate**: string (ReadOnly): Time at which the rule was last updated.
 
 ## SourceCostAllocationResource
 ### Properties
 * **name**: string (Required): If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
-* **resourceType**: 'Dimension' | 'Tag' | string (Required): Category of resource to use for allocation.
+* **resourceType**: 'Dimension' | 'Tag' | string (Required): Type of resources contained in this cost allocation rule
 * **values**: string[] (Required): Source Resources for cost allocation. This list cannot contain more than 25 values.
 
 ## TargetCostAllocationResource
 ### Properties
 * **name**: string (Required): If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
-* **policyType**: 'FixedProportion' | string (Required): Method to use for allocating cost. FixedProportion indicates that cost will be split based on specified percentage values.
-* **resourceType**: 'Dimension' | 'Tag' | string (Required): Category of resource to use for allocation.
+* **policyType**: 'FixedProportion' | string (Required): Method of cost allocation for the rule
+* **resourceType**: 'Dimension' | 'Tag' | string (Required): Type of resources contained in this cost allocation rule
 * **values**: [CostAllocationProportion](#costallocationproportion)[] (Required): Target resources for cost allocation. This list cannot contain more than 25 values.
 

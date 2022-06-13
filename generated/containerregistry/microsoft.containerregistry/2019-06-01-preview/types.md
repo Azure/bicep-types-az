@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AgentPoolProperties](#agentpoolproperties): The properties of agent pool.
+* **properties**: [AgentPoolProperties](#agentpoolproperties): The properties associated with the agent pool
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/agentPools' (ReadOnly, DeployTimeConstant): The resource type
@@ -17,10 +17,10 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [IdentityProperties](#identityproperties): Managed identity for the resource.
+* **identity**: [IdentityProperties](#identityproperties): Identity for the resource.
 * **location**: string: The location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TaskRunProperties](#taskrunproperties): The properties of task run.
+* **properties**: [TaskRunProperties](#taskrunproperties): The properties associated with the task run, i.e., request and result of the run
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/taskRuns' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -29,7 +29,7 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [IdentityProperties](#identityproperties): Managed identity for the resource.
+* **identity**: [IdentityProperties](#identityproperties): Identity for the resource.
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TaskProperties](#taskproperties): The properties of a task.
@@ -127,8 +127,9 @@ this value is the Client ID. If a system-assigned identity, the value will be `s
 the case of a system-assigned identity, the Client ID will be determined by the runner. This
 identity may be used to authenticate to key vault to retrieve credentials or it may be the only 
 source of authentication used for accessing the registry.
-* **password**: [SecretObject](#secretobject): Describes the properties of a secret object value.
-* **userName**: [SecretObject](#secretobject): Describes the properties of a secret object value.
+* **password**: [SecretObject](#secretobject): The password for logging into the custom registry. The password is a secret 
+object that allows multiple ways of providing the value for it.
+* **userName**: [SecretObject](#secretobject): The username for logging into the custom registry.
 
 ## IdentityProperties
 ### Properties
@@ -171,7 +172,7 @@ executing a build step.
 ## PlatformProperties
 ### Properties
 * **architecture**: '386' | 'amd64' | 'arm' | 'arm64' | 'x86' | string: The OS architecture.
-* **os**: 'Linux' | 'Windows' | string (Required): The OS of agent machine
+* **os**: 'Linux' | 'Windows' | string (Required): The operating system type required for the run.
 * **variant**: 'v6' | 'v7' | 'v8' | string: Variant of the CPU.
 
 ## ResourceTags
@@ -193,7 +194,7 @@ executing a build step.
 ### Properties
 * **id**: string (ReadOnly): The resource ID.
 * **name**: string (ReadOnly): The name of the resource.
-* **properties**: [RunProperties](#runproperties): The properties for a run.
+* **properties**: [RunProperties](#runproperties): The properties of a run.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: string (ReadOnly): The type of the resource.
 
@@ -204,27 +205,27 @@ executing a build step.
 
 ## RunProperties
 ### Properties
-* **agentConfiguration**: [AgentProperties](#agentproperties): The properties that determine the run agent configuration.
+* **agentConfiguration**: [AgentProperties](#agentproperties): The machine configuration of the run agent.
 * **agentPoolName**: string: The dedicated agent pool for the run.
 * **createTime**: string: The time the run was scheduled.
 * **customRegistries**: string[]: The list of custom registries that were logged in during this run.
 * **finishTime**: string: The time the run finished.
-* **imageUpdateTrigger**: [ImageUpdateTrigger](#imageupdatetrigger): The image update trigger that caused a build.
+* **imageUpdateTrigger**: [ImageUpdateTrigger](#imageupdatetrigger): The image update trigger that caused the run. This is applicable if the task has base image trigger configured.
 * **isArchiveEnabled**: bool: The value that indicates whether archiving is enabled or not.
 * **lastUpdatedTime**: string: The last updated time for the run.
-* **logArtifact**: [ImageDescriptor](#imagedescriptor) (ReadOnly): Properties for a registry image.
+* **logArtifact**: [ImageDescriptor](#imagedescriptor) (ReadOnly): The image description for the log artifact.
 * **outputImages**: [ImageDescriptor](#imagedescriptor)[]: The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.
-* **platform**: [PlatformProperties](#platformproperties): The platform properties against which the run has to happen.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The provisioning state of this agent pool
+* **platform**: [PlatformProperties](#platformproperties): The platform properties against which the run will happen.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The provisioning state of a run.
 * **runErrorMessage**: string (ReadOnly): The error message received from backend systems after the run is scheduled.
 * **runId**: string: The unique identifier for the run.
 * **runType**: 'AutoBuild' | 'AutoRun' | 'QuickBuild' | 'QuickRun' | string: The type of run.
 * **sourceRegistryAuth**: string: The scope of the credentials that were used to login to the source registry during this run.
-* **sourceTrigger**: [SourceTriggerDescriptor](#sourcetriggerdescriptor): The source trigger that caused a run.
+* **sourceTrigger**: [SourceTriggerDescriptor](#sourcetriggerdescriptor): The source trigger that caused the run.
 * **startTime**: string: The time the run started.
 * **status**: 'Canceled' | 'Error' | 'Failed' | 'Queued' | 'Running' | 'Started' | 'Succeeded' | 'Timeout' | string: The current status of the run.
 * **task**: string: The task against which run was scheduled.
-* **timerTrigger**: [TimerTriggerDescriptor](#timertriggerdescriptor)
+* **timerTrigger**: [TimerTriggerDescriptor](#timertriggerdescriptor): The timer trigger that caused the run.
 * **updateTriggerToken**: string: The update trigger token passed for the Run.
 
 ## RunRequest
@@ -236,9 +237,9 @@ executing a build step.
 * **logTemplate**: string: The template that describes the repository and tag information for run log artifact.
 ### DockerBuildRequest
 #### Properties
-* **agentConfiguration**: [AgentProperties](#agentproperties): The properties that determine the run agent configuration.
+* **agentConfiguration**: [AgentProperties](#agentproperties): The machine configuration of the run agent.
 * **arguments**: [Argument](#argument)[]: The collection of override arguments to be used when executing the run.
-* **credentials**: [Credentials](#credentials): The parameters that describes a set of credentials that will be used when a run is invoked.
+* **credentials**: [Credentials](#credentials): The properties that describes a set of credentials that will be used when this run is invoked.
 * **dockerFilePath**: string (Required): The Docker file path relative to the source location.
 * **imageNames**: string[]: The fully qualified image names including the repository and tag.
 * **isPushEnabled**: bool: The value of this property indicates whether the image built should be pushed to the registry or not.
@@ -252,8 +253,8 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
 ### EncodedTaskRunRequest
 #### Properties
-* **agentConfiguration**: [AgentProperties](#agentproperties): The properties that determine the run agent configuration.
-* **credentials**: [Credentials](#credentials): The parameters that describes a set of credentials that will be used when a run is invoked.
+* **agentConfiguration**: [AgentProperties](#agentproperties): The machine configuration of the run agent.
+* **credentials**: [Credentials](#credentials): The properties that describes a set of credentials that will be used when this run is invoked.
 * **encodedTaskContent**: string (Required): Base64 encoded value of the template/definition file content.
 * **encodedValuesContent**: string: Base64 encoded value of the parameters/values file content.
 * **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the run has to happen.
@@ -265,8 +266,8 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
 ### FileTaskRunRequest
 #### Properties
-* **agentConfiguration**: [AgentProperties](#agentproperties): The properties that determine the run agent configuration.
-* **credentials**: [Credentials](#credentials): The parameters that describes a set of credentials that will be used when a run is invoked.
+* **agentConfiguration**: [AgentProperties](#agentproperties): The machine configuration of the run agent.
+* **credentials**: [Credentials](#credentials): The properties that describes a set of credentials that will be used when this run is invoked.
 * **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the run has to happen.
 * **sourceLocation**: string: The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
@@ -278,7 +279,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
 ### TaskRunRequest
 #### Properties
-* **overrideTaskStepProperties**: [OverrideTaskStepProperties](#overridetaskstepproperties)
+* **overrideTaskStepProperties**: [OverrideTaskStepProperties](#overridetaskstepproperties): Set of overridable parameters that can be passed when running a Task.
 * **taskId**: string (Required): The resource ID of task against which run has to be queued.
 * **type**: 'TaskRunRequest' (Required): The type of the run request.
 
@@ -301,7 +302,8 @@ used as is without any modification.
 ### Properties
 * **branch**: string: The branch name of the source code.
 * **repositoryUrl**: string (Required): The full URL to the source code repository
-* **sourceControlAuthProperties**: [AuthInfo](#authinfo): The authorization properties for accessing the source code repository.
+* **sourceControlAuthProperties**: [AuthInfo](#authinfo): The authorization properties for accessing the source code repository and to set up
+webhooks for notifications.
 * **sourceControlType**: 'Github' | 'VisualStudioTeamService' | string (Required): The type of source control service.
 
 ## SourceRegistryCredentials
@@ -313,7 +315,7 @@ the source registry during the run.
 ## SourceTrigger
 ### Properties
 * **name**: string (Required): The name of the trigger.
-* **sourceRepository**: [SourceProperties](#sourceproperties) (Required): The properties of the source code repository.
+* **sourceRepository**: [SourceProperties](#sourceproperties) (Required): The properties that describes the source(code) for the task.
 * **sourceTriggerEvents**: 'commit' | 'pullrequest' | string[] (Required): The source event corresponding to the trigger.
 * **status**: 'Disabled' | 'Enabled' | string: The current status of trigger.
 
@@ -344,7 +346,7 @@ the source registry during the run.
 ## Task
 ### Properties
 * **id**: string (ReadOnly): The resource ID.
-* **identity**: [IdentityProperties](#identityproperties) (ReadOnly): Managed identity for the resource.
+* **identity**: [IdentityProperties](#identityproperties) (ReadOnly): Identity for the resource.
 * **location**: string (ReadOnly): The location of the resource. This cannot be changed after the resource is created.
 * **name**: string (ReadOnly): The name of the resource.
 * **properties**: [TaskProperties](#taskproperties) (ReadOnly): The properties of a task.
@@ -354,35 +356,35 @@ the source registry during the run.
 
 ## TaskProperties
 ### Properties
-* **agentConfiguration**: [AgentProperties](#agentproperties): The properties that determine the run agent configuration.
+* **agentConfiguration**: [AgentProperties](#agentproperties): The machine configuration of the run agent.
 * **agentPoolName**: string: The dedicated agent pool for the task.
 * **creationDate**: string (ReadOnly): The creation date of task.
-* **credentials**: [Credentials](#credentials): The parameters that describes a set of credentials that will be used when a run is invoked.
+* **credentials**: [Credentials](#credentials): The properties that describes a set of credentials that will be used when this run is invoked.
 * **isSystemTask**: bool: The value of this property indicates whether the task resource is system task or not.
 * **logTemplate**: string: The template that describes the repository and tag information for run log artifact.
 * **platform**: [PlatformProperties](#platformproperties): The platform properties against which the run has to happen.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of this agent pool
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the task.
 * **status**: 'Disabled' | 'Enabled' | string: The current status of task.
-* **step**: [TaskStepProperties](#taskstepproperties): Base properties for any task step.
+* **step**: [TaskStepProperties](#taskstepproperties): The properties of a task step.
 * **timeout**: int: Run timeout in seconds.
-* **trigger**: [TriggerProperties](#triggerproperties): The properties of a trigger.
+* **trigger**: [TriggerProperties](#triggerproperties): The properties that describe all triggers for the task.
 
 ## TaskRun
 ### Properties
 * **id**: string (ReadOnly): The resource ID.
-* **identity**: [IdentityProperties](#identityproperties) (ReadOnly): Managed identity for the resource.
+* **identity**: [IdentityProperties](#identityproperties) (ReadOnly): Identity for the resource.
 * **location**: string (ReadOnly): The location of the resource
 * **name**: string (ReadOnly): The name of the resource.
-* **properties**: [TaskRunProperties](#taskrunproperties) (ReadOnly): The properties of task run.
+* **properties**: [TaskRunProperties](#taskrunproperties) (ReadOnly): The properties associated with the task run, i.e., request and result of the run
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: string (ReadOnly): The type of the resource.
 
 ## TaskRunProperties
 ### Properties
 * **forceUpdateTag**: string: How the run should be forced to rerun even if the run request configuration has not changed
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of this agent pool
-* **runRequest**: [RunRequest](#runrequest): The request parameters for scheduling a run.
-* **runResult**: [Run](#run) (ReadOnly): Run resource properties
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of this task run
+* **runRequest**: [RunRequest](#runrequest): The request (parameters) for the run
+* **runResult**: [Run](#run) (ReadOnly): The result of this task run
 
 ## TaskStepProperties
 * **Discriminator**: type
@@ -429,7 +431,7 @@ the source registry during the run.
 
 ## TriggerProperties
 ### Properties
-* **baseImageTrigger**: [BaseImageTrigger](#baseimagetrigger): The trigger based on base image dependency.
+* **baseImageTrigger**: [BaseImageTrigger](#baseimagetrigger): The trigger based on base image dependencies.
 * **sourceTriggers**: [SourceTrigger](#sourcetrigger)[]: The collection of triggers based on source code repository.
 * **timerTriggers**: [TimerTrigger](#timertrigger)[]: The collection of timer triggers.
 

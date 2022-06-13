@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Kind of encryption protector used to protect the key.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerKeyProperties](#serverkeyproperties): Properties for a key execution.
+* **properties**: [ServerKeyProperties](#serverkeyproperties): Properties of the ServerKey Resource.
 * **type**: 'Microsoft.DBforMySQL/servers/keys' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ServerKeyProperties

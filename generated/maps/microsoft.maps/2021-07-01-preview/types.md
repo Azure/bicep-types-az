@@ -5,13 +5,13 @@
 ### Properties
 * **apiVersion**: '2021-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
-* **kind**: 'Gen1' | 'Gen2' | string: The Kind of the Maps Account.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Sets the identity property for maps account.
+* **kind**: 'Gen1' | 'Gen2' | string: Get or Set Kind property.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MapsAccountProperties](#mapsaccountproperties): Additional Map account properties
-* **sku**: [Sku](#sku) (Required): The SKU of the Maps Account.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [MapsAccountProperties](#mapsaccountproperties): The map account properties.
+* **sku**: [Sku](#sku) (Required): The SKU of this account.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Maps/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -22,7 +22,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreatorProperties](#creatorproperties) (Required): Creator resource properties
+* **properties**: [CreatorProperties](#creatorproperties) (Required): The Creator resource properties.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Maps/accounts/creators' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -68,7 +68,7 @@
 ## MapsAccountProperties
 ### Properties
 * **disableLocalAuth**: bool: Allows toggle functionality on Azure Policy to disable Azure Maps local authentication support. This will disable Shared Keys authentication from any usage.
-* **linkedResources**: [LinkedResource](#linkedresource)[]: The array of associated resources to the Map account. Linked resource in the array cannot individually update, you must update all linked resources in the array together. These resources may be used on operations on the Azure Maps REST API. Access is controlled by the Map Account Managed Identity(s) permissions to those resource(s).
+* **linkedResources**: [LinkedResource](#linkedresource)[]: Sets the resources to be used for Managed Identities based operations for the Map account resource.
 * **provisioningState**: string (ReadOnly): The provisioning state of the Map account resource.
 * **uniqueId**: string (ReadOnly): A unique identifier for the maps account
 
@@ -84,7 +84,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties

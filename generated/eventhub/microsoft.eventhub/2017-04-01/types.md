@@ -8,7 +8,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EHNamespaceProperties](#ehnamespaceproperties): Namespace properties supplied for create namespace operation.
-* **sku**: [Sku](#sku): SKU parameters supplied to the create namespace operation
+* **sku**: [Sku](#sku): Properties of sku resource
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.EventHub/namespaces' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -125,7 +125,7 @@
 
 ## CaptureDescription
 ### Properties
-* **destination**: [Destination](#destination): Capture storage details for capture description
+* **destination**: [Destination](#destination): Properties of Destination where capture will be stored. (Storage Account, Blob Names)
 * **enabled**: bool: A value that indicates whether capture description is enabled.
 * **encoding**: 'Avro' | 'AvroDeflate': Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version
 * **intervalInSeconds**: int: The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
@@ -162,7 +162,7 @@
 
 ## EventhubProperties
 ### Properties
-* **captureDescription**: [CaptureDescription](#capturedescription): Properties to configure capture description for eventhub
+* **captureDescription**: [CaptureDescription](#capturedescription): Properties of capture description
 * **createdAt**: string (ReadOnly): Exact time the Event Hub was created.
 * **messageRetentionInDays**: int: Number of days to retain the events for this Event Hub, value should be 1 to 7 days
 * **partitionCount**: int: Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
@@ -184,7 +184,7 @@
 ## NWRuleSetVirtualNetworkRules
 ### Properties
 * **ignoreMissingVnetServiceEndpoint**: bool: Value that indicates whether to ignore missing VNet Service Endpoint
-* **subnet**: [Subnet](#subnet): Properties supplied for Subnet
+* **subnet**: [Subnet](#subnet): Subnet properties
 
 ## Sku
 ### Properties

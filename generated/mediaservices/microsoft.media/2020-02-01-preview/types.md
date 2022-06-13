@@ -34,7 +34,7 @@
 * **Discriminator**: @odata.type
 
 ### Base Properties
-* **credentials**: [MediaGraphCredentials](#mediagraphcredentials): Credentials to present during authentication.
+* **credentials**: [MediaGraphCredentials](#mediagraphcredentials): Polymorphic credentials to present to the endpoint.
 * **url**: string (Required): Url for the endpoint.
 ### MediaGraphClearEndpoint
 #### Properties
@@ -43,8 +43,8 @@
 ### MediaGraphTlsEndpoint
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphTlsEndpoint' (Required): The discriminator for derived types.
-* **trustedCertificates**: [MediaGraphCertificateSource](#mediagraphcertificatesource): Base class for certificate sources.
-* **validationOptions**: [MediaGraphTlsValidationOptions](#mediagraphtlsvalidationoptions): Options for controlling the authentication of TLS endpoints.
+* **trustedCertificates**: [MediaGraphCertificateSource](#mediagraphcertificatesource): What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.
+* **validationOptions**: [MediaGraphTlsValidationOptions](#mediagraphtlsvalidationoptions): Validation options to use when authenticating a TLS connection. By default, strict validation is used.
 
 
 ## MediaGraphProperties
@@ -76,7 +76,7 @@
 ### MediaGraphRtspSource
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required): The discriminator for derived types.
-* **endpoint**: [MediaGraphEndpoint](#mediagraphendpoint) (Required): Base class for endpoints.
+* **endpoint**: [MediaGraphEndpoint](#mediagraphendpoint) (Required): RTSP endpoint of the stream being connected to.
 * **transport**: 'Http' | 'Tcp' | string (Required): Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
 
 

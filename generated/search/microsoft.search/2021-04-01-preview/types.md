@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Details about the search service identity. A null value indicates that the search service has no identity assigned.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SearchServiceProperties](#searchserviceproperties): Properties of the search service.
-* **sku**: [Sku](#sku): Defines the SKU of an Azure Cognitive Search Service, which determines price tier and capacity limits.
+* **sku**: [Sku](#sku): The SKU of the Search Service, which determines price tier and capacity limits. This property is required when creating a new Search Service.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Search/searchServices' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -28,7 +28,7 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): Describes the properties of an existing Shared Private Link Resource managed by the Azure Cognitive Search service.
+* **properties**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.
 * **type**: 'Microsoft.Search/searchServices/sharedPrivateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listAdminKeys (Microsoft.Search/searchServices@2021-04-01-preview)
@@ -53,7 +53,7 @@
 ## DataPlaneAuthOptions
 ### Properties
 * **aadOrApiKey**: [DataPlaneAadOrApiKeyAuthOption](#dataplaneaadorapikeyauthoption): Indicates that either the API key or an access token from Azure Active Directory can be used for authentication.
-* **apiKeyOnly**: any: Any object
+* **apiKeyOnly**: any: Indicates that only the API key needs to be used for authentication.
 
 ## EncryptionWithCmk
 ### Properties
@@ -65,7 +65,7 @@
 * **principalId**: string (ReadOnly): The principal ID of the system-assigned identity of the search service.
 * **tenantId**: string (ReadOnly): The tenant ID of the system-assigned identity of the search service.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string (Required): The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an identity created by the system and a set of user assigned identities. The type 'None' will remove all identities from the service.
-* **userAssignedIdentities**: [UserAssignedManagedIdentities](#userassignedmanagedidentities): The list of user identities associated with the search service. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **userAssignedIdentities**: [UserAssignedManagedIdentities](#userassignedmanagedidentities): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## IpRule
 ### Properties
@@ -110,10 +110,10 @@
 
 ## SearchServiceProperties
 ### Properties
-* **authOptions**: [DataPlaneAuthOptions](#dataplaneauthoptions): Defines the options for how the data plane API of a Search service authenticates requests. This cannot be set if 'disableLocalAuth' is set to true.
+* **authOptions**: [DataPlaneAuthOptions](#dataplaneauthoptions): Defines the options for how the data plane API of a search service authenticates requests. This cannot be set if 'disableLocalAuth' is set to true.
 * **disabledDataExfiltrationOptions**: 'All' | string[]: A list of data exfiltration scenarios that are explicitly disallowed for the search service. Currently, the only supported value is 'All' to disable all possible data export scenarios with more fine grained controls planned for the future.
 * **disableLocalAuth**: bool: When set to true, calls to the search service will not be permitted to utilize API keys for authentication. This cannot be set to true if 'dataPlaneAuthOptions' are defined.
-* **encryptionWithCmk**: [EncryptionWithCmk](#encryptionwithcmk): Describes a policy that determines how resources within the search service are to be encrypted with Customer Managed Keys.
+* **encryptionWithCmk**: [EncryptionWithCmk](#encryptionwithcmk): Specifies any policy regarding encryption of resources (such as indexes) using customer manager keys within a search service.
 * **eTag**: string (ReadOnly): A system generated property representing the service's etag that can be for optimistic concurrency control during updates.
 * **hostingMode**: 'default' | 'highDensity': Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.
 * **networkRuleSet**: [NetworkRuleSet](#networkruleset): Network specific rules that determine how the Azure Cognitive Search service may be reached.
@@ -131,7 +131,7 @@
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **name**: string (ReadOnly): The name of the resource
-* **properties**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): Describes the properties of an existing Shared Private Link Resource managed by the Azure Cognitive Search service.
+* **properties**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## SharedPrivateLinkResourceProperties

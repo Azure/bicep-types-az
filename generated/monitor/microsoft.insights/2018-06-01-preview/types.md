@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GuestDiagnosticSettings](#guestdiagnosticsettings) (Required): Virtual machine diagnostic settings
+* **properties**: [GuestDiagnosticSettings](#guestdiagnosticsettings) (Required): The diagnostic settings to be applied to azure resources.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'microsoft.insights/guestDiagnosticSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,7 +18,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GuestDiagnosticSettingsAssociation](#guestdiagnosticsettingsassociation) (Required): A guest diagnostic settings association.
+* **properties**: [GuestDiagnosticSettingsAssociation](#guestdiagnosticsettingsassociation) (Required): The diagnostics settings associations of the resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'microsoft.insights/guestDiagnosticSettingsAssociation' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -26,7 +26,7 @@
 ### Properties
 * **configuration**: [DataSourceConfiguration](#datasourceconfiguration) (Required)
 * **kind**: 'ETWProviders' | 'PerformanceCounter' | 'WindowsEventLogs' | string (Required): Datasource kind
-* **sinks**: [SinkConfiguration](#sinkconfiguration)[] (Required): Array of SinkConfiguration
+* **sinks**: [SinkConfiguration](#sinkconfiguration)[] (Required)
 
 ## DataSourceConfiguration
 ### Properties
@@ -42,7 +42,7 @@
 
 ## EtwProviderConfiguration
 ### Properties
-* **events**: [EtwEventConfiguration](#etweventconfiguration)[] (Required): Array of EtwEventConfiguration
+* **events**: [EtwEventConfiguration](#etweventconfiguration)[] (Required)
 * **id**: string (Required)
 
 ## EventLogConfiguration

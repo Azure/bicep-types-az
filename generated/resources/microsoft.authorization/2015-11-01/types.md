@@ -6,7 +6,7 @@
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PolicyAssignmentProperties](#policyassignmentproperties): Policy Assignment properties.
+* **properties**: [PolicyAssignmentProperties](#policyassignmentproperties): Gets or sets the policy assignment properties.
 * **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/policydefinitions@2015-11-01
@@ -15,7 +15,7 @@
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PolicyDefinitionProperties](#policydefinitionproperties): Policy definition properties.
+* **properties**: [PolicyDefinitionProperties](#policydefinitionproperties): Gets or sets the policy definition properties.
 * **type**: 'Microsoft.Authorization/policydefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## PolicyAssignmentProperties
@@ -28,5 +28,5 @@
 ### Properties
 * **description**: string: Gets or sets the policy definition description.
 * **displayName**: string: Gets or sets the policy definition display name.
-* **policyRule**: any: Any object
+* **policyRule**: any: The policy rule json.
 

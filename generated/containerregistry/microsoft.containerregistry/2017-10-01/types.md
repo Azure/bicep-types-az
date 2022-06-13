@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RegistryProperties](#registryproperties): The properties of a container registry.
-* **sku**: [Sku](#sku) (Required): The SKU of a container registry.
+* **properties**: [RegistryProperties](#registryproperties): The properties of the container registry.
+* **sku**: [Sku](#sku) (Required): The SKU of the container registry.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ReplicationProperties](#replicationproperties): The properties of a replication.
+* **properties**: [ReplicationProperties](#replicationproperties): The properties of the replication.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/replications' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -30,7 +30,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the webhook. This cannot be changed after the resource is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WebhookPropertiesCreateParameters](#webhookpropertiescreateparameters): The parameters for creating the properties of a webhook.
+* **properties**: [WebhookPropertiesCreateParameters](#webhookpropertiescreateparameters): The properties that the webhook will be created with.
 * **tags**: [WebhookCreateParametersTags](#webhookcreateparameterstags): The tags for the webhook.
 * **type**: 'Microsoft.ContainerRegistry/registries/webhooks' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -97,7 +97,7 @@
 
 ## IPRule
 ### Properties
-* **action**: 'Allow' | string: The action of virtual network rule.
+* **action**: 'Allow' | string: The action of IP ACL rule.
 * **value**: string (Required): Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
 
 ## NetworkRuleSet
@@ -123,13 +123,13 @@
 * **loginServer**: string (ReadOnly): The URL that can be used to log into the container registry.
 * **networkRuleSet**: [NetworkRuleSet](#networkruleset): The network rule set for a container registry.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the container registry at the time the operation was called.
-* **status**: [Status](#status) (ReadOnly): The status of an Azure resource at the time the operation was called.
-* **storageAccount**: [StorageAccountProperties](#storageaccountproperties): The properties of a storage account for a container registry. Only applicable to Classic SKU.
+* **status**: [Status](#status) (ReadOnly): The status of the container registry at the time the operation was called.
+* **storageAccount**: [StorageAccountProperties](#storageaccountproperties): The properties of the storage account for the container registry. Only applicable to Classic SKU.
 
 ## ReplicationProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the container registry at the time the operation was called.
-* **status**: [Status](#status) (ReadOnly): The status of an Azure resource at the time the operation was called.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the replication at the time the operation was called.
+* **status**: [Status](#status) (ReadOnly): The status of the replication at the time the operation was called.
 
 ## Request
 ### Properties
@@ -195,7 +195,7 @@
 ### Properties
 * **actions**: 'chart_delete' | 'chart_push' | 'delete' | 'push' | 'quarantine' | string[] (Required): The list of actions that trigger the webhook to post notifications.
 * **customHeaders**: [WebhookPropertiesCreateParametersCustomHeaders](#webhookpropertiescreateparameterscustomheaders) (WriteOnly): Custom headers that will be added to the webhook notifications.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the container registry at the time the operation was called.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the webhook at the time the operation was called.
 * **scope**: string: The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means all events.
 * **serviceUri**: string (Required, WriteOnly): The service URI for the webhook to post notifications.
 * **status**: 'disabled' | 'enabled' | string: The status of the webhook at the time the operation was called.

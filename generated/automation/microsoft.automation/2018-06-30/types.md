@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The Azure Region where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PythonPackageCreateProperties](#pythonpackagecreateproperties) (Required): The parameters supplied to the create or update module properties.
+* **properties**: [PythonPackageCreateProperties](#pythonpackagecreateproperties) (Required): Gets or sets the module create properties.
 * **tags**: [PythonPackageCreateParametersTags](#pythonpackagecreateparameterstags): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/python2Packages' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Gets or sets the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RunbookCreateOrUpdateProperties](#runbookcreateorupdateproperties) (Required): The parameters supplied to the create or update runbook properties.
+* **properties**: [RunbookCreateOrUpdateProperties](#runbookcreateorupdateproperties) (Required): Gets or sets runbook create or update properties.
 * **tags**: [RunbookCreateOrUpdateParametersTags](#runbookcreateorupdateparameterstags): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/runbooks' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -62,7 +62,7 @@
 
 ## ContentLink
 ### Properties
-* **contentHash**: [ContentHash](#contenthash): Definition of the runbook property type.
+* **contentHash**: [ContentHash](#contenthash): Gets or sets the hash.
 * **uri**: string: Gets or sets the uri of the runbook content.
 * **version**: string: Gets or sets the version of the content.
 
@@ -79,10 +79,10 @@
 ## PythonPackageCreateProperties
 ### Properties
 * **activityCount**: int (ReadOnly): Gets or sets the activity count of the module.
-* **contentLink**: [ContentLink](#contentlink) (Required): Definition of the content link.
+* **contentLink**: [ContentLink](#contentlink) (Required): Gets or sets the module content link.
 * **creationTime**: string (ReadOnly): Gets or sets the creation time.
 * **description**: string (ReadOnly): Gets or sets the description.
-* **error**: [ModuleErrorInfo](#moduleerrorinfo) (ReadOnly): Definition of the module error info type.
+* **error**: [ModuleErrorInfo](#moduleerrorinfo) (ReadOnly): Gets or sets the error info of the module.
 * **isComposite**: bool (ReadOnly): Gets or sets type of module, if its composite or not.
 * **isGlobal**: bool (ReadOnly): Gets or sets the isGlobal flag of the module.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
@@ -99,7 +99,7 @@
 ### Properties
 * **creationTime**: string (ReadOnly): Gets or sets the creation time.
 * **description**: string: Gets or sets the description of the runbook.
-* **draft**: [RunbookDraft](#runbookdraft)
+* **draft**: [RunbookDraft](#runbookdraft): Gets or sets the draft runbook properties.
 * **jobCount**: int (ReadOnly): Gets or sets the job count of the runbook.
 * **lastModifiedBy**: string (ReadOnly): Gets or sets the last modified by.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
@@ -109,14 +109,14 @@
 * **outputTypes**: string[] (ReadOnly): Gets or sets the runbook output types.
 * **parameters**: [RunbookPropertiesParameters](#runbookpropertiesparameters) (ReadOnly): Gets or sets the runbook parameters.
 * **provisioningState**: 'Succeeded' (ReadOnly): Gets or sets the provisioning state of the runbook.
-* **publishContentLink**: [ContentLink](#contentlink): Definition of the content link.
+* **publishContentLink**: [ContentLink](#contentlink): Gets or sets the published runbook content link.
 * **runbookType**: 'Graph' | 'GraphPowerShell' | 'GraphPowerShellWorkflow' | 'PowerShell' | 'PowerShellWorkflow' | 'Script' | string (Required): Gets or sets the type of the runbook.
 * **state**: 'Edit' | 'New' | 'Published' | string (ReadOnly): Gets or sets the state of the runbook.
 
 ## RunbookDraft
 ### Properties
 * **creationTime**: string: Gets or sets the creation time of the runbook draft.
-* **draftContentLink**: [ContentLink](#contentlink): Definition of the content link.
+* **draftContentLink**: [ContentLink](#contentlink): Gets or sets the draft runbook content link.
 * **inEdit**: bool: Gets or sets whether runbook is in edit mode.
 * **lastModifiedTime**: string: Gets or sets the last modified time of the runbook draft.
 * **outputTypes**: string[]: Gets or sets the runbook output types.

@@ -21,7 +21,7 @@
 ## Container
 ### Properties
 * **name**: string (Required): The user-provided name of the container instance.
-* **properties**: [ContainerProperties](#containerproperties) (Required): The container instance properties.
+* **properties**: [ContainerProperties](#containerproperties) (Required): The properties of the container instance.
 
 ## ContainerEvent
 ### Properties
@@ -35,7 +35,7 @@
 ### Properties
 * **containers**: [Container](#container)[] (Required): The containers within the container group.
 * **imageRegistryCredentials**: [ImageRegistryCredential](#imageregistrycredential)[]: The image registry credentials by which the container group is created from.
-* **ipAddress**: [IpAddress](#ipaddress): IP address for the container group.
+* **ipAddress**: [IpAddress](#ipaddress): The IP address type of the container group.
 * **osType**: 'Linux' | 'Windows' | string (Required): The operating system type required by the containers in the container group.
 * **provisioningState**: string (ReadOnly): The provisioning state of the container group. This only appears in the response.
 * **restartPolicy**: 'always' | string: Restart policy for all containers within the container group. Currently the only available option is `always`.
@@ -53,14 +53,14 @@
 * **image**: string (Required): The name of the image used to create the container instance.
 * **instanceView**: [ContainerPropertiesInstanceView](#containerpropertiesinstanceview) (ReadOnly): The instance view of the container instance. Only valid in response.
 * **ports**: [ContainerPort](#containerport)[]: The exposed ports on the container instance.
-* **resources**: [ResourceRequirements](#resourcerequirements) (Required): The resource requirements.
+* **resources**: [ResourceRequirements](#resourcerequirements) (Required): The resource requirements of the container instance.
 * **volumeMounts**: [VolumeMount](#volumemount)[]: The volume mounts available to the container instance.
 
 ## ContainerPropertiesInstanceView
 ### Properties
-* **currentState**: [ContainerState](#containerstate): The container instance state.
+* **currentState**: [ContainerState](#containerstate): Current container instance state.
 * **events**: [ContainerEvent](#containerevent)[]: The events of the container instance.
-* **previousState**: [ContainerState](#containerstate): The container instance state.
+* **previousState**: [ContainerState](#containerstate): Previous container instance state.
 * **restartCount**: int: The number of times that the container instance has been restarted.
 
 ## ContainerState
@@ -105,8 +105,8 @@
 
 ## ResourceRequirements
 ### Properties
-* **limits**: [ResourceLimits](#resourcelimits): The resource limits.
-* **requests**: [ResourceRequests](#resourcerequests) (Required): The resource requests.
+* **limits**: [ResourceLimits](#resourcelimits): The resource limits of this container instance.
+* **requests**: [ResourceRequests](#resourcerequests) (Required): The resource requests of this container instance.
 
 ## ResourceTags
 ### Properties
@@ -115,7 +115,7 @@
 
 ## Volume
 ### Properties
-* **azureFile**: [AzureFileVolume](#azurefilevolume) (Required): The properties of the Azure File volume. Azure File shares are mounted as volumes.
+* **azureFile**: [AzureFileVolume](#azurefilevolume) (Required): The name of the Azure File volume.
 * **name**: string (Required): The name of the volume.
 
 ## VolumeMount

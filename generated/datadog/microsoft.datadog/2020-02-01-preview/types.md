@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [DatadogAgreementProperties](#datadogagreementproperties): Terms properties.
+* **properties**: [DatadogAgreementProperties](#datadogagreementproperties): Represents the properties of the resource.
 * **type**: 'Microsoft.Datadog/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Datadog/monitors@2020-02-01-preview

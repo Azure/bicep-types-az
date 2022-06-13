@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkbookTemplateProperties](#workbooktemplateproperties): Properties that contain a workbook template.
+* **properties**: [WorkbookTemplateProperties](#workbooktemplateproperties): Metadata describing a workbook template for an Azure resource.
 * **tags**: [WorkbookTemplateResourceTags](#workbooktemplateresourcetags): Resource tags
 * **type**: 'microsoft.insights/workbooktemplates' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -22,7 +22,7 @@
 ## WorkbookTemplateLocalizedGallery
 ### Properties
 * **galleries**: [WorkbookTemplateGallery](#workbooktemplategallery)[]: Workbook galleries supported by the template.
-* **templateData**: any: Any object
+* **templateData**: any: Valid JSON object containing workbook template payload.
 
 ## WorkbookTemplateProperties
 ### Properties
@@ -30,7 +30,7 @@
 * **galleries**: [WorkbookTemplateGallery](#workbooktemplategallery)[] (Required): Workbook galleries supported by the template.
 * **localized**: [WorkbookTemplatePropertiesLocalized](#workbooktemplatepropertieslocalized): Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
 * **priority**: int: Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.
-* **templateData**: any (Required): Any object
+* **templateData**: any (Required): Valid JSON object containing workbook template payload.
 
 ## WorkbookTemplatePropertiesLocalized
 ### Properties

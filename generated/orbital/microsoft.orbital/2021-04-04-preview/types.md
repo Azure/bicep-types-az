@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ContactProfilesProperties](#contactprofilesproperties): List of Contact Profile Resource Properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ContactProfilesProperties](#contactprofilesproperties): Properties of the spacecraft resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Orbital/contactProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -21,8 +21,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SpacecraftsProperties](#spacecraftsproperties): List of Spacecraft Resource Properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [SpacecraftsProperties](#spacecraftsproperties): Spacecraft Properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Orbital/spacecrafts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -34,7 +34,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ContactsProperties](#contactsproperties): Properties of the Contact Resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Orbital/spacecrafts/contacts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listAvailableContacts (Microsoft.Orbital/spacecrafts@2021-04-04-preview)
@@ -46,8 +46,8 @@
 ## AvailableContacts
 ### Properties
 * **groundStationName**: string (ReadOnly): Name of Azure Ground Station.
-* **properties**: [ContactInstanceProperties](#contactinstanceproperties) (ReadOnly): Contact Instance Properties
-* **spacecraft**: [ResourceReference](#resourcereference) (ReadOnly): Resource Reference
+* **properties**: [ContactInstanceProperties](#contactinstanceproperties) (ReadOnly): Properties of Contact resource.
+* **spacecraft**: [ResourceReference](#resourcereference) (ReadOnly): The reference to the spacecraft resource.
 
 ## AvailableContactsListResult
 ### Properties
@@ -68,7 +68,7 @@
 
 ## ContactParameters
 ### Properties
-* **contactProfile**: [ResourceReference](#resourcereference) (Required, WriteOnly): Resource Reference
+* **contactProfile**: [ResourceReference](#resourcereference) (Required, WriteOnly): The reference to the contact profile resource.
 * **endTime**: string (Required, WriteOnly): End time of a contact.
 * **groundStationName**: string (Required, WriteOnly): Name of Azure Ground Station.
 * **startTime**: string (Required, WriteOnly): Start time of a contact.
@@ -101,7 +101,7 @@
 
 ## ContactsProperties
 ### Properties
-* **contactProfile**: [ResourceReference](#resourcereference) (Required): Resource Reference
+* **contactProfile**: [ResourceReference](#resourcereference) (Required): The reference to the contact profile resource.
 * **endAzimuthDegrees**: int (ReadOnly): Azimuth of the antenna at the end of the contact in decimal degrees.
 * **endElevationDegrees**: int (ReadOnly): Spacecraft elevation above the horizon at contact end.
 * **errorMessage**: string (ReadOnly): Any error message while scheduling a contact.
@@ -152,7 +152,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties

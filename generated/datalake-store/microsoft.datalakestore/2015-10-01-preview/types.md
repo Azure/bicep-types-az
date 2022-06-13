@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2015-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [EncryptionIdentity](#encryptionidentity)
+* **identity**: [EncryptionIdentity](#encryptionidentity): The Key vault encryption identity, if any.
 * **location**: string: the account regional location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DataLakeStoreAccountProperties](#datalakestoreaccountproperties): Data Lake Store account properties information
+* **properties**: [DataLakeStoreAccountProperties](#datalakestoreaccountproperties): the Data Lake Store account properties.
 * **tags**: [DataLakeStoreAccountTags](#datalakestoreaccounttags): the value of custom properties.
 * **type**: 'Microsoft.DataLakeStore/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,14 +19,14 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: the firewall rule's regional location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [FirewallRuleProperties](#firewallruleproperties): Data Lake Store firewall rule properties information
+* **properties**: [FirewallRuleProperties](#firewallruleproperties): the properties of the firewall rule.
 * **type**: 'Microsoft.DataLakeStore/accounts/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DataLakeStoreAccountProperties
 ### Properties
 * **creationTime**: string (ReadOnly): the account creation time.
 * **defaultGroup**: string: the default owner group for all new folders and files created in the Data Lake Store account.
-* **encryptionConfig**: [EncryptionConfig](#encryptionconfig)
+* **encryptionConfig**: [EncryptionConfig](#encryptionconfig): The Key vault encryption configuration.
 * **encryptionProvisioningState**: 'Creating' | 'Succeeded' (ReadOnly): The current state of encryption provisioning for this Data Lake store account.
 * **encryptionState**: 'Disabled' | 'Enabled': The current state of encryption for this Data Lake store account.
 * **endpoint**: string: the gateway host.
@@ -41,7 +41,7 @@
 
 ## EncryptionConfig
 ### Properties
-* **keyVaultMetaInfo**: [KeyVaultMetaInfo](#keyvaultmetainfo)
+* **keyVaultMetaInfo**: [KeyVaultMetaInfo](#keyvaultmetainfo): The Key vault information for connecting to user managed encryption keys.
 * **type**: 'ServiceManaged' | 'UserManaged': The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.
 
 ## EncryptionIdentity

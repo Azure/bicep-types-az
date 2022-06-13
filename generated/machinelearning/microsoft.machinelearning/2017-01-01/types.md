@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WebServiceProperties](#webserviceproperties) (Required): The set of properties specific to the Azure ML web service resource.
+* **properties**: [WebServiceProperties](#webserviceproperties) (Required): Contains the property payload that describes the web service.
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearning/webServices' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -15,7 +15,7 @@
 ### Properties
 * **id**: string: Asset's Id.
 * **inputPorts**: [AssetItemInputPorts](#assetiteminputports): Information about the asset's input ports.
-* **locationInfo**: [BlobLocation](#bloblocation) (Required): Describes the access location for a blob.
+* **locationInfo**: [BlobLocation](#bloblocation) (Required): Access information for the asset.
 * **metadata**: [AssetItemMetadata](#assetitemmetadata): If the asset is a custom module, this holds the module's metadata.
 * **name**: string (Required): Asset's friendly name.
 * **outputPorts**: [AssetItemOutputPorts](#assetitemoutputports): Information about the asset's output ports.
@@ -195,36 +195,36 @@
 ## WebServiceParameter
 ### Properties
 * **certificateThumbprint**: string: If the parameter value in 'value' field is encrypted, the thumbprint of the certificate should be put here.
-* **value**: any: Any object
+* **value**: any: The parameter value
 
 ## WebServiceProperties
 * **Discriminator**: packageType
 
 ### Base Properties
 * **assets**: [WebServicePropertiesAssets](#webservicepropertiesassets): Contains user defined properties describing web service assets. Properties are expressed as Key/Value pairs.
-* **commitmentPlan**: [CommitmentPlan](#commitmentplan): Information about the machine learning commitment plan associated with the web service.
+* **commitmentPlan**: [CommitmentPlan](#commitmentplan): Contains the commitment plan associated with this web service. Set at creation time. Once set, this value cannot be changed. Note: The commitment plan is not returned from calls to GET operations.
 * **createdOn**: string (ReadOnly): Read Only: The date and time when the web service was created.
 * **description**: string: The description of the web service.
-* **diagnostics**: [DiagnosticsConfiguration](#diagnosticsconfiguration): Diagnostics settings for an Azure ML web service.
-* **exampleRequest**: [ExampleRequest](#examplerequest): Sample input data for the service's input(s).
+* **diagnostics**: [DiagnosticsConfiguration](#diagnosticsconfiguration): Settings controlling the diagnostics traces collection for the web service.
+* **exampleRequest**: [ExampleRequest](#examplerequest): Defines sample input data for one or more of the service's inputs.
 * **exposeSampleData**: bool: When set to true, sample data is included in the web service's swagger definition. The default value is true.
-* **input**: [ServiceInputOutputSpecification](#serviceinputoutputspecification): The swagger 2.0 schema describing the service's inputs or outputs. See Swagger specification: http://swagger.io/specification/
-* **keys**: [WebServiceKeys](#webservicekeys): Access keys for the web service calls.
-* **machineLearningWorkspace**: [MachineLearningWorkspace](#machinelearningworkspace): Information about the machine learning workspace containing the experiment that is source for the web service.
+* **input**: [ServiceInputOutputSpecification](#serviceinputoutputspecification): Contains the Swagger 2.0 schema describing one or more of the web service's inputs. For more information, see the Swagger specification.
+* **keys**: [WebServiceKeys](#webservicekeys): Contains the web service provisioning keys. If you do not specify provisioning keys, the Azure Machine Learning system generates them for you. Note: The keys are not returned from calls to GET operations.
+* **machineLearningWorkspace**: [MachineLearningWorkspace](#machinelearningworkspace): Specifies the Machine Learning workspace containing the experiment that is source for the web service.
 * **modifiedOn**: string (ReadOnly): Read Only: The date and time when the web service was last modified.
-* **output**: [ServiceInputOutputSpecification](#serviceinputoutputspecification): The swagger 2.0 schema describing the service's inputs or outputs. See Swagger specification: http://swagger.io/specification/
+* **output**: [ServiceInputOutputSpecification](#serviceinputoutputspecification): Contains the Swagger 2.0 schema describing one or more of the web service's outputs. For more information, see the Swagger specification.
 * **parameters**: [WebServicePropertiesParameters](#webservicepropertiesparameters): The set of global parameters values defined for the web service, given as a global parameter name to default value map. If no default value is specified, the parameter is considered to be required.
 * **payloadsInBlobStorage**: bool: When set to true, indicates that the payload size is larger than 3 MB. Otherwise false. If the payload size exceed 3 MB, the payload is stored in a blob and the PayloadsLocation parameter contains the URI of the blob. Otherwise, this will be set to false and Assets, Input, Output, Package, Parameters, ExampleRequest are inline. The Payload sizes is determined by adding the size of the Assets, Input, Output, Package, Parameters, and the ExampleRequest.
-* **payloadsLocation**: [BlobLocation](#bloblocation): Describes the access location for a blob.
+* **payloadsLocation**: [BlobLocation](#bloblocation): The URI of the payload blob. This parameter contains a value only if the payloadsInBlobStorage parameter is set to true. Otherwise is set to null.
 * **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | 'Unknown' | string (ReadOnly): Read Only: The provision state of the web service. Valid values are Unknown, Provisioning, Succeeded, and Failed.
 * **readOnly**: bool: When set to true, indicates that the web service is read-only and can no longer be updated or patched, only removed. Default, is false. Note: Once set to true, you cannot change its value.
-* **realtimeConfiguration**: [RealtimeConfiguration](#realtimeconfiguration): Holds the available configuration options for an Azure ML web service endpoint.
-* **storageAccount**: [StorageAccount](#storageaccount): Access information for a storage account.
+* **realtimeConfiguration**: [RealtimeConfiguration](#realtimeconfiguration): Contains the configuration settings for the web service endpoint.
+* **storageAccount**: [StorageAccount](#storageaccount): Specifies the storage account that Azure Machine Learning uses to store information about the web service. Only the name of the storage account is returned from calls to GET operations. When updating the storage account information, you must ensure that all necessary assets are available in the new storage account or calls to your web service will fail.
 * **swaggerLocation**: string (ReadOnly): Read Only: Contains the URI of the swagger spec associated with this web service.
 * **title**: string: The title of the web service.
 ### WebServicePropertiesForGraph
 #### Properties
-* **package**: [GraphPackage](#graphpackage): Defines the graph of modules making up the machine learning solution.
+* **package**: [GraphPackage](#graphpackage): The definition of the graph package making up this web service.
 * **packageType**: 'Graph' (Required): Specifies the package type. Valid values are Graph (Specifies a web service published through the Machine Learning Studio) and Code (Specifies a web service published using code such as Python). Note: Code is not supported at this time.
 
 

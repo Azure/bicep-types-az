@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2021-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [IdentityProperties](#identityproperties): The properties of the managed service identities assigned to this resource.
+* **identity**: [IdentityProperties](#identityproperties): The managed service identities assigned to this resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MonitorProperties](#monitorproperties) (Required): Properties specific to the monitor resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [MonitorProperties](#monitorproperties) (Required): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System metadata for this resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Dynatrace.Observability/monitors' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,8 +19,8 @@
 * **apiVersion**: '2021-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DynatraceSingleSignOnProperties](#dynatracesinglesignonproperties) (Required): The details of a Dynatrace single sign-on.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [DynatraceSingleSignOnProperties](#dynatracesinglesignonproperties) (Required): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System metadata for this resource.
 * **type**: 'Dynatrace.Observability/monitors/singleSignOnConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Dynatrace.Observability/monitors/tagRules@2021-09-01-preview
@@ -29,8 +29,8 @@
 * **apiVersion**: '2021-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MonitoringTagRulesProperties](#monitoringtagrulesproperties) (Required): Properties for the Tag rules resource of a Monitor account.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [MonitoringTagRulesProperties](#monitoringtagrulesproperties) (Required): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System metadata for this resource.
 * **type**: 'Dynatrace.Observability/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listAppServices (Dynatrace.Observability/monitors@2021-09-01-preview)
@@ -87,8 +87,8 @@
 ### Properties
 * **aadDomains**: string[]: array of Aad(azure active directory) domains
 * **enterpriseAppId**: string: Version of the Dynatrace agent installed on the VM.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the monitoring resource
-* **singleSignOnState**: 'Disable' | 'Enable' | 'Existing' | 'Initial' | string: Various states of the SSO resource
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
+* **singleSignOnState**: 'Disable' | 'Enable' | 'Existing' | 'Initial' | string: State of Single Sign On
 * **singleSignOnUrl**: string: The login URL specific to this Dynatrace Environment
 
 ## EnvironmentInfo
@@ -108,7 +108,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The active directory identifier of this principal.
 * **tenantId**: string (ReadOnly): The Active Directory tenant id of the principal.
-* **type**: 'SystemAndUserAssigned' | 'SystemAssigned' | 'UserAssigned' | string (Required): The kind of managed identity assigned to this resource.
+* **type**: 'SystemAndUserAssigned' | 'SystemAssigned' | 'UserAssigned' | string (Required): The type of managed identity assigned to this resource.
 * **userAssignedIdentities**: [IdentityPropertiesUserAssignedIdentities](#identitypropertiesuserassignedidentities): The identities assigned to this resource by the user.
 
 ## IdentityPropertiesUserAssignedIdentities
@@ -137,9 +137,9 @@
 ### Properties
 * **filteringTags**: [FilteringTag](#filteringtag)[]: List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured.
 If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
-* **sendAadLogs**: 'Disabled' | 'Enabled' | string: Indicates whether AAD logs are being sent.
-* **sendActivityLogs**: 'Disabled' | 'Enabled' | string: Indicates whether activity logs are being sent.
-* **sendSubscriptionLogs**: 'Disabled' | 'Enabled' | string: Indicates whether subscription logs are being sent.
+* **sendAadLogs**: 'Disabled' | 'Enabled' | string: Flag specifying if AAD logs should be sent for the Monitor resource.
+* **sendActivityLogs**: 'Disabled' | 'Enabled' | string: Flag specifying if activity logs from Azure resources should be sent for the Monitor resource.
+* **sendSubscriptionLogs**: 'Disabled' | 'Enabled' | string: Flag specifying if subscription logs should be sent for the Monitor resource.
 
 ## MetricRules
 ### Properties
@@ -150,8 +150,8 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 * **id**: string (ReadOnly): The ARM id of the resource.
 * **reasonForLogsStatus**: string (ReadOnly): Reason for why the resource is sending logs (or why it is not sending).
 * **reasonForMetricsStatus**: string (ReadOnly): Reason for why the resource is sending metrics (or why it is not sending).
-* **sendingLogs**: 'Disabled' | 'Enabled' | string (ReadOnly): Indicates whether logs are being sent.
-* **sendingMetrics**: 'Disabled' | 'Enabled' | string (ReadOnly): Indicates whether metrics are being sent.
+* **sendingLogs**: 'Disabled' | 'Enabled' | string (ReadOnly): Flag indicating if resource is sending logs to Dynatrace.
+* **sendingMetrics**: 'Disabled' | 'Enabled' | string (ReadOnly): Flag indicating if resource is sending metrics to Dynatrace.
 
 ## MonitoredResourceListResponse
 ### Properties
@@ -162,25 +162,25 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 ### Properties
 * **logRules**: [LogRules](#logrules): Set of rules for sending logs for the Monitor resource.
 * **metricRules**: [MetricRules](#metricrules): Set of rules for sending metrics for the Monitor resource.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the monitoring resource
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 
 ## MonitorProperties
 ### Properties
 * **dynatraceEnvironmentProperties**: [DynatraceEnvironmentProperties](#dynatraceenvironmentproperties): Properties of the Dynatrace environment.
-* **liftrResourceCategory**: 'MonitorLogs' | 'Unknown' | string (ReadOnly): Liftr resource category
+* **liftrResourceCategory**: 'MonitorLogs' | 'Unknown' | string (ReadOnly): Liftr Resource category.
 * **liftrResourcePreference**: int (ReadOnly): The priority of the resource.
-* **marketplaceSubscriptionStatus**: 'Active' | 'Suspended' | string: Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
-* **monitoringStatus**: 'Disabled' | 'Enabled' | string: Flag specifying if the resource monitoring is enabled or disabled.
+* **marketplaceSubscriptionStatus**: 'Active' | 'Suspended' | string: Marketplace subscription status.
+* **monitoringStatus**: 'Disabled' | 'Enabled' | string: Status of the monitor.
 * **planData**: [PlanData](#plandata): Billing plan information.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the monitoring resource
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **userInfo**: [UserInfo](#userinfo): User info.
 
 ## PlanData
 ### Properties
-* **billingCycle**: string: Shorthand for setting length limit.
+* **billingCycle**: string: different billing cycles like MONTHLY/WEEKLY. this could be enum
 * **effectiveDate**: string: date when plan was applied
-* **planDetails**: string: Shorthand for setting length limit.
-* **usageType**: string: Shorthand for setting length limit.
+* **planDetails**: string: plan id as published by Dynatrace
+* **usageType**: string: different usage type like PAYG/COMMITTED. this could be enum
 
 ## SystemData
 ### Properties
@@ -189,7 +189,7 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -204,9 +204,9 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 ## UserInfo
 ### Properties
 * **country**: string: Country of the user
-* **emailAddress**: string: Reusable representation of an email address
-* **firstName**: string: Shorthand for setting length limit.
-* **lastName**: string: Shorthand for setting length limit.
+* **emailAddress**: string: Email of the user used by Dynatrace for contacting them if needed
+* **firstName**: string: First Name of the user
+* **lastName**: string: Last Name of the user
 * **phoneNumber**: string: Phone number of the user used by Dynatrace for contacting them if needed
 
 ## VMHostsListResponse

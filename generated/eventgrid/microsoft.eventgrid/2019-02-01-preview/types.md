@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DomainProperties](#domainproperties): Properties of the Domain
+* **properties**: [DomainProperties](#domainproperties): Properties of the domain
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -26,7 +26,7 @@
 * **apiVersion**: '2019-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the Event Subscription
+* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the event subscription
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/topics@2019-02-01-preview
@@ -36,7 +36,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TopicProperties](#topicproperties): Properties of the Topic
+* **properties**: [TopicProperties](#topicproperties): Properties of the topic
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -123,14 +123,14 @@
 ### StorageBlobDeadLetterDestination
 #### Properties
 * **endpointType**: 'StorageBlob' (Required): Type of the endpoint for the dead letter destination
-* **properties**: [StorageBlobDeadLetterDestinationProperties](#storageblobdeadletterdestinationproperties): Properties of the storage blob based dead letter destination.
+* **properties**: [StorageBlobDeadLetterDestinationProperties](#storageblobdeadletterdestinationproperties): The properties of the Storage Blob based deadletter destination
 
 
 ## DomainProperties
 ### Properties
 * **endpoint**: string (ReadOnly): Endpoint for the domain.
 * **inputSchema**: 'CloudEventV01Schema' | 'CustomEventSchema' | 'EventGridSchema' | string: This determines the format that Event Grid should expect for incoming events published to the domain.
-* **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping): By default, Event Grid expects events to be in the Event Grid event schema. Specifying an input schema mapping enables publishing to Event Grid using a custom input schema. Currently, the only supported type of InputSchemaMapping is 'JsonInputSchemaMapping'.
+* **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping): Information about the InputSchemaMapping which specified the info about mapping event payload.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the domain.
 
 ## DomainSharedAccessKeys
@@ -153,27 +153,27 @@
 ### EventHubEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'EventHub' (Required): Type of the endpoint for the event subscription destination
-* **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties): The properties for a event hub destination.
+* **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties): Event Hub Properties of the event subscription destination
 
 ### HybridConnectionEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'HybridConnection' (Required): Type of the endpoint for the event subscription destination
-* **properties**: [HybridConnectionEventSubscriptionDestinationProperties](#hybridconnectioneventsubscriptiondestinationproperties): The properties for a hybrid connection destination.
+* **properties**: [HybridConnectionEventSubscriptionDestinationProperties](#hybridconnectioneventsubscriptiondestinationproperties): Hybrid connection Properties of the event subscription destination
 
 ### ServiceBusQueueEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'ServiceBusQueue' (Required): Type of the endpoint for the event subscription destination
-* **properties**: [ServiceBusQueueEventSubscriptionDestinationProperties](#servicebusqueueeventsubscriptiondestinationproperties): The properties that represent the Service Bus destination of an event subscription.
+* **properties**: [ServiceBusQueueEventSubscriptionDestinationProperties](#servicebusqueueeventsubscriptiondestinationproperties): Service Bus Properties of the event subscription destination
 
 ### StorageQueueEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'StorageQueue' (Required): Type of the endpoint for the event subscription destination
-* **properties**: [StorageQueueEventSubscriptionDestinationProperties](#storagequeueeventsubscriptiondestinationproperties): The properties for a storage queue destination.
+* **properties**: [StorageQueueEventSubscriptionDestinationProperties](#storagequeueeventsubscriptiondestinationproperties): Storage Queue Properties of the event subscription destination
 
 ### WebHookEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'WebHook' (Required): Type of the endpoint for the event subscription destination
-* **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties): Information about the webhook destination properties for an event subscription.
+* **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties): WebHook Properties of the event subscription destination
 
 
 ## EventSubscriptionFilter
@@ -190,14 +190,14 @@ Wildcard characters are not supported in this path.
 
 ## EventSubscriptionProperties
 ### Properties
-* **deadLetterDestination**: [DeadLetterDestination](#deadletterdestination): Information about the dead letter destination for an event subscription. To configure a deadletter destination, do not directly instantiate an object of this class. Instead, instantiate an object of a derived class. Currently, StorageBlobDeadLetterDestination is the only class that derives from this class.
-* **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination): Information about the destination for an event subscription
+* **deadLetterDestination**: [DeadLetterDestination](#deadletterdestination): The DeadLetter destination of the event subscription.
+* **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination): Information about the destination where events have to be delivered for the event subscription.
 * **eventDeliverySchema**: 'CloudEventV01Schema' | 'CustomInputSchema' | 'EventGridSchema' | string: The event delivery schema for the event subscription.
 * **expirationTimeUtc**: string: Expiration time of the event subscription.
-* **filter**: [EventSubscriptionFilter](#eventsubscriptionfilter): Filter for the Event Subscription
+* **filter**: [EventSubscriptionFilter](#eventsubscriptionfilter): Information about the filter for the event subscription.
 * **labels**: string[]: List of user defined labels.
 * **provisioningState**: 'AwaitingManualAction' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the event subscription.
-* **retryPolicy**: [RetryPolicy](#retrypolicy): Information about the retry policy for an event subscription
+* **retryPolicy**: [RetryPolicy](#retrypolicy): The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
 * **topic**: string (ReadOnly): Name of the topic of the event subscription.
 
 ## HybridConnectionEventSubscriptionDestinationProperties
@@ -211,7 +211,7 @@ Wildcard characters are not supported in this path.
 ### JsonInputSchemaMapping
 #### Properties
 * **inputSchemaMappingType**: 'Json' (Required): Type of the custom mapping
-* **properties**: [JsonInputSchemaMappingProperties](#jsoninputschemamappingproperties): This can be used to map properties of a source schema (or default values, for certain supported properties) to properties of the EventGridEvent schema.
+* **properties**: [JsonInputSchemaMappingProperties](#jsoninputschemamappingproperties): JSON Properties of the input schema mapping
 
 
 ## JsonField
@@ -225,21 +225,12 @@ Wildcard characters are not supported in this path.
 
 ## JsonInputSchemaMappingProperties
 ### Properties
-* **dataVersion**: [JsonFieldWithDefault](#jsonfieldwithdefault): This is used to express the source of an input schema mapping for a single target field
-in the Event Grid Event schema. This is currently used in the mappings for the 'subject',
-'eventtype' and 'dataversion' properties. This represents a field in the input event schema
-along with a default value to be used, and at least one of these two properties should be provided.
-* **eventTime**: [JsonField](#jsonfield): This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.
-* **eventType**: [JsonFieldWithDefault](#jsonfieldwithdefault): This is used to express the source of an input schema mapping for a single target field
-in the Event Grid Event schema. This is currently used in the mappings for the 'subject',
-'eventtype' and 'dataversion' properties. This represents a field in the input event schema
-along with a default value to be used, and at least one of these two properties should be provided.
-* **id**: [JsonField](#jsonfield): This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.
-* **subject**: [JsonFieldWithDefault](#jsonfieldwithdefault): This is used to express the source of an input schema mapping for a single target field
-in the Event Grid Event schema. This is currently used in the mappings for the 'subject',
-'eventtype' and 'dataversion' properties. This represents a field in the input event schema
-along with a default value to be used, and at least one of these two properties should be provided.
-* **topic**: [JsonField](#jsonfield): This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.
+* **dataVersion**: [JsonFieldWithDefault](#jsonfieldwithdefault): The mapping information for the DataVersion property of the Event Grid Event.
+* **eventTime**: [JsonField](#jsonfield): The mapping information for the EventTime property of the Event Grid Event.
+* **eventType**: [JsonFieldWithDefault](#jsonfieldwithdefault): The mapping information for the EventType property of the Event Grid Event.
+* **id**: [JsonField](#jsonfield): The mapping information for the Id property of the Event Grid Event.
+* **subject**: [JsonFieldWithDefault](#jsonfieldwithdefault): The mapping information for the Subject property of the Event Grid Event.
+* **topic**: [JsonField](#jsonfield): The mapping information for the Topic property of the Event Grid Event.
 
 ## RetryPolicy
 ### Properties
@@ -263,8 +254,8 @@ along with a default value to be used, and at least one of these two properties 
 ## TopicProperties
 ### Properties
 * **endpoint**: string (ReadOnly): Endpoint for the topic.
-* **inputSchema**: 'CloudEventV01Schema' | 'CustomEventSchema' | 'EventGridSchema' | string: This determines the format that Event Grid should expect for incoming events published to the domain.
-* **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping): By default, Event Grid expects events to be in the Event Grid event schema. Specifying an input schema mapping enables publishing to Event Grid using a custom input schema. Currently, the only supported type of InputSchemaMapping is 'JsonInputSchemaMapping'.
+* **inputSchema**: 'CloudEventV01Schema' | 'CustomEventSchema' | 'EventGridSchema' | string: This determines the format that Event Grid should expect for incoming events published to the topic.
+* **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping): This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the topic.
 
 ## TopicSharedAccessKeys

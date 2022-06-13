@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **sku**: [SKU](#sku) (Required): The EngagementFabric SKU
+* **sku**: [SKU](#sku) (Required): The SKU of the resource
 * **tags**: [TrackedResourceTags](#trackedresourcetags): The tags of the resource
 * **type**: 'Microsoft.EngagementFabric/Accounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -17,7 +17,7 @@
 * **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ChannelProperties](#channelproperties): The EngagementFabric channel properties
+* **properties**: [ChannelProperties](#channelproperties): The properties of the channel
 * **type**: 'Microsoft.EngagementFabric/Accounts/Channels' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listChannelTypes (Microsoft.EngagementFabric/Accounts@2018-09-01-preview)
@@ -54,7 +54,7 @@
 ## KeyDescription
 ### Properties
 * **name**: string (ReadOnly): The name of the key
-* **rank**: 'PrimaryKey' | 'SecondaryKey' | string (ReadOnly): The rank of the EngagementFabric account key
+* **rank**: 'PrimaryKey' | 'SecondaryKey' | string (ReadOnly): The rank of the key
 * **value**: string (ReadOnly): The value of the key
 
 ## KeyDescriptionList

@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'AzureActivityLog' | 'ChangeTrackingCustomRegistry' | 'ChangeTrackingDefaultPath' | 'ChangeTrackingDefaultRegistry' | 'ChangeTrackingPath' | 'CustomLog' | 'CustomLogCollection' | 'GenericDataSource' | 'IISLogs' | 'LinuxPerformanceCollection' | 'LinuxPerformanceObject' | 'LinuxSyslog' | 'LinuxSyslogCollection' | 'WindowsEvent' | 'WindowsPerformanceCounter' | string (Required): The kind of the DataSource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: any (Required): Any object
+* **properties**: any (Required): The data source properties in raw json format, each kind of data source have it's own schema.
 * **tags**: [ProxyResourceTags](#proxyresourcetags): Resource tags
 * **type**: 'Microsoft.OperationalInsights/workspaces/dataSources' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -30,7 +30,7 @@
 * **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [LinkedServiceProperties](#linkedserviceproperties) (Required): Linked service properties.
+* **properties**: [LinkedServiceProperties](#linkedserviceproperties) (Required): The properties of the linked service.
 * **type**: 'Microsoft.OperationalInsights/workspaces/linkedServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## LinkedServiceProperties
@@ -57,6 +57,6 @@
 * **portalUrl**: string (ReadOnly): This is a legacy property and is not used anymore. Kept here for backward compatibility.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | string: The provisioning state of the workspace.
 * **retentionInDays**: int: The workspace data retention in days. -1 means Unlimited retention for the Unlimited Sku. 730 days is the maximum allowed for all other Skus.
-* **sku**: [Sku](#sku): The SKU (tier) of a workspace.
+* **sku**: [Sku](#sku): The SKU of the workspace.
 * **source**: string (ReadOnly): This is a read-only legacy property. It is always set to 'Azure' by the service. Kept here for backward compatibility.
 

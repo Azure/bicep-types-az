@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-05-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [JobCreateProperties](#jobcreateproperties) (Required)
+* **properties**: [JobCreateProperties](#jobcreateproperties) (Required): Gets or sets the list of job properties.
 * **type**: 'Microsoft.Automation/automationAccounts/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/softwareUpdateConfigurations@2017-05-15-preview
@@ -24,7 +24,7 @@
 * **apiVersion**: '2017-05-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SourceControlCreateOrUpdateProperties](#sourcecontrolcreateorupdateproperties) (Required): The properties of the create source control operation.
+* **properties**: [SourceControlCreateOrUpdateProperties](#sourcecontrolcreateorupdateproperties) (Required): The properties of the source control.
 * **type**: 'Microsoft.Automation/automationAccounts/sourceControls' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs@2017-05-15-preview
@@ -33,7 +33,7 @@
 * **apiVersion**: '2017-05-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SourceControlSyncJobCreateProperties](#sourcecontrolsyncjobcreateproperties) (Required): Definition of create source control sync job properties.
+* **properties**: [SourceControlSyncJobCreateProperties](#sourcecontrolsyncjobcreateproperties) (Required): The properties of the source control sync job.
 * **type**: 'Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AdvancedSchedule
@@ -51,7 +51,7 @@
 ### Properties
 * **locations**: string[]: List of locations to scope the query to.
 * **scope**: string[]: List of Subscription or Resource Group ARM Ids.
-* **tagSettings**: [TagSettingsProperties](#tagsettingsproperties): Tag filter information for the VM.
+* **tagSettings**: [TagSettingsProperties](#tagsettingsproperties): Tag settings for the VM.
 
 ## ErrorResponse
 ### Properties
@@ -67,8 +67,8 @@
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time of the job.
 * **lastStatusModifiedTime**: string (ReadOnly): Gets or sets the last status modified time of the job.
 * **parameters**: [JobCreatePropertiesParameters](#jobcreatepropertiesparameters): Gets or sets the parameters of the job.
-* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' | string (ReadOnly): The provisioning state of the resource.
-* **runbook**: [RunbookAssociationProperty](#runbookassociationproperty): The runbook property associated with the entity.
+* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' | string (ReadOnly): The current provisioning state of the job.
+* **runbook**: [RunbookAssociationProperty](#runbookassociationproperty): Gets or sets the runbook.
 * **runOn**: string: Gets or sets the runOn which specifies the group name where the job is to be executed.
 * **startedBy**: string (ReadOnly): Gets or sets the job started by.
 * **startTime**: string (ReadOnly): Gets or sets the start time of the job.
@@ -98,7 +98,7 @@
 
 ## ScheduleProperties
 ### Properties
-* **advancedSchedule**: [AdvancedSchedule](#advancedschedule): The properties of the create Advanced Schedule.
+* **advancedSchedule**: [AdvancedSchedule](#advancedschedule): Gets or sets the advanced schedule.
 * **creationTime**: string: Gets or sets the creation time.
 * **description**: string: Gets or sets the description.
 * **expiryTime**: string: Gets or sets the end time of the schedule.
@@ -117,18 +117,18 @@
 ### Properties
 * **createdBy**: string (ReadOnly): CreatedBy property, which only appears in the response.
 * **creationTime**: string (ReadOnly): Creation time of the resource, which only appears in the response.
-* **error**: [ErrorResponse](#errorresponse): Error response of an operation failure
+* **error**: [ErrorResponse](#errorresponse): Details of provisioning error
 * **lastModifiedBy**: string (ReadOnly): LastModifiedBy property, which only appears in the response.
 * **lastModifiedTime**: string (ReadOnly): Last time resource was modified, which only appears in the response.
 * **provisioningState**: string (ReadOnly): Provisioning state for the software update configuration, which only appears in the response.
-* **scheduleInfo**: [ScheduleProperties](#scheduleproperties) (Required): Definition of schedule parameters.
-* **tasks**: [SoftwareUpdateConfigurationTasks](#softwareupdateconfigurationtasks): Task properties of the software update configuration.
-* **updateConfiguration**: [UpdateConfiguration](#updateconfiguration) (Required): Update specific properties of the software update configuration.
+* **scheduleInfo**: [ScheduleProperties](#scheduleproperties) (Required): Schedule information for the Software update configuration
+* **tasks**: [SoftwareUpdateConfigurationTasks](#softwareupdateconfigurationtasks): Tasks information for the Software update configuration.
+* **updateConfiguration**: [UpdateConfiguration](#updateconfiguration) (Required): update specific properties for the Software update configuration
 
 ## SoftwareUpdateConfigurationTasks
 ### Properties
-* **postTask**: [TaskProperties](#taskproperties): Task properties of the software update configuration.
-* **preTask**: [TaskProperties](#taskproperties): Task properties of the software update configuration.
+* **postTask**: [TaskProperties](#taskproperties): Post task properties.
+* **preTask**: [TaskProperties](#taskproperties): Pre task properties.
 
 ## SourceControlCreateOrUpdateProperties
 ### Properties
@@ -140,8 +140,8 @@
 * **lastModifiedTime**: string (ReadOnly): The last modified time.
 * **publishRunbook**: bool: The auto publish of the source control. Default is true.
 * **repoUrl**: string: The repo url of the source control.
-* **securityToken**: [SourceControlSecurityTokenProperties](#sourcecontrolsecuritytokenproperties) (WriteOnly)
-* **sourceType**: 'GitHub' | 'VsoGit' | 'VsoTfvc' | string: The source type. Must be one of VsoGit, VsoTfvc, GitHub.
+* **securityToken**: [SourceControlSecurityTokenProperties](#sourcecontrolsecuritytokenproperties) (WriteOnly): The authorization token for the repo of the source control.
+* **sourceType**: 'GitHub' | 'VsoGit' | 'VsoTfvc' | string: The source type. Must be one of VsoGit, VsoTfvc, GitHub, case sensitive.
 
 ## SourceControlSecurityTokenProperties
 ### Properties
@@ -191,8 +191,8 @@
 * **duration**: string: Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
 * **linux**: [LinuxProperties](#linuxproperties): Linux specific update configuration.
 * **nonAzureComputerNames**: string[]: List of names of non-azure machines targeted by the software update configuration.
-* **operatingSystem**: 'Linux' | 'Windows' (Required): Target operating system for the software update configuration.
-* **targets**: [TargetProperties](#targetproperties): Group specific to the update configuration.
+* **operatingSystem**: 'Linux' | 'Windows' (Required): operating system of target machines
+* **targets**: [TargetProperties](#targetproperties): Group targets for the software update configuration.
 * **windows**: [WindowsProperties](#windowsproperties): Windows specific update configuration.
 
 ## WindowsProperties

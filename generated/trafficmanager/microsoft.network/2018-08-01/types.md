@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The Azure Region where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ProfileProperties](#profileproperties): Class representing the Traffic Manager profile properties.
+* **properties**: [ProfileProperties](#profileproperties): The properties of the Traffic Manager profile.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/trafficmanagerprofiles' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -17,7 +17,7 @@
 * **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EndpointProperties](#endpointproperties): Class representing a Traffic Manager endpoint properties.
+* **properties**: [EndpointProperties](#endpointproperties): The properties of the Traffic Manager endpoint.
 * **type**: 'Microsoft.Network/trafficmanagerprofiles/AzureEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/trafficmanagerprofiles/ExternalEndpoints@2018-08-01
@@ -26,7 +26,7 @@
 * **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EndpointProperties](#endpointproperties): Class representing a Traffic Manager endpoint properties.
+* **properties**: [EndpointProperties](#endpointproperties): The properties of the Traffic Manager endpoint.
 * **type**: 'Microsoft.Network/trafficmanagerprofiles/ExternalEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/trafficmanagerprofiles/NestedEndpoints@2018-08-01
@@ -35,7 +35,7 @@
 * **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EndpointProperties](#endpointproperties): Class representing a Traffic Manager endpoint properties.
+* **properties**: [EndpointProperties](#endpointproperties): The properties of the Traffic Manager endpoint.
 * **type**: 'Microsoft.Network/trafficmanagerprofiles/NestedEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/trafficManagerUserMetricsKeys@2018-08-01
@@ -44,7 +44,7 @@
 * **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [UserMetricsProperties](#usermetricsproperties) (ReadOnly): Class representing a Traffic Manager Real User Metrics key response.
+* **properties**: [UserMetricsProperties](#usermetricsproperties) (ReadOnly): The properties of the Traffic Manager User Metrics.
 * **type**: 'Microsoft.Network/trafficManagerUserMetricsKeys' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DnsConfig
@@ -57,7 +57,7 @@
 ### Properties
 * **id**: string: Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
 * **name**: string: The name of the resource
-* **properties**: [EndpointProperties](#endpointproperties): Class representing a Traffic Manager endpoint properties.
+* **properties**: [EndpointProperties](#endpointproperties): The properties of the Traffic Manager endpoint.
 * **type**: string: The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
 
 ## EndpointProperties
@@ -112,10 +112,10 @@
 ## ProfileProperties
 ### Properties
 * **allowedEndpointRecordTypes**: 'Any' | 'DomainName' | 'IPv4Address' | 'IPv6Address' | string[]: The list of allowed endpoint record types.
-* **dnsConfig**: [DnsConfig](#dnsconfig): Class containing DNS settings in a Traffic Manager profile.
+* **dnsConfig**: [DnsConfig](#dnsconfig): The DNS settings of the Traffic Manager profile.
 * **endpoints**: [Endpoint](#endpoint)[]: The list of endpoints in the Traffic Manager profile.
 * **maxReturn**: int: Maximum number of endpoints to be returned for MultiValue routing type.
-* **monitorConfig**: [MonitorConfig](#monitorconfig): Class containing endpoint monitoring settings in a Traffic Manager profile.
+* **monitorConfig**: [MonitorConfig](#monitorconfig): The endpoint monitoring settings of the Traffic Manager profile.
 * **profileStatus**: 'Disabled' | 'Enabled' | string: The status of the Traffic Manager profile.
 * **trafficRoutingMethod**: 'Geographic' | 'MultiValue' | 'Performance' | 'Priority' | 'Subnet' | 'Weighted' | string: The traffic routing method of the Traffic Manager profile.
 * **trafficViewEnrollmentStatus**: 'Disabled' | 'Enabled' | string: Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.

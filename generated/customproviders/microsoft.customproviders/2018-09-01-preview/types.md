@@ -22,7 +22,7 @@
 
 ## AssociationProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioning state of the resource provider.
+* **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioning state of the association.
 * **targetResourceId**: string: The REST resource instance of the target resource for this association.
 
 ## CustomRPActionRouteDefinition

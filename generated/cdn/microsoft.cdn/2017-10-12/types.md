@@ -72,7 +72,7 @@
 ### DeliveryRuleCacheExpirationAction
 #### Properties
 * **name**: 'CacheExpiration' (Required): The name of the action for the delivery rule.
-* **parameters**: [CacheExpirationActionParameters](#cacheexpirationactionparameters) (Required): Defines the parameters for the cache expiration action.
+* **parameters**: [CacheExpirationActionParameters](#cacheexpirationactionparameters) (Required): Defines the parameters for the action.
 
 
 ## DeliveryRuleCondition
@@ -82,12 +82,12 @@
 ### DeliveryRuleUrlFileExtensionCondition
 #### Properties
 * **name**: 'UrlFileExtension' (Required): The name of the condition for the delivery rule.
-* **parameters**: [UrlFileExtensionConditionParameters](#urlfileextensionconditionparameters) (Required): Defines the parameters for the URL file extension condition.
+* **parameters**: [UrlFileExtensionConditionParameters](#urlfileextensionconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleUrlPathCondition
 #### Properties
 * **name**: 'UrlPath' (Required): The name of the condition for the delivery rule.
-* **parameters**: [UrlPathConditionParameters](#urlpathconditionparameters) (Required): Defines the parameters for the URL path condition.
+* **parameters**: [UrlPathConditionParameters](#urlpathconditionparameters) (Required): Defines the parameters for the condition.
 
 
 ## EndpointProperties
@@ -99,7 +99,7 @@
 * **isCompressionEnabled**: bool: Indicates whether content compression is enabled on CDN. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB.
 * **isHttpAllowed**: bool: Indicates whether HTTP traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
 * **isHttpsAllowed**: bool: Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
-* **optimizationType**: 'DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming' | string: Specifies what scenario the customer wants this CDN endpoint to optimize, e.g. Download, Media services. With this information we can apply scenario driven optimization.
+* **optimizationType**: 'DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming' | string: Specifies what scenario the customer wants this CDN endpoint to optimize for, e.g. Download, Media services. With this information, CDN can apply scenario driven optimization.
 * **originHostHeader**: string: The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
 * **originPath**: string: A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
 * **origins**: [DeepCreatedOrigin](#deepcreatedorigin)[] (Required): The source of the content being delivered via CDN.

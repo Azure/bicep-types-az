@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AddressProperties](#addressproperties) (Required): Address Properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [AddressProperties](#addressproperties) (Required): Properties of an address.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Represents resource creation and update time
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.EdgeOrder/addresses' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,20 +19,20 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [OrderItemProperties](#orderitemproperties) (Required): Represents order item details.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [OrderItemProperties](#orderitemproperties) (Required): Order item properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Represents resource creation and update time
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.EdgeOrder/orderItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AddressDetails
 ### Properties
-* **forwardAddress**: [AddressProperties](#addressproperties) (Required): Address Properties
-* **returnAddress**: [AddressProperties](#addressproperties) (ReadOnly): Address Properties
+* **forwardAddress**: [AddressProperties](#addressproperties) (Required): Customer address and contact details. It should be address resource
+* **returnAddress**: [AddressProperties](#addressproperties) (ReadOnly): Return shipping address
 
 ## AddressProperties
 ### Properties
-* **contactDetails**: [ContactDetails](#contactdetails) (Required): Contact Details.
-* **shippingAddress**: [ShippingAddress](#shippingaddress): Shipping address where customer wishes to receive the device.
+* **contactDetails**: [ContactDetails](#contactdetails) (Required): Contact details for the address
+* **shippingAddress**: [ShippingAddress](#shippingaddress): Shipping details for the address
 
 ## ContactDetails
 ### Properties
@@ -59,7 +59,7 @@
 
 ## ErrorAdditionalInfo
 ### Properties
-* **info**: any (ReadOnly): Any object
+* **info**: any (ReadOnly): The additional info.
 * **type**: string (ReadOnly): The additional info type.
 
 ## ErrorDetail
@@ -97,42 +97,42 @@
 ### Properties
 * **cancellationReason**: string (ReadOnly): Cancellation reason.
 * **cancellationStatus**: 'Cancellable' | 'CancellableWithFee' | 'NotCancellable' | string (ReadOnly): Describes whether the order item is cancellable or not.
-* **currentStage**: [StageDetails](#stagedetails) (ReadOnly): Resource stage details.
+* **currentStage**: [StageDetails](#stagedetails) (ReadOnly): Current Order item Status
 * **deletionStatus**: 'Allowed' | 'NotAllowed' | string (ReadOnly): Describes whether the order item is deletable or not.
-* **error**: [ErrorDetail](#errordetail) (ReadOnly): The error detail.
-* **forwardShippingDetails**: [ForwardShippingDetails](#forwardshippingdetails) (ReadOnly): Forward shipment details.
-* **managementRpDetails**: [ResourceProviderDetails](#resourceproviderdetails) (ReadOnly): Management RP details
+* **error**: [ErrorDetail](#errordetail) (ReadOnly): Top level error for the job.
+* **forwardShippingDetails**: [ForwardShippingDetails](#forwardshippingdetails) (ReadOnly): Forward Package Shipping details
+* **managementRpDetails**: [ResourceProviderDetails](#resourceproviderdetails) (ReadOnly): Parent RP details - this returns only the first or default parent RP from the entire list
 * **managementRpDetailsList**: [ResourceProviderDetails](#resourceproviderdetails)[] (ReadOnly): List of parent RP details supported for configuration.
 * **notificationEmailList**: string[]: Additional notification email list
 * **orderItemStageHistory**: [StageDetails](#stagedetails)[] (ReadOnly): Order item status history
 * **orderItemType**: 'Purchase' | 'Rental' | string (Required): Order item type.
-* **preferences**: [Preferences](#preferences): Preferences related to the order
-* **productDetails**: [ProductDetails](#productdetails) (Required): Represents product details
+* **preferences**: [Preferences](#preferences): Customer notification Preferences
+* **productDetails**: [ProductDetails](#productdetails) (Required): Unique identifier for configuration.
 * **returnReason**: string (ReadOnly): Return reason.
 * **returnStatus**: 'NotReturnable' | 'Returnable' | 'ReturnableWithFee' | string (ReadOnly): Describes whether the order item is returnable or not.
-* **reverseShippingDetails**: [ReverseShippingDetails](#reverseshippingdetails) (ReadOnly): Reverse shipment details.
+* **reverseShippingDetails**: [ReverseShippingDetails](#reverseshippingdetails) (ReadOnly): Reverse Package Shipping details
 
 ## OrderItemProperties
 ### Properties
-* **addressDetails**: [AddressDetails](#addressdetails) (Required): Address details for an order item.
+* **addressDetails**: [AddressDetails](#addressdetails) (Required): Represents shipping and return address for order item
 * **orderId**: string (Required): Id of the order to which order item belongs to
-* **orderItemDetails**: [OrderItemDetails](#orderitemdetails) (Required): Order item details
+* **orderItemDetails**: [OrderItemDetails](#orderitemdetails) (Required): Represents order item details.
 * **startTime**: string (ReadOnly): Start time of order item
 
 ## Preferences
 ### Properties
-* **encryptionPreferences**: [EncryptionPreferences](#encryptionpreferences): Preferences related to the double encryption
-* **managementResourcePreferences**: [ManagementResourcePreferences](#managementresourcepreferences): Management resource preference to link device
+* **encryptionPreferences**: [EncryptionPreferences](#encryptionpreferences): Preferences related to the Encryption.
+* **managementResourcePreferences**: [ManagementResourcePreferences](#managementresourcepreferences): Preferences related to the Management resource.
 * **notificationPreferences**: [NotificationPreference](#notificationpreference)[]: Notification preferences.
-* **transportPreferences**: [TransportPreferences](#transportpreferences): Preferences related to the shipment logistics of the sku
+* **transportPreferences**: [TransportPreferences](#transportpreferences): Preferences related to the shipment logistics of the order.
 
 ## ProductDetails
 ### Properties
 * **count**: int (ReadOnly): Quantity of the product
 * **deviceDetails**: [DeviceDetails](#devicedetails)[] (ReadOnly): list of device details
-* **displayInfo**: [DisplayInfo](#displayinfo): Describes product display information
-* **hierarchyInformation**: [HierarchyInformation](#hierarchyinformation) (Required): Holds details about product hierarchy information
-* **productDoubleEncryptionStatus**: 'Disabled' | 'Enabled' | string (ReadOnly): Double encryption status as entered by the customer. It is compulsory to give this parameter if the 'Deny' or 'Disabled' policy is configured.
+* **displayInfo**: [DisplayInfo](#displayinfo): Display details of the product
+* **hierarchyInformation**: [HierarchyInformation](#hierarchyinformation) (Required): Hierarchy of the product which uniquely identifies the product
+* **productDoubleEncryptionStatus**: 'Disabled' | 'Enabled' | string (ReadOnly): Double encryption status of the configuration. Read-only field.
 
 ## ResourceProviderDetails
 ### Properties
@@ -173,7 +173,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties

@@ -4,11 +4,11 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **extendedLocation**: [ExtendedLocation](#extendedlocation): The complex type of the extended location.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DataControllerProperties](#datacontrollerproperties) (Required): The data controller properties.
+* **properties**: [DataControllerProperties](#datacontrollerproperties) (Required): The data controller's properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureArcData/dataControllers' (ReadOnly, DeployTimeConstant): The resource type
@@ -17,12 +17,12 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **extendedLocation**: [ExtendedLocation](#extendedlocation): The complex type of the extended location.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PostgresInstanceProperties](#postgresinstanceproperties) (Required): Postgres Instance properties.
-* **sku**: [PostgresInstanceSku](#postgresinstancesku): The resource model definition representing SKU for Azure Database for PostgresSQL - Azure Arc
+* **properties**: [PostgresInstanceProperties](#postgresinstanceproperties) (Required): null
+* **sku**: [PostgresInstanceSku](#postgresinstancesku): Resource sku.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureArcData/postgresInstances' (ReadOnly, DeployTimeConstant): The resource type
@@ -31,12 +31,12 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **extendedLocation**: [ExtendedLocation](#extendedlocation): The complex type of the extended location.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SqlManagedInstanceProperties](#sqlmanagedinstanceproperties) (Required): Properties of sqlManagedInstance.
-* **sku**: [SqlManagedInstanceSku](#sqlmanagedinstancesku): The resource model definition representing SKU for Azure Managed Instance - Azure Arc
+* **properties**: [SqlManagedInstanceProperties](#sqlmanagedinstanceproperties) (Required): null
+* **sku**: [SqlManagedInstanceSku](#sqlmanagedinstancesku): Resource sku.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureArcData/sqlManagedInstances' (ReadOnly, DeployTimeConstant): The resource type
@@ -48,7 +48,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SqlServerInstanceProperties](#sqlserverinstanceproperties): Properties of SqlServerInstance.
+* **properties**: [SqlServerInstanceProperties](#sqlserverinstanceproperties): null
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureArcData/sqlServerInstances' (ReadOnly, DeployTimeConstant): The resource type
@@ -61,7 +61,7 @@
 ## DataControllerProperties
 ### Properties
 * **basicLoginInformation**: [BasicLoginInformation](#basiclogininformation): Username and password for basic login authentication.
-* **k8sRaw**: any: Any object
+* **k8sRaw**: any: The raw kubernetes information
 * **lastUploadedDate**: string: Last uploaded date from Kubernetes cluster. Defaults to current date time
 * **logAnalyticsWorkspaceConfig**: [LogAnalyticsWorkspaceConfig](#loganalyticsworkspaceconfig): Log analytics workspace id and primary key
 * **onPremiseProperty**: [OnPremiseProperty](#onpremiseproperty): Properties from the Kubernetes data controller
@@ -72,7 +72,7 @@
 ## ExtendedLocation
 ### Properties
 * **name**: string: The name of the extended location.
-* **type**: 'CustomLocation' | string: The type of extendedLocation.
+* **type**: 'CustomLocation' | string: The type of the extended location.
 
 ## LogAnalyticsWorkspaceConfig
 ### Properties
@@ -88,9 +88,9 @@
 ## PostgresInstanceProperties
 ### Properties
 * **admin**: string: The instance admin
-* **basicLoginInformation**: [BasicLoginInformation](#basiclogininformation): Username and password for basic login authentication.
+* **basicLoginInformation**: [BasicLoginInformation](#basiclogininformation): Username and password for basic authentication.
 * **dataControllerId**: string: The data controller id
-* **k8sRaw**: any: Any object
+* **k8sRaw**: any: The raw kubernetes information
 * **lastUploadedDate**: string: Last uploaded date from Kubernetes cluster. Defaults to current date time
 * **provisioningState**: string (ReadOnly)
 
@@ -106,10 +106,10 @@
 ## SqlManagedInstanceProperties
 ### Properties
 * **admin**: string: The instance admin user
-* **basicLoginInformation**: [BasicLoginInformation](#basiclogininformation): Username and password for basic login authentication.
+* **basicLoginInformation**: [BasicLoginInformation](#basiclogininformation): Username and password for basic authentication.
 * **dataControllerId**: string: null
 * **endTime**: string: The instance end time
-* **k8sRaw**: any: Any object
+* **k8sRaw**: any: The raw kubernetes information
 * **lastUploadedDate**: string: Last uploaded date from Kubernetes cluster. Defaults to current date time
 * **provisioningState**: string (ReadOnly)
 * **startTime**: string: The instance start time
@@ -145,10 +145,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC)
 * **createdBy**: string: An identifier for the identity that created the resource
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: An identifier for the identity that last modified the resource
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource
 
 ## TrackedResourceTags
 ### Properties

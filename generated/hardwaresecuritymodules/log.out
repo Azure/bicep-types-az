@@ -72,4 +72,4 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hardwaresecuritymodules/resource-manager/Microsoft.HardwareSecurityModules/stable/2021-11-30/dedicatedhsm.json:787:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 2ms
-info    | Autorest completed in 4.54s. 4 files generated.
+info    | Autorest completed in 4.83s. 4 files generated.

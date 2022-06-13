@@ -18,14 +18,14 @@
 
 ## ExportDeliveryInfo
 ### Properties
-* **destination**: [ExportDeliveryDestination](#exportdeliverydestination) (Required): The destination information for the delivery of the export. To allow access to a storage account, you must register the account's subscription with the Microsoft.CostManagementExports resource provider. This is required once per subscription. When creating an export in the Azure portal, it is done automatically. However, API users need to register the subscription. For more information see https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-supported-services .
+* **destination**: [ExportDeliveryDestination](#exportdeliverydestination) (Required): Has destination for the export being delivered.
 
 ## ExportProperties
 ### Properties
-* **definition**: [QueryDefinition](#querydefinition) (Required): The definition of a query.
-* **deliveryInfo**: [ExportDeliveryInfo](#exportdeliveryinfo) (Required): The delivery information associated with a export.
+* **definition**: [QueryDefinition](#querydefinition) (Required): Has definition for the export.
+* **deliveryInfo**: [ExportDeliveryInfo](#exportdeliveryinfo) (Required): Has delivery information for the export.
 * **format**: 'Csv' | string: The format of the export being delivered.
-* **schedule**: [ExportSchedule](#exportschedule): The schedule associated with a export.
+* **schedule**: [ExportSchedule](#exportschedule): Has schedule information for the export.
 
 ## ExportRecurrencePeriod
 ### Properties
@@ -35,7 +35,7 @@
 ## ExportSchedule
 ### Properties
 * **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' | string (Required): The schedule recurrence.
-* **recurrencePeriod**: [ExportRecurrencePeriod](#exportrecurrenceperiod): The start and end date for recurrence schedule.
+* **recurrencePeriod**: [ExportRecurrencePeriod](#exportrecurrenceperiod): Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
 * **status**: 'Active' | 'Inactive' | string: The status of the schedule. Whether active or not. If inactive, the export's scheduled execution is paused.
 
 ## QueryAggregation
@@ -52,8 +52,8 @@
 ## QueryDataset
 ### Properties
 * **aggregation**: [QueryDatasetAggregation](#querydatasetaggregation): Dictionary of aggregation expression to use in the query. The key of each item in the dictionary is the alias for the aggregated column. Query can have up to 2 aggregation clauses.
-* **configuration**: [QueryDatasetConfiguration](#querydatasetconfiguration): The configuration of dataset in the query.
-* **filter**: [QueryFilter](#queryfilter): The filter expression to be used in the export.
+* **configuration**: [QueryDatasetConfiguration](#querydatasetconfiguration): Has configuration information for the data in the export. The configuration will be ignored if aggregation and grouping are provided.
+* **filter**: [QueryFilter](#queryfilter): The filter expression to use in the query. Please reference our Query API REST documentation for how to properly format the filter.
 * **granularity**: 'Daily' | 'Hourly' | string: The granularity of rows in the query.
 * **grouping**: [QueryGrouping](#querygrouping)[]: Array of group by expression to use in the query. Query can have up to 2 group by clauses.
 * **sorting**: [QuerySortingConfiguration](#querysortingconfiguration)[]: Array of sorting by columns in query.
@@ -69,23 +69,23 @@
 
 ## QueryDefinition
 ### Properties
-* **dataset**: [QueryDataset](#querydataset): The definition of data present in the query.
+* **dataset**: [QueryDataset](#querydataset): Has definition for data in this query.
 * **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'TheLastWeek' | 'TheLastYear' | 'WeekToDate' | 'YearToDate' | string (Required): The time frame for pulling data for the query. If custom, then a specific time period must be provided.
-* **timePeriod**: [QueryTimePeriod](#querytimeperiod): The start and end date for pulling data for the query.
+* **timePeriod**: [QueryTimePeriod](#querytimeperiod): Has time period for pulling data for the query.
 * **type**: 'Usage' | string (Required): The type of the query.
 
 ## QueryFilter
 ### Properties
 * **and**: [QueryFilter](#queryfilter)[]: The logical "AND" expression. Must have at least 2 items.
-* **dimension**: [QueryComparisonExpression](#querycomparisonexpression): The comparison expression to be used in the query.
-* **not**: [QueryFilter](#queryfilter): The filter expression to be used in the export.
+* **dimension**: [QueryComparisonExpression](#querycomparisonexpression): Has comparison expression for a dimension
+* **not**: [QueryFilter](#queryfilter): The logical "NOT" expression.
 * **or**: [QueryFilter](#queryfilter)[]: The logical "OR" expression. Must have at least 2 items.
-* **tag**: [QueryComparisonExpression](#querycomparisonexpression): The comparison expression to be used in the query.
+* **tag**: [QueryComparisonExpression](#querycomparisonexpression): Has comparison expression for a tag
 
 ## QueryGrouping
 ### Properties
 * **name**: string (Required): The name of the column to group.
-* **type**: 'Dimension' | 'Tag' | string (Required): The type of the column in the export.
+* **type**: 'Dimension' | 'Tag' | string (Required): Has type of the column to group.
 
 ## QuerySortingConfiguration
 ### Properties

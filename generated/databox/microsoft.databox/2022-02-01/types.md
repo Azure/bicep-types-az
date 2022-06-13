@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ResourceIdentity](#resourceidentity): Msi identity details of the resource
+* **identity**: [ResourceIdentity](#resourceidentity): Msi identity of the resource
 * **location**: string (Required): The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [JobProperties](#jobproperties) (Required): Job Properties
-* **sku**: [Sku](#sku) (Required): The Sku.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Provides details about resource creation and update time
+* **properties**: [JobProperties](#jobproperties) (Required): Properties of a job.
+* **sku**: [Sku](#sku) (Required): The sku type.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ResourceTags](#resourcetags): The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
 * **type**: 'Microsoft.DataBox/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -28,7 +28,7 @@
 
 ## AdditionalErrorInfo
 ### Properties
-* **info**: any: Any object
+* **info**: any: Additional information of the type of error.
 * **type**: string: Type of error (e.g. CustomerIntervention, PolicyViolation, SecurityViolation).
 
 ## ApplianceNetworkConfiguration
@@ -102,7 +102,7 @@
 ### Properties
 * **accountId**: string (ReadOnly): Id of the account where the data needs to be uploaded.
 * **bytesProcessed**: int (ReadOnly): To indicate bytes transferred.
-* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (ReadOnly): Type of the account.
+* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (ReadOnly): Data Account Type.
 * **directoriesErroredOut**: int (ReadOnly): To indicate directories errored out in the job.
 * **filesErroredOut**: int (ReadOnly): Number of files which could not be copied
 * **filesProcessed**: int (ReadOnly): Number of files processed
@@ -115,7 +115,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 * **storageAccountName**: string (ReadOnly): Name of the storage account. This will be empty for data account types other than storage account.
 * **totalBytesToProcess**: int (ReadOnly): Total amount of data to be processed by the job.
 * **totalFilesToProcess**: int (ReadOnly): Total files to process
-* **transferType**: 'ExportFromAzure' | 'ImportToAzure' (ReadOnly): Type of the transfer.
+* **transferType**: 'ExportFromAzure' | 'ImportToAzure' (ReadOnly): Transfer type of data
 
 ## DataAccountDetails
 * **Discriminator**: dataAccountType
@@ -139,7 +139,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 * **accountId**: string (ReadOnly): Id of the account where the data needs to be uploaded.
 * **bytesProcessed**: int (ReadOnly): To indicate bytes transferred.
 * **copyStatus**: 'Completed' | 'CompletedWithErrors' | 'DeviceFormatted' | 'DeviceMetadataModified' | 'DriveCorrupted' | 'DriveNotDetected' | 'DriveNotReceived' | 'Failed' | 'HardwareError' | 'InProgress' | 'MetadataFilesModifiedOrRemoved' | 'NotReturned' | 'NotStarted' | 'OtherServiceError' | 'OtherUserError' | 'StorageAccountNotAccessible' | 'UnsupportedData' | 'UnsupportedDrive' | string (ReadOnly): The Status of the copy
-* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (ReadOnly): Type of the account.
+* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (ReadOnly): Data Account Type.
 * **directoriesErroredOut**: int (ReadOnly): To indicate directories errored out in the job.
 * **filesErroredOut**: int (ReadOnly): Number of files which could not be copied
 * **filesProcessed**: int (ReadOnly): Number of files processed
@@ -153,7 +153,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 * **storageAccountName**: string (ReadOnly): Name of the storage account. This will be empty for data account types other than storage account.
 * **totalBytesToProcess**: int (ReadOnly): Total amount of data to be processed by the job.
 * **totalFilesToProcess**: int (ReadOnly): Total files to process
-* **transferType**: 'ExportFromAzure' | 'ImportToAzure' (ReadOnly): Type of the transfer.
+* **transferType**: 'ExportFromAzure' | 'ImportToAzure' (ReadOnly): Transfer type of data
 
 ## DataBoxCustomerDiskJobDetailsExportDiskDetailsCollection
 ### Properties
@@ -177,7 +177,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 * **accountId**: string (ReadOnly): Id of the account where the data needs to be uploaded.
 * **bytesProcessed**: int (ReadOnly): To indicate bytes transferred.
 * **copyStatus**: 'Completed' | 'CompletedWithErrors' | 'DeviceFormatted' | 'DeviceMetadataModified' | 'DriveCorrupted' | 'DriveNotDetected' | 'DriveNotReceived' | 'Failed' | 'HardwareError' | 'InProgress' | 'MetadataFilesModifiedOrRemoved' | 'NotReturned' | 'NotStarted' | 'OtherServiceError' | 'OtherUserError' | 'StorageAccountNotAccessible' | 'UnsupportedData' | 'UnsupportedDrive' | string (ReadOnly): The Status of the copy
-* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (ReadOnly): Type of the account.
+* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (ReadOnly): Data Account Type.
 * **directoriesErroredOut**: int (ReadOnly): To indicate directories errored out in the job.
 * **filesErroredOut**: int (ReadOnly): Number of files which could not be copied
 * **filesProcessed**: int (ReadOnly): Number of files processed
@@ -191,7 +191,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 * **storageAccountName**: string (ReadOnly): Name of the storage account. This will be empty for data account types other than storage account.
 * **totalBytesToProcess**: int (ReadOnly): Total amount of data to be processed by the job.
 * **totalFilesToProcess**: int (ReadOnly): Total files to process
-* **transferType**: 'ExportFromAzure' | 'ImportToAzure' (ReadOnly): Type of the transfer.
+* **transferType**: 'ExportFromAzure' | 'ImportToAzure' (ReadOnly): Transfer type of data
 
 ## DataBoxDiskJobDetailsDisksAndSizeDetails
 ### Properties
@@ -252,7 +252,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 ### Properties
 * **accountDetails**: [DataAccountDetails](#dataaccountdetails) (Required): Account details of the data to be transferred
 * **logCollectionLevel**: 'Error' | 'Verbose': Level of the logs to be collected.
-* **transferConfiguration**: [TransferConfiguration](#transferconfiguration) (Required): Configuration for defining the transfer of data.
+* **transferConfiguration**: [TransferConfiguration](#transferconfiguration) (Required): Configuration for the data transfer.
 
 ## DataImportDetails
 ### Properties
@@ -311,22 +311,22 @@ Until this is true, the TotalBytesToProcess may not be valid.
 ### Base Properties
 * **actions**: 'MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume'[] (ReadOnly): Available actions on the job.
 * **chainOfCustodySasKey**: string (ReadOnly): Shared access key to download the chain of custody logs
-* **contactDetails**: [ContactDetails](#contactdetails) (Required): Contact Details.
+* **contactDetails**: [ContactDetails](#contactdetails) (Required): Contact details for notification and shipping.
 * **copyLogDetails**: [CopyLogDetails](#copylogdetails)[] (ReadOnly): List of copy log details.
-* **datacenterAddress**: [DatacenterAddressResponse](#datacenteraddressresponse) (ReadOnly): Datacenter address for given storage location.
+* **datacenterAddress**: [DatacenterAddressResponse](#datacenteraddressresponse) (ReadOnly): Datacenter address to ship to, for the given sku and storage location.
 * **dataCenterCode**: 'AM2' | 'AMS06' | 'AMS20' | 'AUH20' | 'AdHoc' | 'BJB' | 'BJS20' | 'BL20' | 'BL7' | 'BN1' | 'BN7' | 'BOM01' | 'BY1' | 'BY2' | 'BY21' | 'BY24' | 'CBR20' | 'CH1' | 'CPQ02' | 'CPQ20' | 'CWL20' | 'CYS04' | 'DSM05' | 'DUB07' | 'FRA22' | 'HKG20' | 'Invalid' | 'JNB21' | 'JNB22' | 'LON24' | 'MAA01' | 'MEL23' | 'MNZ21' | 'MWH01' | 'ORK70' | 'OSA02' | 'OSA20' | 'OSA22' | 'PAR22' | 'PNQ01' | 'PUS20' | 'SEL20' | 'SEL21' | 'SG2' | 'SHA03' | 'SIN20' | 'SN5' | 'SN6' | 'SN8' | 'SSE90' | 'SVG20' | 'SYD03' | 'SYD23' | 'TYO01' | 'TYO22' | 'YQB20' | 'YTO20' | 'YTO21' | 'ZRH20' | string (ReadOnly): DataCenter code.
 * **dataExportDetails**: [DataExportDetails](#dataexportdetails)[]: Details of the data to be exported from azure.
 * **dataImportDetails**: [DataImportDetails](#dataimportdetails)[]: Details of the data to be imported into azure.
-* **deliveryPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly): package shipping details
-* **deviceErasureDetails**: [DeviceErasureDetails](#deviceerasuredetails) (ReadOnly): Device erasure details with erasure completion status and erasureordestructionlog sas key
+* **deliveryPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly): Delivery package shipping details.
+* **deviceErasureDetails**: [DeviceErasureDetails](#deviceerasuredetails) (ReadOnly): Holds device data erasure details
 * **expectedDataSizeInTeraBytes**: int: The expected size of the data, which needs to be transferred in this job, in terabytes.
 * **jobStages**: [JobStages](#jobstages)[] (ReadOnly): List of stages that run in the job.
-* **keyEncryptionKey**: [KeyEncryptionKey](#keyencryptionkey): Encryption key containing details about key to encrypt different keys.
-* **lastMitigationActionOnJob**: [LastMitigationActionOnJob](#lastmitigationactiononjob) (ReadOnly): Last Mitigation Action Performed On Job
-* **preferences**: [Preferences](#preferences): Preferences related to the order
-* **returnPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly): package shipping details
+* **keyEncryptionKey**: [KeyEncryptionKey](#keyencryptionkey): Details about which key encryption type is being used.
+* **lastMitigationActionOnJob**: [LastMitigationActionOnJob](#lastmitigationactiononjob) (ReadOnly): Last mitigation action performed on the job.
+* **preferences**: [Preferences](#preferences): Preferences for the order.
+* **returnPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly): Return package shipping details.
 * **reverseShipmentLabelSasKey**: string (ReadOnly): Shared access key to download the return shipment label
-* **shippingAddress**: [ShippingAddress](#shippingaddress): Shipping address where customer wishes to receive the device.
+* **shippingAddress**: [ShippingAddress](#shippingaddress): Shipping address of the customer.
 ### DataBoxJobDetails
 #### Properties
 * **copyProgress**: [CopyProgress](#copyprogress)[] (ReadOnly): Copy progress per storage account.
@@ -336,12 +336,12 @@ Until this is true, the TotalBytesToProcess may not be valid.
 ### DataBoxCustomerDiskJobDetails
 #### Properties
 * **copyProgress**: [DataBoxCustomerDiskCopyProgress](#databoxcustomerdiskcopyprogress)[] (ReadOnly): Copy progress per disk.
-* **deliverToDcPackageDetails**: [PackageCarrierInfo](#packagecarrierinfo) (ReadOnly): package carrier info
+* **deliverToDcPackageDetails**: [PackageCarrierInfo](#packagecarrierinfo) (ReadOnly): Delivery package shipping details.
 * **enableManifestBackup**: bool: Flag to indicate if disk manifest should be backed-up in the Storage Account.
 * **exportDiskDetailsCollection**: [DataBoxCustomerDiskJobDetailsExportDiskDetailsCollection](#databoxcustomerdiskjobdetailsexportdiskdetailscollection) (ReadOnly): Contains the map of disk serial number to the disk details for export jobs.
 * **importDiskDetailsCollection**: [DataBoxCustomerDiskJobDetailsImportDiskDetailsCollection](#databoxcustomerdiskjobdetailsimportdiskdetailscollection): Contains the map of disk serial number to the disk details for import jobs.
 * **jobDetailsType**: 'DataBoxCustomerDisk' (Required): Indicates the type of job details.
-* **returnToCustomerPackageDetails**: [PackageCarrierDetails](#packagecarrierdetails) (Required): Package carrier details.
+* **returnToCustomerPackageDetails**: [PackageCarrierDetails](#packagecarrierdetails) (Required): Return package shipping details.
 
 ### DataBoxDiskJobDetails
 #### Properties
@@ -362,10 +362,10 @@ Until this is true, the TotalBytesToProcess may not be valid.
 ## JobProperties
 ### Properties
 * **cancellationReason**: string (ReadOnly): Reason for cancellation.
-* **deliveryInfo**: [JobDeliveryInfo](#jobdeliveryinfo): Additional delivery info.
+* **deliveryInfo**: [JobDeliveryInfo](#jobdeliveryinfo): Delivery Info of Job.
 * **deliveryType**: 'NonScheduled' | 'Scheduled': Delivery type of Job.
-* **details**: [JobDetails](#jobdetails): Job details.
-* **error**: [CloudError](#clouderror) (ReadOnly): Provides additional information about an http error response.
+* **details**: [JobDetails](#jobdetails): Details of a job run. This field will only be sent for expand details filter.
+* **error**: [CloudError](#clouderror) (ReadOnly): Top level error for the job.
 * **isCancellable**: bool (ReadOnly): Describes whether the job is cancellable or not.
 * **isCancellableWithoutFee**: bool (ReadOnly): Flag to indicate cancellation of scheduled job.
 * **isDeletable**: bool (ReadOnly): Describes whether the job is deletable or not.
@@ -373,14 +373,14 @@ Until this is true, the TotalBytesToProcess may not be valid.
 * **isShippingAddressEditable**: bool (ReadOnly): Describes whether the shipping address is editable or not.
 * **startTime**: string (ReadOnly): Time at which the job was started in UTC ISO 8601 format.
 * **status**: 'Aborted' | 'AtAzureDC' | 'AwaitingShipmentDetails' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'Created' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'PreparingToShipFromAzureDC' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' | 'ShippedToAzureDC' | 'ShippedToCustomer' | string (ReadOnly): Name of the stage which is in progress.
-* **transferType**: 'ExportFromAzure' | 'ImportToAzure' (Required): Type of the transfer.
+* **transferType**: 'ExportFromAzure' | 'ImportToAzure' (Required): Type of the data transfer.
 
 ## JobSecrets
 * **Discriminator**: jobSecretsType
 
 ### Base Properties
-* **dcAccessSecurityCode**: [DcAccessSecurityCode](#dcaccesssecuritycode) (ReadOnly): Dc access security code
-* **error**: [CloudError](#clouderror) (ReadOnly): Provides additional information about an http error response.
+* **dcAccessSecurityCode**: [DcAccessSecurityCode](#dcaccesssecuritycode) (ReadOnly): Dc Access Security Code for Customer Managed Shipping
+* **error**: [CloudError](#clouderror) (ReadOnly): Error while fetching the secrets.
 ### DataboxJobSecrets
 #### Properties
 * **jobSecretsType**: 'DataBox' (Required): Used to indicate what type of job secrets object.
@@ -408,14 +408,14 @@ Until this is true, the TotalBytesToProcess may not be valid.
 ## JobStages
 ### Properties
 * **displayName**: string (ReadOnly): Display name of the job stage.
-* **jobStageDetails**: any (ReadOnly): Any object
-* **stageName**: 'Aborted' | 'AtAzureDC' | 'AwaitingShipmentDetails' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'Created' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'PreparingToShipFromAzureDC' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' | 'ShippedToAzureDC' | 'ShippedToCustomer' | string (ReadOnly): Name of the stage which is in progress.
-* **stageStatus**: 'Cancelled' | 'Cancelling' | 'CustomerActionPerformed' | 'CustomerActionPerformedForCleanUp' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' | 'SucceededWithErrors' | 'SucceededWithWarnings' | 'WaitingForCustomerAction' | 'WaitingForCustomerActionForCleanUp' | 'WaitingForCustomerActionForKek' (ReadOnly): Holds the device erasure completion status
+* **jobStageDetails**: any (ReadOnly): Job Stage Details
+* **stageName**: 'Aborted' | 'AtAzureDC' | 'AwaitingShipmentDetails' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'Created' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'PreparingToShipFromAzureDC' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' | 'ShippedToAzureDC' | 'ShippedToCustomer' | string (ReadOnly): Name of the job stage.
+* **stageStatus**: 'Cancelled' | 'Cancelling' | 'CustomerActionPerformed' | 'CustomerActionPerformedForCleanUp' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' | 'SucceededWithErrors' | 'SucceededWithWarnings' | 'WaitingForCustomerAction' | 'WaitingForCustomerActionForCleanUp' | 'WaitingForCustomerActionForKek' (ReadOnly): Status of the job stage.
 * **stageTime**: string (ReadOnly): Time for the job stage in UTC ISO 8601 format.
 
 ## KeyEncryptionKey
 ### Properties
-* **identityProperties**: [IdentityProperties](#identityproperties): Managed identity properties.
+* **identityProperties**: [IdentityProperties](#identityproperties): Managed identity properties used for key encryption.
 * **kekType**: 'CustomerManaged' | 'MicrosoftManaged' (Required): Type of encryption key used for key encryption.
 * **kekUrl**: string: Key encryption key. It is required in case of Customer managed KekType.
 * **kekVaultResourceID**: string: Kek vault resource id. It is required in case of Customer managed KekType.
@@ -423,7 +423,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 ## LastMitigationActionOnJob
 ### Properties
 * **actionDateTimeInUtc**: string: Action performed date time
-* **customerResolution**: 'MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume'
+* **customerResolution**: 'MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume': Resolution code provided by customer
 * **isPerformedByCustomer**: bool: Action performed by customer,
 possibility is that mitigation might happen by customer or service or by ops
 
@@ -454,7 +454,7 @@ possibility is that mitigation might happen by customer or service or by ops
 * **encryptionPreferences**: [EncryptionPreferences](#encryptionpreferences): Preferences related to the Encryption.
 * **preferredDataCenterRegion**: string[]: Preferred data center region.
 * **storageAccountAccessTierPreferences**: 'Archive'[]: Preferences related to the Access Tier of storage accounts.
-* **transportPreferences**: [TransportPreferences](#transportpreferences): Preferences related to the shipment logistics of the sku
+* **transportPreferences**: [TransportPreferences](#transportpreferences): Preferences related to the shipment logistics of the sku.
 
 ## ResourceIdentity
 ### Properties
@@ -498,7 +498,7 @@ possibility is that mitigation might happen by customer or service or by ops
 ### Properties
 * **displayName**: string: The display name of the sku.
 * **family**: string: The sku family.
-* **name**: 'DataBox' | 'DataBoxCustomerDisk' | 'DataBoxDisk' | 'DataBoxHeavy' (Required)
+* **name**: 'DataBox' | 'DataBoxCustomerDisk' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): The sku name.
 
 ## SystemData
 ### Properties
@@ -511,7 +511,7 @@ possibility is that mitigation might happen by customer or service or by ops
 
 ## TransferAllDetails
 ### Properties
-* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (Required): Type of the account.
+* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (Required): Type of the account of data
 * **transferAllBlobs**: bool: To indicate if all Azure blobs have to be transferred
 * **transferAllFiles**: bool: To indicate if all Azure Files have to be transferred
 
@@ -531,19 +531,19 @@ possibility is that mitigation might happen by customer or service or by ops
 
 ## TransferFilterDetails
 ### Properties
-* **azureFileFilterDetails**: [AzureFileFilterDetails](#azurefilefilterdetails): Filter details to transfer Azure files
-* **blobFilterDetails**: [BlobFilterDetails](#blobfilterdetails): Filter details to transfer Azure Blobs
-* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (Required): Type of the account.
+* **azureFileFilterDetails**: [AzureFileFilterDetails](#azurefilefilterdetails): Filter details to transfer Azure files.
+* **blobFilterDetails**: [BlobFilterDetails](#blobfilterdetails): Filter details to transfer blobs.
+* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (Required): Type of the account of data.
 * **filterFileDetails**: [FilterFileDetails](#filterfiledetails)[]: Details of the filter files to be used for data transfer.
 
 ## TransportPreferences
 ### Properties
-* **preferredShipmentType**: 'CustomerManaged' | 'MicrosoftManaged' (Required): Transport Shipment Type supported for given region.
+* **preferredShipmentType**: 'CustomerManaged' | 'MicrosoftManaged' (Required): Indicates Shipment Logistics type that the customer preferred.
 
 ## UnencryptedCredentials
 ### Properties
 * **jobName**: string (ReadOnly): Name of the job.
-* **jobSecrets**: [JobSecrets](#jobsecrets) (ReadOnly): The base class for the secrets
+* **jobSecrets**: [JobSecrets](#jobsecrets) (ReadOnly): Secrets related to this job.
 
 ## UnencryptedCredentialsList
 ### Properties

@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AlertRule](#alertrule) (Required): An alert rule.
+* **properties**: [AlertRule](#alertrule) (Required): The alert rule properties of the resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Insights/alertrules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,15 +18,15 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AutoscaleSetting](#autoscalesetting) (Required): A setting that contains all of the configuration for the automatic scaling of a resource.
+* **properties**: [AutoscaleSetting](#autoscalesetting) (Required): The autoscale setting of the resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Insights/autoscalesettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AlertRule
 ### Properties
-* **action**: [RuleAction](#ruleaction): The action that is performed when the alert rule becomes active, and when an alert condition is resolved.
+* **action**: [RuleAction](#ruleaction): action that is performed when the alert rule becomes active, and when an alert condition is resolved.
 * **actions**: [RuleAction](#ruleaction)[]: the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
-* **condition**: [RuleCondition](#rulecondition) (Required): The condition that results in the alert rule being activated.
+* **condition**: [RuleCondition](#rulecondition) (Required): the condition that results in the alert rule being activated.
 * **description**: string: the description of the alert rule that will be included in the alert email.
 * **isEnabled**: bool (Required): the flag that indicates whether the alert rule is enabled.
 * **lastUpdatedTime**: string (ReadOnly): Last time the rule was updated in ISO8601 format.
@@ -35,16 +35,16 @@
 
 ## AutoscaleNotification
 ### Properties
-* **email**: [EmailNotification](#emailnotification): Email notification of an autoscale event.
+* **email**: [EmailNotification](#emailnotification): the email notification.
 * **operation**: 'Scale' (Required): the operation associated with the notification and its value must be "scale"
 * **webhooks**: [WebhookNotification](#webhooknotification)[]: the collection of webhook notifications.
 
 ## AutoscaleProfile
 ### Properties
-* **capacity**: [ScaleCapacity](#scalecapacity) (Required): The number of instances that can be used during this profile.
-* **fixedDate**: [TimeWindow](#timewindow): A specific date-time for the profile.
+* **capacity**: [ScaleCapacity](#scalecapacity) (Required): the number of instances that can be used during this profile.
+* **fixedDate**: [TimeWindow](#timewindow): the specific date-time for the profile. This element is not used if the Recurrence element is used.
 * **name**: string (Required): the name of the profile.
-* **recurrence**: [Recurrence](#recurrence): The repeating times at which this profile begins. This element is not used if the FixedDate element is used.
+* **recurrence**: [Recurrence](#recurrence): the repeating times at which this profile begins. This element is not used if the FixedDate element is used.
 * **rules**: [ScaleRule](#scalerule)[] (Required): the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.
 
 ## AutoscaleSetting
@@ -64,7 +64,7 @@
 
 ## ManagementEventAggregationCondition
 ### Properties
-* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': Operators allowed in the rule condition.
+* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': the condition operator.
 * **threshold**: int: The threshold value that activates the alert.
 * **windowSize**: string: the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
 
@@ -86,7 +86,7 @@
 ## Recurrence
 ### Properties
 * **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'None' | 'Second' | 'Week' | 'Year' (Required): the recurrence frequency. How often the schedule profile should take effect. This value must be Week, meaning each week will have the same set of profiles. For example, to set a daily schedule, set **schedule** to every day of the week. The frequency property specifies that the schedule is repeated weekly.
-* **schedule**: [RecurrentSchedule](#recurrentschedule) (Required): The scheduling constraints for when the profile begins.
+* **schedule**: [RecurrentSchedule](#recurrentschedule) (Required): the scheduling constraints for when the profile begins.
 
 ## RecurrentSchedule
 ### Properties
@@ -126,7 +126,7 @@
 * **Discriminator**: odata.type
 
 ### Base Properties
-* **dataSource**: [RuleDataSource](#ruledatasource): The resource from which the rule collects its data.
+* **dataSource**: [RuleDataSource](#ruledatasource): the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
 ### LocationThresholdRuleCondition
 #### Properties
 * **failedLocationCount**: int (Required): the number of locations that must fail to activate the alert.
@@ -135,15 +135,15 @@
 
 ### ManagementEventRuleCondition
 #### Properties
-* **aggregation**: [ManagementEventAggregationCondition](#managementeventaggregationcondition): How the data that is collected should be combined over time.
+* **aggregation**: [ManagementEventAggregationCondition](#managementeventaggregationcondition): How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition' (Required): specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
 
 ### ThresholdRuleCondition
 #### Properties
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition' (Required): specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
-* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Operators allowed in the rule condition.
+* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): the operator used to compare the data and the threshold.
 * **threshold**: int (Required): the threshold value that activates the alert.
-* **timeAggregation**: 'Average' | 'Last' | 'Maximum' | 'Minimum' | 'Total': Aggregation operators allowed in a rule.
+* **timeAggregation**: 'Average' | 'Last' | 'Maximum' | 'Minimum' | 'Total': the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.
 * **windowSize**: string: the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
 
 
@@ -157,7 +157,7 @@
 * **resourceUri**: string: the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
 ### RuleManagementEventDataSource
 #### Properties
-* **claims**: [RuleManagementEventClaimsDataSource](#rulemanagementeventclaimsdatasource): The claims for a rule management event data source.
+* **claims**: [RuleManagementEventClaimsDataSource](#rulemanagementeventclaimsdatasource): the claims.
 * **eventName**: string: the event name.
 * **eventSource**: string: the event source.
 * **level**: string: the level.
@@ -198,8 +198,8 @@
 
 ## ScaleRule
 ### Properties
-* **metricTrigger**: [MetricTrigger](#metrictrigger) (Required): The trigger that results in a scaling action.
-* **scaleAction**: [ScaleAction](#scaleaction) (Required): The parameters for the scaling action.
+* **metricTrigger**: [MetricTrigger](#metrictrigger) (Required): the trigger that results in a scaling action.
+* **scaleAction**: [ScaleAction](#scaleaction) (Required): the parameters for the scaling action.
 
 ## ScaleRuleMetricDimension
 ### Properties

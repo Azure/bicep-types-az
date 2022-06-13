@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfluentAgreementProperties](#confluentagreementproperties): Terms properties for Marketplace and Confluent.
+* **properties**: [ConfluentAgreementProperties](#confluentagreementproperties): Represents the properties of the resource.
 * **type**: 'Microsoft.Confluent/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Confluent/organizations@2020-03-01
@@ -46,7 +46,7 @@
 * **planId**: string: Offer Plan Id
 * **planName**: string: Offer Plan Name
 * **publisherId**: string: Publisher Id
-* **status**: 'Failed' | 'InProgress' | 'PendingFulfillmentStart' | 'Reinstated' | 'Started' | 'Subscribed' | 'Succeeded' | 'Suspended' | 'Unsubscribed' | 'Updating' | string (ReadOnly): SaaS Offer Status for confluent RP
+* **status**: 'Failed' | 'InProgress' | 'PendingFulfillmentStart' | 'Reinstated' | 'Started' | 'Subscribed' | 'Succeeded' | 'Suspended' | 'Unsubscribed' | 'Updating' | string (ReadOnly): SaaS Offer Status
 * **termUnit**: string: Offer Plan Term unit
 
 ## OrganizationResourcePropertiesUserDetail

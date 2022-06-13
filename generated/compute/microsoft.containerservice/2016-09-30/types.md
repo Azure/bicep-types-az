@@ -25,12 +25,12 @@
 
 ## ContainerServiceDiagnosticsProfile
 ### Properties
-* **vmDiagnostics**: [ContainerServiceVMDiagnostics](#containerservicevmdiagnostics) (Required): Profile for diagnostics on the container service VMs.
+* **vmDiagnostics**: [ContainerServiceVMDiagnostics](#containerservicevmdiagnostics) (Required): Profile for the container service VM diagnostic agent.
 
 ## ContainerServiceLinuxProfile
 ### Properties
 * **adminUsername**: string (Required): The administrator username to use for Linux VMs.
-* **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required): SSH configuration for Linux-based VMs running on Azure.
+* **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required): The ssh key configuration for Linux VMs.
 
 ## ContainerServiceMasterProfile
 ### Properties
@@ -50,14 +50,14 @@
 ## ContainerServiceProperties
 ### Properties
 * **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[] (Required): Properties of the agent pool.
-* **customProfile**: [ContainerServiceCustomProfile](#containerservicecustomprofile): Properties to configure a custom container service cluster.
-* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile)
-* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile) (Required): Profile for Linux VMs in the container service cluster.
-* **masterProfile**: [ContainerServiceMasterProfile](#containerservicemasterprofile) (Required): Profile for the container service master.
-* **orchestratorProfile**: [ContainerServiceOrchestratorProfile](#containerserviceorchestratorprofile): Profile for the container service orchestrator.
+* **customProfile**: [ContainerServiceCustomProfile](#containerservicecustomprofile): Properties for custom clusters.
+* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile): Properties of the diagnostic agent.
+* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile) (Required): Properties of Linux VMs.
+* **masterProfile**: [ContainerServiceMasterProfile](#containerservicemasterprofile) (Required): Properties of master agents.
+* **orchestratorProfile**: [ContainerServiceOrchestratorProfile](#containerserviceorchestratorprofile): Properties of the orchestrator.
 * **provisioningState**: string (ReadOnly): the current deployment or provisioning state, which only appears in the response.
-* **servicePrincipalProfile**: [ContainerServicePrincipalProfile](#containerserviceprincipalprofile): Information about a service principal identity for the cluster to use for manipulating Azure APIs.
-* **windowsProfile**: [ContainerServiceWindowsProfile](#containerservicewindowsprofile): Profile for Windows VMs in the container service cluster.
+* **servicePrincipalProfile**: [ContainerServicePrincipalProfile](#containerserviceprincipalprofile): Properties for cluster service principals.
+* **windowsProfile**: [ContainerServiceWindowsProfile](#containerservicewindowsprofile): Properties of Windows VMs.
 
 ## ContainerServiceSshConfiguration
 ### Properties

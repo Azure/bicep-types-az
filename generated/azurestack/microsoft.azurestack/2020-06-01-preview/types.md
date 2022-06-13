@@ -57,18 +57,18 @@
 ### Properties
 * **galleryPackageBlobSasUri**: string (ReadOnly): The URI to the .azpkg file that provides information required for showing product in the gallery.
 * **productKind**: string (ReadOnly): Specifies the kind of the product (virtualMachine or virtualMachineExtension).
-* **properties**: [ExtendedProductProperties](#extendedproductproperties) (ReadOnly): Product information.
+* **properties**: [ExtendedProductProperties](#extendedproductproperties) (ReadOnly): Specifies additional properties describing the product.
 
 ## ExtendedProductProperties
 ### Properties
-* **computeRole**: 'IaaS' | 'None' | 'PaaS' | string (ReadOnly): Compute role type (IaaS or PaaS).
+* **computeRole**: 'IaaS' | 'None' | 'PaaS' | string (ReadOnly): Specifies kind of compute role included in the package.
 * **dataDiskImages**: [DataDiskImage](#datadiskimage)[] (ReadOnly): List of attached data disks.
 * **isSystemExtension**: bool (ReadOnly): Specifies if product is a Virtual Machine Extension.
-* **osDiskImage**: [OsDiskImage](#osdiskimage) (ReadOnly): OS disk image.
-* **sourceBlob**: [Uri](#uri) (ReadOnly): The URI.
+* **osDiskImage**: [OsDiskImage](#osdiskimage) (ReadOnly): OS disk image used by product.
+* **sourceBlob**: [Uri](#uri) (ReadOnly): Specifies a download location where content can be downloaded from.
 * **supportMultipleExtensions**: bool (ReadOnly): Indicates if specified product supports multiple extensions.
 * **version**: string (ReadOnly): Specifies product version.
-* **vmOsType**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): Operating system type (Windows or Linux).
+* **vmOsType**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): Specifies operating system used by the product.
 * **vmScaleSetEnabled**: bool (ReadOnly): Indicates if virtual machine Scale Set is enabled in the specified product.
 
 ## LinkedSubscriptionParameterProperties
@@ -83,7 +83,7 @@
 
 ## OsDiskImage
 ### Properties
-* **operatingSystem**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): Operating system type (Windows or Linux).
+* **operatingSystem**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): OS operating system type.
 * **sourceBlobSasUri**: string (ReadOnly): SAS key for source blob.
 
 ## RegistrationParameterProperties
@@ -100,7 +100,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties

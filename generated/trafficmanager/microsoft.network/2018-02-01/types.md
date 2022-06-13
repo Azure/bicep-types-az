@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The Azure Region where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ProfileProperties](#profileproperties): Class representing the Traffic Manager profile properties.
+* **properties**: [ProfileProperties](#profileproperties): The properties of the Traffic Manager profile.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/trafficmanagerprofiles' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -21,7 +21,7 @@
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
 * **name**: string (ReadOnly): The name of the resource
-* **properties**: [EndpointProperties](#endpointproperties): Class representing a Traffic Manager endpoint properties.
+* **properties**: [EndpointProperties](#endpointproperties): The properties of the Traffic Manager endpoint.
 * **type**: string (ReadOnly): The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
 
 ## EndpointProperties
@@ -48,9 +48,9 @@
 
 ## ProfileProperties
 ### Properties
-* **dnsConfig**: [DnsConfig](#dnsconfig): Class containing DNS settings in a Traffic Manager profile.
+* **dnsConfig**: [DnsConfig](#dnsconfig): The DNS settings of the Traffic Manager profile.
 * **endpoints**: [Endpoint](#endpoint)[]: The list of endpoints in the Traffic Manager profile.
-* **monitorConfig**: [MonitorConfig](#monitorconfig): Class containing endpoint monitoring settings in a Traffic Manager profile.
+* **monitorConfig**: [MonitorConfig](#monitorconfig): The endpoint monitoring settings of the Traffic Manager profile.
 * **profileStatus**: 'Disabled' | 'Enabled' | string: The status of the Traffic Manager profile.
 * **trafficRoutingMethod**: 'Geographic' | 'Performance' | 'Priority' | 'Weighted' | string: The traffic routing method of the Traffic Manager profile.
 * **trafficViewEnrollmentStatus**: 'Disabled' | 'Enabled' | string: Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.

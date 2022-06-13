@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfigDataProperties](#configdataproperties): Configuration data properties
+* **properties**: [ConfigDataProperties](#configdataproperties): The Advisor configuration data structure.
 * **type**: 'Microsoft.Advisor/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Advisor/recommendations/suppressions@2020-01-01

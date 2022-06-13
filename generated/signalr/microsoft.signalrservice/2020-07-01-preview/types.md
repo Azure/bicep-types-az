@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedIdentity](#managedidentity): A class represent managed identities used for request and response
+* **identity**: [ManagedIdentity](#managedidentity): The managed identity response
 * **kind**: 'RawWebSockets' | 'SignalR' | string: The kind of the service - e.g. "SignalR" for "Microsoft.SignalRService/SignalR"
 * **location**: string: The GEO location of the resource. e.g. West US | East US | North Central US | South Central US.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SignalRProperties](#signalrproperties): A class that describes the properties of the resource
-* **sku**: [ResourceSku](#resourcesku): The billing information of the resource.
+* **properties**: [SignalRProperties](#signalrproperties): Settings used to provision or configure the resource
+* **sku**: [ResourceSku](#resourcesku): The billing information of the resource.(e.g. Free, Standard)
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the service which is a list of key value pairs that describe the resource.
 * **type**: 'Microsoft.SignalRService/signalR' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,7 +20,7 @@
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Private endpoint connection properties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection
 * **type**: 'Microsoft.SignalRService/signalR/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.SignalRService/signalR@2020-07-01-preview)
@@ -66,14 +66,14 @@ It also appears in the aud (audience) claim of the issued token.
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource Id for the resource.
 * **name**: string (ReadOnly): The name of the resource.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Private endpoint connection properties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection
 * **type**: string (ReadOnly): The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Connection state of the private endpoint connection
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint associated with the private endpoint connection
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Connection state
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the private endpoint connection
 
 ## PrivateLinkServiceConnectionState
 ### Properties
@@ -129,7 +129,7 @@ Allowed values: Standard_S1, Free_F1
 ### Properties
 * **defaultAction**: 'Allow' | 'Deny' | string: Default action when no other rule matches
 * **privateEndpoints**: [PrivateEndpointACL](#privateendpointacl)[]: ACLs for requests from private endpoints
-* **publicNetwork**: [NetworkACL](#networkacl): Network ACL
+* **publicNetwork**: [NetworkACL](#networkacl): ACL for requests from public network
 
 ## SignalRProperties
 ### Properties
@@ -142,13 +142,13 @@ And the response will only include featureFlags that are explicitly set.
 When a featureFlag is not explicitly set, SignalR service will use its globally default value. 
 But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
 * **hostName**: string (ReadOnly): FQDN of the service instance.
-* **networkACLs**: [SignalRNetworkACLs](#signalrnetworkacls): Network ACLs for the resource
+* **networkACLs**: [SignalRNetworkACLs](#signalrnetworkacls): Network ACLs
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Private endpoint connections to the resource.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **publicPort**: int (ReadOnly): The publicly accessible port of the resource which is designed for browser/client side usage.
 * **serverPort**: int (ReadOnly): The publicly accessible port of the resource which is designed for customer server side usage.
-* **tls**: [SignalRTlsSettings](#signalrtlssettings): TLS settings for the resource
-* **upstream**: [ServerlessUpstreamSettings](#serverlessupstreamsettings): The settings for the Upstream when the service is in server-less mode.
+* **tls**: [SignalRTlsSettings](#signalrtlssettings): TLS settings.
+* **upstream**: [ServerlessUpstreamSettings](#serverlessupstreamsettings): Upstream settings when the Azure SignalR is in server-less mode.
 * **version**: string (ReadOnly): Version of the resource. Probably you need the same or higher version of client SDKs.
 
 ## SignalRTlsSettings
@@ -162,12 +162,12 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 
 ## UpstreamAuthSettings
 ### Properties
-* **managedIdentity**: [ManagedIdentitySettings](#managedidentitysettings): Managed identity settings for upstream.
+* **managedIdentity**: [ManagedIdentitySettings](#managedidentitysettings): Gets or sets the managed identity settings. It's required if the auth type is set to ManagedIdentity.
 * **type**: 'ManagedIdentity' | 'None' | string: Gets or sets the type of auth. None or ManagedIdentity is supported now.
 
 ## UpstreamTemplate
 ### Properties
-* **auth**: [UpstreamAuthSettings](#upstreamauthsettings): Upstream auth settings.
+* **auth**: [UpstreamAuthSettings](#upstreamauthsettings): Gets or sets the auth settings for an upstream. If not set, no auth is used for upstream messages.
 * **categoryPattern**: string: Gets or sets the matching pattern for category names. If not set, it matches any category.
 There are 3 kind of patterns supported:
     1. "*", it to matches any category name

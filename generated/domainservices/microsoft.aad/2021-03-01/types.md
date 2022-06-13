@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DomainServiceProperties](#domainserviceproperties): Properties of the Domain Service.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [DomainServiceProperties](#domainserviceproperties): Domain service properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.AAD/domainServices' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -23,9 +23,9 @@
 * **location**: string (ReadOnly): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **password**: string (WriteOnly): The account password
-* **properties**: [OuContainerProperties](#oucontainerproperties) (ReadOnly): Properties of the OuContainer.
+* **properties**: [OuContainerProperties](#oucontainerproperties) (ReadOnly): OuContainer properties
 * **spn**: string (WriteOnly): The account spn
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.Aad/domainServices/ouContainer' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -50,14 +50,14 @@
 * **deploymentId**: string (ReadOnly): Deployment Id
 * **domainConfigurationType**: string: Domain Configuration Type
 * **domainName**: string: The name of the Azure domain that the user would like to deploy Domain Services to.
-* **domainSecuritySettings**: [DomainSecuritySettings](#domainsecuritysettings): Domain Security Settings
+* **domainSecuritySettings**: [DomainSecuritySettings](#domainsecuritysettings): DomainSecurity Settings
 * **filteredSync**: 'Disabled' | 'Enabled' | string: Enabled or Disabled flag to turn on Group-based filtered sync
 * **ldapsSettings**: [LdapsSettings](#ldapssettings): Secure LDAP Settings
 * **migrationProperties**: [MigrationProperties](#migrationproperties) (ReadOnly): Migration Properties
-* **notificationSettings**: [NotificationSettings](#notificationsettings): Settings for notification
+* **notificationSettings**: [NotificationSettings](#notificationsettings): Notification Settings
 * **provisioningState**: string (ReadOnly): the current deployment or provisioning state, which only appears in the response.
 * **replicaSets**: [ReplicaSet](#replicaset)[]: List of ReplicaSets
-* **resourceForestSettings**: [ResourceForestSettings](#resourceforestsettings): Settings for Resource Forest
+* **resourceForestSettings**: [ResourceForestSettings](#resourceforestsettings): Resource Forest Settings
 * **sku**: string: Sku Type
 * **syncOwner**: string (ReadOnly): SyncOwner ReplicaSet Id
 * **tenantId**: string (ReadOnly): Azure Active Directory Tenant Id
@@ -160,5 +160,5 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 

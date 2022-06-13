@@ -24,8 +24,8 @@
 ## ReportConfigDataset
 ### Properties
 * **aggregation**: [ReportConfigDatasetAggregation](#reportconfigdatasetaggregation): Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
-* **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration): The configuration of dataset in the report.
-* **filter**: [ReportConfigFilter](#reportconfigfilter): The filter expression to be used in the report.
+* **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration): Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
+* **filter**: [ReportConfigFilter](#reportconfigfilter): Has filter expression to use in the report.
 * **granularity**: 'Daily' | string: The granularity of rows in the report.
 * **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[]: Array of group by expression to use in the report. Report can have up to 2 group by clauses.
 
@@ -40,9 +40,9 @@
 
 ## ReportConfigDefinition
 ### Properties
-* **dataset**: [ReportConfigDataset](#reportconfigdataset): The definition of data present in the report.
+* **dataset**: [ReportConfigDataset](#reportconfigdataset): Has definition for data in this report config.
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' | string (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided.
-* **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod): The start and end date for pulling data for the report.
+* **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod): Has time period for pulling data for the report.
 * **type**: 'Usage' | string (Required): The type of the report.
 
 ## ReportConfigDeliveryDestination
@@ -53,27 +53,27 @@
 
 ## ReportConfigDeliveryInfo
 ### Properties
-* **destination**: [ReportConfigDeliveryDestination](#reportconfigdeliverydestination) (Required): The destination information for the delivery of the report.
+* **destination**: [ReportConfigDeliveryDestination](#reportconfigdeliverydestination) (Required): Has destination for the report being delivered.
 
 ## ReportConfigFilter
 ### Properties
 * **and**: [ReportConfigFilter](#reportconfigfilter)[]: The logical "AND" expression. Must have at least 2 items.
-* **dimension**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): The comparison expression to be used in the report.
-* **not**: [ReportConfigFilter](#reportconfigfilter): The filter expression to be used in the report.
+* **dimension**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): Has comparison expression for a dimension
+* **not**: [ReportConfigFilter](#reportconfigfilter): The logical "NOT" expression.
 * **or**: [ReportConfigFilter](#reportconfigfilter)[]: The logical "OR" expression. Must have at least 2 items.
-* **tag**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): The comparison expression to be used in the report.
+* **tag**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): Has comparison expression for a tag
 
 ## ReportConfigGrouping
 ### Properties
-* **columnType**: 'Dimension' | 'Tag' | string (Required): The type of the column in the report.
+* **columnType**: 'Dimension' | 'Tag' | string (Required): Has type of the column to group.
 * **name**: string (Required): The name of the column to group.
 
 ## ReportConfigProperties
 ### Properties
-* **definition**: [ReportConfigDefinition](#reportconfigdefinition) (Required): The definition of a report config.
-* **deliveryInfo**: [ReportConfigDeliveryInfo](#reportconfigdeliveryinfo) (Required): The delivery information associated with a report config.
+* **definition**: [ReportConfigDefinition](#reportconfigdefinition) (Required): Has definition for the report config.
+* **deliveryInfo**: [ReportConfigDeliveryInfo](#reportconfigdeliveryinfo) (Required): Has delivery information for the report config.
 * **format**: 'Csv' | string: The format of the report being delivered.
-* **schedule**: [ReportConfigSchedule](#reportconfigschedule): The schedule associated with a report config.
+* **schedule**: [ReportConfigSchedule](#reportconfigschedule): Has schedule information for the report config.
 
 ## ReportConfigRecurrencePeriod
 ### Properties
@@ -83,7 +83,7 @@
 ## ReportConfigSchedule
 ### Properties
 * **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' | string (Required): The schedule recurrence.
-* **recurrencePeriod**: [ReportConfigRecurrencePeriod](#reportconfigrecurrenceperiod) (Required): The start and end date for recurrence schedule.
+* **recurrencePeriod**: [ReportConfigRecurrencePeriod](#reportconfigrecurrenceperiod) (Required): Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
 * **status**: 'Active' | 'Inactive' | string: The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.
 
 ## ReportConfigTimePeriod

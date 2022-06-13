@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ADCCatalogProperties](#adccatalogproperties): Properties of the data catalog.
+* **properties**: [ADCCatalogProperties](#adccatalogproperties): Azure Data Catalog properties.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.DataCatalog/catalogs' (ReadOnly, DeployTimeConstant): The resource type
 

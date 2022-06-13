@@ -69,7 +69,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [TimeSettingsProperties](#timesettingsproperties) (Required): The properties of time settings of a device.
+* **properties**: [TimeSettingsProperties](#timesettingsproperties) (Required): The properties of the time settings of a device.
 * **type**: 'Microsoft.StorSimple/managers/devices/timeSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorSimple/managers/devices/volumeContainers@2017-06-01
@@ -79,7 +79,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VolumeContainerProperties](#volumecontainerproperties) (Required): The properties of volume container.
+* **properties**: [VolumeContainerProperties](#volumecontainerproperties) (Required): The volume container properties.
 * **type**: 'Microsoft.StorSimple/managers/devices/volumeContainers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorSimple/managers/devices/volumeContainers/volumes@2017-06-01
@@ -89,7 +89,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VolumeProperties](#volumeproperties) (Required): The properties of volume.
+* **properties**: [VolumeProperties](#volumeproperties) (Required): The properties of the volume.
 * **type**: 'Microsoft.StorSimple/managers/devices/volumeContainers/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorSimple/managers/extendedInformation@2017-06-01
@@ -100,7 +100,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported
 * **name**: 'vaultExtendedInfo' (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagerExtendedInfoProperties](#managerextendedinfoproperties): The properties of the manager extended info.
+* **properties**: [ManagerExtendedInfoProperties](#managerextendedinfoproperties): The extended info properties.
 * **type**: 'Microsoft.StorSimple/managers/extendedInformation' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorSimple/managers/storageAccountCredentials@2017-06-01
@@ -144,7 +144,7 @@
 * **additionalRecipientEmailList**: string[]: The alert notification email list.
 * **alertNotificationCulture**: string: The alert notification culture.
 * **emailNotification**: 'Disabled' | 'Enabled' (Required): Indicates whether email notification enabled or not.
-* **notificationToServiceOwners**: 'Disabled' | 'Enabled': Indicates whether email notification enabled or not.
+* **notificationToServiceOwners**: 'Disabled' | 'Enabled': The value indicating whether alert notification enabled for admin or not.
 
 ## AsymmetricEncryptedSecret
 ### Properties
@@ -164,7 +164,7 @@
 
 ## BackupScheduleProperties
 ### Properties
-* **backupType**: 'CloudSnapshot' | 'LocalSnapshot' (Required): The type of the backup.
+* **backupType**: 'CloudSnapshot' | 'LocalSnapshot' (Required): The type of backup which needs to be taken.
 * **lastSuccessfulRun**: string (ReadOnly): The last successful backup run which was triggered for the schedule.
 * **retentionCount**: int (Required): The number of backups to be retained.
 * **scheduleRecurrence**: [ScheduleRecurrence](#schedulerecurrence) (Required): The schedule recurrence.
@@ -180,12 +180,12 @@
 ### Properties
 * **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[] (Required): The days of the week when this schedule is applicable.
 * **rateInMbps**: int (Required): The rate in Mbps.
-* **start**: [Time](#time) (Required): The time.
-* **stop**: [Time](#time) (Required): The time.
+* **start**: [Time](#time) (Required): The start time of the schedule.
+* **stop**: [Time](#time) (Required): The stop time of the schedule.
 
 ## FailoverSet
 ### Properties
-* **eligibilityResult**: [FailoverSetEligibilityResult](#failoverseteligibilityresult) (ReadOnly): The eligibility result of failover set, for failover.
+* **eligibilityResult**: [FailoverSetEligibilityResult](#failoverseteligibilityresult) (ReadOnly): The eligibility result of the failover set, for failover.
 * **volumeContainers**: [VolumeContainerFailoverMetadata](#volumecontainerfailovermetadata)[] (ReadOnly): The list of meta data of volume containers, which are part of the failover set.
 
 ## FailoverSetEligibilityResult
@@ -205,8 +205,8 @@
 * **deviceId**: string (ReadOnly): The path ID of the device.
 * **deviceLocation**: string (ReadOnly): The geo location (applicable only for cloud appliances) of the device.
 * **deviceSoftwareVersion**: string (ReadOnly): The software version of the device.
-* **deviceStatus**: 'Creating' | 'Deactivated' | 'Deactivating' | 'Deleted' | 'MaintenanceMode' | 'Offline' | 'Online' | 'Provisioning' | 'ReadyToSetup' | 'RequiresAttention' | 'Unknown' (ReadOnly): The current status of the device.
-* **eligibilityResult**: [TargetEligibilityResult](#targeteligibilityresult) (ReadOnly): The eligibility result of device, as a failover target device.
+* **deviceStatus**: 'Creating' | 'Deactivated' | 'Deactivating' | 'Deleted' | 'MaintenanceMode' | 'Offline' | 'Online' | 'Provisioning' | 'ReadyToSetup' | 'RequiresAttention' | 'Unknown' (ReadOnly): The status of the device.
+* **eligibilityResult**: [TargetEligibilityResult](#targeteligibilityresult) (ReadOnly): The eligibility result of the device, as a failover target device.
 * **friendlyDeviceSoftwareVersion**: string (ReadOnly): The friendly name for the current version of software on the device.
 * **modelDescription**: string (ReadOnly): The model number of the device.
 * **volumesCount**: int (ReadOnly): The count of volumes on the device.
@@ -238,9 +238,9 @@
 
 ## ManagerProperties
 ### Properties
-* **cisIntrinsicSettings**: [ManagerIntrinsicSettings](#managerintrinsicsettings): Intrinsic settings which refers to the type of the StorSimple Manager.
+* **cisIntrinsicSettings**: [ManagerIntrinsicSettings](#managerintrinsicsettings): Represents the type of StorSimple Manager.
 * **provisioningState**: string: Specifies the state of the resource as it is getting provisioned. Value of "Succeeded" means the Manager was successfully created.
-* **sku**: [ManagerSku](#managersku): The Sku.
+* **sku**: [ManagerSku](#managersku): Specifies the Sku.
 
 ## ManagerSku
 ### Properties
@@ -259,14 +259,14 @@
 
 ## StorageAccountCredentialProperties
 ### Properties
-* **accessKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
+* **accessKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): The details of the storage account password.
 * **endPoint**: string (Required): The storage endpoint
 * **sslStatus**: 'Disabled' | 'Enabled' (Required): Signifies whether SSL needs to be enabled or not.
 * **volumesCount**: int (ReadOnly): The count of volumes using this storage account credential.
 
 ## SymmetricEncryptedSecret
 ### Properties
-* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' (ReadOnly): The algorithm used to encrypt "Value".
+* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' (ReadOnly): The algorithm used to encrypt the "Value".
 * **value**: string (ReadOnly): The value of the secret itself. If the secret is in plaintext or null then EncryptionAlgorithm will be none.
 * **valueCertificateThumbprint**: string (ReadOnly): The thumbprint of the cert that was used to encrypt "Value".
 
@@ -302,8 +302,8 @@
 ### Properties
 * **bandWidthRateInMbps**: int: The bandwidth-rate set on the volume container.
 * **bandwidthSettingId**: string: The ID of the bandwidth setting associated with the volume container.
-* **encryptionKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
-* **encryptionStatus**: 'Disabled' | 'Enabled' (ReadOnly): The encryption status to indicates if encryption is enabled or not.
+* **encryptionKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): The key used to encrypt data in the volume container. It is required when property 'EncryptionStatus' is "Enabled".
+* **encryptionStatus**: 'Disabled' | 'Enabled' (ReadOnly): The flag to denote whether encryption is enabled or not.
 * **ownerShipStatus**: 'NotOwned' | 'Owned' (ReadOnly): The owner ship status of the volume container. Only when the status is "NotOwned", the delete operation on the volume container is permitted.
 * **storageAccountCredentialId**: string (Required): The path ID of storage account associated with the volume container.
 * **totalCloudStorageUsageInBytes**: int (ReadOnly): The total cloud storage for the volume container.
@@ -317,7 +317,7 @@
 * **backupPolicyId**: string (ReadOnly): The path ID of the backup policy using which the snapshot was taken.
 * **sizeInBytes**: int (ReadOnly): The size of the volume in bytes at the time the snapshot was taken.
 * **volumeId**: string (ReadOnly): The path ID of the volume.
-* **volumeType**: 'Archival' | 'LocallyPinned' | 'Tiered' (ReadOnly): The volume type.
+* **volumeType**: 'Archival' | 'LocallyPinned' | 'Tiered' (ReadOnly): The type of the volume.
 
 ## VolumeProperties
 ### Properties
@@ -329,5 +329,5 @@
 * **sizeInBytes**: int (Required): The size of the volume in bytes.
 * **volumeContainerId**: string (ReadOnly): The ID of the volume container, in which this volume is created.
 * **volumeStatus**: 'Offline' | 'Online' (Required): The volume status.
-* **volumeType**: 'Archival' | 'LocallyPinned' | 'Tiered' (Required): The volume type.
+* **volumeType**: 'Archival' | 'LocallyPinned' | 'Tiered' (Required): The type of the volume.
 

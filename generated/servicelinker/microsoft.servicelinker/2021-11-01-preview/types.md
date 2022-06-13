@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LinkerProperties](#linkerproperties) (Required): The properties of the linker.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system data.
 * **type**: 'Microsoft.ServiceLinker/linkers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listConfigurations (Microsoft.ServiceLinker/linkers@2021-11-01-preview)
@@ -52,12 +52,12 @@
 
 ## LinkerProperties
 ### Properties
-* **authInfo**: [AuthInfoBase](#authinfobase): The authentication info
+* **authInfo**: [AuthInfoBase](#authinfobase): The authentication type.
 * **clientType**: 'django' | 'dotnet' | 'go' | 'java' | 'nodejs' | 'none' | 'php' | 'python' | 'ruby' | 'springBoot' | string: The application client type
 * **provisioningState**: string (ReadOnly): The provisioning state.
 * **secretStore**: [SecretStore](#secretstore): An option to store secret value in secure place
 * **targetId**: string: The resource Id of target service.
-* **vNetSolution**: [VNetSolution](#vnetsolution): The VNet solution for linker
+* **vNetSolution**: [VNetSolution](#vnetsolution): The VNet solution.
 
 ## SecretStore
 ### Properties
@@ -79,7 +79,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## VNetSolution
 ### Properties

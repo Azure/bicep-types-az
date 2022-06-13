@@ -9,7 +9,7 @@
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CertificateProperties](#certificateproperties): Certificate resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -21,8 +21,8 @@
 * **kind**: string: Kind of resource.
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AppServiceEnvironment](#appserviceenvironment): Description of an App Service Environment.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [AppServiceEnvironment](#appserviceenvironment): Core resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/hostingEnvironments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -33,9 +33,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkerPool](#workerpool): Worker pool of an App Service Environment.
+* **properties**: [WorkerPool](#workerpool): Core resource properties
 * **sku**: [SkuDescription](#skudescription): Description of a SKU for a scalable resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/hostingEnvironments/multiRolePools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/hostingEnvironments/workerPools@2020-09-01
@@ -45,9 +45,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkerPool](#workerpool): Worker pool of an App Service Environment.
+* **properties**: [WorkerPool](#workerpool): Core resource properties
 * **sku**: [SkuDescription](#skudescription): Description of a SKU for a scalable resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/hostingEnvironments/workerPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/publishingUsers@2020-09-01
@@ -58,7 +58,7 @@
 * **kind**: string: Kind of resource.
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
 * **properties**: [UserProperties](#userproperties): User resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/publishingUsers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/serverfarms@2020-09-01
@@ -71,7 +71,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AppServicePlanProperties](#appserviceplanproperties): AppServicePlan resource specific properties
 * **sku**: [SkuDescription](#skudescription): Description of a SKU for a scalable resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/serverfarms' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -83,7 +83,7 @@
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VnetGatewayProperties](#vnetgatewayproperties): VnetGateway resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/serverfarms/virtualNetworkConnections/routes@2020-09-01
@@ -94,7 +94,7 @@
 * **kind**: string (WriteOnly): Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VnetRouteProperties](#vnetrouteproperties) (WriteOnly): VnetRoute resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/routes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites@2020-09-01
@@ -107,7 +107,7 @@
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SiteProperties](#siteproperties): Site resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/sites' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -123,7 +123,7 @@
 * **kind**: string: Kind of resource.
 * **name**: 'ftp' (Required, DeployTimeConstant): The resource name
 * **properties**: [CsmPublishingCredentialsPoliciesEntityProperties](#csmpublishingcredentialspoliciesentityproperties): CsmPublishingCredentialsPoliciesEntity resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/basicPublishingCredentialsPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/basicPublishingCredentialsPolicies
@@ -133,7 +133,7 @@
 * **kind**: string: Kind of resource.
 * **name**: 'scm' (Required, DeployTimeConstant): The resource name
 * **properties**: [CsmPublishingCredentialsPoliciesEntityProperties](#csmpublishingcredentialspoliciesentityproperties): CsmPublishingCredentialsPoliciesEntity resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/basicPublishingCredentialsPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 
@@ -149,7 +149,7 @@
 * **kind**: string: Kind of resource.
 * **name**: 'appsettings' (Required, DeployTimeConstant): The resource name
 * **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -159,7 +159,7 @@
 * **kind**: string: Kind of resource.
 * **name**: 'authsettings' (Required, DeployTimeConstant): The resource name
 * **properties**: [SiteAuthSettingsProperties](#siteauthsettingsproperties): SiteAuthSettings resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -169,7 +169,7 @@
 * **kind**: string: Kind of resource.
 * **name**: 'authsettingsV2' (Required, DeployTimeConstant): The resource name
 * **properties**: [SiteAuthSettingsV2Properties](#siteauthsettingsv2properties): SiteAuthSettingsV2 resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -179,7 +179,7 @@
 * **kind**: string: Kind of resource.
 * **name**: 'azurestorageaccounts' (Required, DeployTimeConstant): The resource name
 * **properties**: [AzureStoragePropertyDictionaryResourceProperties](#azurestoragepropertydictionaryresourceproperties): Azure storage accounts.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -189,7 +189,7 @@
 * **kind**: string: Kind of resource.
 * **name**: 'backup' (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupRequestProperties](#backuprequestproperties): BackupRequest resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -199,7 +199,7 @@
 * **kind**: string: Kind of resource.
 * **name**: 'connectionstrings' (Required, DeployTimeConstant): The resource name
 * **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties): Connection strings.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -209,7 +209,7 @@
 * **kind**: string: Kind of resource.
 * **name**: 'logs' (Required, DeployTimeConstant): The resource name
 * **properties**: [SiteLogsConfigProperties](#sitelogsconfigproperties): SiteLogsConfig resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -219,7 +219,7 @@
 * **kind**: string: Kind of resource.
 * **name**: 'metadata' (Required, DeployTimeConstant): The resource name
 * **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -229,7 +229,7 @@
 * **kind**: string: Kind of resource.
 * **name**: 'pushsettings' (Required, DeployTimeConstant): The resource name
 * **properties**: [PushSettingsProperties](#pushsettingsproperties): PushSettings resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -238,10 +238,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'slotConfigNames' (Required, DeployTimeConstant): The resource name
-* **properties**: [SlotConfigNames](#slotconfignames): Names for connection strings, application settings, and external Azure storage account configuration
-identifiers to be marked as sticky to the deployment slot and not moved during a swap operation.
-This is valid for all deployment slots in an app.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [SlotConfigNames](#slotconfignames): Core resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -250,8 +248,8 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteConfig](#siteconfig): Configuration of an App Service app.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [SiteConfig](#siteconfig): Core resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 
@@ -263,7 +261,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DeploymentProperties](#deploymentproperties): Deployment resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/domainOwnershipIdentifiers@2020-09-01
@@ -274,7 +272,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IdentifierProperties](#identifierproperties): Identifier resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/extensions@2020-09-01
@@ -284,8 +282,8 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/functions@2020-09-01
@@ -296,7 +294,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [FunctionEnvelopeProperties](#functionenvelopeproperties): FunctionEnvelope resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/functions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/functions/keys@2020-09-01
@@ -316,7 +314,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [HostNameBindingProperties](#hostnamebindingproperties): HostNameBinding resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/hostNameBindings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/hybridconnection@2020-09-01
@@ -327,7 +325,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RelayServiceConnectionEntityProperties](#relayserviceconnectionentityproperties): RelayServiceConnectionEntity resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/hybridconnection' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/hybridConnectionNamespaces/relays@2020-09-01
@@ -338,7 +336,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [HybridConnectionProperties](#hybridconnectionproperties): HybridConnection resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/hybridConnectionNamespaces/relays' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/instances/extensions@2020-09-01
@@ -348,8 +346,8 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/networkConfig@2020-09-01
@@ -360,7 +358,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: 'virtualNetwork' (Required, DeployTimeConstant): The resource name
 * **properties**: [SwiftVirtualNetworkProperties](#swiftvirtualnetworkproperties): SwiftVirtualNetwork resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/networkConfig' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/premieraddons@2020-09-01
@@ -372,7 +370,7 @@ This is valid for all deployment slots in an app.
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PremierAddOnProperties](#premieraddonproperties): PremierAddOn resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/sites/premieraddons' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -384,7 +382,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: 'virtualNetworks' (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateAccessProperties](#privateaccessproperties): PrivateAccess resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/privateAccess' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/privateEndpointConnections@2020-09-01
@@ -394,8 +392,8 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): A request to approve or reject a private endpoint connection
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): Core resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/publicCertificates@2020-09-01
@@ -406,7 +404,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PublicCertificateProperties](#publiccertificateproperties): PublicCertificate resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/publicCertificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/siteextensions@2020-09-01
@@ -417,7 +415,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string (ReadOnly): Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SiteExtensionInfoProperties](#siteextensioninfoproperties) (ReadOnly): SiteExtensionInfo resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/siteextensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots@2020-09-01
@@ -430,7 +428,7 @@ This is valid for all deployment slots in an app.
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SiteProperties](#siteproperties): Site resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/sites/slots' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -446,7 +444,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: 'appsettings' (Required, DeployTimeConstant): The resource name
 * **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -456,7 +454,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: 'authsettings' (Required, DeployTimeConstant): The resource name
 * **properties**: [SiteAuthSettingsProperties](#siteauthsettingsproperties): SiteAuthSettings resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -466,7 +464,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: 'authsettingsV2' (Required, DeployTimeConstant): The resource name
 * **properties**: [SiteAuthSettingsV2Properties](#siteauthsettingsv2properties): SiteAuthSettingsV2 resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -476,7 +474,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: 'azurestorageaccounts' (Required, DeployTimeConstant): The resource name
 * **properties**: [AzureStoragePropertyDictionaryResourceProperties](#azurestoragepropertydictionaryresourceproperties): Azure storage accounts.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -486,7 +484,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: 'backup' (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupRequestProperties](#backuprequestproperties): BackupRequest resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -496,7 +494,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: 'connectionstrings' (Required, DeployTimeConstant): The resource name
 * **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties): Connection strings.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -506,7 +504,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: 'logs' (Required, DeployTimeConstant): The resource name
 * **properties**: [SiteLogsConfigProperties](#sitelogsconfigproperties): SiteLogsConfig resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -516,7 +514,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: 'metadata' (Required, DeployTimeConstant): The resource name
 * **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -526,7 +524,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: 'pushsettings' (Required, DeployTimeConstant): The resource name
 * **properties**: [PushSettingsProperties](#pushsettingsproperties): PushSettings resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -535,8 +533,8 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteConfig](#siteconfig): Configuration of an App Service app.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [SiteConfig](#siteconfig): Core resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 
@@ -548,7 +546,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DeploymentProperties](#deploymentproperties): Deployment resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/domainOwnershipIdentifiers@2020-09-01
@@ -559,7 +557,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IdentifierProperties](#identifierproperties): Identifier resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/extensions@2020-09-01
@@ -569,8 +567,8 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/functions@2020-09-01
@@ -581,7 +579,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [FunctionEnvelopeProperties](#functionenvelopeproperties): FunctionEnvelope resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/functions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/functions/keys@2020-09-01
@@ -601,7 +599,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [HostNameBindingProperties](#hostnamebindingproperties): HostNameBinding resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/hostNameBindings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/hybridconnection@2020-09-01
@@ -612,7 +610,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RelayServiceConnectionEntityProperties](#relayserviceconnectionentityproperties): RelayServiceConnectionEntity resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/hybridconnection' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/hybridConnectionNamespaces/relays@2020-09-01
@@ -623,7 +621,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [HybridConnectionProperties](#hybridconnectionproperties): HybridConnection resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/hybridConnectionNamespaces/relays' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/instances/extensions@2020-09-01
@@ -633,8 +631,8 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/networkConfig@2020-09-01
@@ -645,7 +643,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: 'virtualNetwork' (Required, DeployTimeConstant): The resource name
 * **properties**: [SwiftVirtualNetworkProperties](#swiftvirtualnetworkproperties): SwiftVirtualNetwork resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/networkConfig' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/premieraddons@2020-09-01
@@ -657,7 +655,7 @@ This is valid for all deployment slots in an app.
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PremierAddOnProperties](#premieraddonproperties): PremierAddOn resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/sites/slots/premieraddons' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -669,7 +667,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: 'virtualNetworks' (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateAccessProperties](#privateaccessproperties): PrivateAccess resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/privateAccess' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/publicCertificates@2020-09-01
@@ -680,7 +678,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PublicCertificateProperties](#publiccertificateproperties): PublicCertificate resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/publicCertificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/siteextensions@2020-09-01
@@ -691,7 +689,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string (ReadOnly): Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SiteExtensionInfoProperties](#siteextensioninfoproperties) (ReadOnly): SiteExtensionInfo resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/siteextensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/sourcecontrols@2020-09-01
@@ -702,7 +700,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
 * **properties**: [SiteSourceControlProperties](#sitesourcecontrolproperties): SiteSourceControl resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/virtualNetworkConnections@2020-09-01
@@ -713,7 +711,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VnetInfoProperties](#vnetinfoproperties): VnetInfo resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/virtualNetworkConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/virtualNetworkConnections/gateways@2020-09-01
@@ -724,7 +722,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VnetGatewayProperties](#vnetgatewayproperties): VnetGateway resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/sourcecontrols@2020-09-01
@@ -735,7 +733,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
 * **properties**: [SiteSourceControlProperties](#sitesourcecontrolproperties): SiteSourceControl resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/virtualNetworkConnections@2020-09-01
@@ -746,7 +744,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VnetInfoProperties](#vnetinfoproperties): VnetInfo resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/virtualNetworkConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/virtualNetworkConnections/gateways@2020-09-01
@@ -757,7 +755,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VnetGatewayProperties](#vnetgatewayproperties): VnetGateway resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sourcecontrols@2020-09-01
@@ -768,7 +766,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SourceControlProperties](#sourcecontrolproperties): SourceControl resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/staticSites@2020-09-01
@@ -779,9 +777,9 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [StaticSite](#staticsite): A static site.
+* **properties**: [StaticSite](#staticsite): Core resource properties
 * **sku**: [SkuDescription](#skudescription): Description of a SKU for a scalable resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/staticSites' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -793,7 +791,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: 'functionappsettings' (Required, DeployTimeConstant): The resource name
 * **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/staticSites/builds/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/staticSites/config@2020-09-01
@@ -804,7 +802,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: 'functionappsettings' (Required, DeployTimeConstant): The resource name
 * **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/staticSites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/staticSites/customDomains@2020-09-01
@@ -918,12 +916,12 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [AllowedAudiencesValidationProperties](#allowedaudiencesvalidationproperties): AllowedAudiencesValidation resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## AllowedAudiencesValidationProperties
 ### Properties
-* **allowedAudiences**: string[]: Array of AllowedAudiencesValidationPropertiesAllowedAudiencesItem
+* **allowedAudiences**: string[]
 
 ## ApiDefinitionInfo
 ### Properties
@@ -935,8 +933,8 @@ This is valid for all deployment slots in an app.
 
 ## ApplicationLogsConfig
 ### Properties
-* **azureBlobStorage**: [AzureBlobStorageApplicationLogsConfig](#azureblobstorageapplicationlogsconfig): Application logs azure blob storage configuration.
-* **azureTableStorage**: [AzureTableStorageApplicationLogsConfig](#azuretablestorageapplicationlogsconfig): Application logs to Azure table storage configuration.
+* **azureBlobStorage**: [AzureBlobStorageApplicationLogsConfig](#azureblobstorageapplicationlogsconfig): Application logs to blob storage configuration.
+* **azureTableStorage**: [AzureTableStorageApplicationLogsConfig](#azuretablestorageapplicationlogsconfig): Application logs to azure table storage configuration.
 * **fileSystem**: [FileSystemApplicationLogsConfig](#filesystemapplicationlogsconfig): Application logs to file system configuration.
 
 ## AppRegistration
@@ -945,7 +943,7 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [AppRegistrationProperties](#appregistrationproperties): AppRegistration resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## AppRegistrationProperties
@@ -991,7 +989,7 @@ This is valid for all deployment slots in an app.
 * **upgradeDomains**: int (ReadOnly): Number of upgrade domains of the App Service Environment.
 * **userWhitelistedIpRanges**: string[]: User added ip ranges to whitelist on ASE db
 * **vipMappings**: [VirtualIPMapping](#virtualipmapping)[] (ReadOnly): Description of IP SSL mapping for the App Service Environment.
-* **virtualNetwork**: [VirtualNetworkProfile](#virtualnetworkprofile) (Required): Specification for using a Virtual Network.
+* **virtualNetwork**: [VirtualNetworkProfile](#virtualnetworkprofile) (Required): Description of the Virtual Network.
 * **vnetName**: string: Name of the Virtual Network for the App Service Environment.
 * **vnetResourceGroupName**: string: Resource group of the Virtual Network.
 * **vnetSubnetName**: string: Subnet of the Virtual Network.
@@ -1001,7 +999,7 @@ This is valid for all deployment slots in an app.
 ### Properties
 * **freeOfferExpirationTime**: string: The time when the server farm free offer expires.
 * **geoRegion**: string (ReadOnly): Geographical location for the App Service plan.
-* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): Specification for an App Service Environment to use for this resource.
+* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): Specification for the App Service Environment to use for the App Service plan.
 * **hyperV**: bool: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
 * **isSpot**: bool: If <code>true</code>, this App Service Plan owns spot instances.
 * **isXenon**: bool: Obsolete: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
@@ -1030,7 +1028,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [AuthPlatformProperties](#authplatformproperties): AuthPlatform resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## AuthPlatformProperties
@@ -1042,8 +1040,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 ## AutoHealActions
 ### Properties
 * **actionType**: 'CustomAction' | 'LogEvent' | 'Recycle': Predefined action to be taken.
-* **customAction**: [AutoHealCustomAction](#autohealcustomaction): Custom action to be executed
-when an auto heal rule is triggered.
+* **customAction**: [AutoHealCustomAction](#autohealcustomaction): Custom action to be taken.
 * **minProcessExecutionTime**: string: Minimum time the process must execute
 before taking the action
 
@@ -1054,14 +1051,14 @@ before taking the action
 
 ## AutoHealRules
 ### Properties
-* **actions**: [AutoHealActions](#autohealactions): Actions which to take by the auto-heal module when a rule is triggered.
-* **triggers**: [AutoHealTriggers](#autohealtriggers): Triggers for auto-heal.
+* **actions**: [AutoHealActions](#autohealactions): Actions to be executed when a rule is triggered.
+* **triggers**: [AutoHealTriggers](#autohealtriggers): Conditions that describe when to execute the auto-heal actions.
 
 ## AutoHealTriggers
 ### Properties
 * **privateBytesInKB**: int: A rule based on private bytes.
-* **requests**: [RequestsBasedTrigger](#requestsbasedtrigger): Trigger based on total requests.
-* **slowRequests**: [SlowRequestsBasedTrigger](#slowrequestsbasedtrigger): Trigger based on request execution time.
+* **requests**: [RequestsBasedTrigger](#requestsbasedtrigger): A rule based on total requests.
+* **slowRequests**: [SlowRequestsBasedTrigger](#slowrequestsbasedtrigger): A rule based on request execution time.
 * **statusCodes**: [StatusCodesBasedTrigger](#statuscodesbasedtrigger)[]: A rule based on status codes.
 
 ## AzureActiveDirectory
@@ -1070,7 +1067,7 @@ before taking the action
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [AzureActiveDirectoryProperties](#azureactivedirectoryproperties): AzureActiveDirectory resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## AzureActiveDirectoryLogin
@@ -1079,13 +1076,13 @@ before taking the action
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [AzureActiveDirectoryLoginProperties](#azureactivedirectoryloginproperties): AzureActiveDirectoryLogin resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## AzureActiveDirectoryLoginProperties
 ### Properties
 * **disableWWWAuthenticate**: bool
-* **loginParameters**: string[]: Array of AzureActiveDirectoryLoginPropertiesLoginParametersItem
+* **loginParameters**: string[]
 
 ## AzureActiveDirectoryProperties
 ### Properties
@@ -1101,7 +1098,7 @@ before taking the action
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [AzureActiveDirectoryRegistrationProperties](#azureactivedirectoryregistrationproperties): AzureActiveDirectoryRegistration resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## AzureActiveDirectoryRegistrationProperties
@@ -1117,12 +1114,12 @@ before taking the action
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [AzureActiveDirectoryValidationProperties](#azureactivedirectoryvalidationproperties): AzureActiveDirectoryValidation resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## AzureActiveDirectoryValidationProperties
 ### Properties
-* **allowedAudiences**: string[]: Array of AzureActiveDirectoryValidationPropertiesAllowedAudiencesItem
+* **allowedAudiences**: string[]
 * **jwtClaimChecks**: [JwtClaimChecks](#jwtclaimchecks)
 
 ## AzureBlobStorageApplicationLogsConfig
@@ -1171,7 +1168,7 @@ Remove blobs older than X days.
 * **kind**: string (ReadOnly): Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [BackupItemProperties](#backupitemproperties) (ReadOnly): BackupItem resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## BackupItem
@@ -1180,7 +1177,7 @@ Remove blobs older than X days.
 * **kind**: string (ReadOnly): Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [BackupItemProperties](#backupitemproperties) (ReadOnly): BackupItem resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## BackupItemCollection
@@ -1216,7 +1213,7 @@ Remove blobs older than X days.
 * **kind**: string (WriteOnly): Kind of resource.
 * **name**: string (ReadOnly, WriteOnly): Resource Name.
 * **properties**: [BackupRequestProperties](#backuprequestproperties) (WriteOnly): BackupRequest resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly, WriteOnly): Resource type.
 
 ## BackupRequest
@@ -1225,13 +1222,13 @@ Remove blobs older than X days.
 * **kind**: string (WriteOnly): Kind of resource.
 * **name**: string (ReadOnly, WriteOnly): Resource Name.
 * **properties**: [BackupRequestProperties](#backuprequestproperties) (WriteOnly): BackupRequest resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly, WriteOnly): Resource type.
 
 ## BackupRequestProperties
 ### Properties
 * **backupName**: string: Name of the backup.
-* **backupSchedule**: [BackupSchedule](#backupschedule): Description of a backup schedule. Describes how often should be the backup performed and what should be the retention policy.
+* **backupSchedule**: [BackupSchedule](#backupschedule): Schedule for the backup if it is executed periodically.
 * **databases**: [DatabaseBackupSetting](#databasebackupsetting)[]: Databases included in the backup.
 * **enabled**: bool: True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
 * **storageAccountUrl**: string (Required): SAS URL to the container.
@@ -1251,7 +1248,7 @@ Remove blobs older than X days.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [BlobStorageTokenStoreProperties](#blobstoragetokenstoreproperties): BlobStorageTokenStore resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## BlobStorageTokenStoreProperties
@@ -1270,7 +1267,7 @@ Remove blobs older than X days.
 * **cerBlob**: any (ReadOnly): Raw bytes of .cer file
 * **expirationDate**: string (ReadOnly): Certificate expiration date.
 * **friendlyName**: string (ReadOnly): Friendly name of the certificate.
-* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile) (ReadOnly): Specification for an App Service Environment to use for this resource.
+* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile) (ReadOnly): Specification for the App Service Environment to use for the certificate.
 * **hostNames**: string[]: Host names the certificate applies to.
 * **issueDate**: string (ReadOnly): Certificate issue Date.
 * **issuer**: string (ReadOnly): Certificate issuer.
@@ -1293,7 +1290,7 @@ Remove blobs older than X days.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [ClientRegistrationProperties](#clientregistrationproperties): ClientRegistration resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## ClientRegistrationProperties
@@ -1357,7 +1354,7 @@ together to use the same snapshot.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [CookieExpirationProperties](#cookieexpirationproperties): CookieExpiration resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## CookieExpirationProperties
@@ -1383,7 +1380,7 @@ for more details.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [CustomOpenIdConnectProviderProperties](#customopenidconnectproviderproperties): CustomOpenIdConnectProvider resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## CustomOpenIdConnectProviderProperties
@@ -1426,7 +1423,7 @@ This is used during restore with overwrite connection strings options.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [FacebookProperties](#facebookproperties): Facebook resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## FacebookProperties
@@ -1456,7 +1453,7 @@ Value can range between 25 and 100.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [FileSystemTokenStoreProperties](#filesystemtokenstoreproperties): FileSystemTokenStore resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## FileSystemTokenStoreProperties
@@ -1469,7 +1466,7 @@ Value can range between 25 and 100.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [ForwardProxyProperties](#forwardproxyproperties): ForwardProxy resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## ForwardProxyProperties
@@ -1480,7 +1477,7 @@ Value can range between 25 and 100.
 
 ## FunctionEnvelopeProperties
 ### Properties
-* **config**: any: Any object
+* **config**: any: Config information.
 * **config_href**: string: Config URI.
 * **files**: [FunctionEnvelopePropertiesFiles](#functionenvelopepropertiesfiles): File list.
 * **function_app_id**: string: Function App ID.
@@ -1525,7 +1522,7 @@ Value can range between 25 and 100.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [GitHubProperties](#githubproperties): GitHub resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## GitHubProperties
@@ -1540,12 +1537,12 @@ Value can range between 25 and 100.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [GlobalValidationProperties](#globalvalidationproperties): GlobalValidation resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## GlobalValidationProperties
 ### Properties
-* **excludedPaths**: string[]: Array of GlobalValidationPropertiesExcludedPathsItem
+* **excludedPaths**: string[]
 * **redirectToProvider**: string
 * **requireAuthentication**: bool
 * **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage' | 'Return401' | 'Return403'
@@ -1556,7 +1553,7 @@ Value can range between 25 and 100.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [GoogleProperties](#googleproperties): Google resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## GoogleProperties
@@ -1608,7 +1605,7 @@ Value can range between 25 and 100.
 * **domainId**: string: Fully qualified ARM domain resource URI.
 * **hostNameType**: 'Managed' | 'Verified': Hostname type.
 * **siteName**: string: App Service app name.
-* **sslState**: 'Disabled' | 'IpBasedEnabled' | 'SniEnabled': SSL type.
+* **sslState**: 'Disabled' | 'IpBasedEnabled' | 'SniEnabled': SSL type
 * **thumbprint**: string: SSL certificate thumbprint
 * **virtualIP**: string (ReadOnly): Virtual IP address assigned to the hostname if IP based SSL is enabled.
 
@@ -1632,7 +1629,7 @@ Value can range between 25 and 100.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [HttpSettingsProperties](#httpsettingsproperties): HttpSettings resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## HttpSettingsProperties
@@ -1647,7 +1644,7 @@ Value can range between 25 and 100.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [HttpSettingsRoutesProperties](#httpsettingsroutesproperties): HttpSettingsRoutes resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## HttpSettingsRoutesProperties
@@ -1660,7 +1657,7 @@ Value can range between 25 and 100.
 * **kind**: string (ReadOnly): Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [HybridConnectionKeyProperties](#hybridconnectionkeyproperties) (ReadOnly): HybridConnectionKey resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## HybridConnectionKeyProperties
@@ -1690,7 +1687,7 @@ normally, use the POST /listKeys API instead.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [IdentityProvidersProperties](#identityprovidersproperties): IdentityProviders resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## IdentityProvidersProperties
@@ -1750,13 +1747,13 @@ SubnetMask property must not be specified.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [JwtClaimChecksProperties](#jwtclaimchecksproperties): JwtClaimChecks resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## JwtClaimChecksProperties
 ### Properties
-* **allowedClientApplications**: string[]: Array of JwtClaimChecksPropertiesAllowedClientApplicationsItem
-* **allowedGroups**: string[]: Array of JwtClaimChecksPropertiesAllowedGroupsItem
+* **allowedClientApplications**: string[]
+* **allowedGroups**: string[]
 
 ## Login
 ### Properties
@@ -1764,12 +1761,12 @@ SubnetMask property must not be specified.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [LoginProperties](#loginproperties): Login resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## LoginProperties
 ### Properties
-* **allowedExternalRedirectUrls**: string[]: Array of LoginPropertiesAllowedExternalRedirectUrlsItem
+* **allowedExternalRedirectUrls**: string[]
 * **cookieExpiration**: [CookieExpiration](#cookieexpiration)
 * **nonce**: [Nonce](#nonce)
 * **preserveUrlFragmentsForLogins**: bool
@@ -1782,7 +1779,7 @@ SubnetMask property must not be specified.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [LoginRoutesProperties](#loginroutesproperties): LoginRoutes resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## LoginRoutesProperties
@@ -1795,12 +1792,12 @@ SubnetMask property must not be specified.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [LoginScopesProperties](#loginscopesproperties): LoginScopes resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## LoginScopesProperties
 ### Properties
-* **scopes**: string[]: Array of LoginScopesPropertiesScopesItem
+* **scopes**: string[]
 
 ## ManagedServiceIdentity
 ### Properties
@@ -1856,7 +1853,7 @@ Setting is <code>false</code> by default.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [NonceProperties](#nonceproperties): Nonce resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## NonceProperties
@@ -1870,7 +1867,7 @@ Setting is <code>false</code> by default.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [OpenIdConnectClientCredentialProperties](#openidconnectclientcredentialproperties): OpenIdConnectClientCredential resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## OpenIdConnectClientCredentialProperties
@@ -1884,7 +1881,7 @@ Setting is <code>false</code> by default.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [OpenIdConnectConfigProperties](#openidconnectconfigproperties): OpenIdConnectConfig resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## OpenIdConnectConfigProperties
@@ -1901,13 +1898,13 @@ Setting is <code>false</code> by default.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [OpenIdConnectLoginProperties](#openidconnectloginproperties): OpenIdConnectLogin resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## OpenIdConnectLoginProperties
 ### Properties
 * **nameClaimType**: string
-* **scopes**: string[]: Array of OpenIdConnectLoginPropertiesScopesItem
+* **scopes**: string[]
 
 ## OpenIdConnectRegistration
 ### Properties
@@ -1915,7 +1912,7 @@ Setting is <code>false</code> by default.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [OpenIdConnectRegistrationProperties](#openidconnectregistrationproperties): OpenIdConnectRegistration resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## OpenIdConnectRegistrationProperties
@@ -1951,7 +1948,7 @@ Setting is <code>false</code> by default.
 
 ## PrivateLinkConnectionApprovalRequest
 ### Properties
-* **privateEndpoint**: [ArmIdWrapper](#armidwrapper) (ReadOnly): A wrapper for an ARM resource id
+* **privateEndpoint**: [ArmIdWrapper](#armidwrapper) (ReadOnly): PrivateEndpoint of a remote private endpoint connection
 * **privateLinkServiceConnectionState**: [PrivateLinkConnectionState](#privatelinkconnectionstate): The state of a private link connection
 * **provisioningState**: string (ReadOnly)
 
@@ -1973,7 +1970,7 @@ Setting is <code>false</code> by default.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [PushSettingsProperties](#pushsettingsproperties): PushSettings resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## PushSettingsProperties
@@ -2160,18 +2157,18 @@ application used for sign-in.
 * **acrUserManagedIdentityID**: string: If using user managed identity, the user managed identity ClientId
 * **alwaysOn**: bool: <code>true</code> if Always On is enabled; otherwise, <code>false</code>.
 * **apiDefinition**: [ApiDefinitionInfo](#apidefinitioninfo): Information about the formal API definition for the app.
-* **apiManagementConfig**: [ApiManagementConfig](#apimanagementconfig): Azure API management (APIM) configuration linked to the app.
+* **apiManagementConfig**: [ApiManagementConfig](#apimanagementconfig): Azure API management settings linked to the app.
 * **appCommandLine**: string: App command line to launch.
 * **appSettings**: [NameValuePair](#namevaluepair)[]: Application settings.
 * **autoHealEnabled**: bool: <code>true</code> if Auto Heal is enabled; otherwise, <code>false</code>.
-* **autoHealRules**: [AutoHealRules](#autohealrules): Rules that can be defined for auto-heal.
+* **autoHealRules**: [AutoHealRules](#autohealrules): Auto Heal rules.
 * **autoSwapSlotName**: string: Auto-swap slot name.
 * **connectionStrings**: [ConnStringInfo](#connstringinfo)[]: Connection strings.
-* **cors**: [CorsSettings](#corssettings): Cross-Origin Resource Sharing (CORS) settings for the app.
+* **cors**: [CorsSettings](#corssettings): Cross-Origin Resource Sharing (CORS) settings.
 * **defaultDocuments**: string[]: Default documents.
 * **detailedErrorLoggingEnabled**: bool: <code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.
 * **documentRoot**: string: Document root.
-* **experiments**: [Experiments](#experiments): Routing rules in production experiments.
+* **experiments**: [Experiments](#experiments): This is work around for polymorphic types.
 * **ftpsState**: 'AllAllowed' | 'Disabled' | 'FtpsOnly' | string: State of FTP / FTPS service
 * **handlerMappings**: [HandlerMapping](#handlermapping)[]: Handler mappings.
 * **healthCheckPath**: string: Health check path
@@ -2181,12 +2178,12 @@ application used for sign-in.
 * **javaContainer**: string: Java container.
 * **javaContainerVersion**: string: Java container version.
 * **javaVersion**: string: Java version.
-* **limits**: [SiteLimits](#sitelimits): Metric limits set on an app.
+* **limits**: [SiteLimits](#sitelimits): Site limits.
 * **linuxFxVersion**: string: Linux App Framework and version
 * **loadBalancing**: 'LeastRequests' | 'LeastResponseTime' | 'RequestHash' | 'WeightedRoundRobin' | 'WeightedTotalTraffic': Site load balancing.
 * **localMySqlEnabled**: bool: <code>true</code> to enable local MySQL; otherwise, <code>false</code>.
 * **logsDirectorySizeLimit**: int: HTTP logs directory size limit.
-* **machineKey**: [SiteMachineKey](#sitemachinekey) (ReadOnly): MachineKey of an app.
+* **machineKey**: [SiteMachineKey](#sitemachinekey) (ReadOnly): Site MachineKey.
 * **managedPipelineMode**: 'Classic' | 'Integrated': Managed pipeline mode.
 * **managedServiceIdentityId**: int: Managed Service Identity Id
 * **minTlsVersion**: '1.0' | '1.1' | '1.2' | string: MinTlsVersion: configures the minimum version of TLS required for SSL requests
@@ -2198,7 +2195,7 @@ application used for sign-in.
 * **preWarmedInstanceCount**: int: Number of preWarmed instances.
 This setting only applies to the Consumption and Elastic Plans
 * **publishingUsername**: string: Publishing user name.
-* **push**: [PushSettings](#pushsettings): Push settings for the App.
+* **push**: [PushSettings](#pushsettings): Push endpoint settings.
 * **pythonVersion**: string: Version of Python.
 * **remoteDebuggingEnabled**: bool: <code>true</code> if remote debugging is enabled; otherwise, <code>false</code>.
 * **remoteDebuggingVersion**: string: Remote debugging version.
@@ -2206,7 +2203,7 @@ This setting only applies to the Consumption and Elastic Plans
 * **requestTracingExpirationTime**: string: Request tracing expiration time.
 * **scmIpSecurityRestrictions**: [IpSecurityRestriction](#ipsecurityrestriction)[]: IP security restrictions for scm.
 * **scmIpSecurityRestrictionsUseMain**: bool: IP security restrictions for scm to use main.
-* **scmMinTlsVersion**: '1.0' | '1.1' | '1.2' | string: MinTlsVersion: configures the minimum version of TLS required for SSL requests
+* **scmMinTlsVersion**: '1.0' | '1.1' | '1.2' | string: ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site
 * **scmType**: 'BitbucketGit' | 'BitbucketHg' | 'CodePlexGit' | 'CodePlexHg' | 'Dropbox' | 'ExternalGit' | 'ExternalHg' | 'GitHub' | 'LocalGit' | 'None' | 'OneDrive' | 'Tfs' | 'VSO' | 'VSTSRM' | string: SCM type.
 * **tracingOptions**: string: Tracing options.
 * **use32BitWorkerProcess**: bool: <code>true</code> to use 32-bit worker process; otherwise, <code>false</code>.
@@ -2250,9 +2247,9 @@ This setting only applies to the Consumption and Elastic Plans
 ## SiteLogsConfigProperties
 ### Properties
 * **applicationLogs**: [ApplicationLogsConfig](#applicationlogsconfig): Application logs configuration.
-* **detailedErrorMessages**: [EnabledConfig](#enabledconfig): Enabled configuration.
-* **failedRequestsTracing**: [EnabledConfig](#enabledconfig): Enabled configuration.
-* **httpLogs**: [HttpLogsConfig](#httplogsconfig): Http logs configuration.
+* **detailedErrorMessages**: [EnabledConfig](#enabledconfig): Detailed error messages configuration.
+* **failedRequestsTracing**: [EnabledConfig](#enabledconfig): Failed requests tracing configuration.
+* **httpLogs**: [HttpLogsConfig](#httplogsconfig): HTTP logs configuration.
 
 ## SiteMachineKey
 ### Properties
@@ -2271,7 +2268,7 @@ This setting only applies to the Consumption and Elastic Plans
 - ClientCertEnabled: false means ClientCert is ignored.
 - ClientCertEnabled: true and ClientCertMode: Required means ClientCert is required.
 - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.
-* **cloningInfo**: [CloningInfo](#cloninginfo) (WriteOnly): Information needed for cloning operation.
+* **cloningInfo**: [CloningInfo](#cloninginfo) (WriteOnly): If specified during app creation, the app is cloned from a source app.
 * **containerSize**: int: Size of the function container.
 * **customDomainVerificationId**: string: Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.
 * **dailyMemoryTimeQuota**: int: Maximum allowed daily memory-time quota (applicable on dynamic apps only).
@@ -2279,7 +2276,7 @@ This setting only applies to the Consumption and Elastic Plans
 * **enabled**: bool: <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).
 * **enabledHostNames**: string[] (ReadOnly): Enabled hostnames for the app.Hostnames need to be assigned (see HostNames) AND enabled. Otherwise,
 the app is not served on those hostnames.
-* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): Specification for an App Service Environment to use for this resource.
+* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): App Service Environment to use for the app.
 * **hostNames**: string[] (ReadOnly): Hostnames associated with the app.
 * **hostNamesDisabled**: bool: <code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>.
  If <code>true</code>, the app is only accessible via API management process.
@@ -2301,8 +2298,8 @@ This only applies to Functions container.
 * **resourceGroup**: string (ReadOnly): Name of the resource group the app belongs to. Read-only.
 * **scmSiteAlsoStopped**: bool: <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.
 * **serverFarmId**: string: Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
-* **siteConfig**: [SiteConfig](#siteconfig): Configuration of an App Service app.
-* **slotSwapStatus**: [SlotSwapStatus](#slotswapstatus) (ReadOnly): The status of the last successful slot swap operation.
+* **siteConfig**: [SiteConfig](#siteconfig): Configuration of the app.
+* **slotSwapStatus**: [SlotSwapStatus](#slotswapstatus) (ReadOnly): Status of the last deployment slot swap operation.
 * **state**: string (ReadOnly): Current state of the app.
 * **suspendedTill**: string (ReadOnly): App suspended till in case memory-time quota is exceeded.
 * **targetSwapSlot**: string (ReadOnly): Specifies which deployment slot this app will swap into. Read-only.
@@ -2333,7 +2330,7 @@ This only applies to Functions container.
 * **locations**: string[]: Locations of the SKU.
 * **name**: string: Name of the resource SKU.
 * **size**: string: Size specifier of the resource SKU.
-* **skuCapacity**: [SkuCapacity](#skucapacity): Description of the App Service plan scale options.
+* **skuCapacity**: [SkuCapacity](#skucapacity): Min, max, and default scale values of the SKU.
 * **tier**: string: Service tier of the resource SKU.
 
 ## SlotConfigNames
@@ -2382,7 +2379,7 @@ Basic apps are not used for capacity allocation.
 ## StaticSite
 ### Properties
 * **branch**: string: The target branch in the repository.
-* **buildProperties**: [StaticSiteBuildProperties](#staticsitebuildproperties): Build properties for the static site.
+* **buildProperties**: [StaticSiteBuildProperties](#staticsitebuildproperties): Build properties to configure on the repository.
 * **customDomains**: string[] (ReadOnly): The custom domains associated with this static site.
 * **defaultHostname**: string (ReadOnly): The default autogenerated hostname for the static site.
 * **repositoryToken**: string: A user's github repository token. This is used to setup the Github Actions workflow file and API secrets.
@@ -2400,7 +2397,7 @@ Basic apps are not used for capacity allocation.
 * **kind**: string (ReadOnly): Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [StaticSiteUserARMResourceProperties](#staticsiteuserarmresourceproperties) (ReadOnly): StaticSiteUserARMResource resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## StaticSiteUserARMResourceProperties
@@ -2429,7 +2426,7 @@ Basic apps are not used for capacity allocation.
 * **kind**: string (ReadOnly): Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (ReadOnly): Settings.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## StringDictionary
@@ -2438,7 +2435,7 @@ Basic apps are not used for capacity allocation.
 * **kind**: string (ReadOnly): Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (ReadOnly): Settings.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## StringDictionary
@@ -2447,7 +2444,7 @@ Basic apps are not used for capacity allocation.
 * **kind**: string (ReadOnly): Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (ReadOnly): Settings.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## StringDictionary
@@ -2456,7 +2453,7 @@ Basic apps are not used for capacity allocation.
 * **kind**: string (ReadOnly): Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (ReadOnly): Settings.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## StringDictionary
@@ -2465,7 +2462,7 @@ Basic apps are not used for capacity allocation.
 * **kind**: string (ReadOnly): Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (ReadOnly): Settings.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## StringDictionary
@@ -2474,7 +2471,7 @@ Basic apps are not used for capacity allocation.
 * **kind**: string (ReadOnly): Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (ReadOnly): Settings.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## StringDictionary
@@ -2483,7 +2480,7 @@ Basic apps are not used for capacity allocation.
 * **kind**: string (ReadOnly): Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (ReadOnly): Settings.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## StringDictionaryProperties
@@ -2533,7 +2530,7 @@ Basic apps are not used for capacity allocation.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TokenStore
 ### Properties
@@ -2541,7 +2538,7 @@ Basic apps are not used for capacity allocation.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [TokenStoreProperties](#tokenstoreproperties): TokenStore resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## TokenStoreProperties
@@ -2557,7 +2554,7 @@ Basic apps are not used for capacity allocation.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [TwitterProperties](#twitterproperties): Twitter resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## TwitterProperties
@@ -2571,7 +2568,7 @@ Basic apps are not used for capacity allocation.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [TwitterRegistrationProperties](#twitterregistrationproperties): TwitterRegistration resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## TwitterRegistrationProperties
@@ -2636,7 +2633,7 @@ Point-To-Site VPN connection.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [VnetRouteProperties](#vnetrouteproperties): VnetRoute resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## VnetRouteProperties
@@ -2652,7 +2649,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 
 ## WorkerPool
 ### Properties
-* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared/dedicated workers.
+* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared or dedicated app hosting.
 * **instanceNames**: string[] (ReadOnly): Names of all instances in the worker pool (read only).
 * **workerCount**: int: Number of instances in the worker pool.
 * **workerSize**: string: VM size of the worker pool instances.

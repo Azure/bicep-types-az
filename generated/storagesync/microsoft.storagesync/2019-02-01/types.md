@@ -17,7 +17,7 @@
 * **apiVersion**: '2019-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RegisteredServerCreateParametersProperties](#registeredservercreateparametersproperties)
+* **properties**: [RegisteredServerCreateParametersProperties](#registeredservercreateparametersproperties): The parameters used to create the registered server.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/registeredServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups@2019-02-01
@@ -26,7 +26,7 @@
 * **apiVersion**: '2019-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: any: Any object
+* **properties**: any: The parameters used to create the sync group
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2019-02-01
@@ -35,7 +35,7 @@
 * **apiVersion**: '2019-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CloudEndpointCreateParametersProperties](#cloudendpointcreateparametersproperties): CloudEndpoint Properties object.
+* **properties**: [CloudEndpointCreateParametersProperties](#cloudendpointcreateparametersproperties): The parameters used to create the cloud endpoint.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints@2019-02-01
@@ -44,7 +44,7 @@
 * **apiVersion**: '2019-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerEndpointCreateParametersProperties](#serverendpointcreateparametersproperties): ServerEndpoint Properties object.
+* **properties**: [ServerEndpointCreateParametersProperties](#serverendpointcreateparametersproperties): The parameters used to create the server endpoint.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## CloudEndpointCreateParametersProperties
@@ -89,34 +89,34 @@
 
 ## ServerEndpointCreateParametersProperties
 ### Properties
-* **cloudTiering**: 'off' | 'on' | string: Type of the Feature Status
+* **cloudTiering**: 'off' | 'on' | string: Cloud Tiering.
 * **friendlyName**: string: Friendly Name
 * **lastOperationName**: string (ReadOnly): Resource Last Operation Name
 * **lastWorkflowId**: string (ReadOnly): ServerEndpoint lastWorkflowId
-* **offlineDataTransfer**: 'off' | 'on' | string: Type of the Feature Status
+* **offlineDataTransfer**: 'off' | 'on' | string: Offline data transfer
 * **offlineDataTransferShareName**: string: Offline data transfer share name
 * **offlineDataTransferStorageAccountResourceId**: string (ReadOnly): Offline data transfer storage account resource ID
 * **offlineDataTransferStorageAccountTenantId**: string (ReadOnly): Offline data transfer storage account tenant ID
 * **provisioningState**: string (ReadOnly): ServerEndpoint Provisioning State
-* **serverLocalPath**: string: Server folder used for data synchronization
-* **serverResourceId**: string: Arm resource identifier.
+* **serverLocalPath**: string: Server Local path.
+* **serverResourceId**: string: Server Resource Id.
 * **syncStatus**: [ServerEndpointSyncStatus](#serverendpointsyncstatus) (ReadOnly): Server Endpoint sync status
 * **tierFilesOlderThanDays**: int: Tier files older than days.
 * **volumeFreeSpacePercent**: int: Level of free space to be maintained by Cloud Tiering if it is enabled.
 
 ## ServerEndpointSyncStatus
 ### Properties
-* **combinedHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string (ReadOnly): Type of the Health state
-* **downloadActivity**: [SyncActivityStatus](#syncactivitystatus) (ReadOnly): Sync Session status object.
-* **downloadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string (ReadOnly): Type of the Health state
-* **downloadStatus**: [SyncSessionStatus](#syncsessionstatus) (ReadOnly): Sync Session status object.
+* **combinedHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string (ReadOnly): Combined Health Status.
+* **downloadActivity**: [SyncActivityStatus](#syncactivitystatus) (ReadOnly): Download sync activity
+* **downloadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string (ReadOnly): Download Health Status.
+* **downloadStatus**: [SyncSessionStatus](#syncsessionstatus) (ReadOnly): Download Status
 * **lastUpdatedTimestamp**: string (ReadOnly): Last Updated Timestamp
-* **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' | string (ReadOnly): Type of the Health state
-* **syncActivity**: 'Download' | 'Upload' | 'UploadAndDownload' | string (ReadOnly): Type of the sync activity state
+* **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' | string (ReadOnly): Offline Data Transfer State
+* **syncActivity**: 'Download' | 'Upload' | 'UploadAndDownload' | string (ReadOnly): Sync activity
 * **totalPersistentFilesNotSyncingCount**: int (ReadOnly): Total count of persistent files not syncing (combined upload + download). Reserved for future use.
-* **uploadActivity**: [SyncActivityStatus](#syncactivitystatus) (ReadOnly): Sync Session status object.
-* **uploadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string (ReadOnly): Type of the Health state
-* **uploadStatus**: [SyncSessionStatus](#syncsessionstatus) (ReadOnly): Sync Session status object.
+* **uploadActivity**: [SyncActivityStatus](#syncactivitystatus) (ReadOnly): Upload sync activity
+* **uploadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string (ReadOnly): Upload Health Status.
+* **uploadStatus**: [SyncSessionStatus](#syncsessionstatus) (ReadOnly): Upload Status
 
 ## StorageSyncServiceCreateParametersTags
 ### Properties

@@ -6,7 +6,7 @@
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DeploymentProperties](#deploymentproperties) (Required): Deployment properties.
+* **properties**: [DeploymentProperties](#deploymentproperties) (Required): The deployment properties.
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Resources/resourceGroups@2018-02-01
@@ -51,23 +51,23 @@
 ## DeploymentProperties
 ### Properties
 * **correlationId**: string (ReadOnly): The correlation ID of the deployment.
-* **debugSetting**: [DebugSetting](#debugsetting)
+* **debugSetting**: [DebugSetting](#debugsetting): The debug setting of the deployment.
 * **dependencies**: [Dependency](#dependency)[] (ReadOnly): The list of deployment dependencies.
-* **error**: [ErrorResponse](#errorresponse) (ReadOnly): Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.)
+* **error**: [ErrorResponse](#errorresponse) (ReadOnly): The deployment error.
 * **mode**: 'Complete' | 'Incremental' (Required): The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.
-* **onErrorDeployment**: [OnErrorDeployment](#onerrordeployment): Deployment on error behavior.
-* **outputs**: any (ReadOnly): Any object
-* **parameters**: any: Any object
-* **parametersLink**: [ParametersLink](#parameterslink): Entity representing the reference to the deployment parameters.
+* **onErrorDeployment**: [OnErrorDeployment](#onerrordeployment): The deployment on error behavior.
+* **outputs**: any (ReadOnly): Key/value pairs that represent deployment output.
+* **parameters**: any: Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string.
+* **parametersLink**: [ParametersLink](#parameterslink): The URI of parameters file. You use this element to link to an existing parameters file. Use either the parametersLink property or the parameters property, but not both.
 * **providers**: [Provider](#provider)[] (ReadOnly): The list of resource providers needed for the deployment.
 * **provisioningState**: string (ReadOnly): The state of the provisioning.
-* **template**: any: Any object
-* **templateLink**: [TemplateLink](#templatelink): Entity representing the reference to the template.
+* **template**: any: The template content. You use this element when you want to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both.
+* **templateLink**: [TemplateLink](#templatelink): The URI of the template. Use either the templateLink property or the template property, but not both.
 * **timestamp**: string (ReadOnly): The timestamp of the template deployment.
 
 ## ErrorAdditionalInfo
 ### Properties
-* **info**: any (ReadOnly): Any object
+* **info**: any (ReadOnly): The additional info.
 * **type**: string (ReadOnly): The additional info type.
 
 ## ErrorResponse
@@ -103,7 +103,7 @@
 * **locations**: string[] (ReadOnly): The collection of locations where this resource type can be created.
 * **properties**: [ProviderResourceTypeProperties](#providerresourcetypeproperties) (ReadOnly): The properties.
 * **resourceType**: string (ReadOnly): The resource type.
-* **zoneMappings**: [ZoneMapping](#zonemapping)[] (ReadOnly): Array of ZoneMapping
+* **zoneMappings**: [ZoneMapping](#zonemapping)[] (ReadOnly)
 
 ## ProviderResourceTypeProperties
 ### Properties
@@ -127,5 +127,5 @@
 ## ZoneMapping
 ### Properties
 * **location**: string (ReadOnly): The location of the zone mapping.
-* **zones**: string[] (ReadOnly): Array of ZoneMappingZonesItem
+* **zones**: string[] (ReadOnly)
 

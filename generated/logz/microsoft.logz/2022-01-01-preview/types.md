@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MonitorProperties](#monitorproperties): Properties specific to the monitor resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **tags**: [LogzMonitorResourceTags](#logzmonitorresourcetags): Dictionary of <string>
 * **type**: 'Microsoft.Logz/monitors' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -22,7 +22,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MonitorProperties](#monitorproperties): Properties specific to the monitor resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **tags**: [LogzMonitorResourceTags](#logzmonitorresourcetags): Dictionary of <string>
 * **type**: 'Microsoft.Logz/monitors/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -33,7 +33,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MonitoringTagRulesProperties](#monitoringtagrulesproperties): Definition of the properties for a TagRules resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **type**: 'Microsoft.Logz/monitors/accounts/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logz/monitors/metricsSource@2022-01-01-preview
@@ -45,7 +45,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MonitorProperties](#monitorproperties): Properties specific to the monitor resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **tags**: [LogzMonitorResourceTags](#logzmonitorresourcetags): Dictionary of <string>
 * **type**: 'Microsoft.Logz/monitors/metricsSource' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -56,7 +56,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MetricsTagRulesProperties](#metricstagrulesproperties): Definition of the properties for a TagRules resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **type**: 'Microsoft.Logz/monitors/metricsSource/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logz/monitors/singleSignOnConfigurations@2022-01-01-preview
@@ -76,7 +76,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MonitoringTagRulesProperties](#monitoringtagrulesproperties): Definition of the properties for a TagRules resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **type**: 'Microsoft.Logz/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listMonitoredResources (Microsoft.Logz/monitors@2022-01-01-preview)
@@ -160,7 +160,7 @@
 
 ## MetricsTagRulesProperties
 ### Properties
-* **metricRules**: [MetricRules](#metricrules)[]: Array of MetricRules
+* **metricRules**: [MetricRules](#metricrules)[]
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Flag specifying if the resource provisioning state as tracked by ARM.
 * **sendMetrics**: bool: Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
@@ -215,7 +215,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## UserInfo
 ### Properties

@@ -6,8 +6,8 @@
 * **apiVersion**: '2022-05-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfigurationProfileAssignmentProperties](#configurationprofileassignmentproperties): Automanage configuration profile assignment properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ConfigurationProfileAssignmentProperties](#configurationprofileassignmentproperties): Properties of the configuration profile assignment.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Automanage/configurationProfileAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automanage/configurationProfiles@2022-05-04
@@ -17,8 +17,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfigurationProfileProperties](#configurationprofileproperties): Automanage configuration profile properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ConfigurationProfileProperties](#configurationprofileproperties): Properties of the configuration profile.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Automanage/configurationProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -29,8 +29,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfigurationProfileProperties](#configurationprofileproperties): Automanage configuration profile properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ConfigurationProfileProperties](#configurationprofileproperties): Properties of the configuration profile.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Automanage/configurationProfiles/versions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -42,14 +42,14 @@
 ## ConfigurationProfileAssignmentProperties
 ### Properties
 * **configurationProfile**: string: The Automanage configurationProfile ARM Resource URI.
-* **profileOverrides**: [ConfigurationProfileAssignmentProfileOverrides](#configurationprofileassignmentprofileoverrides): Data related to configuration profile assignment profile overrides.
+* **profileOverrides**: [ConfigurationProfileAssignmentProfileOverrides](#configurationprofileassignmentprofileoverrides): The profileOverrides setting for the configuration profile assignment.
 * **status**: string (ReadOnly): The status of onboarding, which only appears in the response.
 * **targetId**: string (ReadOnly): The target VM resource URI
 
 ## ConfigurationProfileProperties
 ### Properties
-* **configuration**: any: Any object
-* **overrides**: any[]: The custom overrides for configuration profile
+* **configuration**: any: configuration dictionary of the configuration profile.
+* **overrides**: any[]: overrides of the configuration profile.
 
 ## SystemData
 ### Properties
@@ -58,7 +58,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties

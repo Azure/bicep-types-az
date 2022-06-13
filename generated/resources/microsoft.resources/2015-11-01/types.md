@@ -6,7 +6,7 @@
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DeploymentProperties](#deploymentproperties): Deployment properties.
+* **properties**: [DeploymentProperties](#deploymentproperties): Gets or sets the deployment properties.
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Resources/resourceGroups@2015-11-01
@@ -37,20 +37,20 @@
 ### Properties
 * **correlationId**: string (ReadOnly): Gets or sets the correlation ID of the deployment.
 * **dependencies**: [Dependency](#dependency)[] (ReadOnly): Gets the list of deployment dependencies.
-* **error**: [ErrorResponse](#errorresponse) (ReadOnly): Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.)
+* **error**: [ErrorResponse](#errorresponse) (ReadOnly): The deployment error.
 * **mode**: 'Complete' | 'Incremental': Gets or sets the deployment mode.
-* **outputs**: any (ReadOnly): Any object
-* **parameters**: any: Any object
-* **parametersLink**: [ParametersLink](#parameterslink): Entity representing the reference to the deployment parameters.
+* **outputs**: any (ReadOnly): Gets or sets key/value pairs that represent deployment output.
+* **parameters**: any: Deployment parameters. Use only one of Parameters or ParametersLink.
+* **parametersLink**: [ParametersLink](#parameterslink): Gets or sets the URI referencing the parameters. Use only one of Parameters or ParametersLink.
 * **providers**: [Provider](#provider)[] (ReadOnly): Gets the list of resource providers needed for the deployment.
 * **provisioningState**: string (ReadOnly): Gets or sets the state of the provisioning.
-* **template**: any: Any object
-* **templateLink**: [TemplateLink](#templatelink): Entity representing the reference to the template.
+* **template**: any: Gets or sets the template content. Use only one of Template or TemplateLink.
+* **templateLink**: [TemplateLink](#templatelink): Gets or sets the URI referencing the template. Use only one of Template or TemplateLink.
 * **timestamp**: string (ReadOnly): Gets or sets the timestamp of the template deployment.
 
 ## ErrorAdditionalInfo
 ### Properties
-* **info**: any (ReadOnly): Any object
+* **info**: any (ReadOnly): The additional info.
 * **type**: string (ReadOnly): The additional info type.
 
 ## ErrorResponse

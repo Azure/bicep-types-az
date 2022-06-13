@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [SystemAssignedServiceIdentity](#systemassignedserviceidentity): Managed service identity (either system assigned, or none)
+* **identity**: [SystemAssignedServiceIdentity](#systemassignedserviceidentity): The managed identities for the IoT Central application.
 * **location**: string (Required): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AppProperties](#appproperties): The properties of an IoT Central application.
-* **sku**: [AppSkuInfo](#appskuinfo) (Required): Information about the SKU of the IoT Central application.
+* **properties**: [AppProperties](#appproperties): The common properties of an IoT Central application.
+* **sku**: [AppSkuInfo](#appskuinfo) (Required): A valid instance SKU.
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.IoTCentral/iotApps' (ReadOnly, DeployTimeConstant): The resource type
 

@@ -6,7 +6,7 @@
 * **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'Advanced' | 'Essential' | 'Standard' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [CanonicalSupportPlanProperties](#canonicalsupportplanproperties) (ReadOnly): The properties of the Canonical support plan.
+* **properties**: [CanonicalSupportPlanProperties](#canonicalsupportplanproperties) (ReadOnly): Describes Canonical support plan type and status.
 * **type**: 'Microsoft.Addons/supportProviders/supportPlanTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listSupportPlanInfo (Microsoft.Addons/supportProviders@2018-03-01)

@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: 'service' (Required, DeployTimeConstant): The resource name
-* **properties**: [ServiceDiagnosticSettings](#servicediagnosticsettings): The diagnostic settings for service.
+* **properties**: [ServiceDiagnosticSettings](#servicediagnosticsettings): The service diagnostics settings of the resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'microsoft.insights/diagnosticSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -15,12 +15,12 @@
 ### Properties
 * **category**: string: Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
 * **enabled**: bool (Required): a value indicating whether this log is enabled.
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Specifies the retention policy for the log.
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): the retention policy for this log.
 
 ## MetricSettings
 ### Properties
 * **enabled**: bool (Required): a value indicating whether this timegrain is enabled.
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Specifies the retention policy for the log.
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): the retention policy for this timegrain.
 * **timeGrain**: string (Required): the timegrain of the metric in ISO8601 format.
 
 ## ResourceTags

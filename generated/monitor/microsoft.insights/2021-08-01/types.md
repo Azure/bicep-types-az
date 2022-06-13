@@ -9,8 +9,8 @@
 * **kind**: 'LogAlert' | 'LogToMetric' | string: Indicates the type of scheduled query rule. The default is LogAlert.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ScheduledQueryRuleProperties](#scheduledqueryruleproperties) (Required): scheduled query rule Definition
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ScheduledQueryRuleProperties](#scheduledqueryruleproperties) (Required): The rule properties of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of ScheduledQueryRule.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Insights/scheduledQueryRules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -79,7 +79,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties

@@ -44,7 +44,7 @@
 ## CustomDomainPropertiesParameters
 ### Properties
 * **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
-* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning status of the resource.
+* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning status of the custom domain.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly): Resource status of the custom domain.
 
 ## DeepCreatedOrigin
@@ -73,7 +73,7 @@
 * **originHostHeader**: string: The host header CDN provider will send along with content requests to origins. The default value is the host name of the origin.
 * **originPath**: string: The path used for origin requests.
 * **origins**: [DeepCreatedOrigin](#deepcreatedorigin)[] (Required): The set of origins for the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options.
-* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning status of the resource.
+* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning status of the endpoint.
 * **queryStringCachingBehavior**: 'BypassCaching' | 'IgnoreQueryString' | 'NotSet' | 'UseQueryString': Defines the query string caching behavior.
 * **resourceState**: 'Creating' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Resource status of the endpoint.
 
@@ -82,7 +82,7 @@
 * **hostName**: string (Required): The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.
 * **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535.
 * **httpsPort**: int: The value of the HTTPS port. Must be between 1 and 65535.
-* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning status of the resource.
+* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning status of the origin.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly): Resource status of the origin.
 
 ## ProfileCreateParametersTags
@@ -92,7 +92,7 @@
 
 ## ProfileProperties
 ### Properties
-* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning status of the resource.
+* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning status of the profile.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' (ReadOnly): Resource status of the profile.
 
 ## Sku

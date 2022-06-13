@@ -7,22 +7,22 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AutoscaleSetting](#autoscalesetting) (Required): A setting that contains all of the configuration for the automatic scaling of a resource.
+* **properties**: [AutoscaleSetting](#autoscalesetting) (Required): The autoscale setting of the resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Insights/autoscalesettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AutoscaleNotification
 ### Properties
-* **email**: [EmailNotification](#emailnotification): Email notification of an autoscale event.
+* **email**: [EmailNotification](#emailnotification): the email notification.
 * **operation**: 'Scale' (Required): the operation associated with the notification and its value must be "scale"
 * **webhooks**: [WebhookNotification](#webhooknotification)[]: the collection of webhook notifications.
 
 ## AutoscaleProfile
 ### Properties
-* **capacity**: [ScaleCapacity](#scalecapacity) (Required): The number of instances that can be used during this profile.
-* **fixedDate**: [TimeWindow](#timewindow): A specific date-time for the profile.
+* **capacity**: [ScaleCapacity](#scalecapacity) (Required): the number of instances that can be used during this profile.
+* **fixedDate**: [TimeWindow](#timewindow): the specific date-time for the profile. This element is not used if the Recurrence element is used.
 * **name**: string (Required): the name of the profile.
-* **recurrence**: [Recurrence](#recurrence): The repeating times at which this profile begins. This element is not used if the FixedDate element is used.
+* **recurrence**: [Recurrence](#recurrence): the repeating times at which this profile begins. This element is not used if the FixedDate element is used.
 * **rules**: [ScaleRule](#scalerule)[] (Required): the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.
 
 ## AutoscaleSetting
@@ -58,7 +58,7 @@
 ## Recurrence
 ### Properties
 * **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'None' | 'Second' | 'Week' | 'Year' (Required): the recurrence frequency. How often the schedule profile should take effect. This value must be Week, meaning each week will have the same set of profiles. For example, to set a daily schedule, set **schedule** to every day of the week. The frequency property specifies that the schedule is repeated weekly.
-* **schedule**: [RecurrentSchedule](#recurrentschedule) (Required): The scheduling constraints for when the profile begins.
+* **schedule**: [RecurrentSchedule](#recurrentschedule) (Required): the scheduling constraints for when the profile begins.
 
 ## RecurrentSchedule
 ### Properties
@@ -87,8 +87,8 @@
 
 ## ScaleRule
 ### Properties
-* **metricTrigger**: [MetricTrigger](#metrictrigger) (Required): The trigger that results in a scaling action.
-* **scaleAction**: [ScaleAction](#scaleaction) (Required): The parameters for the scaling action.
+* **metricTrigger**: [MetricTrigger](#metrictrigger) (Required): the trigger that results in a scaling action.
+* **scaleAction**: [ScaleAction](#scaleaction) (Required): the parameters for the scaling action.
 
 ## ScaleRuleMetricDimension
 ### Properties

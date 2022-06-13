@@ -17,8 +17,8 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ActionRequestProperties](#actionrequestproperties): Action property bag.
-* **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ActionRequestProperties](#actionrequestproperties): Action properties for put request
+* **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/automationRules@2019-01-01-preview
@@ -28,7 +28,7 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AutomationRuleProperties](#automationruleproperties): Describes automation rule properties
+* **properties**: [AutomationRuleProperties](#automationruleproperties): Automation rule properties
 * **type**: 'Microsoft.SecurityInsights/automationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/bookmarks@2019-01-01-preview
@@ -38,7 +38,7 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BookmarkProperties](#bookmarkproperties): Describes bookmark properties
+* **properties**: [BookmarkProperties](#bookmarkproperties): Bookmark properties
 * **type**: 'Microsoft.SecurityInsights/bookmarks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/bookmarks/relations@2019-01-01-preview
@@ -48,7 +48,7 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RelationProperties](#relationproperties): Relation property bag.
+* **properties**: [RelationProperties](#relationproperties): Relation properties
 * **type**: 'Microsoft.SecurityInsights/bookmarks/relations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/cases@2019-01-01-preview
@@ -58,7 +58,7 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CaseProperties](#caseproperties): Describes case properties
+* **properties**: [CaseProperties](#caseproperties): Case properties
 * **type**: 'Microsoft.SecurityInsights/cases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/cases/comments@2019-01-01-preview
@@ -67,7 +67,7 @@
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CaseCommentProperties](#casecommentproperties): Case comment property bag.
+* **properties**: [CaseCommentProperties](#casecommentproperties): Case comment properties
 * **type**: 'Microsoft.SecurityInsights/cases/comments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/cases/relations@2019-01-01-preview
@@ -98,7 +98,7 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IncidentProperties](#incidentproperties): Describes incident properties
+* **properties**: [IncidentProperties](#incidentproperties): Incident properties
 * **type**: 'Microsoft.SecurityInsights/incidents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/incidents/comments@2019-01-01-preview
@@ -108,7 +108,7 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IncidentCommentProperties](#incidentcommentproperties): Incident comment property bag.
+* **properties**: [IncidentCommentProperties](#incidentcommentproperties): Incident comment properties
 * **type**: 'Microsoft.SecurityInsights/incidents/comments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/incidents/relations@2019-01-01-preview
@@ -118,7 +118,7 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RelationProperties](#relationproperties): Relation property bag.
+* **properties**: [RelationProperties](#relationproperties): Relation properties
 * **type**: 'Microsoft.SecurityInsights/incidents/relations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/settings@2019-01-01-preview
@@ -137,9 +137,9 @@
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'indicator' | string (Required): The kind of the threat intelligence entity
+* **kind**: 'indicator' | string (Required): The kind of the entity.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ThreatIntelligenceIndicatorProperties](#threatintelligenceindicatorproperties) (WriteOnly): Describes threat intelligence entity properties
+* **properties**: [ThreatIntelligenceIndicatorProperties](#threatintelligenceindicatorproperties) (WriteOnly): Threat Intelligence Entity properties
 * **type**: 'Microsoft.SecurityInsights/threatIntelligence/indicators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/watchlists@2019-01-01-preview
@@ -149,7 +149,7 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WatchlistProperties](#watchlistproperties): Describes watchlist properties
+* **properties**: [WatchlistProperties](#watchlistproperties): Watchlist properties
 * **type**: 'Microsoft.SecurityInsights/watchlists' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/watchlists/watchlistItems@2019-01-01-preview
@@ -159,7 +159,7 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WatchlistItemProperties](#watchlistitemproperties): Describes watchlist item properties
+* **properties**: [WatchlistItemProperties](#watchlistitemproperties): Watchlist Item properties
 * **type**: 'Microsoft.SecurityInsights/watchlists/watchlistItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ActionRequestProperties
@@ -198,27 +198,27 @@
 ### Properties
 * **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined' | string: The reason the incident was closed
 * **classificationComment**: string: Describes the reason the incident was closed
-* **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected' | string: The classification reason the incident was closed with
+* **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected' | string: The classification reason to close the incident with
 * **labels**: [IncidentLabel](#incidentlabel)[]: List of labels to add to the incident
-* **owner**: [IncidentOwnerInfo](#incidentownerinfo): Information on the user an incident is assigned to
+* **owner**: [IncidentOwnerInfo](#incidentownerinfo): Describes a user that the incident is assigned to
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string: The severity of the incident
 * **status**: 'Active' | 'Closed' | 'New' | string: The status of the incident
 
 ## AutomationRuleProperties
 ### Properties
 * **actions**: [AutomationRuleAction](#automationruleaction)[] (Required): The actions to execute when the automation rule is triggered
-* **createdBy**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
+* **createdBy**: [ClientInfo](#clientinfo) (ReadOnly): Describes the client that created the automation rule
 * **createdTimeUtc**: string (ReadOnly): The time the automation rule was created
 * **displayName**: string (Required): The display name of the automation  rule
-* **lastModifiedBy**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
+* **lastModifiedBy**: [ClientInfo](#clientinfo) (ReadOnly): Describes the client that last updated the automation rule
 * **lastModifiedTimeUtc**: string (ReadOnly): The last time the automation rule was updated
 * **order**: int (Required): The order of execution of the automation rule
-* **triggeringLogic**: [AutomationRuleTriggeringLogic](#automationruletriggeringlogic) (Required): Describes automation rule triggering logic
+* **triggeringLogic**: [AutomationRuleTriggeringLogic](#automationruletriggeringlogic) (Required): The triggering logic of the automation rule
 
 ## AutomationRulePropertyValuesConditionProperties
 ### Properties
 * **operator**: 'Contains' | 'EndsWith' | 'Equals' | 'NotContains' | 'NotEndsWith' | 'NotEquals' | 'NotStartsWith' | 'StartsWith' | string: The operator to use for evaluation the condition
-* **propertyName**: 'AccountAadTenantId' | 'AccountAadUserId' | 'AccountNTDomain' | 'AccountName' | 'AccountObjectGuid' | 'AccountPUID' | 'AccountSid' | 'AccountUPNSuffix' | 'AzureResourceResourceId' | 'AzureResourceSubscriptionId' | 'CloudApplicationAppId' | 'CloudApplicationAppName' | 'DNSDomainName' | 'FileDirectory' | 'FileHashValue' | 'FileName' | 'HostAzureID' | 'HostNTDomain' | 'HostName' | 'HostNetBiosName' | 'HostOSVersion' | 'IPAddress' | 'IncidentDescription' | 'IncidentProviderName' | 'IncidentRelatedAnalyticRuleIds' | 'IncidentSeverity' | 'IncidentStatus' | 'IncidentTactics' | 'IncidentTitle' | 'IoTDeviceId' | 'IoTDeviceModel' | 'IoTDeviceName' | 'IoTDeviceOperatingSystem' | 'IoTDeviceType' | 'IoTDeviceVendor' | 'MailMessageDeliveryAction' | 'MailMessageDeliveryLocation' | 'MailMessageP1Sender' | 'MailMessageP2Sender' | 'MailMessageRecipient' | 'MailMessageSenderIP' | 'MailMessageSubject' | 'MailboxDisplayName' | 'MailboxPrimaryAddress' | 'MailboxUPN' | 'MalwareCategory' | 'MalwareName' | 'ProcessCommandLine' | 'ProcessId' | 'RegistryKey' | 'RegistryValueData' | 'Url' | string: The property to evaluate in an automation rule property condition
+* **propertyName**: 'AccountAadTenantId' | 'AccountAadUserId' | 'AccountNTDomain' | 'AccountName' | 'AccountObjectGuid' | 'AccountPUID' | 'AccountSid' | 'AccountUPNSuffix' | 'AzureResourceResourceId' | 'AzureResourceSubscriptionId' | 'CloudApplicationAppId' | 'CloudApplicationAppName' | 'DNSDomainName' | 'FileDirectory' | 'FileHashValue' | 'FileName' | 'HostAzureID' | 'HostNTDomain' | 'HostName' | 'HostNetBiosName' | 'HostOSVersion' | 'IPAddress' | 'IncidentDescription' | 'IncidentProviderName' | 'IncidentRelatedAnalyticRuleIds' | 'IncidentSeverity' | 'IncidentStatus' | 'IncidentTactics' | 'IncidentTitle' | 'IoTDeviceId' | 'IoTDeviceModel' | 'IoTDeviceName' | 'IoTDeviceOperatingSystem' | 'IoTDeviceType' | 'IoTDeviceVendor' | 'MailMessageDeliveryAction' | 'MailMessageDeliveryLocation' | 'MailMessageP1Sender' | 'MailMessageP2Sender' | 'MailMessageRecipient' | 'MailMessageSenderIP' | 'MailMessageSubject' | 'MailboxDisplayName' | 'MailboxPrimaryAddress' | 'MailboxUPN' | 'MalwareCategory' | 'MalwareName' | 'ProcessCommandLine' | 'ProcessId' | 'RegistryKey' | 'RegistryValueData' | 'Url' | string: The property to evaluate
 * **propertyValues**: string[]: The values to use for evaluating the condition
 
 ## AutomationRuleRunPlaybookActionConfiguration
@@ -237,10 +237,10 @@
 ## BookmarkProperties
 ### Properties
 * **created**: string: The time the bookmark was created
-* **createdBy**: [UserInfo](#userinfo): User information that made some action
+* **createdBy**: [UserInfo](#userinfo): Describes a user that created the bookmark
 * **displayName**: string (Required): The display name of the bookmark
 * **eventTime**: string: The bookmark event time
-* **incidentInfo**: [IncidentInfo](#incidentinfo): Describes related incident information for the bookmark
+* **incidentInfo**: [IncidentInfo](#incidentinfo): Describes an incident that relates to bookmark
 * **labels**: string[]: List of labels relevant to this bookmark
 * **notes**: string: The notes of the bookmark
 * **query**: string (Required): The query of the bookmark.
@@ -248,13 +248,13 @@
 * **queryResult**: string: The query result of the bookmark.
 * **queryStartTime**: string: The start time for the query
 * **updated**: string: The last time the bookmark was updated
-* **updatedBy**: [UserInfo](#userinfo): User information that made some action
+* **updatedBy**: [UserInfo](#userinfo): Describes a user that updated the bookmark
 
 ## CaseCommentProperties
 ### Properties
 * **createdTimeUtc**: string (ReadOnly): The time the comment was created
 * **message**: string (Required): The comment message
-* **userInfo**: [UserInfo](#userinfo) (ReadOnly): User information that made some action
+* **userInfo**: [UserInfo](#userinfo) (ReadOnly): Describes the user that created the comment
 
 ## CaseProperties
 ### Properties
@@ -268,7 +268,7 @@
 * **lastComment**: string (ReadOnly): the last comment in the case
 * **lastUpdatedTimeUtc**: string (ReadOnly): The last time the case was updated
 * **metrics**: [CasePropertiesMetrics](#casepropertiesmetrics) (ReadOnly): Dictionary of metrics, for example the number of alerts in the case
-* **owner**: [UserInfo](#userinfo): User information that made some action
+* **owner**: [UserInfo](#userinfo): Describes a user that the case is assigned to
 * **relatedAlertIds**: string[] (ReadOnly): List of related alert identifiers
 * **relatedAlertProductNames**: string[] (ReadOnly): List of related alert product names
 * **severity**: 'Critical' | 'High' | 'Informational' | 'Low' | 'Medium' | string (Required): The severity of the case
@@ -305,7 +305,7 @@
 
 ## IncidentCommentProperties
 ### Properties
-* **author**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
+* **author**: [ClientInfo](#clientinfo) (ReadOnly): Describes the client that created the comment
 * **createdTimeUtc**: string (ReadOnly): The time the comment was created
 * **lastModifiedTimeUtc**: string (ReadOnly): The time the comment was updated
 * **message**: string (Required): The comment message
@@ -331,7 +331,7 @@
 
 ## IncidentProperties
 ### Properties
-* **additionalData**: [IncidentAdditionalData](#incidentadditionaldata) (ReadOnly): Incident additional data property bag.
+* **additionalData**: [IncidentAdditionalData](#incidentadditionaldata) (ReadOnly): Additional data on the incident
 * **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined' | string: The reason the incident was closed
 * **classificationComment**: string: Describes the reason the incident was closed
 * **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected' | string: The classification reason the incident was closed with
@@ -343,7 +343,7 @@
 * **labels**: [IncidentLabel](#incidentlabel)[]: List of labels relevant to this incident
 * **lastActivityTimeUtc**: string: The time of the last activity in the incident
 * **lastModifiedTimeUtc**: string (ReadOnly): The last time the incident was updated
-* **owner**: [IncidentOwnerInfo](#incidentownerinfo): Information on the user an incident is assigned to
+* **owner**: [IncidentOwnerInfo](#incidentownerinfo): Describes a user that the incident is assigned to
 * **providerIncidentId**: string: The incident ID assigned by the incident provider
 * **providerName**: string: The name of the source provider that generated the incident
 * **relatedAnalyticRuleIds**: string[] (ReadOnly): List of resource ids of Analytic rules related to the incident
@@ -376,8 +376,8 @@
 * **bookmarkName**: string (ReadOnly): The case related bookmark name
 * **caseIdentifier**: string (ReadOnly): The case identifier
 * **relationName**: string: Name of relation
-* **sourceRelationNode**: [RelationNode](#relationnode) (WriteOnly): Relation node
-* **targetRelationNode**: [RelationNode](#relationnode) (WriteOnly): Relation node
+* **sourceRelationNode**: [RelationNode](#relationnode) (WriteOnly): Relation source node
+* **targetRelationNode**: [RelationNode](#relationnode) (WriteOnly): Relation target node
 
 ## SystemData
 ### Properties
@@ -386,7 +386,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (WriteOnly): The type of identity that created the resource.
 * **lastModifiedAt**: string (WriteOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (WriteOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (WriteOnly): The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (WriteOnly): The type of identity that last modified the resource.
 
 ## ThreatIntelligenceExternalReference
 ### Properties
@@ -469,13 +469,13 @@
 ## WatchlistItemProperties
 ### Properties
 * **created**: string: The time the watchlist item was created
-* **createdBy**: [UserInfo](#userinfo): User information that made some action
-* **entityMapping**: any: Any object
+* **createdBy**: [UserInfo](#userinfo): Describes a user that created the watchlist item
+* **entityMapping**: any: key-value pairs for a watchlist item entity mapping
 * **isDeleted**: bool: A flag that indicates if the watchlist item is deleted or not
-* **itemsKeyValue**: any (Required): Any object
+* **itemsKeyValue**: any (Required): key-value pairs for a watchlist item
 * **tenantId**: string: The tenantId to which the watchlist item belongs to
 * **updated**: string: The last time the watchlist item was updated
-* **updatedBy**: [UserInfo](#userinfo): User information that made some action
+* **updatedBy**: [UserInfo](#userinfo): Describes a user that updated the watchlist item
 * **watchlistItemId**: string: The id (a Guid) of the watchlist item
 * **watchlistItemType**: string: The type of the watchlist item
 
@@ -483,7 +483,7 @@
 ### Properties
 * **contentType**: string: The content type of the raw content. Example : text/csv or text/tsv
 * **created**: string: The time the watchlist was created
-* **createdBy**: [UserInfo](#userinfo): User information that made some action
+* **createdBy**: [UserInfo](#userinfo): Describes a user that created the watchlist
 * **defaultDuration**: string: The default duration of a watchlist (in ISO 8601 duration format)
 * **description**: string: A description of the watchlist
 * **displayName**: string (Required): The display name of the watchlist
@@ -495,7 +495,7 @@
 * **source**: 'Local file' | 'Remote storage' | string (Required): The source of the watchlist
 * **tenantId**: string: The tenantId where the watchlist belongs to
 * **updated**: string: The last time the watchlist was updated
-* **updatedBy**: [UserInfo](#userinfo): User information that made some action
+* **updatedBy**: [UserInfo](#userinfo): Describes a user that updated the watchlist
 * **uploadStatus**: string: The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted
 * **watchlistAlias**: string: The alias of the watchlist
 * **watchlistId**: string: The id (a Guid) of the watchlist

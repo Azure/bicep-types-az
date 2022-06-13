@@ -148,7 +148,7 @@
 * **hyperVGeneration**: 'V1' | 'V2' | string: The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
 * **identifier**: [GalleryImageIdentifier](#galleryimageidentifier) (Required): This is the gallery image definition identifier.
 * **osState**: 'Generalized' | 'Specialized' (Required): This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.
-* **osType**: 'Linux' | 'Windows' (Required): This property allows you to specify the supported type of the OS that application is built for. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
+* **osType**: 'Linux' | 'Windows' (Required): This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
 * **privacyStatementUri**: string: The privacy statement uri.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state, which only appears in the response.
 * **purchasePlan**: [ImagePurchasePlan](#imagepurchaseplan): Describes the gallery image definition purchase plan. This is used by marketplace images.
@@ -211,7 +211,7 @@
 ## OSDiskImageEncryption
 ### Properties
 * **diskEncryptionSetId**: string: A relative URI containing the resource ID of the disk encryption set.
-* **securityProfile**: [OSDiskImageSecurityProfile](#osdiskimagesecurityprofile): Contains security profile for an OS disk image.
+* **securityProfile**: [OSDiskImageSecurityProfile](#osdiskimagesecurityprofile): This property specifies the security profile of an OS disk image.
 
 ## OSDiskImageSecurityProfile
 ### Properties
@@ -234,7 +234,7 @@
 ### Properties
 * **details**: string: Details of gallery regional sharing failure.
 * **region**: string: Region name
-* **state**: 'Failed' | 'InProgress' | 'Succeeded' | 'Unknown' | string (ReadOnly): The sharing state of the gallery, which only appears in the response.
+* **state**: 'Failed' | 'InProgress' | 'Succeeded' | 'Unknown' | string (ReadOnly): Gallery sharing state in current region
 
 ## ReplicationStatus
 ### Properties
@@ -273,7 +273,7 @@
 
 ## SharingProfile
 ### Properties
-* **communityGalleryInfo**: any: Anything
+* **communityGalleryInfo**: any: Information of community gallery if current gallery is shared to community.
 * **groups**: [SharingProfileGroup](#sharingprofilegroup)[] (ReadOnly): A list of sharing profile groups.
 * **permissions**: 'Community' | 'Groups' | 'Private' | string: This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups** <br><br> **Community**
 
@@ -284,7 +284,7 @@
 
 ## SharingStatus
 ### Properties
-* **aggregatedState**: 'Failed' | 'InProgress' | 'Succeeded' | 'Unknown' | string (ReadOnly): The sharing state of the gallery, which only appears in the response.
+* **aggregatedState**: 'Failed' | 'InProgress' | 'Succeeded' | 'Unknown' | string (ReadOnly): Aggregated sharing state of current gallery.
 * **summary**: [RegionalSharingStatus](#regionalsharingstatus)[]: Summary of all regional sharing status.
 
 ## SoftDeletePolicy

@@ -19,7 +19,7 @@
 * **identity**: [Identity](#identity) (Required): Identity for the resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RolloutRequestProperties](#rolloutrequestproperties) (Required): The properties for defining a rollout.
+* **properties**: [RolloutRequestProperties](#rolloutrequestproperties) (Required): Defines the properties that make up a rollout request.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DeploymentManager/rollouts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -63,14 +63,14 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [StepProperties](#stepproperties) (Required): The properties of a step resource.
+* **properties**: [StepProperties](#stepproperties) (Required): The properties that define the step.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DeploymentManager/steps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ArtifactSourceProperties
 ### Properties
 * **artifactRoot**: string: The path from the location that the 'authentication' property [say, a SAS URI to the blob container] refers to, to the location of the artifacts. This can be used to differentiate different versions of the artifacts. Or, different types of artifacts like binaries or templates. The location referenced by the authentication property concatenated with this optional artifactRoot path forms the artifact source location where the artifacts are expected to be found.
-* **authentication**: [Authentication](#authentication) (Required): Defines the authentication method and properties to access the artifacts.
+* **authentication**: [Authentication](#authentication) (Required): The authentication method to use to access the artifact source.
 * **sourceType**: string (Required): The type of artifact source used.
 
 ## Authentication
@@ -79,7 +79,7 @@
 ### Base Properties
 ### SasAuthentication
 #### Properties
-* **properties**: [SasProperties](#sasproperties): The properties that define SAS authentication.
+* **properties**: [SasProperties](#sasproperties): The SAS properties
 * **type**: 'Sas' (Required): The authentication type
 
 
@@ -99,7 +99,7 @@
 * **waitDuration**: string: The duration in ISO 8601 format for which health check waits idly without any checks.
 ### RestHealthCheckStepAttributes
 #### Properties
-* **properties**: [RestParameters](#restparameters): The parameters for the REST health check.
+* **properties**: [RestParameters](#restparameters): The REST health check parameters.
 * **type**: 'REST' (Required): The type of health check.
 
 
@@ -129,8 +129,8 @@
 ## RestHealthCheck
 ### Properties
 * **name**: string (Required): A unique name for this check.
-* **request**: [RestRequest](#restrequest) (Required): The properties that make up a REST request
-* **response**: [RestResponse](#restresponse): The properties that make up the expected REST response
+* **request**: [RestRequest](#restrequest) (Required): The request to the health provider.
+* **response**: [RestResponse](#restresponse): The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.
 
 ## RestParameters
 ### Properties
@@ -138,7 +138,7 @@
 
 ## RestRequest
 ### Properties
-* **authentication**: [RestRequestAuthentication](#restrequestauthentication) (Required): The authentication information required in the REST health check request to the health provider.
+* **authentication**: [RestRequestAuthentication](#restrequestauthentication) (Required): The authentication information required in the request to the health provider.
 * **method**: 'GET' | 'POST' (Required): The HTTP method to use for the request.
 * **uri**: string (Required): The HTTP URI to use for the request.
 
@@ -171,7 +171,7 @@
 ## RolloutOperationInfo
 ### Properties
 * **endTime**: string (ReadOnly): The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.
-* **error**: [CloudErrorBody](#clouderrorbody) (ReadOnly): Detailed error information of any failure.
+* **error**: [CloudErrorBody](#clouderrorbody) (ReadOnly): The detailed error information for any failure.
 * **retryAttempt**: int (ReadOnly): The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.
 * **skipSucceededOnRetry**: bool (ReadOnly): True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.
 * **startTime**: string (ReadOnly): The start time of the rollout in UTC.
@@ -180,7 +180,7 @@
 ### Properties
 * **artifactSourceId**: string: The reference to the artifact source resource Id where the payload is located.
 * **buildVersion**: string (Required): The version of the build being deployed.
-* **operationInfo**: [RolloutOperationInfo](#rolloutoperationinfo) (ReadOnly): Detailed runtime information of the rollout.
+* **operationInfo**: [RolloutOperationInfo](#rolloutoperationinfo) (ReadOnly): Operational information of the rollout.
 * **services**: [Service](#service)[] (ReadOnly): The detailed information on the services being deployed.
 * **status**: string (ReadOnly): The current status of the rollout.
 * **stepGroups**: [StepGroup](#stepgroup)[] (Required): The list of step groups that define the orchestration.
@@ -191,7 +191,7 @@
 ### Properties
 * **messages**: [Message](#message)[] (ReadOnly): Supplementary informative messages during rollout.
 * **name**: string (ReadOnly): Name of the step.
-* **operationInfo**: [StepOperationInfo](#stepoperationinfo) (ReadOnly): Detailed information of a specific step run.
+* **operationInfo**: [StepOperationInfo](#stepoperationinfo) (ReadOnly): Detailed information of specific action execution.
 * **resourceOperations**: [ResourceOperation](#resourceoperation)[] (ReadOnly): Set of resource operations that were performed, if any, on an Azure resource.
 * **status**: string (ReadOnly): Current state of the step.
 * **stepGroup**: string (ReadOnly): The step group the current step is part of.
@@ -218,7 +218,7 @@
 
 ## ServiceUnit
 ### Properties
-* **artifacts**: [ServiceUnitArtifacts](#serviceunitartifacts) (ReadOnly): Defines the artifacts of a service unit.
+* **artifacts**: [ServiceUnitArtifacts](#serviceunitartifacts) (ReadOnly): The artifacts for the service unit.
 * **deploymentMode**: 'Complete' | 'Incremental' (ReadOnly): Describes the type of ARM deployment to be performed on the resource.
 * **name**: string (ReadOnly): Name of the service unit.
 * **steps**: [RolloutStep](#rolloutstep)[] (ReadOnly): Detailed step information, if present.
@@ -233,7 +233,7 @@
 
 ## ServiceUnitResourceProperties
 ### Properties
-* **artifacts**: [ServiceUnitArtifacts](#serviceunitartifacts): Defines the artifacts of a service unit.
+* **artifacts**: [ServiceUnitArtifacts](#serviceunitartifacts): The artifacts for the service unit.
 * **deploymentMode**: 'Complete' | 'Incremental' (Required): Describes the type of ARM deployment to be performed on the resource.
 * **targetResourceGroup**: string (Required): The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
 
@@ -250,7 +250,7 @@
 * **correlationId**: string (ReadOnly): Unique identifier to track the request for ARM-based resources.
 * **deploymentName**: string (ReadOnly): The name of the ARM deployment initiated as part of the step.
 * **endTime**: string (ReadOnly): End time of the action in UTC.
-* **error**: [CloudErrorBody](#clouderrorbody) (ReadOnly): Detailed error information of any failure.
+* **error**: [CloudErrorBody](#clouderrorbody) (ReadOnly): The errors, if any, for the action.
 * **lastUpdatedTime**: string (ReadOnly): Last time in UTC this operation was updated.
 * **startTime**: string (ReadOnly): Start time of the action in UTC.
 
@@ -260,12 +260,12 @@
 ### Base Properties
 ### HealthCheckStepProperties
 #### Properties
-* **attributes**: [HealthCheckStepAttributes](#healthcheckstepattributes) (Required): The attributes for the health check step.
+* **attributes**: [HealthCheckStepAttributes](#healthcheckstepattributes) (Required): The health check step attributes
 * **stepType**: 'HealthCheck' (Required): The type of step.
 
 ### WaitStepProperties
 #### Properties
-* **attributes**: [WaitStepAttributes](#waitstepattributes) (Required): The parameters for the wait step.
+* **attributes**: [WaitStepAttributes](#waitstepattributes) (Required): The Wait attributes
 * **stepType**: 'Wait' (Required): The type of step.
 
 

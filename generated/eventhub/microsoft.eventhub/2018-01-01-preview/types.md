@@ -8,7 +8,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties): Event Hubs Cluster properties supplied in responses in List or Get operations.
-* **sku**: [ClusterSku](#clustersku): SKU parameters particular to a cluster instance.
+* **sku**: [ClusterSku](#clustersku): Properties of the cluster SKU.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.EventHub/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -17,11 +17,11 @@
 ### Properties
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Properties to configure Identity for Bring your Own Keys
+* **identity**: [Identity](#identity): Properties of BYOK Identity description
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EHNamespaceProperties](#ehnamespaceproperties): Namespace properties supplied for create namespace operation.
-* **sku**: [Sku](#sku): SKU parameters supplied to the create namespace operation
+* **sku**: [Sku](#sku): Properties of sku resource
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.EventHub/namespaces' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -94,7 +94,7 @@
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
 * **type**: 'Microsoft.EventHub/namespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/virtualnetworkrules@2018-01-01-preview
@@ -165,7 +165,7 @@
 
 ## CaptureDescription
 ### Properties
-* **destination**: [Destination](#destination): Capture storage details for capture description
+* **destination**: [Destination](#destination): Properties of Destination where capture will be stored. (Storage Account, Blob Names)
 * **enabled**: bool: A value that indicates whether capture description is enabled.
 * **encoding**: 'Avro' | 'AvroDeflate': Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version
 * **intervalInSeconds**: int: The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
@@ -210,7 +210,7 @@
 ### Properties
 * **clusterArmId**: string: Cluster ARM ID of the Namespace.
 * **createdAt**: string (ReadOnly): The time the Namespace was created.
-* **encryption**: [Encryption](#encryption): Properties to configure Encryption
+* **encryption**: [Encryption](#encryption): Properties of BYOK Encryption description
 * **isAutoInflateEnabled**: bool: Value that indicates whether AutoInflate is enabled for eventhub namespace.
 * **kafkaEnabled**: bool: Value that indicates whether Kafka is enabled for eventhub namespace.
 * **maximumThroughputUnits**: int: Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)
@@ -228,7 +228,7 @@
 
 ## EventhubProperties
 ### Properties
-* **captureDescription**: [CaptureDescription](#capturedescription): Properties to configure capture description for eventhub
+* **captureDescription**: [CaptureDescription](#capturedescription): Properties of capture description
 * **createdAt**: string (ReadOnly): Exact time the Event Hub was created.
 * **messageRetentionInDays**: int: Number of days to retain the events for this Event Hub, value should be 1 to 7 days
 * **partitionCount**: int: Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
@@ -269,7 +269,7 @@
 ## NWRuleSetVirtualNetworkRules
 ### Properties
 * **ignoreMissingVnetServiceEndpoint**: bool: Value that indicates whether to ignore missing Vnet Service Endpoint
-* **subnet**: [Subnet](#subnet): Properties supplied for Subnet
+* **subnet**: [Subnet](#subnet): Subnet properties
 
 ## PrivateEndpoint
 ### Properties
@@ -277,8 +277,8 @@
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): PrivateEndpoint information.
-* **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate): ConnectionState information.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource for this Connection.
+* **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate): Details about the state of the connection.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the Private Endpoint Connection.
 
 ## Sku

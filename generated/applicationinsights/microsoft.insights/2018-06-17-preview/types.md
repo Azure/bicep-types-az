@@ -8,7 +8,7 @@
 * **kind**: 'shared' | 'user' | string: The kind of workbook. Choices are user and shared.
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkbookProperties](#workbookproperties): Properties that contain a workbook.
+* **properties**: [WorkbookProperties](#workbookproperties): Metadata describing a workbook for an Azure resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'microsoft.insights/workbooks' (ReadOnly, DeployTimeConstant): The resource type
 

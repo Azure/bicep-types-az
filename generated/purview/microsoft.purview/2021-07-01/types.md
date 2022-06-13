@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2021-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): The Managed Identity of the resource
+* **identity**: [Identity](#identity): Identity Info on the tracked resource
 * **location**: string: Gets or sets the location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AccountProperties](#accountproperties): The account properties
+* **properties**: [AccountProperties](#accountproperties): Gets or sets the properties.
 * **sku**: [AccountSku](#accountsku) (ReadOnly): Gets or sets the Sku.
 * **systemData**: [TrackedResourceSystemData](#trackedresourcesystemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags on the azure resource.
@@ -20,7 +20,7 @@
 * **apiVersion**: '2021-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): A private endpoint connection properties class.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The connection identifier.
 * **type**: 'Microsoft.Purview/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listkeys (Microsoft.Purview/accounts@2021-07-01)
@@ -35,7 +35,8 @@
 
 ## AccountProperties
 ### Properties
-* **cloudConnectors**: [CloudConnectors](#cloudconnectors): External Cloud Service connectors
+* **cloudConnectors**: [CloudConnectors](#cloudconnectors): Cloud connectors.
+External cloud identifier used as part of scanning configuration.
 * **createdAt**: string (ReadOnly): Gets the time at which the entity was created.
 * **createdBy**: string (ReadOnly): Gets the creator of the entity.
 * **createdByObjectId**: string (ReadOnly): Gets the creators of the entity's object id.
@@ -89,12 +90,12 @@ Configured in AWS to allow use of the role arn used for scanning
 ### Properties
 * **id**: string (ReadOnly): Gets or sets the identifier.
 * **name**: string (ReadOnly): Gets or sets the name.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): A private endpoint connection properties class.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The connection identifier.
 * **type**: string (ReadOnly): Gets or sets the type.
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): A private endpoint class.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The private endpoint information.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): The private link service connection state.
 * **provisioningState**: string (ReadOnly): The provisioning state.
 

@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Azure resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagedClusterProperties](#managedclusterproperties): Describes the managed cluster resource properties.
-* **sku**: [Sku](#sku): Service Fabric managed cluster Sku definition
+* **properties**: [ManagedClusterProperties](#managedclusterproperties): The managed cluster resource properties
+* **sku**: [Sku](#sku): The sku of the managed cluster
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ResourceTags](#resourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
@@ -69,7 +69,7 @@
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [NodeTypeProperties](#nodetypeproperties): Describes a node type in the cluster, each node type represents sub set of nodes in the cluster.
+* **properties**: [NodeTypeProperties](#nodetypeproperties): The node type properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ManagedProxyResourceTags](#managedproxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedClusters/nodeTypes' (ReadOnly, DeployTimeConstant): The resource type
@@ -77,18 +77,12 @@
 ## ApplicationHealthPolicy
 ### Properties
 * **considerWarningAsError**: bool (Required): Indicates whether warnings are treated with the same severity as errors.
-* **defaultServiceTypeHealthPolicy**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy): Represents the health policy used to evaluate the health of services belonging to a service type.
+* **defaultServiceTypeHealthPolicy**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy): The health policy used by default to evaluate the health of a service type.
 * **maxPercentUnhealthyDeployedApplications**: int (Required): The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.
 The percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.
 This is calculated by dividing the number of unhealthy deployed applications over the number of nodes where the application is currently deployed on in the cluster.
 The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
-* **serviceTypeHealthPolicyMap**: [ServiceTypeHealthPolicyMap](#servicetypehealthpolicymap): Defines a ServiceTypeHealthPolicy per service type name.
-
-The entries in the map replace the default service type health policy for each specified service type.
-For example, in an application that contains both a stateless gateway service type and a stateful engine service type, the health policies for the stateless and stateful services can be configured differently.
-With policy per service type, there's more granular control of the health of the service.
-
-If no policy is specified for a service type name, the DefaultServiceTypeHealthPolicy is used for evaluation.
+* **serviceTypeHealthPolicyMap**: [ServiceTypeHealthPolicyMap](#servicetypehealthpolicymap): The map with service type health policy per service type name. The map is empty by default.
 
 ## ApplicationParameterList
 ### Properties
@@ -164,21 +158,14 @@ This name must be the full Arm Resource ID for the referenced application type v
 * **adminPassword**: string: VM admin user password.
 * **adminUserName**: string (Required): VM admin user name.
 * **allowRdpAccess**: bool: Setting this to true enables RDP access to the VM. The default NSG rule opens RDP port to internet which can be overridden with custom Network Security Rules. The default value for this setting is false.
-* **applicationTypeVersionsCleanupPolicy**: [ApplicationTypeVersionsCleanupPolicy](#applicationtypeversionscleanuppolicy): The policy used to clean up unused versions.  When the policy is not specified explicitly, the default unused application versions to keep will be 3.
-* **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory): The settings to enable AAD authentication on the cluster.
+* **applicationTypeVersionsCleanupPolicy**: [ApplicationTypeVersionsCleanupPolicy](#applicationtypeversionscleanuppolicy): The policy used to clean up unused versions.
+* **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory): The AAD authentication settings of the cluster.
 * **clientConnectionPort**: int: The port used for client connections to the cluster.
 * **clients**: [ClientCertificate](#clientcertificate)[]: Client certificates that are allowed to manage the cluster.
 * **clusterCertificateThumbprints**: string[] (ReadOnly): List of thumbprints of the cluster certificates.
 * **clusterCodeVersion**: string: The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
 * **clusterId**: string (ReadOnly): A service generated unique identifier for the cluster resource.
 * **clusterState**: 'BaselineUpgrade' | 'Deploying' | 'Ready' | 'UpgradeFailed' | 'Upgrading' | 'WaitingForNodes' | string (ReadOnly): The current state of the cluster.
-
-  - WaitingForNodes - Indicates that the cluster resource is created and the resource provider is waiting for Service Fabric VM extension to boot up and report to it.
-  - Deploying - Indicates that the Service Fabric runtime is being installed on the VMs. Cluster resource will be in this state until the cluster boots up and system services are up.
-  - BaselineUpgrade - Indicates that the cluster is upgrading to establishes the cluster version. This upgrade is automatically initiated when the cluster boots up for the first time.
-  - Upgrading - Indicates that the cluster is being upgraded with the user provided configuration.
-  - UpgradeFailed - Indicates that the last upgrade for the cluster has failed.
-  - Ready - Indicates that the cluster is in a stable state.
 * **clusterUpgradeCadence**: 'Wave0' | 'Wave1' | 'Wave2' | string: Indicates when new cluster runtime version upgrades will be applied after they are released. By default is Wave0.
 * **dnsName**: string (Required): The cluster dns name.
 * **enableAutoOSUpgrade**: bool: Setting this to true enables automatic OS upgrade for the node types that are created using any platform OS image with version 'latest'. The default value for this setting is false.
@@ -188,7 +175,7 @@ This name must be the full Arm Resource ID for the referenced application type v
 * **ipv4Address**: string (ReadOnly): The IPv4 address associated with the public load balancer of the cluster.
 * **loadBalancingRules**: [LoadBalancingRule](#loadbalancingrule)[]: Load balancing rules that are applied to the public load balancer of the cluster.
 * **networkSecurityRules**: [NetworkSecurityRule](#networksecurityrule)[]: Custom Network Security Rules that are applied to the virtual network of the cluster.
-* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the managed resource.
+* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the managed cluster resource.
 
 ## ManagedIdentity
 ### Properties
@@ -218,13 +205,13 @@ This name must be the full Arm Resource ID for the referenced application type v
 
 ## NodeTypeProperties
 ### Properties
-* **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
+* **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription): The range of ports from which cluster assigned port to Service Fabric applications.
 * **capacities**: [NodeTypePropertiesCapacities](#nodetypepropertiescapacities): The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
 * **dataDiskSizeGB**: int (Required): Disk size for each vm in the node type in GBs.
-* **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
+* **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription): The range of ephemeral ports that nodes in this node type should be configured with.
 * **isPrimary**: bool (Required): The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
 * **placementProperties**: [NodeTypePropertiesPlacementProperties](#nodetypepropertiesplacementproperties): The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
-* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the managed resource.
+* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the managed cluster resource.
 * **vmExtensions**: [VmssExtension](#vmssextension)[]: Set of extensions that should be installed onto the virtual machines.
 * **vmImageOffer**: string: The offer type of the Azure Virtual Machines Marketplace image. For example, UbuntuServer or WindowsServer.
 * **vmImagePublisher**: string: The publisher of the Azure Virtual Machines Marketplace image. For example, Canonical or MicrosoftWindowsServer.
@@ -323,8 +310,8 @@ should be split between the partition ‘Count’
 
 ## ScalingPolicy
 ### Properties
-* **scalingMechanism**: [ScalingMechanism](#scalingmechanism) (Required): Describes the mechanism for performing a scaling operation.
-* **scalingTrigger**: [ScalingTrigger](#scalingtrigger) (Required): Describes the trigger for performing a scaling operation.
+* **scalingMechanism**: [ScalingMechanism](#scalingmechanism) (Required): Specifies the mechanism associated with this scaling policy
+* **scalingTrigger**: [ScalingTrigger](#scalingtrigger) (Required): Specifies the trigger associated with this scaling policy.
 
 ## ScalingTrigger
 * **Discriminator**: kind
@@ -350,8 +337,8 @@ should be split between the partition ‘Count’
 
 ## ServiceCorrelation
 ### Properties
-* **scheme**: 'AlignedAffinity' | 'NonAlignedAffinity' | string (Required): The service correlation scheme.
-* **serviceName**: string (Required): The full ARM Resource ID describing the service resource
+* **scheme**: 'AlignedAffinity' | 'NonAlignedAffinity' | string (Required): The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
+* **serviceName**: string (Required): The Arm Resource ID of the service that the correlation relationship is established with.
 
 ## ServiceLoadMetric
 ### Properties
@@ -359,7 +346,7 @@ should be split between the partition ‘Count’
 * **name**: string (Required): The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
 * **primaryDefaultLoad**: int: Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
 * **secondaryDefaultLoad**: int: Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
-* **weight**: 'High' | 'Low' | 'Medium' | 'Zero' | string: Determines the metric weight relative to the other metrics that are configured for this service. During runtime, if two metrics end up in conflict, the Cluster Resource Manager prefers the metric with the higher weight.
+* **weight**: 'High' | 'Low' | 'Medium' | 'Zero' | string: The service load metric relative weight, compared to other metrics configured for this service, as a number.
 
 ## ServicePlacementPolicy
 * **Discriminator**: type
@@ -461,7 +448,7 @@ The computation rounds up to tolerate one failure on small numbers of services.
 
 ## Sku
 ### Properties
-* **name**: 'Basic' | 'Standard' | string (Required): Sku Name. Basic requires a minimum of 3 nodes and Standard a minimum of 5. Basic only allows 1 node type.
+* **name**: 'Basic' | 'Standard' | string (Required): Sku Name.
 
 ## SubResource
 ### Properties
@@ -493,7 +480,7 @@ The computation rounds up to tolerate one failure on small numbers of services.
 
 ## VaultSecretGroup
 ### Properties
-* **sourceVault**: [SubResource](#subresource) (Required): Azure resource identifier.
+* **sourceVault**: [SubResource](#subresource) (Required): The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
 * **vaultCertificates**: [VaultCertificate](#vaultcertificate)[] (Required): The list of key vault references in SourceVault which contain certificates.
 
 ## VmManagedIdentity
@@ -509,11 +496,11 @@ The computation rounds up to tolerate one failure on small numbers of services.
 ### Properties
 * **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
 * **forceUpdateTag**: string: If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.
-* **protectedSettings**: any: Any object
+* **protectedSettings**: any: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
 * **provisionAfterExtensions**: string[]: Collection of extension names after which this extension needs to be provisioned.
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
 * **publisher**: string (Required): The name of the extension handler publisher.
-* **settings**: any: Any object
+* **settings**: any: Json formatted public settings for the extension.
 * **type**: string (Required): Specifies the type of the extension; an example is "CustomScriptExtension".
 * **typeHandlerVersion**: string (Required): Specifies the version of the script handler.
 

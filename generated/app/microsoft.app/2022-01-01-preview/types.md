@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): managed identities for the Container App to interact with other Azure services without maintaining any secrets or credentials in code.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ContainerAppProperties](#containerappproperties): ContainerApp resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.App/containerApps' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AuthConfigProperties](#authconfigproperties): AuthConfig resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/containerApps/authConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.App/containerApps/sourcecontrols@2022-01-01-preview
@@ -30,7 +30,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SourceControlProperties](#sourcecontrolproperties): SourceControl resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/containerApps/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.App/managedEnvironments@2022-01-01-preview
@@ -41,7 +41,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedEnvironmentProperties](#managedenvironmentproperties): Managed environment resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.App/managedEnvironments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -53,7 +53,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CertificateProperties](#certificateproperties): Certificate resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.App/managedEnvironments/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -64,7 +64,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DaprComponentProperties](#daprcomponentproperties): Dapr Component resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/managedEnvironments/daprComponents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.App/managedEnvironments/storages@2022-01-01-preview
@@ -74,7 +74,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedEnvironmentStorageProperties](#managedenvironmentstorageproperties): Storage properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/managedEnvironments/storages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listCustomHostNameAnalysis (Microsoft.App/containerApps@2022-01-01-preview)
@@ -99,8 +99,8 @@
 ## Apple
 ### Properties
 * **enabled**: bool: <code>false</code> if the Apple provider should not be enabled despite the set registration; otherwise, <code>true</code>.
-* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
-* **registration**: [AppleRegistration](#appleregistration): The configuration settings of the registration for the Apple provider
+* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow.
+* **registration**: [AppleRegistration](#appleregistration): The configuration settings of the Apple registration.
 
 ## AppleRegistration
 ### Properties
@@ -110,7 +110,7 @@
 ## AppLogsConfiguration
 ### Properties
 * **destination**: string: Logs destination
-* **logAnalyticsConfiguration**: [LogAnalyticsConfiguration](#loganalyticsconfiguration): Log analytics configuration
+* **logAnalyticsConfiguration**: [LogAnalyticsConfiguration](#loganalyticsconfiguration): Log Analytics configuration
 
 ## AppRegistration
 ### Properties
@@ -119,7 +119,7 @@
 
 ## AuthConfigProperties
 ### Properties
-* **globalValidation**: [GlobalValidation](#globalvalidation): The configuration settings that determines the validation flow of users using ContainerApp Service Authentication/Authorization.
+* **globalValidation**: [GlobalValidation](#globalvalidation): The configuration settings that determines the validation flow of users using  Service Authentication/Authorization.
 * **httpSettings**: [HttpSettings](#httpsettings): The configuration settings of the HTTP requests for authentication and authorization requests made against ContainerApp Service Authentication/Authorization.
 * **identityProviders**: [IdentityProviders](#identityproviders): The configuration settings of each of the identity providers used to configure ContainerApp Service Authentication/Authorization.
 * **login**: [Login](#login): The configuration settings of the login flow of users using ContainerApp Service Authentication/Authorization.
@@ -168,7 +168,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 ## AzureActiveDirectoryValidation
 ### Properties
 * **allowedAudiences**: string[]: The list of audiences that can make successful authentication/authorization requests.
-* **defaultAuthorizationPolicy**: [DefaultAuthorizationPolicy](#defaultauthorizationpolicy): The configuration settings of the Azure Active Directory default authorization policy.
+* **defaultAuthorizationPolicy**: [DefaultAuthorizationPolicy](#defaultauthorizationpolicy): The configuration settings of the default authorization policy.
 * **jwtClaimChecks**: [JwtClaimChecks](#jwtclaimchecks): The configuration settings of the checks that should be made while validating the JWT Claims.
 
 ## AzureCredentials
@@ -188,7 +188,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 ## AzureStaticWebApps
 ### Properties
 * **enabled**: bool: <code>false</code> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, <code>true</code>.
-* **registration**: [AzureStaticWebAppsRegistration](#azurestaticwebappsregistration): The configuration settings of the registration for the Azure Static Web Apps provider
+* **registration**: [AzureStaticWebAppsRegistration](#azurestaticwebappsregistration): The configuration settings of the Azure Static Web Apps registration.
 
 ## AzureStaticWebAppsRegistration
 ### Properties
@@ -216,8 +216,8 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 ### Properties
 * **activeRevisionsMode**: 'Multiple' | 'Single' | string: ActiveRevisionsMode controls how active revisions are handled for the Container app:
 <list><item>Multiple: multiple revisions can be active. If no value if provided, this is the default</item><item>Single: Only one revision can be active at a time. Revision weights can not be used in this mode</item></list>
-* **dapr**: [Dapr](#dapr): Container App Dapr configuration.
-* **ingress**: [Ingress](#ingress): Container App Ingress configuration.
+* **dapr**: [Dapr](#dapr): Dapr configuration for the Container App.
+* **ingress**: [Ingress](#ingress): Ingress configurations.
 * **registries**: [RegistryCredentials](#registrycredentials)[]: Collection of private container registry credentials for containers used by the Container app
 * **secrets**: [Secret](#secret)[]: Collection of secrets used by a Container app
 
@@ -229,7 +229,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **image**: string: Container image tag.
 * **name**: string: Custom container name.
 * **probes**: [ContainerAppProbe](#containerappprobe)[]: List of probes for the container.
-* **resources**: [ContainerResources](#containerresources): Container App container resource requirements.
+* **resources**: [ContainerResources](#containerresources): Container resource requirements.
 * **volumeMounts**: [VolumeMount](#volumemount)[]: Container volume mounts.
 
 ## ContainerAppProbe
@@ -264,7 +264,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 
 ## ContainerAppProperties
 ### Properties
-* **configuration**: [Configuration](#configuration): Non versioned Container App configuration properties that define the mutable settings of a Container app
+* **configuration**: [Configuration](#configuration): Non versioned Container App configuration properties.
 * **customDomainVerificationId**: string (ReadOnly): Id used to verify domain name ownership
 * **latestRevisionFqdn**: string (ReadOnly): Fully Qualified Domain Name of the latest revision of the Container App.
 * **latestRevisionName**: string (ReadOnly): Name of the latest revision of the Container App.
@@ -272,8 +272,6 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **outboundIPAddresses**: string[] (ReadOnly): Outbound IP Addresses for container app.
 * **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the Container App.
 * **template**: [Template](#template): Container App versioned application definition.
-Defines the desired state of an immutable revision.
-Any changes to this section Will result in a new revision being created
 
 ## ContainerAppSecret
 ### Properties
@@ -302,7 +300,7 @@ Any changes to this section Will result in a new revision being created
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **name**: string (ReadOnly): The name of the resource
 * **properties**: [CustomHostnameAnalysisResultProperties](#customhostnameanalysisresultproperties) (ReadOnly): CustomHostnameAnalysisResult resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## CustomHostnameAnalysisResultProperties
@@ -312,7 +310,7 @@ Any changes to this section Will result in a new revision being created
 * **aRecords**: string[] (ReadOnly): A records visible for this hostname.
 * **cNameRecords**: string[] (ReadOnly): CName records visible for this hostname.
 * **conflictingContainerAppResourceId**: string (ReadOnly): Name of the conflicting Container App on the Managed Environment if it's within the same subscription.
-* **customDomainVerificationFailureInfo**: [DefaultErrorResponse](#defaulterrorresponse) (ReadOnly): App Service error response.
+* **customDomainVerificationFailureInfo**: [DefaultErrorResponse](#defaulterrorresponse) (ReadOnly): Raw failure information if DNS verification fails.
 * **customDomainVerificationTest**: 'Failed' | 'Passed' | 'Skipped' (ReadOnly): DNS verification test result.
 * **hasConflictOnManagedEnvironment**: bool (ReadOnly): <code>true</code> if there is a conflict on the Container App's managed environment; otherwise, <code>false</code>.
 * **hostName**: string (ReadOnly): Host name that was analyzed
@@ -393,8 +391,8 @@ eg: azure-servicebus, redis etc.
 ### Properties
 * **enabled**: bool: <code>false</code> if the Facebook provider should not be enabled despite the set registration; otherwise, <code>true</code>.
 * **graphApiVersion**: string: The version of the Facebook api to be used while logging in.
-* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
-* **registration**: [AppRegistration](#appregistration): The configuration settings of the app registration for providers that have app ids and app secrets
+* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow.
+* **registration**: [AppRegistration](#appregistration): The configuration settings of the app registration for the Facebook provider.
 
 ## ForwardProxy
 ### Properties
@@ -405,16 +403,16 @@ eg: azure-servicebus, redis etc.
 ## GitHub
 ### Properties
 * **enabled**: bool: <code>false</code> if the GitHub provider should not be enabled despite the set registration; otherwise, <code>true</code>.
-* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
-* **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for providers that have client ids and client secrets
+* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow.
+* **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for the GitHub provider.
 
 ## GithubActionConfiguration
 ### Properties
-* **azureCredentials**: [AzureCredentials](#azurecredentials): Container App credentials.
+* **azureCredentials**: [AzureCredentials](#azurecredentials): AzureCredentials configurations.
 * **dockerfilePath**: string: Docker file path
 * **os**: string: Operation system
 * **publishType**: string: Code or Image
-* **registryInfo**: [RegistryInfo](#registryinfo): Container App registry information.
+* **registryInfo**: [RegistryInfo](#registryinfo): Registry configurations.
 * **runtimeStack**: string: Runtime stack
 * **runtimeVersion**: string: Runtime Version
 
@@ -429,9 +427,9 @@ action is set to "RedirectToLoginPage".
 ## Google
 ### Properties
 * **enabled**: bool: <code>false</code> if the Google provider should not be enabled despite the set registration; otherwise, <code>true</code>.
-* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
-* **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for providers that have client ids and client secrets
-* **validation**: [AllowedAudiencesValidation](#allowedaudiencesvalidation): The configuration settings of the Allowed Audiences validation flow.
+* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow.
+* **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for the Google provider.
+* **validation**: [AllowedAudiencesValidation](#allowedaudiencesvalidation): The configuration settings of the Azure Active Directory token validation flow.
 
 ## HttpScaleRule
 ### Properties
@@ -510,17 +508,19 @@ Note that URLs within the current domain are always implicitly allowed.
 
 ## ManagedEnvironmentProperties
 ### Properties
-* **appLogsConfiguration**: [AppLogsConfiguration](#applogsconfiguration): Configuration of application logs
+* **appLogsConfiguration**: [AppLogsConfiguration](#applogsconfiguration): Cluster configuration which enables the log daemon to export
+app logs to a destination. Currently only "log-analytics" is
+supported
 * **daprAIInstrumentationKey**: string: Azure Monitor instrumentation key used by Dapr to export Service to Service communication telemetry
 * **defaultDomain**: string (ReadOnly): Default Domain Name for the cluster
 * **deploymentErrors**: string (ReadOnly): Any errors that occurred during deployment or deployment validation
 * **provisioningState**: 'Canceled' | 'Failed' | 'InfrastructureSetupComplete' | 'InfrastructureSetupInProgress' | 'InitializationInProgress' | 'ScheduledForDelete' | 'Succeeded' | 'UpgradeFailed' | 'UpgradeRequested' | 'Waiting' | string (ReadOnly): Provisioning state of the Environment.
 * **staticIp**: string (ReadOnly): Static IP of the Environment
-* **vnetConfiguration**: [VnetConfiguration](#vnetconfiguration): Configuration properties for apps environment to join a Virtual Network
+* **vnetConfiguration**: [VnetConfiguration](#vnetconfiguration): Vnet configuration for the environment
 
 ## ManagedEnvironmentStorageProperties
 ### Properties
-* **azureFile**: [AzureFileProperties](#azurefileproperties): Azure File Properties.
+* **azureFile**: [AzureFileProperties](#azurefileproperties): Azure file properties
 
 ## ManagedServiceIdentity
 ### Properties
@@ -554,7 +554,7 @@ Note that URLs within the current domain are always implicitly allowed.
 
 ## OpenIdConnectRegistration
 ### Properties
-* **clientCredential**: [OpenIdConnectClientCredential](#openidconnectclientcredential): The authentication client credentials of the custom Open ID Connect provider.
+* **clientCredential**: [OpenIdConnectClientCredential](#openidconnectclientcredential): The authentication credentials of the custom Open ID Connect provider.
 * **clientId**: string: The client id of the custom Open ID Connect provider.
 * **openIdConnectConfiguration**: [OpenIdConnectConfig](#openidconnectconfig): The configuration settings of the endpoints used for the custom Open ID Connect provider.
 
@@ -584,9 +584,9 @@ Note that URLs within the current domain are always implicitly allowed.
 
 ## ScaleRule
 ### Properties
-* **azureQueue**: [QueueScaleRule](#queuescalerule): Container App container Azure Queue based scaling rule.
-* **custom**: [CustomScaleRule](#customscalerule): Container App container Custom scaling rule.
-* **http**: [HttpScaleRule](#httpscalerule): Container App container Custom scaling rule.
+* **azureQueue**: [QueueScaleRule](#queuescalerule): Azure Queue based scaling.
+* **custom**: [CustomScaleRule](#customscalerule): Custom scale rule.
+* **http**: [HttpScaleRule](#httpscalerule): HTTP requests based scaling.
 * **name**: string: Scale Rule Name
 
 ## ScaleRuleAuth
@@ -606,7 +606,9 @@ Note that URLs within the current domain are always implicitly allowed.
 ## SourceControlProperties
 ### Properties
 * **branch**: string: The branch which will trigger the auto deployment
-* **githubActionConfiguration**: [GithubActionConfiguration](#githubactionconfiguration): Configuration properties that define the mutable settings of a Container App SourceControl
+* **githubActionConfiguration**: [GithubActionConfiguration](#githubactionconfiguration): Container App Revision Template with all possible settings and the
+defaults if user did not provide them. The defaults are populated
+as they were at the creation time
 * **operationState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Current provisioning State of the operation
 * **repoUrl**: string: The repo url which will be integrated to ContainerApp.
 
@@ -617,13 +619,13 @@ Note that URLs within the current domain are always implicitly allowed.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## Template
 ### Properties
 * **containers**: [Container](#container)[]: List of container definitions for the Container App.
 * **revisionSuffix**: string: User friendly suffix that is appended to the revision name
-* **scale**: [Scale](#scale): Container App scaling configurations.
+* **scale**: [Scale](#scale): Scaling properties for the Container App.
 * **volumes**: [Volume](#volume)[]: List of volume definitions for the Container App.
 
 ## TrackedResourceTags

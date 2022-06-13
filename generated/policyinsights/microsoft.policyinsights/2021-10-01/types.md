@@ -6,8 +6,8 @@
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RemediationProperties](#remediationproperties): The remediation properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [RemediationProperties](#remediationproperties): Properties for the remediation.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.PolicyInsights/remediations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listDeployments (Microsoft.PolicyInsights/remediations@2021-10-01)
@@ -27,7 +27,7 @@
 ### Properties
 * **createdOn**: string (ReadOnly): The time at which the remediation was created.
 * **deploymentId**: string (ReadOnly): Resource ID of the template deployment that will remediate the resource.
-* **error**: [ErrorDefinition](#errordefinition) (ReadOnly): Error definition.
+* **error**: [ErrorDefinition](#errordefinition) (ReadOnly): Error encountered while remediated the resource.
 * **lastUpdatedOn**: string (ReadOnly): The time at which the remediation deployment was last updated.
 * **remediatedResourceId**: string (ReadOnly): Resource ID of the resource that is being remediated by the deployment.
 * **resourceLocation**: string (ReadOnly): Location of the resource that is being remediated.
@@ -75,10 +75,10 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TypedErrorInfo
 ### Properties
-* **info**: any (ReadOnly): Anything
+* **info**: any (ReadOnly): The scenario specific error details.
 * **type**: string (ReadOnly): The type of included error details.
 

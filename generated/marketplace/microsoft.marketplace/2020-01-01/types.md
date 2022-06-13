@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateStoreProperties](#privatestoreproperties): Describes the json payload on whether or not the private store is enabled for a given tenant
+* **properties**: [PrivateStoreProperties](#privatestoreproperties): The PrivateStore data structure.
 * **type**: 'Microsoft.Marketplace/privateStores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Marketplace/privateStores/offers@2020-01-01
@@ -15,7 +15,7 @@
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [OfferProperties](#offerproperties)
+* **properties**: [OfferProperties](#offerproperties): The privateStore offer data structure.
 * **type**: 'Microsoft.Marketplace/privateStores/offers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## OfferProperties

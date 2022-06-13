@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2021-09-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ResourceIdentity](#resourceidentity): The managed identity of a resource.
+* **identity**: [ResourceIdentity](#resourceidentity): The identity of the experiment resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ExperimentProperties](#experimentproperties) (Required): Model that represents the Experiment properties model.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ExperimentProperties](#experimentproperties) (Required): The properties of the experiment resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata of the experiment resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Chaos/experiments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,8 +20,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Location of the target resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TargetProperties](#targetproperties) (Required): Model that represents the base Target properties model.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [TargetProperties](#targetproperties) (Required): The properties of the target resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata of the target resource.
 * **type**: 'Microsoft.Chaos/targets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Chaos/targets/capabilities@2021-09-15-preview
@@ -30,15 +30,15 @@
 * **apiVersion**: '2021-09-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CapabilityProperties](#capabilityproperties) (ReadOnly): Model that represents the Capability properties model.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [CapabilityProperties](#capabilityproperties) (ReadOnly): The properties of a capability resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The standard system metadata of a resource type.
 * **type**: 'Microsoft.Chaos/targets/capabilities' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Action
 * **Discriminator**: type
 
 ### Base Properties
-* **name**: string (Required): String that represents a URN.
+* **name**: string (Required): String that represents a Capability URN.
 ### ContinuousAction
 #### Properties
 * **duration**: string (Required): ISO8601 formatted string that represents a duration.
@@ -66,10 +66,10 @@
 ## CapabilityProperties
 ### Properties
 * **description**: string (ReadOnly): Localized string of the description.
-* **parametersSchema**: string (ReadOnly): String that represents a URL.
+* **parametersSchema**: string (ReadOnly): URL to retrieve JSON schema of the Capability parameters.
 * **publisher**: string (ReadOnly): String of the Publisher that this Capability extends.
 * **targetType**: string (ReadOnly): String of the Target Type that this Capability extends.
-* **urn**: string (ReadOnly): String that represents a URN.
+* **urn**: string (ReadOnly): String of the URN for this Capability Type.
 
 ## ExperimentProperties
 ### Properties
@@ -106,7 +106,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TargetProperties
 ### Properties
