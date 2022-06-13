@@ -58,7 +58,7 @@
 * **condition**: string: The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
 * **endpointNames**: string[] (Required): The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
 * **isEnabled**: bool (Required): Used to specify whether the fallback route is enabled or not.
-* **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'TwinChangeEvents' | string (Required): The source that the routing rule is to be applied to, such as DeviceMessages.
+* **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'TwinChangeEvents' | string (Required): The source to which the routing rule is to be applied to. e.g. DeviceMessages
 
 ## FeedbackProperties
 ### Properties
@@ -153,7 +153,7 @@
 ## RoutingProperties
 ### Properties
 * **endpoints**: [RoutingEndpoints](#routingendpoints): The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.
-* **fallbackRoute**: [FallbackRouteProperties](#fallbackrouteproperties): The properties related to the fallback route based on which the IoT hub routes messages to the fallback endpoint.
+* **fallbackRoute**: [FallbackRouteProperties](#fallbackrouteproperties): The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.
 * **routes**: [RouteProperties](#routeproperties)[]: The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.
 
 ## RoutingServiceBusQueueEndpointProperties

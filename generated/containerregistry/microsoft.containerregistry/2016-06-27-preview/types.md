@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RegistryProperties](#registryproperties): The properties of a container registry.
+* **properties**: [RegistryProperties](#registryproperties): The properties of the container registry.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -16,7 +16,7 @@
 * **adminUserEnabled**: bool: The value that indicates whether the admin user is enabled. This value is false by default.
 * **creationDate**: string (ReadOnly): The creation date of the container registry in ISO8601 format.
 * **loginServer**: string (ReadOnly): The URL that can be used to log into the container registry.
-* **storageAccount**: [StorageAccountProperties](#storageaccountproperties) (Required): The properties of a storage account for a container registry.
+* **storageAccount**: [StorageAccountProperties](#storageaccountproperties) (Required): The properties of the storage account for the container registry. If specified, the storage account must be in the same physical location as the container registry.
 
 ## ResourceTags
 ### Properties

@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ConnectedClusterIdentity](#connectedclusteridentity) (Required): Identity for the connected cluster.
+* **identity**: [ConnectedClusterIdentity](#connectedclusteridentity) (Required): The identity of the connected cluster.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConnectedClusterProperties](#connectedclusterproperties) (Required): Properties of the connected cluster.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ConnectedClusterProperties](#connectedclusterproperties) (Required): Describes the connected cluster resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Kubernetes/connectedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -38,7 +38,7 @@
 * **offering**: string (ReadOnly): Connected cluster offering
 * **privateLinkScopeResourceId**: string: The resource id of the private link scope this connected cluster is assigned to, if any.
 * **privateLinkState**: 'Disabled' | 'Enabled' | string: Property which describes the state of private link on a connected cluster resource.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string: The current deployment state of connectedClusters.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string: Provisioning state of the connected cluster resource.
 * **totalCoreCount**: int (ReadOnly): Number of CPU cores present in the connected cluster resource
 * **totalNodeCount**: int (ReadOnly): Number of nodes present in the connected cluster resource
 

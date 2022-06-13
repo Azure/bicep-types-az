@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ResourceIdentity](#resourceidentity)
+* **identity**: [ResourceIdentity](#resourceidentity): The managed identity information, if configured.
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationStoreProperties](#configurationstoreproperties): The properties of a configuration store.
-* **sku**: [Sku](#sku) (Required): Describes a configuration store SKU.
+* **sku**: [Sku](#sku) (Required): The sku of the configuration store.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.AppConfiguration/configurationStores' (ReadOnly, DeployTimeConstant): The resource type
 

@@ -6,11 +6,11 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string: Indicates the type of bot service
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string: Required. Gets or sets the Kind of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BotProperties](#botproperties): The parameters to provide for the Bot.
-* **sku**: [Sku](#sku): The SKU of the cognitive services account.
+* **properties**: [BotProperties](#botproperties): The set of properties specific to bot resource
+* **sku**: [Sku](#sku): Gets or sets the SKU of the resource.
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.BotService/botServices' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,11 +20,11 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string: Indicates the type of bot service
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string: Required. Gets or sets the Kind of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: 'DirectLineChannel' | 'EmailChannel' | 'FacebookChannel' | 'KikChannel' | 'MsTeamsChannel' | 'SkypeChannel' | 'SlackChannel' | 'SmsChannel' | 'TelegramChannel' | 'WebChatChannel' (Required, DeployTimeConstant): The resource name
-* **properties**: [Channel](#channel): Channel definition
-* **sku**: [Sku](#sku): The SKU of the cognitive services account.
+* **properties**: [Channel](#channel): The set of properties specific to bot channel resource
+* **sku**: [Sku](#sku): Gets or sets the SKU of the resource.
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.BotService/botServices/channels' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -34,11 +34,11 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string: Indicates the type of bot service
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string: Required. Gets or sets the Kind of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConnectionSettingProperties](#connectionsettingproperties): Properties for a Connection Setting Item
-* **sku**: [Sku](#sku): The SKU of the cognitive services account.
+* **properties**: [ConnectionSettingProperties](#connectionsettingproperties): The set of properties specific to bot channel resource
+* **sku**: [Sku](#sku): Gets or sets the SKU of the resource.
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.BotService/botServices/Connections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -56,11 +56,11 @@
 ### Properties
 * **etag**: string (ReadOnly): Entity Tag
 * **id**: string (ReadOnly): Specifies the resource ID.
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Indicates the type of bot service
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Required. Gets or sets the Kind of the resource.
 * **location**: string (ReadOnly): Specifies the location of the resource.
 * **name**: string (ReadOnly): Specifies the name of the resource.
-* **properties**: [Channel](#channel) (ReadOnly): Channel definition
-* **sku**: [Sku](#sku) (ReadOnly): The SKU of the cognitive services account.
+* **properties**: [Channel](#channel) (ReadOnly): The set of properties specific to bot channel resource
+* **sku**: [Sku](#sku) (ReadOnly): Gets or sets the SKU of the resource.
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
 * **type**: string (ReadOnly): Specifies the type of the resource.
 
@@ -87,63 +87,63 @@
 ### DirectLineChannel
 #### Properties
 * **channelName**: 'DirectLineChannel' (Required): The channel name
-* **properties**: [DirectLineChannelProperties](#directlinechannelproperties): The parameters to provide for the Direct Line channel.
+* **properties**: [DirectLineChannelProperties](#directlinechannelproperties): The set of properties specific to Direct Line channel resource
 
 ### EmailChannel
 #### Properties
 * **channelName**: 'EmailChannel' (Required): The channel name
-* **properties**: [EmailChannelProperties](#emailchannelproperties): The parameters to provide for the Email channel.
+* **properties**: [EmailChannelProperties](#emailchannelproperties): The set of properties specific to email channel resource
 
 ### FacebookChannel
 #### Properties
 * **channelName**: 'FacebookChannel' (Required): The channel name
-* **properties**: [FacebookChannelProperties](#facebookchannelproperties): The parameters to provide for the Facebook channel.
+* **properties**: [FacebookChannelProperties](#facebookchannelproperties): The set of properties specific to bot facebook channel
 
 ### KikChannel
 #### Properties
 * **channelName**: 'KikChannel' (Required): The channel name
-* **properties**: [KikChannelProperties](#kikchannelproperties): The parameters to provide for the Kik channel.
+* **properties**: [KikChannelProperties](#kikchannelproperties): The set of properties specific to Kik channel resource
 
 ### MsTeamsChannel
 #### Properties
 * **channelName**: 'MsTeamsChannel' (Required): The channel name
-* **properties**: [MsTeamsChannelProperties](#msteamschannelproperties): The parameters to provide for the Microsoft Teams channel.
+* **properties**: [MsTeamsChannelProperties](#msteamschannelproperties): The set of properties specific to Microsoft Teams channel resource
 
 ### SkypeChannel
 #### Properties
 * **channelName**: 'SkypeChannel' (Required): The channel name
-* **properties**: [SkypeChannelProperties](#skypechannelproperties): The parameters to provide for the Microsoft Teams channel.
+* **properties**: [SkypeChannelProperties](#skypechannelproperties): The set of properties specific to Skype channel resource
 
 ### SlackChannel
 #### Properties
 * **channelName**: 'SlackChannel' (Required): The channel name
-* **properties**: [SlackChannelProperties](#slackchannelproperties): The parameters to provide for the Slack channel.
+* **properties**: [SlackChannelProperties](#slackchannelproperties): The set of properties specific to Slack channel resource
 
 ### SmsChannel
 #### Properties
 * **channelName**: 'SmsChannel' (Required): The channel name
-* **properties**: [SmsChannelProperties](#smschannelproperties): The parameters to provide for the Sms channel.
+* **properties**: [SmsChannelProperties](#smschannelproperties): The set of properties specific to Sms channel resource
 
 ### TelegramChannel
 #### Properties
 * **channelName**: 'TelegramChannel' (Required): The channel name
-* **properties**: [TelegramChannelProperties](#telegramchannelproperties): The parameters to provide for the Telegram channel.
+* **properties**: [TelegramChannelProperties](#telegramchannelproperties): The set of properties specific to Telegram channel resource
 
 ### WebChatChannel
 #### Properties
 * **channelName**: 'WebChatChannel' (Required): The channel name
-* **properties**: [WebChatChannelProperties](#webchatchannelproperties): The parameters to provide for the Web Chat channel.
+* **properties**: [WebChatChannelProperties](#webchatchannelproperties): The set of properties specific to Web Chat channel resource
 
 
 ## ConnectionSetting
 ### Properties
 * **etag**: string (ReadOnly): Entity Tag
 * **id**: string (ReadOnly): Specifies the resource ID.
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Indicates the type of bot service
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Required. Gets or sets the Kind of the resource.
 * **location**: string (ReadOnly): Specifies the location of the resource.
 * **name**: string (ReadOnly): Specifies the name of the resource.
-* **properties**: [ConnectionSettingProperties](#connectionsettingproperties) (ReadOnly): Properties for a Connection Setting Item
-* **sku**: [Sku](#sku) (ReadOnly): The SKU of the cognitive services account.
+* **properties**: [ConnectionSettingProperties](#connectionsettingproperties) (ReadOnly): The set of properties specific to bot channel resource
+* **sku**: [Sku](#sku) (ReadOnly): Gets or sets the SKU of the resource.
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
 * **type**: string (ReadOnly): Specifies the type of the resource.
 
@@ -239,7 +239,7 @@
 
 ## Sku
 ### Properties
-* **name**: 'F0' | 'S1' | string (Required): The name of SKU.
+* **name**: 'F0' | 'S1' | string (Required): The sku name
 * **tier**: 'Free' | 'Standard' | string (ReadOnly): Gets the sku tier. This is based on the SKU name.
 
 ## SkypeChannelProperties

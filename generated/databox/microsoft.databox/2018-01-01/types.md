@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [JobProperties](#jobproperties) (Required): Job Properties
-* **sku**: [Sku](#sku) (Required): The Sku.
+* **properties**: [JobProperties](#jobproperties) (Required): Properties of a job.
+* **sku**: [Sku](#sku) (Required): The sku type.
 * **tags**: [ResourceTags](#resourcetags): The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
 * **type**: 'Microsoft.DataBox/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -135,17 +135,17 @@
 
 ### Base Properties
 * **chainOfCustodySasKey**: string (ReadOnly): Shared access key to download the chain of custody logs
-* **contactDetails**: [ContactDetails](#contactdetails) (Required): Contact Details.
+* **contactDetails**: [ContactDetails](#contactdetails) (Required): Contact details for notification and shipping.
 * **copyLogDetails**: [CopyLogDetails](#copylogdetails)[] (ReadOnly): List of copy log details.
-* **deliveryPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly): Shipping details.
+* **deliveryPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly): Delivery package shipping details.
 * **destinationAccountDetails**: [DestinationAccountDetails](#destinationaccountdetails)[] (Required): Destination account details.
 * **errorDetails**: [JobErrorDetails](#joberrordetails)[] (ReadOnly): Error details for failure. This is optional.
 * **expectedDataSizeInTeraBytes**: int: The expected size of the data, which needs to be transferred in this job, in terabytes.
 * **jobStages**: [JobStages](#jobstages)[] (ReadOnly): List of stages that run in the job.
-* **preferences**: [Preferences](#preferences): Preferences related to the order
-* **returnPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly): Shipping details.
+* **preferences**: [Preferences](#preferences): Preferences for the order.
+* **returnPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly): Return package shipping details.
 * **reverseShipmentLabelSasKey**: string (ReadOnly): Shared access key to download the return shipment label
-* **shippingAddress**: [ShippingAddress](#shippingaddress) (Required): Shipping address where customer wishes to receive the device.
+* **shippingAddress**: [ShippingAddress](#shippingaddress) (Required): Shipping address of the customer.
 ### DataBoxJobDetails
 #### Properties
 * **copyProgress**: [CopyProgress](#copyprogress)[] (ReadOnly): Copy progress per storage account.
@@ -175,7 +175,7 @@
 ## JobProperties
 ### Properties
 * **cancellationReason**: string (ReadOnly): Reason for cancellation.
-* **details**: [JobDetails](#jobdetails): Job details.
+* **details**: [JobDetails](#jobdetails): Details of a job run. This field will only be sent for expand details filter.
 * **error**: [Error](#error) (ReadOnly): Top level error for the job.
 * **isCancellable**: bool (ReadOnly): Describes whether the job is cancellable or not.
 * **isDeletable**: bool (ReadOnly): Describes whether the job is deletable or not.
@@ -209,8 +209,8 @@
 ### Properties
 * **displayName**: string (ReadOnly): Display name of the job stage.
 * **errorDetails**: [JobErrorDetails](#joberrordetails)[] (ReadOnly): Error details for the stage.
-* **jobStageDetails**: any (ReadOnly): Any object
-* **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' (ReadOnly): Name of the stage which is in progress.
+* **jobStageDetails**: any (ReadOnly): Job Stage Details
+* **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' (ReadOnly): Name of the job stage.
 * **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' | 'SucceededWithErrors' (ReadOnly): Status of the job stage.
 * **stageTime**: string (ReadOnly): Time for the job stage in UTC ISO 8601 format.
 
@@ -227,7 +227,7 @@
 
 ## Preferences
 ### Properties
-* **preferredDataCenterRegion**: string[]: Array of PreferencesPreferredDataCenterRegionItem
+* **preferredDataCenterRegion**: string[]
 
 ## ResourceTags
 ### Properties
@@ -259,12 +259,12 @@
 ### Properties
 * **displayName**: string: The display name of the sku.
 * **family**: string: The sku family.
-* **name**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required)
+* **name**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): The sku name.
 
 ## UnencryptedCredentials
 ### Properties
 * **jobName**: string (ReadOnly): Name of the job.
-* **jobSecrets**: [JobSecrets](#jobsecrets) (ReadOnly): The base class for the secrets
+* **jobSecrets**: [JobSecrets](#jobsecrets) (ReadOnly): Secrets related to this job.
 
 ## UnencryptedCredentialsList
 ### Properties

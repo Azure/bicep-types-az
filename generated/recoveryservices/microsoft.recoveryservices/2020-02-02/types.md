@@ -118,7 +118,7 @@
 * **encryption**: [VaultPropertiesEncryption](#vaultpropertiesencryption): Customer Managed Key details of the resource.
 * **privateEndpointConnections**: [PrivateEndpointConnectionVaultProperties](#privateendpointconnectionvaultproperties)[] (ReadOnly): List of private endpoint connection.
 * **privateEndpointStateForBackup**: 'Enabled' | 'None' | string (ReadOnly): Private endpoint state for backup.
-* **privateEndpointStateForSiteRecovery**: 'Enabled' | 'None' | string (ReadOnly): Private endpoint state for backup.
+* **privateEndpointStateForSiteRecovery**: 'Enabled' | 'None' | string (ReadOnly): Private endpoint state for site recovery.
 * **provisioningState**: string (ReadOnly): Provisioning State.
 * **upgradeDetails**: [UpgradeDetails](#upgradedetails): Details for upgrading vault.
 

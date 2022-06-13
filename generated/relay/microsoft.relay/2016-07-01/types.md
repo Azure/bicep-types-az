@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RelayNamespaceProperties](#relaynamespaceproperties): Properties of the Namespace.
+* **properties**: [RelayNamespaceProperties](#relaynamespaceproperties): Description of Relay Namespace
 * **sku**: [Sku](#sku): Sku of the Namespace.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags
 * **type**: 'Microsoft.Relay/namespaces' (ReadOnly, DeployTimeConstant): The resource type
@@ -18,7 +18,7 @@
 * **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AuthorizationRuleProperties](#authorizationruleproperties) (Required): AuthorizationRule properties.
+* **properties**: [AuthorizationRuleProperties](#authorizationruleproperties) (Required): Authorization Rule properties
 * **type**: 'Microsoft.Relay/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Relay/namespaces/HybridConnections@2016-07-01
@@ -27,7 +27,7 @@
 * **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [HybridConnectionProperties](#hybridconnectionproperties): Properties of the HybridConnection.
+* **properties**: [HybridConnectionProperties](#hybridconnectionproperties): Properties of HybridConnection
 * **type**: 'Microsoft.Relay/namespaces/HybridConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Relay/namespaces/HybridConnections/authorizationRules@2016-07-01
@@ -36,7 +36,7 @@
 * **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AuthorizationRuleProperties](#authorizationruleproperties) (Required): AuthorizationRule properties.
+* **properties**: [AuthorizationRuleProperties](#authorizationruleproperties) (Required): Authorization Rule properties
 * **type**: 'Microsoft.Relay/namespaces/HybridConnections/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Relay/namespaces/WcfRelays@2016-07-01
@@ -45,7 +45,7 @@
 * **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WcfRelayProperties](#wcfrelayproperties): Properties of the WcfRelay Properties.
+* **properties**: [WcfRelayProperties](#wcfrelayproperties): Properties of WcfRelay
 * **type**: 'Microsoft.Relay/namespaces/WcfRelays' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Relay/namespaces/WcfRelays/authorizationRules@2016-07-01
@@ -54,7 +54,7 @@
 * **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AuthorizationRuleProperties](#authorizationruleproperties) (Required): AuthorizationRule properties.
+* **properties**: [AuthorizationRuleProperties](#authorizationruleproperties) (Required): Authorization Rule properties
 * **type**: 'Microsoft.Relay/namespaces/WcfRelays/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.Relay/namespaces/AuthorizationRules@2016-07-01)

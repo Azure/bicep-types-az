@@ -5,13 +5,13 @@
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [CacheIdentity](#cacheidentity): Cache identity properties.
+* **identity**: [CacheIdentity](#cacheidentity): The identity of the cache, if configured.
 * **location**: string: Region name string.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CacheProperties](#cacheproperties): Properties of the Cache.
 * **sku**: [CacheSku](#cachesku): SKU for the Cache.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: any: Any object
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **tags**: any: ARM tags as name/value pairs.
 * **type**: 'Microsoft.StorageCache/caches' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageCache/caches/storageTargets@2020-03-01
@@ -21,13 +21,13 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Region name string.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [StorageTargetProperties](#storagetargetproperties): Properties of the Storage Target.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [StorageTargetProperties](#storagetargetproperties): StorageTarget properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## CacheEncryptionSettings
 ### Properties
-* **keyEncryptionKey**: [KeyVaultKeyReference](#keyvaultkeyreference): Describes a reference to Key Vault Key.
+* **keyEncryptionKey**: [KeyVaultKeyReference](#keyvaultkeyreference): Specifies the location of the key encryption key in Key Vault.
 
 ## CacheHealth
 ### Properties
@@ -48,14 +48,14 @@
 ## CacheProperties
 ### Properties
 * **cacheSizeGB**: int: The size of this Cache, in GB.
-* **encryptionSettings**: [CacheEncryptionSettings](#cacheencryptionsettings): Cache encryption settings.
-* **health**: [CacheHealth](#cachehealth) (ReadOnly): An indication of Cache health. Gives more information about health than just that related to provisioning.
+* **encryptionSettings**: [CacheEncryptionSettings](#cacheencryptionsettings): Specifies encryption settings of the cache.
+* **health**: [CacheHealth](#cachehealth) (ReadOnly): Health of the Cache.
 * **mountAddresses**: string[] (ReadOnly): Array of IP addresses that can be used by clients mounting this Cache.
-* **networkSettings**: [CacheNetworkSettings](#cachenetworksettings): Cache network settings.
+* **networkSettings**: [CacheNetworkSettings](#cachenetworksettings): Specifies network settings of the cache.
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
-* **securitySettings**: [CacheSecuritySettings](#cachesecuritysettings): Cache security settings.
-* **subnet**: string: A fully qualified URL.
-* **upgradeStatus**: [CacheUpgradeStatus](#cacheupgradestatus): Properties describing the software upgrade state of the Cache.
+* **securitySettings**: [CacheSecuritySettings](#cachesecuritysettings): Specifies security settings of the cache.
+* **subnet**: string: Subnet used for the Cache.
+* **upgradeStatus**: [CacheUpgradeStatus](#cacheupgradestatus): Upgrade status of the Cache.
 
 ## CacheSecuritySettings
 ### Properties
@@ -75,7 +75,7 @@
 
 ## ClfsTarget
 ### Properties
-* **target**: string: A fully qualified URL.
+* **target**: string: Resource ID of storage container.
 
 ## KeyVaultKeyReference
 ### Properties
@@ -101,11 +101,11 @@
 * **Discriminator**: targetType
 
 ### Base Properties
-* **clfs**: [ClfsTarget](#clfstarget): Properties pertained to ClfsTarget
+* **clfs**: [ClfsTarget](#clfstarget): Properties when targetType is clfs.
 * **junctions**: [NamespaceJunction](#namespacejunction)[]: List of Cache namespace junctions to target for namespace associations.
-* **nfs3**: [Nfs3Target](#nfs3target): Properties pertained to Nfs3Target
+* **nfs3**: [Nfs3Target](#nfs3target): Properties when targetType is nfs3.
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
-* **unknown**: [UnknownTarget](#unknowntarget): Properties pertained to UnknownTarget
+* **unknown**: [UnknownTarget](#unknowntarget): Properties when targetType is unknown.
 ### ClfsTargetProperties
 #### Properties
 * **targetType**: 'clfs' (Required): Type of the Storage Target.
@@ -126,7 +126,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## UnknownProperties
 ### Properties
@@ -135,5 +135,5 @@
 
 ## UnknownTarget
 ### Properties
-* **unknownMap**: [UnknownProperties](#unknownproperties): Properties of an unknown type of Storage Target.
+* **unknownMap**: [UnknownProperties](#unknownproperties): Dictionary of string->string pairs containing information about the Storage Target.
 

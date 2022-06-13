@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AccountProperties](#accountproperties): NetApp account properties
-* **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
+* **properties**: [AccountProperties](#accountproperties): NetApp Account properties
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2020-02-01
@@ -18,8 +18,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PoolProperties](#poolproperties) (Required): Pool properties
-* **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
+* **properties**: [PoolProperties](#poolproperties) (Required): Capacity pool properties
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-02-01
@@ -30,7 +30,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VolumeProperties](#volumeproperties) (Required): Volume properties
-* **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2020-02-01
@@ -40,7 +40,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SnapshotProperties](#snapshotproperties): Snapshot properties
+* **properties**: [SnapshotProperties](#snapshotproperties): Snapshot Properties
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AccountProperties
@@ -141,7 +141,7 @@
 ## VolumePropertiesDataProtection
 ### Properties
 * **replication**: [ReplicationObject](#replicationobject): Replication properties
-* **snapshot**: [VolumeSnapshotProperties](#volumesnapshotproperties): Volume Snapshot Properties
+* **snapshot**: [VolumeSnapshotProperties](#volumesnapshotproperties): Snapshot properties.
 
 ## VolumePropertiesExportPolicy
 ### Properties

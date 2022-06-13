@@ -6,15 +6,15 @@
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the cluster, if configured.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterProperties](#clusterproperties): Class representing the Kusto cluster properties.
-* **sku**: [AzureSku](#azuresku) (Required): Azure SKU definition.
+* **properties**: [ClusterProperties](#clusterproperties): The cluster properties.
+* **sku**: [AzureSku](#azuresku) (Required): The SKU of the cluster.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant): The resource type
-* **zones**: string[]: An array represents the availability zones of the cluster.
+* **zones**: string[]: The availability zones of the cluster.
 
 ## Resource Microsoft.Kusto/clusters/attachedDatabaseConfigurations@2022-02-01
 * **Valid Scope(s)**: ResourceGroup
@@ -23,7 +23,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AttachedDatabaseConfigurationProperties](#attacheddatabaseconfigurationproperties): Class representing the an attached database configuration properties of kind specific.
+* **properties**: [AttachedDatabaseConfigurationProperties](#attacheddatabaseconfigurationproperties): The properties of the attached database configuration.
 * **type**: 'Microsoft.Kusto/clusters/attachedDatabaseConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Kusto/clusters/databases@2022-02-01
@@ -39,12 +39,12 @@
 ### ReadOnlyFollowingDatabase
 #### Properties
 * **kind**: 'ReadOnlyFollowing' (Required): Kind of the database
-* **properties**: [ReadOnlyFollowingDatabaseProperties](#readonlyfollowingdatabaseproperties): Class representing the Kusto database properties.
+* **properties**: [ReadOnlyFollowingDatabaseProperties](#readonlyfollowingdatabaseproperties): The database properties.
 
 ### ReadWriteDatabase
 #### Properties
 * **kind**: 'ReadWrite' (Required): Kind of the database
-* **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties): Class representing the Kusto database properties.
+* **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties): The database properties.
 
 
 ## Resource Microsoft.Kusto/clusters/databases/dataConnections@2022-02-01
@@ -60,17 +60,17 @@
 ### EventGridDataConnection
 #### Properties
 * **kind**: 'EventGrid' (Required): Kind of the endpoint for the data connection
-* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties): Class representing the Kusto event grid connection properties.
+* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties): The properties of the Event Grid data connection.
 
 ### EventHubDataConnection
 #### Properties
 * **kind**: 'EventHub' (Required): Kind of the endpoint for the data connection
-* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties): Class representing the Kusto event hub connection properties.
+* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties): The Event Hub data connection properties to validate.
 
 ### IotHubDataConnection
 #### Properties
 * **kind**: 'IotHub' (Required): Kind of the endpoint for the data connection
-* **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): Class representing the Kusto Iot hub connection properties.
+* **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): The Iot Hub data connection properties.
 
 
 ## Resource Microsoft.Kusto/clusters/databases/principalAssignments@2022-02-01
@@ -79,7 +79,7 @@
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabasePrincipalProperties](#databaseprincipalproperties): A class representing database principal property.
+* **properties**: [DatabasePrincipalProperties](#databaseprincipalproperties): The database principal.
 * **type**: 'Microsoft.Kusto/clusters/databases/principalAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Kusto/clusters/databases/scripts@2022-02-01
@@ -88,7 +88,7 @@
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ScriptProperties](#scriptproperties): A class representing database script property.
+* **properties**: [ScriptProperties](#scriptproperties): The database script.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Kusto/clusters/databases/scripts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -98,7 +98,7 @@
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagedPrivateEndpointProperties](#managedprivateendpointproperties): A class representing the properties of a managed private endpoint object.
+* **properties**: [ManagedPrivateEndpointProperties](#managedprivateendpointproperties): A managed private endpoint.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Kusto/clusters/managedPrivateEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -108,7 +108,7 @@
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterPrincipalProperties](#clusterprincipalproperties): A class representing cluster principal property.
+* **properties**: [ClusterPrincipalProperties](#clusterprincipalproperties): The cluster principal.
 * **type**: 'Microsoft.Kusto/clusters/principalAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Kusto/clusters/privateEndpointConnections@2022-02-01
@@ -117,7 +117,7 @@
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of a private endpoint connection.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Kusto/clusters/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -147,7 +147,7 @@
 * **databaseName**: string (Required): The name of the database which you would like to attach, use * if you want to follow all current and future databases.
 * **defaultPrincipalsModificationKind**: 'None' | 'Replace' | 'Union' | string (Required): The default principals modification kind
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
-* **tableLevelSharingProperties**: [TableLevelSharingProperties](#tablelevelsharingproperties): Tables that will be included and excluded in the follower database
+* **tableLevelSharingProperties**: [TableLevelSharingProperties](#tablelevelsharingproperties): Table level sharing specifications
 
 ## AzureSku
 ### Properties
@@ -178,9 +178,9 @@
 * **enablePurge**: bool: A boolean value that indicates if the purge operations are enabled.
 * **enableStreamingIngest**: bool: A boolean value that indicates if the streaming ingest is enabled.
 * **engineType**: 'V2' | 'V3' | string: The engine type
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): Properties of the key vault.
-* **languageExtensions**: [LanguageExtensionsList](#languageextensionslist) (ReadOnly): The list of language extension objects.
-* **optimizedAutoscale**: [OptimizedAutoscale](#optimizedautoscale): A class that contains the optimized auto scale definition.
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): KeyVault properties for the cluster encryption.
+* **languageExtensions**: [LanguageExtensionsList](#languageextensionslist) (ReadOnly): List of the cluster's language extensions.
+* **optimizedAutoscale**: [OptimizedAutoscale](#optimizedautoscale): Optimized auto scale definition.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): A list of private endpoint connections.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
 * **publicIPType**: 'DualStack' | 'IPv4' | string: Indicates what public IP type to create - IPv4 (default), or DualStack (both IPv4 and IPv6)
@@ -191,7 +191,7 @@
 * **trustedExternalTenants**: [TrustedExternalTenant](#trustedexternaltenant)[]: The cluster's external tenants.
 * **uri**: string (ReadOnly): The cluster URI.
 * **virtualClusterGraduationProperties**: string (WriteOnly): Virtual Cluster graduation properties
-* **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): A class that contains virtual network definition.
+* **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Virtual network definition.
 
 ## ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
@@ -245,7 +245,7 @@
 
 ## EventHubConnectionProperties
 ### Properties
-* **compression**: 'GZip' | 'None' | string: The compression type
+* **compression**: 'GZip' | 'None' | string: The event hub messages compression type
 * **consumerGroup**: string (Required): The event hub consumer group.
 * **databaseRouting**: 'Multi' | 'Single' | string: Indication for database routing information from the data connection, by default only database routing information is allowed
 * **dataFormat**: 'APACHEAVRO' | 'AVRO' | 'CSV' | 'JSON' | 'MULTIJSON' | 'ORC' | 'PARQUET' | 'PSV' | 'RAW' | 'SCSV' | 'SINGLEJSON' | 'SOHSV' | 'TSV' | 'TSVE' | 'TXT' | 'W3CLOGFILE' | string: The data format of the message. Optionally the data format can be added to each message.
@@ -300,7 +300,7 @@
 
 ## LanguageExtension
 ### Properties
-* **languageExtensionName**: 'PYTHON' | 'R' | string: Language extension that can run within KQL query.
+* **languageExtensionName**: 'PYTHON' | 'R' | string: The language extension name.
 
 ## LanguageExtensionsList
 ### Properties
@@ -329,7 +329,7 @@
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **name**: string (ReadOnly): The name of the resource
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of a private endpoint connection.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
@@ -358,7 +358,7 @@
 * **principalsModificationKind**: 'None' | 'Replace' | 'Union' | string (ReadOnly): The principals modification kind of the database
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
 * **softDeletePeriod**: string (ReadOnly): The time the data should be kept before it stops being accessible to queries in TimeSpan.
-* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): A class that contains database statistics information.
+* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): The statistics of the database.
 
 ## ReadWriteDatabaseProperties
 ### Properties
@@ -366,7 +366,7 @@
 * **isFollowed**: bool (ReadOnly): Indicates whether the database is followed.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
 * **softDeletePeriod**: string: The time the data should be kept before it stops being accessible to queries in TimeSpan.
-* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): A class that contains database statistics information.
+* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): The statistics of the database.
 
 ## ScriptProperties
 ### Properties
@@ -384,7 +384,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TableLevelSharingProperties
 ### Properties

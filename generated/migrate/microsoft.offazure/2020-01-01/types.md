@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Azure location in which Sites is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteProperties](#siteproperties): Class for site properties.
+* **properties**: [SiteProperties](#siteproperties): Nested properties of Hyper-V site.
 * **tags**: [HyperVSiteTags](#hypervsitetags): Dictionary of <string>
 * **type**: 'Microsoft.OffAzure/HyperVSites' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,7 +18,7 @@
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [HyperVClusterProperties](#hypervclusterproperties): Class for cluster properties.
+* **properties**: [HyperVClusterProperties](#hypervclusterproperties): Nested properties of the cluster.
 * **type**: 'Microsoft.OffAzure/HyperVSites/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/HyperVSites/hosts@2020-01-01
@@ -27,7 +27,7 @@
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [HyperVHostProperties](#hypervhostproperties): Class for host properties.
+* **properties**: [HyperVHostProperties](#hypervhostproperties): Nested properties.
 * **type**: 'Microsoft.OffAzure/HyperVSites/hosts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/VMwareSites@2020-01-01
@@ -38,7 +38,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Azure location in which Sites is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteProperties](#siteproperties): Class for site properties.
+* **properties**: [SiteProperties](#siteproperties): Nested properties of VMWare site.
 * **tags**: [VMwareSiteTags](#vmwaresitetags): Dictionary of <string>
 * **type**: 'Microsoft.OffAzure/VMwareSites' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -48,7 +48,7 @@
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VCenterProperties](#vcenterproperties): Class for vCenter properties.
+* **properties**: [VCenterProperties](#vcenterproperties): vCenter nested properties.
 * **type**: 'Microsoft.OffAzure/VMwareSites/vCenters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## HealthErrorDetails
@@ -103,11 +103,11 @@
 
 ## SiteProperties
 ### Properties
-* **agentDetails**: [SiteAgentProperties](#siteagentproperties): Class for site agent properties.
+* **agentDetails**: [SiteAgentProperties](#siteagentproperties): On-premises agent details.
 * **applianceName**: string: Appliance Name.
 * **discoverySolutionId**: string: ARM ID of migration hub solution for SDS.
 * **serviceEndpoint**: string (ReadOnly): Service endpoint.
-* **servicePrincipalIdentityDetails**: [SiteSpnProperties](#sitespnproperties): Class for site properties.
+* **servicePrincipalIdentityDetails**: [SiteSpnProperties](#sitespnproperties): Service principal identity details used by agent for communication to the service.
 
 ## SiteSpnProperties
 ### Properties

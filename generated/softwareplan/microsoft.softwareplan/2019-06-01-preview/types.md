@@ -7,15 +7,15 @@
 * **etag**: int (ReadOnly): Indicates the revision of the hybrid use benefit
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [HybridUseBenefitProperties](#hybridusebenefitproperties): Hybrid use benefit properties
-* **sku**: [Sku](#sku) (Required): The SKU to be applied for this resource
+* **properties**: [HybridUseBenefitProperties](#hybridusebenefitproperties): Property bag for a hybrid use benefit response
+* **sku**: [Sku](#sku) (Required): Hybrid use benefit SKU
 * **type**: 'Microsoft.SoftwarePlan/hybridUseBenefits' (ReadOnly, DeployTimeConstant): The resource type
 
 ## HybridUseBenefitProperties
 ### Properties
 * **createdDate**: string (ReadOnly): Created date
 * **lastUpdatedDate**: string (ReadOnly): Last updated date
-* **provisioningState**: 'Cancelled' | 'Failed' | 'Succeeded' | string (ReadOnly): Represent the current state of the Reservation.
+* **provisioningState**: 'Cancelled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state
 
 ## Sku
 ### Properties

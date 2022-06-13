@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CacheProperties](#cacheproperties): Properties of the Cache.
 * **sku**: [CacheSku](#cachesku): SKU for the Cache.
-* **tags**: any: Any object
+* **tags**: any: ARM tags as name/value pairs.
 * **type**: 'Microsoft.StorageCache/caches' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageCache/caches/storageTargets@2019-11-01
@@ -29,11 +29,11 @@
 ## CacheProperties
 ### Properties
 * **cacheSizeGB**: int: The size of this Cache, in GB.
-* **health**: [CacheHealth](#cachehealth) (ReadOnly): An indication of Cache health. Gives more information about health than just that related to provisioning.
+* **health**: [CacheHealth](#cachehealth) (ReadOnly): Health of the Cache.
 * **mountAddresses**: string[] (ReadOnly): Array of IP addresses that can be used by clients mounting this Cache.
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
-* **subnet**: string: A fully qualified URL.
-* **upgradeStatus**: [CacheUpgradeStatus](#cacheupgradestatus): Properties describing the software upgrade state of the Cache.
+* **subnet**: string: Subnet used for the Cache.
+* **upgradeStatus**: [CacheUpgradeStatus](#cacheupgradestatus): Upgrade status of the Cache.
 
 ## CacheSku
 ### Properties
@@ -49,7 +49,7 @@
 
 ## ClfsTarget
 ### Properties
-* **target**: string: A fully qualified URL.
+* **target**: string: Resource ID of storage container.
 
 ## NamespaceJunction
 ### Properties
@@ -64,12 +64,12 @@
 
 ## StorageTargetProperties
 ### Properties
-* **clfs**: [ClfsTarget](#clfstarget): Storage container for use as a CLFS Storage Target.
+* **clfs**: [ClfsTarget](#clfstarget): Properties when targetType is clfs.
 * **junctions**: [NamespaceJunction](#namespacejunction)[]: List of Cache namespace junctions to target for namespace associations.
-* **nfs3**: [Nfs3Target](#nfs3target): An NFSv3 mount point for use as a Storage Target.
+* **nfs3**: [Nfs3Target](#nfs3target): Properties when targetType is nfs3.
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
 * **targetType**: 'clfs' | 'nfs3' | 'unknown' | string: Type of the Storage Target.
-* **unknown**: [UnknownTarget](#unknowntarget): Storage container for use as an Unknown Storage Target.
+* **unknown**: [UnknownTarget](#unknowntarget): Properties when targetType is unknown.
 
 ## UnknownProperties
 ### Properties
@@ -78,5 +78,5 @@
 
 ## UnknownTarget
 ### Properties
-* **unknownMap**: [UnknownProperties](#unknownproperties): Properties of an unknown type of Storage Target.
+* **unknownMap**: [UnknownProperties](#unknownproperties): Dictionary of string->string pairs containing information about the Storage Target.
 

@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Location of the Guest Usages resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GuestUsagesResourceProperties](#guestusagesresourceproperties): Guest Usages Resource Properties
+* **properties**: [GuestUsagesResourceProperties](#guestusagesresourceproperties): The Guest Usages Resource Properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [GuestUsagesResourceTags](#guestusagesresourcetags): Key-value pairs of additional resource provisioning properties.
 * **type**: 'Microsoft.AzureActiveDirectory/guestUsages' (ReadOnly, DeployTimeConstant): The resource type
@@ -67,5 +67,5 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 * **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that last modified the resource.
 

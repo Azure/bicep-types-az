@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AlertRule](#alertrule) (Required): An alert rule.
+* **properties**: [AlertRule](#alertrule) (Required): The alert rule properties of the resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Insights/alertrules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,15 +18,15 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [LogProfileProperties](#logprofileproperties) (Required): The log profile properties.
+* **properties**: [LogProfileProperties](#logprofileproperties) (Required): The log profile properties of the resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Insights/logprofiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AlertRule
 ### Properties
-* **action**: [RuleAction](#ruleaction): The action that is performed when the alert rule becomes active, and when an alert condition is resolved.
+* **action**: [RuleAction](#ruleaction): action that is performed when the alert rule becomes active, and when an alert condition is resolved.
 * **actions**: [RuleAction](#ruleaction)[]: the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
-* **condition**: [RuleCondition](#rulecondition) (Required): The condition that results in the alert rule being activated.
+* **condition**: [RuleCondition](#rulecondition) (Required): the condition that results in the alert rule being activated.
 * **description**: string: the description of the alert rule that will be included in the alert email.
 * **isEnabled**: bool (Required): the flag that indicates whether the alert rule is enabled.
 * **lastUpdatedTime**: string (ReadOnly): Last time the rule was updated in ISO8601 format.
@@ -37,13 +37,13 @@
 ### Properties
 * **categories**: string[] (Required): the categories of the logs. These categories are created as is convenient to the user. Some values are: 'Write', 'Delete', and/or 'Action.'
 * **locations**: string[] (Required): List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the 'global' location.
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy) (Required): Specifies the retention policy for the log.
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy) (Required): the retention policy for the events in the log.
 * **serviceBusRuleId**: string: The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: '{service bus resource ID}/authorizationrules/{key name}'.
 * **storageAccountId**: string: the resource id of the storage account to which you would like to send the Activity Log.
 
 ## ManagementEventAggregationCondition
 ### Properties
-* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': Operators allowed in the rule condition.
+* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': the condition operator.
 * **threshold**: int: The threshold value that activates the alert.
 * **windowSize**: string: the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
 
@@ -83,7 +83,7 @@
 * **Discriminator**: odata.type
 
 ### Base Properties
-* **dataSource**: [RuleDataSource](#ruledatasource): The resource from which the rule collects its data.
+* **dataSource**: [RuleDataSource](#ruledatasource): the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
 ### LocationThresholdRuleCondition
 #### Properties
 * **failedLocationCount**: int (Required): the number of locations that must fail to activate the alert.
@@ -92,15 +92,15 @@
 
 ### ManagementEventRuleCondition
 #### Properties
-* **aggregation**: [ManagementEventAggregationCondition](#managementeventaggregationcondition): How the data that is collected should be combined over time.
+* **aggregation**: [ManagementEventAggregationCondition](#managementeventaggregationcondition): How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition' (Required): specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
 
 ### ThresholdRuleCondition
 #### Properties
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition' (Required): specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
-* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Operators allowed in the rule condition.
+* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): the operator used to compare the data and the threshold.
 * **threshold**: int (Required): the threshold value that activates the alert.
-* **timeAggregation**: 'Average' | 'Last' | 'Maximum' | 'Minimum' | 'Total': Aggregation operators allowed in a rule.
+* **timeAggregation**: 'Average' | 'Last' | 'Maximum' | 'Minimum' | 'Total': the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.
 * **windowSize**: string: the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
 
 
@@ -114,7 +114,7 @@
 * **resourceUri**: string: the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
 ### RuleManagementEventDataSource
 #### Properties
-* **claims**: [RuleManagementEventClaimsDataSource](#rulemanagementeventclaimsdatasource): The claims for a rule management event data source.
+* **claims**: [RuleManagementEventClaimsDataSource](#rulemanagementeventclaimsdatasource): the claims.
 * **eventName**: string: the event name.
 * **eventSource**: string: the event source.
 * **level**: string: the level.

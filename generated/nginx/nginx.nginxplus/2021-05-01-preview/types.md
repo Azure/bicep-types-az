@@ -73,7 +73,7 @@
 
 ## NginxConfigurationProperties
 ### Properties
-* **files**: [NginxConfigurationFile](#nginxconfigurationfile)[]: Array of NginxConfigurationFile
+* **files**: [NginxConfigurationFile](#nginxconfigurationfile)[]
 * **package**: [NginxConfigurationPackage](#nginxconfigurationpackage)
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string
 * **rootFile**: string
@@ -99,8 +99,8 @@
 
 ## NginxFrontendIPConfiguration
 ### Properties
-* **privateIPAddresses**: [NginxPrivateIPAddress](#nginxprivateipaddress)[]: Array of NginxPrivateIPAddress
-* **publicIPAddresses**: [NginxPublicIPAddress](#nginxpublicipaddress)[]: Array of NginxPublicIPAddress
+* **privateIPAddresses**: [NginxPrivateIPAddress](#nginxprivateipaddress)[]
+* **publicIPAddresses**: [NginxPublicIPAddress](#nginxpublicipaddress)[]
 
 ## NginxNetworkInterfaceConfiguration
 ### Properties
@@ -132,7 +132,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## UserIdentityProperties
 ### Properties

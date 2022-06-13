@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Connector kind (eg aws)
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConnectorProperties](#connectorproperties): The properties of a Connector
+* **properties**: [ConnectorProperties](#connectorproperties): Connector properties
 * **type**: 'Microsoft.CostManagement/cloudConnectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/externalSubscriptions@2019-03-01-preview
@@ -24,7 +24,7 @@
 * **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ShowbackRuleProperties](#showbackruleproperties): The properties of a showback rule.
+* **properties**: [ShowbackRuleProperties](#showbackruleproperties): Showback rule properties
 * **type**: 'Microsoft.CostManagement/showbackRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ConnectorCollectionErrorInfo
@@ -36,7 +36,7 @@
 
 ## ConnectorCollectionInfo
 ### Properties
-* **error**: [ConnectorCollectionErrorInfo](#connectorcollectionerrorinfo): Details of any error encountered on last collection attempt
+* **error**: [ConnectorCollectionErrorInfo](#connectorcollectionerrorinfo): Error information of last collection
 * **lastChecked**: string (ReadOnly): Last time the data acquisition process initiated connecting to the external provider
 * **lastUpdated**: string (ReadOnly): Last time the external data was updated into Azure
 * **sourceLastUpdated**: string (ReadOnly): Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
@@ -44,7 +44,7 @@
 ## ConnectorProperties
 ### Properties
 * **billingModel**: 'autoUpgrade' | 'expired' | 'premium' | 'trial' | string: Connector billing model
-* **collectionInfo**: [ConnectorCollectionInfo](#connectorcollectioninfo) (ReadOnly): Collection and ingestion information
+* **collectionInfo**: [ConnectorCollectionInfo](#connectorcollectioninfo) (ReadOnly): Collection information
 * **createdOn**: string (ReadOnly): Connector definition creation datetime
 * **credentialsKey**: string: Credentials authentication key (eg AWS ARN)
 * **credentialsSecret**: string (WriteOnly): Credentials secret (eg AWS ExternalId)
@@ -93,12 +93,12 @@
 * **version**: int (ReadOnly): The current version of showback rule.
 ### CostAllocationDetailsKind
 #### Properties
-* **details**: [CostAllocationDetails](#costallocationdetails): Represents CostAllocation showback rule model
+* **details**: [CostAllocationDetails](#costallocationdetails): The CostAllocation properties to validate.
 * **ruleType**: 'CostAllocation' (Required): The rule type of the showback rule solution.
 
 ### CustomPriceDetailsKind
 #### Properties
-* **details**: [CustomPriceDetails](#custompricedetails): Represents Custom price showback rule model
+* **details**: [CustomPriceDetails](#custompricedetails): The Custom price properties to validate.
 * **ruleType**: 'CustomPrice' (Required): The rule type of the showback rule solution.
 
 

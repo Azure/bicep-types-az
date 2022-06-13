@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The GEO location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterResourceProperties](#clusterresourceproperties): Service properties payload
-* **sku**: [Sku](#sku): Sku of Azure Spring Cloud
+* **properties**: [ClusterResourceProperties](#clusterresourceproperties): Properties of the Service resource
+* **sku**: [Sku](#sku): Sku of the Service resource
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the service which is a list of key value pairs that describe the resource.
 * **type**: 'Microsoft.AppPlatform/Spring' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -17,10 +17,10 @@
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedIdentityProperties](#managedidentityproperties): Managed identity properties retrieved from ARM request headers.
+* **identity**: [ManagedIdentityProperties](#managedidentityproperties): The Managed Identity type of the app resource
 * **location**: string: The GEO location of the application, always the same with its parent resource
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AppResourceProperties](#appresourceproperties): App resource properties payload
+* **properties**: [AppResourceProperties](#appresourceproperties): Properties of the App resource
 * **type**: 'Microsoft.AppPlatform/Spring/apps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/apps/bindings@2021-06-01-preview
@@ -29,7 +29,7 @@
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BindingResourceProperties](#bindingresourceproperties): Binding resource properties payload
+* **properties**: [BindingResourceProperties](#bindingresourceproperties): Properties of the Binding resource
 * **type**: 'Microsoft.AppPlatform/Spring/apps/bindings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/apps/deployments@2021-06-01-preview
@@ -38,8 +38,8 @@
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DeploymentResourceProperties](#deploymentresourceproperties): Deployment resource properties payload
-* **sku**: [Sku](#sku): Sku of Azure Spring Cloud
+* **properties**: [DeploymentResourceProperties](#deploymentresourceproperties): Properties of the Deployment resource
+* **sku**: [Sku](#sku): Sku of the Deployment resource
 * **type**: 'Microsoft.AppPlatform/Spring/apps/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/apps/domains@2021-06-01-preview
@@ -48,7 +48,7 @@
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CustomDomainProperties](#customdomainproperties): Custom domain of app resource payload.
+* **properties**: [CustomDomainProperties](#customdomainproperties): Properties of the custom domain resource.
 * **type**: 'Microsoft.AppPlatform/Spring/apps/domains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/certificates@2021-06-01-preview
@@ -57,7 +57,7 @@
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CertificateProperties](#certificateproperties): Certificate resource payload.
+* **properties**: [CertificateProperties](#certificateproperties): Properties of the certificate resource payload.
 * **type**: 'Microsoft.AppPlatform/Spring/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/configServers@2021-06-01-preview
@@ -66,7 +66,7 @@
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfigServerProperties](#configserverproperties): Config server git properties payload
+* **properties**: [ConfigServerProperties](#configserverproperties): Properties of the Config Server resource
 * **type**: 'Microsoft.AppPlatform/Spring/configServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/monitoringSettings@2021-06-01-preview
@@ -75,7 +75,7 @@
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [MonitoringSettingProperties](#monitoringsettingproperties): Monitoring Setting properties payload
+* **properties**: [MonitoringSettingProperties](#monitoringsettingproperties): Properties of the Monitoring Setting resource
 * **type**: 'Microsoft.AppPlatform/Spring/monitoringSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listTestKeys (Microsoft.AppPlatform/Spring@2021-06-01-preview)
@@ -94,10 +94,10 @@
 * **enableEndToEndTLS**: bool: Indicate if end to end TLS is enabled.
 * **fqdn**: string: Fully qualified dns Name.
 * **httpsOnly**: bool: Indicate if only https is allowed.
-* **persistentDisk**: [PersistentDisk](#persistentdisk): Persistent disk payload
+* **persistentDisk**: [PersistentDisk](#persistentdisk): Persistent disk settings
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the App
 * **public**: bool: Indicates whether the App exposes public endpoint
-* **temporaryDisk**: [TemporaryDisk](#temporarydisk): Temporary disk payload
+* **temporaryDisk**: [TemporaryDisk](#temporarydisk): Temporary disk settings
 * **url**: string (ReadOnly): URL of the App
 
 ## BindingResourceProperties
@@ -131,7 +131,7 @@
 
 ## ClusterResourceProperties
 ### Properties
-* **networkProfile**: [NetworkProfile](#networkprofile): Service network profile payload
+* **networkProfile**: [NetworkProfile](#networkprofile): Network profile of the Service
 * **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MoveFailed' | 'Moved' | 'Moving' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Service
 * **serviceId**: string (ReadOnly): ServiceInstanceEntity GUID which uniquely identifies a created resource
 * **version**: int (ReadOnly): Version of the Service
@@ -151,13 +151,13 @@
 
 ## ConfigServerProperties
 ### Properties
-* **configServer**: [ConfigServerSettings](#configserversettings): The settings of config server.
-* **error**: [Error](#error): The error code compose of code and message.
+* **configServer**: [ConfigServerSettings](#configserversettings): Settings of config server.
+* **error**: [Error](#error): Error when apply config server settings.
 * **provisioningState**: 'Deleted' | 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the config server.
 
 ## ConfigServerSettings
 ### Properties
-* **gitProperty**: [ConfigServerGitProperty](#configservergitproperty): Property of git.
+* **gitProperty**: [ConfigServerGitProperty](#configservergitproperty): Property of git environment.
 
 ## CustomContainer
 ### Properties
@@ -186,10 +186,10 @@
 * **active**: bool (ReadOnly): Indicates whether the Deployment is active
 * **appName**: string (ReadOnly): App name of the deployment
 * **createdTime**: string (ReadOnly): Date time when the resource is created
-* **deploymentSettings**: [DeploymentSettings](#deploymentsettings): Deployment settings payload
+* **deploymentSettings**: [DeploymentSettings](#deploymentsettings): Deployment settings of the Deployment
 * **instances**: [DeploymentInstance](#deploymentinstance)[] (ReadOnly): Collection of instances belong to the Deployment
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Deployment
-* **source**: [UserSourceInfo](#usersourceinfo): Source information for a deployment
+* **source**: [UserSourceInfo](#usersourceinfo): Uploaded source information of the deployment.
 * **status**: 'Allocating' | 'Compiling' | 'Failed' | 'Running' | 'Stopped' | 'Unknown' | 'Upgrading' | string (ReadOnly): Status of the Deployment
 
 ## DeploymentSettings
@@ -199,7 +199,7 @@
 * **jvmOptions**: string: JVM parameter
 * **memoryInGB**: int: Required Memory size in GB. This should be in range [1, 2] for Basic tier, and in range [1, 8] for Standard tier. This is deprecated starting from API version 2021-06-01-preview. Please use the resourceRequests field to set the the memory size.
 * **netCoreMainEntryPath**: string: The path to the .NET executable relative to zip root
-* **resourceRequests**: [ResourceRequests](#resourcerequests): Deployment resource request payload
+* **resourceRequests**: [ResourceRequests](#resourcerequests): The requested resource quantity for required CPU and Memory. It is recommended that using this field to represent the required CPU and Memory, the old field cpu and memoryInGB will be deprecated later.
 * **runtimeVersion**: 'Java_11' | 'Java_8' | 'NetCore_31' | string: Runtime version
 
 ## DeploymentSettingsEnvironmentVariables
@@ -239,10 +239,10 @@
 
 ## MonitoringSettingProperties
 ### Properties
-* **appInsightsAgentVersions**: [ApplicationInsightsAgentVersions](#applicationinsightsagentversions): Application Insights agent versions properties payload
+* **appInsightsAgentVersions**: [ApplicationInsightsAgentVersions](#applicationinsightsagentversions): Indicates the versions of application insight agent
 * **appInsightsInstrumentationKey**: string: Target application insight instrumentation key, null or whitespace include empty will disable monitoringSettings
 * **appInsightsSamplingRate**: int: Indicates the sampling rate of application insight agent, should be in range [0.0, 100.0]
-* **error**: [Error](#error): The error code compose of code and message.
+* **error**: [Error](#error): Error when apply Monitoring Setting changes.
 * **provisioningState**: 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Monitoring Setting.
 * **traceEnabled**: bool: Indicates whether enable the trace functionality, which will be deprecated since api version 2020-11-01-preview. Please leverage appInsightsInstrumentationKey to indicate if monitoringSettings enabled or not
 

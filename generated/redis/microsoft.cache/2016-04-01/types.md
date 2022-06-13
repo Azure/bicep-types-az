@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisCreateProperties](#rediscreateproperties) (Required): Properties supplied to Create Redis operation.
+* **properties**: [RedisCreateProperties](#rediscreateproperties) (Required): Redis cache properties.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Cache/Redis' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -17,7 +17,7 @@
 * **apiVersion**: '2016-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisFirewallRuleProperties](#redisfirewallruleproperties) (Required): Specifies a range of IP addresses permitted to connect to the cache
+* **properties**: [RedisFirewallRuleProperties](#redisfirewallruleproperties) (Required): redis cache firewall rule properties
 * **type**: 'Microsoft.Cache/Redis/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Cache/Redis/patchSchedules@2016-04-01
@@ -47,7 +47,7 @@
 
 ## RedisCreateProperties
 ### Properties
-* **accessKeys**: [RedisAccessKeys](#redisaccesskeys) (ReadOnly): Redis cache access keys.
+* **accessKeys**: [RedisAccessKeys](#redisaccesskeys) (ReadOnly): The keys of the Redis cache - not set if this object is not the response to Create or Update redis cache
 * **enableNonSslPort**: bool: Specifies whether the non-ssl Redis server port (6379) is enabled.
 * **hostName**: string (ReadOnly): Redis host name.
 * **port**: int (ReadOnly): Redis non-SSL port.
@@ -55,7 +55,7 @@
 * **redisConfiguration**: [RedisPropertiesRedisConfiguration](#redispropertiesredisconfiguration): All Redis Settings. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value etc.
 * **redisVersion**: string (ReadOnly): Redis version.
 * **shardCount**: int: The number of shards to be created on a Premium Cluster Cache.
-* **sku**: [Sku](#sku) (Required): SKU parameters supplied to the create Redis operation.
+* **sku**: [Sku](#sku) (Required): The SKU of the Redis cache to deploy.
 * **sslPort**: int (ReadOnly): Redis SSL port.
 * **staticIP**: string: Static IP address. Required when deploying a Redis cache inside an existing Azure Virtual Network.
 * **subnetId**: string: The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1

@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RegistrationAssignmentProperties](#registrationassignmentproperties): The properties of the registration assignment.
+* **properties**: [RegistrationAssignmentProperties](#registrationassignmentproperties): The properties of a registration assignment.
 * **type**: 'Microsoft.ManagedServices/registrationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedServices/registrationDefinitions@2020-02-01-preview
@@ -33,7 +33,7 @@
 
 ## EligibleAuthorization
 ### Properties
-* **justInTimeAccessPolicy**: [JustInTimeAccessPolicy](#justintimeaccesspolicy): Just-in-time access policy setting.
+* **justInTimeAccessPolicy**: [JustInTimeAccessPolicy](#justintimeaccesspolicy): The just-in-time access policy setting.
 * **principalId**: string (Required): The identifier of the Azure Active Directory principal.
 * **principalIdDisplayName**: string: The display name of the Azure Active Directory principal.
 * **roleDefinitionId**: string (Required): The identifier of the Azure built-in role that defines the permissions that the Azure Active Directory principal will have on the projected scope.
@@ -53,7 +53,7 @@
 
 ## RegistrationAssignmentProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the registration definition.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the registration assignment.
 * **registrationDefinition**: [RegistrationAssignmentPropertiesRegistrationDefinition](#registrationassignmentpropertiesregistrationdefinition) (ReadOnly): The registration definition associated with the registration assignment.
 * **registrationDefinitionId**: string (Required): The fully qualified path of the registration definition.
 

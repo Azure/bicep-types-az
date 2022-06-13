@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SupportTicketDetailsProperties](#supportticketdetailsproperties): Describes the properties of a support ticket.
+* **properties**: [SupportTicketDetailsProperties](#supportticketdetailsproperties): Properties of the resource.
 * **type**: 'Microsoft.Support/supportTickets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Support/supportTickets/communications@2020-04-01
@@ -15,7 +15,7 @@
 * **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CommunicationDetailsProperties](#communicationdetailsproperties): Describes the properties of a communication resource.
+* **properties**: [CommunicationDetailsProperties](#communicationdetailsproperties): Properties of the resource.
 * **type**: 'Microsoft.Support/supportTickets/communications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## CommunicationDetailsProperties
@@ -62,7 +62,7 @@
 
 ## SupportTicketDetailsProperties
 ### Properties
-* **contactDetails**: [ContactProfile](#contactprofile) (Required): Contact information associated with the support ticket.
+* **contactDetails**: [ContactProfile](#contactprofile) (Required): Contact information of the user requesting to create a support ticket.
 * **createdDate**: string (ReadOnly): Time in UTC (ISO 8601 format) when the support ticket was created.
 * **description**: string (Required): Detailed description of the question or issue.
 * **enrollmentId**: string (ReadOnly): Enrollment Id associated with the support ticket.
@@ -70,17 +70,17 @@
 * **problemClassificationDisplayName**: string (ReadOnly): Localized name of problem classification.
 * **problemClassificationId**: string (Required): Each Azure service has its own set of issue categories, also known as problem classification. This parameter is the unique Id for the type of problem you are experiencing.
 * **problemStartTime**: string: Time in UTC (ISO 8601 format) when the problem started.
-* **quotaTicketDetails**: [QuotaTicketDetails](#quotaticketdetails): Additional set of information required for quota increase support ticket for certain quota types, e.g.: Virtual machine cores. Get complete details about Quota payload support request along with examples at [Support quota request](https://aka.ms/supportrpquotarequestpayload).
+* **quotaTicketDetails**: [QuotaTicketDetails](#quotaticketdetails): Additional ticket details associated with a quota support ticket request.
 * **require24X7Response**: bool: Indicates if this requires a 24x7 response from Azure.
 * **serviceDisplayName**: string (ReadOnly): Localized name of the Azure service.
 * **serviceId**: string (Required): This is the resource Id of the Azure service resource associated with the support ticket.
-* **serviceLevelAgreement**: [ServiceLevelAgreement](#servicelevelagreement): Service Level Agreement details for a support ticket.
+* **serviceLevelAgreement**: [ServiceLevelAgreement](#servicelevelagreement): Service Level Agreement information for this support ticket.
 * **severity**: 'critical' | 'highestcriticalimpact' | 'minimal' | 'moderate' | string (Required): A value that indicates the urgency of the case, which in turn determines the response time according to the service level agreement of the technical support plan you have with Azure. Note: 'Highest critical impact', also known as the 'Emergency - Severe impact' level in the Azure portal is reserved only for our Premium customers.
 * **status**: string (ReadOnly): Status of the support ticket.
-* **supportEngineer**: [SupportEngineer](#supportengineer): Support engineer information.
+* **supportEngineer**: [SupportEngineer](#supportengineer): Information about the support engineer working on this support ticket.
 * **supportPlanType**: string (ReadOnly): Support plan type associated with the support ticket.
 * **supportTicketId**: string: System generated support ticket Id that is unique.
-* **technicalTicketDetails**: [TechnicalTicketDetails](#technicalticketdetails): Additional information for technical support ticket.
+* **technicalTicketDetails**: [TechnicalTicketDetails](#technicalticketdetails): Additional ticket details associated with a technical support ticket request.
 * **title**: string (Required): Title of the support ticket.
 
 ## TechnicalTicketDetails

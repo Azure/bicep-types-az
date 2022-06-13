@@ -33,7 +33,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExpressRouteCircuitPropertiesFormat](#expressroutecircuitpropertiesformat): Properties of ExpressRouteCircuit.
-* **sku**: [ExpressRouteCircuitSku](#expressroutecircuitsku): Contains SKU in an ExpressRouteCircuit.
+* **sku**: [ExpressRouteCircuitSku](#expressroutecircuitsku): The SKU.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/expressRouteCircuits' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -216,7 +216,7 @@
 ### Properties
 * **cookieBasedAffinity**: 'Disabled' | 'Enabled' | string: Cookie based affinity. Possible values are: 'Enabled' and 'Disabled'.
 * **port**: int: Port
-* **probe**: [SubResource](#subresource): Azure resource manager sub resource properties.
+* **probe**: [SubResource](#subresource): Probe resource of an application gateway.
 * **protocol**: 'Http' | 'Https' | string: Protocol. Possible values are: 'Http' and 'Https'.
 * **provisioningState**: string: Gets or sets Provisioning state of the backend http settings resource Updating/Deleting/Failed
 * **requestTimeout**: int: Request timeout in seconds. Application Gateway will fail the request if response is not received within RequestTimeout. Acceptable values are from 1 second to 86400 seconds.
@@ -233,8 +233,8 @@
 * **privateIPAddress**: string: PrivateIPAddress of the network interface IP Configuration.
 * **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: PrivateIP allocation method. Possible values are: 'Static' and 'Dynamic'.
 * **provisioningState**: string: Provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **publicIPAddress**: [SubResource](#subresource): Azure resource manager sub resource properties.
-* **subnet**: [SubResource](#subresource): Azure resource manager sub resource properties.
+* **publicIPAddress**: [SubResource](#subresource): Reference of the PublicIP resource.
+* **subnet**: [SubResource](#subresource): Reference of the subnet resource.
 
 ## ApplicationGatewayFrontendPort
 ### Properties
@@ -257,13 +257,13 @@
 
 ## ApplicationGatewayHttpListenerPropertiesFormat
 ### Properties
-* **frontendIPConfiguration**: [SubResource](#subresource): Azure resource manager sub resource properties.
-* **frontendPort**: [SubResource](#subresource): Azure resource manager sub resource properties.
+* **frontendIPConfiguration**: [SubResource](#subresource): Frontend IP configuration resource of an application gateway.
+* **frontendPort**: [SubResource](#subresource): Frontend port resource of an application gateway.
 * **hostName**: string: Host name of HTTP listener.
 * **protocol**: 'Http' | 'Https' | string: Protocol. Possible values are: 'Http' and 'Https'.
 * **provisioningState**: string: Provisioning state of the HTTP listener resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **requireServerNameIndication**: bool: Applicable only if protocol is https. Enables SNI for multi-hosting.
-* **sslCertificate**: [SubResource](#subresource): Azure resource manager sub resource properties.
+* **sslCertificate**: [SubResource](#subresource): SSL certificate resource of an application gateway.
 
 ## ApplicationGatewayIPConfiguration
 ### Properties
@@ -275,7 +275,7 @@
 ## ApplicationGatewayIPConfigurationPropertiesFormat
 ### Properties
 * **provisioningState**: string: Provisioning state of the application gateway subnet resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **subnet**: [SubResource](#subresource): Azure resource manager sub resource properties.
+* **subnet**: [SubResource](#subresource): Reference of the subnet resource. A subnet from where application gateway gets its private address.
 
 ## ApplicationGatewayPathRule
 ### Properties
@@ -286,8 +286,8 @@
 
 ## ApplicationGatewayPathRulePropertiesFormat
 ### Properties
-* **backendAddressPool**: [SubResource](#subresource): Azure resource manager sub resource properties.
-* **backendHttpSettings**: [SubResource](#subresource): Azure resource manager sub resource properties.
+* **backendAddressPool**: [SubResource](#subresource): Backend address pool resource of URL path map.
+* **backendHttpSettings**: [SubResource](#subresource): Backend http settings resource of URL path map.
 * **paths**: string[]: Path rules of URL path map.
 * **provisioningState**: string: Path rule of URL path map resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 
@@ -321,7 +321,7 @@
 * **provisioningState**: string: Provisioning state of the application gateway resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **requestRoutingRules**: [ApplicationGatewayRequestRoutingRule](#applicationgatewayrequestroutingrule)[]: Request routing rules of the application gateway resource.
 * **resourceGuid**: string: Resource GUID property of the application gateway resource.
-* **sku**: [ApplicationGatewaySku](#applicationgatewaysku): SKU of application gateway
+* **sku**: [ApplicationGatewaySku](#applicationgatewaysku): SKU of the application gateway resource.
 * **sslCertificates**: [ApplicationGatewaySslCertificate](#applicationgatewaysslcertificate)[]: SSL certificates of the application gateway resource.
 * **urlPathMaps**: [ApplicationGatewayUrlPathMap](#applicationgatewayurlpathmap)[]: URL path map of the application gateway resource.
 
@@ -334,12 +334,12 @@
 
 ## ApplicationGatewayRequestRoutingRulePropertiesFormat
 ### Properties
-* **backendAddressPool**: [SubResource](#subresource): Azure resource manager sub resource properties.
-* **backendHttpSettings**: [SubResource](#subresource): Azure resource manager sub resource properties.
-* **httpListener**: [SubResource](#subresource): Azure resource manager sub resource properties.
+* **backendAddressPool**: [SubResource](#subresource): Backend address pool resource of the application gateway.
+* **backendHttpSettings**: [SubResource](#subresource): Frontend port resource of the application gateway.
+* **httpListener**: [SubResource](#subresource): Http listener resource of the application gateway.
 * **provisioningState**: string: Provisioning state of the request routing rule resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **ruleType**: 'Basic' | 'PathBasedRouting' | string: Rule type. Possible values are: 'Basic' and 'PathBasedRouting'.
-* **urlPathMap**: [SubResource](#subresource): Azure resource manager sub resource properties.
+* **urlPathMap**: [SubResource](#subresource): URL path map resource of the application gateway.
 
 ## ApplicationGatewaySku
 ### Properties
@@ -370,8 +370,8 @@
 
 ## ApplicationGatewayUrlPathMapPropertiesFormat
 ### Properties
-* **defaultBackendAddressPool**: [SubResource](#subresource): Azure resource manager sub resource properties.
-* **defaultBackendHttpSettings**: [SubResource](#subresource): Azure resource manager sub resource properties.
+* **defaultBackendAddressPool**: [SubResource](#subresource): Default backend address pool resource of URL path map.
+* **defaultBackendHttpSettings**: [SubResource](#subresource): Default backend http settings resource of URL path map.
 * **pathRules**: [ApplicationGatewayPathRule](#applicationgatewaypathrule)[]: Path rule of URL path map resource.
 * **provisioningState**: string: Provisioning state of the backend http settings resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 
@@ -392,7 +392,7 @@
 ### Properties
 * **backendIPConfigurations**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration)[]: Gets collection of references to IP addresses defined in network interfaces.
 * **loadBalancingRules**: [SubResource](#subresource)[] (ReadOnly): Gets load balancing rules that use this backend address pool.
-* **outboundNatRule**: [SubResource](#subresource): Azure resource manager sub resource properties.
+* **outboundNatRule**: [SubResource](#subresource): Gets outbound rules that use this backend address pool.
 * **provisioningState**: string: Get provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 
 ## BgpSettings
@@ -429,7 +429,7 @@
 ## ExpressRouteCircuitPeeringPropertiesFormat
 ### Properties
 * **azureASN**: int: The Azure ASN.
-* **microsoftPeeringConfig**: [ExpressRouteCircuitPeeringConfig](#expressroutecircuitpeeringconfig): Specifies the peering configuration.
+* **microsoftPeeringConfig**: [ExpressRouteCircuitPeeringConfig](#expressroutecircuitpeeringconfig): The Microsoft peering configuration.
 * **peerASN**: int: The peer ASN.
 * **peeringType**: 'AzurePrivatePeering' | 'AzurePublicPeering' | 'MicrosoftPeering' | string: The PeeringType. Possible values are: 'AzurePublicPeering', 'AzurePrivatePeering', and 'MicrosoftPeering'.
 * **primaryAzurePort**: string: The primary port.
@@ -439,7 +439,7 @@
 * **secondaryPeerAddressPrefix**: string: The secondary address prefix.
 * **sharedKey**: string: The shared key.
 * **state**: 'Disabled' | 'Enabled' | string: The state of peering. Possible values are: 'Disabled' and 'Enabled'
-* **stats**: [ExpressRouteCircuitStats](#expressroutecircuitstats): Contains stats associated with the peering.
+* **stats**: [ExpressRouteCircuitStats](#expressroutecircuitstats): Gets peering stats.
 * **vlanId**: int: The VLAN ID.
 
 ## ExpressRouteCircuitPropertiesFormat
@@ -450,7 +450,7 @@
 * **provisioningState**: string: Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **serviceKey**: string: The ServiceKey.
 * **serviceProviderNotes**: string: The ServiceProviderNotes.
-* **serviceProviderProperties**: [ExpressRouteCircuitServiceProviderProperties](#expressroutecircuitserviceproviderproperties): Contains ServiceProviderProperties in an ExpressRouteCircuit.
+* **serviceProviderProperties**: [ExpressRouteCircuitServiceProviderProperties](#expressroutecircuitserviceproviderproperties): The ServiceProviderProperties.
 * **serviceProviderProvisioningState**: 'Deprovisioning' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | string: The ServiceProviderProvisioningState state of the resource. Possible values are 'NotProvisioned', 'Provisioning', 'Provisioned', and 'Deprovisioning'.
 
 ## ExpressRouteCircuitServiceProviderProperties
@@ -484,10 +484,10 @@
 * **loadBalancingRules**: [SubResource](#subresource)[]: Gets load balancing rules URIs that use this frontend IP.
 * **outboundNatRules**: [SubResource](#subresource)[]: Read only. Outbound rules URIs that use this frontend IP.
 * **privateIPAddress**: string: The private IP address of the IP configuration.
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: PrivateIP allocation method. Possible values are: 'Static' and 'Dynamic'.
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: The Private IP allocation method. Possible values are: 'Static' and 'Dynamic'.
 * **provisioningState**: string: Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **publicIPAddress**: [PublicIPAddress](#publicipaddress): Public IP address resource.
-* **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
+* **publicIPAddress**: [PublicIPAddress](#publicipaddress): The reference of the Public IP resource.
+* **subnet**: [Subnet](#subnet): The reference of the subnet resource.
 
 ## InboundNatPool
 ### Properties
@@ -499,10 +499,10 @@
 ## InboundNatPoolPropertiesFormat
 ### Properties
 * **backendPort**: int (Required): The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
-* **frontendIPConfiguration**: [SubResource](#subresource): Azure resource manager sub resource properties.
+* **frontendIPConfiguration**: [SubResource](#subresource): A reference to frontend IP addresses.
 * **frontendPortRangeEnd**: int (Required): The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65535.
 * **frontendPortRangeStart**: int (Required): The first port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65534.
-* **protocol**: 'Tcp' | 'Udp' | string (Required): The transport protocol for the external endpoint. Possible values are 'Udp' or 'Tcp'
+* **protocol**: 'Tcp' | 'Udp' | string (Required): The transport protocol for the endpoint. Possible values are: 'Udp' or 'Tcp'.
 * **provisioningState**: string: Gets the provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 
 ## InboundNatRule
@@ -514,13 +514,13 @@
 
 ## InboundNatRulePropertiesFormat
 ### Properties
-* **backendIPConfiguration**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration): IPConfiguration in a network interface.
+* **backendIPConfiguration**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration): A reference to a private IP address defined on a network interface of a VM. Traffic sent to the frontend port of each of the frontend IP configurations is forwarded to the backed IP.
 * **backendPort**: int: The port used for the internal endpoint. Acceptable values range from 1 to 65535.
 * **enableFloatingIP**: bool: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
-* **frontendIPConfiguration**: [SubResource](#subresource): Azure resource manager sub resource properties.
+* **frontendIPConfiguration**: [SubResource](#subresource): A reference to frontend IP addresses.
 * **frontendPort**: int: The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.
 * **idleTimeoutInMinutes**: int: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
-* **protocol**: 'Tcp' | 'Udp' | string: The transport protocol for the external endpoint. Possible values are 'Udp' or 'Tcp'
+* **protocol**: 'Tcp' | 'Udp' | string: The transport protocol for the endpoint. Possible values are: 'Udp' or 'Tcp'
 * **provisioningState**: string: Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 
 ## IPConfiguration
@@ -533,10 +533,10 @@
 ## IPConfigurationPropertiesFormat
 ### Properties
 * **privateIPAddress**: string: The private IP address of the IP configuration.
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: PrivateIP allocation method. Possible values are: 'Static' and 'Dynamic'.
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: The private IP allocation method. Possible values are 'Static' and 'Dynamic'.
 * **provisioningState**: string: Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **publicIPAddress**: [PublicIPAddress](#publicipaddress): Public IP address resource.
-* **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
+* **publicIPAddress**: [PublicIPAddress](#publicipaddress): The reference of the public IP resource.
+* **subnet**: [Subnet](#subnet): The reference of the subnet resource.
 
 ## LoadBalancerPropertiesFormat
 ### Properties
@@ -559,14 +559,14 @@
 
 ## LoadBalancingRulePropertiesFormat
 ### Properties
-* **backendAddressPool**: [SubResource](#subresource): Azure resource manager sub resource properties.
+* **backendAddressPool**: [SubResource](#subresource): A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs.
 * **backendPort**: int: The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
 * **enableFloatingIP**: bool: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
-* **frontendIPConfiguration**: [SubResource](#subresource): Azure resource manager sub resource properties.
+* **frontendIPConfiguration**: [SubResource](#subresource): A reference to frontend IP addresses.
 * **frontendPort**: int (Required): The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
 * **idleTimeoutInMinutes**: int: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
 * **loadDistribution**: 'Default' | 'SourceIP' | 'SourceIPProtocol' | string: The load distribution policy for this rule. Possible values are 'Default', 'SourceIP', and 'SourceIPProtocol'.
-* **probe**: [SubResource](#subresource): Azure resource manager sub resource properties.
+* **probe**: [SubResource](#subresource): The reference of the load balancer probe used by the load balancing rule.
 * **protocol**: 'Tcp' | 'Udp' | string (Required): The transport protocol for the external endpoint. Possible values are 'Udp' or 'Tcp'
 * **provisioningState**: string: Gets the provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 
@@ -582,9 +582,9 @@
 
 ## LocalNetworkGatewayPropertiesFormat
 ### Properties
-* **bgpSettings**: [BgpSettings](#bgpsettings)
+* **bgpSettings**: [BgpSettings](#bgpsettings): Local network gateway's BGP speaker settings.
 * **gatewayIpAddress**: string: IP address of local network gateway.
-* **localNetworkAddressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
+* **localNetworkAddressSpace**: [AddressSpace](#addressspace): Local network site address space.
 * **provisioningState**: string: Gets or sets Provisioning state of the LocalNetworkGateway resource Updating/Deleting/Failed
 * **resourceGuid**: string: The resource GUID property of the LocalNetworkGateway resource.
 
@@ -618,22 +618,22 @@
 * **loadBalancerInboundNatRules**: [InboundNatRule](#inboundnatrule)[]: A list of references of LoadBalancerInboundNatRules.
 * **primary**: bool: Gets whether this is a primary customer address on the network interface.
 * **privateIPAddress**: string
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: PrivateIP allocation method. Possible values are: 'Static' and 'Dynamic'.
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: Defines how a private IP address is assigned. Possible values are: 'Static' and 'Dynamic'.
 * **provisioningState**: string
 * **publicIPAddress**: [PublicIPAddress](#publicipaddress): Public IP address resource.
 * **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
 
 ## NetworkInterfacePropertiesFormat
 ### Properties
-* **dnsSettings**: [NetworkInterfaceDnsSettings](#networkinterfacednssettings): DNS settings of a network interface.
+* **dnsSettings**: [NetworkInterfaceDnsSettings](#networkinterfacednssettings): The DNS settings in network interface.
 * **enableIPForwarding**: bool: Indicates whether IP forwarding is enabled on this network interface.
 * **ipConfigurations**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration)[]: A list of IPConfigurations of the network interface.
 * **macAddress**: string: The MAC address of the network interface.
-* **networkSecurityGroup**: [NetworkSecurityGroup](#networksecuritygroup): NetworkSecurityGroup resource.
+* **networkSecurityGroup**: [NetworkSecurityGroup](#networksecuritygroup): The reference of the NetworkSecurityGroup resource.
 * **primary**: bool: Gets whether this is a primary network interface on a virtual machine.
 * **provisioningState**: string: The provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **resourceGuid**: string: The resource GUID property of the network interface resource.
-* **virtualMachine**: [SubResource](#subresource): Azure resource manager sub resource properties.
+* **virtualMachine**: [SubResource](#subresource): The reference of a virtual machine.
 
 ## NetworkSecurityGroup
 ### Properties
@@ -664,7 +664,7 @@
 ## OutboundNatRulePropertiesFormat
 ### Properties
 * **allocatedOutboundPorts**: int: The number of outbound ports to be used for NAT.
-* **backendAddressPool**: [SubResource](#subresource) (Required): Azure resource manager sub resource properties.
+* **backendAddressPool**: [SubResource](#subresource) (Required): A reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs.
 * **frontendIPConfigurations**: [SubResource](#subresource)[]: The Frontend IP addresses of the load balancer.
 * **provisioningState**: string: Gets the provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 
@@ -703,12 +703,12 @@
 
 ## PublicIPAddressPropertiesFormat
 ### Properties
-* **dnsSettings**: [PublicIPAddressDnsSettings](#publicipaddressdnssettings): Contains FQDN of the DNS record associated with the public IP address
+* **dnsSettings**: [PublicIPAddressDnsSettings](#publicipaddressdnssettings): The FQDN of the DNS record associated with the public IP address.
 * **idleTimeoutInMinutes**: int: The idle timeout of the public IP address.
 * **ipAddress**: string
 * **ipConfiguration**: [IPConfiguration](#ipconfiguration): IPConfiguration
 * **provisioningState**: string: The provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **publicIPAllocationMethod**: 'Dynamic' | 'Static' | string: PrivateIP allocation method. Possible values are: 'Static' and 'Dynamic'.
+* **publicIPAllocationMethod**: 'Dynamic' | 'Static' | string: The public IP allocation method. Possible values are: 'Static' and 'Dynamic'.
 * **resourceGuid**: string: The resource GUID property of the public IP resource.
 
 ## ResourceTags
@@ -807,7 +807,7 @@
 ### Properties
 * **addressPrefix**: string: The destination CIDR to which the route applies.
 * **nextHopIpAddress**: string: The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
-* **nextHopType**: 'Internet' | 'None' | 'VirtualAppliance' | 'VirtualNetworkGateway' | 'VnetLocal' | string (Required): Gets NextHopType.
+* **nextHopType**: 'Internet' | 'None' | 'VirtualAppliance' | 'VirtualNetworkGateway' | 'VnetLocal' | string (Required): The type of Azure hop the packet should be sent to. Possible values are: 'VirtualNetworkGateway', 'VnetLocal', 'Internet', 'VirtualAppliance', and 'None'
 * **provisioningState**: string: The provisioning state of the resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 
 ## RouteTable
@@ -857,9 +857,9 @@
 ### Properties
 * **addressPrefix**: string: The address prefix for the subnet.
 * **ipConfigurations**: [IPConfiguration](#ipconfiguration)[]: Gets an array of references to the network interface IP configurations using subnet.
-* **networkSecurityGroup**: [NetworkSecurityGroup](#networksecuritygroup): NetworkSecurityGroup resource.
+* **networkSecurityGroup**: [NetworkSecurityGroup](#networksecuritygroup): The reference of the NetworkSecurityGroup resource.
 * **provisioningState**: string: The provisioning state of the resource.
-* **routeTable**: [RouteTable](#routetable): Route table resource.
+* **routeTable**: [RouteTable](#routetable): The reference of the RouteTable resource.
 
 ## SubResource
 ### Properties
@@ -884,7 +884,7 @@
 * **enableBgp**: bool: EnableBgp flag
 * **ingressBytesTransferred**: int: The ingress bytes transferred in this connection.
 * **localNetworkGateway2**: [LocalNetworkGateway](#localnetworkgateway): A common class for general resource information
-* **peer**: [SubResource](#subresource): Azure resource manager sub resource properties.
+* **peer**: [SubResource](#subresource): The reference to peerings resource.
 * **provisioningState**: string: The provisioning state of the VirtualNetworkGatewayConnection resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **resourceGuid**: string: The resource GUID property of the VirtualNetworkGatewayConnection resource.
 * **routingWeight**: int: The routing weight.
@@ -902,22 +902,22 @@
 ## VirtualNetworkGatewayIPConfigurationPropertiesFormat
 ### Properties
 * **privateIPAddress**: string: Gets or sets the privateIPAddress of the IP Configuration
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: PrivateIP allocation method. Possible values are: 'Static' and 'Dynamic'.
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: The private IP allocation method. Possible values are: 'Static' and 'Dynamic'.
 * **provisioningState**: string: The provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **publicIPAddress**: [SubResource](#subresource): Azure resource manager sub resource properties.
-* **subnet**: [SubResource](#subresource): Azure resource manager sub resource properties.
+* **publicIPAddress**: [SubResource](#subresource): The reference of the public IP resource.
+* **subnet**: [SubResource](#subresource): The reference of the subnet resource.
 
 ## VirtualNetworkGatewayPropertiesFormat
 ### Properties
-* **bgpSettings**: [BgpSettings](#bgpsettings)
+* **bgpSettings**: [BgpSettings](#bgpsettings): Virtual network gateway's BGP speaker settings.
 * **enableBgp**: bool: Whether BGP is enabled for this virtual network gateway or not.
-* **gatewayDefaultSite**: [SubResource](#subresource): Azure resource manager sub resource properties.
+* **gatewayDefaultSite**: [SubResource](#subresource): The reference of the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.
 * **gatewayType**: 'ExpressRoute' | 'Vpn' | string: The type of this virtual network gateway. Possible values are: 'Vpn' and 'ExpressRoute'.
 * **ipConfigurations**: [VirtualNetworkGatewayIPConfiguration](#virtualnetworkgatewayipconfiguration)[]: IP configurations for virtual network gateway.
 * **provisioningState**: string: The provisioning state of the VirtualNetworkGateway resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **resourceGuid**: string: The resource GUID property of the VirtualNetworkGateway resource.
-* **sku**: [VirtualNetworkGatewaySku](#virtualnetworkgatewaysku): VirtualNetworkGatewaySku details
-* **vpnClientConfiguration**: [VpnClientConfiguration](#vpnclientconfiguration): VpnClientConfiguration for P2S client
+* **sku**: [VirtualNetworkGatewaySku](#virtualnetworkgatewaysku): The reference of the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.
+* **vpnClientConfiguration**: [VpnClientConfiguration](#vpnclientconfiguration): The reference of the VpnClientConfiguration resource which represents the P2S VpnClient configurations.
 * **vpnType**: 'PolicyBased' | 'RouteBased' | string: The type of this virtual network gateway. Possible values are: 'PolicyBased' and 'RouteBased'.
 
 ## VirtualNetworkGatewaySku
@@ -928,15 +928,15 @@
 
 ## VirtualNetworkPropertiesFormat
 ### Properties
-* **addressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
-* **dhcpOptions**: [DhcpOptions](#dhcpoptions): DhcpOptions contains an array of DNS servers available to VMs deployed in the virtual network. Standard DHCP option for a subnet overrides VNET DHCP options.
+* **addressSpace**: [AddressSpace](#addressspace): The AddressSpace that contains an array of IP address ranges that can be used by subnets.
+* **dhcpOptions**: [DhcpOptions](#dhcpoptions): The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
 * **provisioningState**: string: The provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **resourceGuid**: string: The resourceGuid property of the Virtual Network resource.
 * **subnets**: [Subnet](#subnet)[]: A list of subnets in a Virtual Network.
 
 ## VpnClientConfiguration
 ### Properties
-* **vpnClientAddressPool**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
+* **vpnClientAddressPool**: [AddressSpace](#addressspace): Gets or sets the reference of the Address space resource which represents Address space for P2S VpnClient.
 * **vpnClientRevokedCertificates**: [VpnClientRevokedCertificate](#vpnclientrevokedcertificate)[]: VpnClientRevokedCertificate for Virtual network gateway.
 * **vpnClientRootCertificates**: [VpnClientRootCertificate](#vpnclientrootcertificate)[]: VpnClientRootCertificate for Virtual network gateway.
 

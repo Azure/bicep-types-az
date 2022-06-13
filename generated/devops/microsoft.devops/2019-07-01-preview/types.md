@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PipelineProperties](#pipelineproperties) (Required): Custom properties of a Pipeline.
+* **properties**: [PipelineProperties](#pipelineproperties) (Required): Custom properties of the Pipeline.
 * **tags**: [ResourceTags](#resourcetags): Resource Tags
 * **type**: 'Microsoft.DevOps/pipelines' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -23,12 +23,12 @@
 
 ## BootstrapConfiguration
 ### Properties
-* **repository**: [CodeRepository](#coderepository): Repository containing the source code for a pipeline.
+* **repository**: [CodeRepository](#coderepository): Repository containing the source code for the pipeline.
 * **template**: [PipelineTemplate](#pipelinetemplate) (Required): Template used to bootstrap the pipeline.
 
 ## CodeRepository
 ### Properties
-* **authorization**: [Authorization](#authorization): Authorization info used to access a resource (like code repository).
+* **authorization**: [Authorization](#authorization): Authorization info to access the code repository.
 * **defaultBranch**: string (Required): Default branch used to configure Continuous Integration (CI) in the pipeline.
 * **id**: string (Required): Unique immutable identifier of the code repository.
 * **properties**: [CodeRepositoryProperties](#coderepositoryproperties): Repository-specific properties.
@@ -46,10 +46,10 @@
 
 ## PipelineProperties
 ### Properties
-* **bootstrapConfiguration**: [BootstrapConfiguration](#bootstrapconfiguration) (Required): Configuration used to bootstrap a Pipeline.
-* **organization**: [OrganizationReference](#organizationreference) (Required): Reference to an Azure DevOps Organization.
+* **bootstrapConfiguration**: [BootstrapConfiguration](#bootstrapconfiguration) (Required): Configuration used to bootstrap the Pipeline.
+* **organization**: [OrganizationReference](#organizationreference) (Required): Reference to the Azure DevOps Organization containing the Pipeline.
 * **pipelineId**: int (ReadOnly): Unique identifier of the Azure Pipeline within the Azure DevOps Project.
-* **project**: [ProjectReference](#projectreference) (Required): Reference to an Azure DevOps Project.
+* **project**: [ProjectReference](#projectreference) (Required): Reference to the Azure DevOps Project containing the Pipeline.
 
 ## PipelineTemplate
 ### Properties

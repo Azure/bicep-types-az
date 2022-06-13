@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Gets or sets Namespace data center location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [NamespaceProperties](#namespaceproperties) (Required): Namespace properties.
+* **properties**: [NamespaceProperties](#namespaceproperties) (Required): Gets or sets properties of the Namespace.
 * **tags**: [NamespaceCreateOrUpdateParametersTags](#namespacecreateorupdateparameterstags): Gets or sets Namespace tags.
 * **type**: 'Microsoft.NotificationHubs/namespaces' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,7 +18,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Gets or sets Namespace data center location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required): SharedAccessAuthorizationRule properties.
+* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required): Gets or sets properties of the Namespace AuthorizationRules.
 * **type**: 'Microsoft.NotificationHubs/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NotificationHubs/namespaces/notificationHubs@2014-09-01
@@ -28,7 +28,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Gets or sets NotificationHub data center location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [NotificationHubProperties](#notificationhubproperties) (Required): NotificationHub properties.
+* **properties**: [NotificationHubProperties](#notificationhubproperties) (Required): Gets or sets properties of the NotificationHub.
 * **tags**: [NotificationHubCreateOrUpdateParametersTags](#notificationhubcreateorupdateparameterstags): Gets or sets NotificationHub tags.
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -39,7 +39,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Gets or sets Namespace data center location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required): SharedAccessAuthorizationRule properties.
+* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required): Gets or sets properties of the Namespace AuthorizationRules.
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.NotificationHubs/namespaces/AuthorizationRules@2014-09-01)
@@ -54,7 +54,7 @@
 
 ## AdmCredential
 ### Properties
-* **properties**: [AdmCredentialProperties](#admcredentialproperties): Description of a NotificationHub AdmCredential.
+* **properties**: [AdmCredentialProperties](#admcredentialproperties): Gets or sets properties of NotificationHub AdmCredential.
 
 ## AdmCredentialProperties
 ### Properties
@@ -64,7 +64,7 @@
 
 ## ApnsCredential
 ### Properties
-* **properties**: [ApnsCredentialProperties](#apnscredentialproperties): Description of a NotificationHub ApnsCredential.
+* **properties**: [ApnsCredentialProperties](#apnscredentialproperties): Gets or sets properties of NotificationHub ApnsCredential.
 
 ## ApnsCredentialProperties
 ### Properties
@@ -75,7 +75,7 @@
 
 ## BaiduCredential
 ### Properties
-* **properties**: [BaiduCredentialProperties](#baiducredentialproperties): Description of a NotificationHub BaiduCredential.
+* **properties**: [BaiduCredentialProperties](#baiducredentialproperties): Gets or sets properties of NotificationHub BaiduCredential.
 
 ## BaiduCredentialProperties
 ### Properties
@@ -85,7 +85,7 @@
 
 ## GcmCredential
 ### Properties
-* **properties**: [GcmCredentialProperties](#gcmcredentialproperties): Description of a NotificationHub GcmCredential.
+* **properties**: [GcmCredentialProperties](#gcmcredentialproperties): Gets or sets properties of NotificationHub GcmCredential.
 
 ## GcmCredentialProperties
 ### Properties
@@ -94,7 +94,7 @@
 
 ## MpnsCredential
 ### Properties
-* **properties**: [MpnsCredentialProperties](#mpnscredentialproperties): Description of a NotificationHub MpnsCredential.
+* **properties**: [MpnsCredentialProperties](#mpnscredentialproperties): Gets or sets properties of NotificationHub MpnsCredential.
 
 ## MpnsCredentialProperties
 ### Properties
@@ -128,15 +128,15 @@
 
 ## NotificationHubProperties
 ### Properties
-* **admCredential**: [AdmCredential](#admcredential): Description of a NotificationHub AdmCredential.
-* **apnsCredential**: [ApnsCredential](#apnscredential): Description of a NotificationHub ApnsCredential.
+* **admCredential**: [AdmCredential](#admcredential): The AdmCredential of the created NotificationHub
+* **apnsCredential**: [ApnsCredential](#apnscredential): The ApnsCredential of the created NotificationHub
 * **authorizationRules**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties)[]: The AuthorizationRules of the created NotificationHub
-* **baiduCredential**: [BaiduCredential](#baiducredential): Description of a NotificationHub BaiduCredential.
-* **gcmCredential**: [GcmCredential](#gcmcredential): Description of a NotificationHub GcmCredential.
-* **mpnsCredential**: [MpnsCredential](#mpnscredential): Description of a NotificationHub MpnsCredential.
+* **baiduCredential**: [BaiduCredential](#baiducredential): The BaiduCredential of the created NotificationHub
+* **gcmCredential**: [GcmCredential](#gcmcredential): The GcmCredential of the created NotificationHub
+* **mpnsCredential**: [MpnsCredential](#mpnscredential): The MpnsCredential of the created NotificationHub
 * **name**: string: The NotificationHub name.
 * **registrationTtl**: string: The RegistrationTtl of the created NotificationHub
-* **wnsCredential**: [WnsCredential](#wnscredential): Description of a NotificationHub WnsCredential.
+* **wnsCredential**: [WnsCredential](#wnscredential): The WnsCredential of the created NotificationHub
 
 ## ResourceListKeys
 ### Properties
@@ -162,7 +162,7 @@
 
 ## WnsCredential
 ### Properties
-* **properties**: [WnsCredentialProperties](#wnscredentialproperties): Description of a NotificationHub WnsCredential.
+* **properties**: [WnsCredentialProperties](#wnscredentialproperties): Gets or sets properties of NotificationHub WnsCredential.
 
 ## WnsCredentialProperties
 ### Properties

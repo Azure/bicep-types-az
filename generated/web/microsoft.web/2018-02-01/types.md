@@ -20,7 +20,7 @@
 * **kind**: string: Kind of resource.
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AppServiceEnvironment](#appserviceenvironment): Description of an App Service Environment.
+* **properties**: [AppServiceEnvironment](#appserviceenvironment): Core resource properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/hostingEnvironments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -31,7 +31,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkerPool](#workerpool): Worker pool of an App Service Environment.
+* **properties**: [WorkerPool](#workerpool): Core resource properties
 * **sku**: [SkuDescription](#skudescription): Description of a SKU for a scalable resource.
 * **type**: 'Microsoft.Web/hostingEnvironments/multiRolePools' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -42,7 +42,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkerPool](#workerpool): Worker pool of an App Service Environment.
+* **properties**: [WorkerPool](#workerpool): Core resource properties
 * **sku**: [SkuDescription](#skudescription): Description of a SKU for a scalable resource.
 * **type**: 'Microsoft.Web/hostingEnvironments/workerPools' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -185,9 +185,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'slotConfigNames' (Required, DeployTimeConstant): The resource name
-* **properties**: [SlotConfigNames](#slotconfignames): Names for connection strings, application settings, and external Azure storage account configuration
-identifiers to be marked as sticky to the deployment slot and not moved during a swap operation.
-This is valid for all deployment slots in an app.
+* **properties**: [SlotConfigNames](#slotconfignames): Core resource properties
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -196,7 +194,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteConfig](#siteconfig): Configuration of an App Service app.
+* **properties**: [SiteConfig](#siteconfig): Core resource properties
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 
@@ -227,7 +225,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
+* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
 * **type**: 'Microsoft.Web/sites/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/functions@2018-02-01
@@ -286,7 +284,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
+* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
 * **type**: 'Microsoft.Web/sites/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/networkConfig@2018-02-01
@@ -437,7 +435,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteConfig](#siteconfig): Configuration of an App Service app.
+* **properties**: [SiteConfig](#siteconfig): Core resource properties
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 
@@ -468,7 +466,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
+* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
 * **type**: 'Microsoft.Web/sites/slots/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/functions@2018-02-01
@@ -527,7 +525,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
+* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
 * **type**: 'Microsoft.Web/sites/slots/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/networkConfig@2018-02-01
@@ -735,8 +733,8 @@ This is valid for all deployment slots in an app.
 
 ## ApplicationLogsConfig
 ### Properties
-* **azureBlobStorage**: [AzureBlobStorageApplicationLogsConfig](#azureblobstorageapplicationlogsconfig): Application logs azure blob storage configuration.
-* **azureTableStorage**: [AzureTableStorageApplicationLogsConfig](#azuretablestorageapplicationlogsconfig): Application logs to Azure table storage configuration.
+* **azureBlobStorage**: [AzureBlobStorageApplicationLogsConfig](#azureblobstorageapplicationlogsconfig): Application logs to blob storage configuration.
+* **azureTableStorage**: [AzureTableStorageApplicationLogsConfig](#azuretablestorageapplicationlogsconfig): Application logs to azure table storage configuration.
 * **fileSystem**: [FileSystemApplicationLogsConfig](#filesystemapplicationlogsconfig): Application logs to file system configuration.
 
 ## AppServiceEnvironment
@@ -777,7 +775,7 @@ This is valid for all deployment slots in an app.
 * **upgradeDomains**: int (ReadOnly): Number of upgrade domains of the App Service Environment.
 * **userWhitelistedIpRanges**: string[]: User added ip ranges to whitelist on ASE db
 * **vipMappings**: [VirtualIPMapping](#virtualipmapping)[] (ReadOnly): Description of IP SSL mapping for the App Service Environment.
-* **virtualNetwork**: [VirtualNetworkProfile](#virtualnetworkprofile) (Required): Specification for using a Virtual Network.
+* **virtualNetwork**: [VirtualNetworkProfile](#virtualnetworkprofile) (Required): Description of the Virtual Network.
 * **vnetName**: string: Name of the Virtual Network for the App Service Environment.
 * **vnetResourceGroupName**: string: Resource group of the Virtual Network.
 * **vnetSubnetName**: string: Subnet of the Virtual Network.
@@ -787,7 +785,7 @@ This is valid for all deployment slots in an app.
 ### Properties
 * **freeOfferExpirationTime**: string: The time when the server farm free offer expires.
 * **geoRegion**: string (ReadOnly): Geographical location for the App Service plan.
-* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): Specification for an App Service Environment to use for this resource.
+* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): Specification for the App Service Environment to use for the App Service plan.
 * **hyperV**: bool: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
 * **isSpot**: bool: If <code>true</code>, this App Service Plan owns spot instances.
 * **isXenon**: bool: Obsolete: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
@@ -809,8 +807,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 ## AutoHealActions
 ### Properties
 * **actionType**: 'CustomAction' | 'LogEvent' | 'Recycle': Predefined action to be taken.
-* **customAction**: [AutoHealCustomAction](#autohealcustomaction): Custom action to be executed
-when an auto heal rule is triggered.
+* **customAction**: [AutoHealCustomAction](#autohealcustomaction): Custom action to be taken.
 * **minProcessExecutionTime**: string: Minimum time the process must execute
 before taking the action
 
@@ -821,14 +818,14 @@ before taking the action
 
 ## AutoHealRules
 ### Properties
-* **actions**: [AutoHealActions](#autohealactions): Actions which to take by the auto-heal module when a rule is triggered.
-* **triggers**: [AutoHealTriggers](#autohealtriggers): Triggers for auto-heal.
+* **actions**: [AutoHealActions](#autohealactions): Actions to be executed when a rule is triggered.
+* **triggers**: [AutoHealTriggers](#autohealtriggers): Conditions that describe when to execute the auto-heal actions.
 
 ## AutoHealTriggers
 ### Properties
 * **privateBytesInKB**: int: A rule based on private bytes.
-* **requests**: [RequestsBasedTrigger](#requestsbasedtrigger): Trigger based on total requests.
-* **slowRequests**: [SlowRequestsBasedTrigger](#slowrequestsbasedtrigger): Trigger based on request execution time.
+* **requests**: [RequestsBasedTrigger](#requestsbasedtrigger): A rule based on total requests.
+* **slowRequests**: [SlowRequestsBasedTrigger](#slowrequestsbasedtrigger): A rule based on request execution time.
 * **statusCodes**: [StatusCodesBasedTrigger](#statuscodesbasedtrigger)[]: A rule based on status codes.
 
 ## AzureBlobStorageApplicationLogsConfig
@@ -923,7 +920,7 @@ Remove blobs older than X days.
 ## BackupRequestProperties
 ### Properties
 * **backupName**: string: Name of the backup.
-* **backupSchedule**: [BackupSchedule](#backupschedule): Description of a backup schedule. Describes how often should be the backup performed and what should be the retention policy.
+* **backupSchedule**: [BackupSchedule](#backupschedule): Schedule for the backup if it is executed periodically.
 * **databases**: [DatabaseBackupSetting](#databasebackupsetting)[]: Databases included in the backup.
 * **enabled**: bool: True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
 * **storageAccountUrl**: string (Required): SAS URL to the container.
@@ -948,7 +945,7 @@ Remove blobs older than X days.
 * **cerBlob**: any (ReadOnly): Raw bytes of .cer file
 * **expirationDate**: string (ReadOnly): Certificate expiration date.
 * **friendlyName**: string (ReadOnly): Friendly name of the certificate.
-* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile) (ReadOnly): Specification for an App Service Environment to use for this resource.
+* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile) (ReadOnly): Specification for the App Service Environment to use for the certificate.
 * **hostNames**: string[]: Host names the certificate applies to.
 * **issueDate**: string (ReadOnly): Certificate issue Date.
 * **issuer**: string (ReadOnly): Certificate issuer.
@@ -1067,7 +1064,7 @@ Value can range between 25 and 100.
 
 ## FunctionEnvelopeProperties
 ### Properties
-* **config**: any: Any object
+* **config**: any: Config information.
 * **config_href**: string: Config URI.
 * **files**: [FunctionEnvelopePropertiesFiles](#functionenvelopepropertiesfiles): File list.
 * **function_app_id**: string: Function App ID.
@@ -1170,7 +1167,7 @@ Value can range between 25 and 100.
 * **domainId**: string: Fully qualified ARM domain resource URI.
 * **hostNameType**: 'Managed' | 'Verified': Hostname type.
 * **siteName**: string: App Service app name.
-* **sslState**: 'Disabled' | 'IpBasedEnabled' | 'SniEnabled': SSL type.
+* **sslState**: 'Disabled' | 'IpBasedEnabled' | 'SniEnabled': SSL type
 * **thumbprint**: string: SSL certificate thumbprint
 * **virtualIP**: string (ReadOnly): Virtual IP address assigned to the hostname if IP based SSL is enabled.
 
@@ -1487,15 +1484,15 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **appCommandLine**: string: App command line to launch.
 * **appSettings**: [NameValuePair](#namevaluepair)[]: Application settings.
 * **autoHealEnabled**: bool: <code>true</code> if Auto Heal is enabled; otherwise, <code>false</code>.
-* **autoHealRules**: [AutoHealRules](#autohealrules): Rules that can be defined for auto-heal.
+* **autoHealRules**: [AutoHealRules](#autohealrules): Auto Heal rules.
 * **autoSwapSlotName**: string: Auto-swap slot name.
 * **azureStorageAccounts**: [SiteConfigAzureStorageAccounts](#siteconfigazurestorageaccounts): User-provided Azure storage accounts.
 * **connectionStrings**: [ConnStringInfo](#connstringinfo)[]: Connection strings.
-* **cors**: [CorsSettings](#corssettings): Cross-Origin Resource Sharing (CORS) settings for the app.
+* **cors**: [CorsSettings](#corssettings): Cross-Origin Resource Sharing (CORS) settings.
 * **defaultDocuments**: string[]: Default documents.
 * **detailedErrorLoggingEnabled**: bool: <code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.
 * **documentRoot**: string: Document root.
-* **experiments**: [Experiments](#experiments): Routing rules in production experiments.
+* **experiments**: [Experiments](#experiments): This is work around for polymorphic types.
 * **ftpsState**: 'AllAllowed' | 'Disabled' | 'FtpsOnly' | string: State of FTP / FTPS service
 * **handlerMappings**: [HandlerMapping](#handlermapping)[]: Handler mappings.
 * **http20Enabled**: bool: Http20Enabled: configures a web site to allow clients to connect over http2.0
@@ -1504,12 +1501,12 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **javaContainer**: string: Java container.
 * **javaContainerVersion**: string: Java container version.
 * **javaVersion**: string: Java version.
-* **limits**: [SiteLimits](#sitelimits): Metric limits set on an app.
+* **limits**: [SiteLimits](#sitelimits): Site limits.
 * **linuxFxVersion**: string: Linux App Framework and version
 * **loadBalancing**: 'LeastRequests' | 'LeastResponseTime' | 'RequestHash' | 'WeightedRoundRobin' | 'WeightedTotalTraffic': Site load balancing.
 * **localMySqlEnabled**: bool: <code>true</code> to enable local MySQL; otherwise, <code>false</code>.
 * **logsDirectorySizeLimit**: int: HTTP logs directory size limit.
-* **machineKey**: [SiteMachineKey](#sitemachinekey) (ReadOnly): MachineKey of an app.
+* **machineKey**: [SiteMachineKey](#sitemachinekey) (ReadOnly): Site MachineKey.
 * **managedPipelineMode**: 'Classic' | 'Integrated': Managed pipeline mode.
 * **managedServiceIdentityId**: int: Managed Service Identity Id
 * **minTlsVersion**: '1.0' | '1.1' | '1.2' | string: MinTlsVersion: configures the minimum version of TLS required for SSL requests
@@ -1518,7 +1515,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **numberOfWorkers**: int: Number of workers.
 * **phpVersion**: string: Version of PHP.
 * **publishingUsername**: string: Publishing user name.
-* **push**: [PushSettings](#pushsettings): Push settings for the App.
+* **push**: [PushSettings](#pushsettings): Push endpoint settings.
 * **pythonVersion**: string: Version of Python.
 * **remoteDebuggingEnabled**: bool: <code>true</code> if remote debugging is enabled; otherwise, <code>false</code>.
 * **remoteDebuggingVersion**: string: Remote debugging version.
@@ -1574,9 +1571,9 @@ This setting only applies to the Consumption Plan
 ## SiteLogsConfigProperties
 ### Properties
 * **applicationLogs**: [ApplicationLogsConfig](#applicationlogsconfig): Application logs configuration.
-* **detailedErrorMessages**: [EnabledConfig](#enabledconfig): Enabled configuration.
-* **failedRequestsTracing**: [EnabledConfig](#enabledconfig): Enabled configuration.
-* **httpLogs**: [HttpLogsConfig](#httplogsconfig): Http logs configuration.
+* **detailedErrorMessages**: [EnabledConfig](#enabledconfig): Detailed error messages configuration.
+* **failedRequestsTracing**: [EnabledConfig](#enabledconfig): Failed requests tracing configuration.
+* **httpLogs**: [HttpLogsConfig](#httplogsconfig): HTTP logs configuration.
 
 ## SiteMachineKey
 ### Properties
@@ -1591,7 +1588,7 @@ This setting only applies to the Consumption Plan
 * **clientAffinityEnabled**: bool: <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
 * **clientCertEnabled**: bool: <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.
 * **clientCertExclusionPaths**: string: client certificate authentication comma-separated exclusion paths
-* **cloningInfo**: [CloningInfo](#cloninginfo) (WriteOnly): Information needed for cloning operation.
+* **cloningInfo**: [CloningInfo](#cloninginfo) (WriteOnly): If specified during app creation, the app is cloned from a source app.
 * **containerSize**: int: Size of the function container.
 * **dailyMemoryTimeQuota**: int: Maximum allowed daily memory-time quota (applicable on dynamic apps only).
 * **defaultHostName**: string (ReadOnly): Default hostname of the app. Read-only.
@@ -1599,7 +1596,7 @@ This setting only applies to the Consumption Plan
 * **enabledHostNames**: string[] (ReadOnly): Enabled hostnames for the app.Hostnames need to be assigned (see HostNames) AND enabled. Otherwise,
 the app is not served on those hostnames.
 * **geoDistributions**: [GeoDistribution](#geodistribution)[]: GeoDistributions for this site
-* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): Specification for an App Service Environment to use for this resource.
+* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): App Service Environment to use for the app.
 * **hostNames**: string[] (ReadOnly): Hostnames associated with the app.
 * **hostNamesDisabled**: bool: <code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>.
  If <code>true</code>, the app is only accessible via API management process.
@@ -1621,8 +1618,8 @@ This only applies to Functions container.
 * **resourceGroup**: string (ReadOnly): Name of the resource group the app belongs to. Read-only.
 * **scmSiteAlsoStopped**: bool: <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.
 * **serverFarmId**: string: Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
-* **siteConfig**: [SiteConfig](#siteconfig): Configuration of an App Service app.
-* **slotSwapStatus**: [SlotSwapStatus](#slotswapstatus) (ReadOnly): The status of the last successful slot swap operation.
+* **siteConfig**: [SiteConfig](#siteconfig): Configuration of the app.
+* **slotSwapStatus**: [SlotSwapStatus](#slotswapstatus) (ReadOnly): Status of the last deployment slot swap operation.
 * **state**: string (ReadOnly): Current state of the app.
 * **suspendedTill**: string (ReadOnly): App suspended till in case memory-time quota is exceeded.
 * **targetSwapSlot**: string (ReadOnly): Specifies which deployment slot this app will swap into. Read-only.
@@ -1652,7 +1649,7 @@ This only applies to Functions container.
 * **locations**: string[]: Locations of the SKU.
 * **name**: string: Name of the resource SKU.
 * **size**: string: Size specifier of the resource SKU.
-* **skuCapacity**: [SkuCapacity](#skucapacity): Description of the App Service plan scale options.
+* **skuCapacity**: [SkuCapacity](#skucapacity): Min, max, and default scale values of the SKU.
 * **tier**: string: Service tier of the resource SKU.
 
 ## SlotConfigNames
@@ -1839,7 +1836,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 
 ## WorkerPool
 ### Properties
-* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared/dedicated workers.
+* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared or dedicated app hosting.
 * **instanceNames**: string[] (ReadOnly): Names of all instances in the worker pool (read only).
 * **workerCount**: int: Number of instances in the worker pool.
 * **workerSize**: string: VM size of the worker pool instances.

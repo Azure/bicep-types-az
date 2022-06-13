@@ -5,15 +5,15 @@
 ### Properties
 * **apiVersion**: '2021-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): Identity of the Extension resource
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExtensionProperties](#extensionproperties): Properties of an Extension resource
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
 * **type**: 'Microsoft.KubernetesConfiguration/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ErrorAdditionalInfo
 ### Properties
-* **info**: any (ReadOnly): Any object
+* **info**: any (ReadOnly): The additional info.
 * **type**: string (ReadOnly): The additional info type.
 
 ## ErrorDetail
@@ -36,7 +36,7 @@
 * **packageUri**: string (ReadOnly): Uri of the Helm package
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the extension resource.
 * **releaseTrain**: string: ReleaseTrain this extension participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.
-* **scope**: [Scope](#scope): Scope of the extension. It can be either Cluster or Namespace; but not both.
+* **scope**: [Scope](#scope): Scope at which the extension is installed.
 * **statuses**: [ExtensionStatus](#extensionstatus)[]: Status from this extension.
 * **version**: string: Version of the extension for this extension, if it is 'pinned' to a specific version. autoUpgradeMinorVersion must be 'false'.
 
@@ -95,5 +95,5 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 

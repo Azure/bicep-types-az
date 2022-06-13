@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagementGroupDiagnosticSettings](#managementgroupdiagnosticsettings): The management group diagnostic settings.
+* **properties**: [ManagementGroupDiagnosticSettings](#managementgroupdiagnosticsettings): Properties of a Management Group Diagnostic Settings Resource.
 * **type**: 'microsoft.insights/diagnosticSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ManagementGroupDiagnosticSettings

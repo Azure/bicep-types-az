@@ -7,7 +7,7 @@
 * **etag**: string (ReadOnly): For optimistic concurrency control.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [NotificationSettingProperties](#notificationsettingproperties) (ReadOnly): Model for properties of a NotificationSetting.
+* **properties**: [NotificationSettingProperties](#notificationsettingproperties) (ReadOnly): Properties of Notification Settings
 * **type**: 'Microsoft.WorkloadMonitor/notificationSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## NotificationSettingProperties

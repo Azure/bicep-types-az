@@ -4,12 +4,12 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **extendedLocation**: [ExtendedLocation](#extendedlocation): The complex type of the extended location.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DataControllerProperties](#datacontrollerproperties) (Required): The data controller properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [DataControllerProperties](#datacontrollerproperties) (Required): The data controller's properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureArcData/dataControllers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -17,13 +17,13 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **extendedLocation**: [ExtendedLocation](#extendedlocation): The complex type of the extended location.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SqlManagedInstanceProperties](#sqlmanagedinstanceproperties) (Required): Properties of sqlManagedInstance.
-* **sku**: [SqlManagedInstanceSku](#sqlmanagedinstancesku): The resource model definition representing SKU for Azure Managed Instance - Azure Arc
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [SqlManagedInstanceProperties](#sqlmanagedinstanceproperties) (Required): null
+* **sku**: [SqlManagedInstanceSku](#sqlmanagedinstancesku): Resource sku.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureArcData/sqlManagedInstances' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -34,8 +34,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SqlServerInstanceProperties](#sqlserverinstanceproperties): Properties of SqlServerInstance.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [SqlServerInstanceProperties](#sqlserverinstanceproperties): null
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureArcData/sqlServerInstances' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -46,24 +46,24 @@
 
 ## DataControllerProperties
 ### Properties
-* **basicLoginInformation**: [BasicLoginInformation](#basiclogininformation): Username and password for basic login authentication.
+* **basicLoginInformation**: [BasicLoginInformation](#basiclogininformation): Deprecated. Azure Arc Data Services data controller no longer expose any endpoint. All traffic are exposed through Kubernetes native API.
 * **clusterId**: string: If a CustomLocation is provided, this contains the ARM id of the connected cluster the custom location belongs to.
 * **extensionId**: string: If a CustomLocation is provided, this contains the ARM id of the extension the custom location belongs to.
 * **infrastructure**: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'onpremises' | 'other': The infrastructure the data controller is running on.
-* **k8sRaw**: any: Any object
+* **k8sRaw**: any: The raw kubernetes information
 * **lastUploadedDate**: string: Last uploaded date from Kubernetes cluster. Defaults to current date time
 * **logAnalyticsWorkspaceConfig**: [LogAnalyticsWorkspaceConfig](#loganalyticsworkspaceconfig): Log analytics workspace id and primary key
-* **logsDashboardCredential**: [BasicLoginInformation](#basiclogininformation): Username and password for basic login authentication.
-* **metricsDashboardCredential**: [BasicLoginInformation](#basiclogininformation): Username and password for basic login authentication.
+* **logsDashboardCredential**: [BasicLoginInformation](#basiclogininformation): Login credential for logs dashboard on the Kubernetes cluster.
+* **metricsDashboardCredential**: [BasicLoginInformation](#basiclogininformation): Login credential for metrics dashboard on the Kubernetes cluster.
 * **onPremiseProperty**: [OnPremiseProperty](#onpremiseproperty): Properties from the Kubernetes data controller
 * **provisioningState**: string (ReadOnly)
-* **uploadServicePrincipal**: [UploadServicePrincipal](#uploadserviceprincipal): Service principal for uploading billing, metrics and logs.
+* **uploadServicePrincipal**: [UploadServicePrincipal](#uploadserviceprincipal): Deprecated. Service principal is deprecated in favor of Arc Kubernetes service extension managed identity.
 * **uploadWatermark**: [UploadWatermark](#uploadwatermark): Properties on upload watermark.  Mostly timestamp for each upload data type
 
 ## ExtendedLocation
 ### Properties
 * **name**: string: The name of the extended location.
-* **type**: 'CustomLocation' | string: The type of extendedLocation.
+* **type**: 'CustomLocation' | string: The type of the extended location.
 
 ## K8SResourceRequirements
 ### Properties
@@ -121,12 +121,12 @@
 ## SqlManagedInstanceProperties
 ### Properties
 * **admin**: string: The instance admin user
-* **basicLoginInformation**: [BasicLoginInformation](#basiclogininformation): Username and password for basic login authentication.
+* **basicLoginInformation**: [BasicLoginInformation](#basiclogininformation): Username and password for basic authentication.
 * **clusterId**: string: If a CustomLocation is provided, this contains the ARM id of the connected cluster the custom location belongs to.
 * **dataControllerId**: string: null
 * **endTime**: string: The instance end time
 * **extensionId**: string: If a CustomLocation is provided, this contains the ARM id of the extension the custom location belongs to.
-* **k8sRaw**: [SqlManagedInstanceK8SRaw](#sqlmanagedinstancek8sraw): The raw kubernetes information.
+* **k8sRaw**: [SqlManagedInstanceK8SRaw](#sqlmanagedinstancek8sraw): The raw kubernetes information
 * **lastUploadedDate**: string: Last uploaded date from Kubernetes cluster. Defaults to current date time
 * **licenseType**: 'BasePrice' | 'DisasterRecovery' | 'LicenseIncluded' | string: The license type to apply for this managed instance.
 * **provisioningState**: string (ReadOnly)
@@ -168,7 +168,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties

@@ -33,7 +33,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExpressRouteCircuitPropertiesFormat](#expressroutecircuitpropertiesformat): Properties of ExpressRouteCircuit
-* **sku**: [ExpressRouteCircuitSku](#expressroutecircuitsku): Contains sku in an ExpressRouteCircuit
+* **sku**: [ExpressRouteCircuitSku](#expressroutecircuitsku): Gets or sets sku
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Network/expressRouteCircuits' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -231,8 +231,8 @@
 * **privateIPAddress**: string: Gets or sets the privateIPAddress of the Network Interface IP Configuration
 * **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: Gets or sets PrivateIP allocation method (Static/Dynamic)
 * **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
-* **publicIPAddress**: [SubResource](#subresource)
-* **subnet**: [SubResource](#subresource)
+* **publicIPAddress**: [SubResource](#subresource): Gets or sets the reference of the PublicIP resource
+* **subnet**: [SubResource](#subresource): Gets or sets the reference of the subnet resource
 
 ## ApplicationGatewayFrontendPort
 ### Properties
@@ -255,11 +255,11 @@
 
 ## ApplicationGatewayHttpListenerPropertiesFormat
 ### Properties
-* **frontendIPConfiguration**: [SubResource](#subresource)
-* **frontendPort**: [SubResource](#subresource)
+* **frontendIPConfiguration**: [SubResource](#subresource): Gets or sets frontend IP configuration resource of application gateway
+* **frontendPort**: [SubResource](#subresource): Gets or sets frontend port resource of application gateway
 * **protocol**: 'Http' | 'Https' | string: Gets or sets the protocol
 * **provisioningState**: string: Gets or sets Provisioning state of the http listener resource Updating/Deleting/Failed
-* **sslCertificate**: [SubResource](#subresource)
+* **sslCertificate**: [SubResource](#subresource): Gets or sets ssl certificate resource of application gateway
 
 ## ApplicationGatewayIPConfiguration
 ### Properties
@@ -271,7 +271,7 @@
 ## ApplicationGatewayIPConfigurationPropertiesFormat
 ### Properties
 * **provisioningState**: string: Gets or sets Provisioning state of the application gateway subnet resource Updating/Deleting/Failed
-* **subnet**: [SubResource](#subresource)
+* **subnet**: [SubResource](#subresource): Gets or sets the reference of the subnet resource.A subnet from where application gateway gets its private address
 
 ## ApplicationGatewayPropertiesFormat
 ### Properties
@@ -285,7 +285,7 @@
 * **provisioningState**: string: Gets or sets Provisioning state of the ApplicationGateway resource Updating/Deleting/Failed
 * **requestRoutingRules**: [ApplicationGatewayRequestRoutingRule](#applicationgatewayrequestroutingrule)[]: Gets or sets request routing rules of application gateway resource
 * **resourceGuid**: string: Gets or sets resource guid property of the ApplicationGateway resource
-* **sku**: [ApplicationGatewaySku](#applicationgatewaysku): SKU of application gateway
+* **sku**: [ApplicationGatewaySku](#applicationgatewaysku): Gets or sets sku of application gateway resource
 * **sslCertificates**: [ApplicationGatewaySslCertificate](#applicationgatewaysslcertificate)[]: Gets or sets ssl certificates of application gateway resource
 
 ## ApplicationGatewayRequestRoutingRule
@@ -297,9 +297,9 @@
 
 ## ApplicationGatewayRequestRoutingRulePropertiesFormat
 ### Properties
-* **backendAddressPool**: [SubResource](#subresource)
-* **backendHttpSettings**: [SubResource](#subresource)
-* **httpListener**: [SubResource](#subresource)
+* **backendAddressPool**: [SubResource](#subresource): Gets or sets backend address pool resource of application gateway
+* **backendHttpSettings**: [SubResource](#subresource): Gets or sets frontend port resource of application gateway
+* **httpListener**: [SubResource](#subresource): Gets or sets http listener resource of application gateway
 * **provisioningState**: string: Gets or sets Provisioning state of the request routing rule resource Updating/Deleting/Failed
 * **ruleType**: 'Basic' | string: Gets or sets the rule type
 
@@ -340,7 +340,7 @@
 ### Properties
 * **backendIPConfigurations**: [SubResource](#subresource)[]: Gets collection of references to IPs defined in NICs
 * **loadBalancingRules**: [SubResource](#subresource)[]: Gets Load Balancing rules that use this Backend Address Pool
-* **outboundNatRule**: [SubResource](#subresource)
+* **outboundNatRule**: [SubResource](#subresource): Gets outbound rules that use this Backend Address Pool
 * **provisioningState**: string: Provisioning state of the PublicIP resource Updating/Deleting/Failed
 
 ## DhcpOptions
@@ -371,7 +371,7 @@
 ## ExpressRouteCircuitPeeringPropertiesFormat
 ### Properties
 * **azureASN**: int: Gets or sets the azure ASN
-* **microsoftPeeringConfig**: [ExpressRouteCircuitPeeringConfig](#expressroutecircuitpeeringconfig): Specifies the peering config
+* **microsoftPeeringConfig**: [ExpressRouteCircuitPeeringConfig](#expressroutecircuitpeeringconfig): Gets or sets the Microsoft peering config
 * **peerASN**: int: Gets or sets the peer ASN
 * **peeringType**: 'AzurePrivatePeering' | 'AzurePublicPeering' | 'MicrosoftPeering' | string: Gets or sets PeeringType
 * **primaryAzurePort**: string: Gets or sets the primary port
@@ -381,7 +381,7 @@
 * **secondaryPeerAddressPrefix**: string: Gets or sets the secondary address prefix
 * **sharedKey**: string: Gets or sets the shared key
 * **state**: 'Disabled' | 'Enabled' | string: Gets or sets state of Peering
-* **stats**: [ExpressRouteCircuitStats](#expressroutecircuitstats): Contains Stats associated with the peering
+* **stats**: [ExpressRouteCircuitStats](#expressroutecircuitstats): Gets or peering stats
 * **vlanId**: int: Gets or sets the vlan id
 
 ## ExpressRouteCircuitPropertiesFormat
@@ -392,7 +392,7 @@
 * **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
 * **serviceKey**: string: Gets or sets ServiceKey
 * **serviceProviderNotes**: string: Gets or sets ServiceProviderNotes
-* **serviceProviderProperties**: [ExpressRouteCircuitServiceProviderProperties](#expressroutecircuitserviceproviderproperties): Contains ServiceProviderProperties in an ExpressRouteCircuit
+* **serviceProviderProperties**: [ExpressRouteCircuitServiceProviderProperties](#expressroutecircuitserviceproviderproperties): Gets or sets ServiceProviderProperties
 * **serviceProviderProvisioningState**: 'Deprovisioning' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | string: Gets or sets ServiceProviderProvisioningState state of the resource
 
 ## ExpressRouteCircuitServiceProviderProperties
@@ -428,8 +428,8 @@
 * **privateIPAddress**: string: Gets or sets the IP address of the Load Balancer.This is only specified if a specific private IP address shall be allocated from the subnet specified in subnetRef
 * **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: Gets or sets PrivateIP allocation method (Static/Dynamic)
 * **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
-* **publicIPAddress**: [SubResource](#subresource)
-* **subnet**: [SubResource](#subresource)
+* **publicIPAddress**: [SubResource](#subresource): Gets or sets the reference of the PublicIP resource
+* **subnet**: [SubResource](#subresource): Gets or sets the reference of the subnet resource.A subnet from where the load balancer gets its private frontend address
 
 ## InboundNatPool
 ### Properties
@@ -441,7 +441,7 @@
 ## InboundNatPoolPropertiesFormat
 ### Properties
 * **backendPort**: int (Required): Gets or sets a port used for internal connections on the endpoint. The localPort attribute maps the eternal port of the endpoint to an internal port on a role. This is useful in scenarios where a role must communicate to an internal component on a port that is different from the one that is exposed externally. If not specified, the value of localPort is the same as the port attribute. Set the value of localPort to '*' to automatically assign an unallocated port that is discoverable using the runtime API
-* **frontendIPConfiguration**: [SubResource](#subresource)
+* **frontendIPConfiguration**: [SubResource](#subresource): Gets or sets a reference to frontend IP Addresses
 * **frontendPortRangeEnd**: int (Required): Gets or sets the ending port range for the NAT pool. You can specify any port number you choose, but the port numbers specified for each role in the service must be unique. Possible values range between 1 and 65535, inclusive
 * **frontendPortRangeStart**: int (Required): Gets or sets the starting port range for the NAT pool. You can specify any port number you choose, but the port numbers specified for each role in the service must be unique. Possible values range between 1 and 65535, inclusive
 * **protocol**: 'Tcp' | 'Udp' | string (Required): Gets or sets the transport protocol for the external endpoint. Possible values are Udp or Tcp
@@ -456,10 +456,10 @@
 
 ## InboundNatRulePropertiesFormat
 ### Properties
-* **backendIPConfiguration**: [SubResource](#subresource)
+* **backendIPConfiguration**: [SubResource](#subresource): Gets or sets a reference to a private ip address defined on a NetworkInterface of a VM. Traffic sent to frontendPort of each of the frontendIPConfigurations is forwarded to the backed IP
 * **backendPort**: int: Gets or sets a port used for internal connections on the endpoint. The localPort attribute maps the eternal port of the endpoint to an internal port on a role. This is useful in scenarios where a role must communicate to an internal component on a port that is different from the one that is exposed externally. If not specified, the value of localPort is the same as the port attribute. Set the value of localPort to '*' to automatically assign an unallocated port that is discoverable using the runtime API
 * **enableFloatingIP**: bool (Required): Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn availability Group. This setting is required when using the SQL Always ON availability Groups in SQL server. This setting can't be changed after you create the endpoint
-* **frontendIPConfiguration**: [SubResource](#subresource)
+* **frontendIPConfiguration**: [SubResource](#subresource): Gets or sets a reference to frontend IP Addresses
 * **frontendPort**: int (Required): Gets or sets the port for the external endpoint. You can specify any port number you choose, but the port numbers specified for each role in the service must be unique. Possible values range between 1 and 65535, inclusive
 * **idleTimeoutInMinutes**: int: Gets or sets the timeout for the Tcp idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to Tcp
 * **protocol**: 'Tcp' | 'Udp' | string (Required): Gets or sets the transport protocol for the external endpoint. Possible values are Udp or Tcp
@@ -486,14 +486,14 @@
 
 ## LoadBalancingRulePropertiesFormat
 ### Properties
-* **backendAddressPool**: [SubResource](#subresource) (Required)
+* **backendAddressPool**: [SubResource](#subresource) (Required): Gets or sets  a reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs
 * **backendPort**: int: Gets or sets a port used for internal connections on the endpoint. The localPort attribute maps the eternal port of the endpoint to an internal port on a role. This is useful in scenarios where a role must communicate to an internal component on a port that is different from the one that is exposed externally. If not specified, the value of localPort is the same as the port attribute. Set the value of localPort to '*' to automatically assign an unallocated port that is discoverable using the runtime API
 * **enableFloatingIP**: bool (Required): Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn availability Group. This setting is required when using the SQL Always ON availability Groups in SQL server. This setting can't be changed after you create the endpoint
-* **frontendIPConfiguration**: [SubResource](#subresource)
+* **frontendIPConfiguration**: [SubResource](#subresource): Gets or sets a reference to frontend IP Addresses
 * **frontendPort**: int (Required): Gets or sets the port for the external endpoint. You can specify any port number you choose, but the port numbers specified for each role in the service must be unique. Possible values range between 1 and 65535, inclusive
 * **idleTimeoutInMinutes**: int: Gets or sets the timeout for the Tcp idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to Tcp
 * **loadDistribution**: 'Default' | 'SourceIP' | 'SourceIPProtocol' | string: Gets or sets the load distribution policy for this rule
-* **probe**: [SubResource](#subresource)
+* **probe**: [SubResource](#subresource): Gets or sets the reference of the load balancer probe used by the Load Balancing rule.
 * **protocol**: 'Tcp' | 'Udp' | string (Required): Gets or sets the transport protocol for the external endpoint. Possible values are Udp or Tcp
 * **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
 
@@ -510,7 +510,7 @@
 ## LocalNetworkGatewayPropertiesFormat
 ### Properties
 * **gatewayIpAddress**: string: IP address of local network gateway.
-* **localNetworkAddressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets
+* **localNetworkAddressSpace**: [AddressSpace](#addressspace): Local network site Address space
 * **provisioningState**: string: Gets or sets Provisioning state of the LocalNetworkGateway resource Updating/Deleting/Failed
 * **resourceGuid**: string: Gets or sets resource guid property of the LocalNetworkGateway resource
 
@@ -535,20 +535,20 @@
 * **privateIPAddress**: string: Gets or sets the privateIPAddress of the Network Interface IP Configuration
 * **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: Gets or sets PrivateIP allocation method (Static/Dynamic)
 * **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
-* **publicIPAddress**: [SubResource](#subresource)
-* **subnet**: [SubResource](#subresource)
+* **publicIPAddress**: [SubResource](#subresource): Gets or sets the reference of the PublicIP resource
+* **subnet**: [SubResource](#subresource): Gets or sets the reference of the subnet resource
 
 ## NetworkInterfacePropertiesFormat
 ### Properties
-* **dnsSettings**: [NetworkInterfaceDnsSettings](#networkinterfacednssettings): Dns Settings of a network interface
+* **dnsSettings**: [NetworkInterfaceDnsSettings](#networkinterfacednssettings): Gets or sets DNS Settings in  NetworkInterface
 * **enableIPForwarding**: bool: Gets or sets whether IPForwarding is enabled on the NIC
 * **ipConfigurations**: [NetworkInterfaceIpConfiguration](#networkinterfaceipconfiguration)[]: Gets or sets list of IPConfigurations of the NetworkInterface
 * **macAddress**: string: Gets the MAC Address of the network interface
-* **networkSecurityGroup**: [SubResource](#subresource)
+* **networkSecurityGroup**: [SubResource](#subresource): Gets or sets the reference of the NetworkSecurityGroup resource
 * **primary**: bool: Gets whether this is a primary NIC on a virtual machine
 * **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
 * **resourceGuid**: string: Gets or sets resource guid property of the network interface resource
-* **virtualMachine**: [SubResource](#subresource)
+* **virtualMachine**: [SubResource](#subresource): Gets or sets the reference of a VirtualMachine
 
 ## NetworkSecurityGroupPropertiesFormat
 ### Properties
@@ -569,7 +569,7 @@
 ## OutboundNatRulePropertiesFormat
 ### Properties
 * **allocatedOutboundPorts**: int (Required): Gets or sets the number of outbound ports to be used for SNAT
-* **backendAddressPool**: [SubResource](#subresource) (Required)
+* **backendAddressPool**: [SubResource](#subresource) (Required): Gets or sets a reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs
 * **frontendIPConfigurations**: [SubResource](#subresource)[]: Gets or sets Frontend IP addresses of the load balancer
 * **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
 
@@ -598,12 +598,12 @@
 
 ## PublicIpAddressPropertiesFormat
 ### Properties
-* **dnsSettings**: [PublicIpAddressDnsSettings](#publicipaddressdnssettings): Contains FQDN of the DNS record associated with the public IP address
+* **dnsSettings**: [PublicIpAddressDnsSettings](#publicipaddressdnssettings): Gets or sets FQDN of the DNS record associated with the public IP address
 * **idleTimeoutInMinutes**: int: Gets or sets the idle timeout of the public IP address
 * **ipAddress**: string: Gets the assigned public IP address
-* **ipConfiguration**: [SubResource](#subresource)
+* **ipConfiguration**: [SubResource](#subresource): Gets a reference to the network interface IP configurations using this public IP address
 * **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
-* **publicIPAllocationMethod**: 'Dynamic' | 'Static' | string (Required): Gets or sets PrivateIP allocation method (Static/Dynamic)
+* **publicIPAllocationMethod**: 'Dynamic' | 'Static' | string (Required): Gets or sets PublicIP allocation method (Static/Dynamic)
 * **resourceGuid**: string: Gets or sets resource guid property of the PublicIP resource
 
 ## ResourceTags
@@ -682,7 +682,7 @@
 ### Properties
 * **addressPrefix**: string: Gets or sets the destination CIDR to which the route applies.
 * **nextHopIpAddress**: string: Gets or sets the IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
-* **nextHopType**: 'Internet' | 'None' | 'VirtualAppliance' | 'VirtualNetworkGateway' | 'VnetLocal' | string (Required): Gets NextHopType.
+* **nextHopType**: 'Internet' | 'None' | 'VirtualAppliance' | 'VirtualNetworkGateway' | 'VnetLocal' | string (Required): Gets or sets the type of Azure hop the packet should be sent to.
 * **provisioningState**: string: Gets or sets Provisioning state of the resource Updating/Deleting/Failed
 
 ## RouteTablePropertiesFormat
@@ -722,9 +722,9 @@
 ### Properties
 * **addressPrefix**: string (Required): Gets or sets Address prefix for the subnet.
 * **ipConfigurations**: [SubResource](#subresource)[]: Gets array of references to the network interface IP configurations using subnet
-* **networkSecurityGroup**: [SubResource](#subresource)
+* **networkSecurityGroup**: [SubResource](#subresource): Gets or sets the reference of the NetworkSecurityGroup resource
 * **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
-* **routeTable**: [SubResource](#subresource)
+* **routeTable**: [SubResource](#subresource): Gets or sets the reference of the RouteTable resource
 
 ## SubResource
 ### Properties
@@ -747,7 +747,7 @@
 * **egressBytesTransferred**: int: The Egress Bytes Transferred in this connection
 * **ingressBytesTransferred**: int: The Ingress Bytes Transferred in this connection
 * **localNetworkGateway2**: [LocalNetworkGateway](#localnetworkgateway): A common class for general resource information
-* **peer**: [SubResource](#subresource)
+* **peer**: [SubResource](#subresource): The reference to peerings resource.
 * **provisioningState**: string: Gets or sets Provisioning state of the VirtualNetworkGatewayConnection resource Updating/Deleting/Failed
 * **resourceGuid**: string: Gets or sets resource guid property of the VirtualNetworkGatewayConnection resource
 * **routingWeight**: int: The Routing weight.
@@ -767,13 +767,13 @@
 * **privateIPAddress**: string: Gets or sets the privateIPAddress of the Network Interface IP Configuration
 * **privateIPAllocationMethod**: 'Dynamic' | 'Static' | string: Gets or sets PrivateIP allocation method (Static/Dynamic)
 * **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
-* **publicIPAddress**: [SubResource](#subresource)
-* **subnet**: [SubResource](#subresource)
+* **publicIPAddress**: [SubResource](#subresource): Gets or sets the reference of the PublicIP resource
+* **subnet**: [SubResource](#subresource): Gets or sets the reference of the subnet resource
 
 ## VirtualNetworkGatewayPropertiesFormat
 ### Properties
 * **enableBgp**: bool: EnableBgp Flag
-* **gatewayDefaultSite**: [SubResource](#subresource)
+* **gatewayDefaultSite**: [SubResource](#subresource): Gets or sets the reference of the LocalNetworkGateway resource which represents Local network site having default routes. Assign Null value in case of removing existing default site setting.
 * **gatewayType**: 'ExpressRoute' | 'Vpn' | string: The type of this virtual network gateway.
 * **ipConfigurations**: [VirtualNetworkGatewayIpConfiguration](#virtualnetworkgatewayipconfiguration)[]: IpConfigurations for Virtual network gateway.
 * **provisioningState**: string: Gets or sets Provisioning state of the VirtualNetworkGateway resource Updating/Deleting/Failed
@@ -782,8 +782,8 @@
 
 ## VirtualNetworkPropertiesFormat
 ### Properties
-* **addressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets
-* **dhcpOptions**: [DhcpOptions](#dhcpoptions): DHCPOptions contains an array of DNS servers available to VMs deployed in the virtual networkStandard DHCP option for a subnet overrides VNET DHCP options.
+* **addressSpace**: [AddressSpace](#addressspace): Gets or sets AddressSpace that contains an array of IP address ranges that can be used by subnets
+* **dhcpOptions**: [DhcpOptions](#dhcpoptions): Gets or sets DHCPOptions that contains an array of DNS servers available to VMs deployed in the virtual network
 * **provisioningState**: string: Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed
 * **resourceGuid**: string: Gets or sets resource guid property of the VirtualNetwork resource
 * **subnets**: [Subnet](#subnet)[]: Gets or sets List of subnets in a VirtualNetwork

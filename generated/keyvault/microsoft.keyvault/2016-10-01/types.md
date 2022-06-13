@@ -18,7 +18,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The resource type of the access policy.
 * **name**: 'add' | 'remove' | 'replace' (Required, DeployTimeConstant): The resource name
-* **properties**: [VaultAccessPolicyProperties](#vaultaccesspolicyproperties) (Required): Properties of the vault access policy
+* **properties**: [VaultAccessPolicyProperties](#vaultaccesspolicyproperties) (Required): Properties of the access policy
 * **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KeyVault/vaults/secrets@2016-10-01
@@ -36,7 +36,7 @@
 ### Properties
 * **applicationId**: string: Application ID of the client making request on behalf of a principal
 * **objectId**: string (Required): The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.
-* **permissions**: [Permissions](#permissions) (Required): Permissions the identity has for keys, secrets, certificates and storage.
+* **permissions**: [Permissions](#permissions) (Required): Permissions the identity has for keys, secrets and certificates.
 * **tenantId**: string (Required): The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
 
 ## Permissions
@@ -61,7 +61,7 @@
 
 ## SecretProperties
 ### Properties
-* **attributes**: [SecretAttributes](#secretattributes): The secret management attributes.
+* **attributes**: [SecretAttributes](#secretattributes): The attributes of the secret.
 * **contentType**: string: The content type of the secret.
 * **secretUri**: string (ReadOnly): The URI to retrieve the current version of the secret.
 * **secretUriWithVersion**: string (ReadOnly): The URI to retrieve the specific version of the secret.

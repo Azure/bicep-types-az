@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MonitorProperties](#monitorproperties): Properties specific to the monitor resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **tags**: [LogzMonitorResourceTags](#logzmonitorresourcetags): Dictionary of <string>
 * **type**: 'Microsoft.Logz/monitors' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -22,7 +22,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MonitorProperties](#monitorproperties): Properties specific to the monitor resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **tags**: [LogzMonitorResourceTags](#logzmonitorresourcetags): Dictionary of <string>
 * **type**: 'Microsoft.Logz/monitors/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -33,7 +33,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MonitoringTagRulesProperties](#monitoringtagrulesproperties): Definition of the properties for a TagRules resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **type**: 'Microsoft.Logz/monitors/accounts/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logz/monitors/singleSignOnConfigurations@2020-10-01-preview
@@ -53,7 +53,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MonitoringTagRulesProperties](#monitoringtagrulesproperties): Definition of the properties for a TagRules resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **type**: 'Microsoft.Logz/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listMonitoredResources (Microsoft.Logz/monitors@2020-10-01-preview)
@@ -175,7 +175,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## UserInfo
 ### Properties

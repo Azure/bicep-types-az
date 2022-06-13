@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [IdentityProperties](#identityproperties): Managed identity for the resource.
+* **identity**: [IdentityProperties](#identityproperties): Identity for the resource.
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TaskProperties](#taskproperties): The properties of a task.
@@ -78,8 +78,9 @@ this value is the Client ID. If a system-assigned identity, the value will be `s
 the case of a system-assigned identity, the Client ID will be determined by the runner. This
 identity may be used to authenticate to key vault to retrieve credentials or it may be the only 
 source of authentication used for accessing the registry.
-* **password**: [SecretObject](#secretobject): Describes the properties of a secret object value.
-* **userName**: [SecretObject](#secretobject): Describes the properties of a secret object value.
+* **password**: [SecretObject](#secretobject): The password for logging into the custom registry. The password is a secret 
+object that allows multiple ways of providing the value for it.
+* **userName**: [SecretObject](#secretobject): The username for logging into the custom registry.
 
 ## IdentityProperties
 ### Properties
@@ -134,7 +135,8 @@ used as is without any modification.
 ### Properties
 * **branch**: string: The branch name of the source code.
 * **repositoryUrl**: string (Required): The full URL to the source code repository
-* **sourceControlAuthProperties**: [AuthInfo](#authinfo): The authorization properties for accessing the source code repository.
+* **sourceControlAuthProperties**: [AuthInfo](#authinfo): The authorization properties for accessing the source code repository and to set up
+webhooks for notifications.
 * **sourceControlType**: 'Github' | 'VisualStudioTeamService' | string (Required): The type of source control service.
 
 ## SourceRegistryCredentials
@@ -146,7 +148,7 @@ the source registry during the run.
 ## SourceTrigger
 ### Properties
 * **name**: string (Required): The name of the trigger.
-* **sourceRepository**: [SourceProperties](#sourceproperties) (Required): The properties of the source code repository.
+* **sourceRepository**: [SourceProperties](#sourceproperties) (Required): The properties that describes the source(code) for the task.
 * **sourceTriggerEvents**: 'commit' | 'pullrequest' | string[] (Required): The source event corresponding to the trigger.
 * **status**: 'Disabled' | 'Enabled' | string: The current status of trigger.
 
@@ -158,7 +160,7 @@ the source registry during the run.
 ## Task
 ### Properties
 * **id**: string (ReadOnly): The resource ID.
-* **identity**: [IdentityProperties](#identityproperties) (ReadOnly): Managed identity for the resource.
+* **identity**: [IdentityProperties](#identityproperties) (ReadOnly): Identity for the resource.
 * **location**: string (ReadOnly): The location of the resource. This cannot be changed after the resource is created.
 * **name**: string (ReadOnly): The name of the resource.
 * **properties**: [TaskProperties](#taskproperties) (ReadOnly): The properties of a task.
@@ -167,15 +169,15 @@ the source registry during the run.
 
 ## TaskProperties
 ### Properties
-* **agentConfiguration**: [AgentProperties](#agentproperties): The properties that determine the run agent configuration.
+* **agentConfiguration**: [AgentProperties](#agentproperties): The machine configuration of the run agent.
 * **creationDate**: string (ReadOnly): The creation date of task.
-* **credentials**: [Credentials](#credentials): The parameters that describes a set of credentials that will be used when a run is invoked.
+* **credentials**: [Credentials](#credentials): The properties that describes a set of credentials that will be used when this run is invoked.
 * **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the run has to happen.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of a run.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the task.
 * **status**: 'Disabled' | 'Enabled' | string: The current status of task.
-* **step**: [TaskStepProperties](#taskstepproperties) (Required): Base properties for any task step.
+* **step**: [TaskStepProperties](#taskstepproperties) (Required): The properties of a task step.
 * **timeout**: int: Run timeout in seconds.
-* **trigger**: [TriggerProperties](#triggerproperties): The properties of a trigger.
+* **trigger**: [TriggerProperties](#triggerproperties): The properties that describe all triggers for the task.
 
 ## TaskStepProperties
 * **Discriminator**: type
@@ -217,7 +219,7 @@ the source registry during the run.
 
 ## TriggerProperties
 ### Properties
-* **baseImageTrigger**: [BaseImageTrigger](#baseimagetrigger): The trigger based on base image dependency.
+* **baseImageTrigger**: [BaseImageTrigger](#baseimagetrigger): The trigger based on base image dependencies.
 * **sourceTriggers**: [SourceTrigger](#sourcetrigger)[]: The collection of triggers based on source code repository.
 * **timerTriggers**: [TimerTrigger](#timertrigger)[]: The collection of timer triggers.
 

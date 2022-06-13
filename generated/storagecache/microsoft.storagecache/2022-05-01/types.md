@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2022-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [CacheIdentity](#cacheidentity): Cache identity properties.
+* **identity**: [CacheIdentity](#cacheidentity): The identity of the cache, if configured.
 * **location**: string: Region name string.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CacheProperties](#cacheproperties): Properties of the Cache.
 * **sku**: [CacheSku](#cachesku): SKU for the Cache.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **tags**: [CacheTags](#cachetags): Resource tags.
 * **type**: 'Microsoft.StorageCache/caches' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -21,13 +21,13 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Region name string.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [StorageTargetProperties](#storagetargetproperties): Properties of the Storage Target.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [StorageTargetProperties](#storagetargetproperties): StorageTarget properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## BlobNfsTarget
 ### Properties
-* **target**: string: A fully qualified URL.
+* **target**: string: Resource ID of the storage container.
 * **usageModel**: string: Identifies the StorageCache usage model to be used for this storage target.
 
 ## CacheActiveDirectorySettings
@@ -47,12 +47,12 @@
 
 ## CacheDirectorySettings
 ### Properties
-* **activeDirectory**: [CacheActiveDirectorySettings](#cacheactivedirectorysettings): Active Directory settings used to join a cache to a domain.
-* **usernameDownload**: [CacheUsernameDownloadSettings](#cacheusernamedownloadsettings): Settings for Extended Groups username and group download.
+* **activeDirectory**: [CacheActiveDirectorySettings](#cacheactivedirectorysettings): Specifies settings for joining the HPC Cache to an Active Directory domain.
+* **usernameDownload**: [CacheUsernameDownloadSettings](#cacheusernamedownloadsettings): Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.
 
 ## CacheEncryptionSettings
 ### Properties
-* **keyEncryptionKey**: [KeyVaultKeyReference](#keyvaultkeyreference): Describes a reference to Key Vault Key.
+* **keyEncryptionKey**: [KeyVaultKeyReference](#keyvaultkeyreference): Specifies the location of the key encryption key in Key Vault.
 * **rotationToLatestKeyVersionEnabled**: bool: Specifies whether the service will automatically rotate to the newest version of the key in the Key Vault.
 
 ## CacheHealth
@@ -84,18 +84,18 @@
 ## CacheProperties
 ### Properties
 * **cacheSizeGB**: int: The size of this Cache, in GB.
-* **directoryServicesSettings**: [CacheDirectorySettings](#cachedirectorysettings): Cache Directory Services settings.
-* **encryptionSettings**: [CacheEncryptionSettings](#cacheencryptionsettings): Cache encryption settings.
-* **health**: [CacheHealth](#cachehealth) (ReadOnly): An indication of Cache health. Gives more information about health than just that related to provisioning.
+* **directoryServicesSettings**: [CacheDirectorySettings](#cachedirectorysettings): Specifies Directory Services settings of the cache.
+* **encryptionSettings**: [CacheEncryptionSettings](#cacheencryptionsettings): Specifies encryption settings of the cache.
+* **health**: [CacheHealth](#cachehealth) (ReadOnly): Health of the Cache.
 * **mountAddresses**: string[] (ReadOnly): Array of IP addresses that can be used by clients mounting this Cache.
-* **networkSettings**: [CacheNetworkSettings](#cachenetworksettings): Cache network settings.
-* **primingJobs**: [PrimingJob](#primingjob)[] (ReadOnly): The list of priming jobs defined for the cache.
+* **networkSettings**: [CacheNetworkSettings](#cachenetworksettings): Specifies network settings of the cache.
+* **primingJobs**: [PrimingJob](#primingjob)[] (ReadOnly): Specifies the priming jobs defined in the cache.
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
-* **securitySettings**: [CacheSecuritySettings](#cachesecuritysettings): Cache security settings.
-* **spaceAllocation**: [StorageTargetSpaceAllocation](#storagetargetspaceallocation)[] (ReadOnly): List of storage target space allocations.
-* **subnet**: string: A fully qualified URL.
-* **upgradeSettings**: [CacheUpgradeSettings](#cacheupgradesettings): Cache Upgrade Settings.
-* **upgradeStatus**: [CacheUpgradeStatus](#cacheupgradestatus) (ReadOnly): Properties describing the software upgrade state of the Cache.
+* **securitySettings**: [CacheSecuritySettings](#cachesecuritysettings): Specifies security settings of the cache.
+* **spaceAllocation**: [StorageTargetSpaceAllocation](#storagetargetspaceallocation)[] (ReadOnly): Specifies the space allocation percentage for each storage target in the cache.
+* **subnet**: string: Subnet used for the Cache.
+* **upgradeSettings**: [CacheUpgradeSettings](#cacheupgradesettings): Upgrade settings of the Cache.
+* **upgradeStatus**: [CacheUpgradeStatus](#cacheupgradestatus) (ReadOnly): Upgrade status of the Cache.
 * **zones**: string[]: Availability zones for resources. This field should only contain a single element in the array.
 
 ## CacheSecuritySettings
@@ -146,7 +146,7 @@
 
 ## ClfsTarget
 ### Properties
-* **target**: string: A fully qualified URL.
+* **target**: string: Resource ID of storage container.
 
 ## Condition
 ### Properties
@@ -194,28 +194,28 @@
 ### Properties
 * **primingJobDetails**: string (ReadOnly): The job details or error information if any.
 * **primingJobId**: string (ReadOnly): The unique identifier of the priming job.
-* **primingJobName**: string (Required): Schema for the name of resources served by this provider. Note that objects will contain an odata @id annotation as appropriate. This will contain the complete URL of the object. These names are case-preserving, but not case sensitive.
+* **primingJobName**: string (Required): The priming job name.
 * **primingJobPercentComplete**: int (ReadOnly): The current progress of the priming job, as a percentage.
 * **primingJobState**: 'Complete' | 'Paused' | 'Queued' | 'Running' | string (ReadOnly): The state of the priming operation.
 * **primingJobStatus**: string (ReadOnly): The status code of the priming job.
-* **primingManifestUrl**: string (Required, WriteOnly): A fully qualified URL.
+* **primingManifestUrl**: string (Required, WriteOnly): The URL for the priming manifest file to download. This file must be readable from the HPC Cache. When the file is in Azure blob storage the URL should include a Shared Access Signature (SAS) granting read permissions on the blob.
 
 ## StorageTargetProperties
 ### Properties
 * **allocationPercentage**: int (ReadOnly): The percentage of cache space allocated for this storage target
-* **blobNfs**: [BlobNfsTarget](#blobnfstarget): Properties pertaining to the BlobNfsTarget.
-* **clfs**: [ClfsTarget](#clfstarget): Properties pertaining to the ClfsTarget
+* **blobNfs**: [BlobNfsTarget](#blobnfstarget): Properties when targetType is blobNfs.
+* **clfs**: [ClfsTarget](#clfstarget): Properties when targetType is clfs.
 * **junctions**: [NamespaceJunction](#namespacejunction)[]: List of Cache namespace junctions to target for namespace associations.
-* **nfs3**: [Nfs3Target](#nfs3target): Properties pertaining to the Nfs3Target
+* **nfs3**: [Nfs3Target](#nfs3target): Properties when targetType is nfs3.
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
 * **state**: 'Busy' | 'Flushing' | 'Ready' | 'Suspended' | string: Storage target operational state.
 * **targetType**: 'blobNfs' | 'clfs' | 'nfs3' | 'unknown' | string (Required): Type of the Storage Target.
-* **unknown**: [UnknownTarget](#unknowntarget): Properties pertaining to the UnknownTarget
+* **unknown**: [UnknownTarget](#unknowntarget): Properties when targetType is unknown.
 
 ## StorageTargetSpaceAllocation
 ### Properties
 * **allocationPercentage**: int: The percentage of cache space allocated for this storage target
-* **name**: string: Schema for the name of resources served by this provider. Note that objects will contain an odata @id annotation as appropriate. This will contain the complete URL of the object. These names are case-preserving, but not case sensitive.
+* **name**: string: Name of the storage target.
 
 ## SystemData
 ### Properties
@@ -224,7 +224,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## UnknownProperties
 ### Properties
@@ -233,7 +233,7 @@
 
 ## UnknownTarget
 ### Properties
-* **attributes**: [UnknownProperties](#unknownproperties): Properties of an unknown type of Storage Target.
+* **attributes**: [UnknownProperties](#unknownproperties): Dictionary of string->string pairs containing information about the Storage Target.
 
 ## UserAssignedIdentitiesValue
 ### Properties

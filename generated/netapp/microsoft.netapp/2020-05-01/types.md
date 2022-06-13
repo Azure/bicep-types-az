@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AccountProperties](#accountproperties): NetApp account properties
-* **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
+* **properties**: [AccountProperties](#accountproperties): NetApp Account properties
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/backupPolicies@2020-05-01
@@ -18,8 +18,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BackupPolicyProperties](#backuppolicyproperties) (Required): Backup policy properties
-* **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
+* **properties**: [BackupPolicyProperties](#backuppolicyproperties) (Required): Backup policy Properties
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2020-05-01
@@ -29,8 +29,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PoolProperties](#poolproperties) (Required): Pool properties
-* **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
+* **properties**: [PoolProperties](#poolproperties) (Required): Capacity pool properties
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-05-01
@@ -41,7 +41,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VolumeProperties](#volumeproperties) (Required): Volume properties
-* **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups@2020-05-01
@@ -51,7 +51,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BackupProperties](#backupproperties) (Required): Backup properties
+* **properties**: [BackupProperties](#backupproperties) (Required): Backup Properties
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2020-05-01
@@ -61,7 +61,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SnapshotProperties](#snapshotproperties): Snapshot properties
+* **properties**: [SnapshotProperties](#snapshotproperties): Snapshot Properties
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/snapshotPolicies@2020-05-01
@@ -71,8 +71,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SnapshotPolicyProperties](#snapshotpolicyproperties) (Required): Snapshot policy properties
-* **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
+* **properties**: [SnapshotPolicyProperties](#snapshotpolicyproperties) (Required): Snapshot policy Properties
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts/snapshotPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AccountProperties
@@ -202,13 +202,13 @@
 
 ## SnapshotPolicyProperties
 ### Properties
-* **dailySchedule**: [DailySchedule](#dailyschedule): Daily Schedule properties
+* **dailySchedule**: [DailySchedule](#dailyschedule): Schedule for daily snapshots
 * **enabled**: bool: The property to decide policy is enabled or not
-* **hourlySchedule**: [HourlySchedule](#hourlyschedule): Hourly Schedule properties
-* **monthlySchedule**: [MonthlySchedule](#monthlyschedule): Monthly Schedule properties
+* **hourlySchedule**: [HourlySchedule](#hourlyschedule): Schedule for hourly snapshots
+* **monthlySchedule**: [MonthlySchedule](#monthlyschedule): Schedule for monthly snapshots
 * **name**: string (ReadOnly): Snapshot policy name
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **weeklySchedule**: [WeeklySchedule](#weeklyschedule): Weekly Schedule properties, make a snapshot every week at a specific day or days
+* **weeklySchedule**: [WeeklySchedule](#weeklyschedule): Schedule for weekly snapshots
 
 ## SnapshotProperties
 ### Properties
@@ -251,9 +251,9 @@
 
 ## VolumePropertiesDataProtection
 ### Properties
-* **backup**: [VolumeBackupProperties](#volumebackupproperties): Volume Backup Properties
+* **backup**: [VolumeBackupProperties](#volumebackupproperties): Backup Properties
 * **replication**: [ReplicationObject](#replicationobject): Replication properties
-* **snapshot**: [VolumeSnapshotProperties](#volumesnapshotproperties): Volume Snapshot Properties
+* **snapshot**: [VolumeSnapshotProperties](#volumesnapshotproperties): Snapshot properties.
 
 ## VolumePropertiesExportPolicy
 ### Properties

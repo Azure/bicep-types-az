@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: any: Any object
-* **sku**: [IntegrationAccountSku](#integrationaccountsku): The integration account sku.
+* **properties**: any: The integration account properties.
+* **sku**: [IntegrationAccountSku](#integrationaccountsku): The sku.
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -30,7 +30,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AssemblyProperties](#assemblyproperties) (Required): The assembly properties definition.
+* **properties**: [AssemblyProperties](#assemblyproperties) (Required): The assembly properties.
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/assemblies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -41,7 +41,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BatchConfigurationProperties](#batchconfigurationproperties) (Required): The batch configuration properties definition.
+* **properties**: [BatchConfigurationProperties](#batchconfigurationproperties) (Required): The batch configuration properties.
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/batchConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -63,7 +63,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IntegrationAccountMapProperties](#integrationaccountmapproperties) (Required): The integration account map.
+* **properties**: [IntegrationAccountMapProperties](#integrationaccountmapproperties) (Required): The integration account map properties.
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/maps' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -197,8 +197,8 @@
 
 ## AgreementContent
 ### Properties
-* **aS2**: [AS2AgreementContent](#as2agreementcontent): The integration account AS2 agreement content.
-* **edifact**: [EdifactAgreementContent](#edifactagreementcontent): The Edifact agreement content.
+* **aS2**: [AS2AgreementContent](#as2agreementcontent): The AS2 agreement content.
+* **edifact**: [EdifactAgreementContent](#edifactagreementcontent): The EDIFACT agreement content.
 * **x12**: [X12AgreementContent](#x12agreementcontent): The X12 agreement content.
 
 ## AS2AcknowledgementConnectionSettings
@@ -210,8 +210,8 @@
 
 ## AS2AgreementContent
 ### Properties
-* **receiveAgreement**: [AS2OneWayAgreement](#as2onewayagreement) (Required): The integration account AS2 one-way agreement.
-* **sendAgreement**: [AS2OneWayAgreement](#as2onewayagreement) (Required): The integration account AS2 one-way agreement.
+* **receiveAgreement**: [AS2OneWayAgreement](#as2onewayagreement) (Required): The AS2 one-way receive agreement.
+* **sendAgreement**: [AS2OneWayAgreement](#as2onewayagreement) (Required): The AS2 one-way send agreement.
 
 ## AS2EnvelopeSettings
 ### Properties
@@ -230,7 +230,7 @@
 ### Properties
 * **dispositionNotificationTo**: string: The disposition notification to header value.
 * **mdnText**: string: The MDN text.
-* **micHashingAlgorithm**: 'MD5' | 'None' | 'NotSpecified' | 'SHA1' | 'SHA2256' | 'SHA2384' | 'SHA2512' (Required)
+* **micHashingAlgorithm**: 'MD5' | 'None' | 'NotSpecified' | 'SHA1' | 'SHA2256' | 'SHA2384' | 'SHA2512' (Required): The signing or hashing algorithm.
 * **needMdn**: bool (Required): The value indicating whether to send or request a MDN.
 * **receiptDeliveryUrl**: string: The receipt delivery URL.
 * **sendInboundMdnToMessageBox**: bool (Required): The value indicating whether to send inbound MDN to message box.
@@ -247,19 +247,19 @@
 
 ## AS2OneWayAgreement
 ### Properties
-* **protocolSettings**: [AS2ProtocolSettings](#as2protocolsettings) (Required): The AS2 agreement protocol settings.
-* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
-* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
+* **protocolSettings**: [AS2ProtocolSettings](#as2protocolsettings) (Required): The AS2 protocol settings.
+* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The receiver business identity
+* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The sender business identity
 
 ## AS2ProtocolSettings
 ### Properties
-* **acknowledgementConnectionSettings**: [AS2AcknowledgementConnectionSettings](#as2acknowledgementconnectionsettings) (Required): The AS2 agreement acknowledgement connection settings.
-* **envelopeSettings**: [AS2EnvelopeSettings](#as2envelopesettings) (Required): The AS2 agreement envelope settings.
-* **errorSettings**: [AS2ErrorSettings](#as2errorsettings) (Required): The AS2 agreement error settings.
-* **mdnSettings**: [AS2MdnSettings](#as2mdnsettings) (Required): The AS2 agreement mdn settings.
-* **messageConnectionSettings**: [AS2MessageConnectionSettings](#as2messageconnectionsettings) (Required): The AS2 agreement message connection settings.
-* **securitySettings**: [AS2SecuritySettings](#as2securitysettings) (Required): The AS2 agreement security settings.
-* **validationSettings**: [AS2ValidationSettings](#as2validationsettings) (Required): The AS2 agreement validation settings.
+* **acknowledgementConnectionSettings**: [AS2AcknowledgementConnectionSettings](#as2acknowledgementconnectionsettings) (Required): The acknowledgement connection settings.
+* **envelopeSettings**: [AS2EnvelopeSettings](#as2envelopesettings) (Required): The envelope settings.
+* **errorSettings**: [AS2ErrorSettings](#as2errorsettings) (Required): The error settings.
+* **mdnSettings**: [AS2MdnSettings](#as2mdnsettings) (Required): The MDN settings.
+* **messageConnectionSettings**: [AS2MessageConnectionSettings](#as2messageconnectionsettings) (Required): The message connection settings.
+* **securitySettings**: [AS2SecuritySettings](#as2securitysettings) (Required): The security settings.
+* **validationSettings**: [AS2ValidationSettings](#as2validationsettings) (Required): The validation settings.
 
 ## AS2SecuritySettings
 ### Properties
@@ -280,11 +280,11 @@
 * **checkCertificateRevocationListOnSend**: bool (Required): The value indicating whether to check for certificate revocation list on send.
 * **checkDuplicateMessage**: bool (Required): The value indicating whether to check for duplicate message.
 * **compressMessage**: bool (Required): The value indicating whether the message has to be compressed.
-* **encryptionAlgorithm**: 'AES128' | 'AES192' | 'AES256' | 'DES3' | 'None' | 'NotSpecified' | 'RC2' (Required)
+* **encryptionAlgorithm**: 'AES128' | 'AES192' | 'AES256' | 'DES3' | 'None' | 'NotSpecified' | 'RC2' (Required): The encryption algorithm.
 * **encryptMessage**: bool (Required): The value indicating whether the message has to be encrypted.
 * **interchangeDuplicatesValidityDays**: int (Required): The number of days to look back for duplicate interchange.
 * **overrideMessageProperties**: bool (Required): The value indicating whether to override incoming message properties with those in agreement.
-* **signingAlgorithm**: 'Default' | 'NotSpecified' | 'SHA1' | 'SHA2256' | 'SHA2384' | 'SHA2512' | string
+* **signingAlgorithm**: 'Default' | 'NotSpecified' | 'SHA1' | 'SHA2256' | 'SHA2384' | 'SHA2512' | string: The signing algorithm.
 * **signMessage**: bool (Required): The value indicating whether the message has to be signed.
 
 ## AssemblyProperties
@@ -322,7 +322,7 @@
 ### Properties
 * **batchSize**: int: The batch size in bytes.
 * **messageCount**: int: The message count.
-* **recurrence**: [WorkflowTriggerRecurrence](#workflowtriggerrecurrence): The workflow trigger recurrence.
+* **recurrence**: [WorkflowTriggerRecurrence](#workflowtriggerrecurrence): The recurrence.
 
 ## BusinessIdentity
 ### Properties
@@ -343,7 +343,7 @@
 * **contentHash**: [ContentHash](#contenthash): The content hash.
 * **contentSize**: int: The content size.
 * **contentVersion**: string: The content version.
-* **metadata**: any: Any object
+* **metadata**: any: The metadata.
 * **uri**: string: The content link URI.
 
 ## EdifactAcknowledgementSettings
@@ -362,14 +362,14 @@
 
 ## EdifactAgreementContent
 ### Properties
-* **receiveAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement) (Required): The Edifact one way agreement.
-* **sendAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement) (Required): The Edifact one way agreement.
+* **receiveAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement) (Required): The EDIFACT one-way receive agreement.
+* **sendAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement) (Required): The EDIFACT one-way send agreement.
 
 ## EdifactDelimiterOverride
 ### Properties
 * **componentSeparator**: int (Required): The component separator.
 * **dataElementSeparator**: int (Required): The data element separator.
-* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified' (Required)
+* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified' (Required): The decimal point indicator.
 * **messageAssociationAssignedCode**: string: The message association assigned code.
 * **messageId**: string: The message id.
 * **messageRelease**: string: The message release.
@@ -377,7 +377,7 @@
 * **releaseIndicator**: int (Required): The release indicator.
 * **repetitionSeparator**: int (Required): The repetition separator.
 * **segmentTerminator**: int (Required): The segment terminator.
-* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required)
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required): The segment terminator suffix.
 * **targetNamespace**: string: The target namespace on which this delimiter settings has to be applied.
 
 ## EdifactEnvelopeOverride
@@ -445,20 +445,20 @@
 ## EdifactFramingSettings
 ### Properties
 * **characterEncoding**: string: The character encoding.
-* **characterSet**: 'KECA' | 'NotSpecified' | 'UNOA' | 'UNOB' | 'UNOC' | 'UNOD' | 'UNOE' | 'UNOF' | 'UNOG' | 'UNOH' | 'UNOI' | 'UNOJ' | 'UNOK' | 'UNOX' | 'UNOY' (Required)
+* **characterSet**: 'KECA' | 'NotSpecified' | 'UNOA' | 'UNOB' | 'UNOC' | 'UNOD' | 'UNOE' | 'UNOF' | 'UNOG' | 'UNOH' | 'UNOI' | 'UNOJ' | 'UNOK' | 'UNOX' | 'UNOY' (Required): The EDIFACT frame setting characterSet.
 * **componentSeparator**: int (Required): The component separator.
 * **dataElementSeparator**: int (Required): The data element separator.
-* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified' (Required)
+* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified' (Required): The EDIFACT frame setting decimal indicator.
 * **protocolVersion**: int (Required): The protocol version.
 * **releaseIndicator**: int (Required): The release indicator.
 * **repetitionSeparator**: int (Required): The repetition separator.
 * **segmentTerminator**: int (Required): The segment terminator.
-* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required)
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required): The EDIFACT frame setting segment terminator suffix.
 * **serviceCodeListDirectoryVersion**: string: The service code list directory version.
 
 ## EdifactMessageFilter
 ### Properties
-* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified' (Required)
+* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified' (Required): The message filter type.
 
 ## EdifactMessageIdentifier
 ### Properties
@@ -466,9 +466,9 @@
 
 ## EdifactOneWayAgreement
 ### Properties
-* **protocolSettings**: [EdifactProtocolSettings](#edifactprotocolsettings) (Required): The Edifact agreement protocol settings.
-* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
-* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
+* **protocolSettings**: [EdifactProtocolSettings](#edifactprotocolsettings) (Required): The EDIFACT protocol settings.
+* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The receiver business identity
+* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The sender business identity
 
 ## EdifactProcessingSettings
 ### Properties
@@ -480,17 +480,17 @@
 
 ## EdifactProtocolSettings
 ### Properties
-* **acknowledgementSettings**: [EdifactAcknowledgementSettings](#edifactacknowledgementsettings) (Required): The Edifact agreement acknowledgement settings.
+* **acknowledgementSettings**: [EdifactAcknowledgementSettings](#edifactacknowledgementsettings) (Required): The EDIFACT acknowledgement settings.
 * **edifactDelimiterOverrides**: [EdifactDelimiterOverride](#edifactdelimiteroverride)[]: The EDIFACT delimiter override settings.
 * **envelopeOverrides**: [EdifactEnvelopeOverride](#edifactenvelopeoverride)[]: The EDIFACT envelope override settings.
-* **envelopeSettings**: [EdifactEnvelopeSettings](#edifactenvelopesettings) (Required): The Edifact agreement envelope settings.
-* **framingSettings**: [EdifactFramingSettings](#edifactframingsettings) (Required): The Edifact agreement framing settings.
-* **messageFilter**: [EdifactMessageFilter](#edifactmessagefilter) (Required): The Edifact message filter for odata query.
+* **envelopeSettings**: [EdifactEnvelopeSettings](#edifactenvelopesettings) (Required): The EDIFACT envelope settings.
+* **framingSettings**: [EdifactFramingSettings](#edifactframingsettings) (Required): The EDIFACT framing settings.
+* **messageFilter**: [EdifactMessageFilter](#edifactmessagefilter) (Required): The EDIFACT message filter.
 * **messageFilterList**: [EdifactMessageIdentifier](#edifactmessageidentifier)[]: The EDIFACT message filter list.
-* **processingSettings**: [EdifactProcessingSettings](#edifactprocessingsettings) (Required): The Edifact agreement protocol settings.
+* **processingSettings**: [EdifactProcessingSettings](#edifactprocessingsettings) (Required): The EDIFACT processing Settings.
 * **schemaReferences**: [EdifactSchemaReference](#edifactschemareference)[] (Required): The EDIFACT schema references.
 * **validationOverrides**: [EdifactValidationOverride](#edifactvalidationoverride)[]: The EDIFACT validation override settings.
-* **validationSettings**: [EdifactValidationSettings](#edifactvalidationsettings) (Required): The Edifact agreement validation settings.
+* **validationSettings**: [EdifactValidationSettings](#edifactvalidationsettings) (Required): The EDIFACT validation settings.
 
 ## EdifactSchemaReference
 ### Properties
@@ -507,7 +507,7 @@
 * **allowLeadingAndTrailingSpacesAndZeroes**: bool (Required): The value indicating whether to allow leading and trailing spaces and zeroes.
 * **enforceCharacterSet**: bool (Required): The value indicating whether to validate character Set.
 * **messageId**: string (Required): The message id on which the validation settings has to be applied.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required)
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required): The trailing separator policy.
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool (Required): The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateEdiTypes**: bool (Required): The value indicating whether to validate EDI types.
 * **validateXsdTypes**: bool (Required): The value indicating whether to validate XSD types.
@@ -519,7 +519,7 @@
 * **checkDuplicateInterchangeControlNumber**: bool (Required): The value indicating whether to check for duplicate interchange control number.
 * **checkDuplicateTransactionSetControlNumber**: bool (Required): The value indicating whether to check for duplicate transaction set control number.
 * **interchangeControlNumberValidityDays**: int (Required): The validity period of interchange control number.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required)
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required): The trailing separator policy.
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool (Required): The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateCharacterSet**: bool (Required): The value indicating whether to validate character set in the message.
 * **validateEdiTypes**: bool (Required): The value indicating whether to Whether to validate EDI types.
@@ -528,7 +528,7 @@
 ## Expression
 ### Properties
 * **error**: [AzureResourceErrorInfo](#azureresourceerrorinfo) (ReadOnly): The azure resource error info.
-* **subexpressions**: [Expression](#expression)[] (ReadOnly): Array of Expression
+* **subexpressions**: [Expression](#expression)[] (ReadOnly)
 * **text**: string (ReadOnly)
 * **value**: any (ReadOnly): Anything
 
@@ -536,71 +536,71 @@
 ### Properties
 * **error**: [AzureResourceErrorInfo](#azureresourceerrorinfo) (ReadOnly): The azure resource error info.
 * **path**: string (ReadOnly): The path.
-* **subexpressions**: [Expression](#expression)[] (ReadOnly): Array of Expression
+* **subexpressions**: [Expression](#expression)[] (ReadOnly)
 * **text**: string (ReadOnly)
 * **value**: any (ReadOnly): Anything
 
 ## ExpressionTraces
 ### Properties
-* **inputs**: [ExpressionRoot](#expressionroot)[] (ReadOnly): Array of ExpressionRoot
+* **inputs**: [ExpressionRoot](#expressionroot)[] (ReadOnly)
 
 ## ExpressionTraces
 ### Properties
-* **inputs**: [ExpressionRoot](#expressionroot)[] (ReadOnly): Array of ExpressionRoot
+* **inputs**: [ExpressionRoot](#expressionroot)[] (ReadOnly)
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly)
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly): The key type.
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly)
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly): The key type.
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly)
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly): The key type.
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly)
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly): The key type.
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly)
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly): The key type.
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly)
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly): The key type.
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly)
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly): The key type.
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## IntegrationAccountAgreementProperties
 ### Properties
-* **agreementType**: 'AS2' | 'Edifact' | 'NotSpecified' | 'X12' (Required)
+* **agreementType**: 'AS2' | 'Edifact' | 'NotSpecified' | 'X12' (Required): The agreement type.
 * **changedTime**: string (ReadOnly): The changed time.
-* **content**: [AgreementContent](#agreementcontent) (Required): The integration account agreement content.
+* **content**: [AgreementContent](#agreementcontent) (Required): The agreement content.
 * **createdTime**: string (ReadOnly): The created time.
-* **guestIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
+* **guestIdentity**: [BusinessIdentity](#businessidentity) (Required): The business identity of the guest partner.
 * **guestPartner**: string (Required): The integration account partner that is set as guest partner for this agreement.
-* **hostIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
+* **hostIdentity**: [BusinessIdentity](#businessidentity) (Required): The business identity of the host partner.
 * **hostPartner**: string (Required): The integration account partner that is set as host partner for this agreement.
-* **metadata**: any: Any object
+* **metadata**: any: The metadata.
 
 ## IntegrationAccountCertificateProperties
 ### Properties
 * **changedTime**: string (ReadOnly): The changed time.
 * **createdTime**: string (ReadOnly): The created time.
-* **key**: [KeyVaultKeyReference](#keyvaultkeyreference): The reference to the key vault key.
-* **metadata**: any: Any object
+* **key**: [KeyVaultKeyReference](#keyvaultkeyreference): The key details in the key vault.
+* **metadata**: any: The metadata.
 * **publicCertificate**: string: The public certificate.
 
 ## IntegrationAccountMapProperties
@@ -610,8 +610,8 @@
 * **contentLink**: [ContentLink](#contentlink) (ReadOnly): The content link.
 * **contentType**: string: The content type.
 * **createdTime**: string (ReadOnly): The created time.
-* **mapType**: 'NotSpecified' | 'Xslt' (Required)
-* **metadata**: any: Any object
+* **mapType**: 'NotSpecified' | 'Xslt' (Required): The map type.
+* **metadata**: any: The metadata.
 * **parametersSchema**: [IntegrationAccountMapPropertiesParametersSchema](#integrationaccountmappropertiesparametersschema): The parameters schema of integration account map.
 
 ## IntegrationAccountMapPropertiesParametersSchema
@@ -621,23 +621,23 @@
 ## IntegrationAccountPartnerProperties
 ### Properties
 * **changedTime**: string (ReadOnly): The changed time.
-* **content**: [PartnerContent](#partnercontent) (Required): The integration account partner content.
+* **content**: [PartnerContent](#partnercontent) (Required): The partner content.
 * **createdTime**: string (ReadOnly): The created time.
-* **metadata**: any: Any object
-* **partnerType**: 'B2B' | 'NotSpecified' (Required)
+* **metadata**: any: The metadata.
+* **partnerType**: 'B2B' | 'NotSpecified' (Required): The partner type.
 
 ## IntegrationAccountRosettaNetProcessConfigurationProperties
 ### Properties
-* **activitySettings**: [RosettaNetPipActivitySettings](#rosettanetpipactivitysettings) (Required): The integration account RosettaNet ProcessConfiguration activity settings.
+* **activitySettings**: [RosettaNetPipActivitySettings](#rosettanetpipactivitysettings) (Required): The RosettaNet process configuration activity settings.
 * **changedTime**: string (ReadOnly): The changed time.
 * **createdTime**: string (ReadOnly): The created time.
 * **description**: string: The integration account RosettaNet ProcessConfiguration properties.
-* **initiatorRoleSettings**: [RosettaNetPipRoleSettings](#rosettanetpiprolesettings) (Required): The integration account RosettaNet ProcessConfiguration role settings.
+* **initiatorRoleSettings**: [RosettaNetPipRoleSettings](#rosettanetpiprolesettings) (Required): The RosettaNet initiator role settings.
 * **metadata**: [IntegrationAccountRosettaNetProcessConfigurationPropertiesMetadata](#integrationaccountrosettanetprocessconfigurationpropertiesmetadata): The metadata.
 * **processCode**: string (Required): The integration account RosettaNet process code.
 * **processName**: string (Required): The integration account RosettaNet process name.
 * **processVersion**: string (Required): The integration account RosettaNet process version.
-* **responderRoleSettings**: [RosettaNetPipRoleSettings](#rosettanetpiprolesettings) (Required): The integration account RosettaNet ProcessConfiguration role settings.
+* **responderRoleSettings**: [RosettaNetPipRoleSettings](#rosettanetpiprolesettings) (Required): The RosettaNet responder role settings.
 
 ## IntegrationAccountRosettaNetProcessConfigurationPropertiesMetadata
 ### Properties
@@ -653,19 +653,19 @@
 * **createdTime**: string (ReadOnly): The created time.
 * **documentName**: string: The document name.
 * **fileName**: string: The file name.
-* **metadata**: any: Any object
-* **schemaType**: 'NotSpecified' | 'Xml' (Required)
+* **metadata**: any: The metadata.
+* **schemaType**: 'NotSpecified' | 'Xml' (Required): The schema type.
 * **targetNamespace**: string: The target namespace of the schema.
 
 ## IntegrationAccountSessionProperties
 ### Properties
 * **changedTime**: string (ReadOnly): The changed time.
-* **content**: any: Any object
+* **content**: any: The session content.
 * **createdTime**: string (ReadOnly): The created time.
 
 ## IntegrationAccountSku
 ### Properties
-* **name**: 'Free' | 'NotSpecified' | 'Standard' (Required)
+* **name**: 'Free' | 'NotSpecified' | 'Standard' (Required): The sku name.
 
 ## KeyVaultKey
 ### Properties
@@ -720,7 +720,7 @@
 
 ## RecurrenceScheduleOccurrence
 ### Properties
-* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'
+* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': The day of the week.
 * **occurrence**: int: The occurrence.
 
 ## ResourceReference
@@ -791,20 +791,20 @@
 
 ## RosettaNetPipActivityBehavior
 ### Properties
-* **actionType**: 'DoubleAction' | 'NotSpecified' | 'SingleAction' (Required)
+* **actionType**: 'DoubleAction' | 'NotSpecified' | 'SingleAction' (Required): The value indicating whether the RosettaNet PIP is used for a single action.
 * **isAuthorizationRequired**: bool (Required): The value indicating whether authorization is required.
 * **isSecuredTransportRequired**: bool (Required): The value indicating whether secured transport is required.
 * **nonRepudiationOfOriginAndContent**: bool (Required): The value indicating whether non-repudiation is for origin and content.
-* **persistentConfidentialityScope**: 'None' | 'NotSpecified' | 'Payload' | 'PayloadContainer' (Required)
-* **responseType**: 'Async' | 'NotSpecified' | 'Sync' (Required)
+* **persistentConfidentialityScope**: 'None' | 'NotSpecified' | 'Payload' | 'PayloadContainer' (Required): The persistent confidentiality encryption scope.
+* **responseType**: 'Async' | 'NotSpecified' | 'Sync' (Required): The value indicating whether the RosettaNet PIP communication is synchronous.
 * **retryCount**: int (Required): The value indicating retry count.
 * **timeToPerformInSeconds**: int (Required): The time to perform in seconds.
 
 ## RosettaNetPipActivitySettings
 ### Properties
-* **acknowledgmentOfReceiptSettings**: [RosettaNetPipAcknowledgmentOfReceiptSettings](#rosettanetpipacknowledgmentofreceiptsettings) (Required): The integration account RosettaNet ProcessConfiguration Acknowledgement settings.
-* **activityBehavior**: [RosettaNetPipActivityBehavior](#rosettanetpipactivitybehavior) (Required): The integration account RosettaNet ProcessConfiguration activity behavior.
-* **activityType**: 'BusinessTransaction' | 'InformationDistribution' | 'NotSpecified' | 'Notification' | 'QueryResponse' | 'RequestConfirm' | 'RequestResponse' (Required)
+* **acknowledgmentOfReceiptSettings**: [RosettaNetPipAcknowledgmentOfReceiptSettings](#rosettanetpipacknowledgmentofreceiptsettings) (Required): The RosettaNet ProcessConfiguration acknowledgement settings.
+* **activityBehavior**: [RosettaNetPipActivityBehavior](#rosettanetpipactivitybehavior) (Required): The RosettaNet ProcessConfiguration activity behavior.
+* **activityType**: 'BusinessTransaction' | 'InformationDistribution' | 'NotSpecified' | 'Notification' | 'QueryResponse' | 'RequestConfirm' | 'RequestResponse' (Required): The RosettaNet ProcessConfiguration activity type.
 
 ## RosettaNetPipBusinessDocument
 ### Properties
@@ -815,36 +815,36 @@
 ## RosettaNetPipRoleSettings
 ### Properties
 * **action**: string (Required): The action name.
-* **businessDocument**: [RosettaNetPipBusinessDocument](#rosettanetpipbusinessdocument) (Required): The RosettaNet ProcessConfiguration business document settings.
+* **businessDocument**: [RosettaNetPipBusinessDocument](#rosettanetpipbusinessdocument) (Required): The RosettaNet ProcessConfiguration business document.
 * **description**: string: The description.
 * **role**: string (Required): The role name.
-* **roleType**: 'Employee' | 'Functional' | 'NotSpecified' | 'Organizational' (Required)
+* **roleType**: 'Employee' | 'Functional' | 'NotSpecified' | 'Organizational' (Required): The RosettaNet ProcessConfiguration role type.
 * **service**: string (Required): The service name.
 * **serviceClassification**: string (Required): The service classification name.
 
 ## Sku
 ### Properties
-* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard' (Required): The sku name.
-* **plan**: [ResourceReference](#resourcereference): The resource reference.
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard' (Required): The name.
+* **plan**: [ResourceReference](#resourcereference): The reference to plan.
 
 ## WorkflowParameter
 ### Properties
 * **description**: string: The description.
-* **metadata**: any: Any object
-* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String'
-* **value**: any: Any object
+* **metadata**: any: The metadata.
+* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String': The type.
+* **value**: any: The value.
 
 ## WorkflowProperties
 ### Properties
 * **accessEndpoint**: string (ReadOnly): Gets the access endpoint.
 * **changedTime**: string (ReadOnly): Gets the changed time.
 * **createdTime**: string (ReadOnly): Gets the created time.
-* **definition**: any: Any object
-* **integrationAccount**: [ResourceReference](#resourcereference): The resource reference.
+* **definition**: any: The definition. See [Schema reference for Workflow Definition Language in Azure Logic Apps](https://aka.ms/logic-apps-workflow-definition-language).
+* **integrationAccount**: [ResourceReference](#resourcereference): The integration account.
 * **parameters**: [WorkflowPropertiesParameters](#workflowpropertiesparameters): The parameters.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'NotSpecified' | 'Ready' | 'Registered' | 'Registering' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' (ReadOnly)
-* **sku**: [Sku](#sku): The sku type.
-* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'NotSpecified' | 'Ready' | 'Registered' | 'Registering' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' (ReadOnly): Gets the provisioning state.
+* **sku**: [Sku](#sku): The sku.
+* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended': The state.
 * **version**: string (ReadOnly): Gets the version.
 
 ## WorkflowPropertiesParameters
@@ -935,7 +935,7 @@
 ## WorkflowTriggerRecurrence
 ### Properties
 * **endTime**: string: The end time.
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'NotSpecified' | 'Second' | 'Week' | 'Year'
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'NotSpecified' | 'Second' | 'Week' | 'Year': The frequency.
 * **interval**: int: The interval.
 * **schedule**: [RecurrenceSchedule](#recurrenceschedule): The recurrence schedule.
 * **startTime**: string: The start time.
@@ -961,8 +961,8 @@
 
 ## X12AgreementContent
 ### Properties
-* **receiveAgreement**: [X12OneWayAgreement](#x12onewayagreement) (Required): The X12 one-way agreement.
-* **sendAgreement**: [X12OneWayAgreement](#x12onewayagreement) (Required): The X12 one-way agreement.
+* **receiveAgreement**: [X12OneWayAgreement](#x12onewayagreement) (Required): The X12 one-way receive agreement.
+* **sendAgreement**: [X12OneWayAgreement](#x12onewayagreement) (Required): The X12 one-way send agreement.
 
 ## X12DelimiterOverrides
 ### Properties
@@ -973,12 +973,12 @@
 * **replaceCharacter**: int (Required): The replacement character.
 * **replaceSeparatorsInPayload**: bool (Required): The value indicating whether to replace separators in payload.
 * **segmentTerminator**: int (Required): The segment terminator.
-* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required)
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required): The segment terminator suffix.
 * **targetNamespace**: string: The target namespace on which this delimiter settings has to be applied.
 
 ## X12EnvelopeOverride
 ### Properties
-* **dateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD' (Required)
+* **dateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD' (Required): The date format.
 * **functionalIdentifierCode**: string: The functional identifier code.
 * **headerVersion**: string (Required): The header version.
 * **messageId**: string (Required): The message id on which this envelope settings has to be applied.
@@ -987,7 +987,7 @@
 * **responsibleAgencyCode**: string (Required): The responsible agency code.
 * **senderApplicationId**: string (Required): The sender application id.
 * **targetNamespace**: string (Required): The target namespace on which this envelope settings has to be applied.
-* **timeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified' (Required)
+* **timeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified' (Required): The time format.
 
 ## X12EnvelopeSettings
 ### Properties
@@ -998,8 +998,8 @@
 * **groupControlNumberLowerBound**: int (Required): The group control number lower bound.
 * **groupControlNumberUpperBound**: int (Required): The group control number upper bound.
 * **groupHeaderAgencyCode**: string (Required): The group header agency code.
-* **groupHeaderDateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD' (Required)
-* **groupHeaderTimeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified' (Required)
+* **groupHeaderDateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD' (Required): The group header date format.
+* **groupHeaderTimeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified' (Required): The group header time format.
 * **groupHeaderVersion**: string (Required): The group header version.
 * **interchangeControlNumberLowerBound**: int (Required): The interchange  control number lower bound.
 * **interchangeControlNumberUpperBound**: int (Required): The interchange  control number upper bound.
@@ -1013,22 +1013,22 @@
 * **transactionSetControlNumberPrefix**: string: The transaction set control number prefix.
 * **transactionSetControlNumberSuffix**: string: The transaction set control number suffix.
 * **transactionSetControlNumberUpperBound**: int (Required): The transaction set control number upper bound.
-* **usageIndicator**: 'Information' | 'NotSpecified' | 'Production' | 'Test' (Required)
+* **usageIndicator**: 'Information' | 'NotSpecified' | 'Production' | 'Test' (Required): The usage indicator.
 * **useControlStandardsIdAsRepetitionCharacter**: bool (Required): The value indicating whether to use control standards id as repetition character.
 
 ## X12FramingSettings
 ### Properties
-* **characterSet**: 'Basic' | 'Extended' | 'NotSpecified' | 'UTF8' (Required)
+* **characterSet**: 'Basic' | 'Extended' | 'NotSpecified' | 'UTF8' (Required): The X12 character set.
 * **componentSeparator**: int (Required): The component separator.
 * **dataElementSeparator**: int (Required): The data element separator.
 * **replaceCharacter**: int (Required): The replacement character.
 * **replaceSeparatorsInPayload**: bool (Required): The value indicating whether to replace separators in payload.
 * **segmentTerminator**: int (Required): The segment terminator.
-* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required)
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required): The segment terminator suffix.
 
 ## X12MessageFilter
 ### Properties
-* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified' (Required)
+* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified' (Required): The message filter type.
 
 ## X12MessageIdentifier
 ### Properties
@@ -1036,9 +1036,9 @@
 
 ## X12OneWayAgreement
 ### Properties
-* **protocolSettings**: [X12ProtocolSettings](#x12protocolsettings) (Required): The X12 agreement protocol settings.
-* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
-* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
+* **protocolSettings**: [X12ProtocolSettings](#x12protocolsettings) (Required): The X12 protocol settings.
+* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The receiver business identity
+* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required): The sender business identity
 
 ## X12ProcessingSettings
 ### Properties
@@ -1051,17 +1051,17 @@
 
 ## X12ProtocolSettings
 ### Properties
-* **acknowledgementSettings**: [X12AcknowledgementSettings](#x12acknowledgementsettings) (Required): The X12 agreement acknowledgement settings.
+* **acknowledgementSettings**: [X12AcknowledgementSettings](#x12acknowledgementsettings) (Required): The X12 acknowledgment settings.
 * **envelopeOverrides**: [X12EnvelopeOverride](#x12envelopeoverride)[]: The X12 envelope override settings.
-* **envelopeSettings**: [X12EnvelopeSettings](#x12envelopesettings) (Required): The X12 agreement envelope settings.
-* **framingSettings**: [X12FramingSettings](#x12framingsettings) (Required): The X12 agreement framing settings.
-* **messageFilter**: [X12MessageFilter](#x12messagefilter) (Required): The X12 message filter for odata query.
+* **envelopeSettings**: [X12EnvelopeSettings](#x12envelopesettings) (Required): The X12 envelope settings.
+* **framingSettings**: [X12FramingSettings](#x12framingsettings) (Required): The X12 framing settings.
+* **messageFilter**: [X12MessageFilter](#x12messagefilter) (Required): The X12 message filter.
 * **messageFilterList**: [X12MessageIdentifier](#x12messageidentifier)[]: The X12 message filter list.
 * **processingSettings**: [X12ProcessingSettings](#x12processingsettings) (Required): The X12 processing settings.
 * **schemaReferences**: [X12SchemaReference](#x12schemareference)[] (Required): The X12 schema references.
-* **securitySettings**: [X12SecuritySettings](#x12securitysettings) (Required): The X12 agreement security settings.
+* **securitySettings**: [X12SecuritySettings](#x12securitysettings) (Required): The X12 security settings.
 * **validationOverrides**: [X12ValidationOverride](#x12validationoverride)[]: The X12 validation override settings.
-* **validationSettings**: [X12ValidationSettings](#x12validationsettings) (Required): The X12 agreement validation settings.
+* **validationSettings**: [X12ValidationSettings](#x12validationsettings) (Required): The X12 validation settings.
 * **x12DelimiterOverrides**: [X12DelimiterOverrides](#x12delimiteroverrides)[]: The X12 delimiter override settings.
 
 ## X12SchemaReference
@@ -1082,7 +1082,7 @@
 ### Properties
 * **allowLeadingAndTrailingSpacesAndZeroes**: bool (Required): The value indicating whether to allow leading and trailing spaces and zeroes.
 * **messageId**: string (Required): The message id on which the validation settings has to be applied.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required)
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required): The trailing separator policy.
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool (Required): The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateCharacterSet**: bool (Required): The value indicating whether to validate character Set.
 * **validateEdiTypes**: bool (Required): The value indicating whether to validate EDI types.
@@ -1095,7 +1095,7 @@
 * **checkDuplicateInterchangeControlNumber**: bool (Required): The value indicating whether to check for duplicate interchange control number.
 * **checkDuplicateTransactionSetControlNumber**: bool (Required): The value indicating whether to check for duplicate transaction set control number.
 * **interchangeControlNumberValidityDays**: int (Required): The validity period of interchange control number.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required)
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required): The trailing separator policy.
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool (Required): The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateCharacterSet**: bool (Required): The value indicating whether to validate character set in the message.
 * **validateEdiTypes**: bool (Required): The value indicating whether to Whether to validate EDI types.

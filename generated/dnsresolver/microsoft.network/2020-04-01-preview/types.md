@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DnsForwardingRulesetProperties](#dnsforwardingrulesetproperties): Represents the properties of a DNS forwarding ruleset.
+* **properties**: [DnsForwardingRulesetProperties](#dnsforwardingrulesetproperties): Properties of the DNS forwarding ruleset.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/dnsForwardingRulesets' (ReadOnly, DeployTimeConstant): The resource type
@@ -20,7 +20,7 @@
 * **etag**: string (ReadOnly): ETag of the forwarding rule.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ForwardingRuleProperties](#forwardingruleproperties): Represents the properties of a forwarding rule within a DNS forwarding ruleset.
+* **properties**: [ForwardingRuleProperties](#forwardingruleproperties): Properties of the forwarding rule.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Network/dnsForwardingRulesets/forwardingRules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -31,7 +31,7 @@
 * **etag**: string (ReadOnly): ETag of the virtual network link.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualNetworkLinkProperties](#virtualnetworklinkproperties): Represents the properties of a virtual network link.
+* **properties**: [VirtualNetworkLinkProperties](#virtualnetworklinkproperties): Properties of the virtual network link.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Network/dnsForwardingRulesets/virtualNetworkLinks' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -43,7 +43,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DnsResolverProperties](#dnsresolverproperties): Represents the properties of a DNS resolver.
+* **properties**: [DnsResolverProperties](#dnsresolverproperties): Properties of the DNS resolver.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/dnsResolvers' (ReadOnly, DeployTimeConstant): The resource type
@@ -56,7 +56,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [InboundEndpointProperties](#inboundendpointproperties): Represents the properties of an inbound endpoint for a DNS resolver.
+* **properties**: [InboundEndpointProperties](#inboundendpointproperties): Properties of the inbound endpoint.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/dnsResolvers/inboundEndpoints' (ReadOnly, DeployTimeConstant): The resource type
@@ -69,7 +69,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [OutboundEndpointProperties](#outboundendpointproperties): Represents the properties of an outbound endpoint for a DNS resolver.
+* **properties**: [OutboundEndpointProperties](#outboundendpointproperties): Properties of the outbound endpoint.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/dnsResolvers/outboundEndpoints' (ReadOnly, DeployTimeConstant): The resource type
@@ -87,22 +87,22 @@
 ## DnsForwardingRulesetProperties
 ### Properties
 * **dnsResolverOutboundEndpoints**: [SubResource](#subresource)[]: The reference to the DNS resolver outbound endpoints that are used to route DNS queries matching the forwarding rules in the ruleset to the target DNS servers.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the DNS forwarding ruleset. This is a read-only property and any attempt to set this value will be ignored.
 * **resourceGuid**: string (ReadOnly): The resourceGuid for the DNS forwarding ruleset.
 
 ## DnsResolverProperties
 ### Properties
 * **dnsResolverState**: 'Connected' | 'Disconnected' | string (ReadOnly): The current status of the DNS resolver. This is a read-only property and any attempt to set this value will be ignored.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the resource.
-* **resourceGuid**: string (ReadOnly): The Guid property of the resource.
-* **virtualNetwork**: [SubResource](#subresource) (Required): Reference to another ARM resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the DNS resolver. This is a read-only property and any attempt to set this value will be ignored.
+* **resourceGuid**: string (ReadOnly): The resourceGuid property of the DNS resolver resource.
+* **virtualNetwork**: [SubResource](#subresource) (Required): The reference to the virtual network. This cannot be changed after creation.
 
 ## ForwardingRuleProperties
 ### Properties
 * **domainName**: string (Required): The domain name for the forwarding rule.
 * **forwardingRuleState**: 'Disabled' | 'Enabled' | string: The state of forwarding rule.
 * **metadata**: [ForwardingRulePropertiesMetadata](#forwardingrulepropertiesmetadata): Metadata attached to the forwarding rule.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the forwarding rule. This is a read-only property and any attempt to set this value will be ignored.
 * **targetDnsServers**: [TargetDnsServer](#targetdnsserver)[] (Required): DNS servers to forward the DNS query to.
 
 ## ForwardingRulePropertiesMetadata
@@ -113,20 +113,20 @@
 ## InboundEndpointProperties
 ### Properties
 * **ipConfigurations**: [IpConfiguration](#ipconfiguration)[]: IP configurations for the inbound endpoint.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the resource.
-* **resourceGuid**: string (ReadOnly): The Guid property of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the inbound endpoint. This is a read-only property and any attempt to set this value will be ignored.
+* **resourceGuid**: string (ReadOnly): The resourceGuid property of the inbound endpoint resource.
 
 ## IpConfiguration
 ### Properties
 * **privateIpAddress**: string: Private IP address of the IP configuration.
 * **privateIpAllocationMethod**: 'Dynamic' | 'Static' | string: Private IP address allocation method.
-* **subnet**: [SubResource](#subresource): Reference to another ARM resource.
+* **subnet**: [SubResource](#subresource): The reference to the subnet bound to the IP configuration.
 
 ## OutboundEndpointProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the resource.
-* **resourceGuid**: string (ReadOnly): The Guid property of the resource.
-* **subnet**: [SubResource](#subresource): Reference to another ARM resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the outbound endpoint. This is a read-only property and any attempt to set this value will be ignored.
+* **resourceGuid**: string (ReadOnly): The resourceGuid property of the outbound endpoint resource.
+* **subnet**: [SubResource](#subresource): The reference to the subnet used for the outbound endpoint.
 
 ## SubResource
 ### Properties
@@ -144,7 +144,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TargetDnsServer
 ### Properties
@@ -174,7 +174,7 @@
 ## VirtualNetworkDnsForwardingRuleset
 ### Properties
 * **id**: string (ReadOnly): DNS Forwarding Ruleset Resource ID.
-* **properties**: [VirtualNetworkLinkSubResourceProperties](#virtualnetworklinksubresourceproperties) (ReadOnly): The reference to the virtual network link that associates between the DNS forwarding ruleset and virtual network.
+* **properties**: [VirtualNetworkLinkSubResourceProperties](#virtualnetworklinksubresourceproperties) (ReadOnly): Properties of the virtual network link sub-resource reference.
 
 ## VirtualNetworkDnsForwardingRulesetListResult
 ### Properties
@@ -184,8 +184,8 @@
 ## VirtualNetworkLinkProperties
 ### Properties
 * **metadata**: [VirtualNetworkLinkPropertiesMetadata](#virtualnetworklinkpropertiesmetadata): Metadata attached to the virtual network link.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the resource.
-* **virtualNetwork**: [SubResource](#subresource): Reference to another ARM resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the virtual network link. This is a read-only property and any attempt to set this value will be ignored.
+* **virtualNetwork**: [SubResource](#subresource): The reference to the virtual network. This cannot be changed after creation.
 
 ## VirtualNetworkLinkPropertiesMetadata
 ### Properties
@@ -194,5 +194,5 @@
 
 ## VirtualNetworkLinkSubResourceProperties
 ### Properties
-* **virtualNetworkLink**: [SubResource](#subresource) (ReadOnly): Reference to another ARM resource.
+* **virtualNetworkLink**: [SubResource](#subresource) (ReadOnly): The reference to the virtual network link.
 

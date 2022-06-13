@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [IdentityInfo](#identityinfo): The identity information for the resource.
+* **identity**: [IdentityInfo](#identityinfo): Identity information for the Event Grid Domain resource.
 * **location**: string (Required): Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DomainProperties](#domainproperties): Properties of the Event Grid Domain Resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [DomainProperties](#domainproperties): Properties of the Event Grid Domain resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Domain resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,7 +19,7 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
 * **type**: 'Microsoft.EventGrid/domains/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/domains/topics@2021-12-01
@@ -29,7 +29,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DomainTopicProperties](#domaintopicproperties) (ReadOnly): Properties of the Domain Topic.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Domain Topic resource.
 * **type**: 'Microsoft.EventGrid/domains/topics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/eventSubscriptions@2021-12-01
@@ -38,8 +38,8 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the Event Subscription.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the event subscription.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Event Subscription resource.
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/systemTopics@2021-12-01
@@ -47,11 +47,11 @@
 ### Properties
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [IdentityInfo](#identityinfo): The identity information for the resource.
+* **identity**: [IdentityInfo](#identityinfo): Identity information for the resource.
 * **location**: string (Required): Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SystemTopicProperties](#systemtopicproperties): Properties of the System Topic.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [SystemTopicProperties](#systemtopicproperties): Properties of the system topic.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to System Topic resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/systemTopics' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -61,8 +61,8 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the Event Subscription.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the event subscription.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Event Subscription resource.
 * **type**: 'Microsoft.EventGrid/systemTopics/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/topics@2021-12-01
@@ -70,11 +70,11 @@
 ### Properties
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [IdentityInfo](#identityinfo): The identity information for the resource.
+* **identity**: [IdentityInfo](#identityinfo): Identity information for the resource.
 * **location**: string (Required): Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TopicProperties](#topicproperties): Properties of the Topic
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [TopicProperties](#topicproperties): Properties of the topic.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Topic resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -84,7 +84,7 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
 * **type**: 'Microsoft.EventGrid/topics/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.EventGrid/domains@2021-12-01)
@@ -216,13 +216,14 @@
 ### StorageBlobDeadLetterDestination
 #### Properties
 * **endpointType**: 'StorageBlob' (Required): Type of the endpoint for the dead letter destination
-* **properties**: [StorageBlobDeadLetterDestinationProperties](#storageblobdeadletterdestinationproperties): Properties of the storage blob based dead letter destination.
+* **properties**: [StorageBlobDeadLetterDestinationProperties](#storageblobdeadletterdestinationproperties): The properties of the Storage Blob based deadletter destination
 
 
 ## DeadLetterWithResourceIdentity
 ### Properties
-* **deadLetterDestination**: [DeadLetterDestination](#deadletterdestination): Information about the dead letter destination for an event subscription. To configure a deadletter destination, do not directly instantiate an object of this class. Instead, instantiate an object of a derived class. Currently, StorageBlobDeadLetterDestination is the only class that derives from this class.
-* **identity**: [EventSubscriptionIdentity](#eventsubscriptionidentity): The identity information with the event subscription.
+* **deadLetterDestination**: [DeadLetterDestination](#deadletterdestination): Information about the destination where events have to be delivered for the event subscription.
+Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+* **identity**: [EventSubscriptionIdentity](#eventsubscriptionidentity): The identity to use when dead-lettering events.
 
 ## DeliveryAttributeMapping
 * **Discriminator**: type
@@ -242,8 +243,9 @@
 
 ## DeliveryWithResourceIdentity
 ### Properties
-* **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination): Information about the destination for an event subscription.
-* **identity**: [EventSubscriptionIdentity](#eventsubscriptionidentity): The identity information with the event subscription.
+* **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination): Information about the destination where events have to be delivered for the event subscription.
+Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+* **identity**: [EventSubscriptionIdentity](#eventsubscriptionidentity): The identity to use when delivering events.
 
 ## DomainProperties
 ### Properties
@@ -265,7 +267,7 @@ resources by the user.
 * **endpoint**: string (ReadOnly): Endpoint for the domain.
 * **inboundIpRules**: [InboundIpRule](#inboundiprule)[]: This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
 * **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema' | string: This determines the format that Event Grid should expect for incoming events published to the domain.
-* **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping): By default, Event Grid expects events to be in the Event Grid event schema. Specifying an input schema mapping enables publishing to Event Grid using a custom input schema. Currently, the only supported type of InputSchemaMapping is 'JsonInputSchemaMapping'.
+* **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping): Information about the InputSchemaMapping which specified the info about mapping event payload.
 * **metricResourceId**: string (ReadOnly): Metric resource id for the domain.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Event Grid Domain Resource.
@@ -297,37 +299,37 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 ### AzureFunctionEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'AzureFunction' (Required): Type of the endpoint for the event subscription destination.
-* **properties**: [AzureFunctionEventSubscriptionDestinationProperties](#azurefunctioneventsubscriptiondestinationproperties): The properties that represent the Azure Function destination of an event subscription.
+* **properties**: [AzureFunctionEventSubscriptionDestinationProperties](#azurefunctioneventsubscriptiondestinationproperties): Azure Function Properties of the event subscription destination.
 
 ### EventHubEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'EventHub' (Required): Type of the endpoint for the event subscription destination.
-* **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties): The properties for a event hub destination.
+* **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties): Event Hub Properties of the event subscription destination.
 
 ### HybridConnectionEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'HybridConnection' (Required): Type of the endpoint for the event subscription destination.
-* **properties**: [HybridConnectionEventSubscriptionDestinationProperties](#hybridconnectioneventsubscriptiondestinationproperties): The properties for a hybrid connection destination.
+* **properties**: [HybridConnectionEventSubscriptionDestinationProperties](#hybridconnectioneventsubscriptiondestinationproperties): Hybrid connection Properties of the event subscription destination.
 
 ### ServiceBusQueueEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'ServiceBusQueue' (Required): Type of the endpoint for the event subscription destination.
-* **properties**: [ServiceBusQueueEventSubscriptionDestinationProperties](#servicebusqueueeventsubscriptiondestinationproperties): The properties that represent the Service Bus destination of an event subscription.
+* **properties**: [ServiceBusQueueEventSubscriptionDestinationProperties](#servicebusqueueeventsubscriptiondestinationproperties): Service Bus Properties of the event subscription destination.
 
 ### ServiceBusTopicEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'ServiceBusTopic' (Required): Type of the endpoint for the event subscription destination.
-* **properties**: [ServiceBusTopicEventSubscriptionDestinationProperties](#servicebustopiceventsubscriptiondestinationproperties): The properties that represent the Service Bus Topic destination of an event subscription.
+* **properties**: [ServiceBusTopicEventSubscriptionDestinationProperties](#servicebustopiceventsubscriptiondestinationproperties): Service Bus Topic Properties of the event subscription destination.
 
 ### StorageQueueEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'StorageQueue' (Required): Type of the endpoint for the event subscription destination.
-* **properties**: [StorageQueueEventSubscriptionDestinationProperties](#storagequeueeventsubscriptiondestinationproperties): The properties for a storage queue destination.
+* **properties**: [StorageQueueEventSubscriptionDestinationProperties](#storagequeueeventsubscriptiondestinationproperties): Storage Queue Properties of the event subscription destination.
 
 ### WebHookEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'WebHook' (Required): Type of the endpoint for the event subscription destination.
-* **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties): Information about the webhook destination properties for an event subscription.
+* **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties): WebHook Properties of the event subscription destination.
 
 
 ## EventSubscriptionFilter
@@ -350,16 +352,18 @@ Wildcard characters are not supported in this path.
 
 ## EventSubscriptionProperties
 ### Properties
-* **deadLetterDestination**: [DeadLetterDestination](#deadletterdestination): Information about the dead letter destination for an event subscription. To configure a deadletter destination, do not directly instantiate an object of this class. Instead, instantiate an object of a derived class. Currently, StorageBlobDeadLetterDestination is the only class that derives from this class.
-* **deadLetterWithResourceIdentity**: [DeadLetterWithResourceIdentity](#deadletterwithresourceidentity): Information about the deadletter destination with resource identity.
-* **deliveryWithResourceIdentity**: [DeliveryWithResourceIdentity](#deliverywithresourceidentity): Information about the delivery for an event subscription with resource identity.
-* **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination): Information about the destination for an event subscription.
+* **deadLetterDestination**: [DeadLetterDestination](#deadletterdestination): The DeadLetter destination of the event subscription.
+* **deadLetterWithResourceIdentity**: [DeadLetterWithResourceIdentity](#deadletterwithresourceidentity): The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
+Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+* **deliveryWithResourceIdentity**: [DeliveryWithResourceIdentity](#deliverywithresourceidentity): Information about the destination where events have to be delivered for the event subscription.
+Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+* **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination): Information about the destination where events have to be delivered for the event subscription.
 * **eventDeliverySchema**: 'CloudEventSchemaV1_0' | 'CustomInputSchema' | 'EventGridSchema' | string: The event delivery schema for the event subscription.
 * **expirationTimeUtc**: string: Expiration time of the event subscription.
-* **filter**: [EventSubscriptionFilter](#eventsubscriptionfilter): Filter for the Event Subscription.
+* **filter**: [EventSubscriptionFilter](#eventsubscriptionfilter): Information about the filter for the event subscription.
 * **labels**: string[]: List of user defined labels.
 * **provisioningState**: 'AwaitingManualAction' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the event subscription.
-* **retryPolicy**: [RetryPolicy](#retrypolicy): Information about the retry policy for an event subscription.
+* **retryPolicy**: [RetryPolicy](#retrypolicy): The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
 * **topic**: string (ReadOnly): Name of the topic of the event subscription.
 
 ## HybridConnectionEventSubscriptionDestinationProperties
@@ -393,7 +397,7 @@ This property is currently not used and reserved for future usage.
 ### JsonInputSchemaMapping
 #### Properties
 * **inputSchemaMappingType**: 'Json' (Required): Type of the custom mapping
-* **properties**: [JsonInputSchemaMappingProperties](#jsoninputschemamappingproperties): This can be used to map properties of a source schema (or default values, for certain supported properties) to properties of the EventGridEvent schema.
+* **properties**: [JsonInputSchemaMappingProperties](#jsoninputschemamappingproperties): JSON Properties of the input schema mapping
 
 
 ## JsonField
@@ -407,21 +411,12 @@ This property is currently not used and reserved for future usage.
 
 ## JsonInputSchemaMappingProperties
 ### Properties
-* **dataVersion**: [JsonFieldWithDefault](#jsonfieldwithdefault): This is used to express the source of an input schema mapping for a single target field
-in the Event Grid Event schema. This is currently used in the mappings for the 'subject',
-'eventtype' and 'dataversion' properties. This represents a field in the input event schema
-along with a default value to be used, and at least one of these two properties should be provided.
-* **eventTime**: [JsonField](#jsonfield): This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.
-* **eventType**: [JsonFieldWithDefault](#jsonfieldwithdefault): This is used to express the source of an input schema mapping for a single target field
-in the Event Grid Event schema. This is currently used in the mappings for the 'subject',
-'eventtype' and 'dataversion' properties. This represents a field in the input event schema
-along with a default value to be used, and at least one of these two properties should be provided.
-* **id**: [JsonField](#jsonfield): This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.
-* **subject**: [JsonFieldWithDefault](#jsonfieldwithdefault): This is used to express the source of an input schema mapping for a single target field
-in the Event Grid Event schema. This is currently used in the mappings for the 'subject',
-'eventtype' and 'dataversion' properties. This represents a field in the input event schema
-along with a default value to be used, and at least one of these two properties should be provided.
-* **topic**: [JsonField](#jsonfield): This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.
+* **dataVersion**: [JsonFieldWithDefault](#jsonfieldwithdefault): The mapping information for the DataVersion property of the Event Grid Event.
+* **eventTime**: [JsonField](#jsonfield): The mapping information for the EventTime property of the Event Grid Event.
+* **eventType**: [JsonFieldWithDefault](#jsonfieldwithdefault): The mapping information for the EventType property of the Event Grid Event.
+* **id**: [JsonField](#jsonfield): The mapping information for the Id property of the Event Grid Event.
+* **subject**: [JsonFieldWithDefault](#jsonfieldwithdefault): The mapping information for the Subject property of the Event Grid Event.
+* **topic**: [JsonField](#jsonfield): The mapping information for the Topic property of the Event Grid Event.
 
 ## PrivateEndpoint
 ### Properties
@@ -431,14 +426,14 @@ along with a default value to be used, and at least one of these two properties 
 ### Properties
 * **id**: string (ReadOnly): Fully qualified identifier of the resource.
 * **name**: string (ReadOnly): Name of the resource.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
 * **type**: string (ReadOnly): Type of the resource.
 
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **groupIds**: string[]: GroupIds from the private link service resource.
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): PrivateEndpoint information.
-* **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate): ConnectionState information.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource for this Connection.
+* **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate): Details about the state of the connection.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the Private Endpoint Connection.
 
 ## RetryPolicy
@@ -479,12 +474,12 @@ along with a default value to be used, and at least one of these two properties 
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## SystemTopicProperties
 ### Properties
 * **metricResourceId**: string (ReadOnly): Metric resource id for the system topic.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Private Endpoint Connection.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the system topic.
 * **source**: string: Source for the system topic.
 * **topicType**: string: TopicType for the system topic.
 
@@ -493,13 +488,13 @@ along with a default value to be used, and at least one of these two properties 
 * **disableLocalAuth**: bool: This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the topic.
 * **endpoint**: string (ReadOnly): Endpoint for the topic.
 * **inboundIpRules**: [InboundIpRule](#inboundiprule)[]: This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
-* **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema' | string: This determines the format that Event Grid should expect for incoming events published to the domain.
-* **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping): By default, Event Grid expects events to be in the Event Grid event schema. Specifying an input schema mapping enables publishing to Event Grid using a custom input schema. Currently, the only supported type of InputSchemaMapping is 'JsonInputSchemaMapping'.
+* **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema' | string: This determines the format that Event Grid should expect for incoming events published to the topic.
+* **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping): This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.
 * **metricResourceId**: string (ReadOnly): Metric resource id for the topic.
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Array of PrivateEndpointConnection
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the topic.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: This determines if traffic is allowed over public network. By default it is enabled. 
-You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules" />
+You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules" />
 
 ## TopicSharedAccessKeys
 ### Properties

@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkspaceProperties](#workspaceproperties): The properties of a machine learning workspace.
-* **sku**: [Sku](#sku): Sku of the resource
+* **properties**: [WorkspaceProperties](#workspaceproperties): The properties of the machine learning workspace.
+* **sku**: [Sku](#sku): The sku of the workspace.
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,11 +18,11 @@
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [Compute](#compute): Machine Learning compute object.
-* **sku**: [Sku](#sku): Sku of the resource
+* **properties**: [Compute](#compute): Compute properties
+* **sku**: [Sku](#sku): The sku of the workspace.
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -52,9 +52,9 @@
 ### Properties
 * **agentCount**: int: Number of agents
 * **agentVMSize**: string: Agent virtual machine size
-* **aksNetworkingConfiguration**: [AksNetworkingConfiguration](#aksnetworkingconfiguration): Advance configuration for AKS networking
+* **aksNetworkingConfiguration**: [AksNetworkingConfiguration](#aksnetworkingconfiguration): AKS networking configuration for vnet
 * **clusterFqdn**: string: Cluster full qualified domain name
-* **sslConfiguration**: [SslConfiguration](#sslconfiguration): The ssl configuration for scoring
+* **sslConfiguration**: [SslConfiguration](#sslconfiguration): SSL configuration
 * **systemServices**: [SystemService](#systemservice)[] (ReadOnly): System services
 
 ## AmlComputeNodeInformation
@@ -78,12 +78,12 @@
 * **allocationStateTransitionTime**: string (ReadOnly): The time at which the compute entered its current allocation state.
 * **currentNodeCount**: int (ReadOnly): The number of compute nodes currently assigned to the compute.
 * **errors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Collection of errors encountered by various compute nodes during node setup.
-* **nodeStateCounts**: [NodeStateCounts](#nodestatecounts) (ReadOnly): Counts of various compute node states on the amlCompute.
+* **nodeStateCounts**: [NodeStateCounts](#nodestatecounts) (ReadOnly): Counts of various node states on the compute.
 * **remoteLoginPortPublicAccess**: 'Disabled' | 'Enabled' | 'NotSpecified' | string: State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
-* **scaleSettings**: [ScaleSettings](#scalesettings): scale settings for AML Compute
-* **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
+* **scaleSettings**: [ScaleSettings](#scalesettings): Scale settings for AML Compute
+* **subnet**: [ResourceId](#resourceid): Virtual network subnet resource ID the compute nodes belong to.
 * **targetNodeCount**: int (ReadOnly): The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
-* **userAccountCredentials**: [UserAccountCredentials](#useraccountcredentials): Settings for user account that gets created on each on the nodes of a compute.
+* **userAccountCredentials**: [UserAccountCredentials](#useraccountcredentials): Credentials for an administrator user account that will be created on each compute node.
 * **vmPriority**: 'Dedicated' | 'LowPriority' | string: Virtual Machine priority
 * **vmSize**: string: Virtual Machine Size
 
@@ -97,7 +97,7 @@
 * **isAttachedCompute**: bool (ReadOnly): Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
 * **modifiedOn**: string (ReadOnly): The date and time when the compute was last modified.
 * **provisioningErrors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Errors during provisioning
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
 * **resourceId**: string: ARM resource id of the underlying compute
 ### AKS
 #### Properties
@@ -152,7 +152,7 @@
 
 ### VirtualMachineSecrets
 #### Properties
-* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials) (ReadOnly): Admin credentials for virtual machine
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials) (ReadOnly): Admin credentials for virtual machine.
 * **computeType**: 'VirtualMachine' (Required): The type of compute
 
 
@@ -178,7 +178,7 @@
 ## HDInsightProperties
 ### Properties
 * **address**: string: Public IP address of the master node of the cluster.
-* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for master node of the cluster
 * **sshPort**: int: Port open for ssh connections on the master node of the cluster.
 
 ## Identity
@@ -196,7 +196,7 @@
 
 ## MachineLearningServiceError
 ### Properties
-* **error**: [ErrorResponse](#errorresponse) (ReadOnly): Error response information.
+* **error**: [ErrorResponse](#errorresponse) (ReadOnly): The error response.
 
 ## NodeStateCounts
 ### Properties
@@ -215,7 +215,7 @@
 ## RegistryListCredentialsResult
 ### Properties
 * **location**: string (ReadOnly)
-* **passwords**: [Password](#password)[] (ReadOnly): Array of Password
+* **passwords**: [Password](#password)[] (ReadOnly)
 * **username**: string (ReadOnly)
 
 ## ResourceId

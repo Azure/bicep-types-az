@@ -99,7 +99,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 
 ## CloudServiceVaultSecretGroup
 ### Properties
-* **sourceVault**: [SubResource](#subresource)
+* **sourceVault**: [SubResource](#subresource): The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
 * **vaultCertificates**: [CloudServiceVaultCertificate](#cloudservicevaultcertificate)[]: The list of key vault references in SourceVault which contain certificates.
 
 ## Extension

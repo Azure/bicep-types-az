@@ -17,7 +17,7 @@
 * **apiVersion**: '2018-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BuildStepProperties](#buildstepproperties): Base properties for any build step.
+* **properties**: [BuildStepProperties](#buildstepproperties): The properties of a build step.
 * **type**: 'Microsoft.ContainerRegistry/registries/buildTasks/steps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listBuildArguments (Microsoft.ContainerRegistry/registries/buildTasks/steps@2018-02-01-preview)
@@ -54,7 +54,7 @@
 * **Discriminator**: type
 
 ### Base Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of a build.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the build step.
 ### DockerBuildStep
 #### Properties
 * **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly): List of base image dependencies for a step.
@@ -74,8 +74,8 @@
 * **alias**: string (Required): The alternative updatable name for a build task.
 * **creationDate**: string (ReadOnly): The creation date of build task.
 * **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the build has to happen.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of a build.
-* **sourceRepository**: [SourceRepositoryProperties](#sourcerepositoryproperties) (Required): The properties of the source code repository.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the build task.
+* **sourceRepository**: [SourceRepositoryProperties](#sourcerepositoryproperties) (Required): The properties that describes the source(code) for the build task.
 * **status**: 'Disabled' | 'Enabled' | string: The current status of build task.
 * **timeout**: int: Build timeout in seconds.
 

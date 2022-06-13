@@ -8,8 +8,8 @@
 * **identity**: [Identity](#identity): Identity for the resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MachineProperties](#machineproperties): Describes the properties of a hybrid machine.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [MachineProperties](#machineproperties): Hybrid Compute Machine properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridCompute/machines' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,8 +20,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MachineExtensionProperties](#machineextensionproperties): Describes the properties of a Machine Extension.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [MachineExtensionProperties](#machineextensionproperties): Describes Machine Extension Properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -33,7 +33,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [HybridComputePrivateLinkScopeProperties](#hybridcomputeprivatelinkscopeproperties): Properties that define a Azure Arc PrivateLinkScope resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **tags**: [PrivateLinkScopesResourceTags](#privatelinkscopesresourcetags): Resource tags
 * **type**: 'Microsoft.HybridCompute/privateLinkScopes' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -43,8 +43,8 @@
 * **apiVersion**: '2021-06-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of a private endpoint connection.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DetectedProperties
@@ -54,7 +54,7 @@
 
 ## ErrorAdditionalInfo
 ### Properties
-* **info**: any (ReadOnly): Any object
+* **info**: any (ReadOnly): The additional info.
 * **type**: string (ReadOnly): The additional info type.
 
 ## ErrorDetail
@@ -70,7 +70,7 @@
 * **privateEndpointConnections**: [PrivateEndpointConnectionDataModel](#privateendpointconnectiondatamodel)[] (ReadOnly): The collection of associated Private Endpoint Connections.
 * **privateLinkScopeId**: string (ReadOnly): The Guid id of the private link scope.
 * **provisioningState**: string (ReadOnly): Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: The network access policy to determine if Azure Arc agents can use public Azure Arc service endpoints. Defaults to disabled (access to Azure Arc services only via private link).
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.
 
 ## Identity
 ### Properties
@@ -104,11 +104,11 @@
 ### Properties
 * **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
 * **forceUpdateTag**: string: How the extension handler should be forced to update even if the extension configuration has not changed.
-* **instanceView**: [MachineExtensionInstanceView](#machineextensioninstanceview): Describes the Machine Extension Instance View.
-* **protectedSettings**: any: Any object
+* **instanceView**: [MachineExtensionInstanceView](#machineextensioninstanceview): The machine extension instance view.
+* **protectedSettings**: any: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
 * **publisher**: string: The name of the extension handler publisher.
-* **settings**: any: Any object
+* **settings**: any: Json formatted public settings for the extension.
 * **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
 * **typeHandlerVersion**: string: Specifies the version of the script handler.
 
@@ -161,13 +161,13 @@
 ### Properties
 * **id**: string (ReadOnly): The ARM Resource Id of the Private Endpoint.
 * **name**: string (ReadOnly): The Name of the Private Endpoint.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of a private endpoint connection.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The Private Endpoint Connection properties.
 * **type**: string (ReadOnly): Azure resource type
 
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty): Private endpoint which the connection belongs to.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty): State of the private endpoint connection.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty): Connection state of the private endpoint connection.
 * **provisioningState**: string (ReadOnly): State of the private endpoint connection.
 
 ## PrivateEndpointProperty
@@ -192,7 +192,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties

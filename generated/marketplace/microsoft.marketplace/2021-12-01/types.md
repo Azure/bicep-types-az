@@ -6,8 +6,8 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateStoreProperties](#privatestoreproperties): Describes the json payload on whether or not the private store is enabled for a given tenant
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
+* **properties**: [PrivateStoreProperties](#privatestoreproperties): The PrivateStore data structure.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource
 * **type**: 'Microsoft.Marketplace/privateStores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Marketplace/privateStores/adminRequestApprovals@2021-12-01
@@ -16,8 +16,8 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AdminRequestApprovalProperties](#adminrequestapprovalproperties): Admin approval request resource properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
+* **properties**: [AdminRequestApprovalProperties](#adminrequestapprovalproperties): The privateStore admin Approval request data structure.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource
 * **type**: 'Microsoft.Marketplace/privateStores/adminRequestApprovals' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Marketplace/privateStores/collections@2021-12-01
@@ -26,8 +26,8 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CollectionProperties](#collectionproperties): The collection details
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
+* **properties**: [CollectionProperties](#collectionproperties): The collection data structure.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource
 * **type**: 'Microsoft.Marketplace/privateStores/collections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Marketplace/privateStores/collections/offers@2021-12-01
@@ -36,8 +36,8 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [OfferProperties](#offerproperties)
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
+* **properties**: [OfferProperties](#offerproperties): The privateStore offer data structure.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource
 * **type**: 'Microsoft.Marketplace/privateStores/collections/offers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Marketplace/privateStores/requestApprovals@2021-12-01
@@ -46,8 +46,8 @@
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RequestApprovalProperties](#requestapprovalproperties): Approval request resource properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
+* **properties**: [RequestApprovalProperties](#requestapprovalproperties): The privateStore approval request data structure.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource
 * **type**: 'Microsoft.Marketplace/privateStores/requestApprovals' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listNewPlansNotifications (Microsoft.Marketplace/privateStores@2021-12-01)
@@ -99,7 +99,7 @@
 
 ## NewPlansNotificationsList
 ### Properties
-* **newPlansNotifications**: [NewNotifications](#newnotifications)[] (ReadOnly): Array of NewNotifications
+* **newPlansNotifications**: [NewNotifications](#newnotifications)[] (ReadOnly)
 
 ## NotificationsSettingsProperties
 ### Properties
@@ -138,7 +138,7 @@
 ### Properties
 * **justification**: string: Gets or sets user's justification for the plan's request
 * **planId**: string: Gets or sets Plan Id
-* **requestDate**: any (ReadOnly): Anything
+* **requestDate**: any (ReadOnly): Gets request date
 * **status**: 'Approved' | 'None' | 'Pending' | 'Rejected' | string (ReadOnly): Gets the plan status
 * **subscriptionId**: string: Gets or sets the subscription id that the user is requesting to add the plan to
 * **subscriptionName**: string: Gets or sets the subscription name that the user is requesting to add the plan to
@@ -161,7 +161,7 @@
 * **collectionIds**: string[] (ReadOnly): Gets list of associated collection ids
 * **eTag**: string: Identifier for purposes of race condition
 * **isGov**: bool: Is government
-* **notificationsSettings**: [NotificationsSettingsProperties](#notificationssettingsproperties): Describes the json payload for notifications settings
+* **notificationsSettings**: [NotificationsSettingsProperties](#notificationssettingsproperties): Gets or sets notifications settings
 * **privateStoreId**: string (ReadOnly): Private Store id
 * **privateStoreName**: string: Private Store Name
 * **tenantId**: string: Tenant id
@@ -188,7 +188,7 @@
 
 ## StopSellOffersPlansNotificationsList
 ### Properties
-* **stopSellNotifications**: [StopSellOffersPlansNotificationsListProperties](#stopselloffersplansnotificationslistproperties)[] (ReadOnly): Array of StopSellOffersPlansNotificationsListProperties
+* **stopSellNotifications**: [StopSellOffersPlansNotificationsListProperties](#stopselloffersplansnotificationslistproperties)[] (ReadOnly)
 
 ## StopSellOffersPlansNotificationsListProperties
 ### Properties
@@ -203,20 +203,20 @@
 
 ## StopSellSubscriptions
 ### Properties
-* **subscriptions**: string[] (WriteOnly): Array of StopSellSubscriptionsItem
+* **subscriptions**: string[] (WriteOnly)
 
 ## SubscriptionsContextList
 ### Properties
-* **subscriptionsIds**: string[] (ReadOnly): Array of SubscriptionsContextListSubscriptionsIdsItem
+* **subscriptionsIds**: string[] (ReadOnly)
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC)
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource
 
 ## UserRequestDetails
 ### Properties

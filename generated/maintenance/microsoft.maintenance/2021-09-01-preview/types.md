@@ -15,8 +15,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfigurationAssignmentProperties](#configurationassignmentproperties): Properties for configuration assignment
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ConfigurationAssignmentProperties](#configurationassignmentproperties): Properties of the configuration assignment
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Maintenance/configurationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Maintenance/maintenanceConfigurations@2021-09-01-preview
@@ -26,8 +26,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Gets or sets location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MaintenanceConfigurationProperties](#maintenanceconfigurationproperties): Properties for maintenance configuration
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [MaintenanceConfigurationProperties](#maintenanceconfigurationproperties): Gets or sets properties of the resource
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [MaintenanceConfigurationTags](#maintenanceconfigurationtags): Gets or sets tags of the resource
 * **type**: 'Microsoft.Maintenance/maintenanceConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -44,10 +44,10 @@
 
 ## InputPatchConfiguration
 ### Properties
-* **linuxParameters**: [InputLinuxParameters](#inputlinuxparameters): Input properties for patching a Linux machine.
+* **linuxParameters**: [InputLinuxParameters](#inputlinuxparameters): Input parameters specific to patching Linux machine. For Windows machines, do not pass this property.
 * **rebootSetting**: 'Always' | 'IfRequired' | 'Never' | string: Possible reboot preference as defined by the user based on which it would be decided to reboot the machine or not after the patch operation is completed.
-* **tasks**: [SoftwareUpdateConfigurationTasks](#softwareupdateconfigurationtasks): Task properties of the software update configuration.
-* **windowsParameters**: [InputWindowsParameters](#inputwindowsparameters): Input properties for patching a Windows machine.
+* **tasks**: [SoftwareUpdateConfigurationTasks](#softwareupdateconfigurationtasks): Tasks information for the Software update configuration.
+* **windowsParameters**: [InputWindowsParameters](#inputwindowsparameters): Input parameters specific to patching a Windows machine. For Linux machines, do not pass this property.
 
 ## InputWindowsParameters
 ### Properties
@@ -59,7 +59,7 @@
 ## MaintenanceConfigurationProperties
 ### Properties
 * **extensionProperties**: [MaintenanceConfigurationPropertiesExtensionProperties](#maintenanceconfigurationpropertiesextensionproperties): Gets or sets extensionProperties of the maintenanceConfiguration
-* **installPatches**: [InputPatchConfiguration](#inputpatchconfiguration): Input configuration for a patch run
+* **installPatches**: [InputPatchConfiguration](#inputpatchconfiguration): The input parameters to be passed to the patch run operation.
 * **maintenanceScope**: 'Extension' | 'Host' | 'InGuestPatch' | 'OSImage' | 'SQLDB' | 'SQLManagedInstance' | string: Gets or sets maintenanceScope of the configuration
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Definition of a MaintenanceWindow
 * **namespace**: string: Gets or sets namespace of the resource
@@ -95,7 +95,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TaskProperties
 ### Properties

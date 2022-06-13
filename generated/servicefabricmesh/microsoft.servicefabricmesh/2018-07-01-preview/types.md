@@ -37,8 +37,8 @@
 ### Properties
 * **debugParams**: string: Internal use.
 * **description**: string: User readable description of the application.
-* **diagnostics**: [DiagnosticsDescription](#diagnosticsdescription): Describes the diagnostics options available
-* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' | string (ReadOnly): The health state of a resource such as Application, Service, or Network.
+* **diagnostics**: [DiagnosticsDescription](#diagnosticsdescription): Describes the diagnostics definition and usage for an application resource.
+* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' | string (ReadOnly): Describes the health state of an application resource.
 * **provisioningState**: string (ReadOnly): State of the resource.
 * **serviceNames**: string[] (ReadOnly): Names of the services in the application.
 * **services**: [ServiceResourceDescription](#serviceresourcedescription)[]: describes the services in the application.
@@ -73,9 +73,9 @@
 
 ## ContainerInstanceView
 ### Properties
-* **currentState**: [ContainerState](#containerstate): The container state.
+* **currentState**: [ContainerState](#containerstate): Current container instance state.
 * **events**: [ContainerEvent](#containerevent)[]: The events of this container instance.
-* **previousState**: [ContainerState](#containerstate): The container state.
+* **previousState**: [ContainerState](#containerstate): Previous container instance state.
 * **restartCount**: int: The number of times the container has been restarted.
 
 ## ContainerLabel
@@ -118,7 +118,7 @@
 #### Properties
 * **accountName**: string: Azure Internal monitoring pipeline account.
 * **autoKeyConfigUrl**: string: Azure Internal monitoring pipeline autokey associated with the certificate.
-* **fluentdConfigUrl**: any: Anything
+* **fluentdConfigUrl**: any: Azure Internal monitoring agent fluentd configuration.
 * **kind**: 'AzureInternalMonitoringPipeline' (Required): The kind of DiagnosticsSink.
 * **maConfigUrl**: string: Azure Internal monitoring agent configuration.
 * **namespace**: string: Azure Internal monitoring pipeline account namespace.
@@ -162,7 +162,7 @@
 ### Properties
 * **addressPrefix**: string (Required): the address prefix for this network.
 * **description**: string: User readable description of the network.
-* **ingressConfig**: [IngressConfig](#ingressconfig): Describes public connectivity configuration for the network.
+* **ingressConfig**: [IngressConfig](#ingressconfig): Configuration for public connectivity for this network.
 * **provisioningState**: string (ReadOnly): State of the resource.
 
 ## ResourceLimits
@@ -177,8 +177,8 @@
 
 ## ResourceRequirements
 ### Properties
-* **limits**: [ResourceLimits](#resourcelimits): This type describes the resource limits for a given container. It describes the most amount of resources a container is allowed to use before being restarted.
-* **requests**: [ResourceRequests](#resourcerequests) (Required): This type describes the requested resources for a given container. It describes the least amount of resources required for the container. A container can consume more than requested resources up to the specified limits before being restarted. Currently, the requested resources are treated as limits.
+* **limits**: [ResourceLimits](#resourcelimits): Describes the maximum limits on the resources for a given container.
+* **requests**: [ResourceRequests](#resourcerequests) (Required): Describes the requested resources for a given container.
 
 ## ServiceResourceDescription
 ### Properties

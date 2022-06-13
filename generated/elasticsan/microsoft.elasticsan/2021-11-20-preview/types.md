@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The geo-location where the resource lives.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ElasticSanProperties](#elasticsanproperties): Elastic San response properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ElasticSanProperties](#elasticsanproperties): Properties of ElasticSan.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Resource metadata required by ARM RPC
 * **tags**: [ResourceTags](#resourcetags): Azure resource tags.
 * **type**: 'Microsoft.ElasticSan/elasticSans' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,8 +19,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The geo-location where the resource lives.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VolumeGroupProperties](#volumegroupproperties): VolumeGroup response properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [VolumeGroupProperties](#volumegroupproperties): Properties of VolumeGroup.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Resource metadata required by ARM RPC
 * **tags**: [ResourceTags](#resourcetags): Azure resource tags.
 * **type**: 'Microsoft.ElasticSan/elasticSans/volumegroups' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -31,8 +31,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The geo-location where the resource lives.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VolumeProperties](#volumeproperties): Volume response properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [VolumeProperties](#volumeproperties): Properties of Volume.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Resource metadata required by ARM RPC
 * **tags**: [ResourceTags](#resourcetags): Azure resource tags.
 * **type**: 'Microsoft.ElasticSan/elasticSans/volumegroups/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -42,8 +42,8 @@
 * **baseSizeTiB**: int (Required): Base size of the Elastic San appliance in TiB.
 * **extendedCapacitySizeTiB**: int (Required): Extended size of the Elastic San appliance in TiB.
 * **provisionedMBps**: int (ReadOnly): Provisioned MBps Elastic San appliance.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the iSCSI Target.
-* **sku**: [Sku](#sku): The SKU name. Required for account creation; optional for update.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the operation on the resource.
+* **sku**: [Sku](#sku): resource sku
 * **totalIops**: int (ReadOnly): Total Provisioned IOPS of the Elastic San appliance.
 * **totalMBps**: int (ReadOnly): Total Provisioned MBps Elastic San appliance.
 * **totalVolumeSizeGiB**: int (ReadOnly): Total size of the provisioned Volumes in GiB.
@@ -51,8 +51,8 @@
 
 ## IscsiTargetInfo
 ### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the iSCSI Target.
-* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' | string: Operational status of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the operation on the resource.
+* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' | string: Operational status of the iSCSI Target.
 * **targetIqn**: string (ReadOnly): iSCSI Target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
 * **targetPortalHostname**: string (ReadOnly): iSCSI Target Portal Host Name
 * **targetPortalPort**: int (ReadOnly): iSCSI Target Portal Port
@@ -93,7 +93,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## VirtualNetworkRule
 ### Properties
@@ -103,15 +103,15 @@
 
 ## VolumeGroupProperties
 ### Properties
-* **encryption**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys' | 'EncryptionAtRestWithPlatformKey' | string (Required): The type of key used to encrypt the data of the disk.
-* **networkAcls**: [NetworkRuleSet](#networkruleset): A set of rules governing the network accessibility.
-* **protocolType**: 'Iscsi' | 'None' | string (Required): Storage Target type.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the iSCSI Target.
+* **encryption**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys' | 'EncryptionAtRestWithPlatformKey' | string (Required): Type of encryption
+* **networkAcls**: [NetworkRuleSet](#networkruleset): A collection of rules governing the accessibility from specific network locations.
+* **protocolType**: 'Iscsi' | 'None' | string (Required): Type of storage target
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the operation on the resource.
 
 ## VolumeProperties
 ### Properties
-* **creationData**: [SourceCreationData](#sourcecreationdata): Data used when creating a disk.
+* **creationData**: [SourceCreationData](#sourcecreationdata): State of the operation on the resource.
 * **sizeGiB**: int: Volume size.
-* **storageTarget**: [IscsiTargetInfo](#iscsitargetinfo) (ReadOnly): Iscsi target information
+* **storageTarget**: [IscsiTargetInfo](#iscsitargetinfo) (ReadOnly): Storage target information
 * **volumeId**: string (ReadOnly): Unique Id of the volume in GUID format
 

@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Azure location in which Sites is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteProperties](#siteproperties): Class for site properties.
+* **properties**: [SiteProperties](#siteproperties): Nested properties of Hyper-V site.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [HyperVSiteTags](#hypervsitetags): Dictionary of <string>
 * **type**: 'Microsoft.OffAzure/HyperVSites' (ReadOnly, DeployTimeConstant): The resource type
@@ -19,7 +19,7 @@
 * **apiVersion**: '2020-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [HyperVClusterProperties](#hypervclusterproperties): Class for cluster properties.
+* **properties**: [HyperVClusterProperties](#hypervclusterproperties): Nested properties of the cluster.
 * **type**: 'Microsoft.OffAzure/HyperVSites/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/HyperVSites/hosts@2020-07-07
@@ -28,7 +28,7 @@
 * **apiVersion**: '2020-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [HyperVHostProperties](#hypervhostproperties): Class for host properties.
+* **properties**: [HyperVHostProperties](#hypervhostproperties): Nested properties.
 * **type**: 'Microsoft.OffAzure/HyperVSites/hosts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/MasterSites@2020-07-07
@@ -39,7 +39,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Azure location in which Sites is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MasterSiteProperties](#mastersiteproperties): Class for site properties.
+* **properties**: [MasterSiteProperties](#mastersiteproperties): Nested properties of Master site.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.OffAzure/MasterSites' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -50,7 +50,7 @@
 * **eTag**: string (ReadOnly): Gets the tag for optimistic concurrency control.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Gets the properties of the object.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.OffAzure/masterSites/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -62,7 +62,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Azure location in which Sites is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteProperties](#siteproperties): Class for site properties.
+* **properties**: [SiteProperties](#siteproperties): Nested properties of VMWare site.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [VMwareSiteTags](#vmwaresitetags): Dictionary of <string>
 * **type**: 'Microsoft.OffAzure/VMwareSites' (ReadOnly, DeployTimeConstant): The resource type
@@ -73,7 +73,7 @@
 * **apiVersion**: '2020-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VCenterProperties](#vcenterproperties): Class for vCenter properties.
+* **properties**: [VCenterProperties](#vcenterproperties): vCenter nested properties.
 * **type**: 'Microsoft.OffAzure/VMwareSites/vCenters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## HealthErrorDetails
@@ -131,7 +131,7 @@
 * **eTag**: string (ReadOnly): Gets the tag for optimistic concurrency control.
 * **id**: string (ReadOnly): Relative URL to get this Sites.
 * **name**: string (ReadOnly): Gets the name of the resource.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Gets the properties of the object.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: string (ReadOnly): Gets the resource type.
 
@@ -161,11 +161,11 @@
 
 ## SiteProperties
 ### Properties
-* **agentDetails**: [SiteAgentProperties](#siteagentproperties): Class for site agent properties.
+* **agentDetails**: [SiteAgentProperties](#siteagentproperties): On-premises agent details.
 * **applianceName**: string: Appliance Name.
 * **discoverySolutionId**: string: ARM ID of migration hub solution for SDS.
 * **serviceEndpoint**: string (ReadOnly): Service endpoint.
-* **servicePrincipalIdentityDetails**: [SiteSpnProperties](#sitespnproperties): Class for site properties.
+* **servicePrincipalIdentityDetails**: [SiteSpnProperties](#sitespnproperties): Service principal identity details used by agent for communication to the service.
 
 ## SiteSpnProperties
 ### Properties
@@ -183,7 +183,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## VCenterProperties
 ### Properties

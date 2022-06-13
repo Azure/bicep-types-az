@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ActionGroup](#actiongroup): An Azure action group.
+* **properties**: [ActionGroup](#actiongroup): The action groups properties of the resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'microsoft.insights/actionGroups' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,7 +18,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MetricAlertProperties](#metricalertproperties) (Required): An alert rule.
+* **properties**: [MetricAlertProperties](#metricalertproperties) (Required): The alert rule properties of the resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Insights/metricAlerts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -66,7 +66,7 @@
 ### Properties
 * **emailAddress**: string (Required): The email address of this receiver.
 * **name**: string (Required): The name of the email receiver. Names must be unique across all receivers within an action group.
-* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): Indicates the status of the receiver. Receivers that are not Enabled will not receive any communications.
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The receiver status of the e-mail.
 
 ## ItsmReceiver
 ### Properties
@@ -118,7 +118,7 @@
 ### Properties
 * **actions**: [MetricAlertAction](#metricalertaction)[]: the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
 * **autoMitigate**: bool: the flag that indicates whether the alert should be auto resolved or not. The default is true.
-* **criteria**: [MetricAlertCriteria](#metricalertcriteria) (Required): The rule criteria that defines the conditions of the alert rule.
+* **criteria**: [MetricAlertCriteria](#metricalertcriteria) (Required): defines the specific alert criteria information.
 * **description**: string: the description of the metric alert that will be included in the alert email.
 * **enabled**: bool (Required): the flag that indicates whether the metric alert is enabled.
 * **evaluationFrequency**: string (Required): how often the metric alert is evaluated represented in ISO 8601 duration format.
@@ -190,7 +190,7 @@
 * **countryCode**: string (Required): The country code of the SMS receiver.
 * **name**: string (Required): The name of the SMS receiver. Names must be unique across all receivers within an action group.
 * **phoneNumber**: string (Required): The phone number of the SMS receiver.
-* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): Indicates the status of the receiver. Receivers that are not Enabled will not receive any communications.
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The status of the receiver.
 
 ## VoiceReceiver
 ### Properties

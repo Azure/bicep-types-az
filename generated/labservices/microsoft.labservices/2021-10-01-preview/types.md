@@ -8,7 +8,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LabPlanProperties](#labplanproperties) (Required): Lab plan resource properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the lab plan.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.LabServices/labPlans' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,8 +18,8 @@
 * **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ImageProperties](#imageproperties) (Required): Properties of an image resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ImageProperties](#imageproperties) (Required): Image resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the image.
 * **type**: 'Microsoft.LabServices/labPlans/images' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.LabServices/labs@2021-10-01-preview
@@ -29,8 +29,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [LabProperties](#labproperties) (Required): Properties of a lab resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [LabProperties](#labproperties) (Required): Lab resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the lab.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.LabServices/labs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -41,7 +41,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required): Schedule resource properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the schedule.
 * **type**: 'Microsoft.LabServices/labs/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.LabServices/labs/users@2021-10-01-preview
@@ -51,7 +51,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [UserProperties](#userproperties) (Required): User resource properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the user resource.
 * **type**: 'Microsoft.LabServices/labs/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AutoShutdownProfile
@@ -59,16 +59,16 @@
 * **disconnectDelay**: string: The amount of time a VM will stay running after a user disconnects if this behavior is enabled.
 * **idleDelay**: string: The amount of time a VM will idle before it is shutdown if this behavior is enabled.
 * **noConnectDelay**: string: The amount of time a VM will stay running before it is shutdown if no connection is made and this behavior is enabled.
-* **shutdownOnDisconnect**: 'Disabled' | 'Enabled': Property enabled state.
-* **shutdownOnIdle**: 'LowUsage' | 'None' | 'UserAbsence': Defines whether to shut down VM on idle and the criteria for idle detection.
-* **shutdownWhenNotConnected**: 'Disabled' | 'Enabled': Property enabled state.
+* **shutdownOnDisconnect**: 'Disabled' | 'Enabled': Whether shutdown on disconnect is enabled
+* **shutdownOnIdle**: 'LowUsage' | 'None' | 'UserAbsence': Whether a VM will get shutdown when it has idled for a period of time.
+* **shutdownWhenNotConnected**: 'Disabled' | 'Enabled': Whether a VM will get shutdown when it hasn't been connected to after a period of time.
 
 ## ConnectionProfile
 ### Properties
-* **clientRdpAccess**: 'None' | 'Private' | 'Public': A connection type for access labs and VMs (Public, Private or None).
-* **clientSshAccess**: 'None' | 'Private' | 'Public': A connection type for access labs and VMs (Public, Private or None).
-* **webRdpAccess**: 'None' | 'Private' | 'Public': A connection type for access labs and VMs (Public, Private or None).
-* **webSshAccess**: 'None' | 'Private' | 'Public': A connection type for access labs and VMs (Public, Private or None).
+* **clientRdpAccess**: 'None' | 'Private' | 'Public': The enabled access level for Client Access over RDP.
+* **clientSshAccess**: 'None' | 'Private' | 'Public': The enabled access level for Client Access over SSH.
+* **webRdpAccess**: 'None' | 'Private' | 'Public': The enabled access level for Web Access over RDP.
+* **webSshAccess**: 'None' | 'Private' | 'Public': The enabled access level for Web Access over SSH.
 
 ## Credentials
 ### Properties
@@ -81,23 +81,23 @@
 * **availableRegions**: string[]: The available regions of the image in the shared gallery.
 * **description**: string (ReadOnly): A description of the image.
 * **displayName**: string (ReadOnly): The image display name.
-* **enabledState**: 'Disabled' | 'Enabled': Property enabled state.
+* **enabledState**: 'Disabled' | 'Enabled': Is the image enabled
 * **iconUrl**: string (ReadOnly): URL of the image icon.
 * **offer**: string (ReadOnly): The ID of an offer associated with the image.
-* **osState**: 'Generalized' | 'Specialized' (ReadOnly): The operating system state.
-* **osType**: 'Linux' | 'Windows' (ReadOnly): The operating system type.
+* **osState**: 'Generalized' | 'Specialized' (ReadOnly): The OS State of the image.
+* **osType**: 'Linux' | 'Windows' (ReadOnly): The OS Type of the image.
 * **plan**: string (ReadOnly): The ID of marketplace plan associated with the image (optional).
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Locked' | 'Succeeded' | 'Updating' (ReadOnly): Resource provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Locked' | 'Succeeded' | 'Updating' (ReadOnly): Current provisioning state of the image.
 * **publisher**: string (ReadOnly): The ID of the publisher of the image.
-* **sharedGalleryId**: string (ReadOnly): A URL.
+* **sharedGalleryId**: string (ReadOnly): The ID for the image in the shared gallery.
 * **sku**: string (ReadOnly): The image SKU.
-* **termsStatus**: 'Disabled' | 'Enabled' (ReadOnly): Property enabled state.
+* **termsStatus**: 'Disabled' | 'Enabled' (ReadOnly): The status of image terms of use (enabled = accepted, disabled = not accepted).
 * **version**: string (ReadOnly): The image version.
 
 ## ImageReference
 ### Properties
 * **exactVersion**: string (ReadOnly): The actual version of the image after use.
-* **id**: string: A URL.
+* **id**: string: Image resource ID
 * **offer**: string: The image offer if applicable.
 * **publisher**: string: The image publisher
 * **sku**: string: The image SKU
@@ -105,43 +105,43 @@
 
 ## LabNetworkProfile
 ### Properties
-* **loadBalancerId**: string: A URL.
-* **publicIpId**: string: A URL.
-* **subnetId**: string: A URL.
+* **loadBalancerId**: string: The external load balancer resource id
+* **publicIpId**: string: The external public IP resource id
+* **subnetId**: string: The external subnet resource id
 
 ## LabPlanNetworkProfile
 ### Properties
-* **subnetId**: string: A URL.
+* **subnetId**: string: The external subnet resource id
 
 ## LabPlanProperties
 ### Properties
 * **allowedRegions**: string[]: The allowed regions for the lab creator to use when creating labs using this lab plan.
-* **defaultAutoShutdownProfile**: [AutoShutdownProfile](#autoshutdownprofile): Profile for how to handle shutting down virtual machines.
-* **defaultConnectionProfile**: [ConnectionProfile](#connectionprofile): Connection profile for how users connect to lab virtual machines.
-* **defaultNetworkProfile**: [LabPlanNetworkProfile](#labplannetworkprofile): Profile for how to handle networking for Lab Plans.
-* **linkedLmsInstance**: string: A URL.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Locked' | 'Succeeded' | 'Updating' (ReadOnly): Resource provisioning state.
-* **sharedGalleryId**: string: A URL.
-* **supportInfo**: [SupportInfo](#supportinfo): Support contact information and instructions.
+* **defaultAutoShutdownProfile**: [AutoShutdownProfile](#autoshutdownprofile): The default lab shutdown profile. This can be changed on a lab resource and only provides a default profile.
+* **defaultConnectionProfile**: [ConnectionProfile](#connectionprofile): The default lab connection profile. This can be changed on a lab resource and only provides a default profile.
+* **defaultNetworkProfile**: [LabPlanNetworkProfile](#labplannetworkprofile): The lab plan network profile. To enforce lab network policies they must be defined here and cannot be changed when there are existing labs associated with this lab plan.
+* **linkedLmsInstance**: string: Base Url of the lms instance this lab plan can link lab rosters against.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Locked' | 'Succeeded' | 'Updating' (ReadOnly): Current provisioning state of the lab plan.
+* **sharedGalleryId**: string: Resource ID of the Shared Image Gallery attached to this lab plan. When saving a lab template virtual machine image it will be persisted in this gallery. Shared images from the gallery can be made available to use when creating new labs.
+* **supportInfo**: [SupportInfo](#supportinfo): Support contact information and instructions for users of the lab plan. This information is displayed to lab owners and virtual machine users for all labs in the lab plan.
 
 ## LabProperties
 ### Properties
-* **autoShutdownProfile**: [AutoShutdownProfile](#autoshutdownprofile): Profile for how to handle shutting down virtual machines.
-* **connectionProfile**: [ConnectionProfile](#connectionprofile): Connection profile for how users connect to lab virtual machines.
+* **autoShutdownProfile**: [AutoShutdownProfile](#autoshutdownprofile): The resource auto shutdown configuration for the lab. This controls whether actions are taken on resources that are sitting idle.
+* **connectionProfile**: [ConnectionProfile](#connectionprofile): The connection profile for the lab. This controls settings such as web access to lab resources or whether RDP or SSH ports are open.
 * **description**: string: The description of the lab.
-* **labPlanId**: string: A URL.
-* **networkProfile**: [LabNetworkProfile](#labnetworkprofile): Profile for how to handle networking for Labs.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Locked' | 'Succeeded' | 'Updating' (ReadOnly): Resource provisioning state.
+* **labPlanId**: string: The ID of the lab plan. Used during resource creation to provide defaults and acts as a permission container when creating a lab via labs.azure.com. Setting a labPlanId on an existing lab provides organization..
+* **networkProfile**: [LabNetworkProfile](#labnetworkprofile): The network profile for the lab, typically applied via a lab plan. This profile cannot be modified once a lab has been created.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Locked' | 'Succeeded' | 'Updating' (ReadOnly): Current provisioning state of the lab.
 * **rosterProfile**: [RosterProfile](#rosterprofile): The lab user list management profile.
 * **securityProfile**: [SecurityProfile](#securityprofile): The lab security profile.
-* **state**: 'Draft' | 'Published' | 'Publishing' | 'Scaling' | 'Syncing' (ReadOnly): The state of a virtual machine.
+* **state**: 'Draft' | 'Published' | 'Publishing' | 'Scaling' | 'Syncing' (ReadOnly): The lab state.
 * **title**: string: The title of the lab.
-* **virtualMachineProfile**: [VirtualMachineProfile](#virtualmachineprofile): The base virtual machine configuration for a lab.
+* **virtualMachineProfile**: [VirtualMachineProfile](#virtualmachineprofile): The profile used for creating lab virtual machines.
 
 ## RecurrencePattern
 ### Properties
 * **expirationDate**: string (Required): When the recurrence will expire. This date is inclusive.
-* **frequency**: 'Daily' | 'Weekly' (Required): Schedule recurrence frequencies.
+* **frequency**: 'Daily' | 'Weekly' (Required): The frequency of the recurrence.
 * **interval**: int: The interval to invoke the schedule on. For example, interval = 2 and RecurrenceFrequency.Daily will run every 2 days. When no interval is supplied, an interval of 1 is used.
 * **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: The week days the schedule runs. Used for when the Frequency is set to Weekly.
 
@@ -156,15 +156,15 @@
 ## ScheduleProperties
 ### Properties
 * **notes**: string: Notes for this schedule.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Locked' | 'Succeeded' | 'Updating' (ReadOnly): Resource provisioning state.
-* **recurrencePattern**: [RecurrencePattern](#recurrencepattern): Recurrence pattern of a lab schedule.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Locked' | 'Succeeded' | 'Updating' (ReadOnly): Current provisioning state of the schedule.
+* **recurrencePattern**: [RecurrencePattern](#recurrencepattern): The recurrence pattern of the scheduled actions.
 * **startAt**: string: When lab user virtual machines will be started. Timestamp offsets will be ignored and timeZoneId is used instead.
 * **stopAt**: string: When lab user virtual machines will be stopped. Timestamp offsets will be ignored and timeZoneId is used instead.
 * **timeZoneId**: string: The IANA timezone id for the schedule.
 
 ## SecurityProfile
 ### Properties
-* **openAccess**: 'Disabled' | 'Enabled': Property enabled state.
+* **openAccess**: 'Disabled' | 'Enabled': Whether any user or only specified users can register to a lab.
 * **registrationCode**: string (ReadOnly): The registration code for the lab.
 
 ## Sku
@@ -177,10 +177,10 @@
 
 ## SupportInfo
 ### Properties
-* **email**: string: An email address.
+* **email**: string: Support contact email address.
 * **instructions**: string: Support instructions.
-* **phone**: string: A phone number.
-* **url**: string: A URL.
+* **phone**: string: Support contact phone number.
+* **url**: string: Support web address.
 
 ## SystemData
 ### Properties
@@ -189,7 +189,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -205,26 +205,26 @@
 ### Properties
 * **additionalUsageQuota**: string: The amount of usage quota time the user gets in addition to the lab usage quota.
 * **displayName**: string (ReadOnly): Display name of the user, for example user's full name.
-* **email**: string (Required): An email address.
+* **email**: string (Required): Email address of the user.
 * **invitationSent**: string (ReadOnly): Date and time when the invitation message was sent to the user.
-* **invitationState**: 'Failed' | 'NotSent' | 'Sending' | 'Sent' (ReadOnly): The lab user invitation state.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Locked' | 'Succeeded' | 'Updating' (ReadOnly): Resource provisioning state.
-* **registrationState**: 'NotRegistered' | 'Registered' (ReadOnly): The user lab registration state.
+* **invitationState**: 'Failed' | 'NotSent' | 'Sending' | 'Sent' (ReadOnly): State of the invitation message for the user.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Locked' | 'Succeeded' | 'Updating' (ReadOnly): Current provisioning state of the user resource.
+* **registrationState**: 'NotRegistered' | 'Registered' (ReadOnly): State of the user's registration within the lab.
 * **totalUsage**: string (ReadOnly): How long the user has used their virtual machines in this lab.
 
 ## VirtualMachineAdditionalCapabilities
 ### Properties
-* **installGpuDrivers**: 'Disabled' | 'Enabled': Property enabled state.
+* **installGpuDrivers**: 'Disabled' | 'Enabled': Flag to pre-install dedicated GPU drivers.
 
 ## VirtualMachineProfile
 ### Properties
-* **additionalCapabilities**: [VirtualMachineAdditionalCapabilities](#virtualmachineadditionalcapabilities): The additional capabilities for a lab VM.
-* **adminUser**: [Credentials](#credentials) (Required): Credentials for a user on a lab VM.
+* **additionalCapabilities**: [VirtualMachineAdditionalCapabilities](#virtualmachineadditionalcapabilities): Additional VM capabilities.
+* **adminUser**: [Credentials](#credentials) (Required): Credentials for the admin user on the VM.
 * **createOption**: 'Image' | 'TemplateVM' (Required): Indicates what lab virtual machines are created from.
-* **imageReference**: [ImageReference](#imagereference) (Required): Image reference information. Used in the virtual machine profile.
-* **nonAdminUser**: [Credentials](#credentials): Credentials for a user on a lab VM.
-* **osType**: 'Linux' | 'Windows' (ReadOnly): The operating system type.
-* **sku**: [Sku](#sku) (Required): The resource model definition representing SKU
+* **imageReference**: [ImageReference](#imagereference) (Required): The image configuration for lab virtual machines.
+* **nonAdminUser**: [Credentials](#credentials): Credentials for the non-admin user on the VM, if one exists.
+* **osType**: 'Linux' | 'Windows' (ReadOnly): The OS type of the image
+* **sku**: [Sku](#sku) (Required): The SKU for the lab. Defines the type of virtual machines used in the lab.
 * **usageQuota**: string (Required): The initial quota alloted to each lab user. Must be a time span between 0 and 9999 hours.
-* **useSharedPassword**: 'Disabled' | 'Enabled': Property enabled state.
+* **useSharedPassword**: 'Disabled' | 'Enabled': Enabling this option will use the same password for all user VMs.
 

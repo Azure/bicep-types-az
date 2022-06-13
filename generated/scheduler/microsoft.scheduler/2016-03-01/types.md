@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Gets or sets the storage account location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [JobCollectionProperties](#jobcollectionproperties)
+* **properties**: [JobCollectionProperties](#jobcollectionproperties): Gets or sets the job collection properties.
 * **tags**: [JobCollectionDefinitionTags](#jobcollectiondefinitiontags): Gets or sets the tags.
 * **type**: 'Microsoft.Scheduler/jobCollections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -17,7 +17,7 @@
 * **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [JobProperties](#jobproperties)
+* **properties**: [JobProperties](#jobproperties): Gets or sets the job properties.
 * **type**: 'Microsoft.Scheduler/jobCollections/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## HttpAuthentication
@@ -50,7 +50,7 @@
 
 ## HttpRequest
 ### Properties
-* **authentication**: [HttpAuthentication](#httpauthentication)
+* **authentication**: [HttpAuthentication](#httpauthentication): Gets or sets the authentication method of the request.
 * **body**: string: Gets or sets the request body.
 * **headers**: [HttpRequestHeaders](#httprequestheaders): Gets or sets the headers.
 * **method**: string: Gets or sets the method of the request.
@@ -63,12 +63,12 @@
 
 ## JobAction
 ### Properties
-* **errorAction**: [JobErrorAction](#joberroraction)
-* **queueMessage**: [StorageQueueMessage](#storagequeuemessage)
-* **request**: [HttpRequest](#httprequest)
-* **retryPolicy**: [RetryPolicy](#retrypolicy)
-* **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage)
-* **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage)
+* **errorAction**: [JobErrorAction](#joberroraction): Gets or sets the error action.
+* **queueMessage**: [StorageQueueMessage](#storagequeuemessage): Gets or sets the storage queue message.
+* **request**: [HttpRequest](#httprequest): Gets or sets the http requests.
+* **retryPolicy**: [RetryPolicy](#retrypolicy): Gets or sets the retry policy.
+* **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage): Gets or sets the service bus queue message.
+* **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage): Gets or sets the service bus topic message.
 * **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue': Gets or sets the job action type.
 
 ## JobCollectionDefinitionTags
@@ -78,24 +78,24 @@
 
 ## JobCollectionProperties
 ### Properties
-* **quota**: [JobCollectionQuota](#jobcollectionquota)
-* **sku**: [Sku](#sku)
+* **quota**: [JobCollectionQuota](#jobcollectionquota): Gets or sets the job collection quota.
+* **sku**: [Sku](#sku): Gets or sets the SKU.
 * **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'Suspended': Gets or sets the state.
 
 ## JobCollectionQuota
 ### Properties
 * **maxJobCount**: int: Gets or set the maximum job count.
 * **maxJobOccurrence**: int: Gets or sets the maximum job occurrence.
-* **maxRecurrence**: [JobMaxRecurrence](#jobmaxrecurrence)
+* **maxRecurrence**: [JobMaxRecurrence](#jobmaxrecurrence): Gets or set the maximum recurrence.
 
 ## JobErrorAction
 ### Properties
-* **queueMessage**: [StorageQueueMessage](#storagequeuemessage)
-* **request**: [HttpRequest](#httprequest)
-* **retryPolicy**: [RetryPolicy](#retrypolicy)
-* **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage)
-* **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage)
-* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue': Gets or sets the job action type.
+* **queueMessage**: [StorageQueueMessage](#storagequeuemessage): Gets or sets the storage queue message.
+* **request**: [HttpRequest](#httprequest): Gets or sets the http requests.
+* **retryPolicy**: [RetryPolicy](#retrypolicy): Gets or sets the retry policy.
+* **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage): Gets or sets the service bus queue message.
+* **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage): Gets or sets the service bus topic message.
+* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue': Gets or sets the job error action type.
 
 ## JobMaxRecurrence
 ### Properties
@@ -104,11 +104,11 @@
 
 ## JobProperties
 ### Properties
-* **action**: [JobAction](#jobaction)
-* **recurrence**: [JobRecurrence](#jobrecurrence)
+* **action**: [JobAction](#jobaction): Gets or sets the job action.
+* **recurrence**: [JobRecurrence](#jobrecurrence): Gets or sets the job recurrence.
 * **startTime**: string: Gets or sets the job start time.
 * **state**: 'Completed' | 'Disabled' | 'Enabled' | 'Faulted': Gets or set the job state.
-* **status**: [JobStatus](#jobstatus) (ReadOnly)
+* **status**: [JobStatus](#jobstatus) (ReadOnly): Gets the job status.
 
 ## JobRecurrence
 ### Properties
@@ -179,8 +179,8 @@
 
 ## ServiceBusQueueMessage
 ### Properties
-* **authentication**: [ServiceBusAuthentication](#servicebusauthentication)
-* **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties)
+* **authentication**: [ServiceBusAuthentication](#servicebusauthentication): Gets or sets the Service Bus authentication.
+* **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties): Gets or sets the brokered message properties.
 * **customMessageProperties**: [ServiceBusMessageCustomMessageProperties](#servicebusmessagecustommessageproperties): Gets or sets the custom message properties.
 * **message**: string: Gets or sets the message.
 * **namespace**: string: Gets or sets the namespace.
@@ -189,8 +189,8 @@
 
 ## ServiceBusTopicMessage
 ### Properties
-* **authentication**: [ServiceBusAuthentication](#servicebusauthentication)
-* **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties)
+* **authentication**: [ServiceBusAuthentication](#servicebusauthentication): Gets or sets the Service Bus authentication.
+* **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties): Gets or sets the brokered message properties.
 * **customMessageProperties**: [ServiceBusMessageCustomMessageProperties](#servicebusmessagecustommessageproperties): Gets or sets the custom message properties.
 * **message**: string: Gets or sets the message.
 * **namespace**: string: Gets or sets the namespace.

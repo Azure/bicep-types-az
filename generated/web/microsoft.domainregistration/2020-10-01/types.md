@@ -9,7 +9,7 @@
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DomainProperties](#domainproperties): Domain resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.DomainRegistration/domains' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -21,7 +21,7 @@
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DomainOwnershipIdentifierProperties](#domainownershipidentifierproperties): DomainOwnershipIdentifier resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listAgreements (Microsoft.DomainRegistration/topLevelDomains@2020-10-01)
@@ -41,7 +41,7 @@
 
 ## Contact
 ### Properties
-* **addressMailing**: [Address](#address): Address information for domain registration.
+* **addressMailing**: [Address](#address): Mailing address.
 * **email**: string (Required): Email address.
 * **fax**: string: Fax number.
 * **jobTitle**: string: Job title.
@@ -59,15 +59,11 @@
 ### Properties
 * **authCode**: string
 * **autoRenew**: bool: <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
-* **consent**: [DomainPurchaseConsent](#domainpurchaseconsent) (Required, WriteOnly): Domain purchase consent object, representing acceptance of applicable legal agreements.
-* **contactAdmin**: [Contact](#contact) (Required, WriteOnly): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois 
-directories as per ICANN requirements.
-* **contactBilling**: [Contact](#contact) (Required, WriteOnly): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois 
-directories as per ICANN requirements.
-* **contactRegistrant**: [Contact](#contact) (Required, WriteOnly): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois 
-directories as per ICANN requirements.
-* **contactTech**: [Contact](#contact) (Required, WriteOnly): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois 
-directories as per ICANN requirements.
+* **consent**: [DomainPurchaseConsent](#domainpurchaseconsent) (Required, WriteOnly): Legal agreement consent.
+* **contactAdmin**: [Contact](#contact) (Required, WriteOnly): Administrative contact.
+* **contactBilling**: [Contact](#contact) (Required, WriteOnly): Billing contact.
+* **contactRegistrant**: [Contact](#contact) (Required, WriteOnly): Registrant contact.
+* **contactTech**: [Contact](#contact) (Required, WriteOnly): Technical contact.
 * **createdTime**: string (ReadOnly): Domain creation timestamp.
 * **dnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns': Current DNS type
 * **dnsZoneId**: string: Azure DNS Zone to use
@@ -81,7 +77,7 @@ directories as per ICANN requirements.
 * **readyForDnsRecordManagement**: bool (ReadOnly): <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and 
  it is hosted on name servers Azure has programmatic access to.
 * **registrationStatus**: 'Active' | 'Awaiting' | 'Cancelled' | 'Confiscated' | 'Disabled' | 'Excluded' | 'Expired' | 'Failed' | 'Held' | 'JsonConverterFailed' | 'Locked' | 'Parked' | 'Pending' | 'Reserved' | 'Reverted' | 'Suspended' | 'Transferred' | 'Unknown' | 'Unlocked' | 'Unparked' | 'Updated' (ReadOnly): Domain registration status.
-* **targetDnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns': Current DNS type
+* **targetDnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns': Target DNS type (would be used for migration)
 
 ## DomainPurchaseConsent
 ### Properties
@@ -110,7 +106,7 @@ directories as per ICANN requirements.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TldLegalAgreement
 ### Properties

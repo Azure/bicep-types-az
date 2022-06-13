@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The region in which to create the account.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BatchAccountBaseProperties](#batchaccountbaseproperties): The properties of a Batch account.
+* **properties**: [BatchAccountBaseProperties](#batchaccountbaseproperties): The properties of the account.
 * **tags**: [BatchAccountCreateParametersTags](#batchaccountcreateparameterstags): The user specified tags associated with the account.
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant): The resource type
 

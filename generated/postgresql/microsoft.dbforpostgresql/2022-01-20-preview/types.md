@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerProperties](#serverproperties): The properties of a server.
-* **sku**: [Sku](#sku): Sku information related properties of a server.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ServerProperties](#serverproperties): Properties of the server.
+* **sku**: [Sku](#sku): The SKU (pricing tier) of the server.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationProperties](#configurationproperties): The properties of a configuration.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforPostgreSQL/flexibleServers/databases@2022-01-20-preview
@@ -30,7 +30,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseProperties](#databaseproperties): The properties of a database.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2022-01-20-preview
@@ -39,8 +39,8 @@
 * **apiVersion**: '2022-01-20-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a server firewall rule.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a firewall rule.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Backup
@@ -97,18 +97,18 @@
 * **administratorLogin**: string: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
 * **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for server creation).
 * **availabilityZone**: string: availability zone information of the server.
-* **backup**: [Backup](#backup): Backup properties of a server
+* **backup**: [Backup](#backup): Backup properties of a server.
 * **createMode**: 'Create' | 'Default' | 'PointInTimeRestore' | 'Update' | string (WriteOnly): The mode to create a new PostgreSQL server.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
-* **highAvailability**: [HighAvailability](#highavailability): High availability properties of a server
+* **highAvailability**: [HighAvailability](#highavailability): High availability properties of a server.
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window properties of a server.
 * **minorVersion**: string (ReadOnly): The minor version of the server.
-* **network**: [Network](#network): Network properties of a server
+* **network**: [Network](#network): Network properties of a server.
 * **pointInTimeUTC**: string (WriteOnly): Restore point creation time (ISO8601 format), specifying the time to restore from. It's required when 'createMode' is 'PointInTimeRestore'.
 * **sourceServerResourceId**: string (WriteOnly): The source server resource ID to restore from. It's required when 'createMode' is 'PointInTimeRestore'.
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): A state of a server that is visible to user.
-* **storage**: [Storage](#storage): Storage properties of a server
-* **version**: '11' | '12' | '13' | string: The version of a server.
+* **storage**: [Storage](#storage): Storage properties of a server.
+* **version**: '11' | '12' | '13' | string: PostgreSQL Server version.
 
 ## Sku
 ### Properties
@@ -126,7 +126,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties

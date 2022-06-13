@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagementAssociationProperties](#managementassociationproperties): ManagementAssociation properties supported by the OperationsManagement resource provider.
+* **properties**: [ManagementAssociationProperties](#managementassociationproperties): Properties for ManagementAssociation object supported by the OperationsManagement resource provider.
 * **type**: 'Microsoft.OperationsManagement/ManagementAssociations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationsManagement/ManagementConfigurations@2015-11-01-preview
@@ -17,7 +17,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagementConfigurationProperties](#managementconfigurationproperties): ManagementConfiguration properties supported by the OperationsManagement resource provider.
+* **properties**: [ManagementConfigurationProperties](#managementconfigurationproperties): Properties for ManagementConfiguration object supported by the OperationsManagement resource provider.
 * **type**: 'Microsoft.OperationsManagement/ManagementConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationsManagement/solutions@2015-11-01-preview
@@ -28,7 +28,7 @@
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **plan**: [SolutionPlan](#solutionplan): Plan for solution object supported by the OperationsManagement resource provider.
-* **properties**: [SolutionProperties](#solutionproperties): Solution properties supported by the OperationsManagement resource provider.
+* **properties**: [SolutionProperties](#solutionproperties): Properties for solution object supported by the OperationsManagement resource provider.
 * **tags**: [SolutionTags](#solutiontags): Resource tags
 * **type**: 'Microsoft.OperationsManagement/solutions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -47,7 +47,7 @@
 * **parameters**: [ArmTemplateParameter](#armtemplateparameter)[] (Required): Parameters to run the ARM template
 * **parentResourceType**: string (Required): The type of the parent resource.
 * **provisioningState**: string (ReadOnly): The provisioning state for the ManagementConfiguration.
-* **template**: any (Required): Any object
+* **template**: any (Required): The Json object containing the ARM template to deploy
 
 ## SolutionPlan
 ### Properties

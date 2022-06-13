@@ -29,7 +29,7 @@
 
 ## Contact
 ### Properties
-* **addressMailing**: [Address](#address): Address information for domain registration
+* **addressMailing**: [Address](#address): Mailing address
 * **email**: string: Email address
 * **fax**: string: Fax number
 * **jobTitle**: string: Job title
@@ -42,11 +42,11 @@
 ## DomainProperties
 ### Properties
 * **autoRenew**: bool: If true then domain will renewed automatically
-* **consent**: [DomainPurchaseConsent](#domainpurchaseconsent): Domain purchase consent object representing acceptance of applicable legal agreements
-* **contactAdmin**: [Contact](#contact): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information will be made publicly available through the Whois directories as per ICANN requirements.
-* **contactBilling**: [Contact](#contact): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information will be made publicly available through the Whois directories as per ICANN requirements.
-* **contactRegistrant**: [Contact](#contact): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information will be made publicly available through the Whois directories as per ICANN requirements.
-* **contactTech**: [Contact](#contact): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information will be made publicly available through the Whois directories as per ICANN requirements.
+* **consent**: [DomainPurchaseConsent](#domainpurchaseconsent): Legal agreement consent
+* **contactAdmin**: [Contact](#contact): Admin contact information
+* **contactBilling**: [Contact](#contact): Billing contact information
+* **contactRegistrant**: [Contact](#contact): Registrant contact information
+* **contactTech**: [Contact](#contact): Technical contact information
 * **createdTime**: string: Domain creation timestamp
 * **domainNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive' | string[]: Reasons why domain is not renewable
 * **expirationTime**: string: Domain expiration timestamp
@@ -54,7 +54,7 @@
 * **managedHostNames**: [HostName](#hostname)[]: All hostnames derived from the domain and assigned to Azure resources
 * **nameServers**: string[]: Name servers
 * **privacy**: bool: If true then domain privacy is enabled for this domain
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded': Status of certificate order
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded': Domain provisioning state
 * **readyForDnsRecordManagement**: bool: If true then Azure can assign this domain to Web Apps. This value will be true if domain registration status is active and it is hosted on name servers Azure has programmatic access to
 * **registrationStatus**: 'Active' | 'Awaiting' | 'Cancelled' | 'Confiscated' | 'Disabled' | 'Excluded' | 'Expired' | 'Failed' | 'Held' | 'JsonConverterFailed' | 'Locked' | 'Parked' | 'Pending' | 'Reserved' | 'Reverted' | 'Suspended' | 'Transferred' | 'Unknown' | 'Unlocked' | 'Unparked' | 'Updated': Domain registration status
 

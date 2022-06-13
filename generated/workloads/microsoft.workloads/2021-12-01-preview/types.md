@@ -8,8 +8,8 @@
 * **identity**: [UserAssignedServiceIdentity](#userassignedserviceidentity): Managed service identity (user assigned identities)
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MonitorProperties](#monitorproperties): Describes the properties of a SAP monitor.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [MonitorProperties](#monitorproperties): SAP monitor properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Workloads/monitors' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,8 +20,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [UserAssignedServiceIdentity](#userassignedserviceidentity): Managed service identity (user assigned identities)
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ProviderInstanceProperties](#providerinstanceproperties): Describes the properties of a provider instance.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ProviderInstanceProperties](#providerinstanceproperties): Provider Instance properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Workloads/monitors/providerInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Workloads/phpWorkloads@2021-12-01-preview
@@ -33,9 +33,9 @@
 * **kind**: 'WordPress' | string (Required): Indicates which kind of php workload this resource represent e.g WordPress
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PhpWorkloadResourceProperties](#phpworkloadresourceproperties): PHP workload resource properties
-* **sku**: [Sku](#sku): The resource model definition representing SKU
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [PhpWorkloadResourceProperties](#phpworkloadresourceproperties): Resource properties
+* **sku**: [Sku](#sku): Php workloads SKU
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Workloads/phpWorkloads' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -45,8 +45,8 @@
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [WordpressInstanceResourceProperties](#wordpressinstanceresourceproperties): WordPress instance properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [WordpressInstanceResourceProperties](#wordpressinstanceresourceproperties): Resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Workloads/phpWorkloads/wordpressInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Workloads/sapVirtualInstances@2021-12-01-preview
@@ -58,7 +58,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SAPVirtualInstanceProperties](#sapvirtualinstanceproperties) (Required): Defines the Virtual Instance for SAP properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Workloads/sapVirtualInstances' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -70,7 +70,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SAPApplicationServerProperties](#sapapplicationserverproperties): Defines the SAP Application Server properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Workloads/sapVirtualInstances/applicationInstances' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -82,7 +82,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SAPCentralServerProperties](#sapcentralserverproperties): Defines the SAP Central Server properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Workloads/sapVirtualInstances/centralInstances' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -94,7 +94,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SAPDatabaseProperties](#sapdatabaseproperties): Defines the SAP Database properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Workloads/sapVirtualInstances/databaseInstances' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -102,7 +102,7 @@
 ### Properties
 * **instanceCount**: int (Required): The number of app server instances.
 * **subnetId**: string (Required): The subnet id.
-* **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration) (Required): Defines the virtual machine configuration.
+* **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration) (Required): Gets or sets the virtual machine configuration.
 
 ## BackupProfile
 ### Properties
@@ -121,7 +121,7 @@
 ### Properties
 * **instanceCount**: int (Required): The number of central server VMs.
 * **subnetId**: string (Required): The subnet id.
-* **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration) (Required): Defines the virtual machine configuration.
+* **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration) (Required): Gets or sets the virtual machine configuration.
 
 ## CentralServerVmDetails
 ### Properties
@@ -130,10 +130,10 @@
 
 ## DatabaseConfiguration
 ### Properties
-* **databaseType**: 'DB2' | 'HANA' | string: Defines the supported SAP Database types.
+* **databaseType**: 'DB2' | 'HANA' | string: The database type.
 * **instanceCount**: int (Required): The number of database VMs.
 * **subnetId**: string (Required): The subnet id.
-* **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration) (Required): Defines the virtual machine configuration.
+* **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration) (Required): Gets or sets the virtual machine configuration.
 
 ## DatabaseProfile
 ### Properties
@@ -215,7 +215,7 @@
 
 ## HighAvailabilityConfiguration
 ### Properties
-* **highAvailabilityType**: 'AvailabilitySet' | 'AvailabilityZone' | string (Required): The high availability Type. AvailabilitySet guarantees 99.95% availability. Availability Zone guarantees 99.99% availability.
+* **highAvailabilityType**: 'AvailabilitySet' | 'AvailabilityZone' | string (Required): The high availability type.
 
 ## HighAvailabilitySoftwareConfiguration
 ### Properties
@@ -238,20 +238,20 @@
 * **appResourceGroup**: string (Required): The application resource group where SAP system resources will be deployed.
 ### SingleServerConfiguration
 #### Properties
-* **databaseType**: 'DB2' | 'HANA' | string: Defines the supported SAP Database types.
+* **databaseType**: 'DB2' | 'HANA' | string: The database type.
 * **deploymentType**: 'SingleServer' (Required): The deployment Type.
-* **networkConfiguration**: [NetworkConfiguration](#networkconfiguration): Defines the network configuration for SAP infrastructure
+* **networkConfiguration**: [NetworkConfiguration](#networkconfiguration): Network configuration for the server
 * **subnetId**: string (Required): The subnet id.
-* **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration) (Required): Defines the virtual machine configuration.
+* **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration) (Required): Gets or sets the virtual machine configuration.
 
 ### ThreeTierConfiguration
 #### Properties
-* **applicationServer**: [ApplicationServerConfiguration](#applicationserverconfiguration) (Required): Gets or sets the application server configuration.
-* **centralServer**: [CentralServerConfiguration](#centralserverconfiguration) (Required): Gets or sets the central server configuration.
-* **databaseServer**: [DatabaseConfiguration](#databaseconfiguration) (Required): Gets or sets the database configuration.
+* **applicationServer**: [ApplicationServerConfiguration](#applicationserverconfiguration) (Required): The application server configuration.
+* **centralServer**: [CentralServerConfiguration](#centralserverconfiguration) (Required): The central server configuration.
+* **databaseServer**: [DatabaseConfiguration](#databaseconfiguration) (Required): The database configuration.
 * **deploymentType**: 'ThreeTier' (Required): The deployment Type.
-* **highAvailabilityConfig**: [HighAvailabilityConfiguration](#highavailabilityconfiguration): Gets or sets the high availability configuration.
-* **networkConfiguration**: [NetworkConfiguration](#networkconfiguration): Defines the network configuration for SAP infrastructure
+* **highAvailabilityConfig**: [HighAvailabilityConfiguration](#highavailabilityconfiguration): The high availability configuration.
+* **networkConfiguration**: [NetworkConfiguration](#networkconfiguration): Network configuration common to all servers
 
 
 ## ManagedRGConfiguration
@@ -310,8 +310,8 @@
 * **name**: string: VM or VMSS name
 * **nodeResourceIds**: string[] (ReadOnly): VM/VMSS resource ARM Ids
 * **nodeSku**: string (Required): VM SKU for node(s)
-* **osDisk**: [DiskInfo](#diskinfo) (Required): Disk resource creation details
-* **osImage**: [OsImageProfile](#osimageprofile) (Required): OS image profile
+* **osDisk**: [DiskInfo](#diskinfo) (Required): OS disk details
+* **osImage**: [OsImageProfile](#osimageprofile) (Required): OS image used for creating the nodes
 
 ## OSConfiguration
 * **Discriminator**: osType
@@ -321,8 +321,8 @@
 #### Properties
 * **disablePasswordAuthentication**: bool: Specifies whether password authentication should be disabled.
 * **osType**: 'Linux' (Required): The OS Type
-* **ssh**: [SshConfiguration](#sshconfiguration): SSH configuration for Linux based VMs running on Azure
-* **sshKeyPair**: [SshKeyPair](#sshkeypair): The SSH Key-pair used to authenticate with the VM. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/linux/create-ssh-keys-detailed).
+* **ssh**: [SshConfiguration](#sshconfiguration): Specifies the ssh key configuration for a Linux OS. (This property is deprecated, please use 'sshKeyPair' instead)
+* **sshKeyPair**: [SshKeyPair](#sshkeypair): The SSH Key-pair used to authenticate with the VM's.
 
 ### WindowsConfiguration
 #### Properties
@@ -340,11 +340,11 @@
 ### Properties
 * **adminPassword**: string: Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection)
 * **adminUsername**: string: Specifies the name of the administrator account. <br><br> This property cannot be updated after the VM is created. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters.
-* **osConfiguration**: [OSConfiguration](#osconfiguration): Defines the OS configuration.
+* **osConfiguration**: [OSConfiguration](#osconfiguration): Specifies Windows operating system settings on the virtual machine.
 
 ## OsSapConfiguration
 ### Properties
-* **deployerVmPackages**: [DeployerVmPackages](#deployervmpackages): Defines the url and storage account ID where deployer VM packages are uploaded
+* **deployerVmPackages**: [DeployerVmPackages](#deployervmpackages): The url and storage account ID where deployer VM packages are uploaded
 * **sapFqdn**: string: The FQDN to set for the SAP system
 
 ## PhpProfile
@@ -353,31 +353,31 @@
 
 ## PhpWorkloadResourceIdentity
 ### Properties
-* **type**: 'None' | 'UserAssigned' | string (Required): Type of managed service identity (only None, UserAssigned types are allowed).
-* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+* **type**: 'None' | 'UserAssigned' | string (Required): Type of manage identity
+* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): User assigned identities dictionary
 
 ## PhpWorkloadResourceProperties
 ### Properties
-* **adminUserProfile**: [UserProfile](#userprofile) (Required): User profile to configure on a compute resources such as VM, VMSS
+* **adminUserProfile**: [UserProfile](#userprofile) (Required): Admin user profile used for VM and VMSS
 * **appLocation**: string (Required): The infra resources for PHP workload will be created in this location
 * **backupProfile**: [BackupProfile](#backupprofile): Backup profile
 * **cacheProfile**: [CacheProfile](#cacheprofile): Cache profile
-* **controllerProfile**: [NodeProfile](#nodeprofile) (Required): VM or VMSS node profile
-* **databaseProfile**: [DatabaseProfile](#databaseprofile) (Required): Workload database profile
+* **controllerProfile**: [NodeProfile](#nodeprofile) (Required): Controller VM profile
+* **databaseProfile**: [DatabaseProfile](#databaseprofile) (Required): Database profile
 * **fileshareProfile**: [FileshareProfile](#fileshareprofile): File share profile
-* **managedResourceGroupConfiguration**: [ManagedRGConfiguration](#managedrgconfiguration): Managed resource group configuration
+* **managedResourceGroupConfiguration**: [ManagedRGConfiguration](#managedrgconfiguration): Managed resource group configuration of the workload
 * **networkProfile**: [NetworkProfile](#networkprofile): Network profile
 * **phpProfile**: [PhpProfile](#phpprofile): PHP profile
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Php workload resource provisioning state
 * **searchProfile**: [SearchProfile](#searchprofile): Search profile
-* **siteProfile**: [SiteProfile](#siteprofile): Workload website profile
-* **webNodesProfile**: [VmssNodesProfile](#vmssnodesprofile) (Required): VMSS profile
+* **siteProfile**: [SiteProfile](#siteprofile): Site profile
+* **webNodesProfile**: [VmssNodesProfile](#vmssnodesprofile) (Required): VMSS web nodes profile
 
 ## ProviderInstanceProperties
 ### Properties
 * **errors**: [ProviderInstancePropertiesErrors](#providerinstancepropertieserrors) (ReadOnly): Defines the provider instance errors.
-* **providerSettings**: [ProviderSpecificProperties](#providerspecificproperties): Gets or sets the provider specific properties.
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' | string (ReadOnly): State of provisioning of the SAP monitor.
+* **providerSettings**: [ProviderSpecificProperties](#providerspecificproperties): Defines the provider instance errors.
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' | string (ReadOnly): State of provisioning of the provider instance
 
 ## ProviderInstancePropertiesErrors
 ### Properties
@@ -455,7 +455,7 @@
 
 ## SAPApplicationServerProperties
 ### Properties
-* **errors**: [SAPVirtualInstanceError](#sapvirtualinstanceerror) (ReadOnly): An error response from the Virtual Instance for SAP Workload service.
+* **errors**: [SAPVirtualInstanceError](#sapvirtualinstanceerror) (ReadOnly): Defines the Application Instance errors.
 * **gatewayPort**: int (ReadOnly): The application server gateway Port.
 * **health**: 'Degraded' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (ReadOnly): Defines the SAP Instance health.
 * **hostname**: string (ReadOnly): The application server SAP host name.
@@ -474,7 +474,7 @@
 ### Properties
 * **enqueueReplicationServerProperties**: [EnqueueReplicationServerProperties](#enqueuereplicationserverproperties): Defines the SAP ERS Server properties.
 * **enqueueServerProperties**: [EnqueueServerProperties](#enqueueserverproperties): Defines the SAP enqueue server properties.
-* **errors**: [SAPVirtualInstanceError](#sapvirtualinstanceerror) (ReadOnly): An error response from the Virtual Instance for SAP Workload service.
+* **errors**: [SAPVirtualInstanceError](#sapvirtualinstanceerror) (ReadOnly): Defines the Central Instance errors.
 * **gatewayServerProperties**: [GatewayServerProperties](#gatewayserverproperties): Defines the SAP Gateway Server properties.
 * **health**: 'Degraded' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (ReadOnly): Defines the SAP Instance health.
 * **instanceNo**: string (ReadOnly): The central server instance id.
@@ -494,16 +494,16 @@
 #### Properties
 * **appLocation**: string: The geo-location where the SAP system is to be created.
 * **configurationType**: 'Deployment' (Required): The configuration Type.
-* **infrastructureConfiguration**: [InfrastructureConfiguration](#infrastructureconfiguration): Deploy SAP Infrastructure Details.
-* **softwareConfiguration**: [SoftwareConfiguration](#softwareconfiguration): The SAP Software configuration Input.
+* **infrastructureConfiguration**: [InfrastructureConfiguration](#infrastructureconfiguration): The infrastructure configuration.
+* **softwareConfiguration**: [SoftwareConfiguration](#softwareconfiguration): The software configuration.
 
 ### DeploymentWithOSConfiguration
 #### Properties
 * **appLocation**: string: The geo-location where the SAP system is to be created.
 * **configurationType**: 'DeploymentWithOSConfig' (Required): The configuration Type.
-* **infrastructureConfiguration**: [InfrastructureConfiguration](#infrastructureconfiguration): Deploy SAP Infrastructure Details.
-* **osSapConfiguration**: [OsSapConfiguration](#ossapconfiguration): Defines the OS and SAP Configurations for Deployment
-* **softwareConfiguration**: [SoftwareConfiguration](#softwareconfiguration): The SAP Software configuration Input.
+* **infrastructureConfiguration**: [InfrastructureConfiguration](#infrastructureconfiguration): The infrastructure configuration.
+* **osSapConfiguration**: [OsSapConfiguration](#ossapconfiguration): The OS and SAP configuration.
+* **softwareConfiguration**: [SoftwareConfiguration](#softwareconfiguration): The software configuration.
 
 ### DiscoveryConfiguration
 #### Properties
@@ -516,7 +516,7 @@
 ### Properties
 * **databaseSid**: string (ReadOnly): The database SID.
 * **databaseType**: string (ReadOnly): The SAP database type.
-* **errors**: [SAPVirtualInstanceError](#sapvirtualinstanceerror) (ReadOnly): An error response from the Virtual Instance for SAP Workload service.
+* **errors**: [SAPVirtualInstanceError](#sapvirtualinstanceerror) (ReadOnly): Defines the Database Instance errors.
 * **ipAddress**: string (ReadOnly): The database IP Address.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Defines the provisioning states.
 * **status**: 'Offline' | 'PartiallyRunning' | 'Running' | 'Starting' | 'Stopping' | 'Unavailable' | string (ReadOnly): Defines the SAP Instance status.
@@ -525,13 +525,13 @@
 
 ## SAPVirtualInstanceError
 ### Properties
-* **properties**: [ErrorDefinition](#errordefinition): Error definition.
+* **properties**: [ErrorDefinition](#errordefinition): The Virtual Instance for SAP error body.
 
 ## SAPVirtualInstanceProperties
 ### Properties
-* **configuration**: [SAPConfiguration](#sapconfiguration) (Required): The SAP Configuration.
+* **configuration**: [SAPConfiguration](#sapconfiguration) (Required): Defines if an existing SAP system is being registered or a new SAP system is being created
 * **environment**: 'NonProd' | 'Prod' | string (Required): Defines the environment type - Production/Non Production.
-* **errors**: [SAPVirtualInstanceError](#sapvirtualinstanceerror) (ReadOnly): An error response from the Virtual Instance for SAP Workload service.
+* **errors**: [SAPVirtualInstanceError](#sapvirtualinstanceerror) (ReadOnly): Defines the Virtual Instance for SAP errors.
 * **health**: 'Degraded' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (ReadOnly): Defines the SAP Instance health.
 * **managedResourceGroupConfiguration**: [ManagedRGConfiguration](#managedrgconfiguration): Managed resource group configuration
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Defines the provisioning states.
@@ -545,8 +545,8 @@
 * **name**: string: VM or VMSS name
 * **nodeResourceIds**: string[] (ReadOnly): VM/VMSS resource ARM Ids
 * **nodeSku**: string (Required): VM SKU for node(s)
-* **osDisk**: [DiskInfo](#diskinfo) (Required): Disk resource creation details
-* **osImage**: [OsImageProfile](#osimageprofile) (Required): OS image profile
+* **osDisk**: [DiskInfo](#diskinfo) (Required): OS disk details
+* **osImage**: [OsImageProfile](#osimageprofile) (Required): OS image used for creating the nodes
 * **searchType**: 'Elastic' | string (Required): Search type
 
 ## SiteProfile
@@ -604,7 +604,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -653,8 +653,8 @@
 
 ## UserAssignedServiceIdentity
 ### Properties
-* **type**: 'None' | 'UserAssigned' | string (Required): Type of managed service identity (only None, UserAssigned types are allowed).
-* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+* **type**: 'None' | 'UserAssigned' | string (Required): Type of manage identity
+* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): User assigned identities dictionary
 
 ## UserProfile
 ### Properties
@@ -663,8 +663,8 @@
 
 ## VirtualMachineConfiguration
 ### Properties
-* **imageReference**: [ImageReference](#imagereference) (Required): Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations. NOTE: Image reference publisher and offer can only be set when you create the scale set.
-* **osProfile**: [OSProfile](#osprofile) (Required): Specifies the operating system settings for the virtual machine. Some of the settings cannot be changed once VM is provisioned.
+* **imageReference**: [ImageReference](#imagereference) (Required): The image reference.
+* **osProfile**: [OSProfile](#osprofile) (Required): The OS profile.
 * **vmSize**: string (Required): The virtual machine size.
 
 ## VmssNodesProfile
@@ -675,8 +675,8 @@
 * **name**: string: VM or VMSS name
 * **nodeResourceIds**: string[] (ReadOnly): VM/VMSS resource ARM Ids
 * **nodeSku**: string (Required): VM SKU for node(s)
-* **osDisk**: [DiskInfo](#diskinfo) (Required): Disk resource creation details
-* **osImage**: [OsImageProfile](#osimageprofile) (Required): OS image profile
+* **osDisk**: [DiskInfo](#diskinfo) (Required): OS disk details
+* **osImage**: [OsImageProfile](#osimageprofile) (Required): OS image used for creating the nodes
 
 ## WordpressInstanceResourceProperties
 ### Properties

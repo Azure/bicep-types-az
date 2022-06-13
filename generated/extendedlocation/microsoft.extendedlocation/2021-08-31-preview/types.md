@@ -8,8 +8,8 @@
 * **identity**: [Identity](#identity): Identity for the resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CustomLocationProperties](#customlocationproperties): Properties for a custom location.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [CustomLocationProperties](#customlocationproperties): The set of properties specific to a Custom Location
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ExtendedLocation/customLocations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,8 +20,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ResourceSyncRuleProperties](#resourcesyncruleproperties): Properties for a resource sync rule. For an unmapped custom resource, its labels will be used to find out matching resource sync rules using the selector property of the resource sync rule. If this resource sync rule has highest priority among all matching rules, then the unmapped custom resource will be projected to the target resource group associated with this resource sync rule.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ResourceSyncRuleProperties](#resourcesyncruleproperties): The set of properties specific to a Resource Sync Rule
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ExtendedLocation/customLocations/resourceSyncRules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -61,7 +61,7 @@
 
 ## ResourceSyncRulePropertiesSelector
 ### Properties
-* **matchExpressions**: [MatchExpressionsProperties](#matchexpressionsproperties)[]: Resource Sync Rules matchExpression property definition.
+* **matchExpressions**: [MatchExpressionsProperties](#matchexpressionsproperties)[]: MatchExpressions is a list of resource selector requirements. Valid operators include In, NotIn, Exists, and DoesNotExist. The values set must be non-empty in the case of In and NotIn. The values set must be empty in the case of Exists and DoesNotExist.
 * **matchLabels**: [ResourceSyncRulePropertiesSelectorMatchLabels](#resourcesyncrulepropertiesselectormatchlabels): MatchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is 'key', the operator is 'In', and the values array contains only 'value'.
 
 ## ResourceSyncRulePropertiesSelectorMatchLabels
@@ -76,7 +76,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties

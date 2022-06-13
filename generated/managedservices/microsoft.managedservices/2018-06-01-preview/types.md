@@ -35,7 +35,7 @@
 
 ## RegistrationAssignmentProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Current state of the registration definition.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Current state of the registration assignment.
 * **registrationDefinition**: [RegistrationAssignmentPropertiesRegistrationDefinition](#registrationassignmentpropertiesregistrationdefinition) (ReadOnly): Registration definition inside registration assignment.
 * **registrationDefinitionId**: string (Required): Fully qualified path of the registration definition.
 

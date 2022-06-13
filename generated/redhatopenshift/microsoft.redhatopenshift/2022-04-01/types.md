@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [OpenShiftClusterProperties](#openshiftclusterproperties): OpenShiftClusterProperties represents an OpenShift cluster's properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [OpenShiftClusterProperties](#openshiftclusterproperties): The cluster properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.RedHatOpenShift/openShiftClusters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -26,12 +26,12 @@
 ### Properties
 * **ip**: string: The IP of the cluster API server.
 * **url**: string: The URL to access the cluster API server.
-* **visibility**: 'Private' | 'Public' | string: Visibility represents visibility.
+* **visibility**: 'Private' | 'Public' | string: API server visibility.
 
 ## ClusterProfile
 ### Properties
 * **domain**: string: The domain for the cluster.
-* **fipsValidatedModules**: 'Disabled' | 'Enabled' | string: FipsValidatedModules determines if FIPS is used.
+* **fipsValidatedModules**: 'Disabled' | 'Enabled' | string: If FIPS validated crypto modules are used
 * **pullSecret**: string: The pull secret for the cluster.
 * **resourceGroupId**: string: The ID of the cluster resource group.
 * **version**: string: The version of the cluster.
@@ -44,16 +44,14 @@
 ### Properties
 * **ip**: string: The IP of the ingress.
 * **name**: string: The ingress profile name.
-* **visibility**: 'Private' | 'Public' | string: Visibility represents visibility.
+* **visibility**: 'Private' | 'Public' | string: Ingress visibility.
 
 ## MasterProfile
 ### Properties
 * **diskEncryptionSetId**: string: The resource ID of an associated DiskEncryptionSet, if applicable.
-* **encryptionAtHost**: 'Disabled' | 'Enabled' | string: EncryptionAtHost represents encryption at host state
+* **encryptionAtHost**: 'Disabled' | 'Enabled' | string: Whether master virtual machines are encrypted at host.
 * **subnetId**: string: The Azure resource ID of the master subnet.
-* **vmSize**: string: VM size availability varies by region.
-If a node contains insufficient compute resources (memory, cpu, etc.), pods might fail to run correctly.
-For more details on restricted VM sizes, see: https://docs.microsoft.com/en-us/azure/openshift/support-policies-v4#supported-virtual-machine-sizes
+* **vmSize**: string: The size of the master VMs.
 
 ## NetworkProfile
 ### Properties
@@ -71,14 +69,14 @@ For more details on restricted VM sizes, see: https://docs.microsoft.com/en-us/a
 
 ## OpenShiftClusterProperties
 ### Properties
-* **apiserverProfile**: [APIServerProfile](#apiserverprofile): APIServerProfile represents an API server profile.
-* **clusterProfile**: [ClusterProfile](#clusterprofile): ClusterProfile represents a cluster profile.
-* **consoleProfile**: [ConsoleProfile](#consoleprofile): ConsoleProfile represents a console profile.
+* **apiserverProfile**: [APIServerProfile](#apiserverprofile): The cluster API server profile.
+* **clusterProfile**: [ClusterProfile](#clusterprofile): The cluster profile.
+* **consoleProfile**: [ConsoleProfile](#consoleprofile): The console profile.
 * **ingressProfiles**: [IngressProfile](#ingressprofile)[]: The cluster ingress profiles.
-* **masterProfile**: [MasterProfile](#masterprofile): MasterProfile represents a master profile.
-* **networkProfile**: [NetworkProfile](#networkprofile): NetworkProfile represents a network profile.
-* **provisioningState**: 'AdminUpdating' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ProvisioningState represents a provisioning state.
-* **servicePrincipalProfile**: [ServicePrincipalProfile](#serviceprincipalprofile): ServicePrincipalProfile represents a service principal profile.
+* **masterProfile**: [MasterProfile](#masterprofile): The cluster master profile.
+* **networkProfile**: [NetworkProfile](#networkprofile): The cluster network profile.
+* **provisioningState**: 'AdminUpdating' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The cluster provisioning state.
+* **servicePrincipalProfile**: [ServicePrincipalProfile](#serviceprincipalprofile): The cluster service principal profile.
 * **workerProfiles**: [WorkerProfile](#workerprofile)[]: The cluster worker profiles.
 
 ## ServicePrincipalProfile
@@ -93,7 +91,7 @@ For more details on restricted VM sizes, see: https://docs.microsoft.com/en-us/a
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -105,10 +103,8 @@ For more details on restricted VM sizes, see: https://docs.microsoft.com/en-us/a
 * **count**: int: The number of worker VMs.
 * **diskEncryptionSetId**: string: The resource ID of an associated DiskEncryptionSet, if applicable.
 * **diskSizeGB**: int: The disk size of the worker VMs.
-* **encryptionAtHost**: 'Disabled' | 'Enabled' | string: EncryptionAtHost represents encryption at host state
+* **encryptionAtHost**: 'Disabled' | 'Enabled' | string: Whether master virtual machines are encrypted at host.
 * **name**: string: The worker profile name.
 * **subnetId**: string: The Azure resource ID of the worker subnet.
-* **vmSize**: string: VM size availability varies by region.
-If a node contains insufficient compute resources (memory, cpu, etc.), pods might fail to run correctly.
-For more details on restricted VM sizes, see: https://docs.microsoft.com/en-us/azure/openshift/support-policies-v4#supported-virtual-machine-sizes
+* **vmSize**: string: The size of the worker VMs.
 

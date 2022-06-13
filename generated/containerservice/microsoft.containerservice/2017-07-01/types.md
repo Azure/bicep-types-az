@@ -63,12 +63,12 @@
 ### Properties
 * **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[]: Properties of the agent pool.
 * **customProfile**: [ContainerServiceCustomProfile](#containerservicecustomprofile): Properties to configure a custom container service cluster.
-* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile): Profile for diagnostics on the container service cluster.
+* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile): Profile for diagnostics in the container service cluster.
 * **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile) (Required): Profile for Linux VMs in the container service cluster.
 * **masterProfile**: [ContainerServiceMasterProfile](#containerservicemasterprofile) (Required): Profile for the container service master.
 * **orchestratorProfile**: [ContainerServiceOrchestratorProfile](#containerserviceorchestratorprofile) (Required): Profile for the container service orchestrator.
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
-* **servicePrincipalProfile**: [ContainerServicePrincipalProfile](#containerserviceprincipalprofile): Information about a service principal identity for the cluster to use for manipulating Azure APIs. Either secret or keyVaultSecretRef must be specified.
+* **servicePrincipalProfile**: [ContainerServicePrincipalProfile](#containerserviceprincipalprofile): Information about a service principal identity for the cluster to use for manipulating Azure APIs. Exact one of secret or keyVaultSecretRef need to be specified.
 * **windowsProfile**: [ContainerServiceWindowsProfile](#containerservicewindowsprofile): Profile for Windows VMs in the container service cluster.
 
 ## ContainerServiceSshConfiguration

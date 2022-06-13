@@ -17,7 +17,7 @@
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RegisteredServerCreateParametersProperties](#registeredservercreateparametersproperties)
+* **properties**: [RegisteredServerCreateParametersProperties](#registeredservercreateparametersproperties): The parameters used to create the registered server.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/registeredServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups@2018-07-01
@@ -26,7 +26,7 @@
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: any: Any object
+* **properties**: any: The parameters used to create the sync group
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2018-07-01
@@ -35,7 +35,7 @@
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CloudEndpointCreateParametersProperties](#cloudendpointcreateparametersproperties): CloudEndpoint Properties object.
+* **properties**: [CloudEndpointCreateParametersProperties](#cloudendpointcreateparametersproperties): The parameters used to create the cloud endpoint.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints@2018-07-01
@@ -44,7 +44,7 @@
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerEndpointCreateParametersProperties](#serverendpointcreateparametersproperties): ServerEndpoint Properties object.
+* **properties**: [ServerEndpointCreateParametersProperties](#serverendpointcreateparametersproperties): The parameters used to create the server endpoint.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## CloudEndpointCreateParametersProperties
@@ -83,14 +83,14 @@
 
 ## ServerEndpointCreateParametersProperties
 ### Properties
-* **cloudTiering**: 'off' | 'on' | string: Type of the Feature Status
+* **cloudTiering**: 'off' | 'on' | string: Cloud Tiering.
 * **friendlyName**: string: Friendly Name
 * **lastOperationName**: string (ReadOnly): Resource Last Operation Name
 * **lastWorkflowId**: string (ReadOnly): ServerEndpoint lastWorkflowId
 * **provisioningState**: string (ReadOnly): ServerEndpoint Provisioning State
-* **serverLocalPath**: string: Server folder used for data synchronization
-* **serverResourceId**: string: Arm resource identifier.
-* **syncStatus**: any (ReadOnly): Any object
+* **serverLocalPath**: string: Server Local path.
+* **serverResourceId**: string: Server Resource Id.
+* **syncStatus**: any (ReadOnly): Sync Health Status
 * **tierFilesOlderThanDays**: int: Tier files older than days.
 * **volumeFreeSpacePercent**: int: Level of free space to be maintained by Cloud Tiering if it is enabled.
 

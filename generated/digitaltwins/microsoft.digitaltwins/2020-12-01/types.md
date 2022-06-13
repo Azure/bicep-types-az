@@ -8,7 +8,7 @@
 * **identity**: [DigitalTwinsIdentity](#digitaltwinsidentity): The managed identity for the DigitalTwinsInstance.
 * **location**: string (Required): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DigitalTwinsProperties](#digitaltwinsproperties): The properties of a DigitalTwinsInstance.
+* **properties**: [DigitalTwinsProperties](#digitaltwinsproperties): DigitalTwins instance properties.
 * **tags**: [DigitalTwinsResourceTags](#digitaltwinsresourcetags): The resource tags.
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,7 +18,7 @@
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DigitalTwinsEndpointResourceProperties](#digitaltwinsendpointresourceproperties) (Required): Properties related to Digital Twins Endpoint
+* **properties**: [DigitalTwinsEndpointResourceProperties](#digitaltwinsendpointresourceproperties) (Required): DigitalTwinsInstance endpoint resource properties.
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DigitalTwins/digitalTwinsInstances/privateEndpointConnections@2020-12-01
@@ -84,7 +84,7 @@
 * **createdTime**: string (ReadOnly): Time when DigitalTwinsInstance was created.
 * **hostName**: string (ReadOnly): Api endpoint to work with DigitalTwinsInstance.
 * **lastUpdatedTime**: string (ReadOnly): Time when DigitalTwinsInstance was updated.
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: Array of PrivateEndpointConnection
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]
 * **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Updating' | 'Warning' | string (ReadOnly): The provisioning state.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Public network access for the DigitalTwinsInstance.
 

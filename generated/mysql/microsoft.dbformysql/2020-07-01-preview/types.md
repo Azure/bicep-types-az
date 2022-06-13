@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The Azure Active Directory identity of the server.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerProperties](#serverproperties): The properties of a server.
-* **sku**: [Sku](#sku): Billing information related properties of a server.
+* **properties**: [ServerProperties](#serverproperties): Properties of the server.
+* **sku**: [Sku](#sku): The SKU (pricing tier) of the server.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DBForMySql/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -28,7 +28,7 @@
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a server firewall rule.
+* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a firewall rule.
 * **type**: 'Microsoft.DBForMySql/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBForMySql/flexibleServers/keys@2020-07-01-preview
@@ -38,7 +38,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Kind of encryption protector used to protect the key.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerKeyProperties](#serverkeyproperties): Properties for a key execution.
+* **properties**: [ServerKeyProperties](#serverkeyproperties): Properties of the ServerKey Resource.
 * **type**: 'Microsoft.DBForMySql/flexibleServers/keys' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DatabaseProperties
@@ -85,14 +85,14 @@
 * **availabilityZone**: string: availability Zone information of the server.
 * **byokEnforcement**: string (ReadOnly): Status showing whether the data encryption is enabled with customer-managed keys.
 * **createMode**: 'Default' | 'PointInTimeRestore' | 'Replica' | string (WriteOnly): The mode to create a new MySQL server.
-* **delegatedSubnetArguments**: [DelegatedSubnetArguments](#delegatedsubnetarguments): Delegated subnet arguments of a server
+* **delegatedSubnetArguments**: [DelegatedSubnetArguments](#delegatedsubnetarguments): Delegated subnet arguments.
 * **earliestRestoreDate**: string (ReadOnly): Earliest restore point creation time (ISO8601 format)
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
-* **haEnabled**: 'Disabled' | 'Enabled' | string: Whether or not HA is enabled for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+* **haEnabled**: 'Disabled' | 'Enabled' | string: Enable HA or not for a server.
 * **haState**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' | string (ReadOnly): The state of a HA server.
-* **infrastructureEncryption**: 'Disabled' | 'Enabled' | string (WriteOnly): Add a second layer of encryption for your data using new encryption algorithm which gives additional data protection. Value is optional but if passed in, must be 'Disabled' or 'Enabled'.
+* **infrastructureEncryption**: 'Disabled' | 'Enabled' | string (WriteOnly): Status showing whether the server enabled infrastructure encryption.
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window of a server.
-* **privateDnsZoneArguments**: [PrivateDnsZoneArguments](#privatednszonearguments): Private DNS zone arguments of a server
+* **privateDnsZoneArguments**: [PrivateDnsZoneArguments](#privatednszonearguments): private dns zone arguments.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string (ReadOnly): Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
 * **replicaCapacity**: int (ReadOnly): The maximum number of replicas that a primary server can have.
 * **replicationRole**: string: The replication role.
@@ -101,9 +101,9 @@
 * **sslEnforcement**: 'Disabled' | 'Enabled' | string: Enable ssl enforcement or not when connect to server.
 * **standbyAvailabilityZone**: string (ReadOnly): availability Zone information of the server.
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): The state of a server.
-* **storageProfile**: [StorageProfile](#storageprofile): Storage Profile properties of a server
+* **storageProfile**: [StorageProfile](#storageprofile): Storage profile of a server.
 * **tags**: [ServerPropertiesTags](#serverpropertiestags): Application-specific metadata in the form of key-value pairs.
-* **version**: '5.7' | string: The version of a server.
+* **version**: '5.7' | string: Server version.
 
 ## ServerPropertiesTags
 ### Properties

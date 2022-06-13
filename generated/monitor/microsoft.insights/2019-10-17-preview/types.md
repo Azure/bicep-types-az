@@ -17,7 +17,7 @@
 * **apiVersion**: '2019-10-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of a private endpoint connection.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: 'Microsoft.Insights/privateLinkScopes/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Insights/privateLinkScopes/scopedResources@2019-10-17-preview
@@ -26,7 +26,7 @@
 * **apiVersion**: '2019-10-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ScopedResourceProperties](#scopedresourceproperties): Properties of a private link scoped resource.
+* **properties**: [ScopedResourceProperties](#scopedresourceproperties): Resource properties.
 * **type**: 'Microsoft.Insights/privateLinkScopes/scopedResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AzureMonitorPrivateLinkScopeProperties
@@ -38,13 +38,13 @@
 ### Properties
 * **id**: string (ReadOnly): Azure resource Id
 * **name**: string (ReadOnly): Azure resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of a private endpoint connection.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: string (ReadOnly): Azure resource type
 
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty): Private endpoint which the connection belongs to.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty): State of the private endpoint connection.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty): Connection state of the private endpoint connection.
 * **provisioningState**: string (ReadOnly): State of the private endpoint connection.
 
 ## PrivateEndpointProperty

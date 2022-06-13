@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2016-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string: Resource location
 * **managedBy**: string: ID of the resource that manages this resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplianceDefinitionProperties](#appliancedefinitionproperties) (Required): The appliance definition properties.
-* **sku**: [Sku](#sku): SKU for the resource.
+* **sku**: [Sku](#sku): The SKU of the resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Solutions/applianceDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,14 +19,14 @@
 ### Properties
 * **apiVersion**: '2016-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **kind**: string: The kind of the appliance. Allowed values are MarketPlace and ServiceCatalog.
 * **location**: string: Resource location
 * **managedBy**: string: ID of the resource that manages this resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **plan**: [Plan](#plan): Plan for the appliance.
+* **plan**: [Plan](#plan): The plan information.
 * **properties**: [ApplianceProperties](#applianceproperties): The appliance properties.
-* **sku**: [Sku](#sku): SKU for the resource.
+* **sku**: [Sku](#sku): The SKU of the resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Solutions/appliances' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -49,9 +49,9 @@
 ### Properties
 * **applianceDefinitionId**: string: The fully qualified path of appliance definition Id.
 * **managedResourceGroupId**: string (Required): The managed resource group Id.
-* **outputs**: any (ReadOnly): Any object
-* **parameters**: any: Any object
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status of the appliance.
+* **outputs**: any (ReadOnly): Name and value pairs that define the appliance outputs.
+* **parameters**: any: Name and value pairs that define the appliance parameters. It can be a JObject or a well formed JSON string.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): The appliance provisioning state.
 * **uiDefinitionUri**: string: The blob URI where the UI definition file is located.
 
 ## ApplianceProviderAuthorization

@@ -52,16 +52,16 @@
 ### Properties
 * **autoUpgradeMinorVersion**: bool: Flag to note if this instance participates in auto upgrade of minor version, or not.
 * **configurationProtectedSettings**: [ExtensionProtectedSettings](#extensionprotectedsettings): Configuration settings that are sensitive, as name-value pairs for configuring this instance of the extension.
-* **configurationSettings**: [ConfigurationSettings](#configurationsettings): Name-value pairs for configuring the extensionInstance
+* **configurationSettings**: [ConfigurationSettings](#configurationsettings): Configuration settings, as name-value pairs for configuring this instance of the extension.
 * **creationTime**: string (ReadOnly): DateLiteral (per ISO8601) noting the time the resource was created by the client (user).
-* **errorInfo**: [ErrorDefinition](#errordefinition) (ReadOnly): Error definition.
+* **errorInfo**: [ErrorDefinition](#errordefinition) (ReadOnly): Error information from the Agent - e.g. errors during installation.
 * **extensionType**: string: Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.
-* **identity**: [ConfigurationIdentity](#configurationidentity): Identity for the managed cluster.
+* **identity**: [ConfigurationIdentity](#configurationidentity): The identity of the configuration.
 * **installState**: 'Failed' | 'Installed' | 'Pending' | string (ReadOnly): Status of installation of this instance of the extension.
 * **lastModifiedTime**: string (ReadOnly): DateLiteral (per ISO8601) noting the time the resource was modified by the client (user).
 * **lastStatusTime**: string (ReadOnly): DateLiteral (per ISO8601) noting the time of last status from the agent.
 * **releaseTrain**: string: ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.
-* **scope**: [Scope](#scope): Scope of the extensionInstance. It can be either Cluster or Namespace; but not both.
+* **scope**: [Scope](#scope): Scope at which the extension instance is installed.
 * **statuses**: [ExtensionStatus](#extensionstatus)[]: Status from this instance of the extension.
 * **version**: string: Version of the extension for this extension instance, if it is 'pinned' to a specific version. autoUpgradeMinorVersion must be 'false'.
 
@@ -98,7 +98,7 @@
 
 ## SourceControlConfigurationProperties
 ### Properties
-* **complianceStatus**: [ComplianceStatus](#compliancestatus) (ReadOnly): Compliance Status details
+* **complianceStatus**: [ComplianceStatus](#compliancestatus) (ReadOnly): Compliance Status of the Configuration
 * **configurationProtectedSettings**: [ConfigurationProtectedSettings](#configurationprotectedsettings): Name-value pairs of protected configuration settings for the configuration
 * **enableHelmOperator**: bool: Option to enable Helm Operator for this git configuration.
 * **helmOperatorProperties**: [HelmOperatorProperties](#helmoperatorproperties): Properties for Helm operator.

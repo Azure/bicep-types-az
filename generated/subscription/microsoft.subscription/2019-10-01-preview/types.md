@@ -6,7 +6,7 @@
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PutAliasRequestProperties](#putaliasrequestproperties): Put subscription properties.
+* **properties**: [PutAliasRequestProperties](#putaliasrequestproperties): Put alias request properties.
 * **type**: 'Microsoft.Subscription/aliases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## PutAliasRequestProperties

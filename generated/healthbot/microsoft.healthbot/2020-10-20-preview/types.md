@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [HealthBotProperties](#healthbotproperties): The properties of a HealthBot. The Health Bot Service is a cloud platform that empowers developers in Healthcare organizations to build and deploy their compliant, AI-powered virtual health assistants and health bots, that help them improve processes and reduce costs.
-* **sku**: [Sku](#sku): The resource model definition representing SKU
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
+* **properties**: [HealthBotProperties](#healthbotproperties): The set of properties specific to healthcare bot resource.
+* **sku**: [Sku](#sku): SKU of the HealthBot.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HealthBot/healthBots' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -30,10 +30,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC)
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource
 
 ## TrackedResourceTags
 ### Properties

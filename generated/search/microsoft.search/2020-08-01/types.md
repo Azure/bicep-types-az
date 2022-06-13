@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SearchServiceProperties](#searchserviceproperties): Properties of the search service.
-* **sku**: [Sku](#sku): Defines the SKU of an Azure Cognitive Search Service, which determines price tier and capacity limits.
+* **sku**: [Sku](#sku): The SKU of the Search Service, which determines price tier and capacity limits. This property is required when creating a new Search Service.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Search/searchServices' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -28,7 +28,7 @@
 * **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): Describes the properties of an existing Shared Private Link Resource managed by the Azure Cognitive Search service.
+* **properties**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.
 * **type**: 'Microsoft.Search/searchServices/sharedPrivateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listAdminKeys (Microsoft.Search/searchServices@2020-08-01)
@@ -109,7 +109,7 @@
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **name**: string (ReadOnly): The name of the resource
-* **properties**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): Describes the properties of an existing Shared Private Link Resource managed by the Azure Cognitive Search service.
+* **properties**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## SharedPrivateLinkResourceProperties

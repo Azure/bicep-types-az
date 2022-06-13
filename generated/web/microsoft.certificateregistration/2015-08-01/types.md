@@ -70,14 +70,14 @@
 * **distinguishedName**: string: Certificate distinguished name
 * **domainVerificationToken**: string: Domain Verification Token
 * **expirationTime**: string: Certificate expiration time
-* **intermediate**: [CertificateDetails](#certificatedetails): Certificate Details
+* **intermediate**: [CertificateDetails](#certificatedetails): Intermediate certificate
 * **keySize**: int: Certificate Key Size
 * **lastCertificateIssuanceTime**: string: Certificate last issuance time
 * **productType**: 'StandardDomainValidatedSsl' | 'StandardDomainValidatedWildCardSsl': Certificate product type
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded': Status of certificate order
-* **root**: [CertificateDetails](#certificatedetails): Certificate Details
+* **root**: [CertificateDetails](#certificatedetails): Root certificate
 * **serialNumber**: string: Current serial number of the certificate
-* **signedCertificate**: [CertificateDetails](#certificatedetails): Certificate Details
+* **signedCertificate**: [CertificateDetails](#certificatedetails): Signed certificate
 * **status**: 'Canceled' | 'Denied' | 'Expired' | 'Issued' | 'NotSubmitted' | 'PendingRekey' | 'Pendingissuance' | 'Pendingrevocation' | 'Revoked' | 'Unused': Current order status
 * **validityInYears**: int: Duration in years (must be between 1 and 3)
 

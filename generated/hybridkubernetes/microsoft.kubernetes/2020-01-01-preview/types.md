@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ConnectedClusterIdentity](#connectedclusteridentity) (Required): Identity for the connected cluster.
+* **identity**: [ConnectedClusterIdentity](#connectedclusteridentity) (Required): The identity of the connected cluster.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConnectedClusterProperties](#connectedclusterproperties) (Required): Properties of the connected cluster.
+* **properties**: [ConnectedClusterProperties](#connectedclusterproperties) (Required): Describes the connected cluster resource properties.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Kubernetes/connectedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -41,7 +41,7 @@
 
 ## ConnectedClusterProperties
 ### Properties
-* **aadProfile**: [ConnectedClusterAADProfile](#connectedclusteraadprofile) (Required): AAD profile of the connected cluster
+* **aadProfile**: [ConnectedClusterAADProfile](#connectedclusteraadprofile) (Required): AAD profile of the connected cluster.
 * **agentPublicKeyCertificate**: string (Required): Base64 encoded public certificate used by the agent to do the initial handshake to the backend services in Azure.
 * **agentVersion**: string (ReadOnly): Version of the agent running on the connected cluster resource
 * **connectivityStatus**: 'Connected' | 'Connecting' | 'Expired' | 'Offline' | string: Represents the connectivity status of the connected cluster.
@@ -51,7 +51,7 @@
 * **lastConnectivityTime**: string (ReadOnly): Time representing the last instance when heart beat was received from the cluster
 * **managedIdentityCertificateExpirationTime**: string (ReadOnly): Expiration time of the managed identity certificate
 * **offering**: string (ReadOnly): Connected cluster offering
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string: The current deployment state of connectedClusters.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string: Provisioning state of the connected cluster resource.
 * **totalCoreCount**: int (ReadOnly): Number of CPU cores present in the connected cluster resource
 * **totalNodeCount**: int (ReadOnly): Number of nodes present in the connected cluster resource
 

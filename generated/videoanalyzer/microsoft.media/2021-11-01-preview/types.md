@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [VideoAnalyzerIdentity](#videoanalyzeridentity): The managed identity for the Video Analyzer resource.
+* **identity**: [VideoAnalyzerIdentity](#videoanalyzeridentity): The identities associated to the Video Analyzer resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VideoAnalyzerProperties](#videoanalyzerproperties): The properties of the Video Analyzer account.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [VideoAnalyzerProperties](#videoanalyzerproperties): The resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Media/videoAnalyzers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,8 +19,8 @@
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AccessPolicyProperties](#accesspolicyproperties): Application level properties for the access policy resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [AccessPolicyProperties](#accesspolicyproperties): The resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Media/videoAnalyzers/accessPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Media/videoAnalyzers/edgeModules@2021-11-01-preview
@@ -29,8 +29,8 @@
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EdgeModuleProperties](#edgemoduleproperties): Application level properties for the edge module resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [EdgeModuleProperties](#edgemoduleproperties): The resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Media/videoAnalyzers/edgeModules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Media/videoAnalyzers/livePipelines@2021-11-01-preview
@@ -39,8 +39,8 @@
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [LivePipelineProperties](#livepipelineproperties): Live pipeline properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [LivePipelineProperties](#livepipelineproperties): The resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Media/videoAnalyzers/livePipelines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Media/videoAnalyzers/pipelineJobs@2021-11-01-preview
@@ -49,8 +49,8 @@
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PipelineJobProperties](#pipelinejobproperties): Pipeline job properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [PipelineJobProperties](#pipelinejobproperties): The resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Media/videoAnalyzers/pipelineJobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Media/videoAnalyzers/pipelineTopologies@2021-11-01-preview
@@ -60,9 +60,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'Batch' | 'Live' | string (Required): Topology kind.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PipelineTopologyProperties](#pipelinetopologyproperties): Describes the properties of a pipeline topology.
-* **sku**: [Sku](#sku) (Required): The SKU details.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [PipelineTopologyProperties](#pipelinetopologyproperties): The resource properties.
+* **sku**: [Sku](#sku) (Required): Describes the properties of a SKU.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Media/videoAnalyzers/pipelineTopologies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Media/videoAnalyzers/privateEndpointConnections@2021-11-01-preview
@@ -71,8 +71,8 @@
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Media/videoAnalyzers/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Media/videoAnalyzers/videos@2021-11-01-preview
@@ -81,8 +81,8 @@
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VideoProperties](#videoproperties): Application level properties for the video resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [VideoProperties](#videoproperties): The resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Media/videoAnalyzers/videos' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listContentToken (Microsoft.Media/videoAnalyzers/videos@2021-11-01-preview)
@@ -98,13 +98,13 @@
 
 ## AccessPolicyProperties
 ### Properties
-* **authentication**: [AuthenticationBase](#authenticationbase): Base class for access policies authentication methods.
+* **authentication**: [AuthenticationBase](#authenticationbase): Authentication method to be used when validating client API access.
 * **role**: 'Reader' | string: Defines the access level granted by this policy.
 
 ## AccountEncryption
 ### Properties
-* **identity**: [ResourceIdentity](#resourceidentity): The user assigned managed identity to use when accessing a resource.
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): The details for accessing the encryption keys in Key Vault.
+* **identity**: [ResourceIdentity](#resourceidentity): The Key Vault identity.
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): The properties of the key used to encrypt the account.
 * **status**: string (ReadOnly): The current status of the Key Vault mapping.
 * **type**: 'CustomerKey' | 'SystemKey' | string (Required): The type of key used to encrypt the Account Key.
 
@@ -168,8 +168,8 @@
 ### EncoderCustomPreset
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.EncoderCustomPreset' (Required): The discriminator for derived types.
-* **audioEncoder**: [AudioEncoderBase](#audioencoderbase): Base type for all audio encoder presets, which define the recipe or instructions on how audio should be processed.
-* **videoEncoder**: [VideoEncoderBase](#videoencoderbase): Base type for all video encoding presets, which define the recipe or instructions on how the input video should be processed.
+* **audioEncoder**: [AudioEncoderBase](#audioencoderbase): Describes a custom preset for encoding audio.
+* **videoEncoder**: [VideoEncoderBase](#videoencoderbase): Describes a custom preset for encoding video.
 
 ### EncoderSystemPreset
 #### Properties
@@ -186,14 +186,14 @@
 * **Discriminator**: @type
 
 ### Base Properties
-* **credentials**: [CredentialsBase](#credentialsbase) (Required): Base class for credential objects.
-* **tunnel**: [TunnelBase](#tunnelbase): Base class for tunnel objects.
+* **credentials**: [CredentialsBase](#credentialsbase) (Required): Credentials to be presented to the endpoint.
+* **tunnel**: [TunnelBase](#tunnelbase): Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
 * **url**: string (Required): The endpoint URL for Video Analyzer to connect to.
 ### TlsEndpoint
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.TlsEndpoint' (Required): The discriminator for derived types.
-* **trustedCertificates**: [CertificateSource](#certificatesource): Base class for certificate sources.
-* **validationOptions**: [TlsValidationOptions](#tlsvalidationoptions): Options for controlling the validation of TLS endpoints.
+* **trustedCertificates**: [CertificateSource](#certificatesource): List of trusted certificate authorities when authenticating a TLS connection. A null list designates that Azure Video Analyzer's list of trusted authorities should be used.
+* **validationOptions**: [TlsValidationOptions](#tlsvalidationoptions): Validation options to use when authenticating a TLS connection. By default, strict validation is used.
 
 ### UnsecuredEndpoint
 #### Properties
@@ -202,12 +202,12 @@
 
 ## GroupLevelAccessControl
 ### Properties
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public network access is allowed for resources under the Video Analyzer account.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public network access is allowed for specified resources under the Video Analyzer account.
 
 ## IotHub
 ### Properties
 * **id**: string (Required): The IoT Hub resource identifier.
-* **identity**: [ResourceIdentity](#resourceidentity) (Required): The user assigned managed identity to use when accessing a resource.
+* **identity**: [ResourceIdentity](#resourceidentity) (Required): The IoT Hub identity.
 * **status**: string (ReadOnly): The current status of the Iot Hub mapping.
 
 ## KeyVaultProperties
@@ -229,9 +229,9 @@
 
 ## NetworkAccessControl
 ### Properties
-* **consumption**: [GroupLevelAccessControl](#grouplevelaccesscontrol): Group level network access control.
-* **ingestion**: [GroupLevelAccessControl](#grouplevelaccesscontrol): Group level network access control.
-* **integration**: [GroupLevelAccessControl](#grouplevelaccesscontrol): Group level network access control.
+* **consumption**: [GroupLevelAccessControl](#grouplevelaccesscontrol): Public network access for consumption group.
+* **ingestion**: [GroupLevelAccessControl](#grouplevelaccesscontrol): Public network access for ingestion group.
+* **integration**: [GroupLevelAccessControl](#grouplevelaccesscontrol): Public network access for integration group.
 
 ## NodeInput
 ### Properties
@@ -257,7 +257,7 @@
 ## PipelineJobProperties
 ### Properties
 * **description**: string: An optional description for the pipeline.
-* **error**: [PipelineJobError](#pipelinejoberror) (ReadOnly): Details about the error for a failed pipeline job.
+* **error**: [PipelineJobError](#pipelinejoberror) (ReadOnly): Details about the error, in case the pipeline job fails.
 * **expiration**: string (ReadOnly): The date-time by when this pipeline job will be automatically deleted from your account.
 * **parameters**: [ParameterDefinition](#parameterdefinition)[]: List of the instance level parameter values for the user-defined topology parameters. A pipeline can only define or override parameters values for parameters which have been declared in the referenced topology. Topology parameters without a default value must be defined. Topology parameters with a default value can be optionally be overridden.
 * **state**: 'Canceled' | 'Completed' | 'Failed' | 'Processing' | string (ReadOnly): Current state of the pipeline (read-only).
@@ -279,21 +279,21 @@
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **name**: string (ReadOnly): The name of the resource
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The resource of private end point.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the private endpoint connection resource.
 
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## ProcessorNodeBase
 * **Discriminator**: @type
@@ -304,7 +304,7 @@
 ### EncoderProcessor
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.EncoderProcessor' (Required): The discriminator for derived types.
-* **preset**: [EncoderPresetBase](#encoderpresetbase) (Required): Base type for all encoder presets, which define the recipe or instructions on how the input content should be processed.
+* **preset**: [EncoderPresetBase](#encoderpresetbase) (Required): The encoder preset, which defines the recipe or instructions on how the input content should be processed.
 
 
 ## ResourceIdentity
@@ -320,9 +320,9 @@
 ### VideoSink
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.VideoSink' (Required): The discriminator for derived types.
-* **videoCreationProperties**: [VideoCreationProperties](#videocreationproperties): Optional properties to be used in case a new video resource needs to be created on the service. These will not take effect if the video already exists.
+* **videoCreationProperties**: [VideoCreationProperties](#videocreationproperties): Optional video properties to be used in case a new video resource needs to be created on the service.
 * **videoName**: string (Required): Name of a new or existing video resource used to capture and publish content. Note: if downstream of RTSP source, and if disableArchive is set to true, then no content is archived.
-* **videoPublishingOptions**: [VideoPublishingOptions](#videopublishingoptions): Optional flags used to change how video is published. These are only allowed for topologies where "kind" is set to "live".
+* **videoPublishingOptions**: [VideoPublishingOptions](#videopublishingoptions): Options to change how the video sink publishes content via the video resource. This property is only allowed for topologies where "kind" is set to "live".
 
 
 ## Sku
@@ -338,20 +338,20 @@
 ### RtspSource
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.RtspSource' (Required): The discriminator for derived types.
-* **endpoint**: [EndpointBase](#endpointbase) (Required): Base class for endpoints.
+* **endpoint**: [EndpointBase](#endpointbase) (Required): RTSP endpoint information for Video Analyzer to connect to. This contains the required information for Video Analyzer to connect to RTSP cameras and/or generic RTSP servers.
 * **transport**: 'Http' | 'Tcp' | string: Network transport utilized by the RTSP and RTP exchange: TCP or HTTP. When using TCP, the RTP packets are interleaved on the TCP RTSP connection. When using HTTP, the RTSP messages are exchanged through long lived HTTP connections, and the RTP packages are interleaved in the HTTP connections alongside the RTSP messages.
 
 ### VideoSource
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.VideoSource' (Required): The discriminator for derived types.
-* **timeSequences**: [TimeSequenceBase](#timesequencebase) (Required): A sequence of datetime ranges as a string.
+* **timeSequences**: [TimeSequenceBase](#timesequencebase) (Required): Describes a sequence of datetime ranges. The video source only picks up recorded media within these ranges.
 * **videoName**: string (Required): Name of the Video Analyzer video resource to be used as the source.
 
 
 ## StorageAccount
 ### Properties
 * **id**: string (Required): The ID of the storage account resource. Video Analyzer relies on tables, queues, and blobs. The primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage).
-* **identity**: [ResourceIdentity](#resourceidentity): The user assigned managed identity to use when accessing a resource.
+* **identity**: [ResourceIdentity](#resourceidentity): A managed identity that Video Analyzer will use to access the storage account.
 * **status**: string (ReadOnly): The current status of the storage account mapping.
 
 ## SystemData
@@ -361,7 +361,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TimeSequenceBase
 * **Discriminator**: @type
@@ -436,10 +436,10 @@
 
 ## VideoAnalyzerProperties
 ### Properties
-* **encryption**: [AccountEncryption](#accountencryption): Defines how the Video Analyzer account is (optionally) encrypted.
+* **encryption**: [AccountEncryption](#accountencryption): The account encryption properties.
 * **endpoints**: [Endpoint](#endpoint)[] (ReadOnly): The endpoints associated with this resource.
 * **iotHubs**: [IotHub](#iothub)[]: The IoT Hubs for this resource.
-* **networkAccessControl**: [NetworkAccessControl](#networkaccesscontrol): Network access control for video analyzer account.
+* **networkAccessControl**: [NetworkAccessControl](#networkaccesscontrol): Network access control for Video Analyzer.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Private Endpoint Connections created under Video Analyzer account.
 * **provisioningState**: 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the Video Analyzer account.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public network access is allowed for resources under the Video Analyzer account.
@@ -480,7 +480,7 @@
 ### Base Properties
 * **bitrateKbps**: string: The maximum bitrate, in kilobits per second or Kbps, at which video should be encoded. If omitted, encoder sets it automatically to try and match the quality of the input video.
 * **frameRate**: string: The frame rate (in frames per second) of the encoded video. The value must be greater than zero, and less than or equal to 300. If omitted, the encoder uses the average frame rate of the input video.
-* **scale**: [VideoScale](#videoscale): The video scaling information.
+* **scale**: [VideoScale](#videoscale): Describes the resolution of the encoded video. If omitted, the encoder uses the resolution of the input video.
 ### VideoEncoderH264
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.VideoEncoderH264' (Required): The discriminator for derived types.

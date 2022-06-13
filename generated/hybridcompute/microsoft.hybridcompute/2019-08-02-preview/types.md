@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2019-08-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Managed Identity.
+* **identity**: [Identity](#identity): Hybrid Compute Machine Managed Identity
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MachineProperties](#machineproperties): Describes the properties of a hybrid machine.
+* **properties**: [MachineProperties](#machineproperties): Hybrid Compute Machine properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.HybridCompute/machines' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -17,10 +17,10 @@
 ### Properties
 * **apiVersion**: '2019-08-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Managed Identity.
+* **identity**: [Identity](#identity): Hybrid Compute Machine Managed Identity
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MachineExtensionProperties](#machineextensionproperties): Describes the properties of a Machine Extension.
+* **properties**: [MachineExtensionProperties](#machineextensionproperties): Describes Machine Extension Properties.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -56,11 +56,11 @@
 ### Properties
 * **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
 * **forceUpdateTag**: string: How the extension handler should be forced to update even if the extension configuration has not changed.
-* **instanceView**: [MachineExtensionInstanceView](#machineextensioninstanceview): Describes the Machine Extension Instance View.
-* **protectedSettings**: any: Any object
+* **instanceView**: [MachineExtensionInstanceView](#machineextensioninstanceview): The machine extension instance view.
+* **protectedSettings**: any: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
 * **publisher**: string: The name of the extension handler publisher.
-* **settings**: any: Any object
+* **settings**: any: Json formatted public settings for the extension.
 * **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
 * **typeHandlerVersion**: string: Specifies the version of the script handler.
 

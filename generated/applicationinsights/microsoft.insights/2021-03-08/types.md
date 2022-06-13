@@ -6,11 +6,11 @@
 * **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: [MyWorkbookResourceEtag](#myworkbookresourceetag): Resource etag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [MyWorkbookManagedIdentity](#myworkbookmanagedidentity): Customer Managed Identity
+* **identity**: [MyWorkbookManagedIdentity](#myworkbookmanagedidentity): Identity used for BYOS
 * **kind**: 'shared' | 'user' | string: The kind of workbook. Choices are user and shared.
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MyWorkbookProperties](#myworkbookproperties): Properties that contain a private workbook.
+* **properties**: [MyWorkbookProperties](#myworkbookproperties): Metadata describing a workbook for an Azure resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [MyWorkbookResourceTags](#myworkbookresourcetags): Resource tags
 * **type**: 'Microsoft.Insights/myWorkbooks' (ReadOnly, DeployTimeConstant): The resource type
@@ -21,11 +21,11 @@
 * **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: [ResourceEtag](#resourceetag): Resource etag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [WorkbookManagedIdentity](#workbookmanagedidentity): Customer Managed Identity
+* **identity**: [WorkbookManagedIdentity](#workbookmanagedidentity): Identity used for BYOS
 * **kind**: 'shared' | 'user' | string: The kind of workbook. Choices are user and shared.
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkbookProperties](#workbookproperties): Properties that contain a workbook.
+* **properties**: [WorkbookProperties](#workbookproperties): Metadata describing a workbook for an Azure resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Insights/workbooks' (ReadOnly, DeployTimeConstant): The resource type
@@ -79,7 +79,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## WorkbookManagedIdentity
 ### Properties

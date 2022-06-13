@@ -15,7 +15,7 @@
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AutoProvisioningSettingProperties](#autoprovisioningsettingproperties): describes properties of an auto provisioning setting
+* **properties**: [AutoProvisioningSettingProperties](#autoprovisioningsettingproperties): Auto provisioning setting data
 * **type**: 'Microsoft.Security/autoProvisioningSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/deviceSecurityGroups@2017-08-01-preview
@@ -24,7 +24,7 @@
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DeviceSecurityGroupProperties](#devicesecuritygroupproperties): describes properties of a security group.
+* **properties**: [DeviceSecurityGroupProperties](#devicesecuritygroupproperties): Device Security group data
 * **type**: 'Microsoft.Security/deviceSecurityGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/informationProtectionPolicies@2017-08-01-preview
@@ -33,7 +33,7 @@
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'custom' | 'effective' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [InformationProtectionPolicyProperties](#informationprotectionpolicyproperties): describes properties of an information protection policy.
+* **properties**: [InformationProtectionPolicyProperties](#informationprotectionpolicyproperties): Information protection policy data
 * **type**: 'Microsoft.Security/informationProtectionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/iotSecuritySolutions@2017-08-01-preview
@@ -43,7 +43,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IoTSecuritySolutionProperties](#iotsecuritysolutionproperties): Security Solution setting data
+* **properties**: [IoTSecuritySolutionProperties](#iotsecuritysolutionproperties): Security Solution data
 * **tags**: [TagsResourceTags](#tagsresourcetags): Resource tags
 * **type**: 'Microsoft.Security/iotSecuritySolutions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -62,7 +62,7 @@
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SecurityContactProperties](#securitycontactproperties): describes security contact properties
+* **properties**: [SecurityContactProperties](#securitycontactproperties): Security contact data
 * **type**: 'Microsoft.Security/securityContacts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/settings@2017-08-01-preview
@@ -77,7 +77,7 @@
 ### DataExportSetting
 #### Properties
 * **kind**: 'DataExportSetting' (Required): the kind of the settings string (DataExportSetting)
-* **properties**: [DataExportSettingProperties](#dataexportsettingproperties): The data export setting properties
+* **properties**: [DataExportSettingProperties](#dataexportsettingproperties): Data export setting data
 
 
 ## Resource Microsoft.Security/workspaceSettings@2017-08-01-preview

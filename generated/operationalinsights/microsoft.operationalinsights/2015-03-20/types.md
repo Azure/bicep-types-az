@@ -7,7 +7,7 @@
 * **eTag**: string: The ETag of the saved search.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SavedSearchProperties](#savedsearchproperties) (Required): Value object for saved search results.
+* **properties**: [SavedSearchProperties](#savedsearchproperties) (Required): The properties of the saved search.
 * **type**: 'Microsoft.OperationalInsights/workspaces/savedSearches' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationalInsights/workspaces/storageInsightConfigs@2015-03-20
@@ -52,8 +52,8 @@
 ## StorageInsightProperties
 ### Properties
 * **containers**: string[]: The names of the blob containers that the workspace should read
-* **status**: [StorageInsightStatus](#storageinsightstatus) (ReadOnly): The status of the storage insight.
-* **storageAccount**: [StorageAccount](#storageaccount) (Required): Describes a storage account connection.
+* **status**: [StorageInsightStatus](#storageinsightstatus) (ReadOnly): The status of the storage insight
+* **storageAccount**: [StorageAccount](#storageaccount) (Required): The storage account connection details
 * **tables**: string[]: The names of the Azure tables that the workspace should read
 
 ## StorageInsightStatus

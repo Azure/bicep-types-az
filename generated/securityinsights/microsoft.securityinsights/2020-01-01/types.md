@@ -13,17 +13,17 @@
 ### FusionAlertRule
 #### Properties
 * **kind**: 'Fusion' (Required): The alert rule kind
-* **properties**: [FusionAlertRuleProperties](#fusionalertruleproperties): Fusion alert rule base property bag.
+* **properties**: [FusionAlertRuleProperties](#fusionalertruleproperties): Fusion alert rule properties
 
 ### MicrosoftSecurityIncidentCreationAlertRule
 #### Properties
 * **kind**: 'MicrosoftSecurityIncidentCreation' (Required): The alert rule kind
-* **properties**: [MicrosoftSecurityIncidentCreationAlertRuleProperties](#microsoftsecurityincidentcreationalertruleproperties): MicrosoftSecurityIncidentCreation rule property bag.
+* **properties**: [MicrosoftSecurityIncidentCreationAlertRuleProperties](#microsoftsecurityincidentcreationalertruleproperties): MicrosoftSecurityIncidentCreation rule properties
 
 ### ScheduledAlertRule
 #### Properties
 * **kind**: 'Scheduled' (Required): The alert rule kind
-* **properties**: [ScheduledAlertRuleProperties](#scheduledalertruleproperties): Scheduled alert rule base property bag.
+* **properties**: [ScheduledAlertRuleProperties](#scheduledalertruleproperties): Scheduled alert rule properties
 
 
 ## Resource Microsoft.SecurityInsights/alertRules/actions@2020-01-01
@@ -33,7 +33,7 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ActionRequestProperties](#actionrequestproperties): Action property bag.
+* **properties**: [ActionRequestProperties](#actionrequestproperties): Action properties for put request
 * **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/bookmarks@2020-01-01
@@ -43,7 +43,7 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BookmarkProperties](#bookmarkproperties): Describes bookmark properties
+* **properties**: [BookmarkProperties](#bookmarkproperties): Bookmark properties
 * **type**: 'Microsoft.SecurityInsights/bookmarks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/dataConnectors@2020-01-01
@@ -104,7 +104,7 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IncidentProperties](#incidentproperties): Describes incident properties
+* **properties**: [IncidentProperties](#incidentproperties): Incident properties
 * **type**: 'Microsoft.SecurityInsights/incidents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/incidents/comments@2020-01-01
@@ -113,17 +113,17 @@
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IncidentCommentProperties](#incidentcommentproperties): Incident comment property bag.
+* **properties**: [IncidentCommentProperties](#incidentcommentproperties): Incident comment properties
 * **type**: 'Microsoft.SecurityInsights/incidents/comments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AADDataConnectorProperties
 ### Properties
-* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
+* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): The available data types for the connector.
 * **tenantId**: string: The tenant id to connect to, and get the data from.
 
 ## AatpDataConnectorProperties
 ### Properties
-* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
+* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): The available data types for the connector.
 * **tenantId**: string: The tenant id to connect to, and get the data from.
 
 ## ActionRequestProperties
@@ -134,11 +134,11 @@
 
 ## AlertsDataTypeOfDataConnector
 ### Properties
-* **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Common field for data type in data connectors.
+* **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Alerts data type connection.
 
 ## ASCDataConnectorProperties
 ### Properties
-* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
+* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): The available data types for the connector.
 * **subscriptionId**: string: The subscription id to connect to, and get the data from.
 
 ## AwsCloudTrailDataConnectorDataTypes
@@ -152,15 +152,15 @@
 ## AwsCloudTrailDataConnectorProperties
 ### Properties
 * **awsRoleArn**: string: The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
-* **dataTypes**: [AwsCloudTrailDataConnectorDataTypes](#awscloudtraildataconnectordatatypes): The available data types for Amazon Web Services CloudTrail data connector.
+* **dataTypes**: [AwsCloudTrailDataConnectorDataTypes](#awscloudtraildataconnectordatatypes): The available data types for the connector.
 
 ## BookmarkProperties
 ### Properties
 * **created**: string: The time the bookmark was created
-* **createdBy**: [UserInfo](#userinfo): User information that made some action
+* **createdBy**: [UserInfo](#userinfo): Describes a user that created the bookmark
 * **displayName**: string (Required): The display name of the bookmark
 * **eventTime**: string: The bookmark event time
-* **incidentInfo**: [IncidentInfo](#incidentinfo): Describes related incident information for the bookmark
+* **incidentInfo**: [IncidentInfo](#incidentinfo): Describes an incident that relates to bookmark
 * **labels**: string[]: List of labels relevant to this bookmark
 * **notes**: string: The notes of the bookmark
 * **query**: string (Required): The query of the bookmark.
@@ -168,7 +168,7 @@
 * **queryResult**: string: The query result of the bookmark.
 * **queryStartTime**: string: The start time for the query
 * **updated**: string: The last time the bookmark was updated
-* **updatedBy**: [UserInfo](#userinfo): User information that made some action
+* **updatedBy**: [UserInfo](#userinfo): Describes a user that updated the bookmark
 
 ## ClientInfo
 ### Properties
@@ -188,7 +188,7 @@
 * **displayName**: string (ReadOnly): The display name for alerts created by this alert rule.
 * **enabled**: bool (Required): Determines whether this alert rule is enabled or disabled.
 * **lastModifiedUtc**: string (ReadOnly): The last time that this alert has been modified.
-* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (ReadOnly): The severity of the alert
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (ReadOnly): The severity for alerts created by this alert rule.
 * **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PrivilegeEscalation' | string[] (ReadOnly): The tactics of the alert rule
 
 ## IncidentAdditionalData
@@ -201,7 +201,7 @@
 
 ## IncidentCommentProperties
 ### Properties
-* **author**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
+* **author**: [ClientInfo](#clientinfo) (ReadOnly): Describes the client that created the comment
 * **createdTimeUtc**: string (ReadOnly): The time the comment was created
 * **message**: string (Required): The comment message
 
@@ -226,7 +226,7 @@
 
 ## IncidentProperties
 ### Properties
-* **additionalData**: [IncidentAdditionalData](#incidentadditionaldata) (ReadOnly): Incident additional data property bag.
+* **additionalData**: [IncidentAdditionalData](#incidentadditionaldata) (ReadOnly): Additional data on the incident
 * **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined' | string: The reason the incident was closed
 * **classificationComment**: string: Describes the reason the incident was closed
 * **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected' | string: The classification reason the incident was closed with
@@ -238,7 +238,7 @@
 * **labels**: [IncidentLabel](#incidentlabel)[]: List of labels relevant to this incident
 * **lastActivityTimeUtc**: string: The time of the last activity in the incident
 * **lastModifiedTimeUtc**: string (ReadOnly): The last time the incident was updated
-* **owner**: [IncidentOwnerInfo](#incidentownerinfo): Information on the user an incident is assigned to
+* **owner**: [IncidentOwnerInfo](#incidentownerinfo): Describes a user that the incident is assigned to
 * **relatedAnalyticRuleIds**: string[] (ReadOnly): List of resource ids of Analytic rules related to the incident
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (Required): The severity of the incident
 * **status**: 'Active' | 'Closed' | 'New' | string (Required): The status of the incident
@@ -246,17 +246,17 @@
 
 ## McasDataConnectorDataTypes
 ### Properties
-* **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Common field for data type in data connectors.
-* **discoveryLogs**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Common field for data type in data connectors.
+* **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Alerts data type connection.
+* **discoveryLogs**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Discovery log data type connection.
 
 ## McasDataConnectorProperties
 ### Properties
-* **dataTypes**: [McasDataConnectorDataTypes](#mcasdataconnectordatatypes): The available data types for MCAS (Microsoft Cloud App Security) data connector.
+* **dataTypes**: [McasDataConnectorDataTypes](#mcasdataconnectordatatypes): The available data types for the connector.
 * **tenantId**: string: The tenant id to connect to, and get the data from.
 
 ## MdatpDataConnectorProperties
 ### Properties
-* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
+* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): The available data types for the connector.
 * **tenantId**: string: The tenant id to connect to, and get the data from.
 
 ## MicrosoftSecurityIncidentCreationAlertRuleProperties
@@ -291,7 +291,7 @@
 
 ## OfficeDataConnectorProperties
 ### Properties
-* **dataTypes**: [OfficeDataConnectorDataTypes](#officedataconnectordatatypes): The available data types for office data connector.
+* **dataTypes**: [OfficeDataConnectorDataTypes](#officedataconnectordatatypes): The available data types for the connector.
 * **tenantId**: string: The tenant id to connect to, and get the data from.
 
 ## ScheduledAlertRuleProperties
@@ -304,7 +304,7 @@
 * **query**: string: The query that creates alerts for this rule.
 * **queryFrequency**: string: The frequency (in ISO 8601 duration format) for this alert rule to run.
 * **queryPeriod**: string: The period (in ISO 8601 duration format) that this alert rule looks at.
-* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string: The severity of the alert
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string: The severity for alerts created by this alert rule.
 * **suppressionDuration**: string (Required): The suppression (in ISO 8601 duration format) to wait since last time this alert rule been triggered.
 * **suppressionEnabled**: bool (Required): Determines whether the suppression for this alert rule is enabled or disabled.
 * **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PrivilegeEscalation' | string[]: The tactics of the alert rule
@@ -321,7 +321,7 @@
 
 ## TIDataConnectorProperties
 ### Properties
-* **dataTypes**: [TIDataConnectorDataTypes](#tidataconnectordatatypes): The available data types for TI (Threat Intelligence) data connector.
+* **dataTypes**: [TIDataConnectorDataTypes](#tidataconnectordatatypes): The available data types for the connector.
 * **tenantId**: string: The tenant id to connect to, and get the data from.
 * **tipLookbackPeriod**: string: The lookback period for the feed to be imported.
 

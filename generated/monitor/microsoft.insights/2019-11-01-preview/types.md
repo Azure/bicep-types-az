@@ -69,7 +69,7 @@ This name should be unique across all destinations (regardless of type) within t
 ## ExtensionDataSource
 ### Properties
 * **extensionName**: string (Required): The name of the VM extension.
-* **extensionSettings**: any: Any object
+* **extensionSettings**: any: The extension settings. The format is specific for particular extension.
 * **inputDataSources**: string[]: The list of data sources this extension needs data from.
 * **name**: string: A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.

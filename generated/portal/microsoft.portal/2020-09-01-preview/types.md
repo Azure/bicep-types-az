@@ -48,7 +48,7 @@
 
 ## DashboardParts
 ### Properties
-* **metadata**: [DashboardPartMetadata](#dashboardpartmetadata): A dashboard part metadata.
+* **metadata**: [DashboardPartMetadata](#dashboardpartmetadata): The dashboard part's metadata.
 * **position**: [DashboardPartsPosition](#dashboardpartsposition) (Required): The dashboard's part position.
 
 ## DashboardPartsPosition

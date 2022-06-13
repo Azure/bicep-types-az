@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2017-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Describes how identity is verified
+* **identity**: [Identity](#identity): Describes the system-assigned managed identity assigned to this job that can be used to authenticate with inputs and outputs.
 * **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [StreamingJobProperties](#streamingjobproperties): The properties that are associated with a streaming job.
+* **properties**: [StreamingJobProperties](#streamingjobproperties): The properties that are associated with a streaming job.  Required on PUT (CreateOrReplace) requests.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.StreamAnalytics/streamingjobs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -27,7 +27,7 @@
 * **apiVersion**: '2017-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [InputProperties](#inputproperties): The properties that are associated with an input.
+* **properties**: [InputProperties](#inputproperties): The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.StreamAnalytics/streamingjobs/inputs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StreamAnalytics/streamingjobs/outputs@2017-04-01-preview
@@ -36,7 +36,7 @@
 * **apiVersion**: '2017-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [OutputProperties](#outputproperties): The properties that are associated with an output.
+* **properties**: [OutputProperties](#outputproperties): The properties that are associated with an output. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.StreamAnalytics/streamingjobs/outputs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StreamAnalytics/streamingjobs/transformations@2017-04-01-preview
@@ -45,13 +45,13 @@
 * **apiVersion**: '2017-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TransformationProperties](#transformationproperties): The properties that are associated with a transformation.
+* **properties**: [TransformationProperties](#transformationproperties): The properties that are associated with a transformation. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.StreamAnalytics/streamingjobs/transformations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AzureDataLakeStoreOutputDataSourceProperties
 ### Properties
 * **accountName**: string: The name of the Azure Data Lake Store account. Required on PUT (CreateOrReplace) requests.
-* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode.
 * **dateFormat**: string: The date format. Wherever {date} appears in filePathPrefix, the value of this property is used as the date format instead.
 * **filePathPrefix**: string: The location of the file to which the output should be written to. Required on PUT (CreateOrReplace) requests.
 * **refreshToken**: string: A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
@@ -115,7 +115,7 @@
 
 ## AzureSqlDatabaseOutputDataSourceProperties
 ### Properties
-* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode.
 * **database**: string: The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.
 * **maxBatchCount**: int: Max Batch count for write to Sql database, the default value is 10,000. Optional on PUT requests.
 * **maxWriterCount**: int: Max Write r count, currently only 1(single writer) and 0(based on query partition) are available. Optional on PUT requests.
@@ -156,7 +156,7 @@
 
 ## BlobOutputDataSourceProperties
 ### Properties
-* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode.
 * **container**: string: The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.
 * **dateFormat**: string: The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.
 * **pathPattern**: string: The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.
@@ -165,7 +165,7 @@
 
 ## BlobReferenceInputDataSourceProperties
 ### Properties
-* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode.
 * **container**: string: The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.
 * **dateFormat**: string: The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.
 * **pathPattern**: string: The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.
@@ -174,7 +174,7 @@
 
 ## BlobStreamInputDataSourceProperties
 ### Properties
-* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode.
 * **container**: string: The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.
 * **dateFormat**: string: The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.
 * **pathPattern**: string: The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.
@@ -199,7 +199,7 @@
 
 ## CsvSerializationProperties
 ### Properties
-* **encoding**: 'UTF8' | string: Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output.
+* **encoding**: 'UTF8' | string: Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.
 * **fieldDelimiter**: string: Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.
 
 ## CustomClrSerializationProperties
@@ -228,17 +228,17 @@
 
 ## EventHubOutputDataSourceProperties
 ### Properties
-* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode.
 * **eventHubName**: string: The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
 * **partitionKey**: string: The key/column that is used to determine to which partition to send event data.
-* **propertyColumns**: string[]: Array of EventHubOutputDataSourcePropertiesPropertyColumnsItem
+* **propertyColumns**: string[]
 * **serviceBusNamespace**: string: The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyKey**: string: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyName**: string: The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
 
 ## EventHubStreamInputDataSourceProperties
 ### Properties
-* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode.
 * **consumerGroupName**: string: The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.
 * **eventHubName**: string: The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
 * **serviceBusNamespace**: string: The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
@@ -286,7 +286,7 @@
 ## FunctionConfiguration
 ### Properties
 * **binding**: [FunctionBinding](#functionbinding): The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
-* **inputs**: [FunctionInput](#functioninput)[]: Array of FunctionInput
+* **inputs**: [FunctionInput](#functioninput)[]
 * **output**: [FunctionOutput](#functionoutput): Describes the output of a function.
 
 ## FunctionInput
@@ -323,7 +323,7 @@
 ### Properties
 * **id**: string (ReadOnly): Resource Id
 * **name**: string: Resource name
-* **properties**: [InputProperties](#inputproperties): The properties that are associated with an input.
+* **properties**: [InputProperties](#inputproperties): The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
 * **type**: string (ReadOnly): Resource type
 
 ## InputProperties
@@ -334,15 +334,15 @@
 * **diagnostics**: [Diagnostics](#diagnostics) (ReadOnly): Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
 * **etag**: string (ReadOnly): The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
 * **partitionKey**: string: partitionKey Describes a key in the input data which is used for partitioning the input data
-* **serialization**: [Serialization](#serialization): Describes how data from an input is serialized or how data is serialized when written to an output.
+* **serialization**: [Serialization](#serialization): Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
 ### ReferenceInputProperties
 #### Properties
-* **datasource**: [ReferenceInputDataSource](#referenceinputdatasource): Describes an input data source that contains reference data.
+* **datasource**: [ReferenceInputDataSource](#referenceinputdatasource): Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Reference' (Required): Indicates whether the input is a source of reference data or stream data. Required on PUT (CreateOrReplace) requests.
 
 ### StreamInputProperties
 #### Properties
-* **datasource**: [StreamInputDataSource](#streaminputdatasource): Describes an input data source that contains stream data.
+* **datasource**: [StreamInputDataSource](#streaminputdatasource): Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Stream' (Required): Indicates whether the input is a source of reference data or stream data. Required on PUT (CreateOrReplace) requests.
 
 
@@ -362,18 +362,18 @@
 ### Properties
 * **accountKey**: string: The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
 * **accountName**: string: The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
-* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode.
 
 ## JsonSerializationProperties
 ### Properties
-* **encoding**: 'UTF8' | string: Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output.
-* **format**: 'Array' | 'LineSeparated' | string: Specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects.
+* **encoding**: 'UTF8' | string: Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.
+* **format**: 'Array' | 'LineSeparated' | string: This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null.
 
 ## Output
 ### Properties
 * **id**: string (ReadOnly): Resource Id
 * **name**: string: Resource name
-* **properties**: [OutputProperties](#outputproperties): The properties that are associated with an output.
+* **properties**: [OutputProperties](#outputproperties): The properties that are associated with an output. Required on PUT (CreateOrReplace) requests.
 * **type**: string (ReadOnly): Resource type
 
 ## OutputDataSource
@@ -382,82 +382,82 @@
 ### Base Properties
 ### AzureFunctionOutputDataSource
 #### Properties
-* **properties**: [AzureFunctionOutputDataSourceProperties](#azurefunctionoutputdatasourceproperties): The properties that are associated with a DocumentDB output.
+* **properties**: [AzureFunctionOutputDataSourceProperties](#azurefunctionoutputdatasourceproperties): The properties that are associated with a Azure Function output. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.AzureFunction' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 ### AzureDataLakeStoreOutputDataSource
 #### Properties
-* **properties**: [AzureDataLakeStoreOutputDataSourceProperties](#azuredatalakestoreoutputdatasourceproperties): The properties that are associated with an Azure Data Lake Store.
+* **properties**: [AzureDataLakeStoreOutputDataSourceProperties](#azuredatalakestoreoutputdatasourceproperties): The properties that are associated with an Azure Data Lake Store output. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.DataLake/Accounts' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 ### EventHubV2OutputDataSource
 #### Properties
-* **properties**: [EventHubOutputDataSourceProperties](#eventhuboutputdatasourceproperties): The properties that are associated with an Event Hub output.
+* **properties**: [EventHubOutputDataSourceProperties](#eventhuboutputdatasourceproperties): The properties that are associated with an Event Hub output. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.EventHub/EventHub' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 ### EventHubOutputDataSource
 #### Properties
-* **properties**: [EventHubOutputDataSourceProperties](#eventhuboutputdatasourceproperties): The properties that are associated with an Event Hub output.
+* **properties**: [EventHubOutputDataSourceProperties](#eventhuboutputdatasourceproperties): The properties that are associated with an Event Hub output. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.ServiceBus/EventHub' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 ### ServiceBusQueueOutputDataSource
 #### Properties
-* **properties**: [ServiceBusQueueOutputDataSourceProperties](#servicebusqueueoutputdatasourceproperties): The properties that are associated with a Service Bus Queue output.
+* **properties**: [ServiceBusQueueOutputDataSourceProperties](#servicebusqueueoutputdatasourceproperties): The properties that are associated with a Service Bus Queue output. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.ServiceBus/Queue' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 ### ServiceBusTopicOutputDataSource
 #### Properties
-* **properties**: [ServiceBusTopicOutputDataSourceProperties](#servicebustopicoutputdatasourceproperties): The properties that are associated with a Service Bus Topic output.
+* **properties**: [ServiceBusTopicOutputDataSourceProperties](#servicebustopicoutputdatasourceproperties): The properties that are associated with a Service Bus Topic output. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.ServiceBus/Topic' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 ### AzureSqlDatabaseOutputDataSource
 #### Properties
-* **properties**: [AzureSqlDatabaseOutputDataSourceProperties](#azuresqldatabaseoutputdatasourceproperties): The properties that are associated with an Azure SQL database output.
+* **properties**: [AzureSqlDatabaseOutputDataSourceProperties](#azuresqldatabaseoutputdatasourceproperties): The properties that are associated with an Azure SQL database output. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.Sql/Server/Database' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 ### AzureSynapseOutputDataSource
 #### Properties
-* **properties**: [AzureSynapseOutputDataSourceProperties](#azuresynapseoutputdatasourceproperties): The properties that are associated with an Azure Synapse output.
+* **properties**: [AzureSynapseOutputDataSourceProperties](#azuresynapseoutputdatasourceproperties): The properties that are associated with an Azure Synapse output. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.Sql/Server/DataWarehouse' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 ### BlobOutputDataSource
 #### Properties
-* **properties**: [BlobOutputDataSourceProperties](#bloboutputdatasourceproperties): The properties that are associated with a blob output.
+* **properties**: [BlobOutputDataSourceProperties](#bloboutputdatasourceproperties): The properties that are associated with a blob output. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.Storage/Blob' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 ### DocumentDbOutputDataSource
 #### Properties
-* **properties**: [DocumentDbOutputDataSourceProperties](#documentdboutputdatasourceproperties): The properties that are associated with a DocumentDB output.
+* **properties**: [DocumentDbOutputDataSourceProperties](#documentdboutputdatasourceproperties): The properties that are associated with a DocumentDB output. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.Storage/DocumentDB' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 ### AzureTableOutputDataSource
 #### Properties
-* **properties**: [AzureTableOutputDataSourceProperties](#azuretableoutputdatasourceproperties): The properties that are associated with an Azure Table output.
+* **properties**: [AzureTableOutputDataSourceProperties](#azuretableoutputdatasourceproperties): The properties that are associated with an Azure Table output. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.Storage/Table' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 ### PowerBIOutputDataSource
 #### Properties
-* **properties**: [PowerBIOutputDataSourceProperties](#powerbioutputdatasourceproperties): The properties that are associated with a Power BI output.
+* **properties**: [PowerBIOutputDataSourceProperties](#powerbioutputdatasourceproperties): The properties that are associated with a Power BI output. Required on PUT (CreateOrReplace) requests.
 * **type**: 'PowerBI' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 ### RawOutputDatasource
 #### Properties
-* **properties**: [RawOutputDatasourceProperties](#rawoutputdatasourceproperties): The properties that are associated with a raw output.
+* **properties**: [RawOutputDatasourceProperties](#rawoutputdatasourceproperties): The properties that are associated with a raw output. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Raw' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 
 ## OutputProperties
 ### Properties
-* **datasource**: [OutputDataSource](#outputdatasource): Describes the data source that output will be written to.
+* **datasource**: [OutputDataSource](#outputdatasource): Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
 * **diagnostics**: [Diagnostics](#diagnostics) (ReadOnly): Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
 * **etag**: string (ReadOnly): The current entity tag for the output. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
-* **serialization**: [Serialization](#serialization): Describes how data from an input is serialized or how data is serialized when written to an output.
+* **serialization**: [Serialization](#serialization): Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
 * **sizeWindow**: int
 * **timeWindow**: string
 
 ## PowerBIOutputDataSourceProperties
 ### Properties
-* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode.
 * **dataset**: string: The name of the Power BI dataset. Required on PUT (CreateOrReplace) requests.
 * **groupId**: string: The ID of the Power BI group.
 * **groupName**: string: The name of the Power BI group. Use this property to help remember which specific Power BI group id was used.
@@ -486,12 +486,12 @@
 
 ### BlobReferenceInputDataSource
 #### Properties
-* **properties**: [BlobReferenceInputDataSourceProperties](#blobreferenceinputdatasourceproperties): The properties that are associated with a blob input containing reference data.
+* **properties**: [BlobReferenceInputDataSourceProperties](#blobreferenceinputdatasourceproperties): The properties that are associated with a blob input containing reference data. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.Storage/Blob' (Required): Indicates the type of input data source containing reference data. Required on PUT (CreateOrReplace) requests.
 
 ### RawReferenceInputDataSource
 #### Properties
-* **properties**: [RawInputDatasourceProperties](#rawinputdatasourceproperties): The properties that are associated with a raw input.
+* **properties**: [RawInputDatasourceProperties](#rawinputdatasourceproperties): The properties that are associated with a raw input containing reference data. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Raw' (Required): Indicates the type of input data source containing reference data. Required on PUT (CreateOrReplace) requests.
 
 
@@ -501,33 +501,33 @@
 ### Base Properties
 ### AvroSerialization
 #### Properties
-* **properties**: any: Any object
+* **properties**: any: The properties that are associated with the Avro serialization type. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Avro' (Required): Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
 
 ### CsvSerialization
 #### Properties
-* **properties**: [CsvSerializationProperties](#csvserializationproperties): The properties that are associated with the CSV serialization type.
+* **properties**: [CsvSerializationProperties](#csvserializationproperties): The properties that are associated with the CSV serialization type. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Csv' (Required): Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
 
 ### CustomClrSerialization
 #### Properties
-* **properties**: [CustomClrSerializationProperties](#customclrserializationproperties): The properties that are associated with the CustomClr serialization type.
+* **properties**: [CustomClrSerializationProperties](#customclrserializationproperties): The properties that are associated with the CustomClr serialization type. Required on PUT (CreateOrReplace) requests.
 * **type**: 'CustomClr' (Required): Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
 
 ### JsonSerialization
 #### Properties
-* **properties**: [JsonSerializationProperties](#jsonserializationproperties): The properties that are associated with the JSON serialization type.
+* **properties**: [JsonSerializationProperties](#jsonserializationproperties): The properties that are associated with the JSON serialization type. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Json' (Required): Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
 
 ### ParquetSerialization
 #### Properties
-* **properties**: any: Any object
+* **properties**: any: The properties that are associated with the Parquet serialization type. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Parquet' (Required): Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
 
 
 ## ServiceBusQueueOutputDataSourceProperties
 ### Properties
-* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode.
 * **propertyColumns**: string[]: A string array of the names of output columns to be attached to Service Bus messages as custom properties.
 * **queueName**: string: The name of the Service Bus Queue. Required on PUT (CreateOrReplace) requests.
 * **serviceBusNamespace**: string: The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
@@ -542,7 +542,7 @@
 
 ## ServiceBusTopicOutputDataSourceProperties
 ### Properties
-* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode.
 * **propertyColumns**: string[]: A string array of the names of output columns to be attached to Service Bus messages as custom properties.
 * **serviceBusNamespace**: string: The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyKey**: string: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
@@ -562,7 +562,7 @@
 
 ## StreamingJobProperties
 ### Properties
-* **cluster**: [ClusterInfo](#clusterinfo): The properties associated with a Stream Analytics cluster.
+* **cluster**: [ClusterInfo](#clusterinfo): The cluster which streaming jobs will run on.
 * **compatibilityLevel**: '1.0' | string: Controls certain runtime behaviors of the streaming job.
 * **contentStoragePolicy**: 'JobStorageAccount' | 'SystemAccount' | string: Valid values are JobStorageAccount and SystemAccount. If set to JobStorageAccount, this requires the user to also specify jobStorageAccount property. .
 * **createdDate**: string (ReadOnly): Value is an ISO-8601 formatted UTC timestamp indicating when the streaming job was created.
@@ -581,11 +581,11 @@
 * **lastOutputEventTime**: string (ReadOnly): Value is either an ISO-8601 formatted timestamp indicating the last output event time of the streaming job or null indicating that output has not yet been produced. In case of multiple outputs or multiple streams, this shows the latest value in that set.
 * **outputErrorPolicy**: 'Drop' | 'Stop' | string: Indicates the policy to apply to events that arrive at the output and cannot be written to the external storage due to being malformed (missing column values, column values of wrong type or size).
 * **outputs**: [Output](#output)[]: A list of one or more outputs for the streaming job. The name property for each output is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual output.
-* **outputStartMode**: 'CustomTime' | 'JobStartTime' | 'LastOutputEventTime' | string: Value may be JobStartTime, CustomTime, or LastOutputEventTime to indicate whether the starting point of the output event stream should start whenever the job is started, start at a custom user time stamp specified via the outputStartTime property, or start from the last event output time.
+* **outputStartMode**: 'CustomTime' | 'JobStartTime' | 'LastOutputEventTime' | string: This property should only be utilized when it is desired that the job be started immediately upon creation. Value may be JobStartTime, CustomTime, or LastOutputEventTime to indicate whether the starting point of the output event stream should start whenever the job is started, start at a custom user time stamp specified via the outputStartTime property, or start from the last event output time.
 * **outputStartTime**: string: Value is either an ISO-8601 formatted time stamp that indicates the starting point of the output event stream, or null to indicate that the output event stream will start whenever the streaming job is started. This property must have a value if outputStartMode is set to CustomTime.
 * **provisioningState**: string (ReadOnly): Describes the provisioning status of the streaming job.
-* **sku**: [StreamingJobSku](#streamingjobsku): The properties that are associated with a SKU.
-* **transformation**: [Transformation](#transformation): A transformation object, containing all information associated with the named transformation. All transformations are contained under a streaming job.
+* **sku**: [StreamingJobSku](#streamingjobsku): Describes the SKU of the streaming job. Required on PUT (CreateOrReplace) requests.
+* **transformation**: [Transformation](#transformation): Indicates the query and the number of streaming units to use for the streaming job. The name property of the transformation is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.
 
 ## StreamingJobSku
 ### Properties
@@ -597,27 +597,27 @@
 ### Base Properties
 ### IoTHubStreamInputDataSource
 #### Properties
-* **properties**: [IoTHubStreamInputDataSourceProperties](#iothubstreaminputdatasourceproperties): The properties that are associated with a IoT Hub input containing stream data.
+* **properties**: [IoTHubStreamInputDataSourceProperties](#iothubstreaminputdatasourceproperties): The properties that are associated with an IoT Hub input containing stream data. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.Devices/IotHubs' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
 
 ### EventHubV2StreamInputDataSource
 #### Properties
-* **properties**: [EventHubStreamInputDataSourceProperties](#eventhubstreaminputdatasourceproperties): The properties that are associated with a Event Hub input containing stream data.
+* **properties**: [EventHubStreamInputDataSourceProperties](#eventhubstreaminputdatasourceproperties): The properties that are associated with an Event Hub input containing stream data. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.EventHub/EventHub' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
 
 ### EventHubStreamInputDataSource
 #### Properties
-* **properties**: [EventHubStreamInputDataSourceProperties](#eventhubstreaminputdatasourceproperties): The properties that are associated with a Event Hub input containing stream data.
+* **properties**: [EventHubStreamInputDataSourceProperties](#eventhubstreaminputdatasourceproperties): The properties that are associated with an Event Hub input containing stream data. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.ServiceBus/EventHub' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
 
 ### BlobStreamInputDataSource
 #### Properties
-* **properties**: [BlobStreamInputDataSourceProperties](#blobstreaminputdatasourceproperties): The properties that are associated with a blob input containing stream data.
+* **properties**: [BlobStreamInputDataSourceProperties](#blobstreaminputdatasourceproperties): The properties that are associated with a blob input containing stream data. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.Storage/Blob' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
 
 ### RawStreamInputDataSource
 #### Properties
-* **properties**: [RawInputDatasourceProperties](#rawinputdatasourceproperties): The properties that are associated with a raw input.
+* **properties**: [RawInputDatasourceProperties](#rawinputdatasourceproperties): The properties that are associated with a raw input. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Raw' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
 
 
@@ -630,7 +630,7 @@
 ### Properties
 * **id**: string (ReadOnly): Resource Id
 * **name**: string: Resource name
-* **properties**: [TransformationProperties](#transformationproperties): The properties that are associated with a transformation.
+* **properties**: [TransformationProperties](#transformationproperties): The properties that are associated with a transformation. Required on PUT (CreateOrReplace) requests.
 * **type**: string (ReadOnly): Resource type
 
 ## TransformationProperties

@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [IdentityProperties](#identityproperties): Identity properties.
+* **identity**: [IdentityProperties](#identityproperties): Identity properties of the monitor resource.
 * **location**: string (Required): The location of the monitor resource
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MonitorProperties](#monitorproperties): Properties specific to the monitor resource.
-* **sku**: [ResourceSku](#resourcesku): Microsoft.Elastic SKU.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [MonitorProperties](#monitorproperties): Properties of the monitor resource.
+* **sku**: [ResourceSku](#resourcesku): SKU of the monitor resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **tags**: [ElasticMonitorResourceTags](#elasticmonitorresourcetags): The tags of the monitor resource.
 * **type**: 'Microsoft.Elastic/monitors' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,8 +20,8 @@
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MonitoringTagRulesProperties](#monitoringtagrulesproperties): Definition of the properties for a TagRules resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [MonitoringTagRulesProperties](#monitoringtagrulesproperties): Properties of the monitoring tag rules.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **type**: 'Microsoft.Elastic/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listDeploymentInfo (Microsoft.Elastic/monitors@2020-07-01-preview)
@@ -51,7 +51,7 @@
 ### Properties
 * **diskCapacity**: string (ReadOnly): Disk capacity of the elasticsearch in Elastic cloud deployment.
 * **memoryCapacity**: string (ReadOnly): RAM capacity of the elasticsearch in Elastic cloud deployment.
-* **status**: 'Healthy' | 'Unhealthy' | string (ReadOnly): Flag specifying if the Elastic deployment status is healthy or not.
+* **status**: 'Healthy' | 'Unhealthy' | string (ReadOnly): The Elastic deployment status.
 * **version**: string (ReadOnly): Version of the elasticsearch in Elastic cloud deployment.
 
 ## ElasticCloudDeployment
@@ -77,12 +77,12 @@
 
 ## ElasticProperties
 ### Properties
-* **elasticCloudDeployment**: [ElasticCloudDeployment](#elasticclouddeployment): Details of the user's elastic deployment associated with the monitor resource.
+* **elasticCloudDeployment**: [ElasticCloudDeployment](#elasticclouddeployment): Details of the elastic cloud deployment.
 * **elasticCloudUser**: [ElasticCloudUser](#elasticclouduser): Details of the user's elastic account.
 
 ## FilteringTag
 ### Properties
-* **action**: 'Exclude' | 'Include' | string: Valid actions for a filtering tag. Exclusion takes priority over inclusion.
+* **action**: 'Exclude' | 'Include' | string: Valid actions for a filtering tag.
 * **name**: string: The name (also known as the key) of the tag.
 * **value**: string: The value of the tag.
 
@@ -90,7 +90,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The identity ID.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned' | string: Managed Identity types.
+* **type**: 'SystemAssigned' | string: Managed identity type.
 
 ## LogRules
 ### Properties
@@ -112,17 +112,17 @@
 
 ## MonitoringTagRulesProperties
 ### Properties
-* **logRules**: [LogRules](#logrules): Set of rules for sending logs for the Monitor resource.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string: Provisioning state of Elastic resource.
+* **logRules**: [LogRules](#logrules): Rules for sending logs.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string: Provisioning state of the monitoring tag rules.
 
 ## MonitorProperties
 ### Properties
-* **elasticProperties**: [ElasticProperties](#elasticproperties): Elastic Resource Properties.
+* **elasticProperties**: [ElasticProperties](#elasticproperties): Elastic cloud properties.
 * **liftrResourceCategory**: 'MonitorLogs' | 'Unknown' | string (ReadOnly)
 * **liftrResourcePreference**: int (ReadOnly): The priority of the resource.
 * **monitoringStatus**: 'Disabled' | 'Enabled' | string: Flag specifying if the resource monitoring is enabled or disabled.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string: Provisioning state of Elastic resource.
-* **userInfo**: [UserInfo](#userinfo) (WriteOnly): User Information to be passed to partners.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string: Provisioning state of the monitor resource.
+* **userInfo**: [UserInfo](#userinfo) (WriteOnly): User information.
 
 ## ResourceSku
 ### Properties
@@ -135,7 +135,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## UserInfo
 ### Properties

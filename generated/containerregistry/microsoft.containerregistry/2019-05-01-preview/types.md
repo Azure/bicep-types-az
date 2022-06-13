@@ -6,7 +6,7 @@
 * **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ScopeMapProperties](#scopemapproperties): The properties of a scope map.
+* **properties**: [ScopeMapProperties](#scopemapproperties): The properties of the scope map.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/scopeMaps' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -16,7 +16,7 @@
 * **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TokenProperties](#tokenproperties): The properties of a token.
+* **properties**: [TokenProperties](#tokenproperties): The properties of the token.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/tokens' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -54,8 +54,8 @@ repositories/repository-name/metadata/write
 ## TokenCredentialsProperties
 ### Properties
 * **activeDirectoryObject**: [ActiveDirectoryObject](#activedirectoryobject): The Active Directory Object that will be used for authenticating the token of a container registry.
-* **certificates**: [TokenCertificate](#tokencertificate)[]: Array of TokenCertificate
-* **passwords**: [TokenPassword](#tokenpassword)[]: Array of TokenPassword
+* **certificates**: [TokenCertificate](#tokencertificate)[]
+* **passwords**: [TokenPassword](#tokenpassword)[]
 
 ## TokenPassword
 ### Properties
@@ -67,7 +67,7 @@ repositories/repository-name/metadata/write
 ## TokenProperties
 ### Properties
 * **creationDate**: string (ReadOnly): The creation date of scope map.
-* **credentials**: [TokenCredentialsProperties](#tokencredentialsproperties): The properties of the credentials that can be used for authenticating the token.
+* **credentials**: [TokenCredentialsProperties](#tokencredentialsproperties): The credentials that can be used for authenticating the token.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **scopeMapId**: string: The resource ID of the scope map to which the token will be associated with.
 * **status**: 'disabled' | 'enabled' | string: The status of the token example enabled or disabled.

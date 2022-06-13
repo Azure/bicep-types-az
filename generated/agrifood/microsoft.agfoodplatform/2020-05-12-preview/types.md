@@ -43,7 +43,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 * **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties

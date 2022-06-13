@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The supported Azure location where the attestation service instance should be created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AttestationServiceCreationSpecificParams](#attestationservicecreationspecificparams) (Required): Client supplied parameters used to create a new attestation service instance.
+* **properties**: [AttestationServiceCreationSpecificParams](#attestationservicecreationspecificparams) (Required): Properties of the attestation service instance
 * **tags**: [AttestationServiceCreationParamsTags](#attestationservicecreationparamstags): The tags that will be assigned to the attestation service instance.
 * **type**: 'Microsoft.Attestation/attestationProviders' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,7 +20,7 @@
 ### Properties
 * **attestationPolicy**: string (WriteOnly): Name of attestation policy.
 * **attestUri**: string (ReadOnly): Gets the uri of attestation service
-* **policySigningCertificates**: [JsonWebKeySet](#jsonwebkeyset) (WriteOnly)
+* **policySigningCertificates**: [JsonWebKeySet](#jsonwebkeyset) (WriteOnly): JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations
 * **status**: 'Error' | 'NotReady' | 'Ready' | string (ReadOnly): Status of attestation service.
 * **trustModel**: string (ReadOnly): Trust model for the attestation service instance.
 

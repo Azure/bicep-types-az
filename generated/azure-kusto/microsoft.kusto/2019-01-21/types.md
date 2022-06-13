@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterProperties](#clusterproperties): Class representing the Kusto cluster properties.
-* **sku**: [AzureSku](#azuresku) (Required): Azure SKU definition.
+* **properties**: [ClusterProperties](#clusterproperties): The cluster properties.
+* **sku**: [AzureSku](#azuresku) (Required): The SKU of the cluster.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabaseProperties](#databaseproperties): Class representing the Kusto database properties.
+* **properties**: [DatabaseProperties](#databaseproperties): The database properties.
 * **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Kusto/clusters/databases/dataConnections@2019-01-21
@@ -35,12 +35,12 @@
 ### EventGridDataConnection
 #### Properties
 * **kind**: 'EventGrid' (Required): Kind of the endpoint for the data connection
-* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties): Class representing the Kusto event grid connection properties.
+* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties): The properties of the Event Grid data connection.
 
 ### EventHubDataConnection
 #### Properties
 * **kind**: 'EventHub' (Required): Kind of the endpoint for the data connection
-* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties): Class representing the Kusto event hub connection properties.
+* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties): The Event Hub data connection properties to validate.
 
 
 ## Function listPrincipals (Microsoft.Kusto/clusters/databases@2019-01-21)
@@ -80,7 +80,7 @@
 * **hotCachePeriod**: string: The time the data that should be kept in cache for fast queries in TimeSpan.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
 * **softDeletePeriod**: string: The time the data should be kept before it stops being accessible to queries in TimeSpan.
-* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): A class that contains database statistics information.
+* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): The statistics of the database.
 
 ## DatabaseStatistics
 ### Properties

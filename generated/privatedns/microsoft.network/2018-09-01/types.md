@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The Azure Region where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateZoneProperties](#privatezoneproperties): Represents the properties of the Private DNS zone.
+* **properties**: [PrivateZoneProperties](#privatezoneproperties): Properties of the Private DNS zone.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/privateDnsZones' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,7 +19,7 @@
 * **etag**: string: The ETag of the record set.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RecordSetProperties](#recordsetproperties): Represents the properties of the records in the record set.
+* **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
 * **type**: 'Microsoft.Network/privateDnsZones/A' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateDnsZones/AAAA@2018-09-01
@@ -29,7 +29,7 @@
 * **etag**: string: The ETag of the record set.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RecordSetProperties](#recordsetproperties): Represents the properties of the records in the record set.
+* **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
 * **type**: 'Microsoft.Network/privateDnsZones/AAAA' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateDnsZones/CNAME@2018-09-01
@@ -39,7 +39,7 @@
 * **etag**: string: The ETag of the record set.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RecordSetProperties](#recordsetproperties): Represents the properties of the records in the record set.
+* **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
 * **type**: 'Microsoft.Network/privateDnsZones/CNAME' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateDnsZones/MX@2018-09-01
@@ -49,7 +49,7 @@
 * **etag**: string: The ETag of the record set.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RecordSetProperties](#recordsetproperties): Represents the properties of the records in the record set.
+* **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
 * **type**: 'Microsoft.Network/privateDnsZones/MX' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateDnsZones/PTR@2018-09-01
@@ -59,7 +59,7 @@
 * **etag**: string: The ETag of the record set.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RecordSetProperties](#recordsetproperties): Represents the properties of the records in the record set.
+* **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
 * **type**: 'Microsoft.Network/privateDnsZones/PTR' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateDnsZones/SOA@2018-09-01
@@ -69,7 +69,7 @@
 * **etag**: string: The ETag of the record set.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RecordSetProperties](#recordsetproperties): Represents the properties of the records in the record set.
+* **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
 * **type**: 'Microsoft.Network/privateDnsZones/SOA' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateDnsZones/SRV@2018-09-01
@@ -79,7 +79,7 @@
 * **etag**: string: The ETag of the record set.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RecordSetProperties](#recordsetproperties): Represents the properties of the records in the record set.
+* **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
 * **type**: 'Microsoft.Network/privateDnsZones/SRV' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateDnsZones/TXT@2018-09-01
@@ -89,7 +89,7 @@
 * **etag**: string: The ETag of the record set.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RecordSetProperties](#recordsetproperties): Represents the properties of the records in the record set.
+* **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
 * **type**: 'Microsoft.Network/privateDnsZones/TXT' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateDnsZones/virtualNetworkLinks@2018-09-01
@@ -100,7 +100,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The Azure Region where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualNetworkLinkProperties](#virtualnetworklinkproperties): Represents the properties of the Private DNS zone.
+* **properties**: [VirtualNetworkLinkProperties](#virtualnetworklinkproperties): Properties of the virtual network link to the Private DNS zone.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/privateDnsZones/virtualNetworkLinks' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -139,13 +139,13 @@
 ### Properties
 * **aaaaRecords**: [AaaaRecord](#aaaarecord)[]: The list of AAAA records in the record set.
 * **aRecords**: [ARecord](#arecord)[]: The list of A records in the record set.
-* **cnameRecord**: [CnameRecord](#cnamerecord): A CNAME record.
+* **cnameRecord**: [CnameRecord](#cnamerecord): The CNAME record in the record set.
 * **fqdn**: string (ReadOnly): Fully qualified domain name of the record set.
 * **isAutoRegistered**: bool (ReadOnly): Is the record set auto-registered in the Private DNS zone through a virtual network link?
 * **metadata**: [RecordSetPropertiesMetadata](#recordsetpropertiesmetadata): The metadata attached to the record set.
 * **mxRecords**: [MxRecord](#mxrecord)[]: The list of MX records in the record set.
 * **ptrRecords**: [PtrRecord](#ptrrecord)[]: The list of PTR records in the record set.
-* **soaRecord**: [SoaRecord](#soarecord): An SOA record.
+* **soaRecord**: [SoaRecord](#soarecord): The SOA record in the record set.
 * **srvRecords**: [SrvRecord](#srvrecord)[]: The list of SRV records in the record set.
 * **ttl**: int: The TTL (time-to-live) of the records in the record set.
 * **txtRecords**: [TxtRecord](#txtrecord)[]: The list of TXT records in the record set.
@@ -194,6 +194,6 @@
 ### Properties
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
 * **registrationEnabled**: bool: Is auto-registration of virtual machine records in the virtual network in the Private DNS zone enabled?
-* **virtualNetwork**: [SubResource](#subresource): Reference to another subresource.
+* **virtualNetwork**: [SubResource](#subresource): The reference of the virtual network.
 * **virtualNetworkLinkState**: 'Completed' | 'InProgress' | string (ReadOnly): The status of the virtual network link to the Private DNS zone. Possible values are 'InProgress' and 'Done'. This is a read-only property and any attempt to set this value will be ignored.
 

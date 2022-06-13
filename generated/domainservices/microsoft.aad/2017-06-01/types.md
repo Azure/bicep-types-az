@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DomainServiceProperties](#domainserviceproperties): Properties of the Domain Service.
+* **properties**: [DomainServiceProperties](#domainserviceproperties): Domain service properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.AAD/domainServices' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -22,7 +22,7 @@
 * **location**: string (ReadOnly): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **password**: string (WriteOnly): The account password
-* **properties**: [OuContainerProperties](#oucontainerproperties) (ReadOnly): Properties of the OuContainer.
+* **properties**: [OuContainerProperties](#oucontainerproperties) (ReadOnly): OuContainer properties
 * **spn**: string (WriteOnly): The account spn
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.Aad/domainServices/ouContainer' (ReadOnly, DeployTimeConstant): The resource type
@@ -47,16 +47,16 @@
 * **domainConfigurationType**: string: Domain Configuration Type
 * **domainControllerIpAddress**: string[] (ReadOnly): List of Domain Controller IP Address
 * **domainName**: string: The name of the Azure domain that the user would like to deploy Domain Services to.
-* **domainSecuritySettings**: [DomainSecuritySettings](#domainsecuritysettings): Domain Security Settings
+* **domainSecuritySettings**: [DomainSecuritySettings](#domainsecuritysettings): DomainSecurity Settings
 * **filteredSync**: 'Disabled' | 'Enabled' | string: Enabled or Disabled flag to turn on Group-based filtered sync
 * **healthAlerts**: [HealthAlert](#healthalert)[] (ReadOnly): List of Domain Health Alerts
 * **healthLastEvaluated**: string (ReadOnly): Last domain evaluation run DateTime
 * **healthMonitors**: [HealthMonitor](#healthmonitor)[] (ReadOnly): List of Domain Health Monitors
 * **ldapsSettings**: [LdapsSettings](#ldapssettings): Secure LDAP Settings
 * **migrationProperties**: [MigrationProperties](#migrationproperties) (ReadOnly): Migration Properties
-* **notificationSettings**: [NotificationSettings](#notificationsettings): Settings for notification
+* **notificationSettings**: [NotificationSettings](#notificationsettings): Notification Settings
 * **provisioningState**: string (ReadOnly): the current deployment or provisioning state, which only appears in the response.
-* **resourceForestSettings**: [ResourceForestSettings](#resourceforestsettings): Settings for Resource Forest
+* **resourceForestSettings**: [ResourceForestSettings](#resourceforestsettings): Resource Forest Settings
 * **serviceStatus**: string (ReadOnly): Status of Domain Service instance
 * **sku**: string: Sku Type
 * **subnetId**: string: The name of the virtual network that Domain Services will be deployed on. The id of the subnet that Domain Services will be deployed on. /virtualNetwork/vnetName/subnets/subnetName.

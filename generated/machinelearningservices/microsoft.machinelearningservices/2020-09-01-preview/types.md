@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkspaceProperties](#workspaceproperties): The properties of a machine learning workspace.
-* **sku**: [Sku](#sku): Sku of the resource
+* **properties**: [WorkspaceProperties](#workspaceproperties): The properties of the machine learning workspace.
+* **sku**: [Sku](#sku): The sku of the workspace.
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,11 +18,11 @@
 ### Properties
 * **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [Compute](#compute): Machine Learning compute object.
-* **sku**: [Sku](#sku): Sku of the resource
+* **properties**: [Compute](#compute): Compute properties
+* **sku**: [Sku](#sku): The sku of the workspace.
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -32,7 +32,7 @@
 * **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkspaceConnectionProps](#workspaceconnectionprops): Workspace Connection specific properties.
+* **properties**: [WorkspaceConnectionProps](#workspaceconnectionprops): Properties of workspace connection.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/connections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/labelingJobs@2020-09-01-preview
@@ -61,11 +61,11 @@
 ### Properties
 * **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
-* **sku**: [Sku](#sku): Sku of the resource
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
+* **sku**: [Sku](#sku): The sku of the workspace.
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -78,13 +78,13 @@
 * **description**: string (WriteOnly): The description of the service.
 * **environmentImageRequest**: [CreateServiceRequestEnvironmentImageRequest](#createservicerequestenvironmentimagerequest) (WriteOnly): The Environment, models and assets needed for inferencing.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity) (ReadOnly): Identity for the resource.
+* **identity**: [Identity](#identity) (ReadOnly): The identity of the resource.
 * **keys**: [CreateServiceRequestKeys](#createservicerequestkeys) (WriteOnly): The authentication keys.
 * **kvTags**: [CreateServiceRequestKvTags](#createservicerequestkvtags) (WriteOnly): The service tag dictionary. Tags are mutable.
 * **location**: string: The name of the Azure location/region.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CreateServiceRequestProperties](#createservicerequestproperties): The service properties dictionary. Properties are immutable.
-* **sku**: [Sku](#sku) (ReadOnly): Sku of the resource
+* **sku**: [Sku](#sku) (ReadOnly): The sku of the workspace.
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/services' (ReadOnly, DeployTimeConstant): The resource type
 ### ACIServiceCreateRequest
@@ -93,7 +93,7 @@
 * **authEnabled**: bool (WriteOnly): Whether or not authentication is enabled on the service.
 * **cname**: string (WriteOnly): The CName for the service.
 * **computeType**: 'ACI' (Required): The compute environment type for the service.
-* **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): The resource requirements for the container (cpu and memory).
+* **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): The container resource requirements.
 * **dataCollection**: [ACIServiceCreateRequestDataCollection](#aciservicecreaterequestdatacollection) (WriteOnly): Details of the data collection options specified.
 * **dnsNameLabel**: string (WriteOnly): The Dns label for the service.
 * **encryptionProperties**: [ACIServiceCreateRequestEncryptionProperties](#aciservicecreaterequestencryptionproperties) (WriteOnly): The encryption properties.
@@ -110,7 +110,7 @@
 * **autoScaler**: [AKSServiceCreateRequestAutoScaler](#aksservicecreaterequestautoscaler) (WriteOnly): The auto scaler properties.
 * **computeName**: string (WriteOnly): The name of the compute resource.
 * **computeType**: 'AKS' (Required): The compute environment type for the service.
-* **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): The resource requirements for the container (cpu and memory).
+* **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): The container resource requirements.
 * **dataCollection**: [AKSServiceCreateRequestDataCollection](#aksservicecreaterequestdatacollection) (WriteOnly): Details of the data collection options specified.
 * **livenessProbeRequirements**: [AKSServiceCreateRequestLivenessProbeRequirements](#aksservicecreaterequestlivenessproberequirements) (WriteOnly): The liveness probe requirements.
 * **maxConcurrentRequestsPerContainer**: int (WriteOnly): The maximum number of concurrent requests per container.
@@ -167,9 +167,9 @@
 ### Properties
 * **agentCount**: int: Number of agents
 * **agentVmSize**: string: Agent virtual machine size
-* **aksNetworkingConfiguration**: [AksNetworkingConfiguration](#aksnetworkingconfiguration): Advance configuration for AKS networking
+* **aksNetworkingConfiguration**: [AksNetworkingConfiguration](#aksnetworkingconfiguration): AKS networking configuration for vnet
 * **clusterFqdn**: string: Cluster full qualified domain name
-* **sslConfiguration**: [SslConfiguration](#sslconfiguration): The ssl configuration for scoring
+* **sslConfiguration**: [SslConfiguration](#sslconfiguration): SSL configuration
 * **systemServices**: [SystemService](#systemservice)[] (ReadOnly): System services
 
 ## AKSServiceCreateRequestAutoScaler
@@ -216,14 +216,14 @@
 * **enableNodePublicIp**: bool: Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
 * **errors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Collection of errors encountered by various compute nodes during node setup.
 * **isolatedNetwork**: bool: Network is isolated or not
-* **nodeStateCounts**: [NodeStateCounts](#nodestatecounts) (ReadOnly): Counts of various compute node states on the amlCompute.
+* **nodeStateCounts**: [NodeStateCounts](#nodestatecounts) (ReadOnly): Counts of various node states on the compute.
 * **osType**: 'Linux' | 'Windows' | string: Compute OS Type
 * **remoteLoginPortPublicAccess**: 'Disabled' | 'Enabled' | 'NotSpecified' | string: State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
-* **scaleSettings**: [ScaleSettings](#scalesettings): scale settings for AML Compute
-* **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
+* **scaleSettings**: [ScaleSettings](#scalesettings): Scale settings for AML Compute
+* **subnet**: [ResourceId](#resourceid): Virtual network subnet resource ID the compute nodes belong to.
 * **targetNodeCount**: int (ReadOnly): The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
-* **userAccountCredentials**: [UserAccountCredentials](#useraccountcredentials): Settings for user account that gets created on each on the nodes of a compute.
-* **virtualMachineImage**: [VirtualMachineImage](#virtualmachineimage): Virtual Machine image for Windows AML Compute
+* **userAccountCredentials**: [UserAccountCredentials](#useraccountcredentials): Credentials for an administrator user account that will be created on each compute node.
+* **virtualMachineImage**: [VirtualMachineImage](#virtualmachineimage): Virtual Machine image for AML Compute - windows only
 * **vmPriority**: 'Dedicated' | 'LowPriority' | string: Virtual Machine priority
 * **vmSize**: string: Virtual Machine Size
 
@@ -242,7 +242,7 @@
 * **isAttachedCompute**: bool (ReadOnly): Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
 * **modifiedOn**: string (ReadOnly): The date and time when the compute was last modified.
 * **provisioningErrors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Errors during provisioning
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
 * **resourceId**: string: ARM resource id of the underlying compute
 ### AKS
 #### Properties
@@ -316,15 +316,15 @@
 * **applications**: [ComputeInstanceApplication](#computeinstanceapplication)[] (ReadOnly): Describes available applications and their endpoints on this ComputeInstance.
 * **applicationSharingPolicy**: 'Personal' | 'Shared' | string: Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
 * **computeInstanceAuthorizationType**: 'personal' | string: The Compute Instance Authorization type. Available values are personal (default).
-* **connectivityEndpoints**: [ComputeInstanceConnectivityEndpoints](#computeinstanceconnectivityendpoints) (ReadOnly): Defines all connectivity endpoints and properties for an ComputeInstance.
+* **connectivityEndpoints**: [ComputeInstanceConnectivityEndpoints](#computeinstanceconnectivityendpoints) (ReadOnly): Describes all connectivity endpoints available for this ComputeInstance.
 * **createdBy**: [ComputeInstanceCreatedBy](#computeinstancecreatedby) (ReadOnly): Describes information on user who created this ComputeInstance.
 * **errors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Collection of errors encountered on this ComputeInstance.
 * **lastOperation**: [ComputeInstanceLastOperation](#computeinstancelastoperation) (ReadOnly): The last operation on ComputeInstance.
 * **personalComputeInstanceSettings**: [PersonalComputeInstanceSettings](#personalcomputeinstancesettings): Settings for a personal compute instance.
 * **setupScripts**: [SetupScripts](#setupscripts): Details of customized scripts to execute for setting up the cluster.
 * **sshSettings**: [ComputeInstanceSshSettings](#computeinstancesshsettings): Specifies policy and settings for SSH access.
-* **state**: 'CreateFailed' | 'Creating' | 'Deleting' | 'JobRunning' | 'Restarting' | 'Running' | 'SettingUp' | 'SetupFailed' | 'Starting' | 'Stopped' | 'Stopping' | 'Unknown' | 'Unusable' | 'UserSettingUp' | 'UserSetupFailed' | string (ReadOnly): Current state of an ComputeInstance.
-* **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
+* **state**: 'CreateFailed' | 'Creating' | 'Deleting' | 'JobRunning' | 'Restarting' | 'Running' | 'SettingUp' | 'SetupFailed' | 'Starting' | 'Stopped' | 'Stopping' | 'Unknown' | 'Unusable' | 'UserSettingUp' | 'UserSetupFailed' | string (ReadOnly): The current state of this ComputeInstance.
+* **subnet**: [ResourceId](#resourceid): Virtual network subnet resource ID the compute nodes belong to.
 * **vmSize**: string: Virtual Machine Size
 
 ## ComputeInstanceSshSettings
@@ -352,7 +352,7 @@
 
 ### VirtualMachineSecrets
 #### Properties
-* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials) (ReadOnly): Admin credentials for virtual machine
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials) (ReadOnly): Admin credentials for virtual machine.
 * **computeType**: 'VirtualMachine' (Required): The type of compute
 
 
@@ -402,7 +402,7 @@
 
 ## EncryptionProperty
 ### Properties
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required)
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required): Customer Key vault properties.
 * **status**: 'Disabled' | 'Enabled' | string (Required): Indicates whether or not the encryption is enabled for the workspace.
 
 ## EnvironmentImageRequestEnvironment
@@ -435,7 +435,7 @@
 ## HDInsightProperties
 ### Properties
 * **address**: string: Public IP address of the master node of the cluster.
-* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for master node of the cluster
 * **sshPort**: int: Port open for ssh connections on the master node of the cluster.
 
 ## Identity
@@ -443,7 +443,7 @@
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned': The identity type.
-* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): dictionary containing all the user assigned identities, with resourceId of the UAI as key.
+* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The user assigned identities associated with the resource.
 
 ## ImageAsset
 ### Properties
@@ -499,15 +499,15 @@
 ## LabelingJobProperties
 ### Properties
 * **createdTimeUtc**: string (ReadOnly): Created time of the job in UTC timezone.
-* **datasetConfiguration**: [LabelingDatasetConfiguration](#labelingdatasetconfiguration) (Required): Represents configuration of dataset used in a labeling job.
-* **jobInstructions**: [LabelingJobInstructions](#labelingjobinstructions) (Required): Instructions for a labeling job.
+* **datasetConfiguration**: [LabelingDatasetConfiguration](#labelingdatasetconfiguration) (Required): Dataset configuration for the job.
+* **jobInstructions**: [LabelingJobInstructions](#labelingjobinstructions) (Required): Instructions for the job.
 * **labelCategories**: [LabelingJobPropertiesLabelCategories](#labelingjobpropertieslabelcategories) (Required): Label categories of the job.
-* **labelingJobMediaProperties**: [LabelingJobImageProperties](#labelingjobimageproperties) (Required): Properties in an labeling job of image media.
-* **mlAssistConfiguration**: [MLAssistConfiguration](#mlassistconfiguration): Represents configuration for machine learning assisted features in a labeling job.
-* **progressMetrics**: [ProgressMetrics](#progressmetrics) (ReadOnly): Progress metrics for a labeling job.
+* **labelingJobMediaProperties**: [LabelingJobImageProperties](#labelingjobimageproperties) (Required): Media specific properties in a labeling job.
+* **mlAssistConfiguration**: [MLAssistConfiguration](#mlassistconfiguration): Machine learning assisted configuration for the job.
+* **progressMetrics**: [ProgressMetrics](#progressmetrics) (ReadOnly): Progress metrics of the job.
 * **projectId**: string (ReadOnly): Internal id of the job(Previously called project).
 * **properties**: [LabelingJobProperties](#labelingjobproperties): The job property dictionary. Properties can be added, but not removed or altered.
-* **status**: 'CancelRequested' | 'Canceled' | 'Completed' | 'Failed' | 'Finalizing' | 'NotResponding' | 'NotStarted' | 'Paused' | 'Preparing' | 'Provisioning' | 'Queued' | 'Running' | 'Starting' | string (ReadOnly): The status of a job.
+* **status**: 'CancelRequested' | 'Canceled' | 'Completed' | 'Failed' | 'Finalizing' | 'NotResponding' | 'NotStarted' | 'Paused' | 'Preparing' | 'Provisioning' | 'Queued' | 'Running' | 'Starting' | string (ReadOnly): Status of the job.
 * **statusMessages**: [StatusMessage](#statusmessage)[] (ReadOnly): Status messages of the job.
 * **tags**: [LabelingJobPropertiesTags](#labelingjobpropertiestags): The job tag dictionary. Tags can be added, removed, and updated.
 
@@ -547,15 +547,15 @@
 
 ## MachineLearningServiceError
 ### Properties
-* **error**: [ErrorResponse](#errorresponse) (ReadOnly): Error response information.
+* **error**: [ErrorResponse](#errorresponse) (ReadOnly): The error response.
 
 ## MLAssistConfiguration
 ### Properties
-* **inferencingComputeBinding**: [ComputeBinding](#computebinding) (Required): Compute binding definition.
+* **inferencingComputeBinding**: [ComputeBinding](#computebinding) (Required): The compute designated for inferencing.
 * **mlAssistEnabled**: bool: Indicates whether MLAssist feature is enabled.
 * **modelNamePrefix**: string (Required): Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.
 * **prelabelAccuracyThreshold**: int: Prelabel accuracy threshold used in MLAssist feature.
-* **trainingComputeBinding**: [ComputeBinding](#computebinding) (Required): Compute binding definition.
+* **trainingComputeBinding**: [ComputeBinding](#computebinding) (Required): The compute designated for training.
 
 ## Model
 ### Properties
@@ -573,7 +573,7 @@
 * **name**: string (Required, WriteOnly): The Model name.
 * **parentModelId**: string (WriteOnly): The Parent Model Id.
 * **properties**: [ModelProperties](#modelproperties) (WriteOnly): The Model property dictionary. Properties are immutable.
-* **resourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): The resource requirements for the container (cpu and memory).
+* **resourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): Resource requirements for the model
 * **runId**: string (WriteOnly): The RunId that created this model.
 * **sampleInputData**: string (WriteOnly): Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
 * **sampleOutputData**: string (WriteOnly): Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
@@ -601,7 +601,7 @@
 ## ModelEnvironmentDefinitionPython
 ### Properties
 * **baseCondaEnvironment**: string (WriteOnly)
-* **condaDependencies**: any (WriteOnly): Any object
+* **condaDependencies**: any (WriteOnly): A JObject containing Conda dependencies.
 * **interpreterPath**: string (WriteOnly): The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
 * **userManagedDependencies**: bool (WriteOnly): True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
 
@@ -649,7 +649,7 @@ The path specified gets used to call the user script.
 
 ## PersonalComputeInstanceSettings
 ### Properties
-* **assignedUser**: [AssignedUser](#assigneduser): A user that can be assigned to a compute instance.
+* **assignedUser**: [AssignedUser](#assigneduser): A user explicitly assigned to a personal compute instance.
 
 ## PrivateEndpoint
 ### Properties
@@ -658,25 +658,25 @@ The path specified gets used to call the user script.
 ## PrivateEndpointConnection
 ### Properties
 * **id**: string (ReadOnly): Specifies the resource ID.
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: string (ReadOnly): Specifies the name of the resource.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
-* **sku**: [Sku](#sku): Sku of the resource
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
+* **sku**: [Sku](#sku): The sku of the workspace.
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: string (ReadOnly): Specifies the type of the resource.
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The resource of private end point.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the private endpoint connection resource.
 
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string: The private endpoint connection status.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## ProgressMetrics
 ### Properties
@@ -693,7 +693,7 @@ The path specified gets used to call the user script.
 ## RegistryListCredentialsResult
 ### Properties
 * **location**: string (ReadOnly)
-* **passwords**: [Password](#password)[] (ReadOnly): Array of Password
+* **passwords**: [Password](#password)[] (ReadOnly)
 * **username**: string (ReadOnly)
 
 ## ResourceId
@@ -745,8 +745,8 @@ The path specified gets used to call the user script.
 
 ## ScriptsToExecute
 ### Properties
-* **creationScript**: [ScriptReference](#scriptreference): Script reference
-* **startupScript**: [ScriptReference](#scriptreference): Script reference
+* **creationScript**: [ScriptReference](#scriptreference): Script that's run only once during provision of the compute.
+* **startupScript**: [ScriptReference](#scriptreference): Script that's run every time the machine starts.
 
 ## SetupScripts
 ### Properties
@@ -755,14 +755,14 @@ The path specified gets used to call the user script.
 ## SharedPrivateLinkResource
 ### Properties
 * **name**: string: Unique name of the private link.
-* **properties**: [SharedPrivateLinkResourceProperty](#sharedprivatelinkresourceproperty): Properties of a shared private link resource.
+* **properties**: [SharedPrivateLinkResourceProperty](#sharedprivatelinkresourceproperty): Resource properties.
 
 ## SharedPrivateLinkResourceProperty
 ### Properties
 * **groupId**: string: The private link resource group id.
 * **privateLinkResourceId**: string: The resource id that private link links to.
 * **requestMessage**: string: Request message.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string: The private endpoint connection status.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## Sku
 ### Properties
@@ -796,7 +796,7 @@ The path specified gets used to call the user script.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 * **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that last modified the resource.
 
 ## SystemService
 ### Properties
@@ -854,7 +854,7 @@ The path specified gets used to call the user script.
 * **creationTime**: string (ReadOnly): The creation time of the machine learning workspace in ISO8601 format.
 * **description**: string: The description of this workspace.
 * **discoveryUrl**: string: Url for the discovery service to identify regional endpoints for machine learning experimentation services
-* **encryption**: [EncryptionProperty](#encryptionproperty)
+* **encryption**: [EncryptionProperty](#encryptionproperty): The encryption settings of Azure ML workspace.
 * **friendlyName**: string: The friendly name for this workspace. This name in mutable
 * **hbiWorkspace**: bool: The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
 * **imageBuildCompute**: string: The compute name for image build

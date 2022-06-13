@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Region where the VM is located.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GuestConfigurationAssignmentProperties](#guestconfigurationassignmentproperties): Guest configuration assignment properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [GuestConfigurationAssignmentProperties](#guestconfigurationassignmentproperties): Properties of the Guest configuration assignment.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.GuestConfiguration/guestConfigurationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AssignmentInfo
@@ -18,7 +18,7 @@
 
 ## AssignmentReport
 ### Properties
-* **assignment**: [AssignmentInfo](#assignmentinfo): Information about the guest configuration assignment.
+* **assignment**: [AssignmentInfo](#assignmentinfo): Configuration details of the guest configuration assignment.
 * **complianceStatus**: 'Compliant' | 'NonCompliant' | 'Pending' | string (ReadOnly): A value indicating compliance status of the machine for the assigned guest configuration.
 * **endTime**: string (ReadOnly): End date and time of the guest configuration assignment compliance status check.
 * **id**: string (ReadOnly): ARM resource id of the report for the guest configuration assignment.
@@ -31,7 +31,7 @@
 ## AssignmentReportResource
 ### Properties
 * **complianceStatus**: 'Compliant' | 'NonCompliant' | 'Pending' | string (ReadOnly): A value indicating compliance status of the machine for the assigned guest configuration.
-* **properties**: any (ReadOnly): Any object
+* **properties**: any (ReadOnly): Properties of a guest configuration assignment resource.
 * **reasons**: [AssignmentReportResourceComplianceReason](#assignmentreportresourcecompliancereason)[]: Compliance reason and reason code for a resource.
 * **resourceId**: string (ReadOnly): Name of the guest configuration assignment resource setting.
 
@@ -64,9 +64,9 @@
 * **assignmentHash**: string (ReadOnly): Combined hash of the configuration package and parameters.
 * **complianceStatus**: 'Compliant' | 'NonCompliant' | 'Pending' | string (ReadOnly): A value indicating compliance status of the machine for the assigned guest configuration.
 * **context**: string: The source which initiated the guest configuration assignment. Ex: Azure Policy
-* **guestConfiguration**: [GuestConfigurationNavigation](#guestconfigurationnavigation): Guest configuration is an artifact that encapsulates DSC configuration and its dependencies. The artifact is a zip file containing DSC configuration (as MOF) and dependent resources and other dependencies like modules.
+* **guestConfiguration**: [GuestConfigurationNavigation](#guestconfigurationnavigation): The guest configuration to assign.
 * **lastComplianceStatusChecked**: string (ReadOnly): Date and time when last compliance status was checked.
-* **latestAssignmentReport**: [AssignmentReport](#assignmentreport)
+* **latestAssignmentReport**: [AssignmentReport](#assignmentreport): Last reported guest configuration assignment report.
 * **latestReportId**: string (ReadOnly): Id of the latest report for the guest configuration assignment.
 * **parameterHash**: string (ReadOnly): parameter hash for the guest configuration assignment.
 * **provisioningState**: 'Canceled' | 'Created' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state, which only appears in the response.
@@ -80,7 +80,7 @@
 * **assignmentType**: 'ApplyAndAutoCorrect' | 'ApplyAndMonitor' | 'Audit' | 'DeployAndAutoCorrect' | string: Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
 * **configurationParameter**: [ConfigurationParameter](#configurationparameter)[]: The configuration parameters for the guest configuration.
 * **configurationProtectedParameter**: [ConfigurationParameter](#configurationparameter)[]: The protected configuration parameters for the guest configuration.
-* **configurationSetting**: [ConfigurationSetting](#configurationsetting) (ReadOnly): Configuration setting of LCM (Local Configuration Manager).
+* **configurationSetting**: [ConfigurationSetting](#configurationsetting) (ReadOnly): The configuration setting for the guest configuration.
 * **contentHash**: string: Combined hash of the guest configuration package and configuration parameters.
 * **contentType**: string (ReadOnly): Specifies the content type of the configuration. Possible values could be Builtin or Custom.
 * **contentUri**: string: Uri of the storage where guest configuration package is uploaded.
@@ -95,7 +95,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## VMInfo
 ### Properties

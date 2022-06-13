@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SqlVirtualMachineGroupProperties](#sqlvirtualmachinegroupproperties): The properties of a SQL virtual machine group.
+* **properties**: [SqlVirtualMachineGroupProperties](#sqlvirtualmachinegroupproperties): Resource properties.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -17,7 +17,7 @@
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AvailabilityGroupListenerProperties](#availabilitygrouplistenerproperties): The properties of an availability group listener.
+* **properties**: [AvailabilityGroupListenerProperties](#availabilitygrouplistenerproperties): Resource properties.
 * **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SqlVirtualMachine/sqlVirtualMachines@2017-03-01-preview
@@ -25,10 +25,10 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ResourceIdentity](#resourceidentity): Azure Active Directory identity configuration for a resource.
+* **identity**: [ResourceIdentity](#resourceidentity): Azure Active Directory identity of the server.
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SqlVirtualMachineProperties](#sqlvirtualmachineproperties): The SQL virtual machine properties.
+* **properties**: [SqlVirtualMachineProperties](#sqlvirtualmachineproperties): Resource properties.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -77,7 +77,7 @@
 ## LoadBalancerConfiguration
 ### Properties
 * **loadBalancerResourceId**: string: Resource id of the load balancer.
-* **privateIpAddress**: [PrivateIPAddress](#privateipaddress): A private IP address bound to the availability group listener.
+* **privateIpAddress**: [PrivateIPAddress](#privateipaddress): Private IP address.
 * **probePort**: int: Probe port.
 * **publicIpAddressResourceId**: string: Resource id of the public IP.
 * **sqlVirtualMachineInstances**: string[]: List of the SQL virtual machine instance resource id's that are enrolled into the availability group listener.
@@ -95,10 +95,10 @@
 
 ## ServerConfigurationsManagementSettings
 ### Properties
-* **additionalFeaturesServerConfigurations**: [AdditionalFeaturesServerConfigurations](#additionalfeaturesserverconfigurations): Additional SQL Server feature settings.
-* **sqlConnectivityUpdateSettings**: [SqlConnectivityUpdateSettings](#sqlconnectivityupdatesettings): Set the access level and network port settings for SQL Server.
-* **sqlStorageUpdateSettings**: [SqlStorageUpdateSettings](#sqlstorageupdatesettings): Set disk storage settings for SQL Server.
-* **sqlWorkloadTypeUpdateSettings**: [SqlWorkloadTypeUpdateSettings](#sqlworkloadtypeupdatesettings): Set workload type to optimize storage for SQL Server.
+* **additionalFeaturesServerConfigurations**: [AdditionalFeaturesServerConfigurations](#additionalfeaturesserverconfigurations): Additional SQL feature settings.
+* **sqlConnectivityUpdateSettings**: [SqlConnectivityUpdateSettings](#sqlconnectivityupdatesettings): SQL connectivity type settings.
+* **sqlStorageUpdateSettings**: [SqlStorageUpdateSettings](#sqlstorageupdatesettings): SQL storage update settings.
+* **sqlWorkloadTypeUpdateSettings**: [SqlWorkloadTypeUpdateSettings](#sqlworkloadtypeupdatesettings): SQL workload type settings.
 
 ## SqlConnectivityUpdateSettings
 ### Properties
@@ -126,21 +126,21 @@
 * **scaleType**: 'HA' | string (ReadOnly): Scale type.
 * **sqlImageOffer**: string: SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
 * **sqlImageSku**: 'Developer' | 'Enterprise' | string: SQL image sku.
-* **wsfcDomainProfile**: [WsfcDomainProfile](#wsfcdomainprofile): Active Directory account details to operate Windows Server Failover Cluster.
+* **wsfcDomainProfile**: [WsfcDomainProfile](#wsfcdomainprofile): Cluster Active Directory domain profile.
 
 ## SqlVirtualMachineProperties
 ### Properties
-* **autoBackupSettings**: [AutoBackupSettings](#autobackupsettings): Configure backups for databases in your SQL virtual machine.
-* **autoPatchingSettings**: [AutoPatchingSettings](#autopatchingsettings): Set a patching window during which Windows and SQL patches will be applied.
-* **keyVaultCredentialSettings**: [KeyVaultCredentialSettings](#keyvaultcredentialsettings): Configure your SQL virtual machine to be able to connect to the Azure Key Vault service.
+* **autoBackupSettings**: [AutoBackupSettings](#autobackupsettings): Auto backup settings for SQL Server.
+* **autoPatchingSettings**: [AutoPatchingSettings](#autopatchingsettings): Auto patching settings for applying critical security updates to SQL virtual machine.
+* **keyVaultCredentialSettings**: [KeyVaultCredentialSettings](#keyvaultcredentialsettings): Key vault credential settings.
 * **provisioningState**: string (ReadOnly): Provisioning state to track the async operation status.
-* **serverConfigurationsManagementSettings**: [ServerConfigurationsManagementSettings](#serverconfigurationsmanagementsettings): Set the connectivity, storage and workload settings.
+* **serverConfigurationsManagementSettings**: [ServerConfigurationsManagementSettings](#serverconfigurationsmanagementsettings): SQL Server configuration management settings.
 * **sqlImageOffer**: string: SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.
 * **sqlImageSku**: 'Developer' | 'Enterprise' | 'Express' | 'Standard' | 'Web' | string: SQL Server edition type.
 * **sqlManagement**: 'Full' | 'LightWeight' | 'NoAgent' | string: SQL Server Management type.
 * **sqlServerLicenseType**: 'AHUB' | 'DR' | 'PAYG' | string: SQL Server license type.
 * **sqlVirtualMachineGroupResourceId**: string: ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.
-* **storageConfigurationSettings**: [StorageConfigurationSettings](#storageconfigurationsettings): Storage Configurations for SQL Data, Log and TempDb.
+* **storageConfigurationSettings**: [StorageConfigurationSettings](#storageconfigurationsettings): Storage Configuration Settings.
 * **virtualMachineResourceId**: string: ARM Resource id of underlying virtual machine created from SQL marketplace image.
 * **wsfcDomainCredentials**: [WsfcDomainCredentials](#wsfcdomaincredentials): Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.
 
@@ -151,9 +151,9 @@
 ## StorageConfigurationSettings
 ### Properties
 * **diskConfigurationType**: 'ADD' | 'EXTEND' | 'NEW' | string: Disk configuration to apply to SQL Server.
-* **sqlDataSettings**: [SQLStorageSettings](#sqlstoragesettings): Set disk storage settings for SQL Server.
-* **sqlLogSettings**: [SQLStorageSettings](#sqlstoragesettings): Set disk storage settings for SQL Server.
-* **sqlTempDbSettings**: [SQLStorageSettings](#sqlstoragesettings): Set disk storage settings for SQL Server.
+* **sqlDataSettings**: [SQLStorageSettings](#sqlstoragesettings): SQL Server Data Storage Settings.
+* **sqlLogSettings**: [SQLStorageSettings](#sqlstoragesettings): SQL Server Log Storage Settings.
+* **sqlTempDbSettings**: [SQLStorageSettings](#sqlstoragesettings): SQL Server TempDb Storage Settings.
 * **storageWorkloadType**: 'DW' | 'GENERAL' | 'OLTP' | string: Storage workload type.
 
 ## TrackedResourceTags

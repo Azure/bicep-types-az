@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CdnWebApplicationFirewallPolicyProperties](#cdnwebapplicationfirewallpolicyproperties): Defines CDN web application firewall policy properties.
-* **sku**: [Sku](#sku) (Required): The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.
+* **properties**: [CdnWebApplicationFirewallPolicyProperties](#cdnwebapplicationfirewallpolicyproperties): Properties of the web application firewall policy.
+* **sku**: [Sku](#sku) (Required): The pricing tier (defines a CDN provider, feature list and rate) of the CdnWebApplicationFirewallPolicy.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Cdn/CdnWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant): The resource type
@@ -165,17 +165,17 @@
 ### Properties
 * **certificateType**: 'CustomerCertificate' | 'ManagedCertificate' | string (Required): Defines the source of the SSL certificate.
 * **minimumTlsVersion**: 'TLS10' | 'TLS12': TLS protocol version that will be used for Https
-* **secret**: [ResourceReference](#resourcereference): Reference to another resource.
+* **secret**: [ResourceReference](#resourcereference): Resource reference to the secret. ie. subs/rg/profile/secret
 
 ## AFDDomainProperties
 ### Properties
-* **azureDnsZone**: [ResourceReference](#resourcereference): Reference to another resource.
+* **azureDnsZone**: [ResourceReference](#resourcereference): Resource reference to the Azure DNS zone
 * **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' | string (ReadOnly)
 * **domainValidationState**: 'Approved' | 'Pending' | 'PendingRevalidation' | 'Submitting' | 'TimedOut' | 'Unknown' | string (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. DCV stands for DomainControlValidation.
 * **hostName**: string (Required): The host name of the domain. Must be a domain name.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status
-* **tlsSettings**: [AFDDomainHttpsParameters](#afddomainhttpsparameters): The JSON object that contains the properties to secure a domain.
-* **validationProperties**: [DomainValidationProperties](#domainvalidationproperties) (ReadOnly): The JSON object that contains the properties to validate a domain.
+* **tlsSettings**: [AFDDomainHttpsParameters](#afddomainhttpsparameters): The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
+* **validationProperties**: [DomainValidationProperties](#domainvalidationproperties) (ReadOnly): Values the customer needs to validate domain ownership
 
 ## AFDEndpointProperties
 ### Properties
@@ -188,25 +188,25 @@
 ## AFDOriginGroupProperties
 ### Properties
 * **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' | string (ReadOnly)
-* **healthProbeSettings**: [HealthProbeParameters](#healthprobeparameters): The JSON object that contains the properties to send health probes to origin.
-* **loadBalancingSettings**: [LoadBalancingSettingsParameters](#loadbalancingsettingsparameters): Round-Robin load balancing settings for a backend pool
+* **healthProbeSettings**: [HealthProbeParameters](#healthprobeparameters): Health probe settings to the origin that is used to determine the health of the origin.
+* **loadBalancingSettings**: [LoadBalancingSettingsParameters](#loadbalancingsettingsparameters): Load balancing settings for a backend pool
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status
-* **responseBasedAfdOriginErrorDetectionSettings**: [ResponseBasedOriginErrorDetectionParameters](#responsebasedoriginerrordetectionparameters): The JSON object that contains the properties to determine origin health using real requests/responses.
-* **sessionAffinityState**: 'Disabled' | 'Enabled' | string: Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
+* **responseBasedAfdOriginErrorDetectionSettings**: [ResponseBasedOriginErrorDetectionParameters](#responsebasedoriginerrordetectionparameters): The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
+* **sessionAffinityState**: 'Disabled' | 'Enabled' | string: Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
 * **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int: Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
 
 ## AFDOriginProperties
 ### Properties
-* **azureOrigin**: [ResourceReference](#resourcereference): Reference to another resource.
+* **azureOrigin**: [ResourceReference](#resourcereference): Resource reference to the Azure origin resource.
 * **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' | string (ReadOnly)
-* **enabledState**: 'Disabled' | 'Enabled' | string: Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
+* **enabledState**: 'Disabled' | 'Enabled' | string: Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
 * **hostName**: string: The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
 * **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535.
 * **httpsPort**: int: The value of the HTTPS port. Must be between 1 and 65535.
 * **originHostHeader**: string: The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
 * **priority**: int: Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status
-* **sharedPrivateLinkResource**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): Describes the properties of an existing Shared Private Link Resource to use when connecting to a private origin.
+* **sharedPrivateLinkResource**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): The properties of the private link resource for private origin.
 * **weight**: int: Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
 
 ## CacheExpirationActionParameters
@@ -233,12 +233,12 @@
 
 ## CdnWebApplicationFirewallPolicyProperties
 ### Properties
-* **customRules**: [CustomRuleList](#customrulelist): Defines contents of custom rules
+* **customRules**: [CustomRuleList](#customrulelist): Describes custom rules inside the policy.
 * **endpointLinks**: [CdnEndpoint](#cdnendpoint)[] (ReadOnly): Describes Azure CDN endpoints associated with this Web Application Firewall policy.
-* **managedRules**: [ManagedRuleSetList](#managedrulesetlist): Defines the list of managed rule sets for the policy.
-* **policySettings**: [PolicySettings](#policysettings): Defines contents of a web application firewall global configuration
+* **managedRules**: [ManagedRuleSetList](#managedrulesetlist): Describes managed rules inside the policy.
+* **policySettings**: [PolicySettings](#policysettings): Describes  policySettings for policy
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the WebApplicationFirewallPolicy.
-* **rateLimitRules**: [RateLimitRuleList](#ratelimitrulelist): Defines contents of rate limit rules
+* **rateLimitRules**: [RateLimitRuleList](#ratelimitrulelist): Describes rate limit rules inside the policy.
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the policy.
 
 ## CompressionSettings
@@ -264,17 +264,17 @@
 ### UserManagedHttpsParameters
 #### Properties
 * **certificateSource**: 'AzureKeyVault' (Required): Defines the source of the SSL certificate.
-* **certificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters) (ReadOnly): Describes the parameters for using a user's KeyVault certificate for securing custom domain.
+* **certificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters) (ReadOnly): Defines the certificate source parameters using user's keyvault certificate for enabling SSL.
 
 ### CdnManagedHttpsParameters
 #### Properties
 * **certificateSource**: 'Cdn' (Required): Defines the source of the SSL certificate.
-* **certificateSourceParameters**: [CdnCertificateSourceParameters](#cdncertificatesourceparameters) (ReadOnly): Defines the parameters for using CDN managed certificate for securing custom domain.
+* **certificateSourceParameters**: [CdnCertificateSourceParameters](#cdncertificatesourceparameters) (ReadOnly): Defines the certificate source parameters using CDN managed certificate for enabling SSL.
 
 
 ## CustomDomainPropertiesParameters
 ### Properties
-* **customHttpsParameters**: [CustomDomainHttpsParameters](#customdomainhttpsparameters) (ReadOnly): The JSON object that contains the properties to secure a custom domain.
+* **customHttpsParameters**: [CustomDomainHttpsParameters](#customdomainhttpsparameters) (ReadOnly): Certificate parameters for securing custom HTTPS
 * **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' | string (ReadOnly): Provisioning status of Custom Https of the custom domain.
 * **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' | string (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
 * **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
@@ -284,7 +284,7 @@
 
 ## CustomRule
 ### Properties
-* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' | string (Required): Defines the action to take on rule match.
+* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' | string (Required): Describes what action to be applied when rule matches
 * **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
 * **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions.
 * **name**: string (Required): Defines the name of the custom rule
@@ -306,9 +306,9 @@
 
 ## DeepCreatedOriginGroupProperties
 ### Properties
-* **healthProbeSettings**: [HealthProbeParameters](#healthprobeparameters): The JSON object that contains the properties to send health probes to origin.
+* **healthProbeSettings**: [HealthProbeParameters](#healthprobeparameters): Health probe settings to the origin that is used to determine the health of the origin.
 * **origins**: [ResourceReference](#resourcereference)[] (Required): The source of the content being delivered via CDN within given origin group.
-* **responseBasedOriginErrorDetectionSettings**: [ResponseBasedOriginErrorDetectionParameters](#responsebasedoriginerrordetectionparameters): The JSON object that contains the properties to determine origin health using real requests/responses.
+* **responseBasedOriginErrorDetectionSettings**: [ResponseBasedOriginErrorDetectionParameters](#responsebasedoriginerrordetectionparameters): The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.
 * **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int: Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
 
 ## DeepCreatedOriginProperties
@@ -339,42 +339,42 @@
 ### DeliveryRuleCacheExpirationAction
 #### Properties
 * **name**: 'CacheExpiration' (Required): The name of the action for the delivery rule.
-* **parameters**: [CacheExpirationActionParameters](#cacheexpirationactionparameters) (Required): Defines the parameters for the cache expiration action.
+* **parameters**: [CacheExpirationActionParameters](#cacheexpirationactionparameters) (Required): Defines the parameters for the action.
 
 ### DeliveryRuleCacheKeyQueryStringAction
 #### Properties
 * **name**: 'CacheKeyQueryString' (Required): The name of the action for the delivery rule.
-* **parameters**: [CacheKeyQueryStringActionParameters](#cachekeyquerystringactionparameters) (Required): Defines the parameters for the cache-key query string action.
+* **parameters**: [CacheKeyQueryStringActionParameters](#cachekeyquerystringactionparameters) (Required): Defines the parameters for the action.
 
 ### DeliveryRuleRequestHeaderAction
 #### Properties
 * **name**: 'ModifyRequestHeader' (Required): The name of the action for the delivery rule.
-* **parameters**: [HeaderActionParameters](#headeractionparameters) (Required): Defines the parameters for the request header action.
+* **parameters**: [HeaderActionParameters](#headeractionparameters) (Required): Defines the parameters for the action.
 
 ### DeliveryRuleResponseHeaderAction
 #### Properties
 * **name**: 'ModifyResponseHeader' (Required): The name of the action for the delivery rule.
-* **parameters**: [HeaderActionParameters](#headeractionparameters) (Required): Defines the parameters for the request header action.
+* **parameters**: [HeaderActionParameters](#headeractionparameters) (Required): Defines the parameters for the action.
 
 ### OriginGroupOverrideAction
 #### Properties
 * **name**: 'OriginGroupOverride' (Required): The name of the action for the delivery rule.
-* **parameters**: [OriginGroupOverrideActionParameters](#origingroupoverrideactionparameters) (Required): Defines the parameters for the origin group override action.
+* **parameters**: [OriginGroupOverrideActionParameters](#origingroupoverrideactionparameters) (Required): Defines the parameters for the action.
 
 ### UrlRedirectAction
 #### Properties
 * **name**: 'UrlRedirect' (Required): The name of the action for the delivery rule.
-* **parameters**: [UrlRedirectActionParameters](#urlredirectactionparameters) (Required): Defines the parameters for the url redirect action.
+* **parameters**: [UrlRedirectActionParameters](#urlredirectactionparameters) (Required): Defines the parameters for the action.
 
 ### UrlRewriteAction
 #### Properties
 * **name**: 'UrlRewrite' (Required): The name of the action for the delivery rule.
-* **parameters**: [UrlRewriteActionParameters](#urlrewriteactionparameters) (Required): Defines the parameters for the url rewrite action.
+* **parameters**: [UrlRewriteActionParameters](#urlrewriteactionparameters) (Required): Defines the parameters for the action.
 
 ### UrlSigningAction
 #### Properties
 * **name**: 'UrlSigning' (Required): The name of the action for the delivery rule.
-* **parameters**: [UrlSigningActionParameters](#urlsigningactionparameters) (Required): Defines the parameters for the Url Signing action.
+* **parameters**: [UrlSigningActionParameters](#urlsigningactionparameters) (Required): Defines the parameters for the action.
 
 
 ## DeliveryRuleCondition
@@ -384,72 +384,72 @@
 ### DeliveryRuleCookiesCondition
 #### Properties
 * **name**: 'Cookies' (Required): The name of the condition for the delivery rule.
-* **parameters**: [CookiesMatchConditionParameters](#cookiesmatchconditionparameters) (Required): Defines the parameters for Cookies match conditions
+* **parameters**: [CookiesMatchConditionParameters](#cookiesmatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleHttpVersionCondition
 #### Properties
 * **name**: 'HttpVersion' (Required): The name of the condition for the delivery rule.
-* **parameters**: [HttpVersionMatchConditionParameters](#httpversionmatchconditionparameters) (Required): Defines the parameters for HttpVersion match conditions
+* **parameters**: [HttpVersionMatchConditionParameters](#httpversionmatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleIsDeviceCondition
 #### Properties
 * **name**: 'IsDevice' (Required): The name of the condition for the delivery rule.
-* **parameters**: [IsDeviceMatchConditionParameters](#isdevicematchconditionparameters) (Required): Defines the parameters for IsDevice match conditions
+* **parameters**: [IsDeviceMatchConditionParameters](#isdevicematchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRulePostArgsCondition
 #### Properties
 * **name**: 'PostArgs' (Required): The name of the condition for the delivery rule.
-* **parameters**: [PostArgsMatchConditionParameters](#postargsmatchconditionparameters) (Required): Defines the parameters for PostArgs match conditions
+* **parameters**: [PostArgsMatchConditionParameters](#postargsmatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleQueryStringCondition
 #### Properties
 * **name**: 'QueryString' (Required): The name of the condition for the delivery rule.
-* **parameters**: [QueryStringMatchConditionParameters](#querystringmatchconditionparameters) (Required): Defines the parameters for QueryString match conditions
+* **parameters**: [QueryStringMatchConditionParameters](#querystringmatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleRemoteAddressCondition
 #### Properties
 * **name**: 'RemoteAddress' (Required): The name of the condition for the delivery rule.
-* **parameters**: [RemoteAddressMatchConditionParameters](#remoteaddressmatchconditionparameters) (Required): Defines the parameters for RemoteAddress match conditions
+* **parameters**: [RemoteAddressMatchConditionParameters](#remoteaddressmatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleRequestBodyCondition
 #### Properties
 * **name**: 'RequestBody' (Required): The name of the condition for the delivery rule.
-* **parameters**: [RequestBodyMatchConditionParameters](#requestbodymatchconditionparameters) (Required): Defines the parameters for RequestBody match conditions
+* **parameters**: [RequestBodyMatchConditionParameters](#requestbodymatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleRequestHeaderCondition
 #### Properties
 * **name**: 'RequestHeader' (Required): The name of the condition for the delivery rule.
-* **parameters**: [RequestHeaderMatchConditionParameters](#requestheadermatchconditionparameters) (Required): Defines the parameters for RequestHeader match conditions
+* **parameters**: [RequestHeaderMatchConditionParameters](#requestheadermatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleRequestMethodCondition
 #### Properties
 * **name**: 'RequestMethod' (Required): The name of the condition for the delivery rule.
-* **parameters**: [RequestMethodMatchConditionParameters](#requestmethodmatchconditionparameters) (Required): Defines the parameters for RequestMethod match conditions
+* **parameters**: [RequestMethodMatchConditionParameters](#requestmethodmatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleRequestSchemeCondition
 #### Properties
 * **name**: 'RequestScheme' (Required): The name of the condition for the delivery rule.
-* **parameters**: [RequestSchemeMatchConditionParameters](#requestschemematchconditionparameters) (Required): Defines the parameters for RequestScheme match conditions
+* **parameters**: [RequestSchemeMatchConditionParameters](#requestschemematchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleRequestUriCondition
 #### Properties
 * **name**: 'RequestUri' (Required): The name of the condition for the delivery rule.
-* **parameters**: [RequestUriMatchConditionParameters](#requesturimatchconditionparameters) (Required): Defines the parameters for RequestUri match conditions
+* **parameters**: [RequestUriMatchConditionParameters](#requesturimatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleUrlFileExtensionCondition
 #### Properties
 * **name**: 'UrlFileExtension' (Required): The name of the condition for the delivery rule.
-* **parameters**: [UrlFileExtensionMatchConditionParameters](#urlfileextensionmatchconditionparameters) (Required): Defines the parameters for UrlFileExtension match conditions
+* **parameters**: [UrlFileExtensionMatchConditionParameters](#urlfileextensionmatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleUrlFileNameCondition
 #### Properties
 * **name**: 'UrlFileName' (Required): The name of the condition for the delivery rule.
-* **parameters**: [UrlFileNameMatchConditionParameters](#urlfilenamematchconditionparameters) (Required): Defines the parameters for UrlFilename match conditions
+* **parameters**: [UrlFileNameMatchConditionParameters](#urlfilenamematchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleUrlPathCondition
 #### Properties
 * **name**: 'UrlPath' (Required): The name of the condition for the delivery rule.
-* **parameters**: [UrlPathMatchConditionParameters](#urlpathmatchconditionparameters) (Required): Defines the parameters for UrlPath match conditions
+* **parameters**: [UrlPathMatchConditionParameters](#urlpathmatchconditionparameters) (Required): Defines the parameters for the condition.
 
 
 ## DomainValidationProperties
@@ -460,14 +460,14 @@
 ## EndpointProperties
 ### Properties
 * **contentTypesToCompress**: string[]: List of content types on which compression applies. The value should be a valid MIME type.
-* **defaultOriginGroup**: [ResourceReference](#resourcereference): Reference to another resource.
+* **defaultOriginGroup**: [ResourceReference](#resourcereference): A reference to the origin group.
 * **deliveryPolicy**: [EndpointPropertiesUpdateParametersDeliveryPolicy](#endpointpropertiesupdateparametersdeliverypolicy): A policy that specifies the delivery rules to be used for an endpoint.
 * **geoFilters**: [GeoFilter](#geofilter)[]: List of rules defining the user's geo access within a CDN endpoint. Each geo filter defines an access rule to a specified path or content, e.g. block APAC for path /pictures/
 * **hostName**: string (ReadOnly): The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
 * **isCompressionEnabled**: bool: Indicates whether content compression is enabled on CDN. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB.
 * **isHttpAllowed**: bool: Indicates whether HTTP traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
 * **isHttpsAllowed**: bool: Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
-* **optimizationType**: 'DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming' | string: Specifies what scenario the customer wants this CDN endpoint to optimize, e.g. Download, Media services. With this information we can apply scenario driven optimization.
+* **optimizationType**: 'DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming' | string: Specifies what scenario the customer wants this CDN endpoint to optimize for, e.g. Download, Media services. With this information, CDN can apply scenario driven optimization.
 * **originGroups**: [DeepCreatedOriginGroup](#deepcreatedorigingroup)[]: The origin groups comprising of origins that are used for load balancing the traffic based on availability.
 * **originHostHeader**: string: The host header value sent to the origin with each request. This property at Endpoint is only allowed when endpoint uses single origin and can be overridden by the same property specified at origin.If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
 * **originPath**: string: A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
@@ -561,7 +561,7 @@
 
 ## ManagedRuleOverride
 ### Properties
-* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' | string: Defines the action to take on rule match.
+* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' | string: Describes the override action to be applied when rule matches.
 * **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
 * **ruleId**: string (Required): Identifier for the managed rule.
 
@@ -579,7 +579,7 @@
 ## MatchCondition
 ### Properties
 * **matchValue**: string[] (Required): List of possible match values.
-* **matchVariable**: 'Cookies' | 'HttpVersion' | 'IsDevice' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RemoteAddress' | 'RequestBody' | 'RequestHeader' | 'RequestMethod' | 'RequestScheme' | 'RequestUri' | 'SocketAddr' | 'UrlFileExtension' | 'UrlFileName' | 'UrlPath' | string (Required): The name of the condition for the delivery rule.
+* **matchVariable**: 'Cookies' | 'HttpVersion' | 'IsDevice' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RemoteAddress' | 'RequestBody' | 'RequestHeader' | 'RequestMethod' | 'RequestScheme' | 'RequestUri' | 'SocketAddr' | 'UrlFileExtension' | 'UrlFileName' | 'UrlPath' | string (Required): Match variable to compare against.
 * **negateCondition**: bool: Describes if the result of this condition should be negated.
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
 * **selector**: string: Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
@@ -588,15 +588,15 @@
 ## OriginGroupOverrideActionParameters
 ### Properties
 * **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleOriginGroupOverrideActionParameters' | string (Required)
-* **originGroup**: [ResourceReference](#resourcereference) (Required): Reference to another resource.
+* **originGroup**: [ResourceReference](#resourcereference) (Required): defines the OriginGroup that would override the DefaultOriginGroup.
 
 ## OriginGroupProperties
 ### Properties
-* **healthProbeSettings**: [HealthProbeParameters](#healthprobeparameters): The JSON object that contains the properties to send health probes to origin.
+* **healthProbeSettings**: [HealthProbeParameters](#healthprobeparameters): Health probe settings to the origin that is used to determine the health of the origin.
 * **origins**: [ResourceReference](#resourcereference)[]: The source of the content being delivered via CDN within given origin group.
 * **provisioningState**: string (ReadOnly): Provisioning status of the origin group.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' | string (ReadOnly): Resource status of the origin group.
-* **responseBasedOriginErrorDetectionSettings**: [ResponseBasedOriginErrorDetectionParameters](#responsebasedoriginerrordetectionparameters): The JSON object that contains the properties to determine origin health using real requests/responses.
+* **responseBasedOriginErrorDetectionSettings**: [ResponseBasedOriginErrorDetectionParameters](#responsebasedoriginerrordetectionparameters): The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
 * **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int: Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
 
 ## OriginProperties
@@ -649,7 +649,7 @@
 
 ## RateLimitRule
 ### Properties
-* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' | string (Required): Defines the action to take on rule match.
+* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' | string (Required): Describes what action to be applied when rule matches
 * **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
 * **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions.
 * **name**: string (Required): Defines the name of the custom rule
@@ -720,14 +720,14 @@
 
 ## RouteProperties
 ### Properties
-* **compressionSettings**: [CompressionSettings](#compressionsettings): settings for compression.
+* **compressionSettings**: [CompressionSettings](#compressionsettings): compression settings.
 * **customDomains**: [ResourceReference](#resourcereference)[]: Domains referenced by this endpoint.
 * **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' | string (ReadOnly)
 * **enabledState**: 'Disabled' | 'Enabled' | string: Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
 * **forwardingProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest' | string: Protocol this rule will use when forwarding traffic to backends.
 * **httpsRedirect**: 'Disabled' | 'Enabled' | string: Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
 * **linkToDefaultDomain**: 'Disabled' | 'Enabled' | string: whether this route will be linked to the default endpoint domain.
-* **originGroup**: [ResourceReference](#resourcereference): Reference to another resource.
+* **originGroup**: [ResourceReference](#resourcereference): A reference to the origin group.
 * **originPath**: string: A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
 * **patternsToMatch**: string[]: The route patterns of the rule.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status
@@ -756,7 +756,7 @@
 ### CustomerCertificateParameters
 #### Properties
 * **certificateAuthority**: string: Certificate issuing authority.
-* **secretSource**: [ResourceReference](#resourcereference) (Required): Reference to another resource.
+* **secretSource**: [ResourceReference](#resourcereference) (Required): Resource reference to the KV secret
 * **secretVersion**: string: Version of the secret to be used
 * **subjectAlternativeNames**: string[]: The list of SANs.
 * **type**: 'CustomerCertificate' (Required): The type of the Secret to create.
@@ -769,7 +769,7 @@
 ### UrlSigningKeyParameters
 #### Properties
 * **keyId**: string (Required): Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
-* **secretSource**: [ResourceReference](#resourcereference) (Required): Reference to another resource.
+* **secretSource**: [ResourceReference](#resourcereference) (Required): Resource reference to the KV secret
 * **secretVersion**: string: Version of the secret to be used
 * **type**: 'UrlSigningKey' (Required): The type of the Secret to create.
 
@@ -777,7 +777,7 @@
 ## SecretProperties
 ### Properties
 * **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' | string (ReadOnly)
-* **parameters**: [SecretParameters](#secretparameters): The json object containing secret parameters
+* **parameters**: [SecretParameters](#secretparameters): object which contains secret parameters
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status
 
 ## SecurityPolicyParameters
@@ -788,13 +788,13 @@
 #### Properties
 * **associations**: [SecurityPolicyWebApplicationFirewallAssociation](#securitypolicywebapplicationfirewallassociation)[]: Waf associations
 * **type**: 'WebApplicationFirewall' (Required): The type of the Security policy to create.
-* **wafPolicy**: [ResourceReference](#resourcereference): Reference to another resource.
+* **wafPolicy**: [ResourceReference](#resourcereference): Resource ID.
 
 
 ## SecurityPolicyProperties
 ### Properties
 * **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' | string (ReadOnly)
-* **parameters**: [SecurityPolicyParameters](#securitypolicyparameters): The json object containing security policy parameters
+* **parameters**: [SecurityPolicyParameters](#securitypolicyparameters): object which contains security policy parameters
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status
 
 ## SecurityPolicyWebApplicationFirewallAssociation
@@ -805,7 +805,7 @@
 ## SharedPrivateLinkResourceProperties
 ### Properties
 * **groupId**: string: The group id from the provider of resource the shared private link resource is for.
-* **privateLink**: [ResourceReference](#resourcereference): Reference to another resource.
+* **privateLink**: [ResourceReference](#resourcereference): The resource id of the resource the shared private link resource is for.
 * **privateLinkLocation**: string: The location of the shared private link resource
 * **requestMessage**: string: The request message for requesting approval of the shared private link resource.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout': Status of the shared private link resource. Can be Pending, Approved, Rejected, Disconnected, or Timeout.
@@ -818,10 +818,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC)
 * **createdBy**: string: An identifier for the identity that created the resource
-* **createdByType**: 'application' | 'key' | 'managedIdentity' | 'user' | string: The type of identity that creates/modifies resources
+* **createdByType**: 'application' | 'key' | 'managedIdentity' | 'user' | string: The type of identity that created the resource
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: An identifier for the identity that last modified the resource
-* **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user' | string: The type of identity that creates/modifies resources
+* **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user' | string: The type of identity that last modified the resource
 
 ## TrackedResourceTags
 ### Properties
@@ -893,7 +893,7 @@
 ## UrlSigningKey
 ### Properties
 * **keyId**: string (Required): Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
-* **keySourceParameters**: [KeyVaultSigningKeyParameters](#keyvaultsigningkeyparameters) (Required): Describes the parameters for using a user's KeyVault for URL Signing Key.
+* **keySourceParameters**: [KeyVaultSigningKeyParameters](#keyvaultsigningkeyparameters) (Required): Defines the parameters for using customer key vault for Url Signing Key.
 
 ## UrlSigningParamIdentifier
 ### Properties

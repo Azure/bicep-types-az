@@ -7,7 +7,7 @@
 * **etag**: int (ReadOnly): Type of the partner
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PartnerProperties](#partnerproperties) (ReadOnly): this is the management partner properties
+* **properties**: [PartnerProperties](#partnerproperties) (ReadOnly): Properties of the partner
 * **type**: 'Microsoft.ManagementPartner/partners' (ReadOnly, DeployTimeConstant): The resource type
 
 ## PartnerProperties
@@ -16,7 +16,7 @@
 * **objectId**: string (ReadOnly): This is the object id.
 * **partnerId**: string (ReadOnly): This is the partner id
 * **partnerName**: string (ReadOnly): This is the partner name
-* **state**: 'Active' | 'Deleted' | string (ReadOnly): this is the management partner state: Active or Deleted
+* **state**: 'Active' | 'Deleted' | string (ReadOnly): This is the partner state
 * **tenantId**: string (ReadOnly): This is the tenant id.
 * **updatedTime**: string (ReadOnly): This is the DateTime when the partner was updated.
 * **version**: int (ReadOnly): This is the version.

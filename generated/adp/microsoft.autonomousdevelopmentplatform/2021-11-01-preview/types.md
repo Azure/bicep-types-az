@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AccountProperties](#accountproperties): ADP account properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [AccountProperties](#accountproperties): List of account properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AutonomousDevelopmentPlatform/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,8 +18,8 @@
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DataPoolProperties](#datapoolproperties): Data Pool properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [DataPoolProperties](#datapoolproperties): List of data pool properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource
 * **type**: 'Microsoft.AutonomousDevelopmentPlatform/accounts/dataPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AccountProperties
@@ -36,16 +36,16 @@
 
 ## DataPoolLocation
 ### Properties
-* **encryption**: [DataPoolEncryption](#datapoolencryption): Encryption properties of a Data Pool
+* **encryption**: [DataPoolEncryption](#datapoolencryption): Encryption properties of a Data Pool location
 * **name**: string (Required): The location name
 * **storageAccountCount**: int: The amount of storage accounts provisioned per Data Pool. Default: 5
-* **storageSku**: [StorageSku](#storagesku): The Storage SKU.
+* **storageSku**: [StorageSku](#storagesku): The Storage SKU. Default: Standard_ZRS.
 
 ## DataPoolProperties
 ### Properties
 * **dataPoolId**: string (ReadOnly): The Data Pool's data-plane ID
 * **locations**: [DataPoolLocation](#datapoollocation)[]: Gets or sets the collection of locations where Data Pool resources should be created
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Gets the status of the account at the time the operation was called
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Gets the status of the data pool at the time the operation was called
 * **tags**: [Tags](#tags): Resource tags
 
 ## StorageSku
@@ -59,7 +59,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## Tags
 ### Properties

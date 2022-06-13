@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The identity of the resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisCreateProperties](#rediscreateproperties) (Required): Properties supplied to Create Redis operation.
+* **properties**: [RedisCreateProperties](#rediscreateproperties) (Required): Redis cache properties.
 * **tags**: [RedisCreateParametersTags](#rediscreateparameterstags): Resource tags.
 * **type**: 'Microsoft.Cache/redis' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: A list of availability zones denoting where the resource needs to come from.
@@ -19,7 +19,7 @@
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisFirewallRuleProperties](#redisfirewallruleproperties) (Required): Specifies a range of IP addresses permitted to connect to the cache
+* **properties**: [RedisFirewallRuleProperties](#redisfirewallruleproperties) (Required): redis cache firewall rule properties
 * **type**: 'Microsoft.Cache/redis/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Cache/redis/linkedServers@2021-06-01
@@ -28,7 +28,7 @@
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisLinkedServerCreateProperties](#redislinkedservercreateproperties) (Required): Create properties for a linked server
+* **properties**: [RedisLinkedServerCreateProperties](#redislinkedservercreateproperties) (Required): Properties required to create a linked server.
 * **type**: 'Microsoft.Cache/redis/linkedServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Cache/redis/patchSchedules@2021-06-01
@@ -47,7 +47,7 @@
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: 'Microsoft.Cache/redis/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.Cache/redis@2021-06-01)
@@ -70,20 +70,20 @@
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **name**: string (ReadOnly): The name of the resource
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Properties of the PrivateEndpointConnectProperties.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Resource properties.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The Private Endpoint resource.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The resource of private end point.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the private endpoint connection resource.
 
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: string (ReadOnly): A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string (ReadOnly): The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected' | string (ReadOnly): The private endpoint connection status.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | string (ReadOnly): Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## RedisAccessKeys
 ### Properties
@@ -126,7 +126,7 @@
 
 ## RedisCreateProperties
 ### Properties
-* **accessKeys**: [RedisAccessKeys](#redisaccesskeys) (ReadOnly): Redis cache access keys.
+* **accessKeys**: [RedisAccessKeys](#redisaccesskeys) (ReadOnly): The keys of the Redis cache - not set if this object is not the response to Create or Update redis cache
 * **enableNonSslPort**: bool: Specifies whether the non-ssl Redis server port (6379) is enabled.
 * **hostName**: string (ReadOnly): Redis host name.
 * **instances**: [RedisInstanceDetails](#redisinstancedetails)[] (ReadOnly): List of the Redis instances associated with the cache
@@ -141,7 +141,7 @@
 * **replicasPerMaster**: int: The number of replicas to be created per primary.
 * **replicasPerPrimary**: int: The number of replicas to be created per primary.
 * **shardCount**: int: The number of shards to be created on a Premium Cluster Cache.
-* **sku**: [Sku](#sku) (Required): SKU parameters supplied to the create Redis operation.
+* **sku**: [Sku](#sku) (Required): The SKU of the Redis cache to deploy.
 * **sslPort**: int (ReadOnly): Redis SSL port.
 * **staticIP**: string: Static IP address. Optionally, may be specified when deploying a Redis cache inside an existing Azure Virtual Network; auto assigned by default.
 * **subnetId**: string: The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1

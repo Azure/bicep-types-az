@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Gets or sets the resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkflowProperties](#workflowproperties)
+* **properties**: [WorkflowProperties](#workflowproperties): Gets or sets the workflow properties.
 * **tags**: [ResourceTags](#resourcetags): Gets or sets the resource tags.
 * **type**: 'Microsoft.Logic/workflows' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -17,7 +17,7 @@
 * **apiVersion**: '2015-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkflowAccessKeyProperties](#workflowaccesskeyproperties)
+* **properties**: [WorkflowAccessKeyProperties](#workflowaccesskeyproperties): Gets or sets the workflow access key properties.
 * **type**: 'Microsoft.Logic/workflows/accessKeys' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function list (Microsoft.Logic/workflows/accessKeys@2015-02-01-preview)
@@ -32,10 +32,10 @@
 
 ## ContentLink
 ### Properties
-* **contentHash**: [ContentHash](#contenthash)
+* **contentHash**: [ContentHash](#contenthash): Gets or sets the content hash.
 * **contentSize**: int: Gets or sets the content size.
 * **contentVersion**: string: Gets or sets the content version.
-* **metadata**: any: Any object
+* **metadata**: any: Gets or sets the metadata.
 * **uri**: string: Gets or sets the content link URI.
 
 ## ResourceReference
@@ -51,8 +51,8 @@
 
 ## Sku
 ### Properties
-* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard'
-* **plan**: [ResourceReference](#resourcereference)
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard': Gets or sets the name.
+* **plan**: [ResourceReference](#resourcereference): Gets or sets the reference to plan.
 
 ## WorkflowAccessKeyProperties
 ### Properties
@@ -61,22 +61,22 @@
 
 ## WorkflowParameter
 ### Properties
-* **metadata**: any: Any object
-* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String'
-* **value**: any: Any object
+* **metadata**: any: Gets or sets the metadata.
+* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String': Gets or sets the type.
+* **value**: any: Gets or sets the value.
 
 ## WorkflowProperties
 ### Properties
 * **accessEndpoint**: string (ReadOnly): Gets the access endpoint.
 * **changedTime**: string (ReadOnly): Gets the changed time.
 * **createdTime**: string (ReadOnly): Gets the created time.
-* **definition**: any: Any object
-* **definitionLink**: [ContentLink](#contentlink)
+* **definition**: any: Gets or sets the definition.
+* **definitionLink**: [ContentLink](#contentlink): Gets or sets the link to definition.
 * **parameters**: [WorkflowPropertiesParameters](#workflowpropertiesparameters): Gets or sets the parameters.
-* **parametersLink**: [ContentLink](#contentlink)
-* **provisioningState**: 'Moving' | 'NotSpecified' | 'Succeeded' (ReadOnly)
-* **sku**: [Sku](#sku)
-* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended'
+* **parametersLink**: [ContentLink](#contentlink): Gets or sets the link to parameters.
+* **provisioningState**: 'Moving' | 'NotSpecified' | 'Succeeded' (ReadOnly): Gets the provisioning state.
+* **sku**: [Sku](#sku): Gets or sets the sku.
+* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended': Gets or sets the state.
 * **version**: string (ReadOnly): Gets the version.
 
 ## WorkflowPropertiesParameters

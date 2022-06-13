@@ -6,7 +6,7 @@
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag for the resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ClusterIdentity](#clusteridentity): Identity for the cluster.
+* **identity**: [ClusterIdentity](#clusteridentity): The identity of the cluster, if configured.
 * **location**: string: The location of the cluster.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterCreateProperties](#clustercreateproperties): The cluster create parameters.
@@ -22,7 +22,7 @@
 * **etag**: string: The ETag for the application
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApplicationProperties](#applicationproperties): The HDInsight cluster application GET response.
+* **properties**: [ApplicationProperties](#applicationproperties): The properties of the application.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ApplicationTags](#applicationtags): The tags for the application.
 * **type**: 'Microsoft.HDInsight/clusters/applications' (ReadOnly, DeployTimeConstant): The resource type
@@ -63,7 +63,7 @@
 ### Properties
 * **applicationState**: string (ReadOnly): The application state.
 * **applicationType**: string: The application type.
-* **computeProfile**: [ComputeProfile](#computeprofile): Describes the compute profile.
+* **computeProfile**: [ComputeProfile](#computeprofile): The list of roles in the cluster.
 * **createdDate**: string (ReadOnly): The application create date time.
 * **errors**: [Errors](#errors)[]: The list of errors.
 * **httpsEndpoints**: [ApplicationGetHttpsEndpoint](#applicationgethttpsendpoint)[]: The list of application HTTPS endpoints.
@@ -81,8 +81,8 @@
 
 ## Autoscale
 ### Properties
-* **capacity**: [AutoscaleCapacity](#autoscalecapacity): The load-based autoscale request parameters
-* **recurrence**: [AutoscaleRecurrence](#autoscalerecurrence): Schedule-based autoscale request parameters
+* **capacity**: [AutoscaleCapacity](#autoscalecapacity): Parameters for load-based autoscale
+* **recurrence**: [AutoscaleRecurrence](#autoscalerecurrence): Parameters for schedule-based autoscale
 
 ## AutoscaleCapacity
 ### Properties
@@ -97,7 +97,7 @@
 ## AutoscaleSchedule
 ### Properties
 * **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[]: Days of the week for a schedule-based autoscale rule
-* **timeAndCapacity**: [AutoscaleTimeAndCapacity](#autoscaletimeandcapacity): Time and capacity request parameters
+* **timeAndCapacity**: [AutoscaleTimeAndCapacity](#autoscaletimeandcapacity): Time and capacity for a schedule-based autoscale rule
 
 ## AutoscaleTimeAndCapacity
 ### Properties
@@ -123,22 +123,22 @@
 * **clusterState**: string (ReadOnly): The state of the cluster.
 * **clusterVersion**: string: The version of the cluster.
 * **computeIsolationProperties**: [ComputeIsolationProperties](#computeisolationproperties): The compute isolation properties.
-* **computeProfile**: [ComputeProfile](#computeprofile): Describes the compute profile.
+* **computeProfile**: [ComputeProfile](#computeprofile): The compute profile.
 * **connectivityEndpoints**: [ConnectivityEndpoint](#connectivityendpoint)[] (ReadOnly): The list of connectivity endpoints.
 * **createdDate**: string (ReadOnly): The date on which the cluster was created.
-* **diskEncryptionProperties**: [DiskEncryptionProperties](#diskencryptionproperties): The disk encryption properties
+* **diskEncryptionProperties**: [DiskEncryptionProperties](#diskencryptionproperties): The disk encryption properties.
 * **encryptionInTransitProperties**: [EncryptionInTransitProperties](#encryptionintransitproperties): The encryption-in-transit properties.
 * **errors**: [Errors](#errors)[] (ReadOnly): The list of errors.
-* **excludedServicesConfig**: [ExcludedServicesConfig](#excludedservicesconfig) (ReadOnly): The configuration that services will be excluded when creating cluster.
-* **kafkaRestProperties**: [KafkaRestProperties](#kafkarestproperties): The kafka rest proxy configuration which contains AAD security group information.
+* **excludedServicesConfig**: [ExcludedServicesConfig](#excludedservicesconfig) (ReadOnly): The excluded services config.
+* **kafkaRestProperties**: [KafkaRestProperties](#kafkarestproperties): The cluster kafka rest proxy configuration.
 * **minSupportedTlsVersion**: string: The minimal supported tls version.
 * **networkProperties**: [NetworkProperties](#networkproperties): The network properties.
 * **osType**: 'Linux' | 'Windows' | string: The type of operating system.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections.
 * **privateLinkConfigurations**: [PrivateLinkConfiguration](#privatelinkconfiguration)[]: The private link configurations.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): The provisioning state, which only appears in the response.
-* **quotaInfo**: [QuotaInfo](#quotainfo) (ReadOnly): The quota properties for the cluster.
-* **securityProfile**: [SecurityProfile](#securityprofile): The security profile which contains Ssh public key for the HDInsight cluster.
+* **quotaInfo**: [QuotaInfo](#quotainfo) (ReadOnly): The quota information.
+* **securityProfile**: [SecurityProfile](#securityprofile): The security profile.
 * **storageProfile**: [StorageProfile](#storageprofile): The storage profile.
 * **tier**: 'Premium' | 'Standard' | string: The cluster tier.
 
@@ -146,7 +146,7 @@
 ### Properties
 * **blueprint**: string: The link to the blueprint.
 * **componentVersion**: [ClusterDefinitionComponentVersion](#clusterdefinitioncomponentversion): The versions of different services in the cluster.
-* **configurations**: any: Any object
+* **configurations**: any: The cluster configurations.
 * **kind**: string: The type of cluster.
 
 ## ClusterDefinitionComponentVersion
@@ -235,7 +235,7 @@
 * **privateIPAddress**: string: The IP address.
 * **privateIPAllocationMethod**: 'dynamic' | 'static' | string: The method that private IP address is allocated.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): The private link configuration provisioning state, which only appears in the response.
-* **subnet**: [ResourceId](#resourceid): The azure resource id.
+* **subnet**: [ResourceId](#resourceid): The subnet resource id.
 
 ## KafkaRestProperties
 ### Properties
@@ -250,7 +250,7 @@
 ## LinuxOperatingSystemProfile
 ### Properties
 * **password**: string: The password.
-* **sshProfile**: [SshProfile](#sshprofile): The list of SSH public keys.
+* **sshProfile**: [SshProfile](#sshprofile): The SSH profile.
 * **username**: string: The username.
 
 ## NetworkProperties
@@ -260,7 +260,7 @@
 
 ## OsProfile
 ### Properties
-* **linuxOperatingSystemProfile**: [LinuxOperatingSystemProfile](#linuxoperatingsystemprofile): The ssh username, password, and ssh public key.
+* **linuxOperatingSystemProfile**: [LinuxOperatingSystemProfile](#linuxoperatingsystemprofile): The Linux OS profile.
 
 ## PrivateEndpoint
 ### Properties
@@ -277,7 +277,7 @@
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **linkIdentifier**: string (ReadOnly): The link identifier.
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The private endpoint.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The private endpoint of the private endpoint connection
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly): The private link service connection state.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state, which only appears in the response.
 
@@ -310,16 +310,16 @@
 
 ## Role
 ### Properties
-* **autoscale**: [Autoscale](#autoscale): The autoscale request parameters
+* **autoscale**: [Autoscale](#autoscale): The autoscale configurations.
 * **dataDisksGroups**: [DataDisksGroups](#datadisksgroups)[]: The data disks groups for the role.
 * **encryptDataDisks**: bool: Indicates whether encrypt the data disks.
 * **hardwareProfile**: [HardwareProfile](#hardwareprofile): The hardware profile.
 * **minInstanceCount**: int: The minimum instance count of the cluster.
 * **name**: string: The name of the role.
-* **osProfile**: [OsProfile](#osprofile): The Linux operation systems profile.
+* **osProfile**: [OsProfile](#osprofile): The operating system profile.
 * **scriptActions**: [ScriptAction](#scriptaction)[]: The list of script actions on the role.
 * **targetInstanceCount**: int: The instance count of the cluster.
-* **virtualNetworkProfile**: [VirtualNetworkProfile](#virtualnetworkprofile): The virtual network properties.
+* **virtualNetworkProfile**: [VirtualNetworkProfile](#virtualnetworkprofile): The virtual network profile.
 * **VMGroupName**: string: The name of the virtual machine group.
 
 ## RuntimeScriptAction
@@ -379,7 +379,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 * **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that last modified the resource.
 
 ## UserAssignedIdentity
 ### Properties

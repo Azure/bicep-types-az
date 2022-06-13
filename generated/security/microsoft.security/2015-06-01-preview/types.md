@@ -4,15 +4,15 @@
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2015-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **enforcementMode**: 'Audit' | 'Enforce' | 'None' | string (WriteOnly): The application control policy enforcement/protection mode of the VM/server group
+* **enforcementMode**: 'Audit' | 'Enforce' | 'None' | string (WriteOnly): The enforcement mode of the group. Can also be defined per collection type by using ProtectionMode
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Location where the resource is stored
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[] (WriteOnly): Array of PathRecommendation
+* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[] (WriteOnly)
 * **properties**: [AppWhitelistingGroupData](#appwhitelistinggroupdata) (ReadOnly): Represents a VM/server group and set of rules that are Recommended by Microsoft Defender for Cloud to be allowed
-* **protectionMode**: [ProtectionMode](#protectionmode) (WriteOnly): The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
+* **protectionMode**: [ProtectionMode](#protectionmode) (WriteOnly): The protection mode of the group per collection type. Can also be defined for all collection types by using EnforcementMode
 * **type**: 'Microsoft.Security/locations/applicationWhitelistings' (ReadOnly, DeployTimeConstant): The resource type
-* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[] (WriteOnly): Array of VmRecommendation
+* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[] (WriteOnly)
 
 ## Resource Microsoft.Security/locations/jitNetworkAccessPolicies@2015-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -29,12 +29,12 @@
 ### Properties
 * **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' | string (ReadOnly): The configuration status of the VM/server group or machine or rule on the machine
 * **enforcementMode**: 'Audit' | 'Enforce' | 'None' | string (ReadOnly): The application control policy enforcement/protection mode of the VM/server group
-* **issues**: [AppWhitelistingIssueSummary](#appwhitelistingissuesummary)[] (ReadOnly): Array of AppWhitelistingIssueSummary
-* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[] (ReadOnly): Array of PathRecommendation
+* **issues**: [AppWhitelistingIssueSummary](#appwhitelistingissuesummary)[] (ReadOnly)
+* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[] (ReadOnly)
 * **protectionMode**: [ProtectionMode](#protectionmode) (ReadOnly): The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
 * **recommendationStatus**: 'NoStatus' | 'NotAvailable' | 'NotRecommended' | 'Recommended' | string (ReadOnly): The recommendation status of the VM/server group or VM/server
 * **sourceSystem**: 'Azure_AppLocker' | 'Azure_AuditD' | 'NonAzure_AppLocker' | 'NonAzure_AuditD' | 'None' | string (ReadOnly): The source type of the VM/server group
-* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[] (ReadOnly): Array of VmRecommendation
+* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[] (ReadOnly)
 
 ## AppWhitelistingIssueSummary
 ### Properties
@@ -44,7 +44,7 @@
 ## JitNetworkAccessPolicyProperties
 ### Properties
 * **provisioningState**: string (ReadOnly): Gets the provisioning state of the Just-in-Time policy.
-* **requests**: [JitNetworkAccessRequest](#jitnetworkaccessrequest)[]: Array of JitNetworkAccessRequest
+* **requests**: [JitNetworkAccessRequest](#jitnetworkaccessrequest)[]
 * **virtualMachines**: [JitNetworkAccessPolicyVirtualMachine](#jitnetworkaccesspolicyvirtualmachine)[] (Required): Configurations for Microsoft.Compute/virtualMachines resource type.
 
 ## JitNetworkAccessPolicyVirtualMachine
@@ -66,7 +66,7 @@
 * **justification**: string: The justification for making the initiate request
 * **requestor**: string (Required): The identity of the person who made the request
 * **startTimeUtc**: string (Required): The start time of the request in UTC
-* **virtualMachines**: [JitNetworkAccessRequestVirtualMachine](#jitnetworkaccessrequestvirtualmachine)[] (Required): Array of JitNetworkAccessRequestVirtualMachine
+* **virtualMachines**: [JitNetworkAccessRequestVirtualMachine](#jitnetworkaccessrequestvirtualmachine)[] (Required)
 
 ## JitNetworkAccessRequestPort
 ### Properties
@@ -92,8 +92,8 @@
 * **path**: string (WriteOnly): The full path to whitelist
 * **publisherInfo**: [PublisherInfo](#publisherinfo) (WriteOnly): Represents the publisher information of a process/rule
 * **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature' | string (WriteOnly): The type of the rule to be allowed
-* **usernames**: [UserRecommendation](#userrecommendation)[] (WriteOnly): Array of UserRecommendation
-* **userSids**: string[] (WriteOnly): Array of PathRecommendationUserSidsItem
+* **usernames**: [UserRecommendation](#userrecommendation)[] (WriteOnly)
+* **userSids**: string[] (WriteOnly)
 
 ## ProtectionMode
 ### Properties

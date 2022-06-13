@@ -62,7 +62,7 @@
 ## UserProperties
 ### Properties
 * **preferredLocation**: string (Required): The preferred location of the cloud shell.
-* **preferredOsType**: 'Linux' | 'Windows' | string (Required): The operating system type of the cloud shell.
+* **preferredOsType**: 'Linux' | 'Windows' | string (Required): The operating system type of the cloud shell. Deprecated, use preferredShellType.
 * **preferredShellType**: 'bash' | 'powershell' | 'pwsh' | string (Required): The shell type of the cloud shell.
 * **storageProfile**: [StorageProfile](#storageprofile) (Required): The storage profile of the user settings.
 * **terminalSettings**: [TerminalSettings](#terminalsettings) (Required): Settings for terminal appearance.

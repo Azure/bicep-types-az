@@ -8,7 +8,7 @@
 * **kind**: string: Connector kind (eg aws)
 * **location**: string: Connector location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConnectorProperties](#connectorproperties): The properties of a Connector
+* **properties**: [ConnectorProperties](#connectorproperties): Connector properties
 * **tags**: [ConnectorDefinitionTags](#connectordefinitiontags): Resource tags.
 * **type**: 'Microsoft.CostManagement/connectors' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -30,7 +30,7 @@
 
 ## ConnectorCollectionInfo
 ### Properties
-* **error**: [ConnectorCollectionErrorInfo](#connectorcollectionerrorinfo): Details of any error encountered on last collection attempt
+* **error**: [ConnectorCollectionErrorInfo](#connectorcollectionerrorinfo): Error information of last collection
 * **lastRun**: string (ReadOnly): Last time the data acquisition process completed (even if no new data was found)
 * **lastUpdated**: string (ReadOnly): Last time the external data was updated into Azure
 * **sourceLastUpdated**: string (ReadOnly): Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
@@ -42,7 +42,7 @@
 
 ## ConnectorProperties
 ### Properties
-* **collection**: [ConnectorCollectionInfo](#connectorcollectioninfo) (ReadOnly): Collection and ingestion information
+* **collection**: [ConnectorCollectionInfo](#connectorcollectioninfo) (ReadOnly): Collection information
 * **createdOn**: string (ReadOnly): Connector definition creation datetime
 * **credentialsKey**: string: Credentials authentication key (eg AWS ARN)
 * **credentialsSecret**: string (WriteOnly): Credentials secret (eg AWS ExternalId)
@@ -66,8 +66,8 @@
 ## ReportDataset
 ### Properties
 * **aggregation**: [ReportDatasetAggregation](#reportdatasetaggregation): Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
-* **configuration**: [ReportDatasetConfiguration](#reportdatasetconfiguration): The configuration of dataset in the report.
-* **filter**: [ReportFilter](#reportfilter): The filter expression to be used in the report.
+* **configuration**: [ReportDatasetConfiguration](#reportdatasetconfiguration): Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
+* **filter**: [ReportFilter](#reportfilter): Has filter expression to use in the report.
 * **granularity**: 'Daily' | 'Hourly' | string: The granularity of rows in the report.
 * **grouping**: [ReportGrouping](#reportgrouping)[]: Array of group by expression to use in the report. Report can have up to 2 group by clauses.
 
@@ -82,9 +82,9 @@
 
 ## ReportDefinition
 ### Properties
-* **dataset**: [ReportDataset](#reportdataset): The definition of data present in the report.
+* **dataset**: [ReportDataset](#reportdataset): Has definition for data in this report.
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | string (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided.
-* **timePeriod**: [ReportTimePeriod](#reporttimeperiod): The start and end date for pulling data for the report.
+* **timePeriod**: [ReportTimePeriod](#reporttimeperiod): Has time period for pulling data for the report.
 * **type**: 'Usage' | string (Required): The type of the report.
 
 ## ReportDeliveryDestination
@@ -95,27 +95,27 @@
 
 ## ReportDeliveryInfo
 ### Properties
-* **destination**: [ReportDeliveryDestination](#reportdeliverydestination) (Required): The destination information for the delivery of the report.
+* **destination**: [ReportDeliveryDestination](#reportdeliverydestination) (Required): Has destination for the report being delivered.
 
 ## ReportFilter
 ### Properties
 * **and**: [ReportFilter](#reportfilter)[]: The logical "AND" expression. Must have at least 2 items.
-* **dimension**: [ReportComparisonExpression](#reportcomparisonexpression): The comparison expression to be used in the report.
-* **not**: [ReportFilter](#reportfilter): The filter expression to be used in the report.
+* **dimension**: [ReportComparisonExpression](#reportcomparisonexpression): Has comparison expression for a dimension
+* **not**: [ReportFilter](#reportfilter): The logical "NOT" expression.
 * **or**: [ReportFilter](#reportfilter)[]: The logical "OR" expression. Must have at least 2 items.
-* **tag**: [ReportComparisonExpression](#reportcomparisonexpression): The comparison expression to be used in the report.
+* **tag**: [ReportComparisonExpression](#reportcomparisonexpression): Has comparison expression for a tag
 
 ## ReportGrouping
 ### Properties
 * **name**: string (Required): The name of the column to group.
-* **type**: 'Dimension' | 'Tag' | string (Required): The type of the column in the report.
+* **type**: 'Dimension' | 'Tag' | string (Required): Has type of the column to group.
 
 ## ReportProperties
 ### Properties
-* **definition**: [ReportDefinition](#reportdefinition) (Required): The definition of a report.
-* **deliveryInfo**: [ReportDeliveryInfo](#reportdeliveryinfo) (Required): The delivery information associated with a report.
+* **definition**: [ReportDefinition](#reportdefinition) (Required): Has definition for the report.
+* **deliveryInfo**: [ReportDeliveryInfo](#reportdeliveryinfo) (Required): Has delivery information for the report.
 * **format**: 'Csv' | string: The format of the report being delivered.
-* **schedule**: [ReportSchedule](#reportschedule): The schedule associated with a report.
+* **schedule**: [ReportSchedule](#reportschedule): Has schedule information for the report.
 
 ## ReportRecurrencePeriod
 ### Properties
@@ -125,7 +125,7 @@
 ## ReportSchedule
 ### Properties
 * **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' | string (Required): The schedule recurrence.
-* **recurrencePeriod**: [ReportRecurrencePeriod](#reportrecurrenceperiod): The start and end date for recurrence schedule.
+* **recurrencePeriod**: [ReportRecurrencePeriod](#reportrecurrenceperiod): Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
 * **status**: 'Active' | 'Inactive' | string: The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.
 
 ## ReportTimePeriod

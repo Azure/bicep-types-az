@@ -19,7 +19,7 @@
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TableProperties](#tableproperties): Table properties.
+* **properties**: [TableProperties](#tableproperties): Table's properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.OperationalInsights/workspaces/tables' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -57,7 +57,7 @@
 * **displayName**: string: Table display name.
 * **labels**: string[] (ReadOnly): Table labels.
 * **name**: string: Table name.
-* **restoredLogs**: [RestoredLogs](#restoredlogs) (ReadOnly): Restore parameters.
+* **restoredLogs**: [RestoredLogs](#restoredlogs) (ReadOnly): Parameters of the restore operation that initiated this table.
 * **searchResults**: [SearchResults](#searchresults) (ReadOnly): Parameters of the search job that initiated this table.
 * **solutions**: string[] (ReadOnly): List of solutions the table is affiliated with
 * **source**: 'customer' | 'microsoft' | string (ReadOnly): Table's creator.
@@ -81,7 +81,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TableProperties
 ### Properties
@@ -89,10 +89,10 @@
 * **lastPlanModifiedDate**: string (ReadOnly): The timestamp that table plan was last modified (UTC).
 * **plan**: 'Analytics' | 'Basic' | string: Instruct the system how to handle and charge the logs ingested to this table.
 * **provisioningState**: 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): Table's current provisioning state. If set to 'updating', indicates a resource lock due to ongoing operation, forbidding any update to the table until the ongoing operation is concluded.
-* **restoredLogs**: [RestoredLogs](#restoredlogs): Restore parameters.
+* **restoredLogs**: [RestoredLogs](#restoredlogs): Parameters of the restore operation that initiated this table.
 * **resultStatistics**: [ResultStatistics](#resultstatistics): Search job execution statistics.
 * **retentionInDays**: int: The table retention in days, between 4 and 730. Setting this property to -1 will default to the workspace retention.
-* **schema**: [Schema](#schema): Table's schema.
+* **schema**: [Schema](#schema): Table schema.
 * **searchResults**: [SearchResults](#searchresults): Parameters of the search job that initiated this table.
 * **totalRetentionInDays**: int: The table total retention in days, between 4 and 2555. Setting this property to -1 will default to table retention.
 
@@ -127,10 +127,10 @@
 * **modifiedDate**: string (ReadOnly): Workspace modification date.
 * **privateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly): List of linked private link scope resources.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the workspace.
-* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled' | string: The network access type for operating on the Log Analytics Workspace. By default it is Enabled
-* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled' | string: The network access type for operating on the Log Analytics Workspace. By default it is Enabled
+* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled' | string: The network access type for accessing Log Analytics ingestion.
+* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled' | string: The network access type for accessing Log Analytics query.
 * **retentionInDays**: int: The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
-* **sku**: [WorkspaceSku](#workspacesku): The SKU (tier) of a workspace.
+* **sku**: [WorkspaceSku](#workspacesku): The SKU of the workspace.
 * **workspaceCapping**: [WorkspaceCapping](#workspacecapping): The daily volume cap for ingestion.
 
 ## WorkspaceSku

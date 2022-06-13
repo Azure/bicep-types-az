@@ -8,7 +8,7 @@
 * **kind**: string: Kind of resource.
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AppServiceEnvironment](#appserviceenvironment): Description of an App Service Environment.
+* **properties**: [AppServiceEnvironment](#appserviceenvironment): Core resource properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/hostingEnvironments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkerPool](#workerpool): Worker pool of an App Service Environment.
+* **properties**: [WorkerPool](#workerpool): Core resource properties
 * **sku**: [SkuDescription](#skudescription): Description of a SKU for a scalable resource.
 * **type**: 'Microsoft.Web/hostingEnvironments/multiRolePools' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -30,7 +30,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkerPool](#workerpool): Worker pool of an App Service Environment.
+* **properties**: [WorkerPool](#workerpool): Core resource properties
 * **sku**: [SkuDescription](#skudescription): Description of a SKU for a scalable resource.
 * **type**: 'Microsoft.Web/hostingEnvironments/workerPools' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -107,7 +107,7 @@
 * **upgradeDomains**: int (ReadOnly): Number of upgrade domains of the App Service Environment.
 * **userWhitelistedIpRanges**: string[]: User added ip ranges to whitelist on ASE db
 * **vipMappings**: [VirtualIPMapping](#virtualipmapping)[] (ReadOnly): Description of IP SSL mapping for the App Service Environment.
-* **virtualNetwork**: [VirtualNetworkProfile](#virtualnetworkprofile) (Required): Specification for using a Virtual Network.
+* **virtualNetwork**: [VirtualNetworkProfile](#virtualnetworkprofile) (Required): Description of the Virtual Network.
 * **vnetName**: string: Name of the Virtual Network for the App Service Environment.
 * **vnetResourceGroupName**: string: Resource group of the Virtual Network.
 * **vnetSubnetName**: string: Subnet of the Virtual Network.
@@ -117,7 +117,7 @@
 ### Properties
 * **adminSiteName**: string: App Service plan administration site.
 * **geoRegion**: string (ReadOnly): Geographical location for the App Service plan.
-* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): Specification for an App Service Environment to use for this resource.
+* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): Specification for the App Service Environment to use for the App Service plan.
 * **isSpot**: bool: If <code>true</code>, this App Service Plan owns spot instances.
 * **maximumNumberOfWorkers**: int (ReadOnly): Maximum number of instances that can be assigned to this App Service plan.
 * **name**: string (Required): Name for the App Service plan.
@@ -196,7 +196,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 * **locations**: string[]: Locations of the SKU.
 * **name**: string: Name of the resource SKU.
 * **size**: string: Size specifier of the resource SKU.
-* **skuCapacity**: [SkuCapacity](#skucapacity): Description of the App Service plan scale options.
+* **skuCapacity**: [SkuCapacity](#skucapacity): Min, max, and default scale values of the SKU.
 * **tier**: string: Service tier of the resource SKU.
 
 ## StampCapacity
@@ -249,7 +249,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 
 ## WorkerPool
 ### Properties
-* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared/dedicated workers.
+* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared or dedicated app hosting.
 * **instanceNames**: string[] (ReadOnly): Names of all instances in the worker pool (read only).
 * **workerCount**: int: Number of instances in the worker pool.
 * **workerSize**: string: VM size of the worker pool instances.

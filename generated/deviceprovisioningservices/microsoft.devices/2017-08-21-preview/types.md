@@ -46,7 +46,7 @@
 ## IotDpsPropertiesDescription
 ### Properties
 * **allocationPolicy**: 'GeoLatency' | 'Hashed' | 'Static' | string: Allocation policy to be used by this provisioning service.
-* **authorizationPolicies**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[]: Array of SharedAccessSignatureAuthorizationRule_AccessRightsDescription_
+* **authorizationPolicies**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[]
 * **deviceProvisioningHostName**: string (ReadOnly): Device endpoint for this provisioning service.
 * **idScope**: string (ReadOnly): Unique identifier of this provisioning service.
 * **iotHubs**: [IotHubDefinitionDescription](#iothubdefinitiondescription)[]: List of IoT hubs associated with this provisioning service.
@@ -90,5 +90,5 @@
 ## SharedAccessSignatureAuthorizationRuleListResult
 ### Properties
 * **nextLink**: string (ReadOnly)
-* **value**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[] (ReadOnly): Array of SharedAccessSignatureAuthorizationRule_AccessRightsDescription_
+* **value**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[] (ReadOnly)
 

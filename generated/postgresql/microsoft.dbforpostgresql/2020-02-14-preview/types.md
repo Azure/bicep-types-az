@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2020-02-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The Azure Active Directory identity of the server.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerProperties](#serverproperties): The properties of a server.
-* **sku**: [Sku](#sku): Sku information related properties of a server.
+* **properties**: [ServerProperties](#serverproperties): Properties of the server.
+* **sku**: [Sku](#sku): The SKU (pricing tier) of the server.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DBForPostgreSql/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,7 +19,7 @@
 * **apiVersion**: '2020-02-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a server firewall rule.
+* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a firewall rule.
 * **type**: 'Microsoft.DBForPostgreSql/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## FirewallRuleProperties
@@ -65,9 +65,9 @@
 * **standbyAvailabilityZone**: string (ReadOnly): availability Zone information of the server.
 * **standbyCount**: int: The number of standbys.
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): A state of a server that is visible to user.
-* **storageProfile**: [StorageProfile](#storageprofile): Storage Profile properties of a server
+* **storageProfile**: [StorageProfile](#storageprofile): Storage profile of a server.
 * **tags**: [ServerPropertiesTags](#serverpropertiestags): Application-specific metadata in the form of key-value pairs.
-* **version**: '11' | '12' | string: The version of a server.
+* **version**: '11' | '12' | string: PostgreSQL Server version.
 
 ## ServerPropertiesDelegatedSubnetArguments
 ### Properties

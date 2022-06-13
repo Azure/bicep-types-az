@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: 'vaultconfig' (Required, DeployTimeConstant): The resource name
-* **properties**: [BackupResourceVaultConfig](#backupresourcevaultconfig): Backup resource vault config details.
+* **properties**: [BackupResourceVaultConfig](#backupresourcevaultconfig): BackupResourceVaultConfigResource properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupconfig' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: 'backupResourceEncryptionConfig' (Required, DeployTimeConstant): The resource name
-* **properties**: [BackupResourceEncryptionConfig](#backupresourceencryptionconfig)
+* **properties**: [BackupResourceEncryptionConfig](#backupresourceencryptionconfig): BackupResourceEncryptionConfigResource properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupEncryptionConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -32,7 +32,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ProtectionIntent](#protectionintent): Base class for backup ProtectionIntent.
+* **properties**: [ProtectionIntent](#protectionintent): ProtectionIntentResource properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/backupProtectionIntent' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -44,7 +44,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ProtectionContainer](#protectioncontainer): Base class for container with backup items. Containers with specific workloads are derived from this class.
+* **properties**: [ProtectionContainer](#protectioncontainer): ProtectionContainerResource properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -56,7 +56,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ProtectedItem](#protecteditem): Base class for backup items.
+* **properties**: [ProtectedItem](#protecteditem): ProtectedItemResource properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -68,7 +68,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ProtectionPolicy](#protectionpolicy): Base class for backup policy. Workload-specific backup policies are derived from this class.
+* **properties**: [ProtectionPolicy](#protectionpolicy): ProtectionPolicyResource properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -80,7 +80,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ResourceGuardProxyBase](#resourceguardproxybase) (ReadOnly)
+* **properties**: [ResourceGuardProxyBase](#resourceguardproxybase) (ReadOnly): ResourceGuardProxyBaseResource properties
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupResourceGuardProxies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -92,7 +92,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: 'vaultstorageconfig' (Required, DeployTimeConstant): The resource name
-* **properties**: [BackupResourceConfig](#backupresourceconfig): The resource storage details.
+* **properties**: [BackupResourceConfig](#backupresourceconfig): BackupResourceConfigResource properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupstorageconfig' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -104,7 +104,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnection](#privateendpointconnection): Private Endpoint Connection Response Properties
+* **properties**: [PrivateEndpointConnection](#privateendpointconnection): PrivateEndpointConnectionResource properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -137,7 +137,7 @@
 * **crossRegionRestoreFlag**: bool: Opt in details of Cross Region Restore feature.
 * **dedupState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Vault Dedup state
 * **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type
-* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type
+* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type.
 * **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked' | string: Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
 * **xcoolState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Vault x-cool state
 
@@ -157,8 +157,8 @@
 * **isSoftDeleteFeatureStateEditable**: bool: Is soft delete feature state editable
 * **resourceGuardOperationRequests**: string[]: ResourceGuard Operation Requests
 * **softDeleteFeatureState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Soft Delete feature state
-* **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type
-* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type
+* **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type.
+* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type.
 * **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked' | string: Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
 
 ## ContainerIdentityInfo
@@ -174,7 +174,7 @@
 
 ## DailyRetentionSchedule
 ### Properties
-* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
+* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration of retention Policy.
 * **retentionTimes**: string[]: Retention times of retention policy.
 
 ## DailySchedule
@@ -264,10 +264,10 @@
 
 ## MonthlyRetentionSchedule
 ### Properties
-* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
-* **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format.
+* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration of retention Policy.
+* **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format for monthly retention policy.
 * **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly' | string: Retention schedule format type for monthly retention policy.
-* **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
+* **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format for monthly retention policy.
 * **retentionTimes**: string[]: Retention times of retention policy.
 
 ## PrivateEndpoint
@@ -276,8 +276,8 @@
 
 ## PrivateEndpointConnection
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint network resource that is linked to the Private Endpoint connection
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Private Link Service Connection State
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Gets or sets private endpoint associated with the private endpoint connection
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Gets or sets private link service connection state
 * **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' | string: Gets or sets provisioning state of the private endpoint connection
 
 ## PrivateLinkServiceConnectionState
@@ -290,7 +290,7 @@
 * **Discriminator**: protectedItemType
 
 ### Base Properties
-* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string: Backup management type to execute the current job.
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string: Type of backup management for the backed up item.
 * **backupSetName**: string: Name of the backup set the backup item belongs to
 * **containerName**: string: Unique name of container
 * **createMode**: 'Default' | 'Invalid' | 'Recover' | string: Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
@@ -308,7 +308,7 @@
 * **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string: Type of workload this item represents.
 ### AzureFileshareProtectedItem
 #### Properties
-* **extendedInfo**: [AzureFileshareProtectedItemExtendedInfo](#azurefileshareprotecteditemextendedinfo): Additional information about Azure File Share backup item.
+* **extendedInfo**: [AzureFileshareProtectedItemExtendedInfo](#azurefileshareprotecteditemextendedinfo): Additional information with this backup item.
 * **friendlyName**: string: Friendly name of the fileshare represented by this backup item.
 * **kpisHealths**: [AzureFileshareProtectedItemKpisHealths](#azurefileshareprotecteditemkpishealths): Health details of different KPIs
 * **lastBackupStatus**: string: Last backup operation status. Possible values: Healthy, Unhealthy.
@@ -332,10 +332,10 @@
 ### DPMProtectedItem
 #### Properties
 * **backupEngineName**: string: Backup Management server protecting this backup item
-* **extendedInfo**: [DPMProtectedItemExtendedInfo](#dpmprotecteditemextendedinfo): Additional information of DPM Protected item.
+* **extendedInfo**: [DPMProtectedItemExtendedInfo](#dpmprotecteditemextendedinfo): Extended info of the backup item.
 * **friendlyName**: string: Friendly name of the managed item
 * **protectedItemType**: 'DPMProtectedItem' (Required): backup item type.
-* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped' | string: Backup state of the backed up item.
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped' | string: Protection state of the backup engine
 
 ### GenericProtectedItem
 #### Properties
@@ -351,7 +351,7 @@
 #### Properties
 * **computerName**: string: Name of the computer associated with this backup item.
 * **deferredDeleteSyncTimeInUTC**: int: Sync time for deferred deletion in UTC
-* **extendedInfo**: [MabFileFolderProtectedItemExtendedInfo](#mabfilefolderprotecteditemextendedinfo): Additional information on the backed up item.
+* **extendedInfo**: [MabFileFolderProtectedItemExtendedInfo](#mabfilefolderprotecteditemextendedinfo): Additional information with this backup item.
 * **friendlyName**: string: Friendly name of this backup item.
 * **lastBackupStatus**: string: Status of last backup operation.
 * **lastBackupTime**: string: Timestamp of the last backup operation on this backup item.
@@ -368,7 +368,7 @@
 
 ### AzureSqlProtectedItem
 #### Properties
-* **extendedInfo**: [AzureSqlProtectedItemExtendedInfo](#azuresqlprotecteditemextendedinfo): Additional information on Azure Sql specific protected item.
+* **extendedInfo**: [AzureSqlProtectedItemExtendedInfo](#azuresqlprotecteditemextendedinfo): Additional information for this backup item.
 * **protectedItemDataId**: string: Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.
 * **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required): backup item type.
 * **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped' | string: Backup state of the backed up item.
@@ -378,7 +378,7 @@
 * **Discriminator**: containerType
 
 ### Base Properties
-* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string: Backup management type to execute the current job.
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string: Type of backup management for the container.
 * **friendlyName**: string: Friendly name of the container.
 * **healthStatus**: string: Status of health of the container.
 * **protectableObjectType**: string: Type of the protectable object associated with this container
@@ -403,7 +403,7 @@ Backup is VMAppContainer
 Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
 Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
 Backup is VMAppContainer
-* **extendedInformation**: [GenericContainerExtendedInfo](#genericcontainerextendedinfo): Container extended information
+* **extendedInformation**: [GenericContainerExtendedInfo](#genericcontainerextendedinfo): Extended information (not returned in List container API calls)
 * **fabricName**: string: Name of the container's fabric
 
 ### AzureIaaSClassicComputeVMContainer
@@ -456,7 +456,7 @@ Backup is VMAppContainer
 Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
 Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
 Backup is VMAppContainer
-* **extendedInfo**: [MabContainerExtendedInfo](#mabcontainerextendedinfo): Additional information of the container.
+* **extendedInfo**: [MabContainerExtendedInfo](#mabcontainerextendedinfo): Additional information for this container
 * **mabContainerHealthDetails**: [MABContainerHealthDetails](#mabcontainerhealthdetails)[]: Health details on this mab container.
 * **protectedItemCount**: int: Number of items backed up in this container.
 
@@ -465,10 +465,10 @@ Backup is VMAppContainer
 * **Discriminator**: protectionIntentItemType
 
 ### Base Properties
-* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string: Backup management type to execute the current job.
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string: Type of backup management for the backed up item.
 * **itemId**: string: ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
 * **policyId**: string: ID of the backup policy with which this item is backed up.
-* **protectionState**: 'Invalid' | 'NotProtected' | 'Protected' | 'Protecting' | 'ProtectionFailed' | string: Specifies whether the container is registered or not
+* **protectionState**: 'Invalid' | 'NotProtected' | 'Protected' | 'Protecting' | 'ProtectionFailed' | string: Backup state of this backup item.
 * **sourceResourceId**: string: ARM ID of the resource to be backed up.
 ### AzureResourceProtectionIntent
 #### Properties
@@ -497,8 +497,8 @@ Backup is VMAppContainer
 * **instantRPDetails**: [InstantRPAdditionalDetails](#instantrpadditionaldetails)
 * **instantRpRetentionRangeInDays**: int: Instant RP retention policy range in days
 * **policyType**: 'Invalid' | 'V1' | 'V2' | string
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
-* **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Retention policy with the details on backup copy retention ranges.
+* **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Backup schedule specified as part of backup policy.
 * **tieringPolicy**: [AzureIaaSVMProtectionPolicyTieringPolicy](#azureiaasvmprotectionpolicytieringpolicy): Tiering policy to automatically move RPs to another tier
 Key is Target Tier, defined in RecoveryPointTierType enum.
 Tiering policy specifies the criteria to move RP to the target tier.
@@ -507,13 +507,13 @@ Tiering policy specifies the criteria to move RP to the target tier.
 ### AzureSqlProtectionPolicy
 #### Properties
 * **backupManagementType**: 'AzureSql' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Retention policy details.
 
 ### AzureFileShareProtectionPolicy
 #### Properties
 * **backupManagementType**: 'AzureStorage' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
-* **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Retention policy with the details on backup copy retention ranges.
+* **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Backup schedule specified as part of backup policy.
 * **timeZone**: string: TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
 * **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string: Type of workload for the backup management
 
@@ -521,7 +521,7 @@ Tiering policy specifies the criteria to move RP to the target tier.
 #### Properties
 * **backupManagementType**: 'AzureWorkload' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
 * **makePolicyConsistent**: bool: Fix the policy inconsistency
-* **settings**: [Settings](#settings): Common settings field for backup management
+* **settings**: [Settings](#settings): Common settings for the backup management
 * **subProtectionPolicy**: [SubProtectionPolicy](#subprotectionpolicy)[]: List of sub-protection policies which includes schedule and retention
 * **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string: Type of workload for the backup management
 
@@ -535,8 +535,8 @@ Tiering policy specifies the criteria to move RP to the target tier.
 ### MabProtectionPolicy
 #### Properties
 * **backupManagementType**: 'MAB' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
-* **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Retention policy details.
+* **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Backup schedule of backup policy.
 
 
 ## ResourceGuardOperationDetail
@@ -548,7 +548,7 @@ Tiering policy specifies the criteria to move RP to the target tier.
 ### Properties
 * **description**: string (ReadOnly)
 * **lastUpdatedTime**: string (ReadOnly)
-* **resourceGuardOperationDetails**: [ResourceGuardOperationDetail](#resourceguardoperationdetail)[] (ReadOnly): Array of ResourceGuardOperationDetail
+* **resourceGuardOperationDetails**: [ResourceGuardOperationDetail](#resourceguardoperationdetail)[] (ReadOnly)
 * **resourceGuardResourceId**: string (ReadOnly)
 
 ## ResourceHealthDetails
@@ -615,15 +615,15 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 ### Base Properties
 ### LongTermRetentionPolicy
 #### Properties
-* **dailySchedule**: [DailyRetentionSchedule](#dailyretentionschedule): Daily retention schedule.
-* **monthlySchedule**: [MonthlyRetentionSchedule](#monthlyretentionschedule): Monthly retention schedule.
+* **dailySchedule**: [DailyRetentionSchedule](#dailyretentionschedule): Daily retention schedule of the protection policy.
+* **monthlySchedule**: [MonthlyRetentionSchedule](#monthlyretentionschedule): Monthly retention schedule of the protection policy.
 * **retentionPolicyType**: 'LongTermRetentionPolicy' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **weeklySchedule**: [WeeklyRetentionSchedule](#weeklyretentionschedule): Weekly retention schedule.
-* **yearlySchedule**: [YearlyRetentionSchedule](#yearlyretentionschedule): Yearly retention schedule.
+* **weeklySchedule**: [WeeklyRetentionSchedule](#weeklyretentionschedule): Weekly retention schedule of the protection policy.
+* **yearlySchedule**: [YearlyRetentionSchedule](#yearlyretentionschedule): Yearly retention schedule of the protection policy.
 
 ### SimpleRetentionPolicy
 #### Properties
-* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
+* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration of the protection policy.
 * **retentionPolicyType**: 'SimpleRetentionPolicy' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
 
 
@@ -642,7 +642,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 
 ### SimpleSchedulePolicy
 #### Properties
-* **hourlySchedule**: [HourlySchedule](#hourlyschedule)
+* **hourlySchedule**: [HourlySchedule](#hourlyschedule): Hourly Schedule of this Policy
 * **schedulePolicyType**: 'SimpleSchedulePolicy' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
 * **scheduleRunDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of days of week this schedule has to be run.
 * **scheduleRunFrequency**: 'Daily' | 'Hourly' | 'Invalid' | 'Weekly' | string: Frequency of the schedule operation of this policy.
@@ -651,11 +651,11 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 
 ### SimpleSchedulePolicyV2
 #### Properties
-* **dailySchedule**: [DailySchedule](#dailyschedule)
-* **hourlySchedule**: [HourlySchedule](#hourlyschedule)
+* **dailySchedule**: [DailySchedule](#dailyschedule): Daily schedule of this policy
+* **hourlySchedule**: [HourlySchedule](#hourlyschedule): hourly schedule of this policy
 * **schedulePolicyType**: 'SimpleSchedulePolicyV2' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
 * **scheduleRunFrequency**: 'Daily' | 'Hourly' | 'Invalid' | 'Weekly' | string: Frequency of the schedule operation of this policy.
-* **weeklySchedule**: [WeeklySchedule](#weeklyschedule)
+* **weeklySchedule**: [WeeklySchedule](#weeklyschedule): Weekly schedule of this policy
 
 
 ## Settings
@@ -668,8 +668,8 @@ will be deprecated once clients upgrade to consider this flag.
 ## SubProtectionPolicy
 ### Properties
 * **policyType**: 'CopyOnlyFull' | 'Differential' | 'Full' | 'Incremental' | 'Invalid' | 'Log' | string: Type of backup policy type
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
-* **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Retention policy with the details on backup copy retention ranges.
+* **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Backup schedule specified as part of backup policy.
 * **tieringPolicy**: [SubProtectionPolicyTieringPolicy](#subprotectionpolicytieringpolicy): Tiering policy to automatically move RPs to another tier.
 Key is Target Tier, defined in RecoveryPointTierType enum.
 Tiering policy specifies the criteria to move RP to the target tier.
@@ -683,7 +683,8 @@ Tiering policy specifies the criteria to move RP to the target tier.
 ### Properties
 * **duration**: int: Number of days/weeks/months/years to retain backups in current tier before tiering.
 Used only if TieringMode is set to TierAfter
-* **durationType**: 'Days' | 'Invalid' | 'Months' | 'Weeks' | 'Years' | string: Retention duration type of retention policy.
+* **durationType**: 'Days' | 'Invalid' | 'Months' | 'Weeks' | 'Years' | string: Retention duration type: days/weeks/months/years
+Used only if TieringMode is set to TierAfter
 * **tieringMode**: 'DoNotTier' | 'Invalid' | 'TierAfter' | 'TierRecommended' | string: Tiering Mode to control automatic tiering of recovery points. Supported values are:
 1. TierRecommended: Tier all recovery points recommended to be tiered
 2. TierAfter: Tier all recovery points after a fixed period, as specified in duration + durationType below.
@@ -697,20 +698,20 @@ Used only if TieringMode is set to TierAfter
 ## WeeklyRetentionSchedule
 ### Properties
 * **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of days of week for weekly retention policy.
-* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
+* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration of retention Policy.
 * **retentionTimes**: string[]: Retention times of retention policy.
 
 ## WeeklySchedule
 ### Properties
-* **scheduleRunDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: Array of DayOfWeek
+* **scheduleRunDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]
 * **scheduleRunTimes**: string[]: List of times of day this schedule has to be run.
 
 ## YearlyRetentionSchedule
 ### Properties
 * **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'Invalid' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September'[]: List of months of year of yearly retention policy.
-* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
-* **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format.
-* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly' | string: Retention schedule format type for monthly retention policy.
-* **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
+* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration of retention Policy.
+* **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format for yearly retention policy.
+* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly' | string: Retention schedule format for yearly retention policy.
+* **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format for yearly retention policy.
 * **retentionTimes**: string[]: Retention times of retention policy.
 

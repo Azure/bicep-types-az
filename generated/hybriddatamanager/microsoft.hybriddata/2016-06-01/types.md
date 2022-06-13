@@ -21,7 +21,7 @@ region is specified on update the request will succeed.
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [JobDefinitionProperties](#jobdefinitionproperties) (Required): Job Definition
+* **properties**: [JobDefinitionProperties](#jobdefinitionproperties) (Required): JobDefinition properties.
 * **type**: 'Microsoft.HybridData/dataManagers/dataServices/jobDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridData/dataManagers/dataStores@2016-06-01
@@ -30,7 +30,7 @@ region is specified on update the request will succeed.
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DataStoreProperties](#datastoreproperties) (Required): Data Store for sources and sinks
+* **properties**: [DataStoreProperties](#datastoreproperties) (Required): DataStore properties.
 * **type**: 'Microsoft.HybridData/dataManagers/dataStores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## CustomerSecret
@@ -43,20 +43,20 @@ region is specified on update the request will succeed.
 ### Properties
 * **customerSecrets**: [CustomerSecret](#customersecret)[]: List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
 * **dataStoreTypeId**: string (Required): The arm id of the data store type.
-* **extendedProperties**: any: Any object
+* **extendedProperties**: any: A generic json used differently by each data source type.
 * **repositoryId**: string: Arm Id for the manager resource to which the data source is associated. This is optional.
-* **state**: 'Disabled' | 'Enabled' | 'Supported' (Required): State of the data service.
+* **state**: 'Disabled' | 'Enabled' | 'Supported' (Required): State of the data source.
 
 ## JobDefinitionProperties
 ### Properties
 * **customerSecrets**: [CustomerSecret](#customersecret)[]: List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
-* **dataServiceInput**: any: Any object
+* **dataServiceInput**: any: A generic json used differently by each data service type.
 * **dataSinkId**: string (Required): Data Sink Id associated to the job definition.
 * **dataSourceId**: string (Required): Data Source Id associated to the job definition.
 * **lastModifiedTime**: string: Last modified time of the job definition.
 * **runLocation**: 'australiaeast' | 'australiasoutheast' | 'brazilsouth' | 'canadacentral' | 'canadaeast' | 'centralindia' | 'centralus' | 'eastasia' | 'eastus' | 'eastus2' | 'japaneast' | 'japanwest' | 'koreacentral' | 'koreasouth' | 'none' | 'northcentralus' | 'northeurope' | 'southcentralus' | 'southeastasia' | 'southindia' | 'uksouth' | 'ukwest' | 'westcentralus' | 'westeurope' | 'westindia' | 'westus' | 'westus2': This is the preferred geo location for the job to run.
 * **schedules**: [Schedule](#schedule)[]: Schedule for running the job definition
-* **state**: 'Disabled' | 'Enabled' | 'Supported' (Required): State of the data service.
+* **state**: 'Disabled' | 'Enabled' | 'Supported' (Required): State of the job definition.
 * **userConfirmation**: 'NotRequired' | 'Required': Enum to detect if user confirmation is required. If not passed will default to NotRequired.
 
 ## ResourceTags

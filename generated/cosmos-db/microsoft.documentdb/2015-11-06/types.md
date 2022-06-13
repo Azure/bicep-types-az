@@ -183,8 +183,8 @@
 ## CassandraKeyspaceCreateUpdateProperties
 ### Properties
 * **id**: string (ReadOnly): Name of the Cosmos DB Cassandra keyspace
-* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"
-* **resource**: [CassandraKeyspaceResource](#cassandrakeyspaceresource) (Required, WriteOnly): Cosmos DB Cassandra keyspace id object
+* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
+* **resource**: [CassandraKeyspaceResource](#cassandrakeyspaceresource) (Required, WriteOnly): The standard JSON format of a Cassandra keyspace
 
 ## CassandraKeyspaceResource
 ### Properties
@@ -204,15 +204,15 @@
 ### Properties
 * **defaultTtl**: int (ReadOnly): Time to live of the Cosmos DB Cassandra table
 * **id**: string (ReadOnly): Name of the Cosmos DB Cassandra table
-* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"
-* **resource**: [CassandraTableResource](#cassandratableresource) (Required, WriteOnly): Cosmos DB Cassandra table id object
-* **schema**: [CassandraSchema](#cassandraschema) (ReadOnly): Cosmos DB Cassandra table schema
+* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
+* **resource**: [CassandraTableResource](#cassandratableresource) (Required, WriteOnly): The standard JSON format of a Cassandra table
+* **schema**: [CassandraSchema](#cassandraschema) (ReadOnly): Schema of the Cosmos DB Cassandra table
 
 ## CassandraTableResource
 ### Properties
 * **defaultTtl**: int (WriteOnly): Time to live of the Cosmos DB Cassandra table
 * **id**: string (Required, WriteOnly): Name of the Cosmos DB Cassandra table
-* **schema**: [CassandraSchema](#cassandraschema) (WriteOnly): Cosmos DB Cassandra table schema
+* **schema**: [CassandraSchema](#cassandraschema) (WriteOnly): Schema of the Cosmos DB Cassandra table
 
 ## ClusterKey
 ### Properties
@@ -284,9 +284,9 @@
 ## DatabaseAccountCreateUpdateProperties
 ### Properties
 * **capabilities**: [Capability](#capability)[]: List of Cosmos DB capabilities for the account
-* **connectorOffer**: 'Small' | string: The cassandra connector offer type for the Cosmos DB C* database account.
-* **consistencyPolicy**: [ConsistencyPolicy](#consistencypolicy): The consistency policy for the Cosmos DB database account.
-* **databaseAccountOfferType**: 'Standard' (Required): The offer type for the Cosmos DB database account.
+* **connectorOffer**: 'Small' | string: The cassandra connector offer type for the Cosmos DB database C* account.
+* **consistencyPolicy**: [ConsistencyPolicy](#consistencypolicy): The consistency policy for the Cosmos DB account.
+* **databaseAccountOfferType**: 'Standard' (Required): The offer type for the database
 * **documentEndpoint**: string (ReadOnly): The connection endpoint for the Cosmos DB database account.
 * **enableAutomaticFailover**: bool: Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.
 * **enableCassandraConnector**: bool: Enables the cassandra connector on the Cosmos DB C* account
@@ -325,22 +325,22 @@
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: any (ReadOnly): Anything
-* **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy) (ReadOnly): The conflict resolution policy for the container.
+* **_ts**: any (ReadOnly): A system generated property that denotes the last updated timestamp of the resource.
+* **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy) (ReadOnly): The conflict resolution policy for the graph.
 * **defaultTtl**: int (ReadOnly): Default time to live
 * **id**: string (ReadOnly): Name of the Cosmos DB Gremlin graph
-* **indexingPolicy**: [IndexingPolicy](#indexingpolicy) (ReadOnly): Cosmos DB indexing policy
-* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"
+* **indexingPolicy**: [IndexingPolicy](#indexingpolicy) (ReadOnly): The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the graph
+* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
 * **partitionKey**: [ContainerPartitionKey](#containerpartitionkey) (ReadOnly): The configuration of the partition key to be used for partitioning data into multiple partitions
-* **resource**: [GremlinGraphResource](#gremlingraphresource) (Required, WriteOnly): Cosmos DB Gremlin graph resource object
+* **resource**: [GremlinGraphResource](#gremlingraphresource) (Required, WriteOnly): The standard JSON format of a Gremlin graph
 * **uniqueKeyPolicy**: [UniqueKeyPolicy](#uniquekeypolicy) (ReadOnly): The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
 
 ## GremlinGraphResource
 ### Properties
-* **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy) (WriteOnly): The conflict resolution policy for the container.
+* **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy) (WriteOnly): The conflict resolution policy for the graph.
 * **defaultTtl**: int (WriteOnly): Default time to live
 * **id**: string (Required, WriteOnly): Name of the Cosmos DB Gremlin graph
-* **indexingPolicy**: [IndexingPolicy](#indexingpolicy) (WriteOnly): Cosmos DB indexing policy
+* **indexingPolicy**: [IndexingPolicy](#indexingpolicy) (WriteOnly): The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the graph
 * **partitionKey**: [ContainerPartitionKey](#containerpartitionkey) (WriteOnly): The configuration of the partition key to be used for partitioning data into multiple partitions
 * **uniqueKeyPolicy**: [UniqueKeyPolicy](#uniquekeypolicy) (WriteOnly): The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
 
@@ -375,20 +375,20 @@
 ### Properties
 * **id**: string (ReadOnly): Name of the Cosmos DB MongoDB collection
 * **indexes**: [MongoIndex](#mongoindex)[] (ReadOnly): List of index keys
-* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"
-* **resource**: [MongoDBCollectionResource](#mongodbcollectionresource) (Required, WriteOnly): Cosmos DB MongoDB collection resource object
-* **shardKey**: [ShardKeys](#shardkeys) (ReadOnly): The shard key and partition kind pair, only support "Hash" partition kind
+* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
+* **resource**: [MongoDBCollectionResource](#mongodbcollectionresource) (Required, WriteOnly): The standard JSON format of a MongoDB collection
+* **shardKey**: [ShardKeys](#shardkeys) (ReadOnly): A key-value pair of shard keys to be applied for the request.
 
 ## MongoDBCollectionResource
 ### Properties
 * **id**: string (Required, WriteOnly): Name of the Cosmos DB MongoDB collection
 * **indexes**: [MongoIndex](#mongoindex)[] (WriteOnly): List of index keys
-* **shardKey**: [ShardKeys](#shardkeys) (WriteOnly): The shard key and partition kind pair, only support "Hash" partition kind
+* **shardKey**: [ShardKeys](#shardkeys) (WriteOnly): A key-value pair of shard keys to be applied for the request.
 
 ## MongoIndex
 ### Properties
-* **key**: [MongoIndexKeys](#mongoindexkeys) (WriteOnly): Cosmos DB MongoDB collection resource object
-* **options**: [MongoIndexOptions](#mongoindexoptions) (WriteOnly): Cosmos DB MongoDB collection index options
+* **key**: [MongoIndexKeys](#mongoindexkeys) (WriteOnly): Cosmos DB MongoDB collection index keys
+* **options**: [MongoIndexOptions](#mongoindexoptions) (WriteOnly): Cosmos DB MongoDB collection index key options
 
 ## MongoIndexKeys
 ### Properties
@@ -413,14 +413,14 @@
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: any (ReadOnly): Anything
+* **_ts**: any (ReadOnly): A system generated property that denotes the last updated timestamp of the resource.
 * **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy) (ReadOnly): The conflict resolution policy for the container.
 * **defaultTtl**: int (ReadOnly): Default time to live
 * **id**: string (ReadOnly): Name of the Cosmos DB SQL container
-* **indexingPolicy**: [IndexingPolicy](#indexingpolicy) (ReadOnly): Cosmos DB indexing policy
-* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"
+* **indexingPolicy**: [IndexingPolicy](#indexingpolicy) (ReadOnly): The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container
+* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
 * **partitionKey**: [ContainerPartitionKey](#containerpartitionkey) (ReadOnly): The configuration of the partition key to be used for partitioning data into multiple partitions
-* **resource**: [SqlContainerResource](#sqlcontainerresource) (Required, WriteOnly): Cosmos DB SQL container resource object
+* **resource**: [SqlContainerResource](#sqlcontainerresource) (Required, WriteOnly): The standard JSON format of a container
 * **uniqueKeyPolicy**: [UniqueKeyPolicy](#uniquekeypolicy) (ReadOnly): The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
 
 ## SqlContainerResource
@@ -428,7 +428,7 @@
 * **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy) (WriteOnly): The conflict resolution policy for the container.
 * **defaultTtl**: int (WriteOnly): Default time to live
 * **id**: string (Required, WriteOnly): Name of the Cosmos DB SQL container
-* **indexingPolicy**: [IndexingPolicy](#indexingpolicy) (WriteOnly): Cosmos DB indexing policy
+* **indexingPolicy**: [IndexingPolicy](#indexingpolicy) (WriteOnly): The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container
 * **partitionKey**: [ContainerPartitionKey](#containerpartitionkey) (WriteOnly): The configuration of the partition key to be used for partitioning data into multiple partitions
 * **uniqueKeyPolicy**: [UniqueKeyPolicy](#uniquekeypolicy) (WriteOnly): The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
 
@@ -437,11 +437,11 @@
 * **_colls**: string (ReadOnly): A system generated property that specified the addressable path of the collections resource.
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: any (ReadOnly): Anything
+* **_ts**: any (ReadOnly): A system generated property that denotes the last updated timestamp of the resource.
 * **_users**: string (ReadOnly): A system generated property that specifies the addressable path of the users resource.
 * **id**: string (ReadOnly): Name of the Cosmos DB SQL database
-* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"
-* **resource**: [SqlDatabaseResource](#sqldatabaseresource) (Required, WriteOnly): Cosmos DB SQL database id object
+* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
+* **resource**: [SqlDatabaseResource](#sqldatabaseresource) (Required, WriteOnly): The standard JSON format of a SQL database
 
 ## SqlDatabaseResource
 ### Properties
@@ -450,8 +450,8 @@
 ## TableCreateUpdateProperties
 ### Properties
 * **id**: string (ReadOnly): Name of the Cosmos DB table
-* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"
-* **resource**: [TableResource](#tableresource) (Required, WriteOnly): Cosmos DB table id object
+* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
+* **resource**: [TableResource](#tableresource) (Required, WriteOnly): The standard JSON format of a Table
 
 ## TableResource
 ### Properties
@@ -538,7 +538,7 @@
 
 ## ThroughputUpdateProperties
 ### Properties
-* **resource**: [ThroughputResource](#throughputresource) (Required, WriteOnly): Cosmos DB resource throughput object
+* **resource**: [ThroughputResource](#throughputresource) (Required, WriteOnly): The standard JSON format of a resource throughput
 * **throughput**: int (ReadOnly): Value of the Cosmos DB resource throughput
 
 ## UniqueKey

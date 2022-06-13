@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [VideoAnalyzerIdentity](#videoanalyzeridentity): The managed identity for the Video Analyzer resource.
+* **identity**: [VideoAnalyzerIdentity](#videoanalyzeridentity): The set of managed identities associated with the Video Analyzer resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VideoAnalyzerProperties](#videoanalyzerproperties)
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [VideoAnalyzerProperties](#videoanalyzerproperties): The properties of the Video Analyzer account.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system data of the Video Analyzer account.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Media/videoAnalyzers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,8 +19,8 @@
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AccessPolicyProperties](#accesspolicyproperties): Application level properties for the access policy resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [AccessPolicyProperties](#accesspolicyproperties): The resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Media/videoAnalyzers/accessPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Media/videoAnalyzers/edgeModules@2021-05-01-preview
@@ -29,8 +29,8 @@
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EdgeModuleProperties](#edgemoduleproperties): Application level properties for the edge module resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [EdgeModuleProperties](#edgemoduleproperties): The resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Media/videoAnalyzers/edgeModules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Media/videoAnalyzers/videos@2021-05-01-preview
@@ -39,8 +39,8 @@
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VideoProperties](#videoproperties): Application level properties for the video resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [VideoProperties](#videoproperties): The resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Media/videoAnalyzers/videos' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listProvisioningToken (Microsoft.Media/videoAnalyzers/edgeModules@2021-05-01-preview)
@@ -56,13 +56,13 @@
 
 ## AccessPolicyProperties
 ### Properties
-* **authentication**: [AuthenticationBase](#authenticationbase): Base class for access policies authentication methods.
+* **authentication**: [AuthenticationBase](#authenticationbase): Authentication method to be used when validating client API access.
 * **role**: 'Reader' | string: Defines the access level granted by this policy.
 
 ## AccountEncryption
 ### Properties
-* **identity**: [ResourceIdentity](#resourceidentity): The user assigned managed identity to use when accessing a resource.
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): The details for accessing the encryption keys in Key Vault.
+* **identity**: [ResourceIdentity](#resourceidentity): The Key Vault identity.
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): The properties of the key used to encrypt the account.
 * **status**: string (ReadOnly): The current status of the Key Vault mapping.
 * **type**: 'CustomerKey' | 'SystemKey' | string (Required): The type of key used to encrypt the Account Key.
 
@@ -109,7 +109,7 @@
 ## StorageAccount
 ### Properties
 * **id**: string: The ID of the storage account resource. Video Analyzer relies on tables, queues, and blobs. The primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage).
-* **identity**: [ResourceIdentity](#resourceidentity): The user assigned managed identity to use when accessing a resource.
+* **identity**: [ResourceIdentity](#resourceidentity): A managed identity that Video Analyzer will use to access the storage account.
 * **status**: string (ReadOnly): The current status of the storage account mapping.
 
 ## SystemData
@@ -119,7 +119,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TokenClaim
 ### Properties
@@ -168,7 +168,7 @@
 
 ## VideoAnalyzerProperties
 ### Properties
-* **encryption**: [AccountEncryption](#accountencryption): Defines how the Video Analyzer account is (optionally) encrypted.
+* **encryption**: [AccountEncryption](#accountencryption): The account encryption properties.
 * **endpoints**: [Endpoint](#endpoint)[] (ReadOnly): The list of endpoints associated with this resource.
 * **storageAccounts**: [StorageAccount](#storageaccount)[]: The storage accounts for this resource.
 

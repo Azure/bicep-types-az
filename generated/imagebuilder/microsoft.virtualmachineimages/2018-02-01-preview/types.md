@@ -37,7 +37,7 @@
 ### ImageTemplateSharedImageDistributor
 #### Properties
 * **galleryImageId**: string (Required): Resource Id of the Shared Image Gallery image
-* **replicationRegions**: string[] (Required): Array of ImageTemplateSharedImageDistributorReplicationRegionsItem
+* **replicationRegions**: string[] (Required)
 * **type**: 'sharedImage' (Required): Type of distribution.
 
 
@@ -58,10 +58,10 @@
 ### Properties
 * **customize**: [ImageTemplateCustomizer](#imagetemplatecustomizer)[]: Specifies the properties used to describe the customization steps of the image, like Image source etc
 * **distribute**: [ImageTemplateDistributor](#imagetemplatedistributor)[] (Required): The distribution targets where the image output needs to go to.
-* **lastRunStatus**: [ImageTemplateLastRunStatus](#imagetemplatelastrunstatus) (ReadOnly)
-* **provisioningError**: [ProvisioningError](#provisioningerror) (ReadOnly)
+* **lastRunStatus**: [ImageTemplateLastRunStatus](#imagetemplatelastrunstatus) (ReadOnly): State of 'run' that is currently executing or was last executed.
+* **provisioningError**: [ProvisioningError](#provisioningerror) (ReadOnly): Provisioning error, if any
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource
-* **source**: [ImageTemplateSource](#imagetemplatesource) (Required)
+* **source**: [ImageTemplateSource](#imagetemplatesource) (Required): Specifies the properties used to describe the source image.
 
 ## ImageTemplateSource
 * **Discriminator**: type

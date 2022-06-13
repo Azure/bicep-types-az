@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2022-04-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The type of identity used for the resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [LoadTestProperties](#loadtestproperties): LoadTest resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [LoadTestProperties](#loadtestproperties): Load Test resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.LoadTestService/loadTests' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -27,8 +27,8 @@
 ### Properties
 * **dataPlaneURI**: string (ReadOnly): Resource data plane URI.
 * **description**: string: Description of the resource.
-* **encryption**: [EncryptionProperties](#encryptionproperties): Key and identity details for Customer Managed Key encryption of load test resource
-* **provisioningState**: 'Canceled' | 'Deleted' | 'Failed' | 'Succeeded' | string (ReadOnly): Load Test resources provisioning states.
+* **encryption**: [EncryptionProperties](#encryptionproperties): CMK Encryption property.
+* **provisioningState**: 'Canceled' | 'Deleted' | 'Failed' | 'Succeeded' | string (ReadOnly): Resource provisioning state.
 
 ## ManagedServiceIdentity
 ### Properties
@@ -44,7 +44,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties

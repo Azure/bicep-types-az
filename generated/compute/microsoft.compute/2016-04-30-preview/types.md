@@ -8,7 +8,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AvailabilitySetProperties](#availabilitysetproperties): The instance view of a resource.
-* **sku**: [Sku](#sku): Describes a virtual machine scale set sku.
+* **sku**: [Sku](#sku): Sku of the availability set
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/availabilitySets' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -50,7 +50,7 @@
 ### Properties
 * **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [VirtualMachineIdentity](#virtualmachineidentity): Identity for the virtual machine.
+* **identity**: [VirtualMachineIdentity](#virtualmachineidentity): The identity of the virtual machine, if configured.
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **plan**: [Plan](#plan): Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.
@@ -75,12 +75,12 @@
 ### Properties
 * **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [VirtualMachineScaleSetIdentity](#virtualmachinescalesetidentity): Identity for the virtual machine scale set.
+* **identity**: [VirtualMachineScaleSetIdentity](#virtualmachinescalesetidentity): The identity of the virtual machine scale set, if configured.
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **plan**: [Plan](#plan): Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.
 * **properties**: [VirtualMachineScaleSetProperties](#virtualmachinescalesetproperties): Describes the properties of a Virtual Machine Scale Set.
-* **sku**: [Sku](#sku): Describes a virtual machine scale set sku.
+* **sku**: [Sku](#sku): The virtual machine scale set sku.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/virtualMachineScaleSets' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -116,7 +116,7 @@
 ## CreationData
 ### Properties
 * **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Import' | 'Restore' (Required): This enumerates the possible sources of a disk's creation.
-* **imageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
+* **imageReference**: [ImageDiskReference](#imagediskreference): Disk source information.
 * **sourceResourceId**: string: If createOption is Copy, this is the ARM id of the source snapshot or disk. If createOption is Restore, this is the ARM-like id of the source disk restore point.
 * **sourceUri**: string: If createOption is Import, this is a SAS URI to a blob to be imported into a managed disk. If createOption is Copy, this is a relative Uri containing the id of the source snapshot to be copied into a managed disk.
 * **storageAccountId**: string: If createOption is Import, the Azure Resource Manager identifier of the storage account containing the blob to import as a disk. Required only if the blob is in a different subscription
@@ -126,11 +126,11 @@
 * **caching**: 'None' | 'ReadOnly' | 'ReadWrite': Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
 * **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required): Specifies how the virtual machine should be created.<br><br> Possible values are:<br><br> **Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.<br><br> **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
 * **diskSizeGB**: int: Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
-* **image**: [VirtualHardDisk](#virtualharddisk): Describes the uri of a disk.
+* **image**: [VirtualHardDisk](#virtualharddisk): The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
 * **lun**: int (Required): Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
-* **managedDisk**: [ManagedDiskParameters](#manageddiskparameters): The parameters of a managed disk.
+* **managedDisk**: [ManagedDiskParameters](#manageddiskparameters): The managed disk parameters.
 * **name**: string: The disk name.
-* **vhd**: [VirtualHardDisk](#virtualharddisk): Describes the uri of a disk.
+* **vhd**: [VirtualHardDisk](#virtualharddisk): The virtual hard disk.
 
 ## DiagnosticsProfile
 ### Properties
@@ -138,9 +138,9 @@
 
 ## DiskEncryptionSettings
 ### Properties
-* **diskEncryptionKey**: [KeyVaultSecretReference](#keyvaultsecretreference): Describes a reference to Key Vault Secret
+* **diskEncryptionKey**: [KeyVaultSecretReference](#keyvaultsecretreference): Specifies the location of the disk encryption key, which is a Key Vault Secret.
 * **enabled**: bool: Specifies whether disk encryption should be enabled on the virtual machine.
-* **keyEncryptionKey**: [KeyVaultKeyReference](#keyvaultkeyreference): Describes a reference to Key Vault Key
+* **keyEncryptionKey**: [KeyVaultKeyReference](#keyvaultkeyreference): Specifies the location of the key encryption key in Key Vault.
 
 ## DiskInstanceView
 ### Properties
@@ -149,20 +149,20 @@
 
 ## DiskProperties
 ### Properties
-* **accountType**: 'Premium_LRS' | 'Standard_LRS': Specifies the storage account type for the managed disk. Possible values are: Standard_LRS or Premium_LRS.
-* **creationData**: [CreationData](#creationdata) (Required): Data used when creating a disk.
+* **accountType**: 'Premium_LRS' | 'Standard_LRS': the storage account type of the disk.
+* **creationData**: [CreationData](#creationdata) (Required): Disk source information. CreationData information cannot be changed after the disk has been created.
 * **diskSizeGB**: int: If creationData.createOption is Empty, this field is mandatory and it indicates the size of the VHD to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
 * **encryptionSettings**: [EncryptionSettings](#encryptionsettings): Encryption settings for disk or snapshot
-* **osType**: 'Linux' | 'Windows': The operating system of the osDiskImage.
+* **osType**: 'Linux' | 'Windows': The Operating System type.
 * **ownerId**: string (ReadOnly): A relative URI containing the VM id that has the disk attached.
 * **provisioningState**: string (ReadOnly): The disk provisioning state.
 * **timeCreated**: string (ReadOnly): The time when the disk was created.
 
 ## EncryptionSettings
 ### Properties
-* **diskEncryptionKey**: [KeyVaultAndSecretReference](#keyvaultandsecretreference): Key Vault Secret Url and vault id of the encryption key
+* **diskEncryptionKey**: [KeyVaultAndSecretReference](#keyvaultandsecretreference): Key Vault Secret Url and vault id of the disk encryption key
 * **enabled**: bool: Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.
-* **keyEncryptionKey**: [KeyVaultAndKeyReference](#keyvaultandkeyreference): Key Vault Key Url and vault id of KeK, KeK is optional and when provided is used to unwrap the encryptionKey
+* **keyEncryptionKey**: [KeyVaultAndKeyReference](#keyvaultandkeyreference): Key Vault Key Url and vault id of the key encryption key
 
 ## HardwareProfile
 ### Properties
@@ -174,8 +174,8 @@
 * **caching**: 'None' | 'ReadOnly' | 'ReadWrite': Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
 * **diskSizeGB**: int: Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
 * **lun**: int (Required): Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
-* **managedDisk**: [SubResource](#subresource)
-* **snapshot**: [SubResource](#subresource)
+* **managedDisk**: [SubResource](#subresource): The managedDisk.
+* **snapshot**: [SubResource](#subresource): The snapshot.
 
 ## ImageDiskReference
 ### Properties
@@ -187,16 +187,16 @@
 * **blobUri**: string: The Virtual Hard Disk.
 * **caching**: 'None' | 'ReadOnly' | 'ReadWrite': Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
 * **diskSizeGB**: int: Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
-* **managedDisk**: [SubResource](#subresource)
+* **managedDisk**: [SubResource](#subresource): The managedDisk.
 * **osState**: 'Generalized' | 'Specialized' (Required): The OS State.
-* **osType**: 'Linux' | 'Windows' (Required): The operating system of the osDiskImage.
-* **snapshot**: [SubResource](#subresource)
+* **osType**: 'Linux' | 'Windows' (Required): This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
+* **snapshot**: [SubResource](#subresource): The snapshot.
 
 ## ImageProperties
 ### Properties
 * **provisioningState**: string (ReadOnly): The provisioning state.
-* **sourceVirtualMachine**: [SubResource](#subresource)
-* **storageProfile**: [ImageStorageProfile](#imagestorageprofile): Describes a storage profile.
+* **sourceVirtualMachine**: [SubResource](#subresource): The source virtual machine from which Image is created.
+* **storageProfile**: [ImageStorageProfile](#imagestorageprofile): Specifies the storage settings for the virtual machine disks.
 
 ## ImageReference
 ### Properties
@@ -209,7 +209,7 @@
 ## ImageStorageProfile
 ### Properties
 * **dataDisks**: [ImageDataDisk](#imagedatadisk)[]: Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
-* **osDisk**: [ImageOSDisk](#imageosdisk) (Required): Describes an Operating System disk.
+* **osDisk**: [ImageOSDisk](#imageosdisk) (Required): Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
 
 ## InstanceViewStatus
 ### Properties
@@ -222,27 +222,27 @@
 ## KeyVaultAndKeyReference
 ### Properties
 * **keyUrl**: string (Required): Url pointing to a key or secret in KeyVault
-* **sourceVault**: [SourceVault](#sourcevault) (Required): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
+* **sourceVault**: [SourceVault](#sourcevault) (Required): Resource id of the KeyVault containing the key or secret
 
 ## KeyVaultAndSecretReference
 ### Properties
 * **secretUrl**: string (Required): Url pointing to a key or secret in KeyVault
-* **sourceVault**: [SourceVault](#sourcevault) (Required): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
+* **sourceVault**: [SourceVault](#sourcevault) (Required): Resource id of the KeyVault containing the key or secret
 
 ## KeyVaultKeyReference
 ### Properties
 * **keyUrl**: string (Required): The URL referencing a key encryption key in Key Vault.
-* **sourceVault**: [SubResource](#subresource) (Required)
+* **sourceVault**: [SubResource](#subresource) (Required): The relative URL of the Key Vault containing the key.
 
 ## KeyVaultSecretReference
 ### Properties
 * **secretUrl**: string (Required): The URL referencing a secret in a Key Vault.
-* **sourceVault**: [SubResource](#subresource) (Required)
+* **sourceVault**: [SubResource](#subresource) (Required): The relative URL of the Key Vault containing the secret.
 
 ## LinuxConfiguration
 ### Properties
 * **disablePasswordAuthentication**: bool: Specifies whether password authentication should be disabled.
-* **ssh**: [SshConfiguration](#sshconfiguration): SSH configuration for Linux based VMs running on Azure
+* **ssh**: [SshConfiguration](#sshconfiguration): Specifies the ssh key configuration for a Linux OS.
 
 ## ManagedDiskParameters
 ### Properties
@@ -267,12 +267,12 @@
 * **caching**: 'None' | 'ReadOnly' | 'ReadWrite': Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
 * **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required): Specifies how the virtual machine should be created.<br><br> Possible values are:<br><br> **Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.<br><br> **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
 * **diskSizeGB**: int: Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
-* **encryptionSettings**: [DiskEncryptionSettings](#diskencryptionsettings): Describes a Encryption Settings for a Disk
-* **image**: [VirtualHardDisk](#virtualharddisk): Describes the uri of a disk.
-* **managedDisk**: [ManagedDiskParameters](#manageddiskparameters): The parameters of a managed disk.
+* **encryptionSettings**: [DiskEncryptionSettings](#diskencryptionsettings): Specifies the encryption settings for the OS Disk. <br><br> Minimum api-version: 2015-06-15
+* **image**: [VirtualHardDisk](#virtualharddisk): The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
+* **managedDisk**: [ManagedDiskParameters](#manageddiskparameters): The managed disk parameters.
 * **name**: string: The disk name.
-* **osType**: 'Linux' | 'Windows': The operating system of the osDiskImage.
-* **vhd**: [VirtualHardDisk](#virtualharddisk): Describes the uri of a disk.
+* **osType**: 'Linux' | 'Windows': This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
+* **vhd**: [VirtualHardDisk](#virtualharddisk): The virtual hard disk.
 
 ## OSProfile
 ### Properties
@@ -371,7 +371,7 @@
 
 ## VaultSecretGroup
 ### Properties
-* **sourceVault**: [SubResource](#subresource)
+* **sourceVault**: [SubResource](#subresource): The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
 * **vaultCertificates**: [VaultCertificate](#vaultcertificate)[]: The list of key vault references in SourceVault which contain certificates.
 
 ## VirtualHardDisk
@@ -395,7 +395,7 @@
 
 ## VirtualMachineExtensionHandlerInstanceView
 ### Properties
-* **status**: [InstanceViewStatus](#instanceviewstatus): Instance view status.
+* **status**: [InstanceViewStatus](#instanceviewstatus): The extension handler status.
 * **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
 * **typeHandlerVersion**: string: Specifies the version of the script handler.
 
@@ -411,11 +411,11 @@
 ### Properties
 * **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
 * **forceUpdateTag**: string: How the extension handler should be forced to update even if the extension configuration has not changed.
-* **instanceView**: [VirtualMachineExtensionInstanceView](#virtualmachineextensioninstanceview): The instance view of a virtual machine extension.
-* **protectedSettings**: any: Any object
+* **instanceView**: [VirtualMachineExtensionInstanceView](#virtualmachineextensioninstanceview): The virtual machine extension instance view.
+* **protectedSettings**: any: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
 * **publisher**: string: The name of the extension handler publisher.
-* **settings**: any: Any object
+* **settings**: any: Json formatted public settings for the extension.
 * **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
 * **typeHandlerVersion**: string: Specifies the version of the script handler.
 
@@ -427,21 +427,21 @@
 
 ## VirtualMachineInstanceView
 ### Properties
-* **bootDiagnostics**: [BootDiagnosticsInstanceView](#bootdiagnosticsinstanceview): The instance view of a virtual machine boot diagnostics.
+* **bootDiagnostics**: [BootDiagnosticsInstanceView](#bootdiagnosticsinstanceview): Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.
 * **disks**: [DiskInstanceView](#diskinstanceview)[]: The virtual machine disk information.
 * **extensions**: [VirtualMachineExtensionInstanceView](#virtualmachineextensioninstanceview)[]: The extensions information.
 * **platformFaultDomain**: int: Specifies the fault domain of the virtual machine.
 * **platformUpdateDomain**: int: Specifies the update domain of the virtual machine.
 * **rdpThumbPrint**: string: The Remote desktop certificate thumbprint.
 * **statuses**: [InstanceViewStatus](#instanceviewstatus)[]: The resource status information.
-* **vmAgent**: [VirtualMachineAgentInstanceView](#virtualmachineagentinstanceview): The instance view of the VM Agent running on the virtual machine.
+* **vmAgent**: [VirtualMachineAgentInstanceView](#virtualmachineagentinstanceview): The VM Agent running on the virtual machine.
 
 ## VirtualMachineProperties
 ### Properties
-* **availabilitySet**: [SubResource](#subresource)
+* **availabilitySet**: [SubResource](#subresource): Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Manage the availability of virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json). <br><br> For more information on Azure planned maintenance, see [Planned maintenance for virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Currently, a VM can only be added to availability set at creation time. An existing VM cannot be added to an availability set.
 * **diagnosticsProfile**: [DiagnosticsProfile](#diagnosticsprofile): Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.
 * **hardwareProfile**: [HardwareProfile](#hardwareprofile): Specifies the hardware settings for the virtual machine.
-* **instanceView**: [VirtualMachineInstanceView](#virtualmachineinstanceview) (ReadOnly): The instance view of a virtual machine.
+* **instanceView**: [VirtualMachineInstanceView](#virtualmachineinstanceview) (ReadOnly): The virtual machine instance view.
 * **licenseType**: string: Specifies that the image or disk that is being used was licensed on-premises. This element is only used for images that contain the Windows Server operating system. <br><br> Possible values are: <br><br> Windows_Client <br><br> Windows_Server <br><br> If this element is included in a request for an update, the value must match the initial value. This value cannot be updated. <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Minimum api-version: 2015-06-15
 * **networkProfile**: [NetworkProfile](#networkprofile): Specifies the network interfaces of the virtual machine.
 * **osProfile**: [OSProfile](#osprofile): Specifies the operating system settings for the virtual machine.
@@ -452,10 +452,10 @@
 ## VirtualMachineScaleSetDataDisk
 ### Properties
 * **caching**: 'None' | 'ReadOnly' | 'ReadWrite': Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
-* **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required): Specifies how the virtual machine should be created.<br><br> Possible values are:<br><br> **Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.<br><br> **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
+* **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required): The create option.
 * **diskSizeGB**: int: Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
 * **lun**: int (Required): Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
-* **managedDisk**: [VirtualMachineScaleSetManagedDiskParameters](#virtualmachinescalesetmanageddiskparameters): Describes the parameters of a ScaleSet managed disk.
+* **managedDisk**: [VirtualMachineScaleSetManagedDiskParameters](#virtualmachinescalesetmanageddiskparameters): The managed disk parameters.
 * **name**: string: The disk name.
 
 ## VirtualMachineScaleSetExtension
@@ -471,10 +471,10 @@
 ## VirtualMachineScaleSetExtensionProperties
 ### Properties
 * **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-* **protectedSettings**: any: Any object
+* **protectedSettings**: any: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
 * **publisher**: string: The name of the extension handler publisher.
-* **settings**: any: Any object
+* **settings**: any: Json formatted public settings for the extension.
 * **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
 * **typeHandlerVersion**: string: Specifies the version of the script handler.
 
@@ -482,7 +482,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of virtual machine scale set identity.
 * **tenantId**: string (ReadOnly): The tenant id associated with the virtual machine scale set.
-* **type**: 'SystemAssigned': The type of identity used for the virtual machine. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
+* **type**: 'SystemAssigned': The type of identity used for the virtual machine scale set. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
 
 ## VirtualMachineScaleSetIPConfiguration
 ### Properties
@@ -495,7 +495,7 @@
 * **applicationGatewayBackendAddressPools**: [SubResource](#subresource)[]: The application gateway backend address pools.
 * **loadBalancerBackendAddressPools**: [SubResource](#subresource)[]: The load balancer backend address pools.
 * **loadBalancerInboundNatPools**: [SubResource](#subresource)[]: The load balancer inbound nat pools.
-* **subnet**: [ApiEntityReference](#apientityreference) (Required): The API entity reference.
+* **subnet**: [ApiEntityReference](#apientityreference) (Required): The subnet.
 
 ## VirtualMachineScaleSetManagedDiskParameters
 ### Properties
@@ -519,11 +519,11 @@
 ## VirtualMachineScaleSetOSDisk
 ### Properties
 * **caching**: 'None' | 'ReadOnly' | 'ReadWrite': Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
-* **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required): Specifies how the virtual machine should be created.<br><br> Possible values are:<br><br> **Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.<br><br> **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
-* **image**: [VirtualHardDisk](#virtualharddisk): Describes the uri of a disk.
-* **managedDisk**: [VirtualMachineScaleSetManagedDiskParameters](#virtualmachinescalesetmanageddiskparameters): Describes the parameters of a ScaleSet managed disk.
+* **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required): Specifies how the virtual machines in the scale set should be created.<br><br> The only allowed value is: **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
+* **image**: [VirtualHardDisk](#virtualharddisk): The Source User Image VirtualHardDisk. This VirtualHardDisk will be copied before using it to attach to the Virtual Machine. If SourceImage is provided, the destination VirtualHardDisk should not exist.
+* **managedDisk**: [VirtualMachineScaleSetManagedDiskParameters](#virtualmachinescalesetmanageddiskparameters): The managed disk parameters.
 * **name**: string: The disk name.
-* **osType**: 'Linux' | 'Windows': The operating system of the osDiskImage.
+* **osType**: 'Linux' | 'Windows': This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
 * **vhdContainers**: string[]: The list of virtual hard disk container uris.
 
 ## VirtualMachineScaleSetOSProfile
@@ -532,30 +532,30 @@
 * **adminUsername**: string: Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
 * **computerNamePrefix**: string: Specifies the computer name prefix for all of the virtual machines in the scale set. Computer name prefixes must be 1 to 15 characters long.
 * **customData**: string: A base-64 encoded string of custom data.
-* **linuxConfiguration**: [LinuxConfiguration](#linuxconfiguration): Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+* **linuxConfiguration**: [LinuxConfiguration](#linuxconfiguration): The Linux Configuration of the OS profile.
 * **secrets**: [VaultSecretGroup](#vaultsecretgroup)[]: The List of certificates for addition to the VM.
-* **windowsConfiguration**: [WindowsConfiguration](#windowsconfiguration): Specifies Windows operating system settings on the virtual machine.
+* **windowsConfiguration**: [WindowsConfiguration](#windowsconfiguration): The Windows Configuration of the OS profile.
 
 ## VirtualMachineScaleSetProperties
 ### Properties
 * **overProvision**: bool: Specifies whether the Virtual Machine Scale Set should be overprovisioned.
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
 * **singlePlacementGroup**: bool: When true this limits the scale set to a single placement group, of max size 100 virtual machines.
-* **upgradePolicy**: [UpgradePolicy](#upgradepolicy): Describes an upgrade policy - automatic or manual.
-* **virtualMachineProfile**: [VirtualMachineScaleSetVMProfile](#virtualmachinescalesetvmprofile): Describes a virtual machine scale set virtual machine profile.
+* **upgradePolicy**: [UpgradePolicy](#upgradepolicy): The upgrade policy.
+* **virtualMachineProfile**: [VirtualMachineScaleSetVMProfile](#virtualmachinescalesetvmprofile): The virtual machine profile.
 
 ## VirtualMachineScaleSetStorageProfile
 ### Properties
 * **dataDisks**: [VirtualMachineScaleSetDataDisk](#virtualmachinescalesetdatadisk)[]: The data disks.
-* **imageReference**: [ImageReference](#imagereference): Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
-* **osDisk**: [VirtualMachineScaleSetOSDisk](#virtualmachinescalesetosdisk): Describes a virtual machine scale set operating system disk.
+* **imageReference**: [ImageReference](#imagereference): The image reference.
+* **osDisk**: [VirtualMachineScaleSetOSDisk](#virtualmachinescalesetosdisk): The OS disk.
 
 ## VirtualMachineScaleSetVMProfile
 ### Properties
-* **extensionProfile**: [VirtualMachineScaleSetExtensionProfile](#virtualmachinescalesetextensionprofile): Describes a virtual machine scale set extension profile.
-* **networkProfile**: [VirtualMachineScaleSetNetworkProfile](#virtualmachinescalesetnetworkprofile): Describes a virtual machine scale set network profile.
-* **osProfile**: [VirtualMachineScaleSetOSProfile](#virtualmachinescalesetosprofile): Describes a virtual machine scale set OS profile.
-* **storageProfile**: [VirtualMachineScaleSetStorageProfile](#virtualmachinescalesetstorageprofile): Describes a virtual machine scale set storage profile.
+* **extensionProfile**: [VirtualMachineScaleSetExtensionProfile](#virtualmachinescalesetextensionprofile): The virtual machine scale set extension profile.
+* **networkProfile**: [VirtualMachineScaleSetNetworkProfile](#virtualmachinescalesetnetworkprofile): The virtual machine scale set network profile.
+* **osProfile**: [VirtualMachineScaleSetOSProfile](#virtualmachinescalesetosprofile): The virtual machine scale set OS profile.
+* **storageProfile**: [VirtualMachineScaleSetStorageProfile](#virtualmachinescalesetstorageprofile): The virtual machine scale set storage profile.
 
 ## WindowsConfiguration
 ### Properties
@@ -563,7 +563,7 @@
 * **enableAutomaticUpdates**: bool: Indicates whether virtual machine is enabled for automatic updates.
 * **provisionVMAgent**: bool: Indicates whether virtual machine agent should be provisioned on the virtual machine. <br><br> When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
 * **timeZone**: string: Specifies the time zone of the virtual machine. e.g. "Pacific Standard Time"
-* **winRM**: [WinRMConfiguration](#winrmconfiguration): Describes Windows Remote Management configuration of the VM
+* **winRM**: [WinRMConfiguration](#winrmconfiguration): Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.
 
 ## WinRMConfiguration
 ### Properties

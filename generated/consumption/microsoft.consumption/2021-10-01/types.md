@@ -19,24 +19,24 @@
 ## BudgetFilter
 ### Properties
 * **and**: [BudgetFilterProperties](#budgetfilterproperties)[]: The logical "AND" expression. Must have at least 2 items.
-* **dimensions**: [BudgetComparisonExpression](#budgetcomparisonexpression): The comparison expression to be used in the budgets.
-* **tags**: [BudgetComparisonExpression](#budgetcomparisonexpression): The comparison expression to be used in the budgets.
+* **dimensions**: [BudgetComparisonExpression](#budgetcomparisonexpression): Has comparison expression for a dimension
+* **tags**: [BudgetComparisonExpression](#budgetcomparisonexpression): Has comparison expression for a tag
 
 ## BudgetFilterProperties
 ### Properties
-* **dimensions**: [BudgetComparisonExpression](#budgetcomparisonexpression): The comparison expression to be used in the budgets.
-* **tags**: [BudgetComparisonExpression](#budgetcomparisonexpression): The comparison expression to be used in the budgets.
+* **dimensions**: [BudgetComparisonExpression](#budgetcomparisonexpression): Has comparison expression for a dimension
+* **tags**: [BudgetComparisonExpression](#budgetcomparisonexpression): Has comparison expression for a tag
 
 ## BudgetProperties
 ### Properties
 * **amount**: int (Required): The total amount of cost to track with the budget
 * **category**: 'Cost' | string (Required): The category of the budget, whether the budget tracks cost or usage.
 * **currentSpend**: [CurrentSpend](#currentspend) (ReadOnly): The current amount of cost which is being tracked for a budget.
-* **filter**: [BudgetFilter](#budgetfilter): May be used to filter budgets by resource group, resource, or meter.
+* **filter**: [BudgetFilter](#budgetfilter): May be used to filter budgets by user-specified dimensions and/or tags.
 * **forecastSpend**: [ForecastSpend](#forecastspend) (ReadOnly): The forecasted cost which is being tracked for a budget.
 * **notifications**: [BudgetPropertiesNotifications](#budgetpropertiesnotifications): Dictionary of notifications associated with the budget. Budget can have up to five notifications.
 * **timeGrain**: 'Annually' | 'BillingAnnual' | 'BillingMonth' | 'BillingQuarter' | 'Monthly' | 'Quarterly' | string (Required): The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers
-* **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required): The start and end date for a budget.
+* **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required): Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.
 
 ## BudgetPropertiesNotifications
 ### Properties

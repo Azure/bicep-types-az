@@ -8,14 +8,14 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WebApplicationFirewallPolicyProperties](#webapplicationfirewallpolicyproperties): Defines web application firewall policy properties.
-* **sku**: [Sku](#sku): The pricing tier of the web application firewall policy.
+* **properties**: [WebApplicationFirewallPolicyProperties](#webapplicationfirewallpolicyproperties): Properties of the web application firewall policy.
+* **sku**: [Sku](#sku): The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/FrontDoorWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## CustomRule
 ### Properties
-* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' | string (Required): Defines the action to take on rule match.
+* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' | string (Required): Describes what action to be applied when rule matches.
 * **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
 * **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions.
 * **name**: string: Describes the name of the rule.
@@ -46,8 +46,8 @@
 
 ## ManagedRuleOverride
 ### Properties
-* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' | string: Defines the action to take on rule match.
-* **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the managed rule is in enabled or disabled state.
+* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' | string: Describes the override action to be applied when rule matches.
+* **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
 * **exclusions**: [ManagedRuleExclusion](#managedruleexclusion)[]: Describes the exclusions that are applied to this specific rule.
 * **ruleId**: string (Required): Identifier for the managed rule.
 
@@ -100,10 +100,10 @@
 
 ## WebApplicationFirewallPolicyProperties
 ### Properties
-* **customRules**: [CustomRuleList](#customrulelist): Defines contents of custom rules
+* **customRules**: [CustomRuleList](#customrulelist): Describes custom rules inside the policy.
 * **frontendEndpointLinks**: [FrontendEndpointLink](#frontendendpointlink)[] (ReadOnly): Describes Frontend Endpoints associated with this Web Application Firewall policy.
-* **managedRules**: [ManagedRuleSetList](#managedrulesetlist): Defines the list of managed rule sets for the policy.
-* **policySettings**: [PolicySettings](#policysettings): Defines top-level WebApplicationFirewallPolicy configuration settings.
+* **managedRules**: [ManagedRuleSetList](#managedrulesetlist): Describes managed rules inside the policy.
+* **policySettings**: [PolicySettings](#policysettings): Describes settings for the policy.
 * **provisioningState**: string (ReadOnly): Provisioning state of the policy.
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the policy.
 * **routingRuleLinks**: [RoutingRuleLink](#routingrulelink)[] (ReadOnly): Describes Routing Rules associated with this Web Application Firewall policy.

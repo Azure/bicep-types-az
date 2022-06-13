@@ -67,7 +67,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## DataCollectionEndpointResourceTags
 ### Properties
@@ -88,7 +88,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## DataCollectionRuleDataSources
 ### Properties
@@ -119,7 +119,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## DataCollectionRuleResourceTags
 ### Properties
@@ -139,7 +139,7 @@ This name should be unique across all destinations (regardless of type) within t
 ## ExtensionDataSource
 ### Properties
 * **extensionName**: string (Required): The name of the VM extension.
-* **extensionSettings**: any: Any object
+* **extensionSettings**: any: The extension settings. The format is specific for particular extension.
 * **inputDataSources**: string[]: The list of data sources this extension needs data from.
 * **name**: string: A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.

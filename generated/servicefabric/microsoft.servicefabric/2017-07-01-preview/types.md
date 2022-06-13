@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterProperties](#clusterproperties): Describes the cluster resource properties.
+* **properties**: [ClusterProperties](#clusterproperties): The cluster resource properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.ServiceFabric/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -110,18 +110,12 @@ When creating a new application with application capacity defined, the product o
 ## ArmApplicationHealthPolicy
 ### Properties
 * **ConsiderWarningAsError**: bool: Indicates whether warnings are treated with the same severity as errors.
-* **DefaultServiceTypeHealthPolicy**: [ArmServiceTypeHealthPolicy](#armservicetypehealthpolicy): Represents the health policy used to evaluate the health of services belonging to a service type.
+* **DefaultServiceTypeHealthPolicy**: [ArmServiceTypeHealthPolicy](#armservicetypehealthpolicy): The health policy used by default to evaluate the health of a service type.
 * **MaxPercentUnhealthyDeployedApplications**: int: The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.
 The percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.
 This is calculated by dividing the number of unhealthy deployed applications over the number of nodes where the application is currently deployed on in the cluster.
 The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
-* **ServiceTypeHealthPolicyMap**: [ArmServiceTypeHealthPolicyMap](#armservicetypehealthpolicymap): Defines a ServiceTypeHealthPolicy per service type name.
-
-The entries in the map replace the default service type health policy for each specified service type.
-For example, in an application that contains both a stateless gateway service type and a stateful engine service type, the health policies for the stateless and stateful services can be configured differently.
-With policy per service type, there's more granular control of the health of the service.
-
-If no policy is specified for a service type name, the DefaultServiceTypeHealthPolicy is used for evaluation.
+* **ServiceTypeHealthPolicyMap**: [ArmServiceTypeHealthPolicyMap](#armservicetypehealthpolicymap): The map with service type health policy per service type name. The map is empty by default.
 
 ## ArmRollingUpgradeMonitoringPolicy
 ### Properties
@@ -175,8 +169,8 @@ If no policy is specified for a service type name, the DefaultServiceTypeHealthP
 ### Properties
 * **addOnFeatures**: 'BackupRestoreService' | 'DnsService' | 'RepairManager' | string[]: The list of add-on features to enable in the cluster.
 * **availableClusterVersions**: [ClusterVersionDetails](#clusterversiondetails)[]: The Service Fabric runtime versions available for this cluster.
-* **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory): The settings to enable AAD authentication on the cluster.
-* **certificate**: [CertificateDescription](#certificatedescription): Describes the certificate details.
+* **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory): The AAD authentication settings of the cluster.
+* **certificate**: [CertificateDescription](#certificatedescription): The certificate to use for securing the cluster. The certificate provided will be used for  node to node security within the cluster, SSL certificate for cluster management endpoint and default  admin client.
 * **clientCertificateCommonNames**: [ClientCertificateCommonName](#clientcertificatecommonname)[]: The list of client certificates referenced by common name that are allowed to manage the cluster.
 * **clientCertificateThumbprints**: [ClientCertificateThumbprint](#clientcertificatethumbprint)[]: The list of client certificates referenced by thumbprint that are allowed to manage the cluster.
 * **clusterCodeVersion**: string: The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
@@ -206,8 +200,8 @@ If no policy is specified for a service type name, the DefaultServiceTypeHealthP
   - Silver - Run the System services with a target replica set count of 5.
   - Gold - Run the System services with a target replica set count of 7.
   - Platinum - Run the System services with a target replica set count of 9.
-* **reverseProxyCertificate**: [CertificateDescription](#certificatedescription): Describes the certificate details.
-* **upgradeDescription**: [ClusterUpgradePolicy](#clusterupgradepolicy): Describes the policy used when upgrading the cluster.
+* **reverseProxyCertificate**: [CertificateDescription](#certificatedescription): The server certificate used by reverse proxy.
+* **upgradeDescription**: [ClusterUpgradePolicy](#clusterupgradepolicy): The policy to use when upgrading the cluster.
 * **upgradeMode**: 'Automatic' | 'Manual' | string: The upgrade mode of the cluster when new Service Fabric runtime version is available.
 
   - Automatic - The cluster will be automatically upgraded to the latest Service Fabric runtime version as soon as it is available.
@@ -222,12 +216,12 @@ If no policy is specified for a service type name, the DefaultServiceTypeHealthP
 
 ## ClusterUpgradePolicy
 ### Properties
-* **deltaHealthPolicy**: [ClusterUpgradeDeltaHealthPolicy](#clusterupgradedeltahealthpolicy): Describes the delta health policies for the cluster upgrade.
+* **deltaHealthPolicy**: [ClusterUpgradeDeltaHealthPolicy](#clusterupgradedeltahealthpolicy): The delta health policy used when upgrading the cluster.
 * **forceRestart**: bool: If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
 * **healthCheckRetryTimeout**: string (Required): The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
 * **healthCheckStableDuration**: string (Required): The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
 * **healthCheckWaitDuration**: string (Required): The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
-* **healthPolicy**: [ClusterHealthPolicy](#clusterhealthpolicy) (Required): Defines a health policy used to evaluate the health of the cluster or of a cluster node.
+* **healthPolicy**: [ClusterHealthPolicy](#clusterhealthpolicy) (Required): The cluster health policy used when upgrading the cluster.
 * **upgradeDomainTimeout**: string (Required): The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
 * **upgradeReplicaSetCheckTimeout**: string (Required): The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
 * **upgradeTimeout**: string (Required): The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
@@ -235,7 +229,7 @@ If no policy is specified for a service type name, the DefaultServiceTypeHealthP
 ## ClusterVersionDetails
 ### Properties
 * **codeVersion**: string: The Service Fabric runtime version of the cluster.
-* **environment**: 'Linux' | 'Windows' | string: Cluster operating system, the default will be Windows
+* **environment**: 'Linux' | 'Windows' | string: Indicates if this version is for Windows or Linux operating system.
 * **supportExpiryUtc**: string: The date of expiry of support of the version.
 
 ## DiagnosticsStorageAccountConfig
@@ -253,7 +247,7 @@ If no policy is specified for a service type name, the DefaultServiceTypeHealthP
 
 ## NodeTypeDescription
 ### Properties
-* **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
+* **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription): The range of ports from which cluster assigned port to Service Fabric applications.
 * **capacities**: [NodeTypeDescriptionCapacities](#nodetypedescriptioncapacities): The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
 * **clientConnectionEndpointPort**: int (Required): The TCP cluster management endpoint port.
 * **durabilityLevel**: 'Bronze' | 'Gold' | 'Silver' | string: The durability level of the node type. Learn about [DurabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
@@ -261,7 +255,7 @@ If no policy is specified for a service type name, the DefaultServiceTypeHealthP
   - Bronze - No privileges. This is the default.
   - Silver - The infrastructure jobs can be paused for a duration of 30 minutes per UD.
   - Gold - The infrastructure jobs can be paused for a duration of 2 hours per UD. Gold durability can be enabled only on full node VM skus like D15_V2, G5 etc.
-* **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
+* **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription): The range of ephemeral ports that nodes in this node type should be configured with.
 * **httpGatewayEndpointPort**: int (Required): The HTTP cluster management endpoint port.
 * **isPrimary**: bool (Required): The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
 * **name**: string (Required): The name of the node type.
@@ -310,8 +304,8 @@ should be split between the partition ‘Count’
 
 ## ServiceCorrelationDescription
 ### Properties
-* **Scheme**: 'Affinity' | 'AlignedAffinity' | 'Invalid' | 'NonAlignedAffinity' | string (Required): The service correlation scheme.
-* **ServiceName**: string (Required): The full name of the service with 'fabric:' URI scheme.
+* **Scheme**: 'Affinity' | 'AlignedAffinity' | 'Invalid' | 'NonAlignedAffinity' | string (Required): The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
+* **ServiceName**: string (Required): The name of the service that the correlation relationship is established with.
 
 ## ServiceLoadMetricDescription
 ### Properties
@@ -319,7 +313,7 @@ should be split between the partition ‘Count’
 * **Name**: string (Required): The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
 * **PrimaryDefaultLoad**: int: Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
 * **SecondaryDefaultLoad**: int: Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
-* **Weight**: 'High' | 'Low' | 'Medium' | 'Zero' | string: Determines the metric weight relative to the other metrics that are configured for this service. During runtime, if two metrics end up in conflict, the Cluster Resource Manager prefers the metric with the higher weight.
+* **Weight**: 'High' | 'Low' | 'Medium' | 'Zero' | string: The service load metric relative weight, compared to other metrics configured for this service, as a number.
 
 ## ServicePlacementPolicyDescription
 * **Discriminator**: Type

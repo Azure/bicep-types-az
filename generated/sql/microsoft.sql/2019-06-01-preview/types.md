@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagedDatabaseProperties](#manageddatabaseproperties): The managed database's properties.
+* **properties**: [ManagedDatabaseProperties](#manageddatabaseproperties): Resource properties.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -16,11 +16,11 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ResourceIdentity](#resourceidentity): Azure Active Directory identity configuration for a resource.
+* **identity**: [ResourceIdentity](#resourceidentity): The Azure Active Directory identity of the server.
 * **kind**: string (ReadOnly): Kind of sql server. This is metadata used for the Azure portal experience.
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerProperties](#serverproperties): The properties of a server.
+* **properties**: [ServerProperties](#serverproperties): Resource properties.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -30,7 +30,7 @@
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'ActiveDirectory' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [AdministratorProperties](#administratorproperties): Properties of a active directory administrator.
+* **properties**: [AdministratorProperties](#administratorproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases@2019-06-01-preview
@@ -42,8 +42,18 @@
 * **location**: string (Required): Resource location.
 * **managedBy**: string (ReadOnly): Resource that manages the database.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabaseProperties](#databaseproperties): The database's properties.
-* **sku**: [Sku](#sku): An ARM Resource SKU.
+* **properties**: [DatabaseProperties](#databaseproperties): Resource properties.
+* **sku**: [Sku](#sku): The database SKU.
+
+The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
+
+```azurecli
+az sql db list-editions -l <location> -o table
+````
+
+```powershell
+Get-AzSqlServerServiceObjective -Location <location>
+````
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -53,7 +63,7 @@
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SyncGroupProperties](#syncgroupproperties): Properties of a sync group.
+* **properties**: [SyncGroupProperties](#syncgroupproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/syncGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/syncGroups/syncMembers@2019-06-01-preview
@@ -62,7 +72,7 @@
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SyncMemberProperties](#syncmemberproperties): Properties of a sync member.
+* **properties**: [SyncMemberProperties](#syncmemberproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/syncGroups/syncMembers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/workloadGroups@2019-06-01-preview
@@ -71,7 +81,7 @@
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkloadGroupProperties](#workloadgroupproperties): Workload group definition. For more information look at sys.workload_management_workload_groups (DMV).
+* **properties**: [WorkloadGroupProperties](#workloadgroupproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/workloadGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers@2019-06-01-preview
@@ -80,7 +90,7 @@
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkloadClassifierProperties](#workloadclassifierproperties): Workload classifier definition. For more information look at sys.workload_management_workload_classifiers (DMV).
+* **properties**: [WorkloadClassifierProperties](#workloadclassifierproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AdministratorProperties
@@ -115,7 +125,7 @@ RestoreLongTermRetentionBackup: Creates a database by restoring from a long term
 Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
 * **creationDate**: string (ReadOnly): The creation date of the database (ISO8601 format).
 * **currentServiceObjectiveName**: string (ReadOnly): The current service level objective name of the database.
-* **currentSku**: [Sku](#sku) (ReadOnly): An ARM Resource SKU.
+* **currentSku**: [Sku](#sku) (ReadOnly): The name and tier of the SKU.
 * **databaseId**: string (ReadOnly): The ID of the database.
 * **defaultSecondaryLocation**: string (ReadOnly): The default secondary region for this database.
 * **earliestRestoreDate**: string (ReadOnly): This records the earliest start date and time that restore is available for this database (ISO8601 format).
@@ -175,8 +185,8 @@ When source subscription belongs to a different tenant than target subscription,
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty)
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty)
+* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty): Private endpoint which the connection belongs to.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty): Connection state of the private endpoint connection.
 * **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' | string (ReadOnly): State of the private endpoint connection.
 
 ## PrivateEndpointProperty
@@ -198,7 +208,7 @@ When source subscription belongs to a different tenant than target subscription,
 ## ServerPrivateEndpointConnection
 ### Properties
 * **id**: string (ReadOnly): Resource ID.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Properties of a private endpoint connection.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Private endpoint connection properties
 
 ## ServerProperties
 ### Properties
@@ -227,7 +237,7 @@ When source subscription belongs to a different tenant than target subscription,
 * **interval**: int: Sync interval of the sync group.
 * **lastSyncTime**: string (ReadOnly): Last sync time of the sync group.
 * **privateEndpointName**: string (ReadOnly): Private endpoint name of the sync group if use private link connection is enabled.
-* **schema**: [SyncGroupSchema](#syncgroupschema): Properties of sync group schema.
+* **schema**: [SyncGroupSchema](#syncgroupschema): Sync schema of the sync group.
 * **syncDatabaseId**: string: ARM resource id of the sync database in the sync group.
 * **syncState**: 'Error' | 'Good' | 'NotReady' | 'Progressing' | 'Warning' | string (ReadOnly): Sync state of the sync group.
 * **usePrivateLinkConnection**: bool: If use private link connection is enabled.

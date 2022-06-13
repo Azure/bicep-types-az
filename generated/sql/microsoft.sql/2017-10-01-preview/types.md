@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [InstanceFailoverGroupProperties](#instancefailovergroupproperties): Properties of a instance failover group.
+* **properties**: [InstanceFailoverGroupProperties](#instancefailovergroupproperties): Resource properties.
 * **type**: 'Microsoft.Sql/locations/instanceFailoverGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments@2017-10-01-preview
@@ -15,7 +15,7 @@
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabaseVulnerabilityAssessmentProperties](#databasevulnerabilityassessmentproperties): Properties of a database Vulnerability Assessment.
+* **properties**: [DatabaseVulnerabilityAssessmentProperties](#databasevulnerabilityassessmentproperties): Resource properties.
 * **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines@2017-10-01-preview
@@ -24,7 +24,7 @@
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | 'master' (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabaseVulnerabilityAssessmentRuleBaselineProperties](#databasevulnerabilityassessmentrulebaselineproperties): Properties of a database Vulnerability Assessment rule baseline.
+* **properties**: [DatabaseVulnerabilityAssessmentRuleBaselineProperties](#databasevulnerabilityassessmentrulebaselineproperties): Resource properties.
 * **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/encryptionProtector@2017-10-01-preview
@@ -34,7 +34,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Kind of encryption protector. This is metadata used for the Azure portal experience.
 * **name**: 'current' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagedInstanceEncryptionProtectorProperties](#managedinstanceencryptionprotectorproperties): Properties for an encryption protector execution.
+* **properties**: [ManagedInstanceEncryptionProtectorProperties](#managedinstanceencryptionprotectorproperties): Resource properties.
 * **type**: 'Microsoft.Sql/managedInstances/encryptionProtector' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/keys@2017-10-01-preview
@@ -44,7 +44,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Kind of encryption protector. This is metadata used for the Azure portal experience.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagedInstanceKeyProperties](#managedinstancekeyproperties): Properties for a key execution.
+* **properties**: [ManagedInstanceKeyProperties](#managedinstancekeyproperties): Resource properties.
 * **type**: 'Microsoft.Sql/managedInstances/keys' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases@2017-10-01-preview
@@ -56,8 +56,18 @@
 * **location**: string (Required): Resource location.
 * **managedBy**: string (ReadOnly): Resource that manages the database.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabaseProperties](#databaseproperties): The database's properties.
-* **sku**: [Sku](#sku): An ARM Resource SKU.
+* **properties**: [DatabaseProperties](#databaseproperties): Resource properties.
+* **sku**: [Sku](#sku): The database SKU.
+
+The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
+
+```azurecli
+az sql db list-editions -l <location> -o table
+````
+
+```powershell
+Get-AzSqlServerServiceObjective -Location <location>
+````
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -67,7 +77,7 @@
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [BackupShortTermRetentionPolicyProperties](#backupshorttermretentionpolicyproperties): Properties of a short term retention policy
+* **properties**: [BackupShortTermRetentionPolicyProperties](#backupshorttermretentionpolicyproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/elasticPools@2017-10-01-preview
@@ -78,8 +88,14 @@
 * **kind**: string (ReadOnly): Kind of elastic pool. This is metadata used for the Azure portal experience.
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ElasticPoolProperties](#elasticpoolproperties): Properties of an elastic pool
-* **sku**: [Sku](#sku): An ARM Resource SKU.
+* **properties**: [ElasticPoolProperties](#elasticpoolproperties): Resource properties.
+* **sku**: [Sku](#sku): The elastic pool SKU.
+
+The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or the following command:
+
+```azurecli
+az sql elastic-pool list-editions -l <location> -o table
+````
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/elasticPools' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -111,7 +127,7 @@ RestoreLongTermRetentionBackup: Creates a database by restoring from a long term
 Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
 * **creationDate**: string (ReadOnly): The creation date of the database (ISO8601 format).
 * **currentServiceObjectiveName**: string (ReadOnly): The current service level objective name of the database.
-* **currentSku**: [Sku](#sku) (ReadOnly): An ARM Resource SKU.
+* **currentSku**: [Sku](#sku) (ReadOnly): The name and tier of the SKU.
 * **databaseId**: string (ReadOnly): The ID of the database.
 * **defaultSecondaryLocation**: string (ReadOnly): The default secondary region for this database.
 * **earliestRestoreDate**: string (ReadOnly): This records the earliest start date and time that restore is available for this database (ISO8601 format).
@@ -139,7 +155,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 
 ## DatabaseVulnerabilityAssessmentProperties
 ### Properties
-* **recurringScans**: [VulnerabilityAssessmentRecurringScansProperties](#vulnerabilityassessmentrecurringscansproperties): Properties of a Vulnerability Assessment recurring scans.
+* **recurringScans**: [VulnerabilityAssessmentRecurringScansProperties](#vulnerabilityassessmentrecurringscansproperties): The recurring scans settings
 * **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the storage account for vulnerability assessment scan results. If 'StorageContainerSasKey' isn't specified, storageAccountAccessKey is required.
 * **storageContainerPath**: string (WriteOnly): A blob storage container path to hold the scan results (e.g. https://myStorage.blob.core.windows.net/VaScans/).  It is required if server level vulnerability assessment policy doesn't set
 * **storageContainerSasKey**: string (WriteOnly): A shared access signature (SAS Key) that has read and write access to the blob container specified in 'storageContainerPath' parameter. If 'storageAccountAccessKey' isn't specified, StorageContainerSasKey is required.
@@ -162,7 +178,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **creationDate**: string (ReadOnly): The creation date of the elastic pool (ISO8601 format).
 * **licenseType**: 'BasePrice' | 'LicenseIncluded' | string: The license type to apply for this elastic pool.
 * **maxSizeBytes**: int: The storage limit for the database elastic pool in bytes.
-* **perDatabaseSettings**: [ElasticPoolPerDatabaseSettings](#elasticpoolperdatabasesettings): Per database settings of an elastic pool.
+* **perDatabaseSettings**: [ElasticPoolPerDatabaseSettings](#elasticpoolperdatabasesettings): The per database settings for the elastic pool.
 * **state**: 'Creating' | 'Disabled' | 'Ready' | string (ReadOnly): The state of the elastic pool.
 * **zoneRedundant**: bool: Whether or not this elastic pool is zone redundant, which means the replicas of this elastic pool will be spread across multiple availability zones.
 
@@ -187,7 +203,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 ## ManagedInstanceEncryptionProtectorProperties
 ### Properties
 * **serverKeyName**: string: The name of the managed instance key.
-* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' | string (Required): The key type like 'ServiceManaged', 'AzureKeyVault'.
+* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' | string (Required): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
 * **thumbprint**: string (ReadOnly): Thumbprint of the server key.
 * **uri**: string (ReadOnly): The URI of the server key.
 
@@ -206,7 +222,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 ## PartnerRegionInfo
 ### Properties
 * **location**: string: Geo location of the partner managed instances.
-* **replicationRole**: 'Primary' | 'Secondary' | string (ReadOnly): Local replication role of the failover group instance.
+* **replicationRole**: 'Primary' | 'Secondary' | string (ReadOnly): Replication role of the partner managed instances.
 
 ## Sku
 ### Properties

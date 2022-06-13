@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterProperties](#clusterproperties): Cluster properties.
-* **sku**: [ClusterSku](#clustersku): The cluster sku definition.
+* **properties**: [ClusterProperties](#clusterproperties): Log Analytics cluster properties.
+* **sku**: [ClusterSku](#clustersku): The sku properties.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.OperationalInsights/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -40,13 +40,13 @@
 ## ClusterProperties
 ### Properties
 * **associatedWorkspaces**: [AssociatedWorkspace](#associatedworkspace)[]: The list of Log Analytics workspaces associated with the cluster
-* **billingType**: 'Cluster' | 'Workspaces' | string: Configures whether billing will be only on the cluster or each workspace will be billed by its proportional use. This does not change the overall billing, only how it will be distributed. Default value is 'Cluster'
-* **capacityReservationProperties**: [CapacityReservationProperties](#capacityreservationproperties): The Capacity Reservation properties.
+* **billingType**: 'Cluster' | 'Workspaces' | string: The cluster's billing type.
+* **capacityReservationProperties**: [CapacityReservationProperties](#capacityreservationproperties): Additional properties for capacity reservation
 * **clusterId**: string (ReadOnly): The ID associated with the cluster.
 * **createdDate**: string (ReadOnly): The cluster creation time
 * **isAvailabilityZonesEnabled**: bool: Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.
 * **isDoubleEncryptionEnabled**: bool (WriteOnly): Configures whether cluster will use double encryption. This Property can not be modified after cluster creation. Default value is 'true'
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): The key vault properties.
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): The associated key properties.
 * **lastModifiedDate**: string (ReadOnly): The last time the cluster was updated.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the cluster.
 
@@ -119,10 +119,10 @@
 * **modifiedDate**: string (ReadOnly): Workspace modification date.
 * **privateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly): List of linked private link scope resources.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' | string: The provisioning state of the workspace.
-* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled' | string: The network access type for operating on the Log Analytics Workspace. By default it is Enabled
-* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled' | string: The network access type for operating on the Log Analytics Workspace. By default it is Enabled
+* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled' | string: The network access type for accessing Log Analytics ingestion.
+* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled' | string: The network access type for accessing Log Analytics query.
 * **retentionInDays**: int: The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
-* **sku**: [WorkspaceSku](#workspacesku): The SKU (tier) of a workspace.
+* **sku**: [WorkspaceSku](#workspacesku): The SKU of the workspace.
 * **workspaceCapping**: [WorkspaceCapping](#workspacecapping): The daily volume cap for ingestion.
 
 ## WorkspaceSku

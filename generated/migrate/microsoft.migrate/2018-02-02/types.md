@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Azure location in which project is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ProjectProperties](#projectproperties): Properties of a project.
-* **tags**: any: Any object
+* **properties**: [ProjectProperties](#projectproperties): Properties of the project.
+* **tags**: any: Tags provided by Azure Tagging service.
 * **type**: 'Microsoft.Migrate/projects' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/projects/groups@2018-02-02
@@ -19,7 +19,7 @@
 * **eTag**: string: For optimistic concurrency control.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GroupProperties](#groupproperties) (Required): Properties of group resource.
+* **properties**: [GroupProperties](#groupproperties) (Required): Properties of the group.
 * **type**: 'Microsoft.Migrate/projects/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/projects/groups/assessments@2018-02-02
@@ -29,7 +29,7 @@
 * **eTag**: string: For optimistic concurrency control.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AssessmentProperties](#assessmentproperties) (Required): Properties of an assessment.
+* **properties**: [AssessmentProperties](#assessmentproperties) (Required): Properties of the assessment.
 * **type**: 'Microsoft.Migrate/projects/groups/assessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AssessmentProperties

@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ResourceIdentity](#resourceidentity): Azure Active Directory identity configuration for a resource.
+* **identity**: [ResourceIdentity](#resourceidentity): The Azure Active Directory identity of the managed instance.
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagedInstanceProperties](#managedinstanceproperties): The properties of a managed instance.
-* **sku**: [Sku](#sku): An ARM Resource SKU.
+* **properties**: [ManagedInstanceProperties](#managedinstanceproperties): Resource properties.
+* **sku**: [Sku](#sku): Managed instance SKU. Allowed values for sku.name: GP_Gen4, GP_Gen5, BC_Gen4, BC_Gen5
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/managedInstances' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,11 +18,11 @@
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ResourceIdentity](#resourceidentity): Azure Active Directory identity configuration for a resource.
+* **identity**: [ResourceIdentity](#resourceidentity): The Azure Active Directory identity of the server.
 * **kind**: string (ReadOnly): Kind of sql server. This is metadata used for the Azure portal experience.
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerProperties](#serverproperties): The properties of a server.
+* **properties**: [ServerProperties](#serverproperties): Resource properties.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -33,7 +33,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Resource kind.
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabaseBlobAuditingPolicyProperties](#databaseblobauditingpolicyproperties): Properties of a database blob auditing policy.
+* **properties**: [DatabaseBlobAuditingPolicyProperties](#databaseblobauditingpolicyproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/syncGroups@2015-05-01-preview
@@ -42,7 +42,7 @@
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SyncGroupProperties](#syncgroupproperties): Properties of a sync group.
+* **properties**: [SyncGroupProperties](#syncgroupproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/syncGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/syncGroups/syncMembers@2015-05-01-preview
@@ -51,7 +51,7 @@
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SyncMemberProperties](#syncmemberproperties): Properties of a sync member.
+* **properties**: [SyncMemberProperties](#syncmemberproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/syncGroups/syncMembers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/encryptionProtector@2015-05-01-preview
@@ -62,7 +62,7 @@
 * **kind**: string (ReadOnly): Kind of encryption protector. This is metadata used for the Azure portal experience.
 * **location**: string (ReadOnly): Resource location.
 * **name**: 'current' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [EncryptionProtectorProperties](#encryptionprotectorproperties): Properties for an encryption protector execution.
+* **properties**: [EncryptionProtectorProperties](#encryptionprotectorproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/encryptionProtector' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/failoverGroups@2015-05-01-preview
@@ -72,7 +72,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [FailoverGroupProperties](#failovergroupproperties): Properties of a failover group.
+* **properties**: [FailoverGroupProperties](#failovergroupproperties): Resource properties.
 * **tags**: [FailoverGroupTags](#failovergrouptags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/failoverGroups' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -82,7 +82,7 @@
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerFirewallRuleProperties](#serverfirewallruleproperties): The properties of a server firewall rule.
+* **properties**: [ServerFirewallRuleProperties](#serverfirewallruleproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/keys@2015-05-01-preview
@@ -93,7 +93,7 @@
 * **kind**: string: Kind of encryption protector. This is metadata used for the Azure portal experience.
 * **location**: string (ReadOnly): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerKeyProperties](#serverkeyproperties): Properties for a server key execution.
+* **properties**: [ServerKeyProperties](#serverkeyproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/keys' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/syncAgents@2015-05-01-preview
@@ -102,7 +102,7 @@
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SyncAgentProperties](#syncagentproperties): Properties of an Azure SQL Database sync agent.
+* **properties**: [SyncAgentProperties](#syncagentproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/syncAgents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/virtualNetworkRules@2015-05-01-preview
@@ -111,7 +111,7 @@
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Properties of a virtual network rule.
+* **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DatabaseBlobAuditingPolicyProperties
@@ -265,7 +265,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 ### Properties
 * **id**: string (Required): Resource identifier of the partner server.
 * **location**: string (ReadOnly): Geo location of the partner server.
-* **replicationRole**: 'Primary' | 'Secondary' | string (ReadOnly): Local replication role of the failover group instance.
+* **replicationRole**: 'Primary' | 'Secondary' | string (ReadOnly): Replication role of the partner server.
 
 ## ResourceIdentity
 ### Properties
@@ -281,7 +281,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 ## ServerKeyProperties
 ### Properties
 * **creationDate**: string: The server key creation date.
-* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' | string (Required): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
+* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' | string (Required): The server key type like 'ServiceManaged', 'AzureKeyVault'.
 * **subregion**: string (ReadOnly): Subregion of the server key.
 * **thumbprint**: string: Thumbprint of the server key.
 * **uri**: string: The URI of the server key.
@@ -319,7 +319,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 * **hubDatabaseUserName**: string: User name for the sync group hub database credential.
 * **interval**: int: Sync interval of the sync group.
 * **lastSyncTime**: string (ReadOnly): Last sync time of the sync group.
-* **schema**: [SyncGroupSchema](#syncgroupschema): Properties of sync group schema.
+* **schema**: [SyncGroupSchema](#syncgroupschema): Sync schema of the sync group.
 * **syncDatabaseId**: string: ARM resource id of the sync database in the sync group.
 * **syncState**: 'Error' | 'Good' | 'NotReady' | 'Progressing' | 'Warning' | string (ReadOnly): Sync state of the sync group.
 
@@ -342,7 +342,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 ## SyncMemberProperties
 ### Properties
 * **databaseName**: string: Database name of the member database in the sync member.
-* **databaseType**: 'AzureSqlDatabase' | 'SqlServerDatabase' | string: Type of the sync agent linked database.
+* **databaseType**: 'AzureSqlDatabase' | 'SqlServerDatabase' | string: Database type of the sync member.
 * **password**: string (WriteOnly): Password of the member database in the sync member.
 * **serverName**: string: Server name of the member database in the sync member
 * **sqlServerDatabaseId**: string: SQL Server database id of the sync member.

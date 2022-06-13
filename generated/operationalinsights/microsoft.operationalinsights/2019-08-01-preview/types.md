@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterProperties](#clusterproperties): Cluster properties.
-* **sku**: [Sku](#sku)
+* **properties**: [ClusterProperties](#clusterproperties): Log Analytics cluster properties.
+* **sku**: [Sku](#sku): The sku properties.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.OperationalInsights/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,7 +19,7 @@
 * **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DataExportProperties](#dataexportproperties): Data Export properties.
+* **properties**: [DataExportProperties](#dataexportproperties): data export properties.
 * **type**: 'Microsoft.OperationalInsights/workspaces/dataExports' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationalInsights/workspaces/linkedServices@2019-08-01-preview
@@ -28,7 +28,7 @@
 * **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [LinkedServiceProperties](#linkedserviceproperties) (Required): Linked service properties.
+* **properties**: [LinkedServiceProperties](#linkedserviceproperties) (Required): The properties of the linked service.
 * **type**: 'Microsoft.OperationalInsights/workspaces/linkedServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationalInsights/workspaces/linkedStorageAccounts@2019-08-01-preview
@@ -43,7 +43,7 @@
 ## ClusterProperties
 ### Properties
 * **clusterId**: string (ReadOnly): The ID associated with the cluster.
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): The associated key properties.
 * **nextLink**: string: The link used to get the next page of recommendations.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | string (ReadOnly): The provisioning state of the cluster.
 
@@ -51,14 +51,14 @@
 ### Properties
 * **createdDate**: string: The latest data export rule modification time.
 * **dataExportId**: string: The data export rule ID.
-* **destination**: [Destination](#destination): Destination properties.
+* **destination**: [Destination](#destination): destination properties.
 * **enable**: bool: Active when enabled.
 * **lastModifiedDate**: string: Date and time when the export was last modified.
 * **tableNames**: string[] (Required): An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
 
 ## Destination
 ### Properties
-* **metaData**: [DestinationMetaData](#destinationmetadata): Destination meta data.
+* **metaData**: [DestinationMetaData](#destinationmetadata): destination meta data.
 * **resourceId**: string (Required): The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
 * **type**: 'EventHub' | 'StorageAccount' | string (ReadOnly): The type of the destination resource
 

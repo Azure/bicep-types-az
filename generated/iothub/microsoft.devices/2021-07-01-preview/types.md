@@ -6,11 +6,11 @@
 * **apiVersion**: '2021-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ArmIdentity](#armidentity)
+* **identity**: [ArmIdentity](#armidentity): The managed identities for the IotHub.
 * **location**: string (Required): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IotHubProperties](#iothubproperties): The properties of an IoT hub.
-* **sku**: [IotHubSkuInfo](#iothubskuinfo) (Required): Information about the SKU of the IoT hub.
+* **properties**: [IotHubProperties](#iothubproperties): IotHub properties
+* **sku**: [IotHubSkuInfo](#iothubskuinfo) (Required): IotHub SKU info
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Devices/IotHubs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -115,7 +115,7 @@
 * **endpointNames**: string[] (Required): The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
 * **isEnabled**: bool (Required): Used to specify whether the fallback route is enabled.
 * **name**: string: The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
-* **source**: 'DeviceConnectionStateEvents' | 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'DigitalTwinChangeEvents' | 'Invalid' | 'MqttBrokerMessages' | 'TwinChangeEvents' | string (Required): The source that the routing rule is to be applied to, such as DeviceMessages.
+* **source**: 'DeviceConnectionStateEvents' | 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'DigitalTwinChangeEvents' | 'Invalid' | 'MqttBrokerMessages' | 'TwinChangeEvents' | string (Required): The source to which the routing rule is to be applied to. For example, DeviceMessages
 
 ## FeedbackProperties
 ### Properties
@@ -189,7 +189,7 @@
 
 ## KeyVaultKeyProperties
 ### Properties
-* **identity**: [ManagedIdentity](#managedidentity): The properties of the Managed identity.
+* **identity**: [ManagedIdentity](#managedidentity): Managed identity properties of KeyVault Key.
 * **keyIdentifier**: string: The identifier of the key.
 
 ## ManagedIdentity
@@ -258,12 +258,12 @@
 
 ## RoutingEventHubProperties
 ### Properties
-* **authenticationType**: 'identityBased' | 'keyBased' | string: Specifies authentication type being used for connecting to the storage account.
+* **authenticationType**: 'identityBased' | 'keyBased' | string: Method used to authenticate against the event hub endpoint
 * **connectionString**: string: The connection string of the event hub endpoint.
 * **endpointUri**: string: The url of the event hub endpoint. It must include the protocol sb://
 * **entityPath**: string: Event hub name on the event hub namespace
 * **id**: string: Id of the event hub endpoint
-* **identity**: [ManagedIdentity](#managedidentity): The properties of the Managed identity.
+* **identity**: [ManagedIdentity](#managedidentity): Managed identity properties of routing event hub endpoint.
 * **name**: string (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
 * **resourceGroup**: string: The name of the resource group of the event hub endpoint.
 * **subscriptionId**: string: The subscription identifier of the event hub endpoint.
@@ -272,36 +272,36 @@
 ### Properties
 * **endpoints**: [RoutingEndpoints](#routingendpoints): The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.
 * **enrichments**: [EnrichmentProperties](#enrichmentproperties)[]: The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid
-* **fallbackRoute**: [FallbackRouteProperties](#fallbackrouteproperties): The properties of the fallback route. IoT Hub uses these properties when it routes messages to the fallback endpoint.
+* **fallbackRoute**: [FallbackRouteProperties](#fallbackrouteproperties): The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.
 * **routes**: [RouteProperties](#routeproperties)[]: The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.
 
 ## RoutingServiceBusQueueEndpointProperties
 ### Properties
-* **authenticationType**: 'identityBased' | 'keyBased' | string: Specifies authentication type being used for connecting to the storage account.
+* **authenticationType**: 'identityBased' | 'keyBased' | string: Method used to authenticate against the service bus queue endpoint
 * **connectionString**: string: The connection string of the service bus queue endpoint.
 * **endpointUri**: string: The url of the service bus queue endpoint. It must include the protocol sb://
 * **entityPath**: string: Queue name on the service bus namespace
 * **id**: string: Id of the service bus queue endpoint
-* **identity**: [ManagedIdentity](#managedidentity): The properties of the Managed identity.
+* **identity**: [ManagedIdentity](#managedidentity): Managed identity properties of routing service bus queue endpoint.
 * **name**: string (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.
 * **resourceGroup**: string: The name of the resource group of the service bus queue endpoint.
 * **subscriptionId**: string: The subscription identifier of the service bus queue endpoint.
 
 ## RoutingServiceBusTopicEndpointProperties
 ### Properties
-* **authenticationType**: 'identityBased' | 'keyBased' | string: Specifies authentication type being used for connecting to the storage account.
+* **authenticationType**: 'identityBased' | 'keyBased' | string: Method used to authenticate against the service bus topic endpoint
 * **connectionString**: string: The connection string of the service bus topic endpoint.
 * **endpointUri**: string: The url of the service bus topic endpoint. It must include the protocol sb://
 * **entityPath**: string: Queue name on the service bus topic
 * **id**: string: Id of the service bus topic endpoint
-* **identity**: [ManagedIdentity](#managedidentity): The properties of the Managed identity.
+* **identity**: [ManagedIdentity](#managedidentity): Managed identity properties of routing service bus topic endpoint.
 * **name**: string (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.
 * **resourceGroup**: string: The name of the resource group of the service bus topic endpoint.
 * **subscriptionId**: string: The subscription identifier of the service bus topic endpoint.
 
 ## RoutingStorageContainerProperties
 ### Properties
-* **authenticationType**: 'identityBased' | 'keyBased' | string: Specifies authentication type being used for connecting to the storage account.
+* **authenticationType**: 'identityBased' | 'keyBased' | string: Method used to authenticate against the storage endpoint
 * **batchFrequencyInSeconds**: int: Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.
 * **connectionString**: string: The connection string of the storage account.
 * **containerName**: string (Required): The name of storage container in the storage account.
@@ -309,7 +309,7 @@
 * **endpointUri**: string: The url of the storage endpoint. It must include the protocol https://
 * **fileNameFormat**: string: File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.
 * **id**: string: Id of the storage container endpoint
-* **identity**: [ManagedIdentity](#managedidentity): The properties of the Managed identity.
+* **identity**: [ManagedIdentity](#managedidentity): Managed identity properties of routing storage endpoint.
 * **maxChunkSizeInBytes**: int: Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).
 * **name**: string (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
 * **resourceGroup**: string: The name of the resource group of the storage account.
@@ -339,6 +339,6 @@
 * **authenticationType**: 'identityBased' | 'keyBased' | string: Specifies authentication type being used for connecting to the storage account.
 * **connectionString**: string (Required): The connection string for the Azure Storage account to which files are uploaded.
 * **containerName**: string (Required): The name of the root container where you upload files. The container need not exist but should be creatable using the connectionString specified.
-* **identity**: [ManagedIdentity](#managedidentity): The properties of the Managed identity.
+* **identity**: [ManagedIdentity](#managedidentity): Managed identity properties of storage endpoint for file upload.
 * **sasTtlAsIso8601**: string: The period of time for which the SAS URI generated by IoT Hub for file upload is valid. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options.
 

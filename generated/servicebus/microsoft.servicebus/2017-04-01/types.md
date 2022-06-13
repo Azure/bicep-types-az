@@ -8,7 +8,7 @@
 * **location**: string (Required): The Geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SBNamespaceProperties](#sbnamespaceproperties): Properties of the namespace.
-* **sku**: [SBSku](#sbsku): SKU of the namespace.
+* **sku**: [SBSku](#sbsku): Properties of Sku
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags
 * **type**: 'Microsoft.ServiceBus/namespaces' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -54,7 +54,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SBQueueProperties](#sbqueueproperties): The Queue Properties definition.
+* **properties**: [SBQueueProperties](#sbqueueproperties): Queue Properties
 * **type**: 'Microsoft.ServiceBus/namespaces/queues' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/queues/authorizationRules@2017-04-01
@@ -72,7 +72,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SBTopicProperties](#sbtopicproperties): The Topic Properties definition.
+* **properties**: [SBTopicProperties](#sbtopicproperties): Properties of topic resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/topics/authorizationRules@2017-04-01
@@ -90,7 +90,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SBSubscriptionProperties](#sbsubscriptionproperties): Description of Subscription Resource.
+* **properties**: [SBSubscriptionProperties](#sbsubscriptionproperties): Properties of subscriptions resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/topics/subscriptions/rules@2017-04-01
@@ -99,7 +99,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [Ruleproperties](#ruleproperties): Description of Rule Resource.
+* **properties**: [Ruleproperties](#ruleproperties): Properties of Rule resource
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions/rules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2017-04-01)
@@ -224,14 +224,14 @@
 ## NWRuleSetVirtualNetworkRules
 ### Properties
 * **ignoreMissingVnetServiceEndpoint**: bool: Value that indicates whether to ignore missing VNet Service Endpoint
-* **subnet**: [Subnet](#subnet): Properties supplied for Subnet
+* **subnet**: [Subnet](#subnet): Subnet properties
 
 ## Ruleproperties
 ### Properties
 * **action**: [Action](#action): Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
-* **correlationFilter**: [CorrelationFilter](#correlationfilter): Represents the correlation filter expression.
-* **filterType**: 'CorrelationFilter' | 'SqlFilter': Rule filter types
-* **sqlFilter**: [SqlFilter](#sqlfilter): Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
+* **correlationFilter**: [CorrelationFilter](#correlationfilter): Properties of correlationFilter
+* **filterType**: 'CorrelationFilter' | 'SqlFilter': Filter type that is evaluated against a BrokeredMessage.
+* **sqlFilter**: [SqlFilter](#sqlfilter): Properties of sqlFilter
 
 ## SBAuthorizationRuleProperties
 ### Properties
@@ -266,7 +266,7 @@
 * **requiresDuplicateDetection**: bool: A value indicating if this queue requires duplicate detection.
 * **requiresSession**: bool: A value that indicates whether the queue supports the concept of sessions.
 * **sizeInBytes**: int (ReadOnly): The size of the queue, in bytes.
-* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Entity status.
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of a messaging entity.
 * **updatedAt**: string (ReadOnly): The exact time the message was updated.
 
 ## SBSku
@@ -279,7 +279,7 @@
 ### Properties
 * **accessedAt**: string (ReadOnly): Last time there was a receive request to this subscription.
 * **autoDeleteOnIdle**: string: ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
-* **countDetails**: [MessageCountDetails](#messagecountdetails) (ReadOnly): Message Count Details.
+* **countDetails**: [MessageCountDetails](#messagecountdetails) (ReadOnly): Message count details
 * **createdAt**: string (ReadOnly): Exact time the message was created.
 * **deadLetteringOnFilterEvaluationExceptions**: bool: Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.
 * **deadLetteringOnMessageExpiration**: bool: Value that indicates whether a subscription has dead letter support when a message expires.
@@ -292,14 +292,14 @@
 * **maxDeliveryCount**: int: Number of maximum deliveries.
 * **messageCount**: int (ReadOnly): Number of messages.
 * **requiresSession**: bool: Value indicating if a subscription supports the concept of sessions.
-* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Entity status.
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of a messaging entity.
 * **updatedAt**: string (ReadOnly): The exact time the message was updated.
 
 ## SBTopicProperties
 ### Properties
 * **accessedAt**: string (ReadOnly): Last time the message was sent, or a request was received, for this topic.
 * **autoDeleteOnIdle**: string: ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
-* **countDetails**: [MessageCountDetails](#messagecountdetails) (ReadOnly): Message Count Details.
+* **countDetails**: [MessageCountDetails](#messagecountdetails) (ReadOnly): Message count details
 * **createdAt**: string (ReadOnly): Exact time the message was created.
 * **defaultMessageTimeToLive**: string: ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
 * **duplicateDetectionHistoryTimeWindow**: string: ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
@@ -309,7 +309,7 @@
 * **maxSizeInMegabytes**: int: Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
 * **requiresDuplicateDetection**: bool: Value indicating if this topic requires duplicate detection.
 * **sizeInBytes**: int (ReadOnly): Size of the topic, in bytes.
-* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Entity status.
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of a messaging entity.
 * **subscriptionCount**: int (ReadOnly): Number of subscriptions.
 * **supportOrdering**: bool: Value that indicates whether the topic supports ordering.
 * **updatedAt**: string (ReadOnly): The exact time the message was updated.

@@ -9,7 +9,7 @@
 * **kind**: string (ReadOnly): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ScheduledQueryRuleProperties](#scheduledqueryruleproperties) (Required): scheduled query rule Definition
+* **properties**: [ScheduledQueryRuleProperties](#scheduledqueryruleproperties) (Required): The rule properties of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Insights/scheduledQueryRules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -51,7 +51,7 @@
 
 ## ScheduledQueryRuleProperties
 ### Properties
-* **actions**: [Action](#action)[]: Array of Action
+* **actions**: [Action](#action)[]
 * **createdWithApiVersion**: string (ReadOnly): The api-version used when creating this alert rule
 * **criteria**: [ScheduledQueryRuleCriteria](#scheduledqueryrulecriteria): The rule criteria that defines the conditions of the scheduled query rule.
 * **description**: string: The description of the scheduled query rule.

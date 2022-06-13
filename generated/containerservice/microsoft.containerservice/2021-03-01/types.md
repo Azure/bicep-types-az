@@ -4,13 +4,13 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **extendedLocation**: [ExtendedLocation](#extendedlocation): The complex type of the extended location.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location of the Virtual Machine.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedClusterIdentity](#managedclusteridentity): Identity for the managed cluster.
+* **identity**: [ManagedClusterIdentity](#managedclusteridentity): The identity of the managed cluster, if configured.
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagedClusterProperties](#managedclusterproperties): Properties of the managed cluster.
-* **sku**: [ManagedClusterSKU](#managedclustersku)
+* **properties**: [ManagedClusterProperties](#managedclusterproperties): Properties of a managed cluster.
+* **sku**: [ManagedClusterSKU](#managedclustersku): The managed cluster SKU.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,7 +20,7 @@
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagedClusterAgentPoolProfileProperties](#managedclusteragentpoolprofileproperties): Properties for the container service agent pool profile.
+* **properties**: [ManagedClusterAgentPoolProfileProperties](#managedclusteragentpoolprofileproperties): Properties of an agent pool.
 * **type**: 'Microsoft.ContainerService/managedClusters/agentPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/managedClusters/maintenanceConfigurations@2021-03-01
@@ -29,8 +29,8 @@
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MaintenanceConfigurationProperties](#maintenanceconfigurationproperties): Default maintenance configuration properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [MaintenanceConfigurationProperties](#maintenanceconfigurationproperties): Properties of a default maintenance configuration.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.ContainerService/managedClusters/maintenanceConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/managedClusters/privateEndpointConnections@2021-03-01
@@ -39,7 +39,7 @@
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of a private endpoint connection.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The properties of a private endpoint connection.
 * **type**: 'Microsoft.ContainerService/managedClusters/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listClusterAdminCredential (Microsoft.ContainerService/managedClusters@2021-03-01)
@@ -72,7 +72,7 @@
 
 ## CloudError
 ### Properties
-* **error**: [CloudErrorBody](#clouderrorbody): An error response from the Container service.
+* **error**: [CloudErrorBody](#clouderrorbody): Details about the error.
 
 ## CloudErrorBody
 ### Properties
@@ -101,7 +101,7 @@
 ### Properties
 * **dnsServiceIP**: string: An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
 * **dockerBridgeCidr**: string: A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
-* **loadBalancerProfile**: [ManagedClusterLoadBalancerProfile](#managedclusterloadbalancerprofile): Profile of the managed cluster load balancer.
+* **loadBalancerProfile**: [ManagedClusterLoadBalancerProfile](#managedclusterloadbalancerprofile): Profile of the cluster load balancer.
 * **loadBalancerSku**: 'basic' | 'standard' | string: The load balancer sku for the managed cluster.
 * **networkMode**: 'bridge' | 'transparent' | string: Network mode used for building Kubernetes network.
 * **networkPlugin**: 'azure' | 'kubenet' | string: Network plugin used for building Kubernetes network.
@@ -138,7 +138,7 @@
 ## ExtendedLocation
 ### Properties
 * **name**: string: The name of the extended location.
-* **type**: 'EdgeZone' | string: The type of extendedLocation.
+* **type**: 'EdgeZone' | string: The type of the extended location.
 
 ## KubeletConfig
 ### Properties
@@ -181,7 +181,7 @@
 * **id**: string (ReadOnly): Resource Id
 * **location**: string (ReadOnly): Resource location
 * **name**: string (ReadOnly): Resource name
-* **properties**: [AccessProfile](#accessprofile) (ReadOnly): Profile for enabling a user to access a managed cluster.
+* **properties**: [AccessProfile](#accessprofile) (ReadOnly): AccessProfile of a managed cluster.
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: string (ReadOnly): Resource type
 
@@ -211,13 +211,13 @@
 * **enableFIPS**: bool: Whether to use FIPS enabled OS
 * **enableNodePublicIP**: bool: Enable public IP for nodes
 * **gpuInstanceProfile**: 'MIG1g' | 'MIG2g' | 'MIG3g' | 'MIG4g' | 'MIG7g' | string: GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
-* **kubeletConfig**: [KubeletConfig](#kubeletconfig): Kubelet configurations of agent nodes.
-* **kubeletDiskType**: 'OS' | 'Temporary' | string: KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Allowed values: 'OS', 'Temporary' (preview).
-* **linuxOSConfig**: [LinuxOSConfig](#linuxosconfig): OS configurations of Linux agent nodes.
+* **kubeletConfig**: [KubeletConfig](#kubeletconfig): KubeletConfig specifies the configuration of kubelet on agent nodes.
+* **kubeletDiskType**: 'OS' | 'Temporary' | string: KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.
+* **linuxOSConfig**: [LinuxOSConfig](#linuxosconfig): LinuxOSConfig specifies the OS configuration of linux agent nodes.
 * **maxCount**: int: Maximum number of nodes for auto-scaling
 * **maxPods**: int: Maximum number of pods that can run on a node.
 * **minCount**: int: Minimum number of nodes for auto-scaling
-* **mode**: 'System' | 'User' | string: AgentPoolMode represents mode of an agent pool.
+* **mode**: 'System' | 'User' | string: AgentPoolMode represents mode of an agent pool
 * **name**: string (Required): Unique name of the agent pool profile in the context of the subscription and resource group.
 * **nodeImageVersion**: string (ReadOnly): Version of node image
 * **nodeLabels**: [ManagedClusterAgentPoolProfilePropertiesNodeLabels](#managedclusteragentpoolprofilepropertiesnodelabels): Agent pool node labels to be persisted across all nodes in agent pool.
@@ -225,21 +225,21 @@
 * **nodeTaints**: string[]: Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
 * **orchestratorVersion**: string: Version of orchestrator specified when creating the managed cluster.
 * **osDiskSizeGB**: int: OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
-* **osDiskType**: 'Ephemeral' | 'Managed' | string: OSDiskType represents the type of an OS disk on an agent pool.
+* **osDiskType**: 'Ephemeral' | 'Managed' | string: OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.
 * **osSKU**: 'CBLMariner' | 'Ubuntu' | string: OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
 * **osType**: 'Linux' | 'Windows' | string: OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
-* **podSubnetID**: string: specifies a subnet's resource id with subscription, resource group, vnet and subnet name
-* **powerState**: [PowerState](#powerstate) (ReadOnly): Describes the Power State of the cluster
+* **podSubnetID**: string: Pod SubnetID specifies the VNet's subnet identifier for pods.
+* **powerState**: [PowerState](#powerstate) (ReadOnly): Describes whether the Agent Pool is Running or Stopped
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
 * **proximityPlacementGroupID**: string: The ID for Proximity Placement Group.
 * **scaleSetEvictionPolicy**: 'Deallocate' | 'Delete' | string: ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
 * **scaleSetPriority**: 'Regular' | 'Spot' | string: ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
 * **spotMaxPrice**: int: SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.
 * **tags**: [ManagedClusterAgentPoolProfilePropertiesTags](#managedclusteragentpoolprofilepropertiestags): Agent pool tags to be persisted on the agent pool virtual machine scale set.
-* **type**: 'AvailabilitySet' | 'VirtualMachineScaleSets' | string: AgentPoolType represents types of an agent pool.
-* **upgradeSettings**: [AgentPoolUpgradeSettings](#agentpoolupgradesettings): Settings for upgrading an agentpool
+* **type**: 'AvailabilitySet' | 'VirtualMachineScaleSets' | string: AgentPoolType represents types of an agent pool
+* **upgradeSettings**: [AgentPoolUpgradeSettings](#agentpoolupgradesettings): Settings for upgrading the agentpool
 * **vmSize**: string: Size of agent VMs.
-* **vnetSubnetID**: string: specifies a subnet's resource id with subscription, resource group, vnet and subnet name
+* **vnetSubnetID**: string: VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods
 
 ## ManagedClusterAgentPoolProfileProperties
 ### Properties
@@ -250,34 +250,34 @@
 * **enableFIPS**: bool: Whether to use FIPS enabled OS
 * **enableNodePublicIP**: bool: Enable public IP for nodes
 * **gpuInstanceProfile**: 'MIG1g' | 'MIG2g' | 'MIG3g' | 'MIG4g' | 'MIG7g' | string: GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
-* **kubeletConfig**: [KubeletConfig](#kubeletconfig): Kubelet configurations of agent nodes.
-* **kubeletDiskType**: 'OS' | 'Temporary' | string: KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Allowed values: 'OS', 'Temporary' (preview).
-* **linuxOSConfig**: [LinuxOSConfig](#linuxosconfig): OS configurations of Linux agent nodes.
+* **kubeletConfig**: [KubeletConfig](#kubeletconfig): KubeletConfig specifies the configuration of kubelet on agent nodes.
+* **kubeletDiskType**: 'OS' | 'Temporary' | string: KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.
+* **linuxOSConfig**: [LinuxOSConfig](#linuxosconfig): LinuxOSConfig specifies the OS configuration of linux agent nodes.
 * **maxCount**: int: Maximum number of nodes for auto-scaling
 * **maxPods**: int: Maximum number of pods that can run on a node.
 * **minCount**: int: Minimum number of nodes for auto-scaling
-* **mode**: 'System' | 'User' | string: AgentPoolMode represents mode of an agent pool.
+* **mode**: 'System' | 'User' | string: AgentPoolMode represents mode of an agent pool
 * **nodeImageVersion**: string (ReadOnly): Version of node image
 * **nodeLabels**: [ManagedClusterAgentPoolProfilePropertiesNodeLabels](#managedclusteragentpoolprofilepropertiesnodelabels): Agent pool node labels to be persisted across all nodes in agent pool.
 * **nodePublicIPPrefixID**: string: Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.
 * **nodeTaints**: string[]: Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
 * **orchestratorVersion**: string: Version of orchestrator specified when creating the managed cluster.
 * **osDiskSizeGB**: int: OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
-* **osDiskType**: 'Ephemeral' | 'Managed' | string: OSDiskType represents the type of an OS disk on an agent pool.
+* **osDiskType**: 'Ephemeral' | 'Managed' | string: OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.
 * **osSKU**: 'CBLMariner' | 'Ubuntu' | string: OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
 * **osType**: 'Linux' | 'Windows' | string: OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
-* **podSubnetID**: string: specifies a subnet's resource id with subscription, resource group, vnet and subnet name
-* **powerState**: [PowerState](#powerstate) (ReadOnly): Describes the Power State of the cluster
+* **podSubnetID**: string: Pod SubnetID specifies the VNet's subnet identifier for pods.
+* **powerState**: [PowerState](#powerstate) (ReadOnly): Describes whether the Agent Pool is Running or Stopped
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
 * **proximityPlacementGroupID**: string: The ID for Proximity Placement Group.
 * **scaleSetEvictionPolicy**: 'Deallocate' | 'Delete' | string: ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
 * **scaleSetPriority**: 'Regular' | 'Spot' | string: ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
 * **spotMaxPrice**: int: SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.
 * **tags**: [ManagedClusterAgentPoolProfilePropertiesTags](#managedclusteragentpoolprofilepropertiestags): Agent pool tags to be persisted on the agent pool virtual machine scale set.
-* **type**: 'AvailabilitySet' | 'VirtualMachineScaleSets' | string: AgentPoolType represents types of an agent pool.
-* **upgradeSettings**: [AgentPoolUpgradeSettings](#agentpoolupgradesettings): Settings for upgrading an agentpool
+* **type**: 'AvailabilitySet' | 'VirtualMachineScaleSets' | string: AgentPoolType represents types of an agent pool
+* **upgradeSettings**: [AgentPoolUpgradeSettings](#agentpoolupgradesettings): Settings for upgrading the agentpool
 * **vmSize**: string: Size of agent VMs.
-* **vnetSubnetID**: string: specifies a subnet's resource id with subscription, resource group, vnet and subnet name
+* **vnetSubnetID**: string: VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods
 
 ## ManagedClusterAgentPoolProfilePropertiesNodeLabels
 ### Properties
@@ -352,7 +352,7 @@
 ## ManagedClusterPodIdentity
 ### Properties
 * **bindingSelector**: string: Binding selector to use for the AzureIdentityBinding resource.
-* **identity**: [UserAssignedIdentity](#userassignedidentity) (Required)
+* **identity**: [UserAssignedIdentity](#userassignedidentity) (Required): Information of the user assigned identity.
 * **name**: string (Required): Name of the pod identity.
 * **namespace**: string (Required): Namespace of the pod identity.
 * **provisioningInfo**: [ManagedClusterPodIdentityProvisioningInfo](#managedclusterpodidentityprovisioninginfo) (ReadOnly)
@@ -378,16 +378,16 @@
 
 ## ManagedClusterPodIdentityProvisioningInfo
 ### Properties
-* **error**: [CloudError](#clouderror): An error response from the Container service.
+* **error**: [CloudError](#clouderror): Pod identity assignment error (if any).
 
 ## ManagedClusterProperties
 ### Properties
-* **aadProfile**: [ManagedClusterAADProfile](#managedclusteraadprofile): AADProfile specifies attributes for Azure Active Directory integration.
+* **aadProfile**: [ManagedClusterAADProfile](#managedclusteraadprofile): Profile of Azure Active Directory configuration.
 * **addonProfiles**: [ManagedClusterPropertiesAddonProfiles](#managedclusterpropertiesaddonprofiles): Profile of managed cluster add-on.
 * **agentPoolProfiles**: [ManagedClusterAgentPoolProfile](#managedclusteragentpoolprofile)[]: Properties of the agent pool.
 * **apiServerAccessProfile**: [ManagedClusterAPIServerAccessProfile](#managedclusterapiserveraccessprofile): Access profile for managed cluster API server.
 * **autoScalerProfile**: [ManagedClusterPropertiesAutoScalerProfile](#managedclusterpropertiesautoscalerprofile): Parameters to be applied to the cluster-autoscaler when enabled
-* **autoUpgradeProfile**: [ManagedClusterAutoUpgradeProfile](#managedclusterautoupgradeprofile): Auto upgrade profile for a managed cluster.
+* **autoUpgradeProfile**: [ManagedClusterAutoUpgradeProfile](#managedclusterautoupgradeprofile): Profile of auto upgrade configuration.
 * **azurePortalFQDN**: string (ReadOnly): FQDN for the master pool which used by proxy config.
 * **disableLocalAccounts**: bool: If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.
 * **diskEncryptionSetID**: string: ResourceId of the disk encryption set to use for enabling encryption at rest.
@@ -403,8 +403,8 @@
 * **maxAgentPools**: int (ReadOnly): The max number of agent pools for the managed cluster.
 * **networkProfile**: [ContainerServiceNetworkProfile](#containerservicenetworkprofile): Profile of network configuration.
 * **nodeResourceGroup**: string: Name of the resource group containing agent pool nodes.
-* **podIdentityProfile**: [ManagedClusterPodIdentityProfile](#managedclusterpodidentityprofile)
-* **powerState**: [PowerState](#powerstate) (ReadOnly): Describes the Power State of the cluster
+* **podIdentityProfile**: [ManagedClusterPodIdentityProfile](#managedclusterpodidentityprofile): Profile of managed cluster pod identity.
+* **powerState**: [PowerState](#powerstate) (ReadOnly): Represents the Power State of the cluster
 * **privateFQDN**: string (ReadOnly): FQDN of private cluster.
 * **privateLinkResources**: [PrivateLinkResource](#privatelinkresource)[]: Private link resources associated with the cluster.
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
@@ -468,8 +468,8 @@
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint which a connection belongs to.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): The state of a private link service connection.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The resource of private endpoint.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
 
 ## PrivateLinkResource
@@ -538,11 +538,11 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TimeInWeek
 ### Properties
-* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string: The weekday enum.
+* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string: A day in a week.
 * **hourSlots**: int[]: hour slots in a day.
 
 ## TimeSpan

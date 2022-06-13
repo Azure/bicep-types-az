@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
+* **identity**: [Identity](#identity): The Azure Active Directory identity of the server.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerProperties](#serverproperties): The properties of a server.
-* **sku**: [Sku](#sku): Billing information related properties of a server.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ServerProperties](#serverproperties): Properties of the server.
+* **sku**: [Sku](#sku): The SKU (pricing tier) of the server.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -21,7 +21,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseProperties](#databaseproperties): The properties of a database.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMySQL/flexibleServers/firewallRules@2021-05-01-preview
@@ -30,15 +30,15 @@
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a server firewall rule.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a firewall rule.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Backup
 ### Properties
 * **backupRetentionDays**: int: Backup retention days for the server.
 * **earliestRestoreDate**: string (ReadOnly): Earliest restore point creation time (ISO8601 format)
-* **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: Enum to indicate whether value is 'Enabled' or 'Disabled'
+* **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: Whether or not geo redundant backup is enabled.
 
 ## DatabaseProperties
 ### Properties
@@ -73,26 +73,26 @@
 ### Properties
 * **delegatedSubnetResourceId**: string: Delegated subnet resource id used to setup vnet for a server.
 * **privateDnsZoneResourceId**: string: Private DNS zone resource id.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string (ReadOnly): Enum to indicate whether value is 'Enabled' or 'Disabled'
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string (ReadOnly): Whether or not public network access is allowed for this server. Value is 'Disabled' when server has VNet integration.
 
 ## ServerProperties
 ### Properties
 * **administratorLogin**: string: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
 * **administratorLoginPassword**: string (WriteOnly): The password of the administrator login (required for server creation).
 * **availabilityZone**: string: availability Zone information of the server.
-* **backup**: [Backup](#backup): Storage Profile properties of a server
+* **backup**: [Backup](#backup): Backup related properties of a server.
 * **createMode**: 'Default' | 'GeoRestore' | 'PointInTimeRestore' | 'Replica' | string (WriteOnly): The mode to create a new MySQL server.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
-* **highAvailability**: [HighAvailability](#highavailability): Network related properties of a server
+* **highAvailability**: [HighAvailability](#highavailability): High availability related properties of a server.
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window of a server.
-* **network**: [Network](#network): Network related properties of a server
+* **network**: [Network](#network): Network related properties of a server.
 * **replicaCapacity**: int (ReadOnly): The maximum number of replicas that a primary server can have.
 * **replicationRole**: 'None' | 'Replica' | 'Source' | string: The replication role.
 * **restorePointInTime**: string (WriteOnly): Restore point creation time (ISO8601 format), specifying the time to restore from.
 * **sourceServerResourceId**: string: The source MySQL server id.
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): The state of a server.
-* **storage**: [Storage](#storage): Storage Profile properties of a server
-* **version**: '5.7' | '8.0.21' | string: The version of a server.
+* **storage**: [Storage](#storage): Storage related properties of a server.
+* **version**: '5.7' | '8.0.21' | string: Server version.
 
 ## Sku
 ### Properties
@@ -101,7 +101,7 @@
 
 ## Storage
 ### Properties
-* **autoGrow**: 'Disabled' | 'Enabled' | string: Enum to indicate whether value is 'Enabled' or 'Disabled'
+* **autoGrow**: 'Disabled' | 'Enabled' | string: Enable Storage Auto Grow or not.
 * **iops**: int: Storage IOPS for a server.
 * **storageSizeGB**: int: Max storage size allowed for a server.
 * **storageSku**: string (ReadOnly): The sku name of the server storage.
@@ -113,7 +113,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties

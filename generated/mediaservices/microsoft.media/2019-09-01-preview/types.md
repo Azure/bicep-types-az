@@ -38,7 +38,7 @@
 ### MediaGraphRtspSource
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required): The discriminator for derived types.
-* **credentials**: [MediaGraphUserCredentials](#mediagraphusercredentials): Credentials to authenticate to Media Graph sources
+* **credentials**: [MediaGraphUserCredentials](#mediagraphusercredentials): RTSP Credentials
 * **rtspUrl**: string (Required): RTSP URL
 
 

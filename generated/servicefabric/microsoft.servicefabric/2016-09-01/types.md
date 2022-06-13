@@ -43,21 +43,21 @@
 ### Properties
 * **availableClusterVersions**: [ClusterVersionDetails](#clusterversiondetails)[] (ReadOnly): The available cluster code version which the cluster can upgrade to, note that you must choose upgradeMode to manual to upgrade to
 * **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory): The settings to enable AAD authentication on the cluster
-* **certificate**: [CertificateDescription](#certificatedescription): Certificate details
+* **certificate**: [CertificateDescription](#certificatedescription): This primary certificate will be used as cluster node to node security, SSL certificate for cluster management endpoint and default admin client
 * **clientCertificateCommonNames**: [ClientCertificateCommonName](#clientcertificatecommonname)[]: List of client certificates to whitelist based on common names
 * **clientCertificateThumbprints**: [ClientCertificateThumbprint](#clientcertificatethumbprint)[]: The client thumbprint details ,it is used for client access for cluster operation
 * **clusterCodeVersion**: string: The ServiceFabric code version running in your cluster
 * **clusterEndpoint**: string (ReadOnly): The endpoint for the cluster connecting to servicefabric resource provider
 * **clusterId**: string (ReadOnly): The unique identifier for the cluster resource
 * **clusterState**: 'AutoScale' | 'BaselineUpgrade' | 'Deploying' | 'EnforcingClusterVersion' | 'Ready' | 'UpdatingInfrastructure' | 'UpdatingUserCertificate' | 'UpdatingUserConfiguration' | 'UpgradeServiceUnreachable' | 'WaitingForNodes' | string (ReadOnly): The state for the cluster
-* **diagnosticsStorageAccountConfig**: [DiagnosticsStorageAccountConfig](#diagnosticsstorageaccountconfig): Diagnostics storage account config
+* **diagnosticsStorageAccountConfig**: [DiagnosticsStorageAccountConfig](#diagnosticsstorageaccountconfig): The storage diagnostics account configuration details
 * **fabricSettings**: [SettingsSectionDescription](#settingssectiondescription)[]: List of custom fabric settings to configure the cluster.
 * **managementEndpoint**: string (Required): The http management endpoint of the cluster
 * **nodeTypes**: [NodeTypeDescription](#nodetypedescription)[] (Required): The list of node types that make up the cluster
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the cluster resource
 * **reliabilityLevel**: 'Bronze' | 'Gold' | 'Platinum' | 'Silver' | string: Cluster reliability level indicates replica set size of system service
-* **reverseProxyCertificate**: [CertificateDescription](#certificatedescription): Certificate details
-* **upgradeDescription**: [ClusterUpgradePolicy](#clusterupgradepolicy): Cluster upgrade policy
+* **reverseProxyCertificate**: [CertificateDescription](#certificatedescription): The server certificate used by reverse proxy
+* **upgradeDescription**: [ClusterUpgradePolicy](#clusterupgradepolicy): The policy to use when upgrading the cluster.
 * **upgradeMode**: 'Automatic' | 'Manual' | string: Cluster upgrade mode indicates if fabric upgrade is initiated automatically by the system or not
 * **vmImage**: string: The name of VM image VMSS has been configured with. Generic names such as Windows or Linux can be used.
 
@@ -69,12 +69,12 @@
 
 ## ClusterUpgradePolicy
 ### Properties
-* **deltaHealthPolicy**: [ClusterUpgradeDeltaHealthPolicy](#clusterupgradedeltahealthpolicy): Delta health policy for the cluster
+* **deltaHealthPolicy**: [ClusterUpgradeDeltaHealthPolicy](#clusterupgradedeltahealthpolicy): Delta health policy
 * **forceRestart**: bool: Force node to restart or not
 * **healthCheckRetryTimeout**: string (Required): The length of time that health checks can fail continuously,it represents .Net TimeSpan
 * **healthCheckStableDuration**: string (Required): The length of time that health checks must pass continuously,it represents .Net TimeSpan
 * **healthCheckWaitDuration**: string (Required): The length of time to wait after completing an upgrade domain before performing health checks, it represents .Net TimeSpan
-* **healthPolicy**: [ClusterHealthPolicy](#clusterhealthpolicy) (Required): Defines a health policy used to evaluate the health of the cluster or of a cluster node.
+* **healthPolicy**: [ClusterHealthPolicy](#clusterhealthpolicy) (Required): Cluster health Policy
 * **overrideUserUpgradePolicy**: bool: Use the user defined upgrade policy or not
 * **upgradeDomainTimeout**: string (Required): The timeout for any upgrade domain,it represents .Net TimeSpan
 * **upgradeReplicaSetCheckTimeout**: string (Required): Timeout for replica set upgrade to complete,it represents .Net TimeSpan
@@ -83,7 +83,7 @@
 ## ClusterVersionDetails
 ### Properties
 * **codeVersion**: string: The ServiceFabric runtime version of the cluster
-* **environment**: 'Linux' | 'Windows' | string: Cluster operating system, the default will be Windows
+* **environment**: 'Linux' | 'Windows' | string: Cluster operating system
 * **supportExpiryUtc**: string: The date of expiry of support of the version
 
 ## DiagnosticsStorageAccountConfig
@@ -101,11 +101,11 @@
 
 ## NodeTypeDescription
 ### Properties
-* **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
+* **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription): Ports used by applications
 * **capacities**: [NodeTypeDescriptionCapacities](#nodetypedescriptioncapacities): The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much of a resource a node has
 * **clientConnectionEndpointPort**: int (Required): The TCP cluster management endpoint port
 * **durabilityLevel**: 'Bronze' | 'Gold' | 'Silver' | string: Node type durability Level
-* **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
+* **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription): System assigned application ports
 * **httpGatewayEndpointPort**: int (Required): The HTTP cluster management endpoint port
 * **isPrimary**: bool (Required): Mark this as the primary node type
 * **name**: string (Required): Name of the node type

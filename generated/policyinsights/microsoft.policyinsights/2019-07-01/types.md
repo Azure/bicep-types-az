@@ -6,7 +6,7 @@
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RemediationProperties](#remediationproperties): The remediation properties.
+* **properties**: [RemediationProperties](#remediationproperties): Properties for the remediation.
 * **type**: 'Microsoft.PolicyInsights/remediations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listDeployments (Microsoft.PolicyInsights/remediations@2019-07-01)
@@ -26,7 +26,7 @@
 ### Properties
 * **createdOn**: string (ReadOnly): The time at which the remediation was created.
 * **deploymentId**: string (ReadOnly): Resource ID of the template deployment that will remediate the resource.
-* **error**: [ErrorDefinition](#errordefinition) (ReadOnly): Error definition.
+* **error**: [ErrorDefinition](#errordefinition) (ReadOnly): Error encountered while remediated the resource.
 * **lastUpdatedOn**: string (ReadOnly): The time at which the remediation deployment was last updated.
 * **remediatedResourceId**: string (ReadOnly): Resource ID of the resource that is being remediated by the deployment.
 * **resourceLocation**: string (ReadOnly): Location of the resource that is being remediated.
@@ -60,6 +60,6 @@
 
 ## TypedErrorInfo
 ### Properties
-* **info**: any (ReadOnly): Anything
+* **info**: any (ReadOnly): The scenario specific error details.
 * **type**: string (ReadOnly): The type of included error details.
 

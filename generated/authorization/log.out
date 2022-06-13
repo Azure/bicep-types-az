@@ -82,7 +82,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ClassicAdministratorListResul
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/stable/2015-07-01/authorization-ClassicAdminCalls.json:113:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{roleAssignmentId}': Unable to locate "/providers/" segment
-info    | autorest.bicep took 12ms
+info    | autorest.bicep took 9ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2020-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -105,7 +105,7 @@ info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/wo
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2022-04-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -185,7 +185,7 @@ warning | PreCheck/EmptyParentSchemaWarning | Schema 'AccessReviewDecisionUserId
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AccessReviewDecisionServicePrincipalIdentity' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2021-07-01-preview/authorization-AccessReviewCalls.json:1876:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2021-03-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -254,7 +254,7 @@ warning | PreCheck/EmptyParentSchemaWarning | Schema 'AccessReviewDecisionUserId
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AccessReviewDecisionServicePrincipalIdentity' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2021-03-01-preview/authorization-AccessReviewCalls.json:1660:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2021-01-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -341,7 +341,7 @@ info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/wo
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 0ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2018-01-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -377,7 +377,7 @@ warning | PreCheck/SchemaMissingType | The schema 'RoleAssignmentCreateParameter
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2018-01-01-preview/authorization-RoleAssignmentsCalls.json:643:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{roleId}': Unable to locate "/providers/" segment
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2020-10-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -401,7 +401,7 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{roleAssignmentId}': Unable to locate "/providers/" segment
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2019-08-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -495,7 +495,7 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{roleId}': Unable to locate "/providers/" segment
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2020-03-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -519,7 +519,7 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{roleAssignmentId}': Unable to locate "/providers/" segment
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2018-09-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -592,4 +592,4 @@ warning | PreCheck/SchemaMissingType | The schema 'RoleAssignmentCreateParameter
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{roleAssignmentId}': Unable to locate "/providers/" segment
 info    | autorest.bicep took 1ms
-info    | Autorest completed in 33.33s. 30 files generated.
+info    | Autorest completed in 32.41s. 30 files generated.

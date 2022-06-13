@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfigureAlertRequestProperties](#configurealertrequestproperties): Properties of a configure alert request.
+* **properties**: [ConfigureAlertRequestProperties](#configurealertrequestproperties): The properties of a configure alert request.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationAlertSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics@2018-01-10
@@ -17,7 +17,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [FabricCreationInputProperties](#fabriccreationinputproperties): Properties of site details provided during the time of site creation
+* **properties**: [FabricCreationInputProperties](#fabriccreationinputproperties): Fabric creation input.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks/replicationNetworkMappings@2018-01-10
@@ -27,7 +27,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateNetworkMappingInputProperties](#createnetworkmappinginputproperties): Common input details for network mapping operation.
+* **properties**: [CreateNetworkMappingInputProperties](#createnetworkmappinginputproperties): Input properties for creating network mapping.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks/replicationNetworkMappings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers@2018-01-10
@@ -67,7 +67,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateProtectionContainerMappingInputProperties](#createprotectioncontainermappinginputproperties): Configure pairing input properties.
+* **properties**: [CreateProtectionContainerMappingInputProperties](#createprotectioncontainermappinginputproperties): Configure protection input properties.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders@2018-01-10
@@ -183,8 +183,8 @@
 ## AddRecoveryServicesProviderInputProperties
 ### Properties
 * **allowedScenarios**: string[] (ReadOnly): The scenarios allowed on this provider.
-* **authenticationIdentityDetails**: [IdentityProviderDetails](#identityproviderdetails) (ReadOnly): Identity provider details.
-* **authenticationIdentityInput**: [IdentityProviderInput](#identityproviderinput) (Required, WriteOnly): Identity provider input.
+* **authenticationIdentityDetails**: [IdentityProviderDetails](#identityproviderdetails) (ReadOnly): The authentication identity details.
+* **authenticationIdentityInput**: [IdentityProviderInput](#identityproviderinput) (Required, WriteOnly): The identity provider input for DRA authentication.
 * **connectionStatus**: string (ReadOnly): A value indicating whether DRA is responsive.
 * **draIdentifier**: string (ReadOnly): The DRA Id.
 * **fabricFriendlyName**: string (ReadOnly): The fabric friendly name.
@@ -195,11 +195,11 @@
 * **machineName**: string (Required, WriteOnly): The name of the machine where the provider is getting added.
 * **protectedItemCount**: int (ReadOnly): Number of protected VMs currently managed by the DRA.
 * **providerVersion**: string (ReadOnly): The provider version.
-* **providerVersionDetails**: [VersionDetails](#versiondetails) (ReadOnly): Version related details.
+* **providerVersionDetails**: [VersionDetails](#versiondetails) (ReadOnly): The provider version details.
 * **providerVersionExpiryDate**: string (ReadOnly): Expiry date of the version.
 * **providerVersionState**: string (ReadOnly): DRA version status.
-* **resourceAccessIdentityDetails**: [IdentityProviderDetails](#identityproviderdetails) (ReadOnly): Identity provider details.
-* **resourceAccessIdentityInput**: [IdentityProviderInput](#identityproviderinput) (Required, WriteOnly): Identity provider input.
+* **resourceAccessIdentityDetails**: [IdentityProviderDetails](#identityproviderdetails) (ReadOnly): The resource access identity details.
+* **resourceAccessIdentityInput**: [IdentityProviderInput](#identityproviderinput) (Required, WriteOnly): The identity provider input for resource access.
 * **serverVersion**: string (ReadOnly): The fabric provider.
 
 ## AddVCenterRequestProperties
@@ -245,8 +245,8 @@
 
 ## CreateNetworkMappingInputProperties
 ### Properties
-* **fabricSpecificDetails**: [FabricSpecificCreateNetworkMappingInput](#fabricspecificcreatenetworkmappinginput) (WriteOnly): Input details specific to fabrics during Network Mapping.
-* **fabricSpecificSettings**: [NetworkMappingFabricSpecificSettings](#networkmappingfabricspecificsettings) (ReadOnly): Network Mapping fabric specific settings.
+* **fabricSpecificDetails**: [FabricSpecificCreateNetworkMappingInput](#fabricspecificcreatenetworkmappinginput) (WriteOnly): Fabric specific input properties.
+* **fabricSpecificSettings**: [NetworkMappingFabricSpecificSettings](#networkmappingfabricspecificsettings) (ReadOnly): The fabric specific settings.
 * **primaryFabricFriendlyName**: string (ReadOnly): The primary fabric friendly name.
 * **primaryNetworkFriendlyName**: string (ReadOnly): The primary network friendly name.
 * **primaryNetworkId**: string (ReadOnly): The primary network id for network mapping.
@@ -260,13 +260,13 @@
 ## CreatePolicyInputProperties
 ### Properties
 * **friendlyName**: string (ReadOnly): The FriendlyName.
-* **providerSpecificDetails**: [PolicyProviderSpecificDetails](#policyproviderspecificdetails) (ReadOnly): Base class for Provider specific details for policies.
-* **providerSpecificInput**: [PolicyProviderSpecificInput](#policyproviderspecificinput) (WriteOnly): Base class for provider specific input
+* **providerSpecificDetails**: [PolicyProviderSpecificDetails](#policyproviderspecificdetails) (ReadOnly): The ReplicationChannelSetting.
+* **providerSpecificInput**: [PolicyProviderSpecificInput](#policyproviderspecificinput) (WriteOnly): The ReplicationProviderSettings.
 
 ## CreateProtectionContainerInputProperties
 ### Properties
 * **fabricFriendlyName**: string (ReadOnly): Fabric friendly name.
-* **fabricSpecificDetails**: [ProtectionContainerFabricSpecificDetails](#protectioncontainerfabricspecificdetails) (ReadOnly): Base class for fabric specific details of container.
+* **fabricSpecificDetails**: [ProtectionContainerFabricSpecificDetails](#protectioncontainerfabricspecificdetails) (ReadOnly): Fabric specific details.
 * **fabricType**: string (ReadOnly): The fabric type.
 * **friendlyName**: string (ReadOnly): The name.
 * **pairingStatus**: string (ReadOnly): The pairing status of this cloud.
@@ -280,8 +280,8 @@
 * **healthErrorDetails**: [HealthError](#healtherror)[] (ReadOnly): Health error.
 * **policyFriendlyName**: string (ReadOnly): Friendly name of replication policy.
 * **policyId**: string: Applicable policy.
-* **providerSpecificDetails**: [ProtectionContainerMappingProviderSpecificDetails](#protectioncontainermappingproviderspecificdetails) (ReadOnly): Container mapping provider specific details.
-* **providerSpecificInput**: [ReplicationProviderSpecificContainerMappingInput](#replicationproviderspecificcontainermappinginput) (WriteOnly): Provider specific input for pairing operations.
+* **providerSpecificDetails**: [ProtectionContainerMappingProviderSpecificDetails](#protectioncontainermappingproviderspecificdetails) (ReadOnly): Provider specific provider details.
+* **providerSpecificInput**: [ReplicationProviderSpecificContainerMappingInput](#replicationproviderspecificcontainermappinginput) (WriteOnly): Provider specific input for pairing.
 * **sourceFabricFriendlyName**: string (ReadOnly): Friendly name of source fabric.
 * **sourceProtectionContainerFriendlyName**: string (ReadOnly): Friendly name of source protection container.
 * **state**: string (ReadOnly): Association Status
@@ -292,7 +292,7 @@
 ## CreateRecoveryPlanInputProperties
 ### Properties
 * **allowedOperations**: string[] (ReadOnly): The list of allowed operations.
-* **currentScenario**: [CurrentScenarioDetails](#currentscenariodetails) (ReadOnly): Current scenario details of the protected entity.
+* **currentScenario**: [CurrentScenarioDetails](#currentscenariodetails) (ReadOnly): The current scenario details.
 * **currentScenarioStatus**: string (ReadOnly): The recovery plan status.
 * **currentScenarioStatusDescription**: string (ReadOnly): The recovery plan status description.
 * **failoverDeploymentModel**: 'Classic' | 'NotApplicable' | 'ResourceManager' | string: The failover deployment model.
@@ -336,8 +336,8 @@
 
 ## DiskEncryptionInfo
 ### Properties
-* **diskEncryptionKeyInfo**: [DiskEncryptionKeyInfo](#diskencryptionkeyinfo) (WriteOnly): Disk Encryption Key Information (BitLocker Encryption Key (BEK) on Windows).
-* **keyEncryptionKeyInfo**: [KeyEncryptionKeyInfo](#keyencryptionkeyinfo) (WriteOnly): Key Encryption Key (KEK) information.
+* **diskEncryptionKeyInfo**: [DiskEncryptionKeyInfo](#diskencryptionkeyinfo) (WriteOnly): The recovery KeyVault reference for secret.
+* **keyEncryptionKeyInfo**: [KeyEncryptionKeyInfo](#keyencryptionkeyinfo) (WriteOnly): The recovery KeyVault reference for key.
 
 ## DiskEncryptionKeyInfo
 ### Properties
@@ -347,7 +347,7 @@
 ## EnableMigrationInputProperties
 ### Properties
 * **allowedOperations**: 'DisableMigration' | 'Migrate' | 'StartResync' | 'TestMigrate' | 'TestMigrateCleanup' | string[] (ReadOnly): The allowed operations on the migration item, based on the current migration state of the item.
-* **currentJob**: [CurrentJobDetails](#currentjobdetails) (ReadOnly): Current job details of the migration item.
+* **currentJob**: [CurrentJobDetails](#currentjobdetails) (ReadOnly): The current job details.
 * **eventCorrelationId**: string (ReadOnly): The correlation Id for events associated with this migration item.
 * **health**: 'Critical' | 'None' | 'Normal' | 'Warning' | string (ReadOnly): The consolidated health.
 * **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): The list of health errors.
@@ -358,7 +358,7 @@
 * **migrationStateDescription**: string (ReadOnly): The migration state description.
 * **policyFriendlyName**: string (ReadOnly): The name of policy governing this item.
 * **policyId**: string (Required): The policy Id.
-* **providerSpecificDetails**: [EnableMigrationProviderSpecificInput](#enablemigrationproviderspecificinput) (Required): Enable migration provider specific input.
+* **providerSpecificDetails**: [EnableMigrationProviderSpecificInput](#enablemigrationproviderspecificinput) (Required): The provider specific details.
 * **testMigrateState**: 'None' | 'TestMigrationCleanupInProgress' | 'TestMigrationFailed' | 'TestMigrationInProgress' | 'TestMigrationSucceeded' | string (ReadOnly): The test migrate state.
 * **testMigrateStateDescription**: string (ReadOnly): The test migrate state description.
 
@@ -403,7 +403,7 @@
 ### Properties
 * **activeLocation**: string (ReadOnly): The Current active location of the PE.
 * **allowedOperations**: string[] (ReadOnly): The allowed operations on the Replication protected item.
-* **currentScenario**: [CurrentScenarioDetails](#currentscenariodetails) (ReadOnly): Current scenario details of the protected entity.
+* **currentScenario**: [CurrentScenarioDetails](#currentscenariodetails) (ReadOnly): The current scenario.
 * **failoverHealth**: string (ReadOnly): The consolidated failover health for the VM.
 * **failoverRecoveryPointId**: string (ReadOnly): The recovery point ARM Id to which the Vm was failed over.
 * **friendlyName**: string (ReadOnly): The name.
@@ -419,7 +419,7 @@
 * **protectedItemType**: string (ReadOnly): The type of protected item type.
 * **protectionState**: string (ReadOnly): The protection status.
 * **protectionStateDescription**: string (ReadOnly): The protection state description.
-* **providerSpecificDetails**: [EnableProtectionProviderSpecificInput](#enableprotectionproviderspecificinput): Enable protection provider specific input.
+* **providerSpecificDetails**: [EnableProtectionProviderSpecificInput](#enableprotectionproviderspecificinput): The ReplicationProviderInput. For HyperVReplicaAzure provider, it will be AzureEnableProtectionInput object. For San provider, it will be SanEnableProtectionInput object. For HyperVReplicaAzure provider, it can be null.
 * **recoveryContainerId**: string (ReadOnly): The recovery container Id.
 * **recoveryFabricFriendlyName**: string (ReadOnly): The friendly name of recovery fabric.
 * **recoveryFabricId**: string (ReadOnly): The Arm Id of recovery fabric.
@@ -436,7 +436,7 @@
 ### A2AEnableProtectionInput
 #### Properties
 * **agentVersion**: string (ReadOnly): The agent version.
-* **diskEncryptionInfo**: [DiskEncryptionInfo](#diskencryptioninfo) (WriteOnly): Recovery disk encryption info (BEK and KEK).
+* **diskEncryptionInfo**: [DiskEncryptionInfo](#diskencryptioninfo) (WriteOnly): The recovery disk encryption information.
 * **fabricObjectId**: string: The fabric specific object Id of the virtual machine.
 * **instanceType**: 'A2A' (Required): The class type.
 * **isReplicationAgentUpdateRequired**: bool (ReadOnly): A value indicating whether replication agent update is required.
@@ -473,7 +473,7 @@
 * **vmNics**: [VMNicDetails](#vmnicdetails)[] (ReadOnly): The virtual machine nic details.
 * **vmProtectionState**: string (ReadOnly): The protection state for the vm.
 * **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
-* **vmSyncedConfigDetails**: [AzureToAzureVmSyncedConfigDetails](#azuretoazurevmsyncedconfigdetails) (ReadOnly): Azure to Azure VM synced configuration details.
+* **vmSyncedConfigDetails**: [AzureToAzureVmSyncedConfigDetails](#azuretoazurevmsyncedconfigdetails) (ReadOnly): The synced configuration details.
 
 ### HyperVReplicaReplicationDetails
 #### Properties
@@ -510,7 +510,7 @@
 * **lastRpoCalculatedTime**: string (ReadOnly): The last RPO calculated time.
 * **licenseType**: string (ReadOnly): License Type of the VM to be used.
 * **logStorageAccountId**: string (WriteOnly): The storage account to be used for logging during replication.
-* **oSDetails**: [OSDetails](#osdetails) (ReadOnly): Disk Details.
+* **oSDetails**: [OSDetails](#osdetails) (ReadOnly): The operating system info.
 * **osType**: string (WriteOnly): The OS type associated with vm.
 * **recoveryAvailabilitySetId**: string (ReadOnly): The recovery availability set Id.
 * **recoveryAzureLogStorageAccountId**: string (ReadOnly): The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection.
@@ -551,14 +551,14 @@
 ### InMageEnableProtectionInput
 #### Properties
 * **activeSiteType**: string (ReadOnly): The active location of the VM. If the VM is being protected from Azure, this field will take values from { Azure, OnPrem }. If the VM is being protected between two data-centers, this field will be OnPrem always.
-* **agentDetails**: [InMageAgentDetails](#inmageagentdetails) (ReadOnly): The details of the InMage agent.
+* **agentDetails**: [InMageAgentDetails](#inmageagentdetails) (ReadOnly): The agent details.
 * **azureStorageAccountId**: string (ReadOnly): A value indicating the underlying Azure storage account. If the VM is not running in Azure, this value shall be set to null.
 * **compressedDataRateInMB**: int (ReadOnly): The compressed data change rate in MB.
 * **consistencyPoints**: [InMageReplicationDetailsConsistencyPoints](#inmagereplicationdetailsconsistencypoints) (ReadOnly): The collection of Consistency points.
 * **datastoreName**: string (WriteOnly): The target data store name.
 * **datastores**: string[] (ReadOnly): The data stores of the on-premise machine Value can be list of strings that contain data store names
 * **discoveryType**: string (ReadOnly): A value indicating the discovery type of the machine.
-* **diskExclusionInput**: [InMageDiskExclusionInput](#inmagediskexclusioninput) (WriteOnly): DiskExclusionInput when doing enable protection of virtual machine in InMage provider.
+* **diskExclusionInput**: [InMageDiskExclusionInput](#inmagediskexclusioninput) (WriteOnly): The enable disk exclusion input.
 * **diskResized**: string (ReadOnly): A value indicating whether any disk is resized for this VM.
 * **disksToInclude**: string[] (WriteOnly): The disks to include list.
 * **infrastructureVmId**: string (ReadOnly): The infrastructure VM Id.
@@ -571,14 +571,14 @@
 * **multiVmGroupId**: string (Required): The multi vm group Id.
 * **multiVmGroupName**: string (Required): The multi vm group name.
 * **multiVmSyncStatus**: string (ReadOnly): A value indicating whether the multi vm sync is enabled or disabled.
-* **osDetails**: [OSDiskDetails](#osdiskdetails) (ReadOnly): Details of the OS Disk.
+* **osDetails**: [OSDiskDetails](#osdiskdetails) (ReadOnly): The OS details.
 * **osVersion**: string (ReadOnly): The OS Version of the protected item.
 * **processServerId**: string (Required): The Process Server Id.
 * **protectedDisks**: [InMageProtectedDiskDetails](#inmageprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
 * **protectionStage**: string (ReadOnly): The protection stage.
 * **rebootAfterUpdateStatus**: string (ReadOnly): A value indicating whether the source server requires a restart after update.
 * **replicaId**: string (ReadOnly): The replica id of the protected item.
-* **resyncDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
+* **resyncDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): The resync details of the machine
 * **retentionDrive**: string (Required, WriteOnly): The retention drive to use on the MT.
 * **retentionWindowEnd**: string (ReadOnly): The retention window end time.
 * **retentionWindowStart**: string (ReadOnly): The retention window start time.
@@ -671,13 +671,13 @@
 ## FabricCreationInputProperties
 ### Properties
 * **bcdrState**: string (ReadOnly): BCDR state of the fabric.
-* **customDetails**: [FabricSpecificCreationInput](#fabricspecificcreationinput): Fabric provider specific settings.
+* **customDetails**: [FabricSpecificCreationInput](#fabricspecificcreationinput): Fabric provider specific creation input.
 * **encryptionDetails**: [EncryptionDetails](#encryptiondetails) (ReadOnly): Encryption details for the fabric.
 * **friendlyName**: string (ReadOnly): Friendly name of the fabric.
 * **health**: string (ReadOnly): Health of fabric.
 * **healthErrorDetails**: [HealthError](#healtherror)[] (ReadOnly): Fabric health error details.
 * **internalIdentifier**: string (ReadOnly): Dra Registration Id.
-* **rolloverEncryptionDetails**: [EncryptionDetails](#encryptiondetails) (ReadOnly): Encryption details for the fabric.
+* **rolloverEncryptionDetails**: [EncryptionDetails](#encryptiondetails) (ReadOnly): Rollover encryption details for the fabric.
 
 ## FabricSpecificCreateNetworkMappingInput
 * **Discriminator**: instanceType
@@ -720,7 +720,7 @@
 * **agentCount**: string (ReadOnly): The number of source and target servers configured to talk to this CS.
 * **agentExpiryDate**: string (ReadOnly): Agent expiry date.
 * **agentVersion**: string (ReadOnly): The agent Version.
-* **agentVersionDetails**: [VersionDetails](#versiondetails) (ReadOnly): Version related details.
+* **agentVersionDetails**: [VersionDetails](#versiondetails) (ReadOnly): The agent version details.
 * **availableMemoryInBytes**: int (ReadOnly): The available memory.
 * **availableSpaceInBytes**: int (ReadOnly): The available space.
 * **cpuLoad**: string (ReadOnly): The percentage of the CPU load.
@@ -891,7 +891,7 @@
 ### Properties
 * **agentExpiryDate**: string (ReadOnly): Agent expiry date.
 * **agentVersion**: string (ReadOnly): The version of the scout component on the server.
-* **agentVersionDetails**: [VersionDetails](#versiondetails) (ReadOnly): Version related details.
+* **agentVersionDetails**: [VersionDetails](#versiondetails) (ReadOnly): Agent version details.
 * **dataStores**: [DataStore](#datastore)[] (ReadOnly): The list of data stores in the fabric.
 * **diskCount**: int (ReadOnly): Disk count of the master target.
 * **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): Health errors.
@@ -900,7 +900,7 @@
 * **lastHeartbeat**: string (ReadOnly): The last heartbeat received from the server.
 * **marsAgentExpiryDate**: string (ReadOnly): MARS agent expiry date.
 * **marsAgentVersion**: string (ReadOnly): MARS agent version.
-* **marsAgentVersionDetails**: [VersionDetails](#versiondetails) (ReadOnly): Version related details.
+* **marsAgentVersionDetails**: [VersionDetails](#versiondetails) (ReadOnly): Mars agent version details.
 * **name**: string (ReadOnly): The server name.
 * **osType**: string (ReadOnly): The OS type of the server.
 * **osVersion**: string (ReadOnly): OS Version of the master target.
@@ -1135,7 +1135,7 @@
 ### Properties
 * **agentExpiryDate**: string (ReadOnly): Agent expiry date.
 * **agentVersion**: string (ReadOnly): The version of the scout component on the server.
-* **agentVersionDetails**: [VersionDetails](#versiondetails) (ReadOnly): Version related details.
+* **agentVersionDetails**: [VersionDetails](#versiondetails) (ReadOnly): The agent version details.
 * **availableMemoryInBytes**: int (ReadOnly): The available memory.
 * **availableSpaceInBytes**: int (ReadOnly): The available space.
 * **cpuLoad**: string (ReadOnly): The percentage of the CPU load.
@@ -1192,7 +1192,7 @@
 ## RecoveryPlanAction
 ### Properties
 * **actionName**: string (Required): The action name.
-* **customDetails**: [RecoveryPlanActionDetails](#recoveryplanactiondetails) (Required): Recovery plan action custom details.
+* **customDetails**: [RecoveryPlanActionDetails](#recoveryplanactiondetails) (Required): The custom details.
 * **failoverDirections**: 'PrimaryToRecovery' | 'RecoveryToPrimary' | string[] (Required): The list of failover directions.
 * **failoverTypes**: 'ChangePit' | 'Commit' | 'CompleteMigration' | 'DisableProtection' | 'Failback' | 'FinalizeFailback' | 'PlannedFailover' | 'RepairReplication' | 'ReverseReplicate' | 'SwitchProtection' | 'TestFailover' | 'TestFailoverCleanup' | 'UnplannedFailover' | string[] (Required): The list of failover types.
 
@@ -1330,7 +1330,7 @@
 * **sourceIPAddressType**: 'Dynamic' | 'Static' | string (ReadOnly): The source IP address type.
 * **sourceNetworkId**: string (ReadOnly): Source network Id.
 * **targetIPAddress**: string (ReadOnly): The target IP address.
-* **targetIPAddressType**: 'Dynamic' | 'Static' | string (ReadOnly): The source IP address type.
+* **targetIPAddressType**: 'Dynamic' | 'Static' | string (ReadOnly): The target IP address type.
 * **targetSubnetName**: string (ReadOnly): Target subnet name.
 
 ## VMwareCbtProtectedDiskDetails

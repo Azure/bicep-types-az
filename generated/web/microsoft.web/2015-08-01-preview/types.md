@@ -37,13 +37,13 @@
 ## ApiEntityProperties
 ### Properties
 * **apiDefinitionUrl**: string: API definition Url - url where the swagger can be downloaded from
-* **backendService**: [BackendServiceDefinition](#backendservicedefinition): API definitions with backend urls
+* **backendService**: [BackendServiceDefinition](#backendservicedefinition): Backend service definition
 * **capabilities**: string[]: Capabilities
 * **changedTime**: string: Timestamp of last connection change.
 * **connectionParameters**: [ApiEntityPropertiesConnectionParameters](#apientitypropertiesconnectionparameters): Connection parameters
 * **createdTime**: string: Timestamp of the connection creation
-* **generalInformation**: [GeneralApiInformation](#generalapiinformation): General API information
-* **metadata**: any: Any object
+* **generalInformation**: [GeneralApiInformation](#generalapiinformation): the URL path of this API when exposed via APIM
+* **metadata**: any: Free form object for the data caller wants to store
 * **name**: string: Name of the API
             the URL path of this API when exposed via APIM
 * **path**: string: the URL path of this API when exposed via APIM
@@ -62,7 +62,7 @@
 * **clientSecret**: string: Client Secret needed for OAuth
 * **customParameters**: [ApiOAuthSettingsCustomParameters](#apioauthsettingscustomparameters): OAuth parameters key is the name of parameter
 * **identityProvider**: string: Identity provider
-* **properties**: any: Any object
+* **properties**: any: Read only properties for this oauth setting.
 * **redirectUrl**: string: Url
 * **scopes**: string[]: OAuth scopes
 
@@ -73,8 +73,8 @@
 
 ## ApiOAuthSettingsParameter
 ### Properties
-* **options**: any: Any object
-* **uiDefinition**: any: Any object
+* **options**: any: Read only: Options available to this parameter
+* **uiDefinition**: any: UI definitions per culture as caller can specify the culture
 * **value**: string: Value
 
 ## ApiPolicies
@@ -131,14 +131,14 @@
 
 ## ConnectionParameter
 ### Properties
-* **defaultValue**: any: Any object
-* **oAuthSettings**: [ApiOAuthSettings](#apioauthsettings): OAuth settings for the connection provider
+* **defaultValue**: any: Default parameter value
+* **oAuthSettings**: [ApiOAuthSettings](#apioauthsettings): Settings defining OAuth flow for the back end provider
 * **type**: 'array' | 'bool' | 'connection' | 'int' | 'oauthSetting' | 'object' | 'secureobject' | 'securestring' | 'string': Type of the parameter
-* **uiDefinition**: any: Any object
+* **uiDefinition**: any: UI definitions
 
 ## ConnectionProperties
 ### Properties
-* **api**: [ExpandedParentApiEntity](#expandedparentapientity): expanded parent object for expansion
+* **api**: [ExpandedParentApiEntity](#expandedparentapientity): expanded connection provider name
 * **changedTime**: string: Timestamp of last connection change.
 * **createdTime**: string: Timestamp of the connection creation
 * **customParameterValues**: [ConnectionPropertiesCustomParameterValues](#connectionpropertiescustomparametervalues): Custom login setting values.
@@ -189,7 +189,7 @@
 
 ## ConnectionStatusProperties
 ### Properties
-* **error**: [ConnectionError](#connectionerror): Connection error
+* **error**: [ConnectionError](#connectionerror): Error details
 * **status**: string: Status
 * **target**: string: Target of the error
 
@@ -253,7 +253,7 @@
 
 ## ExpandedParentApiEntityProperties
 ### Properties
-* **entity**: [ResponseMessageEnvelopeApiEntity](#responsemessageenvelopeapientity): Message envelope that contains the common Azure resource manager properties and the resource provider specific content
+* **entity**: [ResponseMessageEnvelopeApiEntity](#responsemessageenvelopeapientity): Id of connection provider
 * **id**: string: Id of connection provider
 
 ## GeneralApiInformation
@@ -269,7 +269,7 @@
 ## GeneralApiInformationProperties
 ### Properties
 * **connectionDisplayName**: string: DefaultConnectionNameTemplate
-* **connectionPortalUrl**: any: Any object
+* **connectionPortalUrl**: any: ConnectionPortalUrl
 * **description**: string: Description
 * **displayName**: string: Display Name
 * **iconUrl**: string: Icon Url
@@ -385,9 +385,9 @@
             For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/providers/Microsoft.Web/sites/{sitename}
 * **location**: string: Geo region resource belongs to e.g. SouthCentralUS, SouthEastAsia
 * **name**: string: Name of resource
-* **plan**: [ArmPlan](#armplan): The plan object in an ARM, represents a marketplace plan
-* **properties**: [ApiEntity](#apientity): API Management
-* **sku**: [SkuDescription](#skudescription): Describes a sku for a scalable resource
+* **plan**: [ArmPlan](#armplan): Azure resource manager plan
+* **properties**: [ApiEntity](#apientity): Resource specific properties
+* **sku**: [SkuDescription](#skudescription): Sku description of the resource
 * **tags**: [ResponseMessageEnvelopeApiEntityTags](#responsemessageenvelopeapientitytags): Tags associated with resource
 * **type**: string: Type of resource e.g Microsoft.Web/sites
 

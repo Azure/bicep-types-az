@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Properties to configure User Assigned Identities for Bring your Own Keys
+* **identity**: [Identity](#identity): Properties of BYOK Identity description
 * **location**: string (Required): The Geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SBNamespaceProperties](#sbnamespaceproperties): Properties of the namespace.
-* **sku**: [SBSku](#sbsku): SKU of the namespace.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **sku**: [SBSku](#sbsku): Properties of SKU
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags
 * **type**: 'Microsoft.ServiceBus/namespaces' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -22,7 +22,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SBAuthorizationRuleProperties](#sbauthorizationruleproperties): AuthorizationRule properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2022-01-01-preview
@@ -33,7 +33,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ArmDisasterRecoveryProperties](#armdisasterrecoveryproperties): Properties required to the Create Or Update Alias(Disaster Recovery configurations)
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/migrationConfigurations@2022-01-01-preview
@@ -44,7 +44,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: '$default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [MigrationConfigPropertiesProperties](#migrationconfigpropertiesproperties): Properties required to the Create Migration Configuration
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/migrationConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/networkRuleSets@2022-01-01-preview
@@ -55,7 +55,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkRuleSetProperties](#networkrulesetproperties): NetworkRuleSet properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/privateEndpointConnections@2022-01-01-preview
@@ -65,8 +65,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/queues@2022-01-01-preview
@@ -76,8 +76,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SBQueueProperties](#sbqueueproperties): The Queue Properties definition.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [SBQueueProperties](#sbqueueproperties): Queue Properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/queues' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/queues/authorizationRules@2022-01-01-preview
@@ -88,7 +88,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SBAuthorizationRuleProperties](#sbauthorizationruleproperties): AuthorizationRule properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/queues/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/topics@2022-01-01-preview
@@ -98,8 +98,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SBTopicProperties](#sbtopicproperties): The Topic Properties definition.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [SBTopicProperties](#sbtopicproperties): Properties of topic resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/topics/authorizationRules@2022-01-01-preview
@@ -110,7 +110,7 @@
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SBAuthorizationRuleProperties](#sbauthorizationruleproperties): AuthorizationRule properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/topics/subscriptions@2022-01-01-preview
@@ -120,8 +120,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SBSubscriptionProperties](#sbsubscriptionproperties): Description of Subscription Resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [SBSubscriptionProperties](#sbsubscriptionproperties): Properties of subscriptions resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceBus/namespaces/topics/subscriptions/rules@2022-01-01-preview
@@ -131,8 +131,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [Ruleproperties](#ruleproperties): Description of Rule Resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [Ruleproperties](#ruleproperties): Properties of Rule resource
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions/rules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2022-01-01-preview)
@@ -289,7 +289,7 @@
 ## NWRuleSetVirtualNetworkRules
 ### Properties
 * **ignoreMissingVnetServiceEndpoint**: bool: Value that indicates whether to ignore missing VNet Service Endpoint
-* **subnet**: [Subnet](#subnet): Properties supplied for Subnet
+* **subnet**: [Subnet](#subnet): Subnet properties
 
 ## PrivateEndpoint
 ### Properties
@@ -300,22 +300,22 @@
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string (ReadOnly): The name of the resource
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.EventHub/Namespaces" or "Microsoft.EventHub/Namespaces/EventHubs"
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): PrivateEndpoint information.
-* **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate): ConnectionState information.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource for this Connection.
+* **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate): Details about the state of the connection.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the Private Endpoint Connection.
 
 ## Ruleproperties
 ### Properties
 * **action**: [Action](#action): Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
-* **correlationFilter**: [CorrelationFilter](#correlationfilter): Represents the correlation filter expression.
-* **filterType**: 'CorrelationFilter' | 'SqlFilter' | string: Rule filter types
-* **sqlFilter**: [SqlFilter](#sqlfilter): Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
+* **correlationFilter**: [CorrelationFilter](#correlationfilter): Properties of correlationFilter
+* **filterType**: 'CorrelationFilter' | 'SqlFilter' | string: Filter type that is evaluated against a BrokeredMessage.
+* **sqlFilter**: [SqlFilter](#sqlfilter): Properties of sqlFilter
 
 ## SBAuthorizationRuleProperties
 ### Properties
@@ -332,7 +332,7 @@
 * **alternateName**: string: Alternate name for namespace
 * **createdAt**: string (ReadOnly): The time the namespace was created
 * **disableLocalAuth**: bool: This property disables SAS authentication for the Service Bus namespace.
-* **encryption**: [Encryption](#encryption): Properties to configure Encryption
+* **encryption**: [Encryption](#encryption): Properties of BYOK Encryption description
 * **metricId**: string (ReadOnly): Identifier for Azure Insights metrics
 * **minimumTlsVersion**: '1.0' | '1.1' | '1.2' | string: The minimum TLS version for the cluster to support, e.g. '1.2'
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: List of private endpoint connections.
@@ -365,7 +365,7 @@
 * **requiresDuplicateDetection**: bool: A value indicating if this queue requires duplicate detection.
 * **requiresSession**: bool: A value that indicates whether the queue supports the concept of sessions.
 * **sizeInBytes**: int (ReadOnly): The size of the queue, in bytes.
-* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Entity status.
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of a messaging entity.
 * **updatedAt**: string (ReadOnly): The exact time the message was updated.
 
 ## SBSku
@@ -379,7 +379,7 @@
 * **accessedAt**: string (ReadOnly): Last time there was a receive request to this subscription.
 * **autoDeleteOnIdle**: string: ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
 * **clientAffineProperties**: [SBClientAffineProperties](#sbclientaffineproperties): Properties specific to client affine subscriptions.
-* **countDetails**: [MessageCountDetails](#messagecountdetails) (ReadOnly): Message Count Details.
+* **countDetails**: [MessageCountDetails](#messagecountdetails) (ReadOnly): Message count details
 * **createdAt**: string (ReadOnly): Exact time the message was created.
 * **deadLetteringOnFilterEvaluationExceptions**: bool: Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.
 * **deadLetteringOnMessageExpiration**: bool: Value that indicates whether a subscription has dead letter support when a message expires.
@@ -393,14 +393,14 @@
 * **maxDeliveryCount**: int: Number of maximum deliveries.
 * **messageCount**: int (ReadOnly): Number of messages.
 * **requiresSession**: bool: Value indicating if a subscription supports the concept of sessions.
-* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Entity status.
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of a messaging entity.
 * **updatedAt**: string (ReadOnly): The exact time the message was updated.
 
 ## SBTopicProperties
 ### Properties
 * **accessedAt**: string (ReadOnly): Last time the message was sent, or a request was received, for this topic.
 * **autoDeleteOnIdle**: string: ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
-* **countDetails**: [MessageCountDetails](#messagecountdetails) (ReadOnly): Message Count Details.
+* **countDetails**: [MessageCountDetails](#messagecountdetails) (ReadOnly): Message count details
 * **createdAt**: string (ReadOnly): Exact time the message was created.
 * **defaultMessageTimeToLive**: string: ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
 * **duplicateDetectionHistoryTimeWindow**: string: ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
@@ -411,7 +411,7 @@
 * **maxSizeInMegabytes**: int: Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
 * **requiresDuplicateDetection**: bool: Value indicating if this topic requires duplicate detection.
 * **sizeInBytes**: int (ReadOnly): Size of the topic, in bytes.
-* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Entity status.
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of a messaging entity.
 * **subscriptionCount**: int (ReadOnly): Number of subscriptions.
 * **supportOrdering**: bool: Value that indicates whether the topic supports ordering.
 * **updatedAt**: string (ReadOnly): The exact time the message was updated.
@@ -433,7 +433,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties

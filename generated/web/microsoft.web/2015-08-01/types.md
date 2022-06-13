@@ -359,9 +359,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (WriteOnly): Geo region resource belongs to e.g. SouthCentralUS, SouthEastAsia
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **plan**: [ArmPlan](#armplan) (WriteOnly): The plan object in an ARM, represents a marketplace plan
-* **properties**: any (WriteOnly): Any object
-* **sku**: [SkuDescription](#skudescription) (WriteOnly): Describes a sku for a scalable resource
+* **plan**: [ArmPlan](#armplan) (WriteOnly): Azure resource manager plan
+* **properties**: any (WriteOnly): Resource specific properties
+* **sku**: [SkuDescription](#skudescription) (WriteOnly): Sku description of the resource
 * **tags**: [PremierAddOnRequestTags](#premieraddonrequesttags) (WriteOnly): Tags associated with resource
 * **type**: 'Microsoft.Web/sites/premieraddons' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -590,9 +590,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (WriteOnly): Geo region resource belongs to e.g. SouthCentralUS, SouthEastAsia
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **plan**: [ArmPlan](#armplan) (WriteOnly): The plan object in an ARM, represents a marketplace plan
-* **properties**: any (WriteOnly): Any object
-* **sku**: [SkuDescription](#skudescription) (WriteOnly): Describes a sku for a scalable resource
+* **plan**: [ArmPlan](#armplan) (WriteOnly): Azure resource manager plan
+* **properties**: any (WriteOnly): Resource specific properties
+* **sku**: [SkuDescription](#skudescription) (WriteOnly): Sku description of the resource
 * **tags**: [PremierAddOnRequestTags](#premieraddonrequesttags) (WriteOnly): Tags associated with resource
 * **type**: 'Microsoft.Web/sites/slots/premieraddons' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -708,7 +708,7 @@
 
 ## ApplicationLogsConfig
 ### Properties
-* **azureBlobStorage**: [AzureBlobStorageApplicationLogsConfig](#azureblobstorageapplicationlogsconfig): Application logs azure blob storage configuration
+* **azureBlobStorage**: [AzureBlobStorageApplicationLogsConfig](#azureblobstorageapplicationlogsconfig): Application logs to blob storage configuration
 * **azureTableStorage**: [AzureTableStorageApplicationLogsConfig](#azuretablestorageapplicationlogsconfig): Application logs to azure table storage configuration
 * **fileSystem**: [FileSystemApplicationLogsConfig](#filesystemapplicationlogsconfig): Application logs to file system configuration
 
@@ -723,8 +723,7 @@
 ## AutoHealActions
 ### Properties
 * **actionType**: 'CustomAction' | 'LogEvent' | 'Recycle' (Required): ActionType - predefined action to be taken
-* **customAction**: [AutoHealCustomAction](#autohealcustomaction): AutoHealCustomAction - Describes the custom action to be executed
-            when an auto heal rule is triggered.
+* **customAction**: [AutoHealCustomAction](#autohealcustomaction): CustomAction - custom action to be taken
 * **minProcessExecutionTime**: string: MinProcessExecutionTime - minimum time the process must execute
             before taking the action
 
@@ -735,15 +734,14 @@
 
 ## AutoHealRules
 ### Properties
-* **actions**: [AutoHealActions](#autohealactions): AutoHealActions - Describes the actions which can be
-            taken by the auto-heal module when a rule is triggered.
-* **triggers**: [AutoHealTriggers](#autohealtriggers): AutoHealTriggers - describes the triggers for auto-heal.
+* **actions**: [AutoHealActions](#autohealactions): Actions - Actions to be executed when a rule is triggered
+* **triggers**: [AutoHealTriggers](#autohealtriggers): Triggers - Conditions that describe when to execute the auto-heal actions
 
 ## AutoHealTriggers
 ### Properties
 * **privateBytesInKB**: int: PrivateBytesInKB - Defines a rule based on private bytes
-* **requests**: [RequestsBasedTrigger](#requestsbasedtrigger): RequestsBasedTrigger
-* **slowRequests**: [SlowRequestsBasedTrigger](#slowrequestsbasedtrigger): SlowRequestsBasedTrigger
+* **requests**: [RequestsBasedTrigger](#requestsbasedtrigger): Requests - Defines a rule based on total requests
+* **slowRequests**: [SlowRequestsBasedTrigger](#slowrequestsbasedtrigger): SlowRequests - Defines a rule based on request execution time
 * **statusCodes**: [StatusCodesBasedTrigger](#statuscodesbasedtrigger)[]: StatusCodes - Defines a rule based on status codes
 
 ## AzureBlobStorageApplicationLogsConfig
@@ -826,7 +824,7 @@
 
 ## BackupRequestProperties
 ### Properties
-* **backupSchedule**: [BackupSchedule](#backupschedule): Description of a backup schedule. Describes how often should be the backup performed and what should be the retention policy.
+* **backupSchedule**: [BackupSchedule](#backupschedule): Schedule for the backup if it is executed periodically
 * **databases**: [DatabaseBackupSetting](#databasebackupsetting)[]: Databases included in the backup
 * **enabled**: bool: True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled
 * **name**: string: Name of the backup
@@ -847,7 +845,7 @@
 * **cerBlob**: string: Raw bytes of .cer file
 * **expirationDate**: string: Certificate expiration date
 * **friendlyName**: string: Friendly name of the certificate
-* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): Specification for a hostingEnvironment (App Service Environment) to use for this resource
+* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): Specification for the hosting environment (App Service Environment) to use for the certificate
 * **hostNames**: string[]: Host names the certificate applies to
 * **issueDate**: string: Certificate issue Date
 * **issuer**: string: Certificate issuer
@@ -996,7 +994,7 @@
 * **multiSize**: string: Front-end VM size, e.g. "Medium", "Large"
 * **name**: string: Name of the hostingEnvironment (App Service Environment)
 * **networkAccessControlList**: [NetworkAccessControlEntry](#networkaccesscontrolentry)[]: Access control list for controlling traffic to the hostingEnvironment (App Service Environment)
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded': Status of certificate order
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded': Provisioning state of the hostingEnvironment (App Service Environment)
 * **resourceGroup**: string: Resource group of the hostingEnvironment (App Service Environment)
 * **status**: 'Deleting' | 'Preparing' | 'Ready' | 'Scaling' (Required): Current status of the hostingEnvironment (App Service Environment)
 * **subscriptionId**: string: Subscription of the hostingEnvironment (App Service Environment)
@@ -1004,7 +1002,7 @@
             (most likely because NSG blocked the incoming traffic)
 * **upgradeDomains**: int: Number of upgrade domains of this hostingEnvironment (App Service Environment)
 * **vipMappings**: [VirtualIPMapping](#virtualipmapping)[]: Description of IP SSL mapping for this hostingEnvironment (App Service Environment)
-* **virtualNetwork**: [VirtualNetworkProfile](#virtualnetworkprofile): Specification for using a virtual network
+* **virtualNetwork**: [VirtualNetworkProfile](#virtualnetworkprofile): Description of the hostingEnvironment's (App Service Environment) virtual network
 * **vnetName**: string: Name of the hostingEnvironment's (App Service Environment) virtual network
 * **vnetResourceGroupName**: string: Resource group of the hostingEnvironment's (App Service Environment) virtual network
 * **vnetSubnetName**: string: Subnet of the hostingEnvironment's (App Service Environment) virtual network
@@ -1013,10 +1011,10 @@
 ## HostNameBindingProperties
 ### Properties
 * **azureResourceName**: string: Azure resource name
-* **azureResourceType**: 'TrafficManager' | 'Website': Type of the Azure resource the hostname is assigned to
-* **customHostNameDnsRecordType**: 'A' | 'CName': Type of the Dns record
+* **azureResourceType**: 'TrafficManager' | 'Website': Azure resource type
+* **customHostNameDnsRecordType**: 'A' | 'CName': Custom DNS record type
 * **domainId**: string: Fully qualified ARM domain resource URI
-* **hostNameType**: 'Managed' | 'Verified': Type of the hostname
+* **hostNameType**: 'Managed' | 'Verified': Host name type
 * **name**: string: Hostname
 * **siteName**: string: Web app name
 
@@ -1337,7 +1335,7 @@
 * **hostingEnvironment**: string: App Service Environment name, if needed (only when restoring a site to an App Service Environment)
 * **ignoreConflictingHostNames**: bool: Changes a logic when restoring a site with custom domains. If "true", custom domains are removed automatically. If "false", custom domains are added to 
             the site object when it is being restored, but that might fail due to conflicts during the operation.
-* **operationType**: 'Clone' | 'Default' | 'Relocation' (Required): Type of the backup
+* **operationType**: 'Clone' | 'Default' | 'Relocation' (Required): Operation type
 * **overwrite**: bool: True if the restore operation can overwrite target site. "True" needed if trying to restore over an existing site.
 * **siteName**: string: Name of a site (Web App)
 * **storageAccountUrl**: string: SAS URL to the container
@@ -1346,7 +1344,7 @@
 ### Properties
 * **adminSiteName**: string: App Service Plan administration site
 * **geoRegion**: string (ReadOnly): Geographical location for the App Service Plan
-* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): Specification for a hostingEnvironment (App Service Environment) to use for this resource
+* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): Specification for the hosting environment (App Service Environment) to use for the App Service Plan
 * **maximumNumberOfWorkers**: int: Maximum number of instances that can be assigned to this App Service Plan
 * **name**: string: Name for the App Service Plan
 * **numberOfSites**: int (ReadOnly): Number of web apps assigned to this App Service Plan
@@ -1375,21 +1373,21 @@
 * **appCommandLine**: string: App Command Line to launch
 * **appSettings**: [NameValuePair](#namevaluepair)[]: Application Settings
 * **autoHealEnabled**: bool: Auto heal enabled
-* **autoHealRules**: [AutoHealRules](#autohealrules): AutoHealRules - describes the rules which can be defined for auto-heal
+* **autoHealRules**: [AutoHealRules](#autohealrules): Auto heal rules
 * **autoSwapSlotName**: string: Auto swap slot name
 * **connectionStrings**: [ConnStringInfo](#connstringinfo)[]: Connection strings
-* **cors**: [CorsSettings](#corssettings): Cross-Origin Resource Sharing (CORS) settings for the web app.
+* **cors**: [CorsSettings](#corssettings): Cross-Origin Resource Sharing (CORS) settings.
 * **defaultDocuments**: string[]: Default documents
 * **detailedErrorLoggingEnabled**: bool: Detailed error logging enabled
 * **documentRoot**: string: Document root
-* **experiments**: [Experiments](#experiments): Class containing Routing in production experiments
+* **experiments**: [Experiments](#experiments): This is work around for polymorphic types
 * **handlerMappings**: [HandlerMapping](#handlermapping)[]: Handler mappings
 * **httpLoggingEnabled**: bool: HTTP logging Enabled
 * **ipSecurityRestrictions**: [IpSecurityRestriction](#ipsecurityrestriction)[]: Ip Security restrictions
 * **javaContainer**: string: Java container
 * **javaContainerVersion**: string: Java container version
 * **javaVersion**: string: Java version
-* **limits**: [SiteLimits](#sitelimits): Represents metric limits set on a web app.
+* **limits**: [SiteLimits](#sitelimits): Site limits
 * **loadBalancing**: 'LeastRequests' | 'LeastResponseTime' | 'RequestHash' | 'WeightedRoundRobin' | 'WeightedTotalTraffic': Site load balancing
 * **localMySqlEnabled**: bool: Local mysql enabled
 * **logsDirectorySizeLimit**: int: HTTP Logs Directory size limit
@@ -1422,8 +1420,8 @@
 ## SiteLogsConfigProperties
 ### Properties
 * **applicationLogs**: [ApplicationLogsConfig](#applicationlogsconfig): Application logs configuration
-* **detailedErrorMessages**: [EnabledConfig](#enabledconfig): Enabled configuration
-* **failedRequestsTracing**: [EnabledConfig](#enabledconfig): Enabled configuration
+* **detailedErrorMessages**: [EnabledConfig](#enabledconfig): Detailed error messages configuration
+* **failedRequestsTracing**: [EnabledConfig](#enabledconfig): Failed requests tracing configuration
 * **httpLogs**: [HttpLogsConfig](#httplogsconfig): Http logs configuration
 
 ## SiteProperties
@@ -1433,14 +1431,15 @@
             Limited means that only partial management information for the site is available and that detailed site information is unavailable.
 * **clientAffinityEnabled**: bool: Specifies if the client affinity is enabled when load balancing http request for multiple instances of the web app
 * **clientCertEnabled**: bool: Specifies if the client certificate is enabled for the web app
-* **cloningInfo**: [CloningInfo](#cloninginfo): Represents information needed for cloning operation
+* **cloningInfo**: [CloningInfo](#cloninginfo): This is only valid for web app creation. If specified, web app is cloned from 
+            a source web app
 * **containerSize**: int: Size of a function container
 * **defaultHostName**: string (ReadOnly): Default hostname of the web app
 * **enabled**: bool: True if the site is enabled; otherwise, false. Setting this  value to false disables the site (takes the site off line).
 * **enabledHostNames**: string[] (ReadOnly): Hostnames for the web app that are enabled. Hostnames need to be assigned and enabled. If some hostnames are assigned but not enabled
             the app is not served on those hostnames
 * **gatewaySiteName**: string: Name of gateway app associated with web app
-* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): Specification for a hostingEnvironment (App Service Environment) to use for this resource
+* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): Specification for the hosting environment (App Service Environment) to use for the web app
 * **hostNames**: string[] (ReadOnly): Hostnames associated with web app
 * **hostNamesDisabled**: bool: Specifies if the public hostnames are disabled the web app.
             If set to true the app is only accessible via API Management process
@@ -1457,7 +1456,7 @@
 * **resourceGroup**: string (ReadOnly): Resource group web app belongs to
 * **scmSiteAlsoStopped**: bool: If set indicates whether to stop SCM (KUDU) site when the web app is stopped. Default is false.
 * **serverFarmId**: string
-* **siteConfig**: [SiteConfig](#siteconfig): Configuration of Azure web site
+* **siteConfig**: [SiteConfig](#siteconfig): Configuration of web app
 * **state**: string (ReadOnly): State of the web app
 * **targetSwapSlot**: string (ReadOnly): Read-only property that specifies which slot this app will swap into
 * **trafficManagerHostNames**: string[] (ReadOnly): Read-only list of Azure Traffic manager hostnames associated with web app
@@ -1501,7 +1500,7 @@
 ## StampCapacity
 ### Properties
 * **availableCapacity**: int: Available capacity (# of machines, bytes of storage etc...)
-* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared or dedicated web app hosting
+* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared/Dedicated workers
 * **excludeFromCapacityAllocation**: bool: If true it includes basic sites
             Basic sites are not used for capacity allocation.
 * **isApplicableForAllComputeModes**: bool: Is capacity applicable for all sites?
@@ -1579,7 +1578,7 @@
 ### Properties
 * **physicalPath**: string
 * **preloadEnabled**: bool
-* **virtualDirectories**: [VirtualDirectory](#virtualdirectory)[]: Array of VirtualDirectory
+* **virtualDirectories**: [VirtualDirectory](#virtualdirectory)[]
 * **virtualPath**: string
 
 ## VirtualDirectory

@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConnectorSettingProperties](#connectorsettingproperties): Describes properties of a connector setting
+* **properties**: [ConnectorSettingProperties](#connectorsettingproperties): Connector setting data
 * **type**: 'Microsoft.Security/connectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AuthenticationDetailsProperties
@@ -47,8 +47,8 @@
 
 ## ConnectorSettingProperties
 ### Properties
-* **authenticationDetails**: [AuthenticationDetailsProperties](#authenticationdetailsproperties): Settings for cloud authentication management
-* **hybridComputeSettings**: [HybridComputeSettingsProperties](#hybridcomputesettingsproperties): Settings for hybrid compute management
+* **authenticationDetails**: [AuthenticationDetailsProperties](#authenticationdetailsproperties): Settings for authentication management, these settings are relevant only for the cloud connector.
+* **hybridComputeSettings**: [HybridComputeSettingsProperties](#hybridcomputesettingsproperties): Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
 
 ## HybridComputeSettingsProperties
 ### Properties
@@ -57,7 +57,7 @@
 * **proxyServer**: [ProxyServerProperties](#proxyserverproperties): For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
 * **region**: string: The location where the metadata of machines will be stored
 * **resourceGroupName**: string: The name of the resource group where Arc (Hybrid Compute) connectors are connected.
-* **servicePrincipal**: [ServicePrincipalProperties](#serviceprincipalproperties): Details of the service principal.
+* **servicePrincipal**: [ServicePrincipalProperties](#serviceprincipalproperties): An object to access resources that are secured by an Azure AD tenant.
 
 ## ProxyServerProperties
 ### Properties

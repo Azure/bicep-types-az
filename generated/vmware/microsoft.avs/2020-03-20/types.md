@@ -8,7 +8,7 @@
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateCloudProperties](#privatecloudproperties) (Required): The properties of a private cloud resource
-* **sku**: [Sku](#sku) (Required): The resource model definition representing SKU
+* **sku**: [Sku](#sku) (Required): The private cloud SKU
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags
 * **type**: 'Microsoft.AVS/privateClouds' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -27,8 +27,8 @@
 * **apiVersion**: '2020-03-20' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterProperties](#clusterproperties) (Required): The properties of a cluster
-* **sku**: [Sku](#sku) (Required): The resource model definition representing SKU
+* **properties**: [ClusterProperties](#clusterproperties) (Required): The properties of a cluster resource
+* **sku**: [Sku](#sku) (Required): The cluster SKU
 * **type**: 'Microsoft.AVS/privateClouds/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AVS/privateClouds/hcxEnterpriseSites@2020-03-20
@@ -37,7 +37,7 @@
 * **apiVersion**: '2020-03-20' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [HcxEnterpriseSiteProperties](#hcxenterprisesiteproperties) (ReadOnly): The properties of an HCX Enterprise Site
+* **properties**: [HcxEnterpriseSiteProperties](#hcxenterprisesiteproperties) (ReadOnly): The properties of an HCX Enterprise Site resource
 * **type**: 'Microsoft.AVS/privateClouds/hcxEnterpriseSites' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listAdminCredentials (Microsoft.AVS/privateClouds@2020-03-20)
@@ -106,10 +106,10 @@
 ## PrivateCloudProperties
 ### Properties
 * **circuit**: [Circuit](#circuit): An ExpressRoute Circuit
-* **endpoints**: [Endpoints](#endpoints) (ReadOnly): Endpoint addresses
+* **endpoints**: [Endpoints](#endpoints) (ReadOnly): The endpoints
 * **identitySources**: [IdentitySource](#identitysource)[]: vCenter Single Sign On Identity Sources
 * **internet**: 'Disabled' | 'Enabled' | string: Connectivity to internet is enabled or disabled
-* **managementCluster**: [ManagementCluster](#managementcluster): The properties of a default cluster
+* **managementCluster**: [ManagementCluster](#managementcluster): The default cluster used for management
 * **managementNetwork**: string (ReadOnly): Network used to access vCenter Server and NSX-T Manager
 * **networkBlock**: string (Required): The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
 * **nsxtCertificateThumbprint**: string (ReadOnly): Thumbprint of the NSX-T Manager SSL certificate

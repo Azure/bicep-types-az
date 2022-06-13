@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ProtectionContainer](#protectioncontainer): Base class for container with backup items. Containers with specific workloads are derived from this class.
+* **properties**: [ProtectionContainer](#protectioncontainer): ProtectionContainerResource properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,14 +20,14 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: 'vaultstorageconfig' (Required, DeployTimeConstant): The resource name
-* **properties**: [BackupResourceConfig](#backupresourceconfig): The resource storage details.
+* **properties**: [BackupResourceConfig](#backupresourceconfig): BackupResourceConfigResource properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupstorageconfig' (ReadOnly, DeployTimeConstant): The resource type
 
 ## BackupResourceConfig
 ### Properties
 * **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | string: Storage type
-* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | string: Storage type
+* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | string: Storage type.
 * **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked' | string: Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
 
 ## ContainerIdentityInfo
@@ -67,7 +67,7 @@
 * **Discriminator**: containerType
 
 ### Base Properties
-* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string: Type of backup management for the backup engine.
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string: Type of backup management for the container.
 * **friendlyName**: string: Friendly name of the container.
 * **healthStatus**: string: Status of health of the container.
 * **registrationStatus**: string: Status of registration of the container with the Recovery Services Vault.
@@ -91,7 +91,7 @@ Backup is VMAppContainer
 Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
 Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
 Backup is VMAppContainer
-* **extendedInformation**: [GenericContainerExtendedInfo](#genericcontainerextendedinfo): Container extended information
+* **extendedInformation**: [GenericContainerExtendedInfo](#genericcontainerextendedinfo): Extended information (not returned in List container API calls)
 * **fabricName**: string: Name of the container's fabric
 
 ### AzureIaaSClassicComputeVMContainer
@@ -143,7 +143,7 @@ Backup is VMAppContainer
 Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
 Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
 Backup is VMAppContainer
-* **extendedInfo**: [MabContainerExtendedInfo](#mabcontainerextendedinfo): Additional information of the container.
+* **extendedInfo**: [MabContainerExtendedInfo](#mabcontainerextendedinfo): Additional information for this container
 * **mabContainerHealthDetails**: [MABContainerHealthDetails](#mabcontainerhealthdetails)[]: Health details on this mab container.
 * **protectedItemCount**: int: Number of items backed up in this container.
 

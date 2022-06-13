@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The Azure location where the CommunicationService is running.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CommunicationServiceProperties](#communicationserviceproperties): A class that describes the properties of the CommunicationService.
+* **properties**: [CommunicationServiceProperties](#communicationserviceproperties): The properties of the service.
 * **tags**: [TaggedResourceTags](#taggedresourcetags): Tags of the service which is a list of key value pairs that describe the resource.
 * **type**: 'Microsoft.Communication/communicationServices' (ReadOnly, DeployTimeConstant): The resource type
 

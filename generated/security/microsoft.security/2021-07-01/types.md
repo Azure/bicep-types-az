@@ -12,12 +12,12 @@
 ### AlertSyncSettings
 #### Properties
 * **kind**: 'AlertSyncSettings' (Required): the kind of the settings string
-* **properties**: [AlertSyncSettingProperties](#alertsyncsettingproperties): The alert sync setting properties
+* **properties**: [AlertSyncSettingProperties](#alertsyncsettingproperties): Alert sync setting data
 
 ### DataExportSettings
 #### Properties
 * **kind**: 'DataExportSettings' (Required): the kind of the settings string
-* **properties**: [DataExportSettingProperties](#dataexportsettingproperties): The data export setting properties
+* **properties**: [DataExportSettingProperties](#dataexportsettingproperties): Data export setting data
 
 
 ## AlertSyncSettingProperties

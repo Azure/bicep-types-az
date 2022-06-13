@@ -43,8 +43,8 @@
 ## CreationData
 ### Properties
 * **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Import' | 'Restore' | 'Upload' | string (Required): This enumerates the possible sources of a disk's creation.
-* **galleryImageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
-* **imageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
+* **galleryImageReference**: [ImageDiskReference](#imagediskreference): Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.
+* **imageReference**: [ImageDiskReference](#imagediskreference): Disk source information.
 * **sourceResourceId**: string: If createOption is Copy, this is the ARM id of the source snapshot or disk.
 * **sourceUniqueId**: string (ReadOnly): If this field is set, this is the unique id identifying the source of this resource.
 * **sourceUri**: string: If createOption is Import, this is the URI of a blob to be imported into a managed disk.
@@ -53,7 +53,7 @@
 
 ## DiskProperties
 ### Properties
-* **creationData**: [CreationData](#creationdata) (Required): Data used when creating a disk.
+* **creationData**: [CreationData](#creationdata) (Required): Disk source information. CreationData information cannot be changed after the disk has been created.
 * **diskIOPSReadOnly**: int: The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.
 * **diskIOPSReadWrite**: int: The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.
 * **diskMBpsReadOnly**: int: The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
@@ -61,8 +61,8 @@
 * **diskSizeBytes**: int (ReadOnly): The size of the disk in bytes. This field is read only.
 * **diskSizeGB**: int: If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
 * **diskState**: 'ActiveSAS' | 'ActiveUpload' | 'Attached' | 'ReadyToUpload' | 'Reserved' | 'Unattached' | string (ReadOnly): The state of the disk.
-* **encryption**: [Encryption](#encryption): Encryption at rest settings for disk or snapshot
-* **encryptionSettingsCollection**: [EncryptionSettingsCollection](#encryptionsettingscollection): Encryption settings for disk or snapshot
+* **encryption**: [Encryption](#encryption): Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
+* **encryptionSettingsCollection**: [EncryptionSettingsCollection](#encryptionsettingscollection): Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
 * **hyperVGeneration**: 'V1' | 'V2' | string: The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
 * **maxShares**: int: The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
 * **osType**: 'Linux' | 'Windows': The Operating System type.
@@ -89,7 +89,7 @@
 
 ## EncryptionSetProperties
 ### Properties
-* **activeKey**: [KeyVaultAndKeyReference](#keyvaultandkeyreference): Key Vault Key Url and vault id of KeK, KeK is optional and when provided is used to unwrap the encryptionKey
+* **activeKey**: [KeyVaultAndKeyReference](#keyvaultandkeyreference): The key vault key which is currently used by this disk encryption set.
 * **previousKeys**: [KeyVaultAndKeyReference](#keyvaultandkeyreference)[] (ReadOnly): A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.
 * **provisioningState**: string (ReadOnly): The disk encryption set provisioning state.
 
@@ -101,8 +101,8 @@
 
 ## EncryptionSettingsElement
 ### Properties
-* **diskEncryptionKey**: [KeyVaultAndSecretReference](#keyvaultandsecretreference): Key Vault Secret Url and vault id of the encryption key
-* **keyEncryptionKey**: [KeyVaultAndKeyReference](#keyvaultandkeyreference): Key Vault Key Url and vault id of KeK, KeK is optional and when provided is used to unwrap the encryptionKey
+* **diskEncryptionKey**: [KeyVaultAndSecretReference](#keyvaultandsecretreference): Key Vault Secret Url and vault id of the disk encryption key
+* **keyEncryptionKey**: [KeyVaultAndKeyReference](#keyvaultandkeyreference): Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.
 
 ## ImageDiskReference
 ### Properties
@@ -112,12 +112,12 @@
 ## KeyVaultAndKeyReference
 ### Properties
 * **keyUrl**: string (Required): Url pointing to a key or secret in KeyVault
-* **sourceVault**: [SourceVault](#sourcevault) (Required): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
+* **sourceVault**: [SourceVault](#sourcevault) (Required): Resource id of the KeyVault containing the key or secret
 
 ## KeyVaultAndSecretReference
 ### Properties
 * **secretUrl**: string (Required): Url pointing to a key or secret in KeyVault
-* **sourceVault**: [SourceVault](#sourcevault) (Required): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
+* **sourceVault**: [SourceVault](#sourcevault) (Required): Resource id of the KeyVault containing the key or secret
 
 ## ResourceTags
 ### Properties
@@ -140,11 +140,11 @@
 
 ## SnapshotProperties
 ### Properties
-* **creationData**: [CreationData](#creationdata) (Required): Data used when creating a disk.
+* **creationData**: [CreationData](#creationdata) (Required): Disk source information. CreationData information cannot be changed after the disk has been created.
 * **diskSizeBytes**: int (ReadOnly): The size of the disk in bytes. This field is read only.
 * **diskSizeGB**: int: If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
-* **encryption**: [Encryption](#encryption): Encryption at rest settings for disk or snapshot
-* **encryptionSettingsCollection**: [EncryptionSettingsCollection](#encryptionsettingscollection): Encryption settings for disk or snapshot
+* **encryption**: [Encryption](#encryption): Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
+* **encryptionSettingsCollection**: [EncryptionSettingsCollection](#encryptionsettingscollection): Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
 * **hyperVGeneration**: 'V1' | 'V2' | string: The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
 * **incremental**: bool: Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.
 * **osType**: 'Linux' | 'Windows': The Operating System type.

@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AzureTrafficCollectorPropertiesFormat](#azuretrafficcollectorpropertiesformat): Azure Traffic Collector resource properties.
+* **properties**: [AzureTrafficCollectorPropertiesFormat](#azuretrafficcollectorpropertiesformat): Properties of the Azure Traffic Collector.
 * **systemData**: [TrackedResourceSystemData](#trackedresourcesystemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetworkFunction/azureTrafficCollectors' (ReadOnly, DeployTimeConstant): The resource type
@@ -20,30 +20,30 @@
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CollectorPolicyPropertiesFormat](#collectorpolicypropertiesformat): Collection policy properties.
+* **properties**: [CollectorPolicyPropertiesFormat](#collectorpolicypropertiesformat): Properties of the Collector Policy.
 * **systemData**: [CollectorPolicySystemData](#collectorpolicysystemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.NetworkFunction/azureTrafficCollectors/collectorPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AzureTrafficCollectorPropertiesFormat
 ### Properties
 * **collectorPolicies**: [CollectorPolicy](#collectorpolicy)[]: Collector Policies for Azure Traffic Collector.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
-* **virtualHub**: [ResourceReference](#resourcereference): Resource reference properties.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the application rule collection resource.
+* **virtualHub**: [ResourceReference](#resourcereference): The virtualHub to which the Azure Traffic Collector belongs.
 
 ## CollectorPolicy
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly): Azure resource Id
 * **name**: string (ReadOnly): Azure resource name
-* **properties**: [CollectorPolicyPropertiesFormat](#collectorpolicypropertiesformat): Collection policy properties.
+* **properties**: [CollectorPolicyPropertiesFormat](#collectorpolicypropertiesformat): Properties of the Collector Policy.
 * **systemData**: [CollectorPolicySystemData](#collectorpolicysystemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: string (ReadOnly): Azure resource type
 
 ## CollectorPolicyPropertiesFormat
 ### Properties
 * **emissionPolicies**: [EmissionPoliciesPropertiesFormat](#emissionpoliciespropertiesformat)[]: Emission policies.
-* **ingestionPolicy**: [IngestionPolicyPropertiesFormat](#ingestionpolicypropertiesformat): Ingestion Policy properties.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
+* **ingestionPolicy**: [IngestionPolicyPropertiesFormat](#ingestionpolicypropertiesformat): Ingestion policies.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state.
 
 ## CollectorPolicySystemData
 ### Properties
@@ -51,7 +51,7 @@
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## EmissionPoliciesPropertiesFormat
 ### Properties
@@ -82,7 +82,7 @@
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties

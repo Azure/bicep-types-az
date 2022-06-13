@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApplicationGroupProperties](#applicationgroupproperties) (Required): Schema for ApplicationGroup properties.
+* **properties**: [ApplicationGroupProperties](#applicationgroupproperties) (Required): Detailed properties for ApplicationGroup
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -17,7 +17,7 @@
 * **apiVersion**: '2020-11-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApplicationProperties](#applicationproperties) (Required): Schema for Application properties.
+* **properties**: [ApplicationProperties](#applicationproperties) (Required): Detailed properties for Application
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups/applications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/hostPools@2020-11-10-preview
@@ -27,7 +27,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [HostPoolProperties](#hostpoolproperties) (Required): Properties of HostPool.
+* **properties**: [HostPoolProperties](#hostpoolproperties) (Required): Detailed properties for HostPool
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/hostPools' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -37,7 +37,7 @@
 * **apiVersion**: '2020-11-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MsixPackageProperties](#msixpackageproperties) (Required): Schema for MSIX Package properties.
+* **properties**: [MsixPackageProperties](#msixpackageproperties) (Required): Detailed properties for MSIX Package
 * **type**: 'Microsoft.DesktopVirtualization/hostPools/msixPackages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/scalingPlans@2020-11-10-preview
@@ -47,7 +47,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ScalingPlanProperties](#scalingplanproperties): Scaling plan properties.
+* **properties**: [ScalingPlanProperties](#scalingplanproperties): Detailed properties for scaling plan.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/scalingPlans' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -58,7 +58,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkspaceProperties](#workspaceproperties): Schema for Workspace properties.
+* **properties**: [WorkspaceProperties](#workspaceproperties): Detailed properties for Workspace
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -97,7 +97,7 @@
 * **maxSessionLimit**: int: The max session limit of HostPool.
 * **personalDesktopAssignmentType**: 'Automatic' | 'Direct' | string: PersonalDesktopAssignment type for HostPool.
 * **preferredAppGroupType**: 'Desktop' | 'None' | 'RailApplications' | string (Required): The type of preferred application group type, default to Desktop Application Group
-* **registrationInfo**: [RegistrationInfo](#registrationinfo): Represents a RegistrationInfo definition.
+* **registrationInfo**: [RegistrationInfo](#registrationinfo): The registration info of HostPool.
 * **ring**: int: The ring number of HostPool.
 * **ssoadfsAuthority**: string: URL to customer ADFS server for signing WVD SSO certificates.
 * **ssoClientId**: string: ClientId for the registered Relying Party used to issue WVD SSO certificates.
@@ -154,7 +154,7 @@
 * **exclusionTag**: string: Exclusion tag for scaling plan.
 * **friendlyName**: string: User friendly name of scaling plan.
 * **hostPoolReferences**: [ScalingHostPoolReference](#scalinghostpoolreference)[]: List of ScalingHostPoolReference definitions.
-* **hostPoolType**: 'Personal' | 'Pooled' | string: HostPool type for desktop.
+* **hostPoolType**: 'Personal' | 'Pooled' | string: HostPool type for scaling plan.
 * **schedules**: [ScalingSchedule](#scalingschedule)[]: List of ScalingSchedule definitions.
 * **timeZone**: string: Timezone of the scaling plan.
 
@@ -162,13 +162,13 @@
 ### Properties
 * **daysOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[]: Set of days of the week on which this schedule is active.
 * **name**: string: Name of the scaling schedule.
-* **offPeakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for ramp up period.
+* **offPeakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for off-peak period.
 * **offPeakStartTime**: string: Starting time for off-peak period.
-* **peakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for ramp up period.
+* **peakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for peak period.
 * **peakStartTime**: string: Starting time for peak period.
 * **rampDownCapacityThresholdPct**: int: Capacity threshold for ramp down period.
 * **rampDownForceLogoffUsers**: bool: Should users be logged off forcefully from hosts.
-* **rampDownLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for ramp up period.
+* **rampDownLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for ramp down period.
 * **rampDownMinimumHostsPct**: int: Minimum host percentage for ramp down period.
 * **rampDownNotificationMessage**: string: Notification message for users during ramp down period.
 * **rampDownStartTime**: string: Starting time for ramp down period.

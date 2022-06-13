@@ -8,9 +8,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TestBaseAccountResourceProperties](#testbaseaccountresourceproperties): The properties of a Test Base Account resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Tags](#tags): Resource tags.
+* **properties**: [TestBaseAccountResourceProperties](#testbaseaccountresourceproperties): Properties of a Test Base Account.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
+* **tags**: [Tags](#tags): The tags of the resource.
 * **type**: 'Microsoft.TestBase/testBaseAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.TestBase/testBaseAccounts/customerEvents@2020-12-16-preview
@@ -19,8 +19,8 @@
 * **apiVersion**: '2020-12-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CustomerEventProperties](#customereventproperties): A notification events subscribed to be received by customer.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [CustomerEventProperties](#customereventproperties): Customer Notification Event properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **type**: 'Microsoft.TestBase/testBaseAccounts/customerEvents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.TestBase/testBaseAccounts/packages@2020-12-16-preview
@@ -31,9 +31,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PackageProperties](#packageproperties): The properties of the Test Base Package.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Tags](#tags): Resource tags.
+* **properties**: [PackageProperties](#packageproperties): Test Base Package properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
+* **tags**: [Tags](#tags): The tags of the resource.
 * **type**: 'Microsoft.TestBase/testBaseAccounts/packages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.TestBase/testBaseAccounts/packages/favoriteProcesses@2020-12-16-preview
@@ -43,7 +43,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [FavoriteProcessProperties](#favoriteprocessproperties): Properties of a favorite process identifier.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **type**: 'Microsoft.TestBase/testBaseAccounts/packages/favoriteProcesses' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Command
@@ -75,12 +75,12 @@
 ## NotificationEventReceiver
 ### Properties
 * **receiverType**: string: The type of the notification event receiver.
-* **receiverValue**: [NotificationReceiverValue](#notificationreceivervalue): A notification event receiver value.
+* **receiverValue**: [NotificationReceiverValue](#notificationreceivervalue): The notification event receiver value.
 
 ## NotificationReceiverValue
 ### Properties
 * **distributionGroupListReceiverValue**: [DistributionGroupListReceiverValue](#distributiongrouplistreceivervalue): The user object receiver value.
-* **subscriptionReceiverValue**: [SubscriptionReceiverValue](#subscriptionreceivervalue): The subscription role receiver value.
+* **subscriptionReceiverValue**: [SubscriptionReceiverValue](#subscriptionreceivervalue): The user object receiver value.
 * **userObjectReceiverValue**: [UserObjectReceiverValue](#userobjectreceivervalue): The user object receiver value.
 
 ## PackageProperties
@@ -91,7 +91,7 @@
 * **isEnabled**: bool (ReadOnly): Flag showing that whether the package is enabled. It doesn't schedule test for package which is not enabled.
 * **lastModifiedTime**: string (ReadOnly): The UTC timestamp when the package was last modified.
 * **packageStatus**: 'Deleted' | 'Error' | 'PreValidationCheckPass' | 'Ready' | 'Registered' | 'Unknown' | 'ValidatingPackage' | 'ValidationLongerThanUsual' | 'VerifyingPackage' | string (ReadOnly): The status of the package.
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
 * **targetOSList**: [TargetOSInfo](#targetosinfo)[] (Required): Specifies the target OSs of specific OS Update types.
 * **tests**: [Test](#test)[] (Required): The detailed test information.
 * **testTypes**: 'FunctionalTest' | 'OutOfBoxTest' | string[] (ReadOnly): OOB, functional or both. Mapped to the data in 'tests' property.
@@ -117,7 +117,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## Tags
 ### Properties
@@ -138,14 +138,14 @@
 ### Properties
 * **commands**: [Command](#command)[] (Required): The commands used in the test.
 * **isActive**: bool: Indicates if this test is active.It doesn't schedule test for not active Test.
-* **testType**: 'FunctionalTest' | 'OutOfBoxTest' | string (Required): The test type.
+* **testType**: 'FunctionalTest' | 'OutOfBoxTest' | string (Required): The type of the test.
 * **validationRunStatus**: 'Failed' | 'Passed' | 'Pending' | 'Unknown' | string (ReadOnly): The status of the validation run of the package.
 
 ## TestBaseAccountResourceProperties
 ### Properties
 * **accessLevel**: string (ReadOnly): The access level of the Test Base Account.
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
-* **sku**: [TestBaseAccountSKU](#testbaseaccountsku) (Required): Describes a Test Base Account SKU.
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
+* **sku**: [TestBaseAccountSKU](#testbaseaccountsku) (Required): The SKU of the Test Base Account.
 
 ## TestBaseAccountSKU
 ### Properties

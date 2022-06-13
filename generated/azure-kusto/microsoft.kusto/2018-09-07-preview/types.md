@@ -9,7 +9,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties): Class representing the Kusto cluster properties.
-* **sku**: [AzureSku](#azuresku) (Required)
+* **sku**: [AzureSku](#azuresku) (Required): The SKU of the cluster.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -72,7 +72,7 @@
 * **hotCachePeriodInDays**: int: The number of days of data that should be kept in cache for fast queries.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
 * **softDeletePeriodInDays**: int (Required): The number of days data should be kept before it stops being accessible to queries.
-* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly)
+* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): The statistics of the database.
 
 ## DatabaseStatistics
 ### Properties

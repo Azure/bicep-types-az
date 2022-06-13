@@ -28,7 +28,7 @@
 * **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [OrderProperties](#orderproperties): Order properties.
+* **properties**: [OrderProperties](#orderproperties): The order properties.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles@2019-03-01
@@ -43,7 +43,7 @@
 ### IoTRole
 #### Properties
 * **kind**: 'IOT' (Required): Role type.
-* **properties**: [IoTRoleProperties](#iotroleproperties): IoT role properties.
+* **properties**: [IoTRoleProperties](#iotroleproperties): Properties specific to IoT role.
 
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares@2019-03-01
@@ -90,7 +90,7 @@
 * **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [UserProperties](#userproperties) (Required): The user properties.
+* **properties**: [UserProperties](#userproperties) (Required): The storage account credential properties.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Address
@@ -166,20 +166,20 @@
 ## FileTriggerProperties
 ### Properties
 * **customContextTag**: string: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
-* **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Compute role against which events will be raised.
-* **sourceInfo**: [FileSourceInfo](#filesourceinfo) (Required): File source details.
+* **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Role sink info.
+* **sourceInfo**: [FileSourceInfo](#filesourceinfo) (Required): File event source details.
 
 ## IoTDeviceInfo
 ### Properties
-* **authentication**: [Authentication](#authentication): Authentication mechanism for IoT devices.
+* **authentication**: [Authentication](#authentication): IoT device authentication info.
 * **deviceId**: string (Required): ID of the IoT device/edge device.
 * **ioTHostHub**: string (Required): Host name for the IoT hub associated to the device.
 
 ## IoTRoleProperties
 ### Properties
 * **hostPlatform**: 'Linux' | 'Windows' | string (Required): Host OS supported by the IoT role.
-* **ioTDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
-* **ioTEdgeDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
+* **ioTDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): IoT device metadata to which data box edge device needs to be connected.
+* **ioTEdgeDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): IoT edge device to which the IoT role needs to be configured.
 * **roleStatus**: 'Disabled' | 'Enabled' | string (Required): Role status.
 * **shareMappings**: [MountPointMap](#mountpointmap)[]: Mount points of shares in role(s).
 
@@ -187,18 +187,18 @@
 ### Properties
 * **mountPoint**: string (ReadOnly): Mount point for the share.
 * **roleId**: string (ReadOnly): ID of the role to which share is mounted.
-* **roleType**: 'ASA' | 'Cognitive' | 'Functions' | 'IOT' | string (ReadOnly)
+* **roleType**: 'ASA' | 'Cognitive' | 'Functions' | 'IOT' | string (ReadOnly): Role type.
 * **shareId**: string (Required): ID of the share mounted to the role VM.
 
 ## OrderProperties
 ### Properties
-* **contactInformation**: [ContactDetails](#contactdetails) (Required): Contains all the contact details of the customer.
-* **currentStatus**: [OrderStatus](#orderstatus): Represents a single status change.
+* **contactInformation**: [ContactDetails](#contactdetails) (Required): The contact details.
+* **currentStatus**: [OrderStatus](#orderstatus): Current status of the order.
 * **deliveryTrackingInfo**: [TrackingInfo](#trackinginfo)[] (ReadOnly): Tracking information for the package delivered to the customer whether it has an original or a replacement device.
 * **orderHistory**: [OrderStatus](#orderstatus)[] (ReadOnly): List of status changes in the order.
 * **returnTrackingInfo**: [TrackingInfo](#trackinginfo)[] (ReadOnly): Tracking information for the package returned from the customer whether it has an original or a replacement device.
 * **serialNumber**: string (ReadOnly): Serial number of the device.
-* **shippingAddress**: [Address](#address) (Required): The shipping address of the customer.
+* **shippingAddress**: [Address](#address) (Required): The shipping address.
 
 ## OrderStatus
 ### Properties
@@ -209,8 +209,8 @@
 ## PeriodicTimerProperties
 ### Properties
 * **customContextTag**: string: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
-* **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Compute role against which events will be raised.
-* **sourceInfo**: [PeriodicTimerSourceInfo](#periodictimersourceinfo) (Required): Periodic timer event source.
+* **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Role Sink information.
+* **sourceInfo**: [PeriodicTimerSourceInfo](#periodictimersourceinfo) (Required): Periodic timer details.
 
 ## PeriodicTimerSourceInfo
 ### Properties
@@ -237,12 +237,12 @@
 ## ShareProperties
 ### Properties
 * **accessProtocol**: 'NFS' | 'SMB' | string (Required): Access protocol to be used by the share.
-* **azureContainerInfo**: [AzureContainerInfo](#azurecontainerinfo): Azure container mapping of the endpoint.
+* **azureContainerInfo**: [AzureContainerInfo](#azurecontainerinfo): Azure container mapping for the share.
 * **clientAccessRights**: [ClientAccessRight](#clientaccessright)[]: List of IP addresses and corresponding access rights on the share(required for NFS protocol).
 * **dataPolicy**: 'Cloud' | 'Local' | string: Data policy of the share.
 * **description**: string: Description for the share.
 * **monitoringStatus**: 'Disabled' | 'Enabled' | string (Required): Current monitoring status of the share.
-* **refreshDetails**: [RefreshDetails](#refreshdetails): Fields for tracking refresh job on the share.
+* **refreshDetails**: [RefreshDetails](#refreshdetails): Details of the refresh job on this share.
 * **shareMappings**: [MountPointMap](#mountpointmap)[] (ReadOnly): Share mount point to the role.
 * **shareStatus**: 'Offline' | 'Online' | string (Required): Current status of the share.
 * **userAccessRights**: [UserAccessRight](#useraccessright)[]: Mapping of users and corresponding access rights on the share (required for SMB protocol).
@@ -254,7 +254,7 @@
 
 ## StorageAccountCredentialProperties
 ### Properties
-* **accountKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
+* **accountKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Encrypted storage key.
 * **accountType**: 'BlobStorage' | 'GeneralPurposeStorage' | string (Required): Type of storage accessed on the storage account.
 * **alias**: string (Required): Alias for the storage account.
 * **blobDomainName**: string: Blob end point for private clouds.
@@ -264,7 +264,7 @@
 
 ## SymmetricKey
 ### Properties
-* **connectionString**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
+* **connectionString**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Connection string based on the symmetric key.
 
 ## TrackingInfo
 ### Properties
@@ -275,11 +275,11 @@
 
 ## UserAccessRight
 ### Properties
-* **accessType**: 'Change' | 'Custom' | 'Read' | string (Required): Type of access to be allowed on the share for this user.
+* **accessType**: 'Change' | 'Custom' | 'Read' | string (Required): Type of access to be allowed for the user.
 * **userId**: string (Required): User ID (already existing in the device).
 
 ## UserProperties
 ### Properties
-* **encryptedPassword**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
+* **encryptedPassword**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): The password details.
 * **shareAccessRights**: [ShareAccessRight](#shareaccessright)[]: List of shares that the user has rights on. This field should not be specified during user creation.
 

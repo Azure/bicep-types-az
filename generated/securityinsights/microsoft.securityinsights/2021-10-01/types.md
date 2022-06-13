@@ -9,22 +9,22 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/alertRules' (ReadOnly, DeployTimeConstant): The resource type
 ### FusionAlertRule
 #### Properties
 * **kind**: 'Fusion' (Required): The alert rule kind
-* **properties**: [FusionAlertRuleProperties](#fusionalertruleproperties): Fusion alert rule base property bag.
+* **properties**: [FusionAlertRuleProperties](#fusionalertruleproperties): Fusion alert rule properties
 
 ### MicrosoftSecurityIncidentCreationAlertRule
 #### Properties
 * **kind**: 'MicrosoftSecurityIncidentCreation' (Required): The alert rule kind
-* **properties**: [MicrosoftSecurityIncidentCreationAlertRuleProperties](#microsoftsecurityincidentcreationalertruleproperties): MicrosoftSecurityIncidentCreation rule property bag.
+* **properties**: [MicrosoftSecurityIncidentCreationAlertRuleProperties](#microsoftsecurityincidentcreationalertruleproperties): MicrosoftSecurityIncidentCreation rule properties
 
 ### ScheduledAlertRule
 #### Properties
 * **kind**: 'Scheduled' (Required): The alert rule kind
-* **properties**: [ScheduledAlertRuleProperties](#scheduledalertruleproperties): Scheduled alert rule base property bag.
+* **properties**: [ScheduledAlertRuleProperties](#scheduledalertruleproperties): Scheduled alert rule properties
 
 
 ## Resource Microsoft.SecurityInsights/alertRules/actions@2021-10-01
@@ -34,8 +34,8 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ActionRequestProperties](#actionrequestproperties): Action property bag.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ActionRequestProperties](#actionrequestproperties): Action properties for put request
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/automationRules@2021-10-01
@@ -46,7 +46,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AutomationRuleProperties](#automationruleproperties) (Required): Automation rule properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/automationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/bookmarks@2021-10-01
@@ -56,8 +56,8 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BookmarkProperties](#bookmarkproperties): Describes bookmark properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [BookmarkProperties](#bookmarkproperties): Bookmark properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/bookmarks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/dataConnectors@2021-10-01
@@ -69,7 +69,7 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/dataConnectors' (ReadOnly, DeployTimeConstant): The resource type
 ### AwsCloudTrailDataConnector
 #### Properties
@@ -119,8 +119,8 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IncidentProperties](#incidentproperties): Describes incident properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [IncidentProperties](#incidentproperties): Incident properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/incidents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/incidents/comments@2021-10-01
@@ -130,8 +130,8 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IncidentCommentProperties](#incidentcommentproperties): Incident comment property bag.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [IncidentCommentProperties](#incidentcommentproperties): Incident comment properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/incidents/comments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/incidents/relations@2021-10-01
@@ -141,8 +141,8 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RelationProperties](#relationproperties): Relation property bag.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [RelationProperties](#relationproperties): Relation properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/incidents/relations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/onboardingStates@2021-10-01
@@ -152,8 +152,8 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SentinelOnboardingStateProperties](#sentinelonboardingstateproperties): The Sentinel onboarding state properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [SentinelOnboardingStateProperties](#sentinelonboardingstateproperties): The Sentinel onboarding state object
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/onboardingStates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/threatIntelligence/indicators@2021-10-01
@@ -163,8 +163,8 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ThreatIntelligenceIndicatorProperties](#threatintelligenceindicatorproperties) (WriteOnly): Describes threat intelligence entity properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ThreatIntelligenceIndicatorProperties](#threatintelligenceindicatorproperties) (WriteOnly): Threat Intelligence Entity properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/threatIntelligence/indicators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/watchlists@2021-10-01
@@ -174,8 +174,8 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WatchlistProperties](#watchlistproperties): Describes watchlist properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [WatchlistProperties](#watchlistproperties): Watchlist properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/watchlists' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/watchlists/watchlistItems@2021-10-01
@@ -185,18 +185,18 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WatchlistItemProperties](#watchlistitemproperties): Describes watchlist item properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [WatchlistItemProperties](#watchlistitemproperties): Watchlist Item properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/watchlists/watchlistItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AADDataConnectorProperties
 ### Properties
-* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
+* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): The available data types for the connector.
 * **tenantId**: string: The tenant id to connect to, and get the data from.
 
 ## AatpDataConnectorProperties
 ### Properties
-* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
+* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): The available data types for the connector.
 * **tenantId**: string: The tenant id to connect to, and get the data from.
 
 ## ActionRequestProperties
@@ -214,11 +214,11 @@
 
 ## AlertsDataTypeOfDataConnector
 ### Properties
-* **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Common field for data type in data connectors.
+* **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Alerts data type connection.
 
 ## ASCDataConnectorProperties
 ### Properties
-* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
+* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): The available data types for the connector.
 * **subscriptionId**: string: The subscription id to connect to, and get the data from.
 
 ## AutomationRuleAction
@@ -262,7 +262,7 @@
 ### Properties
 * **operator**: 'Contains' | 'EndsWith' | 'Equals' | 'NotContains' | 'NotEndsWith' | 'NotEquals' | 'NotStartsWith' | 'StartsWith' | string
 * **propertyName**: 'AccountAadTenantId' | 'AccountAadUserId' | 'AccountNTDomain' | 'AccountName' | 'AccountObjectGuid' | 'AccountPUID' | 'AccountSid' | 'AccountUPNSuffix' | 'AlertProductNames' | 'AzureResourceResourceId' | 'AzureResourceSubscriptionId' | 'CloudApplicationAppId' | 'CloudApplicationAppName' | 'DNSDomainName' | 'FileDirectory' | 'FileHashValue' | 'FileName' | 'HostAzureID' | 'HostNTDomain' | 'HostName' | 'HostNetBiosName' | 'HostOSVersion' | 'IPAddress' | 'IncidentDescription' | 'IncidentLabel' | 'IncidentProviderName' | 'IncidentRelatedAnalyticRuleIds' | 'IncidentSeverity' | 'IncidentStatus' | 'IncidentTactics' | 'IncidentTitle' | 'IoTDeviceId' | 'IoTDeviceModel' | 'IoTDeviceName' | 'IoTDeviceOperatingSystem' | 'IoTDeviceType' | 'IoTDeviceVendor' | 'MailMessageDeliveryAction' | 'MailMessageDeliveryLocation' | 'MailMessageP1Sender' | 'MailMessageP2Sender' | 'MailMessageRecipient' | 'MailMessageSenderIP' | 'MailMessageSubject' | 'MailboxDisplayName' | 'MailboxPrimaryAddress' | 'MailboxUPN' | 'MalwareCategory' | 'MalwareName' | 'ProcessCommandLine' | 'ProcessId' | 'RegistryKey' | 'RegistryValueData' | 'Url' | string: The property to evaluate in an automation rule property condition
-* **propertyValues**: string[]: Array of AutomationRulePropertyValuesConditionPropertyValuesItem
+* **propertyValues**: string[]
 
 ## AutomationRuleTriggeringLogic
 ### Properties
@@ -283,15 +283,15 @@
 ## AwsCloudTrailDataConnectorProperties
 ### Properties
 * **awsRoleArn**: string: The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
-* **dataTypes**: [AwsCloudTrailDataConnectorDataTypes](#awscloudtraildataconnectordatatypes): The available data types for Amazon Web Services CloudTrail data connector.
+* **dataTypes**: [AwsCloudTrailDataConnectorDataTypes](#awscloudtraildataconnectordatatypes): The available data types for the connector.
 
 ## BookmarkProperties
 ### Properties
 * **created**: string: The time the bookmark was created
-* **createdBy**: [UserInfo](#userinfo): User information that made some action
+* **createdBy**: [UserInfo](#userinfo): Describes a user that created the bookmark
 * **displayName**: string (Required): The display name of the bookmark
 * **eventTime**: string: The bookmark event time
-* **incidentInfo**: [IncidentInfo](#incidentinfo): Describes related incident information for the bookmark
+* **incidentInfo**: [IncidentInfo](#incidentinfo): Describes an incident that relates to bookmark
 * **labels**: string[]: List of labels relevant to this bookmark
 * **notes**: string: The notes of the bookmark
 * **query**: string (Required): The query of the bookmark.
@@ -299,7 +299,7 @@
 * **queryResult**: string: The query result of the bookmark.
 * **queryStartTime**: string: The start time for the query
 * **updated**: string: The last time the bookmark was updated
-* **updatedBy**: [UserInfo](#userinfo): User information that made some action
+* **updatedBy**: [UserInfo](#userinfo): Describes a user that updated the bookmark
 
 ## ClientInfo
 ### Properties
@@ -338,7 +338,7 @@
 * **displayName**: string (ReadOnly): The display name for alerts created by this alert rule.
 * **enabled**: bool (Required): Determines whether this alert rule is enabled or disabled.
 * **lastModifiedUtc**: string (ReadOnly): The last time that this alert has been modified.
-* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (ReadOnly): The severity of the alert
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (ReadOnly): The severity for alerts created by this alert rule.
 * **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string[] (ReadOnly): The tactics of the alert rule
 
 ## GroupingConfiguration
@@ -361,7 +361,7 @@
 
 ## IncidentCommentProperties
 ### Properties
-* **author**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
+* **author**: [ClientInfo](#clientinfo) (ReadOnly): Describes the client that created the comment
 * **createdTimeUtc**: string (ReadOnly): The time the comment was created
 * **lastModifiedTimeUtc**: string (ReadOnly): The time the comment was updated
 * **message**: string (Required): The comment message
@@ -369,7 +369,7 @@
 ## IncidentConfiguration
 ### Properties
 * **createIncident**: bool (Required): Create incidents from alerts triggered by this analytics rule
-* **groupingConfiguration**: [GroupingConfiguration](#groupingconfiguration): Grouping configuration property bag.
+* **groupingConfiguration**: [GroupingConfiguration](#groupingconfiguration): Set how the alerts that are triggered by this analytics rule, are grouped into incidents
 
 ## IncidentInfo
 ### Properties
@@ -400,7 +400,7 @@
 
 ## IncidentProperties
 ### Properties
-* **additionalData**: [IncidentAdditionalData](#incidentadditionaldata) (ReadOnly): Incident additional data property bag.
+* **additionalData**: [IncidentAdditionalData](#incidentadditionaldata) (ReadOnly): Additional data on the incident
 * **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined' | string: The reason the incident was closed
 * **classificationComment**: string: Describes the reason the incident was closed
 * **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected' | string: The classification reason the incident was closed with
@@ -412,7 +412,7 @@
 * **labels**: [IncidentLabel](#incidentlabel)[]: List of labels relevant to this incident
 * **lastActivityTimeUtc**: string: The time of the last activity in the incident
 * **lastModifiedTimeUtc**: string (ReadOnly): The last time the incident was updated
-* **owner**: [IncidentOwnerInfo](#incidentownerinfo): Information on the user an incident is assigned to
+* **owner**: [IncidentOwnerInfo](#incidentownerinfo): Describes a user that the incident is assigned to
 * **relatedAnalyticRuleIds**: string[] (ReadOnly): List of resource ids of Analytic rules related to the incident
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (Required): The severity of the incident
 * **status**: 'Active' | 'Closed' | 'New' | string (Required): The status of the incident
@@ -430,17 +430,17 @@
 
 ## McasDataConnectorDataTypes
 ### Properties
-* **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Common field for data type in data connectors.
-* **discoveryLogs**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Common field for data type in data connectors.
+* **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Alerts data type connection.
+* **discoveryLogs**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Discovery log data type connection.
 
 ## McasDataConnectorProperties
 ### Properties
-* **dataTypes**: [McasDataConnectorDataTypes](#mcasdataconnectordatatypes): The available data types for MCAS (Microsoft Cloud App Security) data connector.
+* **dataTypes**: [McasDataConnectorDataTypes](#mcasdataconnectordatatypes): The available data types for the connector.
 * **tenantId**: string: The tenant id to connect to, and get the data from.
 
 ## MdatpDataConnectorProperties
 ### Properties
-* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
+* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): The available data types for the connector.
 * **tenantId**: string: The tenant id to connect to, and get the data from.
 
 ## MicrosoftSecurityIncidentCreationAlertRuleProperties
@@ -475,7 +475,7 @@
 
 ## OfficeDataConnectorProperties
 ### Properties
-* **dataTypes**: [OfficeDataConnectorDataTypes](#officedataconnectordatatypes): The available data types for office data connector.
+* **dataTypes**: [OfficeDataConnectorDataTypes](#officedataconnectordatatypes): The available data types for the connector.
 * **tenantId**: string: The tenant id to connect to, and get the data from.
 
 ## PlaybookActionProperties
@@ -497,20 +497,20 @@
 
 ## ScheduledAlertRuleProperties
 ### Properties
-* **alertDetailsOverride**: [AlertDetailsOverride](#alertdetailsoverride): Settings for how to dynamically override alert static details
+* **alertDetailsOverride**: [AlertDetailsOverride](#alertdetailsoverride): The alert details override settings
 * **alertRuleTemplateName**: string: The Name of the alert rule template used to create this rule.
 * **customDetails**: [ScheduledAlertRuleCommonPropertiesCustomDetails](#scheduledalertrulecommonpropertiescustomdetails): Dictionary of string key-value pairs of columns to be attached to the alert
 * **description**: string: The description of the alert rule.
 * **displayName**: string (Required): The display name for alerts created by this alert rule.
 * **enabled**: bool (Required): Determines whether this alert rule is enabled or disabled.
-* **entityMappings**: [EntityMapping](#entitymapping)[]: List of entity mappings of the alert rule
-* **eventGroupingSettings**: [EventGroupingSettings](#eventgroupingsettings): Event grouping settings property bag.
-* **incidentConfiguration**: [IncidentConfiguration](#incidentconfiguration): Incident Configuration property bag.
+* **entityMappings**: [EntityMapping](#entitymapping)[]: Array of the entity mappings of the alert rule
+* **eventGroupingSettings**: [EventGroupingSettings](#eventgroupingsettings): The event grouping settings.
+* **incidentConfiguration**: [IncidentConfiguration](#incidentconfiguration): The settings of the incidents that created from alerts triggered by this analytics rule
 * **lastModifiedUtc**: string (ReadOnly): The last time that this alert rule has been modified.
 * **query**: string: The query that creates alerts for this rule.
 * **queryFrequency**: string: The frequency (in ISO 8601 duration format) for this alert rule to run.
 * **queryPeriod**: string: The period (in ISO 8601 duration format) that this alert rule looks at.
-* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string: The severity of the alert
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string: The severity for alerts created by this alert rule.
 * **suppressionDuration**: string (Required): The suppression (in ISO 8601 duration format) to wait since last time this alert rule been triggered.
 * **suppressionEnabled**: bool (Required): Determines whether the suppression for this alert rule is enabled or disabled.
 * **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string[]: The tactics of the alert rule
@@ -529,7 +529,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## ThreatIntelligenceExternalReference
 ### Properties
@@ -613,7 +613,7 @@
 
 ## TIDataConnectorProperties
 ### Properties
-* **dataTypes**: [TIDataConnectorDataTypes](#tidataconnectordatatypes): The available data types for TI (Threat Intelligence) data connector.
+* **dataTypes**: [TIDataConnectorDataTypes](#tidataconnectordatatypes): The available data types for the connector.
 * **tenantId**: string: The tenant id to connect to, and get the data from.
 * **tipLookbackPeriod**: string: The lookback period for the feed to be imported.
 
@@ -626,13 +626,13 @@
 ## WatchlistItemProperties
 ### Properties
 * **created**: string: The time the watchlist item was created
-* **createdBy**: [UserInfo](#userinfo): User information that made some action
-* **entityMapping**: any: Any object
+* **createdBy**: [UserInfo](#userinfo): Describes a user that created the watchlist item
+* **entityMapping**: any: key-value pairs for a watchlist item entity mapping
 * **isDeleted**: bool: A flag that indicates if the watchlist item is deleted or not
-* **itemsKeyValue**: any (Required): Any object
+* **itemsKeyValue**: any (Required): key-value pairs for a watchlist item
 * **tenantId**: string: The tenantId to which the watchlist item belongs to
 * **updated**: string: The last time the watchlist item was updated
-* **updatedBy**: [UserInfo](#userinfo): User information that made some action
+* **updatedBy**: [UserInfo](#userinfo): Describes a user that updated the watchlist item
 * **watchlistItemId**: string: The id (a Guid) of the watchlist item
 * **watchlistItemType**: string: The type of the watchlist item
 
@@ -640,7 +640,7 @@
 ### Properties
 * **contentType**: string: The content type of the raw content. For now, only text/csv is valid
 * **created**: string: The time the watchlist was created
-* **createdBy**: [UserInfo](#userinfo): User information that made some action
+* **createdBy**: [UserInfo](#userinfo): Describes a user that created the watchlist
 * **defaultDuration**: string: The default duration of a watchlist (in ISO 8601 duration format)
 * **description**: string: A description of the watchlist
 * **displayName**: string (Required): The display name of the watchlist
@@ -655,7 +655,7 @@ value1,value2
 * **source**: 'Local file' | 'Remote storage' | string (Required): The source of the watchlist
 * **tenantId**: string: The tenantId where the watchlist belongs to
 * **updated**: string: The last time the watchlist was updated
-* **updatedBy**: [UserInfo](#userinfo): User information that made some action
+* **updatedBy**: [UserInfo](#userinfo): Describes a user that updated the watchlist
 * **uploadStatus**: string: The status of the Watchlist upload : New, InProgress or Complete. **Note** : When a Watchlist upload status is InProgress, the Watchlist cannot be deleted
 * **watchlistAlias**: string: The alias of the watchlist
 * **watchlistId**: string: The id (a Guid) of the watchlist

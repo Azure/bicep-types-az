@@ -9,8 +9,8 @@
 * **kind**: string: The resource kind. Only 'vm' (the default) is supported.
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DataMigrationServiceProperties](#datamigrationserviceproperties): Properties of the Data Migration service instance
-* **sku**: [ServiceSku](#servicesku): An Azure SKU instance
+* **properties**: [DataMigrationServiceProperties](#datamigrationserviceproperties): Custom service properties
+* **sku**: [ServiceSku](#servicesku): Service SKU
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DataMigration/services' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -21,7 +21,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ProjectProperties](#projectproperties): Project-specific properties
+* **properties**: [ProjectProperties](#projectproperties): Project properties
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DataMigration/services/projects' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -32,7 +32,7 @@
 * **etag**: string: HTTP strong entity tag value. This is ignored if submitted.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ProjectTaskProperties](#projecttaskproperties): Base class for all types of DMS task properties. If task is not supported by current client, this object is returned.
+* **properties**: [ProjectTaskProperties](#projecttaskproperties): Custom task properties
 * **type**: 'Microsoft.DataMigration/services/projects/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ConnectionInfo
@@ -44,7 +44,7 @@
 ### SqlConnectionInfo
 #### Properties
 * **additionalSettings**: string: Additional connection settings
-* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': An enumeration of possible authentication types when connecting
+* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': Authentication type to use for connection
 * **dataSource**: string (Required): Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
 * **encryptConnection**: bool: Whether to encrypt the connection
 * **trustServerCertificate**: bool: Whether to trust the server certificate
@@ -53,8 +53,8 @@
 
 ## ConnectToSourceSqlServerTaskInput
 ### Properties
-* **checkPermissionsGroup**: 'Default' | 'MigrationFromSqlServerToAzureDB': Permission group for validations. These groups will run a set of permissions for validating user activity. Select the permission group for the activity that you are performing.
-* **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Information for connecting to SQL database server
+* **checkPermissionsGroup**: 'Default' | 'MigrationFromSqlServerToAzureDB': Permission group for validations
+* **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Connection information for Source SQL Server
 
 ## ConnectToSourceSqlServerTaskOutput
 * **Discriminator**: resultType
@@ -63,9 +63,9 @@
 * **id**: string (ReadOnly): Result identifier
 ### ConnectToSourceSqlServerTaskOutputDatabaseLevel
 #### Properties
-* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): An enumeration of SQL Server database compatibility levels
+* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): SQL Server compatibility level of database
 * **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly): The list of database files
-* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): An enumeration of SQL Server Database states
+* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database
 * **name**: string (ReadOnly): Database name
 * **resultType**: 'DatabaseLevelOutput' (Required): Type of result - database level or task level
 * **sizeMB**: int (ReadOnly): Size of the file in megabytes
@@ -81,7 +81,7 @@
 
 ## ConnectToTargetSqlDbTaskInput
 ### Properties
-* **targetConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Information for connecting to SQL database server
+* **targetConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Connection information for target SQL DB
 
 ## ConnectToTargetSqlDbTaskOutput
 ### Properties
@@ -93,7 +93,7 @@
 ## DatabaseFileInfo
 ### Properties
 * **databaseName**: string: Name of the database
-* **fileType**: 'Filestream' | 'Fulltext' | 'Log' | 'NotSupported' | 'Rows': An enumeration of SQL Server database file types
+* **fileType**: 'Filestream' | 'Fulltext' | 'Log' | 'NotSupported' | 'Rows': Database file type
 * **id**: string: Unique identifier for database file
 * **logicalName**: string: Logical name of the file
 * **physicalFullName**: string: Operating-system full path of the file
@@ -112,7 +112,7 @@
 
 ## GetUserTablesSqlTaskInput
 ### Properties
-* **connectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Information for connecting to SQL database server
+* **connectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Connection information for SQL Server
 * **selectedDatabases**: string[] (Required): List of database names to collect tables for
 
 ## GetUserTablesSqlTaskOutput
@@ -136,9 +136,11 @@
 ## MigrateSqlServerSqlDbTaskInput
 ### Properties
 * **selectedDatabases**: [MigrateSqlServerSqlDbDatabaseInput](#migratesqlserversqldbdatabaseinput)[] (Required): Databases to migrate
-* **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Information for connecting to SQL database server
-* **targetConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Information for connecting to SQL database server
-* **validationOptions**: [MigrationValidationOptions](#migrationvalidationoptions): Types of validations to run after the migration
+* **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Information for connecting to source
+* **targetConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Information for connecting to target
+* **validationOptions**: [MigrationValidationOptions](#migrationvalidationoptions): Options for enabling various post migration validations. Available options, 
+ 1.) Data Integrity Check: Performs a checksum based comparison on source and target tables after the migration to ensure the correctness of the data. 
+ 2.) Schema Validation: Performs a thorough schema comparison between the source and target tables and provides a list of differences between the source and target database, 3.) Query Analysis: Executes a set of queries picked up automatically either from the Query Plan Cache or Query Store and execute them and compares the execution time between the source and target database.
 
 ## MigrateSqlServerSqlDbTaskOutput
 * **Discriminator**: resultType
@@ -158,14 +160,14 @@
 * **objectSummary**: string (ReadOnly): Summary of object results in the migration
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
 * **resultType**: 'DatabaseLevelOutput' (Required): Result type
-* **stage**: 'Backup' | 'Completed' | 'FileCopy' | 'Initialize' | 'None' | 'Restore' (ReadOnly): Current stage of migration
+* **stage**: 'Backup' | 'Completed' | 'FileCopy' | 'Initialize' | 'None' | 'Restore' (ReadOnly): Migration stage that this database is in
 * **startedOn**: string (ReadOnly): Migration start time
 * **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
 * **statusMessage**: string (ReadOnly): Status message
 
 ### MigrateSqlServerSqlDbTaskOutputError
 #### Properties
-* **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
+* **error**: [ReportableException](#reportableexception) (ReadOnly): Migration error
 * **resultType**: 'ErrorOutput' (Required): Result type
 
 ### MigrateSqlServerSqlDbTaskOutputMigrationLevel
@@ -176,7 +178,7 @@
 * **endedOn**: string (ReadOnly): Migration end time
 * **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly): Migration exceptions and warnings.
 * **message**: string (ReadOnly): Migration progress message
-* **migrationReportResult**: [MigrationReportResult](#migrationreportresult): Migration validation report result, contains the url for downloading the generated report.
+* **migrationReportResult**: [MigrationReportResult](#migrationreportresult): Migration Report Result, provides unique url for downloading your migration report.
 * **resultType**: 'MigrationLevelOutput' (Required): Result type
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
@@ -222,10 +224,10 @@
 * **creationTime**: string (ReadOnly): UTC Date and time when project was created
 * **databasesInfo**: [DatabaseInfo](#databaseinfo)[]: List of DatabaseInfo
 * **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly): The project's provisioning state
-* **sourceConnectionInfo**: [ConnectionInfo](#connectioninfo): Defines the connection properties of a server
-* **sourcePlatform**: 'SQL' | 'Unknown' (Required): Source platform of the project
-* **targetConnectionInfo**: [ConnectionInfo](#connectioninfo): Defines the connection properties of a server
-* **targetPlatform**: 'SQLDB' | 'Unknown' (Required): Target platform of the project
+* **sourceConnectionInfo**: [ConnectionInfo](#connectioninfo): Information for connecting to source
+* **sourcePlatform**: 'SQL' | 'Unknown' (Required): Source platform for the project
+* **targetConnectionInfo**: [ConnectionInfo](#connectioninfo): Information for connecting to target
+* **targetPlatform**: 'SQLDB' | 'Unknown' (Required): Target platform for the project
 
 ## ProjectTaskProperties
 * **Discriminator**: taskType
@@ -235,25 +237,25 @@
 * **state**: 'Canceled' | 'Failed' | 'FailedInputValidation' | 'Faulted' | 'Queued' | 'Running' | 'Succeeded' | 'Unknown' (ReadOnly): The state of the task. This is ignored if submitted.
 ### ConnectToSourceSqlServerTaskProperties
 #### Properties
-* **input**: [ConnectToSourceSqlServerTaskInput](#connecttosourcesqlservertaskinput): Input for the task that validates connection to SQL Server and also validates source server requirements
+* **input**: [ConnectToSourceSqlServerTaskInput](#connecttosourcesqlservertaskinput): Task input
 * **output**: [ConnectToSourceSqlServerTaskOutput](#connecttosourcesqlservertaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
 * **taskType**: 'ConnectToSource.SqlServer' (Required): Task type.
 
 ### ConnectToTargetSqlDbTaskProperties
 #### Properties
-* **input**: [ConnectToTargetSqlDbTaskInput](#connecttotargetsqldbtaskinput): Input for the task that validates connection to SQL DB and target server requirements
+* **input**: [ConnectToTargetSqlDbTaskInput](#connecttotargetsqldbtaskinput): Task input
 * **output**: [ConnectToTargetSqlDbTaskOutput](#connecttotargetsqldbtaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
 * **taskType**: 'ConnectToTarget.SqlDb' (Required): Task type.
 
 ### GetUserTablesSqlTaskProperties
 #### Properties
-* **input**: [GetUserTablesSqlTaskInput](#getusertablessqltaskinput): Input for the task that collects user tables for the given list of databases
+* **input**: [GetUserTablesSqlTaskInput](#getusertablessqltaskinput): Task input
 * **output**: [GetUserTablesSqlTaskOutput](#getusertablessqltaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
 * **taskType**: 'GetUserTables.Sql' (Required): Task type.
 
 ### MigrateSqlServerSqlDbTaskProperties
 #### Properties
-* **input**: [MigrateSqlServerSqlDbTaskInput](#migratesqlserversqldbtaskinput): Input for the task that migrates on-prem SQL Server databases to Azure SQL Database
+* **input**: [MigrateSqlServerSqlDbTaskInput](#migratesqlserversqldbtaskinput): Task input
 * **output**: [MigrateSqlServerSqlDbTaskOutput](#migratesqlserversqldbtaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
 * **taskType**: 'Migrate.SqlServer.SqlDb' (Required): Task type.
 
@@ -277,7 +279,7 @@
 ## SqlConnectionInfo
 ### Properties
 * **additionalSettings**: string: Additional connection settings
-* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': An enumeration of possible authentication types when connecting
+* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': Authentication type to use for connection
 * **dataSource**: string (Required): Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
 * **encryptConnection**: bool: Whether to encrypt the connection
 * **password**: string: Password credential.

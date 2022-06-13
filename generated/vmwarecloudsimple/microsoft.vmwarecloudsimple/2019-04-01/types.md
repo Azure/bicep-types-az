@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Azure region
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DedicatedCloudNodeProperties](#dedicatedcloudnodeproperties): Properties of dedicated cloud node
-* **sku**: [Sku](#sku): The purchase SKU for CloudSimple paid resources
-* **tags**: [Tags](#tags): Tags model
+* **properties**: [DedicatedCloudNodeProperties](#dedicatedcloudnodeproperties): Dedicated Cloud Nodes properties
+* **sku**: [Sku](#sku): Dedicated Cloud Nodes SKU
+* **tags**: [Tags](#tags): Dedicated Cloud Nodes tags
 * **type**: 'Microsoft.VMwareCloudSimple/dedicatedCloudNodes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.VMwareCloudSimple/dedicatedCloudServices@2019-04-01
@@ -19,8 +19,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Azure region
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DedicatedCloudServiceProperties](#dedicatedcloudserviceproperties): Properties of dedicated cloud service
-* **tags**: [Tags](#tags): Tags model
+* **properties**: [DedicatedCloudServiceProperties](#dedicatedcloudserviceproperties): The properties of Dedicated Node Service
+* **tags**: [Tags](#tags): The list of tags
 * **type**: 'Microsoft.VMwareCloudSimple/dedicatedCloudServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.VMwareCloudSimple/virtualMachines@2019-04-01
@@ -30,8 +30,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Azure region
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualMachineProperties](#virtualmachineproperties): Properties of virtual machine
-* **tags**: [Tags](#tags): Tags model
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties): Virtual machine properties
+* **tags**: [Tags](#tags): The list of tags
 * **type**: 'Microsoft.VMwareCloudSimple/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DedicatedCloudNodeProperties
@@ -47,7 +47,7 @@
 * **privateCloudName**: string (ReadOnly): Resource Pool Name
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource
 * **purchaseId**: string (Required): purchase id
-* **skuDescription**: [SkuDescription](#skudescription): The purchase SKU for CloudSimple paid resources
+* **skuDescription**: [SkuDescription](#skudescription): Dedicated Cloud Nodes SKU's description
 * **status**: 'unused' | 'used' (ReadOnly): Node status, indicates is private cloud set up on this node or not
 * **vmwareClusterName**: string (ReadOnly): VMWare Cluster Name
 
@@ -71,10 +71,10 @@
 * **allocation**: 'dynamic' | 'static' | string: IP address allocation method
 * **dnsServers**: string[]: List of dns servers to use
 * **gateway**: string[]: Gateway addresses assigned to nic
-* **ipAddress**: string
-* **mask**: string
-* **primaryWinsServer**: string
-* **secondaryWinsServer**: string
+* **ipAddress**: string: Static ip address for nic
+* **mask**: string: Network mask for nic
+* **primaryWinsServer**: string: primary WINS server for Windows
+* **secondaryWinsServer**: string: secondary WINS server for Windows
 
 ## ResourcePool
 ### Properties
@@ -82,7 +82,7 @@
 * **location**: string (ReadOnly): Azure region
 * **name**: string (ReadOnly): {ResourcePoolName}
 * **privateCloudId**: string (ReadOnly): The Private Cloud Id
-* **properties**: [ResourcePoolProperties](#resourcepoolproperties): Properties of resource pool
+* **properties**: [ResourcePoolProperties](#resourcepoolproperties): Resource pool properties
 * **type**: string (ReadOnly): {resourceProviderNamespace}/{resourceType}
 
 ## ResourcePoolProperties
@@ -136,7 +136,7 @@
 ### Properties
 * **amountOfRam**: int (Required): The amount of memory
 * **controllers**: [VirtualDiskController](#virtualdiskcontroller)[] (ReadOnly): The list of Virtual Disks' Controllers
-* **customization**: [GuestOSCustomization](#guestoscustomization): Guest OS Customization properties
+* **customization**: [GuestOSCustomization](#guestoscustomization): Virtual machine properties
 * **disks**: [VirtualDisk](#virtualdisk)[]: The list of Virtual Disks
 * **dnsname**: string (ReadOnly): The DNS name of Virtual Machine in VCenter
 * **exposeToGuestVM**: bool: Expose Guest OS or not
@@ -149,7 +149,7 @@
 * **privateCloudId**: string (Required): Private Cloud Id
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource
 * **publicIP**: string (ReadOnly): The public ip of Virtual Machine
-* **resourcePool**: [ResourcePool](#resourcepool): Resource pool model
+* **resourcePool**: [ResourcePool](#resourcepool): Virtual Machines Resource Pool
 * **status**: 'deallocating' | 'deleting' | 'poweredoff' | 'running' | 'suspended' | 'updating' (ReadOnly): The status of Virtual machine
 * **templateId**: string: Virtual Machine Template Id
 * **username**: string: Username for login. Deprecated - use customization property
@@ -163,7 +163,7 @@
 * **id**: string (Required): virtual network id (privateCloudId:vsphereId)
 * **location**: string (ReadOnly): Azure region
 * **name**: string (ReadOnly): {VirtualNetworkName}
-* **properties**: [VirtualNetworkProperties](#virtualnetworkproperties): Properties of virtual network
+* **properties**: [VirtualNetworkProperties](#virtualnetworkproperties): Virtual Network properties
 * **type**: string (ReadOnly): {resourceProviderNamespace}/{resourceType}
 
 ## VirtualNetworkProperties
@@ -172,10 +172,10 @@
 
 ## VirtualNic
 ### Properties
-* **customization**: [GuestOsnicCustomization](#guestosniccustomization): Guest OS nic customization
+* **customization**: [GuestOsnicCustomization](#guestosniccustomization): guest OS customization for nic
 * **ipAddresses**: string[]: NIC ip address
 * **macAddress**: string: NIC MAC address
-* **network**: [VirtualNetwork](#virtualnetwork) (Required): Virtual network model
+* **network**: [VirtualNetwork](#virtualnetwork) (Required): Virtual Network
 * **nicType**: 'E1000' | 'E1000E' | 'PCNET32' | 'VMXNET' | 'VMXNET2' | 'VMXNET3' (Required): NIC type
 * **powerOnBoot**: bool: Is NIC powered on/off on boot
 * **virtualNicId**: string: NIC id

@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PipelineProperties](#pipelineproperties) (Required): Custom properties of a Pipeline.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [PipelineProperties](#pipelineproperties) (Required): Custom properties of the Pipeline.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata pertaining to this resource.
 * **tags**: [ResourceTags](#resourcetags): Resource Tags
 * **type**: 'Microsoft.DevOps/pipelines' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -24,12 +24,12 @@
 
 ## BootstrapConfiguration
 ### Properties
-* **sourceRepository**: [CodeRepository](#coderepository): Repository containing the source code for a pipeline.
+* **sourceRepository**: [CodeRepository](#coderepository): Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.
 * **template**: [PipelineTemplate](#pipelinetemplate) (Required): Template used to bootstrap the pipeline.
 
 ## CodeRepository
 ### Properties
-* **authorization**: [Authorization](#authorization): Authorization info used to access a resource (like code repository).
+* **authorization**: [Authorization](#authorization): Authorization info to access the code repository.
 * **defaultBranch**: string (Required): Default branch used to configure Continuous Integration (CI) in the pipeline.
 * **id**: string (Required): Unique immutable identifier of the code repository.
 * **properties**: [CodeRepositoryProperties](#coderepositoryproperties): Repository-specific properties.
@@ -49,18 +49,18 @@
 * **Discriminator**: pipelineType
 
 ### Base Properties
-* **bootstrapConfiguration**: [BootstrapConfiguration](#bootstrapconfiguration) (Required): Configuration used to bootstrap a Pipeline.
+* **bootstrapConfiguration**: [BootstrapConfiguration](#bootstrapconfiguration) (Required): Configuration used to bootstrap the Pipeline.
 * **pipelineId**: int (ReadOnly): Unique identifier of the Pipeline
 ### AzurePipelineProperties
 #### Properties
-* **organization**: [OrganizationReference](#organizationreference) (Required): Reference to an Azure DevOps Organization.
+* **organization**: [OrganizationReference](#organizationreference) (Required): Reference to the Azure DevOps Organization containing the Pipeline. Required for 'azurePipeline' pipeline type.
 * **pipelineType**: 'azurePipeline' (Required): Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
-* **project**: [ProjectReference](#projectreference) (Required): Reference to an Azure DevOps Project.
+* **project**: [ProjectReference](#projectreference) (Required): Reference to the Azure DevOps Project containing the Pipeline. Required for 'azurePipeline' pipeline type.
 
 ### GithubWorkflowProperties
 #### Properties
 * **pipelineType**: 'githubWorkflow' (Required): Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
-* **repository**: [CodeRepository](#coderepository) (Required): Repository containing the source code for a pipeline.
+* **repository**: [CodeRepository](#coderepository) (Required): Contains the specifications of the repository to be created for generating the workflow. Required for 'githubWorkflow' pipeline type.
 
 
 ## PipelineTemplate
@@ -90,5 +90,5 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 

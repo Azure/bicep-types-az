@@ -50,14 +50,14 @@
 * **eTag**: string (ReadOnly): Gets the tag for optimistic concurrency control.
 * **id**: string (ReadOnly): Relative URL to get this Sites.
 * **name**: string (ReadOnly): Gets the name of the resource.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Properties of a private endpoint connection.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Gets the properties of the object.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: string (ReadOnly): Gets the resource type.
 
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **privateEndpoint**: [ResourceId](#resourceid) (ReadOnly)
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Private endpoint connection state.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Gets the properties of the object.
 * **provisioningState**: 'Accepted' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state.
 
 ## PrivateLinkServiceConnectionState
@@ -89,5 +89,5 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 

@@ -6,11 +6,11 @@
 * **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ArmIdentity](#armidentity): The set of ARM identities associated with the IoT DPS resource.
+* **identity**: [ArmIdentity](#armidentity): The managed identities for the IotDps instance.
 * **location**: string (Required): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IotDpsPropertiesDescription](#iotdpspropertiesdescription) (Required): the service specific properties of a provisioning service, including keys, linked iot hubs, current state, and system generated properties such as hostname and idScope
-* **sku**: [IotDpsSkuInfo](#iotdpsskuinfo) (Required): List of possible provisioning service SKUs.
+* **properties**: [IotDpsPropertiesDescription](#iotdpspropertiesdescription) (Required): Service specific properties for a provisioning service
+* **sku**: [IotDpsSkuInfo](#iotdpsskuinfo) (Required): Sku info for a provisioning Service.
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Devices/provisioningServices' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -22,7 +22,7 @@
 * **etag**: string (ReadOnly): The entity tag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CertificateProperties](#certificateproperties) (ReadOnly): The description of an X509 CA Certificate.
+* **properties**: [CertificateProperties](#certificateproperties) (ReadOnly): properties of a certificate
 * **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Devices/provisioningServices/privateEndpointConnections@2020-09-01-preview
@@ -76,7 +76,7 @@
 
 ## EncryptionPropertiesDescription
 ### Properties
-* **identity**: [EncryptionKeyIdentity](#encryptionkeyidentity): The properties of the identity used to access the key encryption key in KeyVault.
+* **identity**: [EncryptionKeyIdentity](#encryptionkeyidentity): The identity used to access the encryption key in KeyVault.
 * **keySource**: string: The source of the encryption key. Typically, Microsoft.KeyVault
 * **keyVaultProperties**: [KeyVaultKeyProperties](#keyvaultkeyproperties)[]: The properties of the encryption key configured in KeyVault.
 
@@ -85,7 +85,7 @@
 * **allocationPolicy**: 'GeoLatency' | 'Hashed' | 'Static' | string: Allocation policy to be used by this provisioning service.
 * **authorizationPolicies**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[]: List of authorization keys for a provisioning service.
 * **deviceProvisioningHostName**: string (ReadOnly): Device endpoint for this provisioning service.
-* **encryption**: [EncryptionPropertiesDescription](#encryptionpropertiesdescription): The customer-managed encryption key (CMK) properties for the IoT DPS instance.
+* **encryption**: [EncryptionPropertiesDescription](#encryptionpropertiesdescription): The encryption properties for the IoT DPS instance.
 * **idScope**: string (ReadOnly): Unique identifier of this provisioning service.
 * **iotHubs**: [IotHubDefinitionDescription](#iothubdefinitiondescription)[]: List of IoT hubs associated with this provisioning service.
 * **ipFilterRules**: [IpFilterRule](#ipfilterrule)[]: The IP filter rules.

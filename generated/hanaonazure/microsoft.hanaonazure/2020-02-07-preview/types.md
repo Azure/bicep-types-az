@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SapMonitorProperties](#sapmonitorproperties): Describes the properties of a SAP monitor.
+* **properties**: [SapMonitorProperties](#sapmonitorproperties): SAP monitor properties
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HanaOnAzure/sapMonitors' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -17,14 +17,14 @@
 * **apiVersion**: '2020-02-07-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ProviderInstanceProperties](#providerinstanceproperties): Describes the properties of a provider instance.
+* **properties**: [ProviderInstanceProperties](#providerinstanceproperties): Provider Instance properties
 * **type**: 'Microsoft.HanaOnAzure/sapMonitors/providerInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ProviderInstanceProperties
 ### Properties
 * **metadata**: string: A JSON string containing metadata of the provider instance.
 * **properties**: string: A JSON string containing the properties of the provider instance.
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' | string (ReadOnly): State of provisioning of the HanaInstance
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' | string (ReadOnly): State of provisioning of the provider instance
 * **type**: string: The type of provider instance.
 
 ## SapMonitorProperties

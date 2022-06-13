@@ -151,10 +151,10 @@
 * **dataFormatId**: string (ReadOnly): The DataFormat ID.
 * **description**: string: The description of the connector mapping.
 * **displayName**: string: Display name for the connector mapping.
-* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): Type of entity.
+* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): Defines which entity type the file should map to.
 * **entityTypeName**: string (Required): The mapping entity name.
 * **lastModified**: string (ReadOnly): The last modified time.
-* **mappingProperties**: [ConnectorMappingProperties](#connectormappingproperties) (Required): The connector mapping properties.
+* **mappingProperties**: [ConnectorMappingProperties](#connectormappingproperties) (Required): The properties of the mapping.
 * **nextRunTime**: string (ReadOnly): The next run time based on customer's settings.
 * **runId**: string (ReadOnly): The RunId.
 * **state**: 'Created' | 'Creating' | 'Expiring' | 'Failed' | 'Ready' | 'Running' | 'Stopped' (ReadOnly): State of connector mapping.
@@ -186,12 +186,12 @@
 
 ## ConnectorMappingProperties
 ### Properties
-* **availability**: [ConnectorMappingAvailability](#connectormappingavailability) (Required): Connector mapping property availability.
-* **completeOperation**: [ConnectorMappingCompleteOperation](#connectormappingcompleteoperation) (Required): The complete operation.
-* **errorManagement**: [ConnectorMappingErrorManagement](#connectormappingerrormanagement) (Required): The error management.
+* **availability**: [ConnectorMappingAvailability](#connectormappingavailability) (Required): The availability of mapping property.
+* **completeOperation**: [ConnectorMappingCompleteOperation](#connectormappingcompleteoperation) (Required): The operation after import is done.
+* **errorManagement**: [ConnectorMappingErrorManagement](#connectormappingerrormanagement) (Required): The error management setting for the mapping.
 * **fileFilter**: string: The file filter for the mapping.
 * **folderPath**: string: The folder path for the mapping.
-* **format**: [ConnectorMappingFormat](#connectormappingformat) (Required): Connector mapping property format.
+* **format**: [ConnectorMappingFormat](#connectormappingformat) (Required): The format of mapping property.
 * **hasHeader**: bool: If the file contains a header or not.
 * **structure**: [ConnectorMappingStructure](#connectormappingstructure)[] (Required): Ingestion mapping information at property level.
 
@@ -239,7 +239,7 @@
 ## HubPropertiesFormat
 ### Properties
 * **apiEndpoint**: string (ReadOnly): API endpoint URL of the hub.
-* **hubBillingInfo**: [HubBillingInfoFormat](#hubbillinginfoformat): Hub billing info.
+* **hubBillingInfo**: [HubBillingInfoFormat](#hubbillinginfoformat): Billing settings of the hub.
 * **provisioningState**: string (ReadOnly): Provisioning state of the hub.
 * **tenantFeatures**: int: The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.
 * **webEndpoint**: string (ReadOnly): Web endpoint URL of the hub.
@@ -249,7 +249,7 @@
 * **apiEntitySetName**: string: The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
 * **attributes**: [MetadataDefinitionBaseAttributes](#metadatadefinitionbaseattributes): The attributes for the Type.
 * **dataSourcePrecedenceRules**: [DataSourcePrecedence](#datasourceprecedence)[] (ReadOnly): This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.
-* **defaultDataSource**: [DataSource](#datasource): Data Source is a way for us to know the source of instances. A single type can have data coming in from multiple places. In activities we use this to determine precedence rules.
+* **defaultDataSource**: [DataSource](#datasource): Default data source is specifically used in cases where data source is not specified in an instance.
 * **description**: [MetadataDefinitionBaseDescription](#metadatadefinitionbasedescription): Localized descriptions for the property.
 * **displayName**: [MetadataDefinitionBaseDisplayName](#metadatadefinitionbasedisplayname): Localized display names for the property.
 * **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship': Type of entity.
@@ -282,7 +282,7 @@
 * **calculationWindowFieldName**: string: Name of calculation window field.
 * **description**: [KpiDefinitionDescription](#kpidefinitiondescription): Localized description for the KPI.
 * **displayName**: [KpiDefinitionDisplayName](#kpidefinitiondisplayname): Localized display name for the KPI.
-* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): Type of entity.
+* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): The mapping entity type.
 * **entityTypeName**: string (Required): The mapping entity name.
 * **expression**: string (Required): The computation expression for the KPI.
 * **extracts**: [KpiExtract](#kpiextract)[]: The KPI extracts.
@@ -294,7 +294,7 @@
 * **participantProfilesMetadata**: [KpiParticipantProfilesMetadata](#kpiparticipantprofilesmetadata)[] (ReadOnly): The participant profiles.
 * **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state.
 * **tenantId**: string (ReadOnly): The hub name.
-* **thresHolds**: [KpiThresholds](#kpithresholds): Defines the KPI Threshold limits.
+* **thresHolds**: [KpiThresholds](#kpithresholds): The KPI thresholds.
 * **unit**: string: The unit of measurement for the KPI.
 
 ## KpiDefinitionDescription
@@ -548,25 +548,25 @@
 ## RoleAssignment
 ### Properties
 * **assignmentName**: string (ReadOnly): The name of the metadata object.
-* **conflationPolicies**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
-* **connectors**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
+* **conflationPolicies**: [ResourceSetDescription](#resourcesetdescription): Widget types set for the assignment.
+* **connectors**: [ResourceSetDescription](#resourcesetdescription): Connectors set for the assignment.
 * **description**: [RoleAssignmentDescription](#roleassignmentdescription): Localized description for the metadata.
 * **displayName**: [RoleAssignmentDisplayName](#roleassignmentdisplayname): Localized display names for the metadata.
-* **interactions**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
-* **kpis**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
-* **links**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
+* **interactions**: [ResourceSetDescription](#resourcesetdescription): Interactions set for the assignment.
+* **kpis**: [ResourceSetDescription](#resourcesetdescription): Kpis set for the assignment.
+* **links**: [ResourceSetDescription](#resourcesetdescription): Links set for the assignment.
 * **principals**: [AssignmentPrincipal](#assignmentprincipal)[] (Required): The principals being assigned to.
-* **profiles**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
+* **profiles**: [ResourceSetDescription](#resourcesetdescription): Profiles set for the assignment.
 * **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state.
-* **relationshipLinks**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
-* **relationships**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
+* **relationshipLinks**: [ResourceSetDescription](#resourcesetdescription): The Role assignments set for the relationship links.
+* **relationships**: [ResourceSetDescription](#resourcesetdescription): The Role assignments set for the relationships.
 * **role**: 'Admin' | 'DataAdmin' | 'DataReader' | 'ManageAdmin' | 'ManageReader' | 'Reader' (Required): Type of roles.
-* **roleAssignments**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
-* **sasPolicies**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
-* **segments**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
+* **roleAssignments**: [ResourceSetDescription](#resourcesetdescription): The Role assignments set for the assignment.
+* **sasPolicies**: [ResourceSetDescription](#resourcesetdescription): Sas Policies set for the assignment.
+* **segments**: [ResourceSetDescription](#resourcesetdescription): The Role assignments set for the assignment.
 * **tenantId**: string (ReadOnly): The hub name.
-* **views**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
-* **widgetTypes**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
+* **views**: [ResourceSetDescription](#resourcesetdescription): Views set for the assignment.
+* **widgetTypes**: [ResourceSetDescription](#resourcesetdescription): Widget types set for the assignment.
 
 ## RoleAssignmentDescription
 ### Properties

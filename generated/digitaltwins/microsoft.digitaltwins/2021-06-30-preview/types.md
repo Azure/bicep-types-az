@@ -8,8 +8,8 @@
 * **identity**: [DigitalTwinsIdentity](#digitaltwinsidentity): The managed identity for the DigitalTwinsInstance.
 * **location**: string (Required): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DigitalTwinsProperties](#digitaltwinsproperties): The properties of a DigitalTwinsInstance.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [DigitalTwinsProperties](#digitaltwinsproperties): DigitalTwins instance properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the DigitalTwinsInstance.
 * **tags**: [DigitalTwinsResourceTags](#digitaltwinsresourcetags): The resource tags.
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,7 +19,7 @@
 * **apiVersion**: '2021-06-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DigitalTwinsEndpointResourceProperties](#digitaltwinsendpointresourceproperties) (Required): Properties related to Digital Twins Endpoint
+* **properties**: [DigitalTwinsEndpointResourceProperties](#digitaltwinsendpointresourceproperties) (Required): DigitalTwinsInstance endpoint resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -29,8 +29,8 @@
 * **apiVersion**: '2021-06-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConnectionProperties](#connectionproperties) (Required): The properties of a private endpoint connection.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ConnectionProperties](#connectionproperties) (Required): The connection properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the private endpoint connection.
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DigitalTwins/digitalTwinsInstances/timeSeriesDatabaseConnections@2021-06-30-preview
@@ -39,14 +39,14 @@
 * **apiVersion**: '2021-06-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TimeSeriesDatabaseConnectionProperties](#timeseriesdatabaseconnectionproperties): Properties of a time series database connection resource.
+* **properties**: [TimeSeriesDatabaseConnectionProperties](#timeseriesdatabaseconnectionproperties): Properties of a specific time series database connection.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/timeSeriesDatabaseConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ConnectionProperties
 ### Properties
 * **groupIds**: string[]: The list of group ids for the private endpoint connection.
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The private endpoint property of a private endpoint connection.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The private endpoint.
 * **privateLinkServiceConnectionState**: [ConnectionPropertiesPrivateLinkServiceConnectionState](#connectionpropertiesprivatelinkserviceconnectionstate): The connection state.
 * **provisioningState**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (ReadOnly): The provisioning state.
 
@@ -117,8 +117,8 @@
 ### Properties
 * **id**: string (ReadOnly): The resource identifier.
 * **name**: string (ReadOnly): The resource name.
-* **properties**: [ConnectionProperties](#connectionproperties) (Required): The properties of a private endpoint connection.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ConnectionProperties](#connectionproperties) (Required): The connection properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the private endpoint connection.
 * **type**: string (ReadOnly): The resource type.
 
 ## SystemData
@@ -128,7 +128,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TimeSeriesDatabaseConnectionProperties
 * **Discriminator**: connectionType

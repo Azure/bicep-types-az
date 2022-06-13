@@ -36,7 +36,7 @@
 * **kind**: string: Kind of the resource
 * **location**: string: Location where the resource is stored
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AutomationProperties](#automationproperties): A set of properties that defines the behavior of the automation configuration. To learn more about the supported security events data models schemas - please visit https://aka.ms/ASCAutomationSchemas.
+* **properties**: [AutomationProperties](#automationproperties): Security automation data
 * **tags**: [Tags](#tags): A list of key value pairs that describe the resource.
 * **type**: 'Microsoft.Security/automations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -48,7 +48,7 @@
 * **lastModifiedUtc**: string (ReadOnly): The last time this rule was modified
 * **reason**: string (Required): The reason for dismissing the alert
 * **state**: 'Disabled' | 'Enabled' | 'Expired' (Required): Possible states of the rule
-* **suppressionAlertsScope**: [SuppressionAlertsScope](#suppressionalertsscope)
+* **suppressionAlertsScope**: [SuppressionAlertsScope](#suppressionalertsscope): The suppression conditions
 
 ## AssessmentLinks
 ### Properties
@@ -93,7 +93,7 @@
 
 ## AutomationRuleSet
 ### Properties
-* **rules**: [AutomationTriggeringRule](#automationtriggeringrule)[]: Array of AutomationTriggeringRule
+* **rules**: [AutomationTriggeringRule](#automationtriggeringrule)[]
 
 ## AutomationScope
 ### Properties
@@ -137,15 +137,15 @@
 ## SecurityAssessmentMetadataProperties
 ### Properties
 * **assessmentType**: 'BuiltIn' | 'CustomPolicy' | 'CustomerManaged' | string (Required): BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
-* **categories**: 'Compute' | 'Data' | 'IdentityAndAccess' | 'IoT' | 'Networking' | string[]: Array of categories
+* **categories**: 'Compute' | 'Data' | 'IdentityAndAccess' | 'IoT' | 'Networking' | string[]
 * **description**: string: Human readable description of the assessment
 * **displayName**: string (Required): User friendly display name of the assessment
 * **implementationEffort**: 'High' | 'Low' | 'Moderate' | string: The implementation effort required to remediate this assessment
 * **policyDefinitionId**: string (ReadOnly): Azure resource ID of the policy definition that turns this assessment calculation on
 * **preview**: bool: True if this assessment is in preview release status
 * **remediationDescription**: string: Human readable description of what you should do to mitigate this security issue
-* **severity**: 'High' | 'Low' | 'Medium' | string (Required): The sub-assessment severity level
-* **threats**: 'accountBreach' | 'dataExfiltration' | 'dataSpillage' | 'denialOfService' | 'elevationOfPrivilege' | 'maliciousInsider' | 'missingCoverage' | 'threatResistance' | string[]: Array of threats
+* **severity**: 'High' | 'Low' | 'Medium' | string (Required): The severity level of the assessment
+* **threats**: 'accountBreach' | 'dataExfiltration' | 'dataSpillage' | 'denialOfService' | 'elevationOfPrivilege' | 'maliciousInsider' | 'missingCoverage' | 'threatResistance' | string[]
 * **userImpact**: 'High' | 'Low' | 'Moderate' | string: The user impact of the assessment
 
 ## SecurityAssessmentProperties

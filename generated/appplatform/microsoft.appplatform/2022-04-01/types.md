@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The GEO location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterResourceProperties](#clusterresourceproperties): Service properties payload
-* **sku**: [Sku](#sku): Sku of Azure Spring Apps
+* **properties**: [ClusterResourceProperties](#clusterresourceproperties): Properties of the Service resource
+* **sku**: [Sku](#sku): Sku of the Service resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the service which is a list of key value pairs that describe the resource.
 * **type**: 'Microsoft.AppPlatform/Spring' (ReadOnly, DeployTimeConstant): The resource type
@@ -18,10 +18,10 @@
 ### Properties
 * **apiVersion**: '2022-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedIdentityProperties](#managedidentityproperties): Managed identity properties retrieved from ARM request headers.
+* **identity**: [ManagedIdentityProperties](#managedidentityproperties): The Managed Identity type of the app resource
 * **location**: string: The GEO location of the application, always the same with its parent resource
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AppResourceProperties](#appresourceproperties): App resource properties payload
+* **properties**: [AppResourceProperties](#appresourceproperties): Properties of the App resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/apps' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -31,7 +31,7 @@
 * **apiVersion**: '2022-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BindingResourceProperties](#bindingresourceproperties): Binding resource properties payload
+* **properties**: [BindingResourceProperties](#bindingresourceproperties): Properties of the Binding resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/apps/bindings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -41,8 +41,8 @@
 * **apiVersion**: '2022-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DeploymentResourceProperties](#deploymentresourceproperties): Deployment resource properties payload
-* **sku**: [Sku](#sku): Sku of Azure Spring Apps
+* **properties**: [DeploymentResourceProperties](#deploymentresourceproperties): Properties of the Deployment resource
+* **sku**: [Sku](#sku): Sku of the Deployment resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/apps/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -52,7 +52,7 @@
 * **apiVersion**: '2022-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CustomDomainProperties](#customdomainproperties): Custom domain of app resource payload.
+* **properties**: [CustomDomainProperties](#customdomainproperties): Properties of the custom domain resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/apps/domains' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -62,7 +62,7 @@
 * **apiVersion**: '2022-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BuildServiceAgentPoolProperties](#buildserviceagentpoolproperties): Build service agent pool properties
+* **properties**: [BuildServiceAgentPoolProperties](#buildserviceagentpoolproperties): build service agent pool properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/buildServices/agentPools' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -72,7 +72,7 @@
 * **apiVersion**: '2022-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BuilderProperties](#builderproperties): KPack Builder properties payload
+* **properties**: [BuilderProperties](#builderproperties): Property of the Builder resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/buildServices/builders' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -92,7 +92,7 @@
 * **apiVersion**: '2022-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BuildProperties](#buildproperties): Build resource properties payload
+* **properties**: [BuildProperties](#buildproperties): Properties of the build resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/buildServices/builds' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -102,7 +102,7 @@
 * **apiVersion**: '2022-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CertificateProperties](#certificateproperties): Certificate resource payload.
+* **properties**: [CertificateProperties](#certificateproperties): Properties of the certificate resource payload.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -112,7 +112,7 @@
 * **apiVersion**: '2022-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfigServerProperties](#configserverproperties): Config server git properties payload
+* **properties**: [ConfigServerProperties](#configserverproperties): Properties of the Config Server resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/configServers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -132,7 +132,7 @@
 * **apiVersion**: '2022-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [MonitoringSettingProperties](#monitoringsettingproperties): Monitoring Setting properties payload
+* **properties**: [MonitoringSettingProperties](#monitoringsettingproperties): Properties of the Monitoring Setting resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/monitoringSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -171,11 +171,11 @@
 * **enableEndToEndTLS**: bool: Indicate if end to end TLS is enabled.
 * **fqdn**: string: Fully qualified dns Name.
 * **httpsOnly**: bool: Indicate if only https is allowed.
-* **loadedCertificates**: [LoadedCertificate](#loadedcertificate)[]: Collection of loaded certificate resources list and a possible link for next page.
-* **persistentDisk**: [PersistentDisk](#persistentdisk): Persistent disk payload
+* **loadedCertificates**: [LoadedCertificate](#loadedcertificate)[]: Collection of loaded certificates
+* **persistentDisk**: [PersistentDisk](#persistentdisk): Persistent disk settings
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the App
 * **public**: bool: Indicates whether the App exposes public endpoint
-* **temporaryDisk**: [TemporaryDisk](#temporarydisk): Temporary disk payload
+* **temporaryDisk**: [TemporaryDisk](#temporarydisk): Temporary disk settings
 * **url**: string (ReadOnly): URL of the App
 
 ## AppResourcePropertiesAddonConfigs
@@ -203,7 +203,7 @@
 ### Properties
 * **buildpackGroups**: [BuildpacksGroupProperties](#buildpacksgroupproperties)[]: Builder buildpack groups.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Builder provision status.
-* **stack**: [StackProperties](#stackproperties): KPack ClusterStack properties payload
+* **stack**: [StackProperties](#stackproperties): Builder cluster stack property.
 
 ## BuildpackBindingLaunchProperties
 ### Properties
@@ -223,7 +223,7 @@
 ## BuildpackBindingProperties
 ### Properties
 * **bindingType**: 'ApacheSkyWalking' | 'AppDynamics' | 'ApplicationInsights' | 'Dynatrace' | 'ElasticAPM' | 'NewRelic' | string: Buildpack Binding Type
-* **launchProperties**: [BuildpackBindingLaunchProperties](#buildpackbindinglaunchproperties): Buildpack Binding Launch Properties
+* **launchProperties**: [BuildpackBindingLaunchProperties](#buildpackbindinglaunchproperties): The object describes the buildpack binding launch properties
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Buildpack Binding.
 
 ## BuildpackProperties
@@ -242,7 +242,7 @@
 * **env**: [BuildPropertiesEnv](#buildpropertiesenv): The environment variables for this build
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the KPack build result
 * **relativePath**: string: The relative path of source code
-* **triggeredBuildResult**: [TriggeredBuildResult](#triggeredbuildresult) (ReadOnly): The build result triggered by a build
+* **triggeredBuildResult**: [TriggeredBuildResult](#triggeredbuildresult) (ReadOnly): The build result triggered by this build
 
 ## BuildPropertiesEnv
 ### Properties
@@ -251,7 +251,7 @@
 
 ## BuildServiceAgentPoolProperties
 ### Properties
-* **poolSize**: [BuildServiceAgentPoolSizeProperties](#buildserviceagentpoolsizeproperties): Build service agent pool size properties
+* **poolSize**: [BuildServiceAgentPoolSizeProperties](#buildserviceagentpoolsizeproperties): build service agent pool size properties
 * **provisioningState**: string (ReadOnly): Provisioning state of the build service agent pool
 
 ## BuildServiceAgentPoolSizeProperties
@@ -288,7 +288,7 @@
 ## ClusterResourceProperties
 ### Properties
 * **fqdn**: string (ReadOnly): Fully qualified dns name of the service instance
-* **networkProfile**: [NetworkProfile](#networkprofile): Service network profile payload
+* **networkProfile**: [NetworkProfile](#networkprofile): Network profile of the Service
 * **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MoveFailed' | 'Moved' | 'Moving' | 'Starting' | 'Stopping' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Service
 * **serviceId**: string (ReadOnly): ServiceInstanceEntity GUID which uniquely identifies a created resource
 * **version**: int (ReadOnly): Version of the Service
@@ -309,13 +309,13 @@
 
 ## ConfigServerProperties
 ### Properties
-* **configServer**: [ConfigServerSettings](#configserversettings): The settings of config server.
-* **error**: [Error](#error): The error code compose of code and message.
+* **configServer**: [ConfigServerSettings](#configserversettings): Settings of config server.
+* **error**: [Error](#error): Error when apply config server settings.
 * **provisioningState**: 'Deleted' | 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the config server.
 
 ## ConfigServerSettings
 ### Properties
-* **gitProperty**: [ConfigServerGitProperty](#configservergitproperty): Property of git.
+* **gitProperty**: [ConfigServerGitProperty](#configservergitproperty): Property of git environment.
 
 ## ConfigurationServiceGitProperty
 ### Properties
@@ -344,7 +344,7 @@
 ### Properties
 * **instances**: [ConfigurationServiceInstance](#configurationserviceinstance)[] (ReadOnly): Collection of instances belong to Application Configuration Service.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Application Configuration Service.
-* **resourceRequests**: [ConfigurationServiceResourceRequests](#configurationserviceresourcerequests) (ReadOnly): Resource request payload of Application Configuration Service
+* **resourceRequests**: [ConfigurationServiceResourceRequests](#configurationserviceresourcerequests) (ReadOnly): The requested resource quantity for required CPU and Memory.
 * **settings**: [ConfigurationServiceSettings](#configurationservicesettings): The settings of Application Configuration Service.
 
 ## ConfigurationServiceResourceRequests
@@ -375,17 +375,17 @@
 ## DeploymentResourceProperties
 ### Properties
 * **active**: bool: Indicates whether the Deployment is active
-* **deploymentSettings**: [DeploymentSettings](#deploymentsettings): Deployment settings payload
+* **deploymentSettings**: [DeploymentSettings](#deploymentsettings): Deployment settings of the Deployment
 * **instances**: [DeploymentInstance](#deploymentinstance)[] (ReadOnly): Collection of instances belong to the Deployment
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Deployment
-* **source**: [UserSourceInfo](#usersourceinfo): Source information for a deployment
+* **source**: [UserSourceInfo](#usersourceinfo): Uploaded source information of the deployment.
 * **status**: 'Running' | 'Stopped' | string (ReadOnly): Status of the Deployment
 
 ## DeploymentSettings
 ### Properties
 * **addonConfigs**: [DeploymentSettingsAddonConfigs](#deploymentsettingsaddonconfigs): Collection of addons
 * **environmentVariables**: [DeploymentSettingsEnvironmentVariables](#deploymentsettingsenvironmentvariables): Collection of environment variables
-* **resourceRequests**: [ResourceRequests](#resourcerequests): Deployment resource request payload
+* **resourceRequests**: [ResourceRequests](#resourcerequests): The requested resource quantity for required CPU and Memory. It is recommended that using this field to represent the required CPU and Memory, the old field cpu and memoryInGB will be deprecated later.
 
 ## DeploymentSettingsAddonConfigs
 ### Properties
@@ -429,10 +429,10 @@
 
 ## MonitoringSettingProperties
 ### Properties
-* **appInsightsAgentVersions**: [ApplicationInsightsAgentVersions](#applicationinsightsagentversions): Application Insights agent versions properties payload
+* **appInsightsAgentVersions**: [ApplicationInsightsAgentVersions](#applicationinsightsagentversions): Indicates the versions of application insight agent
 * **appInsightsInstrumentationKey**: string: Target application insight instrumentation key, null or whitespace include empty will disable monitoringSettings
 * **appInsightsSamplingRate**: int: Indicates the sampling rate of application insight agent, should be in range [0.0, 100.0]
-* **error**: [Error](#error): The error code compose of code and message.
+* **error**: [Error](#error): Error when apply Monitoring Setting changes.
 * **provisioningState**: 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Monitoring Setting.
 * **traceEnabled**: bool: Indicates whether enable the trace functionality, which will be deprecated since api version 2020-11-01-preview. Please leverage appInsightsInstrumentationKey to indicate if monitoringSettings enabled or not
 
@@ -478,7 +478,7 @@
 ### Properties
 * **instances**: [ServiceRegistryInstance](#serviceregistryinstance)[] (ReadOnly): Collection of instances belong to Service Registry.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Service Registry.
-* **resourceRequests**: [ServiceRegistryResourceRequests](#serviceregistryresourcerequests) (ReadOnly): Resource request payload of Service Registry
+* **resourceRequests**: [ServiceRegistryResourceRequests](#serviceregistryresourcerequests) (ReadOnly): The requested resource quantity for required CPU and Memory.
 
 ## ServiceRegistryResourceRequests
 ### Properties

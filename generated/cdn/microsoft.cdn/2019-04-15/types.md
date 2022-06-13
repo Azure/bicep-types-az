@@ -68,17 +68,17 @@
 ### UserManagedHttpsParameters
 #### Properties
 * **certificateSource**: 'AzureKeyVault' (Required): Defines the source of the SSL certificate.
-* **certificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters) (ReadOnly): Describes the parameters for using a user's KeyVault certificate for securing custom domain.
+* **certificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters) (ReadOnly): Defines the certificate source parameters using user's keyvault certificate for enabling SSL.
 
 ### CdnManagedHttpsParameters
 #### Properties
 * **certificateSource**: 'Cdn' (Required): Defines the source of the SSL certificate.
-* **certificateSourceParameters**: [CdnCertificateSourceParameters](#cdncertificatesourceparameters) (ReadOnly): Defines the parameters for using CDN managed certificate for securing custom domain.
+* **certificateSourceParameters**: [CdnCertificateSourceParameters](#cdncertificatesourceparameters) (ReadOnly): Defines the certificate source parameters using CDN managed certificate for enabling SSL.
 
 
 ## CustomDomainPropertiesParameters
 ### Properties
-* **customHttpsParameters**: [CustomDomainHttpsParameters](#customdomainhttpsparameters) (ReadOnly): The JSON object that contains the properties to secure a custom domain.
+* **customHttpsParameters**: [CustomDomainHttpsParameters](#customdomainhttpsparameters) (ReadOnly): Certificate parameters for securing custom HTTPS
 * **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' | string (ReadOnly): Provisioning status of Custom Https of the custom domain.
 * **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' | string (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
 * **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
@@ -111,32 +111,32 @@
 ### DeliveryRuleCacheExpirationAction
 #### Properties
 * **name**: 'CacheExpiration' (Required): The name of the action for the delivery rule.
-* **parameters**: [CacheExpirationActionParameters](#cacheexpirationactionparameters) (Required): Defines the parameters for the cache expiration action.
+* **parameters**: [CacheExpirationActionParameters](#cacheexpirationactionparameters) (Required): Defines the parameters for the action.
 
 ### DeliveryRuleCacheKeyQueryStringAction
 #### Properties
 * **name**: 'CacheKeyQueryString' (Required): The name of the action for the delivery rule.
-* **parameters**: [CacheKeyQueryStringActionParameters](#cachekeyquerystringactionparameters) (Required): Defines the parameters for the cache-key query string action.
+* **parameters**: [CacheKeyQueryStringActionParameters](#cachekeyquerystringactionparameters) (Required): Defines the parameters for the action.
 
 ### DeliveryRuleRequestHeaderAction
 #### Properties
 * **name**: 'ModifyRequestHeader' (Required): The name of the action for the delivery rule.
-* **parameters**: [HeaderActionParameters](#headeractionparameters) (Required): Defines the parameters for the request header action.
+* **parameters**: [HeaderActionParameters](#headeractionparameters) (Required): Defines the parameters for the action.
 
 ### DeliveryRuleResponseHeaderAction
 #### Properties
 * **name**: 'ModifyResponseHeader' (Required): The name of the action for the delivery rule.
-* **parameters**: [HeaderActionParameters](#headeractionparameters) (Required): Defines the parameters for the request header action.
+* **parameters**: [HeaderActionParameters](#headeractionparameters) (Required): Defines the parameters for the action.
 
 ### UrlRedirectAction
 #### Properties
 * **name**: 'UrlRedirect' (Required): The name of the action for the delivery rule.
-* **parameters**: [UrlRedirectActionParameters](#urlredirectactionparameters) (Required): Defines the parameters for the url redirect action.
+* **parameters**: [UrlRedirectActionParameters](#urlredirectactionparameters) (Required): Defines the parameters for the action.
 
 ### UrlRewriteAction
 #### Properties
 * **name**: 'UrlRewrite' (Required): The name of the action for the delivery rule.
-* **parameters**: [UrlRewriteActionParameters](#urlrewriteactionparameters) (Required): Defines the parameters for the url rewrite action.
+* **parameters**: [UrlRewriteActionParameters](#urlrewriteactionparameters) (Required): Defines the parameters for the action.
 
 
 ## DeliveryRuleCondition
@@ -146,72 +146,72 @@
 ### DeliveryRuleCookiesCondition
 #### Properties
 * **name**: 'Cookies' (Required): The name of the condition for the delivery rule.
-* **parameters**: [CookiesMatchConditionParameters](#cookiesmatchconditionparameters) (Required): Defines the parameters for Cookies match conditions
+* **parameters**: [CookiesMatchConditionParameters](#cookiesmatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleHttpVersionCondition
 #### Properties
 * **name**: 'HttpVersion' (Required): The name of the condition for the delivery rule.
-* **parameters**: [HttpVersionMatchConditionParameters](#httpversionmatchconditionparameters) (Required): Defines the parameters for HttpVersion match conditions
+* **parameters**: [HttpVersionMatchConditionParameters](#httpversionmatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleIsDeviceCondition
 #### Properties
 * **name**: 'IsDevice' (Required): The name of the condition for the delivery rule.
-* **parameters**: [IsDeviceMatchConditionParameters](#isdevicematchconditionparameters) (Required): Defines the parameters for IsDevice match conditions
+* **parameters**: [IsDeviceMatchConditionParameters](#isdevicematchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRulePostArgsCondition
 #### Properties
 * **name**: 'PostArgs' (Required): The name of the condition for the delivery rule.
-* **parameters**: [PostArgsMatchConditionParameters](#postargsmatchconditionparameters) (Required): Defines the parameters for PostArgs match conditions
+* **parameters**: [PostArgsMatchConditionParameters](#postargsmatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleQueryStringCondition
 #### Properties
 * **name**: 'QueryString' (Required): The name of the condition for the delivery rule.
-* **parameters**: [QueryStringMatchConditionParameters](#querystringmatchconditionparameters) (Required): Defines the parameters for QueryString match conditions
+* **parameters**: [QueryStringMatchConditionParameters](#querystringmatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleRemoteAddressCondition
 #### Properties
 * **name**: 'RemoteAddress' (Required): The name of the condition for the delivery rule.
-* **parameters**: [RemoteAddressMatchConditionParameters](#remoteaddressmatchconditionparameters) (Required): Defines the parameters for RemoteAddress match conditions
+* **parameters**: [RemoteAddressMatchConditionParameters](#remoteaddressmatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleRequestBodyCondition
 #### Properties
 * **name**: 'RequestBody' (Required): The name of the condition for the delivery rule.
-* **parameters**: [RequestBodyMatchConditionParameters](#requestbodymatchconditionparameters) (Required): Defines the parameters for RequestBody match conditions
+* **parameters**: [RequestBodyMatchConditionParameters](#requestbodymatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleRequestHeaderCondition
 #### Properties
 * **name**: 'RequestHeader' (Required): The name of the condition for the delivery rule.
-* **parameters**: [RequestHeaderMatchConditionParameters](#requestheadermatchconditionparameters) (Required): Defines the parameters for RequestHeader match conditions
+* **parameters**: [RequestHeaderMatchConditionParameters](#requestheadermatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleRequestMethodCondition
 #### Properties
 * **name**: 'RequestMethod' (Required): The name of the condition for the delivery rule.
-* **parameters**: [RequestMethodMatchConditionParameters](#requestmethodmatchconditionparameters) (Required): Defines the parameters for RequestMethod match conditions
+* **parameters**: [RequestMethodMatchConditionParameters](#requestmethodmatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleRequestSchemeCondition
 #### Properties
 * **name**: 'RequestScheme' (Required): The name of the condition for the delivery rule.
-* **parameters**: [RequestSchemeMatchConditionParameters](#requestschemematchconditionparameters) (Required): Defines the parameters for RequestScheme match conditions
+* **parameters**: [RequestSchemeMatchConditionParameters](#requestschemematchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleRequestUriCondition
 #### Properties
 * **name**: 'RequestUri' (Required): The name of the condition for the delivery rule.
-* **parameters**: [RequestUriMatchConditionParameters](#requesturimatchconditionparameters) (Required): Defines the parameters for RequestUri match conditions
+* **parameters**: [RequestUriMatchConditionParameters](#requesturimatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleUrlFileExtensionCondition
 #### Properties
 * **name**: 'UrlFileExtension' (Required): The name of the condition for the delivery rule.
-* **parameters**: [UrlFileExtensionMatchConditionParameters](#urlfileextensionmatchconditionparameters) (Required): Defines the parameters for UrlFileExtension match conditions
+* **parameters**: [UrlFileExtensionMatchConditionParameters](#urlfileextensionmatchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleUrlFileNameCondition
 #### Properties
 * **name**: 'UrlFileName' (Required): The name of the condition for the delivery rule.
-* **parameters**: [UrlFileNameMatchConditionParameters](#urlfilenamematchconditionparameters) (Required): Defines the parameters for UrlFilename match conditions
+* **parameters**: [UrlFileNameMatchConditionParameters](#urlfilenamematchconditionparameters) (Required): Defines the parameters for the condition.
 
 ### DeliveryRuleUrlPathCondition
 #### Properties
 * **name**: 'UrlPath' (Required): The name of the condition for the delivery rule.
-* **parameters**: [UrlPathMatchConditionParameters](#urlpathmatchconditionparameters) (Required): Defines the parameters for UrlPath match conditions
+* **parameters**: [UrlPathMatchConditionParameters](#urlpathmatchconditionparameters) (Required): Defines the parameters for the condition.
 
 
 ## EndpointProperties
@@ -223,7 +223,7 @@
 * **isCompressionEnabled**: bool: Indicates whether content compression is enabled on CDN. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB.
 * **isHttpAllowed**: bool: Indicates whether HTTP traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
 * **isHttpsAllowed**: bool: Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
-* **optimizationType**: 'DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming' | string: Specifies what scenario the customer wants this CDN endpoint to optimize, e.g. Download, Media services. With this information we can apply scenario driven optimization.
+* **optimizationType**: 'DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming' | string: Specifies what scenario the customer wants this CDN endpoint to optimize for, e.g. Download, Media services. With this information, CDN can apply scenario driven optimization.
 * **originHostHeader**: string: The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
 * **originPath**: string: A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
 * **origins**: [DeepCreatedOrigin](#deepcreatedorigin)[] (Required): The source of the content being delivered via CDN.

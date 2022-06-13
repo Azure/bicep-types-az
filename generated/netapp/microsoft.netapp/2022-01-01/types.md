@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AccountProperties](#accountproperties): NetApp account properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [AccountProperties](#accountproperties): NetApp Account properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -21,8 +21,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BackupPolicyProperties](#backuppolicyproperties) (Required): Backup policy properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [BackupPolicyProperties](#backuppolicyproperties) (Required): Backup policy Properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetApp/netAppAccounts/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -34,8 +34,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PoolProperties](#poolproperties) (Required): Pool properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [PoolProperties](#poolproperties) (Required): Capacity pool properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -48,7 +48,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VolumeProperties](#volumeproperties) (Required): Volume properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: Availability Zone
@@ -60,7 +60,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BackupProperties](#backupproperties) (Required): Backup properties
+* **properties**: [BackupProperties](#backupproperties) (Required): Backup Properties
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2022-01-01
@@ -70,7 +70,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SnapshotProperties](#snapshotproperties): Snapshot properties
+* **properties**: [SnapshotProperties](#snapshotproperties): Snapshot Properties
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes@2022-01-01
@@ -79,8 +79,8 @@
 * **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SubvolumeProperties](#subvolumeproperties): This represents path associated with the subvolume
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [SubvolumeProperties](#subvolumeproperties): Subvolume Properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/volumeQuotaRules@2022-01-01
@@ -90,8 +90,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VolumeQuotaRulesProperties](#volumequotarulesproperties): Volume Quota Rule properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [VolumeQuotaRulesProperties](#volumequotarulesproperties): Volume Quota Rule Properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/volumeQuotaRules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -103,8 +103,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SnapshotPolicyProperties](#snapshotpolicyproperties) (Required): Snapshot policy properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [SnapshotPolicyProperties](#snapshotpolicyproperties) (Required): Snapshot policy Properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetApp/netAppAccounts/snapshotPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -146,7 +146,7 @@
 * **encryptDCConnections**: bool: If enabled, Traffic between the SMB server to Domain Controller (DC) will be encrypted.
 * **kdcIP**: string: kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.
 * **ldapOverTLS**: bool: Specifies whether or not the LDAP traffic needs to be secured via TLS.
-* **ldapSearchScope**: [LdapSearchScopeOpt](#ldapsearchscopeopt): LDAP search scope
+* **ldapSearchScope**: [LdapSearchScopeOpt](#ldapsearchscopeopt): LDAP Search scope options
 * **ldapSigning**: bool: Specifies whether or not the LDAP traffic needs to be signed.
 * **organizationalUnit**: string: The Organizational Unit (OU) within the Windows Active Directory
 * **password**: string: Plain text password of Active Directory domain administrator, value is masked in the response
@@ -276,12 +276,12 @@
 
 ## SnapshotPolicyProperties
 ### Properties
-* **dailySchedule**: [DailySchedule](#dailyschedule): Daily Schedule properties
+* **dailySchedule**: [DailySchedule](#dailyschedule): Schedule for daily snapshots
 * **enabled**: bool: The property to decide policy is enabled or not
-* **hourlySchedule**: [HourlySchedule](#hourlyschedule): Hourly Schedule properties
-* **monthlySchedule**: [MonthlySchedule](#monthlyschedule): Monthly Schedule properties
+* **hourlySchedule**: [HourlySchedule](#hourlyschedule): Schedule for hourly snapshots
+* **monthlySchedule**: [MonthlySchedule](#monthlyschedule): Schedule for monthly snapshots
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **weeklySchedule**: [WeeklySchedule](#weeklyschedule): Weekly Schedule properties, make a snapshot every week at a specific day or days
+* **weeklySchedule**: [WeeklySchedule](#weeklyschedule): Schedule for weekly snapshots
 
 ## SnapshotProperties
 ### Properties
@@ -303,7 +303,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -359,7 +359,7 @@
 
 ## VolumeGroupProperties
 ### Properties
-* **groupMetaData**: [VolumeGroupMetaData](#volumegroupmetadata): Volume group properties
+* **groupMetaData**: [VolumeGroupMetaData](#volumegroupmetadata): Volume group details
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **volumes**: [VolumeGroupVolumeProperties](#volumegroupvolumeproperties)[]: List of volumes from group
 
@@ -368,7 +368,7 @@
 * **id**: string (ReadOnly): Resource Id
 * **name**: string: Resource name
 * **properties**: [VolumeProperties](#volumeproperties) (Required): Volume properties
-* **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: string (ReadOnly): Resource type
 
 ## VolumeProperties
@@ -419,9 +419,9 @@
 
 ## VolumePropertiesDataProtection
 ### Properties
-* **backup**: [VolumeBackupProperties](#volumebackupproperties): Volume Backup Properties
+* **backup**: [VolumeBackupProperties](#volumebackupproperties): Backup Properties
 * **replication**: [ReplicationObject](#replicationobject): Replication properties
-* **snapshot**: [VolumeSnapshotProperties](#volumesnapshotproperties): Volume Snapshot Properties
+* **snapshot**: [VolumeSnapshotProperties](#volumesnapshotproperties): Snapshot properties.
 
 ## VolumePropertiesExportPolicy
 ### Properties

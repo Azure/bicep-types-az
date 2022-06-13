@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Azure location in which project is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ProjectProperties](#projectproperties): Properties of a project.
-* **tags**: any: Any object
+* **properties**: [ProjectProperties](#projectproperties): Properties of the project.
+* **tags**: any: Tags provided by Azure Tagging service.
 * **type**: 'Microsoft.Migrate/assessmentProjects' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/groups@2019-10-01
@@ -19,7 +19,7 @@
 * **eTag**: string: For optimistic concurrency control.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GroupProperties](#groupproperties) (Required): Properties of group resource.
+* **properties**: [GroupProperties](#groupproperties) (Required): Properties of the group.
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/groups/assessments@2019-10-01
@@ -29,7 +29,7 @@
 * **eTag**: string: For optimistic concurrency control.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AssessmentProperties](#assessmentproperties) (Required): Properties of an assessment.
+* **properties**: [AssessmentProperties](#assessmentproperties) (Required): Properties of the assessment.
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups/assessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/hypervcollectors@2019-10-01
@@ -59,7 +59,7 @@
 * **eTag**: string: For optimistic concurrency control.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): Private endpoint connection properties.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): Properties of the private endpoint endpoint connection.
 * **type**: 'Microsoft.Migrate/assessmentprojects/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/servercollectors@2019-10-01
@@ -113,7 +113,7 @@
 * **status**: 'Completed' | 'Created' | 'Invalid' | 'OutDated' | 'OutOfSync' | 'Running' | 'Updated' | string (ReadOnly): Whether the assessment has been created and is valid.
 * **timeRange**: 'Custom' | 'Day' | 'Month' | 'Week' | string (Required): Time range of performance data used to recommend a size.
 * **updatedTimestamp**: string (ReadOnly): Time when this project was last updated. Date-Time represented in ISO-8601 format.
-* **vmUptime**: [VmUptime](#vmuptime) (Required)
+* **vmUptime**: [VmUptime](#vmuptime) (Required): Specify the duration for which the VMs are up in the on-premises environment.
 
 ## CollectorAgentProperties
 ### Properties
@@ -158,13 +158,13 @@
 * **eTag**: string: For optimistic concurrency control.
 * **id**: string (ReadOnly): Path reference to this private endpoint endpoint connection. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/privateEndpointConnections/{privateEndpointConnectionName}
 * **name**: string (ReadOnly): Name of the private endpoint endpoint connection.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): Private endpoint connection properties.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): Properties of the private endpoint endpoint connection.
 * **type**: string (ReadOnly): Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [ResourceId](#resourceid) (ReadOnly): ARM id for a resource.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): State of a private endpoint connection.
+* **privateEndpoint**: [ResourceId](#resourceid) (ReadOnly): ARM id for the private endpoint resource corresponding to the connection.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): State of the private endpoint connection.
 * **provisioningState**: 'Accepted' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Indicates whether there is an ongoing operation on the private endpoint.
 
 ## PrivateLinkServiceConnectionState

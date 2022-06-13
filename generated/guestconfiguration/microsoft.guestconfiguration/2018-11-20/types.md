@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Region where the VM is located.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GuestConfigurationAssignmentProperties](#guestconfigurationassignmentproperties): Guest configuration assignment properties.
+* **properties**: [GuestConfigurationAssignmentProperties](#guestconfigurationassignmentproperties): Properties of the Guest configuration assignment.
 * **type**: 'Microsoft.GuestConfiguration/guestConfigurationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ConfigurationParameter
@@ -29,7 +29,7 @@
 * **assignmentHash**: string (ReadOnly): Combined hash of the configuration package and parameters.
 * **complianceStatus**: 'Compliant' | 'NonCompliant' | 'Pending' | string (ReadOnly): A value indicating compliance status of the machine for the assigned guest configuration.
 * **context**: string: The source which initiated the guest configuration assignment. Ex: Azure Policy
-* **guestConfiguration**: [GuestConfigurationNavigation](#guestconfigurationnavigation): Guest configuration is an artifact that encapsulates DSC configuration and its dependencies. The artifact is a zip file containing DSC configuration (as MOF) and dependent resources and other dependencies like modules.
+* **guestConfiguration**: [GuestConfigurationNavigation](#guestconfigurationnavigation): The guest configuration to assign.
 * **lastComplianceStatusChecked**: string (ReadOnly): Date and time when last compliance status was checked.
 * **latestReportId**: string (ReadOnly): Id of the latest report for the guest configuration assignment.
 * **parameterHash**: string (ReadOnly): parameter hash for the guest configuration assignment.
@@ -42,7 +42,7 @@
 * **assignmentType**: 'ApplyAndAutoCorrect' | 'ApplyAndMonitor' | 'Audit' | 'DeployAndAutoCorrect' | string: Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
 * **configurationParameter**: [ConfigurationParameter](#configurationparameter)[]: The configuration parameters for the guest configuration.
 * **configurationProtectedParameter**: [ConfigurationParameter](#configurationparameter)[]: The protected configuration parameters for the guest configuration.
-* **configurationSetting**: [ConfigurationSetting](#configurationsetting): Configuration setting of LCM (Local Configuration Manager).
+* **configurationSetting**: [ConfigurationSetting](#configurationsetting): The configuration setting for the guest configuration.
 * **contentHash**: string: Combined hash of the guest configuration package and configuration parameters.
 * **contentType**: string (ReadOnly): Specifies the content type of the configuration. Possible values could be Builtin or Custom.
 * **contentUri**: string: Uri of the storage where guest configuration package is uploaded.

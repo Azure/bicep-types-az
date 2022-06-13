@@ -44,9 +44,9 @@
 
 ## ProfileProperties
 ### Properties
-* **dnsConfig**: [DnsConfig](#dnsconfig): Class containing DNS settings in a Traffic Manager profile.
+* **dnsConfig**: [DnsConfig](#dnsconfig): Gets or sets the DNS settings of the Traffic Manager profile.
 * **endpoints**: [Endpoint](#endpoint)[]: Gets or sets the list of endpoints in the Traffic Manager profile.
-* **monitorConfig**: [MonitorConfig](#monitorconfig): Class containing endpoint monitoring settings in a Traffic Manager profile.
+* **monitorConfig**: [MonitorConfig](#monitorconfig): Gets or sets the endpoint monitoring settings of the Traffic Manager profile.
 * **profileStatus**: string: Gets or sets the status of the Traffic Manager profile.  Possible values are 'Enabled' and 'Disabled'.
 * **trafficRoutingMethod**: string: Gets or sets the traffic routing method of the Traffic Manager profile.  Possible values are 'Performance', 'Weighted', or 'Priority'.
 

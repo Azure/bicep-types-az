@@ -18,7 +18,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The resource type of the access policy.
 * **name**: 'add' | 'remove' | 'replace' (Required, DeployTimeConstant): The resource name
-* **properties**: [VaultAccessPolicyProperties](#vaultaccesspolicyproperties) (Required): Properties of the vault access policy
+* **properties**: [VaultAccessPolicyProperties](#vaultaccesspolicyproperties) (Required): Properties of the access policy
 * **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KeyVault/vaults/secrets@2018-02-14-preview
@@ -36,7 +36,7 @@
 ### Properties
 * **applicationId**: string: Application ID of the client making request on behalf of a principal
 * **objectId**: string (Required): The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.
-* **permissions**: [Permissions](#permissions) (Required): Permissions the identity has for keys, secrets, certificates and storage.
+* **permissions**: [Permissions](#permissions) (Required): Permissions the identity has for keys, secrets and certificates.
 * **tenantId**: string (Required): The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
 
 ## IPRule
@@ -72,7 +72,7 @@
 
 ## SecretProperties
 ### Properties
-* **attributes**: [SecretAttributes](#secretattributes): The secret management attributes.
+* **attributes**: [SecretAttributes](#secretattributes): The attributes of the secret.
 * **contentType**: string: The content type of the secret.
 * **secretUri**: string (ReadOnly): The URI to retrieve the current version of the secret.
 * **secretUriWithVersion**: string (ReadOnly): The URI to retrieve the specific version of the secret.
@@ -101,7 +101,7 @@
 * **enabledForTemplateDeployment**: bool: Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.
 * **enablePurgeProtection**: bool: Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.
 * **enableSoftDelete**: bool: Property to specify whether the 'soft delete' functionality is enabled for this key vault. It does not accept false value.
-* **networkAcls**: [NetworkRuleSet](#networkruleset): A set of rules governing the network accessibility of a vault.
+* **networkAcls**: [NetworkRuleSet](#networkruleset): A collection of rules governing the accessibility of the vault from specific network locations.
 * **sku**: [Sku](#sku) (Required): SKU details
 * **tenantId**: string (Required): The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
 * **vaultUri**: string: The URI of the vault for performing operations on keys and secrets.
