@@ -36,7 +36,6 @@
       "properties": {
         "properties": {
           "$ref": "#/definitions/TestType1Properties",
-          "description": "The resource properties.",
           "x-ms-client-flatten": true
         }
       },
@@ -44,6 +43,7 @@
       "description": "The testType1 resource."
     },
     "TestType1Properties": {
+      "description": "TestType1 properties",
       "properties": {
         "basicString": {
           "type": "string",
@@ -74,6 +74,10 @@
         },
         "skuTier": {
           "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/SkuTier"
+        },
+        "encryptionProperties": {
+          "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/encryptionProperties",
+          "description": "TestType1 encryption properties"
         }
       }
     },
