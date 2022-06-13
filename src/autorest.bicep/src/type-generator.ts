@@ -54,7 +54,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
 
       const propertyDefinition = parseType(putProperty?.schema, getProperty?.schema);
       if (propertyDefinition) {
-        const description = (putProperty?.schema ?? getProperty?.schema)?.language.default?.description;
+        const description = getPropertyDescription(putProperty, getProperty);
         const flags = parsePropertyFlags(putProperty, getProperty);
         resourceProperties[propertyName] = createObjectProperty(propertyDefinition, flags, description);
       }
@@ -228,6 +228,13 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
 
       yield { propertyName, putProperty, getProperty };
     }
+  }
+
+  function getPropertyDescription(putProperty: Property | undefined, getProperty: Property | undefined) {
+    const propertyDescription = (putProperty ?? getProperty)?.language.default?.description;
+    const typeDescription = (putProperty?.schema ?? getProperty?.schema)?.language.default?.description;
+
+    return propertyDescription ?? typeDescription;
   }
 
   function flattenDiscriminatorSubTypes(schema: ObjectSchema | undefined) {
@@ -447,7 +454,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     for (const { propertyName, putProperty, getProperty } of getObjectTypeProperties(putSchema, getSchema, includeBaseProperties)) {
       const propertyDefinition = parseType(putProperty?.schema, getProperty?.schema);
       if (propertyDefinition) {
-        const description = (putProperty?.schema ?? getProperty?.schema)?.language.default?.description;
+        const description = getPropertyDescription(putProperty, getProperty);
         const flags = parsePropertyFlags(putProperty, getProperty);
         definitionProperties[propertyName] = createObjectProperty(propertyDefinition, flags, description);
       }
