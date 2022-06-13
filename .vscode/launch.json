@@ -36,6 +36,17 @@
             "preLaunchTask": "build autorest.bicep"
         },
         {
+            "name": "Test autorest.bicep",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "test"
+            ],
+            "cwd": "${workspaceFolder}/src/autorest.bicep",
+            "preLaunchTask": "build autorest.bicep"
+        },
+        {
             "type": "node",
             "request": "attach",
             "name": "Attach",
