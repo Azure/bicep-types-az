@@ -40,12 +40,12 @@
 
 ## AccountSasParameters
 ### Properties
-* **expiry**: string (Required, WriteOnly): The date time offset of when the token validity expires. For example "2017-05-24T10:42:03.1567373Z"
-* **maxRatePerSecond**: int (Required, WriteOnly): Required parameter which represents the desired maximum request per second to allowed for the given SAS token. This does not guarantee perfect accuracy in measurements but provides application safe guards of abuse with eventual enforcement.
-* **principalId**: string (Required, WriteOnly): The principal Id also known as the object Id of a User Assigned Managed Identity currently assigned to the Map Account. To assign a Managed Identity of the account, use operation Create or Update an assign a User Assigned Identity resource Id.
-* **regions**: string[] (WriteOnly): Optional, allows control of which region locations are permitted access to Azure Maps REST APIs with the SAS token. Example: "eastus", "westus2". Omitting this parameter will allow all region locations to be accessible.
-* **signingKey**: 'primaryKey' | 'secondaryKey' | string (Required, WriteOnly): The Map account key to use for signing.
-* **start**: string (Required, WriteOnly): The date time offset of when the token validity begins. For example "2017-05-24T10:42:03.1567373Z".
+* **expiry**: string (Required): The date time offset of when the token validity expires. For example "2017-05-24T10:42:03.1567373Z"
+* **maxRatePerSecond**: int (Required): Required parameter which represents the desired maximum request per second to allowed for the given SAS token. This does not guarantee perfect accuracy in measurements but provides application safe guards of abuse with eventual enforcement.
+* **principalId**: string (Required): The principal Id also known as the object Id of a User Assigned Managed Identity currently assigned to the Map Account. To assign a Managed Identity of the account, use operation Create or Update an assign a User Assigned Identity resource Id.
+* **regions**: string[]: Optional, allows control of which region locations are permitted access to Azure Maps REST APIs with the SAS token. Example: "eastus", "westus2". Omitting this parameter will allow all region locations to be accessible.
+* **signingKey**: 'primaryKey' | 'secondaryKey' | string (Required): The Map account key to use for signing.
+* **start**: string (Required): The date time offset of when the token validity begins. For example "2017-05-24T10:42:03.1567373Z".
 
 ## Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties

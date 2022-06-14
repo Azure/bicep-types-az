@@ -8,7 +8,7 @@
 * **identity**: [ResourceIdentity](#resourceidentity) (ReadOnly): The Azure Active Directory identity of the server.
 * **location**: string (Required): The location the resource resides in.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required): Properties of the server.
+* **properties**: [ServerPropertiesForCreateOrServerProperties](#serverpropertiesforcreateorserverproperties) (Required): Properties of the server.
 * **sku**: [Sku](#sku): The SKU (pricing tier) of the server.
 * **tags**: [ServerForCreateTags](#serverforcreatetags): Application-specific metadata in the form of key-value pairs.
 * **type**: 'Microsoft.DBforMySQL/servers' (ReadOnly, DeployTimeConstant): The resource type
@@ -88,25 +88,25 @@
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty) (ReadOnly): Private endpoint which the connection belongs to.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty) (ReadOnly): Connection state of the private endpoint connection.
+* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty): Private endpoint which the connection belongs to.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty): Connection state of the private endpoint connection.
 * **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' | string (ReadOnly): State of the private endpoint connection.
 
 ## PrivateEndpointProperty
 ### Properties
-* **id**: string (ReadOnly): Resource id of the private endpoint.
+* **id**: string: Resource id of the private endpoint.
 
 ## PrivateLinkServiceConnectionStateProperty
 ### Properties
 * **actionsRequired**: 'None' | string (ReadOnly): The actions required for private link service connection.
-* **description**: string (ReadOnly): The private link service connection description.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (ReadOnly): The private link service connection status.
+* **description**: string (Required): The private link service connection description.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (Required): The private link service connection status.
 
 ## ResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The Azure Active Directory principal id.
 * **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
-* **type**: 'SystemAssigned' | string (ReadOnly): The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
+* **type**: 'SystemAssigned' | string: The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
 
 ## SecurityAlertPolicyProperties
 ### Properties
@@ -135,7 +135,7 @@
 * **id**: string (ReadOnly): Resource Id of the private endpoint connection.
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Private endpoint connection properties
 
-## ServerPropertiesForCreate
+## ServerPropertiesForCreateOrServerProperties
 * **Discriminator**: createMode
 
 ### Base Properties

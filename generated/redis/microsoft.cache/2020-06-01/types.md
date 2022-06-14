@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisCreateProperties](#rediscreateproperties) (Required): Redis cache properties.
+* **properties**: [RedisCreatePropertiesOrRedisProperties](#rediscreatepropertiesorredisproperties) (Required): Redis cache properties.
 * **tags**: [RedisCreateParametersTags](#rediscreateparameterstags): Resource tags.
 * **type**: 'Microsoft.Cache/redis' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: A list of availability zones denoting where the resource needs to come from.
@@ -27,7 +27,7 @@
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisLinkedServerCreateProperties](#redislinkedservercreateproperties) (Required): Properties required to create a linked server.
+* **properties**: [RedisLinkedServerCreatePropertiesOrRedisLinkedServerProperties](#redislinkedservercreatepropertiesorredislinkedserverproperties) (Required): Properties required to create a linked server.
 * **type**: 'Microsoft.Cache/redis/linkedServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Cache/redis/patchSchedules@2020-06-01
@@ -61,20 +61,20 @@
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **name**: string (ReadOnly): The name of the resource
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Resource properties.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The resource of private end point.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly): A collection of information about the state of the connection between service consumer and provider.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The resource of private end point.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the private endpoint connection resource.
 
 ## PrivateLinkServiceConnectionState
 ### Properties
-* **actionsRequired**: string (ReadOnly): A message indicating if changes on the service provider require any updates on the consumer.
-* **description**: string (ReadOnly): The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected' | string (ReadOnly): Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+* **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
+* **description**: string: The reason for approval/rejection of the connection.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## RedisAccessKeys
 ### Properties
@@ -112,7 +112,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## RedisCreateProperties
+## RedisCreatePropertiesOrRedisProperties
 ### Properties
 * **accessKeys**: [RedisAccessKeys](#redisaccesskeys) (ReadOnly): The keys of the Redis cache - not set if this object is not the response to Create or Update redis cache
 * **enableNonSslPort**: bool: Specifies whether the non-ssl Redis server port (6379) is enabled.
@@ -151,7 +151,7 @@
 ### Properties
 * **id**: string (ReadOnly): Linked server Id.
 
-## RedisLinkedServerCreateProperties
+## RedisLinkedServerCreatePropertiesOrRedisLinkedServerProperties
 ### Properties
 * **linkedRedisCacheId**: string (Required): Fully qualified resourceId of the linked redis cache.
 * **linkedRedisCacheLocation**: string (Required): Location of the linked redis cache.

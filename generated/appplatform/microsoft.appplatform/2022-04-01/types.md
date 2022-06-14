@@ -513,11 +513,11 @@
 
 ## TestKeys
 ### Properties
-* **enabled**: bool (ReadOnly): Indicates whether the test endpoint feature enabled or not
-* **primaryKey**: string (ReadOnly): Primary key
-* **primaryTestEndpoint**: string (ReadOnly): Primary test endpoint
-* **secondaryKey**: string (ReadOnly): Secondary key
-* **secondaryTestEndpoint**: string (ReadOnly): Secondary test endpoint
+* **enabled**: bool: Indicates whether the test endpoint feature enabled or not
+* **primaryKey**: string: Primary key
+* **primaryTestEndpoint**: string: Primary test endpoint
+* **secondaryKey**: string: Secondary key
+* **secondaryTestEndpoint**: string: Secondary test endpoint
 
 ## TrackedResourceTags
 ### Properties

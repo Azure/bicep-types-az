@@ -85,34 +85,34 @@
 
 ## AddressDetails
 ### Properties
-* **addressLine1**: string (WriteOnly): Address line 1.
-* **addressLine2**: string (WriteOnly): Address line 2.
-* **addressLine3**: string (WriteOnly): Address line 3.
-* **city**: string (WriteOnly): Address city.
-* **companyName**: string (WriteOnly): Company name.
-* **country**: string (WriteOnly): Country code uses ISO2, 2-digit format.
-* **firstName**: string (WriteOnly): First name.
-* **lastName**: string (WriteOnly): Last name.
-* **postalCode**: string (WriteOnly): Postal code.
-* **region**: string (WriteOnly): Address region.
+* **addressLine1**: string: Address line 1.
+* **addressLine2**: string: Address line 2.
+* **addressLine3**: string: Address line 3.
+* **city**: string: Address city.
+* **companyName**: string: Company name.
+* **country**: string: Country code uses ISO2, 2-digit format.
+* **firstName**: string: First name.
+* **lastName**: string: Last name.
+* **postalCode**: string: Postal code.
+* **region**: string: Address region.
 
 ## AzurePlan
 ### Properties
-* **skuDescription**: string (ReadOnly, WriteOnly): The sku description.
-* **skuId**: string (WriteOnly): The sku id.
+* **skuDescription**: string (ReadOnly): The sku description.
+* **skuId**: string: The sku id.
 
 ## BillingProfileProperties
 ### Properties
-* **address**: [AddressDetails](#addressdetails) (ReadOnly): Billing address.
+* **address**: [AddressDetails](#addressdetails): Billing address.
 * **billingRelationshipType**: 'CSPPartner' | 'Direct' | 'IndirectCustomer' | 'IndirectPartner' | string (ReadOnly): Identifies which services and purchases are paid by a billing profile.
 * **currency**: string (ReadOnly): The currency in which the charges for the billing profile are billed.
-* **displayName**: string (ReadOnly): The name of the billing profile.
-* **enabledAzurePlans**: [AzurePlan](#azureplan)[] (ReadOnly): Information about the enabled azure plans.
+* **displayName**: string: The name of the billing profile.
+* **enabledAzurePlans**: [AzurePlan](#azureplan)[]: Information about the enabled azure plans.
 * **indirectRelationshipInfo**: [IndirectRelationshipInfo](#indirectrelationshipinfo) (ReadOnly): Identifies the billing profile that is linked to another billing profile in indirect purchase motion.
 * **invoiceDay**: int (ReadOnly): The day of the month when the invoice for the billing profile is generated.
-* **invoiceEmailOptIn**: bool (ReadOnly): Flag controlling whether the invoices for the billing profile are sent through email.
-* **invoiceSections**: [InvoiceSection](#invoicesection)[] (ReadOnly): The invoice sections associated to the billing profile.
-* **poNumber**: string (ReadOnly): The purchase order name that will appear on the invoices generated for the billing profile.
+* **invoiceEmailOptIn**: bool: Flag controlling whether the invoices for the billing profile are sent through email.
+* **invoiceSections**: [InvoiceSection](#invoicesection)[]: The invoice sections associated to the billing profile.
+* **poNumber**: string: The purchase order name that will appear on the invoices generated for the billing profile.
 * **spendingLimit**: 'Off' | 'On' | string (ReadOnly): The billing profile spending limit.
 * **status**: 'Active' | 'Disabled' | 'Warned' | string (ReadOnly): The status of the billing profile.
 * **statusReasonCode**: 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' | string (ReadOnly): Reason for the specified billing profile status.
@@ -138,9 +138,9 @@
 
 ## IndirectRelationshipInfo
 ### Properties
-* **billingAccountName**: string (ReadOnly): The billing account name of the partner or the customer for an indirect motion.
-* **billingProfileName**: string (ReadOnly): The billing profile name of the partner or the customer for an indirect motion.
-* **displayName**: string (ReadOnly): The display name of the partner or customer for an indirect motion.
+* **billingAccountName**: string: The billing account name of the partner or the customer for an indirect motion.
+* **billingProfileName**: string: The billing profile name of the partner or the customer for an indirect motion.
+* **displayName**: string: The display name of the partner or customer for an indirect motion.
 
 ## InstructionProperties
 ### Properties
@@ -153,17 +153,17 @@
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **name**: string (ReadOnly): Resource name.
-* **properties**: [InvoiceSectionProperties](#invoicesectionproperties) (ReadOnly): The properties of an invoice section.
+* **properties**: [InvoiceSectionProperties](#invoicesectionproperties): The properties of an invoice section.
 * **type**: string (ReadOnly): Resource type.
 
 ## InvoiceSectionListWithCreateSubPermissionResult
 ### Properties
 * **nextLink**: string (ReadOnly): The link (url) to the next page of results.
-* **value**: [InvoiceSectionWithCreateSubPermission](#invoicesectionwithcreatesubpermission)[] (ReadOnly): The list of invoice section properties with create subscription permission.
+* **value**: [InvoiceSectionWithCreateSubPermission](#invoicesectionwithcreatesubpermission)[]: The list of invoice section properties with create subscription permission.
 
 ## InvoiceSectionProperties
 ### Properties
-* **displayName**: string (ReadOnly): The name of the invoice section.
+* **displayName**: string: The name of the invoice section.
 * **state**: 'Active' | 'Restricted' | string (ReadOnly): Identifies the state of an invoice section.
 * **targetCloud**: 'USGov' | 'USNat' | 'USSec' | string (ReadOnly): Identifies the cloud environments that are associated with an invoice section. This is a system managed optional field and gets updated as the invoice section gets associated with accounts in various clouds.
 
@@ -174,7 +174,7 @@
 * **billingProfileSpendingLimit**: 'Off' | 'On' | string (ReadOnly): The billing profile spending limit.
 * **billingProfileStatus**: 'Active' | 'Disabled' | 'Warned' | string (ReadOnly): The status of the billing profile.
 * **billingProfileStatusReasonCode**: 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' | string (ReadOnly): Reason for the specified billing profile status.
-* **enabledAzurePlans**: [AzurePlan](#azureplan)[] (ReadOnly): Enabled azure plans for the associated billing profile.
+* **enabledAzurePlans**: [AzurePlan](#azureplan)[]: Enabled azure plans for the associated billing profile.
 * **invoiceSectionDisplayName**: string (ReadOnly): The name of the invoice section.
 * **invoiceSectionId**: string (ReadOnly): The ID of the invoice section.
 

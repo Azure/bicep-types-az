@@ -9,7 +9,7 @@
 * **identity**: [ClusterIdentity](#clusteridentity): The identity of the cluster, if configured.
 * **location**: string: The location of the cluster.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterCreateProperties](#clustercreateproperties): The cluster create parameters.
+* **properties**: [ClusterCreatePropertiesOrClusterGetProperties](#clustercreatepropertiesorclustergetproperties): The cluster create parameters.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ClusterCreateParametersExtendedTags](#clustercreateparametersextendedtags): The resource tags.
 * **type**: 'Microsoft.HDInsight/clusters' (ReadOnly, DeployTimeConstant): The resource type
@@ -115,7 +115,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ClusterCreateProperties
+## ClusterCreatePropertiesOrClusterGetProperties
 ### Properties
 * **clusterDefinition**: [ClusterDefinition](#clusterdefinition): The cluster definition.
 * **clusterHdpVersion**: string (ReadOnly): The hdp version of the cluster.
@@ -177,11 +177,11 @@
 
 ## ConnectivityEndpoint
 ### Properties
-* **location**: string (ReadOnly): The location of the endpoint.
-* **name**: string (ReadOnly): The name of the endpoint.
-* **port**: int (ReadOnly): The port to connect to.
-* **privateIPAddress**: string (ReadOnly): The private ip address of the endpoint.
-* **protocol**: string (ReadOnly): The protocol of the endpoint.
+* **location**: string: The location of the endpoint.
+* **name**: string: The name of the endpoint.
+* **port**: int: The port to connect to.
+* **privateIPAddress**: string: The private ip address of the endpoint.
+* **protocol**: string: The protocol of the endpoint.
 
 ## DataDisksGroups
 ### Properties
@@ -204,13 +204,13 @@
 
 ## Errors
 ### Properties
-* **code**: string (ReadOnly): The error code.
-* **message**: string (ReadOnly): The error message.
+* **code**: string: The error code.
+* **message**: string: The error message.
 
 ## ExcludedServicesConfig
 ### Properties
-* **excludedServicesConfigId**: string (ReadOnly): The config id of excluded services.
-* **excludedServicesList**: string (ReadOnly): The list of excluded services.
+* **excludedServicesConfigId**: string: The config id of excluded services.
+* **excludedServicesList**: string: The list of excluded services.
 
 ## HardwareProfile
 ### Properties
@@ -218,9 +218,9 @@
 
 ## HostInfo
 ### Properties
-* **effectiveDiskEncryptionKeyUrl**: string (ReadOnly): The effective disk encryption key URL used by the host
-* **fqdn**: string (ReadOnly): The Fully Qualified Domain Name of host
-* **name**: string (ReadOnly): The host name
+* **effectiveDiskEncryptionKeyUrl**: string: The effective disk encryption key URL used by the host
+* **fqdn**: string: The Fully Qualified Domain Name of host
+* **name**: string: The host name
 
 ## IPConfiguration
 ### Properties
@@ -264,13 +264,13 @@
 
 ## PrivateEndpoint
 ### Properties
-* **id**: string (ReadOnly): The private endpoint id.
+* **id**: string: The private endpoint id.
 
 ## PrivateEndpointConnection
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **name**: string (ReadOnly): The name of the resource
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): The private endpoint connection properties.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The private endpoint connection properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
@@ -278,7 +278,7 @@
 ### Properties
 * **linkIdentifier**: string (ReadOnly): The link identifier.
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The private endpoint of the private endpoint connection
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly): The private link service connection state.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): The private link service connection state.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state, which only appears in the response.
 
 ## PrivateLinkConfiguration
@@ -296,13 +296,13 @@
 
 ## PrivateLinkServiceConnectionState
 ### Properties
-* **actionsRequired**: string (ReadOnly): Whether there is further actions.
-* **description**: string (ReadOnly): The optional description of the status.
-* **status**: 'Approved' | 'Pending' | 'Rejected' | 'Removed' | string (ReadOnly): The concrete private link service connection.
+* **actionsRequired**: string: Whether there is further actions.
+* **description**: string: The optional description of the status.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | 'Removed' | string (Required): The concrete private link service connection.
 
 ## QuotaInfo
 ### Properties
-* **coresUsed**: int (ReadOnly): The cores used by the cluster.
+* **coresUsed**: int: The cores used by the cluster.
 
 ## ResourceId
 ### Properties
@@ -374,12 +374,12 @@
 
 ## SystemData
 ### Properties
-* **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
-* **createdBy**: string (ReadOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
-* **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that last modified the resource.
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## UserAssignedIdentity
 ### Properties

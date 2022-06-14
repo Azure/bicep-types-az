@@ -15,14 +15,14 @@
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SecurityAssessmentProperties](#securityassessmentproperties): Describes properties of an assessment.
+* **properties**: [SecurityAssessmentPropertiesOrSecurityAssessmentPropertiesResponse](#securityassessmentpropertiesorsecurityassessmentpropertiesresponse): Describes properties of an assessment.
 * **type**: 'Microsoft.Security/assessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AssessmentLinks
 ### Properties
 * **azurePortalUri**: string (ReadOnly): Link to assessment in Azure Portal
 
-## AssessmentStatus
+## AssessmentStatusOrAssessmentStatusResponse
 ### Properties
 * **cause**: string: Programmatic code for the cause of the assessment status
 * **code**: 'Healthy' | 'NotApplicable' | 'Unhealthy' | string (Required): Programmatic code for the status of the assessment
@@ -96,7 +96,12 @@
 * **partnerName**: string (Required): Name of the company of the partner
 * **secret**: string (Required): secret to authenticate the partner - write only
 
-## SecurityAssessmentProperties
+## SecurityAssessmentPropertiesBaseAdditionalData
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SecurityAssessmentPropertiesOrSecurityAssessmentPropertiesResponse
 ### Properties
 * **additionalData**: [SecurityAssessmentPropertiesBaseAdditionalData](#securityassessmentpropertiesbaseadditionaldata): Additional data regarding the assessment
 * **displayName**: string (ReadOnly): User friendly display name of the assessment
@@ -104,10 +109,5 @@
 * **metadata**: [SecurityAssessmentMetadataProperties](#securityassessmentmetadataproperties): Describes properties of an assessment metadata.
 * **partnersData**: [SecurityAssessmentPartnerData](#securityassessmentpartnerdata): Data regarding 3rd party partner integration
 * **resourceDetails**: [ResourceDetails](#resourcedetails) (Required): Details of the resource that was assessed
-* **status**: [AssessmentStatus](#assessmentstatus) (Required): The result of the assessment
-
-## SecurityAssessmentPropertiesBaseAdditionalData
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **status**: [AssessmentStatusOrAssessmentStatusResponse](#assessmentstatusorassessmentstatusresponse) (Required): The result of the assessment
 

@@ -74,27 +74,27 @@
 
 ## AuthorizationRuleKeys
 ### Properties
-* **keyName**: string (ReadOnly): A string that describes the authorization rule
-* **primaryConnectionString**: string (ReadOnly): PrimaryConnectionString of the created Namespace AuthorizationRule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token
-* **secondaryConnectionString**: string (ReadOnly): SecondaryConnectionString of the created Namespace AuthorizationRule
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit secondary key for signing and validating the SAS token
+* **keyName**: string: A string that describes the authorization rule
+* **primaryConnectionString**: string: PrimaryConnectionString of the created Namespace AuthorizationRule.
+* **primaryKey**: string: A base64-encoded 256-bit primary key for signing and validating the SAS token
+* **secondaryConnectionString**: string: SecondaryConnectionString of the created Namespace AuthorizationRule
+* **secondaryKey**: string: A base64-encoded 256-bit secondary key for signing and validating the SAS token
 
 ## AuthorizationRuleKeys
 ### Properties
-* **keyName**: string (ReadOnly): A string that describes the authorization rule
-* **primaryConnectionString**: string (ReadOnly): PrimaryConnectionString of the created Namespace AuthorizationRule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token
-* **secondaryConnectionString**: string (ReadOnly): SecondaryConnectionString of the created Namespace AuthorizationRule
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit secondary key for signing and validating the SAS token
+* **keyName**: string: A string that describes the authorization rule
+* **primaryConnectionString**: string: PrimaryConnectionString of the created Namespace AuthorizationRule.
+* **primaryKey**: string: A base64-encoded 256-bit primary key for signing and validating the SAS token
+* **secondaryConnectionString**: string: SecondaryConnectionString of the created Namespace AuthorizationRule
+* **secondaryKey**: string: A base64-encoded 256-bit secondary key for signing and validating the SAS token
 
 ## AuthorizationRuleKeys
 ### Properties
-* **keyName**: string (ReadOnly): A string that describes the authorization rule
-* **primaryConnectionString**: string (ReadOnly): PrimaryConnectionString of the created Namespace AuthorizationRule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token
-* **secondaryConnectionString**: string (ReadOnly): SecondaryConnectionString of the created Namespace AuthorizationRule
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit secondary key for signing and validating the SAS token
+* **keyName**: string: A string that describes the authorization rule
+* **primaryConnectionString**: string: PrimaryConnectionString of the created Namespace AuthorizationRule.
+* **primaryKey**: string: A base64-encoded 256-bit primary key for signing and validating the SAS token
+* **secondaryConnectionString**: string: SecondaryConnectionString of the created Namespace AuthorizationRule
+* **secondaryKey**: string: A base64-encoded 256-bit secondary key for signing and validating the SAS token
 
 ## AuthorizationRuleProperties
 ### Properties

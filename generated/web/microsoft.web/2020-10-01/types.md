@@ -282,7 +282,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
+* **properties**: [MSDeployCoreOrMSDeployStatusProperties](#msdeploycoreormsdeploystatusproperties): Core resource properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -346,7 +346,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
+* **properties**: [MSDeployCoreOrMSDeployStatusProperties](#msdeploycoreormsdeploystatusproperties): Core resource properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -392,7 +392,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): Core resource properties
+* **properties**: [PrivateLinkConnectionApprovalRequestOrRemotePrivateEndpointConnection](#privatelinkconnectionapprovalrequestorremoteprivateendpointconnection): Core resource properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -567,7 +567,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
+* **properties**: [MSDeployCoreOrMSDeployStatusProperties](#msdeploycoreormsdeploystatusproperties): Core resource properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -631,7 +631,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
+* **properties**: [MSDeployCoreOrMSDeployStatusProperties](#msdeploycoreormsdeploystatusproperties): Core resource properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Web/sites/slots/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -1165,30 +1165,30 @@ Remove blobs older than X days.
 ## BackupItem
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [BackupItemProperties](#backupitemproperties) (ReadOnly): BackupItem resource specific properties
+* **properties**: [BackupItemProperties](#backupitemproperties): BackupItem resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## BackupItem
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [BackupItemProperties](#backupitemproperties) (ReadOnly): BackupItem resource specific properties
+* **properties**: [BackupItemProperties](#backupitemproperties): BackupItem resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## BackupItemCollection
 ### Properties
 * **nextLink**: string (ReadOnly): Link to next page of resources.
-* **value**: [BackupItem](#backupitem)[] (ReadOnly): Collection of resources.
+* **value**: [BackupItem](#backupitem)[] (Required): Collection of resources.
 
 ## BackupItemCollection
 ### Properties
 * **nextLink**: string (ReadOnly): Link to next page of resources.
-* **value**: [BackupItem](#backupitem)[] (ReadOnly): Collection of resources.
+* **value**: [BackupItem](#backupitem)[] (Required): Collection of resources.
 
 ## BackupItemProperties
 ### Properties
@@ -1209,21 +1209,21 @@ Remove blobs older than X days.
 
 ## BackupRequest
 ### Properties
-* **id**: string (ReadOnly, WriteOnly): Resource Id.
-* **kind**: string (WriteOnly): Kind of resource.
-* **name**: string (ReadOnly, WriteOnly): Resource Name.
-* **properties**: [BackupRequestProperties](#backuprequestproperties) (WriteOnly): BackupRequest resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): The system metadata relating to this resource.
-* **type**: string (ReadOnly, WriteOnly): Resource type.
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string: Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [BackupRequestProperties](#backuprequestproperties): BackupRequest resource specific properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
+* **type**: string (ReadOnly): Resource type.
 
 ## BackupRequest
 ### Properties
-* **id**: string (ReadOnly, WriteOnly): Resource Id.
-* **kind**: string (WriteOnly): Kind of resource.
-* **name**: string (ReadOnly, WriteOnly): Resource Name.
-* **properties**: [BackupRequestProperties](#backuprequestproperties) (WriteOnly): BackupRequest resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): The system metadata relating to this resource.
-* **type**: string (ReadOnly, WriteOnly): Resource type.
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string: Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [BackupRequestProperties](#backuprequestproperties): BackupRequest resource specific properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
+* **type**: string (ReadOnly): Resource type.
 
 ## BackupRequestProperties
 ### Properties
@@ -1498,23 +1498,23 @@ Value can range between 25 and 100.
 
 ## FunctionSecrets
 ### Properties
-* **key**: string (ReadOnly): Secret key.
-* **trigger_url**: string (ReadOnly): Trigger URL.
+* **key**: string: Secret key.
+* **trigger_url**: string: Trigger URL.
 
 ## FunctionSecrets
 ### Properties
-* **key**: string (ReadOnly): Secret key.
-* **trigger_url**: string (ReadOnly): Trigger URL.
+* **key**: string: Secret key.
+* **trigger_url**: string: Trigger URL.
 
 ## FunctionSecrets
 ### Properties
-* **key**: string (ReadOnly): Secret key.
-* **trigger_url**: string (ReadOnly): Trigger URL.
+* **key**: string: Secret key.
+* **trigger_url**: string: Trigger URL.
 
 ## FunctionSecrets
 ### Properties
-* **key**: string (ReadOnly): Secret key.
-* **trigger_url**: string (ReadOnly): Trigger URL.
+* **key**: string: Secret key.
+* **trigger_url**: string: Trigger URL.
 
 ## GitHub
 ### Properties
@@ -1577,15 +1577,15 @@ Value can range between 25 and 100.
 
 ## HostKeys
 ### Properties
-* **functionKeys**: [HostKeysFunctionKeys](#hostkeysfunctionkeys) (ReadOnly): Host level function keys.
-* **masterKey**: string (ReadOnly): Secret key.
-* **systemKeys**: [HostKeysSystemKeys](#hostkeyssystemkeys) (ReadOnly): System keys.
+* **functionKeys**: [HostKeysFunctionKeys](#hostkeysfunctionkeys): Host level function keys.
+* **masterKey**: string: Secret key.
+* **systemKeys**: [HostKeysSystemKeys](#hostkeyssystemkeys): System keys.
 
 ## HostKeys
 ### Properties
-* **functionKeys**: [HostKeysFunctionKeys](#hostkeysfunctionkeys) (ReadOnly): Host level function keys.
-* **masterKey**: string (ReadOnly): Secret key.
-* **systemKeys**: [HostKeysSystemKeys](#hostkeyssystemkeys) (ReadOnly): System keys.
+* **functionKeys**: [HostKeysFunctionKeys](#hostkeysfunctionkeys): Host level function keys.
+* **masterKey**: string: Secret key.
+* **systemKeys**: [HostKeysSystemKeys](#hostkeyssystemkeys): System keys.
 
 ## HostKeysFunctionKeys
 ### Properties
@@ -1654,9 +1654,9 @@ Value can range between 25 and 100.
 ## HybridConnectionKey
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [HybridConnectionKeyProperties](#hybridconnectionkeyproperties) (ReadOnly): HybridConnectionKey resource specific properties
+* **properties**: [HybridConnectionKeyProperties](#hybridconnectionkeyproperties): HybridConnectionKey resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
@@ -1811,7 +1811,7 @@ SubnetMask property must not be specified.
 ### Additional Properties
 * **Additional Properties Type**: [Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties](#components1jq1t4ischemasmanagedserviceidentitypropertiesuserassignedidentitiesadditionalproperties)
 
-## MSDeployCore
+## MSDeployCoreOrMSDeployStatusProperties
 ### Properties
 * **appOffline**: bool (WriteOnly): Sets the AppOffline rule while the MSDeploy operation executes.
 Setting is <code>false</code> by default.
@@ -1946,7 +1946,7 @@ Setting is <code>false</code> by default.
 * **resourceId**: string: The ARM uri of the Virtual Network
 * **subnets**: [PrivateAccessSubnet](#privateaccesssubnet)[]: A List of subnets that access is allowed to on this Virtual Network. An empty array (but not null) is interpreted to mean that all subnets are allowed within this Virtual Network.
 
-## PrivateLinkConnectionApprovalRequest
+## PrivateLinkConnectionApprovalRequestOrRemotePrivateEndpointConnection
 ### Properties
 * **privateEndpoint**: [ArmIdWrapper](#armidwrapper) (ReadOnly): PrivateEndpoint of a remote private endpoint connection
 * **privateLinkServiceConnectionState**: [PrivateLinkConnectionState](#privatelinkconnectionstate): The state of a private link connection
@@ -2217,26 +2217,26 @@ This setting only applies to the Consumption and Elastic Plans
 
 ## SiteExtensionInfoProperties
 ### Properties
-* **authors**: string[] (ReadOnly): List of authors.
-* **comment**: string (ReadOnly): Site Extension comment.
-* **description**: string (ReadOnly): Detailed description.
-* **download_count**: int (ReadOnly): Count of downloads.
-* **extension_id**: string (ReadOnly): Site extension ID.
-* **extension_type**: 'Gallery' | 'WebRoot' (ReadOnly): Site extension type.
-* **extension_url**: string (ReadOnly): Extension URL.
-* **feed_url**: string (ReadOnly): Feed URL.
-* **icon_url**: string (ReadOnly): Icon URL.
-* **installed_date_time**: string (ReadOnly): Installed timestamp.
-* **installer_command_line_params**: string (ReadOnly): Installer command line parameters.
-* **license_url**: string (ReadOnly): License URL.
-* **local_is_latest_version**: bool (ReadOnly): <code>true</code> if the local version is the latest version; <code>false</code> otherwise.
-* **local_path**: string (ReadOnly): Local path.
-* **project_url**: string (ReadOnly): Project URL.
-* **provisioningState**: string (ReadOnly): Provisioning state.
-* **published_date_time**: string (ReadOnly): Published timestamp.
-* **summary**: string (ReadOnly): Summary description.
-* **title**: string (ReadOnly)
-* **version**: string (ReadOnly): Version information.
+* **authors**: string[]: List of authors.
+* **comment**: string: Site Extension comment.
+* **description**: string: Detailed description.
+* **download_count**: int: Count of downloads.
+* **extension_id**: string: Site extension ID.
+* **extension_type**: 'Gallery' | 'WebRoot': Site extension type.
+* **extension_url**: string: Extension URL.
+* **feed_url**: string: Feed URL.
+* **icon_url**: string: Icon URL.
+* **installed_date_time**: string: Installed timestamp.
+* **installer_command_line_params**: string: Installer command line parameters.
+* **license_url**: string: License URL.
+* **local_is_latest_version**: bool: <code>true</code> if the local version is the latest version; <code>false</code> otherwise.
+* **local_path**: string: Local path.
+* **project_url**: string: Project URL.
+* **provisioningState**: string: Provisioning state.
+* **published_date_time**: string: Published timestamp.
+* **summary**: string: Summary description.
+* **title**: string
+* **version**: string: Version information.
 
 ## SiteLimits
 ### Properties
@@ -2395,9 +2395,9 @@ Basic apps are not used for capacity allocation.
 ## StaticSiteUserARMResource
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [StaticSiteUserARMResourceProperties](#staticsiteuserarmresourceproperties) (ReadOnly): StaticSiteUserARMResource resource specific properties
+* **properties**: [StaticSiteUserARMResourceProperties](#staticsiteuserarmresourceproperties): StaticSiteUserARMResource resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
@@ -2405,13 +2405,13 @@ Basic apps are not used for capacity allocation.
 ### Properties
 * **displayName**: string (ReadOnly): The display name for the static site user.
 * **provider**: string (ReadOnly): The identity provider for the static site user.
-* **roles**: string (ReadOnly): The roles for the static site user, in free-form string format
+* **roles**: string: The roles for the static site user, in free-form string format
 * **userId**: string (ReadOnly): The user id for the static site user.
 
 ## StaticSiteUserCollection
 ### Properties
 * **nextLink**: string (ReadOnly): Link to next page of resources.
-* **value**: [StaticSiteUserARMResource](#staticsiteuserarmresource)[] (ReadOnly): Collection of resources.
+* **value**: [StaticSiteUserARMResource](#staticsiteuserarmresource)[] (Required): Collection of resources.
 
 ## StatusCodesBasedTrigger
 ### Properties
@@ -2424,63 +2424,63 @@ Basic apps are not used for capacity allocation.
 ## StringDictionary
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (ReadOnly): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## StringDictionary
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (ReadOnly): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## StringDictionary
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (ReadOnly): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## StringDictionary
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (ReadOnly): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## StringDictionary
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (ReadOnly): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## StringDictionary
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (ReadOnly): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## StringDictionary
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (ReadOnly): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: string (ReadOnly): Resource type.
 

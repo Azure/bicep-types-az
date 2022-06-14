@@ -799,13 +799,13 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## FollowerDatabaseDefinition
 ### Properties
-* **attachedDatabaseConfigurationName**: string (ReadOnly): Resource name of the attached database configuration in the follower cluster.
-* **clusterResourceId**: string (ReadOnly): Resource id of the cluster that follows a database owned by this cluster.
+* **attachedDatabaseConfigurationName**: string (Required): Resource name of the attached database configuration in the follower cluster.
+* **clusterResourceId**: string (Required): Resource id of the cluster that follows a database owned by this cluster.
 * **databaseName**: string (ReadOnly): The database name owned by this cluster that was followed. * in case following all databases.
 
 ## FollowerDatabaseListResult
 ### Properties
-* **value**: [FollowerDatabaseDefinition](#followerdatabasedefinition)[] (ReadOnly): The list of follower database result.
+* **value**: [FollowerDatabaseDefinition](#followerdatabasedefinition)[]: The list of follower database result.
 
 ## GeoBackupPolicyProperties
 ### Properties
@@ -832,8 +832,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## IntegrationRuntimeAuthKeys
 ### Properties
-* **authKey1**: string (ReadOnly): The primary integration runtime authentication key.
-* **authKey2**: string (ReadOnly): The secondary integration runtime authentication key.
+* **authKey1**: string: The primary integration runtime authentication key.
+* **authKey2**: string: The secondary integration runtime authentication key.
 
 ## IntegrationRuntimeComputeProperties
 ### Properties

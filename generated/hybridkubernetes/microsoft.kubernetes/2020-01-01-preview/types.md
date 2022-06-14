@@ -20,12 +20,12 @@
 
 ## AuthenticationDetails
 ### Properties
-* **authenticationMethod**: 'Token' | string (Required, WriteOnly): The mode of client authentication.
-* **value**: [AuthenticationDetailsValue](#authenticationdetailsvalue) (Required, WriteOnly): Authentication token value.
+* **authenticationMethod**: 'Token' | string (Required): The mode of client authentication.
+* **value**: [AuthenticationDetailsValue](#authenticationdetailsvalue) (Required): Authentication token value.
 
 ## AuthenticationDetailsValue
 ### Properties
-* **token**: string (WriteOnly): Authentication token.
+* **token**: string: Authentication token.
 
 ## ConnectedClusterAADProfile
 ### Properties

@@ -32,7 +32,7 @@
 * **etag**: string (ReadOnly): The etag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventHubConsumerGroupName](#eventhubconsumergroupname) (Required): The EventHub consumer group name.
+* **properties**: [EventHubConsumerGroupNameOrEventHubConsumerGroupInfoProperties](#eventhubconsumergroupnameoreventhubconsumergroupinfoproperties) (Required): The EventHub consumer group name.
 * **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Devices/iotHubs/privateEndpointConnections@2021-07-02
@@ -93,7 +93,7 @@
 * **key**: string (Required): The key or name for the enrichment property.
 * **value**: string (Required): The value for the enrichment property.
 
-## EventHubConsumerGroupName
+## EventHubConsumerGroupNameOrEventHubConsumerGroupInfoProperties
 ### Properties
 * **name**: string (Required, WriteOnly): EventHub consumer group name
 
@@ -318,7 +318,7 @@
 ## SharedAccessSignatureAuthorizationRuleListResult
 ### Properties
 * **nextLink**: string (ReadOnly): The next link.
-* **value**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)[] (ReadOnly): The list of shared access policies.
+* **value**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)[]: The list of shared access policies.
 
 ## StorageEndpointProperties
 ### Properties

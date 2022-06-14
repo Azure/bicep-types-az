@@ -77,43 +77,43 @@
 
 ## DatadogApiKey
 ### Properties
-* **created**: string (ReadOnly): The time of creation of the API key.
-* **createdBy**: string (ReadOnly): The user that created the API key.
-* **key**: string (ReadOnly): The value of the API key.
-* **name**: string (ReadOnly): The name of the API key.
+* **created**: string: The time of creation of the API key.
+* **createdBy**: string: The user that created the API key.
+* **key**: string (Required): The value of the API key.
+* **name**: string: The name of the API key.
 
 ## DatadogApiKeyListResponse
 ### Properties
-* **nextLink**: string (ReadOnly): Link to the next set of results, if any.
-* **value**: [DatadogApiKey](#datadogapikey)[] (ReadOnly): Results of a list operation.
+* **nextLink**: string: Link to the next set of results, if any.
+* **value**: [DatadogApiKey](#datadogapikey)[]: Results of a list operation.
 
 ## DatadogHost
 ### Properties
-* **aliases**: string[] (ReadOnly): The aliases for the host.
-* **apps**: string[] (ReadOnly): The Datadog integrations reporting metrics for the host.
-* **meta**: [DatadogHostMetadata](#datadoghostmetadata) (ReadOnly)
-* **name**: string (ReadOnly): The name of the host.
+* **aliases**: string[]: The aliases for the host.
+* **apps**: string[]: The Datadog integrations reporting metrics for the host.
+* **meta**: [DatadogHostMetadata](#datadoghostmetadata)
+* **name**: string: The name of the host.
 
 ## DatadogHostListResponse
 ### Properties
-* **nextLink**: string (ReadOnly): Link to the next set of results, if any.
-* **value**: [DatadogHost](#datadoghost)[] (ReadOnly): Results of a list operation.
+* **nextLink**: string: Link to the next set of results, if any.
+* **value**: [DatadogHost](#datadoghost)[]: Results of a list operation.
 
 ## DatadogHostMetadata
 ### Properties
-* **agentVersion**: string (ReadOnly): The agent version.
-* **installMethod**: [DatadogInstallMethod](#datadoginstallmethod) (ReadOnly)
-* **logsAgent**: [DatadogLogsAgent](#datadoglogsagent) (ReadOnly)
+* **agentVersion**: string: The agent version.
+* **installMethod**: [DatadogInstallMethod](#datadoginstallmethod)
+* **logsAgent**: [DatadogLogsAgent](#datadoglogsagent)
 
 ## DatadogInstallMethod
 ### Properties
-* **installerVersion**: string (ReadOnly): The installer version.
-* **tool**: string (ReadOnly): The tool.
-* **toolVersion**: string (ReadOnly): The tool version.
+* **installerVersion**: string: The installer version.
+* **tool**: string: The tool.
+* **toolVersion**: string: The tool version.
 
 ## DatadogLogsAgent
 ### Properties
-* **transport**: string (ReadOnly): The transport.
+* **transport**: string: The transport.
 
 ## DatadogMonitorResourceTags
 ### Properties
@@ -152,12 +152,12 @@
 
 ## LinkedResource
 ### Properties
-* **id**: string (ReadOnly): The ARM id of the linked resource.
+* **id**: string: The ARM id of the linked resource.
 
 ## LinkedResourceListResponse
 ### Properties
-* **nextLink**: string (ReadOnly): Link to the next set of results, if any.
-* **value**: [LinkedResource](#linkedresource)[] (ReadOnly): Results of a list operation.
+* **nextLink**: string: Link to the next set of results, if any.
+* **value**: [LinkedResource](#linkedresource)[]: Results of a list operation.
 
 ## LogRules
 ### Properties
@@ -172,16 +172,16 @@
 
 ## MonitoredResource
 ### Properties
-* **id**: string (ReadOnly): The ARM id of the resource.
-* **reasonForLogsStatus**: string (ReadOnly): Reason for why the resource is sending logs (or why it is not sending).
-* **reasonForMetricsStatus**: string (ReadOnly): Reason for why the resource is sending metrics (or why it is not sending).
-* **sendingLogs**: bool (ReadOnly): Flag indicating if resource is sending logs to Datadog.
-* **sendingMetrics**: bool (ReadOnly): Flag indicating if resource is sending metrics to Datadog.
+* **id**: string: The ARM id of the resource.
+* **reasonForLogsStatus**: string: Reason for why the resource is sending logs (or why it is not sending).
+* **reasonForMetricsStatus**: string: Reason for why the resource is sending metrics (or why it is not sending).
+* **sendingLogs**: bool: Flag indicating if resource is sending logs to Datadog.
+* **sendingMetrics**: bool: Flag indicating if resource is sending metrics to Datadog.
 
 ## MonitoredResourceListResponse
 ### Properties
-* **nextLink**: string (ReadOnly): Link to the next set of results, if any.
-* **value**: [MonitoredResource](#monitoredresource)[] (ReadOnly): Results of a list operation.
+* **nextLink**: string: Link to the next set of results, if any.
+* **value**: [MonitoredResource](#monitoredresource)[]: Results of a list operation.
 
 ## MonitoringTagRulesProperties
 ### Properties

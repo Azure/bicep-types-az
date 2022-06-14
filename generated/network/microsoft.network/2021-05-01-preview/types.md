@@ -219,87 +219,87 @@
 * **Discriminator**: kind
 
 ### Base Properties
-* **commitTime**: string (ReadOnly): Deployment time string.
-* **configurationDescription**: string (ReadOnly): A description of the security admin configuration.
-* **configurationDisplayName**: string (ReadOnly): A display name of the security admin configuration.
-* **id**: string (ReadOnly): Resource ID.
-* **region**: string (ReadOnly): Deployment region.
-* **ruleCollectionAppliesToGroups**: [NetworkManagerSecurityGroupItem](#networkmanagersecuritygroupitem)[] (ReadOnly): Groups for rule collection
-* **ruleCollectionDescription**: string (ReadOnly): A description of the rule collection.
-* **ruleCollectionDisplayName**: string (ReadOnly): A display name of the rule collection.
-* **ruleGroups**: [ConfigurationGroup](#configurationgroup)[] (ReadOnly): Effective configuration groups.
+* **commitTime**: string: Deployment time string.
+* **configurationDescription**: string: A description of the security admin configuration.
+* **configurationDisplayName**: string: A display name of the security admin configuration.
+* **id**: string: Resource ID.
+* **region**: string: Deployment region.
+* **ruleCollectionAppliesToGroups**: [NetworkManagerSecurityGroupItem](#networkmanagersecuritygroupitem)[]: Groups for rule collection
+* **ruleCollectionDescription**: string: A description of the rule collection.
+* **ruleCollectionDisplayName**: string: A display name of the rule collection.
+* **ruleGroups**: [ConfigurationGroup](#configurationgroup)[]: Effective configuration groups.
 ### ActiveSecurityAdminRule
 #### Properties
 * **kind**: 'Custom' (Required): Whether the rule is custom or default.
-* **properties**: [AdminPropertiesFormat](#adminpropertiesformat) (ReadOnly): Indicates the properties of the security admin rule
+* **properties**: [AdminPropertiesFormat](#adminpropertiesformat): Indicates the properties of the security admin rule
 
 ### ActiveDefaultSecurityAdminRule
 #### Properties
 * **kind**: 'Default' (Required): Whether the rule is custom or default.
-* **properties**: [DefaultAdminPropertiesFormat](#defaultadminpropertiesformat) (ReadOnly): Indicates the properties of the default security admin rule
+* **properties**: [DefaultAdminPropertiesFormat](#defaultadminpropertiesformat): Indicates the properties of the default security admin rule
 
 
 ## ActiveBaseSecurityUserRule
 * **Discriminator**: kind
 
 ### Base Properties
-* **commitTime**: string (ReadOnly): Deployment time string.
-* **configurationDescription**: string (ReadOnly): A description of the security user configuration.
-* **configurationDisplayName**: string (ReadOnly): A display name of the security user configuration.
-* **id**: string (ReadOnly): Resource ID.
-* **region**: string (ReadOnly): Deployment region.
-* **ruleCollectionAppliesToGroups**: [NetworkManagerSecurityGroupItem](#networkmanagersecuritygroupitem)[] (ReadOnly): Groups for rule collection
-* **ruleCollectionDescription**: string (ReadOnly): A description of the rule collection.
-* **ruleCollectionDisplayName**: string (ReadOnly): A display name of the rule collection.
-* **ruleGroups**: [ConfigurationGroup](#configurationgroup)[] (ReadOnly): Effective configuration groups.
+* **commitTime**: string: Deployment time string.
+* **configurationDescription**: string: A description of the security user configuration.
+* **configurationDisplayName**: string: A display name of the security user configuration.
+* **id**: string: Resource ID.
+* **region**: string: Deployment region.
+* **ruleCollectionAppliesToGroups**: [NetworkManagerSecurityGroupItem](#networkmanagersecuritygroupitem)[]: Groups for rule collection
+* **ruleCollectionDescription**: string: A description of the rule collection.
+* **ruleCollectionDisplayName**: string: A display name of the rule collection.
+* **ruleGroups**: [ConfigurationGroup](#configurationgroup)[]: Effective configuration groups.
 ### ActiveSecurityUserRule
 #### Properties
 * **kind**: 'Custom' (Required): Whether the rule is custom or default.
-* **properties**: [UserRulePropertiesFormat](#userrulepropertiesformat) (ReadOnly): Indicates the properties of the security user rule
+* **properties**: [UserRulePropertiesFormat](#userrulepropertiesformat): Indicates the properties of the security user rule
 
 ### ActiveDefaultSecurityUserRule
 #### Properties
 * **kind**: 'Default' (Required): Whether the rule is custom or default.
-* **properties**: [DefaultUserRulePropertiesFormat](#defaultuserrulepropertiesformat) (ReadOnly): Indicates the properties of the security default user rule
+* **properties**: [DefaultUserRulePropertiesFormat](#defaultuserrulepropertiesformat): Indicates the properties of the security default user rule
 
 
 ## ActiveConfigurationParameter
 ### Properties
-* **regions**: string[] (WriteOnly): List of regions.
-* **skipToken**: string (WriteOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+* **regions**: string[]: List of regions.
+* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
 
 ## ActiveConfigurationParameter
 ### Properties
-* **regions**: string[] (WriteOnly): List of regions.
-* **skipToken**: string (WriteOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+* **regions**: string[]: List of regions.
+* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
 
 ## ActiveConfigurationParameter
 ### Properties
-* **regions**: string[] (WriteOnly): List of regions.
-* **skipToken**: string (WriteOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+* **regions**: string[]: List of regions.
+* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
 
 ## ActiveConnectivityConfiguration
 ### Properties
-* **commitTime**: string (ReadOnly): Deployment time string.
-* **configurationGroups**: [ConfigurationGroup](#configurationgroup)[] (ReadOnly): Effective configuration groups.
-* **id**: string (ReadOnly): Resource ID.
-* **properties**: [ConnectivityConfigurationProperties](#connectivityconfigurationproperties) (ReadOnly): Properties of a network manager connectivity configuration
-* **region**: string (ReadOnly): Deployment region.
+* **commitTime**: string: Deployment time string.
+* **configurationGroups**: [ConfigurationGroup](#configurationgroup)[]: Effective configuration groups.
+* **id**: string: Resource ID.
+* **properties**: [ConnectivityConfigurationProperties](#connectivityconfigurationproperties): Properties of a network manager connectivity configuration
+* **region**: string: Deployment region.
 
 ## ActiveConnectivityConfigurationsListResult
 ### Properties
-* **skipToken**: string (ReadOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-* **value**: [ActiveConnectivityConfiguration](#activeconnectivityconfiguration)[] (ReadOnly): Gets a page of active connectivity configurations.
+* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+* **value**: [ActiveConnectivityConfiguration](#activeconnectivityconfiguration)[]: Gets a page of active connectivity configurations.
 
 ## ActiveSecurityAdminRulesListResult
 ### Properties
-* **skipToken**: string (ReadOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-* **value**: [ActiveBaseSecurityAdminRule](#activebasesecurityadminrule)[] (ReadOnly): Gets a page of active security admin rules.
+* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+* **value**: [ActiveBaseSecurityAdminRule](#activebasesecurityadminrule)[]: Gets a page of active security admin rules.
 
 ## ActiveSecurityUserRulesListResult
 ### Properties
-* **skipToken**: string (ReadOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-* **value**: [ActiveBaseSecurityUserRule](#activebasesecurityuserrule)[] (ReadOnly): Gets a page of active security user rules.
+* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+* **value**: [ActiveBaseSecurityUserRule](#activebasesecurityuserrule)[]: Gets a page of active security user rules.
 
 ## AddressPrefixItem
 ### Properties
@@ -322,8 +322,8 @@
 
 ## ConfigurationGroup
 ### Properties
-* **id**: string (ReadOnly): Resource ID.
-* **properties**: [NetworkGroupProperties](#networkgroupproperties) (ReadOnly): The network configuration group properties
+* **id**: string: Resource ID.
+* **properties**: [NetworkGroupProperties](#networkgroupproperties): The network configuration group properties
 
 ## ConnectivityConfigurationProperties
 ### Properties
@@ -381,50 +381,50 @@
 * **Discriminator**: kind
 
 ### Base Properties
-* **configurationDescription**: string (ReadOnly): A description of the security admin configuration.
-* **configurationDisplayName**: string (ReadOnly): A display name of the security admin configuration.
-* **id**: string (ReadOnly): Resource ID.
-* **ruleCollectionAppliesToGroups**: [NetworkManagerSecurityGroupItem](#networkmanagersecuritygroupitem)[] (ReadOnly): Groups for rule collection
-* **ruleCollectionDescription**: string (ReadOnly): A description of the rule collection.
-* **ruleCollectionDisplayName**: string (ReadOnly): A display name of the rule collection.
-* **ruleGroups**: [ConfigurationGroup](#configurationgroup)[] (ReadOnly): Effective configuration groups.
+* **configurationDescription**: string: A description of the security admin configuration.
+* **configurationDisplayName**: string: A display name of the security admin configuration.
+* **id**: string: Resource ID.
+* **ruleCollectionAppliesToGroups**: [NetworkManagerSecurityGroupItem](#networkmanagersecuritygroupitem)[]: Groups for rule collection
+* **ruleCollectionDescription**: string: A description of the rule collection.
+* **ruleCollectionDisplayName**: string: A display name of the rule collection.
+* **ruleGroups**: [ConfigurationGroup](#configurationgroup)[]: Effective configuration groups.
 ### EffectiveSecurityAdminRule
 #### Properties
 * **kind**: 'Custom' (Required): Whether the rule is custom or default.
-* **properties**: [AdminPropertiesFormat](#adminpropertiesformat) (ReadOnly): Indicates the properties of the security admin rule
+* **properties**: [AdminPropertiesFormat](#adminpropertiesformat): Indicates the properties of the security admin rule
 
 ### EffectiveDefaultSecurityAdminRule
 #### Properties
 * **kind**: 'Default' (Required): Whether the rule is custom or default.
-* **properties**: [DefaultAdminPropertiesFormat](#defaultadminpropertiesformat) (ReadOnly): Indicates the properties of the default security admin rule
+* **properties**: [DefaultAdminPropertiesFormat](#defaultadminpropertiesformat): Indicates the properties of the default security admin rule
 
 
 ## EffectiveConnectivityConfiguration
 ### Properties
-* **configurationGroups**: [ConfigurationGroup](#configurationgroup)[] (ReadOnly): Effective configuration groups.
-* **id**: string (ReadOnly): Resource ID.
-* **properties**: [ConnectivityConfigurationProperties](#connectivityconfigurationproperties) (ReadOnly): Properties of a network manager connectivity configuration
+* **configurationGroups**: [ConfigurationGroup](#configurationgroup)[]: Effective configuration groups.
+* **id**: string: Resource ID.
+* **properties**: [ConnectivityConfigurationProperties](#connectivityconfigurationproperties): Properties of a network manager connectivity configuration
 
 ## EffectiveVirtualNetwork
 ### Properties
-* **id**: string (ReadOnly): Effective vnet Id.
-* **location**: string (ReadOnly): Location of vnet.
-* **membershipType**: 'Dynamic' | 'Static' | string (ReadOnly): Membership Type.
+* **id**: string: Effective vnet Id.
+* **location**: string: Location of vnet.
+* **membershipType**: 'Dynamic' | 'Static' | string: Membership Type.
 
 ## EffectiveVirtualNetworksListResult
 ### Properties
-* **skipToken**: string (ReadOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-* **value**: [EffectiveVirtualNetwork](#effectivevirtualnetwork)[] (ReadOnly): Gets a page of EffectiveVirtualNetwork
+* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+* **value**: [EffectiveVirtualNetwork](#effectivevirtualnetwork)[]: Gets a page of EffectiveVirtualNetwork
 
 ## EffectiveVirtualNetworksListResult
 ### Properties
-* **skipToken**: string (ReadOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-* **value**: [EffectiveVirtualNetwork](#effectivevirtualnetwork)[] (ReadOnly): Gets a page of EffectiveVirtualNetwork
+* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+* **value**: [EffectiveVirtualNetwork](#effectivevirtualnetwork)[]: Gets a page of EffectiveVirtualNetwork
 
 ## EffectiveVirtualNetworksParameter
 ### Properties
-* **conditionalMembers**: string (WriteOnly): Conditional Members.
-* **skipToken**: string (WriteOnly): Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
+* **conditionalMembers**: string: Conditional Members.
+* **skipToken**: string: Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
 
 ## Hub
 ### Properties
@@ -446,33 +446,33 @@
 
 ## NetworkManagerDeploymentStatus
 ### Properties
-* **commitTime**: string (ReadOnly): Commit Time.
-* **configurationIds**: string[] (ReadOnly): List of configuration ids.
-* **deploymentStatus**: 'Deployed' | 'Deploying' | 'Failed' | 'NotStarted' | string (ReadOnly): Deployment Status.
-* **deploymentType**: 'Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string (ReadOnly): Configuration Deployment Type.
-* **errorMessage**: string (ReadOnly): Error Message.
-* **region**: string (ReadOnly): Region Name.
+* **commitTime**: string: Commit Time.
+* **configurationIds**: string[]: List of configuration ids.
+* **deploymentStatus**: 'Deployed' | 'Deploying' | 'Failed' | 'NotStarted' | string: Deployment Status.
+* **deploymentType**: 'Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string: Configuration Deployment Type.
+* **errorMessage**: string: Error Message.
+* **region**: string: Region Name.
 
 ## NetworkManagerDeploymentStatusListResult
 ### Properties
-* **skipToken**: string (ReadOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-* **value**: [NetworkManagerDeploymentStatus](#networkmanagerdeploymentstatus)[] (ReadOnly): Gets a page of Network Manager Deployment Status
+* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+* **value**: [NetworkManagerDeploymentStatus](#networkmanagerdeploymentstatus)[]: Gets a page of Network Manager Deployment Status
 
 ## NetworkManagerDeploymentStatusParameter
 ### Properties
-* **deploymentTypes**: 'Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string[] (WriteOnly): List of deployment types.
-* **regions**: string[] (WriteOnly): List of locations.
-* **skipToken**: string (WriteOnly): Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
+* **deploymentTypes**: 'Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string[]: List of deployment types.
+* **regions**: string[]: List of locations.
+* **skipToken**: string: Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
 
 ## NetworkManagerEffectiveConnectivityConfigurationListResult
 ### Properties
-* **skipToken**: string (ReadOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-* **value**: [EffectiveConnectivityConfiguration](#effectiveconnectivityconfiguration)[] (ReadOnly): Gets a page of NetworkManagerEffectiveConnectivityConfiguration
+* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+* **value**: [EffectiveConnectivityConfiguration](#effectiveconnectivityconfiguration)[]: Gets a page of NetworkManagerEffectiveConnectivityConfiguration
 
 ## NetworkManagerEffectiveSecurityAdminRulesListResult
 ### Properties
-* **skipToken**: string (ReadOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-* **value**: [EffectiveBaseSecurityAdminRule](#effectivebasesecurityadminrule)[] (ReadOnly): Gets a page of NetworkManagerEffectiveSecurityAdminRules
+* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+* **value**: [EffectiveBaseSecurityAdminRule](#effectivebasesecurityadminrule)[]: Gets a page of NetworkManagerEffectiveSecurityAdminRules
 
 ## NetworkManagerProperties
 ### Properties
@@ -494,15 +494,15 @@
 
 ## QueryRequestOptions
 ### Properties
-* **skipToken**: string (WriteOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
 
 ## QueryRequestOptions
 ### Properties
-* **skipToken**: string (WriteOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
 
 ## QueryRequestOptions
 ### Properties
-* **skipToken**: string (WriteOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
 
 ## ResourceTags
 ### Properties

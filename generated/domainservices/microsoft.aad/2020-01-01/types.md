@@ -29,9 +29,9 @@
 
 ## ContainerAccount
 ### Properties
-* **accountName**: string (ReadOnly): The account name
-* **password**: string (ReadOnly): The account password
-* **spn**: string (ReadOnly): The account spn
+* **accountName**: string: The account name
+* **password**: string: The account password
+* **spn**: string: The account spn
 
 ## DomainSecuritySettings
 ### Properties
@@ -112,7 +112,7 @@
 
 ## OuContainerProperties
 ### Properties
-* **accounts**: [ContainerAccount](#containeraccount)[] (ReadOnly): The list of container accounts
+* **accounts**: [ContainerAccount](#containeraccount)[]: The list of container accounts
 * **containerId**: string (ReadOnly): The OuContainer name
 * **deploymentId**: string (ReadOnly): The Deployment id
 * **distinguishedName**: string (ReadOnly): Distinguished Name of OuContainer instance

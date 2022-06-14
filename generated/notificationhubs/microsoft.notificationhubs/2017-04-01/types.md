@@ -143,19 +143,19 @@
 
 ## ResourceListKeys
 ### Properties
-* **keyName**: string (ReadOnly): KeyName of the created AuthorizationRule
-* **primaryConnectionString**: string (ReadOnly): PrimaryConnectionString of the AuthorizationRule.
-* **primaryKey**: string (ReadOnly): PrimaryKey of the created AuthorizationRule.
-* **secondaryConnectionString**: string (ReadOnly): SecondaryConnectionString of the created AuthorizationRule
-* **secondaryKey**: string (ReadOnly): SecondaryKey of the created AuthorizationRule
+* **keyName**: string: KeyName of the created AuthorizationRule
+* **primaryConnectionString**: string: PrimaryConnectionString of the AuthorizationRule.
+* **primaryKey**: string: PrimaryKey of the created AuthorizationRule.
+* **secondaryConnectionString**: string: SecondaryConnectionString of the created AuthorizationRule
+* **secondaryKey**: string: SecondaryKey of the created AuthorizationRule
 
 ## ResourceListKeys
 ### Properties
-* **keyName**: string (ReadOnly): KeyName of the created AuthorizationRule
-* **primaryConnectionString**: string (ReadOnly): PrimaryConnectionString of the AuthorizationRule.
-* **primaryKey**: string (ReadOnly): PrimaryKey of the created AuthorizationRule.
-* **secondaryConnectionString**: string (ReadOnly): SecondaryConnectionString of the created AuthorizationRule
-* **secondaryKey**: string (ReadOnly): SecondaryKey of the created AuthorizationRule
+* **keyName**: string: KeyName of the created AuthorizationRule
+* **primaryConnectionString**: string: PrimaryConnectionString of the AuthorizationRule.
+* **primaryKey**: string: PrimaryKey of the created AuthorizationRule.
+* **secondaryConnectionString**: string: SecondaryConnectionString of the created AuthorizationRule
+* **secondaryKey**: string: SecondaryKey of the created AuthorizationRule
 
 ## ResourceTags
 ### Properties

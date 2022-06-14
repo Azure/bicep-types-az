@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: 'global' | string (Required): Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RegistrationParameterProperties](#registrationparameterproperties) (Required): Properties of the Azure Stack registration resource
+* **properties**: [RegistrationParameterPropertiesOrRegistrationProperties](#registrationparameterpropertiesorregistrationproperties) (Required): Properties of the Azure Stack registration resource
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.AzureStack/registrations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -45,7 +45,7 @@
 * **operatingSystem**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): OS operating system type.
 * **sourceBlobSasUri**: string (ReadOnly): SAS key for source blob.
 
-## RegistrationParameterProperties
+## RegistrationParameterPropertiesOrRegistrationProperties
 ### Properties
 * **billingModel**: string (ReadOnly): Specifies the billing mode for the Azure Stack registration.
 * **cloudId**: string (ReadOnly): The identifier of the registered Azure Stack.

@@ -234,159 +234,159 @@
 
 ## LocalizedOperationDefinition
 ### Properties
-* **actionType**: 'Internal' | 'NotSpecified' | string (WriteOnly)
-* **display**: [LocalizedOperationDefinitionDisplay](#localizedoperationdefinitiondisplay) (Required, WriteOnly): Display information of the operation.
-* **isDataAction**: bool (WriteOnly): Indicates whether the operation applies to data-plane.
-* **name**: string (Required, WriteOnly): Name of the operation.
-* **origin**: 'NotSpecified' | 'System' | 'User' | string (WriteOnly)
-* **properties**: any (WriteOnly): Anything
+* **actionType**: 'Internal' | 'NotSpecified' | string
+* **display**: [LocalizedOperationDefinitionDisplay](#localizedoperationdefinitiondisplay) (Required): Display information of the operation.
+* **isDataAction**: bool: Indicates whether the operation applies to data-plane.
+* **name**: string (Required): Name of the operation.
+* **origin**: 'NotSpecified' | 'System' | 'User' | string
+* **properties**: any: Anything
 
 ## LocalizedOperationDefinitionDisplay
 ### Properties
-* **cs**: [LocalizedOperationDisplayDefinitionCs](#localizedoperationdisplaydefinitioncs) (WriteOnly): Display information of the operation for cs locale.
-* **de**: [LocalizedOperationDisplayDefinitionDe](#localizedoperationdisplaydefinitionde) (WriteOnly): Display information of the operation for de locale.
-* **default**: [LocalizedOperationDisplayDefinitionDefault](#localizedoperationdisplaydefinitiondefault) (Required, WriteOnly): Display information of the operation.
-* **en**: [LocalizedOperationDisplayDefinitionEn](#localizedoperationdisplaydefinitionen) (WriteOnly): Display information of the operation for en locale.
-* **es**: [LocalizedOperationDisplayDefinitionEs](#localizedoperationdisplaydefinitiones) (WriteOnly): Display information of the operation for es locale.
-* **fr**: [LocalizedOperationDisplayDefinitionFr](#localizedoperationdisplaydefinitionfr) (WriteOnly): Display information of the operation for fr locale.
-* **hu**: [LocalizedOperationDisplayDefinitionHu](#localizedoperationdisplaydefinitionhu) (WriteOnly): Display information of the operation for hu locale.
-* **it**: [LocalizedOperationDisplayDefinitionIt](#localizedoperationdisplaydefinitionit) (WriteOnly): Display information of the operation for it locale.
-* **ja**: [LocalizedOperationDisplayDefinitionJa](#localizedoperationdisplaydefinitionja) (WriteOnly): Display information of the operation for ja locale.
-* **ko**: [LocalizedOperationDisplayDefinitionKo](#localizedoperationdisplaydefinitionko) (WriteOnly): Display information of the operation for ko locale.
-* **nl**: [LocalizedOperationDisplayDefinitionNl](#localizedoperationdisplaydefinitionnl) (WriteOnly): Display information of the operation for nl locale.
-* **pl**: [LocalizedOperationDisplayDefinitionPl](#localizedoperationdisplaydefinitionpl) (WriteOnly): Display information of the operation for pl locale.
-* **ptBR**: [LocalizedOperationDisplayDefinitionPtBR](#localizedoperationdisplaydefinitionptbr) (WriteOnly): Display information of the operation for pt-BR locale.
-* **ptPT**: [LocalizedOperationDisplayDefinitionPt](#localizedoperationdisplaydefinitionpt) (WriteOnly): Display information of the operation for pt-PT locale.
-* **ru**: [LocalizedOperationDisplayDefinitionRu](#localizedoperationdisplaydefinitionru) (WriteOnly): Display information of the operation for ru locale.
-* **sv**: [LocalizedOperationDisplayDefinitionSv](#localizedoperationdisplaydefinitionsv) (WriteOnly): Display information of the operation for sv locale.
-* **zhHans**: [LocalizedOperationDisplayDefinitionZhHans](#localizedoperationdisplaydefinitionzhhans) (WriteOnly): Display information of the operation for zh-Hans locale.
-* **zhHant**: [LocalizedOperationDisplayDefinitionZhHant](#localizedoperationdisplaydefinitionzhhant) (WriteOnly): Display information of the operation for zh-Hant locale.
+* **cs**: [LocalizedOperationDisplayDefinitionCs](#localizedoperationdisplaydefinitioncs): Display information of the operation for cs locale.
+* **de**: [LocalizedOperationDisplayDefinitionDe](#localizedoperationdisplaydefinitionde): Display information of the operation for de locale.
+* **default**: [LocalizedOperationDisplayDefinitionDefault](#localizedoperationdisplaydefinitiondefault) (Required): Display information of the operation.
+* **en**: [LocalizedOperationDisplayDefinitionEn](#localizedoperationdisplaydefinitionen): Display information of the operation for en locale.
+* **es**: [LocalizedOperationDisplayDefinitionEs](#localizedoperationdisplaydefinitiones): Display information of the operation for es locale.
+* **fr**: [LocalizedOperationDisplayDefinitionFr](#localizedoperationdisplaydefinitionfr): Display information of the operation for fr locale.
+* **hu**: [LocalizedOperationDisplayDefinitionHu](#localizedoperationdisplaydefinitionhu): Display information of the operation for hu locale.
+* **it**: [LocalizedOperationDisplayDefinitionIt](#localizedoperationdisplaydefinitionit): Display information of the operation for it locale.
+* **ja**: [LocalizedOperationDisplayDefinitionJa](#localizedoperationdisplaydefinitionja): Display information of the operation for ja locale.
+* **ko**: [LocalizedOperationDisplayDefinitionKo](#localizedoperationdisplaydefinitionko): Display information of the operation for ko locale.
+* **nl**: [LocalizedOperationDisplayDefinitionNl](#localizedoperationdisplaydefinitionnl): Display information of the operation for nl locale.
+* **pl**: [LocalizedOperationDisplayDefinitionPl](#localizedoperationdisplaydefinitionpl): Display information of the operation for pl locale.
+* **ptBR**: [LocalizedOperationDisplayDefinitionPtBR](#localizedoperationdisplaydefinitionptbr): Display information of the operation for pt-BR locale.
+* **ptPT**: [LocalizedOperationDisplayDefinitionPt](#localizedoperationdisplaydefinitionpt): Display information of the operation for pt-PT locale.
+* **ru**: [LocalizedOperationDisplayDefinitionRu](#localizedoperationdisplaydefinitionru): Display information of the operation for ru locale.
+* **sv**: [LocalizedOperationDisplayDefinitionSv](#localizedoperationdisplaydefinitionsv): Display information of the operation for sv locale.
+* **zhHans**: [LocalizedOperationDisplayDefinitionZhHans](#localizedoperationdisplaydefinitionzhhans): Display information of the operation for zh-Hans locale.
+* **zhHant**: [LocalizedOperationDisplayDefinitionZhHant](#localizedoperationdisplaydefinitionzhhant): Display information of the operation for zh-Hant locale.
 
 ## LocalizedOperationDisplayDefinitionCs
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **description**: string (Required)
+* **operation**: string (Required)
+* **provider**: string (Required)
+* **resource**: string (Required)
 
 ## LocalizedOperationDisplayDefinitionDe
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **description**: string (Required)
+* **operation**: string (Required)
+* **provider**: string (Required)
+* **resource**: string (Required)
 
 ## LocalizedOperationDisplayDefinitionDefault
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **description**: string (Required)
+* **operation**: string (Required)
+* **provider**: string (Required)
+* **resource**: string (Required)
 
 ## LocalizedOperationDisplayDefinitionEn
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **description**: string (Required)
+* **operation**: string (Required)
+* **provider**: string (Required)
+* **resource**: string (Required)
 
 ## LocalizedOperationDisplayDefinitionEs
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **description**: string (Required)
+* **operation**: string (Required)
+* **provider**: string (Required)
+* **resource**: string (Required)
 
 ## LocalizedOperationDisplayDefinitionFr
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **description**: string (Required)
+* **operation**: string (Required)
+* **provider**: string (Required)
+* **resource**: string (Required)
 
 ## LocalizedOperationDisplayDefinitionHu
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **description**: string (Required)
+* **operation**: string (Required)
+* **provider**: string (Required)
+* **resource**: string (Required)
 
 ## LocalizedOperationDisplayDefinitionIt
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **description**: string (Required)
+* **operation**: string (Required)
+* **provider**: string (Required)
+* **resource**: string (Required)
 
 ## LocalizedOperationDisplayDefinitionJa
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **description**: string (Required)
+* **operation**: string (Required)
+* **provider**: string (Required)
+* **resource**: string (Required)
 
 ## LocalizedOperationDisplayDefinitionKo
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **description**: string (Required)
+* **operation**: string (Required)
+* **provider**: string (Required)
+* **resource**: string (Required)
 
 ## LocalizedOperationDisplayDefinitionNl
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **description**: string (Required)
+* **operation**: string (Required)
+* **provider**: string (Required)
+* **resource**: string (Required)
 
 ## LocalizedOperationDisplayDefinitionPl
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **description**: string (Required)
+* **operation**: string (Required)
+* **provider**: string (Required)
+* **resource**: string (Required)
 
 ## LocalizedOperationDisplayDefinitionPt
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **description**: string (Required)
+* **operation**: string (Required)
+* **provider**: string (Required)
+* **resource**: string (Required)
 
 ## LocalizedOperationDisplayDefinitionPtBR
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **description**: string (Required)
+* **operation**: string (Required)
+* **provider**: string (Required)
+* **resource**: string (Required)
 
 ## LocalizedOperationDisplayDefinitionRu
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **description**: string (Required)
+* **operation**: string (Required)
+* **provider**: string (Required)
+* **resource**: string (Required)
 
 ## LocalizedOperationDisplayDefinitionSv
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **description**: string (Required)
+* **operation**: string (Required)
+* **provider**: string (Required)
+* **resource**: string (Required)
 
 ## LocalizedOperationDisplayDefinitionZhHans
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **description**: string (Required)
+* **operation**: string (Required)
+* **provider**: string (Required)
+* **resource**: string (Required)
 
 ## LocalizedOperationDisplayDefinitionZhHant
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **description**: string (Required)
+* **operation**: string (Required)
+* **provider**: string (Required)
+* **resource**: string (Required)
 
 ## LoggingRule
 ### Properties
@@ -423,7 +423,7 @@
 
 ## OperationsPutContentProperties
 ### Properties
-* **contents**: [LocalizedOperationDefinition](#localizedoperationdefinition)[] (WriteOnly): Operations content.
+* **contents**: [LocalizedOperationDefinition](#localizedoperationdefinition)[]: Operations content.
 
 ## ProviderHubMetadataProviderAuthentication
 ### Properties

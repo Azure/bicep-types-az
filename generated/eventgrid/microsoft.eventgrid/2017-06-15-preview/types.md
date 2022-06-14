@@ -62,8 +62,8 @@ Wildcard characters are not supported in this path.
 
 ## TopicSharedAccessKeys
 ### Properties
-* **key1**: string (ReadOnly): Shared access key1 for the topic.
-* **key2**: string (ReadOnly): Shared access key2 for the topic.
+* **key1**: string: Shared access key1 for the topic.
+* **key2**: string: Shared access key2 for the topic.
 
 ## TrackedResourceTags
 ### Properties

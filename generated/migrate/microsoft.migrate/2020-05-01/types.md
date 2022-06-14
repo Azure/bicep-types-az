@@ -19,11 +19,11 @@
 * **eTag**: string: Gets the tag for optimistic concurrency control.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConnectionStateRequestBodyProperties](#connectionstaterequestbodyproperties): Properties of Connection state request.
+* **properties**: [ConnectionStateRequestBodyPropertiesOrPrivateEndpointConnectionProperties](#connectionstaterequestbodypropertiesorprivateendpointconnectionproperties): Properties of Connection state request.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Migrate/migrateProjects/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## ConnectionStateRequestBodyProperties
+## ConnectionStateRequestBodyPropertiesOrPrivateEndpointConnectionProperties
 ### Properties
 * **privateEndpoint**: [ResourceId](#resourceid) (ReadOnly)
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Private endpoint connection state.

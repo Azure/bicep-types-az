@@ -56,16 +56,16 @@
 
 ## DatabasePrincipal
 ### Properties
-* **appId**: string (ReadOnly): Application id - relevant only for application principal type.
-* **email**: string (ReadOnly): Database principal email if exists.
-* **fqn**: string (ReadOnly): Database principal fully qualified name.
-* **name**: string (ReadOnly): Database principal name.
-* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewers' | 'User' | 'Viewer' | string (ReadOnly): Database principal role.
-* **type**: 'App' | 'Group' | 'User' | string (ReadOnly): Database principal type.
+* **appId**: string: Application id - relevant only for application principal type.
+* **email**: string: Database principal email if exists.
+* **fqn**: string: Database principal fully qualified name.
+* **name**: string (Required): Database principal name.
+* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewers' | 'User' | 'Viewer' | string (Required): Database principal role.
+* **type**: 'App' | 'Group' | 'User' | string (Required): Database principal type.
 
 ## DatabasePrincipalListResult
 ### Properties
-* **value**: [DatabasePrincipal](#databaseprincipal)[] (ReadOnly): The list of Kusto database principals.
+* **value**: [DatabasePrincipal](#databaseprincipal)[]: The list of Kusto database principals.
 
 ## DatabaseProperties
 ### Properties

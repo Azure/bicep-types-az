@@ -18,18 +18,18 @@
 
 ## RoleAssignmentApprovalActorIdentity
 ### Properties
-* **principalId**: string (ReadOnly, WriteOnly): The identity id
-* **principalName**: string (ReadOnly, WriteOnly): The identity display name
-* **principalType**: 'servicePrincipal' | 'user' | string (ReadOnly, WriteOnly): The identity type : user/servicePrincipal
-* **userPrincipalName**: string (ReadOnly, WriteOnly): The user principal name(if valid)
+* **principalId**: string (ReadOnly): The identity id
+* **principalName**: string (ReadOnly): The identity display name
+* **principalType**: 'servicePrincipal' | 'user' | string (ReadOnly): The identity type : user/servicePrincipal
+* **userPrincipalName**: string (ReadOnly): The user principal name(if valid)
 
 ## RoleAssignmentApprovalStepProperties
 ### Properties
 * **assignedToMe**: bool (ReadOnly): Indicates whether the stage is assigned to me for review
-* **displayName**: string (ReadOnly): The display name for the approval stage.
-* **justification**: string (ReadOnly): Justification provided by approvers for their action
+* **displayName**: string: The display name for the approval stage.
+* **justification**: string: Justification provided by approvers for their action
 * **reviewedBy**: [RoleAssignmentApprovalActorIdentity](#roleassignmentapprovalactoridentity) (ReadOnly): Details of the approver.
 * **reviewedDateTime**: string (ReadOnly): Date Time when a decision was taken.
-* **reviewResult**: 'Approve' | 'Deny' | 'NotReviewed' | string (ReadOnly): The decision on the approval stage. This value is initially set to NotReviewed. Approvers can take action of Approve/Deny
+* **reviewResult**: 'Approve' | 'Deny' | 'NotReviewed' | string: The decision on the approval stage. This value is initially set to NotReviewed. Approvers can take action of Approve/Deny
 * **status**: 'Completed' | 'Completing' | 'Escalated' | 'Escalating' | 'Expired' | 'InProgress' | 'Initializing' | 'NotStarted' | string (ReadOnly): This read-only field specifies the status of an approval.
 

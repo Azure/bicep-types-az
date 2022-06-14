@@ -33,8 +33,8 @@
 
 ## ApiKeyListResult
 ### Properties
-* **nextLink**: string (ReadOnly): The URI that can be used to request the next set of paged results.
-* **value**: [ApiKey](#apikey)[] (ReadOnly): The collection value.
+* **nextLink**: string: The URI that can be used to request the next set of paged results.
+* **value**: [ApiKey](#apikey)[]: The collection value.
 
 ## ConfigurationStoreProperties
 ### Properties
@@ -64,8 +64,8 @@ A locked key-value may not be modified until it is unlocked.
 
 ## ListKeyValueParameters
 ### Properties
-* **key**: string (Required, WriteOnly): The key to retrieve.
-* **label**: string (WriteOnly): The label of the key.
+* **key**: string (Required): The key to retrieve.
+* **label**: string: The label of the key.
 
 ## ResourceTags
 ### Properties

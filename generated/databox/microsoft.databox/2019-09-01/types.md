@@ -111,8 +111,8 @@
 
 ## DcAccessSecurityCode
 ### Properties
-* **forwardDCAccessCode**: string (ReadOnly): Dc Access Code for dispatching from DC.
-* **reverseDCAccessCode**: string (ReadOnly): Dc Access code for dropping off at DC.
+* **forwardDCAccessCode**: string: Dc Access Code for dispatching from DC.
+* **reverseDCAccessCode**: string: Dc Access code for dropping off at DC.
 
 ## DestinationAccountDetails
 * **Discriminator**: dataDestinationType
@@ -208,11 +208,11 @@
 * **Discriminator**: jobSecretsType
 
 ### Base Properties
-* **dcAccessSecurityCode**: [DcAccessSecurityCode](#dcaccesssecuritycode) (ReadOnly): Dc Access Security Code for Customer Managed Shipping
+* **dcAccessSecurityCode**: [DcAccessSecurityCode](#dcaccesssecuritycode): Dc Access Security Code for Customer Managed Shipping
 ### DataboxJobSecrets
 #### Properties
 * **jobSecretsType**: 'DataBox' (Required): Used to indicate what type of job secrets object.
-* **podSecrets**: [DataBoxSecret](#databoxsecret)[] (ReadOnly): Contains the list of secret objects for a job.
+* **podSecrets**: [DataBoxSecret](#databoxsecret)[]: Contains the list of secret objects for a job.
 
 ### DataBoxDiskJobSecrets
 #### Properties
@@ -295,6 +295,6 @@
 
 ## UnencryptedCredentialsList
 ### Properties
-* **nextLink**: string (ReadOnly): Link for the next set of unencrypted credentials.
-* **value**: [UnencryptedCredentials](#unencryptedcredentials)[] (ReadOnly): List of unencrypted credentials.
+* **nextLink**: string: Link for the next set of unencrypted credentials.
+* **value**: [UnencryptedCredentials](#unencryptedcredentials)[]: List of unencrypted credentials.
 

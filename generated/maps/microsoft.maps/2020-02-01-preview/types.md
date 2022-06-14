@@ -47,7 +47,7 @@
 
 ## CreatorProperties
 ### Properties
-* **provisioningState**: string (ReadOnly): The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
+* **provisioningState**: string: The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
 
 ## MapsAccountCreateParametersTags
 ### Properties
@@ -62,7 +62,7 @@
 
 ## MapsAccountProperties
 ### Properties
-* **x-ms-client-id**: string (ReadOnly): A unique identifier for the maps account
+* **x-ms-client-id**: string: A unique identifier for the maps account
 
 ## PrivateAtlasCreateParametersTags
 ### Properties
@@ -71,7 +71,7 @@
 
 ## PrivateAtlasProperties
 ### Properties
-* **provisioningState**: string (ReadOnly): The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
+* **provisioningState**: string: The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
 
 ## Sku
 ### Properties
@@ -80,10 +80,10 @@
 
 ## SystemData
 ### Properties
-* **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
-* **createdBy**: string (ReadOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
-* **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that last modified the resource.
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 

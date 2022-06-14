@@ -747,8 +747,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## IntegrationRuntimeAuthKeys
 ### Properties
-* **authKey1**: string (ReadOnly): The primary integration runtime authentication key.
-* **authKey2**: string (ReadOnly): The secondary integration runtime authentication key.
+* **authKey1**: string: The primary integration runtime authentication key.
+* **authKey2**: string: The secondary integration runtime authentication key.
 
 ## IntegrationRuntimeComputeProperties
 ### Properties

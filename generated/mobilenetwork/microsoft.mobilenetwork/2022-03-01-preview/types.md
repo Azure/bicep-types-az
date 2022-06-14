@@ -279,7 +279,7 @@ If not specified and NAPT is enabled, this range defaults to 1,024 - 65,535. (Po
 ## SimIdListResult
 ### Properties
 * **nextLink**: string (ReadOnly): The URL to get the next set of results.
-* **value**: [SubResource](#subresource)[] (ReadOnly): A list of sim profile ids in a resource group.
+* **value**: [SubResource](#subresource)[]: A list of sim profile ids in a resource group.
 
 ## SimPolicyPropertiesFormat
 ### Properties

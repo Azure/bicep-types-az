@@ -23,12 +23,12 @@
 
 ## DataPartitionProperties
 ### Properties
-* **name**: string (ReadOnly): Name of the data partition
-* **provisioningState**: string (ReadOnly): Name of the data partition
+* **name**: string: Name of the data partition
+* **provisioningState**: string: Name of the data partition
 
 ## DataPartitionsListResult
 ### Properties
-* **dataPartitionInfo**: [DataPartitionProperties](#datapartitionproperties)[] (ReadOnly): List of data partitions along with their properties in a given OEP resource.
+* **dataPartitionInfo**: [DataPartitionProperties](#datapartitionproperties)[]: List of data partitions along with their properties in a given OEP resource.
 
 ## EnergyServiceProperties
 ### Properties

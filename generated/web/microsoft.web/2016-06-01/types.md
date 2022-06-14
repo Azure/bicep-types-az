@@ -166,21 +166,21 @@
 
 ## ConsentLinkCollection
 ### Properties
-* **value**: [ConsentLinkDefinition](#consentlinkdefinition)[] (ReadOnly): Collection of resources
+* **value**: [ConsentLinkDefinition](#consentlinkdefinition)[]: Collection of resources
 
 ## ConsentLinkDefinition
 ### Properties
-* **displayName**: string (ReadOnly): Display name of the parameter in the connection provider's OAuth settings
-* **firstPartyLoginUri**: string (ReadOnly): URI for first party login
-* **link**: string (ReadOnly): URI for the consent link
-* **status**: 'Authenticated' | 'Error' | 'Unauthenticated' | string (ReadOnly): Status of the link
+* **displayName**: string: Display name of the parameter in the connection provider's OAuth settings
+* **firstPartyLoginUri**: string: URI for first party login
+* **link**: string: URI for the consent link
+* **status**: 'Authenticated' | 'Error' | 'Unauthenticated' | string: Status of the link
 
 ## ConsentLinkParameterDefinition
 ### Properties
-* **objectId**: string (WriteOnly): AAD OID (user or group) if the principal type is ActiveDirectory. MSA PUID if the principal type is MicrosoftAccount
-* **parameterName**: string (WriteOnly): Name of the parameter in the connection provider's OAuth settings
-* **redirectUrl**: string (WriteOnly): Name of the parameter in the connection provider's OAuth settings
-* **tenantId**: string (WriteOnly): The tenant id
+* **objectId**: string: AAD OID (user or group) if the principal type is ActiveDirectory. MSA PUID if the principal type is MicrosoftAccount
+* **parameterName**: string: Name of the parameter in the connection provider's OAuth settings
+* **redirectUrl**: string: Name of the parameter in the connection provider's OAuth settings
+* **tenantId**: string: The tenant id
 
 ## CustomApiPropertiesDefinition
 ### Properties
@@ -204,7 +204,7 @@
 
 ## ListConsentLinksDefinition
 ### Properties
-* **parameters**: [ConsentLinkParameterDefinition](#consentlinkparameterdefinition)[] (WriteOnly): Collection of resources
+* **parameters**: [ConsentLinkParameterDefinition](#consentlinkparameterdefinition)[]: Collection of resources
 
 ## TagsDictionary
 ### Properties
@@ -247,5 +247,5 @@
 
 ## WsdlServiceCollection
 ### Properties
-* **value**: [WsdlService](#wsdlservice)[] (ReadOnly): Collection of WSDL interfaces
+* **value**: [WsdlService](#wsdlservice)[]: Collection of WSDL interfaces
 

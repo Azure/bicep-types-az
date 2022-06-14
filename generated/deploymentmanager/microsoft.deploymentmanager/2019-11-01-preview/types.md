@@ -19,7 +19,7 @@
 * **identity**: [Identity](#identity) (Required): Identity for the resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RolloutRequestProperties](#rolloutrequestproperties) (Required): Defines the properties that make up a rollout request.
+* **properties**: [RolloutRequestPropertiesOrRolloutProperties](#rolloutrequestpropertiesorrolloutproperties) (Required): Defines the properties that make up a rollout request.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DeploymentManager/rollouts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -86,9 +86,9 @@
 ## CloudErrorBody
 ### Properties
 * **code**: string (ReadOnly): Error code string.
-* **details**: [CloudErrorBody](#clouderrorbody)[] (ReadOnly): More detailed error information.
+* **details**: [CloudErrorBody](#clouderrorbody)[]: More detailed error information.
 * **message**: string (ReadOnly): Descriptive error information.
-* **target**: string (ReadOnly): Error target
+* **target**: string: Error target
 
 ## HealthCheckStepAttributes
 * **Discriminator**: type
@@ -121,8 +121,8 @@
 ### Properties
 * **operationId**: string (ReadOnly): Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.
 * **provisioningState**: string (ReadOnly): State of the resource deployment. For ARM resources, this is the current provisioning state of the resource.
-* **resourceName**: string (ReadOnly): Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.
-* **resourceType**: string (ReadOnly): Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.
+* **resourceName**: string: Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.
+* **resourceType**: string: Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.
 * **statusCode**: string (ReadOnly): Http status code of the operation.
 * **statusMessage**: string (ReadOnly): Descriptive information of the resource operation.
 
@@ -176,7 +176,7 @@
 * **skipSucceededOnRetry**: bool (ReadOnly): True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.
 * **startTime**: string (ReadOnly): The start time of the rollout in UTC.
 
-## RolloutRequestProperties
+## RolloutRequestPropertiesOrRolloutProperties
 ### Properties
 * **artifactSourceId**: string: The reference to the artifact source resource Id where the payload is located.
 * **buildVersion**: string (Required): The version of the build being deployed.
@@ -190,11 +190,11 @@
 ## RolloutStep
 ### Properties
 * **messages**: [Message](#message)[] (ReadOnly): Supplementary informative messages during rollout.
-* **name**: string (ReadOnly): Name of the step.
+* **name**: string (Required): Name of the step.
 * **operationInfo**: [StepOperationInfo](#stepoperationinfo) (ReadOnly): Detailed information of specific action execution.
 * **resourceOperations**: [ResourceOperation](#resourceoperation)[] (ReadOnly): Set of resource operations that were performed, if any, on an Azure resource.
 * **status**: string (ReadOnly): Current state of the step.
-* **stepGroup**: string (ReadOnly): The step group the current step is part of.
+* **stepGroup**: string: The step group the current step is part of.
 
 ## SasProperties
 ### Properties
@@ -202,10 +202,10 @@
 
 ## Service
 ### Properties
-* **name**: string (ReadOnly): Name of the service.
-* **serviceUnits**: [ServiceUnit](#serviceunit)[] (ReadOnly): The detailed information about the units that make up the service.
-* **targetLocation**: string (ReadOnly): The Azure location to which the resources in the service belong to or should be deployed to.
-* **targetSubscriptionId**: string (ReadOnly): The subscription to which the resources in the service belong to or should be deployed to.
+* **name**: string: Name of the service.
+* **serviceUnits**: [ServiceUnit](#serviceunit)[]: The detailed information about the units that make up the service.
+* **targetLocation**: string (Required): The Azure location to which the resources in the service belong to or should be deployed to.
+* **targetSubscriptionId**: string (Required): The subscription to which the resources in the service belong to or should be deployed to.
 
 ## ServiceResourceProperties
 ### Properties
@@ -218,11 +218,11 @@
 
 ## ServiceUnit
 ### Properties
-* **artifacts**: [ServiceUnitArtifacts](#serviceunitartifacts) (ReadOnly): The artifacts for the service unit.
-* **deploymentMode**: 'Complete' | 'Incremental' (ReadOnly): Describes the type of ARM deployment to be performed on the resource.
-* **name**: string (ReadOnly): Name of the service unit.
-* **steps**: [RolloutStep](#rolloutstep)[] (ReadOnly): Detailed step information, if present.
-* **targetResourceGroup**: string (ReadOnly): The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
+* **artifacts**: [ServiceUnitArtifacts](#serviceunitartifacts): The artifacts for the service unit.
+* **deploymentMode**: 'Complete' | 'Incremental' (Required): Describes the type of ARM deployment to be performed on the resource.
+* **name**: string: Name of the service unit.
+* **steps**: [RolloutStep](#rolloutstep)[]: Detailed step information, if present.
+* **targetResourceGroup**: string (Required): The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
 
 ## ServiceUnitArtifacts
 ### Properties
@@ -250,7 +250,7 @@
 * **correlationId**: string (ReadOnly): Unique identifier to track the request for ARM-based resources.
 * **deploymentName**: string (ReadOnly): The name of the ARM deployment initiated as part of the step.
 * **endTime**: string (ReadOnly): End time of the action in UTC.
-* **error**: [CloudErrorBody](#clouderrorbody) (ReadOnly): The errors, if any, for the action.
+* **error**: [CloudErrorBody](#clouderrorbody): The errors, if any, for the action.
 * **lastUpdatedTime**: string (ReadOnly): Last time in UTC this operation was updated.
 * **startTime**: string (ReadOnly): Start time of the action in UTC.
 

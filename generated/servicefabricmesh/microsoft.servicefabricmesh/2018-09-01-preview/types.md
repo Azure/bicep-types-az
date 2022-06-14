@@ -344,7 +344,7 @@
 
 ## SecretValue
 ### Properties
-* **value**: string (ReadOnly): The actual value of the secret.
+* **value**: string: The actual value of the secret.
 
 ## SecretValueResourceProperties
 ### Properties

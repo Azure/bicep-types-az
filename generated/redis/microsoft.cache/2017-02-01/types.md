@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisCreateProperties](#rediscreateproperties) (Required): Redis cache properties.
+* **properties**: [RedisCreatePropertiesOrRedisResourceProperties](#rediscreatepropertiesorredisresourceproperties) (Required): Redis cache properties.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Cache/Redis' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -26,7 +26,7 @@
 * **apiVersion**: '2017-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisLinkedServerCreateProperties](#redislinkedservercreateproperties) (Required): Properties required to create a linked server.
+* **properties**: [RedisLinkedServerCreatePropertiesOrRedisLinkedServerProperties](#redislinkedservercreatepropertiesorredislinkedserverproperties) (Required): Properties required to create a linked server.
 * **type**: 'Microsoft.Cache/Redis/linkedServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Cache/Redis/patchSchedules@2017-02-01
@@ -54,7 +54,7 @@
 * **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
 * **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
 
-## RedisCreateProperties
+## RedisCreatePropertiesOrRedisResourceProperties
 ### Properties
 * **accessKeys**: [RedisAccessKeys](#redisaccesskeys) (ReadOnly): The keys of the Redis cache - not set if this object is not the response to Create or Update redis cache
 * **enableNonSslPort**: bool: Specifies whether the non-ssl Redis server port (6379) is enabled.
@@ -80,7 +80,7 @@
 ### Properties
 * **id**: string (ReadOnly): Linked server Id.
 
-## RedisLinkedServerCreateProperties
+## RedisLinkedServerCreatePropertiesOrRedisLinkedServerProperties
 ### Properties
 * **linkedRedisCacheId**: string (Required): Fully qualified resourceId of the linked redis cache.
 * **linkedRedisCacheLocation**: string (Required): Location of the linked redis cache.
@@ -89,7 +89,7 @@
 
 ## RedisLinkedServerList
 ### Properties
-* **value**: [RedisLinkedServer](#redislinkedserver)[] (ReadOnly): List of linked server Ids of a Redis cache.
+* **value**: [RedisLinkedServer](#redislinkedserver)[] (Required): List of linked server Ids of a Redis cache.
 
 ## RedisPropertiesRedisConfiguration
 ### Properties

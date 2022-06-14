@@ -217,7 +217,7 @@
 
 ## ListProvisioningTokenInput
 ### Properties
-* **expirationDate**: string (Required, WriteOnly): The desired expiration date of the registration token. The Azure Video Analyzer IoT edge module must be initialized and connected to the Internet prior to the token expiration date.
+* **expirationDate**: string (Required): The desired expiration date of the registration token. The Azure Video Analyzer IoT edge module must be initialized and connected to the Internet prior to the token expiration date.
 
 ## LivePipelineProperties
 ### Properties

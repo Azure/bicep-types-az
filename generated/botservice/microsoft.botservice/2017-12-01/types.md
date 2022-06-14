@@ -54,14 +54,14 @@
 
 ## BotChannel
 ### Properties
-* **etag**: string (ReadOnly): Entity Tag
+* **etag**: string: Entity Tag
 * **id**: string (ReadOnly): Specifies the resource ID.
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Required. Gets or sets the Kind of the resource.
-* **location**: string (ReadOnly): Specifies the location of the resource.
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string: Required. Gets or sets the Kind of the resource.
+* **location**: string: Specifies the location of the resource.
 * **name**: string (ReadOnly): Specifies the name of the resource.
-* **properties**: [Channel](#channel) (ReadOnly): The set of properties specific to bot channel resource
-* **sku**: [Sku](#sku) (ReadOnly): Gets or sets the SKU of the resource.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
+* **properties**: [Channel](#channel): The set of properties specific to bot channel resource
+* **sku**: [Sku](#sku): Gets or sets the SKU of the resource.
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: string (ReadOnly): Specifies the type of the resource.
 
 ## BotProperties
@@ -137,14 +137,14 @@
 
 ## ConnectionSetting
 ### Properties
-* **etag**: string (ReadOnly): Entity Tag
+* **etag**: string: Entity Tag
 * **id**: string (ReadOnly): Specifies the resource ID.
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Required. Gets or sets the Kind of the resource.
-* **location**: string (ReadOnly): Specifies the location of the resource.
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string: Required. Gets or sets the Kind of the resource.
+* **location**: string: Specifies the location of the resource.
 * **name**: string (ReadOnly): Specifies the name of the resource.
-* **properties**: [ConnectionSettingProperties](#connectionsettingproperties) (ReadOnly): The set of properties specific to bot channel resource
-* **sku**: [Sku](#sku) (ReadOnly): Gets or sets the SKU of the resource.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
+* **properties**: [ConnectionSettingProperties](#connectionsettingproperties): The set of properties specific to bot channel resource
+* **sku**: [Sku](#sku): Gets or sets the SKU of the resource.
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: string (ReadOnly): Specifies the type of the resource.
 
 ## ConnectionSettingParameter

@@ -8,7 +8,7 @@
 * **location**: string (Required): Azure GEO region: e.g. West US | East US | North Central US | South Central US | West Europe | North Europe | East Asia | Southeast Asia | etc. 
 The geo region of a resource never changes after it is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SignalRCreateOrUpdateProperties](#signalrcreateorupdateproperties): Settings used to provision or configure the resource
+* **properties**: [SignalRCreateOrUpdatePropertiesOrSignalRProperties](#signalrcreateorupdatepropertiesorsignalrproperties): Settings used to provision or configure the resource
 * **sku**: [ResourceSku](#resourcesku): The billing information of the resource.(e.g. basic vs. standard)
 * **tags**: [SignalRUpdateParametersTags](#signalrupdateparameterstags): A list of key value pairs that describe the resource.
 * **type**: 'Microsoft.SignalRService/SignalR' (ReadOnly, DeployTimeConstant): The resource type
@@ -27,7 +27,7 @@ possible for the resource this may be omitted.
 * **size**: string: Optional, string. When the name field is the combination of tier and some other value, this would be the standalone code.
 * **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard' | string: Optional tier of this particular SKU. `Basic` is deprecated, use `Standard` instead for Basic tier
 
-## SignalRCreateOrUpdateProperties
+## SignalRCreateOrUpdatePropertiesOrSignalRProperties
 ### Properties
 * **externalIP**: string (ReadOnly): The publicly accessible IP of the SignalR service.
 * **hostName**: string (ReadOnly): FQDN of the SignalR service instance. Format: xxx.service.signalr.net
@@ -40,10 +40,10 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
 
 ## SignalRKeys
 ### Properties
-* **primaryConnectionString**: string (ReadOnly): SignalR connection string constructed via the primaryKey
-* **primaryKey**: string (ReadOnly): The primary access key.
-* **secondaryConnectionString**: string (ReadOnly): SignalR connection string constructed via the secondaryKey
-* **secondaryKey**: string (ReadOnly): The secondary access key.
+* **primaryConnectionString**: string: SignalR connection string constructed via the primaryKey
+* **primaryKey**: string: The primary access key.
+* **secondaryConnectionString**: string: SignalR connection string constructed via the secondaryKey
+* **secondaryKey**: string: The secondary access key.
 
 ## SignalRUpdateParametersTags
 ### Properties

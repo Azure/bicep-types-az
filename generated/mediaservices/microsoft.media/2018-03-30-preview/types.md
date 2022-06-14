@@ -124,7 +124,7 @@
 
 ## AssetContainerSas
 ### Properties
-* **assetContainerSasUrls**: string[] (ReadOnly): The list of Asset container SAS URLs.
+* **assetContainerSasUrls**: string[]: The list of Asset container SAS URLs.
 
 ## AssetProperties
 ### Properties
@@ -501,17 +501,17 @@
 
 ## ListContainerSasInput
 ### Properties
-* **expiryTime**: string (WriteOnly): The SAS URL expiration time.  This must be less than 24 hours from the current time.
-* **permissions**: 'Read' | 'ReadWrite' | 'ReadWriteDelete' (WriteOnly): The permissions to set on the SAS URL.
+* **expiryTime**: string: The SAS URL expiration time.  This must be less than 24 hours from the current time.
+* **permissions**: 'Read' | 'ReadWrite' | 'ReadWriteDelete': The permissions to set on the SAS URL.
 
 ## ListContentKeysResponse
 ### Properties
-* **contentKeys**: [StreamingLocatorContentKey](#streaminglocatorcontentkey)[] (ReadOnly): ContentKeys used by current Streaming Locator
+* **contentKeys**: [StreamingLocatorContentKey](#streaminglocatorcontentkey)[]: ContentKeys used by current Streaming Locator
 
 ## ListPathsResponse
 ### Properties
-* **downloadPaths**: string[] (ReadOnly): Download Paths supported by current Streaming Locator
-* **streamingPaths**: [StreamingPath](#streamingpath)[] (ReadOnly): Streaming Paths supported by current Streaming Locator
+* **downloadPaths**: string[]: Download Paths supported by current Streaming Locator
+* **streamingPaths**: [StreamingPath](#streamingpath)[]: Streaming Paths supported by current Streaming Locator
 
 ## LiveEventEncoding
 ### Properties
@@ -666,12 +666,12 @@
 
 ## StreamingLocatorContentKey
 ### Properties
-* **id**: string (ReadOnly): ID of Content Key
-* **label**: string (ReadOnly): Label of Content Key
-* **policyName**: string (ReadOnly): ContentKeyPolicy used by Content Key
-* **tracks**: [TrackSelection](#trackselection)[] (ReadOnly): Tracks which use this Content Key
-* **type**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' (ReadOnly): Encryption type of Content Key
-* **value**: string (ReadOnly): Value of Content Key
+* **id**: string (Required): ID of Content Key
+* **label**: string: Label of Content Key
+* **policyName**: string: ContentKeyPolicy used by Content Key
+* **tracks**: [TrackSelection](#trackselection)[]: Tracks which use this Content Key
+* **type**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' (Required): Encryption type of Content Key
+* **value**: string: Value of Content Key
 
 ## StreamingLocatorProperties
 ### Properties
@@ -692,9 +692,9 @@
 
 ## StreamingPath
 ### Properties
-* **encryptionScheme**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' | 'NoEncryption' (ReadOnly): Encryption scheme
-* **paths**: string[] (ReadOnly): Streaming paths for each protocol and encryptionScheme pair
-* **streamingProtocol**: 'Dash' | 'Download' | 'Hls' | 'SmoothStreaming' (ReadOnly): Streaming protocol
+* **encryptionScheme**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' | 'NoEncryption' (Required): Encryption scheme
+* **paths**: string[]: Streaming paths for each protocol and encryptionScheme pair
+* **streamingProtocol**: 'Dash' | 'Download' | 'Hls' | 'SmoothStreaming' (Required): Streaming protocol
 
 ## StreamingPolicyContentKey
 ### Properties

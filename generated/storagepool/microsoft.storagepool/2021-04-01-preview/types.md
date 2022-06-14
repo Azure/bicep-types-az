@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DiskPoolCreateProperties](#diskpoolcreateproperties) (Required): Properties for Disk Pool create request.
+* **properties**: [DiskPoolCreatePropertiesOrDiskPoolProperties](#diskpoolcreatepropertiesordiskpoolproperties) (Required): Properties for Disk Pool create request.
 * **sku**: [Sku](#sku) (Required): Determines the SKU of the Disk Pool
 * **systemData**: [SystemMetadata](#systemmetadata) (ReadOnly): Resource metadata required by ARM RPC
 * **tags**: [DiskPoolCreateTags](#diskpoolcreatetags): Resource tags.
@@ -19,7 +19,7 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IscsiTargetCreateProperties](#iscsitargetcreateproperties) (Required): Properties for iSCSI Target create request.
+* **properties**: [IscsiTargetCreatePropertiesOrIscsiTargetProperties](#iscsitargetcreatepropertiesoriscsitargetproperties) (Required): Properties for iSCSI Target create request.
 * **systemData**: [SystemMetadata](#systemmetadata) (ReadOnly): Resource metadata required by ARM RPC
 * **type**: 'Microsoft.StoragePool/diskPools/iscsiTargets' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -32,7 +32,7 @@
 ### Properties
 * **id**: string (Required): Unique Azure Resource ID of the Managed Disk.
 
-## DiskPoolCreateProperties
+## DiskPoolCreatePropertiesOrDiskPoolProperties
 ### Properties
 * **additionalCapabilities**: string[]: List of additional capabilities for a Disk Pool.
 * **availabilityZones**: string[]: Logical zone for Disk Pool resource; example: ["1"].
@@ -52,7 +52,7 @@
 * **managedDiskAzureResourceId**: string (Required): Azure Resource ID of the Managed Disk.
 * **name**: string (Required): User defined name for iSCSI LUN; example: "lun0"
 
-## IscsiTargetCreateProperties
+## IscsiTargetCreatePropertiesOrIscsiTargetProperties
 ### Properties
 * **aclMode**: 'Dynamic' | 'Static' | string (Required): Mode for Target connectivity.
 * **endpoints**: string[] (ReadOnly): List of private IPv4 addresses to connect to the iSCSI Target.
@@ -70,10 +70,10 @@
 
 ## SystemMetadata
 ### Properties
-* **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
-* **createdBy**: string (ReadOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
-* **lastModifiedAt**: string (ReadOnly): The type of identity that last modified the resource.
-* **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that last modified the resource.
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The type of identity that last modified the resource.
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 

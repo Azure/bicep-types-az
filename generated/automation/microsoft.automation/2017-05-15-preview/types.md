@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-05-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [JobCreateProperties](#jobcreateproperties) (Required): Gets or sets the list of job properties.
+* **properties**: [JobCreatePropertiesOrJobProperties](#jobcreatepropertiesorjobproperties) (Required): Gets or sets the list of job properties.
 * **type**: 'Microsoft.Automation/automationAccounts/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/softwareUpdateConfigurations@2017-05-15-preview
@@ -24,7 +24,7 @@
 * **apiVersion**: '2017-05-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SourceControlCreateOrUpdateProperties](#sourcecontrolcreateorupdateproperties) (Required): The properties of the source control.
+* **properties**: [SourceControlCreateOrUpdatePropertiesOrSourceControlProperties](#sourcecontrolcreateorupdatepropertiesorsourcecontrolproperties) (Required): The properties of the source control.
 * **type**: 'Microsoft.Automation/automationAccounts/sourceControls' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs@2017-05-15-preview
@@ -33,7 +33,7 @@
 * **apiVersion**: '2017-05-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SourceControlSyncJobCreateProperties](#sourcecontrolsyncjobcreateproperties) (Required): The properties of the source control sync job.
+* **properties**: [SourceControlSyncJobCreatePropertiesOrSourceControlSyncJobByIdProperties](#sourcecontrolsyncjobcreatepropertiesorsourcecontrolsyncjobbyidproperties) (Required): The properties of the source control sync job.
 * **type**: 'Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AdvancedSchedule
@@ -58,7 +58,7 @@
 * **code**: string: Error code
 * **message**: string: Error message indicating why the operation failed.
 
-## JobCreateProperties
+## JobCreatePropertiesOrJobProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Gets or sets the creation time of the job.
 * **endTime**: string (ReadOnly): Gets or sets the end time of the job.
@@ -130,7 +130,7 @@
 * **postTask**: [TaskProperties](#taskproperties): Post task properties.
 * **preTask**: [TaskProperties](#taskproperties): Pre task properties.
 
-## SourceControlCreateOrUpdateProperties
+## SourceControlCreateOrUpdatePropertiesOrSourceControlProperties
 ### Properties
 * **autoSync**: bool: The auto async of the source control. Default is false.
 * **branch**: string: The repo branch of the source control. Include branch as empty string for VsoTfvc.
@@ -145,11 +145,11 @@
 
 ## SourceControlSecurityTokenProperties
 ### Properties
-* **accessToken**: string (WriteOnly): The access token.
-* **refreshToken**: string (WriteOnly): The refresh token.
-* **tokenType**: 'Oauth' | 'PersonalAccessToken' | string (WriteOnly): The token type. Must be either PersonalAccessToken or Oauth.
+* **accessToken**: string: The access token.
+* **refreshToken**: string: The refresh token.
+* **tokenType**: 'Oauth' | 'PersonalAccessToken' | string: The token type. Must be either PersonalAccessToken or Oauth.
 
-## SourceControlSyncJobCreateProperties
+## SourceControlSyncJobCreatePropertiesOrSourceControlSyncJobByIdProperties
 ### Properties
 * **commitId**: string (Required, WriteOnly): The commit id of the source control sync job. If not syncing to a commitId, enter an empty string.
 * **creationTime**: string (ReadOnly): The creation time of the job.

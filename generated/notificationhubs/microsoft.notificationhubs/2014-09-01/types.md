@@ -140,13 +140,13 @@
 
 ## ResourceListKeys
 ### Properties
-* **primaryConnectionString**: string (ReadOnly): Gets or sets the primaryConnectionString of the created Namespace AuthorizationRule.
-* **secondaryConnectionString**: string (ReadOnly): Gets or sets the secondaryConnectionString of the created Namespace AuthorizationRule
+* **primaryConnectionString**: string: Gets or sets the primaryConnectionString of the created Namespace AuthorizationRule.
+* **secondaryConnectionString**: string: Gets or sets the secondaryConnectionString of the created Namespace AuthorizationRule
 
 ## ResourceListKeys
 ### Properties
-* **primaryConnectionString**: string (ReadOnly): Gets or sets the primaryConnectionString of the created Namespace AuthorizationRule.
-* **secondaryConnectionString**: string (ReadOnly): Gets or sets the secondaryConnectionString of the created Namespace AuthorizationRule
+* **primaryConnectionString**: string: Gets or sets the primaryConnectionString of the created Namespace AuthorizationRule.
+* **secondaryConnectionString**: string: Gets or sets the secondaryConnectionString of the created Namespace AuthorizationRule
 
 ## SharedAccessAuthorizationRuleProperties
 ### Properties

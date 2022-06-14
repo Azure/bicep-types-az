@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters)
+* **properties**: [StorageAccountPropertiesCreateParametersOrStorageAccountProperties](#storageaccountpropertiescreateparametersorstorageaccountproperties)
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,14 +18,14 @@
 
 ## CustomDomain
 ### Properties
-* **name**: string (ReadOnly): Gets or sets the custom domain name. Name is the CNAME source.
-* **useSubDomainName**: bool (ReadOnly): Indicates whether indirect CName validation is enabled. Default value is false. This should only be set on updates
+* **name**: string: Gets or sets the custom domain name. Name is the CNAME source.
+* **useSubDomainName**: bool: Indicates whether indirect CName validation is enabled. Default value is false. This should only be set on updates
 
 ## Endpoints
 ### Properties
-* **blob**: string (ReadOnly): Gets the blob endpoint.
-* **queue**: string (ReadOnly): Gets the queue endpoint.
-* **table**: string (ReadOnly): Gets the table endpoint.
+* **blob**: string: Gets the blob endpoint.
+* **queue**: string: Gets the queue endpoint.
+* **table**: string: Gets the table endpoint.
 
 ## ResourceTags
 ### Properties
@@ -34,10 +34,10 @@
 
 ## StorageAccountKeys
 ### Properties
-* **key1**: string (ReadOnly): Gets the value of key 1.
-* **key2**: string (ReadOnly): Gets the value of key 2.
+* **key1**: string: Gets the value of key 1.
+* **key2**: string: Gets the value of key 2.
 
-## StorageAccountPropertiesCreateParameters
+## StorageAccountPropertiesCreateParametersOrStorageAccountProperties
 ### Properties
 * **accountType**: 'Premium_LRS' | 'Standard_GRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_ZRS': Gets or sets the account type.
 * **creationTime**: string (ReadOnly): Gets the creation date and time of the storage account in UTC.

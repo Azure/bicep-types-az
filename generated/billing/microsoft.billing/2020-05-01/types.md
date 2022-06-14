@@ -124,7 +124,7 @@
 ## InvoiceSectionListWithCreateSubPermissionResult
 ### Properties
 * **nextLink**: string (ReadOnly): The link (url) to the next page of results.
-* **value**: [InvoiceSectionWithCreateSubPermission](#invoicesectionwithcreatesubpermission)[] (ReadOnly): The list of invoice section properties with create subscription permission.
+* **value**: [InvoiceSectionWithCreateSubPermission](#invoicesectionwithcreatesubpermission)[]: The list of invoice section properties with create subscription permission.
 
 ## InvoiceSectionProperties
 ### Properties
@@ -158,7 +158,7 @@
 * **billingProfileStatus**: 'Active' | 'Disabled' | 'Warned' | string (ReadOnly): The status of the billing profile.
 * **billingProfileStatusReasonCode**: 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' | string (ReadOnly): Reason for the specified billing profile status.
 * **billingProfileSystemId**: string (ReadOnly): The system generated unique identifier for a billing profile.
-* **enabledAzurePlans**: [AzurePlan](#azureplan)[] (ReadOnly): Enabled azure plans for the associated billing profile.
+* **enabledAzurePlans**: [AzurePlan](#azureplan)[]: Enabled azure plans for the associated billing profile.
 * **invoiceSectionDisplayName**: string (ReadOnly): The name of the invoice section.
 * **invoiceSectionId**: string (ReadOnly): The ID of the invoice section.
 * **invoiceSectionSystemId**: string (ReadOnly): The system generated unique identifier for an invoice section.

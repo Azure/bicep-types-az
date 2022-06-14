@@ -340,11 +340,11 @@ Get-AzSqlServerServiceObjective -Location <location>
 
 ## DisasterRecoveryConfigurationProperties
 ### Properties
-* **autoFailover**: 'Off' | 'On' | string (ReadOnly): Whether or not failover can be done automatically.
-* **failoverPolicy**: 'Automatic' | 'Manual' | string (ReadOnly): How aggressive the automatic failover should be.
+* **autoFailover**: 'Off' | 'On' | string (Required): Whether or not failover can be done automatically.
+* **failoverPolicy**: 'Automatic' | 'Manual' | string (Required): How aggressive the automatic failover should be.
 * **logicalServerName**: string (ReadOnly): Logical name of the server.
 * **partnerLogicalServerName**: string (ReadOnly): Logical name of the partner server.
-* **partnerServerId**: string (ReadOnly): Id of the partner server.
+* **partnerServerId**: string (Required): Id of the partner server.
 * **role**: 'None' | 'Primary' | 'Secondary' | string (ReadOnly): The role of the current server in the disaster recovery configuration.
 * **status**: 'Creating' | 'Dropping' | 'FailingOver' | 'Ready' | string (ReadOnly): The status of the disaster recovery configuration.
 
@@ -371,13 +371,13 @@ Get-AzSqlServerServiceObjective -Location <location>
 
 ## ImportExtensionProperties
 ### Properties
-* **administratorLogin**: string (Required, WriteOnly): The name of the SQL administrator.
-* **administratorLoginPassword**: string (Required, WriteOnly): The password of the SQL administrator.
-* **authenticationType**: 'ADPassword' | 'SQL' (WriteOnly): The authentication type.
-* **operationMode**: 'Import' (Required, WriteOnly): The type of import operation being performed. This is always Import.
-* **storageKey**: string (Required, WriteOnly): The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?."
-* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required, WriteOnly): The type of the storage key to use.
-* **storageUri**: string (Required, WriteOnly): The storage uri to use.
+* **administratorLogin**: string (Required): The name of the SQL administrator.
+* **administratorLoginPassword**: string (Required): The password of the SQL administrator.
+* **authenticationType**: 'ADPassword' | 'SQL': The authentication type.
+* **operationMode**: 'Import' (Required): The type of import operation being performed. This is always Import.
+* **storageKey**: string (Required): The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?."
+* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required): The type of the storage key to use.
+* **storageUri**: string (Required): The storage uri to use.
 
 ## OperationImpact
 ### Properties

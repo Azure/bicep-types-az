@@ -65,12 +65,12 @@
 
 ## SourceConfiguration
 ### Properties
-* **name**: string (ReadOnly): The name of setting.
-* **value**: string (ReadOnly): The value of setting
+* **name**: string: The name of setting.
+* **value**: string: The value of setting
 
 ## SourceConfigurationResult
 ### Properties
-* **configurations**: [SourceConfiguration](#sourceconfiguration)[] (ReadOnly): The configuration properties for source resource.
+* **configurations**: [SourceConfiguration](#sourceconfiguration)[]: The configuration properties for source resource.
 
 ## SystemData
 ### Properties

@@ -277,7 +277,7 @@
 
 ## AuthenticationSettingsContract
 ### Properties
-* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract) (WriteOnly): API OAuth2 Authentication settings details.
+* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract): API OAuth2 Authentication settings details.
 
 ## BackendCredentialsContractHeader
 ### Properties
@@ -313,8 +313,8 @@
 
 ## OAuth2AuthenticationSettingsContract
 ### Properties
-* **authorizationServerId**: string (WriteOnly): OAuth authorization server identifier.
-* **scope**: string (WriteOnly): operations scope.
+* **authorizationServerId**: string: OAuth authorization server identifier.
+* **scope**: string: operations scope.
 
 ## ParameterContract
 ### Properties
@@ -350,8 +350,8 @@
 
 ## SubscriptionKeyParameterNamesContract
 ### Properties
-* **header**: string (WriteOnly): Subscription key header name.
-* **query**: string (WriteOnly): Subscription key query string parameter name.
+* **header**: string: Subscription key header name.
+* **query**: string: Subscription key query string parameter name.
 
 ## TokenBodyParameterContract
 ### Properties
@@ -360,8 +360,8 @@
 
 ## UserIdentityContract
 ### Properties
-* **id**: string (ReadOnly): Identifier value within provider.
-* **provider**: string (ReadOnly): Identity provider name.
+* **id**: string: Identifier value within provider.
+* **provider**: string: Identity provider name.
 
 ## VirtualNetworkConfiguration
 ### Properties

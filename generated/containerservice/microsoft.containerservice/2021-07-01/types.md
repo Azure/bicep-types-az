@@ -64,7 +64,7 @@
 
 ## AccessProfile
 ### Properties
-* **kubeConfig**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
+* **kubeConfig**: any: Base64-encoded Kubernetes configuration file.
 
 ## AgentPoolUpgradeSettings
 ### Properties
@@ -158,10 +158,10 @@
 ## ManagedClusterAccessProfile
 ### Properties
 * **id**: string (ReadOnly): Resource Id
-* **location**: string (ReadOnly): Resource location
+* **location**: string (Required): Resource location
 * **name**: string (ReadOnly): Resource name
-* **properties**: [AccessProfile](#accessprofile) (ReadOnly): AccessProfile of a managed cluster.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **properties**: [AccessProfile](#accessprofile): AccessProfile of a managed cluster.
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: string (ReadOnly): Resource type
 
 ## ManagedClusterAddonProfile

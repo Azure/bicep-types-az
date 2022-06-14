@@ -1201,8 +1201,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## IntegrationRuntimeAuthKeys
 ### Properties
-* **authKey1**: string (ReadOnly): The primary integration runtime authentication key.
-* **authKey2**: string (ReadOnly): The secondary integration runtime authentication key.
+* **authKey1**: string: The primary integration runtime authentication key.
+* **authKey2**: string: The secondary integration runtime authentication key.
 
 ## IntegrationRuntimeComputeProperties
 ### Properties

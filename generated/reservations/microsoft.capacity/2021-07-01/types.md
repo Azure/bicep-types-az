@@ -8,38 +8,51 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (WriteOnly): The Azure Region where the reserved resource lives.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PurchaseRequestProperties](#purchaserequestproperties)
+* **properties**: [PurchaseRequestPropertiesOrReservationOrderProperties](#purchaserequestpropertiesorreservationorderproperties)
 * **sku**: [SkuName](#skuname) (WriteOnly)
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Capacity/reservationOrders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ExtendedStatusInfo
 ### Properties
-* **message**: string (ReadOnly): The message giving detailed information about the status code.
-* **statusCode**: 'Active' | 'Expired' | 'Merged' | 'None' | 'PaymentInstrumentError' | 'Pending' | 'Processing' | 'PurchaseError' | 'Split' | 'Succeeded' | string (ReadOnly)
+* **message**: string: The message giving detailed information about the status code.
+* **statusCode**: 'Active' | 'Expired' | 'Merged' | 'None' | 'PaymentInstrumentError' | 'Pending' | 'Processing' | 'PurchaseError' | 'Split' | 'Succeeded' | string
 
 ## PaymentDetail
 ### Properties
-* **billingAccount**: string (ReadOnly): Shows the Account that is charged for this payment.
-* **billingCurrencyTotal**: [Price](#price) (ReadOnly): Amount charged in Billing currency. Tax not included. Is null for future payments
-* **dueDate**: string (ReadOnly): Date when the payment needs to be done.
-* **extendedStatusInfo**: [ExtendedStatusInfo](#extendedstatusinfo) (ReadOnly)
-* **paymentDate**: string (ReadOnly): Date when the transaction is completed. Is null when it is scheduled.
-* **pricingCurrencyTotal**: [Price](#price) (ReadOnly): Amount in pricing currency. Tax not included.
-* **status**: 'Cancelled' | 'Failed' | 'Scheduled' | 'Succeeded' | string (ReadOnly): Describes whether the payment is completed, failed, cancelled or scheduled in the future.
+* **billingAccount**: string: Shows the Account that is charged for this payment.
+* **billingCurrencyTotal**: [Price](#price): Amount charged in Billing currency. Tax not included. Is null for future payments
+* **dueDate**: string: Date when the payment needs to be done.
+* **extendedStatusInfo**: [ExtendedStatusInfo](#extendedstatusinfo)
+* **paymentDate**: string: Date when the transaction is completed. Is null when it is scheduled.
+* **pricingCurrencyTotal**: [Price](#price): Amount in pricing currency. Tax not included.
+* **status**: 'Cancelled' | 'Failed' | 'Scheduled' | 'Succeeded' | string: Describes whether the payment is completed, failed, cancelled or scheduled in the future.
 
 ## Price
 ### Properties
-* **amount**: int (ReadOnly)
-* **currencyCode**: string (ReadOnly): The ISO 4217 3-letter currency code for the currency used by this purchase record.
+* **amount**: int
+* **currencyCode**: string: The ISO 4217 3-letter currency code for the currency used by this purchase record.
 
 ## PurchaseRequest
 ### Properties
-* **location**: string (ReadOnly): The Azure Region where the reserved resource lives.
-* **properties**: [PurchaseRequestProperties](#purchaserequestproperties) (ReadOnly)
-* **sku**: [SkuName](#skuname) (ReadOnly)
+* **location**: string: The Azure Region where the reserved resource lives.
+* **properties**: [PurchaseRequestProperties](#purchaserequestproperties)
+* **sku**: [SkuName](#skuname)
 
 ## PurchaseRequestProperties
+### Properties
+* **appliedScopes**: string[]: List of the subscriptions that the benefit will be applied. Do not specify if AppliedScopeType is Shared.
+* **appliedScopeType**: 'Shared' | 'Single' | string: Type of the Applied Scope.
+* **billingPlan**: 'Monthly' | 'Upfront' | string: Represent the billing plans.
+* **billingScopeId**: string: Subscription that will be charged for purchasing Reservation
+* **displayName**: string: Friendly name of the Reservation
+* **quantity**: int: Quantity of the SKUs that are part of the Reservation.
+* **renew**: bool: Setting this to true will automatically purchase a new reservation on the expiration date time.
+* **reservedResourceProperties**: [PurchaseRequestPropertiesReservedResourceProperties](#purchaserequestpropertiesreservedresourceproperties): Properties specific to each reserved resource type. Not required if not applicable.
+* **reservedResourceType**: 'AVS' | 'AppService' | 'AzureDataExplorer' | 'AzureFiles' | 'BlockBlob' | 'CosmosDb' | 'DataFactory' | 'Databricks' | 'DedicatedHost' | 'ManagedDisk' | 'MariaDb' | 'MySql' | 'NetAppStorage' | 'PostgreSql' | 'RedHat' | 'RedHatOsa' | 'RedisCache' | 'SapHana' | 'SqlAzureHybridBenefit' | 'SqlDataWarehouse' | 'SqlDatabases' | 'SqlEdge' | 'SuseLinux' | 'VMwareCloudSimple' | 'VirtualMachines' | string: The type of the resource that is being reserved.
+* **term**: 'P1Y' | 'P3Y' | 'P5Y' | string: Represent the term of Reservation.
+
+## PurchaseRequestPropertiesOrReservationOrderProperties
 ### Properties
 * **appliedScopes**: string[] (WriteOnly): List of the subscriptions that the benefit will be applied. Do not specify if AppliedScopeType is Shared.
 * **appliedScopeType**: 'Shared' | 'Single' | string (WriteOnly): Type of the Applied Scope.
@@ -61,88 +74,88 @@
 
 ## PurchaseRequestPropertiesReservedResourceProperties
 ### Properties
-* **instanceFlexibility**: 'Off' | 'On' | string (WriteOnly): Turning this on will apply the reservation discount to other VMs in the same VM size group. Only specify for VirtualMachines reserved resource type.
+* **instanceFlexibility**: 'Off' | 'On' | string: Turning this on will apply the reservation discount to other VMs in the same VM size group. Only specify for VirtualMachines reserved resource type.
 
 ## RenewPropertiesResponse
 ### Properties
-* **billingCurrencyTotal**: [RenewPropertiesResponseBillingCurrencyTotal](#renewpropertiesresponsebillingcurrencytotal) (ReadOnly): Currency and amount that customer will be charged in customer's local currency for renewal purchase. Tax is not included.
-* **pricingCurrencyTotal**: [RenewPropertiesResponsePricingCurrencyTotal](#renewpropertiesresponsepricingcurrencytotal) (ReadOnly): Amount that Microsoft uses for record. Used during refund for calculating refund limit. Tax is not included. This is locked price 30 days before expiry.
-* **purchaseProperties**: [PurchaseRequest](#purchaserequest) (ReadOnly)
+* **billingCurrencyTotal**: [RenewPropertiesResponseBillingCurrencyTotal](#renewpropertiesresponsebillingcurrencytotal): Currency and amount that customer will be charged in customer's local currency for renewal purchase. Tax is not included.
+* **pricingCurrencyTotal**: [RenewPropertiesResponsePricingCurrencyTotal](#renewpropertiesresponsepricingcurrencytotal): Amount that Microsoft uses for record. Used during refund for calculating refund limit. Tax is not included. This is locked price 30 days before expiry.
+* **purchaseProperties**: [PurchaseRequest](#purchaserequest)
 
 ## RenewPropertiesResponseBillingCurrencyTotal
 ### Properties
-* **amount**: int (ReadOnly)
-* **currencyCode**: string (ReadOnly): The ISO 4217 3-letter currency code for the currency used by this purchase record.
+* **amount**: int
+* **currencyCode**: string: The ISO 4217 3-letter currency code for the currency used by this purchase record.
 
 ## RenewPropertiesResponsePricingCurrencyTotal
 ### Properties
-* **amount**: int (ReadOnly)
-* **currencyCode**: string (ReadOnly): The ISO 4217 3-letter currency code for the currency used by this purchase record.
+* **amount**: int
+* **currencyCode**: string: The ISO 4217 3-letter currency code for the currency used by this purchase record.
 
 ## ReservationMergeProperties
 ### Properties
-* **mergeDestination**: string (ReadOnly): Reservation Resource Id Created due to the merge. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
-* **mergeSources**: string[] (ReadOnly): Resource Ids of the Source Reservation's merged to form this Reservation. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
+* **mergeDestination**: string: Reservation Resource Id Created due to the merge. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
+* **mergeSources**: string[]: Resource Ids of the Source Reservation's merged to form this Reservation. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
 
 ## ReservationOrderBillingPlanInformation
 ### Properties
-* **nextPaymentDueDate**: string (ReadOnly): For recurring billing plans, indicates the date when next payment will be processed. Null when total is paid off.
-* **pricingCurrencyTotal**: [Price](#price) (ReadOnly): Amount of money to be paid for the Order. Tax is not included.
-* **startDate**: string (ReadOnly): Date when the billing plan has started.
-* **transactions**: [PaymentDetail](#paymentdetail)[] (ReadOnly)
+* **nextPaymentDueDate**: string: For recurring billing plans, indicates the date when next payment will be processed. Null when total is paid off.
+* **pricingCurrencyTotal**: [Price](#price): Amount of money to be paid for the Order. Tax is not included.
+* **startDate**: string: Date when the billing plan has started.
+* **transactions**: [PaymentDetail](#paymentdetail)[]
 
 ## ReservationResponse
 ### Properties
-* **etag**: int (ReadOnly)
+* **etag**: int
 * **id**: string (ReadOnly): Identifier of the reservation
-* **kind**: 'Microsoft.Compute' (ReadOnly): Resource Provider type to be reserved.
-* **location**: string (ReadOnly): The Azure Region where the reserved resource lives.
+* **kind**: 'Microsoft.Compute': Resource Provider type to be reserved.
+* **location**: string: The Azure Region where the reserved resource lives.
 * **name**: string (ReadOnly): Name of the reservation
-* **properties**: [ReservationsProperties](#reservationsproperties) (ReadOnly): The properties associated to this reservation
-* **sku**: [SkuName](#skuname) (ReadOnly): The sku information associated to this reservation
+* **properties**: [ReservationsProperties](#reservationsproperties): The properties associated to this reservation
+* **sku**: [SkuName](#skuname): The sku information associated to this reservation
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: string (ReadOnly): Type of resource. "Microsoft.Capacity/reservationOrders/reservations"
 
 ## ReservationSplitProperties
 ### Properties
-* **splitDestinations**: string[] (ReadOnly): List of destination Resource Id that are created due to split. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
-* **splitSource**: string (ReadOnly): Resource Id of the Reservation from which this is split. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
+* **splitDestinations**: string[]: List of destination Resource Id that are created due to split. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
+* **splitSource**: string: Resource Id of the Reservation from which this is split. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
 
 ## ReservationsProperties
 ### Properties
-* **appliedScopes**: string[] (ReadOnly): The list of applied scopes
-* **appliedScopeType**: 'Shared' | 'Single' | string (ReadOnly): The applied scope type
-* **archived**: bool (ReadOnly): Indicates if the reservation is archived
-* **billingPlan**: 'Monthly' | 'Upfront' | string (ReadOnly): The billing plan options available for this SKU.
-* **billingScopeId**: string (ReadOnly): Subscription that will be charged for purchasing Reservation
-* **capabilities**: string (ReadOnly): Capabilities of the reservation
-* **displayName**: string (ReadOnly): Friendly name for user to easily identify the reservation
+* **appliedScopes**: string[]: The list of applied scopes
+* **appliedScopeType**: 'Shared' | 'Single' | string: The applied scope type
+* **archived**: bool: Indicates if the reservation is archived
+* **billingPlan**: 'Monthly' | 'Upfront' | string: The billing plan options available for this SKU.
+* **billingScopeId**: string: Subscription that will be charged for purchasing Reservation
+* **capabilities**: string: Capabilities of the reservation
+* **displayName**: string: Friendly name for user to easily identify the reservation
 * **displayProvisioningState**: string (ReadOnly): The provisioning state of the reservation for display, e.g. Succeeded
-* **effectiveDateTime**: string (ReadOnly): DateTime of the Reservation starting when this version is effective from.
-* **expiryDate**: string (ReadOnly): This is the date when the Reservation will expire.
-* **extendedStatusInfo**: [ExtendedStatusInfo](#extendedstatusinfo) (ReadOnly): The message giving detailed information about the status code.
-* **instanceFlexibility**: 'Off' | 'On' | string (ReadOnly): Allows reservation discount to be applied across skus within the same Autofit group. Not all skus support instance size flexibility.
+* **effectiveDateTime**: string: DateTime of the Reservation starting when this version is effective from.
+* **expiryDate**: string: This is the date when the Reservation will expire.
+* **extendedStatusInfo**: [ExtendedStatusInfo](#extendedstatusinfo): The message giving detailed information about the status code.
+* **instanceFlexibility**: 'Off' | 'On' | string: Allows reservation discount to be applied across skus within the same Autofit group. Not all skus support instance size flexibility.
 * **lastUpdatedDateTime**: string (ReadOnly): DateTime of the last time the Reservation was updated.
-* **mergeProperties**: [ReservationMergeProperties](#reservationmergeproperties) (ReadOnly)
-* **provisioningState**: 'BillingFailed' | 'Cancelled' | 'ConfirmedBilling' | 'ConfirmedResourceHold' | 'Created' | 'Creating' | 'Expired' | 'Failed' | 'Merged' | 'PendingBilling' | 'PendingResourceHold' | 'Split' | 'Succeeded' | string (ReadOnly): Current state of the reservation.
+* **mergeProperties**: [ReservationMergeProperties](#reservationmergeproperties)
+* **provisioningState**: 'BillingFailed' | 'Cancelled' | 'ConfirmedBilling' | 'ConfirmedResourceHold' | 'Created' | 'Creating' | 'Expired' | 'Failed' | 'Merged' | 'PendingBilling' | 'PendingResourceHold' | 'Split' | 'Succeeded' | string: Current state of the reservation.
 * **provisioningSubState**: string (ReadOnly): The provisioning state of the reservation, e.g. Succeeded
-* **purchaseDate**: string (ReadOnly): This is the date when the Reservation was purchased.
-* **quantity**: int (ReadOnly): Quantity of the SKUs that are part of the Reservation.
-* **renew**: bool (ReadOnly): Setting this to true will automatically purchase a new reservation on the expiration date time.
-* **renewDestination**: string (ReadOnly): Reservation Id of the reservation which is purchased because of renew. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}.
-* **renewProperties**: [RenewPropertiesResponse](#renewpropertiesresponse) (ReadOnly)
-* **renewSource**: string (ReadOnly): Reservation Id of the reservation from which this reservation is renewed. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}.
-* **reservedResourceType**: 'AVS' | 'AppService' | 'AzureDataExplorer' | 'AzureFiles' | 'BlockBlob' | 'CosmosDb' | 'DataFactory' | 'Databricks' | 'DedicatedHost' | 'ManagedDisk' | 'MariaDb' | 'MySql' | 'NetAppStorage' | 'PostgreSql' | 'RedHat' | 'RedHatOsa' | 'RedisCache' | 'SapHana' | 'SqlAzureHybridBenefit' | 'SqlDataWarehouse' | 'SqlDatabases' | 'SqlEdge' | 'SuseLinux' | 'VMwareCloudSimple' | 'VirtualMachines' | string (ReadOnly): The type of the resource that is being reserved.
-* **skuDescription**: string (ReadOnly): Description of the SKU in english.
-* **splitProperties**: [ReservationSplitProperties](#reservationsplitproperties) (ReadOnly)
-* **term**: 'P1Y' | 'P3Y' | 'P5Y' | string (ReadOnly): Represent the term of Reservation.
+* **purchaseDate**: string: This is the date when the Reservation was purchased.
+* **quantity**: int: Quantity of the SKUs that are part of the Reservation.
+* **renew**: bool: Setting this to true will automatically purchase a new reservation on the expiration date time.
+* **renewDestination**: string: Reservation Id of the reservation which is purchased because of renew. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}.
+* **renewProperties**: [RenewPropertiesResponse](#renewpropertiesresponse)
+* **renewSource**: string: Reservation Id of the reservation from which this reservation is renewed. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}.
+* **reservedResourceType**: 'AVS' | 'AppService' | 'AzureDataExplorer' | 'AzureFiles' | 'BlockBlob' | 'CosmosDb' | 'DataFactory' | 'Databricks' | 'DedicatedHost' | 'ManagedDisk' | 'MariaDb' | 'MySql' | 'NetAppStorage' | 'PostgreSql' | 'RedHat' | 'RedHatOsa' | 'RedisCache' | 'SapHana' | 'SqlAzureHybridBenefit' | 'SqlDataWarehouse' | 'SqlDatabases' | 'SqlEdge' | 'SuseLinux' | 'VMwareCloudSimple' | 'VirtualMachines' | string: The type of the resource that is being reserved.
+* **skuDescription**: string: Description of the SKU in english.
+* **splitProperties**: [ReservationSplitProperties](#reservationsplitproperties)
+* **term**: 'P1Y' | 'P3Y' | 'P5Y' | string: Represent the term of Reservation.
 * **userFriendlyAppliedScopeType**: string (ReadOnly): The applied scope type of the reservation for display, e.g. Shared
 * **userFriendlyRenewState**: string (ReadOnly): The renew state of the reservation for display, e.g. On
 * **utilization**: [ReservationsPropertiesUtilization](#reservationspropertiesutilization) (ReadOnly): Reservation utilization
 
 ## ReservationsPropertiesUtilization
 ### Properties
-* **aggregates**: [ReservationUtilizationAggregates](#reservationutilizationaggregates)[] (ReadOnly): The array of aggregates of a reservation's utilization
+* **aggregates**: [ReservationUtilizationAggregates](#reservationutilizationaggregates)[]: The array of aggregates of a reservation's utilization
 * **trend**: string (ReadOnly): The number of days trend for a reservation
 
 ## ReservationUtilizationAggregates
@@ -154,14 +167,14 @@
 
 ## SkuName
 ### Properties
-* **name**: string (WriteOnly)
+* **name**: string
 
 ## SystemData
 ### Properties
-* **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
-* **createdBy**: string (ReadOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
-* **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that last modified the resource.
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
