@@ -9,7 +9,7 @@ info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/wo
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 11ms
 info    | Processing batch task - {"tag":"microsoft.communication-2020-08-20-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -29,5 +29,5 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'CommunicationServiceRe
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DomainResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from DomainResource
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'EmailServiceResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from EmailServiceResource
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Communication/listVerifiedExchangeOnlineDomains': Unable to find type segments
-info    | autorest.bicep took 3ms
-info    | Autorest completed in 7.33s. 6 files generated.
+info    | autorest.bicep took 4ms
+info    | Autorest completed in 7.8s. 6 files generated.
