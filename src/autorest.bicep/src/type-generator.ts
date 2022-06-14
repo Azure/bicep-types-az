@@ -471,12 +471,15 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       namedDefinitions[definitionName] = definition;
     }
 
-    // Only make a distinction between what's defined on PUT vs GET if we're dealing with a synthetic object.
+    // Only make a distinction between what's defined on PUT vs GET if we're dealing with a synthetic object or a discriminated subtype.
     // If the schema on both PUT and GET is the same named object (or if one of the two is undefined),
     // use the combined schema as both GET and PUT schemata to prevent ReadOnly/WriteOnly flags from trickling down
     // to object properties (which is problematic if shapes are reused across resources)
-    const schemaForPut = syntheticObject ? putSchema : combinedSchema;
-    const schemaForGet = syntheticObject ? getSchema : combinedSchema;
+    //
+    // For discriminated subtypes, Bicep's type system does not have a great way to communicate which variants are available on read vs write, but this
+    // can be communicated on variant properties. NB: `putSchema` and `getSchema` will only be different in a discriminated subtype if the discriminated
+    // object was synthetic.
+    const [schemaForPut, schemaForGet] = syntheticObject || !includeBaseProperties ? [putSchema, getSchema] : [combinedSchema, combinedSchema];
 
     for (const { propertyName, putProperty, getProperty } of getObjectTypeProperties(schemaForPut, schemaForGet, includeBaseProperties)) {
       const propertyDefinition = parseType(putProperty?.schema, getProperty?.schema);
