@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { ChoiceSchema, CodeModel, HttpMethod, HttpParameter, HttpRequest, HttpResponse, ImplementationLocation, ObjectSchema, Operation, Parameter, ParameterLocation, Request, Response, Schema, SchemaResponse, SealedChoiceSchema, Metadata } from "@autorest/codemodel";
+import { ChoiceSchema, CodeModel, ComplexSchema, HttpMethod, HttpParameter, HttpRequest, HttpResponse, ImplementationLocation, isObjectSchema, ObjectSchema, Operation, Parameter, ParameterLocation, Request, Response, Schema, SchemaResponse, SealedChoiceSchema, Metadata } from "@autorest/codemodel";
 import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
 import { keys, Dictionary, values, groupBy, uniqBy } from 'lodash';
 import { success, failure, Result } from './utils';
@@ -21,6 +21,8 @@ export interface ResourceDescriptor {
   typeSegments: string[];
   apiVersion: string;
   constantName?: string;
+  readable: boolean;
+  writable: boolean;
 }
 
 export interface ProviderDefinition {
@@ -30,12 +32,18 @@ export interface ProviderDefinition {
   resourceActions: ResourceListActionDefinition[];
 }
 
+export interface ResourceOperationDefintion {
+  request: HttpRequest;
+  response?: HttpResponse;
+  parameters: Parameter[];
+  requestSchema?: ObjectSchema;
+  responseSchema?: ObjectSchema;
+}
+
 export interface ResourceDefinition {
   descriptor: ResourceDescriptor;
-  putRequest: HttpRequest;
-  putParameters: Parameter[];
-  putSchema?: ObjectSchema;
-  getSchema?: ObjectSchema;
+  putOperation?: ResourceOperationDefintion;
+  getOperation?: ResourceOperationDefintion;
 }
 
 export interface ResourceListActionDefinition {
@@ -108,7 +116,7 @@ function getNormalizedMethodPath(path: string) {
   return path;
 }
 
-export function getSerializedName(metadata: Metadata) { 
+export function getSerializedName(metadata: Metadata) {
   return metadata.language.default.serializedName ?? metadata.language.default.name;
 }
 
@@ -161,6 +169,29 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     return apiVersions.flatMap(v => getProviderDefinitionsForApiVersion(v));
   }
 
+  function getExtensions(schema: ComplexSchema) {
+    // extensions are defined as Record<string, any> in autorest
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const extensions: Record<string, any> = {};
+    if (isObjectSchema(schema)) {
+      for (const parent of schema.parents?.all || []) {
+        for (const [key, value] of Object.entries(getExtensions(parent))) {
+          extensions[key] = value;
+        }
+      }
+    }
+
+    for (const [key, value] of Object.entries(schema.extensions || {})) {
+      extensions[key] = value;
+    }
+
+    return extensions;
+  }
+
+  function isResourceSchema(schema?: ComplexSchema) {
+    return schema && getExtensions(schema)['x-ms-azure-resource'];
+  }
+
   function getProviderDefinitionsForApiVersion(apiVersion: string) {
     const providerDefinitions: Dictionary<ProviderDefinition> = {};
     const operations = codeModel.operationGroups.flatMap(x => x.operations);
@@ -191,7 +222,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
       if (putRequest) {
         putOperationsByPath[putRequest.path.toLowerCase()] = operation;
       }
-      const postListRequest = requests.filter(r => { 
+      const postListRequest = requests.filter(r => {
         if (r.method !== HttpMethod.Post) {
           return false;
         }
@@ -211,19 +242,31 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     });
 
     const resourcesByProvider: Dictionary<ResourceDefinition[]> = {};
-    for (const lcPath in putOperationsByPath) {
+    for (const lcPath of new Set<string>([...Object.keys(putOperationsByPath), ...Object.keys(getOperationsByPath)])) {
       const putOperation = putOperationsByPath[lcPath];
       const getOperation = getOperationsByPath[lcPath];
-
       const putData = getPutSchema(putOperation);
-      const getData = getGetSchema(getOperation) ?? putData;
-      if (!putData || !getData) {
+      const getData = getGetSchema(getOperation);
+
+      let parseResult: Result<ResourceDescriptor[], string>;
+      if (putData) {
+        parseResult = parseResourceMethod(
+          putData.request.path,
+          putData.parameters,
+          apiVersion,
+          !!getData,
+          true
+        );
+      } else if (getData && isResourceSchema(getData.responseSchema)) {
+        parseResult = parseResourceMethod(getData.request.path, getData.parameters, apiVersion, true, false);
+      } else {
+        // A non-resource get with no corresponding put is most likely a collection or utility endpoint.
+        // No types should be generated
         continue;
       }
 
-      const parseResult = parseResourceMethod(putData.request.path, putData.parameters, apiVersion);
       if (!parseResult.success) {
-        logWarning(`Skipping path '${putData.request.path}': ${parseResult.error}`);
+        logWarning(`Skipping path '${lcPath}': ${parseResult.error}`);
         continue;
       }
 
@@ -232,11 +275,22 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
 
         const resource: ResourceDefinition = {
           descriptor,
-          putRequest: putData.request,
-          putParameters: putData.parameters,
-          putSchema: (putData.schema instanceof ObjectSchema) ? putData.schema : undefined,
-          getSchema: (getData.schema instanceof ObjectSchema) ? getData.schema : undefined,
+          putOperation: putData
+            ? {
+              ...putData,
+              requestSchema: (putData?.requestSchema instanceof ObjectSchema) ? putData.requestSchema : undefined,
+              responseSchema: (putData?.responseSchema instanceof ObjectSchema) ? putData.responseSchema : undefined,
+            }
+            : undefined,
+          getOperation: getData
+            ? {
+              ...getData,
+              requestSchema: (getData?.requestSchema instanceof ObjectSchema) ? getData.requestSchema : undefined,
+              responseSchema: (getData?.responseSchema instanceof ObjectSchema) ? getData.responseSchema : undefined,
+            }
+            : undefined
         };
+
 
         const lcNamespace = descriptor.namespace.toLowerCase();
         resourcesByProvider[lcNamespace] = [
@@ -289,7 +343,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
 
     return values(providerDefinitions);
   }
-  
+
   function getRequestSchema(operation: Operation | undefined, requests: Request[]) {
     if (!operation || requests.length === 0) {
       return;
@@ -346,14 +400,41 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
   }
 
   function getGetSchema(operation?: Operation) {
-    return getResponseSchema(operation);
+    const requestSchema = getRequestSchema(
+      operation,
+      operation?.requests?.filter(r => r.protocol.http?.method === HttpMethod.Get) ?? []
+    );
+    const responseSchema = getResponseSchema(operation);
+
+    if (!requestSchema || !responseSchema) {
+      return;
+    }
+
+    return {
+      request: requestSchema.request,
+      response: responseSchema.response,
+      parameters: requestSchema.parameters,
+      requestSchema: requestSchema.schema,
+      responseSchema: responseSchema.schema,
+    };
   }
 
   function getPutSchema(operation?: Operation) {
     const requests = operation?.requests ?? [];
     const validRequests = requests.filter(r => (r.protocol.http as HttpRequest)?.method === HttpMethod.Put);
+    const requestSchema = getRequestSchema(operation, validRequests);
+    const responseSchema = getResponseSchema(operation);
+    if (!requestSchema) {
+      return;
+    }
 
-    return getRequestSchema(operation, validRequests);
+    return {
+      request: requestSchema.request,
+      response: responseSchema?.response,
+      parameters: requestSchema.parameters,
+      requestSchema: requestSchema.schema,
+      responseSchema: responseSchema?.schema,
+    };
   }
 
   function getPostSchema(operation?: Operation) {
@@ -369,6 +450,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
 
     return {
       request: request.request,
+      response: response.response,
       parameters: request.parameters,
       requestSchema: request.schema,
       responseSchema: response.schema,
@@ -391,7 +473,14 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     return success({ scopeType, routingScope });
   }
 
-  function parseResourceDescriptors(parameters: Parameter[], apiVersion: string, scopeType: ScopeType, routingScope: string): Result<ResourceDescriptor[], string> {
+  function parseResourceDescriptors(
+    parameters: Parameter[],
+    apiVersion: string,
+    scopeType: ScopeType,
+    routingScope: string,
+    readable: boolean,
+    writable: boolean
+  ): Result<ResourceDescriptor[], string> {
     const namespace = routingScope.substr(0, routingScope.indexOf('/'));
     if (isPathVariable(namespace)) {
       return failure(`Unable to process parameterized provider namespace "${namespace}"`);
@@ -411,12 +500,20 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
       typeSegments: type,
       apiVersion,
       constantName,
+      readable,
+      writable,
     }));
 
     return success(descriptors);
   }
 
-  function parseResourceMethod(path: string, parameters: Parameter[], apiVersion: string) {
+  function parseResourceMethod(
+    path: string,
+    parameters: Parameter[],
+    apiVersion: string,
+    readable: boolean,
+    writable: boolean
+  ) {
     const resourceScopeResult = parseResourceScopes(path);
 
     if (!resourceScopeResult.success) {
@@ -425,7 +522,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
 
     const { scopeType, routingScope } = resourceScopeResult.value;
 
-    return parseResourceDescriptors(parameters, apiVersion, scopeType, routingScope);
+    return parseResourceDescriptors(parameters, apiVersion, scopeType, routingScope, readable, writable);
   }
 
   function parseResourceActionMethod(path: string, parameters: Parameter[], apiVersion: string) {
@@ -440,12 +537,12 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     const routingScope = actionRoutingScope.substr(0, actionRoutingScope.lastIndexOf('/'));
     const actionName = actionRoutingScope.substr(actionRoutingScope.lastIndexOf('/') + 1);
 
-    const resourceDescriptorsResult = parseResourceDescriptors(parameters, apiVersion, scopeType, routingScope);
+    const resourceDescriptorsResult = parseResourceDescriptors(parameters, apiVersion, scopeType, routingScope, false, true);
     if (!resourceDescriptorsResult.success) {
       return failure(resourceDescriptorsResult.error);
     }
 
-    return success({ 
+    return success({
       descriptors: resourceDescriptorsResult.value,
       actionName: actionName,
     });
@@ -478,7 +575,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
         const choiceSchema = parameter.schema;
         if (!(choiceSchema instanceof ChoiceSchema || choiceSchema instanceof SealedChoiceSchema)) {
           return failure(`Parameter reference ${typeSegment} is not defined as an enum`);
-        }        
+        }
 
         if (choiceSchema.choices.length === 0) {
           return failure(`Parameter reference ${typeSegment} is defined as an enum, but doesn't have any specified values`);
