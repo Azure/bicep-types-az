@@ -198,11 +198,11 @@
 
 ## SkuCredential
 ### Properties
-* **acrServerUrl**: string (ReadOnly): The Acr server url
-* **acrToken**: string (ReadOnly): The credential value.
-* **expiry**: string (ReadOnly): The UTC time when credential will expire.
-* **repositories**: string[] (ReadOnly): The repositories that could be accessed using the current credential.
-* **username**: string (ReadOnly): The username of the sku credential.
+* **acrServerUrl**: string: The Acr server url
+* **acrToken**: string: The credential value.
+* **expiry**: string: The UTC time when credential will expire.
+* **repositories**: string[]: The repositories that could be accessed using the current credential.
+* **username**: string: The username of the sku credential.
 
 ## SshConfiguration
 ### Properties

@@ -137,27 +137,27 @@
 
 ## ResourceListKeys
 ### Properties
-* **keyName**: string (ReadOnly): A string that describes the authorization rule.
-* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace authorization rule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace authorization rule.
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **keyName**: string: A string that describes the authorization rule.
+* **primaryConnectionString**: string: Primary connection string of the created namespace authorization rule.
+* **primaryKey**: string: A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **secondaryConnectionString**: string: Secondary connection string of the created namespace authorization rule.
+* **secondaryKey**: string: A base64-encoded 256-bit primary key for signing and validating the SAS token.
 
 ## ResourceListKeys
 ### Properties
-* **keyName**: string (ReadOnly): A string that describes the authorization rule.
-* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace authorization rule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace authorization rule.
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **keyName**: string: A string that describes the authorization rule.
+* **primaryConnectionString**: string: Primary connection string of the created namespace authorization rule.
+* **primaryKey**: string: A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **secondaryConnectionString**: string: Secondary connection string of the created namespace authorization rule.
+* **secondaryKey**: string: A base64-encoded 256-bit primary key for signing and validating the SAS token.
 
 ## ResourceListKeys
 ### Properties
-* **keyName**: string (ReadOnly): A string that describes the authorization rule.
-* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace authorization rule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace authorization rule.
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **keyName**: string: A string that describes the authorization rule.
+* **primaryConnectionString**: string: Primary connection string of the created namespace authorization rule.
+* **primaryKey**: string: A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **secondaryConnectionString**: string: Secondary connection string of the created namespace authorization rule.
+* **secondaryKey**: string: A base64-encoded 256-bit primary key for signing and validating the SAS token.
 
 ## SharedAccessAuthorizationRuleProperties
 ### Properties

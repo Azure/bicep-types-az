@@ -115,7 +115,7 @@ dictionary key references will be ARM resource ids in the form:
 
 ## RunGetLogResult
 ### Properties
-* **logLink**: string (ReadOnly): The link to logs for a run on a azure container registry.
+* **logLink**: string: The link to logs for a run on a azure container registry.
 
 ## SecretObject
 ### Properties
@@ -154,17 +154,17 @@ the source registry during the run.
 
 ## SourceUploadDefinition
 ### Properties
-* **relativePath**: string (ReadOnly): The relative path to the source. This is used to submit the subsequent queue build request.
-* **uploadUrl**: string (ReadOnly): The URL where the client can upload the source.
+* **relativePath**: string: The relative path to the source. This is used to submit the subsequent queue build request.
+* **uploadUrl**: string: The URL where the client can upload the source.
 
 ## Task
 ### Properties
 * **id**: string (ReadOnly): The resource ID.
-* **identity**: [IdentityProperties](#identityproperties) (ReadOnly): Identity for the resource.
-* **location**: string (ReadOnly): The location of the resource. This cannot be changed after the resource is created.
+* **identity**: [IdentityProperties](#identityproperties): Identity for the resource.
+* **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
 * **name**: string (ReadOnly): The name of the resource.
-* **properties**: [TaskProperties](#taskproperties) (ReadOnly): The properties of a task.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The tags of the resource.
+* **properties**: [TaskProperties](#taskproperties): The properties of a task.
+* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: string (ReadOnly): The type of the resource.
 
 ## TaskProperties

@@ -110,18 +110,18 @@
 
 ## TldLegalAgreement
 ### Properties
-* **agreementKey**: string (ReadOnly): Unique identifier for the agreement.
-* **content**: string (ReadOnly): Agreement details.
-* **title**: string (ReadOnly): Agreement title.
-* **url**: string (ReadOnly): URL where a copy of the agreement details is hosted.
+* **agreementKey**: string (Required): Unique identifier for the agreement.
+* **content**: string (Required): Agreement details.
+* **title**: string (Required): Agreement title.
+* **url**: string: URL where a copy of the agreement details is hosted.
 
 ## TldLegalAgreementCollection
 ### Properties
 * **nextLink**: string (ReadOnly): Link to next page of resources.
-* **value**: [TldLegalAgreement](#tldlegalagreement)[] (ReadOnly): Collection of resources.
+* **value**: [TldLegalAgreement](#tldlegalagreement)[] (Required): Collection of resources.
 
 ## TopLevelDomainAgreementOption
 ### Properties
-* **forTransfer**: bool (WriteOnly): If <code>true</code>, then the list of agreements will include agreements for domain transfer as well; otherwise, <code>false</code>.
-* **includePrivacy**: bool (WriteOnly): If <code>true</code>, then the list of agreements will include agreements for domain privacy as well; otherwise, <code>false</code>.
+* **forTransfer**: bool: If <code>true</code>, then the list of agreements will include agreements for domain transfer as well; otherwise, <code>false</code>.
+* **includePrivacy**: bool: If <code>true</code>, then the list of agreements will include agreements for domain privacy as well; otherwise, <code>false</code>.
 

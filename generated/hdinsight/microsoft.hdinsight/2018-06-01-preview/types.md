@@ -9,7 +9,7 @@
 * **identity**: [ClusterIdentity](#clusteridentity): The identity of the cluster, if configured.
 * **location**: string: The location of the cluster.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterCreateProperties](#clustercreateproperties): The cluster create parameters.
+* **properties**: [ClusterCreatePropertiesOrClusterGetProperties](#clustercreatepropertiesorclustergetproperties): The cluster create parameters.
 * **tags**: [ClusterCreateParametersExtendedTags](#clustercreateparametersextendedtags): The resource tags.
 * **type**: 'Microsoft.HDInsight/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -101,7 +101,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ClusterCreateProperties
+## ClusterCreatePropertiesOrClusterGetProperties
 ### Properties
 * **clusterDefinition**: [ClusterDefinition](#clusterdefinition): The cluster definition.
 * **clusterHdpVersion**: string (ReadOnly): The hdp version of the cluster.
@@ -167,11 +167,11 @@
 
 ## ConnectivityEndpoint
 ### Properties
-* **location**: string (ReadOnly): The location of the endpoint.
-* **name**: string (ReadOnly): The name of the endpoint.
-* **port**: int (ReadOnly): The port to connect to.
-* **privateIPAddress**: string (ReadOnly): The private ip address of the endpoint.
-* **protocol**: string (ReadOnly): The protocol of the endpoint.
+* **location**: string: The location of the endpoint.
+* **name**: string: The name of the endpoint.
+* **port**: int: The port to connect to.
+* **privateIPAddress**: string: The private ip address of the endpoint.
+* **protocol**: string: The protocol of the endpoint.
 
 ## DataDisksGroups
 ### Properties
@@ -194,13 +194,13 @@
 
 ## Errors
 ### Properties
-* **code**: string (ReadOnly): The error code.
-* **message**: string (ReadOnly): The error message.
+* **code**: string: The error code.
+* **message**: string: The error message.
 
 ## ExcludedServicesConfig
 ### Properties
-* **excludedServicesConfigId**: string (ReadOnly): The config id of excluded services.
-* **excludedServicesList**: string (ReadOnly): The list of excluded services.
+* **excludedServicesConfigId**: string: The config id of excluded services.
+* **excludedServicesList**: string: The list of excluded services.
 
 ## HardwareProfile
 ### Properties
@@ -208,9 +208,9 @@
 
 ## HostInfo
 ### Properties
-* **effectiveDiskEncryptionKeyUrl**: string (ReadOnly): The effective disk encryption key URL used by the host
-* **fqdn**: string (ReadOnly): The Fully Qualified Domain Name of host
-* **name**: string (ReadOnly): The host name
+* **effectiveDiskEncryptionKeyUrl**: string: The effective disk encryption key URL used by the host
+* **fqdn**: string: The Fully Qualified Domain Name of host
+* **name**: string: The host name
 
 ## KafkaRestProperties
 ### Properties
@@ -239,7 +239,7 @@
 
 ## QuotaInfo
 ### Properties
-* **coresUsed**: int (ReadOnly): The cores used by the cluster.
+* **coresUsed**: int: The cores used by the cluster.
 
 ## Role
 ### Properties

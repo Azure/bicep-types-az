@@ -177,19 +177,19 @@
 
 ## ACIServiceCreateRequestDataCollection
 ### Properties
-* **eventHubEnabled**: bool (WriteOnly): Option for enabling/disabling Event Hub.
-* **storageEnabled**: bool (WriteOnly): Option for enabling/disabling storage.
+* **eventHubEnabled**: bool: Option for enabling/disabling Event Hub.
+* **storageEnabled**: bool: Option for enabling/disabling storage.
 
 ## ACIServiceCreateRequestEncryptionProperties
 ### Properties
-* **keyName**: string (Required, WriteOnly): Encryption Key name
-* **keyVersion**: string (Required, WriteOnly): Encryption Key Version
-* **vaultBaseUrl**: string (Required, WriteOnly): vault base Url
+* **keyName**: string (Required): Encryption Key name
+* **keyVersion**: string (Required): Encryption Key Version
+* **vaultBaseUrl**: string (Required): vault base Url
 
 ## ACIServiceCreateRequestVnetConfiguration
 ### Properties
-* **subnetName**: string (WriteOnly): The name of the virtual network subnet.
-* **vnetName**: string (WriteOnly): The name of the virtual network.
+* **subnetName**: string: The name of the virtual network subnet.
+* **vnetName**: string: The name of the virtual network.
 
 ## AksNetworkingConfiguration
 ### Properties
@@ -209,24 +209,24 @@
 
 ## AKSServiceCreateRequestAutoScaler
 ### Properties
-* **autoscaleEnabled**: bool (WriteOnly): Option to enable/disable auto scaling.
-* **maxReplicas**: int (WriteOnly): The maximum number of replicas in the cluster.
-* **minReplicas**: int (WriteOnly): The minimum number of replicas to scale down to.
-* **refreshPeriodInSeconds**: int (WriteOnly): The amount of seconds to wait between auto scale updates.
-* **targetUtilization**: int (WriteOnly): The target utilization percentage to use for determining whether to scale the cluster.
+* **autoscaleEnabled**: bool: Option to enable/disable auto scaling.
+* **maxReplicas**: int: The maximum number of replicas in the cluster.
+* **minReplicas**: int: The minimum number of replicas to scale down to.
+* **refreshPeriodInSeconds**: int: The amount of seconds to wait between auto scale updates.
+* **targetUtilization**: int: The target utilization percentage to use for determining whether to scale the cluster.
 
 ## AKSServiceCreateRequestDataCollection
 ### Properties
-* **eventHubEnabled**: bool (WriteOnly): Option for enabling/disabling Event Hub.
-* **storageEnabled**: bool (WriteOnly): Option for enabling/disabling storage.
+* **eventHubEnabled**: bool: Option for enabling/disabling Event Hub.
+* **storageEnabled**: bool: Option for enabling/disabling storage.
 
 ## AKSServiceCreateRequestLivenessProbeRequirements
 ### Properties
-* **failureThreshold**: int (WriteOnly): The number of failures to allow before returning an unhealthy status.
-* **initialDelaySeconds**: int (WriteOnly): The delay before the first probe in seconds.
-* **periodSeconds**: int (WriteOnly): The length of time between probes in seconds.
-* **successThreshold**: int (WriteOnly): The number of successful probes before returning a healthy status.
-* **timeoutSeconds**: int (WriteOnly): The probe timeout in seconds.
+* **failureThreshold**: int: The number of failures to allow before returning an unhealthy status.
+* **initialDelaySeconds**: int: The delay before the first probe in seconds.
+* **periodSeconds**: int: The length of time between probes in seconds.
+* **successThreshold**: int: The number of successful probes before returning a healthy status.
+* **timeoutSeconds**: int: The probe timeout in seconds.
 
 ## AmlComputeNodeInformation
 ### Properties
@@ -239,7 +239,7 @@
 
 ## AmlComputeNodesInformation
 ### Properties
-* **computeType**: 'AKS' | 'AmlCompute' | 'DataFactory' | 'DataLakeAnalytics' | 'Databricks' | 'HDInsight' | 'VirtualMachine' | string (ReadOnly): The type of compute
+* **computeType**: 'AKS' | 'AmlCompute' | 'DataFactory' | 'DataLakeAnalytics' | 'Databricks' | 'HDInsight' | 'VirtualMachine' | string (Required): The type of compute
 * **nextLink**: string (ReadOnly): The continuation token.
 * **nodes**: [AmlComputeNodeInformation](#amlcomputenodeinformation)[] (ReadOnly): The collection of returned AmlCompute nodes details.
 
@@ -260,115 +260,115 @@
 
 ## AzureDataLakeSection
 ### Properties
-* **authorityUrl**: string (ReadOnly): The authority URL used for authentication.
-* **certificate**: string (ReadOnly): The content of the certificate used for authentication.
-* **clientId**: string (ReadOnly): The Client ID/Application ID
-* **clientSecret**: string (ReadOnly): The client secret.
-* **credentialType**: 'None' | 'ServicePrincipal' | string (ReadOnly): The Azure Data Lake credential type.
-* **isCertAuth**: bool (ReadOnly): Is it using certificate to authenticate. If false then use client secret.
-* **resourceGroup**: string (ReadOnly): Resource Group.
-* **resourceUri**: string (ReadOnly): The resource the service principal/app has access to.
-* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | string (ReadOnly): Indicates which identity to use to authenticate service data access to customer's storage.
-* **storeName**: string (ReadOnly): The Azure Data Lake store name.
-* **subscriptionId**: string (ReadOnly): Subscription ID.
-* **tenantId**: string (ReadOnly): The ID of the tenant the service principal/app belongs to.
-* **thumbprint**: string (ReadOnly): The thumbprint of the certificate above.
+* **authorityUrl**: string: The authority URL used for authentication.
+* **certificate**: string: The content of the certificate used for authentication.
+* **clientId**: string: The Client ID/Application ID
+* **clientSecret**: string: The client secret.
+* **credentialType**: 'None' | 'ServicePrincipal' | string: The Azure Data Lake credential type.
+* **isCertAuth**: bool: Is it using certificate to authenticate. If false then use client secret.
+* **resourceGroup**: string: Resource Group.
+* **resourceUri**: string: The resource the service principal/app has access to.
+* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | string: Indicates which identity to use to authenticate service data access to customer's storage.
+* **storeName**: string: The Azure Data Lake store name.
+* **subscriptionId**: string: Subscription ID.
+* **tenantId**: string: The ID of the tenant the service principal/app belongs to.
+* **thumbprint**: string: The thumbprint of the certificate above.
 
 ## AzureMySqlSection
 ### Properties
-* **authorityUrl**: string (ReadOnly): The authority URL used for authentication.
-* **certificate**: string (ReadOnly): The content of the certificate used for authentication.
-* **clientId**: string (ReadOnly): The Client ID/Application ID
-* **clientSecret**: string (ReadOnly): The client secret.
-* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' | string (ReadOnly): Sql Authentication type.
-* **databaseName**: string (ReadOnly): The Azure SQL database name.
-* **endpoint**: string (ReadOnly): The server host endpoint.
-* **isCertAuth**: bool (ReadOnly): Is it using certificate to authenticate. If false then use client secret.
-* **portNumber**: string (ReadOnly): / The Azure SQL port number.
-* **resourceGroup**: string (ReadOnly): Resource Group.
-* **resourceUri**: string (ReadOnly): The resource the service principal/app has access to.
-* **serverName**: string (ReadOnly): The Azure SQL server name.
-* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | string (ReadOnly): Indicates which identity to use to authenticate service data access to customer's storage.
-* **subscriptionId**: string (ReadOnly): Subscription ID.
-* **tenantId**: string (ReadOnly): The ID of the tenant the service principal/app belongs to.
-* **thumbprint**: string (ReadOnly): The thumbprint of the certificate above.
-* **userId**: string (ReadOnly): The Azure SQL user id.
-* **userPassword**: string (ReadOnly): The Azure SQL user password.
+* **authorityUrl**: string: The authority URL used for authentication.
+* **certificate**: string: The content of the certificate used for authentication.
+* **clientId**: string: The Client ID/Application ID
+* **clientSecret**: string: The client secret.
+* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' | string: Sql Authentication type.
+* **databaseName**: string: The Azure SQL database name.
+* **endpoint**: string: The server host endpoint.
+* **isCertAuth**: bool: Is it using certificate to authenticate. If false then use client secret.
+* **portNumber**: string: / The Azure SQL port number.
+* **resourceGroup**: string: Resource Group.
+* **resourceUri**: string: The resource the service principal/app has access to.
+* **serverName**: string: The Azure SQL server name.
+* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | string: Indicates which identity to use to authenticate service data access to customer's storage.
+* **subscriptionId**: string: Subscription ID.
+* **tenantId**: string: The ID of the tenant the service principal/app belongs to.
+* **thumbprint**: string: The thumbprint of the certificate above.
+* **userId**: string: The Azure SQL user id.
+* **userPassword**: string: The Azure SQL user password.
 
 ## AzurePostgreSqlSection
 ### Properties
-* **authorityUrl**: string (ReadOnly): The authority URL used for authentication.
-* **certificate**: string (ReadOnly): The content of the certificate used for authentication.
-* **clientId**: string (ReadOnly): The Client ID/Application ID
-* **clientSecret**: string (ReadOnly): The client secret.
-* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' | string (ReadOnly): Sql Authentication type.
-* **databaseName**: string (ReadOnly): The Azure SQL database name.
-* **enableSsl**: bool (ReadOnly): Indicates SSL requirement of Azure Postgresql server.
-* **endpoint**: string (ReadOnly): The server host endpoint.
-* **isCertAuth**: bool (ReadOnly): Is it using certificate to authenticate. If false then use client secret.
-* **portNumber**: string (ReadOnly): / The Azure SQL port number.
-* **resourceGroup**: string (ReadOnly): Resource Group.
-* **resourceUri**: string (ReadOnly): The resource the service principal/app has access to.
-* **serverName**: string (ReadOnly): The Azure SQL server name.
-* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | string (ReadOnly): Indicates which identity to use to authenticate service data access to customer's storage.
-* **subscriptionId**: string (ReadOnly): Subscription ID.
-* **tenantId**: string (ReadOnly): The ID of the tenant the service principal/app belongs to.
-* **thumbprint**: string (ReadOnly): The thumbprint of the certificate above.
-* **userId**: string (ReadOnly): The Azure SQL user id.
-* **userPassword**: string (ReadOnly): The Azure SQL user password.
+* **authorityUrl**: string: The authority URL used for authentication.
+* **certificate**: string: The content of the certificate used for authentication.
+* **clientId**: string: The Client ID/Application ID
+* **clientSecret**: string: The client secret.
+* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' | string: Sql Authentication type.
+* **databaseName**: string: The Azure SQL database name.
+* **enableSsl**: bool: Indicates SSL requirement of Azure Postgresql server.
+* **endpoint**: string: The server host endpoint.
+* **isCertAuth**: bool: Is it using certificate to authenticate. If false then use client secret.
+* **portNumber**: string: / The Azure SQL port number.
+* **resourceGroup**: string: Resource Group.
+* **resourceUri**: string: The resource the service principal/app has access to.
+* **serverName**: string: The Azure SQL server name.
+* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | string: Indicates which identity to use to authenticate service data access to customer's storage.
+* **subscriptionId**: string: Subscription ID.
+* **tenantId**: string: The ID of the tenant the service principal/app belongs to.
+* **thumbprint**: string: The thumbprint of the certificate above.
+* **userId**: string: The Azure SQL user id.
+* **userPassword**: string: The Azure SQL user password.
 
 ## AzureSqlDatabaseSection
 ### Properties
-* **authorityUrl**: string (ReadOnly): The authority URL used for authentication.
-* **certificate**: string (ReadOnly): The content of the certificate used for authentication.
-* **clientId**: string (ReadOnly): The Client ID/Application ID
-* **clientSecret**: string (ReadOnly): The client secret.
-* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' | string (ReadOnly): Sql Authentication type.
-* **databaseName**: string (ReadOnly): The Azure SQL database name.
-* **endpoint**: string (ReadOnly): The server host endpoint.
-* **isCertAuth**: bool (ReadOnly): Is it using certificate to authenticate. If false then use client secret.
-* **portNumber**: string (ReadOnly): / The Azure SQL port number.
-* **resourceGroup**: string (ReadOnly): Resource Group.
-* **resourceUri**: string (ReadOnly): The resource the service principal/app has access to.
-* **serverName**: string (ReadOnly): The Azure SQL server name.
-* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | string (ReadOnly): Indicates which identity to use to authenticate service data access to customer's storage.
-* **subscriptionId**: string (ReadOnly): Subscription ID.
-* **tenantId**: string (ReadOnly): The ID of the tenant the service principal/app belongs to.
-* **thumbprint**: string (ReadOnly): The thumbprint of the certificate above.
-* **userId**: string (ReadOnly): The Azure SQL user id.
-* **userPassword**: string (ReadOnly): The Azure SQL user password.
+* **authorityUrl**: string: The authority URL used for authentication.
+* **certificate**: string: The content of the certificate used for authentication.
+* **clientId**: string: The Client ID/Application ID
+* **clientSecret**: string: The client secret.
+* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' | string: Sql Authentication type.
+* **databaseName**: string: The Azure SQL database name.
+* **endpoint**: string: The server host endpoint.
+* **isCertAuth**: bool: Is it using certificate to authenticate. If false then use client secret.
+* **portNumber**: string: / The Azure SQL port number.
+* **resourceGroup**: string: Resource Group.
+* **resourceUri**: string: The resource the service principal/app has access to.
+* **serverName**: string: The Azure SQL server name.
+* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | string: Indicates which identity to use to authenticate service data access to customer's storage.
+* **subscriptionId**: string: Subscription ID.
+* **tenantId**: string: The ID of the tenant the service principal/app belongs to.
+* **thumbprint**: string: The thumbprint of the certificate above.
+* **userId**: string: The Azure SQL user id.
+* **userPassword**: string: The Azure SQL user password.
 
 ## AzureStorageSection
 ### Properties
-* **accountKey**: string (ReadOnly): Storage Account Key (Deprecated).
-* **accountName**: string (ReadOnly): Storage Account Name.
-* **areWorkspaceManagedIdentitiesAllowed**: bool (ReadOnly): Indicate if we are using Workspace ManagedIdentities/MSI token (Deprecated).
-* **blobCacheTimeout**: int (ReadOnly): If this is an "DataStoreType.AzureBlob", the length of time (in seconds) to cache files locally after they are accessed (downloaded).
-* **clientCredentials**: [ClientCredentials](#clientcredentials) (ReadOnly): Service principal credential when credential type is "AzureStorageCredentialTypes.ClientCredentials".
-* **containerName**: string (ReadOnly): The storage container name.
-* **credential**: string (ReadOnly): The credential.
-* **credentialType**: 'AccountKey' | 'ClientCredentials' | 'None' | 'Sas' | string (ReadOnly): The credential type.
-* **endpoint**: string (ReadOnly): The host of the container.
-* **isSas**: bool (ReadOnly): Indicate if we are using SAS token or Account Key (Deprecated).
-* **protocol**: string (ReadOnly): The protocol to use. Defaults to https.
-* **resourceGroup**: string (ReadOnly): Resource Group.
-* **sasToken**: string (ReadOnly): SAS Token for the container (Deprecated).
-* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | string (ReadOnly): Indicates which identity to use to authenticate service data access to customer's storage.
-* **subscriptionId**: string (ReadOnly): Subscription ID.
+* **accountKey**: string: Storage Account Key (Deprecated).
+* **accountName**: string: Storage Account Name.
+* **areWorkspaceManagedIdentitiesAllowed**: bool: Indicate if we are using Workspace ManagedIdentities/MSI token (Deprecated).
+* **blobCacheTimeout**: int: If this is an "DataStoreType.AzureBlob", the length of time (in seconds) to cache files locally after they are accessed (downloaded).
+* **clientCredentials**: [ClientCredentials](#clientcredentials): Service principal credential when credential type is "AzureStorageCredentialTypes.ClientCredentials".
+* **containerName**: string: The storage container name.
+* **credential**: string: The credential.
+* **credentialType**: 'AccountKey' | 'ClientCredentials' | 'None' | 'Sas' | string: The credential type.
+* **endpoint**: string: The host of the container.
+* **isSas**: bool: Indicate if we are using SAS token or Account Key (Deprecated).
+* **protocol**: string: The protocol to use. Defaults to https.
+* **resourceGroup**: string: Resource Group.
+* **sasToken**: string: SAS Token for the container (Deprecated).
+* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | string: Indicates which identity to use to authenticate service data access to customer's storage.
+* **subscriptionId**: string: Subscription ID.
 
 ## ClientCredentials
 ### Properties
-* **authorityUrl**: string (ReadOnly): The authority URL used for authentication.
-* **certificate**: string (ReadOnly): The content of the certificate used for authentication.
-* **clientId**: string (ReadOnly): The Client ID/Application ID
-* **clientSecret**: string (ReadOnly): The client secret.
-* **isCertAuth**: bool (ReadOnly): Is it using certificate to authenticate. If false then use client secret.
-* **resourceGroup**: string (ReadOnly): Resource Group.
-* **resourceUri**: string (ReadOnly): The resource the service principal/app has access to.
-* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | string (ReadOnly): Indicates which identity to use to authenticate service data access to customer's storage.
-* **subscriptionId**: string (ReadOnly): Subscription ID.
-* **tenantId**: string (ReadOnly): The ID of the tenant the service principal/app belongs to.
-* **thumbprint**: string (ReadOnly): The thumbprint of the certificate above.
+* **authorityUrl**: string: The authority URL used for authentication.
+* **certificate**: string: The content of the certificate used for authentication.
+* **clientId**: string: The Client ID/Application ID
+* **clientSecret**: string: The client secret.
+* **isCertAuth**: bool: Is it using certificate to authenticate. If false then use client secret.
+* **resourceGroup**: string: Resource Group.
+* **resourceUri**: string: The resource the service principal/app has access to.
+* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | string: Indicates which identity to use to authenticate service data access to customer's storage.
+* **subscriptionId**: string: Subscription ID.
+* **tenantId**: string: The ID of the tenant the service principal/app belongs to.
+* **thumbprint**: string: The thumbprint of the certificate above.
 
 ## Compute
 * **Discriminator**: computeType
@@ -423,42 +423,42 @@
 ### Base Properties
 ### AksComputeSecrets
 #### Properties
-* **adminKubeConfig**: string (ReadOnly): Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
+* **adminKubeConfig**: string: Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
 * **computeType**: 'AKS' (Required): The type of compute
-* **imagePullSecretName**: string (ReadOnly): Image registry pull secret.
-* **userKubeConfig**: string (ReadOnly): Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
+* **imagePullSecretName**: string: Image registry pull secret.
+* **userKubeConfig**: string: Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
 
 ### DatabricksComputeSecrets
 #### Properties
 * **computeType**: 'Databricks' (Required): The type of compute
-* **databricksAccessToken**: string (ReadOnly): access token for databricks account.
+* **databricksAccessToken**: string: access token for databricks account.
 
 ### VirtualMachineSecrets
 #### Properties
-* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials) (ReadOnly): Admin credentials for virtual machine.
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine.
 * **computeType**: 'VirtualMachine' (Required): The type of compute
 
 
 ## ContainerResourceRequirements
 ### Properties
-* **cpu**: int (WriteOnly): The number of CPU cores on the container.
-* **fpga**: int (WriteOnly): The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.
-* **gpu**: int (WriteOnly): The number of GPU cores in the container.
-* **memoryInGB**: int (WriteOnly): The amount of memory on the container in GB.
+* **cpu**: int: The number of CPU cores on the container.
+* **fpga**: int: The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.
+* **gpu**: int: The number of GPU cores in the container.
+* **memoryInGB**: int: The amount of memory on the container in GB.
 
 ## CreateServiceRequestEnvironmentImageRequest
 ### Properties
-* **assets**: [ImageAsset](#imageasset)[] (WriteOnly): The list of assets.
-* **driverProgram**: string (WriteOnly): The name of the driver file.
-* **environment**: [EnvironmentImageRequestEnvironment](#environmentimagerequestenvironment) (WriteOnly): The details of the AZURE ML environment.
-* **environmentReference**: [EnvironmentImageRequestEnvironmentReference](#environmentimagerequestenvironmentreference) (WriteOnly): The unique identifying details of the AZURE ML environment.
-* **modelIds**: string[] (WriteOnly): The list of model Ids.
-* **models**: [Model](#model)[] (WriteOnly): The list of models.
+* **assets**: [ImageAsset](#imageasset)[]: The list of assets.
+* **driverProgram**: string: The name of the driver file.
+* **environment**: [EnvironmentImageRequestEnvironment](#environmentimagerequestenvironment): The details of the AZURE ML environment.
+* **environmentReference**: [EnvironmentImageRequestEnvironmentReference](#environmentimagerequestenvironmentreference): The unique identifying details of the AZURE ML environment.
+* **modelIds**: string[]: The list of model Ids.
+* **models**: [Model](#model)[]: The list of models.
 
 ## CreateServiceRequestKeys
 ### Properties
-* **primaryKey**: string (WriteOnly): The primary key.
-* **secondaryKey**: string (WriteOnly): The secondary key.
+* **primaryKey**: string: The primary key.
+* **secondaryKey**: string: The secondary key.
 
 ## CreateServiceRequestKvTags
 ### Properties
@@ -482,47 +482,47 @@
 ### Properties
 * **createdTime**: string (ReadOnly): The dataset creation time (UTC).
 * **datasetId**: string (ReadOnly): Unique Dataset identifier.
-* **datasetState**: [DatasetState](#datasetstate) (ReadOnly): Dataset state
+* **datasetState**: [DatasetState](#datasetstate): Dataset state
 * **datasetType**: string (ReadOnly): Dataset Type.
 * **defaultCompute**: string (ReadOnly): Name of the default compute to be used for any Dataset actions (such as Profile, Write).
 * **description**: string (ReadOnly): Description about this dataset version.
 * **etag**: string (ReadOnly): eTag description
 * **isVisible**: bool (ReadOnly): Flag to hide Dataset in UI
-* **latest**: [DatasetLatest](#datasetlatest) (ReadOnly): Last created Dataset definition.
+* **latest**: [DatasetLatest](#datasetlatest): Last created Dataset definition.
 * **modifiedTime**: string (ReadOnly): The dataset last modified time (UTC).
 * **name**: string (ReadOnly): Unique dataset name
 * **tags**: [DatasetTags](#datasettags) (ReadOnly): Tags for this dataset version.
 
 ## DatasetCreateRequestParameters
 ### Properties
-* **header**: 'all_files_have_same_headers' | 'combine_all_files_headers' | 'no_headers' | 'only_first_file_has_headers' | string (WriteOnly): Header type.
-* **includePath**: bool (WriteOnly): Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.
-* **partitionFormat**: string (WriteOnly): The partition information of each path will be extracted into columns based on the specified format. Format part '{column_name}' creates string column, and '{column_name:yyyy/MM/dd/HH/mm/ss}' creates datetime column, where 'yyyy', 'MM', 'dd', 'HH', 'mm' and 'ss' are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path '../USA/2019/01/01/data.parquet' where the partition is by country/region and time, partition_format='/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv' creates a string column 'CountryOrRegion' with the value 'USA' and a datetime column 'PartitionDate' with the value '2019-01-01
-* **path**: [DatasetCreateRequestParametersPath](#datasetcreaterequestparameterspath) (WriteOnly)
-* **query**: [DatasetCreateRequestParametersQuery](#datasetcreaterequestparametersquery) (WriteOnly)
-* **separator**: string (WriteOnly): The separator used to split columns for 'delimited_files' sourceType.
-* **sourceType**: 'delimited_files' | 'json_lines_files' | 'parquet_files' | string (WriteOnly): Data source type.
+* **header**: 'all_files_have_same_headers' | 'combine_all_files_headers' | 'no_headers' | 'only_first_file_has_headers' | string: Header type.
+* **includePath**: bool: Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.
+* **partitionFormat**: string: The partition information of each path will be extracted into columns based on the specified format. Format part '{column_name}' creates string column, and '{column_name:yyyy/MM/dd/HH/mm/ss}' creates datetime column, where 'yyyy', 'MM', 'dd', 'HH', 'mm' and 'ss' are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path '../USA/2019/01/01/data.parquet' where the partition is by country/region and time, partition_format='/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv' creates a string column 'CountryOrRegion' with the value 'USA' and a datetime column 'PartitionDate' with the value '2019-01-01
+* **path**: [DatasetCreateRequestParametersPath](#datasetcreaterequestparameterspath)
+* **query**: [DatasetCreateRequestParametersQuery](#datasetcreaterequestparametersquery)
+* **separator**: string: The separator used to split columns for 'delimited_files' sourceType.
+* **sourceType**: 'delimited_files' | 'json_lines_files' | 'parquet_files' | string: Data source type.
 
 ## DatasetCreateRequestParametersPath
 ### Properties
-* **dataPath**: [DatasetCreateRequestParametersPathDataPath](#datasetcreaterequestparameterspathdatapath) (WriteOnly)
-* **httpUrl**: string (WriteOnly): The Http URL.
+* **dataPath**: [DatasetCreateRequestParametersPathDataPath](#datasetcreaterequestparameterspathdatapath)
+* **httpUrl**: string: The Http URL.
 
 ## DatasetCreateRequestParametersPathDataPath
 ### Properties
-* **datastoreName**: string (WriteOnly): The datastore name.
-* **relativePath**: string (WriteOnly): Path within the datastore.
+* **datastoreName**: string: The datastore name.
+* **relativePath**: string: Path within the datastore.
 
 ## DatasetCreateRequestParametersQuery
 ### Properties
-* **datastoreName**: string (WriteOnly): The SQL/PostgreSQL/MySQL datastore name.
-* **query**: string (WriteOnly): SQL Quey.
+* **datastoreName**: string: The SQL/PostgreSQL/MySQL datastore name.
+* **query**: string: SQL Quey.
 
 ## DatasetCreateRequestRegistration
 ### Properties
-* **description**: string (WriteOnly): The description for the dataset.
-* **name**: string (WriteOnly): The name of the dataset.
-* **tags**: [DatasetCreateRequestRegistrationTags](#datasetcreaterequestregistrationtags) (WriteOnly): Tags associated with the dataset.
+* **description**: string: The description for the dataset.
+* **name**: string: The name of the dataset.
+* **tags**: [DatasetCreateRequestRegistrationTags](#datasetcreaterequestregistrationtags): Tags associated with the dataset.
 
 ## DatasetCreateRequestRegistrationTags
 ### Properties
@@ -531,16 +531,16 @@
 
 ## DatasetCreateRequestTimeSeries
 ### Properties
-* **coarseGrainTimestamp**: string (WriteOnly): Column name to be used as CoarseGrainTimestamp. Can only be used if 'fineGrainTimestamp' is specified and cannot be same as 'fineGrainTimestamp'.
-* **fineGrainTimestamp**: string (WriteOnly): Column name to be used as FineGrainTimestamp
+* **coarseGrainTimestamp**: string: Column name to be used as CoarseGrainTimestamp. Can only be used if 'fineGrainTimestamp' is specified and cannot be same as 'fineGrainTimestamp'.
+* **fineGrainTimestamp**: string: Column name to be used as FineGrainTimestamp
 
 ## DatasetLatest
 ### Properties
-* **createdBy**: [UserInfo](#userinfo) (ReadOnly): User who created.
+* **createdBy**: [UserInfo](#userinfo): User who created.
 * **createdTime**: string (ReadOnly): The dataset creation time (UTC).
 * **dataflow**: string (ReadOnly): Dataflow Json
-* **dataPath**: [DatasetLatestDataPath](#datasetlatestdatapath) (ReadOnly): Datastore and reference to location of data such as relativePath, Sql Query and etc.
-* **datasetDefinitionState**: [DatasetState](#datasetstate) (ReadOnly): Dataset state
+* **dataPath**: [DatasetLatestDataPath](#datasetlatestdatapath): Datastore and reference to location of data such as relativePath, Sql Query and etc.
+* **datasetDefinitionState**: [DatasetState](#datasetstate): Dataset state
 * **datasetId**: string (ReadOnly): Unique Dataset identifier.
 * **description**: string (ReadOnly): Description about the dataset.
 * **etag**: string (ReadOnly): eTag description
@@ -548,7 +548,7 @@
 * **modifiedTime**: string (ReadOnly): The dataset last modified time (UTC).
 * **notes**: string (ReadOnly): Summary of Definition changes.
 * **partitionFormatInPath**: bool (ReadOnly): Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.
-* **properties**: [DatasetLatestProperties](#datasetlatestproperties) (ReadOnly): Properties stores information like name of time series column for time series dataset.
+* **properties**: [DatasetLatestProperties](#datasetlatestproperties): Properties stores information like name of time series column for time series dataset.
 * **savedDatasetId**: string (ReadOnly): Indicates the saved dataset this definition is mapping to, populated on Get.
 * **tags**: [DatasetLatestTags](#datasetlatesttags) (ReadOnly): Tags associated with the dataset.
 * **telemetryInfo**: [DatasetLatestTelemetryInfo](#datasetlatesttelemetryinfo) (ReadOnly): Telemetry information about the dataset including information like which service the dataset was created from.
@@ -557,7 +557,7 @@
 
 ## DatasetLatestDataPath
 ### Properties
-* **additionalProperties**: [DatasetLatestDataPathAdditionalProperties](#datasetlatestdatapathadditionalproperties) (ReadOnly): Additional Properties.
+* **additionalProperties**: [DatasetLatestDataPathAdditionalProperties](#datasetlatestdatapathadditionalproperties): Additional Properties.
 * **azureFilePath**: string (ReadOnly): Azure path for Azure Blob or File
 * **datastoreName**: string (ReadOnly): Data store Name
 * **httpUrl**: string (ReadOnly): HTTP URL.
@@ -565,7 +565,7 @@
 * **partitionFormatIgnoreError**: bool (ReadOnly): Whether or not to ignore unmatched path.
 * **paths**: string[] (ReadOnly): List of files expanded from a file GLOB specified
 * **relativePath**: string (ReadOnly): Relative path in the data store
-* **sqlDataPath**: [DatasetLatestDataPathSqlDataPath](#datasetlatestdatapathsqldatapath) (ReadOnly): Sql Query/Table/Stored Procedure details.
+* **sqlDataPath**: [DatasetLatestDataPathSqlDataPath](#datasetlatestdatapathsqldatapath): Sql Query/Table/Stored Procedure details.
 
 ## DatasetLatestDataPathAdditionalProperties
 ### Properties
@@ -596,19 +596,19 @@
 
 ## DatasetReference
 ### Properties
-* **id**: string (WriteOnly): The id of the dataset reference.
-* **name**: string (WriteOnly): The name of the dataset reference.
+* **id**: string: The id of the dataset reference.
+* **name**: string: The name of the dataset reference.
 
 ## DatasetState
 ### Properties
-* **deprecatedBy**: [DatasetStateDeprecatedBy](#datasetstatedeprecatedby) (ReadOnly): Reference to better Dataset or a Definition
+* **deprecatedBy**: [DatasetStateDeprecatedBy](#datasetstatedeprecatedby): Reference to better Dataset or a Definition
 * **etag**: string (ReadOnly): eTag description
-* **state**: string (ReadOnly): Dataset state
+* **state**: string: Dataset state
 
 ## DatasetStateDeprecatedBy
 ### Properties
 * **datasetId**: string (ReadOnly): Unique Dataset identifier.
-* **definitionVersion**: string (ReadOnly): Definition Version
+* **definitionVersion**: string: Definition Version
 
 ## DatasetTags
 ### Properties
@@ -617,21 +617,21 @@
 
 ## Datastore
 ### Properties
-* **azureDataLakeSection**: [AzureDataLakeSection](#azuredatalakesection) (ReadOnly): Data Specific to azure data lake.
-* **azureMySqlSection**: [AzureMySqlSection](#azuremysqlsection) (ReadOnly): Data specific to azure MySQL.
-* **azurePostgreSqlSection**: [AzurePostgreSqlSection](#azurepostgresqlsection) (ReadOnly): Data specific to azure PostgreSQL.
-* **azureSqlDatabaseSection**: [AzureSqlDatabaseSection](#azuresqldatabasesection) (ReadOnly): Data specific to azure SQL database.
-* **azureStorageSection**: [AzureStorageSection](#azurestoragesection) (ReadOnly): Data specific to azure storage.
+* **azureDataLakeSection**: [AzureDataLakeSection](#azuredatalakesection): Data Specific to azure data lake.
+* **azureMySqlSection**: [AzureMySqlSection](#azuremysqlsection): Data specific to azure MySQL.
+* **azurePostgreSqlSection**: [AzurePostgreSqlSection](#azurepostgresqlsection): Data specific to azure PostgreSQL.
+* **azureSqlDatabaseSection**: [AzureSqlDatabaseSection](#azuresqldatabasesection): Data specific to azure SQL database.
+* **azureStorageSection**: [AzureStorageSection](#azurestoragesection): Data specific to azure storage.
 * **createdBy**: [UserInfo](#userinfo) (ReadOnly): The User who created the datastore.
 * **createdTime**: string (ReadOnly): The date and time when the datastore was created.
-* **dataStoreType**: 'AzureBlob' | 'AzureDataLake' | 'AzureDataLakeGen2' | 'AzureFile' | 'AzureMySql' | 'AzurePostgreSql' | 'AzureSqlDatabase' | 'DBFS' | string (ReadOnly): The datastore type.
-* **description**: string (ReadOnly): Description of the datastore.
-* **glusterFsSection**: [GlusterFsSection](#glusterfssection) (ReadOnly): Data specific to GlusterFS.
-* **hasBeenValidated**: bool (ReadOnly): A read only property that denotes whether the service datastore has been validated with credentials.
-* **linkedInfo**: [LinkedInfo](#linkedinfo) (ReadOnly): Info about origin if it is linked.
+* **dataStoreType**: 'AzureBlob' | 'AzureDataLake' | 'AzureDataLakeGen2' | 'AzureFile' | 'AzureMySql' | 'AzurePostgreSql' | 'AzureSqlDatabase' | 'DBFS' | string: The datastore type.
+* **description**: string: Description of the datastore.
+* **glusterFsSection**: [GlusterFsSection](#glusterfssection): Data specific to GlusterFS.
+* **hasBeenValidated**: bool: A read only property that denotes whether the service datastore has been validated with credentials.
+* **linkedInfo**: [LinkedInfo](#linkedinfo): Info about origin if it is linked.
 * **modifiedBy**: [UserInfo](#userinfo) (ReadOnly): The User who modified the datastore.
 * **modifiedTime**: string (ReadOnly): The date and time when the datastore was last modified.
-* **name**: string (ReadOnly): Name of the datastore.
+* **name**: string: Name of the datastore.
 * **tags**: [DatastoreTags](#datastoretags) (ReadOnly): Tags for this datastore.
 
 ## DatastoreTags
@@ -646,19 +646,19 @@
 
 ## EnvironmentImageRequestEnvironment
 ### Properties
-* **docker**: [ModelEnvironmentDefinitionDocker](#modelenvironmentdefinitiondocker) (WriteOnly): The definition of a Docker container.
-* **environmentVariables**: [ModelEnvironmentDefinitionEnvironmentVariables](#modelenvironmentdefinitionenvironmentvariables) (WriteOnly): Definition of environment variables to be defined in the environment.
-* **inferencingStackVersion**: string (WriteOnly): The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: "latest".
-* **name**: string (WriteOnly): The name of the environment.
-* **python**: [ModelEnvironmentDefinitionPython](#modelenvironmentdefinitionpython) (WriteOnly): Settings for a Python environment.
-* **r**: [ModelEnvironmentDefinitionR](#modelenvironmentdefinitionr) (WriteOnly): Settings for a R environment.
-* **spark**: [ModelEnvironmentDefinitionSpark](#modelenvironmentdefinitionspark) (WriteOnly): The configuration for a Spark environment.
-* **version**: string (WriteOnly): The environment version.
+* **docker**: [ModelEnvironmentDefinitionDocker](#modelenvironmentdefinitiondocker): The definition of a Docker container.
+* **environmentVariables**: [ModelEnvironmentDefinitionEnvironmentVariables](#modelenvironmentdefinitionenvironmentvariables): Definition of environment variables to be defined in the environment.
+* **inferencingStackVersion**: string: The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: "latest".
+* **name**: string: The name of the environment.
+* **python**: [ModelEnvironmentDefinitionPython](#modelenvironmentdefinitionpython): Settings for a Python environment.
+* **r**: [ModelEnvironmentDefinitionR](#modelenvironmentdefinitionr): Settings for a R environment.
+* **spark**: [ModelEnvironmentDefinitionSpark](#modelenvironmentdefinitionspark): The configuration for a Spark environment.
+* **version**: string: The environment version.
 
 ## EnvironmentImageRequestEnvironmentReference
 ### Properties
-* **name**: string (WriteOnly): Name of the environment.
-* **version**: string (WriteOnly): Version of the environment.
+* **name**: string: Name of the environment.
+* **version**: string: Version of the environment.
 
 ## ErrorDetail
 ### Properties
@@ -691,10 +691,10 @@
 
 ## ImageAsset
 ### Properties
-* **id**: string (WriteOnly): The Asset Id.
-* **mimeType**: string (WriteOnly): The mime type.
-* **unpack**: bool (WriteOnly): Whether the Asset is unpacked.
-* **url**: string (WriteOnly): The Url of the Asset.
+* **id**: string: The Asset Id.
+* **mimeType**: string: The mime type.
+* **unpack**: bool: Whether the Asset is unpacked.
+* **url**: string: The Url of the Asset.
 
 ## KeyVaultProperties
 ### Properties
@@ -704,9 +704,9 @@
 
 ## LinkedInfo
 ### Properties
-* **linkedId**: string (ReadOnly): LinkedId id.
-* **linkedResourceName**: string (ReadOnly): Linked resource name.
-* **origin**: 'Synapse' | string (ReadOnly): Datastore origin
+* **linkedId**: string: LinkedId id.
+* **linkedResourceName**: string: Linked resource name.
+* **origin**: 'Synapse' | string: Datastore origin
 
 ## LinkedWorkspaceProps
 ### Properties
@@ -726,39 +726,39 @@
 
 ## Model
 ### Properties
-* **createdTime**: string (WriteOnly): The Model creation time (UTC).
-* **datasets**: [DatasetReference](#datasetreference)[] (WriteOnly): The list of datasets associated with the model.
-* **derivedModelIds**: string[] (WriteOnly): Models derived from this model
-* **description**: string (WriteOnly): The Model description text.
-* **experimentName**: string (WriteOnly): The name of the experiment where this model was created.
-* **framework**: string (WriteOnly): The Model framework.
-* **frameworkVersion**: string (WriteOnly): The Model framework version.
-* **id**: string (WriteOnly): The Model Id.
-* **kvTags**: [ModelKvTags](#modelkvtags) (WriteOnly): The Model tag dictionary. Items are mutable.
-* **mimeType**: string (Required, WriteOnly): The MIME type of Model content. For more details about MIME type, please open https://www.iana.org/assignments/media-types/media-types.xhtml
-* **modifiedTime**: string (WriteOnly): The Model last modified time (UTC).
-* **name**: string (Required, WriteOnly): The Model name.
-* **parentModelId**: string (WriteOnly): The Parent Model Id.
-* **properties**: [ModelProperties](#modelproperties) (WriteOnly): The Model property dictionary. Properties are immutable.
-* **resourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): Resource requirements for the model
-* **runId**: string (WriteOnly): The RunId that created this model.
-* **sampleInputData**: string (WriteOnly): Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
-* **sampleOutputData**: string (WriteOnly): Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
-* **unpack**: bool (WriteOnly): Indicates whether we need to unpack the Model during docker Image creation.
-* **url**: string (Required, WriteOnly): The URL of the Model. Usually a SAS URL.
-* **version**: int (WriteOnly): The Model version assigned by Model Management Service.
+* **createdTime**: string: The Model creation time (UTC).
+* **datasets**: [DatasetReference](#datasetreference)[]: The list of datasets associated with the model.
+* **derivedModelIds**: string[]: Models derived from this model
+* **description**: string: The Model description text.
+* **experimentName**: string: The name of the experiment where this model was created.
+* **framework**: string: The Model framework.
+* **frameworkVersion**: string: The Model framework version.
+* **id**: string: The Model Id.
+* **kvTags**: [ModelKvTags](#modelkvtags): The Model tag dictionary. Items are mutable.
+* **mimeType**: string (Required): The MIME type of Model content. For more details about MIME type, please open https://www.iana.org/assignments/media-types/media-types.xhtml
+* **modifiedTime**: string: The Model last modified time (UTC).
+* **name**: string (Required): The Model name.
+* **parentModelId**: string: The Parent Model Id.
+* **properties**: [ModelProperties](#modelproperties): The Model property dictionary. Properties are immutable.
+* **resourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements): Resource requirements for the model
+* **runId**: string: The RunId that created this model.
+* **sampleInputData**: string: Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
+* **sampleOutputData**: string: Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
+* **unpack**: bool: Indicates whether we need to unpack the Model during docker Image creation.
+* **url**: string (Required): The URL of the Model. Usually a SAS URL.
+* **version**: int: The Model version assigned by Model Management Service.
 
 ## ModelDockerSectionBaseImageRegistry
 ### Properties
-* **address**: string (WriteOnly)
-* **password**: string (WriteOnly)
-* **username**: string (WriteOnly)
+* **address**: string
+* **password**: string
+* **username**: string
 
 ## ModelEnvironmentDefinitionDocker
 ### Properties
-* **baseDockerfile**: string (WriteOnly): Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
-* **baseImage**: string (WriteOnly): Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
-* **baseImageRegistry**: [ModelDockerSectionBaseImageRegistry](#modeldockersectionbaseimageregistry) (WriteOnly): Image registry that contains the base image.
+* **baseDockerfile**: string: Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
+* **baseImage**: string: Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
+* **baseImageRegistry**: [ModelDockerSectionBaseImageRegistry](#modeldockersectionbaseimageregistry): Image registry that contains the base image.
 
 ## ModelEnvironmentDefinitionEnvironmentVariables
 ### Properties
@@ -767,28 +767,28 @@
 
 ## ModelEnvironmentDefinitionPython
 ### Properties
-* **baseCondaEnvironment**: string (WriteOnly)
-* **condaDependencies**: any (WriteOnly): A JObject containing Conda dependencies.
-* **interpreterPath**: string (WriteOnly): The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
-* **userManagedDependencies**: bool (WriteOnly): True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
+* **baseCondaEnvironment**: string
+* **condaDependencies**: any: A JObject containing Conda dependencies.
+* **interpreterPath**: string: The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
+* **userManagedDependencies**: bool: True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
 
 ## ModelEnvironmentDefinitionR
 ### Properties
-* **bioConductorPackages**: string[] (WriteOnly): The packages from Bioconductor.
-* **cranPackages**: [RCranPackage](#rcranpackage)[] (WriteOnly): The CRAN packages to use.
-* **customUrlPackages**: string[] (WriteOnly): The packages from custom urls.
-* **gitHubPackages**: [RGitHubPackage](#rgithubpackage)[] (WriteOnly): The packages directly from GitHub.
-* **rscriptPath**: string (WriteOnly): The Rscript path to use if an environment build is not required.
+* **bioConductorPackages**: string[]: The packages from Bioconductor.
+* **cranPackages**: [RCranPackage](#rcranpackage)[]: The CRAN packages to use.
+* **customUrlPackages**: string[]: The packages from custom urls.
+* **gitHubPackages**: [RGitHubPackage](#rgithubpackage)[]: The packages directly from GitHub.
+* **rscriptPath**: string: The Rscript path to use if an environment build is not required.
 The path specified gets used to call the user script.
-* **rVersion**: string (WriteOnly): The version of R to be installed
-* **snapshotDate**: string (WriteOnly): Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. "2019-04-17"
-* **userManaged**: bool (WriteOnly): Indicates whether the environment is managed by user or by AzureML.
+* **rVersion**: string: The version of R to be installed
+* **snapshotDate**: string: Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. "2019-04-17"
+* **userManaged**: bool: Indicates whether the environment is managed by user or by AzureML.
 
 ## ModelEnvironmentDefinitionSpark
 ### Properties
-* **packages**: [SparkMavenPackage](#sparkmavenpackage)[] (WriteOnly): The Spark packages to use.
-* **precachePackages**: bool (WriteOnly): Whether to precache the packages.
-* **repositories**: string[] (WriteOnly): The list of spark repositories.
+* **packages**: [SparkMavenPackage](#sparkmavenpackage)[]: The Spark packages to use.
+* **precachePackages**: bool: Whether to precache the packages.
+* **repositories**: string[]: The list of spark repositories.
 
 ## ModelKvTags
 ### Properties
@@ -843,13 +843,13 @@ The path specified gets used to call the user script.
 
 ## RCranPackage
 ### Properties
-* **name**: string (WriteOnly): The package name.
-* **repository**: string (WriteOnly): The repository name.
+* **name**: string: The package name.
+* **repository**: string: The repository name.
 
 ## RegistryListCredentialsResult
 ### Properties
 * **location**: string (ReadOnly)
-* **passwords**: [Password](#password)[] (ReadOnly)
+* **passwords**: [Password](#password)[]
 * **username**: string (ReadOnly)
 
 ## ResourceId
@@ -893,8 +893,8 @@ The path specified gets used to call the user script.
 
 ## RGitHubPackage
 ### Properties
-* **authToken**: string (WriteOnly): Personal access token to install from a private repo
-* **repository**: string (WriteOnly): Repository address in the format username/repo[/subdir][@ref|#pull].
+* **authToken**: string: Personal access token to install from a private repo
+* **repository**: string: Repository address in the format username/repo[/subdir][@ref|#pull].
 
 ## ScaleSettings
 ### Properties
@@ -921,9 +921,9 @@ The path specified gets used to call the user script.
 
 ## SparkMavenPackage
 ### Properties
-* **artifact**: string (WriteOnly)
-* **group**: string (WriteOnly)
-* **version**: string (WriteOnly)
+* **artifact**: string
+* **group**: string
+* **version**: string
 
 ## SslConfiguration
 ### Properties
@@ -957,13 +957,13 @@ The path specified gets used to call the user script.
 
 ## UserInfo
 ### Properties
-* **userAltSecId**: string (ReadOnly): A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid
-* **userIdp**: string (ReadOnly): A user identity provider. Eg live.com
-* **userIss**: string (ReadOnly): The issuer which issued the token for this user.
-* **userName**: string (ReadOnly): A user's full name or a service principal's app ID.
-* **userObjectId**: string (ReadOnly): A user or service principal's object ID..
-* **userPuId**: string (ReadOnly): A user or service principal's PuID.
-* **userTenantId**: string (ReadOnly): A user or service principal's tenant ID.
+* **userAltSecId**: string: A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid
+* **userIdp**: string: A user identity provider. Eg live.com
+* **userIss**: string: The issuer which issued the token for this user.
+* **userName**: string: A user's full name or a service principal's app ID.
+* **userObjectId**: string: A user or service principal's object ID..
+* **userPuId**: string: A user or service principal's PuID.
+* **userTenantId**: string: A user or service principal's tenant ID.
 
 ## VirtualMachineProperties
 ### Properties

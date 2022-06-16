@@ -185,43 +185,43 @@
 
 ## FailoverSet
 ### Properties
-* **eligibilityResult**: [FailoverSetEligibilityResult](#failoverseteligibilityresult) (ReadOnly): The eligibility result of the failover set, for failover.
-* **volumeContainers**: [VolumeContainerFailoverMetadata](#volumecontainerfailovermetadata)[] (ReadOnly): The list of meta data of volume containers, which are part of the failover set.
+* **eligibilityResult**: [FailoverSetEligibilityResult](#failoverseteligibilityresult): The eligibility result of the failover set, for failover.
+* **volumeContainers**: [VolumeContainerFailoverMetadata](#volumecontainerfailovermetadata)[]: The list of meta data of volume containers, which are part of the failover set.
 
 ## FailoverSetEligibilityResult
 ### Properties
-* **errorMessage**: string (ReadOnly): The error message, if the failover set is not eligible for failover.
-* **isEligibleForFailover**: bool (ReadOnly): Represents if this failover set is eligible for failover or not.
+* **errorMessage**: string: The error message, if the failover set is not eligible for failover.
+* **isEligibleForFailover**: bool: Represents if this failover set is eligible for failover or not.
 
 ## FailoverSetsList
 ### Properties
-* **value**: [FailoverSet](#failoverset)[] (ReadOnly): The list of failover sets.
+* **value**: [FailoverSet](#failoverset)[]: The list of failover sets.
 
 ## FailoverTarget
 ### Properties
-* **availableLocalStorageInBytes**: int (ReadOnly): The amount of free local storage available on the device in bytes.
-* **availableTieredStorageInBytes**: int (ReadOnly): The amount of free tiered storage available for the device in bytes.
-* **dataContainersCount**: int (ReadOnly): The count of data containers on the device.
-* **deviceId**: string (ReadOnly): The path ID of the device.
-* **deviceLocation**: string (ReadOnly): The geo location (applicable only for cloud appliances) of the device.
-* **deviceSoftwareVersion**: string (ReadOnly): The software version of the device.
-* **deviceStatus**: 'Creating' | 'Deactivated' | 'Deactivating' | 'Deleted' | 'MaintenanceMode' | 'Offline' | 'Online' | 'Provisioning' | 'ReadyToSetup' | 'RequiresAttention' | 'Unknown' (ReadOnly): The status of the device.
-* **eligibilityResult**: [TargetEligibilityResult](#targeteligibilityresult) (ReadOnly): The eligibility result of the device, as a failover target device.
-* **friendlyDeviceSoftwareVersion**: string (ReadOnly): The friendly name for the current version of software on the device.
-* **modelDescription**: string (ReadOnly): The model number of the device.
-* **volumesCount**: int (ReadOnly): The count of volumes on the device.
+* **availableLocalStorageInBytes**: int: The amount of free local storage available on the device in bytes.
+* **availableTieredStorageInBytes**: int: The amount of free tiered storage available for the device in bytes.
+* **dataContainersCount**: int: The count of data containers on the device.
+* **deviceId**: string: The path ID of the device.
+* **deviceLocation**: string: The geo location (applicable only for cloud appliances) of the device.
+* **deviceSoftwareVersion**: string: The software version of the device.
+* **deviceStatus**: 'Creating' | 'Deactivated' | 'Deactivating' | 'Deleted' | 'MaintenanceMode' | 'Offline' | 'Online' | 'Provisioning' | 'ReadyToSetup' | 'RequiresAttention' | 'Unknown': The status of the device.
+* **eligibilityResult**: [TargetEligibilityResult](#targeteligibilityresult): The eligibility result of the device, as a failover target device.
+* **friendlyDeviceSoftwareVersion**: string: The friendly name for the current version of software on the device.
+* **modelDescription**: string: The model number of the device.
+* **volumesCount**: int: The count of volumes on the device.
 
 ## FailoverTargetsList
 ### Properties
-* **value**: [FailoverTarget](#failovertarget)[] (ReadOnly): The list of all the failover targets.
+* **value**: [FailoverTarget](#failovertarget)[]: The list of all the failover targets.
 
 ## Key
 ### Properties
-* **activationKey**: string (ReadOnly): The activation key for the device.
+* **activationKey**: string (Required): The activation key for the device.
 
 ## ListFailoverTargetsRequest
 ### Properties
-* **volumeContainers**: string[] (WriteOnly): The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.
+* **volumeContainers**: string[]: The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.
 
 ## ManagerExtendedInfoProperties
 ### Properties
@@ -266,20 +266,20 @@
 
 ## SymmetricEncryptedSecret
 ### Properties
-* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' (ReadOnly): The algorithm used to encrypt the "Value".
-* **value**: string (ReadOnly): The value of the secret itself. If the secret is in plaintext or null then EncryptionAlgorithm will be none.
-* **valueCertificateThumbprint**: string (ReadOnly): The thumbprint of the cert that was used to encrypt "Value".
+* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' (Required): The algorithm used to encrypt the "Value".
+* **value**: string (Required): The value of the secret itself. If the secret is in plaintext or null then EncryptionAlgorithm will be none.
+* **valueCertificateThumbprint**: string: The thumbprint of the cert that was used to encrypt "Value".
 
 ## TargetEligibilityErrorMessage
 ### Properties
-* **message**: string (ReadOnly): The localized error message stating the reason why the device is not eligible as a target device.
-* **resolution**: string (ReadOnly): The localized resolution message for the error.
-* **resultCode**: 'LocalToTieredVolumesConversionWarning' | 'TargetAndSourceCannotBeSameError' | 'TargetInsufficientCapacityError' | 'TargetInsufficientLocalVolumeMemoryError' | 'TargetInsufficientTieredVolumeMemoryError' | 'TargetIsNotOnlineError' | 'TargetSourceIncompatibleVersionError' (ReadOnly): The result code for the error, due to which the device does not qualify as a failover target device.
+* **message**: string: The localized error message stating the reason why the device is not eligible as a target device.
+* **resolution**: string: The localized resolution message for the error.
+* **resultCode**: 'LocalToTieredVolumesConversionWarning' | 'TargetAndSourceCannotBeSameError' | 'TargetInsufficientCapacityError' | 'TargetInsufficientLocalVolumeMemoryError' | 'TargetInsufficientTieredVolumeMemoryError' | 'TargetIsNotOnlineError' | 'TargetSourceIncompatibleVersionError': The result code for the error, due to which the device does not qualify as a failover target device.
 
 ## TargetEligibilityResult
 ### Properties
-* **eligibilityStatus**: 'Eligible' | 'NotEligible' (ReadOnly): The eligibility status of device, as a failover target device.
-* **messages**: [TargetEligibilityErrorMessage](#targeteligibilityerrormessage)[] (ReadOnly): The list of error messages, if a device does not qualify as a failover target device.
+* **eligibilityStatus**: 'Eligible' | 'NotEligible': The eligibility status of device, as a failover target device.
+* **messages**: [TargetEligibilityErrorMessage](#targeteligibilityerrormessage)[]: The list of error messages, if a device does not qualify as a failover target device.
 
 ## Time
 ### Properties
@@ -295,8 +295,8 @@
 
 ## VolumeContainerFailoverMetadata
 ### Properties
-* **volumeContainerId**: string (ReadOnly): The path ID of the volume container.
-* **volumes**: [VolumeFailoverMetadata](#volumefailovermetadata)[] (ReadOnly): The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.
+* **volumeContainerId**: string: The path ID of the volume container.
+* **volumes**: [VolumeFailoverMetadata](#volumefailovermetadata)[]: The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.
 
 ## VolumeContainerProperties
 ### Properties
@@ -311,13 +311,13 @@
 
 ## VolumeFailoverMetadata
 ### Properties
-* **backupCreatedDate**: string (ReadOnly): The date at which the snapshot was taken.
-* **backupElementId**: string (ReadOnly): The path ID of the backup-element for this volume, inside the backup set.
-* **backupId**: string (ReadOnly): The path ID of the backup set.
-* **backupPolicyId**: string (ReadOnly): The path ID of the backup policy using which the snapshot was taken.
-* **sizeInBytes**: int (ReadOnly): The size of the volume in bytes at the time the snapshot was taken.
-* **volumeId**: string (ReadOnly): The path ID of the volume.
-* **volumeType**: 'Archival' | 'LocallyPinned' | 'Tiered' (ReadOnly): The type of the volume.
+* **backupCreatedDate**: string: The date at which the snapshot was taken.
+* **backupElementId**: string: The path ID of the backup-element for this volume, inside the backup set.
+* **backupId**: string: The path ID of the backup set.
+* **backupPolicyId**: string: The path ID of the backup policy using which the snapshot was taken.
+* **sizeInBytes**: int: The size of the volume in bytes at the time the snapshot was taken.
+* **volumeId**: string: The path ID of the volume.
+* **volumeType**: 'Archival' | 'LocallyPinned' | 'Tiered': The type of the volume.
 
 ## VolumeProperties
 ### Properties

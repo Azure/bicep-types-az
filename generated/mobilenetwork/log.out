@@ -19,11 +19,11 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'PacketCoreDataPlane' h
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'Service' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Service
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SimPolicy' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from SimPolicy
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'Slice' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Slice
-info    | autorest.bicep took 16ms
+info    | autorest.bicep took 15ms
 info    | Processing batch task - {"tag":"microsoft.mobilenetwork-2022-01-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 7ms
-info    | Autorest completed in 10.07s. 4 files generated.
+info    | autorest.bicep took 6ms
+info    | Autorest completed in 8.29s. 4 files generated.

@@ -46,13 +46,13 @@
 ## AvailableContacts
 ### Properties
 * **groundStationName**: string (ReadOnly): Name of Azure Ground Station.
-* **properties**: [ContactInstanceProperties](#contactinstanceproperties) (ReadOnly): Properties of Contact resource.
-* **spacecraft**: [ResourceReference](#resourcereference) (ReadOnly): The reference to the spacecraft resource.
+* **properties**: [ContactInstanceProperties](#contactinstanceproperties): Properties of Contact resource.
+* **spacecraft**: [ResourceReference](#resourcereference): The reference to the spacecraft resource.
 
 ## AvailableContactsListResult
 ### Properties
 * **nextLink**: string (ReadOnly): The URL to get the next set of results.
-* **value**: [AvailableContacts](#availablecontacts)[] (ReadOnly): A list of available contacts
+* **value**: [AvailableContacts](#availablecontacts)[]: A list of available contacts
 
 ## ContactInstanceProperties
 ### Properties
@@ -68,10 +68,10 @@
 
 ## ContactParameters
 ### Properties
-* **contactProfile**: [ResourceReference](#resourcereference) (Required, WriteOnly): The reference to the contact profile resource.
-* **endTime**: string (Required, WriteOnly): End time of a contact.
-* **groundStationName**: string (Required, WriteOnly): Name of Azure Ground Station.
-* **startTime**: string (Required, WriteOnly): Start time of a contact.
+* **contactProfile**: [ResourceReference](#resourcereference) (Required): The reference to the contact profile resource.
+* **endTime**: string (Required): End time of a contact.
+* **groundStationName**: string (Required): Name of Azure Ground Station.
+* **startTime**: string (Required): Start time of a contact.
 
 ## ContactProfileLink
 ### Properties

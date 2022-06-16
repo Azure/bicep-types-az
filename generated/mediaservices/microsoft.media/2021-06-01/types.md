@@ -187,7 +187,7 @@
 
 ## AssetContainerSas
 ### Properties
-* **assetContainerSasUrls**: string[] (ReadOnly): The list of Asset container SAS URLs.
+* **assetContainerSasUrls**: string[]: The list of Asset container SAS URLs.
 
 ## AssetProperties
 ### Properties
@@ -464,20 +464,20 @@
 
 ## EdgePolicies
 ### Properties
-* **usageDataCollectionPolicy**: [EdgeUsageDataCollectionPolicy](#edgeusagedatacollectionpolicy) (ReadOnly)
+* **usageDataCollectionPolicy**: [EdgeUsageDataCollectionPolicy](#edgeusagedatacollectionpolicy)
 
 ## EdgeUsageDataCollectionPolicy
 ### Properties
-* **dataCollectionFrequency**: string (ReadOnly): Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
-* **dataReportingFrequency**: string (ReadOnly): Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
-* **eventHubDetails**: [EdgeUsageDataEventHub](#edgeusagedataeventhub) (ReadOnly): Details of Event Hub where the usage will be reported.
-* **maxAllowedUnreportedUsageDuration**: string (ReadOnly): Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
+* **dataCollectionFrequency**: string: Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
+* **dataReportingFrequency**: string: Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
+* **eventHubDetails**: [EdgeUsageDataEventHub](#edgeusagedataeventhub): Details of Event Hub where the usage will be reported.
+* **maxAllowedUnreportedUsageDuration**: string: Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
 
 ## EdgeUsageDataEventHub
 ### Properties
-* **name**: string (ReadOnly): Name of the Event Hub where usage will be reported.
-* **namespace**: string (ReadOnly): Namespace of the Event Hub where usage will be reported.
-* **token**: string (ReadOnly): SAS token needed to interact with Event Hub.
+* **name**: string: Name of the Event Hub where usage will be reported.
+* **namespace**: string: Namespace of the Event Hub where usage will be reported.
+* **token**: string: SAS token needed to interact with Event Hub.
 
 ## EnabledProtocols
 ### Properties
@@ -721,21 +721,21 @@
 
 ## ListContainerSasInput
 ### Properties
-* **expiryTime**: string (WriteOnly): The SAS URL expiration time.  This must be less than 24 hours from the current time.
-* **permissions**: 'Read' | 'ReadWrite' | 'ReadWriteDelete' | string (WriteOnly): The permissions to set on the SAS URL.
+* **expiryTime**: string: The SAS URL expiration time.  This must be less than 24 hours from the current time.
+* **permissions**: 'Read' | 'ReadWrite' | 'ReadWriteDelete' | string: The permissions to set on the SAS URL.
 
 ## ListContentKeysResponse
 ### Properties
-* **contentKeys**: [StreamingLocatorContentKey](#streaminglocatorcontentkey)[] (ReadOnly): ContentKeys used by current Streaming Locator
+* **contentKeys**: [StreamingLocatorContentKey](#streaminglocatorcontentkey)[]: ContentKeys used by current Streaming Locator
 
 ## ListEdgePoliciesInput
 ### Properties
-* **deviceId**: string (WriteOnly): Unique identifier of the edge device.
+* **deviceId**: string: Unique identifier of the edge device.
 
 ## ListPathsResponse
 ### Properties
-* **downloadPaths**: string[] (ReadOnly): Download Paths supported by current Streaming Locator
-* **streamingPaths**: [StreamingPath](#streamingpath)[] (ReadOnly): Streaming Paths supported by current Streaming Locator
+* **downloadPaths**: string[]: Download Paths supported by current Streaming Locator
+* **streamingPaths**: [StreamingPath](#streamingpath)[]: Streaming Paths supported by current Streaming Locator
 
 ## ListStreamingLocatorsResponse
 ### Properties
@@ -1011,9 +1011,9 @@
 
 ## StreamingPath
 ### Properties
-* **encryptionScheme**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' | 'NoEncryption' | string (ReadOnly): Encryption scheme
-* **paths**: string[] (ReadOnly): Streaming paths for each protocol and encryptionScheme pair
-* **streamingProtocol**: 'Dash' | 'Download' | 'Hls' | 'SmoothStreaming' | string (ReadOnly): Streaming protocol
+* **encryptionScheme**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' | 'NoEncryption' | string (Required): Encryption scheme
+* **paths**: string[]: Streaming paths for each protocol and encryptionScheme pair
+* **streamingProtocol**: 'Dash' | 'Download' | 'Hls' | 'SmoothStreaming' | string (Required): Streaming protocol
 
 ## StreamingPolicyContentKey
 ### Properties

@@ -248,19 +248,19 @@
 
 ## OperationsDefinition
 ### Properties
-* **actionType**: 'Internal' | 'NotSpecified' | string (WriteOnly)
-* **display**: [OperationsDefinitionDisplay](#operationsdefinitiondisplay) (Required, WriteOnly): Display information of the operation.
-* **isDataAction**: bool (WriteOnly): Indicates whether the operation applies to data-plane.
-* **name**: string (Required, WriteOnly): Name of the operation.
-* **origin**: 'NotSpecified' | 'System' | 'User' | string (WriteOnly)
-* **properties**: any (WriteOnly): Anything
+* **actionType**: 'Internal' | 'NotSpecified' | string
+* **display**: [OperationsDefinitionDisplay](#operationsdefinitiondisplay) (Required): Display information of the operation.
+* **isDataAction**: bool: Indicates whether the operation applies to data-plane.
+* **name**: string (Required): Name of the operation.
+* **origin**: 'NotSpecified' | 'System' | 'User' | string
+* **properties**: any: Anything
 
 ## OperationsDefinitionDisplay
 ### Properties
-* **description**: string (Required, WriteOnly)
-* **operation**: string (Required, WriteOnly)
-* **provider**: string (Required, WriteOnly)
-* **resource**: string (Required, WriteOnly)
+* **description**: string (Required)
+* **operation**: string (Required)
+* **provider**: string (Required)
+* **resource**: string (Required)
 
 ## ProviderHubMetadataProviderAuthentication
 ### Properties

@@ -124,7 +124,7 @@
 
 ## AssetContainerSas
 ### Properties
-* **assetContainerSasUrls**: string[] (ReadOnly): The list of Asset container SAS URLs.
+* **assetContainerSasUrls**: string[]: The list of Asset container SAS URLs.
 
 ## AssetProperties
 ### Properties
@@ -507,17 +507,17 @@
 
 ## ListContainerSasInput
 ### Properties
-* **expiryTime**: string (WriteOnly): The SAS URL expiration time.  This must be less than 24 hours from the current time.
-* **permissions**: 'Read' | 'ReadWrite' | 'ReadWriteDelete' (WriteOnly): The permissions to set on the SAS URL.
+* **expiryTime**: string: The SAS URL expiration time.  This must be less than 24 hours from the current time.
+* **permissions**: 'Read' | 'ReadWrite' | 'ReadWriteDelete': The permissions to set on the SAS URL.
 
 ## ListContentKeysResponse
 ### Properties
-* **contentKeys**: [StreamingLocatorContentKey](#streaminglocatorcontentkey)[] (ReadOnly): ContentKeys used by current Streaming Locator
+* **contentKeys**: [StreamingLocatorContentKey](#streaminglocatorcontentkey)[]: ContentKeys used by current Streaming Locator
 
 ## ListPathsResponse
 ### Properties
-* **downloadPaths**: string[] (ReadOnly): Download Paths supported by current Streaming Locator
-* **streamingPaths**: [StreamingPath](#streamingpath)[] (ReadOnly): Streaming Paths supported by current Streaming Locator
+* **downloadPaths**: string[]: Download Paths supported by current Streaming Locator
+* **streamingPaths**: [StreamingPath](#streamingpath)[]: Streaming Paths supported by current Streaming Locator
 
 ## LiveEventEncoding
 ### Properties
@@ -694,9 +694,9 @@
 
 ## StreamingPath
 ### Properties
-* **encryptionScheme**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' | 'NoEncryption' (ReadOnly): Encryption scheme
-* **paths**: string[] (ReadOnly): Streaming paths for each protocol and encryptionScheme pair
-* **streamingProtocol**: 'Dash' | 'Download' | 'Hls' | 'SmoothStreaming' (ReadOnly): Streaming protocol
+* **encryptionScheme**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' | 'NoEncryption' (Required): Encryption scheme
+* **paths**: string[]: Streaming paths for each protocol and encryptionScheme pair
+* **streamingProtocol**: 'Dash' | 'Download' | 'Hls' | 'SmoothStreaming' (Required): Streaming protocol
 
 ## StreamingPolicyContentKey
 ### Properties

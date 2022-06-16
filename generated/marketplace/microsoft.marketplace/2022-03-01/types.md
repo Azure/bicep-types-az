@@ -93,16 +93,16 @@
 
 ## NewNotifications
 ### Properties
-* **displayName**: string (ReadOnly): Gets offer display name
-* **icon**: string (ReadOnly): Gets or sets the icon url
-* **isFuturePlansEnabled**: bool (ReadOnly): Gets a value indicating whether future plans is enabled.
-* **messageCode**: int (ReadOnly): Gets or sets the notification message id
-* **offerId**: string (ReadOnly): Gets offer id
-* **plans**: [PlanNotificationDetails](#plannotificationdetails)[] (ReadOnly): Gets or sets removed plans notifications
+* **displayName**: string: Gets offer display name
+* **icon**: string: Gets or sets the icon url
+* **isFuturePlansEnabled**: bool: Gets a value indicating whether future plans is enabled.
+* **messageCode**: int: Gets or sets the notification message id
+* **offerId**: string: Gets offer id
+* **plans**: [PlanNotificationDetails](#plannotificationdetails)[]: Gets or sets removed plans notifications
 
 ## NewPlansNotificationsList
 ### Properties
-* **newPlansNotifications**: [NewNotifications](#newnotifications)[] (ReadOnly)
+* **newPlansNotifications**: [NewNotifications](#newnotifications)[]
 
 ## NotificationsSettingsProperties
 ### Properties
@@ -148,8 +148,8 @@
 
 ## PlanNotificationDetails
 ### Properties
-* **planDisplayName**: string (ReadOnly): Gets or sets the plan display name
-* **planId**: string (ReadOnly): Gets or sets the plan id
+* **planDisplayName**: string: Gets or sets the plan display name
+* **planId**: string: Gets or sets the plan id
 
 ## PlanRequesterDetails
 ### Properties
@@ -191,7 +191,7 @@
 
 ## StopSellOffersPlansNotificationsList
 ### Properties
-* **stopSellNotifications**: [StopSellOffersPlansNotificationsListProperties](#stopselloffersplansnotificationslistproperties)[] (ReadOnly)
+* **stopSellNotifications**: [StopSellOffersPlansNotificationsListProperties](#stopselloffersplansnotificationslistproperties)[]
 
 ## StopSellOffersPlansNotificationsListProperties
 ### Properties
@@ -206,11 +206,11 @@
 
 ## StopSellSubscriptions
 ### Properties
-* **subscriptions**: string[] (WriteOnly)
+* **subscriptions**: string[]
 
 ## SubscriptionsContextList
 ### Properties
-* **subscriptionsIds**: string[] (ReadOnly)
+* **subscriptionsIds**: string[]
 
 ## SystemData
 ### Properties

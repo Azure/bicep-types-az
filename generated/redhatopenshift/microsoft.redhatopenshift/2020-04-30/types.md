@@ -51,8 +51,8 @@
 
 ## OpenShiftClusterCredentials
 ### Properties
-* **kubeadminPassword**: string (ReadOnly): The password for the kubeadmin user
-* **kubeadminUsername**: string (ReadOnly): The username for the kubeadmin user
+* **kubeadminPassword**: string: The password for the kubeadmin user
+* **kubeadminUsername**: string: The username for the kubeadmin user
 
 ## OpenShiftClusterProperties
 ### Properties

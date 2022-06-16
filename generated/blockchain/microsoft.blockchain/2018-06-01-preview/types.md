@@ -39,16 +39,16 @@
 
 ## ApiKey
 ### Properties
-* **keyName**: string (ReadOnly): Gets or sets the API key name.
-* **value**: string (ReadOnly): Gets or sets the API key value.
+* **keyName**: string: Gets or sets the API key name.
+* **value**: string: Gets or sets the API key value.
 
 ## ApiKeyCollection
 ### Properties
-* **keys**: [ApiKey](#apikey)[] (ReadOnly): Gets or sets the collection of API key.
+* **keys**: [ApiKey](#apikey)[]: Gets or sets the collection of API key.
 
 ## ApiKeyCollection
 ### Properties
-* **keys**: [ApiKey](#apikey)[] (ReadOnly): Gets or sets the collection of API key.
+* **keys**: [ApiKey](#apikey)[]: Gets or sets the collection of API key.
 
 ## BlockchainMemberNodesSku
 ### Properties
@@ -73,12 +73,12 @@
 
 ## Consortium
 ### Properties
-* **name**: string (ReadOnly): Gets or sets the blockchain member name.
-* **protocol**: 'Corda' | 'NotSpecified' | 'Parity' | 'Quorum' | string (ReadOnly): Gets or sets the protocol for the consortium.
+* **name**: string: Gets or sets the blockchain member name.
+* **protocol**: 'Corda' | 'NotSpecified' | 'Parity' | 'Quorum' | string: Gets or sets the protocol for the consortium.
 
 ## ConsortiumCollection
 ### Properties
-* **value**: [Consortium](#consortium)[] (ReadOnly): Gets or sets the collection of consortiums.
+* **value**: [Consortium](#consortium)[]: Gets or sets the collection of consortiums.
 
 ## FirewallRule
 ### Properties

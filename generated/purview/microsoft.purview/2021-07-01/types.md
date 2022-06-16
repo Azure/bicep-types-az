@@ -30,8 +30,8 @@
 
 ## AccessKeys
 ### Properties
-* **atlasKafkaPrimaryEndpoint**: string (ReadOnly): Gets or sets the primary connection string.
-* **atlasKafkaSecondaryEndpoint**: string (ReadOnly): Gets or sets the secondary connection string.
+* **atlasKafkaPrimaryEndpoint**: string: Gets or sets the primary connection string.
+* **atlasKafkaSecondaryEndpoint**: string: Gets or sets the secondary connection string.
 
 ## AccountProperties
 ### Properties

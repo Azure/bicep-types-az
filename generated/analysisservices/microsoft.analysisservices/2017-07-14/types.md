@@ -36,7 +36,7 @@
 
 ## GatewayListStatusLive
 ### Properties
-* **status**: '0' (ReadOnly): Live message of list gateway. Status: 0 - Live
+* **status**: '0': Live message of list gateway. Status: 0 - Live
 
 ## ResourceSku
 ### Properties

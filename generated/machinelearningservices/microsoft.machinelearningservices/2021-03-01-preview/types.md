@@ -297,7 +297,7 @@
 
 ## AmlComputeNodesInformation
 ### Properties
-* **computeType**: 'AKS' | 'AmlCompute' | 'ComputeInstance' | 'DataFactory' | 'DataLakeAnalytics' | 'Databricks' | 'HDInsight' | 'SynapseSpark' | 'VirtualMachine' | string (ReadOnly): The type of compute
+* **computeType**: 'AKS' | 'AmlCompute' | 'ComputeInstance' | 'DataFactory' | 'DataLakeAnalytics' | 'Databricks' | 'HDInsight' | 'SynapseSpark' | 'VirtualMachine' | string (Required): The type of compute
 * **nextLink**: string (ReadOnly): The continuation token.
 * **nodes**: [AmlComputeNodeInformation](#amlcomputenodeinformation)[] (ReadOnly): The collection of returned AmlCompute nodes details.
 
@@ -608,19 +608,19 @@ This property will always be returned as null. AuthKey values must be retrieved 
 ### Base Properties
 ### AksComputeSecrets
 #### Properties
-* **adminKubeConfig**: string (ReadOnly): Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
+* **adminKubeConfig**: string: Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
 * **computeType**: 'AKS' (Required): The type of compute
-* **imagePullSecretName**: string (ReadOnly): Image registry pull secret.
-* **userKubeConfig**: string (ReadOnly): Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
+* **imagePullSecretName**: string: Image registry pull secret.
+* **userKubeConfig**: string: Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
 
 ### DatabricksComputeSecrets
 #### Properties
 * **computeType**: 'Databricks' (Required): The type of compute
-* **databricksAccessToken**: string (ReadOnly): access token for databricks account.
+* **databricksAccessToken**: string: access token for databricks account.
 
 ### VirtualMachineSecrets
 #### Properties
-* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials) (ReadOnly): Admin credentials for virtual machine.
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine.
 * **computeType**: 'VirtualMachine' (Required): The type of compute
 
 
@@ -816,12 +816,12 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ### Base Properties
 ### AccountKeyDatastoreSecrets
 #### Properties
-* **key**: string (ReadOnly): Storage account key.
+* **key**: string: Storage account key.
 * **secretsType**: 'AccountKey' (Required): [Required] Credential type used to authentication with storage.
 
 ### CertificateDatastoreSecrets
 #### Properties
-* **certificate**: string (ReadOnly): Service principal certificate.
+* **certificate**: string: Service principal certificate.
 * **secretsType**: 'Certificate' (Required): [Required] Credential type used to authentication with storage.
 
 ### NoneDatastoreSecrets
@@ -830,17 +830,17 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 
 ### SasDatastoreSecrets
 #### Properties
-* **sasToken**: string (ReadOnly): Storage container SAS token.
+* **sasToken**: string: Storage container SAS token.
 * **secretsType**: 'Sas' (Required): [Required] Credential type used to authentication with storage.
 
 ### ServicePrincipalDatastoreSecrets
 #### Properties
-* **clientSecret**: string (ReadOnly): Service principal secret.
+* **clientSecret**: string: Service principal secret.
 * **secretsType**: 'ServicePrincipal' (Required): [Required] Credential type used to authentication with storage.
 
 ### SqlAdminDatastoreSecrets
 #### Properties
-* **password**: string (ReadOnly): SQL database password.
+* **password**: string: SQL database password.
 * **secretsType**: 'SqlAdmin' (Required): [Required] Credential type used to authentication with storage.
 
 
@@ -1526,7 +1526,7 @@ optional
 ## RegistryListCredentialsResult
 ### Properties
 * **location**: string (ReadOnly)
-* **passwords**: [Password](#password)[] (ReadOnly)
+* **passwords**: [Password](#password)[]
 * **username**: string (ReadOnly)
 
 ## ResourceId

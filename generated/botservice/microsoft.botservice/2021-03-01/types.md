@@ -183,26 +183,26 @@
 
 ## ChannelSettings
 ### Properties
-* **botIconUrl**: string (ReadOnly): The bot icon url
-* **botId**: string (ReadOnly): The bot id
-* **channelDisplayName**: string (ReadOnly): The channel display name
-* **channelId**: string (ReadOnly): The channel id
-* **disableLocalAuth**: bool (ReadOnly): Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
-* **extensionKey1**: string (ReadOnly): The extensionKey1
-* **extensionKey2**: string (ReadOnly): The extensionKey2
-* **isEnabled**: bool (ReadOnly): Whether this channel is enabled for the bot
-* **sites**: [Site](#site)[] (ReadOnly): The list of sites
+* **botIconUrl**: string: The bot icon url
+* **botId**: string: The bot id
+* **channelDisplayName**: string: The channel display name
+* **channelId**: string: The channel id
+* **disableLocalAuth**: bool: Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
+* **extensionKey1**: string: The extensionKey1
+* **extensionKey2**: string: The extensionKey2
+* **isEnabled**: bool: Whether this channel is enabled for the bot
+* **sites**: [Site](#site)[]: The list of sites
 
 ## ConnectionSetting
 ### Properties
-* **etag**: string (ReadOnly): Entity Tag
+* **etag**: string: Entity Tag
 * **id**: string (ReadOnly): Specifies the resource ID.
-* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Required. Gets or sets the Kind of the resource.
-* **location**: string (ReadOnly): Specifies the location of the resource.
+* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string: Required. Gets or sets the Kind of the resource.
+* **location**: string: Specifies the location of the resource.
 * **name**: string (ReadOnly): Specifies the name of the resource.
-* **properties**: [ConnectionSettingProperties](#connectionsettingproperties) (ReadOnly): The set of properties specific to bot channel resource
-* **sku**: [Sku](#sku) (ReadOnly): Gets or sets the SKU of the resource.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
+* **properties**: [ConnectionSettingProperties](#connectionsettingproperties): The set of properties specific to bot channel resource
+* **sku**: [Sku](#sku): Gets or sets the SKU of the resource.
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: string (ReadOnly): Specifies the type of the resource.
 * **zones**: string[] (ReadOnly): Entity zones
 
@@ -292,19 +292,19 @@
 
 ## ListChannelWithKeysResponse
 ### Properties
-* **changedTime**: string (ReadOnly): Changed time of the resource
-* **entityTag**: string (ReadOnly): Entity tag of the resource
-* **etag**: string (ReadOnly): Entity Tag
+* **changedTime**: string: Changed time of the resource
+* **entityTag**: string: Entity tag of the resource
+* **etag**: string: Entity Tag
 * **id**: string (ReadOnly): Specifies the resource ID.
-* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Required. Gets or sets the Kind of the resource.
-* **location**: string (ReadOnly): Specifies the location of the resource.
+* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string: Required. Gets or sets the Kind of the resource.
+* **location**: string: Specifies the location of the resource.
 * **name**: string (ReadOnly): Specifies the name of the resource.
-* **properties**: [Channel](#channel) (ReadOnly): The set of properties specific to bot channel resource
-* **provisioningState**: string (ReadOnly): Provisioning state of the resource
-* **resource**: [Channel](#channel) (ReadOnly): The set of properties specific to bot channel resource
-* **setting**: [ChannelSettings](#channelsettings) (ReadOnly): Channel settings
-* **sku**: [Sku](#sku) (ReadOnly): Gets or sets the SKU of the resource.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
+* **properties**: [Channel](#channel): The set of properties specific to bot channel resource
+* **provisioningState**: string: Provisioning state of the resource
+* **resource**: [Channel](#channel): The set of properties specific to bot channel resource
+* **setting**: [ChannelSettings](#channelsettings): Channel settings
+* **sku**: [Sku](#sku): Gets or sets the SKU of the resource.
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: string (ReadOnly): Specifies the type of the resource.
 * **zones**: string[] (ReadOnly): Entity zones
 
@@ -344,19 +344,19 @@
 
 ## Site
 ### Properties
-* **eTag**: string (ReadOnly): Entity Tag
-* **isBlockUserUploadEnabled**: bool (ReadOnly): Whether this site is enabled for block user upload.
-* **isEnabled**: bool (ReadOnly): Whether this site is enabled for DirectLine channel.
-* **isSecureSiteEnabled**: bool (ReadOnly): Whether this site is enabled for authentication with Bot Framework.
-* **isTokenEnabled**: bool (ReadOnly): Whether this site is token enabled for channel
-* **isV1Enabled**: bool (ReadOnly): Whether this site is enabled for Bot Framework V1 protocol.
-* **isV3Enabled**: bool (ReadOnly): Whether this site is enabled for Bot Framework V1 protocol.
-* **isWebchatPreviewEnabled**: bool (ReadOnly): Whether this site is enabled for preview versions of Webchat
+* **eTag**: string: Entity Tag
+* **isBlockUserUploadEnabled**: bool: Whether this site is enabled for block user upload.
+* **isEnabled**: bool (Required): Whether this site is enabled for DirectLine channel.
+* **isSecureSiteEnabled**: bool: Whether this site is enabled for authentication with Bot Framework.
+* **isTokenEnabled**: bool: Whether this site is token enabled for channel
+* **isV1Enabled**: bool (Required): Whether this site is enabled for Bot Framework V1 protocol.
+* **isV3Enabled**: bool (Required): Whether this site is enabled for Bot Framework V1 protocol.
+* **isWebchatPreviewEnabled**: bool (Required): Whether this site is enabled for preview versions of Webchat
 * **key**: string (ReadOnly): Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
 * **key2**: string (ReadOnly): Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
 * **siteId**: string (ReadOnly): Site Id
-* **siteName**: string (ReadOnly): Site name
-* **trustedOrigins**: string[] (ReadOnly): List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
+* **siteName**: string (Required): Site name
+* **trustedOrigins**: string[]: List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
 
 ## Sku
 ### Properties

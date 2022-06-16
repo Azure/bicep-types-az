@@ -40,7 +40,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 37ms
+info    | autorest.bicep took 33ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2022-02-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -79,7 +79,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 29ms
+info    | autorest.bicep took 25ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2022-01-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -170,7 +170,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuZoneDetails' with 
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2022-01-01-preview/workspaceSkus.json:146:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 14ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2021-07-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -261,7 +261,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuZoneDetails' with 
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2021-07-01/workspaceSkus.json:150:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 11ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2021-04-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -404,7 +404,7 @@ warning | PreCheck/SchemaMissingType | The schema 'AKSServiceCreateRequest-liven
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'AmlComputeNodesInformation' has a property 'nextLink' that is already declared the parent schema 'ComputeNodesInformation' but isn't significantly different. The property has been removed from AmlComputeNodesInformation
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 16ms
+info    | autorest.bicep took 11ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2021-01-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -640,7 +640,7 @@ warning | Modeler/MissingType | The schema 'components·1dsxf3l·schemas·comman
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2021-03-01-preview/mfe.json#/components/schemas/components·1dsxf3l·schemas·commandjob·properties·parameters·additionalproperties
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 33ms
+info    | autorest.bicep took 23ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2020-08-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -725,7 +725,7 @@ warning | PreCheck/SchemaMissingType | The schema 'SharedPrivateLinkResourceProp
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2020-08-01/machineLearningServices.json:3998:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'AmlComputeNodesInformation' has a property 'nextLink' that is already declared the parent schema 'ComputeNodesInformation' but isn't significantly different. The property has been removed from AmlComputeNodesInformation
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2020-06-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -805,7 +805,7 @@ warning | PreCheck/SchemaMissingType | The schema 'SharedPrivateLinkResource' wi
 warning | PreCheck/SchemaMissingType | The schema 'SharedPrivateLinkResourceProperty' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2020-06-01/machineLearningServices.json:3839:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2020-05-15-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -945,7 +945,7 @@ warning | PreCheck/SchemaMissingType | The schema 'AKSServiceCreateRequest-autoS
 warning | PreCheck/SchemaMissingType | The schema 'AKSServiceCreateRequest-livenessProbeRequirements' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 9ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2020-04-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -1027,7 +1027,7 @@ warning | PreCheck/SchemaMissingType | The schema 'SharedPrivateLinkResource' wi
 warning | PreCheck/SchemaMissingType | The schema 'SharedPrivateLinkResourceProperty' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2020-04-01/machineLearningServices.json:3390:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2020-03-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -1109,7 +1109,7 @@ warning | PreCheck/SchemaMissingType | The schema 'SharedPrivateLinkResource' wi
 warning | PreCheck/SchemaMissingType | The schema 'SharedPrivateLinkResourceProperty' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2020-03-01/machineLearningServices.json:3347:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2020-01-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -1187,7 +1187,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResource' with an 
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2020-01-01/machineLearningServices.json:3185:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2019-11-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -1251,7 +1251,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuZoneDetails' with 
 warning | PreCheck/SchemaMissingType | The schema 'Restriction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2019-11-01/machineLearningServices.json:2808:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2019-06-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -1307,7 +1307,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdateParameters' with
 warning | PreCheck/SchemaMissingType | The schema 'AmlComputeNodeInformation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2019-06-01/machineLearningServices.json:2356:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2019-05-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -1349,7 +1349,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdateParameters' with
 warning | PreCheck/SchemaMissingType | The schema 'AmlComputeNodeInformation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2019-05-01/machineLearningServices.json:2057:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2018-11-19"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -1391,7 +1391,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdateParameters' with
 warning | PreCheck/SchemaMissingType | The schema 'AmlComputeNodeInformation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2018-11-19/machineLearningServices.json:2040:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2020-09-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -1532,7 +1532,7 @@ warning | PreCheck/SchemaMissingType | The schema 'AKSServiceCreateRequest-liven
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'AmlComputeNodesInformation' has a property 'nextLink' that is already declared the parent schema 'ComputeNodesInformation' but isn't significantly different. The property has been removed from AmlComputeNodesInformation
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 20ms
+info    | autorest.bicep took 10ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2020-05-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -1670,7 +1670,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 10ms
+info    | autorest.bicep took 11ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2020-04-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -1755,7 +1755,7 @@ warning | PreCheck/SchemaMissingType | The schema 'SharedPrivateLinkResourceProp
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2020-04-01-preview/machineLearningServices.json:3480:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.MachineLearningServices/workspaces/{workspaceName}/linkedWorkspaces/{linkName}': Unable to locate "/providers/" segment
-info    | autorest.bicep took 10ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2020-02-18-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -1833,7 +1833,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResource' with an 
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2020-02-18-preview/machineLearningServices.json:3439:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.machinelearningservices-2018-03-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -1855,5 +1855,5 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
 warning | PreCheck/SchemaMissingType | The schema 'DataFactory' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2018-03-01-preview/machineLearningServices.json:1367:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 4ms
-info    | Autorest completed in 100.05s. 44 files generated.
+info    | autorest.bicep took 1ms
+info    | Autorest completed in 82.93s. 44 files generated.

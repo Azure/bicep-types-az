@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (WriteOnly): Gets or sets the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DscCompilationJobCreateProperties](#dsccompilationjobcreateproperties) (Required): Gets or sets the list of compilation job properties.
+* **properties**: [DscCompilationJobCreatePropertiesOrDscCompilationJobProperties](#dsccompilationjobcreatepropertiesordsccompilationjobproperties) (Required): Gets or sets the list of compilation job properties.
 * **tags**: [DscCompilationJobCreateParametersTags](#dsccompilationjobcreateparameterstags) (WriteOnly): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/compilationjobs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -17,16 +17,16 @@
 * **apiVersion**: '2018-01-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DscNodeConfigurationCreateOrUpdateParametersProperties](#dscnodeconfigurationcreateorupdateparametersproperties): Node configuration properties
+* **properties**: [DscNodeConfigurationCreateOrUpdateParametersPropertiesOrDscNodeConfigurationProperties](#dscnodeconfigurationcreateorupdateparameterspropertiesordscnodeconfigurationproperties): Node configuration properties
 * **tags**: [DscNodeConfigurationCreateOrUpdateParametersTags](#dscnodeconfigurationcreateorupdateparameterstags) (WriteOnly): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ContentHash
 ### Properties
-* **algorithm**: string (Required, WriteOnly): Gets or sets the content hash algorithm used to hash the content.
-* **value**: string (Required, WriteOnly): Gets or sets expected hash value of the content.
+* **algorithm**: string (Required): Gets or sets the content hash algorithm used to hash the content.
+* **value**: string (Required): Gets or sets expected hash value of the content.
 
-## ContentSource
+## ContentSourceOrDscNodeConfigurationPropertiesSource
 ### Properties
 * **hash**: [ContentHash](#contenthash) (WriteOnly): Gets or sets the hash.
 * **type**: 'embeddedContent' | 'uri' | string (WriteOnly): Gets or sets the content source type.
@@ -38,7 +38,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## DscCompilationJobCreateProperties
+## DscCompilationJobCreatePropertiesOrDscCompilationJobProperties
 ### Properties
 * **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required): Gets or sets the configuration.
 * **creationTime**: string (ReadOnly): Gets the creation time of the job.
@@ -65,14 +65,14 @@
 ### Properties
 * **name**: string: Gets or sets the name of the Dsc configuration.
 
-## DscNodeConfigurationCreateOrUpdateParametersProperties
+## DscNodeConfigurationCreateOrUpdateParametersPropertiesOrDscNodeConfigurationProperties
 ### Properties
 * **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required): Gets or sets the configuration of the node.
 * **creationTime**: string (ReadOnly): Gets or sets creation time.
 * **incrementNodeConfigurationBuild**: bool: If a new build version of NodeConfiguration is required.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
 * **nodeCount**: int (ReadOnly): Number of nodes with this node configuration assigned
-* **source**: [ContentSource](#contentsource) (Required): Gets or sets the source.
+* **source**: [ContentSourceOrDscNodeConfigurationPropertiesSource](#contentsourceordscnodeconfigurationpropertiessource) (Required): Gets or sets the source.
 
 ## DscNodeConfigurationCreateOrUpdateParametersTags
 ### Properties

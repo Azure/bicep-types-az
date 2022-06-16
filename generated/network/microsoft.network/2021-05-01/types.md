@@ -461,7 +461,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Connection monitor location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConnectionMonitorParameters](#connectionmonitorparameters) (Required): Properties of the connection monitor.
+* **properties**: [ConnectionMonitorParametersOrConnectionMonitorResultProperties](#connectionmonitorparametersorconnectionmonitorresultproperties) (Required): Properties of the connection monitor.
 * **tags**: [ConnectionMonitorTags](#connectionmonitortags): Connection monitor tags.
 * **type**: 'Microsoft.Network/networkWatchers/connectionMonitors' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -484,7 +484,7 @@
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PacketCaptureParameters](#packetcaptureparameters) (Required): Properties of the packet capture.
+* **properties**: [PacketCaptureParametersOrPacketCaptureResultProperties](#packetcaptureparametersorpacketcaptureresultproperties) (Required): Properties of the packet capture.
 * **type**: 'Microsoft.Network/networkWatchers/packetCaptures' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/p2svpnGateways@2021-05-01
@@ -1704,7 +1704,7 @@
 * **type**: 'Workspace' | string: Connection monitor output destination type. Currently, only "Workspace" is supported.
 * **workspaceSettings**: [ConnectionMonitorWorkspaceSettings](#connectionmonitorworkspacesettings): Describes the settings for producing output into a log analytics workspace.
 
-## ConnectionMonitorParameters
+## ConnectionMonitorParametersOrConnectionMonitorResultProperties
 ### Properties
 * **autoStart**: bool: Determines if the connection monitor will start automatically once created.
 * **connectionMonitorType**: 'MultiEndpoint' | 'SingleSourceDestination' | string (ReadOnly): Type of connection monitor.
@@ -2141,8 +2141,8 @@
 
 ## FilterItems
 ### Properties
-* **field**: string (WriteOnly): The name of the field we would like to filter
-* **values**: string[] (WriteOnly): List of values to filter the current field by
+* **field**: string: The name of the field we would like to filter
+* **values**: string[]: List of values to filter the current field by
 
 ## FirewallPolicyCertificateAuthority
 ### Properties
@@ -2418,11 +2418,11 @@
 
 ## IdpsQueryObject
 ### Properties
-* **filters**: [FilterItems](#filteritems)[] (WriteOnly): Contain all filters names and values
-* **orderBy**: [OrderBy](#orderby) (WriteOnly): Column to sort response by
-* **resultsPerPage**: int (WriteOnly): The number of the results to return in each page
-* **search**: string (WriteOnly): Search term in all columns
-* **skip**: int (WriteOnly): The number of records matching the filter to skip
+* **filters**: [FilterItems](#filteritems)[]: Contain all filters names and values
+* **orderBy**: [OrderBy](#orderby): Column to sort response by
+* **resultsPerPage**: int: The number of the results to return in each page
+* **search**: string: Search term in all columns
+* **skip**: int: The number of records matching the filter to skip
 
 ## InboundNatPool
 ### Properties
@@ -2863,8 +2863,8 @@
 
 ## OrderBy
 ### Properties
-* **field**: string (WriteOnly): Describes the actual column name to sort by
-* **order**: 'Ascending' | 'Descending' | string (WriteOnly): Describes if results should be in ascending/descending order
+* **field**: string: Describes the actual column name to sort by
+* **order**: 'Ascending' | 'Descending' | string: Describes if results should be in ascending/descending order
 
 ## OutboundRule
 ### Properties
@@ -2934,7 +2934,7 @@
 * **remoteIPAddress**: string: Local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
 * **remotePort**: string: Remote port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
 
-## PacketCaptureParameters
+## PacketCaptureParametersOrPacketCaptureResultProperties
 ### Properties
 * **bytesToCapturePerPacket**: int: Number of bytes captured per packet, the remaining bytes are truncated.
 * **filters**: [PacketCaptureFilter](#packetcapturefilter)[]: A list of packet capture filters.
@@ -3225,8 +3225,8 @@
 
 ## QueryResults
 ### Properties
-* **matchingRecordsCount**: int (ReadOnly): Number of total records matching the query.
-* **signatures**: [SingleQueryResult](#singlequeryresult)[] (ReadOnly): Array containing the results of the query
+* **matchingRecordsCount**: int: Number of total records matching the query.
+* **signatures**: [SingleQueryResult](#singlequeryresult)[]: Array containing the results of the query
 
 ## RadiusServer
 ### Properties
@@ -3728,11 +3728,11 @@
 
 ## SignatureOverridesFilterValuesQuery
 ### Properties
-* **filterName**: string (WriteOnly): Describes the name of the column which values will be returned
+* **filterName**: string: Describes the name of the column which values will be returned
 
 ## SignatureOverridesFilterValuesResponse
 ### Properties
-* **filterValues**: string[] (ReadOnly): Describes the possible values
+* **filterValues**: string[]: Describes the possible values
 
 ## Signatures
 ### Properties
@@ -3745,17 +3745,17 @@
 
 ## SingleQueryResult
 ### Properties
-* **description**: string (ReadOnly): Describes what is the signature enforces
-* **destinationPorts**: string[] (ReadOnly): Describes the list of destination ports related to this signature
-* **direction**: int (ReadOnly): Describes in which direction signature is being enforced: 0 - Inbound, 1 - OutBound, 2 - Bidirectional
-* **group**: string (ReadOnly): Describes the groups the signature belongs to
-* **inheritedFromParentPolicy**: bool (ReadOnly): Describes if this override is inherited from base policy or not
-* **lastUpdated**: string (ReadOnly): Describes the last updated time of the signature (provided from 3rd party vendor)
-* **mode**: int (ReadOnly): The current mode enforced, 0 - Disabled, 1 - Alert, 2 -Deny
-* **protocol**: string (ReadOnly): Describes the protocol the signatures is being enforced in
-* **severity**: int (ReadOnly): Describes the severity of signature: 1 - Low, 2 - Medium, 3 - High
-* **signatureId**: int (ReadOnly): The ID of the signature
-* **sourcePorts**: string[] (ReadOnly): Describes the list of source ports related to this signature
+* **description**: string: Describes what is the signature enforces
+* **destinationPorts**: string[]: Describes the list of destination ports related to this signature
+* **direction**: int: Describes in which direction signature is being enforced: 0 - Inbound, 1 - OutBound, 2 - Bidirectional
+* **group**: string: Describes the groups the signature belongs to
+* **inheritedFromParentPolicy**: bool: Describes if this override is inherited from base policy or not
+* **lastUpdated**: string: Describes the last updated time of the signature (provided from 3rd party vendor)
+* **mode**: int: The current mode enforced, 0 - Disabled, 1 - Alert, 2 -Deny
+* **protocol**: string: Describes the protocol the signatures is being enforced in
+* **severity**: int: Describes the severity of signature: 1 - Low, 2 - Medium, 3 - High
+* **signatureId**: int: The ID of the signature
+* **sourcePorts**: string[]: Describes the list of source ports related to this signature
 
 ## Sku
 ### Properties

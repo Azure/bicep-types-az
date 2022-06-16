@@ -12,12 +12,12 @@
 
 ## PartnerProperties
 ### Properties
-* **createdTime**: string (ReadOnly): This is the DateTime when the partner was created.
-* **objectId**: string (ReadOnly): This is the object id.
-* **partnerId**: string (ReadOnly): This is the partner id
-* **partnerName**: string (ReadOnly): This is the partner name
-* **state**: 'Active' | 'Deleted' | string (ReadOnly): This is the partner state
-* **tenantId**: string (ReadOnly): This is the tenant id.
-* **updatedTime**: string (ReadOnly): This is the DateTime when the partner was updated.
-* **version**: int (ReadOnly): This is the version.
+* **createdTime**: string: This is the DateTime when the partner was created.
+* **objectId**: string: This is the object id.
+* **partnerId**: string: This is the partner id
+* **partnerName**: string: This is the partner name
+* **state**: 'Active' | 'Deleted' | string: This is the partner state
+* **tenantId**: string: This is the tenant id.
+* **updatedTime**: string: This is the DateTime when the partner was updated.
+* **version**: int: This is the version.
 

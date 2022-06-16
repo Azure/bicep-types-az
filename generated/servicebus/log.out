@@ -130,7 +130,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'sqlExpression' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'compatibilityLevel' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'requiresPreprocessing' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
-info    | autorest.bicep took 19ms
+info    | autorest.bicep took 16ms
 info    | Processing batch task - {"tag":"microsoft.servicebus-2021-06-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -255,7 +255,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'sqlExpression' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'compatibilityLevel' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'requiresPreprocessing' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.servicebus-2022-01-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -278,7 +278,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'sqlExpression' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'compatibilityLevel' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'requiresPreprocessing' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.servicebus-2018-01-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -443,7 +443,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'sqlExpression' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'compatibilityLevel' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'requiresPreprocessing' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
-info    | autorest.bicep took 10ms
+info    | autorest.bicep took 13ms
 info    | Processing batch task - {"tag":"microsoft.servicebus-2021-11-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -466,7 +466,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'sqlExpression' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'compatibilityLevel' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'requiresPreprocessing' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
-info    | autorest.bicep took 15ms
+info    | autorest.bicep took 12ms
 info    | Processing batch task - {"tag":"microsoft.servicebus-2017-04-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -593,7 +593,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'sqlExpression' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'compatibilityLevel' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'requiresPreprocessing' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.servicebus-2015-08-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -658,5 +658,5 @@ warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an un
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2730:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'TrackedResource' has a property 'location' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from TrackedResource
-info    | autorest.bicep took 3ms
-info    | Autorest completed in 31.47s. 14 files generated.
+info    | autorest.bicep took 6ms
+info    | Autorest completed in 25.38s. 14 files generated.

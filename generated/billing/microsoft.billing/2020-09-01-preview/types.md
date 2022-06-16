@@ -7,11 +7,11 @@
 * **etag**: int (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PromotionCreateRequestProperties](#promotioncreaterequestproperties)
+* **properties**: [PromotionCreateRequestPropertiesOrPromotionResponseProperties](#promotioncreaterequestpropertiesorpromotionresponseproperties)
 * **sku**: [PromotionCreateSkuNameRequestProperties](#promotioncreateskunamerequestproperties) (WriteOnly)
 * **type**: 'Microsoft.Billing/promotions' (ReadOnly, DeployTimeConstant): The resource type
 
-## PromotionCreateRequestProperties
+## PromotionCreateRequestPropertiesOrPromotionResponseProperties
 ### Properties
 * **appliedScopes**: string[]: List of subscriptions getting the benefit of the promotion.
 * **displayName**: string: Friendly name for user to easily identified the promotion.
@@ -23,5 +23,5 @@
 
 ## PromotionCreateSkuNameRequestProperties
 ### Properties
-* **name**: string (WriteOnly): SKU Name of the promotion to activate
+* **name**: string: SKU Name of the promotion to activate
 

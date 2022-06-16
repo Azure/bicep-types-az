@@ -31,7 +31,7 @@ warning | PreCheck/SchemaMissingType | The schema 'JobExtendedInfo-additionalDet
 warning | PreCheck/SchemaMissingType | The schema 'JobSubTask-additionalDetails' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/dataprotection/resource-manager/Microsoft.DataProtection/stable/2022-04-01/dataprotection.json:5367:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 16ms
+info    | autorest.bicep took 13ms
 info    | Processing batch task - {"tag":"microsoft.dataprotection-2022-03-31-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -59,7 +59,7 @@ warning | PreCheck/SchemaMissingType | The schema 'JobExtendedInfo-additionalDet
 warning | PreCheck/SchemaMissingType | The schema 'JobSubTask-additionalDetails' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/dataprotection/resource-manager/Microsoft.DataProtection/preview/2022-03-31-preview/dataprotection.json:5425:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.dataprotection-2022-02-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -87,7 +87,7 @@ warning | PreCheck/SchemaMissingType | The schema 'JobExtendedInfo-additionalDet
 warning | PreCheck/SchemaMissingType | The schema 'JobSubTask-additionalDetails' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/dataprotection/resource-manager/Microsoft.DataProtection/preview/2022-02-01-preview/dataprotection.json:5367:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.dataprotection-2022-01-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -115,7 +115,7 @@ warning | PreCheck/SchemaMissingType | The schema 'JobExtendedInfo-additionalDet
 warning | PreCheck/SchemaMissingType | The schema 'JobSubTask-additionalDetails' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/dataprotection/resource-manager/Microsoft.DataProtection/stable/2022-01-01/dataprotection.json:5346:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 10ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.dataprotection-2021-10-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -143,7 +143,7 @@ warning | PreCheck/SchemaMissingType | The schema 'JobExtendedInfo-additionalDet
 warning | PreCheck/SchemaMissingType | The schema 'JobSubTask-additionalDetails' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/dataprotection/resource-manager/Microsoft.DataProtection/preview/2021-10-01-preview/dataprotection.json:4825:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.dataprotection-2021-07-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -171,7 +171,7 @@ warning | PreCheck/SchemaMissingType | The schema 'JobExtendedInfo-additionalDet
 warning | PreCheck/SchemaMissingType | The schema 'JobSubTask-additionalDetails' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/dataprotection/resource-manager/Microsoft.DataProtection/stable/2021-07-01/dataprotection.json:4824:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.dataprotection-2021-01-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -255,7 +255,7 @@ warning | PreCheck/SchemaMissingType | The schema 'JobExtendedInfo-additionalDet
 warning | PreCheck/SchemaMissingType | The schema 'JobSubTask-additionalDetails' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/dataprotection/resource-manager/Microsoft.DataProtection/preview/2021-06-01-preview/dataprotection.json:4121:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.dataprotection-2021-12-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -283,7 +283,7 @@ warning | PreCheck/SchemaMissingType | The schema 'JobExtendedInfo-additionalDet
 warning | PreCheck/SchemaMissingType | The schema 'JobSubTask-additionalDetails' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/dataprotection/resource-manager/Microsoft.DataProtection/preview/2021-12-01-preview/dataprotection.json:4802:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.dataprotection-2022-03-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -312,4 +312,4 @@ warning | PreCheck/SchemaMissingType | The schema 'JobSubTask-additionalDetails'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/dataprotection/resource-manager/Microsoft.DataProtection/stable/2022-03-01/dataprotection.json:5346:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 6ms
-info    | Autorest completed in 49.96s. 22 files generated.
+info    | Autorest completed in 40.69s. 22 files generated.

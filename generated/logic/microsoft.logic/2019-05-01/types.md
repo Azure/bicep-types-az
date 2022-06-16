@@ -375,9 +375,9 @@
 
 ## AzureResourceErrorInfo
 ### Properties
-* **code**: string (ReadOnly): The error code.
-* **details**: [AzureResourceErrorInfo](#azureresourceerrorinfo)[] (ReadOnly): The error details.
-* **message**: string (ReadOnly): The error message.
+* **code**: string (Required): The error code.
+* **details**: [AzureResourceErrorInfo](#azureresourceerrorinfo)[]: The error details.
+* **message**: string (Required): The error message.
 
 ## B2BPartnerContent
 ### Properties
@@ -404,7 +404,7 @@
 
 ## CallbackUrl
 ### Properties
-* **value**: string (ReadOnly): The URL value.
+* **value**: string: The URL value.
 
 ## ContentHash
 ### Properties
@@ -600,26 +600,26 @@
 
 ## Expression
 ### Properties
-* **error**: [AzureResourceErrorInfo](#azureresourceerrorinfo) (ReadOnly): The azure resource error info.
-* **subexpressions**: [Expression](#expression)[] (ReadOnly): The sub expressions.
-* **text**: string (ReadOnly): The text.
-* **value**: any (ReadOnly): Anything
+* **error**: [AzureResourceErrorInfo](#azureresourceerrorinfo): The azure resource error info.
+* **subexpressions**: [Expression](#expression)[]: The sub expressions.
+* **text**: string: The text.
+* **value**: any: Anything
 
 ## ExpressionRoot
 ### Properties
-* **error**: [AzureResourceErrorInfo](#azureresourceerrorinfo) (ReadOnly): The azure resource error info.
-* **path**: string (ReadOnly): The path.
-* **subexpressions**: [Expression](#expression)[] (ReadOnly): The sub expressions.
-* **text**: string (ReadOnly): The text.
-* **value**: any (ReadOnly): Anything
+* **error**: [AzureResourceErrorInfo](#azureresourceerrorinfo): The azure resource error info.
+* **path**: string: The path.
+* **subexpressions**: [Expression](#expression)[]: The sub expressions.
+* **text**: string: The text.
+* **value**: any: Anything
 
 ## ExpressionTraces
 ### Properties
-* **inputs**: [ExpressionRoot](#expressionroot)[] (ReadOnly)
+* **inputs**: [ExpressionRoot](#expressionroot)[]
 
 ## ExpressionTraces
 ### Properties
-* **inputs**: [ExpressionRoot](#expressionroot)[] (ReadOnly)
+* **inputs**: [ExpressionRoot](#expressionroot)[]
 
 ## FlowAccessControlConfiguration
 ### Properties
@@ -645,38 +645,38 @@
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly): The key type.
-* **notAfter**: string (WriteOnly): The expiry time.
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string: The key type.
+* **notAfter**: string: The expiry time.
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly): The key type.
-* **notAfter**: string (WriteOnly): The expiry time.
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string: The key type.
+* **notAfter**: string: The expiry time.
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly): The key type.
-* **notAfter**: string (WriteOnly): The expiry time.
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string: The key type.
+* **notAfter**: string: The expiry time.
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly): The key type.
-* **notAfter**: string (WriteOnly): The expiry time.
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string: The key type.
+* **notAfter**: string: The expiry time.
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly): The key type.
-* **notAfter**: string (WriteOnly): The expiry time.
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string: The key type.
+* **notAfter**: string: The expiry time.
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly): The key type.
-* **notAfter**: string (WriteOnly): The expiry time.
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string: The key type.
+* **notAfter**: string: The expiry time.
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly): The key type.
-* **notAfter**: string (WriteOnly): The expiry time.
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string: The key type.
+* **notAfter**: string: The expiry time.
 
 ## IntegrationAccountAgreementProperties
 ### Properties
@@ -808,19 +808,19 @@
 
 ## KeyVaultKey
 ### Properties
-* **attributes**: [KeyVaultKeyAttributes](#keyvaultkeyattributes) (ReadOnly): The key attributes.
-* **kid**: string (ReadOnly): The key id.
+* **attributes**: [KeyVaultKeyAttributes](#keyvaultkeyattributes): The key attributes.
+* **kid**: string: The key id.
 
 ## KeyVaultKeyAttributes
 ### Properties
-* **created**: int (ReadOnly): When the key was created.
-* **enabled**: bool (ReadOnly): Whether the key is enabled or not.
-* **updated**: int (ReadOnly): When the key was updated.
+* **created**: int: When the key was created.
+* **enabled**: bool: Whether the key is enabled or not.
+* **updated**: int: When the key was updated.
 
 ## KeyVaultKeyCollection
 ### Properties
-* **skipToken**: string (ReadOnly): The skip token.
-* **value**: [KeyVaultKey](#keyvaultkey)[] (ReadOnly): The key vault keys.
+* **skipToken**: string: The skip token.
+* **value**: [KeyVaultKey](#keyvaultkey)[]: The key vault keys.
 
 ## KeyVaultKeyReference
 ### Properties
@@ -836,14 +836,14 @@
 
 ## KeyVaultReference
 ### Properties
-* **id**: string (WriteOnly): The resource id.
-* **name**: string (ReadOnly, WriteOnly): Gets the resource name.
-* **type**: string (ReadOnly, WriteOnly): Gets the resource type.
+* **id**: string: The resource id.
+* **name**: string (ReadOnly): Gets the resource name.
+* **type**: string (ReadOnly): Gets the resource type.
 
 ## ListKeyVaultKeysDefinition
 ### Properties
-* **keyVault**: [KeyVaultReference](#keyvaultreference) (Required, WriteOnly): The key vault reference.
-* **skipToken**: string (WriteOnly): The skip token.
+* **keyVault**: [KeyVaultReference](#keyvaultreference) (Required): The key vault reference.
+* **skipToken**: string: The skip token.
 
 ## ManagedServiceIdentity
 ### Properties
@@ -1007,81 +1007,81 @@
 ### Properties
 * **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
 * **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
+* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries): Gets the workflow trigger callback URL query parameters.
 * **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
+* **relativePathParameters**: string[]: Gets the workflow trigger callback URL relative path parameters.
 * **value**: string (ReadOnly): Gets the workflow trigger callback URL.
 
 ## WorkflowTriggerCallbackUrl
 ### Properties
 * **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
 * **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
+* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries): Gets the workflow trigger callback URL query parameters.
 * **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
+* **relativePathParameters**: string[]: Gets the workflow trigger callback URL relative path parameters.
 * **value**: string (ReadOnly): Gets the workflow trigger callback URL.
 
 ## WorkflowTriggerCallbackUrl
 ### Properties
 * **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
 * **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
+* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries): Gets the workflow trigger callback URL query parameters.
 * **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
+* **relativePathParameters**: string[]: Gets the workflow trigger callback URL relative path parameters.
 * **value**: string (ReadOnly): Gets the workflow trigger callback URL.
 
 ## WorkflowTriggerCallbackUrl
 ### Properties
 * **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
 * **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
+* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries): Gets the workflow trigger callback URL query parameters.
 * **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
+* **relativePathParameters**: string[]: Gets the workflow trigger callback URL relative path parameters.
 * **value**: string (ReadOnly): Gets the workflow trigger callback URL.
 
 ## WorkflowTriggerCallbackUrl
 ### Properties
 * **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
 * **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
+* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries): Gets the workflow trigger callback URL query parameters.
 * **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
+* **relativePathParameters**: string[]: Gets the workflow trigger callback URL relative path parameters.
 * **value**: string (ReadOnly): Gets the workflow trigger callback URL.
 
 ## WorkflowTriggerCallbackUrl
 ### Properties
 * **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
 * **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
+* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries): Gets the workflow trigger callback URL query parameters.
 * **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
+* **relativePathParameters**: string[]: Gets the workflow trigger callback URL relative path parameters.
 * **value**: string (ReadOnly): Gets the workflow trigger callback URL.
 
 ## WorkflowTriggerCallbackUrl
 ### Properties
 * **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
 * **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
+* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries): Gets the workflow trigger callback URL query parameters.
 * **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
+* **relativePathParameters**: string[]: Gets the workflow trigger callback URL relative path parameters.
 * **value**: string (ReadOnly): Gets the workflow trigger callback URL.
 
 ## WorkflowTriggerCallbackUrl
 ### Properties
 * **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
 * **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries) (ReadOnly): Gets the workflow trigger callback URL query parameters.
+* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries): Gets the workflow trigger callback URL query parameters.
 * **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[] (ReadOnly): Gets the workflow trigger callback URL relative path parameters.
+* **relativePathParameters**: string[]: Gets the workflow trigger callback URL relative path parameters.
 * **value**: string (ReadOnly): Gets the workflow trigger callback URL.
 
 ## WorkflowTriggerListCallbackUrlQueries
 ### Properties
-* **api-version**: string (ReadOnly): The api version.
-* **se**: string (ReadOnly): The SAS timestamp.
-* **sig**: string (ReadOnly): The SAS signature.
-* **sp**: string (ReadOnly): The SAS permissions.
-* **sv**: string (ReadOnly): The SAS version.
+* **api-version**: string: The api version.
+* **se**: string: The SAS timestamp.
+* **sig**: string: The SAS signature.
+* **sp**: string: The SAS permissions.
+* **sv**: string: The SAS version.
 
 ## WorkflowTriggerRecurrence
 ### Properties

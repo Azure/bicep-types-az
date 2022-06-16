@@ -527,11 +527,11 @@ The check is performed after every upgrade domain upgrade completion to make sur
 
 ## UpgradableVersionPathResult
 ### Properties
-* **supportedPath**: string[] (ReadOnly)
+* **supportedPath**: string[]
 
 ## UpgradableVersionsDescription
 ### Properties
-* **targetVersion**: string (Required, WriteOnly): The target code version.
+* **targetVersion**: string (Required): The target code version.
 
 ## UserAssignedIdentity
 ### Properties

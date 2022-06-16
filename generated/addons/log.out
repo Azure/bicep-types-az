@@ -21,4 +21,4 @@ warning | PreCheck/SchemaMissingType | The schema 'CanonicalSupportPlanStatusIte
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | Resource type microsoft.addons/supportproviders/supportplantypes under path '/subscriptions/{subscriptionId}/providers/Microsoft.Addons/supportProviders/{providerName}/supportPlanTypes/{planTypeName}' has no body defined.
 info    | autorest.bicep took 2ms
-info    | Autorest completed in 6.25s. 4 files generated.
+info    | Autorest completed in 6.03s. 4 files generated.

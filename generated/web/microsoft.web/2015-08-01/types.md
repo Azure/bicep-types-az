@@ -70,7 +70,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [HostingEnvironmentProperties](#hostingenvironmentproperties)
+* **properties**: [HostingEnvironmentPropertiesOrManagedHostingEnvironmentProperties](#hostingenvironmentpropertiesormanagedhostingenvironmentproperties)
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Web/managedHostingEnvironments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -714,11 +714,11 @@
 
 ## ArmPlan
 ### Properties
-* **name**: string (WriteOnly): The name
-* **product**: string (WriteOnly): The product
-* **promotionCode**: string (WriteOnly): The promotion code
-* **publisher**: string (WriteOnly): The publisher
-* **version**: string (WriteOnly): Version of product
+* **name**: string: The name
+* **product**: string: The product
+* **promotionCode**: string: The promotion code
+* **publisher**: string: The publisher
+* **version**: string: Version of product
 
 ## AutoHealActions
 ### Properties
@@ -767,60 +767,60 @@
 
 ## BackupItem
 ### Properties
-* **id**: string (ReadOnly): Resource Id
-* **kind**: string (ReadOnly): Kind of resource
-* **location**: string (ReadOnly): Resource Location
-* **name**: string (ReadOnly): Resource Name
-* **properties**: [BackupItemProperties](#backupitemproperties) (ReadOnly)
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
-* **type**: string (ReadOnly): Resource type
+* **id**: string: Resource Id
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
+* **name**: string: Resource Name
+* **properties**: [BackupItemProperties](#backupitemproperties)
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: string: Resource type
 
 ## BackupItem
 ### Properties
-* **id**: string (ReadOnly): Resource Id
-* **kind**: string (ReadOnly): Kind of resource
-* **location**: string (ReadOnly): Resource Location
-* **name**: string (ReadOnly): Resource Name
-* **properties**: [BackupItemProperties](#backupitemproperties) (ReadOnly)
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
-* **type**: string (ReadOnly): Resource type
+* **id**: string: Resource Id
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
+* **name**: string: Resource Name
+* **properties**: [BackupItemProperties](#backupitemproperties)
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: string: Resource type
 
 ## BackupItemProperties
 ### Properties
-* **blobName**: string (ReadOnly): Name of the blob which contains data for this backup
-* **correlationId**: string (ReadOnly): Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.
-* **created**: string (ReadOnly): Timestamp of the backup creation
-* **databases**: [DatabaseBackupSetting](#databasebackupsetting)[] (ReadOnly): List of databases included in the backup
-* **finishedTimeStamp**: string (ReadOnly): Timestamp when this backup finished.
-* **id**: int (ReadOnly): Id of the backup.
-* **lastRestoreTimeStamp**: string (ReadOnly): Timestamp of a last restore operation which used this backup.
-* **log**: string (ReadOnly): Details regarding this backup. Might contain an error message.
-* **name**: string (ReadOnly): Name of this backup
-* **scheduled**: bool (ReadOnly): True if this backup has been created due to a schedule being triggered.
-* **sizeInBytes**: int (ReadOnly): Size of the backup in bytes
-* **status**: 'Created' | 'DeleteFailed' | 'DeleteInProgress' | 'Deleted' | 'Failed' | 'InProgress' | 'PartiallySucceeded' | 'Skipped' | 'Succeeded' | 'TimedOut' (ReadOnly): Backup status
-* **storageAccountUrl**: string (ReadOnly): SAS URL for the storage account container which contains this backup
-* **websiteSizeInBytes**: int (ReadOnly): Size of the original web app which has been backed up
+* **blobName**: string: Name of the blob which contains data for this backup
+* **correlationId**: string: Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.
+* **created**: string: Timestamp of the backup creation
+* **databases**: [DatabaseBackupSetting](#databasebackupsetting)[]: List of databases included in the backup
+* **finishedTimeStamp**: string: Timestamp when this backup finished.
+* **id**: int: Id of the backup.
+* **lastRestoreTimeStamp**: string: Timestamp of a last restore operation which used this backup.
+* **log**: string: Details regarding this backup. Might contain an error message.
+* **name**: string: Name of this backup
+* **scheduled**: bool: True if this backup has been created due to a schedule being triggered.
+* **sizeInBytes**: int: Size of the backup in bytes
+* **status**: 'Created' | 'DeleteFailed' | 'DeleteInProgress' | 'Deleted' | 'Failed' | 'InProgress' | 'PartiallySucceeded' | 'Skipped' | 'Succeeded' | 'TimedOut' (Required): Backup status
+* **storageAccountUrl**: string: SAS URL for the storage account container which contains this backup
+* **websiteSizeInBytes**: int: Size of the original web app which has been backed up
 
 ## BackupRequest
 ### Properties
-* **id**: string (WriteOnly): Resource Id
-* **kind**: string (WriteOnly): Kind of resource
-* **location**: string (Required, WriteOnly): Resource Location
-* **name**: string (WriteOnly): Resource Name
-* **properties**: [BackupRequestProperties](#backuprequestproperties) (WriteOnly)
-* **tags**: [ResourceTags](#resourcetags) (WriteOnly): Resource tags
-* **type**: string (WriteOnly): Resource type
+* **id**: string: Resource Id
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
+* **name**: string: Resource Name
+* **properties**: [BackupRequestProperties](#backuprequestproperties)
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: string: Resource type
 
 ## BackupRequest
 ### Properties
-* **id**: string (WriteOnly): Resource Id
-* **kind**: string (WriteOnly): Kind of resource
-* **location**: string (Required, WriteOnly): Resource Location
-* **name**: string (WriteOnly): Resource Name
-* **properties**: [BackupRequestProperties](#backuprequestproperties) (WriteOnly)
-* **tags**: [ResourceTags](#resourcetags) (WriteOnly): Resource tags
-* **type**: string (WriteOnly): Resource type
+* **id**: string: Resource Id
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
+* **name**: string: Resource Name
+* **properties**: [BackupRequestProperties](#backuprequestproperties)
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: string: Resource type
 
 ## BackupRequestProperties
 ### Properties
@@ -1007,6 +1007,43 @@
 * **vnetResourceGroupName**: string: Resource group of the hostingEnvironment's (App Service Environment) virtual network
 * **vnetSubnetName**: string: Subnet of the hostingEnvironment's (App Service Environment) virtual network
 * **workerPools**: [WorkerPool](#workerpool)[]: Description of worker pools with worker size ids, VM sizes, and number of workers in each pool
+
+## HostingEnvironmentPropertiesOrManagedHostingEnvironmentProperties
+### Properties
+* **allowedMultiSizes**: string (WriteOnly): List of comma separated strings describing which VM sizes are allowed for front-ends
+* **allowedWorkerSizes**: string (WriteOnly): List of comma separated strings describing which VM sizes are allowed for workers
+* **apiManagementAccount**: string (ReadOnly): Resource id of the api management account associated with this managed hosting environment (read only)
+* **apiManagementAccountId**: string (WriteOnly): Api Management Account associated with this Hosting Environment
+* **clusterSettings**: [NameValuePair](#namevaluepair)[] (WriteOnly): Custom settings for changing the behavior of the hosting environment
+* **databaseEdition**: string (WriteOnly): Edition of the metadata database for the hostingEnvironment (App Service Environment) e.g. "Standard"
+* **databaseServiceObjective**: string (WriteOnly): Service objective of the metadata database for the hostingEnvironment (App Service Environment) e.g. "S0"
+* **dnsSuffix**: string: DNS suffix of the hostingEnvironment (App Service Environment)
+* **environmentCapacities**: [StampCapacity](#stampcapacity)[] (WriteOnly): Current total, used, and available worker capacities
+* **environmentIsHealthy**: bool: True/false indicating whether the hostingEnvironment (App Service Environment) is healthy
+* **environmentStatus**: string: Detailed message about with results of the last check of the hostingEnvironment (App Service Environment)
+* **internalLoadBalancingMode**: 'None' | 'Publishing' | 'Web' (WriteOnly): Specifies which endpoints to serve internally in the hostingEnvironment's (App Service Environment) VNET
+* **ipsslAddressCount**: int: Number of IP SSL addresses reserved for this hostingEnvironment (App Service Environment)
+* **lastAction**: string (WriteOnly): Last deployment action on this hostingEnvironment (App Service Environment)
+* **lastActionResult**: string (WriteOnly): Result of the last deployment action on this hostingEnvironment (App Service Environment)
+* **location**: string: Location of the hostingEnvironment (App Service Environment), e.g. "West US"
+* **maximumNumberOfMachines**: int (WriteOnly): Maximum number of VMs in this hostingEnvironment (App Service Environment)
+* **multiRoleCount**: int (WriteOnly): Number of front-end instances
+* **multiSize**: string (WriteOnly): Front-end VM size, e.g. "Medium", "Large"
+* **name**: string: Name of the hostingEnvironment (App Service Environment)
+* **networkAccessControlList**: [NetworkAccessControlEntry](#networkaccesscontrolentry)[] (WriteOnly): Access control list for controlling traffic to the hostingEnvironment (App Service Environment)
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (WriteOnly): Provisioning state of the hostingEnvironment (App Service Environment)
+* **resourceGroup**: string: Resource group of the hostingEnvironment (App Service Environment)
+* **status**: 'Deleting' | 'Preparing' | 'Ready' | 'Scaling' (Required): Current status of the hostingEnvironment (App Service Environment)
+* **subscriptionId**: string: Subscription of the hostingEnvironment (App Service Environment)
+* **suspended**: bool: True/false indicating whether the hostingEnvironment is suspended. The environment can be suspended e.g. when the management endpoint is no longer available
+            (most likely because NSG blocked the incoming traffic)
+* **upgradeDomains**: int (WriteOnly): Number of upgrade domains of this hostingEnvironment (App Service Environment)
+* **vipMappings**: [VirtualIPMapping](#virtualipmapping)[] (WriteOnly): Description of IP SSL mapping for this hostingEnvironment (App Service Environment)
+* **virtualNetwork**: [VirtualNetworkProfile](#virtualnetworkprofile): Description of the hostingEnvironment's (App Service Environment) virtual network
+* **vnetName**: string (WriteOnly): Name of the hostingEnvironment's (App Service Environment) virtual network
+* **vnetResourceGroupName**: string (WriteOnly): Resource group of the hostingEnvironment's (App Service Environment) virtual network
+* **vnetSubnetName**: string (WriteOnly): Subnet of the hostingEnvironment's (App Service Environment) virtual network
+* **workerPools**: [WorkerPool](#workerpool)[] (WriteOnly): Description of worker pools with worker size ids, VM sizes, and number of workers in each pool
 
 ## HostNameBindingProperties
 ### Properties
@@ -1524,23 +1561,23 @@
 
 ## StringDictionary
 ### Properties
-* **id**: string (ReadOnly): Resource Id
-* **kind**: string (ReadOnly): Kind of resource
-* **location**: string (ReadOnly): Resource Location
-* **name**: string (ReadOnly): Resource Name
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (ReadOnly): Settings
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
-* **type**: string (ReadOnly): Resource type
+* **id**: string: Resource Id
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
+* **name**: string: Resource Name
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: string: Resource type
 
 ## StringDictionary
 ### Properties
-* **id**: string (ReadOnly): Resource Id
-* **kind**: string (ReadOnly): Kind of resource
-* **location**: string (ReadOnly): Resource Location
-* **name**: string (ReadOnly): Resource Name
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (ReadOnly): Settings
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
-* **type**: string (ReadOnly): Resource type
+* **id**: string: Resource Id
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
+* **name**: string: Resource Name
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: string: Resource type
 
 ## StringDictionaryProperties
 ### Properties
@@ -1627,16 +1664,16 @@
 
 ## VnetRouteProperties
 ### Properties
-* **endAddress**: string (WriteOnly): The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
-* **name**: string (WriteOnly): The name of this route. This is only returned by the server and does not need to be set by the client.
-* **routeType**: string (WriteOnly): The type of route this is:
+* **endAddress**: string: The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
+* **name**: string: The name of this route. This is only returned by the server and does not need to be set by the client.
+* **routeType**: string: The type of route this is:
             DEFAULT - By default, every web app has routes to the local address ranges specified by RFC1918
             INHERITED - Routes inherited from the real Virtual Network routes
             STATIC - Static route set on the web app only
             
             These values will be used for syncing a Web App's routes with those from a Virtual Network. This operation will clear all DEFAULT and INHERITED routes and replace them
             with new INHERITED routes.
-* **startAddress**: string (WriteOnly): The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
+* **startAddress**: string: The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
 
 ## WorkerPool
 ### Properties

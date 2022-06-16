@@ -54,5 +54,5 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'HubAndSpokePeeringPolicyProperties' has a property 'hub' that is already declared the parent schema 'ManagedNetworkPeeringPolicyProperties' but isn't significantly different. The property has been removed from HubAndSpokePeeringPolicyProperties
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'HubAndSpokePeeringPolicyProperties' has a property 'spokes' that is already declared the parent schema 'ManagedNetworkPeeringPolicyProperties' but isn't significantly different. The property has been removed from HubAndSpokePeeringPolicyProperties
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MeshPeeringPolicyProperties' has a property 'mesh' that is already declared the parent schema 'ManagedNetworkPeeringPolicyProperties' but isn't significantly different. The property has been removed from MeshPeeringPolicyProperties
-info    | autorest.bicep took 11ms
-info    | Autorest completed in 4.61s. 2 files generated.
+info    | autorest.bicep took 13ms
+info    | Autorest completed in 3.88s. 2 files generated.

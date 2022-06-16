@@ -55,7 +55,7 @@
 
 ## CertificateProperties
 ### Properties
-* **certificate**: string (ReadOnly): The certificate content
+* **certificate**: string: The certificate content
 * **created**: string (ReadOnly): The certificate's create date and time.
 * **expiry**: string (ReadOnly): The certificate's expiration date and time.
 * **isVerified**: bool (ReadOnly): Determines whether certificate has been verified.
@@ -274,7 +274,7 @@
 ## SharedAccessSignatureAuthorizationRuleListResult
 ### Properties
 * **nextLink**: string (ReadOnly): The next link.
-* **value**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)[] (ReadOnly): The list of shared access policies.
+* **value**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)[]: The list of shared access policies.
 
 ## StorageEndpointProperties
 ### Properties

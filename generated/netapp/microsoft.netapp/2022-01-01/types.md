@@ -220,7 +220,7 @@
 
 ## ListReplications
 ### Properties
-* **value**: [Replication](#replication)[] (ReadOnly): A list of replications
+* **value**: [Replication](#replication)[]: A list of replications
 
 ## MonthlySchedule
 ### Properties
@@ -256,10 +256,10 @@
 
 ## Replication
 ### Properties
-* **endpointType**: 'dst' | 'src' | string (ReadOnly): Indicates whether the local volume is the source or destination for the Volume Replication
-* **remoteVolumeRegion**: string (ReadOnly): The remote region for the other end of the Volume Replication.
-* **remoteVolumeResourceId**: string (ReadOnly): The resource ID of the remote volume.
-* **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' | string (ReadOnly): Schedule
+* **endpointType**: 'dst' | 'src' | string: Indicates whether the local volume is the source or destination for the Volume Replication
+* **remoteVolumeRegion**: string: The remote region for the other end of the Volume Replication.
+* **remoteVolumeResourceId**: string (Required): The resource ID of the remote volume.
+* **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' | string: Schedule
 
 ## ReplicationObject
 ### Properties

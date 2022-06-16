@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisCreateProperties](#rediscreateproperties) (Required): Redis cache properties.
+* **properties**: [RedisCreatePropertiesOrRedisResourceProperties](#rediscreatepropertiesorredisresourceproperties) (Required): Redis cache properties.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Cache/Redis' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -45,7 +45,7 @@
 * **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
 * **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
 
-## RedisCreateProperties
+## RedisCreatePropertiesOrRedisResourceProperties
 ### Properties
 * **accessKeys**: [RedisAccessKeys](#redisaccesskeys) (ReadOnly): The keys of the Redis cache - not set if this object is not the response to Create or Update redis cache
 * **enableNonSslPort**: bool: Specifies whether the non-ssl Redis server port (6379) is enabled.

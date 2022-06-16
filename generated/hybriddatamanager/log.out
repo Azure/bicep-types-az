@@ -26,4 +26,4 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 3ms
-info    | Autorest completed in 8.33s. 4 files generated.
+info    | Autorest completed in 6.63s. 4 files generated.

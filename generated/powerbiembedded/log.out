@@ -11,4 +11,4 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 9ms
-info    | Autorest completed in 4.34s. 2 files generated.
+info    | Autorest completed in 3.63s. 2 files generated.

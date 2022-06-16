@@ -95,8 +95,8 @@
 
 ## AuthenticationKeys
 ### Properties
-* **authKey1**: string (ReadOnly): The first authentication key.
-* **authKey2**: string (ReadOnly): The second authentication key.
+* **authKey1**: string: The first authentication key.
+* **authKey2**: string: The second authentication key.
 
 ## AzureActiveDirectoryApp
 ### Properties

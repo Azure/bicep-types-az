@@ -95,8 +95,8 @@
 
 ## ApiKeys
 ### Properties
-* **key1**: string (ReadOnly): Gets the value of key 1.
-* **key2**: string (ReadOnly): Gets the value of key 2.
+* **key1**: string: Gets the value of key 1.
+* **key2**: string: Gets the value of key 2.
 
 ## ApiProperties
 ### Properties

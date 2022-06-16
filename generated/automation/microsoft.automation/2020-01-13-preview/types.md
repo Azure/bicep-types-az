@@ -9,7 +9,7 @@
 * **identity**: [Identity](#identity): Sets the identity property for automation account
 * **location**: string: Gets or sets the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AutomationAccountCreateOrUpdateProperties](#automationaccountcreateorupdateproperties): Gets or sets account create or update properties.
+* **properties**: [AutomationAccountCreateOrUpdatePropertiesOrAutomationAccountProperties](#automationaccountcreateorupdatepropertiesorautomationaccountproperties): Gets or sets account create or update properties.
 * **tags**: [AutomationAccountCreateOrUpdateParametersTags](#automationaccountcreateorupdateparameterstags): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,7 +19,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CertificateCreateOrUpdateProperties](#certificatecreateorupdateproperties) (Required): Gets or sets the properties of the certificate.
+* **properties**: [CertificateCreateOrUpdatePropertiesOrCertificateProperties](#certificatecreateorupdatepropertiesorcertificateproperties) (Required): Gets or sets the properties of the certificate.
 * **type**: 'Microsoft.Automation/automationAccounts/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/compilationjobs@2020-01-13-preview
@@ -29,7 +29,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (WriteOnly): Gets or sets the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DscCompilationJobCreateProperties](#dsccompilationjobcreateproperties) (Required): Gets or sets the list of compilation job properties.
+* **properties**: [DscCompilationJobCreatePropertiesOrDscCompilationJobProperties](#dsccompilationjobcreatepropertiesordsccompilationjobproperties) (Required): Gets or sets the list of compilation job properties.
 * **tags**: [DscCompilationJobCreateParametersTags](#dsccompilationjobcreateparameterstags) (WriteOnly): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/compilationjobs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -39,7 +39,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConnectionCreateOrUpdateProperties](#connectioncreateorupdateproperties) (Required): Gets or sets the properties of the connection.
+* **properties**: [ConnectionCreateOrUpdatePropertiesOrConnectionProperties](#connectioncreateorupdatepropertiesorconnectionproperties) (Required): Gets or sets the properties of the connection.
 * **type**: 'Microsoft.Automation/automationAccounts/connections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/connectionTypes@2020-01-13-preview
@@ -48,7 +48,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConnectionTypeCreateOrUpdateProperties](#connectiontypecreateorupdateproperties) (Required): Gets or sets the value of the connection type.
+* **properties**: [ConnectionTypeCreateOrUpdatePropertiesOrConnectionTypeProperties](#connectiontypecreateorupdatepropertiesorconnectiontypeproperties) (Required): Gets or sets the value of the connection type.
 * **type**: 'Microsoft.Automation/automationAccounts/connectionTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/credentials@2020-01-13-preview
@@ -57,7 +57,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CredentialCreateOrUpdateProperties](#credentialcreateorupdateproperties) (Required): Gets or sets the properties of the credential.
+* **properties**: [CredentialCreateOrUpdatePropertiesOrCredentialProperties](#credentialcreateorupdatepropertiesorcredentialproperties) (Required): Gets or sets the properties of the credential.
 * **type**: 'Microsoft.Automation/automationAccounts/credentials' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/jobSchedules@2020-01-13-preview
@@ -66,7 +66,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [JobScheduleCreateProperties](#jobschedulecreateproperties) (Required): Gets or sets the list of job schedule properties.
+* **properties**: [JobScheduleCreatePropertiesOrJobScheduleProperties](#jobschedulecreatepropertiesorjobscheduleproperties) (Required): Gets or sets the list of job schedule properties.
 * **type**: 'Microsoft.Automation/automationAccounts/jobSchedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/modules@2020-01-13-preview
@@ -77,7 +77,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Gets or sets the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ModuleCreateOrUpdateProperties](#modulecreateorupdateproperties) (Required): Gets or sets the module create properties.
+* **properties**: [ModuleCreateOrUpdatePropertiesOrModuleProperties](#modulecreateorupdatepropertiesormoduleproperties) (Required): Gets or sets the module create properties.
 * **tags**: [ModuleCreateOrUpdateParametersTags](#modulecreateorupdateparameterstags): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/modules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -87,7 +87,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DscNodeConfigurationCreateOrUpdateParametersProperties](#dscnodeconfigurationcreateorupdateparametersproperties): Node configuration properties
+* **properties**: [DscNodeConfigurationCreateOrUpdateParametersPropertiesOrDscNodeConfigurationProperties](#dscnodeconfigurationcreateorupdateparameterspropertiesordscnodeconfigurationproperties): Node configuration properties
 * **tags**: [DscNodeConfigurationCreateOrUpdateParametersTags](#dscnodeconfigurationcreateorupdateparameterstags) (WriteOnly): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -108,7 +108,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The Azure Region where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PythonPackageCreateProperties](#pythonpackagecreateproperties) (Required): Gets or sets the module create properties.
+* **properties**: [PythonPackageCreatePropertiesOrModuleProperties](#pythonpackagecreatepropertiesormoduleproperties) (Required): Gets or sets the module create properties.
 * **tags**: [PythonPackageCreateParametersTags](#pythonpackagecreateparameterstags): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/python2Packages' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -118,7 +118,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ScheduleCreateOrUpdateProperties](#schedulecreateorupdateproperties) (Required): Gets or sets the list of schedule properties.
+* **properties**: [ScheduleCreateOrUpdatePropertiesOrScheduleProperties](#schedulecreateorupdatepropertiesorscheduleproperties) (Required): Gets or sets the list of schedule properties.
 * **type**: 'Microsoft.Automation/automationAccounts/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/sourceControls@2020-01-13-preview
@@ -127,7 +127,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SourceControlCreateOrUpdateProperties](#sourcecontrolcreateorupdateproperties) (Required): The properties of the source control.
+* **properties**: [SourceControlCreateOrUpdatePropertiesOrSourceControlProperties](#sourcecontrolcreateorupdatepropertiesorsourcecontrolproperties) (Required): The properties of the source control.
 * **type**: 'Microsoft.Automation/automationAccounts/sourceControls' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs@2020-01-13-preview
@@ -136,7 +136,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SourceControlSyncJobCreateProperties](#sourcecontrolsyncjobcreateproperties) (Required): The properties of the source control sync job.
+* **properties**: [SourceControlSyncJobCreatePropertiesOrSourceControlSyncJobByIdProperties](#sourcecontrolsyncjobcreatepropertiesorsourcecontrolsyncjobbyidproperties) (Required): The properties of the source control sync job.
 * **type**: 'Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/variables@2020-01-13-preview
@@ -145,7 +145,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VariableCreateOrUpdateProperties](#variablecreateorupdateproperties) (Required): Gets or sets the properties of the variable.
+* **properties**: [VariableCreateOrUpdatePropertiesOrVariableProperties](#variablecreateorupdatepropertiesorvariableproperties) (Required): Gets or sets the properties of the variable.
 * **type**: 'Microsoft.Automation/automationAccounts/variables' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/watchers@2020-01-13-preview
@@ -181,7 +181,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## AutomationAccountCreateOrUpdateProperties
+## AutomationAccountCreateOrUpdatePropertiesOrAutomationAccountProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Gets the creation time.
 * **description**: string (ReadOnly): Gets or sets the description.
@@ -193,7 +193,7 @@
 * **sku**: [Sku](#sku): Gets or sets account SKU.
 * **state**: 'Ok' | 'Suspended' | 'Unavailable' | string (ReadOnly): Gets status of account.
 
-## CertificateCreateOrUpdateProperties
+## CertificateCreateOrUpdatePropertiesOrCertificateProperties
 ### Properties
 * **base64Value**: string (Required, WriteOnly): Gets or sets the base64 encoded value of the certificate.
 * **creationTime**: string (ReadOnly): Gets the creation time.
@@ -208,7 +208,12 @@
 * **clientId**: string (ReadOnly): The client id of user assigned identity.
 * **principalId**: string (ReadOnly): The principal id of user assigned identity.
 
-## ConnectionCreateOrUpdateProperties
+## ConnectionCreateOrUpdatePropertiesFieldDefinitionValues
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ConnectionCreateOrUpdatePropertiesOrConnectionProperties
 ### Properties
 * **connectionType**: [ConnectionTypeAssociationProperty](#connectiontypeassociationproperty) (Required): Gets or sets the connectionType of the connection.
 * **creationTime**: string (ReadOnly): Gets the creation time.
@@ -216,27 +221,22 @@
 * **fieldDefinitionValues**: [ConnectionCreateOrUpdatePropertiesFieldDefinitionValues](#connectioncreateorupdatepropertiesfielddefinitionvalues): Gets or sets the field definition properties of the connection.
 * **lastModifiedTime**: string (ReadOnly): Gets the last modified time.
 
-## ConnectionCreateOrUpdatePropertiesFieldDefinitionValues
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ConnectionTypeAssociationProperty
 ### Properties
 * **name**: string: Gets or sets the name of the connection type.
 
-## ConnectionTypeCreateOrUpdateProperties
+## ConnectionTypeCreateOrUpdatePropertiesFieldDefinitions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [FieldDefinition](#fielddefinition)
+
+## ConnectionTypeCreateOrUpdatePropertiesOrConnectionTypeProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Gets the creation time.
 * **description**: string (ReadOnly): Gets or sets the description.
 * **fieldDefinitions**: [ConnectionTypeCreateOrUpdatePropertiesFieldDefinitions](#connectiontypecreateorupdatepropertiesfielddefinitions) (Required): Gets or sets the field definitions of the connection type.
 * **isGlobal**: bool: Gets or sets a Boolean value to indicate if the connection type is global.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
-
-## ConnectionTypeCreateOrUpdatePropertiesFieldDefinitions
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [FieldDefinition](#fielddefinition)
 
 ## ContentHash
 ### Properties
@@ -249,14 +249,14 @@
 * **uri**: string: Gets or sets the uri of the runbook content.
 * **version**: string: Gets or sets the version of the content.
 
-## ContentSource
+## ContentSourceOrDscNodeConfigurationPropertiesSource
 ### Properties
 * **hash**: [ContentHash](#contenthash) (WriteOnly): Gets or sets the hash.
 * **type**: 'embeddedContent' | 'uri' | string (WriteOnly): Gets or sets the content source type.
 * **value**: string (WriteOnly): Gets or sets the value of the content. This is based on the content source type.
 * **version**: string (WriteOnly): Gets or sets the version of the content.
 
-## CredentialCreateOrUpdateProperties
+## CredentialCreateOrUpdatePropertiesOrCredentialProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Gets the creation time.
 * **description**: string: Gets or sets the description of the credential.
@@ -269,7 +269,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## DscCompilationJobCreateProperties
+## DscCompilationJobCreatePropertiesOrDscCompilationJobProperties
 ### Properties
 * **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required): Gets or sets the configuration.
 * **creationTime**: string (ReadOnly): Gets the creation time of the job.
@@ -296,14 +296,14 @@
 ### Properties
 * **name**: string: Gets or sets the name of the Dsc configuration.
 
-## DscNodeConfigurationCreateOrUpdateParametersProperties
+## DscNodeConfigurationCreateOrUpdateParametersPropertiesOrDscNodeConfigurationProperties
 ### Properties
 * **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required): Gets or sets the configuration of the node.
 * **creationTime**: string (ReadOnly): Gets or sets creation time.
 * **incrementNodeConfigurationBuild**: bool: If a new build version of NodeConfiguration is required.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
 * **nodeCount**: int (ReadOnly): Number of nodes with this node configuration assigned
-* **source**: [ContentSource](#contentsource) (Required): Gets or sets the source.
+* **source**: [ContentSourceOrDscNodeConfigurationPropertiesSource](#contentsourceordscnodeconfigurationpropertiessource) (Required): Gets or sets the source.
 
 ## DscNodeConfigurationCreateOrUpdateParametersTags
 ### Properties
@@ -338,7 +338,7 @@
 ### Additional Properties
 * **Additional Properties Type**: [ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties](#componentssgqdofschemasidentitypropertiesuserassignedidentitiesadditionalproperties)
 
-## JobScheduleCreateProperties
+## JobScheduleCreatePropertiesOrJobScheduleProperties
 ### Properties
 * **jobScheduleId**: string (ReadOnly): Gets or sets the id of job schedule.
 * **parameters**: [JobScheduleCreatePropertiesParameters](#jobschedulecreatepropertiesparameters): Gets or sets a list of job properties.
@@ -359,7 +359,7 @@
 
 ## KeyListResult
 ### Properties
-* **keys**: [Key](#key)[] (ReadOnly): Lists the automation keys.
+* **keys**: [Key](#key)[]: Lists the automation keys.
 
 ## KeyVaultProperties
 ### Properties
@@ -372,7 +372,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ModuleCreateOrUpdateProperties
+## ModuleCreateOrUpdatePropertiesOrModuleProperties
 ### Properties
 * **activityCount**: int (ReadOnly): Gets or sets the activity count of the module.
 * **contentLink**: [ContentLink](#contentlink) (Required): Gets or sets the module content link.
@@ -388,14 +388,14 @@
 
 ## ModuleErrorInfo
 ### Properties
-* **code**: string (ReadOnly): Gets or sets the error code.
-* **message**: string (ReadOnly): Gets or sets the error message.
+* **code**: string: Gets or sets the error code.
+* **message**: string: Gets or sets the error message.
 
 ## PrivateEndpointConnection
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource Id for the resource
 * **name**: string (ReadOnly): The name of the resource
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Resource properties.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: string (ReadOnly): The type of the resource.
 
 ## PrivateEndpointConnectionProperties
@@ -419,7 +419,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## PythonPackageCreateProperties
+## PythonPackageCreatePropertiesOrModuleProperties
 ### Properties
 * **activityCount**: int (ReadOnly): Gets or sets the activity count of the module.
 * **contentLink**: [ContentLink](#contentlink) (Required): Gets or sets the module content link.
@@ -441,7 +441,7 @@
 ### Properties
 * **name**: string: Gets or sets the name of the Schedule.
 
-## ScheduleCreateOrUpdateProperties
+## ScheduleCreateOrUpdatePropertiesOrScheduleProperties
 ### Properties
 * **advancedSchedule**: [AdvancedSchedule](#advancedschedule): Gets or sets the AdvancedSchedule.
 * **creationTime**: string (ReadOnly): Gets or sets the creation time.
@@ -464,7 +464,7 @@
 * **family**: string: Gets or sets the SKU family.
 * **name**: 'Basic' | 'Free' | string (Required): Gets or sets the SKU name of the account.
 
-## SourceControlCreateOrUpdateProperties
+## SourceControlCreateOrUpdatePropertiesOrSourceControlProperties
 ### Properties
 * **autoSync**: bool: The auto async of the source control. Default is false.
 * **branch**: string: The repo branch of the source control. Include branch as empty string for VsoTfvc.
@@ -479,11 +479,11 @@
 
 ## SourceControlSecurityTokenProperties
 ### Properties
-* **accessToken**: string (WriteOnly): The access token.
-* **refreshToken**: string (WriteOnly): The refresh token.
-* **tokenType**: 'Oauth' | 'PersonalAccessToken' | string (WriteOnly): The token type. Must be either PersonalAccessToken or Oauth.
+* **accessToken**: string: The access token.
+* **refreshToken**: string: The refresh token.
+* **tokenType**: 'Oauth' | 'PersonalAccessToken' | string: The token type. Must be either PersonalAccessToken or Oauth.
 
-## SourceControlSyncJobCreateProperties
+## SourceControlSyncJobCreatePropertiesOrSourceControlSyncJobByIdProperties
 ### Properties
 * **commitId**: string (Required, WriteOnly): The commit id of the source control sync job. If not syncing to a commitId, enter an empty string.
 * **creationTime**: string (ReadOnly): The creation time of the job.
@@ -494,7 +494,7 @@
 * **startTime**: string (ReadOnly): The start time of the job.
 * **syncType**: 'FullSync' | 'PartialSync' | string (ReadOnly): The sync type.
 
-## VariableCreateOrUpdateProperties
+## VariableCreateOrUpdatePropertiesOrVariableProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Gets or sets the creation time.
 * **description**: string: Gets or sets the description of the variable.

@@ -64,7 +64,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecordSet' has a property 'id' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecordSet' has a property 'name' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecordSet' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
-info    | autorest.bicep took 13ms
+info    | autorest.bicep took 12ms
 info    | Processing batch task - {"tag":"microsoft.network-2020-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -177,4 +177,4 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecordSet' has a prope
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecordSet' has a property 'name' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecordSet' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
 info    | autorest.bicep took 3ms
-info    | Autorest completed in 9.37s. 6 files generated.
+info    | Autorest completed in 7.38s. 6 files generated.

@@ -17,7 +17,7 @@ warning | PreCheck/SchemaMissingType | The schema 'customLocationOperationValueD
 warning | PreCheck/SchemaMissingType | The schema 'customLocationOperationsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/extendedlocation/resource-manager/Microsoft.ExtendedLocation/preview/2021-03-15-preview/customlocations.json:593:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 15ms
 info    | Processing batch task - {"tag":"microsoft.extendedlocation-2021-08-15"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -31,11 +31,11 @@ warning | PreCheck/SchemaMissingType | The schema 'customLocationOperationValueD
 warning | PreCheck/SchemaMissingType | The schema 'customLocationOperationsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/extendedlocation/resource-manager/Microsoft.ExtendedLocation/stable/2021-08-15/customlocations.json:625:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.extendedlocation-2021-08-31-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 2ms
-info    | Autorest completed in 7.31s. 6 files generated.
+info    | Autorest completed in 5.99s. 6 files generated.

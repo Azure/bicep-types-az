@@ -487,14 +487,14 @@ Backup is VMAppContainer
 
 ## ResourceGuardOperationDetail
 ### Properties
-* **defaultResourceRequest**: string (ReadOnly)
-* **vaultCriticalOperation**: string (ReadOnly)
+* **defaultResourceRequest**: string
+* **vaultCriticalOperation**: string
 
 ## ResourceGuardProxyBase
 ### Properties
-* **lastUpdatedTime**: string (ReadOnly)
-* **resourceGuardOperationDetails**: [ResourceGuardOperationDetail](#resourceguardoperationdetail)[] (ReadOnly)
-* **resourceGuardResourceId**: string (ReadOnly)
+* **lastUpdatedTime**: string
+* **resourceGuardOperationDetails**: [ResourceGuardOperationDetail](#resourceguardoperationdetail)[]
+* **resourceGuardResourceId**: string
 
 ## ResourceHealthDetails
 ### Properties

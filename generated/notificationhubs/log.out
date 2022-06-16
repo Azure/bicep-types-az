@@ -230,4 +230,4 @@ warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefine
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/notificationhubs/resource-manager/Microsoft.NotificationHubs/stable/2014-09-01/notificationhubs.json:1750:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 3ms
-info    | Autorest completed in 9s. 6 files generated.
+info    | Autorest completed in 7.23s. 6 files generated.

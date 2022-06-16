@@ -24,5 +24,5 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorBody' with an undefined 
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/EnterpriseKnowledgeGraph/resource-manager/Microsoft.EnterpriseKnowledgeGraph/preview/2018-12-03/EnterpriseKnowledgeGraphSwagger.json:460:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 8ms
-info    | Autorest completed in 4.25s. 2 files generated.
+info    | autorest.bicep took 7ms
+info    | Autorest completed in 3.45s. 2 files generated.

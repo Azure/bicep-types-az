@@ -6,10 +6,10 @@
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PutAliasRequestProperties](#putaliasrequestproperties) (Required): Put alias request properties.
+* **properties**: [PutAliasRequestPropertiesOrPutAliasResponseProperties](#putaliasrequestpropertiesorputaliasresponseproperties) (Required): Put alias request properties.
 * **type**: 'Microsoft.Subscription/aliases' (ReadOnly, DeployTimeConstant): The resource type
 
-## PutAliasRequestProperties
+## PutAliasRequestPropertiesOrPutAliasResponseProperties
 ### Properties
 * **billingScope**: string (WriteOnly): Determines whether subscription is fieldLed, partnerLed or LegacyEA
 * **displayName**: string (WriteOnly): The friendly name of the subscription.

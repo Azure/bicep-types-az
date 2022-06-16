@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DiskPoolCreateProperties](#diskpoolcreateproperties) (Required): Properties for Disk pool create request.
+* **properties**: [DiskPoolCreatePropertiesOrDiskPoolProperties](#diskpoolcreatepropertiesordiskpoolproperties) (Required): Properties for Disk pool create request.
 * **systemData**: [SystemMetadata](#systemmetadata) (ReadOnly): Resource metadata required by ARM RPC
 * **tags**: [DiskPoolCreateTags](#diskpoolcreatetags): Resource tags.
 * **type**: 'Microsoft.StoragePool/diskPools' (ReadOnly, DeployTimeConstant): The resource type
@@ -18,7 +18,7 @@
 * **apiVersion**: '2020-03-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IscsiTargetCreateProperties](#iscsitargetcreateproperties) (Required): Properties for iSCSI target create request.
+* **properties**: [IscsiTargetCreatePropertiesOrIscsiTargetProperties](#iscsitargetcreatepropertiesoriscsitargetproperties) (Required): Properties for iSCSI target create request.
 * **type**: 'Microsoft.StoragePool/diskPools/iscsiTargets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Acl
@@ -36,7 +36,7 @@
 ### Properties
 * **id**: string (Required): Unique Azure Resource ID of the Managed Disk.
 
-## DiskPoolCreateProperties
+## DiskPoolCreatePropertiesOrDiskPoolProperties
 ### Properties
 * **additionalCapabilities**: string[]: List of additional capabilities for a Disk pool.
 * **availabilityZones**: string[] (Required): Logical zone for Disk pool resource; example: ["1"].
@@ -56,12 +56,12 @@
 * **managedDiskAzureResourceId**: string (Required): Azure Resource ID of the Managed Disk.
 * **name**: string (Required): User defined name for iSCSI LUN; example: "lun0"
 
-## IscsiTargetCreateProperties
+## IscsiTargetCreatePropertiesOrIscsiTargetProperties
 ### Properties
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the operation on the resource.
 * **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' | string (ReadOnly): Operational status of the iSCSI target.
 * **targetIqn**: string: iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
-* **tpgs**: [TargetPortalGroupCreate](#targetportalgroupcreate)[] (Required): List of iSCSI target portal groups. Can have 1 portal group at most.
+* **tpgs**: [TargetPortalGroupCreateOrTargetPortalGroup](#targetportalgroupcreateortargetportalgroup)[] (Required): List of iSCSI target portal groups. Can have 1 portal group at most.
 
 ## IscsiTargetCredentials
 ### Properties
@@ -70,14 +70,14 @@
 
 ## SystemMetadata
 ### Properties
-* **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
-* **createdBy**: string (ReadOnly): A string identifier for the identity that created the resource.
-* **createdByType**: string (ReadOnly): The type of identity that created the resource: user, application, managedIdentity.
-* **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC).
-* **lastModifiedBy**: string (ReadOnly): A string identifier for the identity that last modified the resource.
-* **lastModifiedByType**: string (ReadOnly): The type of identity that last modified the resource: user, application, managedIdentity.
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: A string identifier for the identity that created the resource.
+* **createdByType**: string: The type of identity that created the resource: user, application, managedIdentity.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC).
+* **lastModifiedBy**: string: A string identifier for the identity that last modified the resource.
+* **lastModifiedByType**: string: The type of identity that last modified the resource: user, application, managedIdentity.
 
-## TargetPortalGroupCreate
+## TargetPortalGroupCreateOrTargetPortalGroup
 ### Properties
 * **acls**: [Acl](#acl)[] (Required): Access Control List (ACL) for an iSCSI target portal group.
 * **attributes**: [Attributes](#attributes) (Required): Attributes of an iSCSI target portal group.

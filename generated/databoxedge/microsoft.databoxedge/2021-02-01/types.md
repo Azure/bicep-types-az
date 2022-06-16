@@ -307,11 +307,11 @@
 
 ## DCAccessCode
 ### Properties
-* **properties**: [DCAccessCodeProperties](#dcaccesscodeproperties) (ReadOnly): DCAccessCode properties.
+* **properties**: [DCAccessCodeProperties](#dcaccesscodeproperties): DCAccessCode properties.
 
 ## DCAccessCodeProperties
 ### Properties
-* **authCode**: string (ReadOnly): DCAccess Code for the Self Managed shipment.
+* **authCode**: string: DCAccess Code for the Self Managed shipment.
 
 ## DiagnosticRemoteSupportSettingsProperties
 ### Properties

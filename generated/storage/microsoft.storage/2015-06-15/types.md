@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters): The parameters used to create the storage account.
+* **properties**: [StorageAccountPropertiesCreateParametersOrStorageAccountProperties](#storageaccountpropertiescreateparametersorstorageaccountproperties): The parameters used to create the storage account.
 * **tags**: [StorageAccountCreateParametersTags](#storageaccountcreateparameterstags): A list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,15 +18,15 @@
 
 ## CustomDomain
 ### Properties
-* **name**: string (ReadOnly): The custom domain name. Name is the CNAME source.
-* **useSubDomainName**: bool (ReadOnly): Indicates whether indirect CName validation is enabled. Default value is false. This should only be set on updates
+* **name**: string (Required): The custom domain name. Name is the CNAME source.
+* **useSubDomainName**: bool: Indicates whether indirect CName validation is enabled. Default value is false. This should only be set on updates
 
 ## Endpoints
 ### Properties
-* **blob**: string (ReadOnly): The blob endpoint.
-* **file**: string (ReadOnly): The file endpoint.
-* **queue**: string (ReadOnly): The queue endpoint.
-* **table**: string (ReadOnly): The table endpoint.
+* **blob**: string: The blob endpoint.
+* **file**: string: The file endpoint.
+* **queue**: string: The queue endpoint.
+* **table**: string: The table endpoint.
 
 ## StorageAccountCreateParametersTags
 ### Properties
@@ -35,10 +35,10 @@
 
 ## StorageAccountKeys
 ### Properties
-* **key1**: string (ReadOnly): The value of key 1.
-* **key2**: string (ReadOnly): The value of key 2.
+* **key1**: string: The value of key 1.
+* **key2**: string: The value of key 2.
 
-## StorageAccountPropertiesCreateParameters
+## StorageAccountPropertiesCreateParametersOrStorageAccountProperties
 ### Properties
 * **accountType**: 'Premium_LRS' | 'Standard_GRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_ZRS' (Required): The sku name. Required for account creation; optional for update. Note that in older versions, sku name was called accountType.
 * **creationTime**: string (ReadOnly): The creation date and time of the storage account in UTC.

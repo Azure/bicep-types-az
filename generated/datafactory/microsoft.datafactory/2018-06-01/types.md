@@ -100,7 +100,7 @@
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): Core resource properties
+* **properties**: [PrivateLinkConnectionApprovalRequestOrRemotePrivateEndpointConnection](#privatelinkconnectionapprovalrequestorremoteprivateendpointconnection): Core resource properties
 * **type**: 'Microsoft.DataFactory/factories/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/triggers@2018-06-01
@@ -3467,8 +3467,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## IntegrationRuntimeAuthKeys
 ### Properties
-* **authKey1**: string (ReadOnly): The primary integration runtime authentication key.
-* **authKey2**: string (ReadOnly): The secondary integration runtime authentication key.
+* **authKey1**: string: The primary integration runtime authentication key.
+* **authKey2**: string: The secondary integration runtime authentication key.
 
 ## IntegrationRuntimeComputeProperties
 ### Properties
@@ -4644,13 +4644,13 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **username**: any: The user name used to connect to the Presto server.
 * **useSystemTrustStore**: any: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
 
-## PrivateEndpoint
+## PrivateEndpointOrArmIdWrapper
 ### Properties
 * **id**: string: The resource Id for private endpoint
 
-## PrivateLinkConnectionApprovalRequest
+## PrivateLinkConnectionApprovalRequestOrRemotePrivateEndpointConnection
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The resource of private endpoint.
+* **privateEndpoint**: [PrivateEndpointOrArmIdWrapper](#privateendpointorarmidwrapper): The resource of private endpoint.
 * **privateLinkServiceConnectionState**: [PrivateLinkConnectionState](#privatelinkconnectionstate): The state of a private link connection
 * **provisioningState**: string (ReadOnly)
 

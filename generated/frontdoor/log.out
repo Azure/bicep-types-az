@@ -77,7 +77,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleDefinition' with a
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleExclusion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:818:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 17ms
+info    | autorest.bicep took 12ms
 info    | Processing batch task - {"tag":"microsoft.network-2019-11-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -126,7 +126,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'Profile' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from Profile
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'Experiment' has a property 'name' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Experiment
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PreconfiguredEndpoint' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from PreconfiguredEndpoint
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.network-2020-05-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -214,7 +214,7 @@ warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefine
 warning | PreCheck/SchemaMissingType | The schema 'TagsObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/network.json:138:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.network-2020-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -334,7 +334,7 @@ warning | PreCheck/SchemaMissingType | The schema 'RulesEngineProperties' with a
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngineRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:2073:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.network-2020-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -422,7 +422,7 @@ warning | PreCheck/SchemaMissingType | The schema 'RulesEngineProperties' with a
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngineRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:2063:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.network-2019-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -473,7 +473,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleExclusion' with an
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:764:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.network-2019-05-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -670,7 +670,7 @@ warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefine
 warning | PreCheck/SchemaMissingType | The schema 'TagsObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/network.json:138:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.network-2018-08-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -772,7 +772,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'MatchCondition' (5 
   - x-ms-enum: <none> => {"name":"MatchCondition","modelAsString":true}
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'MatchCondition' -> 'MatchConditionAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'WebApplicationFirewallPolicy' -> 'WebApplicationFirewallPolicyAutoGenerated'
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.network-2019-03-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -821,5 +821,5 @@ warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleDefinition' with a
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:716:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 4ms
-info    | Autorest completed in 24.29s. 22 files generated.
+info    | autorest.bicep took 2ms
+info    | Autorest completed in 18.93s. 22 files generated.

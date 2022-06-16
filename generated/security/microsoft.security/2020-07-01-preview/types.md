@@ -14,5 +14,5 @@ Leave this field empty it LatestScan == true.
 
 ## RuleResultsProperties
 ### Properties
-* **results**: string[][] (ReadOnly): Expected results in the baseline.
+* **results**: string[][]: Expected results in the baseline.
 

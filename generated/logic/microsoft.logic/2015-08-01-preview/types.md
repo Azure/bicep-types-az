@@ -174,7 +174,7 @@
 
 ## CallbackUrl
 ### Properties
-* **value**: string (ReadOnly): The URL value.
+* **value**: string: The URL value.
 
 ## EdifactAcknowledgementSettings
 ### Properties
@@ -465,7 +465,7 @@
 
 ## ListCallbackUrlParameters
 ### Properties
-* **NotAfter**: string (WriteOnly): The expiry time.
+* **NotAfter**: string: The expiry time.
 
 ## PartnerContent
 ### Properties

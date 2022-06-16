@@ -454,7 +454,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 
 ## LabVhd
 ### Properties
-* **id**: string (ReadOnly): The URI to the VHD.
+* **id**: string: The URI to the VHD.
 
 ## LabVirtualMachineCreationParameter
 ### Properties
@@ -685,13 +685,13 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 
 ## ResponseWithContinuationLabVhd
 ### Properties
-* **nextLink**: string (ReadOnly): Link for next set of results.
-* **value**: [LabVhd](#labvhd)[] (ReadOnly): Results of the list operation.
+* **nextLink**: string: Link for next set of results.
+* **value**: [LabVhd](#labvhd)[]: Results of the list operation.
 
 ## ResponseWithContinuationSchedule
 ### Properties
-* **nextLink**: string (ReadOnly): Link for next set of results.
-* **value**: [Schedule](#schedule)[] (ReadOnly): Results of the list operation.
+* **nextLink**: string: Link for next set of results.
+* **value**: [Schedule](#schedule)[]: Results of the list operation.
 
 ## Schedule
 ### Properties

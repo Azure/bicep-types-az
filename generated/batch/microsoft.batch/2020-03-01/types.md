@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The region in which to create the account.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BatchAccountCreateProperties](#batchaccountcreateproperties): The properties of the Batch account.
+* **properties**: [BatchAccountCreatePropertiesOrBatchAccountProperties](#batchaccountcreatepropertiesorbatchaccountproperties): The properties of the Batch account.
 * **tags**: [BatchAccountCreateParametersTags](#batchaccountcreateparameterstags): The user-specified tags associated with the account.
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -38,7 +38,7 @@
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CertificateCreateOrUpdateProperties](#certificatecreateorupdateproperties): The properties associated with the certificate.
+* **properties**: [CertificateCreateOrUpdatePropertiesOrCertificateProperties](#certificatecreateorupdatepropertiesorcertificateproperties): The properties associated with the certificate.
 * **type**: 'Microsoft.Batch/batchAccounts/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Batch/batchAccounts/pools@2020-03-01
@@ -92,7 +92,7 @@
 * **evaluationInterval**: string: If omitted, the default value is 15 minutes (PT15M).
 * **formula**: string (Required): A formula for the desired number of compute nodes in the pool.
 
-## AutoStorageBaseProperties
+## AutoStorageBasePropertiesOrAutoStorageProperties
 ### Properties
 * **lastKeySync**: string (ReadOnly): The UTC time at which storage keys were last synchronized with the Batch account.
 * **storageAccountId**: string (Required): The resource ID of the storage account to be used for auto-storage account.
@@ -124,11 +124,11 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## BatchAccountCreateProperties
+## BatchAccountCreatePropertiesOrBatchAccountProperties
 ### Properties
 * **accountEndpoint**: string (ReadOnly): The account endpoint used to interact with the Batch service.
 * **activeJobAndJobScheduleQuota**: int (ReadOnly): The active job and job schedule quota for the Batch account.
-* **autoStorage**: [AutoStorageBaseProperties](#autostoragebaseproperties): The properties related to the auto-storage account.
+* **autoStorage**: [AutoStorageBasePropertiesOrAutoStorageProperties](#autostoragebasepropertiesorautostorageproperties): The properties related to the auto-storage account.
 * **dedicatedCoreQuota**: int (ReadOnly): For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
 * **dedicatedCoreQuotaPerVMFamily**: [VirtualMachineFamilyCoreQuota](#virtualmachinefamilycorequota)[] (ReadOnly): A list of the dedicated core quota per Virtual Machine family for the Batch account. For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
 * **dedicatedCoreQuotaPerVMFamilyEnforced**: bool (ReadOnly): Batch is transitioning its core quota system for dedicated cores to be enforced per Virtual Machine family. During this transitional phase, the dedicated core quota per Virtual Machine family may not yet be enforced. If this flag is false, dedicated core quota is enforced via the old dedicatedCoreQuota property on the account and does not consider Virtual Machine family. If this flag is true, dedicated core quota is enforced via the dedicatedCoreQuotaPerVMFamily property on the account, and the old dedicatedCoreQuota does not apply.
@@ -147,7 +147,7 @@
 * **primary**: string (ReadOnly): The primary key associated with the account.
 * **secondary**: string (ReadOnly): The secondary key associated with the account.
 
-## CertificateCreateOrUpdateProperties
+## CertificateCreateOrUpdatePropertiesOrCertificateProperties
 ### Properties
 * **data**: string (Required, WriteOnly): The maximum size is 10KB.
 * **deleteCertificateError**: [DeleteCertificateError](#deletecertificateerror) (ReadOnly): This is only returned when the certificate provisioningState is 'Failed'.
@@ -211,10 +211,10 @@
 
 ## DeleteCertificateError
 ### Properties
-* **code**: string (ReadOnly): An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
-* **details**: [DeleteCertificateError](#deletecertificateerror)[] (ReadOnly): A list of additional details about the error.
-* **message**: string (ReadOnly): A message describing the error, intended to be suitable for display in a user interface.
-* **target**: string (ReadOnly): The target of the particular error. For example, the name of the property in error.
+* **code**: string (Required): An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+* **details**: [DeleteCertificateError](#deletecertificateerror)[]: A list of additional details about the error.
+* **message**: string (Required): A message describing the error, intended to be suitable for display in a user interface.
+* **target**: string: The target of the particular error. For example, the name of the property in error.
 
 ## DeploymentConfiguration
 ### Properties
@@ -346,20 +346,20 @@
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
 * **id**: string (ReadOnly): The ID of the resource.
 * **name**: string (ReadOnly): The name of the resource.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): The properties associated with the private endpoint connection.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The properties associated with the private endpoint connection.
 * **type**: string (ReadOnly): The type of the resource.
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The private endpoint of the private endpoint connection.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly): The private link service connection state of the private endpoint connection
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The private endpoint of the private endpoint connection.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): The private link service connection state of the private endpoint connection
 * **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the private endpoint connection.
 
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **actionRequired**: string (ReadOnly): Action required on the private connection state
-* **description**: string (ReadOnly): Description of the private Connection state
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly): The status of the Batch private endpoint connection
+* **description**: string: Description of the private Connection state
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (Required): The status of the Batch private endpoint connection
 
 ## PublicIPAddressConfiguration
 ### Properties

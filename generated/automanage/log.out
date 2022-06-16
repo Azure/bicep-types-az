@@ -18,7 +18,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 13ms
+info    | autorest.bicep took 11ms
 info    | Processing batch task - {"tag":"microsoft.automanage-2021-04-30-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -75,4 +75,4 @@ warning | PreCheck/SchemaMissingType | The schema 'OperationList' with an undefi
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 3ms
-info    | Autorest completed in 9.61s. 6 files generated.
+info    | Autorest completed in 7.97s. 6 files generated.

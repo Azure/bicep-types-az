@@ -6,7 +6,7 @@
 * **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConsoleCreateProperties](#consolecreateproperties) (Required): Cloud shell properties for creating a console.
+* **properties**: [ConsoleCreatePropertiesOrConsoleProperties](#consolecreatepropertiesorconsoleproperties) (Required): Cloud shell properties for creating a console.
 * **type**: 'Microsoft.Portal/consoles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Portal/locations/consoles@2018-10-01
@@ -36,7 +36,7 @@
 * **properties**: [UserProperties](#userproperties) (Required): The cloud shell user settings properties.
 * **type**: 'Microsoft.Portal/userSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## ConsoleCreateProperties
+## ConsoleCreatePropertiesOrConsoleProperties
 ### Properties
 * **osType**: 'Linux' | 'Windows' | string (Required): The operating system type of the cloud shell.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Failed' | 'NotSpecified' | 'Pending' | 'Repairing' | 'Succeeded' | 'Updating' | string: Provisioning state of the console.
@@ -44,9 +44,9 @@
 
 ## ConsoleProperties
 ### Properties
-* **osType**: 'Linux' | 'Windows' | string (ReadOnly): The operating system type of the cloud shell.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Failed' | 'NotSpecified' | 'Pending' | 'Repairing' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the console.
-* **uri**: string (ReadOnly): Uri of the console.
+* **osType**: 'Linux' | 'Windows' | string (Required): The operating system type of the cloud shell.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Failed' | 'NotSpecified' | 'Pending' | 'Repairing' | 'Succeeded' | 'Updating' | string (Required): Provisioning state of the console.
+* **uri**: string (Required): Uri of the console.
 
 ## StorageProfile
 ### Properties

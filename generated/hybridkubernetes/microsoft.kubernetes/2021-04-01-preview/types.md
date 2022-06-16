@@ -61,8 +61,8 @@
 
 ## ListClusterUserCredentialsProperties
 ### Properties
-* **authenticationMethod**: 'AAD' | 'Token' | string (Required, WriteOnly): The mode of client authentication.
-* **clientProxy**: bool (Required, WriteOnly): Boolean value to indicate whether the request is for client side proxy or not
+* **authenticationMethod**: 'AAD' | 'Token' | string (Required): The mode of client authentication.
+* **clientProxy**: bool (Required): Boolean value to indicate whether the request is for client side proxy or not
 
 ## SystemData
 ### Properties

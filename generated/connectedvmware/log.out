@@ -13,5 +13,5 @@ warning | PreCheck/SchemaMissingType | The schema 'MachineExtensionProperties-in
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 24ms
-info    | Autorest completed in 6.87s. 2 files generated.
+info    | autorest.bicep took 18ms
+info    | Autorest completed in 5.99s. 2 files generated.

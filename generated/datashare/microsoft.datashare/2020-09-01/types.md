@@ -444,8 +444,8 @@ invitations to specific users or applications in an AD tenant.
 
 ## ScheduledSourceShareSynchronizationSettingProperties
 ### Properties
-* **recurrenceInterval**: 'Day' | 'Hour' | string (ReadOnly): Recurrence Interval
-* **synchronizationTime**: string (ReadOnly): Synchronization time
+* **recurrenceInterval**: 'Day' | 'Hour' | string: Recurrence Interval
+* **synchronizationTime**: string: Synchronization time
 
 ## ScheduledSynchronizationSettingProperties
 ### Properties
@@ -495,36 +495,36 @@ invitations to specific users or applications in an AD tenant.
 
 ## ShareSubscriptionSynchronization
 ### Properties
-* **durationMs**: int (ReadOnly, WriteOnly): Synchronization duration
-* **endTime**: string (ReadOnly, WriteOnly): End time of synchronization
-* **message**: string (ReadOnly, WriteOnly): message of Synchronization
-* **startTime**: string (ReadOnly, WriteOnly): start time of synchronization
-* **status**: string (ReadOnly, WriteOnly): Raw Status
-* **synchronizationId**: string (Required, WriteOnly): Synchronization id
-* **synchronizationMode**: 'FullSync' | 'Incremental' | string (ReadOnly, WriteOnly): Synchronization Mode
+* **durationMs**: int (ReadOnly): Synchronization duration
+* **endTime**: string (ReadOnly): End time of synchronization
+* **message**: string (ReadOnly): message of Synchronization
+* **startTime**: string (ReadOnly): start time of synchronization
+* **status**: string (ReadOnly): Raw Status
+* **synchronizationId**: string (Required): Synchronization id
+* **synchronizationMode**: 'FullSync' | 'Incremental' | string (ReadOnly): Synchronization Mode
 
 ## ShareSubscriptionSynchronizationList
 ### Properties
-* **nextLink**: string (ReadOnly): The Url of next result page.
-* **value**: [ShareSubscriptionSynchronization](#sharesubscriptionsynchronization)[] (ReadOnly): Collection of items of type DataTransferObjects.
+* **nextLink**: string: The Url of next result page.
+* **value**: [ShareSubscriptionSynchronization](#sharesubscriptionsynchronization)[] (Required): Collection of items of type DataTransferObjects.
 
 ## ShareSynchronization
 ### Properties
-* **consumerEmail**: string (WriteOnly): Email of the user who created the synchronization
-* **consumerName**: string (WriteOnly): Name of the user who created the synchronization
-* **consumerTenantName**: string (WriteOnly): Tenant name of the consumer who created the synchronization
-* **durationMs**: int (WriteOnly): synchronization duration
-* **endTime**: string (WriteOnly): End time of synchronization
-* **message**: string (WriteOnly): message of synchronization
-* **startTime**: string (WriteOnly): start time of synchronization
-* **status**: string (WriteOnly): Raw Status
-* **synchronizationId**: string (WriteOnly): Synchronization id
-* **synchronizationMode**: 'FullSync' | 'Incremental' | string (ReadOnly, WriteOnly): Synchronization mode
+* **consumerEmail**: string: Email of the user who created the synchronization
+* **consumerName**: string: Name of the user who created the synchronization
+* **consumerTenantName**: string: Tenant name of the consumer who created the synchronization
+* **durationMs**: int: synchronization duration
+* **endTime**: string: End time of synchronization
+* **message**: string: message of synchronization
+* **startTime**: string: start time of synchronization
+* **status**: string: Raw Status
+* **synchronizationId**: string: Synchronization id
+* **synchronizationMode**: 'FullSync' | 'Incremental' | string (ReadOnly): Synchronization mode
 
 ## ShareSynchronizationList
 ### Properties
-* **nextLink**: string (ReadOnly): The Url of next result page.
-* **value**: [ShareSynchronization](#sharesynchronization)[] (ReadOnly): Collection of items of type DataTransferObjects.
+* **nextLink**: string: The Url of next result page.
+* **value**: [ShareSynchronization](#sharesynchronization)[] (Required): Collection of items of type DataTransferObjects.
 
 ## SourceShareSynchronizationSetting
 * **Discriminator**: kind
@@ -533,13 +533,13 @@ invitations to specific users or applications in an AD tenant.
 ### ScheduledSourceSynchronizationSetting
 #### Properties
 * **kind**: 'ScheduleBased' (Required): Kind of synchronization setting on share.
-* **properties**: [ScheduledSourceShareSynchronizationSettingProperties](#scheduledsourcesharesynchronizationsettingproperties) (ReadOnly): Properties of scheduled synchronization
+* **properties**: [ScheduledSourceShareSynchronizationSettingProperties](#scheduledsourcesharesynchronizationsettingproperties): Properties of scheduled synchronization
 
 
 ## SourceShareSynchronizationSettingList
 ### Properties
-* **nextLink**: string (ReadOnly): The Url of next result page.
-* **value**: [SourceShareSynchronizationSetting](#sourcesharesynchronizationsetting)[] (ReadOnly): Collection of items of type DataTransferObjects.
+* **nextLink**: string: The Url of next result page.
+* **value**: [SourceShareSynchronizationSetting](#sourcesharesynchronizationsetting)[] (Required): Collection of items of type DataTransferObjects.
 
 ## SqlDBTableDataSetMappingProperties
 ### Properties
@@ -609,13 +609,13 @@ invitations to specific users or applications in an AD tenant.
 
 ## SynchronizationDetailsList
 ### Properties
-* **nextLink**: string (ReadOnly): The Url of next result page.
-* **value**: [SynchronizationDetails](#synchronizationdetails)[] (ReadOnly): Collection of items of type DataTransferObjects.
+* **nextLink**: string: The Url of next result page.
+* **value**: [SynchronizationDetails](#synchronizationdetails)[] (Required): Collection of items of type DataTransferObjects.
 
 ## SynchronizationDetailsList
 ### Properties
-* **nextLink**: string (ReadOnly): The Url of next result page.
-* **value**: [SynchronizationDetails](#synchronizationdetails)[] (ReadOnly): Collection of items of type DataTransferObjects.
+* **nextLink**: string: The Url of next result page.
+* **value**: [SynchronizationDetails](#synchronizationdetails)[] (Required): Collection of items of type DataTransferObjects.
 
 ## SystemData
 ### Properties

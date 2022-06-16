@@ -41,8 +41,8 @@
 
 ## SharedKeys
 ### Properties
-* **primarySharedKey**: string (ReadOnly): The primary shared key of a workspace.
-* **secondarySharedKey**: string (ReadOnly): The secondary shared key of a workspace.
+* **primarySharedKey**: string: The primary shared key of a workspace.
+* **secondarySharedKey**: string: The secondary shared key of a workspace.
 
 ## StorageAccount
 ### Properties

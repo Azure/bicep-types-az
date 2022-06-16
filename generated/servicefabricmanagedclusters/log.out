@@ -64,7 +64,7 @@ warning | PreCheck/EmptyParentSchemaWarning | Schema 'ManagedCluster' has an all
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 20ms
+info    | autorest.bicep took 18ms
 info    | Processing batch task - {"tag":"microsoft.servicefabric-2022-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -108,7 +108,7 @@ warning | PreCheck/EmptyParentSchemaWarning | Schema 'ManagedCluster' has an all
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 11ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.servicefabric-2021-11-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -152,7 +152,7 @@ warning | PreCheck/EmptyParentSchemaWarning | Schema 'ManagedCluster' has an all
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 11ms
+info    | autorest.bicep took 9ms
 info    | Processing batch task - {"tag":"microsoft.servicefabric-2021-07-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -196,7 +196,7 @@ warning | PreCheck/EmptyParentSchemaWarning | Schema 'ManagedCluster' has an all
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 18ms
+info    | autorest.bicep took 20ms
 info    | Processing batch task - {"tag":"microsoft.servicefabric-2021-05-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -390,7 +390,7 @@ warning | PreCheck/EmptyParentSchemaWarning | Schema 'ManagedCluster' has an all
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.servicefabric-2021-01-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -580,5 +580,5 @@ warning | PreCheck/EmptyParentSchemaWarning | Schema 'ManagedCluster' has an all
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 7ms
-info    | Autorest completed in 29.37s. 12 files generated.
+info    | autorest.bicep took 10ms
+info    | Autorest completed in 24.35s. 12 files generated.

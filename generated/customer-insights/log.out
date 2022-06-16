@@ -196,7 +196,7 @@ warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an un
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/customer-insights/resource-manager/Microsoft.CustomerInsights/stable/2017-04-26/customer-insights.json:6483:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 20ms
+info    | autorest.bicep took 18ms
 info    | Processing batch task - {"tag":"microsoft.customerinsights-2017-01-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -371,5 +371,5 @@ warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an un
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/customer-insights/resource-manager/Microsoft.CustomerInsights/stable/2017-01-01/customer-insights.json:5661:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 9ms
-info    | Autorest completed in 11.2s. 4 files generated.
+info    | autorest.bicep took 8ms
+info    | Autorest completed in 9.19s. 4 files generated.

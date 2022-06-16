@@ -17,7 +17,7 @@ warning | PreCheck/SchemaMissingType | The schema 'HybridUseBenefitModel' with a
 warning | PreCheck/SchemaMissingType | The schema 'HybridUseBenefitProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/softwareplan/resource-manager/Microsoft.SoftwarePlan/stable/2019-12-01/softwareplan.json:452:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.softwareplan-2019-06-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -30,5 +30,5 @@ warning | PreCheck/SchemaMissingType | The schema 'HybridUseBenefitModel' with a
 warning | PreCheck/SchemaMissingType | The schema 'HybridUseBenefitProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/softwareplan/resource-manager/Microsoft.SoftwarePlan/preview/2019-06-01-preview/softwareplan.json:452:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Autorest completed in 5.29s. 4 files generated.
+info    | autorest.bicep took 3ms
+info    | Autorest completed in 4.48s. 4 files generated.

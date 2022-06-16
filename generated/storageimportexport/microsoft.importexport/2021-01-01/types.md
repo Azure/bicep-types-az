@@ -27,8 +27,8 @@
 
 ## DriveBitLockerKey
 ### Properties
-* **bitLockerKey**: string (ReadOnly): BitLocker recovery key or password
-* **driveId**: string (ReadOnly): Drive ID
+* **bitLockerKey**: string: BitLocker recovery key or password
+* **driveId**: string: Drive ID
 
 ## DriveStatus
 ### Properties
@@ -63,13 +63,13 @@
 
 ## GetBitLockerKeysResponse
 ### Properties
-* **value**: [DriveBitLockerKey](#drivebitlockerkey)[] (ReadOnly): drive status
+* **value**: [DriveBitLockerKey](#drivebitlockerkey)[]: drive status
 
 ## IdentityDetails
 ### Properties
 * **principalId**: string (ReadOnly): Specifies the principal id for the identity for the job.
 * **tenantId**: string (ReadOnly): Specifies the tenant id for the identity for the job.
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string (ReadOnly): The type of identity
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string: The type of identity
 
 ## JobDetails
 ### Properties
@@ -130,10 +130,10 @@
 
 ## SystemData
 ### Properties
-* **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
-* **createdBy**: string (ReadOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
-* **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that last modified the resource.
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 

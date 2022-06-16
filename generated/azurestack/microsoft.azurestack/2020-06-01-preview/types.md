@@ -9,7 +9,7 @@
 * **kind**: string (ReadOnly): The kind of the resource.
 * **location**: 'global' | string (Required): Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [LinkedSubscriptionParameterProperties](#linkedsubscriptionparameterproperties) (Required): Properties of the Linked Subscription resource
+* **properties**: [LinkedSubscriptionParameterPropertiesOrLinkedSubscriptionProperties](#linkedsubscriptionparameterpropertiesorlinkedsubscriptionproperties) (Required): Properties of the Linked Subscription resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Custom tags for the resource.
 * **type**: 'Microsoft.AzureStack/linkedSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
@@ -23,7 +23,7 @@
 * **kind**: string (ReadOnly): The kind of the resource.
 * **location**: 'global' | string (Required): Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RegistrationParameterProperties](#registrationparameterproperties) (Required): Properties of the Azure Stack registration resource
+* **properties**: [RegistrationParameterPropertiesOrRegistrationProperties](#registrationparameterpropertiesorregistrationproperties) (Required): Properties of the Azure Stack registration resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Custom tags for the resource.
 * **type**: 'Microsoft.AzureStack/registrations' (ReadOnly, DeployTimeConstant): The resource type
@@ -71,7 +71,7 @@
 * **vmOsType**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): Specifies operating system used by the product.
 * **vmScaleSetEnabled**: bool (ReadOnly): Indicates if virtual machine Scale Set is enabled in the specified product.
 
-## LinkedSubscriptionParameterProperties
+## LinkedSubscriptionParameterPropertiesOrLinkedSubscriptionProperties
 ### Properties
 * **deviceConnectionStatus**: string (ReadOnly): The status of the remote management connection of the Azure Stack device.
 * **deviceId**: string (ReadOnly): The identifier of the Azure Stack device for remote management.
@@ -86,7 +86,7 @@
 * **operatingSystem**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): OS operating system type.
 * **sourceBlobSasUri**: string (ReadOnly): SAS key for source blob.
 
-## RegistrationParameterProperties
+## RegistrationParameterPropertiesOrRegistrationProperties
 ### Properties
 * **billingModel**: string (ReadOnly): Specifies the billing mode for the Azure Stack registration.
 * **cloudId**: string (ReadOnly): The identifier of the registered Azure Stack.

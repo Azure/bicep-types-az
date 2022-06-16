@@ -116,7 +116,7 @@ warning | PreCheck/SchemaMissingType | The schema 'AmountWithExchangeRate' with 
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:5452:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'LegacyReservationTransaction' has a property 'properties' that is already declared the parent schema 'ReservationTransaction' but isn't significantly different. The property has been removed from LegacyReservationTransaction
-info    | autorest.bicep took 10ms
+info    | autorest.bicep took 9ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2021-05-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -342,7 +342,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefi
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ReservationRecommendationDetailsModel' has a property 'etag' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from ReservationRecommendationDetailsModel
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'LegacyReservationTransaction' has a property 'properties' that is already declared the parent schema 'ReservationTransaction' but isn't significantly different. The property has been removed from LegacyReservationTransaction
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2019-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -457,7 +457,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefi
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2019-10-01/consumption.json:5277:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'LegacyReservationTransaction' has a property 'properties' that is already declared the parent schema 'ReservationTransaction' but isn't significantly different. The property has been removed from LegacyReservationTransaction
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2019-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -525,7 +525,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ResourceAttributes' with an u
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2019-06-01/consumption.json:3279:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2019-05-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -587,7 +587,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ResourceAttributes' with an u
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2019-05-01/consumption.json:3041:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2019-05-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -715,7 +715,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ResourceAttributes' with an u
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/preview/2019-04-01-preview/consumption.json:2931:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2018-11-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -774,7 +774,7 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/preview/2018-11-01-preview/consumption.json:1391:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/UnknownFormatType | Integer schema 'schemas:49' with unknown format: 'date-time' is not valid.  Treating it as 'int32'.
-info    | autorest.bicep took 0ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2019-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -912,7 +912,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PriceSheetModel' with an unde
 warning | PreCheck/SchemaMissingType | The schema 'PriceSheetProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2018-01-31/consumption.json:2030:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2018-03-31"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -1124,7 +1124,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ResourceAttributes' with an u
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2018-08-31/consumption.json:4255:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2018-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -1188,7 +1188,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ResourceAttributes' with an u
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2018-10-01/consumption.json:4510:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2017-04-24-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -1237,4 +1237,4 @@ warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefi
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/preview/2017-12-30-preview/consumption.json:502:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 1ms
-info    | Autorest completed in 58.98s. 30 files generated.
+info    | Autorest completed in 48.05s. 30 files generated.

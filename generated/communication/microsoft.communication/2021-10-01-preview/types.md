@@ -43,10 +43,10 @@
 
 ## CommunicationServiceKeys
 ### Properties
-* **primaryConnectionString**: string (ReadOnly): CommunicationService connection string constructed via the primaryKey
-* **primaryKey**: string (ReadOnly): The primary access key.
-* **secondaryConnectionString**: string (ReadOnly): CommunicationService connection string constructed via the secondaryKey
-* **secondaryKey**: string (ReadOnly): The secondary access key.
+* **primaryConnectionString**: string: CommunicationService connection string constructed via the primaryKey
+* **primaryKey**: string: The primary access key.
+* **secondaryConnectionString**: string: CommunicationService connection string constructed via the secondaryKey
+* **secondaryKey**: string: The secondary access key.
 
 ## CommunicationServiceProperties
 ### Properties

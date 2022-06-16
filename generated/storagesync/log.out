@@ -32,7 +32,7 @@ warning | PreCheck/SchemaMissingType | The schema 'StorageSyncServiceUpdateParam
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2020-09-01/storagesync.json:4115:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 16ms
+info    | autorest.bicep took 14ms
 info    | Processing batch task - {"tag":"microsoft.storagesync-2020-03-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -61,7 +61,7 @@ warning | PreCheck/SchemaMissingType | The schema 'StorageSyncServiceUpdateParam
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2020-03-01/storagesync.json:4095:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.storagesync-2019-10-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -119,7 +119,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Modeler/MissingType | The schema 'StorageSyncServiceCreateParameters-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2019-06-01/storagesync.json#/components/schemas/StorageSyncServiceCreateParameters-properties
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.storagesync-2019-03-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -148,7 +148,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Modeler/MissingType | The schema 'StorageSyncServiceCreateParameters-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2019-03-01/storagesync.json#/components/schemas/StorageSyncServiceCreateParameters-properties
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.storagesync-2019-02-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -175,7 +175,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Modeler/MissingType | The schema 'StorageSyncServiceCreateParameters-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2019-02-01/storagesync.json#/components/schemas/StorageSyncServiceCreateParameters-properties
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.storagesync-2018-10-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -230,7 +230,7 @@ warning | Modeler/MissingType | The schema 'StorageSyncServiceCreateParameters-p
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2018-07-01/storagesync.json#/components/schemas/StorageSyncServiceCreateParameters-properties
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.storagesync-2018-04-02"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -264,7 +264,7 @@ warning | PreCheck/SchemaMissingType | The schema 'StorageSyncServiceUpdateParam
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.storagesync-2017-06-05-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -274,4 +274,4 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 2ms
-info    | Autorest completed in 35.15s. 20 files generated.
+info    | Autorest completed in 28.66s. 20 files generated.
