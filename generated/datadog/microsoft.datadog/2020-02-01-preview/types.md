@@ -1,12 +1,12 @@
 # Microsoft.Datadog @ 2020-02-01-preview
 
-## Resource Microsoft.Datadog/agreements@2020-02-01-preview
+## Resource Microsoft.Datadog/agreements@2020-02-01-preview (WriteOnly)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [DatadogAgreementProperties](#datadogagreementproperties): Represents the properties of the resource.
+* **properties**: [DatadogAgreementProperties](#datadogagreementproperties) (WriteOnly): Represents the properties of the resource.
 * **type**: 'Microsoft.Datadog/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Datadog/monitors@2020-02-01-preview

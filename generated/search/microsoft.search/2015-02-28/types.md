@@ -1,14 +1,14 @@
 # Microsoft.Search @ 2015-02-28
 
-## Resource Microsoft.Search/searchServices@2015-02-28
+## Resource Microsoft.Search/searchServices@2015-02-28 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-02-28' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The geographic location of the Search service.
+* **location**: string (WriteOnly): The geographic location of the Search service.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SearchServiceProperties](#searchserviceproperties): Properties of the Search service.
-* **tags**: [SearchServiceCreateOrUpdateParametersTags](#searchservicecreateorupdateparameterstags): Tags to help categorize the Search service in the Azure Portal.
+* **properties**: [SearchServiceProperties](#searchserviceproperties) (WriteOnly): Properties of the Search service.
+* **tags**: [SearchServiceCreateOrUpdateParametersTags](#searchservicecreateorupdateparameterstags) (WriteOnly): Tags to help categorize the Search service in the Azure Portal.
 * **type**: 'Microsoft.Search/searchServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listAdminKeys (Microsoft.Search/searchServices@2015-02-28)

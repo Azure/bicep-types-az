@@ -47,6 +47,15 @@
 * **properties**: [StorageAccountPropertiesOrStorageAccountInformationProperties](#storageaccountpropertiesorstorageaccountinformationproperties) (Required): The Azure Storage account properties to use when adding a new Azure Storage account.
 * **type**: 'Microsoft.DataLakeAnalytics/accounts/StorageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DataLakeAnalytics/accounts/storageAccounts/containers@2015-10-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [StorageContainerProperties](#storagecontainerproperties) (ReadOnly): The properties of the blob container.
+* **type**: 'Microsoft.DataLakeAnalytics/accounts/storageAccounts/containers' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listSasTokens (Microsoft.DataLakeAnalytics/accounts/storageAccounts/containers@2015-10-01-preview)
 * **Resource**: Microsoft.DataLakeAnalytics/accounts/storageAccounts/containers
 * **ApiVersion**: 2015-10-01-preview
@@ -171,6 +180,10 @@
 ### Properties
 * **accessKey**: string (Required, WriteOnly): The access key associated with this Azure Storage account that will be used to connect to it.
 * **suffix**: string: The optional suffix for the storage account.
+
+## StorageContainerProperties
+### Properties
+* **lastModifiedTime**: string (ReadOnly): The last modified time of the blob container.
 
 ## VirtualNetworkRule
 ### Properties

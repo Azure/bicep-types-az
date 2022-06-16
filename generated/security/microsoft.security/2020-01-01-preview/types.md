@@ -9,6 +9,15 @@
 * **properties**: [ConnectorSettingProperties](#connectorsettingproperties): Connector setting data
 * **type**: 'Microsoft.Security/connectors' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Security/secureScores@2020-01-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SecureScoreItemProperties](#securescoreitemproperties) (ReadOnly): Secure score item
+* **type**: 'Microsoft.Security/secureScores' (ReadOnly, DeployTimeConstant): The resource type
+
 ## AuthenticationDetailsProperties
 * **Discriminator**: authenticationType
 
@@ -63,6 +72,18 @@
 ### Properties
 * **ip**: string: Proxy server IP
 * **port**: string: Proxy server port
+
+## ScoreDetails
+### Properties
+* **current**: int (ReadOnly): Current score
+* **max**: int (ReadOnly): Maximum score available
+* **percentage**: int (ReadOnly): Ratio of the current score divided by the maximum. Rounded to 4 digits after the decimal point
+
+## SecureScoreItemProperties
+### Properties
+* **displayName**: string (ReadOnly): The initiative’s name
+* **score**: [ScoreDetails](#scoredetails) (ReadOnly): score object
+* **weight**: int (ReadOnly): The relative weight for each subscription. Used when calculating an aggregated secure score for multiple subscriptions.
 
 ## ServicePrincipalProperties
 ### Properties

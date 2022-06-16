@@ -14,13 +14,13 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/certificates@2020-02-02
+## Resource Microsoft.RecoveryServices/vaults/certificates@2020-02-02 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-02-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RawCertificateData](#rawcertificatedata): Raw certificate data.
+* **properties**: [RawCertificateData](#rawcertificatedata) (WriteOnly): Raw certificate data.
 * **type**: 'Microsoft.RecoveryServices/vaults/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/extendedInformation@2020-02-02
@@ -32,6 +32,20 @@
 * **name**: 'vaultExtendedInfo' (Required, DeployTimeConstant): The resource name
 * **properties**: [VaultExtendedInfo](#vaultextendedinfo): Vault extended information.
 * **type**: 'Microsoft.RecoveryServices/vaults/extendedInformation' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.RecoveryServices/vaults/operationResults@2020-02-02 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-02-02' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): Optional ETag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [IdentityData](#identitydata) (ReadOnly): Identity for the resource.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VaultProperties](#vaultproperties) (ReadOnly): Properties of the vault.
+* **sku**: [Sku](#sku) (ReadOnly): Identifies the unique system identifier for each Azure resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.RecoveryServices/vaults/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## CmkKekIdentity
 ### Properties
@@ -83,6 +97,11 @@
 ## Sku
 ### Properties
 * **name**: 'RS0' | 'Standard' | string (Required): The Sku name.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

@@ -12,6 +12,18 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Web/connections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Web/locations/managedApis@2015-08-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2015-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ApiEntityProperties](#apientityproperties) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Web/locations/managedApis' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listConnectionKeys (Microsoft.Web/connections@2015-08-01-preview)
 * **Resource**: Microsoft.Web/connections
 * **ApiVersion**: 2015-08-01-preview
@@ -317,6 +329,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [CustomLoginSettingValue](#customloginsettingvalue)
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

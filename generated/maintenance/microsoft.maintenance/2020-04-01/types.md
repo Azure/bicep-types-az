@@ -1,21 +1,13 @@
 # Microsoft.Maintenance @ 2020-04-01
 
-## Resource Microsoft.Maintenance/applyUpdates@2020-04-01
+## Resource Microsoft.Maintenance/configurationAssignments@2020-04-01 (WriteOnly)
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.Maintenance/applyUpdates' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Maintenance/configurationAssignments@2020-04-01
-* **Valid Scope(s)**: Extension
-### Properties
-* **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Location of the resource
+* **location**: string (WriteOnly): Location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfigurationAssignmentProperties](#configurationassignmentproperties): Properties of the configuration assignment
+* **properties**: [ConfigurationAssignmentProperties](#configurationassignmentproperties) (WriteOnly): Properties of the configuration assignment
 * **type**: 'Microsoft.Maintenance/configurationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Maintenance/maintenanceConfigurations@2020-04-01

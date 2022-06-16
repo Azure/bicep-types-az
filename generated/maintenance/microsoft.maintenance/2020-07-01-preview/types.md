@@ -1,21 +1,13 @@
 # Microsoft.Maintenance @ 2020-07-01-preview
 
-## Resource Microsoft.Maintenance/applyUpdates@2020-07-01-preview
+## Resource Microsoft.Maintenance/configurationAssignments@2020-07-01-preview (WriteOnly)
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.Maintenance/applyUpdates' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Maintenance/configurationAssignments@2020-07-01-preview
-* **Valid Scope(s)**: Extension
-### Properties
-* **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Location of the resource
+* **location**: string (WriteOnly): Location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfigurationAssignmentProperties](#configurationassignmentproperties): Properties of the configuration assignment
+* **properties**: [ConfigurationAssignmentProperties](#configurationassignmentproperties) (WriteOnly): Properties of the configuration assignment
 * **type**: 'Microsoft.Maintenance/configurationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Maintenance/maintenanceConfigurations@2020-07-01-preview
@@ -28,6 +20,17 @@
 * **properties**: [MaintenanceConfigurationProperties](#maintenanceconfigurationproperties): Gets or sets properties of the resource
 * **tags**: [MaintenanceConfigurationTags](#maintenanceconfigurationtags): Gets or sets tags of the resource
 * **type**: 'Microsoft.Maintenance/maintenanceConfigurations' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Maintenance/publicMaintenanceConfigurations@2020-07-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Gets or sets location of the resource
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [MaintenanceConfigurationProperties](#maintenanceconfigurationproperties) (ReadOnly): Gets or sets properties of the resource
+* **tags**: [MaintenanceConfigurationTags](#maintenanceconfigurationtags) (ReadOnly): Gets or sets tags of the resource
+* **type**: 'Microsoft.Maintenance/publicMaintenanceConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ConfigurationAssignmentProperties
 ### Properties
@@ -43,6 +46,11 @@
 * **visibility**: 'Custom' | 'Public' | string: Gets or sets the visibility of the configuration
 
 ## MaintenanceConfigurationPropertiesExtensionProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## MaintenanceConfigurationTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

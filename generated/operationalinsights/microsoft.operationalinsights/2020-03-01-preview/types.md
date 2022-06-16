@@ -25,6 +25,15 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.OperationalInsights/workspaces/dataCollectorLogs@2020-03-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DataCollectorLogProperties](#datacollectorlogproperties) (ReadOnly): Data collector log properties.
+* **type**: 'Microsoft.OperationalInsights/workspaces/dataCollectorLogs' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.OperationalInsights/workspaces/dataExports@2020-03-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -86,6 +95,15 @@
 * **tags**: [StorageInsightTags](#storageinsighttags): Resource tags.
 * **type**: 'Microsoft.OperationalInsights/workspaces/storageInsightConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.OperationalInsights/workspaces/tables@2020-03-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TableProperties](#tableproperties) (ReadOnly): Table properties.
+* **type**: 'Microsoft.OperationalInsights/workspaces/tables' (ReadOnly, DeployTimeConstant): The resource type
+
 ## ClusterProperties
 ### Properties
 * **clusterId**: string (ReadOnly): The ID associated with the cluster.
@@ -97,6 +115,10 @@
 ### Properties
 * **capacity**: int: The capacity value
 * **name**: 'CapacityReservation' | string: The name of the SKU.
+
+## DataCollectorLogProperties
+### Properties
+* **name**: string: Table's name.
 
 ## DataExportProperties
 ### Properties
@@ -186,6 +208,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TableProperties
+### Properties
+* **retentionInDays**: int: The data table data retention in days, between 30 and 730. Setting this property to null will default to the workspace retention.
 
 ## Tag
 ### Properties

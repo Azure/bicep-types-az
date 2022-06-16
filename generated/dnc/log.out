@@ -28,4 +28,4 @@ warning | PreCheck/SchemaMissingType | The schema 'ResourceUpdateParameters' wit
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/dnc/resource-manager/Microsoft.DelegatedNetwork/preview/2020-08-08-preview/delegatedSubnets.json:348:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 2ms
-info    | Autorest completed in 5.37s. 4 files generated.
+info    | Autorest completed in 5.84s. 4 files generated.

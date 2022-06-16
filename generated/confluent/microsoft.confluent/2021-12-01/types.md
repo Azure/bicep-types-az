@@ -1,13 +1,13 @@
 # Microsoft.Confluent @ 2021-12-01
 
-## Resource Microsoft.Confluent/agreements@2021-12-01
+## Resource Microsoft.Confluent/agreements@2021-12-01 (WriteOnly)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfluentAgreementProperties](#confluentagreementproperties): Represents the properties of the resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource
+* **properties**: [ConfluentAgreementProperties](#confluentagreementproperties) (WriteOnly): Represents the properties of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): Metadata pertaining to creation and last modification of the resource
 * **type**: 'Microsoft.Confluent/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Confluent/organizations@2021-12-01

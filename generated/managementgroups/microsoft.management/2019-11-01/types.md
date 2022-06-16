@@ -9,7 +9,7 @@
 * **properties**: [CreateManagementGroupPropertiesOrManagementGroupProperties](#createmanagementgrouppropertiesormanagementgroupproperties): The generic properties of a management group used during creation.
 * **type**: 'Microsoft.Management/managementGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Management/managementGroups/subscriptions@2019-11-01
+## Resource Microsoft.Management/managementGroups/subscriptions@2019-11-01 (WriteOnly)
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version

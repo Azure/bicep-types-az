@@ -12,6 +12,18 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Web/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Web/classicMobileServices@2015-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ClassicMobileServiceProperties](#classicmobileserviceproperties) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Web/classicMobileServices' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Web/csrs@2015-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -99,6 +111,31 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Web/serverfarms' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Web/serverfarms/operationresults@2015-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServerFarmWithRichSkuProperties](#serverfarmwithrichskuproperties) (ReadOnly)
+* **sku**: [SkuDescription](#skudescription) (ReadOnly): Describes a sku for a scalable resource
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Web/serverfarms/operationresults' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/serverfarms/virtualNetworkConnections@2015-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VnetInfoProperties](#vnetinfoproperties) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Web/serverfarms/virtualNetworkConnections/gateways@2015-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -135,18 +172,6 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Web/sites' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Web/sites/backups@2015-08-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource
-* **location**: string (Required): Resource Location
-* **name**: 'discover' (Required, DeployTimeConstant): The resource name
-* **properties**: [RestoreRequestProperties](#restorerequestproperties)
-* **tags**: [ResourceTags](#resourcetags): Resource tags
-* **type**: 'Microsoft.Web/sites/backups' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Web/sites/config@2015-08-01
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: name
@@ -156,107 +181,107 @@
 #### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource
-* **location**: string (Required): Resource Location
+* **kind**: string (WriteOnly): Kind of resource
+* **location**: string (Required, WriteOnly): Resource Location
 * **name**: 'appsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (WriteOnly): Settings
+* **tags**: [ResourceTags](#resourcetags) (WriteOnly): Resource tags
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
 #### Properties
-* **aadClientId**: string
-* **additionalLoginParams**: string[]: Gets or sets a list of login parameters to send to the OpenID Connect authorization endpoint when
+* **aadClientId**: string (WriteOnly)
+* **additionalLoginParams**: string[] (WriteOnly): Gets or sets a list of login parameters to send to the OpenID Connect authorization endpoint when
             a user logs in. Each parameter must be in the form "key=value".
-* **allowedAudiences**: string[]: Gets or sets a list of allowed audience values to consider when validating JWTs issued by 
+* **allowedAudiences**: string[] (WriteOnly): Gets or sets a list of allowed audience values to consider when validating JWTs issued by 
             Azure Active Directory. Note that the {Microsoft.Web.Hosting.Administration.SiteAuthSettings.ClientId} value is always considered an
             allowed audience, regardless of this setting.
-* **allowedExternalRedirectUrls**: string[]: Gets or sets a collection of external URLs that can be redirected to as part of logging in
+* **allowedExternalRedirectUrls**: string[] (WriteOnly): Gets or sets a collection of external URLs that can be redirected to as part of logging in
             or logging out of the web app. Note that the query string part of the URL is ignored.
             This is an advanced setting typically only needed by Windows Store application backends.
             Note that URLs within the current domain are always implicitly allowed.
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **clientId**: string: Gets or sets the Client ID of this relying party application, known as the client_id.
+* **clientId**: string (WriteOnly): Gets or sets the Client ID of this relying party application, known as the client_id.
             This setting is required for enabling OpenID Connection authentication with Azure Active Directory or 
             other 3rd party OpenID Connect providers.
             More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
-* **clientSecret**: string: Gets or sets the Client Secret of this relying party application (in Azure Active Directory, this is also referred to as the Key).
+* **clientSecret**: string (WriteOnly): Gets or sets the Client Secret of this relying party application (in Azure Active Directory, this is also referred to as the Key).
             This setting is optional. If no client secret is configured, the OpenID Connect implicit auth flow is used to authenticate end users.
             Otherwise, the OpenID Connect Authorization Code Flow is used to authenticate end users.
             More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
-* **defaultProvider**: 'AzureActiveDirectory' | 'Facebook' | 'Google' | 'MicrosoftAccount' | 'Twitter': Gets or sets the default authentication provider to use when multiple providers are configured.
+* **defaultProvider**: 'AzureActiveDirectory' | 'Facebook' | 'Google' | 'MicrosoftAccount' | 'Twitter' (WriteOnly): Gets or sets the default authentication provider to use when multiple providers are configured.
             This setting is only needed if multiple providers are configured and the unauthenticated client
             action is set to "RedirectToLoginPage".
-* **enabled**: bool: Gets or sets a value indicating whether the Authentication / Authorization feature is enabled for the current app.
-* **facebookAppId**: string: Gets or sets the App ID of the Facebook app used for login.
+* **enabled**: bool (WriteOnly): Gets or sets a value indicating whether the Authentication / Authorization feature is enabled for the current app.
+* **facebookAppId**: string (WriteOnly): Gets or sets the App ID of the Facebook app used for login.
             This setting is required for enabling Facebook Login.
             Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
-* **facebookAppSecret**: string: Gets or sets the App Secret of the Facebook app used for Facebook Login.
+* **facebookAppSecret**: string (WriteOnly): Gets or sets the App Secret of the Facebook app used for Facebook Login.
             This setting is required for enabling Facebook Login.
             Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
-* **facebookOAuthScopes**: string[]: Gets or sets the OAuth 2.0 scopes that will be requested as part of Facebook Login authentication.
+* **facebookOAuthScopes**: string[] (WriteOnly): Gets or sets the OAuth 2.0 scopes that will be requested as part of Facebook Login authentication.
             This setting is optional.
             Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
-* **googleClientId**: string: Gets or sets the OpenID Connect Client ID for the Google web application.
+* **googleClientId**: string (WriteOnly): Gets or sets the OpenID Connect Client ID for the Google web application.
             This setting is required for enabling Google Sign-In.
             Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
-* **googleClientSecret**: string: Gets or sets the client secret associated with the Google web application.
+* **googleClientSecret**: string (WriteOnly): Gets or sets the client secret associated with the Google web application.
             This setting is required for enabling Google Sign-In.
             Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
-* **googleOAuthScopes**: string[]: Gets or sets the OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication.
+* **googleOAuthScopes**: string[] (WriteOnly): Gets or sets the OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication.
             This setting is optional. If not specified, "openid", "profile", and "email" are used as default scopes.
             Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
-* **httpApiPrefixPath**: string: Gets or sets the relative path prefix used by platform HTTP APIs.
+* **httpApiPrefixPath**: string (WriteOnly): Gets or sets the relative path prefix used by platform HTTP APIs.
             Changing this value is not recommended except for compatibility reasons.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **issuer**: string: Gets or sets the OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
+* **issuer**: string (WriteOnly): Gets or sets the OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
             When using Azure Active Directory, this value is the URI of the directory tenant, e.g. https://sts.windows.net/{tenant-guid}/.
             This URI is a case-sensitive identifier for the token issuer.
             More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html
-* **microsoftAccountClientId**: string: Gets or sets the OAuth 2.0 client ID that was created for the app used for authentication.
+* **microsoftAccountClientId**: string (WriteOnly): Gets or sets the OAuth 2.0 client ID that was created for the app used for authentication.
             This setting is required for enabling Microsoft Account authentication.
             Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm
-* **microsoftAccountClientSecret**: string: Gets or sets the OAuth 2.0 client secret that was created for the app used for authentication.
+* **microsoftAccountClientSecret**: string (WriteOnly): Gets or sets the OAuth 2.0 client secret that was created for the app used for authentication.
             This setting is required for enabling Microsoft Account authentication.
             Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm
-* **microsoftAccountOAuthScopes**: string[]: Gets or sets the OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication.
+* **microsoftAccountOAuthScopes**: string[] (WriteOnly): Gets or sets the OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication.
             This setting is optional. If not specified, "wl.basic" is used as the default scope.
             Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx
 * **name**: 'authsettings' (Required, DeployTimeConstant): The resource name
-* **openIdIssuer**: string
-* **tokenRefreshExtensionHours**: int: Gets or sets the number of hours after session token expiration that a session token can be used to
+* **openIdIssuer**: string (WriteOnly)
+* **tokenRefreshExtensionHours**: int (WriteOnly): Gets or sets the number of hours after session token expiration that a session token can be used to
             call the token refresh API. The default is 72 hours.
-* **tokenStoreEnabled**: bool: Gets or sets a value indicating whether to durably store platform-specific security tokens
+* **tokenStoreEnabled**: bool (WriteOnly): Gets or sets a value indicating whether to durably store platform-specific security tokens
             obtained during login flows. This capability is disabled by default.
-* **twitterConsumerKey**: string: Gets or sets the OAuth 1.0a consumer key of the Twitter application used for sign-in.
+* **twitterConsumerKey**: string (WriteOnly): Gets or sets the OAuth 1.0a consumer key of the Twitter application used for sign-in.
             This setting is required for enabling Twitter Sign-In.
             Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
-* **twitterConsumerSecret**: string: Gets or sets the OAuth 1.0a consumer secret of the Twitter application used for sign-in.
+* **twitterConsumerSecret**: string (WriteOnly): Gets or sets the OAuth 1.0a consumer secret of the Twitter application used for sign-in.
             This setting is required for enabling Twitter Sign-In.
             Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
-* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage': Gets or sets the action to take when an unauthenticated client attempts to access the app.
+* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage' (WriteOnly): Gets or sets the action to take when an unauthenticated client attempts to access the app.
 
 ### Microsoft.Web/sites/config
 #### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource
-* **location**: string (Required): Resource Location
+* **kind**: string (WriteOnly): Kind of resource
+* **location**: string (Required, WriteOnly): Resource Location
 * **name**: 'backup' (Required, DeployTimeConstant): The resource name
-* **properties**: [BackupRequestProperties](#backuprequestproperties)
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **properties**: [BackupRequestProperties](#backuprequestproperties) (WriteOnly)
+* **tags**: [ResourceTags](#resourcetags) (WriteOnly): Resource tags
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
 #### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource
-* **location**: string (Required): Resource Location
+* **kind**: string (WriteOnly): Kind of resource
+* **location**: string (Required, WriteOnly): Resource Location
 * **name**: 'connectionstrings' (Required, DeployTimeConstant): The resource name
-* **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties): Connection strings
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties) (WriteOnly): Connection strings
+* **tags**: [ResourceTags](#resourcetags) (WriteOnly): Resource tags
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -274,11 +299,11 @@
 #### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource
-* **location**: string (Required): Resource Location
+* **kind**: string (WriteOnly): Kind of resource
+* **location**: string (Required, WriteOnly): Resource Location
 * **name**: 'metadata' (Required, DeployTimeConstant): The resource name
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (WriteOnly): Settings
+* **tags**: [ResourceTags](#resourcetags) (WriteOnly): Resource tags
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -352,6 +377,18 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Web/sites/instances/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Web/sites/networkFeatures@2015-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NetworkFeaturesProperties](#networkfeaturesproperties) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Web/sites/networkFeatures' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Web/sites/premieraddons@2015-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -377,18 +414,6 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Web/sites/slots' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Web/sites/slots/backups@2015-08-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource
-* **location**: string (Required): Resource Location
-* **name**: 'discover' (Required, DeployTimeConstant): The resource name
-* **properties**: [RestoreRequestProperties](#restorerequestproperties)
-* **tags**: [ResourceTags](#resourcetags): Resource tags
-* **type**: 'Microsoft.Web/sites/slots/backups' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Web/sites/slots/config@2015-08-01
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: name
@@ -398,107 +423,107 @@
 #### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource
-* **location**: string (Required): Resource Location
+* **kind**: string (WriteOnly): Kind of resource
+* **location**: string (Required, WriteOnly): Resource Location
 * **name**: 'appsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (WriteOnly): Settings
+* **tags**: [ResourceTags](#resourcetags) (WriteOnly): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
 #### Properties
-* **aadClientId**: string
-* **additionalLoginParams**: string[]: Gets or sets a list of login parameters to send to the OpenID Connect authorization endpoint when
+* **aadClientId**: string (WriteOnly)
+* **additionalLoginParams**: string[] (WriteOnly): Gets or sets a list of login parameters to send to the OpenID Connect authorization endpoint when
             a user logs in. Each parameter must be in the form "key=value".
-* **allowedAudiences**: string[]: Gets or sets a list of allowed audience values to consider when validating JWTs issued by 
+* **allowedAudiences**: string[] (WriteOnly): Gets or sets a list of allowed audience values to consider when validating JWTs issued by 
             Azure Active Directory. Note that the {Microsoft.Web.Hosting.Administration.SiteAuthSettings.ClientId} value is always considered an
             allowed audience, regardless of this setting.
-* **allowedExternalRedirectUrls**: string[]: Gets or sets a collection of external URLs that can be redirected to as part of logging in
+* **allowedExternalRedirectUrls**: string[] (WriteOnly): Gets or sets a collection of external URLs that can be redirected to as part of logging in
             or logging out of the web app. Note that the query string part of the URL is ignored.
             This is an advanced setting typically only needed by Windows Store application backends.
             Note that URLs within the current domain are always implicitly allowed.
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **clientId**: string: Gets or sets the Client ID of this relying party application, known as the client_id.
+* **clientId**: string (WriteOnly): Gets or sets the Client ID of this relying party application, known as the client_id.
             This setting is required for enabling OpenID Connection authentication with Azure Active Directory or 
             other 3rd party OpenID Connect providers.
             More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
-* **clientSecret**: string: Gets or sets the Client Secret of this relying party application (in Azure Active Directory, this is also referred to as the Key).
+* **clientSecret**: string (WriteOnly): Gets or sets the Client Secret of this relying party application (in Azure Active Directory, this is also referred to as the Key).
             This setting is optional. If no client secret is configured, the OpenID Connect implicit auth flow is used to authenticate end users.
             Otherwise, the OpenID Connect Authorization Code Flow is used to authenticate end users.
             More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
-* **defaultProvider**: 'AzureActiveDirectory' | 'Facebook' | 'Google' | 'MicrosoftAccount' | 'Twitter': Gets or sets the default authentication provider to use when multiple providers are configured.
+* **defaultProvider**: 'AzureActiveDirectory' | 'Facebook' | 'Google' | 'MicrosoftAccount' | 'Twitter' (WriteOnly): Gets or sets the default authentication provider to use when multiple providers are configured.
             This setting is only needed if multiple providers are configured and the unauthenticated client
             action is set to "RedirectToLoginPage".
-* **enabled**: bool: Gets or sets a value indicating whether the Authentication / Authorization feature is enabled for the current app.
-* **facebookAppId**: string: Gets or sets the App ID of the Facebook app used for login.
+* **enabled**: bool (WriteOnly): Gets or sets a value indicating whether the Authentication / Authorization feature is enabled for the current app.
+* **facebookAppId**: string (WriteOnly): Gets or sets the App ID of the Facebook app used for login.
             This setting is required for enabling Facebook Login.
             Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
-* **facebookAppSecret**: string: Gets or sets the App Secret of the Facebook app used for Facebook Login.
+* **facebookAppSecret**: string (WriteOnly): Gets or sets the App Secret of the Facebook app used for Facebook Login.
             This setting is required for enabling Facebook Login.
             Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
-* **facebookOAuthScopes**: string[]: Gets or sets the OAuth 2.0 scopes that will be requested as part of Facebook Login authentication.
+* **facebookOAuthScopes**: string[] (WriteOnly): Gets or sets the OAuth 2.0 scopes that will be requested as part of Facebook Login authentication.
             This setting is optional.
             Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
-* **googleClientId**: string: Gets or sets the OpenID Connect Client ID for the Google web application.
+* **googleClientId**: string (WriteOnly): Gets or sets the OpenID Connect Client ID for the Google web application.
             This setting is required for enabling Google Sign-In.
             Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
-* **googleClientSecret**: string: Gets or sets the client secret associated with the Google web application.
+* **googleClientSecret**: string (WriteOnly): Gets or sets the client secret associated with the Google web application.
             This setting is required for enabling Google Sign-In.
             Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
-* **googleOAuthScopes**: string[]: Gets or sets the OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication.
+* **googleOAuthScopes**: string[] (WriteOnly): Gets or sets the OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication.
             This setting is optional. If not specified, "openid", "profile", and "email" are used as default scopes.
             Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
-* **httpApiPrefixPath**: string: Gets or sets the relative path prefix used by platform HTTP APIs.
+* **httpApiPrefixPath**: string (WriteOnly): Gets or sets the relative path prefix used by platform HTTP APIs.
             Changing this value is not recommended except for compatibility reasons.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **issuer**: string: Gets or sets the OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
+* **issuer**: string (WriteOnly): Gets or sets the OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
             When using Azure Active Directory, this value is the URI of the directory tenant, e.g. https://sts.windows.net/{tenant-guid}/.
             This URI is a case-sensitive identifier for the token issuer.
             More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html
-* **microsoftAccountClientId**: string: Gets or sets the OAuth 2.0 client ID that was created for the app used for authentication.
+* **microsoftAccountClientId**: string (WriteOnly): Gets or sets the OAuth 2.0 client ID that was created for the app used for authentication.
             This setting is required for enabling Microsoft Account authentication.
             Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm
-* **microsoftAccountClientSecret**: string: Gets or sets the OAuth 2.0 client secret that was created for the app used for authentication.
+* **microsoftAccountClientSecret**: string (WriteOnly): Gets or sets the OAuth 2.0 client secret that was created for the app used for authentication.
             This setting is required for enabling Microsoft Account authentication.
             Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm
-* **microsoftAccountOAuthScopes**: string[]: Gets or sets the OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication.
+* **microsoftAccountOAuthScopes**: string[] (WriteOnly): Gets or sets the OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication.
             This setting is optional. If not specified, "wl.basic" is used as the default scope.
             Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx
 * **name**: 'authsettings' (Required, DeployTimeConstant): The resource name
-* **openIdIssuer**: string
-* **tokenRefreshExtensionHours**: int: Gets or sets the number of hours after session token expiration that a session token can be used to
+* **openIdIssuer**: string (WriteOnly)
+* **tokenRefreshExtensionHours**: int (WriteOnly): Gets or sets the number of hours after session token expiration that a session token can be used to
             call the token refresh API. The default is 72 hours.
-* **tokenStoreEnabled**: bool: Gets or sets a value indicating whether to durably store platform-specific security tokens
+* **tokenStoreEnabled**: bool (WriteOnly): Gets or sets a value indicating whether to durably store platform-specific security tokens
             obtained during login flows. This capability is disabled by default.
-* **twitterConsumerKey**: string: Gets or sets the OAuth 1.0a consumer key of the Twitter application used for sign-in.
+* **twitterConsumerKey**: string (WriteOnly): Gets or sets the OAuth 1.0a consumer key of the Twitter application used for sign-in.
             This setting is required for enabling Twitter Sign-In.
             Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
-* **twitterConsumerSecret**: string: Gets or sets the OAuth 1.0a consumer secret of the Twitter application used for sign-in.
+* **twitterConsumerSecret**: string (WriteOnly): Gets or sets the OAuth 1.0a consumer secret of the Twitter application used for sign-in.
             This setting is required for enabling Twitter Sign-In.
             Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
-* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage': Gets or sets the action to take when an unauthenticated client attempts to access the app.
+* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage' (WriteOnly): Gets or sets the action to take when an unauthenticated client attempts to access the app.
 
 ### Microsoft.Web/sites/slots/config
 #### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource
-* **location**: string (Required): Resource Location
+* **kind**: string (WriteOnly): Kind of resource
+* **location**: string (Required, WriteOnly): Resource Location
 * **name**: 'backup' (Required, DeployTimeConstant): The resource name
-* **properties**: [BackupRequestProperties](#backuprequestproperties)
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **properties**: [BackupRequestProperties](#backuprequestproperties) (WriteOnly)
+* **tags**: [ResourceTags](#resourcetags) (WriteOnly): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
 #### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource
-* **location**: string (Required): Resource Location
+* **kind**: string (WriteOnly): Kind of resource
+* **location**: string (Required, WriteOnly): Resource Location
 * **name**: 'connectionstrings' (Required, DeployTimeConstant): The resource name
-* **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties): Connection strings
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties) (WriteOnly): Connection strings
+* **tags**: [ResourceTags](#resourcetags) (WriteOnly): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -516,11 +541,11 @@
 #### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource
-* **location**: string (Required): Resource Location
+* **kind**: string (WriteOnly): Kind of resource
+* **location**: string (Required, WriteOnly): Resource Location
 * **name**: 'metadata' (Required, DeployTimeConstant): The resource name
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (WriteOnly): Settings
+* **tags**: [ResourceTags](#resourcetags) (WriteOnly): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -582,6 +607,18 @@
 * **properties**: [DeploymentProperties](#deploymentproperties)
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/instances/deployments' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/slots/networkFeatures@2015-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NetworkFeaturesProperties](#networkfeaturesproperties) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Web/sites/slots/networkFeatures' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/premieraddons@2015-08-01
 * **Valid Scope(s)**: ResourceGroup
@@ -858,6 +895,10 @@
 * **thumbprint**: string: Certificate thumbprint
 * **valid**: bool: Is the certificate valid?
 
+## ClassicMobileServiceProperties
+### Properties
+* **name**: string: Name of the mobile service
+
 ## CloningInfo
 ### Properties
 * **appSettingsOverrides**: [CloningInfoAppSettingsOverrides](#cloninginfoappsettingsoverrides): Application settings overrides for cloned web app. If specified these settings will override the settings cloned 
@@ -1085,6 +1126,12 @@
 * **order**: int
 * **remoteSubnet**: string
 
+## NetworkFeaturesProperties
+### Properties
+* **hybridConnections**: [RelayServiceConnectionEntity](#relayserviceconnectionentity)[]: The Hybrid Connections Summary view
+* **virtualNetworkConnection**: [VnetInfo](#vnetinfo): The Vnet Summary view
+* **virtualNetworkName**: string: The Vnet Name
+
 ## PremierAddOnRequestTags
 ### Properties
 ### Additional Properties
@@ -1108,6 +1155,16 @@
 * **minReroutePercentage**: int: [Optional] Specifies lower boundary above which ReroutePercentage will stay.
 * **name**: string: Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the experiment.
 * **reroutePercentage**: int: Percentage of the traffic which will be redirected to {Microsoft.Web.Hosting.Administration.RampUpRule.ActionHostName}
+
+## RelayServiceConnectionEntity
+### Properties
+* **id**: string: Resource Id
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
+* **name**: string: Resource Name
+* **properties**: [RelayServiceConnectionEntityProperties](#relayserviceconnectionentityproperties)
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: string: Resource type
 
 ## RelayServiceConnectionEntityProperties
 ### Properties
@@ -1364,18 +1421,30 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## RestoreRequestProperties
+## ResourceTags
 ### Properties
-* **adjustConnectionStrings**: bool: Gets or sets a flag showing if SiteConfig.ConnectionStrings should be set in new site
-* **blobName**: string: Name of a blob which contains the backup
-* **databases**: [DatabaseBackupSetting](#databasebackupsetting)[]: Collection of databases which should be restored. This list has to match the list of databases included in the backup.
-* **hostingEnvironment**: string: App Service Environment name, if needed (only when restoring a site to an App Service Environment)
-* **ignoreConflictingHostNames**: bool: Changes a logic when restoring a site with custom domains. If "true", custom domains are removed automatically. If "false", custom domains are added to 
-            the site object when it is being restored, but that might fail due to conflicts during the operation.
-* **operationType**: 'Clone' | 'Default' | 'Relocation' (Required): Operation type
-* **overwrite**: bool: True if the restore operation can overwrite target site. "True" needed if trying to restore over an existing site.
-* **siteName**: string: Name of a site (Web App)
-* **storageAccountUrl**: string: SAS URL to the container
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ServerFarmWithRichSkuProperties
 ### Properties
@@ -1641,6 +1710,16 @@
 ### Properties
 * **vnetName**: string: The VNET name.
 * **vpnPackageUri**: string: The URI where the Vpn package can be downloaded
+
+## VnetInfo
+### Properties
+* **id**: string: Resource Id
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
+* **name**: string: Resource Name
+* **properties**: [VnetInfoProperties](#vnetinfoproperties)
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: string: Resource type
 
 ## VnetInfoProperties
 ### Properties

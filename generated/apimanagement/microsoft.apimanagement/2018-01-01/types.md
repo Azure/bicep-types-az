@@ -42,7 +42,7 @@
 * **properties**: [DiagnosticContractProperties](#diagnosticcontractproperties): Diagnostic entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/apis/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/apis/diagnostics/loggers@2018-01-01
+## Resource Microsoft.ApiManagement/service/apis/diagnostics/loggers@2018-01-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -185,7 +185,7 @@
 * **properties**: [DiagnosticContractProperties](#diagnosticcontractproperties): Diagnostic entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/diagnostics/loggers@2018-01-01
+## Resource Microsoft.ApiManagement/service/diagnostics/loggers@2018-01-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -202,7 +202,7 @@
 * **properties**: [GroupCreateParametersPropertiesOrGroupContractProperties](#groupcreateparameterspropertiesorgroupcontractproperties): Properties supplied to Create Group operation.
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/groups/users@2018-01-01
+## Resource Microsoft.ApiManagement/service/groups/users@2018-01-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -237,7 +237,7 @@
 * **properties**: [NotificationContractProperties](#notificationcontractproperties) (ReadOnly): Notification entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/notifications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/notifications/recipientEmails@2018-01-01
+## Resource Microsoft.ApiManagement/service/notifications/recipientEmails@2018-01-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -245,7 +245,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/notifications/recipientEmails' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/notifications/recipientUsers@2018-01-01
+## Resource Microsoft.ApiManagement/service/notifications/recipientUsers@2018-01-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -310,7 +310,7 @@
 * **properties**: [ProductContractProperties](#productcontractproperties): Product entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/products/apis@2018-01-01
+## Resource Microsoft.ApiManagement/service/products/apis@2018-01-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -318,7 +318,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/products/apis' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/products/groups@2018-01-01
+## Resource Microsoft.ApiManagement/service/products/groups@2018-01-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version

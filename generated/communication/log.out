@@ -30,4 +30,4 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'DomainResource' has a 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'EmailServiceResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from EmailServiceResource
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Communication/listVerifiedExchangeOnlineDomains': Unable to find type segments
 info    | autorest.bicep took 4ms
-info    | Autorest completed in 6.51s. 6 files generated.
+info    | Autorest completed in 7.05s. 6 files generated.

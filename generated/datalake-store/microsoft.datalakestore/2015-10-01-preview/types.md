@@ -1,25 +1,25 @@
 # Microsoft.DataLakeStore @ 2015-10-01-preview
 
-## Resource Microsoft.DataLakeStore/accounts@2015-10-01-preview
+## Resource Microsoft.DataLakeStore/accounts@2015-10-01-preview (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [EncryptionIdentity](#encryptionidentity): The Key vault encryption identity, if any.
-* **location**: string: the account regional location.
+* **identity**: [EncryptionIdentity](#encryptionidentity) (WriteOnly): The Key vault encryption identity, if any.
+* **location**: string (WriteOnly): the account regional location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DataLakeStoreAccountProperties](#datalakestoreaccountproperties): the Data Lake Store account properties.
-* **tags**: [DataLakeStoreAccountTags](#datalakestoreaccounttags): the value of custom properties.
+* **properties**: [DataLakeStoreAccountProperties](#datalakestoreaccountproperties) (WriteOnly): the Data Lake Store account properties.
+* **tags**: [DataLakeStoreAccountTags](#datalakestoreaccounttags) (WriteOnly): the value of custom properties.
 * **type**: 'Microsoft.DataLakeStore/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataLakeStore/accounts/firewallRules@2015-10-01-preview
+## Resource Microsoft.DataLakeStore/accounts/firewallRules@2015-10-01-preview (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: the firewall rule's regional location.
+* **location**: string (WriteOnly): the firewall rule's regional location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [FirewallRuleProperties](#firewallruleproperties): the properties of the firewall rule.
+* **properties**: [FirewallRuleProperties](#firewallruleproperties) (WriteOnly): the properties of the firewall rule.
 * **type**: 'Microsoft.DataLakeStore/accounts/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DataLakeStoreAccountProperties

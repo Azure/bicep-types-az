@@ -196,13 +196,13 @@
 * **properties**: [GatewayContractProperties](#gatewaycontractproperties): Gateway details.
 * **type**: 'Microsoft.ApiManagement/service/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/gateways/apis@2019-12-01-preview
+## Resource Microsoft.ApiManagement/service/gateways/apis@2019-12-01-preview (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AssociationContractProperties](#associationcontractproperties): Association entity contract properties.
+* **properties**: [AssociationContractProperties](#associationcontractproperties) (WriteOnly): Association entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/gateways/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/gateways/hostnameConfigurations@2019-12-01-preview
@@ -223,7 +223,7 @@
 * **properties**: [GroupCreateParametersPropertiesOrGroupContractProperties](#groupcreateparameterspropertiesorgroupcontractproperties): Properties supplied to Create Group operation.
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/groups/users@2019-12-01-preview
+## Resource Microsoft.ApiManagement/service/groups/users@2019-12-01-preview (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -239,6 +239,15 @@
 * **name**: 'aad' | 'aadB2C' | 'facebook' | 'google' | 'microsoft' | 'twitter' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [IdentityProviderCreateContractPropertiesOrIdentityProviderContractProperties](#identityprovidercreatecontractpropertiesoridentityprovidercontractproperties): Identity Provider contract properties.
 * **type**: 'Microsoft.ApiManagement/service/identityProviders' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ApiManagement/service/issues@2019-12-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [IssueContractProperties](#issuecontractproperties) (ReadOnly): Properties of the Issue.
+* **type**: 'Microsoft.ApiManagement/service/issues' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/loggers@2019-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -267,7 +276,7 @@
 * **properties**: [NotificationContractProperties](#notificationcontractproperties) (ReadOnly): Notification entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/notifications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/notifications/recipientEmails@2019-12-01-preview
+## Resource Microsoft.ApiManagement/service/notifications/recipientEmails@2019-12-01-preview (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -275,7 +284,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/notifications/recipientEmails' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/notifications/recipientUsers@2019-12-01-preview
+## Resource Microsoft.ApiManagement/service/notifications/recipientUsers@2019-12-01-preview (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -340,7 +349,7 @@
 * **properties**: [ProductContractProperties](#productcontractproperties): Product entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/products/apis@2019-12-01-preview
+## Resource Microsoft.ApiManagement/service/products/apis@2019-12-01-preview (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -348,7 +357,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/products/apis' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/products/groups@2019-12-01-preview
+## Resource Microsoft.ApiManagement/service/products/groups@2019-12-01-preview (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

@@ -22,6 +22,28 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/artifactsources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DevTestLab/labs/artifactsources/armtemplates@2016-05-15 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-05-15' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ArmTemplateProperties](#armtemplateproperties) (ReadOnly): The properties of the resource.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The tags of the resource.
+* **type**: 'Microsoft.DevTestLab/labs/artifactsources/armtemplates' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DevTestLab/labs/artifactsources/artifacts@2016-05-15 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-05-15' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ArtifactProperties](#artifactproperties) (ReadOnly): The properties of the resource.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The tags of the resource.
+* **type**: 'Microsoft.DevTestLab/labs/artifactsources/artifacts' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DevTestLab/labs/costs@2016-05-15
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -230,6 +252,16 @@
 * **name**: string: The name of the template parameter.
 * **value**: string: The value of the template parameter.
 
+## ArmTemplateProperties
+### Properties
+* **contents**: any (ReadOnly): The contents of the ARM template.
+* **createdDate**: string (ReadOnly): The creation date of the armTemplate.
+* **description**: string (ReadOnly): The description of the ARM template.
+* **displayName**: string (ReadOnly): The display name of the ARM template.
+* **icon**: string (ReadOnly): The URI to the icon of the ARM template.
+* **parametersValueFilesInfo**: [ParametersValueFileInfo](#parametersvaluefileinfo)[] (ReadOnly): File name and parameter values information from all azuredeploy.*.parameters.json for the ARM template.
+* **publisher**: string (ReadOnly): The publisher of the ARM template.
+
 ## ArtifactDeploymentStatusProperties
 ### Properties
 * **artifactsApplied**: int: The total count of the artifacts that were successfully applied.
@@ -249,6 +281,17 @@
 ### Properties
 * **name**: string: The name of the artifact parameter.
 * **value**: string: The value of the artifact parameter.
+
+## ArtifactProperties
+### Properties
+* **createdDate**: string (ReadOnly): The artifact's creation date.
+* **description**: string (ReadOnly): The artifact's description.
+* **filePath**: string (ReadOnly): The file path to the artifact.
+* **icon**: string (ReadOnly): The URI to the artifact icon.
+* **parameters**: any (ReadOnly): The artifact's parameters.
+* **publisher**: string (ReadOnly): The artifact's publisher.
+* **targetOsType**: string (ReadOnly): The artifact's target OS.
+* **title**: string (ReadOnly): The artifact's title.
 
 ## ArtifactSourceProperties
 ### Properties
@@ -567,6 +610,11 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **timeInMinutes**: int: Time in minutes before event at which notification will be sent.
 * **webhookUrl**: string: The webhook URL to which the notification will be sent.
 
+## ParametersValueFileInfo
+### Properties
+* **fileName**: string: File name.
+* **parametersValueInfo**: any: Contents of the file.
+
 ## PercentageCostThresholdProperties
 ### Properties
 * **thresholdValue**: int: The cost threshold value.
@@ -587,6 +635,16 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 ### Properties
 * **backendPort**: int: Backend port of the target virtual machine.
 * **transportProtocol**: 'Tcp' | 'Udp' | string: Protocol type of the port.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

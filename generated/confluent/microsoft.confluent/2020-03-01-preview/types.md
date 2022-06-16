@@ -1,12 +1,12 @@
 # Microsoft.Confluent @ 2020-03-01-preview
 
-## Resource Microsoft.Confluent/agreements@2020-03-01-preview
+## Resource Microsoft.Confluent/agreements@2020-03-01-preview (WriteOnly)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfluentAgreementProperties](#confluentagreementproperties): Represents the properties of the resource.
+* **properties**: [ConfluentAgreementProperties](#confluentagreementproperties) (WriteOnly): Represents the properties of the resource.
 * **type**: 'Microsoft.Confluent/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Confluent/organizations@2020-03-01-preview

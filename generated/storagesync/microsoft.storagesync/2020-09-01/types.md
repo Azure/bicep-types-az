@@ -62,6 +62,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.StorageSync/storageSyncServices/workflows@2020-09-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkflowProperties](#workflowproperties) (ReadOnly): Workflow properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.StorageSync/storageSyncServices/workflows' (ReadOnly, DeployTimeConstant): The resource type
+
 ## CloudEndpointChangeEnumerationActivity
 ### Properties
 * **deletesProgressPercent**: int (ReadOnly): Progress percentage for processing deletes. This is done separately from the rest of the enumeration run
@@ -314,4 +324,15 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## WorkflowProperties
+### Properties
+* **commandName**: string (ReadOnly): workflow command name.
+* **createdTimestamp**: string (ReadOnly): workflow created timestamp.
+* **lastOperationId**: string: workflow last operation identifier.
+* **lastStatusTimestamp**: string (ReadOnly): workflow last status timestamp.
+* **lastStepName**: string: last step name
+* **operation**: 'cancel' | 'do' | 'undo' | string: operation direction.
+* **status**: 'aborted' | 'active' | 'expired' | 'failed' | 'succeeded' | string: workflow status.
+* **steps**: string: workflow steps
 
