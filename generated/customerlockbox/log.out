@@ -10,4 +10,4 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 1ms
-info    | Autorest completed in 3.99s. 0 files generated.
+info    | Autorest completed in 3.39s. 0 files generated.

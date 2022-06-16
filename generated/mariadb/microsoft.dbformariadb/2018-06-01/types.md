@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location the resource resides in.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required): Properties of the server.
+* **properties**: [ServerPropertiesForCreateOrServerProperties](#serverpropertiesforcreateorserverproperties) (Required): Properties of the server.
 * **sku**: [Sku](#sku): The SKU (pricing tier) of the server.
 * **tags**: [ServerForCreateTags](#serverforcreatetags): Application-specific metadata in the form of key-value pairs.
 * **type**: 'Microsoft.DBforMariaDB/servers' (ReadOnly, DeployTimeConstant): The resource type
@@ -93,7 +93,7 @@
 
 ## PrivateEndpointProperty
 ### Properties
-* **id**: string (ReadOnly): Resource id of the private endpoint.
+* **id**: string: Resource id of the private endpoint.
 
 ## PrivateLinkServiceConnectionStateProperty
 ### Properties
@@ -123,17 +123,17 @@
 
 ## ServerPrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty) (ReadOnly): Private endpoint which the connection belongs to.
-* **privateLinkServiceConnectionState**: [ServerPrivateLinkServiceConnectionStateProperty](#serverprivatelinkserviceconnectionstateproperty) (ReadOnly): Connection state of the private endpoint connection.
+* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty): Private endpoint which the connection belongs to.
+* **privateLinkServiceConnectionState**: [ServerPrivateLinkServiceConnectionStateProperty](#serverprivatelinkserviceconnectionstateproperty): Connection state of the private endpoint connection.
 * **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' | string (ReadOnly): State of the private endpoint connection.
 
 ## ServerPrivateLinkServiceConnectionStateProperty
 ### Properties
 * **actionsRequired**: 'None' | string (ReadOnly): The actions required for private link service connection.
-* **description**: string (ReadOnly): The private link service connection description.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (ReadOnly): The private link service connection status.
+* **description**: string (Required): The private link service connection description.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (Required): The private link service connection status.
 
-## ServerPropertiesForCreate
+## ServerPropertiesForCreateOrServerProperties
 * **Discriminator**: createMode
 
 ### Base Properties

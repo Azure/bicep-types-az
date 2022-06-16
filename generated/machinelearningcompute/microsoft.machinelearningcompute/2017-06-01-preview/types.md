@@ -69,12 +69,12 @@
 
 ## OperationalizationClusterCredentials
 ### Properties
-* **appInsights**: [AppInsightsCredentials](#appinsightscredentials) (ReadOnly): Credentials for Azure AppInsights.
-* **containerRegistry**: [ContainerRegistryCredentials](#containerregistrycredentials) (ReadOnly): Credentials for Azure Container Registry.
-* **containerService**: [ContainerServiceCredentials](#containerservicecredentials) (ReadOnly): Credentials for Azure Container Service.
-* **serviceAuthConfiguration**: [ServiceAuthConfiguration](#serviceauthconfiguration) (ReadOnly): Global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.
-* **sslConfiguration**: [SslConfiguration](#sslconfiguration) (ReadOnly): The SSL configuration for the services.
-* **storageAccount**: [StorageAccountCredentials](#storageaccountcredentials) (ReadOnly): Credentials for the Storage Account.
+* **appInsights**: [AppInsightsCredentials](#appinsightscredentials): Credentials for Azure AppInsights.
+* **containerRegistry**: [ContainerRegistryCredentials](#containerregistrycredentials): Credentials for Azure Container Registry.
+* **containerService**: [ContainerServiceCredentials](#containerservicecredentials): Credentials for Azure Container Service.
+* **serviceAuthConfiguration**: [ServiceAuthConfiguration](#serviceauthconfiguration): Global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.
+* **sslConfiguration**: [SslConfiguration](#sslconfiguration): The SSL configuration for the services.
+* **storageAccount**: [StorageAccountCredentials](#storageaccountcredentials): Credentials for the Storage Account.
 
 ## OperationalizationClusterProperties
 ### Properties

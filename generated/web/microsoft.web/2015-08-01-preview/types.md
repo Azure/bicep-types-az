@@ -169,8 +169,8 @@
 
 ## ConnectionSecrets
 ### Properties
-* **connectionKey**: string (ReadOnly): Connection Key
-* **parameterValues**: [ConnectionSecretsParameterValues](#connectionsecretsparametervalues) (ReadOnly): Tokens/Claim
+* **connectionKey**: string: Connection Key
+* **parameterValues**: [ConnectionSecretsParameterValues](#connectionsecretsparametervalues): Tokens/Claim
 
 ## ConnectionSecretsParameterValues
 ### Properties
@@ -195,37 +195,37 @@
 
 ## ConsentLink
 ### Properties
-* **displayName**: string (ReadOnly): Display Name of the parameter in the connection provider's oauthSettings
-* **firstPartyLoginUri**: string (ReadOnly): Uri for first party login
-* **link**: string (ReadOnly): Uri for the consent link
-* **status**: 'Authenticated' | 'Error' | 'Unauthenticated' (ReadOnly): Status of the link
+* **displayName**: string: Display Name of the parameter in the connection provider's oauthSettings
+* **firstPartyLoginUri**: string: Uri for first party login
+* **link**: string: Uri for the consent link
+* **status**: 'Authenticated' | 'Error' | 'Unauthenticated': Status of the link
 
 ## ConsentLinkInput
 ### Properties
-* **id**: string (WriteOnly): Resource Id
-* **kind**: string (WriteOnly): Kind of resource
-* **location**: string (Required, WriteOnly): Resource Location
-* **name**: string (WriteOnly): Resource Name
-* **properties**: [ConsentLinkInputProperties](#consentlinkinputproperties) (WriteOnly)
-* **tags**: [ResourceTags](#resourcetags) (WriteOnly): Resource tags
-* **type**: string (WriteOnly): Resource type
+* **id**: string: Resource Id
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
+* **name**: string: Resource Name
+* **properties**: [ConsentLinkInputProperties](#consentlinkinputproperties)
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: string: Resource type
 
 ## ConsentLinkInputParameter
 ### Properties
-* **objectId**: string (WriteOnly): AAD OID (user or group) if the principal type is ActiveDirectory.
+* **objectId**: string: AAD OID (user or group) if the principal type is ActiveDirectory.
             MSA PUID if the principal type is MicrosoftAccount.
-* **parameterName**: string (WriteOnly): Name of the parameter in the connection provider's oauthSettings
-* **principalType**: 'ActiveDirectory' | 'Connection' | 'MicrosoftAccount' (WriteOnly): Principal type
-* **redirectUrl**: string (WriteOnly): Name of the parameter in the connection provider's oauthSettings
-* **tenantId**: string (WriteOnly): Tenant Id
+* **parameterName**: string: Name of the parameter in the connection provider's oauthSettings
+* **principalType**: 'ActiveDirectory' | 'Connection' | 'MicrosoftAccount': Principal type
+* **redirectUrl**: string: Name of the parameter in the connection provider's oauthSettings
+* **tenantId**: string: Tenant Id
 
 ## ConsentLinkInputProperties
 ### Properties
-* **parameters**: [ConsentLinkInputParameter](#consentlinkinputparameter)[] (WriteOnly): Array of links
+* **parameters**: [ConsentLinkInputParameter](#consentlinkinputparameter)[]: Array of links
 
 ## ConsentLinkPayload
 ### Properties
-* **value**: [ConsentLink](#consentlink)[] (ReadOnly): Collection of resources
+* **value**: [ConsentLink](#consentlink)[]: Collection of resources
 
 ## CustomLoginSettingValue
 ### Properties
@@ -287,17 +287,17 @@
 
 ## ListConnectionKeysInput
 ### Properties
-* **id**: string (WriteOnly): Resource Id
-* **kind**: string (WriteOnly): Kind of resource
-* **location**: string (Required, WriteOnly): Resource Location
-* **name**: string (WriteOnly): Resource Name
-* **properties**: [ListConnectionKeysInputProperties](#listconnectionkeysinputproperties) (WriteOnly)
-* **tags**: [ResourceTags](#resourcetags) (WriteOnly): Resource tags
-* **type**: string (WriteOnly): Resource type
+* **id**: string: Resource Id
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
+* **name**: string: Resource Name
+* **properties**: [ListConnectionKeysInputProperties](#listconnectionkeysinputproperties)
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: string: Resource type
 
 ## ListConnectionKeysInputProperties
 ### Properties
-* **validityTimeSpan**: string (WriteOnly): time span for how long the keys will be valid
+* **validityTimeSpan**: string: time span for how long the keys will be valid
 
 ## ParameterCustomLoginSettingValues
 ### Properties

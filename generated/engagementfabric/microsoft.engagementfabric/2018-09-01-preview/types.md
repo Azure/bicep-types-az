@@ -43,13 +43,13 @@
 
 ## ChannelTypeDescription
 ### Properties
-* **channelDescription**: string (ReadOnly): Text description for the channel
-* **channelFunctions**: string[] (ReadOnly): All the available functions for the channel
-* **channelType**: string (ReadOnly): Channel type
+* **channelDescription**: string: Text description for the channel
+* **channelFunctions**: string[]: All the available functions for the channel
+* **channelType**: string: Channel type
 
 ## ChannelTypeDescriptionList
 ### Properties
-* **value**: [ChannelTypeDescription](#channeltypedescription)[] (ReadOnly): Channel descriptions
+* **value**: [ChannelTypeDescription](#channeltypedescription)[]: Channel descriptions
 
 ## KeyDescription
 ### Properties

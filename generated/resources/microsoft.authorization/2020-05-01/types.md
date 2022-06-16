@@ -16,7 +16,7 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkAssociationProperties](#privatelinkassociationproperties): The properties of the PrivateLinkAssociation.
+* **properties**: [PrivateLinkAssociationPropertiesOrPrivateLinkAssociationPropertiesExpanded](#privatelinkassociationpropertiesorprivatelinkassociationpropertiesexpanded): The properties of the PrivateLinkAssociation.
 * **type**: 'Microsoft.Authorization/privateLinkAssociations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/resourceManagementPrivateLinks@2020-05-01
@@ -39,7 +39,7 @@
 * **notes**: string: Notes about the lock. Maximum of 512 characters.
 * **owners**: [ManagementLockOwner](#managementlockowner)[]: The owners of the lock.
 
-## PrivateLinkAssociationProperties
+## PrivateLinkAssociationPropertiesOrPrivateLinkAssociationPropertiesExpanded
 ### Properties
 * **privateLink**: string: The rmpl Resource ID.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string
@@ -48,7 +48,7 @@
 
 ## ResourceManagementPrivateLinkEndpointConnections
 ### Properties
-* **privateEndpointConnections**: string[] (ReadOnly): The private endpoint connections.
+* **privateEndpointConnections**: string[]: The private endpoint connections.
 
 ## SystemData
 ### Properties

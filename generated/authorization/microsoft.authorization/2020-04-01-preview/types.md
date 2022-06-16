@@ -6,10 +6,10 @@
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RoleAssignmentProperties](#roleassignmentproperties) (Required): Role assignment properties.
+* **properties**: [RoleAssignmentPropertiesOrRoleAssignmentPropertiesWithScope](#roleassignmentpropertiesorroleassignmentpropertieswithscope) (Required): Role assignment properties.
 * **type**: 'Microsoft.Authorization/roleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## RoleAssignmentProperties
+## RoleAssignmentPropertiesOrRoleAssignmentPropertiesWithScope
 ### Properties
 * **canDelegate**: bool: The delegation flag used for creating a role assignment
 * **condition**: string: The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'

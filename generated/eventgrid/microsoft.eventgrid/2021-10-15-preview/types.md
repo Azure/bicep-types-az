@@ -432,8 +432,8 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 
 ## DomainSharedAccessKeys
 ### Properties
-* **key1**: string (ReadOnly): Shared access key1 for the domain.
-* **key2**: string (ReadOnly): Shared access key2 for the domain.
+* **key1**: string: Shared access key1 for the domain.
+* **key2**: string: Shared access key2 for the domain.
 
 ## DomainTopicProperties
 ### Properties
@@ -716,8 +716,8 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 
 ## PartnerNamespaceSharedAccessKeys
 ### Properties
-* **key1**: string (ReadOnly): Shared access key1 for the partner namespace.
-* **key2**: string (ReadOnly): Shared access key2 for the partner namespace.
+* **key1**: string: Shared access key1 for the partner namespace.
+* **key2**: string: Shared access key2 for the partner namespace.
 
 ## PartnerRegistrationProperties
 ### Properties
@@ -861,8 +861,8 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 
 ## TopicSharedAccessKeys
 ### Properties
-* **key1**: string (ReadOnly): Shared access key1 for the topic.
-* **key2**: string (ReadOnly): Shared access key2 for the topic.
+* **key1**: string: Shared access key1 for the topic.
+* **key2**: string: Shared access key2 for the topic.
 
 ## TrackedResourceTags
 ### Properties

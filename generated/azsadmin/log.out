@@ -22,5 +22,5 @@ warning | PreCheck/SchemaMissingType | The schema 'SubscriptionList' with an und
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/user-subscriptions/Microsoft.Subscriptions/preview/2015-11-01/Subscriptions.json:216:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionId}': Unable to locate "/providers/" segment
-info    | autorest.bicep took 2ms
-info    | Autorest completed in 4.41s. 0 files generated.
+info    | autorest.bicep took 1ms
+info    | Autorest completed in 3.74s. 0 files generated.

@@ -27,19 +27,19 @@
 
 ## AppWhitelistingGroupData
 ### Properties
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' | string (ReadOnly): The configuration status of the VM/server group or machine or rule on the machine
-* **enforcementMode**: 'Audit' | 'Enforce' | 'None' | string (ReadOnly): The application control policy enforcement/protection mode of the VM/server group
-* **issues**: [AppWhitelistingIssueSummary](#appwhitelistingissuesummary)[] (ReadOnly)
-* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[] (ReadOnly)
-* **protectionMode**: [ProtectionMode](#protectionmode) (ReadOnly): The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
-* **recommendationStatus**: 'NoStatus' | 'NotAvailable' | 'NotRecommended' | 'Recommended' | string (ReadOnly): The recommendation status of the VM/server group or VM/server
-* **sourceSystem**: 'Azure_AppLocker' | 'Azure_AuditD' | 'NonAzure_AppLocker' | 'NonAzure_AuditD' | 'None' | string (ReadOnly): The source type of the VM/server group
-* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[] (ReadOnly)
+* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' | string: The configuration status of the VM/server group or machine or rule on the machine
+* **enforcementMode**: 'Audit' | 'Enforce' | 'None' | string: The application control policy enforcement/protection mode of the VM/server group
+* **issues**: [AppWhitelistingIssueSummary](#appwhitelistingissuesummary)[]
+* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[]
+* **protectionMode**: [ProtectionMode](#protectionmode): The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
+* **recommendationStatus**: 'NoStatus' | 'NotAvailable' | 'NotRecommended' | 'Recommended' | string: The recommendation status of the VM/server group or VM/server
+* **sourceSystem**: 'Azure_AppLocker' | 'Azure_AuditD' | 'NonAzure_AppLocker' | 'NonAzure_AuditD' | 'None' | string: The source type of the VM/server group
+* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[]
 
 ## AppWhitelistingIssueSummary
 ### Properties
-* **issue**: 'ExecutableViolationsAudited' | 'MsiAndScriptViolationsAudited' | 'MsiAndScriptViolationsBlocked' | 'RulesViolatedManually' | 'ViolationsAudited' | 'ViolationsBlocked' | string (ReadOnly): An alert that VMs/servers within a group can have
-* **numberOfVms**: int (ReadOnly): The number of machines in the VM/server group that have this alert
+* **issue**: 'ExecutableViolationsAudited' | 'MsiAndScriptViolationsAudited' | 'MsiAndScriptViolationsBlocked' | 'RulesViolatedManually' | 'ViolationsAudited' | 'ViolationsBlocked' | string: An alert that VMs/servers within a group can have
+* **numberOfVms**: int: The number of machines in the VM/server group that have this alert
 
 ## JitNetworkAccessPolicyProperties
 ### Properties
@@ -85,39 +85,39 @@
 
 ## PathRecommendation
 ### Properties
-* **action**: 'Add' | 'Recommended' | 'Remove' | string (WriteOnly): The recommendation action of the VM/server or rule
-* **common**: bool (WriteOnly): Whether the path is commonly run on the machine
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' | string (WriteOnly): The configuration status of the VM/server group or machine or rule on the machine
-* **fileType**: 'Dll' | 'Exe' | 'Executable' | 'Msi' | 'Script' | 'Unknown' | string (WriteOnly): The type of the file (for Linux files - Executable is used)
-* **path**: string (WriteOnly): The full path to whitelist
-* **publisherInfo**: [PublisherInfo](#publisherinfo) (WriteOnly): Represents the publisher information of a process/rule
-* **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature' | string (WriteOnly): The type of the rule to be allowed
-* **usernames**: [UserRecommendation](#userrecommendation)[] (WriteOnly)
-* **userSids**: string[] (WriteOnly)
+* **action**: 'Add' | 'Recommended' | 'Remove' | string: The recommendation action of the VM/server or rule
+* **common**: bool: Whether the path is commonly run on the machine
+* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' | string: The configuration status of the VM/server group or machine or rule on the machine
+* **fileType**: 'Dll' | 'Exe' | 'Executable' | 'Msi' | 'Script' | 'Unknown' | string: The type of the file (for Linux files - Executable is used)
+* **path**: string: The full path to whitelist
+* **publisherInfo**: [PublisherInfo](#publisherinfo): Represents the publisher information of a process/rule
+* **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature' | string: The type of the rule to be allowed
+* **usernames**: [UserRecommendation](#userrecommendation)[]
+* **userSids**: string[]
 
 ## ProtectionMode
 ### Properties
-* **exe**: 'Audit' | 'Enforce' | 'None' | string (WriteOnly): The application control policy enforcement/protection mode of the VM/server group
-* **executable**: 'Audit' | 'Enforce' | 'None' | string (WriteOnly): The application control policy enforcement/protection mode of the VM/server group
-* **msi**: 'Audit' | 'Enforce' | 'None' | string (WriteOnly): The application control policy enforcement/protection mode of the VM/server group
-* **script**: 'Audit' | 'Enforce' | 'None' | string (WriteOnly): The application control policy enforcement/protection mode of the VM/server group
+* **exe**: 'Audit' | 'Enforce' | 'None' | string: The application control policy enforcement/protection mode of the VM/server group
+* **executable**: 'Audit' | 'Enforce' | 'None' | string: The application control policy enforcement/protection mode of the VM/server group
+* **msi**: 'Audit' | 'Enforce' | 'None' | string: The application control policy enforcement/protection mode of the VM/server group
+* **script**: 'Audit' | 'Enforce' | 'None' | string: The application control policy enforcement/protection mode of the VM/server group
 
 ## PublisherInfo
 ### Properties
-* **binaryName**: string (WriteOnly): The "OriginalName" field taken from the file's version resource
-* **productName**: string (WriteOnly): The product name taken from the file's version resource
-* **publisherName**: string (WriteOnly): The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
-* **version**: string (WriteOnly): The binary file version taken from the file's version resource
+* **binaryName**: string: The "OriginalName" field taken from the file's version resource
+* **productName**: string: The product name taken from the file's version resource
+* **publisherName**: string: The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
+* **version**: string: The binary file version taken from the file's version resource
 
 ## UserRecommendation
 ### Properties
-* **recommendationAction**: 'Add' | 'Recommended' | 'Remove' | string (WriteOnly): The recommendation action of the VM/server or rule
-* **username**: string (WriteOnly): Represents a user that is recommended to be allowed for a certain rule
+* **recommendationAction**: 'Add' | 'Recommended' | 'Remove' | string: The recommendation action of the VM/server or rule
+* **username**: string: Represents a user that is recommended to be allowed for a certain rule
 
 ## VmRecommendation
 ### Properties
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' | string (WriteOnly): The configuration status of the VM/server group or machine or rule on the machine
-* **enforcementSupport**: 'NotSupported' | 'Supported' | 'Unknown' | string (WriteOnly): The VM/server supportability of Enforce feature
-* **recommendationAction**: 'Add' | 'Recommended' | 'Remove' | string (WriteOnly): The recommendation action of the VM/server or rule
-* **resourceId**: string (WriteOnly): The full azure resource id of the machine
+* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' | string: The configuration status of the VM/server group or machine or rule on the machine
+* **enforcementSupport**: 'NotSupported' | 'Supported' | 'Unknown' | string: The VM/server supportability of Enforce feature
+* **recommendationAction**: 'Add' | 'Recommended' | 'Remove' | string: The recommendation action of the VM/server or rule
+* **resourceId**: string: The full azure resource id of the machine
 

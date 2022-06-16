@@ -61,20 +61,20 @@
 
 ## AppServiceInfo
 ### Properties
-* **autoUpdateSetting**: 'DISABLED' | 'ENABLED' | string (ReadOnly): Update settings of OneAgent.
-* **availabilityState**: 'CRASHED' | 'LOST' | 'MONITORED' | 'PRE_MONITORED' | 'SHUTDOWN' | 'UNEXPECTED_SHUTDOWN' | 'UNKNOWN' | 'UNMONITORED' | string (ReadOnly): The availability state of OneAgent.
-* **hostGroup**: string (ReadOnly): The name of the host group
-* **hostName**: string (ReadOnly): The name of the host
-* **logModule**: 'DISABLED' | 'ENABLED' | string (ReadOnly): Tells whether log modules are enabled or not
-* **monitoringType**: 'CLOUD_INFRASTRUCTURE' | 'FULL_STACK' | string (ReadOnly): The monitoring mode of OneAgent
-* **resourceId**: string (ReadOnly): App service resource ID
-* **updateStatus**: 'INCOMPATIBLE' | 'OUTDATED' | 'SCHEDULED' | 'SUPPRESSED' | 'UNKNOWN' | 'UP2DATE' | 'UPDATE_IN_PROGRESS' | 'UPDATE_PENDING' | 'UPDATE_PROBLEM' | string (ReadOnly): The current update status of OneAgent.
-* **version**: string (ReadOnly): Version of the Dynatrace agent installed on the App Service.
+* **autoUpdateSetting**: 'DISABLED' | 'ENABLED' | string: Update settings of OneAgent.
+* **availabilityState**: 'CRASHED' | 'LOST' | 'MONITORED' | 'PRE_MONITORED' | 'SHUTDOWN' | 'UNEXPECTED_SHUTDOWN' | 'UNKNOWN' | 'UNMONITORED' | string: The availability state of OneAgent.
+* **hostGroup**: string: The name of the host group
+* **hostName**: string: The name of the host
+* **logModule**: 'DISABLED' | 'ENABLED' | string: Tells whether log modules are enabled or not
+* **monitoringType**: 'CLOUD_INFRASTRUCTURE' | 'FULL_STACK' | string: The monitoring mode of OneAgent
+* **resourceId**: string: App service resource ID
+* **updateStatus**: 'INCOMPATIBLE' | 'OUTDATED' | 'SCHEDULED' | 'SUPPRESSED' | 'UNKNOWN' | 'UP2DATE' | 'UPDATE_IN_PROGRESS' | 'UPDATE_PENDING' | 'UPDATE_PROBLEM' | string: The current update status of OneAgent.
+* **version**: string: Version of the Dynatrace agent installed on the App Service.
 
 ## AppServiceListResponse
 ### Properties
-* **nextLink**: string (ReadOnly): The link to the next page of items
-* **value**: [AppServiceInfo](#appserviceinfo)[] (ReadOnly): The items on this page
+* **nextLink**: string (Required): The link to the next page of items
+* **value**: [AppServiceInfo](#appserviceinfo)[] (Required): The items on this page
 
 ## DynatraceEnvironmentProperties
 ### Properties
@@ -118,20 +118,20 @@
 
 ## LinkableEnvironmentListResponse
 ### Properties
-* **nextLink**: string (ReadOnly): Link to the next set of results, if any.
-* **value**: [LinkableEnvironmentResponse](#linkableenvironmentresponse)[] (ReadOnly): List of environments for which user is an admin
+* **nextLink**: string: Link to the next set of results, if any.
+* **value**: [LinkableEnvironmentResponse](#linkableenvironmentresponse)[]: List of environments for which user is an admin
 
 ## LinkableEnvironmentRequest
 ### Properties
-* **region**: string (WriteOnly): Azure region in which we want to link the environment
-* **tenantId**: string (WriteOnly): Tenant Id of the user in which they want to link the environment
-* **userPrincipal**: string (WriteOnly): user principal id of the user
+* **region**: string: Azure region in which we want to link the environment
+* **tenantId**: string: Tenant Id of the user in which they want to link the environment
+* **userPrincipal**: string: user principal id of the user
 
 ## LinkableEnvironmentResponse
 ### Properties
-* **environmentId**: string (ReadOnly): environment id for which user is an admin
-* **environmentName**: string (ReadOnly): Name of the environment
-* **planData**: [PlanData](#plandata) (ReadOnly): Billing plan information.
+* **environmentId**: string: environment id for which user is an admin
+* **environmentName**: string: Name of the environment
+* **planData**: [PlanData](#plandata): Billing plan information.
 
 ## LogRules
 ### Properties
@@ -147,16 +147,16 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 
 ## MonitoredResource
 ### Properties
-* **id**: string (ReadOnly): The ARM id of the resource.
-* **reasonForLogsStatus**: string (ReadOnly): Reason for why the resource is sending logs (or why it is not sending).
-* **reasonForMetricsStatus**: string (ReadOnly): Reason for why the resource is sending metrics (or why it is not sending).
-* **sendingLogs**: 'Disabled' | 'Enabled' | string (ReadOnly): Flag indicating if resource is sending logs to Dynatrace.
-* **sendingMetrics**: 'Disabled' | 'Enabled' | string (ReadOnly): Flag indicating if resource is sending metrics to Dynatrace.
+* **id**: string: The ARM id of the resource.
+* **reasonForLogsStatus**: string: Reason for why the resource is sending logs (or why it is not sending).
+* **reasonForMetricsStatus**: string: Reason for why the resource is sending metrics (or why it is not sending).
+* **sendingLogs**: 'Disabled' | 'Enabled' | string: Flag indicating if resource is sending logs to Dynatrace.
+* **sendingMetrics**: 'Disabled' | 'Enabled' | string: Flag indicating if resource is sending metrics to Dynatrace.
 
 ## MonitoredResourceListResponse
 ### Properties
-* **nextLink**: string (ReadOnly): The link to the next page of items
-* **value**: [MonitoredResource](#monitoredresource)[] (ReadOnly): The items on this page
+* **nextLink**: string (Required): The link to the next page of items
+* **value**: [MonitoredResource](#monitoredresource)[] (Required): The items on this page
 
 ## MonitoringTagRulesProperties
 ### Properties
@@ -211,18 +211,18 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 
 ## VMHostsListResponse
 ### Properties
-* **nextLink**: string (ReadOnly): The link to the next page of items
-* **value**: [VMInfo](#vminfo)[] (ReadOnly): The items on this page
+* **nextLink**: string (Required): The link to the next page of items
+* **value**: [VMInfo](#vminfo)[] (Required): The items on this page
 
 ## VMInfo
 ### Properties
-* **autoUpdateSetting**: 'DISABLED' | 'ENABLED' | string (ReadOnly): Update settings of OneAgent.
-* **availabilityState**: 'CRASHED' | 'LOST' | 'MONITORED' | 'PRE_MONITORED' | 'SHUTDOWN' | 'UNEXPECTED_SHUTDOWN' | 'UNKNOWN' | 'UNMONITORED' | string (ReadOnly): The availability state of OneAgent.
-* **hostGroup**: string (ReadOnly): The name of the host group
-* **hostName**: string (ReadOnly): The name of the host
-* **logModule**: 'DISABLED' | 'ENABLED' | string (ReadOnly): Tells whether log modules are enabled or not
-* **monitoringType**: 'CLOUD_INFRASTRUCTURE' | 'FULL_STACK' | string (ReadOnly): The monitoring mode of OneAgent
-* **resourceId**: string (ReadOnly): Azure VM resource ID
-* **updateStatus**: 'INCOMPATIBLE' | 'OUTDATED' | 'SCHEDULED' | 'SUPPRESSED' | 'UNKNOWN' | 'UP2DATE' | 'UPDATE_IN_PROGRESS' | 'UPDATE_PENDING' | 'UPDATE_PROBLEM' | string (ReadOnly): The current update status of OneAgent.
-* **version**: string (ReadOnly): Version of the Dynatrace agent installed on the VM.
+* **autoUpdateSetting**: 'DISABLED' | 'ENABLED' | string: Update settings of OneAgent.
+* **availabilityState**: 'CRASHED' | 'LOST' | 'MONITORED' | 'PRE_MONITORED' | 'SHUTDOWN' | 'UNEXPECTED_SHUTDOWN' | 'UNKNOWN' | 'UNMONITORED' | string: The availability state of OneAgent.
+* **hostGroup**: string: The name of the host group
+* **hostName**: string: The name of the host
+* **logModule**: 'DISABLED' | 'ENABLED' | string: Tells whether log modules are enabled or not
+* **monitoringType**: 'CLOUD_INFRASTRUCTURE' | 'FULL_STACK' | string: The monitoring mode of OneAgent
+* **resourceId**: string: Azure VM resource ID
+* **updateStatus**: 'INCOMPATIBLE' | 'OUTDATED' | 'SCHEDULED' | 'SUPPRESSED' | 'UNKNOWN' | 'UP2DATE' | 'UPDATE_IN_PROGRESS' | 'UPDATE_PENDING' | 'UPDATE_PROBLEM' | string: The current update status of OneAgent.
+* **version**: string: Version of the Dynatrace agent installed on the VM.
 

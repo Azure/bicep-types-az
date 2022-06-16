@@ -90,5 +90,5 @@
 ## SharedAccessSignatureAuthorizationRuleListResult
 ### Properties
 * **nextLink**: string (ReadOnly)
-* **value**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[] (ReadOnly)
+* **value**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[]
 

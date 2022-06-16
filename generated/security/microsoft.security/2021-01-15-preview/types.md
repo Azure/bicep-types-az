@@ -21,7 +21,7 @@
 
 ## ConnectionStrings
 ### Properties
-* **value**: [IngestionConnectionString](#ingestionconnectionstring)[] (ReadOnly): Connection strings
+* **value**: [IngestionConnectionString](#ingestionconnectionstring)[] (Required): Connection strings
 
 ## IngestionConnectionString
 ### Properties

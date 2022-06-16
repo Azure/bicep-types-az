@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Profile location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ProfilePropertiesCreateParameters](#profilepropertiescreateparameters)
+* **properties**: [ProfilePropertiesCreateParametersOrProfileProperties](#profilepropertiescreateparametersorprofileproperties)
 * **tags**: [ProfileCreateParametersTags](#profilecreateparameterstags): Profile tags
 * **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,7 +18,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Endpoint location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EndpointPropertiesCreateParameters](#endpointpropertiescreateparameters)
+* **properties**: [EndpointPropertiesCreateParametersOrEndpointProperties](#endpointpropertiescreateparametersorendpointproperties)
 * **tags**: [EndpointCreateParametersTags](#endpointcreateparameterstags): Endpoint tags
 * **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -28,7 +28,7 @@
 * **apiVersion**: '2015-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CustomDomainPropertiesParameters](#customdomainpropertiesparameters)
+* **properties**: [CustomDomainPropertiesParametersOrCustomDomainProperties](#customdomainpropertiesparametersorcustomdomainproperties)
 * **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Cdn/profiles/endpoints/origins@2015-06-01
@@ -37,10 +37,10 @@
 * **apiVersion**: '2015-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [OriginPropertiesParameters](#originpropertiesparameters)
+* **properties**: [OriginPropertiesParametersOrOriginProperties](#originpropertiesparametersororiginproperties)
 * **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant): The resource type
 
-## CustomDomainPropertiesParameters
+## CustomDomainPropertiesParametersOrCustomDomainProperties
 ### Properties
 * **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning status of the custom domain.
@@ -62,7 +62,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## EndpointPropertiesCreateParameters
+## EndpointPropertiesCreateParametersOrEndpointProperties
 ### Properties
 * **contentTypesToCompress**: string[]: List of content types on which compression will be applied. The value for the elements should be a valid MIME type.
 * **hostName**: string (ReadOnly): The host name of the endpoint {endpointName}.{DNSZone}
@@ -76,7 +76,7 @@
 * **queryStringCachingBehavior**: 'BypassCaching' | 'IgnoreQueryString' | 'NotSet' | 'UseQueryString': Defines the query string caching behavior.
 * **resourceState**: 'Creating' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Resource status of the endpoint.
 
-## OriginPropertiesParameters
+## OriginPropertiesParametersOrOriginProperties
 ### Properties
 * **hostName**: string (Required): The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.
 * **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535.
@@ -89,7 +89,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ProfilePropertiesCreateParameters
+## ProfilePropertiesCreateParametersOrProfileProperties
 ### Properties
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning status of the profile.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' (ReadOnly): Resource status of the profile.

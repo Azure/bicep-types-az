@@ -20,5 +20,5 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
-info    | Autorest completed in 6.21s. 4 files generated.
+info    | autorest.bicep took 2ms
+info    | Autorest completed in 5.18s. 4 files generated.

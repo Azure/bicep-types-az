@@ -167,22 +167,22 @@
 
 ## MonitoredResource
 ### Properties
-* **id**: string (ReadOnly): The ARM id of the resource.
-* **reasonForLogsStatus**: string (ReadOnly): Reason for why the resource is sending logs (or why it is not sending).
-* **reasonForMetricsStatus**: string (ReadOnly): Reason for why the resource is sending metrics (or why it is not sending).
-* **sendingLogs**: bool (ReadOnly): Flag indicating if resource is sending logs to Logz.
-* **sendingMetrics**: bool (ReadOnly): Flag indicating if resource is sending metrics to Logz.
+* **id**: string: The ARM id of the resource.
+* **reasonForLogsStatus**: string: Reason for why the resource is sending logs (or why it is not sending).
+* **reasonForMetricsStatus**: string: Reason for why the resource is sending metrics (or why it is not sending).
+* **sendingLogs**: bool: Flag indicating if resource is sending logs to Logz.
+* **sendingMetrics**: bool: Flag indicating if resource is sending metrics to Logz.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 
 ## MonitoredResourceListResponse
 ### Properties
-* **nextLink**: string (ReadOnly): Link to the next set of results, if any.
-* **value**: [MonitoredResource](#monitoredresource)[] (ReadOnly): Results of a list operation.
+* **nextLink**: string: Link to the next set of results, if any.
+* **value**: [MonitoredResource](#monitoredresource)[]: Results of a list operation.
 
 ## MonitoredResourceListResponse
 ### Properties
-* **nextLink**: string (ReadOnly): Link to the next set of results, if any.
-* **value**: [MonitoredResource](#monitoredresource)[] (ReadOnly): Results of a list operation.
+* **nextLink**: string: Link to the next set of results, if any.
+* **value**: [MonitoredResource](#monitoredresource)[]: Results of a list operation.
 
 ## MonitoringTagRulesProperties
 ### Properties
@@ -226,29 +226,29 @@
 
 ## UserRoleListResponse
 ### Properties
-* **nextLink**: string (ReadOnly): Link to the next set of results, if any.
-* **value**: [UserRoleResponse](#userroleresponse)[] (ReadOnly): List of user roles for Logz.io account.
+* **nextLink**: string: Link to the next set of results, if any.
+* **value**: [UserRoleResponse](#userroleresponse)[]: List of user roles for Logz.io account.
 
 ## UserRoleRequest
 ### Properties
-* **emailAddress**: string (WriteOnly): Email of the user used by Logz for contacting them if needed
+* **emailAddress**: string: Email of the user used by Logz for contacting them if needed
 
 ## UserRoleResponse
 ### Properties
-* **role**: 'Admin' | 'None' | 'User' | string (ReadOnly): User roles on configured in Logz.io account.
+* **role**: 'Admin' | 'None' | 'User' | string: User roles on configured in Logz.io account.
 
 ## VMResources
 ### Properties
-* **agentVersion**: string (ReadOnly): Version of the Logz agent installed on the VM.
-* **id**: string (ReadOnly): Request of a list vm host update operation.
+* **agentVersion**: string: Version of the Logz agent installed on the VM.
+* **id**: string: Request of a list vm host update operation.
 
 ## VMResourcesListResponse
 ### Properties
-* **nextLink**: string (ReadOnly): Link to the next set of results, if any.
-* **value**: [VMResources](#vmresources)[] (ReadOnly): Response of a list vm host update operation.
+* **nextLink**: string: Link to the next set of results, if any.
+* **value**: [VMResources](#vmresources)[]: Response of a list vm host update operation.
 
 ## VMResourcesListResponse
 ### Properties
-* **nextLink**: string (ReadOnly): Link to the next set of results, if any.
-* **value**: [VMResources](#vmresources)[] (ReadOnly): Response of a list vm host update operation.
+* **nextLink**: string: Link to the next set of results, if any.
+* **value**: [VMResources](#vmresources)[]: Response of a list vm host update operation.
 

@@ -106,14 +106,14 @@
 
 ## MonitoredResource
 ### Properties
-* **id**: string (ReadOnly): The ARM id of the resource.
-* **reasonForLogsStatus**: string (ReadOnly): Reason for why the resource is sending logs (or why it is not sending).
-* **sendingLogs**: 'False' | 'True' | string (ReadOnly): Flag indicating the status of the resource for sending logs operation to Elastic.
+* **id**: string: The ARM id of the resource.
+* **reasonForLogsStatus**: string: Reason for why the resource is sending logs (or why it is not sending).
+* **sendingLogs**: 'False' | 'True' | string: Flag indicating the status of the resource for sending logs operation to Elastic.
 
 ## MonitoredResourceListResponse
 ### Properties
-* **nextLink**: string (ReadOnly): Link to the next set of results, if any.
-* **value**: [MonitoredResource](#monitoredresource)[] (ReadOnly): Results of a list operation.
+* **nextLink**: string: Link to the next set of results, if any.
+* **value**: [MonitoredResource](#monitoredresource)[]: Results of a list operation.
 
 ## MonitoringTagRulesProperties
 ### Properties
@@ -145,8 +145,8 @@
 
 ## UpgradableVersionsList
 ### Properties
-* **currentVersion**: string (ReadOnly): Current version of the elastic monitor
-* **upgradableVersions**: string[] (ReadOnly): Stack Versions that this version can upgrade to
+* **currentVersion**: string: Current version of the elastic monitor
+* **upgradableVersions**: string[]: Stack Versions that this version can upgrade to
 
 ## UserInfo
 ### Properties
@@ -158,10 +158,10 @@
 
 ## VMHostListResponse
 ### Properties
-* **nextLink**: string (ReadOnly): Link to the next Vm resource Id, if any.
-* **value**: [VMResources](#vmresources)[] (ReadOnly): Results of a list operation.
+* **nextLink**: string: Link to the next Vm resource Id, if any.
+* **value**: [VMResources](#vmresources)[]: Results of a list operation.
 
 ## VMResources
 ### Properties
-* **vmResourceId**: string (ReadOnly): The ARM id of the VM resource.
+* **vmResourceId**: string: The ARM id of the VM resource.
 

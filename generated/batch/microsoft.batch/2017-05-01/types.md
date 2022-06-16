@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The region in which to create the account.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BatchAccountCreateProperties](#batchaccountcreateproperties): The properties of the Batch account.
+* **properties**: [BatchAccountCreatePropertiesOrBatchAccountProperties](#batchaccountcreatepropertiesorbatchaccountproperties): The properties of the Batch account.
 * **tags**: [BatchAccountCreateParametersTags](#batchaccountcreateparameterstags): The user-specified tags associated with the account.
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -52,7 +52,7 @@
 * **storageUrlExpiry**: string (ReadOnly): The UTC time at which the Azure Storage URL will expire.
 * **version**: string (ReadOnly): The version of the application package.
 
-## AutoStorageBaseProperties
+## AutoStorageBasePropertiesOrAutoStorageProperties
 ### Properties
 * **lastKeySync**: string (ReadOnly): The UTC time at which storage keys were last synchronized with the Batch account.
 * **storageAccountId**: string (Required): The resource ID of the storage account to be used for auto-storage account.
@@ -62,11 +62,11 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## BatchAccountCreateProperties
+## BatchAccountCreatePropertiesOrBatchAccountProperties
 ### Properties
 * **accountEndpoint**: string (ReadOnly): The account endpoint used to interact with the Batch service.
 * **activeJobAndJobScheduleQuota**: int (ReadOnly): The active job and job schedule quota for this Batch account.
-* **autoStorage**: [AutoStorageBaseProperties](#autostoragebaseproperties): The properties related to the auto-storage account.
+* **autoStorage**: [AutoStorageBasePropertiesOrAutoStorageProperties](#autostoragebasepropertiesorautostorageproperties): The properties related to the auto-storage account.
 * **dedicatedCoreQuota**: int (ReadOnly): The dedicated core quota for this Batch account.
 * **keyVaultReference**: [KeyVaultReference](#keyvaultreference): A reference to the Azure key vault associated with the Batch account.
 * **lowPriorityCoreQuota**: int (ReadOnly): The low-priority core quota for this Batch account.

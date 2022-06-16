@@ -23,4 +23,4 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undef
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
 info    | autorest.bicep took 7ms
-info    | Autorest completed in 4.22s. 2 files generated.
+info    | Autorest completed in 3.59s. 2 files generated.

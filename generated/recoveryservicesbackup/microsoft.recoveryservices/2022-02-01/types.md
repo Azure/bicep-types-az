@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: 'backupResourceEncryptionConfig' (Required, DeployTimeConstant): The resource name
-* **properties**: [BackupResourceEncryptionConfig](#backupresourceencryptionconfig): BackupResourceEncryptionConfigResource properties
+* **properties**: [BackupResourceEncryptionConfigOrBackupResourceEncryptionConfigExtended](#backupresourceencryptionconfigorbackupresourceencryptionconfigextended): BackupResourceEncryptionConfigResource properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupEncryptionConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -136,7 +136,7 @@
 * **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked' | string: Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
 * **xcoolState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Vault x-cool state
 
-## BackupResourceEncryptionConfig
+## BackupResourceEncryptionConfigOrBackupResourceEncryptionConfigExtended
 ### Properties
 * **encryptionAtRestType**: 'CustomerManaged' | 'Invalid' | 'MicrosoftManaged' | string: Encryption At Rest Type
 * **infrastructureEncryptionState**: 'Disabled' | 'Enabled' | 'Invalid' | string

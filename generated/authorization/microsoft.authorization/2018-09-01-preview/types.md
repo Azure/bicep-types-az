@@ -6,10 +6,10 @@
 * **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RoleAssignmentProperties](#roleassignmentproperties) (Required): Role assignment properties.
+* **properties**: [RoleAssignmentPropertiesOrRoleAssignmentPropertiesWithScope](#roleassignmentpropertiesorroleassignmentpropertieswithscope) (Required): Role assignment properties.
 * **type**: 'Microsoft.Authorization/roleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## RoleAssignmentProperties
+## RoleAssignmentPropertiesOrRoleAssignmentPropertiesWithScope
 ### Properties
 * **canDelegate**: bool: The delegation flag used for creating a role assignment
 * **principalId**: string (Required): The principal ID assigned to the role. This maps to the ID inside the Active Directory. It can point to a user, service principal, or security group.

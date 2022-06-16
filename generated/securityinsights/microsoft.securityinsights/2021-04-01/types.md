@@ -144,11 +144,11 @@
 
 ## ThreatIntelligenceExternalReference
 ### Properties
-* **description**: string (WriteOnly): External reference description
-* **externalId**: string (WriteOnly): External reference ID
-* **hashes**: [ThreatIntelligenceExternalReferenceHashes](#threatintelligenceexternalreferencehashes) (WriteOnly): External reference hashes
-* **sourceName**: string (WriteOnly): External reference source name
-* **url**: string (WriteOnly): External reference URL
+* **description**: string: External reference description
+* **externalId**: string: External reference ID
+* **hashes**: [ThreatIntelligenceExternalReferenceHashes](#threatintelligenceexternalreferencehashes): External reference hashes
+* **sourceName**: string: External reference source name
+* **url**: string: External reference URL
 
 ## ThreatIntelligenceExternalReferenceHashes
 ### Properties
@@ -157,42 +157,42 @@
 
 ## ThreatIntelligenceGranularMarkingModel
 ### Properties
-* **language**: string (WriteOnly): Language granular marking model
-* **markingRef**: int (WriteOnly): marking reference granular marking model
-* **selectors**: string[] (WriteOnly): granular marking model selectors
+* **language**: string: Language granular marking model
+* **markingRef**: int: marking reference granular marking model
+* **selectors**: string[]: granular marking model selectors
 
 ## ThreatIntelligenceIndicatorProperties
 ### Properties
-* **additionalData**: [EntityCommonPropertiesAdditionalData](#entitycommonpropertiesadditionaldata) (ReadOnly, WriteOnly): A bag of custom fields that should be part of the entity and will be presented to the user.
-* **confidence**: int (WriteOnly): Confidence of threat intelligence entity
-* **created**: string (WriteOnly): Created by
-* **createdByRef**: string (WriteOnly): Created by reference of threat intelligence entity
-* **defanged**: bool (WriteOnly): Is threat intelligence entity defanged
-* **description**: string (WriteOnly): Description of a threat intelligence entity
-* **displayName**: string (WriteOnly): Display name of a threat intelligence entity
-* **extensions**: [ThreatIntelligenceIndicatorPropertiesExtensions](#threatintelligenceindicatorpropertiesextensions) (WriteOnly): Extensions map
-* **externalId**: string (WriteOnly): External ID of threat intelligence entity
-* **externalLastUpdatedTimeUtc**: string (WriteOnly): External last updated time in UTC
-* **externalReferences**: [ThreatIntelligenceExternalReference](#threatintelligenceexternalreference)[] (WriteOnly): External References
-* **friendlyName**: string (ReadOnly, WriteOnly): The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated.
-* **granularMarkings**: [ThreatIntelligenceGranularMarkingModel](#threatintelligencegranularmarkingmodel)[] (WriteOnly): Granular Markings
-* **indicatorTypes**: string[] (WriteOnly): Indicator types of threat intelligence entities
-* **killChainPhases**: [ThreatIntelligenceKillChainPhase](#threatintelligencekillchainphase)[] (WriteOnly): Kill chain phases
-* **labels**: string[] (WriteOnly): Labels  of threat intelligence entity
-* **language**: string (WriteOnly): Language of threat intelligence entity
-* **lastUpdatedTimeUtc**: string (WriteOnly): Last updated time in UTC
-* **modified**: string (WriteOnly): Modified by
-* **objectMarkingRefs**: string[] (WriteOnly): Threat intelligence entity object marking references
-* **parsedPattern**: [ThreatIntelligenceParsedPattern](#threatintelligenceparsedpattern)[] (WriteOnly): Parsed patterns
-* **pattern**: string (WriteOnly): Pattern of a threat intelligence entity
-* **patternType**: string (WriteOnly): Pattern type of a threat intelligence entity
-* **patternVersion**: string (WriteOnly): Pattern version of a threat intelligence entity
-* **revoked**: bool (WriteOnly): Is threat intelligence entity revoked
-* **source**: string (WriteOnly): Source of a threat intelligence entity
-* **threatIntelligenceTags**: string[] (WriteOnly): List of tags
-* **threatTypes**: string[] (WriteOnly): Threat types
-* **validFrom**: string (WriteOnly): Valid from
-* **validUntil**: string (WriteOnly): Valid until
+* **additionalData**: [EntityCommonPropertiesAdditionalData](#entitycommonpropertiesadditionaldata) (ReadOnly): A bag of custom fields that should be part of the entity and will be presented to the user.
+* **confidence**: int: Confidence of threat intelligence entity
+* **created**: string: Created by
+* **createdByRef**: string: Created by reference of threat intelligence entity
+* **defanged**: bool: Is threat intelligence entity defanged
+* **description**: string: Description of a threat intelligence entity
+* **displayName**: string: Display name of a threat intelligence entity
+* **extensions**: [ThreatIntelligenceIndicatorPropertiesExtensions](#threatintelligenceindicatorpropertiesextensions): Extensions map
+* **externalId**: string: External ID of threat intelligence entity
+* **externalLastUpdatedTimeUtc**: string: External last updated time in UTC
+* **externalReferences**: [ThreatIntelligenceExternalReference](#threatintelligenceexternalreference)[]: External References
+* **friendlyName**: string (ReadOnly): The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated.
+* **granularMarkings**: [ThreatIntelligenceGranularMarkingModel](#threatintelligencegranularmarkingmodel)[]: Granular Markings
+* **indicatorTypes**: string[]: Indicator types of threat intelligence entities
+* **killChainPhases**: [ThreatIntelligenceKillChainPhase](#threatintelligencekillchainphase)[]: Kill chain phases
+* **labels**: string[]: Labels  of threat intelligence entity
+* **language**: string: Language of threat intelligence entity
+* **lastUpdatedTimeUtc**: string: Last updated time in UTC
+* **modified**: string: Modified by
+* **objectMarkingRefs**: string[]: Threat intelligence entity object marking references
+* **parsedPattern**: [ThreatIntelligenceParsedPattern](#threatintelligenceparsedpattern)[]: Parsed patterns
+* **pattern**: string: Pattern of a threat intelligence entity
+* **patternType**: string: Pattern type of a threat intelligence entity
+* **patternVersion**: string: Pattern version of a threat intelligence entity
+* **revoked**: bool: Is threat intelligence entity revoked
+* **source**: string: Source of a threat intelligence entity
+* **threatIntelligenceTags**: string[]: List of tags
+* **threatTypes**: string[]: Threat types
+* **validFrom**: string: Valid from
+* **validUntil**: string: Valid until
 
 ## ThreatIntelligenceIndicatorPropertiesExtensions
 ### Properties
@@ -201,18 +201,18 @@
 
 ## ThreatIntelligenceKillChainPhase
 ### Properties
-* **killChainName**: string (WriteOnly): Kill chainName name
-* **phaseName**: string (WriteOnly): Phase name
+* **killChainName**: string: Kill chainName name
+* **phaseName**: string: Phase name
 
 ## ThreatIntelligenceParsedPattern
 ### Properties
-* **patternTypeKey**: string (WriteOnly): Pattern type key
-* **patternTypeValues**: [ThreatIntelligenceParsedPatternTypeValue](#threatintelligenceparsedpatterntypevalue)[] (WriteOnly): Pattern type keys
+* **patternTypeKey**: string: Pattern type key
+* **patternTypeValues**: [ThreatIntelligenceParsedPatternTypeValue](#threatintelligenceparsedpatterntypevalue)[]: Pattern type keys
 
 ## ThreatIntelligenceParsedPatternTypeValue
 ### Properties
-* **value**: string (WriteOnly): Value of parsed pattern
-* **valueType**: string (WriteOnly): Type of the value
+* **value**: string: Value of parsed pattern
+* **valueType**: string: Type of the value
 
 ## UserInfo
 ### Properties

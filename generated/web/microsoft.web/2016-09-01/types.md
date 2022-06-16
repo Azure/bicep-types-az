@@ -149,9 +149,9 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 ## HybridConnectionKey
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [HybridConnectionKeyProperties](#hybridconnectionkeyproperties) (ReadOnly): HybridConnectionKey resource specific properties
+* **properties**: [HybridConnectionKeyProperties](#hybridconnectionkeyproperties): HybridConnectionKey resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
 ## HybridConnectionKeyProperties
@@ -237,15 +237,15 @@ Basic apps are not used for capacity allocation.
 
 ## VnetRouteProperties
 ### Properties
-* **endAddress**: string (WriteOnly): The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
-* **name**: string (WriteOnly): The name of this route. This is only returned by the server and does not need to be set by the client.
-* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC' | string (WriteOnly): The type of route this is:
+* **endAddress**: string: The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
+* **name**: string: The name of this route. This is only returned by the server and does not need to be set by the client.
+* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC' | string: The type of route this is:
 DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
 INHERITED - Routes inherited from the real Virtual Network routes
 STATIC - Static route set on the app only
 
 These values will be used for syncing an app's routes with those from a Virtual Network.
-* **startAddress**: string (WriteOnly): The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
+* **startAddress**: string: The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
 
 ## WorkerPool
 ### Properties

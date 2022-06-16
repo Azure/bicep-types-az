@@ -44,7 +44,7 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ActionRequestProperties](#actionrequestproperties): Action properties for put request
+* **properties**: [ActionRequestPropertiesOrActionResponseProperties](#actionrequestpropertiesoractionresponseproperties): Action properties for put request
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -141,7 +141,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/entityQueries' (ReadOnly, DeployTimeConstant): The resource type
-### ActivityCustomEntityQuery
+### ActivityCustomEntityQueryOrActivityEntityQuery
 #### Properties
 * **kind**: 'Activity' (Required): the entity query kind
 * **properties**: [ActivityEntityQueriesProperties](#activityentityqueriesproperties): Activity entity query properties
@@ -282,7 +282,7 @@
 * **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): The available data types for the connector.
 * **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
-## ActionRequestProperties
+## ActionRequestPropertiesOrActionResponseProperties
 ### Properties
 * **logicAppResourceId**: string (Required): Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
 * **triggerUri**: string (Required, WriteOnly): Logic App Callback URL for this specific workflow.
@@ -439,12 +439,12 @@
 
 ## ExpansionEntityQueriesProperties
 ### Properties
-* **dataSources**: string[] (ReadOnly): List of the data sources that are required to run the query
-* **displayName**: string (ReadOnly): The query display name
-* **inputEntityType**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'HuntingBookmark' | 'IP' | 'IoTDevice' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'URL' | string (ReadOnly): The type of the query's source entity
-* **inputFields**: string[] (ReadOnly): List of the fields of the source entity that are required to run the query
-* **outputEntityTypes**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'HuntingBookmark' | 'IP' | 'IoTDevice' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'URL' | string[] (ReadOnly): List of the desired output types to be constructed from the result
-* **queryTemplate**: string (ReadOnly): The template query string to be parsed and formatted
+* **dataSources**: string[]: List of the data sources that are required to run the query
+* **displayName**: string: The query display name
+* **inputEntityType**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'HuntingBookmark' | 'IP' | 'IoTDevice' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'URL' | string: The type of the query's source entity
+* **inputFields**: string[]: List of the fields of the source entity that are required to run the query
+* **outputEntityTypes**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'HuntingBookmark' | 'IP' | 'IoTDevice' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'URL' | string[]: List of the desired output types to be constructed from the result
+* **queryTemplate**: string: The template query string to be parsed and formatted
 
 ## EyesOnSettingsProperties
 ### Properties

@@ -148,7 +148,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
+* **properties**: [MSDeployCoreOrMSDeployStatusProperties](#msdeploycoreormsdeploystatusproperties): Core resource properties
 * **type**: 'Microsoft.Web/sites/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/functions@2018-11-01
@@ -198,7 +198,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
+* **properties**: [MSDeployCoreOrMSDeployStatusProperties](#msdeploycoreormsdeploystatusproperties): Core resource properties
 * **type**: 'Microsoft.Web/sites/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/networkConfig@2018-11-01
@@ -380,7 +380,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
+* **properties**: [MSDeployCoreOrMSDeployStatusProperties](#msdeploycoreormsdeploystatusproperties): Core resource properties
 * **type**: 'Microsoft.Web/sites/slots/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/functions@2018-11-01
@@ -430,7 +430,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): Core resource properties
+* **properties**: [MSDeployCoreOrMSDeployStatusProperties](#msdeploycoreormsdeploystatusproperties): Core resource properties
 * **type**: 'Microsoft.Web/sites/slots/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/networkConfig@2018-11-01
@@ -674,17 +674,17 @@ Remove blobs older than X days.
 ## BackupItem
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [BackupItemProperties](#backupitemproperties) (ReadOnly): BackupItem resource specific properties
+* **properties**: [BackupItemProperties](#backupitemproperties): BackupItem resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
 ## BackupItem
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [BackupItemProperties](#backupitemproperties) (ReadOnly): BackupItem resource specific properties
+* **properties**: [BackupItemProperties](#backupitemproperties): BackupItem resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
 ## BackupItemProperties
@@ -706,19 +706,19 @@ Remove blobs older than X days.
 
 ## BackupRequest
 ### Properties
-* **id**: string (ReadOnly, WriteOnly): Resource Id.
-* **kind**: string (WriteOnly): Kind of resource.
-* **name**: string (ReadOnly, WriteOnly): Resource Name.
-* **properties**: [BackupRequestProperties](#backuprequestproperties) (WriteOnly): BackupRequest resource specific properties
-* **type**: string (ReadOnly, WriteOnly): Resource type.
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string: Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [BackupRequestProperties](#backuprequestproperties): BackupRequest resource specific properties
+* **type**: string (ReadOnly): Resource type.
 
 ## BackupRequest
 ### Properties
-* **id**: string (ReadOnly, WriteOnly): Resource Id.
-* **kind**: string (WriteOnly): Kind of resource.
-* **name**: string (ReadOnly, WriteOnly): Resource Name.
-* **properties**: [BackupRequestProperties](#backuprequestproperties) (WriteOnly): BackupRequest resource specific properties
-* **type**: string (ReadOnly, WriteOnly): Resource type.
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string: Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [BackupRequestProperties](#backuprequestproperties): BackupRequest resource specific properties
+* **type**: string (ReadOnly): Resource type.
 
 ## BackupRequestProperties
 ### Properties
@@ -879,39 +879,39 @@ Value can range between 25 and 100.
 ## FunctionSecrets
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [FunctionSecretsProperties](#functionsecretsproperties) (ReadOnly): FunctionSecrets resource specific properties
+* **properties**: [FunctionSecretsProperties](#functionsecretsproperties): FunctionSecrets resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
 ## FunctionSecrets
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [FunctionSecretsProperties](#functionsecretsproperties) (ReadOnly): FunctionSecrets resource specific properties
+* **properties**: [FunctionSecretsProperties](#functionsecretsproperties): FunctionSecrets resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
 ## FunctionSecrets
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [FunctionSecretsProperties](#functionsecretsproperties) (ReadOnly): FunctionSecrets resource specific properties
+* **properties**: [FunctionSecretsProperties](#functionsecretsproperties): FunctionSecrets resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
 ## FunctionSecrets
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [FunctionSecretsProperties](#functionsecretsproperties) (ReadOnly): FunctionSecrets resource specific properties
+* **properties**: [FunctionSecretsProperties](#functionsecretsproperties): FunctionSecrets resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
 ## FunctionSecretsProperties
 ### Properties
-* **key**: string (ReadOnly): Secret key.
-* **trigger_url**: string (ReadOnly): Trigger URL.
+* **key**: string: Secret key.
+* **trigger_url**: string: Trigger URL.
 
 ## GeoDistribution
 ### Properties
@@ -959,17 +959,17 @@ Value can range between 25 and 100.
 ## HybridConnectionKey
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [HybridConnectionKeyProperties](#hybridconnectionkeyproperties) (ReadOnly): HybridConnectionKey resource specific properties
+* **properties**: [HybridConnectionKeyProperties](#hybridconnectionkeyproperties): HybridConnectionKey resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
 ## HybridConnectionKey
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [HybridConnectionKeyProperties](#hybridconnectionkeyproperties) (ReadOnly): HybridConnectionKey resource specific properties
+* **properties**: [HybridConnectionKeyProperties](#hybridconnectionkeyproperties): HybridConnectionKey resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
 ## HybridConnectionKeyProperties
@@ -1021,7 +1021,7 @@ SubnetMask property must not be specified.
 ### Additional Properties
 * **Additional Properties Type**: [Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties](#components1jq1t4ischemasmanagedserviceidentitypropertiesuserassignedidentitiesadditionalproperties)
 
-## MSDeployCore
+## MSDeployCoreOrMSDeployStatusProperties
 ### Properties
 * **appOffline**: bool (WriteOnly): Sets the AppOffline rule while the MSDeploy operation executes.
 Setting is <code>false</code> by default.
@@ -1287,26 +1287,26 @@ This setting only applies to the Consumption Plan
 
 ## SiteExtensionInfoProperties
 ### Properties
-* **authors**: string[] (ReadOnly): List of authors.
-* **comment**: string (ReadOnly): Site Extension comment.
-* **description**: string (ReadOnly): Detailed description.
-* **download_count**: int (ReadOnly): Count of downloads.
-* **extension_id**: string (ReadOnly): Site extension ID.
-* **extension_type**: 'Gallery' | 'WebRoot' (ReadOnly): Site extension type.
-* **extension_url**: string (ReadOnly): Extension URL.
-* **feed_url**: string (ReadOnly): Feed URL.
-* **icon_url**: string (ReadOnly): Icon URL.
-* **installed_date_time**: string (ReadOnly): Installed timestamp.
-* **installer_command_line_params**: string (ReadOnly): Installer command line parameters.
-* **license_url**: string (ReadOnly): License URL.
-* **local_is_latest_version**: bool (ReadOnly): <code>true</code> if the local version is the latest version; <code>false</code> otherwise.
-* **local_path**: string (ReadOnly): Local path.
-* **project_url**: string (ReadOnly): Project URL.
-* **provisioningState**: string (ReadOnly): Provisioning state.
-* **published_date_time**: string (ReadOnly): Published timestamp.
-* **summary**: string (ReadOnly): Summary description.
-* **title**: string (ReadOnly)
-* **version**: string (ReadOnly): Version information.
+* **authors**: string[]: List of authors.
+* **comment**: string: Site Extension comment.
+* **description**: string: Detailed description.
+* **download_count**: int: Count of downloads.
+* **extension_id**: string: Site extension ID.
+* **extension_type**: 'Gallery' | 'WebRoot': Site extension type.
+* **extension_url**: string: Extension URL.
+* **feed_url**: string: Feed URL.
+* **icon_url**: string: Icon URL.
+* **installed_date_time**: string: Installed timestamp.
+* **installer_command_line_params**: string: Installer command line parameters.
+* **license_url**: string: License URL.
+* **local_is_latest_version**: bool: <code>true</code> if the local version is the latest version; <code>false</code> otherwise.
+* **local_path**: string: Local path.
+* **project_url**: string: Project URL.
+* **provisioningState**: string: Provisioning state.
+* **published_date_time**: string: Published timestamp.
+* **summary**: string: Summary description.
+* **title**: string
+* **version**: string: Version information.
 
 ## SiteLimits
 ### Properties
@@ -1409,17 +1409,17 @@ This only applies to Functions container.
 ## StringDictionary
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (ReadOnly): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **type**: string (ReadOnly): Resource type.
 
 ## StringDictionary
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
-* **kind**: string (ReadOnly): Kind of resource.
+* **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties) (ReadOnly): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **type**: string (ReadOnly): Resource type.
 
 ## StringDictionaryProperties

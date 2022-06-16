@@ -205,7 +205,7 @@
 
 ## LabVhd
 ### Properties
-* **id**: string (ReadOnly): The absolute URI of the VHD.
+* **id**: string: The absolute URI of the VHD.
 
 ## LabVirtualMachine
 ### Properties
@@ -270,8 +270,8 @@
 
 ## ResponseWithContinuationLabVhd
 ### Properties
-* **nextLink**: string (ReadOnly): Link for next set of results.
-* **value**: [LabVhd](#labvhd)[] (ReadOnly): Results of the list operation.
+* **nextLink**: string: Link for next set of results.
+* **value**: [LabVhd](#labvhd)[]: Results of the list operation.
 
 ## ScheduleProperties
 ### Properties

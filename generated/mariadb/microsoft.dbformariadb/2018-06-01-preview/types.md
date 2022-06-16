@@ -8,7 +8,7 @@
 * **identity**: [ResourceIdentity](#resourceidentity) (ReadOnly): The Azure Active Directory identity of the server.
 * **location**: string (Required): The location the resource resides in.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required): Properties of the server.
+* **properties**: [ServerPropertiesForCreateOrServerProperties](#serverpropertiesforcreateorserverproperties) (Required): Properties of the server.
 * **sku**: [Sku](#sku): The SKU (pricing tier) of the server.
 * **tags**: [ServerForCreateTags](#serverforcreatetags): Application-specific metadata in the form of key-value pairs.
 * **type**: 'Microsoft.DBforMariaDB/servers' (ReadOnly, DeployTimeConstant): The resource type
@@ -81,7 +81,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The Azure Active Directory principal id.
 * **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
-* **type**: 'SystemAssigned' | string (ReadOnly): The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
+* **type**: 'SystemAssigned' | string: The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
 
 ## SecurityAlertPolicyProperties
 ### Properties
@@ -98,7 +98,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ServerPropertiesForCreate
+## ServerPropertiesForCreateOrServerProperties
 * **Discriminator**: createMode
 
 ### Base Properties

@@ -33,11 +33,11 @@
 
 ## ServiceKeys
 ### Properties
-* **primaryAuthEndpoint**: string (ReadOnly): The primary authorization endpoint.
-* **primaryKey**: string (ReadOnly): The primary key for the Media Service resource.
-* **scope**: string (ReadOnly): The authorization scope.
-* **secondaryAuthEndpoint**: string (ReadOnly): The secondary authorization endpoint.
-* **secondaryKey**: string (ReadOnly): The secondary key for the Media Service resource.
+* **primaryAuthEndpoint**: string: The primary authorization endpoint.
+* **primaryKey**: string: The primary key for the Media Service resource.
+* **scope**: string: The authorization scope.
+* **secondaryAuthEndpoint**: string: The secondary authorization endpoint.
+* **secondaryKey**: string: The secondary key for the Media Service resource.
 
 ## StorageAccount
 ### Properties

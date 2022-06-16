@@ -17,7 +17,7 @@
 * **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RegisteredServerCreateParametersProperties](#registeredservercreateparametersproperties): The parameters used to create the registered server.
+* **properties**: [RegisteredServerCreateParametersPropertiesOrRegisteredServerProperties](#registeredservercreateparameterspropertiesorregisteredserverproperties): The parameters used to create the registered server.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/registeredServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups@2018-10-01
@@ -35,7 +35,7 @@
 * **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CloudEndpointCreateParametersProperties](#cloudendpointcreateparametersproperties): The parameters used to create the cloud endpoint.
+* **properties**: [CloudEndpointCreateParametersPropertiesOrCloudEndpointProperties](#cloudendpointcreateparameterspropertiesorcloudendpointproperties): The parameters used to create the cloud endpoint.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints@2018-10-01
@@ -44,10 +44,10 @@
 * **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerEndpointCreateParametersProperties](#serverendpointcreateparametersproperties): The parameters used to create the server endpoint.
+* **properties**: [ServerEndpointCreateParametersPropertiesOrServerEndpointProperties](#serverendpointcreateparameterspropertiesorserverendpointproperties): The parameters used to create the server endpoint.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## CloudEndpointCreateParametersProperties
+## CloudEndpointCreateParametersPropertiesOrCloudEndpointProperties
 ### Properties
 * **backupEnabled**: string (ReadOnly): Backup Enabled
 * **friendlyName**: string (ReadOnly): Friendly Name
@@ -59,7 +59,7 @@
 * **storageAccountShareName**: string: Storage Account Share name
 * **storageAccountTenantId**: string: Storage Account Tenant Id
 
-## RegisteredServerCreateParametersProperties
+## RegisteredServerCreateParametersPropertiesOrRegisteredServerProperties
 ### Properties
 * **agentVersion**: string: Registered Server Agent Version
 * **clusterId**: string: Registered Server clusterId
@@ -81,7 +81,7 @@
 * **serviceLocation**: string (ReadOnly): Service Location
 * **storageSyncServiceUid**: string (ReadOnly): Registered Server storageSyncServiceUid
 
-## ServerEndpointCreateParametersProperties
+## ServerEndpointCreateParametersPropertiesOrServerEndpointProperties
 ### Properties
 * **cloudTiering**: 'off' | 'on' | string: Cloud Tiering.
 * **friendlyName**: string: Friendly Name
@@ -100,14 +100,14 @@
 
 ## ServerEndpointHealth
 ### Properties
-* **combinedHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string (ReadOnly): Combined Health Status.
-* **currentProgress**: [SyncProgressStatus](#syncprogressstatus) (ReadOnly): Current progress
-* **downloadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string (ReadOnly): Download Health Status.
-* **downloadStatus**: [SyncSessionStatus](#syncsessionstatus) (ReadOnly): Download Status
-* **lastUpdatedTimestamp**: string (ReadOnly): Last Updated Timestamp
-* **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' | string (ReadOnly): Offline Data Transfer State
-* **uploadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string (ReadOnly): Upload Health Status.
-* **uploadStatus**: [SyncSessionStatus](#syncsessionstatus) (ReadOnly): Upload Status
+* **combinedHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string: Combined Health Status.
+* **currentProgress**: [SyncProgressStatus](#syncprogressstatus): Current progress
+* **downloadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string: Download Health Status.
+* **downloadStatus**: [SyncSessionStatus](#syncsessionstatus): Download Status
+* **lastUpdatedTimestamp**: string: Last Updated Timestamp
+* **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' | string: Offline Data Transfer State
+* **uploadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string: Upload Health Status.
+* **uploadStatus**: [SyncSessionStatus](#syncsessionstatus): Upload Status
 
 ## StorageSyncServiceCreateParametersTags
 ### Properties
@@ -116,18 +116,18 @@
 
 ## SyncProgressStatus
 ### Properties
-* **appliedBytes**: int (ReadOnly): Applied bytes
-* **appliedItemCount**: int (ReadOnly): Applied item count.
-* **perItemErrorCount**: int (ReadOnly): Per item error count
-* **progressTimestamp**: string (ReadOnly): Progress timestamp
-* **syncDirection**: 'download' | 'initialize' | 'none' | 'recall' | 'upload' | string (ReadOnly): Sync direction.
-* **totalBytes**: int (ReadOnly): Total bytes
-* **totalItemCount**: int (ReadOnly): Total item count
+* **appliedBytes**: int: Applied bytes
+* **appliedItemCount**: int: Applied item count.
+* **perItemErrorCount**: int: Per item error count
+* **progressTimestamp**: string: Progress timestamp
+* **syncDirection**: 'download' | 'initialize' | 'none' | 'recall' | 'upload' | string: Sync direction.
+* **totalBytes**: int: Total bytes
+* **totalItemCount**: int: Total item count
 
 ## SyncSessionStatus
 ### Properties
-* **lastSyncPerItemErrorCount**: int (ReadOnly): Last sync per item error count.
-* **lastSyncResult**: int (ReadOnly): Last sync status
-* **lastSyncSuccessTimestamp**: string (ReadOnly): Last sync success timestamp
-* **lastSyncTimestamp**: string (ReadOnly): Last sync timestamp
+* **lastSyncPerItemErrorCount**: int: Last sync per item error count.
+* **lastSyncResult**: int: Last sync status
+* **lastSyncSuccessTimestamp**: string: Last sync success timestamp
+* **lastSyncTimestamp**: string: Last sync timestamp
 

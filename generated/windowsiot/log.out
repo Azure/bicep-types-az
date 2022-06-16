@@ -19,7 +19,7 @@ warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an 
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/windowsiot/resource-manager/Microsoft.WindowsIoT/stable/2019-06-01/WindowsIotServices.json:586:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.windowsiot-2018-02-16-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -35,5 +35,5 @@ warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an 
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/windowsiot/resource-manager/Microsoft.WindowsIoT/preview/2018-02-16-preview/WindowsIotServices.json:567:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Autorest completed in 5.54s. 4 files generated.
+info    | autorest.bicep took 3ms
+info    | Autorest completed in 4.5s. 4 files generated.

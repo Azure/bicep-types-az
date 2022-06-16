@@ -158,9 +158,9 @@
 
 ## LabDetails
 ### Properties
-* **id**: string (ReadOnly): The Id of the lab.
-* **name**: string (ReadOnly): Name of the lab
-* **provisioningState**: string (ReadOnly): The provisioning state of the lab.
+* **id**: string: The Id of the lab.
+* **name**: string: Name of the lab
+* **provisioningState**: string: The provisioning state of the lab.
 * **usageQuota**: string (ReadOnly): The maximum duration a user can use a VM in this lab.
 
 ## LabProperties
@@ -188,15 +188,15 @@
 
 ## ListEnvironmentsPayload
 ### Properties
-* **labId**: string (WriteOnly): The resource Id of the lab
+* **labId**: string: The resource Id of the lab
 
 ## ListEnvironmentsResponse
 ### Properties
-* **environments**: [EnvironmentDetails](#environmentdetails)[] (ReadOnly): List of all the environments
+* **environments**: [EnvironmentDetails](#environmentdetails)[]: List of all the environments
 
 ## ListLabsResponse
 ### Properties
-* **labs**: [LabDetails](#labdetails)[] (ReadOnly): List of all the labs
+* **labs**: [LabDetails](#labdetails)[]: List of all the labs
 
 ## NetworkInterface
 ### Properties

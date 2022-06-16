@@ -1441,7 +1441,7 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipiente
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 51ms
+info    | autorest.bicep took 32ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2021-04-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -2133,7 +2133,7 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipiente
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 44ms
+info    | autorest.bicep took 25ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2021-01-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -2817,7 +2817,7 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 38ms
+info    | autorest.bicep took 21ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2020-12-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -3497,7 +3497,7 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 31ms
+info    | autorest.bicep took 18ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2020-06-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -4173,7 +4173,7 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 33ms
+info    | autorest.bicep took 23ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2019-12-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -4778,7 +4778,7 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 28ms
+info    | autorest.bicep took 19ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2019-12-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -5366,7 +5366,7 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 23ms
+info    | autorest.bicep took 20ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2019-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -5910,7 +5910,7 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 28ms
+info    | autorest.bicep took 16ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2018-06-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -6450,7 +6450,7 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 17ms
+info    | autorest.bicep took 14ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2018-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -6974,7 +6974,7 @@ info    | Resource type microsoft.apimanagement/service/products/groups under pa
 info    | Resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}' has no body defined.
-info    | autorest.bicep took 21ms
+info    | autorest.bicep took 15ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2017-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -7480,7 +7480,7 @@ info    | Resource type microsoft.apimanagement/service/products/groups under pa
 info    | Resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}' has no body defined.
-info    | autorest.bicep took 14ms
+info    | autorest.bicep took 16ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2016-10-10"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -7762,7 +7762,7 @@ info    | Resource type microsoft.apimanagement/service/groups/users under path 
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/tenant under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/tenant/policy' has no body defined.
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 11ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2016-07-07"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -7989,5 +7989,5 @@ warning | Unrecognized property type: byte-array. Returning 'any'.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{uid}' has no body defined.
-info    | autorest.bicep took 9ms
-info    | Autorest completed in 218.5s. 28 files generated.
+info    | autorest.bicep took 15ms
+info    | Autorest completed in 179.35s. 28 files generated.

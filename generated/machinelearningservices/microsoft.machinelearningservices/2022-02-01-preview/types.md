@@ -736,32 +736,32 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ### Base Properties
 ### AccountKeyDatastoreSecrets
 #### Properties
-* **key**: string (ReadOnly): Storage account key.
+* **key**: string: Storage account key.
 * **secretsType**: 'AccountKey' (Required): [Required] Credential type used to authentication with storage.
 
 ### CertificateDatastoreSecrets
 #### Properties
-* **certificate**: string (ReadOnly): Service principal certificate.
+* **certificate**: string: Service principal certificate.
 * **secretsType**: 'Certificate' (Required): [Required] Credential type used to authentication with storage.
 
 ### KerberosKeytabSecrets
 #### Properties
-* **kerberosKeytab**: string (ReadOnly): Kerberos keytab secret.
+* **kerberosKeytab**: string: Kerberos keytab secret.
 * **secretsType**: 'KerberosKeytab' (Required): [Required] Credential type used to authentication with storage.
 
 ### KerberosPasswordSecrets
 #### Properties
-* **kerberosPassword**: string (ReadOnly): Kerberos password secret.
+* **kerberosPassword**: string: Kerberos password secret.
 * **secretsType**: 'KerberosPassword' (Required): [Required] Credential type used to authentication with storage.
 
 ### SasDatastoreSecrets
 #### Properties
-* **sasToken**: string (ReadOnly): Storage container SAS token.
+* **sasToken**: string: Storage container SAS token.
 * **secretsType**: 'Sas' (Required): [Required] Credential type used to authentication with storage.
 
 ### ServicePrincipalDatastoreSecrets
 #### Properties
-* **clientSecret**: string (ReadOnly): Service principal secret.
+* **clientSecret**: string: Service principal secret.
 * **secretsType**: 'ServicePrincipal' (Required): [Required] Credential type used to authentication with storage.
 
 
@@ -1407,7 +1407,7 @@ Defaults to 5000ms.
 ## RegistryListCredentialsResult
 ### Properties
 * **location**: string (ReadOnly)
-* **passwords**: [Password](#password)[] (ReadOnly)
+* **passwords**: [Password](#password)[]
 * **username**: string (ReadOnly)
 
 ## ResourceBaseProperties

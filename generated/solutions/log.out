@@ -14,5 +14,5 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Skipping resource action listAllowedUpgradePlans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Solutions/applications/{applicationName}/listAllowedUpgradePlans': failed to find a response schema
-info    | autorest.bicep took 16ms
-info    | Autorest completed in 5.14s. 2 files generated.
+info    | autorest.bicep took 15ms
+info    | Autorest completed in 4.25s. 2 files generated.

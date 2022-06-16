@@ -10,14 +10,14 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
-info    | autorest.bicep took 14ms
+info    | autorest.bicep took 12ms
 info    | Processing batch task - {"tag":"microsoft.virtualmachineimages-2021-10-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 23ms
 info    | Processing batch task - {"tag":"microsoft.virtualmachineimages-2020-02-14"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -147,7 +147,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ApiError' with an undefined t
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/imagebuilder/resource-manager/Microsoft.VirtualMachineImages/preview/2019-05-01-preview/imagebuilder.json:1248:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.virtualmachineimages-2018-02-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -196,7 +196,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ApiError' with an undefined t
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/imagebuilder/resource-manager/Microsoft.VirtualMachineImages/preview/2018-02-01-preview/imagebuilder.json:993:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.virtualmachineimages-2019-02-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
@@ -252,4 +252,4 @@ warning | PreCheck/SchemaMissingType | The schema 'ApiError' with an undefined t
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
 info    | autorest.bicep took 2ms
-info    | Autorest completed in 12.48s. 12 files generated.
+info    | Autorest completed in 10.53s. 12 files generated.

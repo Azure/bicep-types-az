@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: 'backupResourceEncryptionConfig' (Required, DeployTimeConstant): The resource name
-* **properties**: [BackupResourceEncryptionConfig](#backupresourceencryptionconfig): BackupResourceEncryptionConfigResource properties
+* **properties**: [BackupResourceEncryptionConfigOrBackupResourceEncryptionConfigExtended](#backupresourceencryptionconfigorbackupresourceencryptionconfigextended): BackupResourceEncryptionConfigResource properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupEncryptionConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -103,7 +103,7 @@
 * **policyState**: string: State of the backup policy associated with this backup item.
 * **recoveryPointCount**: int: Number of available backup copies associated with this backup item.
 
-## BackupResourceEncryptionConfig
+## BackupResourceEncryptionConfigOrBackupResourceEncryptionConfigExtended
 ### Properties
 * **encryptionAtRestType**: 'CustomerManaged' | 'Invalid' | 'MicrosoftManaged' | string: Encryption At Rest Type
 * **infrastructureEncryptionState**: 'Disabled' | 'Enabled' | 'Invalid' | string

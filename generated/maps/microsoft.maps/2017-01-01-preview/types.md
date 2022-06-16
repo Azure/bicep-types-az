@@ -30,7 +30,7 @@
 
 ## MapsAccountProperties
 ### Properties
-* **x-ms-client-id**: string (ReadOnly): A unique identifier for the maps account
+* **x-ms-client-id**: string: A unique identifier for the maps account
 
 ## Sku
 ### Properties

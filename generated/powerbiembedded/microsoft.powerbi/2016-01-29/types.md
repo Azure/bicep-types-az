@@ -29,6 +29,6 @@
 
 ## WorkspaceCollectionAccessKeys
 ### Properties
-* **key1**: string (ReadOnly): Access key 1
-* **key2**: string (ReadOnly): Access key 2
+* **key1**: string: Access key 1
+* **key2**: string: Access key 2
 

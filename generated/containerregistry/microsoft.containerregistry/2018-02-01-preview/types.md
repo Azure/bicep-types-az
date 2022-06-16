@@ -47,8 +47,8 @@
 
 ## BuildArgumentList
 ### Properties
-* **nextLink**: string (ReadOnly): The URI that can be used to request the next set of paged results.
-* **value**: [BuildArgument](#buildargument)[] (ReadOnly): The collection value.
+* **nextLink**: string: The URI that can be used to request the next set of paged results.
+* **value**: [BuildArgument](#buildargument)[]: The collection value.
 
 ## BuildStepProperties
 * **Discriminator**: type

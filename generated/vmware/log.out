@@ -88,7 +88,7 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 21ms
+info    | autorest.bicep took 17ms
 info    | Processing batch task - {"tag":"microsoft.avs-2021-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -320,7 +320,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PSCredentialExecutionParamete
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/vmware/resource-manager/Microsoft.AVS/stable/2021-06-01/vmware.json:7011:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.avs-2021-01-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -511,7 +511,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsZone' with 
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsZonesList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/vmware/resource-manager/Microsoft.AVS/preview/2021-01-01-preview/vmware.json:5526:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 15ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.avs-2020-07-17-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -796,5 +796,5 @@ warning | PreCheck/SchemaMissingType | The schema 'HcxEnterpriseSiteProperties' 
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/vmware/resource-manager/Microsoft.AVS/stable/2020-03-20/vmware.json:2044:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ClusterProperties' has a property 'provisioningState' that is already declared the parent schema 'ManagementCluster' but isn't significantly different. The property has been removed from ClusterProperties
-info    | autorest.bicep took 3ms
-info    | Autorest completed in 21.46s. 10 files generated.
+info    | autorest.bicep took 4ms
+info    | Autorest completed in 17.56s. 10 files generated.

@@ -29,8 +29,8 @@
 
 ## WorkspaceKeysResponse
 ### Properties
-* **primaryToken**: string (ReadOnly): Primary authorization key for this workspace.
-* **secondaryToken**: string (ReadOnly): Secondary authorization key for this workspace.
+* **primaryToken**: string: Primary authorization key for this workspace.
+* **secondaryToken**: string: Secondary authorization key for this workspace.
 
 ## WorkspaceProperties
 ### Properties

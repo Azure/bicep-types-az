@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location to store the deployment data.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DeploymentProperties](#deploymentproperties) (Required): The deployment properties.
+* **properties**: [DeploymentPropertiesOrDeploymentPropertiesExtended](#deploymentpropertiesordeploymentpropertiesextended) (Required): The deployment properties.
 * **tags**: [DeploymentTags](#deploymenttags): Deployment tags
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -35,18 +35,18 @@
 ## Alias
 ### Properties
 * **defaultMetadata**: [AliasPathMetadata](#aliaspathmetadata) (ReadOnly): The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata
-* **defaultPath**: string (ReadOnly): The default path for an alias.
-* **defaultPattern**: [AliasPattern](#aliaspattern) (ReadOnly): The default pattern for an alias.
-* **name**: string (ReadOnly): The alias name.
-* **paths**: [AliasPath](#aliaspath)[] (ReadOnly): The paths for an alias.
-* **type**: 'Mask' | 'NotSpecified' | 'PlainText' (ReadOnly): The type of the alias.
+* **defaultPath**: string: The default path for an alias.
+* **defaultPattern**: [AliasPattern](#aliaspattern): The default pattern for an alias.
+* **name**: string: The alias name.
+* **paths**: [AliasPath](#aliaspath)[]: The paths for an alias.
+* **type**: 'Mask' | 'NotSpecified' | 'PlainText': The type of the alias.
 
 ## AliasPath
 ### Properties
-* **apiVersions**: string[] (ReadOnly): The API versions.
+* **apiVersions**: string[]: The API versions.
 * **metadata**: [AliasPathMetadata](#aliaspathmetadata) (ReadOnly): The metadata of the alias path. If missing, fall back to the default metadata of the alias.
-* **path**: string (ReadOnly): The path of an alias.
-* **pattern**: [AliasPattern](#aliaspattern) (ReadOnly): The pattern for an alias path.
+* **path**: string: The path of an alias.
+* **pattern**: [AliasPattern](#aliaspattern): The pattern for an alias path.
 
 ## AliasPathMetadata
 ### Properties
@@ -55,9 +55,9 @@
 
 ## AliasPattern
 ### Properties
-* **phrase**: string (ReadOnly): The alias pattern phrase.
-* **type**: 'Extract' | 'NotSpecified' (ReadOnly): The type of alias pattern
-* **variable**: string (ReadOnly): The alias pattern variable.
+* **phrase**: string: The alias pattern phrase.
+* **type**: 'Extract' | 'NotSpecified': The type of alias pattern
+* **variable**: string: The alias pattern variable.
 
 ## ApiProfile
 ### Properties
@@ -66,9 +66,9 @@
 
 ## BasicDependency
 ### Properties
-* **id**: string (ReadOnly): The ID of the dependency.
-* **resourceName**: string (ReadOnly): The dependency resource name.
-* **resourceType**: string (ReadOnly): The dependency resource type.
+* **id**: string: The ID of the dependency.
+* **resourceName**: string: The dependency resource name.
+* **resourceType**: string: The dependency resource type.
 
 ## DebugSetting
 ### Properties
@@ -76,12 +76,12 @@
 
 ## Dependency
 ### Properties
-* **dependsOn**: [BasicDependency](#basicdependency)[] (ReadOnly): The list of dependencies.
-* **id**: string (ReadOnly): The ID of the dependency.
-* **resourceName**: string (ReadOnly): The dependency resource name.
-* **resourceType**: string (ReadOnly): The dependency resource type.
+* **dependsOn**: [BasicDependency](#basicdependency)[]: The list of dependencies.
+* **id**: string: The ID of the dependency.
+* **resourceName**: string: The dependency resource name.
+* **resourceType**: string: The dependency resource type.
 
-## DeploymentProperties
+## DeploymentPropertiesOrDeploymentPropertiesExtended
 ### Properties
 * **correlationId**: string (ReadOnly): The correlation ID of the deployment.
 * **debugSetting**: [DebugSetting](#debugsetting): The debug setting of the deployment.
@@ -90,7 +90,7 @@
 * **error**: [ErrorResponse](#errorresponse) (ReadOnly): The deployment error.
 * **expressionEvaluationOptions**: [ExpressionEvaluationOptions](#expressionevaluationoptions) (WriteOnly): Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.
 * **mode**: 'Complete' | 'Incremental' (Required): The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.
-* **onErrorDeployment**: [OnErrorDeployment](#onerrordeployment): The deployment on error behavior.
+* **onErrorDeployment**: [OnErrorDeploymentOrOnErrorDeploymentExtended](#onerrordeploymentoronerrordeploymentextended): The deployment on error behavior.
 * **outputResources**: [ResourceReference](#resourcereference)[] (ReadOnly): Array of provisioned resources.
 * **outputs**: any (ReadOnly): Key/value pairs that represent deployment output.
 * **parameters**: any: Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string.
@@ -123,9 +123,9 @@
 
 ## ExpressionEvaluationOptions
 ### Properties
-* **scope**: 'Inner' | 'NotSpecified' | 'Outer' | string (WriteOnly): The scope to be used for evaluation of parameters, variables and functions in a nested template.
+* **scope**: 'Inner' | 'NotSpecified' | 'Outer' | string: The scope to be used for evaluation of parameters, variables and functions in a nested template.
 
-## OnErrorDeployment
+## OnErrorDeploymentOrOnErrorDeploymentExtended
 ### Properties
 * **deploymentName**: string: The deployment to be used on error case.
 * **provisioningState**: string (ReadOnly): The state of the provisioning for the on error deployment.
@@ -139,30 +139,30 @@
 ## Provider
 ### Properties
 * **id**: string (ReadOnly): The provider ID.
-* **namespace**: string (ReadOnly): The namespace of the resource provider.
-* **providerAuthorizationConsentState**: 'Consented' | 'NotRequired' | 'NotSpecified' | 'Required' | string (ReadOnly): The provider authorization consent state.
+* **namespace**: string: The namespace of the resource provider.
+* **providerAuthorizationConsentState**: 'Consented' | 'NotRequired' | 'NotSpecified' | 'Required' | string: The provider authorization consent state.
 * **registrationPolicy**: string (ReadOnly): The registration policy of the resource provider.
 * **registrationState**: string (ReadOnly): The registration state of the resource provider.
 * **resourceTypes**: [ProviderResourceType](#providerresourcetype)[] (ReadOnly): The collection of provider resource types.
 
 ## ProviderExtendedLocation
 ### Properties
-* **extendedLocations**: string[] (ReadOnly): The extended locations for the azure location.
-* **location**: string (ReadOnly): The azure location.
-* **type**: string (ReadOnly): The extended location type.
+* **extendedLocations**: string[]: The extended locations for the azure location.
+* **location**: string: The azure location.
+* **type**: string: The extended location type.
 
 ## ProviderResourceType
 ### Properties
-* **aliases**: [Alias](#alias)[] (ReadOnly): The aliases that are supported by this resource type.
+* **aliases**: [Alias](#alias)[]: The aliases that are supported by this resource type.
 * **apiProfiles**: [ApiProfile](#apiprofile)[] (ReadOnly): The API profiles for the resource provider.
-* **apiVersions**: string[] (ReadOnly): The API version.
-* **capabilities**: string (ReadOnly): The additional capabilities offered by this resource type.
+* **apiVersions**: string[]: The API version.
+* **capabilities**: string: The additional capabilities offered by this resource type.
 * **defaultApiVersion**: string (ReadOnly): The default API version.
-* **locationMappings**: [ProviderExtendedLocation](#providerextendedlocation)[] (ReadOnly): The location mappings that are supported by this resource type.
-* **locations**: string[] (ReadOnly): The collection of locations where this resource type can be created.
-* **properties**: [ProviderResourceTypeProperties](#providerresourcetypeproperties) (ReadOnly): The properties.
-* **resourceType**: string (ReadOnly): The resource type.
-* **zoneMappings**: [ZoneMapping](#zonemapping)[] (ReadOnly)
+* **locationMappings**: [ProviderExtendedLocation](#providerextendedlocation)[]: The location mappings that are supported by this resource type.
+* **locations**: string[]: The collection of locations where this resource type can be created.
+* **properties**: [ProviderResourceTypeProperties](#providerresourcetypeproperties): The properties.
+* **resourceType**: string: The resource type.
+* **zoneMappings**: [ZoneMapping](#zonemapping)[]
 
 ## ProviderResourceTypeProperties
 ### Properties
@@ -201,6 +201,6 @@
 
 ## ZoneMapping
 ### Properties
-* **location**: string (ReadOnly): The location of the zone mapping.
-* **zones**: string[] (ReadOnly)
+* **location**: string: The location of the zone mapping.
+* **zones**: string[]
 

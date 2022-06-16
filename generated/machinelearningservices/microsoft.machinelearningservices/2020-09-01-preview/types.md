@@ -142,19 +142,19 @@
 
 ## ACIServiceCreateRequestDataCollection
 ### Properties
-* **eventHubEnabled**: bool (WriteOnly): Option for enabling/disabling Event Hub.
-* **storageEnabled**: bool (WriteOnly): Option for enabling/disabling storage.
+* **eventHubEnabled**: bool: Option for enabling/disabling Event Hub.
+* **storageEnabled**: bool: Option for enabling/disabling storage.
 
 ## ACIServiceCreateRequestEncryptionProperties
 ### Properties
-* **keyName**: string (Required, WriteOnly): Encryption Key name
-* **keyVersion**: string (Required, WriteOnly): Encryption Key Version
-* **vaultBaseUrl**: string (Required, WriteOnly): vault base Url
+* **keyName**: string (Required): Encryption Key name
+* **keyVersion**: string (Required): Encryption Key Version
+* **vaultBaseUrl**: string (Required): vault base Url
 
 ## ACIServiceCreateRequestVnetConfiguration
 ### Properties
-* **subnetName**: string (WriteOnly): The name of the virtual network subnet.
-* **vnetName**: string (WriteOnly): The name of the virtual network.
+* **subnetName**: string: The name of the virtual network subnet.
+* **vnetName**: string: The name of the virtual network.
 
 ## AksNetworkingConfiguration
 ### Properties
@@ -174,24 +174,24 @@
 
 ## AKSServiceCreateRequestAutoScaler
 ### Properties
-* **autoscaleEnabled**: bool (WriteOnly): Option to enable/disable auto scaling.
-* **maxReplicas**: int (WriteOnly): The maximum number of replicas in the cluster.
-* **minReplicas**: int (WriteOnly): The minimum number of replicas to scale down to.
-* **refreshPeriodInSeconds**: int (WriteOnly): The amount of seconds to wait between auto scale updates.
-* **targetUtilization**: int (WriteOnly): The target utilization percentage to use for determining whether to scale the cluster.
+* **autoscaleEnabled**: bool: Option to enable/disable auto scaling.
+* **maxReplicas**: int: The maximum number of replicas in the cluster.
+* **minReplicas**: int: The minimum number of replicas to scale down to.
+* **refreshPeriodInSeconds**: int: The amount of seconds to wait between auto scale updates.
+* **targetUtilization**: int: The target utilization percentage to use for determining whether to scale the cluster.
 
 ## AKSServiceCreateRequestDataCollection
 ### Properties
-* **eventHubEnabled**: bool (WriteOnly): Option for enabling/disabling Event Hub.
-* **storageEnabled**: bool (WriteOnly): Option for enabling/disabling storage.
+* **eventHubEnabled**: bool: Option for enabling/disabling Event Hub.
+* **storageEnabled**: bool: Option for enabling/disabling storage.
 
 ## AKSServiceCreateRequestLivenessProbeRequirements
 ### Properties
-* **failureThreshold**: int (WriteOnly): The number of failures to allow before returning an unhealthy status.
-* **initialDelaySeconds**: int (WriteOnly): The delay before the first probe in seconds.
-* **periodSeconds**: int (WriteOnly): The length of time between probes in seconds.
-* **successThreshold**: int (WriteOnly): The number of successful probes before returning a healthy status.
-* **timeoutSeconds**: int (WriteOnly): The probe timeout in seconds.
+* **failureThreshold**: int: The number of failures to allow before returning an unhealthy status.
+* **initialDelaySeconds**: int: The delay before the first probe in seconds.
+* **periodSeconds**: int: The length of time between probes in seconds.
+* **successThreshold**: int: The number of successful probes before returning a healthy status.
+* **timeoutSeconds**: int: The probe timeout in seconds.
 
 ## AmlComputeNodeInformation
 ### Properties
@@ -204,7 +204,7 @@
 
 ## AmlComputeNodesInformation
 ### Properties
-* **computeType**: 'AKS' | 'AmlCompute' | 'ComputeInstance' | 'DataFactory' | 'DataLakeAnalytics' | 'Databricks' | 'HDInsight' | 'VirtualMachine' | string (ReadOnly): The type of compute
+* **computeType**: 'AKS' | 'AmlCompute' | 'ComputeInstance' | 'DataFactory' | 'DataLakeAnalytics' | 'Databricks' | 'HDInsight' | 'VirtualMachine' | string (Required): The type of compute
 * **nextLink**: string (ReadOnly): The continuation token.
 * **nodes**: [AmlComputeNodeInformation](#amlcomputenodeinformation)[] (ReadOnly): The collection of returned AmlCompute nodes details.
 
@@ -340,42 +340,42 @@
 ### Base Properties
 ### AksComputeSecrets
 #### Properties
-* **adminKubeConfig**: string (ReadOnly): Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
+* **adminKubeConfig**: string: Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
 * **computeType**: 'AKS' (Required): The type of compute
-* **imagePullSecretName**: string (ReadOnly): Image registry pull secret.
-* **userKubeConfig**: string (ReadOnly): Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
+* **imagePullSecretName**: string: Image registry pull secret.
+* **userKubeConfig**: string: Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
 
 ### DatabricksComputeSecrets
 #### Properties
 * **computeType**: 'Databricks' (Required): The type of compute
-* **databricksAccessToken**: string (ReadOnly): access token for databricks account.
+* **databricksAccessToken**: string: access token for databricks account.
 
 ### VirtualMachineSecrets
 #### Properties
-* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials) (ReadOnly): Admin credentials for virtual machine.
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine.
 * **computeType**: 'VirtualMachine' (Required): The type of compute
 
 
 ## ContainerResourceRequirements
 ### Properties
-* **cpu**: int (WriteOnly): The number of CPU cores on the container.
-* **fpga**: int (WriteOnly): The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.
-* **gpu**: int (WriteOnly): The number of GPU cores in the container.
-* **memoryInGB**: int (WriteOnly): The amount of memory on the container in GB.
+* **cpu**: int: The number of CPU cores on the container.
+* **fpga**: int: The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.
+* **gpu**: int: The number of GPU cores in the container.
+* **memoryInGB**: int: The amount of memory on the container in GB.
 
 ## CreateServiceRequestEnvironmentImageRequest
 ### Properties
-* **assets**: [ImageAsset](#imageasset)[] (WriteOnly): The list of assets.
-* **driverProgram**: string (WriteOnly): The name of the driver file.
-* **environment**: [EnvironmentImageRequestEnvironment](#environmentimagerequestenvironment) (WriteOnly): The details of the AZURE ML environment.
-* **environmentReference**: [EnvironmentImageRequestEnvironmentReference](#environmentimagerequestenvironmentreference) (WriteOnly): The unique identifying details of the AZURE ML environment.
-* **modelIds**: string[] (WriteOnly): The list of model Ids.
-* **models**: [Model](#model)[] (WriteOnly): The list of models.
+* **assets**: [ImageAsset](#imageasset)[]: The list of assets.
+* **driverProgram**: string: The name of the driver file.
+* **environment**: [EnvironmentImageRequestEnvironment](#environmentimagerequestenvironment): The details of the AZURE ML environment.
+* **environmentReference**: [EnvironmentImageRequestEnvironmentReference](#environmentimagerequestenvironmentreference): The unique identifying details of the AZURE ML environment.
+* **modelIds**: string[]: The list of model Ids.
+* **models**: [Model](#model)[]: The list of models.
 
 ## CreateServiceRequestKeys
 ### Properties
-* **primaryKey**: string (WriteOnly): The primary key.
-* **secondaryKey**: string (WriteOnly): The secondary key.
+* **primaryKey**: string: The primary key.
+* **secondaryKey**: string: The secondary key.
 
 ## CreateServiceRequestKvTags
 ### Properties
@@ -397,8 +397,8 @@
 
 ## DatasetReference
 ### Properties
-* **id**: string (WriteOnly): The id of the dataset reference.
-* **name**: string (WriteOnly): The name of the dataset reference.
+* **id**: string: The id of the dataset reference.
+* **name**: string: The name of the dataset reference.
 
 ## EncryptionProperty
 ### Properties
@@ -407,19 +407,19 @@
 
 ## EnvironmentImageRequestEnvironment
 ### Properties
-* **docker**: [ModelEnvironmentDefinitionDocker](#modelenvironmentdefinitiondocker) (WriteOnly): The definition of a Docker container.
-* **environmentVariables**: [ModelEnvironmentDefinitionEnvironmentVariables](#modelenvironmentdefinitionenvironmentvariables) (WriteOnly): Definition of environment variables to be defined in the environment.
-* **inferencingStackVersion**: string (WriteOnly): The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: "latest".
-* **name**: string (WriteOnly): The name of the environment.
-* **python**: [ModelEnvironmentDefinitionPython](#modelenvironmentdefinitionpython) (WriteOnly): Settings for a Python environment.
-* **r**: [ModelEnvironmentDefinitionR](#modelenvironmentdefinitionr) (WriteOnly): Settings for a R environment.
-* **spark**: [ModelEnvironmentDefinitionSpark](#modelenvironmentdefinitionspark) (WriteOnly): The configuration for a Spark environment.
-* **version**: string (WriteOnly): The environment version.
+* **docker**: [ModelEnvironmentDefinitionDocker](#modelenvironmentdefinitiondocker): The definition of a Docker container.
+* **environmentVariables**: [ModelEnvironmentDefinitionEnvironmentVariables](#modelenvironmentdefinitionenvironmentvariables): Definition of environment variables to be defined in the environment.
+* **inferencingStackVersion**: string: The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: "latest".
+* **name**: string: The name of the environment.
+* **python**: [ModelEnvironmentDefinitionPython](#modelenvironmentdefinitionpython): Settings for a Python environment.
+* **r**: [ModelEnvironmentDefinitionR](#modelenvironmentdefinitionr): Settings for a R environment.
+* **spark**: [ModelEnvironmentDefinitionSpark](#modelenvironmentdefinitionspark): The configuration for a Spark environment.
+* **version**: string: The environment version.
 
 ## EnvironmentImageRequestEnvironmentReference
 ### Properties
-* **name**: string (WriteOnly): Name of the environment.
-* **version**: string (WriteOnly): Version of the environment.
+* **name**: string: Name of the environment.
+* **version**: string: Version of the environment.
 
 ## ErrorDetail
 ### Properties
@@ -447,10 +447,10 @@
 
 ## ImageAsset
 ### Properties
-* **id**: string (WriteOnly): The Asset Id.
-* **mimeType**: string (WriteOnly): The mime type.
-* **unpack**: bool (WriteOnly): Whether the Asset is unpacked.
-* **url**: string (WriteOnly): The Url of the Asset.
+* **id**: string: The Asset Id.
+* **mimeType**: string: The mime type.
+* **unpack**: bool: Whether the Asset is unpacked.
+* **url**: string: The Url of the Asset.
 
 ## KeyVaultProperties
 ### Properties
@@ -559,39 +559,39 @@
 
 ## Model
 ### Properties
-* **createdTime**: string (WriteOnly): The Model creation time (UTC).
-* **datasets**: [DatasetReference](#datasetreference)[] (WriteOnly): The list of datasets associated with the model.
-* **derivedModelIds**: string[] (WriteOnly): Models derived from this model
-* **description**: string (WriteOnly): The Model description text.
-* **experimentName**: string (WriteOnly): The name of the experiment where this model was created.
-* **framework**: string (WriteOnly): The Model framework.
-* **frameworkVersion**: string (WriteOnly): The Model framework version.
-* **id**: string (WriteOnly): The Model Id.
-* **kvTags**: [ModelKvTags](#modelkvtags) (WriteOnly): The Model tag dictionary. Items are mutable.
-* **mimeType**: string (Required, WriteOnly): The MIME type of Model content. For more details about MIME type, please open https://www.iana.org/assignments/media-types/media-types.xhtml
-* **modifiedTime**: string (WriteOnly): The Model last modified time (UTC).
-* **name**: string (Required, WriteOnly): The Model name.
-* **parentModelId**: string (WriteOnly): The Parent Model Id.
-* **properties**: [ModelProperties](#modelproperties) (WriteOnly): The Model property dictionary. Properties are immutable.
-* **resourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): Resource requirements for the model
-* **runId**: string (WriteOnly): The RunId that created this model.
-* **sampleInputData**: string (WriteOnly): Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
-* **sampleOutputData**: string (WriteOnly): Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
-* **unpack**: bool (WriteOnly): Indicates whether we need to unpack the Model during docker Image creation.
-* **url**: string (Required, WriteOnly): The URL of the Model. Usually a SAS URL.
-* **version**: int (WriteOnly): The Model version assigned by Model Management Service.
+* **createdTime**: string: The Model creation time (UTC).
+* **datasets**: [DatasetReference](#datasetreference)[]: The list of datasets associated with the model.
+* **derivedModelIds**: string[]: Models derived from this model
+* **description**: string: The Model description text.
+* **experimentName**: string: The name of the experiment where this model was created.
+* **framework**: string: The Model framework.
+* **frameworkVersion**: string: The Model framework version.
+* **id**: string: The Model Id.
+* **kvTags**: [ModelKvTags](#modelkvtags): The Model tag dictionary. Items are mutable.
+* **mimeType**: string (Required): The MIME type of Model content. For more details about MIME type, please open https://www.iana.org/assignments/media-types/media-types.xhtml
+* **modifiedTime**: string: The Model last modified time (UTC).
+* **name**: string (Required): The Model name.
+* **parentModelId**: string: The Parent Model Id.
+* **properties**: [ModelProperties](#modelproperties): The Model property dictionary. Properties are immutable.
+* **resourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements): Resource requirements for the model
+* **runId**: string: The RunId that created this model.
+* **sampleInputData**: string: Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
+* **sampleOutputData**: string: Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
+* **unpack**: bool: Indicates whether we need to unpack the Model during docker Image creation.
+* **url**: string (Required): The URL of the Model. Usually a SAS URL.
+* **version**: int: The Model version assigned by Model Management Service.
 
 ## ModelDockerSectionBaseImageRegistry
 ### Properties
-* **address**: string (WriteOnly)
-* **password**: string (WriteOnly)
-* **username**: string (WriteOnly)
+* **address**: string
+* **password**: string
+* **username**: string
 
 ## ModelEnvironmentDefinitionDocker
 ### Properties
-* **baseDockerfile**: string (WriteOnly): Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
-* **baseImage**: string (WriteOnly): Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
-* **baseImageRegistry**: [ModelDockerSectionBaseImageRegistry](#modeldockersectionbaseimageregistry) (WriteOnly): Image registry that contains the base image.
+* **baseDockerfile**: string: Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
+* **baseImage**: string: Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
+* **baseImageRegistry**: [ModelDockerSectionBaseImageRegistry](#modeldockersectionbaseimageregistry): Image registry that contains the base image.
 
 ## ModelEnvironmentDefinitionEnvironmentVariables
 ### Properties
@@ -600,28 +600,28 @@
 
 ## ModelEnvironmentDefinitionPython
 ### Properties
-* **baseCondaEnvironment**: string (WriteOnly)
-* **condaDependencies**: any (WriteOnly): A JObject containing Conda dependencies.
-* **interpreterPath**: string (WriteOnly): The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
-* **userManagedDependencies**: bool (WriteOnly): True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
+* **baseCondaEnvironment**: string
+* **condaDependencies**: any: A JObject containing Conda dependencies.
+* **interpreterPath**: string: The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
+* **userManagedDependencies**: bool: True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
 
 ## ModelEnvironmentDefinitionR
 ### Properties
-* **bioConductorPackages**: string[] (WriteOnly): The packages from Bioconductor.
-* **cranPackages**: [RCranPackage](#rcranpackage)[] (WriteOnly): The CRAN packages to use.
-* **customUrlPackages**: string[] (WriteOnly): The packages from custom urls.
-* **gitHubPackages**: [RGitHubPackage](#rgithubpackage)[] (WriteOnly): The packages directly from GitHub.
-* **rscriptPath**: string (WriteOnly): The Rscript path to use if an environment build is not required.
+* **bioConductorPackages**: string[]: The packages from Bioconductor.
+* **cranPackages**: [RCranPackage](#rcranpackage)[]: The CRAN packages to use.
+* **customUrlPackages**: string[]: The packages from custom urls.
+* **gitHubPackages**: [RGitHubPackage](#rgithubpackage)[]: The packages directly from GitHub.
+* **rscriptPath**: string: The Rscript path to use if an environment build is not required.
 The path specified gets used to call the user script.
-* **rVersion**: string (WriteOnly): The version of R to be installed
-* **snapshotDate**: string (WriteOnly): Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. "2019-04-17"
-* **userManaged**: bool (WriteOnly): Indicates whether the environment is managed by user or by AzureML.
+* **rVersion**: string: The version of R to be installed
+* **snapshotDate**: string: Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. "2019-04-17"
+* **userManaged**: bool: Indicates whether the environment is managed by user or by AzureML.
 
 ## ModelEnvironmentDefinitionSpark
 ### Properties
-* **packages**: [SparkMavenPackage](#sparkmavenpackage)[] (WriteOnly): The Spark packages to use.
-* **precachePackages**: bool (WriteOnly): Whether to precache the packages.
-* **repositories**: string[] (WriteOnly): The list of spark repositories.
+* **packages**: [SparkMavenPackage](#sparkmavenpackage)[]: The Spark packages to use.
+* **precachePackages**: bool: Whether to precache the packages.
+* **repositories**: string[]: The list of spark repositories.
 
 ## ModelKvTags
 ### Properties
@@ -687,13 +687,13 @@ The path specified gets used to call the user script.
 
 ## RCranPackage
 ### Properties
-* **name**: string (WriteOnly): The package name.
-* **repository**: string (WriteOnly): The repository name.
+* **name**: string: The package name.
+* **repository**: string: The repository name.
 
 ## RegistryListCredentialsResult
 ### Properties
 * **location**: string (ReadOnly)
-* **passwords**: [Password](#password)[] (ReadOnly)
+* **passwords**: [Password](#password)[]
 * **username**: string (ReadOnly)
 
 ## ResourceId
@@ -727,8 +727,8 @@ The path specified gets used to call the user script.
 
 ## RGitHubPackage
 ### Properties
-* **authToken**: string (WriteOnly): Personal access token to install from a private repo
-* **repository**: string (WriteOnly): Repository address in the format username/repo[/subdir][@ref|#pull].
+* **authToken**: string: Personal access token to install from a private repo
+* **repository**: string: Repository address in the format username/repo[/subdir][@ref|#pull].
 
 ## ScaleSettings
 ### Properties
@@ -771,9 +771,9 @@ The path specified gets used to call the user script.
 
 ## SparkMavenPackage
 ### Properties
-* **artifact**: string (WriteOnly)
-* **group**: string (WriteOnly)
-* **version**: string (WriteOnly)
+* **artifact**: string
+* **group**: string
+* **version**: string
 
 ## SslConfiguration
 ### Properties
@@ -791,12 +791,12 @@ The path specified gets used to call the user script.
 
 ## SystemData
 ### Properties
-* **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
-* **createdBy**: string (ReadOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
-* **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that last modified the resource.
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## SystemService
 ### Properties

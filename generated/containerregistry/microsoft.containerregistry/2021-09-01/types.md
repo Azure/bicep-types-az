@@ -43,7 +43,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the webhook. This cannot be changed after the resource is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WebhookPropertiesCreateParameters](#webhookpropertiescreateparameters): The properties that the webhook will be created with.
+* **properties**: [WebhookPropertiesCreateParametersOrWebhookProperties](#webhookpropertiescreateparametersorwebhookproperties): The properties that the webhook will be created with.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [WebhookCreateParametersTags](#webhookcreateparameterstags): The tags for the webhook.
 * **type**: 'Microsoft.ContainerRegistry/registries/webhooks' (ReadOnly, DeployTimeConstant): The resource type
@@ -60,7 +60,7 @@
 
 ## Actor
 ### Properties
-* **name**: string (ReadOnly): The subject or username associated with the request context that generated the event.
+* **name**: string: The subject or username associated with the request context that generated the event.
 
 ## EncryptionProperty
 ### Properties
@@ -69,32 +69,32 @@
 
 ## Event
 ### Properties
-* **eventRequestMessage**: [EventRequestMessage](#eventrequestmessage) (ReadOnly): The event request message sent to the service URI.
-* **eventResponseMessage**: [EventResponseMessage](#eventresponsemessage) (ReadOnly): The event response message received from the service URI.
-* **id**: string (ReadOnly): The event ID.
+* **eventRequestMessage**: [EventRequestMessage](#eventrequestmessage): The event request message sent to the service URI.
+* **eventResponseMessage**: [EventResponseMessage](#eventresponsemessage): The event response message received from the service URI.
+* **id**: string: The event ID.
 
 ## EventContent
 ### Properties
-* **action**: string (ReadOnly): The action that encompasses the provided event.
-* **actor**: [Actor](#actor) (ReadOnly): The agent that initiated the event. For most situations, this could be from the authorization context of the request.
-* **id**: string (ReadOnly): The event ID.
-* **request**: [Request](#request) (ReadOnly): The request that generated the event.
-* **source**: [Source](#source) (ReadOnly): The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
-* **target**: [Target](#target) (ReadOnly): The target of the event.
-* **timestamp**: string (ReadOnly): The time at which the event occurred.
+* **action**: string: The action that encompasses the provided event.
+* **actor**: [Actor](#actor): The agent that initiated the event. For most situations, this could be from the authorization context of the request.
+* **id**: string: The event ID.
+* **request**: [Request](#request): The request that generated the event.
+* **source**: [Source](#source): The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
+* **target**: [Target](#target): The target of the event.
+* **timestamp**: string: The time at which the event occurred.
 
 ## EventListResult
 ### Properties
-* **nextLink**: string (ReadOnly): The URI that can be used to request the next list of events.
-* **value**: [Event](#event)[] (ReadOnly): The list of events. Since this list may be incomplete, the nextLink field should be used to request the next list of events.
+* **nextLink**: string: The URI that can be used to request the next list of events.
+* **value**: [Event](#event)[]: The list of events. Since this list may be incomplete, the nextLink field should be used to request the next list of events.
 
 ## EventRequestMessage
 ### Properties
-* **content**: [EventContent](#eventcontent) (ReadOnly): The content of the event request message.
-* **headers**: [EventRequestMessageHeaders](#eventrequestmessageheaders) (ReadOnly): The headers of the event request message.
-* **method**: string (ReadOnly): The HTTP method used to send the event request message.
-* **requestUri**: string (ReadOnly): The URI used to send the event request message.
-* **version**: string (ReadOnly): The HTTP message version.
+* **content**: [EventContent](#eventcontent): The content of the event request message.
+* **headers**: [EventRequestMessageHeaders](#eventrequestmessageheaders): The headers of the event request message.
+* **method**: string: The HTTP method used to send the event request message.
+* **requestUri**: string: The URI used to send the event request message.
+* **version**: string: The HTTP message version.
 
 ## EventRequestMessageHeaders
 ### Properties
@@ -103,11 +103,11 @@
 
 ## EventResponseMessage
 ### Properties
-* **content**: string (ReadOnly): The content of the event response message.
-* **headers**: [EventResponseMessageHeaders](#eventresponsemessageheaders) (ReadOnly): The headers of the event response message.
-* **reasonPhrase**: string (ReadOnly): The reason phrase of the event response message.
-* **statusCode**: string (ReadOnly): The status code of the event response message.
-* **version**: string (ReadOnly): The HTTP message version.
+* **content**: string: The content of the event response message.
+* **headers**: [EventResponseMessageHeaders](#eventresponsemessageheaders): The headers of the event response message.
+* **reasonPhrase**: string: The reason phrase of the event response message.
+* **statusCode**: string: The status code of the event response message.
+* **version**: string: The HTTP message version.
 
 ## EventResponseMessageHeaders
 ### Properties
@@ -188,13 +188,13 @@ dictionary key references will be ARM resource ids in the form:
 
 ## RegistryListCredentialsResult
 ### Properties
-* **passwords**: [RegistryPassword](#registrypassword)[] (ReadOnly): The list of passwords for a container registry.
-* **username**: string (ReadOnly): The username for a container registry.
+* **passwords**: [RegistryPassword](#registrypassword)[]: The list of passwords for a container registry.
+* **username**: string: The username for a container registry.
 
 ## RegistryPassword
 ### Properties
-* **name**: 'password' | 'password2' (ReadOnly): The password name.
-* **value**: string (ReadOnly): The password value.
+* **name**: 'password' | 'password2': The password name.
+* **value**: string: The password value.
 
 ## RegistryProperties
 ### Properties
@@ -222,11 +222,11 @@ dictionary key references will be ARM resource ids in the form:
 
 ## Request
 ### Properties
-* **addr**: string (ReadOnly): The IP or hostname and possibly port of the client connection that initiated the event. This is the RemoteAddr from the standard http request.
-* **host**: string (ReadOnly): The externally accessible hostname of the registry instance, as specified by the http host header on incoming requests.
-* **id**: string (ReadOnly): The ID of the request that initiated the event.
-* **method**: string (ReadOnly): The request method that generated the event.
-* **useragent**: string (ReadOnly): The user agent header of the request.
+* **addr**: string: The IP or hostname and possibly port of the client connection that initiated the event. This is the RemoteAddr from the standard http request.
+* **host**: string: The externally accessible hostname of the registry instance, as specified by the http host header on incoming requests.
+* **id**: string: The ID of the request that initiated the event.
+* **method**: string: The request method that generated the event.
+* **useragent**: string: The user agent header of the request.
 
 ## ResourceTags
 ### Properties
@@ -251,8 +251,8 @@ dictionary key references will be ARM resource ids in the form:
 
 ## Source
 ### Properties
-* **addr**: string (ReadOnly): The IP or hostname and the port of the registry node that generated the event. Generally, this will be resolved by os.Hostname() along with the running port.
-* **instanceID**: string (ReadOnly): The running instance of an application. Changes after each restart.
+* **addr**: string: The IP or hostname and the port of the registry node that generated the event. Generally, this will be resolved by os.Hostname() along with the running port.
+* **instanceID**: string: The running instance of an application. Changes after each restart.
 
 ## Status
 ### Properties
@@ -271,15 +271,15 @@ dictionary key references will be ARM resource ids in the form:
 
 ## Target
 ### Properties
-* **digest**: string (ReadOnly): The digest of the content, as defined by the Registry V2 HTTP API Specification.
-* **length**: int (ReadOnly): The number of bytes of the content. Same as Size field.
-* **mediaType**: string (ReadOnly): The MIME type of the referenced object.
-* **name**: string (ReadOnly): The name of the artifact.
-* **repository**: string (ReadOnly): The repository name.
-* **size**: int (ReadOnly): The number of bytes of the content. Same as Length field.
-* **tag**: string (ReadOnly): The tag name.
-* **url**: string (ReadOnly): The direct URL to the content.
-* **version**: string (ReadOnly): The version of the artifact.
+* **digest**: string: The digest of the content, as defined by the Registry V2 HTTP API Specification.
+* **length**: int: The number of bytes of the content. Same as Size field.
+* **mediaType**: string: The MIME type of the referenced object.
+* **name**: string: The name of the artifact.
+* **repository**: string: The repository name.
+* **size**: int: The number of bytes of the content. Same as Length field.
+* **tag**: string: The tag name.
+* **url**: string: The direct URL to the content.
+* **version**: string: The version of the artifact.
 
 ## TrustPolicy
 ### Properties
@@ -296,7 +296,12 @@ dictionary key references will be ARM resource ids in the form:
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## WebhookPropertiesCreateParameters
+## WebhookPropertiesCreateParametersCustomHeaders
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## WebhookPropertiesCreateParametersOrWebhookProperties
 ### Properties
 * **actions**: 'chart_delete' | 'chart_push' | 'delete' | 'push' | 'quarantine' | string[] (Required): The list of actions that trigger the webhook to post notifications.
 * **customHeaders**: [WebhookPropertiesCreateParametersCustomHeaders](#webhookpropertiescreateparameterscustomheaders) (WriteOnly): Custom headers that will be added to the webhook notifications.
@@ -304,9 +309,4 @@ dictionary key references will be ARM resource ids in the form:
 * **scope**: string: The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means all events.
 * **serviceUri**: string (Required, WriteOnly): The service URI for the webhook to post notifications.
 * **status**: 'disabled' | 'enabled' | string: The status of the webhook at the time the operation was called.
-
-## WebhookPropertiesCreateParametersCustomHeaders
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

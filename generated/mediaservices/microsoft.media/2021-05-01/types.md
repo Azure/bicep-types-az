@@ -40,20 +40,20 @@
 
 ## EdgePolicies
 ### Properties
-* **usageDataCollectionPolicy**: [EdgeUsageDataCollectionPolicy](#edgeusagedatacollectionpolicy) (ReadOnly)
+* **usageDataCollectionPolicy**: [EdgeUsageDataCollectionPolicy](#edgeusagedatacollectionpolicy)
 
 ## EdgeUsageDataCollectionPolicy
 ### Properties
-* **dataCollectionFrequency**: string (ReadOnly): Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
-* **dataReportingFrequency**: string (ReadOnly): Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
-* **eventHubDetails**: [EdgeUsageDataEventHub](#edgeusagedataeventhub) (ReadOnly): Details of Event Hub where the usage will be reported.
-* **maxAllowedUnreportedUsageDuration**: string (ReadOnly): Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
+* **dataCollectionFrequency**: string: Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
+* **dataReportingFrequency**: string: Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
+* **eventHubDetails**: [EdgeUsageDataEventHub](#edgeusagedataeventhub): Details of Event Hub where the usage will be reported.
+* **maxAllowedUnreportedUsageDuration**: string: Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
 
 ## EdgeUsageDataEventHub
 ### Properties
-* **name**: string (ReadOnly): Name of the Event Hub where usage will be reported.
-* **namespace**: string (ReadOnly): Namespace of the Event Hub where usage will be reported.
-* **token**: string (ReadOnly): SAS token needed to interact with Event Hub.
+* **name**: string: Name of the Event Hub where usage will be reported.
+* **namespace**: string: Namespace of the Event Hub where usage will be reported.
+* **token**: string: SAS token needed to interact with Event Hub.
 
 ## KeyDelivery
 ### Properties
@@ -66,7 +66,7 @@
 
 ## ListEdgePoliciesInput
 ### Properties
-* **deviceId**: string (WriteOnly): Unique identifier of the edge device.
+* **deviceId**: string: Unique identifier of the edge device.
 
 ## MediaServiceIdentity
 ### Properties

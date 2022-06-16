@@ -19,7 +19,7 @@ info    | Resource type microsoft.appplatform/spring/serviceregistries under pat
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 26ms
+info    | autorest.bicep took 22ms
 info    | Processing batch task - {"tag":"microsoft.appplatform-2022-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -32,7 +32,7 @@ info    | Resource type microsoft.appplatform/spring/serviceregistries under pat
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 17ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.appplatform-2022-03-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -45,7 +45,7 @@ info    | Resource type microsoft.appplatform/spring/serviceregistries under pat
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 14ms
+info    | autorest.bicep took 15ms
 info    | Processing batch task - {"tag":"microsoft.appplatform-2022-01-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -58,7 +58,7 @@ info    | Resource type microsoft.appplatform/spring/serviceregistries under pat
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 16ms
+info    | autorest.bicep took 14ms
 info    | Processing batch task - {"tag":"microsoft.appplatform-2021-09-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -72,7 +72,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undef
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/appplatform/resource-manager/Microsoft.AppPlatform/preview/2021-09-01-preview/appplatform.json:5395:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.appplatform-2021-06-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -86,7 +86,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undef
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/appplatform/resource-manager/Microsoft.AppPlatform/preview/2021-06-01-preview/appplatform.json:4600:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.appplatform-2020-11-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -100,7 +100,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undef
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/appplatform/resource-manager/Microsoft.AppPlatform/preview/2020-11-01-preview/appplatform.json:4520:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.appplatform-2020-07-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -114,5 +114,5 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undef
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/appplatform/resource-manager/Microsoft.AppPlatform/stable/2020-07-01/appplatform.json:4529:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
-info    | Autorest completed in 39.07s. 16 files generated.
+info    | autorest.bicep took 4ms
+info    | Autorest completed in 32.27s. 16 files generated.

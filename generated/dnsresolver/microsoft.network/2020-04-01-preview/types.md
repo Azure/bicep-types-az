@@ -135,7 +135,7 @@
 ## SubResourceListResult
 ### Properties
 * **nextLink**: string (ReadOnly): The continuation token for the next page of results.
-* **value**: [SubResource](#subresource)[] (ReadOnly): Enumeration of the sub-resources.
+* **value**: [SubResource](#subresource)[]: Enumeration of the sub-resources.
 
 ## SystemData
 ### Properties
@@ -173,13 +173,13 @@
 
 ## VirtualNetworkDnsForwardingRuleset
 ### Properties
-* **id**: string (ReadOnly): DNS Forwarding Ruleset Resource ID.
-* **properties**: [VirtualNetworkLinkSubResourceProperties](#virtualnetworklinksubresourceproperties) (ReadOnly): Properties of the virtual network link sub-resource reference.
+* **id**: string: DNS Forwarding Ruleset Resource ID.
+* **properties**: [VirtualNetworkLinkSubResourceProperties](#virtualnetworklinksubresourceproperties): Properties of the virtual network link sub-resource reference.
 
 ## VirtualNetworkDnsForwardingRulesetListResult
 ### Properties
 * **nextLink**: string (ReadOnly): The continuation token for the next page of results.
-* **value**: [VirtualNetworkDnsForwardingRuleset](#virtualnetworkdnsforwardingruleset)[] (ReadOnly): Enumeration of the Virtual Network DNS Forwarding Ruleset.
+* **value**: [VirtualNetworkDnsForwardingRuleset](#virtualnetworkdnsforwardingruleset)[]: Enumeration of the Virtual Network DNS Forwarding Ruleset.
 
 ## VirtualNetworkLinkProperties
 ### Properties
@@ -194,5 +194,5 @@
 
 ## VirtualNetworkLinkSubResourceProperties
 ### Properties
-* **virtualNetworkLink**: [SubResource](#subresource) (ReadOnly): The reference to the virtual network link.
+* **virtualNetworkLink**: [SubResource](#subresource): The reference to the virtual network link.
 

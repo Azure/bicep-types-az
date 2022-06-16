@@ -97,5 +97,5 @@
 
 ## UserMetricsProperties
 ### Properties
-* **key**: string (ReadOnly): The key returned by the User Metrics operation.
+* **key**: string: The key returned by the User Metrics operation.
 

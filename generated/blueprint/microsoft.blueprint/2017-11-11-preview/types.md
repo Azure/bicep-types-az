@@ -149,14 +149,14 @@
 
 ## PublishedBlueprintProperties
 ### Properties
-* **blueprintName**: string (ReadOnly): Name of the Blueprint definition.
-* **changeNotes**: string (ReadOnly): Version-specific change notes
-* **description**: string (ReadOnly): Multi-line explain this resource.
-* **displayName**: string (ReadOnly): One-liner string explain this resource.
-* **parameters**: [ParameterDefinitionCollection](#parameterdefinitioncollection) (ReadOnly): Parameters required by this Blueprint definition.
-* **resourceGroups**: [ResourceGroupDefinitionCollection](#resourcegroupdefinitioncollection) (ReadOnly): Resource group placeholders defined by this Blueprint definition.
+* **blueprintName**: string: Name of the Blueprint definition.
+* **changeNotes**: string: Version-specific change notes
+* **description**: string: Multi-line explain this resource.
+* **displayName**: string: One-liner string explain this resource.
+* **parameters**: [ParameterDefinitionCollection](#parameterdefinitioncollection): Parameters required by this Blueprint definition.
+* **resourceGroups**: [ResourceGroupDefinitionCollection](#resourcegroupdefinitioncollection): Resource group placeholders defined by this Blueprint definition.
 * **status**: [BlueprintStatus](#blueprintstatus) (ReadOnly): Status of the Blueprint. This field is readonly.
-* **targetScope**: 'managementGroup' | 'subscription' | string (ReadOnly): The scope where this Blueprint can be applied.
+* **targetScope**: 'managementGroup' | 'subscription' | string: The scope where this Blueprint can be applied.
 
 ## ResourceGroupDefinition
 ### Properties

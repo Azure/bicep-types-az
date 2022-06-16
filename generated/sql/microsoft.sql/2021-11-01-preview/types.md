@@ -1211,7 +1211,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## JobExecutionProperties
 ### Properties
 * **createTime**: string (ReadOnly): The time that the job execution was created.
-* **currentAttempts**: int (ReadOnly): Number of times the job execution has been attempted.
+* **currentAttempts**: int: Number of times the job execution has been attempted.
 * **currentAttemptStartTime**: string (ReadOnly): Start time of the current attempt.
 * **endTime**: string (ReadOnly): The time that the job execution completed.
 * **jobExecutionId**: string (ReadOnly): The unique identifier of the job execution.

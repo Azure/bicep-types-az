@@ -40,4 +40,4 @@ warning | PreCheck/SchemaMissingType | The schema 'PipelineListResult' with an u
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/devops/resource-manager/Microsoft.DevOps/preview/2019-07-01-preview/devops.json:829:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 2ms
-info    | Autorest completed in 5.81s. 4 files generated.
+info    | Autorest completed in 4.76s. 4 files generated.

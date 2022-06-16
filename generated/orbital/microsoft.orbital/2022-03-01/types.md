@@ -51,13 +51,13 @@
 ## AvailableContacts
 ### Properties
 * **groundStationName**: string (ReadOnly): Name of Azure Ground Station.
-* **properties**: [AvailableContactsProperties](#availablecontactsproperties) (ReadOnly): Properties of Contact resource.
-* **spacecraft**: [AvailableContactsSpacecraft](#availablecontactsspacecraft) (ReadOnly): The reference to the spacecraft resource.
+* **properties**: [AvailableContactsProperties](#availablecontactsproperties): Properties of Contact resource.
+* **spacecraft**: [AvailableContactsSpacecraft](#availablecontactsspacecraft): The reference to the spacecraft resource.
 
 ## AvailableContactsListResult
 ### Properties
 * **nextLink**: string (ReadOnly): The URL to get the next set of results.
-* **value**: [AvailableContacts](#availablecontacts)[] (ReadOnly): A list of available contacts
+* **value**: [AvailableContacts](#availablecontacts)[]: A list of available contacts
 
 ## AvailableContactsProperties
 ### Properties
@@ -73,18 +73,18 @@
 
 ## AvailableContactsSpacecraft
 ### Properties
-* **id**: string (ReadOnly): Resource ID.
+* **id**: string: Resource ID.
 
 ## ContactParameters
 ### Properties
-* **contactProfile**: [ContactParametersContactProfile](#contactparameterscontactprofile) (Required, WriteOnly): The reference to the contact profile resource.
-* **endTime**: string (Required, WriteOnly): End time of a contact.
-* **groundStationName**: string (Required, WriteOnly): Name of Azure Ground Station.
-* **startTime**: string (Required, WriteOnly): Start time of a contact.
+* **contactProfile**: [ContactParametersContactProfile](#contactparameterscontactprofile) (Required): The reference to the contact profile resource.
+* **endTime**: string (Required): End time of a contact.
+* **groundStationName**: string (Required): Name of Azure Ground Station.
+* **startTime**: string (Required): Start time of a contact.
 
 ## ContactParametersContactProfile
 ### Properties
-* **id**: string (WriteOnly): Resource ID.
+* **id**: string: Resource ID.
 
 ## ContactProfileLink
 ### Properties

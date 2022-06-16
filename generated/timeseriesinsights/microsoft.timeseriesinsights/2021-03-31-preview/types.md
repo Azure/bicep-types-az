@@ -12,15 +12,15 @@
 * **sku**: [Sku](#sku) (Required): The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
 * **tags**: [CreateOrUpdateTrackedResourcePropertiesTags](#createorupdatetrackedresourcepropertiestags): Key-value pairs of additional properties for the resource.
 * **type**: 'Microsoft.TimeSeriesInsights/environments' (ReadOnly, DeployTimeConstant): The resource type
-### Gen1EnvironmentCreateOrUpdateParameters
+### Gen1EnvironmentCreateOrUpdateParametersOrGen1EnvironmentResource
 #### Properties
 * **kind**: 'Gen1' (Required): The kind of the environment.
-* **properties**: [Gen1EnvironmentCreationProperties](#gen1environmentcreationproperties) (Required): Properties used to create a Gen1 environment.
+* **properties**: [Gen1EnvironmentCreationPropertiesOrGen1EnvironmentResourceProperties](#gen1environmentcreationpropertiesorgen1environmentresourceproperties) (Required): Properties used to create a Gen1 environment.
 
-### Gen2EnvironmentCreateOrUpdateParameters
+### Gen2EnvironmentCreateOrUpdateParametersOrGen2EnvironmentResource
 #### Properties
 * **kind**: 'Gen2' (Required): The kind of the environment.
-* **properties**: [Gen2EnvironmentCreationProperties](#gen2environmentcreationproperties) (Required): Properties used to create a Gen2 environment.
+* **properties**: [Gen2EnvironmentCreationPropertiesOrGen2EnvironmentResourceProperties](#gen2environmentcreationpropertiesorgen2environmentresourceproperties) (Required): Properties used to create a Gen2 environment.
 
 
 ## Resource Microsoft.TimeSeriesInsights/environments/accessPolicies@2021-03-31-preview
@@ -44,15 +44,15 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **tags**: [CreateOrUpdateTrackedResourcePropertiesTags](#createorupdatetrackedresourcepropertiestags): Key-value pairs of additional properties for the resource.
 * **type**: 'Microsoft.TimeSeriesInsights/environments/eventSources' (ReadOnly, DeployTimeConstant): The resource type
-### EventHubEventSourceCreateOrUpdateParameters
+### EventHubEventSourceCreateOrUpdateParametersOrEventHubEventSourceResource
 #### Properties
 * **kind**: 'Microsoft.EventHub' (Required): The kind of the event source.
-* **properties**: [EventHubEventSourceCreationProperties](#eventhubeventsourcecreationproperties) (Required): Properties of the EventHub event source that are required on create or update requests.
+* **properties**: [EventHubEventSourceCreationPropertiesOrEventHubEventSourceResourceProperties](#eventhubeventsourcecreationpropertiesoreventhubeventsourceresourceproperties) (Required): Properties of the EventHub event source that are required on create or update requests.
 
-### IoTHubEventSourceCreateOrUpdateParameters
+### IoTHubEventSourceCreateOrUpdateParametersOrIoTHubEventSourceResource
 #### Properties
 * **kind**: 'Microsoft.IoTHub' (Required): The kind of the event source.
-* **properties**: [IoTHubEventSourceCreationProperties](#iothubeventsourcecreationproperties) (Required): Properties of the IoTHub event source that are required on create or update requests.
+* **properties**: [IoTHubEventSourceCreationPropertiesOrIoTHubEventSourceResourceProperties](#iothubeventsourcecreationpropertiesoriothubeventsourceresourceproperties) (Required): Properties of the IoTHub event source that are required on create or update requests.
 
 
 ## Resource Microsoft.TimeSeriesInsights/environments/privateEndpointConnections@2021-03-31-preview
@@ -71,7 +71,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ReferenceDataSetCreationProperties](#referencedatasetcreationproperties) (Required): Properties used to create a reference data set.
+* **properties**: [ReferenceDataSetCreationPropertiesOrReferenceDataSetResourceProperties](#referencedatasetcreationpropertiesorreferencedatasetresourceproperties) (Required): Properties used to create a reference data set.
 * **tags**: [CreateOrUpdateTrackedResourcePropertiesTags](#createorupdatetrackedresourcepropertiestags): Key-value pairs of additional properties for the resource.
 * **type**: 'Microsoft.TimeSeriesInsights/environments/referenceDataSets' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -98,15 +98,15 @@
 
 ## EnvironmentStateDetails
 ### Properties
-* **code**: string (ReadOnly): Contains the code that represents the reason of an environment being in a particular state. Can be used to programmatically handle specific cases.
-* **message**: string (ReadOnly): A message that describes the state in detail.
+* **code**: string: Contains the code that represents the reason of an environment being in a particular state. Can be used to programmatically handle specific cases.
+* **message**: string: A message that describes the state in detail.
 
 ## EnvironmentStatus
 ### Properties
 * **ingress**: [IngressEnvironmentStatus](#ingressenvironmentstatus) (ReadOnly): An object that represents the status of ingress on an environment.
 * **warmStorage**: [WarmStorageEnvironmentStatus](#warmstorageenvironmentstatus) (ReadOnly): An object that represents the status of warm storage on an environment.
 
-## EventHubEventSourceCreationProperties
+## EventHubEventSourceCreationPropertiesOrEventHubEventSourceResourceProperties
 ### Properties
 * **consumerGroupName**: string (Required): The name of the event hub's consumer group that holds the partitions from which events will be read.
 * **creationTime**: string (ReadOnly): The time the resource was created.
@@ -120,7 +120,7 @@
 * **sharedAccessKey**: string (Required, WriteOnly): The value of the shared access key that grants the Time Series Insights service read access to the event hub. This property is not shown in event source responses.
 * **timestampPropertyName**: string: The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
 
-## Gen1EnvironmentCreationProperties
+## Gen1EnvironmentCreationPropertiesOrGen1EnvironmentResourceProperties
 ### Properties
 * **creationTime**: string (ReadOnly): The time the resource was created.
 * **dataAccessFqdn**: string (ReadOnly): The fully qualified domain name used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
@@ -131,7 +131,7 @@
 * **status**: [EnvironmentStatus](#environmentstatus) (ReadOnly): An object that represents the status of the environment, and its internal state in the Time Series Insights service.
 * **storageLimitExceededBehavior**: 'PauseIngress' | 'PurgeOldData' | string: The behavior the Time Series Insights service should take when the environment's capacity has been exceeded. If "PauseIngress" is specified, new events will not be read from the event source. If "PurgeOldData" is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
 
-## Gen2EnvironmentCreationProperties
+## Gen2EnvironmentCreationPropertiesOrGen2EnvironmentResourceProperties
 ### Properties
 * **creationTime**: string (ReadOnly): The time the resource was created.
 * **dataAccessFqdn**: string (ReadOnly): The fully qualified domain name used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
@@ -140,18 +140,18 @@
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **publicNetworkAccess**: 'disabled' | 'enabled' | string: This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
 * **status**: [EnvironmentStatus](#environmentstatus) (ReadOnly): An object that represents the status of the environment, and its internal state in the Time Series Insights service.
-* **storageConfiguration**: [Gen2StorageConfigurationInput](#gen2storageconfigurationinput) (Required): The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment's data.
+* **storageConfiguration**: [Gen2StorageConfigurationInputOrGen2StorageConfigurationOutput](#gen2storageconfigurationinputorgen2storageconfigurationoutput) (Required): The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment's data.
 * **timeSeriesIdProperties**: [TimeSeriesIdProperty](#timeseriesidproperty)[] (Required): The list of event properties which will be used to define the environment's time series id.
 * **warmStoreConfiguration**: [WarmStoreConfigurationProperties](#warmstoreconfigurationproperties): The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment's data available for faster query.
 
-## Gen2StorageConfigurationInput
+## Gen2StorageConfigurationInputOrGen2StorageConfigurationOutput
 ### Properties
 * **accountName**: string (Required): The name of the storage account that will hold the environment's Gen2 data.
 * **managementKey**: string (Required, WriteOnly): The value of the management key that grants the Time Series Insights service write access to the storage account. This property is not shown in environment responses.
 
 ## IngressEnvironmentStatus
 ### Properties
-* **state**: 'Disabled' | 'Paused' | 'Ready' | 'Running' | 'Unknown' | string (ReadOnly): This string represents the state of ingress operations on an environment. It can be "Disabled", "Ready", "Running", "Paused" or "Unknown"
+* **state**: 'Disabled' | 'Paused' | 'Ready' | 'Running' | 'Unknown' | string: This string represents the state of ingress operations on an environment. It can be "Disabled", "Ready", "Running", "Paused" or "Unknown"
 * **stateDetails**: [EnvironmentStateDetails](#environmentstatedetails) (ReadOnly): An object that contains the details about an environment's state.
 
 ## IngressStartAtProperties
@@ -159,7 +159,7 @@
 * **time**: string: ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.
 * **type**: 'CustomEnqueuedTime' | 'EarliestAvailable' | 'EventSourceCreationTime' | string: The type of the ingressStartAt, It can be "EarliestAvailable", "EventSourceCreationTime", "CustomEnqueuedTime".
 
-## IoTHubEventSourceCreationProperties
+## IoTHubEventSourceCreationPropertiesOrIoTHubEventSourceResourceProperties
 ### Properties
 * **consumerGroupName**: string (Required): The name of the iot hub's consumer group that holds the partitions from which events will be read.
 * **creationTime**: string (ReadOnly): The time the resource was created.
@@ -174,12 +174,12 @@
 
 ## LocalTimestamp
 ### Properties
-* **format**: 'Embedded' | string (WriteOnly): An enum that represents the format of the local timestamp property that needs to be set.
-* **timeZoneOffset**: [LocalTimestampTimeZoneOffset](#localtimestamptimezoneoffset) (WriteOnly): An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.
+* **format**: 'Embedded' | string: An enum that represents the format of the local timestamp property that needs to be set.
+* **timeZoneOffset**: [LocalTimestampTimeZoneOffset](#localtimestamptimezoneoffset): An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.
 
 ## LocalTimestampTimeZoneOffset
 ### Properties
-* **propertyName**: string (WriteOnly): The event property that will be contain the offset information to calculate the local timestamp. When the LocalTimestampFormat is Iana, the property name will contain the name of the column which contains IANA Timezone Name (eg: Americas/Los Angeles). When LocalTimestampFormat is Timespan, it contains the name of property which contains values representing the offset (eg: P1D or 1.00:00:00)
+* **propertyName**: string: The event property that will be contain the offset information to calculate the local timestamp. When the LocalTimestampFormat is Iana, the property name will contain the name of the column which contains IANA Timezone Name (eg: Americas/Los Angeles). When LocalTimestampFormat is Timespan, it contains the name of property which contains values representing the offset (eg: P1D or 1.00:00:00)
 
 ## PrivateEndpoint
 ### Properties
@@ -205,7 +205,7 @@
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
-## ReferenceDataSetCreationProperties
+## ReferenceDataSetCreationPropertiesOrReferenceDataSetResourceProperties
 ### Properties
 * **creationTime**: string (ReadOnly): The time the resource was created.
 * **dataStringComparisonBehavior**: 'Ordinal' | 'OrdinalIgnoreCase' | string: The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.
@@ -233,13 +233,13 @@
 
 ## WarmStoragePropertiesUsage
 ### Properties
-* **state**: 'Error' | 'Ok' | 'Unknown' | string (ReadOnly): This string represents the state of warm storage properties usage. It can be "Ok", "Error", "Unknown".
+* **state**: 'Error' | 'Ok' | 'Unknown' | string: This string represents the state of warm storage properties usage. It can be "Ok", "Error", "Unknown".
 * **stateDetails**: [WarmStoragePropertiesUsageStateDetails](#warmstoragepropertiesusagestatedetails) (ReadOnly): An object that contains the details about warm storage properties usage state.
 
 ## WarmStoragePropertiesUsageStateDetails
 ### Properties
-* **currentCount**: int (ReadOnly): A value that represents the number of properties used by the environment for S1/S2 SKU and number of properties used by Warm Store for PAYG SKU
-* **maxCount**: int (ReadOnly): A value that represents the maximum number of properties used allowed by the environment for S1/S2 SKU and maximum number of properties allowed by Warm Store for PAYG SKU.
+* **currentCount**: int: A value that represents the number of properties used by the environment for S1/S2 SKU and number of properties used by Warm Store for PAYG SKU
+* **maxCount**: int: A value that represents the maximum number of properties used allowed by the environment for S1/S2 SKU and maximum number of properties allowed by Warm Store for PAYG SKU.
 
 ## WarmStoreConfigurationProperties
 ### Properties

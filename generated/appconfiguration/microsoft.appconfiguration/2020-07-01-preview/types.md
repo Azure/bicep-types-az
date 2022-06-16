@@ -47,8 +47,8 @@
 
 ## ApiKeyListResult
 ### Properties
-* **nextLink**: string (ReadOnly): The URI that can be used to request the next set of paged results.
-* **value**: [ApiKey](#apikey)[] (ReadOnly): The collection value.
+* **nextLink**: string: The URI that can be used to request the next set of paged results.
+* **value**: [ApiKey](#apikey)[]: The collection value.
 
 ## ConfigurationStoreProperties
 ### Properties

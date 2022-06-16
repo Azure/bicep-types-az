@@ -80,17 +80,17 @@
 
 ## TldLegalAgreement
 ### Properties
-* **agreementKey**: string (ReadOnly): Unique identifier for the agreement
-* **content**: string (ReadOnly): Agreement details
-* **title**: string (ReadOnly): Agreement title
-* **url**: string (ReadOnly): Url where a copy of the agreement details is hosted
+* **agreementKey**: string: Unique identifier for the agreement
+* **content**: string: Agreement details
+* **title**: string: Agreement title
+* **url**: string: Url where a copy of the agreement details is hosted
 
 ## TldLegalAgreementCollection
 ### Properties
-* **nextLink**: string (ReadOnly): Link to next page of resources
-* **value**: [TldLegalAgreement](#tldlegalagreement)[] (ReadOnly): Collection of resources
+* **nextLink**: string: Link to next page of resources
+* **value**: [TldLegalAgreement](#tldlegalagreement)[]: Collection of resources
 
 ## TopLevelDomainAgreementOption
 ### Properties
-* **includePrivacy**: bool (WriteOnly): If true then the list of agreements will include agreements for domain privacy as well.
+* **includePrivacy**: bool: If true then the list of agreements will include agreements for domain privacy as well.
 

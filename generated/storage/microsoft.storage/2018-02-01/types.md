@@ -9,7 +9,7 @@
 * **kind**: 'BlobStorage' | 'Storage' | 'StorageV2' (Required): Required. Indicates the type of storage account.
 * **location**: string (Required): Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters): The parameters used to create the storage account.
+* **properties**: [StorageAccountPropertiesCreateParametersOrStorageAccountProperties](#storageaccountpropertiescreateparametersorstorageaccountproperties): The parameters used to create the storage account.
 * **sku**: [Sku](#sku) (Required): Required. Gets or sets the sku name.
 * **tags**: [StorageAccountCreateParametersTags](#storageaccountcreateparameterstags): Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
@@ -53,14 +53,14 @@
 
 ## AccountSasParameters
 ### Properties
-* **keyToSign**: string (WriteOnly): The key to sign the account SAS token with.
-* **signedExpiry**: string (Required, WriteOnly): The time at which the shared access signature becomes invalid.
-* **signedIp**: string (WriteOnly): An IP address or a range of IP addresses from which to accept requests.
-* **signedPermission**: 'a' | 'c' | 'd' | 'l' | 'p' | 'r' | 'u' | 'w' | string (Required, WriteOnly): The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).
-* **signedProtocol**: 'https' | 'https,http' (WriteOnly): The protocol permitted for a request made with the account SAS.
-* **signedResourceTypes**: 'c' | 'o' | 's' | string (Required, WriteOnly): The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files.
-* **signedServices**: 'b' | 'f' | 'q' | 't' | string (Required, WriteOnly): The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f).
-* **signedStart**: string (WriteOnly): The time at which the SAS becomes valid.
+* **keyToSign**: string: The key to sign the account SAS token with.
+* **signedExpiry**: string (Required): The time at which the shared access signature becomes invalid.
+* **signedIp**: string: An IP address or a range of IP addresses from which to accept requests.
+* **signedPermission**: 'a' | 'c' | 'd' | 'l' | 'p' | 'r' | 'u' | 'w' | string (Required): The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).
+* **signedProtocol**: 'https' | 'https,http': The protocol permitted for a request made with the account SAS.
+* **signedResourceTypes**: 'c' | 'o' | 's' | string (Required): The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files.
+* **signedServices**: 'b' | 'f' | 'q' | 't' | string (Required): The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f).
+* **signedStart**: string: The time at which the SAS becomes valid.
 
 ## ContainerProperties
 ### Properties
@@ -168,24 +168,24 @@
 
 ## ServiceSasParameters
 ### Properties
-* **canonicalizedResource**: string (Required, WriteOnly): The canonical path to the signed resource.
-* **endPk**: string (WriteOnly): The end of partition key.
-* **endRk**: string (WriteOnly): The end of row key.
-* **keyToSign**: string (WriteOnly): The key to sign the account SAS token with.
-* **rscc**: string (WriteOnly): The response header override for cache control.
-* **rscd**: string (WriteOnly): The response header override for content disposition.
-* **rsce**: string (WriteOnly): The response header override for content encoding.
-* **rscl**: string (WriteOnly): The response header override for content language.
-* **rsct**: string (WriteOnly): The response header override for content type.
-* **signedExpiry**: string (WriteOnly): The time at which the shared access signature becomes invalid.
-* **signedIdentifier**: string (WriteOnly): A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table.
-* **signedIp**: string (WriteOnly): An IP address or a range of IP addresses from which to accept requests.
-* **signedPermission**: 'a' | 'c' | 'd' | 'l' | 'p' | 'r' | 'u' | 'w' | string (WriteOnly): The signed permissions for the service SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).
-* **signedProtocol**: 'https' | 'https,http' (WriteOnly): The protocol permitted for a request made with the account SAS.
-* **signedResource**: 'b' | 'c' | 'f' | 's' | string (WriteOnly): The signed services accessible with the service SAS. Possible values include: Blob (b), Container (c), File (f), Share (s).
-* **signedStart**: string (WriteOnly): The time at which the SAS becomes valid.
-* **startPk**: string (WriteOnly): The start of partition key.
-* **startRk**: string (WriteOnly): The start of row key.
+* **canonicalizedResource**: string (Required): The canonical path to the signed resource.
+* **endPk**: string: The end of partition key.
+* **endRk**: string: The end of row key.
+* **keyToSign**: string: The key to sign the account SAS token with.
+* **rscc**: string: The response header override for cache control.
+* **rscd**: string: The response header override for content disposition.
+* **rsce**: string: The response header override for content encoding.
+* **rscl**: string: The response header override for content language.
+* **rsct**: string: The response header override for content type.
+* **signedExpiry**: string: The time at which the shared access signature becomes invalid.
+* **signedIdentifier**: string: A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table.
+* **signedIp**: string: An IP address or a range of IP addresses from which to accept requests.
+* **signedPermission**: 'a' | 'c' | 'd' | 'l' | 'p' | 'r' | 'u' | 'w' | string: The signed permissions for the service SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).
+* **signedProtocol**: 'https' | 'https,http': The protocol permitted for a request made with the account SAS.
+* **signedResource**: 'b' | 'c' | 'f' | 's' | string: The signed services accessible with the service SAS. Possible values include: Blob (b), Container (c), File (f), Share (s).
+* **signedStart**: string: The time at which the SAS becomes valid.
+* **startPk**: string: The start of partition key.
+* **startRk**: string: The start of row key.
 
 ## Sku
 ### Properties
@@ -217,7 +217,7 @@
 ### Properties
 * **keys**: [StorageAccountKey](#storageaccountkey)[] (ReadOnly): Gets the list of storage account keys and their properties for the specified storage account.
 
-## StorageAccountPropertiesCreateParameters
+## StorageAccountPropertiesCreateParametersOrStorageAccountProperties
 ### Properties
 * **accessTier**: 'Cool' | 'Hot': Required for storage accounts where kind = BlobStorage. The access tier used for billing.
 * **creationTime**: string (ReadOnly): Gets the creation date and time of the storage account in UTC.

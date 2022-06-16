@@ -196,17 +196,17 @@
 
 ## DatabasePrincipal
 ### Properties
-* **appId**: string (ReadOnly): Application id - relevant only for application principal type.
-* **email**: string (ReadOnly): Database principal email if exists.
-* **fqn**: string (ReadOnly): Database principal fully qualified name.
-* **name**: string (ReadOnly): Database principal name.
-* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewer' | 'User' | 'Viewer' | string (ReadOnly): Database principal role.
+* **appId**: string: Application id - relevant only for application principal type.
+* **email**: string: Database principal email if exists.
+* **fqn**: string: Database principal fully qualified name.
+* **name**: string (Required): Database principal name.
+* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewer' | 'User' | 'Viewer' | string (Required): Database principal role.
 * **tenantName**: string (ReadOnly): The tenant name of the principal
-* **type**: 'App' | 'Group' | 'User' | string (ReadOnly): Database principal type.
+* **type**: 'App' | 'Group' | 'User' | string (Required): Database principal type.
 
 ## DatabasePrincipalListResult
 ### Properties
-* **value**: [DatabasePrincipal](#databaseprincipal)[] (ReadOnly): The list of Kusto database principals.
+* **value**: [DatabasePrincipal](#databaseprincipal)[]: The list of Kusto database principals.
 
 ## DatabasePrincipalProperties
 ### Properties
@@ -248,13 +248,13 @@
 
 ## FollowerDatabaseDefinition
 ### Properties
-* **attachedDatabaseConfigurationName**: string (ReadOnly): Resource name of the attached database configuration in the follower cluster.
-* **clusterResourceId**: string (ReadOnly): Resource id of the cluster that follows a database owned by this cluster.
+* **attachedDatabaseConfigurationName**: string (Required): Resource name of the attached database configuration in the follower cluster.
+* **clusterResourceId**: string (Required): Resource id of the cluster that follows a database owned by this cluster.
 * **databaseName**: string (ReadOnly): The database name owned by this cluster that was followed. * in case following all databases.
 
 ## FollowerDatabaseListResult
 ### Properties
-* **value**: [FollowerDatabaseDefinition](#followerdatabasedefinition)[] (ReadOnly): The list of follower database result.
+* **value**: [FollowerDatabaseDefinition](#followerdatabasedefinition)[]: The list of follower database result.
 
 ## Identity
 ### Properties

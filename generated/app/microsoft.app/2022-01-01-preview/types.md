@@ -299,23 +299,23 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **name**: string (ReadOnly): The name of the resource
-* **properties**: [CustomHostnameAnalysisResultProperties](#customhostnameanalysisresultproperties) (ReadOnly): CustomHostnameAnalysisResult resource specific properties
+* **properties**: [CustomHostnameAnalysisResultProperties](#customhostnameanalysisresultproperties): CustomHostnameAnalysisResult resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## CustomHostnameAnalysisResultProperties
 ### Properties
-* **alternateCNameRecords**: string[] (ReadOnly): Alternate CName records visible for this hostname.
-* **alternateTxtRecords**: string[] (ReadOnly): Alternate TXT records visible for this hostname.
-* **aRecords**: string[] (ReadOnly): A records visible for this hostname.
-* **cNameRecords**: string[] (ReadOnly): CName records visible for this hostname.
+* **alternateCNameRecords**: string[]: Alternate CName records visible for this hostname.
+* **alternateTxtRecords**: string[]: Alternate TXT records visible for this hostname.
+* **aRecords**: string[]: A records visible for this hostname.
+* **cNameRecords**: string[]: CName records visible for this hostname.
 * **conflictingContainerAppResourceId**: string (ReadOnly): Name of the conflicting Container App on the Managed Environment if it's within the same subscription.
 * **customDomainVerificationFailureInfo**: [DefaultErrorResponse](#defaulterrorresponse) (ReadOnly): Raw failure information if DNS verification fails.
 * **customDomainVerificationTest**: 'Failed' | 'Passed' | 'Skipped' (ReadOnly): DNS verification test result.
 * **hasConflictOnManagedEnvironment**: bool (ReadOnly): <code>true</code> if there is a conflict on the Container App's managed environment; otherwise, <code>false</code>.
 * **hostName**: string (ReadOnly): Host name that was analyzed
 * **isHostnameAlreadyVerified**: bool (ReadOnly): <code>true</code> if hostname is already verified; otherwise, <code>false</code>.
-* **txtRecords**: string[] (ReadOnly): TXT records visible for this hostname.
+* **txtRecords**: string[]: TXT records visible for this hostname.
 
 ## CustomOpenIdConnectProvider
 ### Properties
@@ -370,7 +370,7 @@ eg: azure-servicebus, redis etc.
 ## DefaultErrorResponseError
 ### Properties
 * **code**: string (ReadOnly): Standardized string to programmatically identify the error.
-* **details**: [DefaultErrorResponseErrorDetailsItem](#defaulterrorresponseerrordetailsitem)[] (ReadOnly): Details or the error
+* **details**: [DefaultErrorResponseErrorDetailsItem](#defaulterrorresponseerrordetailsitem)[]: Details or the error
 * **innererror**: string (ReadOnly): More information to debug error.
 * **message**: string (ReadOnly): Detailed error description and debugging information.
 * **target**: string (ReadOnly): Detailed error description and debugging information.
@@ -601,7 +601,7 @@ supported
 
 ## SecretsCollection
 ### Properties
-* **value**: [ContainerAppSecret](#containerappsecret)[] (ReadOnly): Collection of resources.
+* **value**: [ContainerAppSecret](#containerappsecret)[] (Required): Collection of resources.
 
 ## SourceControlProperties
 ### Properties

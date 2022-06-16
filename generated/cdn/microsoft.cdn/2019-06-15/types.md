@@ -42,7 +42,7 @@
 * **apiVersion**: '2019-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CustomDomainPropertiesParameters](#customdomainpropertiesparameters): The JSON object that contains the properties of the custom domain to create.
+* **properties**: [CustomDomainPropertiesParametersOrCustomDomainProperties](#customdomainpropertiesparametersorcustomdomainproperties): The JSON object that contains the properties of the custom domain to create.
 * **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## CacheExpirationActionParameters
@@ -60,8 +60,8 @@
 
 ## CdnCertificateSourceParameters
 ### Properties
-* **@odata.type**: '#Microsoft.Azure.Cdn.Models.CdnCertificateSourceParameters' | string (ReadOnly)
-* **certificateType**: 'Dedicated' | 'Shared' | string (ReadOnly): Type of certificate used
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.CdnCertificateSourceParameters' | string (Required)
+* **certificateType**: 'Dedicated' | 'Shared' | string (Required): Type of certificate used
 
 ## CdnEndpoint
 ### Properties
@@ -90,20 +90,20 @@
 * **Discriminator**: certificateSource
 
 ### Base Properties
-* **minimumTlsVersion**: 'None' | 'TLS10' | 'TLS12' (ReadOnly): TLS protocol version that will be used for Https
-* **protocolType**: 'IPBased' | 'ServerNameIndication' | string (ReadOnly): Defines the TLS extension protocol that is used for secure delivery.
+* **minimumTlsVersion**: 'None' | 'TLS10' | 'TLS12': TLS protocol version that will be used for Https
+* **protocolType**: 'IPBased' | 'ServerNameIndication' | string (Required): Defines the TLS extension protocol that is used for secure delivery.
 ### UserManagedHttpsParameters
 #### Properties
 * **certificateSource**: 'AzureKeyVault' (Required): Defines the source of the SSL certificate.
-* **certificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters) (ReadOnly): Defines the certificate source parameters using user's keyvault certificate for enabling SSL.
+* **certificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters) (Required): Defines the certificate source parameters using user's keyvault certificate for enabling SSL.
 
 ### CdnManagedHttpsParameters
 #### Properties
 * **certificateSource**: 'Cdn' (Required): Defines the source of the SSL certificate.
-* **certificateSourceParameters**: [CdnCertificateSourceParameters](#cdncertificatesourceparameters) (ReadOnly): Defines the certificate source parameters using CDN managed certificate for enabling SSL.
+* **certificateSourceParameters**: [CdnCertificateSourceParameters](#cdncertificatesourceparameters) (Required): Defines the certificate source parameters using CDN managed certificate for enabling SSL.
 
 
-## CustomDomainPropertiesParameters
+## CustomDomainPropertiesParametersOrCustomDomainProperties
 ### Properties
 * **customHttpsParameters**: [CustomDomainHttpsParameters](#customdomainhttpsparameters) (ReadOnly): Certificate parameters for securing custom HTTPS
 * **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' | string (ReadOnly): Provisioning status of Custom Https of the custom domain.
@@ -311,14 +311,14 @@
 
 ## KeyVaultCertificateSourceParameters
 ### Properties
-* **@odata.type**: '#Microsoft.Azure.Cdn.Models.KeyVaultCertificateSourceParameters' | string (ReadOnly)
-* **deleteRule**: 'NoAction' | string (ReadOnly): Describes the action that shall be taken when the certificate is removed from Key Vault.
-* **resourceGroupName**: string (ReadOnly): Resource group of the user's Key Vault containing the SSL certificate
-* **secretName**: string (ReadOnly): The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.
-* **secretVersion**: string (ReadOnly): The version(GUID) of Key Vault Secret in Key Vault.
-* **subscriptionId**: string (ReadOnly): Subscription Id of the user's Key Vault containing the SSL certificate
-* **updateRule**: 'NoAction' | string (ReadOnly): Describes the action that shall be taken when the certificate is updated in Key Vault.
-* **vaultName**: string (ReadOnly): The name of the user's Key Vault containing the SSL certificate
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.KeyVaultCertificateSourceParameters' | string (Required)
+* **deleteRule**: 'NoAction' | string (Required): Describes the action that shall be taken when the certificate is removed from Key Vault.
+* **resourceGroupName**: string (Required): Resource group of the user's Key Vault containing the SSL certificate
+* **secretName**: string (Required): The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.
+* **secretVersion**: string: The version(GUID) of Key Vault Secret in Key Vault.
+* **subscriptionId**: string (Required): Subscription Id of the user's Key Vault containing the SSL certificate
+* **updateRule**: 'NoAction' | string (Required): Describes the action that shall be taken when the certificate is updated in Key Vault.
+* **vaultName**: string (Required): The name of the user's Key Vault containing the SSL certificate
 
 ## ManagedRuleGroupOverride
 ### Properties

@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The Azure Region where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PythonPackageCreateProperties](#pythonpackagecreateproperties) (Required): Gets or sets the module create properties.
+* **properties**: [PythonPackageCreatePropertiesOrModuleProperties](#pythonpackagecreatepropertiesormoduleproperties) (Required): Gets or sets the module create properties.
 * **tags**: [PythonPackageCreateParametersTags](#pythonpackagecreateparameterstags): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/python2Packages' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Gets or sets the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RunbookCreateOrUpdateProperties](#runbookcreateorupdateproperties) (Required): Gets or sets runbook create or update properties.
+* **properties**: [RunbookCreateOrUpdatePropertiesOrRunbookProperties](#runbookcreateorupdatepropertiesorrunbookproperties) (Required): Gets or sets runbook create or update properties.
 * **tags**: [RunbookCreateOrUpdateParametersTags](#runbookcreateorupdateparameterstags): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/runbooks' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -68,15 +68,15 @@
 
 ## ModuleErrorInfo
 ### Properties
-* **code**: string (ReadOnly): Gets or sets the error code.
-* **message**: string (ReadOnly): Gets or sets the error message.
+* **code**: string: Gets or sets the error code.
+* **message**: string: Gets or sets the error message.
 
 ## PythonPackageCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## PythonPackageCreateProperties
+## PythonPackageCreatePropertiesOrModuleProperties
 ### Properties
 * **activityCount**: int (ReadOnly): Gets or sets the activity count of the module.
 * **contentLink**: [ContentLink](#contentlink) (Required): Gets or sets the module content link.
@@ -95,7 +95,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## RunbookCreateOrUpdateProperties
+## RunbookCreateOrUpdatePropertiesOrRunbookProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Gets or sets the creation time.
 * **description**: string: Gets or sets the description of the runbook.

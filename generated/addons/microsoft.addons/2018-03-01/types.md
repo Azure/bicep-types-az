@@ -16,11 +16,11 @@
 
 ## CanonicalSupportPlanInfoDefinition
 ### Properties
-* **enabled**: bool (ReadOnly): Flag to indicate if this support plan type is currently enabled for the subscription.
-* **oneTimeCharge**: 'no' | 'onEnabled' | 'onReenabled' | string (ReadOnly): The one time charge status for the subscription.
-* **supportPlanType**: 'advanced' | 'essential' | 'standard' | string (ReadOnly): Support plan type.
+* **enabled**: bool: Flag to indicate if this support plan type is currently enabled for the subscription.
+* **oneTimeCharge**: 'no' | 'onEnabled' | 'onReenabled' | string: The one time charge status for the subscription.
+* **supportPlanType**: 'advanced' | 'essential' | 'standard' | string: Support plan type.
 
 ## CanonicalSupportPlanProperties
 ### Properties
-* **provisioningState**: 'Cancelled' | 'Cancelling' | 'Downgrading' | 'Failed' | 'Purchasing' | 'Succeeded' | 'Upgrading' | string (ReadOnly): The provisioning state of the resource.
+* **provisioningState**: 'Cancelled' | 'Cancelling' | 'Downgrading' | 'Failed' | 'Purchasing' | 'Succeeded' | 'Upgrading' | string: The provisioning state of the resource.
 

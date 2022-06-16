@@ -20,5 +20,5 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | Resource type microsoft.agfoodplatform/farmbeats/extensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AgFoodPlatform/farmBeats/{farmBeatsResourceName}/extensions/{extensionId}' has no body defined.
-info    | autorest.bicep took 13ms
-info    | Autorest completed in 4.57s. 2 files generated.
+info    | autorest.bicep took 14ms
+info    | Autorest completed in 3.92s. 2 files generated.

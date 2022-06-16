@@ -77,7 +77,7 @@
 
 ## AccessProfile
 ### Properties
-* **kubeConfig**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
+* **kubeConfig**: any: Base64-encoded Kubernetes configuration file.
 
 ## AgentPoolUpgradeSettings
 ### Properties
@@ -178,11 +178,11 @@
 ## ManagedClusterAccessProfile
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-* **location**: string (ReadOnly): Resource location
+* **location**: string (Required): Resource location
 * **name**: string (ReadOnly): The name of the resource
-* **properties**: [AccessProfile](#accessprofile) (ReadOnly): AccessProfile of a managed cluster.
+* **properties**: [AccessProfile](#accessprofile): AccessProfile of a managed cluster.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## ManagedClusterAddonProfile

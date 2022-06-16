@@ -23,7 +23,7 @@
 
 ## EndpointAccessResource
 ### Properties
-* **relay**: [RelayNamespaceAccessProperties](#relaynamespaceaccessproperties) (ReadOnly): Azure relay hybrid connection access properties
+* **relay**: [RelayNamespaceAccessProperties](#relaynamespaceaccessproperties): Azure relay hybrid connection access properties
 
 ## EndpointProperties
 ### Properties
@@ -33,21 +33,21 @@
 
 ## ManagedProxyRequest
 ### Properties
-* **hostname**: string (WriteOnly): The target host name.
-* **service**: string (Required, WriteOnly): The name of the service.
+* **hostname**: string: The target host name.
+* **service**: string (Required): The name of the service.
 
 ## ManagedProxyResource
 ### Properties
-* **expiresOn**: int (ReadOnly): The expiration time of short lived proxy name in unix epoch.
-* **proxy**: string (ReadOnly): The short lived proxy name.
+* **expiresOn**: int (Required): The expiration time of short lived proxy name in unix epoch.
+* **proxy**: string (Required): The short lived proxy name.
 
 ## RelayNamespaceAccessProperties
 ### Properties
 * **accessKey**: string (ReadOnly): Access key for hybrid connection.
-* **expiresOn**: int (ReadOnly): The expiration of access key in unix time.
-* **hybridConnectionName**: string (ReadOnly): Azure Relay hybrid connection name for the resource.
-* **namespaceName**: string (ReadOnly): The namespace name.
-* **namespaceNameSuffix**: string (ReadOnly): The suffix domain name of relay namespace.
+* **expiresOn**: int: The expiration of access key in unix time.
+* **hybridConnectionName**: string (Required): Azure Relay hybrid connection name for the resource.
+* **namespaceName**: string (Required): The namespace name.
+* **namespaceNameSuffix**: string (Required): The suffix domain name of relay namespace.
 
 ## SystemData
 ### Properties

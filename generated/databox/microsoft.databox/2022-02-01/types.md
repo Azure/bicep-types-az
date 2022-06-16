@@ -261,8 +261,8 @@ Until this is true, the TotalBytesToProcess may not be valid.
 
 ## DcAccessSecurityCode
 ### Properties
-* **forwardDCAccessCode**: string (ReadOnly): Forward Dc access security code.
-* **reverseDCAccessCode**: string (ReadOnly): Reverse Dc access security code.
+* **forwardDCAccessCode**: string: Forward Dc access security code.
+* **reverseDCAccessCode**: string: Reverse Dc access security code.
 
 ## DeviceErasureDetails
 ### Properties
@@ -384,7 +384,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 ### DataboxJobSecrets
 #### Properties
 * **jobSecretsType**: 'DataBox' (Required): Used to indicate what type of job secrets object.
-* **podSecrets**: [DataBoxSecret](#databoxsecret)[] (ReadOnly): Contains the list of secret objects for a job.
+* **podSecrets**: [DataBoxSecret](#databoxsecret)[]: Contains the list of secret objects for a job.
 
 ### CustomerDiskJobSecrets
 #### Properties
@@ -547,8 +547,8 @@ possibility is that mitigation might happen by customer or service or by ops
 
 ## UnencryptedCredentialsList
 ### Properties
-* **nextLink**: string (ReadOnly): Link for the next set of unencrypted credentials.
-* **value**: [UnencryptedCredentials](#unencryptedcredentials)[] (ReadOnly): List of unencrypted credentials.
+* **nextLink**: string: Link for the next set of unencrypted credentials.
+* **value**: [UnencryptedCredentials](#unencryptedcredentials)[]: List of unencrypted credentials.
 
 ## UserAssignedIdentity
 ### Properties

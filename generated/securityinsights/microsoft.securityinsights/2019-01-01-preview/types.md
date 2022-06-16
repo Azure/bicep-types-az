@@ -17,7 +17,7 @@
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ActionRequestProperties](#actionrequestproperties): Action properties for put request
+* **properties**: [ActionRequestPropertiesOrActionResponseProperties](#actionrequestpropertiesoractionresponseproperties): Action properties for put request
 * **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -78,7 +78,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'CasesToBookmarks' | string (ReadOnly): The type of relation node
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RelationsModelInputProperties](#relationsmodelinputproperties): Relation input properties
+* **properties**: [RelationsModelInputPropertiesOrCaseRelationProperties](#relationsmodelinputpropertiesorcaserelationproperties): Relation input properties
 * **type**: 'Microsoft.SecurityInsights/cases/relations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/dataConnectors@2019-01-01-preview
@@ -162,7 +162,7 @@
 * **properties**: [WatchlistItemProperties](#watchlistitemproperties): Watchlist Item properties
 * **type**: 'Microsoft.SecurityInsights/watchlists/watchlistItems' (ReadOnly, DeployTimeConstant): The resource type
 
-## ActionRequestProperties
+## ActionRequestPropertiesOrActionResponseProperties
 ### Properties
 * **logicAppResourceId**: string (Required): Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
 * **triggerUri**: string (Required, WriteOnly): Logic App Callback URL for this specific workflow.
@@ -353,10 +353,10 @@
 
 ## RelationNode
 ### Properties
-* **etag**: string (WriteOnly): Etag for relation node
-* **relationAdditionalProperties**: [RelationNodeRelationAdditionalProperties](#relationnoderelationadditionalproperties) (WriteOnly): Additional set of properties
-* **relationNodeId**: string (WriteOnly): Relation Node Id
-* **relationNodeKind**: 'Bookmark' | 'Case' | string (ReadOnly, WriteOnly): The type of relation node
+* **etag**: string: Etag for relation node
+* **relationAdditionalProperties**: [RelationNodeRelationAdditionalProperties](#relationnoderelationadditionalproperties): Additional set of properties
+* **relationNodeId**: string: Relation Node Id
+* **relationNodeKind**: 'Bookmark' | 'Case' | string (ReadOnly): The type of relation node
 
 ## RelationNodeRelationAdditionalProperties
 ### Properties
@@ -370,7 +370,7 @@
 * **relatedResourceName**: string (ReadOnly): The name of the related resource
 * **relatedResourceType**: string (ReadOnly): The resource type of the related resource
 
-## RelationsModelInputProperties
+## RelationsModelInputPropertiesOrCaseRelationProperties
 ### Properties
 * **bookmarkId**: string (ReadOnly): The case related bookmark id
 * **bookmarkName**: string (ReadOnly): The case related bookmark name
@@ -381,20 +381,20 @@
 
 ## SystemData
 ### Properties
-* **createdAt**: string (WriteOnly): The timestamp of resource creation (UTC).
-* **createdBy**: string (WriteOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (WriteOnly): The type of identity that created the resource.
-* **lastModifiedAt**: string (WriteOnly): The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string (WriteOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (WriteOnly): The type of identity that last modified the resource.
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## ThreatIntelligenceExternalReference
 ### Properties
-* **description**: string (WriteOnly): External reference description
-* **externalId**: string (WriteOnly): External reference ID
-* **hashes**: [ThreatIntelligenceExternalReferenceHashes](#threatintelligenceexternalreferencehashes) (WriteOnly): External reference hashes
-* **sourceName**: string (WriteOnly): External reference source name
-* **url**: string (WriteOnly): External reference URL
+* **description**: string: External reference description
+* **externalId**: string: External reference ID
+* **hashes**: [ThreatIntelligenceExternalReferenceHashes](#threatintelligenceexternalreferencehashes): External reference hashes
+* **sourceName**: string: External reference source name
+* **url**: string: External reference URL
 
 ## ThreatIntelligenceExternalReferenceHashes
 ### Properties
@@ -403,42 +403,42 @@
 
 ## ThreatIntelligenceGranularMarkingModel
 ### Properties
-* **language**: string (WriteOnly): Language granular marking model
-* **markingRef**: int (WriteOnly): marking reference granular marking model
-* **selectors**: string[] (WriteOnly): granular marking model selectors
+* **language**: string: Language granular marking model
+* **markingRef**: int: marking reference granular marking model
+* **selectors**: string[]: granular marking model selectors
 
 ## ThreatIntelligenceIndicatorProperties
 ### Properties
-* **additionalData**: [EntityCommonPropertiesAdditionalData](#entitycommonpropertiesadditionaldata) (ReadOnly, WriteOnly): A bag of custom fields that should be part of the entity and will be presented to the user.
-* **confidence**: int (WriteOnly): Confidence of threat intelligence entity
-* **created**: string (WriteOnly): Created by
-* **createdByRef**: string (WriteOnly): Created by reference of threat intelligence entity
-* **defanged**: bool (WriteOnly): Is threat intelligence entity defanged
-* **description**: string (WriteOnly): Description of a threat intelligence entity
-* **displayName**: string (WriteOnly): Display name of a threat intelligence entity
-* **extensions**: [ThreatIntelligenceIndicatorPropertiesExtensions](#threatintelligenceindicatorpropertiesextensions) (WriteOnly): Extensions map
-* **externalId**: string (WriteOnly): External ID of threat intelligence entity
-* **externalLastUpdatedTimeUtc**: string (WriteOnly): External last updated time in UTC
-* **externalReferences**: [ThreatIntelligenceExternalReference](#threatintelligenceexternalreference)[] (WriteOnly): External References
-* **friendlyName**: string (ReadOnly, WriteOnly): The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated.
-* **granularMarkings**: [ThreatIntelligenceGranularMarkingModel](#threatintelligencegranularmarkingmodel)[] (WriteOnly): Granular Markings
-* **indicatorTypes**: string[] (WriteOnly): Indicator types of threat intelligence entities
-* **killChainPhases**: [ThreatIntelligenceKillChainPhase](#threatintelligencekillchainphase)[] (WriteOnly): Kill chain phases
-* **labels**: string[] (WriteOnly): Labels  of threat intelligence entity
-* **language**: string (WriteOnly): Language of threat intelligence entity
-* **lastUpdatedTimeUtc**: string (WriteOnly): Last updated time in UTC
-* **modified**: string (WriteOnly): Modified by
-* **objectMarkingRefs**: string[] (WriteOnly): Threat intelligence entity object marking references
-* **parsedPattern**: [ThreatIntelligenceParsedPattern](#threatintelligenceparsedpattern)[] (WriteOnly): Parsed patterns
-* **pattern**: string (WriteOnly): Pattern of a threat intelligence entity
-* **patternType**: string (WriteOnly): Pattern type of a threat intelligence entity
-* **patternVersion**: string (WriteOnly): Pattern version of a threat intelligence entity
-* **revoked**: bool (WriteOnly): Is threat intelligence entity revoked
-* **source**: string (WriteOnly): Source of a threat intelligence entity
-* **threatIntelligenceTags**: string[] (WriteOnly): List of tags
-* **threatTypes**: string[] (WriteOnly): Threat types
-* **validFrom**: string (WriteOnly): Valid from
-* **validUntil**: string (WriteOnly): Valid until
+* **additionalData**: [EntityCommonPropertiesAdditionalData](#entitycommonpropertiesadditionaldata) (ReadOnly): A bag of custom fields that should be part of the entity and will be presented to the user.
+* **confidence**: int: Confidence of threat intelligence entity
+* **created**: string: Created by
+* **createdByRef**: string: Created by reference of threat intelligence entity
+* **defanged**: bool: Is threat intelligence entity defanged
+* **description**: string: Description of a threat intelligence entity
+* **displayName**: string: Display name of a threat intelligence entity
+* **extensions**: [ThreatIntelligenceIndicatorPropertiesExtensions](#threatintelligenceindicatorpropertiesextensions): Extensions map
+* **externalId**: string: External ID of threat intelligence entity
+* **externalLastUpdatedTimeUtc**: string: External last updated time in UTC
+* **externalReferences**: [ThreatIntelligenceExternalReference](#threatintelligenceexternalreference)[]: External References
+* **friendlyName**: string (ReadOnly): The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated.
+* **granularMarkings**: [ThreatIntelligenceGranularMarkingModel](#threatintelligencegranularmarkingmodel)[]: Granular Markings
+* **indicatorTypes**: string[]: Indicator types of threat intelligence entities
+* **killChainPhases**: [ThreatIntelligenceKillChainPhase](#threatintelligencekillchainphase)[]: Kill chain phases
+* **labels**: string[]: Labels  of threat intelligence entity
+* **language**: string: Language of threat intelligence entity
+* **lastUpdatedTimeUtc**: string: Last updated time in UTC
+* **modified**: string: Modified by
+* **objectMarkingRefs**: string[]: Threat intelligence entity object marking references
+* **parsedPattern**: [ThreatIntelligenceParsedPattern](#threatintelligenceparsedpattern)[]: Parsed patterns
+* **pattern**: string: Pattern of a threat intelligence entity
+* **patternType**: string: Pattern type of a threat intelligence entity
+* **patternVersion**: string: Pattern version of a threat intelligence entity
+* **revoked**: bool: Is threat intelligence entity revoked
+* **source**: string: Source of a threat intelligence entity
+* **threatIntelligenceTags**: string[]: List of tags
+* **threatTypes**: string[]: Threat types
+* **validFrom**: string: Valid from
+* **validUntil**: string: Valid until
 
 ## ThreatIntelligenceIndicatorPropertiesExtensions
 ### Properties
@@ -447,18 +447,18 @@
 
 ## ThreatIntelligenceKillChainPhase
 ### Properties
-* **killChainName**: string (WriteOnly): Kill chainName name
-* **phaseName**: string (WriteOnly): Phase name
+* **killChainName**: string: Kill chainName name
+* **phaseName**: string: Phase name
 
 ## ThreatIntelligenceParsedPattern
 ### Properties
-* **patternTypeKey**: string (WriteOnly): Pattern type key
-* **patternTypeValues**: [ThreatIntelligenceParsedPatternTypeValue](#threatintelligenceparsedpatterntypevalue)[] (WriteOnly): Pattern type keys
+* **patternTypeKey**: string: Pattern type key
+* **patternTypeValues**: [ThreatIntelligenceParsedPatternTypeValue](#threatintelligenceparsedpatterntypevalue)[]: Pattern type keys
 
 ## ThreatIntelligenceParsedPatternTypeValue
 ### Properties
-* **value**: string (WriteOnly): Value of parsed pattern
-* **valueType**: string (WriteOnly): Type of the value
+* **value**: string: Value of parsed pattern
+* **valueType**: string: Type of the value
 
 ## UserInfo
 ### Properties

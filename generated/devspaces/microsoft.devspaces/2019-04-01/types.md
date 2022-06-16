@@ -20,11 +20,11 @@
 
 ## ControllerConnectionDetails
 ### Properties
-* **orchestratorSpecificConnectionDetails**: [OrchestratorSpecificConnectionDetails](#orchestratorspecificconnectiondetails) (ReadOnly): Base class for types that supply values used to connect to container orchestrators
+* **orchestratorSpecificConnectionDetails**: [OrchestratorSpecificConnectionDetails](#orchestratorspecificconnectiondetails): Base class for types that supply values used to connect to container orchestrators
 
 ## ControllerConnectionDetailsList
 ### Properties
-* **connectionDetailsList**: [ControllerConnectionDetails](#controllerconnectiondetails)[] (ReadOnly): List of Azure Dev Spaces Controller connection details.
+* **connectionDetailsList**: [ControllerConnectionDetails](#controllerconnectiondetails)[]: List of Azure Dev Spaces Controller connection details.
 
 ## ControllerProperties
 ### Properties
@@ -37,7 +37,7 @@
 
 ## ListConnectionDetailsParameters
 ### Properties
-* **targetContainerHostResourceId**: string (Required, WriteOnly): Resource ID of the target container host mapped to the Azure Dev Spaces Controller.
+* **targetContainerHostResourceId**: string (Required): Resource ID of the target container host mapped to the Azure Dev Spaces Controller.
 
 ## OrchestratorSpecificConnectionDetails
 * **Discriminator**: instanceType
@@ -46,7 +46,7 @@
 ### KubernetesConnectionDetails
 #### Properties
 * **instanceType**: 'Kubernetes' (Required): Gets the Instance type.
-* **kubeConfig**: string (ReadOnly): Gets the kubeconfig for the cluster.
+* **kubeConfig**: string: Gets the kubeconfig for the cluster.
 
 
 ## Sku

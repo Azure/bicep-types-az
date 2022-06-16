@@ -254,12 +254,12 @@
 
 ## SystemData
 ### Properties
-* **createdAt**: string (ReadOnly): The timestamp of the key vault resource creation (UTC).
-* **createdBy**: string (ReadOnly): The identity that created the key vault resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the key vault resource.
-* **lastModifiedAt**: string (ReadOnly): The timestamp of the key vault resource last modification (UTC).
-* **lastModifiedBy**: string (ReadOnly): The identity that last modified the key vault resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that last modified the key vault resource.
+* **createdAt**: string: The timestamp of the key vault resource creation (UTC).
+* **createdBy**: string: The identity that created the key vault resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the key vault resource.
+* **lastModifiedAt**: string: The timestamp of the key vault resource last modification (UTC).
+* **lastModifiedBy**: string: The identity that last modified the key vault resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the key vault resource.
 
 ## VaultAccessPolicyProperties
 ### Properties

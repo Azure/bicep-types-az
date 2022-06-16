@@ -104,7 +104,7 @@ warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyResourcePropertie
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/timeseriesinsights/resource-manager/Microsoft.TimeSeriesInsights/preview/2021-03-31-preview/timeseriesinsights.json:2839:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateEndpointConnection' has a property 'id' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateEndpointConnection
-info    | autorest.bicep took 17ms
+info    | autorest.bicep took 12ms
 info    | Processing batch task - {"tag":"microsoft.timeseriesinsights-2021-06-30-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -201,7 +201,7 @@ warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyResource' with an
 warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/timeseriesinsights/resource-manager/Microsoft.TimeSeriesInsights/preview/2021-06-30-preview/timeseriesinsights.json:2620:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.timeseriesinsights-2020-05-15"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -395,7 +395,7 @@ warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyResource' with an
 warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/timeseriesinsights/resource-manager/Microsoft.TimeSeriesInsights/preview/2018-08-15-preview/timeseriesinsights.json:2381:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.timeseriesinsights-2017-11-15"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -480,7 +480,7 @@ warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyResource' with an
 warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/timeseriesinsights/resource-manager/Microsoft.TimeSeriesInsights/stable/2017-11-15/timeseriesinsights.json:2068:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.timeseriesinsights-2017-02-28-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -564,4 +564,4 @@ warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyResourcePropertie
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/timeseriesinsights/resource-manager/Microsoft.TimeSeriesInsights/preview/2017-02-28-preview/timeseriesinsights.json:1914:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 3ms
-info    | Autorest completed in 16.87s. 12 files generated.
+info    | Autorest completed in 13.22s. 12 files generated.
