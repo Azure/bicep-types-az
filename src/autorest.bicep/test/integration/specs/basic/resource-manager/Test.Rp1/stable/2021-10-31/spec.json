@@ -42,8 +42,22 @@
       "type": "object",
       "description": "The testType1 resource."
     },
-    "TestType1Properties": {
-      "description": "TestType1 properties",
+    "TestType1Input": {
+      "allOf": [
+        {
+          "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/TrackedResource"
+        }
+      ],
+      "type": "object",
+      "properties": {
+        "properties": {
+          "$ref": "#/definitions/TestType1CreateOrUpdateProperties",
+          "description": "The resource properties.",
+          "x-ms-client-flatten": true
+        }
+      }
+    },
+    "TestType1CreateOrUpdateProperties": {
       "properties": {
         "basicString": {
           "type": "string",
@@ -81,6 +95,18 @@
         }
       }
     },
+    "TestType1Properties": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/TestType1CreateOrUpdateProperties"
+        }
+      ],
+      "properties": {
+        "locationData": {
+          "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/locationData"
+        }
+      }
+    },
     "FoosResponse": {
       "properties": {
         "someString": {
@@ -94,6 +120,9 @@
         "someString": {
           "type": "string",
           "description": "The foo request string"
+        },
+        "locationData": {
+          "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/locationData"
         }
       },
       "required": [
@@ -204,7 +233,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/TestType1"
+              "$ref": "#/definitions/TestType1Input"
             },
             "description": "The request parameters"
           },

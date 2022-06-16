@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TestType1Properties](#testtype1properties): TestType1 properties
+* **properties**: [TestType1CreateOrUpdatePropertiesOrTestType1Properties](#testtype1createorupdatepropertiesortesttype1properties): The resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Test.Rp1/testType1' (ReadOnly, DeployTimeConstant): The resource type
@@ -30,20 +30,28 @@
 
 ## FoosRequest
 ### Properties
-* **someString**: string (Required, WriteOnly): The foo request string
+* **locationData**: [LocationData](#locationdata): Metadata pertaining to the geographic location of the resource.
+* **someString**: string (Required): The foo request string
 
 ## FoosResponse
 ### Properties
-* **someString**: string (ReadOnly): The foo response string
+* **someString**: string: The foo response string
 
 ## FoosResponse
 ### Properties
-* **someString**: string (ReadOnly): The foo response string
+* **someString**: string: The foo response string
 
 ## KeyVaultProperties
 ### Properties
 * **identity**: string: The client ID of the identity which will be used to access key vault.
 * **keyIdentifier**: string: Key vault uri to access the encryption key.
+
+## LocationData
+### Properties
+* **city**: string: The city or locality where the resource is located.
+* **countryOrRegion**: string: The country or region where the resource is located
+* **district**: string: The district, state, or province where the resource is located.
+* **name**: string (Required): A canonical name for the geographic or physical location.
 
 ## SystemData
 ### Properties
@@ -54,10 +62,11 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
-## TestType1Properties
+## TestType1CreateOrUpdatePropertiesOrTestType1Properties
 ### Properties
 * **basicString**: string: Description for a basic string property.
 * **encryptionProperties**: [EncryptionProperties](#encryptionproperties): TestType1 encryption properties
+* **locationData**: [LocationData](#locationdata) (ReadOnly): Metadata pertaining to the geographic location of the resource.
 * **skuTier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
 * **stringEnum**: 'Bar' | 'Foo' | string: Description for a basic enum property.
 
