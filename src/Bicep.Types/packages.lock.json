@@ -29,9 +29,9 @@
       },
       "System.Text.Json": {
         "type": "Direct",
-        "requested": "[6.0.4, )",
-        "resolved": "6.0.4",
-        "contentHash": "krM+rxZPl5MQqGmHbj/gLis58IqGrLQGm7CIvNJ72Wj1MCdXNu1uMco5wRr7PmPOL/ITF/uEkB/3S1nSGFNvHg==",
+        "requested": "[6.0.5, )",
+        "resolved": "6.0.5",
+        "contentHash": "SSH+YYrMpvLcy7Orzb5K1tSyffnFacWahyxCCjYH1PbSHdAF4dekmIetBurFKgtTHDmwEe/J2Csi/7niRH6d/g==",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
           "System.Buffers": "4.5.1",
