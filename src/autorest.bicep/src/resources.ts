@@ -291,7 +291,6 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
             : undefined
         };
 
-
         const lcNamespace = descriptor.namespace.toLowerCase();
         resourcesByProvider[lcNamespace] = [
           ...(resourcesByProvider[lcNamespace] || []),

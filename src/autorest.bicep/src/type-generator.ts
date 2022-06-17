@@ -25,7 +25,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
         request: definition.putOperation.request,
         parameters: definition.putOperation.parameters,
         putSchema: definition.putOperation.requestSchema,
-        getSchema: definition.getOperation?.responseSchema,
+        getSchema: definition.getOperation?.responseSchema ?? definition.putOperation.requestSchema,
       }
     } else if (definition.getOperation) {
       return {
@@ -162,9 +162,12 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       if (descriptor.readable && !descriptor.writable) {
         flags |= ResourceFlags.ReadOnly;
       }
-      if (descriptor.writable && !descriptor.readable) {
-        flags |= ResourceFlags.WriteOnly;
-      }
+
+      // There's still a discussion to have about whether WriteOnly resources are a real thing or just an
+      // artifact of imperfect service models.
+      // if (descriptor.writable && !descriptor.readable) {
+      //   flags |= ResourceFlags.WriteOnly;
+      // }
 
       factory.addType(new ResourceType(
         `${getFullyQualifiedType(descriptor)}@${descriptor.apiVersion}`,
