@@ -63,6 +63,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Event Subscription resource.
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.EventGrid/extensionTopics@2021-10-15-preview (ReadOnly)
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2021-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [ExtensionTopicProperties](#extensiontopicproperties) (ReadOnly): Properties of the extension topic
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Extension Topic resource.
+* **type**: 'Microsoft.EventGrid/extensionTopics' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.EventGrid/partnerConfigurations@2021-10-15-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -220,6 +230,25 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
 * **type**: 'Microsoft.EventGrid/topics/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.EventGrid/topicTypes@2021-10-15-preview (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2021-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TopicTypeProperties](#topictypeproperties) (ReadOnly): Properties of the topic type info
+* **type**: 'Microsoft.EventGrid/topicTypes' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.EventGrid/verifiedPartners@2021-10-15-preview (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2021-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VerifiedPartnerProperties](#verifiedpartnerproperties) (ReadOnly): Properties of the verified partner.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Verified Partner resource.
+* **type**: 'Microsoft.EventGrid/verifiedPartners' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.EventGrid/domains@2021-10-15-preview)
 * **Resource**: Microsoft.EventGrid/domains
@@ -576,6 +605,11 @@ The inline event type values are of type InlineEventProperties and will contain 
 * **name**: string: Fully qualified name of the extended location.
 * **type**: string: Type of the extended location.
 
+## ExtensionTopicProperties
+### Properties
+* **description**: string: Description of the extension topic.
+* **systemTopic**: string: System topic resource id which is mapped to the source.
+
 ## HybridConnectionEventSubscriptionDestinationProperties
 ### Properties
 * **deliveryAttributeMappings**: [DeliveryAttributeMapping](#deliveryattributemapping)[]: Delivery attribute details.
@@ -695,6 +729,13 @@ the partner destination and corresponding channel are deleted.
 * **messageForActivation**: string: Context or helpful message that can be used during the approval process.
 * **partnerRegistrationImmutableId**: string: The immutable Id of the corresponding partner registration.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the partner destination.
+
+## PartnerDetails
+### Properties
+* **description**: string: This is short description about the partner. The length of this description should not exceed 256 characters.
+* **longDescription**: string: Long description for the partner's scenarios and integration.Length of this description should not exceed 2048 characters.
+* **setupUri**: string: URI of the partner website that can be used by Azure customers to setup Event Grid
+integration on an event source.
 
 ## PartnerEventSubscriptionDestinationProperties
 ### Properties
@@ -864,6 +905,17 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 * **key1**: string: Shared access key1 for the topic.
 * **key2**: string: Shared access key2 for the topic.
 
+## TopicTypeProperties
+### Properties
+* **description**: string: Description of the topic type.
+* **displayName**: string: Display Name for the topic type.
+* **provider**: string: Namespace of the provider of the topic type.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the topic type
+* **resourceRegionType**: 'GlobalResource' | 'RegionalResource' | string: Region type of the resource.
+* **sourceResourceFormat**: string: Source resource format.
+* **supportedLocations**: string[]: List of locations supported by this topic type.
+* **supportedScopesForSource**: 'AzureSubscription' | 'ManagementGroup' | 'Resource' | 'ResourceGroup' | string[]: Supported source scopes.
+
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
@@ -903,6 +955,15 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 ### Properties
 * **clientId**: string: The client id of user assigned identity.
 * **principalId**: string: The principal id of user assigned identity.
+
+## VerifiedPartnerProperties
+### Properties
+* **organizationName**: string: Official name of the Partner.
+* **partnerDestinationDetails**: [PartnerDetails](#partnerdetails): Details of the partner destination scenario.
+* **partnerDisplayName**: string: Display name of the verified partner.
+* **partnerRegistrationImmutableId**: string: ImmutableId of the corresponding partner registration.
+* **partnerTopicDetails**: [PartnerDetails](#partnerdetails): Details of the partner topic scenario.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the verified partner.
 
 ## WebHookEventSubscriptionDestinationProperties
 ### Properties

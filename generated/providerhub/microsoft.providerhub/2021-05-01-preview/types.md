@@ -40,7 +40,7 @@
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **contents**: [OperationsDefinition](#operationsdefinition)[] (Required, WriteOnly)
+* **contents**: [OperationsDefinition](#operationsdefinition)[] (Required)
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ProviderHub/providerRegistrations/operations' (ReadOnly, DeployTimeConstant): The resource type

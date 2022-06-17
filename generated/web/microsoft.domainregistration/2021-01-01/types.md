@@ -22,6 +22,16 @@
 * **properties**: [DomainOwnershipIdentifierProperties](#domainownershipidentifierproperties): DomainOwnershipIdentifier resource specific properties
 * **type**: 'Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DomainRegistration/topLevelDomains@2021-01-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TopLevelDomainProperties](#topleveldomainproperties) (ReadOnly): TopLevelDomain resource specific properties
+* **type**: 'Microsoft.DomainRegistration/topLevelDomains' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listAgreements (Microsoft.DomainRegistration/topLevelDomains@2021-01-01)
 * **Resource**: Microsoft.DomainRegistration/topLevelDomains
 * **ApiVersion**: 2021-01-01
@@ -113,4 +123,8 @@
 ### Properties
 * **forTransfer**: bool: If <code>true</code>, then the list of agreements will include agreements for domain transfer as well; otherwise, <code>false</code>.
 * **includePrivacy**: bool: If <code>true</code>, then the list of agreements will include agreements for domain privacy as well; otherwise, <code>false</code>.
+
+## TopLevelDomainProperties
+### Properties
+* **privacy**: bool: If <code>true</code>, then the top level domain supports domain privacy; otherwise, <code>false</code>.
 

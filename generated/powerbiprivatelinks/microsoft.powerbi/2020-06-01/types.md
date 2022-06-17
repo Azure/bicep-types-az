@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (WriteOnly): Specifies the location of the resource.
+* **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TenantProperties](#tenantproperties) (WriteOnly): Specifies the properties of the resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): The system metadata relating to this resource.
-* **tags**: [TenantResourceTags](#tenantresourcetags) (WriteOnly): Specifies the tags of the resource.
+* **properties**: [TenantProperties](#tenantproperties): Specifies the properties of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
+* **tags**: [TenantResourceTags](#tenantresourcetags): Specifies the tags of the resource.
 * **type**: 'Microsoft.PowerBI/privateLinkServicesForPowerBI' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.PowerBI/privateLinkServicesForPowerBI/privateEndpointConnections@2020-06-01

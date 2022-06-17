@@ -48,6 +48,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DeviceUpdate/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DeviceUpdate/accounts/privateLinkResources@2022-04-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [GroupInformationProperties](#groupinformationproperties) (ReadOnly): The properties for a group information object
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.DeviceUpdate/accounts/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## AccountProperties
 ### Properties
 * **hostName**: string (ReadOnly): API host name.
@@ -79,6 +89,13 @@
 * **memberName**: string (ReadOnly): Member name.
 * **privateLinkServiceArmRegion**: string: PrivateLinkService ARM region.
 * **redirectMapId**: string: Redirect map ID.
+
+## GroupInformationProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of private link group ID.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
+* **requiredZoneNames**: string[]: The private link resource Private link DNS zone name.
 
 ## InstanceProperties
 ### Properties

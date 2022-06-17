@@ -34,6 +34,21 @@
 * **properties**: [VaultExtendedInfo](#vaultextendedinfo): Vault extended information.
 * **type**: 'Microsoft.RecoveryServices/vaults/extendedInformation' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.RecoveryServices/vaults/operationResults@2022-04-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Optional ETag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [IdentityData](#identitydata) (ReadOnly): Identity for the resource.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VaultProperties](#vaultproperties) (ReadOnly): Properties of the vault.
+* **sku**: [Sku](#sku) (ReadOnly): Identifies the unique system identifier for each Azure resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.RecoveryServices/vaults/operationResults' (ReadOnly, DeployTimeConstant): The resource type
+
 ## AzureMonitorAlertSettings
 ### Properties
 * **alertsForAllJobFailures**: 'Disabled' | 'Enabled' | string
@@ -113,6 +128,11 @@
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

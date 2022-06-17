@@ -1,5 +1,14 @@
 # Microsoft.Network @ 2018-04-01
 
+## Resource Microsoft.Network/trafficManagerGeographicHierarchies@2018-04-01 (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [GeographicHierarchyProperties](#geographichierarchyproperties) (ReadOnly): The properties of the Geographic Hierarchy resource.
+* **type**: 'Microsoft.Network/trafficManagerGeographicHierarchies' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Network/trafficmanagerprofiles@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -10,6 +19,15 @@
 * **properties**: [ProfileProperties](#profileproperties): The properties of the Traffic Manager profile.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/trafficmanagerprofiles' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Network/trafficmanagerprofiles/heatMaps@2018-04-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
+* **properties**: [HeatMapProperties](#heatmapproperties) (ReadOnly): The properties of the Traffic Manager HeatMap.
+* **type**: 'Microsoft.Network/trafficmanagerprofiles/heatMaps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/trafficManagerUserMetricsKeys@2018-04-01
 * **Valid Scope(s)**: Subscription
@@ -58,6 +76,22 @@
 * **last**: string: Last address in the subnet.
 * **scope**: int: Block size (number of leading bits in the subnet mask).
 
+## GeographicHierarchyProperties
+### Properties
+* **geographicHierarchy**: [Region](#region): The region at the root of the hierarchy from all the regions in the hierarchy can be retrieved.
+
+## HeatMapEndpoint
+### Properties
+* **endpointId**: int: A number uniquely identifying this endpoint in query experiences.
+* **resourceId**: string: The ARM Resource ID of this Traffic Manager endpoint.
+
+## HeatMapProperties
+### Properties
+* **endpoints**: [HeatMapEndpoint](#heatmapendpoint)[]: The endpoints used in this HeatMap calculation.
+* **endTime**: string: The ending of the time window for this HeatMap, exclusive.
+* **startTime**: string: The beginning of the time window for this HeatMap, inclusive.
+* **trafficFlows**: [TrafficFlow](#trafficflow)[]: The traffic flows produced in this HeatMap calculation.
+
 ## MonitorConfig
 ### Properties
 * **customHeaders**: [MonitorConfigCustomHeadersItem](#monitorconfigcustomheadersitem)[]: List of custom headers.
@@ -90,10 +124,29 @@
 * **trafficRoutingMethod**: 'Geographic' | 'MultiValue' | 'Performance' | 'Priority' | 'Subnet' | 'Weighted' | string: The traffic routing method of the Traffic Manager profile.
 * **trafficViewEnrollmentStatus**: 'Disabled' | 'Enabled' | string: Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.
 
+## QueryExperience
+### Properties
+* **endpointId**: int (Required): The id of the endpoint from the 'endpoints' array which these queries were routed to.
+* **latency**: int: The latency experienced by queries originating from this location.
+* **queryCount**: int (Required): The number of queries originating from this location.
+
+## Region
+### Properties
+* **code**: string: The code of the region
+* **name**: string: The name of the region
+* **regions**: [Region](#region)[]: The list of Regions grouped under this Region in the Geographic Hierarchy.
+
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TrafficFlow
+### Properties
+* **latitude**: int: The approximate latitude that these queries originated from.
+* **longitude**: int: The approximate longitude that these queries originated from.
+* **queryExperiences**: [QueryExperience](#queryexperience)[]: The query experiences produced in this HeatMap calculation.
+* **sourceIp**: string: The IP address that this query experience originated from.
 
 ## UserMetricsProperties
 ### Properties

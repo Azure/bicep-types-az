@@ -13,6 +13,28 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Chaos/experiments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Chaos/locations/targetTypes@2021-09-15-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-09-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Location of the Target Type resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TargetTypeProperties](#targettypeproperties) (ReadOnly): The properties of the target type resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata properties of the target type resource.
+* **type**: 'Microsoft.Chaos/locations/targetTypes' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Chaos/locations/targetTypes/capabilityTypes@2021-09-15-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-09-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Location of the Capability Type resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [CapabilityTypeProperties](#capabilitytypeproperties) (ReadOnly): The properties of the capability type resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata properties of the capability type resource.
+* **type**: 'Microsoft.Chaos/locations/targetTypes/capabilityTypes' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Chaos/targets@2021-09-15-preview
 * **Valid Scope(s)**: Extension
 ### Properties
@@ -71,6 +93,15 @@
 * **targetType**: string (ReadOnly): String of the Target Type that this Capability extends.
 * **urn**: string (ReadOnly): String of the URN for this Capability Type.
 
+## CapabilityTypeProperties
+### Properties
+* **description**: string (ReadOnly): Localized string of the description.
+* **displayName**: string (ReadOnly): Localized string of the display name.
+* **parametersSchema**: string (ReadOnly): URL to retrieve JSON schema of the Capability Type parameters.
+* **publisher**: string (ReadOnly): String of the Publisher that this Capability Type extends.
+* **targetType**: string (ReadOnly): String of the Target Type that this Capability Type extends.
+* **urn**: string (ReadOnly): String of the URN for this Capability Type.
+
 ## ExperimentProperties
 ### Properties
 * **selectors**: [Selector](#selector)[] (Required): List of selectors.
@@ -117,6 +148,13 @@
 ### Properties
 * **id**: string (Required): String of the resource ID of a Target resource.
 * **type**: 'ChaosTarget' (Required): Enum of the Target reference type.
+
+## TargetTypeProperties
+### Properties
+* **description**: string (ReadOnly): Localized string of the description.
+* **displayName**: string (ReadOnly): Localized string of the display name.
+* **propertiesSchema**: string (ReadOnly): URL to retrieve JSON schema of the Target Type properties.
+* **resourceTypes**: string[] (ReadOnly): List of resource types this Target Type can extend.
 
 ## TrackedResourceTags
 ### Properties

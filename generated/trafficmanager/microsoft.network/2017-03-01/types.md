@@ -1,5 +1,16 @@
 # Microsoft.Network @ 2017-03-01
 
+## Resource Microsoft.Network/trafficManagerGeographicHierarchies@2017-03-01 (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2017-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [GeographicHierarchyProperties](#geographichierarchyproperties) (ReadOnly): Class representing the properties of the Geographic hierarchy used with the Geographic traffic routing method.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Network/trafficManagerGeographicHierarchies' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Network/trafficmanagerprofiles@2017-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -36,6 +47,10 @@
 * **targetResourceId**: string: Gets or sets the Azure Resource URI of the of the endpoint.  Not applicable to endpoints of type 'ExternalEndpoints'.
 * **weight**: int: Gets or sets the weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.
 
+## GeographicHierarchyProperties
+### Properties
+* **geographicHierarchy**: [Region](#region): The region at the root of the hierarchy from all the regions in the hierarchy can be retrieved.
+
 ## MonitorConfig
 ### Properties
 * **path**: string: Gets or sets the path relative to the endpoint domain name used to probe for endpoint health.
@@ -50,6 +65,17 @@
 * **monitorConfig**: [MonitorConfig](#monitorconfig): Gets or sets the endpoint monitoring settings of the Traffic Manager profile.
 * **profileStatus**: string: Gets or sets the status of the Traffic Manager profile.  Possible values are 'Enabled' and 'Disabled'.
 * **trafficRoutingMethod**: string: Gets or sets the traffic routing method of the Traffic Manager profile.  Possible values are 'Performance', 'Weighted', 'Priority' or 'Geographic'.
+
+## Region
+### Properties
+* **code**: string: The code of the region
+* **name**: string: The name of the region
+* **regions**: [Region](#region)[]: The list of Regions grouped under this Region in the Geographic Hierarchy.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
