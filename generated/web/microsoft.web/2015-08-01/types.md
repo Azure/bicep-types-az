@@ -12,6 +12,18 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Web/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Web/classicMobileServices@2015-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ClassicMobileServiceProperties](#classicmobileserviceproperties) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Web/classicMobileServices' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Web/csrs@2015-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -99,6 +111,31 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Web/serverfarms' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Web/serverfarms/operationresults@2015-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServerFarmWithRichSkuProperties](#serverfarmwithrichskuproperties) (ReadOnly)
+* **sku**: [SkuDescription](#skudescription) (ReadOnly): Describes a sku for a scalable resource
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Web/serverfarms/operationresults' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/serverfarms/virtualNetworkConnections@2015-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VnetInfoProperties](#vnetinfoproperties) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Web/serverfarms/virtualNetworkConnections/gateways@2015-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -134,18 +171,6 @@
 * **properties**: [SiteProperties](#siteproperties)
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Web/sites' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Web/sites/backups@2015-08-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource
-* **location**: string (Required): Resource Location
-* **name**: 'discover' (Required, DeployTimeConstant): The resource name
-* **properties**: [RestoreRequestProperties](#restorerequestproperties)
-* **tags**: [ResourceTags](#resourcetags): Resource tags
-* **type**: 'Microsoft.Web/sites/backups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/config@2015-08-01
 * **Valid Scope(s)**: ResourceGroup
@@ -352,6 +377,18 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Web/sites/instances/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Web/sites/networkFeatures@2015-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NetworkFeaturesProperties](#networkfeaturesproperties) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Web/sites/networkFeatures' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Web/sites/premieraddons@2015-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -376,18 +413,6 @@
 * **properties**: [SiteProperties](#siteproperties)
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Web/sites/slots' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Web/sites/slots/backups@2015-08-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource
-* **location**: string (Required): Resource Location
-* **name**: 'discover' (Required, DeployTimeConstant): The resource name
-* **properties**: [RestoreRequestProperties](#restorerequestproperties)
-* **tags**: [ResourceTags](#resourcetags): Resource tags
-* **type**: 'Microsoft.Web/sites/slots/backups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/config@2015-08-01
 * **Valid Scope(s)**: ResourceGroup
@@ -582,6 +607,18 @@
 * **properties**: [DeploymentProperties](#deploymentproperties)
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/instances/deployments' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/slots/networkFeatures@2015-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NetworkFeaturesProperties](#networkfeaturesproperties) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Web/sites/slots/networkFeatures' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/premieraddons@2015-08-01
 * **Valid Scope(s)**: ResourceGroup
@@ -858,6 +895,10 @@
 * **thumbprint**: string: Certificate thumbprint
 * **valid**: bool: Is the certificate valid?
 
+## ClassicMobileServiceProperties
+### Properties
+* **name**: string: Name of the mobile service
+
 ## CloningInfo
 ### Properties
 * **appSettingsOverrides**: [CloningInfoAppSettingsOverrides](#cloninginfoappsettingsoverrides): Application settings overrides for cloned web app. If specified these settings will override the settings cloned 
@@ -1085,6 +1126,12 @@
 * **order**: int
 * **remoteSubnet**: string
 
+## NetworkFeaturesProperties
+### Properties
+* **hybridConnections**: [RelayServiceConnectionEntity](#relayserviceconnectionentity)[]: The Hybrid Connections Summary view
+* **virtualNetworkConnection**: [VnetInfo](#vnetinfo): The Vnet Summary view
+* **virtualNetworkName**: string: The Vnet Name
+
 ## PremierAddOnRequestTags
 ### Properties
 ### Additional Properties
@@ -1108,6 +1155,16 @@
 * **minReroutePercentage**: int: [Optional] Specifies lower boundary above which ReroutePercentage will stay.
 * **name**: string: Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the experiment.
 * **reroutePercentage**: int: Percentage of the traffic which will be redirected to {Microsoft.Web.Hosting.Administration.RampUpRule.ActionHostName}
+
+## RelayServiceConnectionEntity
+### Properties
+* **id**: string: Resource Id
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
+* **name**: string: Resource Name
+* **properties**: [RelayServiceConnectionEntityProperties](#relayserviceconnectionentityproperties)
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: string: Resource type
 
 ## RelayServiceConnectionEntityProperties
 ### Properties
@@ -1364,18 +1421,30 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## RestoreRequestProperties
+## ResourceTags
 ### Properties
-* **adjustConnectionStrings**: bool: Gets or sets a flag showing if SiteConfig.ConnectionStrings should be set in new site
-* **blobName**: string: Name of a blob which contains the backup
-* **databases**: [DatabaseBackupSetting](#databasebackupsetting)[]: Collection of databases which should be restored. This list has to match the list of databases included in the backup.
-* **hostingEnvironment**: string: App Service Environment name, if needed (only when restoring a site to an App Service Environment)
-* **ignoreConflictingHostNames**: bool: Changes a logic when restoring a site with custom domains. If "true", custom domains are removed automatically. If "false", custom domains are added to 
-            the site object when it is being restored, but that might fail due to conflicts during the operation.
-* **operationType**: 'Clone' | 'Default' | 'Relocation' (Required): Operation type
-* **overwrite**: bool: True if the restore operation can overwrite target site. "True" needed if trying to restore over an existing site.
-* **siteName**: string: Name of a site (Web App)
-* **storageAccountUrl**: string: SAS URL to the container
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ServerFarmWithRichSkuProperties
 ### Properties
@@ -1641,6 +1710,16 @@
 ### Properties
 * **vnetName**: string: The VNET name.
 * **vpnPackageUri**: string: The URI where the Vpn package can be downloaded
+
+## VnetInfo
+### Properties
+* **id**: string: Resource Id
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
+* **name**: string: Resource Name
+* **properties**: [VnetInfoProperties](#vnetinfoproperties)
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: string: Resource type
 
 ## VnetInfoProperties
 ### Properties

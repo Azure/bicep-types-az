@@ -26,6 +26,15 @@
 * **properties**: [ApplicationProperties](#applicationproperties) (Required): Detailed properties for Application
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups/applications' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DesktopVirtualization/applicationGroups/desktops@2021-04-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DesktopProperties](#desktopproperties) (ReadOnly): Detailed properties for Desktop
+* **type**: 'Microsoft.DesktopVirtualization/applicationGroups/desktops' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DesktopVirtualization/hostPools@2021-04-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -61,6 +70,24 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DesktopVirtualization/hostPools/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DesktopVirtualization/hostPools/sessionHosts@2021-04-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SessionHostProperties](#sessionhostproperties) (ReadOnly): Detailed properties for SessionHost
+* **type**: 'Microsoft.DesktopVirtualization/hostPools/sessionHosts' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions@2021-04-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [UserSessionProperties](#usersessionproperties) (ReadOnly): Detailed properties for UserSession
+* **type**: 'Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/scalingPlans@2021-04-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -133,6 +160,14 @@
 * **msixPackageFamilyName**: string: Specifies the package family name for MSIX applications
 * **objectId**: string (ReadOnly): ObjectId of Application. (internal use)
 * **showInPortal**: bool: Specifies whether to show the RemoteApp program in the RD Web Access server.
+
+## DesktopProperties
+### Properties
+* **description**: string: Description of Desktop.
+* **friendlyName**: string: Friendly name of Desktop.
+* **iconContent**: any (ReadOnly): The icon a 64 bit string as a byte array.
+* **iconHash**: string (ReadOnly): Hash of the icon.
+* **objectId**: string (ReadOnly): ObjectId of Desktop. (internal use)
 
 ## HostPoolProperties
 ### Properties
@@ -295,6 +330,37 @@
 * **rampUpMinimumHostsPct**: int: Minimum host percentage for ramp up period.
 * **rampUpStartTime**: string: Starting time for ramp up period.
 
+## SessionHostHealthCheckFailureDetails
+### Properties
+* **errorCode**: int (ReadOnly): Error code corresponding for the failure.
+* **lastHealthCheckDateTime**: string (ReadOnly): The timestamp of the last update.
+* **message**: string (ReadOnly): Failure message: hints on what is wrong and how to recover.
+
+## SessionHostHealthCheckReport
+### Properties
+* **additionalFailureDetails**: [SessionHostHealthCheckFailureDetails](#sessionhosthealthcheckfailuredetails) (ReadOnly): Additional detailed information on the failure.
+* **healthCheckName**: 'AppAttachHealthCheck' | 'DomainJoinedCheck' | 'DomainReachable' | 'DomainTrustCheck' | 'FSLogixHealthCheck' | 'MetaDataServiceCheck' | 'MonitoringAgentCheck' | 'SupportedEncryptionCheck' | 'SxSStackListenerCheck' | 'UrlsAccessibleCheck' | 'WebRTCRedirectorCheck' | string (ReadOnly): Represents the name of the health check operation performed.
+* **healthCheckResult**: 'HealthCheckFailed' | 'HealthCheckSucceeded' | 'SessionHostShutdown' | 'Unknown' | string (ReadOnly): Represents the Health state of the health check we performed.
+
+## SessionHostProperties
+### Properties
+* **agentVersion**: string: Version of agent on SessionHost.
+* **allowNewSession**: bool: Allow a new session.
+* **assignedUser**: string: User assigned to SessionHost.
+* **lastHeartBeat**: string: Last heart beat from SessionHost.
+* **lastUpdateTime**: string (ReadOnly): The timestamp of the last update.
+* **objectId**: string (ReadOnly): ObjectId of SessionHost. (internal use)
+* **osVersion**: string: The version of the OS on the session host.
+* **resourceId**: string (ReadOnly): Resource Id of SessionHost's underlying virtual machine.
+* **sessionHostHealthCheckResults**: [SessionHostHealthCheckReport](#sessionhosthealthcheckreport)[] (ReadOnly): List of SessionHostHealthCheckReports
+* **sessions**: int: Number of sessions on SessionHost.
+* **status**: 'Available' | 'Disconnected' | 'DomainTrustRelationshipLost' | 'FSLogixNotHealthy' | 'NeedsAssistance' | 'NoHeartbeat' | 'NotJoinedToDomain' | 'Shutdown' | 'SxSStackListenerNotReady' | 'Unavailable' | 'UpgradeFailed' | 'Upgrading' | string: Status for a SessionHost.
+* **statusTimestamp**: string (ReadOnly): The timestamp of the status.
+* **sxSStackVersion**: string: The version of the side by side stack on the session host.
+* **updateErrorMessage**: string: The error message.
+* **updateState**: 'Failed' | 'Initial' | 'Pending' | 'Started' | 'Succeeded' | string: Update state of a SessionHost.
+* **virtualMachineId**: string (ReadOnly): Virtual Machine Id of SessionHost's underlying virtual machine.
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -303,6 +369,15 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## UserSessionProperties
+### Properties
+* **activeDirectoryUserName**: string: The active directory user name.
+* **applicationType**: 'Desktop' | 'RemoteApp' | string: Application type of application.
+* **createTime**: string: The timestamp of the user session create.
+* **objectId**: string (ReadOnly): ObjectId of user session. (internal use)
+* **sessionState**: 'Active' | 'Disconnected' | 'LogOff' | 'Pending' | 'Unknown' | 'UserProfileDiskMounted' | string: State of user session.
+* **userPrincipalName**: string: The user principal name.
 
 ## WorkspaceProperties
 ### Properties

@@ -213,9 +213,9 @@ warning | PreCheck/SchemaMissingType | The schema 'ComponentPurgeStatusResponse'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'ComponentPurgeBodyFilters-value' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/applicationinsights/resource-manager/Microsoft.Insights/stable/2015-05-01/components_API.json#/components/schemas/ComponentPurgeBodyFilters-value
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/Annotations': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/currentbillingfeatures': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 14ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.insights/components/{resourcename}/annotations': Found mismatch between type segments (2) and name segments (1)
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.insights/components/{resourcename}/currentbillingfeatures': Found mismatch between type segments (2) and name segments (1)
+info    | autorest.bicep took 16ms
 info    | Processing batch task - {"tag":"microsoft.insights-2020-11-20"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -303,7 +303,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkbookTemplateErrorBody' wi
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.insights-2021-03-08"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -496,7 +496,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkbookResource-identity' wi
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'WorkbookErrorDefinition-innerError' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/applicationinsights/resource-manager/Microsoft.Insights/stable/2022-04-01/workbooks_API.json#/components/schemas/WorkbookErrorDefinition-innerError
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.insights-2020-02-02"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -588,7 +588,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ComponentPurgeStatusResponse'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'ComponentPurgeBodyFilters-value' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/applicationinsights/resource-manager/Microsoft.Insights/stable/2020-02-02/components_API.json#/components/schemas/ComponentPurgeBodyFilters-value
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.insights-2020-03-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -790,7 +790,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkbookResource-identity' wi
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'WorkbookErrorDefinition-innerError' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/applicationinsights/resource-manager/Microsoft.Insights/stable/2021-08-01/workbooks_API.json#/components/schemas/WorkbookErrorDefinition-innerError
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.insights-2018-05-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -896,7 +896,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WebTestProperties' with an un
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'ComponentPurgeBodyFilters-value' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/applicationinsights/resource-manager/Microsoft.Insights/preview/2018-05-01-preview/components_API.json#/components/schemas/ComponentPurgeBodyFilters-value
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.insights-2020-06-02-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1389,7 +1389,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ComponentPurgeStatusResponse'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'ComponentPurgeBodyFilters-value' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/applicationinsights/resource-manager/Microsoft.Insights/preview/2020-02-02-preview/components_API.json#/components/schemas/ComponentPurgeBodyFilters-value
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.insights-2019-10-17-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1475,7 +1475,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkbookError' with an undefi
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.insights-2018-06-17-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1634,5 +1634,5 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/applicationinsights/resource-manager/Microsoft.Insights/preview/2017-10-01/componentFeaturesAndPricing_API.json:152:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/microsoft.insights/listMigrationdate': Unable to find type segments
-info    | autorest.bicep took 1ms
-info    | Autorest completed in 27.89s. 28 files generated.
+info    | autorest.bicep took 2ms
+info    | Autorest completed in 30.64s. 28 files generated.
