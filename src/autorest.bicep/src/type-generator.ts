@@ -25,7 +25,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
         request: definition.putOperation.request,
         parameters: definition.putOperation.parameters,
         putSchema: definition.putOperation.requestSchema,
-        getSchema: definition.getOperation?.responseSchema ?? definition.putOperation.requestSchema,
+        getSchema: definition.getOperation ? definition.getOperation.responseSchema : definition.putOperation.requestSchema
       }
     } else if (definition.getOperation) {
       return {
@@ -68,7 +68,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     const resourceProperties = getStandardizedResourceProperties(descriptor, nameSchemaResult.value);
 
     let resourceDefinition: TypeReference;
-    const schema = putSchema ?? getSchema;
+    const schema = definition.putOperation ? putSchema : getSchema;
     if (schema) {
       resourceDefinition = createObject(getFullyQualifiedType(descriptor), schema, resourceProperties);
     } else {
