@@ -1,5 +1,14 @@
 # Microsoft.SecurityInsights @ 2019-01-01-preview
 
+## Resource Microsoft.SecurityInsights/aggregations@2019-01-01-preview (ReadOnly)
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: 'CasesAggregation' | string (ReadOnly): The kind of the setting
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.SecurityInsights/aggregations' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.SecurityInsights/alertRules@2019-01-01-preview
 * **Valid Scope(s)**: Extension
 ### Properties
@@ -20,6 +29,15 @@
 * **properties**: [ActionRequestPropertiesOrActionResponseProperties](#actionrequestpropertiesoractionresponseproperties): Action properties for put request
 * **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.SecurityInsights/alertRuleTemplates@2019-01-01-preview (ReadOnly)
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: 'Fusion' | 'MLBehaviorAnalytics' | 'MicrosoftSecurityIncidentCreation' | 'Scheduled' | 'ThreatIntelligence' | string (ReadOnly): The kind of the alert rule
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.SecurityInsights/alertRuleTemplates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/automationRules@2019-01-01-preview
 * **Valid Scope(s)**: Extension
@@ -91,6 +109,35 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.SecurityInsights/dataConnectors' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.SecurityInsights/entities@2019-01-01-preview (ReadOnly)
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: 'Account' | 'AzureResource' | 'Bookmark' | 'CloudApplication' | 'DnsResolution' | 'File' | 'FileHash' | 'Host' | 'IoTDevice' | 'Ip' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'Url' | string (ReadOnly): The kind of the entity.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.SecurityInsights/entities' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.SecurityInsights/entities/relations@2019-01-01-preview (ReadOnly)
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Etag of the azure resource
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RelationProperties](#relationproperties) (ReadOnly): Relation properties
+* **type**: 'Microsoft.SecurityInsights/entities/relations' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.SecurityInsights/entityQueries@2019-01-01-preview (ReadOnly)
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Etag of the azure resource
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: 'Expansion' | 'Insight' | string (ReadOnly): The kind of the entity query
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.SecurityInsights/entityQueries' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.SecurityInsights/incidents@2019-01-01-preview
 * **Valid Scope(s)**: Extension
 ### Properties
@@ -120,6 +167,15 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RelationProperties](#relationproperties): Relation properties
 * **type**: 'Microsoft.SecurityInsights/incidents/relations' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.SecurityInsights/officeConsents@2019-01-01-preview (ReadOnly)
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [OfficeConsentProperties](#officeconsentproperties) (ReadOnly): Office consent properties
+* **type**: 'Microsoft.SecurityInsights/officeConsents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/settings@2019-01-01-preview
 * **Valid Scope(s)**: Extension
@@ -350,6 +406,11 @@
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (Required): The severity of the incident
 * **status**: 'Active' | 'Closed' | 'New' | string (Required): The status of the incident
 * **title**: string (Required): The title of the incident
+
+## OfficeConsentProperties
+### Properties
+* **consentId**: string: Help to easily cascade among the data layers.
+* **tenantId**: string: The tenantId of the Office365 with the consent.
 
 ## RelationNode
 ### Properties

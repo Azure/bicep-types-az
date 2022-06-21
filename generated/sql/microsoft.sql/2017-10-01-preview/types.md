@@ -27,6 +27,15 @@
 * **properties**: [DatabaseVulnerabilityAssessmentRuleBaselineProperties](#databasevulnerabilityassessmentrulebaselineproperties): Resource properties.
 * **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans@2017-10-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VulnerabilityAssessmentScanRecordProperties](#vulnerabilityassessmentscanrecordproperties) (ReadOnly): Resource properties.
+* **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/managedInstances/encryptionProtector@2017-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -46,6 +55,15 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstanceKeyProperties](#managedinstancekeyproperties): Resource properties.
 * **type**: 'Microsoft.Sql/managedInstances/keys' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/managedInstances/recoverableDatabases@2017-10-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecoverableManagedDatabaseProperties](#recoverablemanageddatabaseproperties) (ReadOnly): Resource properties.
+* **type**: 'Microsoft.Sql/managedInstances/recoverableDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases@2017-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -79,6 +97,15 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupShortTermRetentionPolicyProperties](#backupshorttermretentionpolicyproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans@2017-10-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VulnerabilityAssessmentScanRecordProperties](#vulnerabilityassessmentscanrecordproperties) (ReadOnly): Resource properties.
+* **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/elasticPools@2017-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -224,6 +251,10 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **location**: string: Geo location of the partner managed instances.
 * **replicationRole**: 'Primary' | 'Secondary' | string (ReadOnly): Replication role of the partner managed instances.
 
+## RecoverableManagedDatabaseProperties
+### Properties
+* **lastAvailableBackupDate**: string (ReadOnly): The last available backup date.
+
 ## Sku
 ### Properties
 * **capacity**: int: Capacity of the particular SKU.
@@ -247,4 +278,20 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **emails**: string[]: Specifies an array of e-mail addresses to which the scan notification is sent.
 * **emailSubscriptionAdmins**: bool: Specifies that the schedule scan notification will be is sent to the subscription administrators.
 * **isEnabled**: bool: Recurring scans state.
+
+## VulnerabilityAssessmentScanError
+### Properties
+* **code**: string (ReadOnly): The error code.
+* **message**: string (ReadOnly): The error message.
+
+## VulnerabilityAssessmentScanRecordProperties
+### Properties
+* **endTime**: string (ReadOnly): The scan end time (UTC).
+* **errors**: [VulnerabilityAssessmentScanError](#vulnerabilityassessmentscanerror)[] (ReadOnly): The scan errors.
+* **numberOfFailedSecurityChecks**: int (ReadOnly): The number of failed security checks.
+* **scanId**: string (ReadOnly): The scan ID.
+* **startTime**: string (ReadOnly): The scan start time (UTC).
+* **state**: 'Failed' | 'FailedToRun' | 'InProgress' | 'Passed' | string (ReadOnly): The scan status.
+* **storageContainerPath**: string (ReadOnly): The scan results storage container path.
+* **triggerType**: 'OnDemand' | 'Recurring' | string (ReadOnly): The scan trigger type.
 

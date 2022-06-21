@@ -1,5 +1,15 @@
 # Microsoft.ManagedServices @ 2020-02-01-preview
 
+## Resource Microsoft.ManagedServices/marketplaceRegistrationDefinitions@2020-02-01-preview (ReadOnly)
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **plan**: [Plan](#plan) (ReadOnly): The details for the Managed Services offer’s plan in Azure Marketplace.
+* **properties**: [MarketplaceRegistrationDefinitionProperties](#marketplaceregistrationdefinitionproperties) (ReadOnly): The properties of the marketplace registration definition.
+* **type**: 'Microsoft.ManagedServices/marketplaceRegistrationDefinitions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.ManagedServices/registrationAssignments@2020-02-01-preview
 * **Valid Scope(s)**: Unknown
 ### Properties
@@ -43,6 +53,15 @@
 * **managedByTenantApprovers**: [EligibleApprover](#eligibleapprover)[]: The list of managedByTenant approvers for the eligible authorization.
 * **maximumActivationDuration**: string: The maximum access duration in ISO 8601 format for just-in-time access requests.
 * **multiFactorAuthProvider**: 'Azure' | 'None' | string (Required): The multi-factor authorization provider to be used for just-in-time access requests.
+
+## MarketplaceRegistrationDefinitionProperties
+### Properties
+* **authorizations**: [Authorization](#authorization)[] (Required): The collection of authorization objects describing the access Azure Active Directory principals in the managedBy tenant will receive on the delegated resource in the managed tenant.
+* **eligibleAuthorizations**: [EligibleAuthorization](#eligibleauthorization)[]: The collection of eligible authorization objects describing the just-in-time access Azure Active Directory principals in the managedBy tenant will receive on the delegated resource in the managed tenant.
+* **managedByTenantId**: string (Required): The identifier of the managedBy tenant.
+* **offerDisplayName**: string: The marketplace offer display name.
+* **planDisplayName**: string: The marketplace plan display name.
+* **publisherDisplayName**: string: The marketplace publisher display name.
 
 ## Plan
 ### Properties
