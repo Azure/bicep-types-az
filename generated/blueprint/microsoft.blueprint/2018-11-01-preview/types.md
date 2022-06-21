@@ -11,6 +11,15 @@
 * **properties**: [AssignmentProperties](#assignmentproperties) (Required): Properties for blueprint assignment object.
 * **type**: 'Microsoft.Blueprint/blueprintAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Blueprint/blueprintAssignments/assignmentOperations@2018-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AssignmentOperationProperties](#assignmentoperationproperties) (ReadOnly): Properties for AssignmentOperation.
+* **type**: 'Microsoft.Blueprint/blueprintAssignments/assignmentOperations' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Blueprint/blueprints@2018-11-01-preview
 * **Valid Scope(s)**: Unknown
 ### Properties
@@ -54,11 +63,72 @@
 * **properties**: [PublishedBlueprintProperties](#publishedblueprintproperties) (Required): Detailed properties for published blueprint.
 * **type**: 'Microsoft.Blueprint/blueprints/versions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Blueprint/blueprints/versions/artifacts@2018-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: Unknown
+* **Discriminator**: kind
+
+### Base Properties
+* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.Blueprint/blueprints/versions/artifacts' (ReadOnly, DeployTimeConstant): The resource type
+### PolicyAssignmentArtifact
+#### Properties
+* **kind**: 'policyAssignment' (Required): Specifies the kind of blueprint artifact.
+* **properties**: [PolicyAssignmentArtifactProperties](#policyassignmentartifactproperties) (ReadOnly): properties for policyAssignment Artifact
+
+### RoleAssignmentArtifact
+#### Properties
+* **kind**: 'roleAssignment' (Required): Specifies the kind of blueprint artifact.
+* **properties**: [RoleAssignmentArtifactProperties](#roleassignmentartifactproperties) (ReadOnly): Properties for a Role assignment blueprint artifact.
+
+### TemplateArtifact
+#### Properties
+* **kind**: 'template' (Required): Specifies the kind of blueprint artifact.
+* **properties**: [TemplateArtifactProperties](#templateartifactproperties) (ReadOnly): Properties for a Resource Manager template blueprint artifact.
+
+
+## AssignmentDeploymentJob
+### Properties
+* **action**: string: Name of the action performed in this job.
+* **history**: [AssignmentDeploymentJobResult](#assignmentdeploymentjobresult)[]: Result of this deployment job for each retry.
+* **jobId**: string: Id of this job.
+* **jobState**: string: State of this job.
+* **kind**: string: Kind of job.
+* **requestUri**: string: Reference to deployment job resource id.
+* **result**: [AssignmentDeploymentJobResult](#assignmentdeploymentjobresult): Deployment job result.
+
+## AssignmentDeploymentJobResult
+### Properties
+* **error**: [AzureResourceManagerError](#azureresourcemanagererror): Contains error details if deployment job failed.
+* **resources**: [AssignmentJobCreatedResource](#assignmentjobcreatedresource)[]: Resources created as result of the deployment job.
+
+## AssignmentJobCreatedResource
+### Properties
+* **id**: string (ReadOnly): String Id used to locate any resource on Azure.
+* **name**: string (ReadOnly): Name of this resource.
+* **properties**: [AssignmentJobCreatedResourceProperties](#assignmentjobcreatedresourceproperties): Additional properties in a dictionary.
+* **type**: string (ReadOnly): Type of this resource.
+
+## AssignmentJobCreatedResourceProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## AssignmentLockSettings
 ### Properties
 * **excludedActions**: string[]: List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to 'AllResourcesReadOnly', then the following actions are automatically appended to 'excludedActions': '*/read', 'Microsoft.Network/virtualNetworks/subnets/join/action' and 'Microsoft.Authorization/locks/delete'. If the lock mode is set to 'AllResourcesDoNotDelete', then the following actions are automatically appended to 'excludedActions': 'Microsoft.Authorization/locks/delete'. Duplicate actions will get removed.
 * **excludedPrincipals**: string[]: List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.
 * **mode**: 'AllResourcesDoNotDelete' | 'AllResourcesReadOnly' | 'None' | string: Lock mode.
+
+## AssignmentOperationProperties
+### Properties
+* **assignmentState**: string: State of this blueprint assignment operation.
+* **blueprintVersion**: string: The published version of the blueprint definition used for the blueprint assignment operation.
+* **deployments**: [AssignmentDeploymentJob](#assignmentdeploymentjob)[]: List of jobs in this blueprint assignment operation.
+* **timeCreated**: string: Create time of this blueprint assignment operation.
+* **timeFinished**: string: Finish time of the overall underlying deployments.
+* **timeStarted**: string: Start time of the underlying deployment.
 
 ## AssignmentProperties
 ### Properties
@@ -87,6 +157,11 @@
 * **lastModified**: string (ReadOnly): Last modified time of this blueprint definition.
 * **managedResources**: string[] (ReadOnly): List of resources that were created by the blueprint assignment.
 * **timeCreated**: string (ReadOnly): Creation time of this blueprint definition.
+
+## AzureResourceManagerError
+### Properties
+* **code**: string: Error code.
+* **message**: string: Error message.
 
 ## BlueprintProperties
 ### Properties

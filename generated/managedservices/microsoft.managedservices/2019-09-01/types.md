@@ -1,5 +1,15 @@
 # Microsoft.ManagedServices @ 2019-09-01
 
+## Resource Microsoft.ManagedServices/marketplaceRegistrationDefinitions@2019-09-01 (ReadOnly)
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **plan**: [Plan](#plan) (ReadOnly): Plan details for the managed services.
+* **properties**: [MarketplaceRegistrationDefinitionProperties](#marketplaceregistrationdefinitionproperties) (ReadOnly): Properties of a marketplace registration definition.
+* **type**: 'Microsoft.ManagedServices/marketplaceRegistrationDefinitions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.ManagedServices/registrationAssignments@2019-09-01
 * **Valid Scope(s)**: Unknown
 ### Properties
@@ -25,6 +35,14 @@
 * **principalId**: string (Required): Principal Id of the security group/service principal/user that would be assigned permissions to the projected subscription
 * **principalIdDisplayName**: string: Display name of the principal Id.
 * **roleDefinitionId**: string (Required): The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.
+
+## MarketplaceRegistrationDefinitionProperties
+### Properties
+* **authorizations**: [Authorization](#authorization)[] (Required): Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
+* **managedByTenantId**: string (Required): Id of the managedBy tenant.
+* **offerDisplayName**: string: The marketplace offer display name.
+* **planDisplayName**: string: The marketplace plan display name.
+* **publisherDisplayName**: string: The marketplace publisher display name.
 
 ## Plan
 ### Properties

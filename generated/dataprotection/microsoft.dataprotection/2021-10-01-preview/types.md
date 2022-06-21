@@ -24,6 +24,26 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupInstances' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints@2021-10-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AzureBackupRecoveryPoint](#azurebackuprecoverypoint) (ReadOnly): AzureBackupRecoveryPointResource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DataProtection/backupVaults/backupJobs@2021-10-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AzureBackupJob](#azurebackupjob) (ReadOnly): AzureBackupJobResource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.DataProtection/backupVaults/backupJobs' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DataProtection/backupVaults/backupPolicies@2021-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -33,6 +53,20 @@
 * **properties**: [BaseBackupPolicy](#basebackuppolicy): BaseBackupPolicyResource properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DataProtection/backupVaults/operationResults@2021-10-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): Optional ETag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [DppIdentityDetails](#dppidentitydetails) (ReadOnly): Input Managed Identity Details
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [BackupVault](#backupvault) (ReadOnly): BackupVaultResource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [DppTrackedResourceTags](#dpptrackedresourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.DataProtection/backupVaults/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataProtection/resourceGuards@2021-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -60,6 +94,57 @@
 #### Properties
 * **objectType**: 'SecretStoreBasedAuthCredentials' (Required): Type of the specific object - used for deserializing
 * **secretStoreResource**: [SecretStoreResource](#secretstoreresource): Secret store resource
+
+
+## AzureBackupJob
+### Properties
+* **activityID**: string (Required): Job Activity Id
+* **backupInstanceFriendlyName**: string (Required): Name of the Backup Instance
+* **backupInstanceId**: string (ReadOnly): ARM ID of the Backup Instance
+* **dataSourceId**: string (Required): ARM ID of the DataSource
+* **dataSourceLocation**: string (Required): Location of the DataSource
+* **dataSourceName**: string (Required): User Friendly Name of the DataSource
+* **dataSourceSetName**: string: Data Source Set Name of the DataSource
+* **dataSourceType**: string (Required): Type of DataSource
+* **destinationDataStoreName**: string
+* **duration**: string: Total run time of the job. ISO 8601 format.
+* **endTime**: string (ReadOnly): EndTime of the job(in UTC)
+* **errorDetails**: [UserFacingError](#userfacingerror)[] (ReadOnly): A List, detailing the errors related to the job
+* **etag**: string
+* **extendedInfo**: [JobExtendedInfo](#jobextendedinfo) (ReadOnly): Extended Information about the job
+* **isUserTriggered**: bool (Required): Indicated that whether the job is adhoc(true) or scheduled(false)
+* **operation**: string (Required): It indicates the type of Job i.e. Backup:full/log/diff ;Restore:ALR/OLR; Tiering:Backup/Archive ; Management:ConfigureProtection/UnConfigure
+* **operationCategory**: string (Required): It indicates the type of Job i.e. Backup/Restore/Tiering/Management
+* **policyId**: string (ReadOnly): ARM ID of the policy
+* **policyName**: string (ReadOnly): Name of the policy
+* **progressEnabled**: bool (Required): Indicated whether progress is enabled for the job
+* **progressUrl**: string (ReadOnly): Url which contains job's progress
+* **restoreType**: string (ReadOnly): It indicates the sub type of operation i.e. in case of Restore it can be ALR/OLR
+* **sourceDataStoreName**: string
+* **sourceResourceGroup**: string (Required): Resource Group Name of the Datasource
+* **sourceSubscriptionID**: string (Required): SubscriptionId corresponding to the DataSource
+* **startTime**: string (Required): StartTime of the job(in UTC)
+* **status**: string (Required): Status of the job like InProgress/Success/Failed/Cancelled/SuccessWithWarning
+* **subscriptionId**: string (Required): Subscription Id of the corresponding backup vault
+* **supportedActions**: string[] (Required): List of supported actions
+* **vaultName**: string (Required): Name of the vault
+
+## AzureBackupRecoveryPoint
+* **Discriminator**: objectType
+
+### Base Properties
+### AzureBackupDiscreteRecoveryPoint
+#### Properties
+* **friendlyName**: string
+* **objectType**: 'AzureBackupDiscreteRecoveryPoint' (Required)
+* **policyName**: string
+* **policyVersion**: string
+* **recoveryPointDataStoresDetails**: [RecoveryPointDataStoreDetails](#recoverypointdatastoredetails)[]
+* **recoveryPointId**: string
+* **recoveryPointTime**: string (Required)
+* **recoveryPointType**: string
+* **retentionTagName**: string
+* **retentionTagVersion**: string
 
 
 ## BackupCriteria
@@ -240,6 +325,11 @@ and should be part of AbsoluteMarker enum
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## DppTrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## InnerError
 ### Properties
 * **additionalInfo**: [InnerErrorAdditionalInfo](#innererroradditionalinfo): Any Key value pairs that can be provided to the client for additional  verbose information.
@@ -247,6 +337,34 @@ and should be part of AbsoluteMarker enum
 * **embeddedInnerError**: [InnerError](#innererror): Child Inner Error, to allow Nesting.
 
 ## InnerErrorAdditionalInfo
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## JobExtendedInfo
+### Properties
+* **additionalDetails**: [JobExtendedInfoAdditionalDetails](#jobextendedinfoadditionaldetails): Job's Additional Details
+* **backupInstanceState**: string (ReadOnly): State of the Backup Instance
+* **dataTransferredInBytes**: int (ReadOnly): Number of bytes transferred
+* **recoveryDestination**: string (ReadOnly): Destination where restore is done
+* **sourceRecoverPoint**: [RestoreJobRecoveryPointDetails](#restorejobrecoverypointdetails) (ReadOnly): Details of the Source Recovery Point
+* **subTasks**: [JobSubTask](#jobsubtask)[] (ReadOnly): List of Sub Tasks of the job
+* **targetRecoverPoint**: [RestoreJobRecoveryPointDetails](#restorejobrecoverypointdetails) (ReadOnly): Details of the Target Recovery Point
+
+## JobExtendedInfoAdditionalDetails
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## JobSubTask
+### Properties
+* **additionalDetails**: [JobSubTaskAdditionalDetails](#jobsubtaskadditionaldetails): Additional details of Sub Tasks
+* **taskId**: int (Required): Task Id of the Sub Task
+* **taskName**: string (Required): Name of the Sub Task
+* **taskProgress**: string (ReadOnly): Progress of the Sub Task
+* **taskStatus**: string (Required): Status of the Sub Task
+
+## JobSubTaskAdditionalDetails
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -265,6 +383,18 @@ and should be part of AbsoluteMarker enum
 ### Properties
 * **errorDetails**: [UserFacingError](#userfacingerror): Specifies the protection status error of the resource
 * **status**: 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'ProtectionConfigured' | 'ProtectionStopped' | 'SoftDeleted' | 'SoftDeleting' | string: Specifies the protection status of the resource
+
+## RecoveryPointDataStoreDetails
+### Properties
+* **creationTime**: string
+* **expiryTime**: string
+* **id**: string
+* **metaData**: string
+* **rehydrationExpiryTime**: string (ReadOnly)
+* **rehydrationStatus**: 'COMPLETED' | 'CREATE_IN_PROGRESS' | 'DELETED' | 'DELETE_IN_PROGRESS' | 'FAILED' | string (ReadOnly)
+* **state**: string
+* **type**: string
+* **visible**: bool
 
 ## ResourceGuard
 ### Properties
@@ -286,6 +416,11 @@ and should be part of AbsoluteMarker enum
 * **sourceResourcePath**: string: ARM resource path of source resource
 * **startTimeUtc**: string: Start time in UTC of latest ResourceMove operation attempted. ISO 8601 format.
 * **targetResourcePath**: string: ARM resource path of target resource used in latest ResourceMove operation
+
+## RestoreJobRecoveryPointDetails
+### Properties
+* **recoveryPointID**: string
+* **recoveryPointTime**: string
 
 ## RetentionTag
 ### Properties
