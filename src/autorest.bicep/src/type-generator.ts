@@ -5,7 +5,7 @@ import { AnySchema, ArraySchema, ChoiceSchema, ConstantSchema, DictionarySchema,
 import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
 import { ArrayType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceFlags, ResourceFunctionType, ResourceType, StringLiteralType, TypeFactory, TypeReference, UnionType } from "./types";
 import { uniq, keys, keyBy, Dictionary, flatMap } from 'lodash';
-import { getFullyQualifiedType, getSerializedName, parseNameSchema, ProviderDefinition, ResourceDefinition, ResourceDescriptor } from "./resources";
+import { getFullyQualifiedType, getNameSchema, getSerializedName, ProviderDefinition, ResourceDefinition, ResourceDescriptor, ResourceOperationDefintion } from "./resources";
 
 export function generateTypes(host: AutorestExtensionHost, definition: ProviderDefinition) {
   const factory = new TypeFactory();
@@ -19,60 +19,64 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     host.message({ Channel: Channel.Information, Text: message, });
   }
 
-  function getHttpProperties(definition: ResourceDefinition) {
-    if (definition.putOperation) {
-      return {
-        request: definition.putOperation.request,
-        parameters: definition.putOperation.parameters,
-        putSchema: definition.putOperation.requestSchema,
-        getSchema: definition.getOperation ? definition.getOperation.responseSchema : definition.putOperation.requestSchema
+  function getResourcePath(definition: ResourceDefinition) {
+    return (definition.putOperation ?? definition.getOperation)?.request.path;
+  }
+
+  function getNameType(fullyQualifiedType: string, definition: ResourceDefinition) {
+    function getSchema(op: ResourceOperationDefintion) {
+      const r = getNameSchema(op.request, op.parameters);
+
+      if (!r.success) {
+        logWarning(`Skipping resource type ${fullyQualifiedType} under path '${op.request.path}': ${r.error}`);
+        return
       }
-    } else if (definition.getOperation) {
-      return {
-        request: definition.getOperation.request,
-        parameters: definition.getOperation.parameters,
-        getSchema: definition.getOperation.responseSchema,
-      }
+
+      return r.value;
     }
 
-    return;
+    const {putOperation, getOperation} = definition;
+    const parameterizedSentinelName = "{name}";
+    const seenNames = new Set<string>();
+    for (const ns of [putOperation ? getSchema(putOperation) : undefined, getOperation ? getSchema(getOperation) : undefined]) {
+      if (!ns) {
+        continue;
+      }
+
+      seenNames.add(ns.type === 'parameterized' ? parameterizedSentinelName : ns.value);
+    }
+
+    const enumTypes = [...seenNames].map(name => name === parameterizedSentinelName
+      ? factory.lookupBuiltInType(BuiltInTypeKind.String)
+      : factory.addType(new StringLiteralType(name)));
+
+    if (enumTypes.length === 1) {
+      return enumTypes[0];
+    }
+
+    return enumTypes.length > 0 ? factory.addType(new UnionType(enumTypes)) : undefined;
   }
 
   function processResourceBody(fullyQualifiedType: string, definition: ResourceDefinition) {
-    const { descriptor } = definition;
-    const httpProperties = getHttpProperties(definition);
+    const { descriptor, putOperation, getOperation } = definition;
+    const {requestSchema: putSchema} = putOperation || {};
+    const getSchema = getOperation ? getOperation.responseSchema : putSchema;
 
-    if (!httpProperties) {
-      logWarning(`Skipping resource type ${fullyQualifiedType} as it has no defined HTTP operations.`);
-      return;
-    }
+    const nameType = getNameType(fullyQualifiedType, definition);
 
-    const { request, parameters, putSchema, getSchema, } = httpProperties;
-
-    const nameSchemaResult = parseNameSchema(
-      request,
-      parameters,
-      schema => parseType(schema, schema),
-      (name) => factory.addType(new StringLiteralType(name)));
-
-    if (!nameSchemaResult.success) {
-      logWarning(`Skipping resource type ${fullyQualifiedType} under path '${request.path}': ${nameSchemaResult.error}`);
+    if (!nameType) {
+      logWarning(`Skipping resource type ${fullyQualifiedType} under path '${getResourcePath(definition)}': failed to obtain a name value`);
       return
     }
 
-    if (!nameSchemaResult.value) {
-      logWarning(`Skipping resource type ${fullyQualifiedType} under path '${request.path}': failed to obtain a name value`);
-      return
-    }
-
-    const resourceProperties = getStandardizedResourceProperties(descriptor, nameSchemaResult.value);
+    const resourceProperties = getStandardizedResourceProperties(descriptor, nameType);
 
     let resourceDefinition: TypeReference;
     const schema = definition.putOperation ? putSchema : getSchema;
     if (schema) {
       resourceDefinition = createObject(getFullyQualifiedType(descriptor), schema, resourceProperties);
     } else {
-      logInfo(`Resource type ${fullyQualifiedType} under path '${request.path}' has no body defined.`);
+      logInfo(`Resource type ${fullyQualifiedType} under path '${getResourcePath(definition)}' has no body defined.`);
       resourceDefinition = factory.addType(new ObjectType(getFullyQualifiedType(descriptor), resourceProperties));
     }
 
@@ -102,7 +106,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     if (definitions.length > 1) {
       for (const definition of definitions) {
         if (!definition.descriptor.constantName) {
-          logWarning(`Skipping resource type ${fullyQualifiedType} under path '${getHttpProperties(definitions[0])?.request.path}': Found multiple definitions for the same type`);
+          logWarning(`Skipping resource type ${fullyQualifiedType} under path '${getResourcePath(definitions[0])}': Found multiple definitions for the same type`);
           return null;
         }
       }

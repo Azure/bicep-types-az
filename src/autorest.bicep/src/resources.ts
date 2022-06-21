@@ -3,7 +3,7 @@
 
 import { ChoiceSchema, CodeModel, ComplexSchema, HttpMethod, HttpParameter, HttpRequest, HttpResponse, ImplementationLocation, isObjectSchema, ObjectSchema, Operation, Parameter, ParameterLocation, Request, Response, Schema, SchemaResponse, SealedChoiceSchema, Metadata } from "@autorest/codemodel";
 import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
-import { keys, Dictionary, values, groupBy, uniqBy } from 'lodash';
+import { keys, Dictionary, values, groupBy, uniqBy, chain, flatten } from 'lodash';
 import { success, failure, Result } from './utils';
 
 export enum ScopeType {
@@ -120,7 +120,19 @@ export function getSerializedName(metadata: Metadata) {
   return metadata.language.default.serializedName ?? metadata.language.default.name;
 }
 
-export function parseNameSchema<T>(request: HttpRequest, parameters: Parameter[], parseType: (schema: Schema) => T, createConstantName: (name: string) => T): Result<T, string> {
+interface ParameterizedName {
+  type: 'parameterized';
+  schema: Schema;
+}
+
+interface ConstantName {
+  type: 'constant';
+  value: string;
+}
+
+type NameSchema = ParameterizedName|ConstantName;
+
+export function getNameSchema(request: HttpRequest, parameters: Parameter[]): Result<NameSchema, string> {
   const path = getNormalizedMethodPath(request.path);
 
   const finalProvidersMatch = path.match(parentScopePrefix)?.slice(-1)[0];
@@ -142,14 +154,28 @@ export function parseNameSchema<T>(request: HttpRequest, parameters: Parameter[]
       return failure(`Unable to locate parameter with name '${resNameParam}'`);
     }
 
-    return success(parseType(param.schema));
+    return success({type: 'parameterized', schema: param.schema});
   }
 
   if (!/^[a-zA-Z0-9]*$/.test(resNameParam)) {
     return failure(`Unable to process non-alphanumeric name '${resNameParam}'`);
   }
 
-  return success(createConstantName(resNameParam));
+  return success({type: 'constant', value: resNameParam});
+}
+
+export function parseNameSchema<T>(request: HttpRequest, parameters: Parameter[], parseType: (schema: Schema) => T, createConstantName: (name: string) => T): Result<T, string> {
+  const nsResult = getNameSchema(request, parameters);
+  if (!nsResult.success) {
+    return nsResult;
+  }
+
+  const {value} = nsResult;
+  if (value.type === 'parameterized') {
+    return success(parseType(value.schema));
+  }
+
+  return success(createConstantName(value.value));
 }
 
 export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExtensionHost): ProviderDefinition[] {
@@ -266,7 +292,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
       }
 
       if (!parseResult.success) {
-        logWarning(`Skipping path '${lcPath}': ${parseResult.error}`);
+        logWarning(`Skipping path '${putData?.request.path ?? getData?.request.path ?? lcPath}': ${parseResult.error}`);
         continue;
       }
 
@@ -647,9 +673,43 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     return Object.values(definitionsByName);
   }
 
+  function collapsePartiallyConstantNameResources(resources: ResourceDefinition[])
+  {
+    const definitionsByNormalizedPath = resources.reduce((acc, resource) => {
+      const path = resource.putOperation?.request.path ?? resource.getOperation?.request.path ?? '/';
+      const normalizedPath = path.substring(0, path.lastIndexOf('/') + 1);
+      if (acc[normalizedPath]) {
+        acc[normalizedPath].push(resource);
+      } else {
+        acc[normalizedPath] = [resource];
+      }
+
+      return acc;
+    }, {} as Dictionary<ResourceDefinition[]>)
+
+    for (const path of Object.keys(definitionsByNormalizedPath)) {
+      const atPath = definitionsByNormalizedPath[path];
+      const parameterized = chain(atPath).map(r => r.descriptor).filter(d => d.constantName === undefined).value();
+
+      if (parameterized.length === 1) {
+        definitionsByNormalizedPath[path] = [{
+          descriptor: {
+            ...parameterized[0],
+            readable: atPath.filter(d => d.descriptor.readable).length > 0,
+            writable: atPath.filter(d => d.descriptor.writable).length > 0,
+          },
+          putOperation: chain(atPath).map(r => r.putOperation).find().value(),
+          getOperation: chain(atPath).map(r => r.getOperation).find().value(),
+        }];
+      }
+    }
+
+    return flatten(Object.values(definitionsByNormalizedPath));
+  }
+
   function collapseDefinitions(resources: ResourceDefinition[]) {
-    const resourcesByType = groupByType(resources);
-    const collapsedResources = Object.values(resourcesByType).flatMap(collapseDefinitionScopes);
+    const deduplicated = Object.values(groupByType(resources)).flatMap(collapsePartiallyConstantNameResources);
+    const collapsedResources = Object.values(groupByType(deduplicated)).flatMap(collapseDefinitionScopes);
 
     return groupByType(collapsedResources);
   }
