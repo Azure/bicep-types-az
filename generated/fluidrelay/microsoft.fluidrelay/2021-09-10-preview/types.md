@@ -13,6 +13,22 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.FluidRelay/fluidRelayServers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.FluidRelay/fluidRelayServers/fluidRelayContainers@2021-09-10-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-09-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [FluidRelayContainerProperties](#fluidrelaycontainerproperties) (ReadOnly): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System meta data for this resource, including creation and modification information.
+* **type**: 'Microsoft.FluidRelay/fluidRelayServers/fluidRelayContainers' (ReadOnly, DeployTimeConstant): The resource type
+
+## FluidRelayContainerProperties
+### Properties
+* **frsContainerId**: string (ReadOnly): The frsContainerId for this container
+* **frsTenantId**: string (ReadOnly): The Fluid tenantId for this container
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provision states for FluidRelay RP
+
 ## FluidRelayEndpoints
 ### Properties
 * **ordererEndpoints**: string[] (ReadOnly): The Fluid Relay Orderer endpoints.
