@@ -266,7 +266,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
       }
 
       if (!parseResult.success) {
-        logWarning(`Skipping path '${lcPath}': ${parseResult.error}`);
+        logWarning(`Skipping path '${putData?.request.path ?? getData?.request.path ?? lcPath}': ${parseResult.error}`);
         continue;
       }
 

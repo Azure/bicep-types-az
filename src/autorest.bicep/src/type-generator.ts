@@ -5,7 +5,7 @@ import { AnySchema, ArraySchema, ChoiceSchema, ConstantSchema, DictionarySchema,
 import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
 import { ArrayType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceFlags, ResourceFunctionType, ResourceType, StringLiteralType, TypeFactory, TypeReference, UnionType } from "./types";
 import { uniq, keys, keyBy, Dictionary, flatMap } from 'lodash';
-import { getFullyQualifiedType, getSerializedName, parseNameSchema, ProviderDefinition, ResourceDefinition, ResourceDescriptor } from "./resources";
+import { getFullyQualifiedType, getSerializedName, parseNameSchema, ProviderDefinition, ResourceDefinition, ResourceDescriptor, ResourceOperationDefintion } from "./resources";
 
 export function generateTypes(host: AutorestExtensionHost, definition: ProviderDefinition) {
   const factory = new TypeFactory();
@@ -98,13 +98,60 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     return resourceDefinition;
   }
 
+  function deduplicateResourceBodies(definitions: ResourceDefinition[])
+  {
+    function reduceSchemata(
+      operationSelector: (r: ResourceDefinition) => ResourceOperationDefintion|undefined,
+      schemaSelector: (o: ResourceOperationDefintion) => ObjectSchema|undefined,
+    ) {
+      return definitions.reduce((carry, r) => {
+        const nextOperation = operationSelector(r);
+        if (carry.multipleSchemata || !nextOperation) {
+          return carry;
+        }
+        const schema = schemaSelector(nextOperation);
+        const nextSchema = schemaSelector(nextOperation);
+        if (schema && nextSchema && schema !== nextSchema) {
+          return {multipleSchemata: true};
+        }
+
+        return {
+          multipleSchemata: false,
+          operation: carry.operation ?? nextOperation,
+        };
+      }, {multipleSchemata: false} as {multipleSchemata: boolean, operation?: ResourceOperationDefintion});
+    }
+
+    const puts = reduceSchemata(r => r.putOperation, o => o?.requestSchema);
+    const gets = reduceSchemata(r => r.getOperation, o => o?.responseSchema);
+
+    return {
+      onlyDuplicates: !puts.multipleSchemata && !gets.multipleSchemata,
+      getOperation: gets.operation,
+      putOperation: puts.operation,
+    };
+  }
+
   function processResource(fullyQualifiedType: string, definitions: ResourceDefinition[]) {
     if (definitions.length > 1) {
-      for (const definition of definitions) {
-        if (!definition.descriptor.constantName) {
-          logWarning(`Skipping resource type ${fullyQualifiedType} under path '${getHttpProperties(definitions[0])?.request.path}': Found multiple definitions for the same type`);
-          return null;
+      const parameterizedNameDescriptors = definitions.map(rd => rd.descriptor).filter(d => d.constantName === undefined);
+
+      if (parameterizedNameDescriptors.length === 1) {
+        const {onlyDuplicates, getOperation, putOperation} = deduplicateResourceBodies(definitions);
+        if (onlyDuplicates) {
+          const descriptor = parameterizedNameDescriptors[0];
+          const bodyType = processResourceBody(fullyQualifiedType, {descriptor, putOperation, getOperation});
+          if (!bodyType) {
+            return null;
+          }
+
+          return {descriptor, bodyType,};
         }
+      }
+
+      if (parameterizedNameDescriptors.length > 0) {
+        logWarning(`Skipping resource type ${fullyQualifiedType} under path '${getHttpProperties(definitions[0])?.request.path}': Found multiple definitions for the same type`);
+        return null;
       }
 
       const polymorphicBodies: Dictionary<TypeReference> = {};
