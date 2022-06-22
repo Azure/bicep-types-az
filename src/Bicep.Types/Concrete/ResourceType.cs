@@ -9,15 +9,15 @@ namespace Azure.Bicep.Types.Concrete
     {
         None = 0,
         ReadOnly = 1 << 0,
-        // WriteOnly = 1 << 1,
     }
 
     public class ResourceType : TypeBase
     {
-        public ResourceType(string name, ScopeType scopeType, ITypeReference body, ResourceFlags flags)
+        public ResourceType(string name, ScopeType scopeType, ScopeType? readOnlyScopes, ITypeReference body, ResourceFlags flags)
         {
             Name = name;
             ScopeType = scopeType;
+            ReadOnlyScopes = readOnlyScopes;
             Body = body;
             Flags = flags;
         }
@@ -25,6 +25,8 @@ namespace Azure.Bicep.Types.Concrete
         public string Name { get; set; }
 
         public ScopeType ScopeType { get; set; }
+
+        public ScopeType? ReadOnlyScopes { get; set; }
 
         public ITypeReference Body { get; set; }
 
