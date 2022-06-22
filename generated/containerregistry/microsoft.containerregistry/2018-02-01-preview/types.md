@@ -1,5 +1,14 @@
 # Microsoft.ContainerRegistry @ 2018-02-01-preview
 
+## Resource Microsoft.ContainerRegistry/registries/builds@2018-02-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [BuildProperties](#buildproperties) (ReadOnly): The properties of a build.
+* **type**: 'Microsoft.ContainerRegistry/registries/builds' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.ContainerRegistry/registries/buildTasks@2018-02-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -50,6 +59,23 @@
 * **nextLink**: string: The URI that can be used to request the next set of paged results.
 * **value**: [BuildArgument](#buildargument)[]: The collection value.
 
+## BuildProperties
+### Properties
+* **buildId**: string: The unique identifier for the build.
+* **buildTask**: string: The build task with which the build was started.
+* **buildType**: 'AutoBuild' | 'QuickBuild' | string: The type of build.
+* **createTime**: string: The time the build was created.
+* **finishTime**: string: The time the build finished.
+* **gitCommitTrigger**: [GitCommitTrigger](#gitcommittrigger): The git commit trigger that caused the build.
+* **imageUpdateTrigger**: [ImageUpdateTrigger](#imageupdatetrigger): The image update trigger that caused the build.
+* **isArchiveEnabled**: bool: The value that indicates whether archiving is enabled or not.
+* **lastUpdatedTime**: string: The last updated time for the build.
+* **outputImages**: [ImageDescriptor](#imagedescriptor)[]: The list of all images that were generated from the build.
+* **platform**: [PlatformProperties](#platformproperties): The platform properties against which the build will happen.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The provisioning state of a build.
+* **startTime**: string: The time the build started.
+* **status**: 'Canceled' | 'Error' | 'Failed' | 'Queued' | 'Running' | 'Started' | 'Succeeded' | 'Timeout' | string: The current status of the build.
+
 ## BuildStepProperties
 * **Discriminator**: type
 
@@ -78,6 +104,27 @@
 * **sourceRepository**: [SourceRepositoryProperties](#sourcerepositoryproperties) (Required): The properties that describes the source(code) for the build task.
 * **status**: 'Disabled' | 'Enabled' | string: The current status of build task.
 * **timeout**: int: Build timeout in seconds.
+
+## GitCommitTrigger
+### Properties
+* **branchName**: string: The branch name in the repository.
+* **commitId**: string: The unique ID that identifies a commit.
+* **id**: string: The unique ID of the trigger.
+* **providerType**: string: The source control provider type.
+* **repositoryUrl**: string: The repository URL.
+
+## ImageDescriptor
+### Properties
+* **digest**: string: The sha256-based digest of the image manifest.
+* **registry**: string: The registry login server.
+* **repository**: string: The repository name.
+* **tag**: string: The tag name.
+
+## ImageUpdateTrigger
+### Properties
+* **id**: string: The unique ID of the trigger.
+* **images**: [ImageDescriptor](#imagedescriptor)[]: The list of image updates that caused the build.
+* **timestamp**: string: The timestamp when the image update happened.
 
 ## PlatformProperties
 ### Properties

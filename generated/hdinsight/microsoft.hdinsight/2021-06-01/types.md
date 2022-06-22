@@ -27,6 +27,17 @@
 * **tags**: [ApplicationTags](#applicationtags): The tags for the application.
 * **type**: 'Microsoft.HDInsight/clusters/applications' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.HDInsight/clusters/extensions@2021-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **clusterMonitoringEnabled**: bool (ReadOnly): The status of the monitor on the HDInsight cluster.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'clustermonitoring' (Required, DeployTimeConstant): The resource name
+* **primaryKey**: string (WriteOnly): The cluster monitor workspace key.
+* **type**: 'Microsoft.HDInsight/clusters/extensions' (ReadOnly, DeployTimeConstant): The resource type
+* **workspaceId**: string: The cluster monitor workspace ID.
+
 ## Resource Microsoft.HDInsight/clusters/privateEndpointConnections@2021-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -36,6 +47,16 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The private endpoint connection properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.HDInsight/clusters/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.HDInsight/clusters/privateLinkResources@2021-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.HDInsight/clusters/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listHosts (Microsoft.HDInsight/clusters@2021-06-01)
 * **Resource**: Microsoft.HDInsight/clusters
@@ -293,6 +314,12 @@
 * **groupId**: string (Required): The HDInsight private linkable sub-resource name to apply the private link configuration to. For example, 'headnode', 'gateway', 'edgenode'.
 * **ipConfigurations**: [IPConfiguration](#ipconfiguration)[] (Required): The IP configurations for the private link service.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): The private link configuration provisioning state, which only appears in the response.
+
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
+* **requiredZoneNames**: string[]: The private link resource Private link DNS zone name.
 
 ## PrivateLinkServiceConnectionState
 ### Properties

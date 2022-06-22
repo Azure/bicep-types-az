@@ -22,6 +22,39 @@
 * **tags**: [ArtifactSourceTags](#artifactsourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/artifactsources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DevTestLab/labs/artifactsources/artifacts@2015-05-21-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ArtifactProperties](#artifactproperties) (ReadOnly): The properties of the resource.
+* **tags**: [ArtifactTags](#artifacttags) (ReadOnly): The tags of the resource.
+* **type**: 'Microsoft.DevTestLab/labs/artifactsources/artifacts' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DevTestLab/labs/costinsights@2015-05-21-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [CostInsightProperties](#costinsightproperties) (ReadOnly): The properties of the resource.
+* **tags**: [CostInsightTags](#costinsighttags) (ReadOnly): The tags of the resource.
+* **type**: 'Microsoft.DevTestLab/labs/costinsights' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DevTestLab/labs/costs@2015-05-21-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [CostProperties](#costproperties) (ReadOnly): The properties of the resource.
+* **tags**: [CostTags](#costtags) (ReadOnly): The tags of the resource.
+* **type**: 'Microsoft.DevTestLab/labs/costs' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DevTestLab/labs/customimages@2015-05-21-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -109,6 +142,15 @@
 * **name**: string: The name of the artifact parameter.
 * **value**: string: The value of the artifact parameter.
 
+## ArtifactProperties
+### Properties
+* **description**: string: The description of the artifact.
+* **filePath**: string: The file path of the artifact.
+* **icon**: string: The icon of the artifact.
+* **parameters**: any: The parameters of the artifact.
+* **targetOsType**: string: Gets or sets the type of the target os.
+* **title**: string: The title of the artifact.
+
 ## ArtifactSourceProperties
 ### Properties
 * **branchRef**: string: The branch reference of the artifact source.
@@ -121,6 +163,38 @@
 * **uri**: string: The URI of the artifact source.
 
 ## ArtifactSourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ArtifactTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## CostInsightProperties
+### Properties
+* **currencyCode**: string
+* **provisioningState**: string: The provisioning status of the resource.
+* **vmCosts**: [VMCostProperties](#vmcostproperties)[]
+
+## CostInsightTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## CostPerDayProperties
+### Properties
+* **cost**: int: The cost of the cost item.
+* **costType**: 'Projected' | 'Reported' | 'Unavailable' | string: The type of the cost.
+* **date**: string: The date of the cost item.
+
+## CostProperties
+### Properties
+* **costs**: [CostPerDayProperties](#costperdayproperties)[]: The per-day costs items of the cost.
+* **currencyCode**: string: The currency code of the cost.
+
+## CostTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -313,6 +387,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## VMCostProperties
+### Properties
+* **cost**: int
+* **name**: string
+* **resourceGroupName**: string
 
 ## WeekDetails
 ### Properties

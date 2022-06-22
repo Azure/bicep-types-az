@@ -13,6 +13,15 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DBForMySql/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DBForMySql/flexibleServers/configurations@2020-07-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ConfigurationProperties](#configurationproperties) (ReadOnly): The properties of a configuration.
+* **type**: 'Microsoft.DBForMySql/flexibleServers/configurations' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DBForMySql/flexibleServers/databases@2020-07-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -40,6 +49,18 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerKeyProperties](#serverkeyproperties): Properties of the ServerKey Resource.
 * **type**: 'Microsoft.DBForMySql/flexibleServers/keys' (ReadOnly, DeployTimeConstant): The resource type
+
+## ConfigurationProperties
+### Properties
+* **allowedValues**: string (ReadOnly): Allowed values of the configuration.
+* **dataType**: string (ReadOnly): Data type of the configuration.
+* **defaultValue**: string (ReadOnly): Default value of the configuration.
+* **description**: string (ReadOnly): Description of the configuration.
+* **isConfigPendingRestart**: 'False' | 'True' | string (ReadOnly): If is the configuration pending restart or not.
+* **isDynamicConfig**: 'False' | 'True' | string (ReadOnly): If is the configuration dynamic.
+* **isReadOnly**: 'False' | 'True' | string (ReadOnly): If is the configuration read only.
+* **source**: string: Source of the configuration.
+* **value**: string: Value of the configuration.
 
 ## DatabaseProperties
 ### Properties

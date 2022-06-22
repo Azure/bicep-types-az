@@ -15,6 +15,21 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Insights/workbooks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Insights/workbooks/revisions@2021-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Resource etag
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [WorkbookResourceIdentity](#workbookresourceidentity) (ReadOnly): Identity used for BYOS
+* **kind**: 'shared' | 'user' | string (ReadOnly): The kind of workbook. Only valid value is shared.
+* **location**: string (ReadOnly): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkbookProperties](#workbookproperties) (ReadOnly): Metadata describing a workbook for an Azure resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.Insights/workbooks/revisions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -23,6 +38,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

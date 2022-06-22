@@ -11,6 +11,14 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.EventGrid/domains/topics@2018-09-15-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-09-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.EventGrid/domains/topics' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.EventGrid/eventSubscriptions@2018-09-15-preview
 * **Valid Scope(s)**: Unknown
 ### Properties
@@ -30,6 +38,15 @@
 * **properties**: [TopicProperties](#topicproperties): Properties of the topic
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.EventGrid/topicTypes@2018-09-15-preview (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2018-09-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TopicTypeProperties](#topictypeproperties) (ReadOnly): Properties of the topic type info
+* **type**: 'Microsoft.EventGrid/topicTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.EventGrid/domains@2018-09-15-preview)
 * **Resource**: Microsoft.EventGrid/domains
@@ -241,6 +258,15 @@ Wildcard characters are not supported in this path.
 ### Properties
 * **key1**: string: Shared access key1 for the topic.
 * **key2**: string: Shared access key2 for the topic.
+
+## TopicTypeProperties
+### Properties
+* **description**: string: Description of the topic type.
+* **displayName**: string: Display Name for the topic type.
+* **provider**: string: Namespace of the provider of the topic type.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the topic type
+* **resourceRegionType**: 'GlobalResource' | 'RegionalResource' | string: Region type of the resource.
+* **supportedLocations**: string[]: List of locations supported by this topic type.
 
 ## TrackedResourceTags
 ### Properties

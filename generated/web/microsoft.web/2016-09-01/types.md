@@ -47,6 +47,36 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/serverfarms' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Web/serverfarms/hybridConnectionNamespaces/relays@2016-09-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [HybridConnectionProperties](#hybridconnectionproperties) (ReadOnly): HybridConnection resource specific properties
+* **type**: 'Microsoft.Web/serverfarms/hybridConnectionNamespaces/relays' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/serverfarms/hybridConnectionPlanLimits@2016-09-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: 'limit' (Required, DeployTimeConstant): The resource name
+* **properties**: [HybridConnectionLimitsProperties](#hybridconnectionlimitsproperties) (ReadOnly): HybridConnectionLimits resource specific properties
+* **type**: 'Microsoft.Web/serverfarms/hybridConnectionPlanLimits' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/serverfarms/virtualNetworkConnections@2016-09-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VnetInfoProperties](#vnetinfoproperties) (ReadOnly): VnetInfo resource specific properties
+* **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Web/serverfarms/virtualNetworkConnections/gateways@2016-09-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -159,6 +189,23 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 * **sendKeyName**: string (ReadOnly): The name of the send key.
 * **sendKeyValue**: string (ReadOnly): The value of the send key.
 
+## HybridConnectionLimitsProperties
+### Properties
+* **current**: int (ReadOnly): The current number of Hybrid Connections.
+* **maximum**: int (ReadOnly): The maximum number of Hybrid Connections allowed.
+
+## HybridConnectionProperties
+### Properties
+* **hostname**: string: The hostname of the endpoint.
+* **port**: int: The port of the endpoint.
+* **relayArmUri**: string: The ARM URI to the Service Bus relay.
+* **relayName**: string: The name of the Service Bus relay.
+* **sendKeyName**: string: The name of the Service Bus key which has Send permissions. This is used to authenticate to Service Bus.
+* **sendKeyValue**: string: The value of the Service Bus key. This is used to authenticate to Service Bus. In ARM this key will not be returned
+normally, use the POST /listKeys API instead.
+* **serviceBusNamespace**: string: The name of the Service Bus namespace.
+* **serviceBusSuffix**: string: The suffix for the service bus endpoint. By default this is .servicebus.windows.net
+
 ## NameValuePair
 ### Properties
 * **name**: string: Pair name.
@@ -234,6 +281,24 @@ Basic apps are not used for capacity allocation.
 ### Properties
 * **vnetName**: string: The Virtual Network name.
 * **vpnPackageUri**: string (Required, WriteOnly): The URI where the VPN package can be downloaded.
+
+## VnetInfoProperties
+### Properties
+* **certBlob**: any: A certificate file (.cer) blob containing the public key of the private key used to authenticate a 
+Point-To-Site VPN connection.
+* **certThumbprint**: string (ReadOnly): The client certificate thumbprint.
+* **dnsServers**: string: DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.
+* **resyncRequired**: bool (ReadOnly): <code>true</code> if a resync is required; otherwise, <code>false</code>.
+* **routes**: [VnetRoute](#vnetroute)[] (ReadOnly): The routes that this Virtual Network connection uses.
+* **vnetResourceId**: string: The Virtual Network's resource ID.
+
+## VnetRoute
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string: Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [VnetRouteProperties](#vnetrouteproperties): VnetRoute resource specific properties
+* **type**: string (ReadOnly): Resource type.
 
 ## VnetRouteProperties
 ### Properties

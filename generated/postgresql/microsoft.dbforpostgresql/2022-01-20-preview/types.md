@@ -13,6 +13,16 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DBforPostgreSQL/flexibleServers/backups@2022-01-20-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-01-20-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServerBackupProperties](#serverbackupproperties) (ReadOnly): The properties of a server backup.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
+* **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/backups' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DBforPostgreSQL/flexibleServers/configurations@2022-01-20-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -91,6 +101,12 @@
 * **delegatedSubnetResourceId**: string: delegated subnet arm resource id.
 * **privateDnsZoneArmResourceId**: string: private dns zone arm resource id.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string (ReadOnly): public network access is enabled or not
+
+## ServerBackupProperties
+### Properties
+* **backupType**: string: Backup type.
+* **completedTime**: string: Backup completed time (ISO8601 format).
+* **source**: string: Backup source
 
 ## ServerProperties
 ### Properties

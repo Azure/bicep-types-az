@@ -22,6 +22,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.HybridNetwork/locations/vendors/networkFunctions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances@2021-05-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-05-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RoleInstanceProperties](#roleinstanceproperties) (ReadOnly): The role instance properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **type**: 'Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.HybridNetwork/networkFunctions@2021-05-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -190,6 +200,11 @@
 ## PreviewSubscriptionProperties
 ### Properties
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The provisioning state of the PreviewSubscription resource.
+
+## RoleInstanceProperties
+### Properties
+* **operationalState**: 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Unknown' | string: The operational state of the role instance.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The provisioning state of the RoleInstance resource.
 
 ## SshConfiguration
 ### Properties
