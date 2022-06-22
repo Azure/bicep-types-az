@@ -13,6 +13,15 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DBforPostgreSQL/flexibleServers/advisors@2021-06-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: any (ReadOnly): The properties of a recommendation action advisor.
+* **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/advisors' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DBforPostgreSQL/flexibleServers/configurations@2021-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -42,6 +51,15 @@
 * **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a firewall rule.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DBforPostgreSQL/flexibleServers/queryTexts@2021-06-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [QueryTextProperties](#querytextproperties) (ReadOnly): The properties of a query text.
+* **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/queryTexts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Backup
 ### Properties
@@ -91,6 +109,11 @@
 * **delegatedSubnetResourceId**: string: delegated subnet arm resource id.
 * **privateDnsZoneArmResourceId**: string: private dns zone arm resource id.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string (ReadOnly): public network access is enabled or not
+
+## QueryTextProperties
+### Properties
+* **queryId**: string: Query identifier unique to the server.
+* **queryText**: string: Query text.
 
 ## ServerProperties
 ### Properties

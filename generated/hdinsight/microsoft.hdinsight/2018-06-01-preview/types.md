@@ -24,6 +24,17 @@
 * **tags**: [ApplicationTags](#applicationtags): The tags for the application.
 * **type**: 'Microsoft.HDInsight/clusters/applications' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.HDInsight/clusters/extensions@2018-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **clusterMonitoringEnabled**: bool (ReadOnly): The status of the monitor on the HDInsight cluster.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'clustermonitoring' (Required, DeployTimeConstant): The resource name
+* **primaryKey**: string (WriteOnly): The cluster monitor workspace key.
+* **type**: 'Microsoft.HDInsight/clusters/extensions' (ReadOnly, DeployTimeConstant): The resource type
+* **workspaceId**: string: The cluster monitor workspace ID.
+
 ## Function listHosts (Microsoft.HDInsight/clusters@2018-06-01-preview)
 * **Resource**: Microsoft.HDInsight/clusters
 * **ApiVersion**: 2018-06-01-preview

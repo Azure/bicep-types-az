@@ -30,6 +30,21 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Insights/workbooks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Insights/workbooks/revisions@2021-03-08 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: [ResourceEtag](#resourceetag) (ReadOnly): Resource etag
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [WorkbookManagedIdentity](#workbookmanagedidentity) (ReadOnly): Identity used for BYOS
+* **kind**: 'shared' | 'user' | string (ReadOnly): The kind of workbook. Choices are user and shared.
+* **location**: string (ReadOnly): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkbookProperties](#workbookproperties) (ReadOnly): Metadata describing a workbook for an Azure resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Insights/workbooks/revisions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## MyWorkbookManagedIdentity
 ### Properties
 * **type**: 'None' | 'UserAssigned' | string: The identity type.
@@ -63,6 +78,16 @@
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
 
 ## ResourceEtag
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceEtag
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

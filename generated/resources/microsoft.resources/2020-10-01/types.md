@@ -35,6 +35,15 @@
 * **properties**: [AzurePowerShellScriptProperties](#azurepowershellscriptproperties) (Required): Properties of the Azure PowerShell script object.
 
 
+## Resource Microsoft.Resources/deploymentScripts/logs@2020-10-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [LogProperties](#logproperties) (ReadOnly): Script log properties.
+* **type**: 'Microsoft.Resources/deploymentScripts/logs' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Resources/resourceGroups@2020-10-01
 * **Valid Scope(s)**: Subscription
 ### Properties
@@ -209,6 +218,10 @@
 ## ExpressionEvaluationOptions
 ### Properties
 * **scope**: 'Inner' | 'NotSpecified' | 'Outer' | string: The scope to be used for evaluation of parameters, variables and functions in a nested template.
+
+## LogProperties
+### Properties
+* **log**: string (ReadOnly): Script execution logs in text format.
 
 ## ManagedServiceIdentity
 ### Properties
