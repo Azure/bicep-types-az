@@ -183,19 +183,14 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
 
       const { descriptor, bodyType } = output;
       let flags = ResourceFlags.None;
-      if (descriptor.readable && !descriptor.writable) {
+      if (descriptor.readonlyScopes === descriptor.scopeType) {
         flags |= ResourceFlags.ReadOnly;
       }
-
-      // There's still a discussion to have about whether WriteOnly resources are a real thing or just an
-      // artifact of imperfect service models.
-      // if (descriptor.writable && !descriptor.readable) {
-      //   flags |= ResourceFlags.WriteOnly;
-      // }
 
       factory.addType(new ResourceType(
         `${getFullyQualifiedType(descriptor)}@${descriptor.apiVersion}`,
         descriptor.scopeType,
+        descriptor.readonlyScopes !== descriptor.scopeType ? descriptor.readonlyScopes : undefined,
         bodyType,
         flags));
     }

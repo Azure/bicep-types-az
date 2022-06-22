@@ -119,7 +119,7 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
         const resourceType = type as ResourceType;
         const flagsString = resourceType.Flags ? ` (${getResourceFlagsLabels(resourceType.Flags).join(', ')})` : '';
         writeHeading(nesting, `Resource ${resourceType.Name}${flagsString}`);
-        writeBullet("Valid Scope(s)", `${getScopeTypeLabels(resourceType.ScopeType).join(', ') || 'Unknown'}`);
+        writeBullet("Valid Scope(s)", `${getScopeTypeLabels(resourceType.ScopeType, [resourceType.ReadOnlyScopes, 'ReadOnly']).join(', ') || 'Unknown'}`);
         writeComplexType(types, types[resourceType.Body.Index], nesting, false);
 
         return;
