@@ -21,8 +21,7 @@ export interface ResourceDescriptor {
   typeSegments: string[];
   apiVersion: string;
   constantName?: string;
-  readable: boolean;
-  writable: boolean;
+  readonlyScopes?: ScopeType;
 }
 
 export interface ProviderDefinition {
@@ -525,8 +524,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
       typeSegments: type,
       apiVersion,
       constantName,
-      readable,
-      writable,
+      readonlyScopes: readable && !writable ? scopeType : undefined,
     }));
 
     return success(descriptors);
@@ -650,6 +648,18 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     return scopeA | scopeB;
   }
 
+  function mergeOptionalScopes(scopeA: ScopeType|undefined, scopeB: ScopeType|undefined) {
+    if (scopeA !== undefined) {
+      if (scopeB !== undefined) {
+        return mergeScopes(scopeA, scopeB);
+      }
+
+      return scopeA;
+    }
+
+    return scopeB;
+  }
+
   function collapseDefinitionScopes(resources: ResourceDefinition[]) {
     const definitionsByName: Dictionary<ResourceDefinition> = {};
     for (const resource of resources) {
@@ -658,11 +668,18 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
         const curDescriptor = definitionsByName[name].descriptor;
         const newDescriptor = resource.descriptor;
 
+        const scopeType = mergeScopes(curDescriptor.scopeType, newDescriptor.scopeType);
+        const curWritableScopes = curDescriptor.readonlyScopes !== undefined ? curDescriptor.scopeType ^ curDescriptor.readonlyScopes : curDescriptor.scopeType;
+        const newWritableScopes = newDescriptor.readonlyScopes !== undefined ? newDescriptor.scopeType ^ newDescriptor.readonlyScopes : newDescriptor.scopeType;
+        const writableScopes = curWritableScopes | newWritableScopes;
+        const readonlyScopes = scopeType === writableScopes ? undefined : scopeType ^ writableScopes;
+
         definitionsByName[name] = {
           ...definitionsByName[name],
           descriptor: {
             ...curDescriptor,
-            scopeType: mergeScopes(curDescriptor.scopeType, newDescriptor.scopeType),
+            scopeType,
+            readonlyScopes,
           },
         };
       } else {
@@ -695,8 +712,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
         definitionsByNormalizedPath[path] = [{
           descriptor: {
             ...parameterized[0],
-            readable: atPath.filter(d => d.descriptor.readable).length > 0,
-            writable: atPath.filter(d => d.descriptor.writable).length > 0,
+            readonlyScopes: atPath.reduce((acc, {descriptor: {readonlyScopes}}) => mergeOptionalScopes(acc, readonlyScopes), undefined as ScopeType|undefined),
           },
           putOperation: chain(atPath).map(r => r.putOperation).find().value(),
           getOperation: chain(atPath).map(r => r.getOperation).find().value(),
