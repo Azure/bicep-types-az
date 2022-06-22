@@ -386,6 +386,83 @@
           }
         ]
       }
+    },
+    "/providers/Test.Rp1/splitPutAndGetType/{typeName}": {
+      "get": {
+        "summary": "Get a splitPutAndGetType resource",
+        "description": "Get a splitPutAndGetType resource",
+        "operationId": "SplitPutAndGetType_Get",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/TestType1"
+            }
+          },
+          "default": {
+            "description": "Detailed error information.",
+            "schema": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "typeName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The splitPutAndGetType resource name.",
+            "enum": [
+              "constantName",
+              "yetAnotherName"
+            ],
+            "x-ms-enum": {
+              "name": "SplitPutAndGetType_Name",
+              "modelAsString": true
+            }
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          }
+        ]
+      }
+    },
+    "/providers/Test.Rp1/splitPutAndGetType/constantName": {
+      "put": {
+        "summary": "Create or update a splitPutAndGetType resource",
+        "description": "Create or update a splitPutAndGetType resource",
+        "operationId": "SplitPutAndGetType_CreateOrUpdate",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/TestType1"
+            }
+          },
+          "default": {
+            "description": "Detailed error information.",
+            "schema": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "parameters",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TestType1Input"
+            },
+            "description": "The request parameters"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          }
+        ],
+        "x-ms-long-running-operation": true
+      }
     }
   }
 }
