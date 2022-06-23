@@ -85,6 +85,15 @@
 * **properties**: [WorkloadNetworkDnsZoneProperties](#workloadnetworkdnszoneproperties): DNS Zone properties
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/dnsZones' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/gateways@2020-07-17-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkloadNetworkGatewayProperties](#workloadnetworkgatewayproperties) (ReadOnly): Gateway properties.
+* **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/gateways' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles@2020-07-17-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -102,6 +111,15 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkloadNetworkSegmentProperties](#workloadnetworksegmentproperties): The properties of a Workload Segment proxy resource.
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/segments' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/virtualMachines@2020-07-17-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkloadNetworkVirtualMachineProperties](#workloadnetworkvirtualmachineproperties) (ReadOnly): Virtual machine properties.
+* **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AVS/privateClouds/workloadNetworks/vmGroups@2020-07-17-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -256,6 +274,11 @@
 * **revision**: int: NSX revision number.
 * **sourceIp**: string: Source IP of the DNS Zone.
 
+## WorkloadNetworkGatewayProperties
+### Properties
+* **displayName**: string: Display name of the DHCP entity.
+* **path**: string (ReadOnly): NSX Gateway Path.
+
 ## WorkloadNetworkPortMirroringProperties
 ### Properties
 * **destination**: string: Destination VM Group.
@@ -284,6 +307,11 @@
 ### Properties
 * **dhcpRanges**: string[]: DHCP Range assigned for subnet.
 * **gatewayAddress**: string: Gateway address.
+
+## WorkloadNetworkVirtualMachineProperties
+### Properties
+* **displayName**: string: Display name of the VM.
+* **vmType**: 'REGULAR, EDGE, SERVICE' | string (ReadOnly): Virtual machine type.
 
 ## WorkloadNetworkVMGroupProperties
 ### Properties

@@ -1,5 +1,17 @@
 # Microsoft.RecoveryServices @ 2016-12-01
 
+## Resource Microsoft.RecoveryServices/vaults/backupEngines@2016-12-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): Optional ETag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [BackupEngineBase](#backupenginebase) (ReadOnly): BackupEngineBaseResource properties
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.RecoveryServices/vaults/backupEngines' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers@2016-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -12,6 +24,18 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/operationResults@2016-12-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): Optional ETag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProtectionContainer](#protectioncontainer) (ReadOnly): ProtectionContainerResource properties
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/operationResults' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.RecoveryServices/vaults/backupstorageconfig@2016-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -23,6 +47,42 @@
 * **properties**: [BackupResourceConfig](#backupresourceconfig): BackupResourceConfigResource properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupstorageconfig' (ReadOnly, DeployTimeConstant): The resource type
+
+## BackupEngineBase
+* **Discriminator**: backupEngineType
+
+### Base Properties
+* **azureBackupAgentVersion**: string: Backup agent version
+* **backupEngineId**: string: ID of the backup engine.
+* **backupEngineState**: string: Status of the backup engine with the Recovery Services Vault. = {Active/Deleting/DeleteFailed}
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string: Type of backup management for the backup engine.
+* **canReRegister**: bool: Flag indicating if the backup engine be registered, once already registered.
+* **dpmVersion**: string: Backup engine version
+* **extendedInfo**: [BackupEngineExtendedInfo](#backupengineextendedinfo): Extended info of the backupengine
+* **friendlyName**: string: Friendly name of the backup engine.
+* **healthStatus**: string: Backup status of the backup engine.
+* **isAzureBackupAgentUpgradeAvailable**: bool: To check if backup agent upgrade available
+* **isDpmUpgradeAvailable**: bool: To check if backup engine upgrade available
+* **registrationStatus**: string: Registration status of the backup engine with the Recovery Services Vault.
+### AzureBackupServerEngine
+#### Properties
+* **backupEngineType**: 'AzureBackupServerEngine' (Required): Type of the backup engine.
+
+### DpmBackupEngine
+#### Properties
+* **backupEngineType**: 'DpmBackupEngine' (Required): Type of the backup engine.
+
+
+## BackupEngineExtendedInfo
+### Properties
+* **availableDiskSpace**: int: Disk space currently available in the backup engine.
+* **azureProtectedInstances**: int: Protected instances in the backup engine.
+* **databaseName**: string: Database name of backup engine.
+* **diskCount**: int: Number of disks in the backup engine.
+* **protectedItemsCount**: int: Number of protected items in the backup engine.
+* **protectedServersCount**: int: Number of protected servers in the backup engine.
+* **refreshedAt**: string: Last refresh time in the backup engine.
+* **usedDiskSpace**: int: Disk space used in the backup engine.
 
 ## BackupResourceConfig
 ### Properties
@@ -147,6 +207,16 @@ Backup is VMAppContainer
 * **mabContainerHealthDetails**: [MABContainerHealthDetails](#mabcontainerhealthdetails)[]: Health details on this mab container.
 * **protectedItemCount**: int: Number of items backed up in this container.
 
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

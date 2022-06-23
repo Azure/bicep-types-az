@@ -9,6 +9,15 @@
 * **properties**: [SubscriptionDefinitionProperties](#subscriptiondefinitionproperties): the subscription definition properties
 * **type**: 'Microsoft.Subscription/subscriptionDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Subscription/subscriptionOperations@2017-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2017-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SubscriptionDefinitionProperties](#subscriptiondefinitionproperties) (ReadOnly): the subscription definition properties
+* **type**: 'Microsoft.Subscription/subscriptionOperations' (ReadOnly, DeployTimeConstant): The resource type
+
 ## SubscriptionDefinitionProperties
 ### Properties
 * **etag**: string: The etag the subscription definition.

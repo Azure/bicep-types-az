@@ -1,5 +1,14 @@
 # Microsoft.Authorization @ 2021-01-01-preview
 
+## Resource Microsoft.Authorization/roleAssignmentApprovals@2021-01-01-preview (ReadOnly)
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RoleAssignmentApprovalProperties](#roleassignmentapprovalproperties) (ReadOnly): Role Assignment Approval properties.
+* **type**: 'Microsoft.Authorization/roleAssignmentApprovals' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Authorization/roleAssignmentApprovals/stages@2021-01-01-preview
 * **Valid Scope(s)**: Unknown
 ### Properties
@@ -22,6 +31,17 @@
 * **principalName**: string (ReadOnly): The identity display name
 * **principalType**: 'servicePrincipal' | 'user' | string (ReadOnly): The identity type : user/servicePrincipal
 * **userPrincipalName**: string (ReadOnly): The user principal name(if valid)
+
+## RoleAssignmentApprovalProperties
+### Properties
+* **stages**: [RoleAssignmentApprovalStep](#roleassignmentapprovalstep)[]: This is the collection of stages returned when one does an expand on it.
+
+## RoleAssignmentApprovalStep
+### Properties
+* **id**: string (ReadOnly): The role assignment approval stage id.
+* **name**: string (ReadOnly): The role assignment approval stage name.
+* **properties**: [RoleAssignmentApprovalStepProperties](#roleassignmentapprovalstepproperties): Role Assignment Approval Step properties.
+* **type**: string (ReadOnly): The resource type.
 
 ## RoleAssignmentApprovalStepProperties
 ### Properties
