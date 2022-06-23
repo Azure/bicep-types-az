@@ -10,6 +10,40 @@
 * **properties**: [BudgetProperties](#budgetproperties): The properties of the budget.
 * **type**: 'Microsoft.Consumption/budgets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Consumption/credits@2019-10-01 (ReadOnly)
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Resource etag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'balanceSummary' (Required, DeployTimeConstant): The resource name
+* **properties**: [CreditSummaryProperties](#creditsummaryproperties) (ReadOnly): The properties of the credit summary.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.Consumption/credits' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Consumption/pricesheets@2019-10-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription, Extension
+### Properties
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Resource etag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [PriceSheetModel](#pricesheetmodel) (ReadOnly): price sheet result. It contains the pricesheet associated with billing period
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.Consumption/pricesheets' (ReadOnly, DeployTimeConstant): The resource type
+
+## Amount
+### Properties
+* **currency**: string (ReadOnly): Amount currency.
+* **value**: int (ReadOnly): Amount.
+
+## AmountWithExchangeRate
+### Properties
+* **currency**: string (ReadOnly): Amount currency.
+* **exchangeRate**: int (ReadOnly): Exchange Rate.
+* **exchangeRateMonth**: int (ReadOnly): Exchange rate month.
+* **value**: int (ReadOnly): Amount.
+
 ## BudgetComparisonExpression
 ### Properties
 * **name**: string (Required): The name of the column to use in comparison.
@@ -49,6 +83,23 @@
 * **endDate**: string: The end date for the budget. If not provided, we default this to 10 years from the start date.
 * **startDate**: string (Required): The start date for the budget.
 
+## CreditBalanceSummary
+### Properties
+* **currentBalance**: [Amount](#amount) (ReadOnly): Current balance.
+* **currentBalanceInBillingCurrency**: [AmountWithExchangeRate](#amountwithexchangerate) (ReadOnly): Current balance.
+* **estimatedBalance**: [Amount](#amount) (ReadOnly): Estimated balance.
+* **estimatedBalanceInBillingCurrency**: [AmountWithExchangeRate](#amountwithexchangerate) (ReadOnly): Current balance.
+
+## CreditSummaryProperties
+### Properties
+* **balanceSummary**: [CreditBalanceSummary](#creditbalancesummary) (ReadOnly): Summary of balances associated with this credit summary.
+* **billingCurrency**: string (ReadOnly): Billing Currency.
+* **creditCurrency**: string (ReadOnly): Credit Currency
+* **expiredCredit**: [Amount](#amount) (ReadOnly): Expired credit.
+* **pendingCreditAdjustments**: [Amount](#amount) (ReadOnly): Pending credit adjustments.
+* **pendingEligibleCharges**: [Amount](#amount) (ReadOnly): Pending eligible charges.
+* **reseller**: [Reseller](#reseller) (ReadOnly): Reseller details.
+
 ## CurrentSpend
 ### Properties
 * **amount**: int (ReadOnly): The total amount of cost which is being tracked by the budget.
@@ -58,6 +109,18 @@
 ### Properties
 * **amount**: int (ReadOnly): The forecasted cost for the total time period which is being tracked by the budget. This value is only provided if the budget contains a forecast alert type.
 * **unit**: string (ReadOnly): The unit of measure for the budget amount.
+
+## MeterDetails
+### Properties
+* **meterCategory**: string (ReadOnly): The category of the meter, for example, 'Cloud services', 'Networking', etc..
+* **meterLocation**: string (ReadOnly): The location in which the Azure service is available.
+* **meterName**: string (ReadOnly): The name of the meter, within the given meter category
+* **meterSubCategory**: string (ReadOnly): The subcategory of the meter, for example, 'A6 Cloud services', 'ExpressRoute (IXP)', etc..
+* **pretaxStandardRate**: int (ReadOnly): The pretax listing price.
+* **serviceName**: string (ReadOnly): The name of the service.
+* **serviceTier**: string (ReadOnly): The service tier.
+* **totalIncludedQuantity**: int (ReadOnly): The total included quantity associated with the offer.
+* **unit**: string (ReadOnly): The unit in which the meter consumption is charged, for example, 'Hours', 'GB', etc.
 
 ## Notification
 ### Properties
@@ -69,4 +132,37 @@
 * **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' | string (Required): The comparison operator.
 * **threshold**: int (Required): Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.
 * **thresholdType**: 'Actual' | string: The type of threshold
+
+## PriceSheetModel
+### Properties
+* **download**: [MeterDetails](#meterdetails) (ReadOnly): Pricesheet download details.
+* **nextLink**: string (ReadOnly): The link (url) to the next page of results.
+* **pricesheets**: [PriceSheetProperties](#pricesheetproperties)[] (ReadOnly): Price sheet
+
+## PriceSheetProperties
+### Properties
+* **billingPeriodId**: string (ReadOnly): The id of the billing period resource that the usage belongs to.
+* **currencyCode**: string (ReadOnly): Currency Code
+* **includedQuantity**: int (ReadOnly): Included quality for an offer
+* **meterDetails**: [MeterDetails](#meterdetails) (ReadOnly): The details about the meter. By default this is not populated, unless it's specified in $expand.
+* **meterId**: string (ReadOnly): The meter id (GUID)
+* **offerId**: string (ReadOnly): Offer Id
+* **partNumber**: string (ReadOnly): Part Number
+* **unitOfMeasure**: string (ReadOnly): Unit of measure
+* **unitPrice**: int (ReadOnly): Unit Price
+
+## Reseller
+### Properties
+* **resellerDescription**: string (ReadOnly): Reseller Description.
+* **resellerId**: string (ReadOnly): Reseller id.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

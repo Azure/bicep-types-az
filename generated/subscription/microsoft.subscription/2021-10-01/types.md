@@ -11,7 +11,7 @@
 * **type**: 'Microsoft.Subscription/aliases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Subscription/policies@2021-10-01
-* **Valid Scope(s)**: Tenant
+* **Valid Scope(s)**: Tenant, Extension (ReadOnly)
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **blockSubscriptionsIntoTenant**: bool (WriteOnly): Blocks the entering of subscriptions into user's tenant.

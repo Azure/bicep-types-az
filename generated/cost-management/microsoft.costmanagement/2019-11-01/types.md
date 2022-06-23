@@ -1,5 +1,15 @@
 # Microsoft.CostManagement @ 2019-11-01
 
+## Resource Microsoft.CostManagement/alerts@2019-11-01 (ReadOnly)
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AlertProperties](#alertproperties) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.CostManagement/alerts' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.CostManagement/exports@2019-11-01
 * **Valid Scope(s)**: Unknown
 ### Properties
@@ -29,6 +39,45 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ViewProperties](#viewproperties): The properties of the view.
 * **type**: 'Microsoft.CostManagement/views' (ReadOnly, DeployTimeConstant): The resource type
+
+## AlertProperties
+### Properties
+* **closeTime**: string: dateTime in which alert was closed
+* **costEntityId**: string: related budget
+* **creationTime**: string: dateTime in which alert was created
+* **definition**: [AlertPropertiesDefinition](#alertpropertiesdefinition): defines the type of alert
+* **description**: string: Alert description
+* **details**: [AlertPropertiesDetails](#alertpropertiesdetails): Alert details
+* **modificationTime**: string: dateTime in which alert was last modified
+* **source**: 'Preset' | 'User' | string: Source of alert
+* **status**: 'Active' | 'Dismissed' | 'None' | 'Overridden' | 'Resolved' | string: alert status
+* **statusModificationTime**: string: dateTime in which the alert status was last modified
+* **statusModificationUserName**: string
+
+## AlertPropertiesDefinition
+### Properties
+* **category**: 'Billing' | 'Cost' | 'System' | 'Usage' | string: Alert category
+* **criteria**: 'CostThresholdExceeded' | 'CreditThresholdApproaching' | 'CreditThresholdReached' | 'CrossCloudCollectionError' | 'CrossCloudNewDataAvailable' | 'ForecastCostThresholdExceeded' | 'ForecastUsageThresholdExceeded' | 'GeneralThresholdError' | 'InvoiceDueDateApproaching' | 'InvoiceDueDateReached' | 'MultiCurrency' | 'QuotaThresholdApproaching' | 'QuotaThresholdReached' | 'UsageThresholdExceeded' | string: Criteria that triggered alert
+* **type**: 'Budget' | 'BudgetForecast' | 'Credit' | 'General' | 'Invoice' | 'Quota' | 'xCloud' | string: type of alert
+
+## AlertPropertiesDetails
+### Properties
+* **amount**: int: budget threshold amount
+* **contactEmails**: string[]: list of emails to contact
+* **contactGroups**: string[]: list of action groups to broadcast to
+* **contactRoles**: string[]: list of contact roles
+* **currentSpend**: int: current spend
+* **meterFilter**: any[]: array of meters to filter by
+* **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' | 'LessThan' | 'LessThanOrEqualTo' | 'None' | string: operator used to compare currentSpend with amount
+* **overridingAlert**: string: overriding alert
+* **periodStartDate**: string: datetime of periodStartDate
+* **resourceFilter**: any[]: array of resources to filter by
+* **resourceGroupFilter**: any[]: array of resourceGroups to filter by
+* **tagFilter**: any: tags to filter by
+* **threshold**: int: notification threshold percentage as a decimal which activated this alert
+* **timeGrainType**: 'Annually' | 'BillingAnnual' | 'BillingMonth' | 'BillingQuarter' | 'Monthly' | 'None' | 'Quarterly' | string: Type of timegrain cadence
+* **triggeredBy**: string: notificationId that triggered this alert
+* **unit**: string: unit of currency being used
 
 ## CacheItem
 ### Properties
@@ -190,6 +239,11 @@
 ### Properties
 * **from**: string (Required): The start date to pull data from.
 * **to**: string (Required): The end date to pull data to.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## SettingsProperties
 ### Properties

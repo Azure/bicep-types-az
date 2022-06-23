@@ -11,6 +11,17 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.ContainerService/managedClusters/accessProfiles@2017-08-31 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-08-31' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AccessProfile](#accessprofile) (ReadOnly): AccessProfile of a managed cluster.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.ContainerService/managedClusters/accessProfiles' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listCredential (Microsoft.ContainerService/managedClusters/accessProfiles@2017-08-31)
 * **Resource**: Microsoft.ContainerService/managedClusters/accessProfiles
 * **ApiVersion**: 2017-08-31
@@ -76,6 +87,11 @@
 * **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile): Profile for Linux VMs in the container service cluster.
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
 * **servicePrincipalProfile**: [ContainerServicePrincipalProfile](#containerserviceprincipalprofile): Information about a service principal identity for the cluster to use for manipulating Azure APIs. Either secret or keyVaultSecretRef must be specified.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

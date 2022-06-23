@@ -24,6 +24,15 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: 'microsoft.aadiam/privateLinkForAzureAd/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource microsoft.aadiam/privateLinkForAzureAd/privateLinkResources@2020-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Resource properties.
+* **type**: 'microsoft.aadiam/privateLinkForAzureAd/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## PrivateEndpoint
 ### Properties
 * **id**: string: Full identifier of the private endpoint resource.
@@ -39,6 +48,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
 
 ## PrivateLinkServiceConnectionState
 ### Properties

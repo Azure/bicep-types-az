@@ -1,7 +1,7 @@
 # Microsoft.Media @ 2018-06-01-preview
 
 ## Resource Microsoft.Media/mediaservices@2018-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Valid Scope(s)**: Subscription (ReadOnly), ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -114,6 +114,23 @@
 * **source**: [ContentSource](#contentsource) (Required, WriteOnly): Gets or sets the source.
 * **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Automation/automationAccounts/nodes@2015-10-31 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **accountId**: string (ReadOnly): Gets or sets the account id of the node.
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Gets or sets the etag of the resource.
+* **extensionHandler**: [DscNodeExtensionHandlerAssociationProperty](#dscnodeextensionhandlerassociationproperty)[] (ReadOnly): Gets or sets the list of extensionHandler properties for a Node.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **ip**: string (ReadOnly): Gets or sets the ip of the node.
+* **lastSeen**: string (ReadOnly): Gets or sets the last seen time of the node.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **nodeConfiguration**: [DscNodeConfigurationAssociationProperty](#dscnodeconfigurationassociationproperty) (ReadOnly): Gets or sets the configuration of the node.
+* **nodeId**: string (ReadOnly): Gets or sets the node id.
+* **registrationTime**: string (ReadOnly): Gets or sets the registration time of the node.
+* **status**: string (ReadOnly): Gets or sets the status of the node.
+* **type**: 'Microsoft.Automation/automationAccounts/nodes' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Automation/automationAccounts/runbooks@2015-10-31
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -354,6 +371,15 @@
 * **isMandatory**: bool: Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
 * **position**: int: Get or sets the position of the parameter.
 * **type**: string: Gets or sets the type of the parameter.
+
+## DscNodeConfigurationAssociationProperty
+### Properties
+* **name**: string: Gets or sets the name of the dsc node configuration.
+
+## DscNodeExtensionHandlerAssociationProperty
+### Properties
+* **name**: string: Gets or sets the name of the extension handler.
+* **version**: string: Gets or sets the version of the extension handler.
 
 ## FieldDefinition
 ### Properties

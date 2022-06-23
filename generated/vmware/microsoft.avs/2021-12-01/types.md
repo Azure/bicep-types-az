@@ -68,6 +68,15 @@
 * **properties**: [PlacementPolicyProperties](#placementpolicyproperties): placement policy properties
 * **type**: 'Microsoft.AVS/privateClouds/clusters/placementPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.AVS/privateClouds/clusters/virtualMachines@2021-12-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties) (ReadOnly): Virtual machine properties.
+* **type**: 'Microsoft.AVS/privateClouds/clusters/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.AVS/privateClouds/globalReachConnections@2021-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -94,6 +103,24 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ScriptExecutionProperties](#scriptexecutionproperties): The properties of a script execution resource
 * **type**: 'Microsoft.AVS/privateClouds/scriptExecutions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.AVS/privateClouds/scriptPackages@2021-12-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ScriptPackageProperties](#scriptpackageproperties) (ReadOnly): ScriptPackage resource properties
+* **type**: 'Microsoft.AVS/privateClouds/scriptPackages' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.AVS/privateClouds/scriptPackages/scriptCmdlets@2021-12-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ScriptCmdletProperties](#scriptcmdletproperties) (ReadOnly): The properties of a script cmdlet resource
+* **type**: 'Microsoft.AVS/privateClouds/scriptPackages/scriptCmdlets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AVS/privateClouds/workloadNetworks/dhcpConfigurations@2021-12-01
 * **Valid Scope(s)**: ResourceGroup
@@ -122,6 +149,15 @@
 * **properties**: [WorkloadNetworkDnsZoneProperties](#workloadnetworkdnszoneproperties): DNS Zone properties
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/dnsZones' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/gateways@2021-12-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkloadNetworkGatewayProperties](#workloadnetworkgatewayproperties) (ReadOnly): Gateway properties.
+* **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/gateways' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles@2021-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -148,6 +184,15 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkloadNetworkSegmentProperties](#workloadnetworksegmentproperties): The properties of a Workload Segment proxy resource.
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/segments' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/virtualMachines@2021-12-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkloadNetworkVirtualMachineProperties](#workloadnetworkvirtualmachineproperties) (ReadOnly): Virtual machine properties.
+* **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AVS/privateClouds/workloadNetworks/vmGroups@2021-12-01
 * **Valid Scope(s)**: ResourceGroup
@@ -347,6 +392,12 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ScriptCmdletProperties
+### Properties
+* **description**: string (ReadOnly): Description of the scripts functionality
+* **parameters**: [ScriptParameter](#scriptparameter)[] (ReadOnly): Parameters the script will accept
+* **timeout**: string (ReadOnly): Recommended time limit for execution
+
 ## ScriptExecutionParameter
 * **Discriminator**: type
 
@@ -392,9 +443,29 @@
 ### Additional Properties
 * **Additional Properties Type**: any
 
+## ScriptPackageProperties
+### Properties
+* **description**: string (ReadOnly): User friendly description of the package
+* **version**: string (ReadOnly): Module version
+
+## ScriptParameter
+### Properties
+* **description**: string (ReadOnly): User friendly description of the parameter
+* **name**: string: The parameter name that the script will expect a parameter value for
+* **optional**: 'Optional' | 'Required' | string (ReadOnly): Is this parameter required or optional
+* **type**: 'Bool' | 'Credential' | 'Float' | 'Int' | 'SecureString' | 'String' | string (ReadOnly): The type of parameter the script is expecting. psCredential is a PSCredentialObject
+* **visibility**: 'Hidden' | 'Visible' | string (ReadOnly): Should this parameter be visible to arm and passed in the parameters argument when executing
+
 ## Sku
 ### Properties
 * **name**: string (Required): The name of the SKU.
+
+## VirtualMachineProperties
+### Properties
+* **displayName**: string (ReadOnly): Display name of the VM.
+* **folderPath**: string (ReadOnly): Path to virtual machine's folder starting from datacenter virtual machine folder
+* **moRefId**: string (ReadOnly): Virtual machine managed object reference id
+* **restrictMovement**: 'Disabled' | 'Enabled' | string (ReadOnly): Whether VM DRS-driven movement is restricted (enabled) or not (disabled)
 
 ## WorkloadNetworkDhcpEntity
 * **Discriminator**: dhcpType
@@ -437,6 +508,11 @@
 * **revision**: int: NSX revision number.
 * **sourceIp**: string: Source IP of the DNS Zone.
 
+## WorkloadNetworkGatewayProperties
+### Properties
+* **displayName**: string: Display name of the DHCP entity.
+* **path**: string (ReadOnly): NSX Gateway Path.
+
 ## WorkloadNetworkPortMirroringProperties
 ### Properties
 * **destination**: string: Destination VM Group.
@@ -472,6 +548,11 @@
 ### Properties
 * **dhcpRanges**: string[]: DHCP Range assigned for subnet.
 * **gatewayAddress**: string: Gateway address.
+
+## WorkloadNetworkVirtualMachineProperties
+### Properties
+* **displayName**: string: Display name of the VM.
+* **vmType**: 'EDGE' | 'REGULAR' | 'SERVICE' | string (ReadOnly): Virtual machine type.
 
 ## WorkloadNetworkVMGroupProperties
 ### Properties

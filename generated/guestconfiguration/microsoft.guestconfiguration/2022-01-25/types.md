@@ -1,6 +1,6 @@
 # Microsoft.GuestConfiguration @ 2022-01-25
 
-## Resource Microsoft.GuestConfiguration/guestConfigurationAssignments@2022-01-25
+## Resource Microsoft.GuestConfiguration/guestConfigurationAssignments@2022-01-25 (ReadOnly)
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2022-01-25' (ReadOnly, DeployTimeConstant): The resource api version

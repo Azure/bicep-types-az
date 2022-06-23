@@ -42,6 +42,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Event Subscription resource.
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.EventGrid/extensionTopics@2021-12-01 (ReadOnly)
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [ExtensionTopicProperties](#extensiontopicproperties) (ReadOnly): Properties of the extension topic
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Extension Topic resource.
+* **type**: 'Microsoft.EventGrid/extensionTopics' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.EventGrid/systemTopics@2021-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -86,6 +96,15 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
 * **type**: 'Microsoft.EventGrid/topics/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.EventGrid/topicTypes@2021-12-01 (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TopicTypeProperties](#topictypeproperties) (ReadOnly): Properties of the topic type info
+* **type**: 'Microsoft.EventGrid/topicTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.EventGrid/domains@2021-12-01)
 * **Resource**: Microsoft.EventGrid/domains
@@ -366,6 +385,11 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 * **retryPolicy**: [RetryPolicy](#retrypolicy): The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
 * **topic**: string (ReadOnly): Name of the topic of the event subscription.
 
+## ExtensionTopicProperties
+### Properties
+* **description**: string: Description of the extension topic.
+* **systemTopic**: string: System topic resource id which is mapped to the source.
+
 ## HybridConnectionEventSubscriptionDestinationProperties
 ### Properties
 * **deliveryAttributeMappings**: [DeliveryAttributeMapping](#deliveryattributemapping)[]: Delivery attribute details.
@@ -500,6 +524,17 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 ### Properties
 * **key1**: string: Shared access key1 for the topic.
 * **key2**: string: Shared access key2 for the topic.
+
+## TopicTypeProperties
+### Properties
+* **description**: string: Description of the topic type.
+* **displayName**: string: Display Name for the topic type.
+* **provider**: string: Namespace of the provider of the topic type.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the topic type
+* **resourceRegionType**: 'GlobalResource' | 'RegionalResource' | string: Region type of the resource.
+* **sourceResourceFormat**: string: Source resource format.
+* **supportedLocations**: string[]: List of locations supported by this topic type.
+* **supportedScopesForSource**: 'AzureSubscription' | 'Resource' | 'ResourceGroup' | string[]: Supported source scopes.
 
 ## TrackedResourceTags
 ### Properties

@@ -73,6 +73,41 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/images' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Compute/locations/edgeZones/publishers/artifacttypes/offers/skus/versions@2022-03-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **extendedLocation**: [ExtendedLocation](#extendedlocation) (ReadOnly): The extended location of the Virtual Machine.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The supported Azure location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VirtualMachineImageProperties](#virtualmachineimageproperties) (ReadOnly): Describes the properties of a Virtual Machine Image.
+* **tags**: [VirtualMachineImageResourceTags](#virtualmachineimageresourcetags) (ReadOnly): Specifies the tags that are assigned to the virtual machine. For more information about using tags, see [Using tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags.md).
+* **type**: 'Microsoft.Compute/locations/edgeZones/publishers/artifacttypes/offers/skus/versions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Compute/locations/publishers/artifacttypes/offers/skus/versions@2022-03-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **extendedLocation**: [ExtendedLocation](#extendedlocation) (ReadOnly): The extended location of the Virtual Machine.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The supported Azure location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VirtualMachineImageProperties](#virtualmachineimageproperties) (ReadOnly): Describes the properties of a Virtual Machine Image.
+* **tags**: [VirtualMachineImageResourceTags](#virtualmachineimageresourcetags) (ReadOnly): Specifies the tags that are assigned to the virtual machine. For more information about using tags, see [Using tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags.md).
+* **type**: 'Microsoft.Compute/locations/publishers/artifacttypes/offers/skus/versions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Compute/locations/publishers/artifacttypes/types/versions@2022-03-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VirtualMachineExtensionImageProperties](#virtualmachineextensionimageproperties) (ReadOnly): Describes the properties of a Virtual Machine Extension Image.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Compute/locations/publishers/artifacttypes/types/versions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Compute/proximityPlacementGroups@2022-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -179,6 +214,17 @@
 * **properties**: [VirtualMachineScaleSetExtensionProperties](#virtualmachinescalesetextensionproperties): Describes the properties of a Virtual Machine Scale Set Extension.
 * **type**: 'Microsoft.Compute/virtualMachineScaleSets/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Compute/virtualMachineScaleSets/rollingUpgrades@2022-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location
+* **name**: 'latest' (Required, DeployTimeConstant): The resource name
+* **properties**: [RollingUpgradeStatusInfoProperties](#rollingupgradestatusinfoproperties) (ReadOnly): The status of the latest virtual machine scale set rolling upgrade.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Compute/virtualMachineScaleSets/rollingUpgrades' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Compute/virtualMachineScaleSets/virtualMachines@2022-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -255,6 +301,10 @@
 * **disableAutomaticRollback**: bool: Whether OS image rollback feature should be disabled. Default value is false.
 * **enableAutomaticOSUpgrade**: bool: Indicates whether OS upgrades should automatically be applied to scale set instances in a rolling fashion when a newer version of the OS image becomes available. Default value is false. <br><br> If this is set to true for Windows based scale sets, [enableAutomaticUpdates](https://docs.microsoft.com/dotnet/api/microsoft.azure.management.compute.models.windowsconfiguration.enableautomaticupdates?view=azure-dotnet) is automatically set to false and cannot be set to true.
 * **useRollingUpgradePolicy**: bool: Indicates whether rolling upgrade policy should be used during Auto OS Upgrade. Default value is false. Auto OS Upgrade will fallback to the default policy if no policy is defined on the VMSS.
+
+## AutomaticOSUpgradeProperties
+### Properties
+* **automaticOSUpgradeSupported**: bool (Required): Specifies whether automatic OS upgrade is supported on the image.
 
 ## AutomaticRepairsPolicy
 ### Properties
@@ -351,6 +401,10 @@
 * **vhd**: [VirtualHardDisk](#virtualharddisk): The virtual hard disk.
 * **writeAcceleratorEnabled**: bool: Specifies whether writeAccelerator should be enabled or disabled on the disk.
 
+## DataDiskImage
+### Properties
+* **lun**: int (ReadOnly): Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+
 ## DedicatedHostAllocatableVM
 ### Properties
 * **count**: int: Maximum number of VMs of size vmSize that can fit in the dedicated host's remaining capacity.
@@ -409,6 +463,10 @@
 ### Properties
 * **option**: 'Local' | string: Specifies the ephemeral disk settings for operating system disk.
 * **placement**: 'CacheDisk' | 'ResourceDisk' | string: Specifies the ephemeral disk placement for operating system disk.<br><br> Possible values are: <br><br> **CacheDisk** <br><br> **ResourceDisk** <br><br> Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.<br><br> Refer to VM size documentation for Windows VM at https://docs.microsoft.com/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.
+
+## DisallowedConfiguration
+### Properties
+* **vmDiskType**: 'None' | 'Unmanaged' | string: VM disk types which are disallowed.
 
 ## DiskEncryptionSetParameters
 ### Properties
@@ -595,6 +653,10 @@
 * **vhd**: [VirtualHardDisk](#virtualharddisk): The virtual hard disk.
 * **writeAcceleratorEnabled**: bool: Specifies whether writeAccelerator should be enabled or disabled on the disk.
 
+## OSDiskImage
+### Properties
+* **operatingSystem**: 'Linux' | 'Windows' (Required): The operating system of the osDiskImage.
+
 ## OSProfile
 ### Properties
 * **adminPassword**: string: Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection)
@@ -638,6 +700,22 @@
 ### Properties
 * **name**: 'Basic' | 'Standard' | string: Specify public IP sku name
 * **tier**: 'Global' | 'Regional' | string: Specify public IP sku tier
+
+## PurchasePlan
+### Properties
+* **name**: string (Required): The plan ID.
+* **product**: string (Required): Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
+* **publisher**: string (Required): The publisher ID.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
@@ -797,6 +875,27 @@
 * **pauseTimeBetweenBatches**: string: The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format. The default value is 0 seconds (PT0S).
 * **prioritizeUnhealthyInstances**: bool: Upgrade all unhealthy instances in a scale set before any healthy instances.
 
+## RollingUpgradeProgressInfo
+### Properties
+* **failedInstanceCount**: int (ReadOnly): The number of instances that have failed to be upgraded successfully.
+* **inProgressInstanceCount**: int (ReadOnly): The number of instances that are currently being upgraded.
+* **pendingInstanceCount**: int (ReadOnly): The number of instances that have not yet begun to be upgraded.
+* **successfulInstanceCount**: int (ReadOnly): The number of instances that have been successfully upgraded.
+
+## RollingUpgradeRunningStatus
+### Properties
+* **code**: 'Cancelled' | 'Completed' | 'Faulted' | 'RollingForward' (ReadOnly): Code indicating the current status of the upgrade.
+* **lastAction**: 'Cancel' | 'Start' (ReadOnly): The last action performed on the rolling upgrade.
+* **lastActionTime**: string (ReadOnly): Last action time of the upgrade.
+* **startTime**: string (ReadOnly): Start time of the upgrade.
+
+## RollingUpgradeStatusInfoProperties
+### Properties
+* **error**: [ApiError](#apierror) (ReadOnly): Error details for this upgrade, if there are any.
+* **policy**: [RollingUpgradePolicy](#rollingupgradepolicy) (ReadOnly): The rolling upgrade policies applied for this upgrade.
+* **progress**: [RollingUpgradeProgressInfo](#rollingupgradeprogressinfo) (ReadOnly): Information about the number of virtual machine instances in each upgrade state.
+* **runningStatus**: [RollingUpgradeRunningStatus](#rollingupgraderunningstatus) (ReadOnly): Information about the current running state of the overall upgrade.
+
 ## RunCommandInputParameter
 ### Properties
 * **name**: string (Required): The run command parameter name.
@@ -926,6 +1025,14 @@
 * **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
 * **typeHandlerVersion**: string: Specifies the version of the script handler.
 
+## VirtualMachineExtensionImageProperties
+### Properties
+* **computeRole**: string (Required): The type of role (IaaS or PaaS) this extension supports.
+* **handlerSchema**: string (Required): The schema defined by publisher, where extension consumers should provide settings in a matching schema.
+* **operatingSystem**: string (Required): The operating system this extension supports.
+* **supportsMultipleExtensions**: bool: Whether the handler can support multiple extensions.
+* **vmScaleSetEnabled**: bool: Whether the extension can be used on xRP VMScaleSets. By default existing extensions are usable on scalesets, but there might be cases where a publisher wants to explicitly indicate the extension is only enabled for CRP VMs but not VMSS.
+
 ## VirtualMachineExtensionInstanceView
 ### Properties
 * **name**: string: The virtual machine extension name.
@@ -959,6 +1066,32 @@
 * **tenantId**: string (ReadOnly): The tenant id associated with the virtual machine. This property will only be provided for a system assigned identity.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of identity used for the virtual machine. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The list of user identities associated with the Virtual Machine. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+
+## VirtualMachineImageFeature
+### Properties
+* **name**: string: The name of the feature.
+* **value**: string: The corresponding value for the feature.
+
+## VirtualMachineImageProperties
+### Properties
+* **architecture**: 'Arm64' | 'x64' | string: Specifies the Architecture Type
+* **automaticOSUpgradeProperties**: [AutomaticOSUpgradeProperties](#automaticosupgradeproperties): Describes automatic OS upgrade properties on the image.
+* **dataDiskImages**: [DataDiskImage](#datadiskimage)[]
+* **disallowed**: [DisallowedConfiguration](#disallowedconfiguration): Specifies disallowed configuration for the VirtualMachine created from the image
+* **features**: [VirtualMachineImageFeature](#virtualmachineimagefeature)[]
+* **hyperVGeneration**: 'V1' | 'V2' | string: Specifies the HyperVGeneration Type
+* **osDiskImage**: [OSDiskImage](#osdiskimage): Contains the os disk image information.
+* **plan**: [PurchasePlan](#purchaseplan): Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
+
+## VirtualMachineImageResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## VirtualMachineImageResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## VirtualMachineInstanceView
 ### Properties

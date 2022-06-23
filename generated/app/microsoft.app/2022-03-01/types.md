@@ -23,6 +23,26 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/containerApps/authConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.App/containerApps/revisions@2022-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RevisionProperties](#revisionproperties) (ReadOnly): Revision resource specific properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.App/containerApps/revisions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.App/containerApps/revisions/replicas@2022-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ReplicaProperties](#replicaproperties) (ReadOnly): Replica resource specific properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.App/containerApps/revisions/replicas' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.App/containerApps/sourcecontrols@2022-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -588,6 +608,34 @@ supported
 * **registryPassword**: string (WriteOnly): registry secret.
 * **registryUrl**: string: registry server Url.
 * **registryUserName**: string: registry username.
+
+## ReplicaContainer
+### Properties
+* **containerId**: string: The Id of the Container
+* **name**: string: The Name of the Container
+* **ready**: bool: The container ready status
+* **restartCount**: int: The container restart count
+* **started**: bool: The container start status
+
+## ReplicaProperties
+### Properties
+* **containers**: [ReplicaContainer](#replicacontainer)[]: The containers collection under a replica.
+* **createdTime**: string (ReadOnly): Timestamp describing when the pod was created by controller
+
+## RevisionProperties
+### Properties
+* **active**: bool (ReadOnly): Boolean describing if the Revision is Active
+* **createdTime**: string (ReadOnly): Timestamp describing when the revision was created
+by controller
+* **fqdn**: string (ReadOnly): Fully qualified domain name of the revision
+* **healthState**: 'Healthy' | 'None' | 'Unhealthy' | string (ReadOnly): Current health State of the revision
+* **provisioningError**: string (ReadOnly): Optional Field - Platform Error Message
+* **provisioningState**: 'Deprovisioned' | 'Deprovisioning' | 'Failed' | 'Provisioned' | 'Provisioning' | string (ReadOnly): Current provisioning State of the revision
+* **replicas**: int (ReadOnly): Number of pods currently running for this revision
+* **template**: [Template](#template) (ReadOnly): Container App Revision Template with all possible settings and the
+defaults if user did not provide them. The defaults are populated
+as they were at the creation time
+* **trafficWeight**: int (ReadOnly): Traffic weight assigned to this revision
 
 ## Scale
 ### Properties

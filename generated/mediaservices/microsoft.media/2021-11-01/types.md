@@ -39,6 +39,15 @@
 * **properties**: [AssetTrackProperties](#assettrackproperties): The resource properties.
 * **type**: 'Microsoft.Media/mediaServices/assets/tracks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Media/mediaServices/assets/tracks/operationResults@2021-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AssetTrackProperties](#assettrackproperties) (ReadOnly): The resource properties.
+* **type**: 'Microsoft.Media/mediaServices/assets/tracks/operationResults' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Media/mediaServices/contentKeyPolicies@2021-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties

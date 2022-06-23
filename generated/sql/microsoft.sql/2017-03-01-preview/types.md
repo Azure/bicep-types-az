@@ -1,5 +1,14 @@
 # Microsoft.Sql @ 2017-03-01-preview
 
+## Resource Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups@2017-03-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription, ResourceGroup
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [LongTermRetentionBackupProperties](#longtermretentionbackupproperties) (ReadOnly): Resource properties.
+* **type**: 'Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/managedInstances/administrators@2017-03-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -38,6 +47,17 @@
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Resource properties.
 * **type**: 'Microsoft.Sql/managedInstances/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/managedInstances/restorableDroppedDatabases@2017-03-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RestorableDroppedManagedDatabaseProperties](#restorabledroppedmanageddatabaseproperties) (ReadOnly): Resource properties.
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.Sql/managedInstances/restorableDroppedDatabases' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/managedInstances/restorableDroppedDatabases/backupShortTermRetentionPolicies@2017-03-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -64,6 +84,15 @@
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerBlobAuditingPolicyProperties](#serverblobauditingpolicyproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/automaticTuning@2017-03-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'current' (Required, DeployTimeConstant): The resource name
+* **properties**: [AutomaticTuningServerProperties](#automatictuningserverproperties) (ReadOnly): Resource properties.
+* **type**: 'Microsoft.Sql/servers/automaticTuning' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases@2017-03-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -97,6 +126,15 @@
 * **properties**: [LongTermRetentionPolicyProperties](#longtermretentionpolicyproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/servers/databases/dataWarehouseUserActivities@2017-03-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'current' | string (Required, DeployTimeConstant): The resource name
+* **properties**: [DataWarehouseUserActivitiesProperties](#datawarehouseuseractivitiesproperties) (ReadOnly): Resource properties.
+* **type**: 'Microsoft.Sql/servers/databases/dataWarehouseUserActivities' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/servers/databases/extendedAuditingSettings@2017-03-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -106,12 +144,22 @@
 * **properties**: [ExtendedDatabaseBlobAuditingPolicyProperties](#extendeddatabaseblobauditingpolicyproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/extendedAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/servers/databases/restorePoints@2017-03-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RestorePointProperties](#restorepointproperties) (ReadOnly): Resource properties.
+* **type**: 'Microsoft.Sql/servers/databases/restorePoints' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels@2017-03-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'current' (Required, DeployTimeConstant): The resource name
+* **name**: 'current' | 'recommended' (Required, DeployTimeConstant): The resource name
 * **properties**: [SensitivityLabelProperties](#sensitivitylabelproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -190,6 +238,24 @@
 * **properties**: [JobExecutionProperties](#jobexecutionproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/executions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/servers/jobAgents/jobs/executions/steps@2017-03-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [JobExecutionProperties](#jobexecutionproperties) (ReadOnly): Resource properties.
+* **type**: 'Microsoft.Sql/servers/jobAgents/jobs/executions/steps' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/jobAgents/jobs/executions/steps/targets@2017-03-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [JobExecutionProperties](#jobexecutionproperties) (ReadOnly): Resource properties.
+* **type**: 'Microsoft.Sql/servers/jobAgents/jobs/executions/steps/targets' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/servers/jobAgents/jobs/steps@2017-03-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -198,6 +264,23 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [JobStepProperties](#jobstepproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/steps' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/jobAgents/jobs/versions@2017-03-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: int (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.Sql/servers/jobAgents/jobs/versions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/jobAgents/jobs/versions/steps@2017-03-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [JobStepProperties](#jobstepproperties) (ReadOnly): Resource properties.
+* **type**: 'Microsoft.Sql/servers/jobAgents/jobs/versions/steps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents/targetGroups@2017-03-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -216,6 +299,24 @@
 * **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
+
+## AutomaticTuningServerOptions
+### Properties
+* **actualState**: 'Off' | 'On' (ReadOnly): Automatic tuning option actual state.
+* **desiredState**: 'Default' | 'Off' | 'On': Automatic tuning option desired state.
+* **reasonCode**: int (ReadOnly): Reason code if desired and actual state are different.
+* **reasonDesc**: 'AutoConfigured' | 'Default' | 'Disabled' (ReadOnly): Reason description if desired and actual state are different.
+
+## AutomaticTuningServerProperties
+### Properties
+* **actualState**: 'Auto' | 'Custom' | 'Unspecified' (ReadOnly): Automatic tuning actual state.
+* **desiredState**: 'Auto' | 'Custom' | 'Unspecified': Automatic tuning desired state.
+* **options**: [AutomaticTuningServerPropertiesOptions](#automatictuningserverpropertiesoptions): Automatic tuning options definition.
+
+## AutomaticTuningServerPropertiesOptions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [AutomaticTuningServerOptions](#automatictuningserveroptions)
 
 ## DatabaseBlobAuditingPolicyProperties
 ### Properties
@@ -357,6 +458,10 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 ## DatabaseVulnerabilityAssessmentRuleBaselineProperties
 ### Properties
 * **baselineResults**: [DatabaseVulnerabilityAssessmentRuleBaselineItem](#databasevulnerabilityassessmentrulebaselineitem)[] (Required): The rule baseline result
+
+## DataWarehouseUserActivitiesProperties
+### Properties
+* **activeQueriesCount**: int (ReadOnly): Count of running and suspended queries.
 
 ## ExtendedDatabaseBlobAuditingPolicyProperties
 ### Properties
@@ -628,6 +733,15 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **members**: [JobTarget](#jobtarget)[] (Required): Members of the target group.
 
+## LongTermRetentionBackupProperties
+### Properties
+* **backupExpirationTime**: string (ReadOnly): The time the long term retention backup will expire.
+* **backupTime**: string (ReadOnly): The time the backup was taken
+* **databaseDeletionTime**: string (ReadOnly): The delete time of the database
+* **databaseName**: string (ReadOnly): The name of the database the backup belong to
+* **serverCreateTime**: string (ReadOnly): The create time of the server.
+* **serverName**: string (ReadOnly): The server name that the backup database belong to.
+
 ## LongTermRetentionPolicyProperties
 ### Properties
 * **monthlyRetention**: string: The monthly retention policy for an LTR backup in an ISO 8601 format.
@@ -663,6 +777,20 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **login**: string (Required): Login name of the managed instance administrator.
 * **sid**: string (Required): SID (object ID) of the managed instance administrator.
 * **tenantId**: string: Tenant ID of the managed instance administrator.
+
+## RestorableDroppedManagedDatabaseProperties
+### Properties
+* **creationDate**: string (ReadOnly): The creation date of the database (ISO8601 format).
+* **databaseName**: string (ReadOnly): The name of the database.
+* **deletionDate**: string (ReadOnly): The deletion date of the database (ISO8601 format).
+* **earliestRestoreDate**: string (ReadOnly): The earliest restore date of the database (ISO8601 format).
+
+## RestorePointProperties
+### Properties
+* **earliestRestoreDate**: string (ReadOnly): The earliest time to which this database can be restored
+* **restorePointCreationDate**: string (ReadOnly): The time the backup was taken
+* **restorePointLabel**: string (ReadOnly): The label of restore point for backup request by user
+* **restorePointType**: 'CONTINUOUS' | 'DISCRETE' (ReadOnly): The type of restore point
 
 ## SecurityAlertPolicyProperties
 ### Properties
@@ -782,6 +910,11 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **name**: string (Required): The name of the SKU, typically, a letter + Number code, e.g. P3.
 * **size**: string: Size of the particular SKU
 * **tier**: string: The tier or edition of the particular SKU, e.g. Basic, Premium.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

@@ -12,6 +12,18 @@
 * **sku**: [SkuName](#skuname) (WriteOnly)
 * **type**: 'Microsoft.Capacity/reservationOrders' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Capacity/reservationOrders/reservations@2020-10-01-preview (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: int (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The Azure Region where the reserved resource lives.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ReservationProperties](#reservationproperties) (ReadOnly)
+* **sku**: [SkuName](#skuname) (ReadOnly)
+* **type**: 'Microsoft.Capacity/reservationOrders/reservations' (ReadOnly, DeployTimeConstant): The resource type
+
 ## ExtendedStatusInfo
 ### Properties
 * **message**: string: The message giving detailed information about the status code.
