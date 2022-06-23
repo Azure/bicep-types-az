@@ -1,7 +1,7 @@
 # Microsoft.Security @ 2021-06-01
 
 ## Resource Microsoft.Security/assessmentMetadata@2021-06-01
-* **Valid Scope(s)**: Subscription
+* **Valid Scope(s)**: Tenant (ReadOnly), Subscription
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

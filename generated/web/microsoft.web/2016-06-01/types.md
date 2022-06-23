@@ -36,6 +36,30 @@
 * **tags**: [TagsDictionary](#tagsdictionary): Resource tags
 * **type**: 'Microsoft.Web/customApis' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Web/locations/connectionGatewayInstallations@2016-06-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Resource ETag
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ConnectionGatewayInstallationDefinitionProperties](#connectiongatewayinstallationdefinitionproperties) (ReadOnly)
+* **tags**: [TagsDictionary](#tagsdictionary) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Web/locations/connectionGatewayInstallations' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/locations/managedApis@2016-06-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Resource ETag
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ApiResourceProperties](#apiresourceproperties) (ReadOnly): API resource properties
+* **tags**: [TagsDictionary](#tagsdictionary) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Web/locations/managedApis' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listConsentLinks (Microsoft.Web/connections@2016-06-01)
 * **Resource**: Microsoft.Web/connections
 * **ApiVersion**: 2016-06-01
@@ -121,6 +145,49 @@
 * **modifiedSwaggerUrl**: string: The modified swagger URL
 * **originalSwaggerUrl**: string: The original swagger URL
 
+## ApiResourceGeneralInformation
+### Properties
+* **description**: string: The API description
+* **displayName**: string: Display name
+* **iconUrl**: string: The icon URL
+* **releaseTag**: string: Release tag
+* **termsOfUseUrl**: string: URL to the Terms of Use
+
+## ApiResourceMetadata
+### Properties
+* **apiType**: 'NotSpecified' | 'Rest' | 'Soap' | string: The API type
+* **brandColor**: string: Brand color
+* **connectionType**: string: The connection type
+* **hideKey**: string: Hide key
+* **source**: string: The source
+* **tags**: [TagsDictionary](#tagsdictionary): Resource tags
+* **wsdlImportMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest' | string: The WSDL import method
+* **wsdlService**: [WsdlService](#wsdlservice): The service with name and endpoint names
+
+## ApiResourcePolicies
+### Properties
+* **content**: string: API level policies as XML
+* **contentLink**: string: Link to the JSON of the policies
+
+## ApiResourceProperties
+### Properties
+* **apiDefinitions**: [ApiResourceDefinitions](#apiresourcedefinitions): API Definitions
+* **apiDefinitionUrl**: string: URL where the swagger can be downloaded from
+* **backendService**: [ApiResourceBackendService](#apiresourcebackendservice): The API backend service
+* **capabilities**: string[]: The managed API capabilities
+* **connectionParameters**: [ApiResourcePropertiesConnectionParameters](#apiresourcepropertiesconnectionparameters): Connection parameters
+* **generalInformation**: [ApiResourceGeneralInformation](#apiresourcegeneralinformation): General information about the API
+* **metadata**: [ApiResourceMetadata](#apiresourcemetadata)
+* **name**: string
+* **policies**: [ApiResourcePolicies](#apiresourcepolicies): Describes the API policies either as embedded content or as a link to uploaded content
+* **runtimeUrls**: string[]: Runtime URLs
+* **swagger**: any: The JSON representation of the swagger
+
+## ApiResourcePropertiesConnectionParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ConnectionParameter](#connectionparameter)
+
 ## ConnectionError
 ### Properties
 * **etag**: string: Resource ETag
@@ -140,6 +207,16 @@
 ### Properties
 * **backendUri**: string: The URI of the backend
 * **connectionGatewayInstallation**: [ConnectionGatewayReference](#connectiongatewayreference): The gateway installation reference
+* **contactInformation**: string[]: The gateway admin
+* **description**: string: The gateway description
+* **displayName**: string: The gateway display name
+* **machineName**: string: The machine name of the gateway
+* **status**: any: The gateway status
+
+## ConnectionGatewayInstallationDefinitionProperties
+### Properties
+* **backendUri**: string: The URI of the backend
+* **connectionGateway**: [ConnectionGatewayReference](#connectiongatewayreference): The gateway installation reference
 * **contactInformation**: string[]: The gateway admin
 * **description**: string: The gateway description
 * **displayName**: string: The gateway display name
@@ -205,6 +282,21 @@
 ## ListConsentLinksDefinition
 ### Properties
 * **parameters**: [ConsentLinkParameterDefinition](#consentlinkparameterdefinition)[]: Collection of resources
+
+## TagsDictionary
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TagsDictionary
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TagsDictionary
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TagsDictionary
 ### Properties

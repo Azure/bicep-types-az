@@ -100,6 +100,15 @@
 * **properties**: [InvitationProperties](#invitationproperties): Properties on the Invitation
 * **type**: 'Microsoft.DataShare/accounts/shares/invitations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DataShare/accounts/shares/providerShareSubscriptions@2019-11-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProviderShareSubscriptionProperties](#providersharesubscriptionproperties) (ReadOnly): properties of providerShareSubscription
+* **type**: 'Microsoft.DataShare/accounts/shares/providerShareSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DataShare/accounts/shares/synchronizationSettings@2019-11-01
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
@@ -198,6 +207,15 @@
 * **kind**: 'ScheduleBased' (Required): Kind of synchronization on trigger.
 * **properties**: [ScheduledTriggerProperties](#scheduledtriggerproperties) (Required): Properties of scheduled synchronization
 
+
+## Resource Microsoft.DataShare/locations/consumerInvitations@2019-11-01 (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ConsumerInvitationProperties](#consumerinvitationproperties) (ReadOnly): Properties on the account
+* **type**: 'Microsoft.DataShare/locations/consumerInvitations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listSourceShareSynchronizationSettings (Microsoft.DataShare/accounts/shareSubscriptions@2019-11-01)
 * **Resource**: Microsoft.DataShare/accounts/shareSubscriptions
@@ -368,6 +386,23 @@
 * **storageAccountName**: string (Required): Storage account name of the source data set
 * **subscriptionId**: string (Required): Subscription id of storage account
 
+## ConsumerInvitationProperties
+### Properties
+* **dataSetCount**: int (ReadOnly): Number of data sets in a share
+* **description**: string (ReadOnly): Description shared when the invitation was created
+* **invitationId**: string (Required): Unique id of the invitation.
+* **invitationStatus**: 'Accepted' | 'Pending' | 'Rejected' | 'Withdrawn' | string (ReadOnly): The status of the invitation.
+* **location**: string (ReadOnly): invitation location
+* **providerEmail**: string (ReadOnly): Email of the provider who created the resource
+* **providerName**: string (ReadOnly): Name of the provider who created the resource
+* **providerTenantName**: string (ReadOnly): Tenant name of the provider who created the resource
+* **respondedAt**: string (ReadOnly): The time the recipient responded to the invitation.
+* **sentAt**: string (ReadOnly): Gets the time at which the invitation was sent.
+* **shareName**: string (ReadOnly): Gets the source share Name.
+* **termsOfUse**: string (ReadOnly): Terms of use shared when the invitation was created
+* **userEmail**: string (ReadOnly): Email of the user who created the resource
+* **userName**: string (ReadOnly): Name of the user who created the resource
+
 ## DefaultDtoTags
 ### Properties
 ### Additional Properties
@@ -422,6 +457,18 @@ invitations to specific users or applications in an AD tenant.
 * **kustoDatabaseResourceId**: string (Required): Resource id of the kusto database.
 * **location**: string (ReadOnly): Location of the kusto cluster.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string (ReadOnly): Provisioning state of the kusto database data set.
+
+## ProviderShareSubscriptionProperties
+### Properties
+* **consumerEmail**: string (ReadOnly): Email of the consumer who created the share subscription
+* **consumerName**: string (ReadOnly): Name of the consumer who created the share subscription
+* **consumerTenantName**: string (ReadOnly): Tenant name of the consumer who created the share subscription
+* **createdAt**: string (ReadOnly): created at
+* **providerEmail**: string (ReadOnly): Email of the provider who created the share
+* **providerName**: string (ReadOnly): Name of the provider who created the share
+* **sharedAt**: string (ReadOnly): Shared at
+* **shareSubscriptionObjectId**: string (ReadOnly): share Subscription Object Id
+* **shareSubscriptionStatus**: 'Active' | 'Revoked' | 'Revoking' | 'SourceDeleted' | string (ReadOnly): Gets the status of share subscription
 
 ## ScheduledSourceShareSynchronizationSettingProperties
 ### Properties

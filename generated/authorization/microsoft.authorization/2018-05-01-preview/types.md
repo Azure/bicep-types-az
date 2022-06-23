@@ -19,6 +19,24 @@
 * **status**: 'Applied' | 'Applying' | 'AutoReviewed' | 'AutoReviewing' | 'Completed' | 'Completing' | 'InProgress' | 'Initializing' | 'NotStarted' | 'Scheduled' | 'Starting' | string (ReadOnly, WriteOnly): This read-only field specifies the status of an accessReview.
 * **type**: 'Microsoft.Authorization/accessReviewScheduleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Authorization/accessReviewScheduleDefinitions/instances@2018-05-01-preview (ReadOnly)
+* **Valid Scope(s)**: Tenant, Subscription
+### Properties
+* **apiVersion**: '2018-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AccessReviewInstanceProperties](#accessreviewinstanceproperties) (ReadOnly): Access Review properties.
+* **type**: 'Microsoft.Authorization/accessReviewScheduleDefinitions/instances' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Authorization/accessReviewScheduleDefinitions/instances/decisions@2018-05-01-preview (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2018-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AccessReviewDecisionProperties](#accessreviewdecisionproperties) (ReadOnly): Access Review Decision properties.
+* **type**: 'Microsoft.Authorization/accessReviewScheduleDefinitions/instances/decisions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Authorization/accessReviewScheduleSettings@2018-05-01-preview
 * **Valid Scope(s)**: Subscription
 ### Properties
@@ -43,6 +61,37 @@
 * **principalName**: string (ReadOnly): The identity display name
 * **principalType**: 'servicePrincipal' | 'user' | string (ReadOnly): The identity type : user/servicePrincipal
 * **userPrincipalName**: string (ReadOnly): The user principal name(if valid)
+
+## AccessReviewDecisionProperties
+### Properties
+* **appliedBy**: [AccessReviewActorIdentity](#accessreviewactoridentity) (ReadOnly): Details of the applier.
+* **appliedDateTime**: string (ReadOnly): The date and time when the review decision was applied.
+* **applyResult**: 'AppliedSuccessfully' | 'AppliedSuccessfullyButObjectNotFound' | 'AppliedWithUnknownFailure' | 'ApplyNotSupported' | 'Applying' | 'New' | string (ReadOnly): The outcome of applying the decision.
+* **decision**: 'Approve' | 'Deny' | 'DontKnow' | 'NotNotified' | 'NotReviewed' | string: The decision on the approval step. This value is initially set to NotReviewed. Approvers can take action of Approve/Deny
+* **justification**: string: Justification provided by approvers for their action
+* **recommendation**: 'Approve' | 'Deny' | 'NoInfoAvailable' | string (ReadOnly): The feature- generated recommendation shown to the reviewer.
+* **reviewedBy**: [AccessReviewActorIdentity](#accessreviewactoridentity) (ReadOnly): Details of the approver.
+* **reviewedDateTime**: string (ReadOnly): Date Time when a decision was taken.
+* **target**: [AccessReviewDecisionTarget](#accessreviewdecisiontarget) (ReadOnly): Target of this decision record. Can be UserDecisionTarget or ServicePrincipalDecisionTarget
+
+## AccessReviewDecisionTarget
+* **Discriminator**: type
+
+### Base Properties
+### ServicePrincipalDecisionTarget
+#### Properties
+* **appId**: string (ReadOnly): The appId for the service principal entity being reviewed
+* **principalId**: string (ReadOnly): The id of service principal whose access is reviewed.
+* **principalName**: string (ReadOnly): The display name of the service principal whose access was reviewed.
+* **type**: 'servicePrincipal' (Required): The type of decision target : User/ServicePrincipal
+
+### UserDecisionTarget
+#### Properties
+* **principalId**: string (ReadOnly): The id of user whose access was reviewed.
+* **principalName**: string (ReadOnly): The display name of the user whose access was reviewed.
+* **type**: 'user' (Required): The type of decision target : User/ServicePrincipal
+* **userPrincipalName**: string (ReadOnly): The user principal name of the user whose access was reviewed.
+
 
 ## AccessReviewInstance
 ### Properties

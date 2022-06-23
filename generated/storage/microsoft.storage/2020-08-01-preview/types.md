@@ -1,5 +1,14 @@
 # Microsoft.Storage @ 2020-08-01-preview
 
+## Resource Microsoft.Storage/locations/deletedAccounts@2020-08-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DeletedAccountProperties](#deletedaccountproperties) (ReadOnly): Properties of the deleted account.
+* **type**: 'Microsoft.Storage/locations/deletedAccounts' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Storage/storageAccounts@2020-08-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -301,6 +310,14 @@
 ### Properties
 * **daysAfterLastAccessTimeGreaterThan**: int: Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy
 * **daysAfterModificationGreaterThan**: int: Value indicating the age in days after last modification
+
+## DeletedAccountProperties
+### Properties
+* **creationTime**: string (ReadOnly): Creation time of the deleted account.
+* **deletionTime**: string (ReadOnly): Deletion time of the deleted account.
+* **location**: string (ReadOnly): Location of the deleted account.
+* **restoreReference**: string (ReadOnly): Can be used to attempt recovering this deleted account via PutStorageAccount API.
+* **storageAccountResourceId**: string (ReadOnly): Full resource id of the original storage account.
 
 ## DeleteRetentionPolicy
 ### Properties

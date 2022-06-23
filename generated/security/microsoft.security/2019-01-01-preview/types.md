@@ -10,7 +10,7 @@
 * **type**: 'Microsoft.Security/alertsSuppressionRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/assessmentMetadata@2019-01-01-preview
-* **Valid Scope(s)**: Subscription
+* **Valid Scope(s)**: Tenant (ReadOnly), Subscription
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -27,6 +27,15 @@
 * **properties**: [SecurityAssessmentProperties](#securityassessmentproperties): Describes properties of an assessment.
 * **type**: 'Microsoft.Security/assessments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Security/assessments/subAssessments@2019-01-01-preview (ReadOnly)
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SecuritySubAssessmentProperties](#securitysubassessmentproperties) (ReadOnly): Describes properties of an sub-assessment.
+* **type**: 'Microsoft.Security/assessments/subAssessments' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Security/automations@2019-01-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -39,6 +48,67 @@
 * **properties**: [AutomationProperties](#automationproperties): Security automation data
 * **tags**: [Tags](#tags): A list of key value pairs that describe the resource.
 * **type**: 'Microsoft.Security/automations' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Security/regulatoryComplianceStandards@2019-01-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RegulatoryComplianceStandardProperties](#regulatorycompliancestandardproperties) (ReadOnly): Regulatory compliance standard data
+* **type**: 'Microsoft.Security/regulatoryComplianceStandards' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls@2019-01-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RegulatoryComplianceControlProperties](#regulatorycompliancecontrolproperties) (ReadOnly): Regulatory compliance control data
+* **type**: 'Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls/regulatoryComplianceAssessments@2019-01-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RegulatoryComplianceAssessmentProperties](#regulatorycomplianceassessmentproperties) (ReadOnly): Regulatory compliance assessment data
+* **type**: 'Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls/regulatoryComplianceAssessments' (ReadOnly, DeployTimeConstant): The resource type
+
+## AdditionalData
+* **Discriminator**: assessedResourceType
+
+### Base Properties
+### ContainerRegistryVulnerabilityProperties
+#### Properties
+* **assessedResourceType**: 'ContainerRegistryVulnerability' (Required): Sub-assessment resource type
+* **cve**: [CVE](#cve)[] (ReadOnly): List of CVEs
+* **cvss**: [ContainerRegistryVulnerabilityPropertiesCvss](#containerregistryvulnerabilitypropertiescvss) (ReadOnly): Dictionary from cvss version to cvss details object
+* **imageDigest**: string (ReadOnly): Digest of the vulnerable image
+* **patchable**: bool (ReadOnly): Indicates whether a patch is available or not
+* **publishedTime**: string (ReadOnly): Published time
+* **repositoryName**: string (ReadOnly): Name of the repository which the vulnerable image belongs to
+* **type**: string (ReadOnly): Vulnerability Type. e.g: Vulnerability, Potential Vulnerability, Information Gathered, Vulnerability
+* **vendorReferences**: [VendorReference](#vendorreference)[] (ReadOnly)
+
+### ServerVulnerabilityProperties
+#### Properties
+* **assessedResourceType**: 'ServerVulnerabilityAssessment' (Required): Sub-assessment resource type
+* **cve**: [CVE](#cve)[] (ReadOnly): List of CVEs
+* **cvss**: [ServerVulnerabilityPropertiesCvss](#servervulnerabilitypropertiescvss) (ReadOnly): Dictionary from cvss version to cvss details object
+* **patchable**: bool (ReadOnly): Indicates whether a patch is available or not
+* **publishedTime**: string (ReadOnly): Published time
+* **threat**: string (ReadOnly): Threat name
+* **type**: string (ReadOnly): Vulnerability Type. e.g: Vulnerability, Potential Vulnerability, Information Gathered
+* **vendorReferences**: [VendorReference](#vendorreference)[] (ReadOnly)
+
+### SqlServerVulnerabilityProperties
+#### Properties
+* **assessedResourceType**: 'SqlServerVulnerability' (Required): Sub-assessment resource type
+* **query**: string (ReadOnly): The T-SQL query that runs on your SQL database to perform the particular check
+* **type**: string (ReadOnly): The resource type the sub assessment refers to in its resource details
+
 
 ## AlertsSuppressionRuleProperties
 ### Properties
@@ -112,6 +182,47 @@
 * **propertyJPath**: string: The JPath of the entity model property that should be checked.
 * **propertyType**: 'Boolean' | 'Integer' | 'Number' | 'String' | string: The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
 
+## ContainerRegistryVulnerabilityPropertiesCvss
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [Cvss](#cvss)
+
+## CVE
+### Properties
+* **link**: string (ReadOnly): Link url
+* **title**: string (ReadOnly): CVE title
+
+## Cvss
+### Properties
+* **base**: int (ReadOnly): CVSS base
+
+## RegulatoryComplianceAssessmentProperties
+### Properties
+* **assessmentDetailsLink**: string (ReadOnly): Link to more detailed assessment results data. The response type will be according to the assessmentType field
+* **assessmentType**: string (ReadOnly): The expected type of assessment contained in the AssessmentDetailsLink
+* **description**: string (ReadOnly): The description of the regulatory compliance assessment
+* **failedResources**: int (ReadOnly): The given assessment's related resources count with failed state.
+* **passedResources**: int (ReadOnly): The given assessment's related resources count with passed state.
+* **skippedResources**: int (ReadOnly): The given assessment's related resources count with skipped state.
+* **state**: 'Failed' | 'Passed' | 'Skipped' | 'Unsupported' | string: Aggregative state based on the assessment's scanned resources states
+* **unsupportedResources**: int (ReadOnly): The given assessment's related resources count with unsupported state.
+
+## RegulatoryComplianceControlProperties
+### Properties
+* **description**: string (ReadOnly): The description of the regulatory compliance control
+* **failedAssessments**: int (ReadOnly): The number of supported regulatory compliance assessments of the given control with a failed state
+* **passedAssessments**: int (ReadOnly): The number of supported regulatory compliance assessments of the given control with a passed state
+* **skippedAssessments**: int (ReadOnly): The number of supported regulatory compliance assessments of the given control with a skipped state
+* **state**: 'Failed' | 'Passed' | 'Skipped' | 'Unsupported' | string: Aggregative state based on the control's supported assessments states
+
+## RegulatoryComplianceStandardProperties
+### Properties
+* **failedControls**: int (ReadOnly): The number of supported regulatory compliance controls of the given standard with a failed state
+* **passedControls**: int (ReadOnly): The number of supported regulatory compliance controls of the given standard with a passed state
+* **skippedControls**: int (ReadOnly): The number of supported regulatory compliance controls of the given standard with a skipped state
+* **state**: 'Failed' | 'Passed' | 'Skipped' | 'Unsupported' | string: Aggregative state based on the standard's supported controls states
+* **unsupportedControls**: int (ReadOnly): The number of regulatory compliance controls of the given standard which are unsupported by automated assessments
+
 ## ResourceDetails
 * **Discriminator**: source
 
@@ -161,6 +272,31 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## SecuritySubAssessmentProperties
+### Properties
+* **additionalData**: [AdditionalData](#additionaldata): Details of the sub-assessment
+* **category**: string (ReadOnly): Category of the sub-assessment
+* **description**: string (ReadOnly): Human readable description of the assessment status
+* **displayName**: string (ReadOnly): User friendly display name of the sub-assessment
+* **id**: string (ReadOnly): Vulnerability ID
+* **impact**: string (ReadOnly): Description of the impact of this sub-assessment
+* **remediation**: string (ReadOnly): Information on how to remediate this sub-assessment
+* **resourceDetails**: [ResourceDetails](#resourcedetails): Details of the resource that was assessed
+* **status**: [SubAssessmentStatus](#subassessmentstatus): Status of the sub-assessment
+* **timeGenerated**: string (ReadOnly): The date and time the sub-assessment was generated
+
+## ServerVulnerabilityPropertiesCvss
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [Cvss](#cvss)
+
+## SubAssessmentStatus
+### Properties
+* **cause**: string (ReadOnly): Programmatic code for the cause of the assessment status
+* **code**: 'Healthy' | 'NotApplicable' | 'Unhealthy' | string (ReadOnly): Programmatic code for the status of the assessment
+* **description**: string (ReadOnly): Human readable description of the assessment status
+* **severity**: 'High' | 'Low' | 'Medium' | string (ReadOnly): The sub-assessment severity level
+
 ## SuppressionAlertsScope
 ### Properties
 * **allOf**: [ScopeElement](#scopeelement)[] (Required): All the conditions inside need to be true in order to suppress the alert
@@ -169,4 +305,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## VendorReference
+### Properties
+* **link**: string (ReadOnly): Link url
+* **title**: string (ReadOnly): Link title
 

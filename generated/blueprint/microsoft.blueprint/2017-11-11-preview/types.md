@@ -54,6 +54,31 @@
 * **properties**: [PublishedBlueprintProperties](#publishedblueprintproperties) (ReadOnly): Detailed properties for published Blueprint
 * **type**: 'Microsoft.Blueprint/blueprints/versions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Blueprint/blueprints/versions/artifacts@2017-11-11-preview (ReadOnly)
+* **Valid Scope(s)**: ManagementGroup
+* **Discriminator**: kind
+
+### Base Properties
+* **apiVersion**: '2017-11-11-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.Blueprint/blueprints/versions/artifacts' (ReadOnly, DeployTimeConstant): The resource type
+### PolicyAssignmentArtifact
+#### Properties
+* **kind**: 'policyAssignment' (Required): Specifies the kind of Blueprint artifact.
+* **properties**: [PolicyAssignmentArtifactProperties](#policyassignmentartifactproperties) (ReadOnly): properties for policyAssignment Artifact
+
+### RoleAssignmentArtifact
+#### Properties
+* **kind**: 'roleAssignment' (Required): Specifies the kind of Blueprint artifact.
+* **properties**: [RoleAssignmentArtifactProperties](#roleassignmentartifactproperties) (ReadOnly): Properties for roleAssignment artifact.
+
+### TemplateArtifact
+#### Properties
+* **kind**: 'template' (Required): Specifies the kind of Blueprint artifact.
+* **properties**: [TemplateArtifactProperties](#templateartifactproperties) (ReadOnly): Properties for template artifact
+
+
 ## AssignmentLockSettings
 ### Properties
 * **mode**: 'AllResources' | 'None' | string: Lock mode.

@@ -13,6 +13,16 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.FluidRelay/fluidRelayServers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.FluidRelay/fluidRelayServers/fluidRelayContainers@2022-05-11 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-05-11' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [FluidRelayContainerProperties](#fluidrelaycontainerproperties) (ReadOnly): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System meta data for this resource, including creation and modification information.
+* **type**: 'Microsoft.FluidRelay/fluidRelayServers/fluidRelayContainers' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listKeys (Microsoft.FluidRelay/fluidRelayServers@2022-05-11)
 * **Resource**: Microsoft.FluidRelay/fluidRelayServers
 * **ApiVersion**: 2022-05-11
@@ -31,6 +41,14 @@
 ## EncryptionProperties
 ### Properties
 * **customerManagedKeyEncryption**: [CustomerManagedKeyEncryptionProperties](#customermanagedkeyencryptionproperties): All Customer-managed key encryption properties for the resource.
+
+## FluidRelayContainerProperties
+### Properties
+* **creationTime**: string (ReadOnly): The creation time of this resource
+* **frsContainerId**: string (ReadOnly): The frsContainerId for this container
+* **frsTenantId**: string (ReadOnly): The Fluid tenantId for this container
+* **lastAccessTime**: string (ReadOnly): Last time when user access this resource
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provision states for FluidRelay RP
 
 ## FluidRelayEndpoints
 ### Properties
