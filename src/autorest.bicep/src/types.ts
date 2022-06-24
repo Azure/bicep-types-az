@@ -45,11 +45,17 @@ const ScopeTypeLabel = new Map<ScopeType, string>([
   [ScopeType.Extension, 'Extension'],
 ]);
 
-export function getScopeTypeLabels(input: ScopeType) {
+export function getScopeTypeLabels(input: ScopeType, ...scopeLabels: [ScopeType|undefined, string][]) {
   const types = [];
   for (const [key, value] of ScopeTypeLabel) {
     if ((key & input) === key) {
-      types.push(value);
+      const labels = [];
+      for (const [labeledScopes, label] of scopeLabels) {
+        if (labeledScopes !== undefined && (key & labeledScopes) === key) {
+          labels.push(label);
+        }
+      }
+      types.push(`${value}${labels.length > 0 ? ` (${labels.join(', ')})` : ''}`);
     }
   }
 
@@ -107,6 +113,26 @@ export function getTypeBaseKindLabel(input: TypeBaseKind) {
   return TypeBaseKindLabel.get(input) ?? '';
 }
 
+export enum ResourceFlags {
+  None = 0,
+  ReadOnly = 1 << 0,
+}
+
+const ResourceFlagsLabels = new Map<ResourceFlags, string>([
+  [ResourceFlags.ReadOnly, 'ReadOnly'],
+]);
+
+export function getResourceFlagsLabels(input: ResourceFlags) {
+  const flags = [];
+  for (const [bitmask, label] of ResourceFlagsLabels) {
+    if ((bitmask & input) === bitmask) {
+      flags.push(label);
+    }
+  }
+
+  return flags;
+}
+
 export abstract class TypeBase {
   constructor(type: TypeBaseKind) {
     this.Type = type;
@@ -146,15 +172,19 @@ export class StringLiteralType extends TypeBase {
 }
 
 export class ResourceType extends TypeBase {
-  constructor(name: string, scopeType: ScopeType, body: TypeReference) {
+  constructor(name: string, scopeType: ScopeType, readOnlyScopes: ScopeType|undefined, body: TypeReference, flags: ResourceFlags) {
     super(TypeBaseKind.ResourceType);
     this.Name = name;
     this.ScopeType = scopeType;
+    this.ReadOnlyScopes = readOnlyScopes;
     this.Body = body;
+    this.Flags = flags;
   }
   readonly Name: string;
   readonly ScopeType: ScopeType;
+  readonly ReadOnlyScopes?: ScopeType;
   readonly Body: TypeReference;
+  readonly Flags: ResourceFlags;
 }
 
 export class ResourceFunctionType extends TypeBase {

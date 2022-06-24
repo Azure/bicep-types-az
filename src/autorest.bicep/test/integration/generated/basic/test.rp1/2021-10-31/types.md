@@ -1,5 +1,41 @@
 # Test.Rp1 @ 2021-10-31
 
+## Resource Test.Rp1/partlyReadonlyType@2021-10-31
+* **Valid Scope(s)**: Tenant (ReadOnly), ResourceGroup
+### Properties
+* **apiVersion**: '2021-10-31' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TestType1Properties](#testtype1properties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Test.Rp1/partlyReadonlyType' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Test.Rp1/readOnlyTestType@2021-10-31 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-10-31' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ReadOnlyTestTypeProperties](#readonlytesttypeproperties) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
+* **type**: 'Test.Rp1/readOnlyTestType' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Test.Rp1/splitPutAndGetType@2021-10-31
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-10-31' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: 'constantName' | 'yetAnotherName' | string (Required, DeployTimeConstant): The resource name
+* **properties**: [TestType1CreateOrUpdatePropertiesOrTestType1Properties](#testtype1createorupdatepropertiesortesttype1properties): The resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Test.Rp1/splitPutAndGetType' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Test.Rp1/testType1@2021-10-31
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -53,6 +89,18 @@
 * **district**: string: The district, state, or province where the resource is located.
 * **name**: string (Required): A canonical name for the geographic or physical location.
 
+## Plan
+### Properties
+* **name**: string (Required): A user defined name of the 3rd Party Artifact that is being procured.
+* **product**: string (Required): The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.
+* **promotionCode**: string: A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
+* **publisher**: string (Required): The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
+* **version**: string: The version of the desired product/artifact.
+
+## ReadOnlyTestTypeProperties
+### Properties
+* **plan**: [Plan](#plan): Plan for the resource.
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -69,6 +117,29 @@
 * **locationData**: [LocationData](#locationdata) (ReadOnly): Metadata pertaining to the geographic location of the resource.
 * **skuTier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
 * **stringEnum**: 'Bar' | 'Foo' | string: Description for a basic enum property.
+
+## TestType1Properties
+### Properties
+* **basicString**: string: Description for a basic string property.
+* **encryptionProperties**: [EncryptionProperties](#encryptionproperties): TestType1 encryption properties
+* **locationData**: [LocationData](#locationdata): Metadata pertaining to the geographic location of the resource.
+* **skuTier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
+* **stringEnum**: 'Bar' | 'Foo' | string: Description for a basic enum property.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

@@ -107,6 +107,23 @@
         }
       }
     },
+    "ReadOnlyTestType": {
+      "allOf": [
+        {
+          "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/TrackedResource"
+        }
+      ],
+      "properties": {
+        "properties": {
+          "type": "object",
+          "properties": {
+            "plan": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/Plan"
+            }
+          }
+          }
+        }
+    },
     "FoosResponse": {
       "properties": {
         "someString": {
@@ -324,6 +341,245 @@
             "required": true,
             "type": "string",
             "description": "The testType1 resource name."
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          }
+        ]
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Test.Rp1/readOnlyTestType/{typeName}": {
+      "get": {
+        "summary": "Get a readOnlyTestType resource",
+        "description": "Get a readOnlyTestType resource",
+        "operationId": "ReadOnlyTestType_Get",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ReadOnlyTestType"
+            }
+          },
+          "default": {
+            "description": "Detailed error information.",
+            "schema": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "name": "typeName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The readOnlyTestType resource name."
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          }
+        ]
+      }
+    },
+    "/subscriptions/{subscriptionId}/providers/Test.Rp1/splitPutAndGetType/{typeName}": {
+      "get": {
+        "summary": "Get a splitPutAndGetType resource",
+        "description": "Get a splitPutAndGetType resource",
+        "operationId": "SplitPutAndGetType_Get",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/TestType1"
+            }
+          },
+          "default": {
+            "description": "Detailed error information.",
+            "schema": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "name": "typeName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The splitPutAndGetType resource name.",
+            "enum": [
+              "constantName",
+              "yetAnotherName"
+            ],
+            "x-ms-enum": {
+              "name": "SplitPutAndGetType_Name",
+              "modelAsString": true
+            }
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          }
+        ]
+      }
+    },
+    "/subscriptions/{subscriptionId}/providers/Test.Rp1/splitPutAndGetType/constantName": {
+      "put": {
+        "summary": "Create or update a splitPutAndGetType resource",
+        "description": "Create or update a splitPutAndGetType resource",
+        "operationId": "SplitPutAndGetType_CreateOrUpdate",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/TestType1"
+            }
+          },
+          "default": {
+            "description": "Detailed error information.",
+            "schema": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "name": "parameters",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TestType1Input"
+            },
+            "description": "The request parameters"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          }
+        ]
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Test.Rp1/partlyReadonlyType/{typeName}": {
+      "put": {
+        "summary": "Create or update a partlyReadonlyType resource",
+        "description": "Create or update a partlyReadonlyType resource",
+        "operationId": "PartlyReadonlyType_CreateOrUpdate",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/TestType1"
+            }
+          },
+          "default": {
+            "description": "Detailed error information.",
+            "schema": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "name": "typeName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The partlyReadonlyType resource name."
+          },
+          {
+            "name": "parameters",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TestType1"
+            },
+            "description": "The request parameters"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          }
+        ]
+      },
+      "get": {
+        "summary": "Get a partlyReadonlyType resource",
+        "description": "Get a partlyReadonlyType resource",
+        "operationId": "PartlyReadonlyType_Get",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/TestType1"
+            }
+          },
+          "default": {
+            "description": "Detailed error information.",
+            "schema": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "name": "typeName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The partlyReadonlyType resource name."
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          }
+        ]
+      }
+    },
+    "/providers/Test.Rp1/partlyReadonlyType/{typeName}": {
+      "get": {
+        "summary": "Get a partlyReadonlyType resource at the tenant level",
+        "description": "Get a partlyReadonlyType resource at the tenant level",
+        "operationId": "PartlyReadonlyType_GetAtTenant",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/TestType1"
+            }
+          },
+          "default": {
+            "description": "Detailed error information.",
+            "schema": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "typeName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The partlyReadonlyType resource name."
           },
           {
             "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"

@@ -3,9 +3,10 @@
 
 import { AnySchema, ArraySchema, ChoiceSchema, ConstantSchema, DictionarySchema, ObjectSchema, PrimitiveSchema, Property, Schema, SchemaType, SealedChoiceSchema, StringSchema } from "@autorest/codemodel";
 import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
-import { ArrayType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceFunctionType, ResourceType, StringLiteralType, TypeFactory, TypeReference, UnionType } from "./types";
+import { ArrayType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceFlags, ResourceFunctionType, ResourceType, StringLiteralType, TypeFactory, TypeReference, UnionType } from "./types";
 import { uniq, keys, keyBy, Dictionary, flatMap } from 'lodash';
-import { getFullyQualifiedType, getSerializedName, parseNameSchema, ProviderDefinition, ResourceDefinition, ResourceDescriptor } from "./resources";
+import { getFullyQualifiedType, getNameSchema, getSerializedName, ProviderDefinition, ResourceDefinition, ResourceDescriptor, ResourceOperationDefintion } from "./resources";
+import { failure, success } from "./utils";
 
 export function generateTypes(host: AutorestExtensionHost, definition: ProviderDefinition) {
   const factory = new TypeFactory();
@@ -19,31 +20,89 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     host.message({ Channel: Channel.Information, Text: message, });
   }
 
+  function getResourcePath(definition: ResourceDefinition) {
+    return (definition.putOperation ?? definition.getOperation)?.request.path;
+  }
+
+  function getNameType(fullyQualifiedType: string, definition: ResourceDefinition) {
+    function getSchema(op: ResourceOperationDefintion) {
+      const r = getNameSchema(op.request, op.parameters);
+
+      if (!r.success) {
+        logWarning(`Skipping resource type ${fullyQualifiedType} under path '${op.request.path}': ${r.error}`);
+        return
+      }
+
+      return r.value;
+    }
+
+    // In some cases, the one of the PUT or GET operations for a resource is defined with a constant name while the
+    // other defines a parameterized name, or a resource may use an enum to strictly enforce what names may be used to
+    // PUT a resource while reserving itself some flexibility by providing a looser definition of what will be returned
+    // by a GET. Because the resource's name property will be used both when defining the resource and when using the
+    // `existing` keyword, the two definitions of a resource's name need to be reconciled with a different approach than
+    // is used for other resource properties.
+    const {putOperation, getOperation} = definition;
+    const nameLiterals = new Set<string>();
+    const nameTypes = new Set<BuiltInTypeKind>();
+    for (const ns of [putOperation ? getSchema(putOperation) : undefined, getOperation ? getSchema(getOperation) : undefined]) {
+      if (!ns) {
+        continue;
+      }
+
+      if (ns.type === 'parameterized') {
+        const {schema} = ns;
+        if (schema instanceof ConstantSchema && toBuiltInTypeKind(schema.valueType) === BuiltInTypeKind.String) {
+          nameLiterals.add(schema.value.value);
+        } else if (schema instanceof ChoiceSchema || schema instanceof SealedChoiceSchema) {
+          const enumValues = getValuesForEnum(schema);
+          if (enumValues.success) {
+            const {values, closed} = enumValues.value;
+            values.forEach(v => nameLiterals.add(v));
+            if (!closed) {
+              nameTypes.add(BuiltInTypeKind.String);
+            }
+          }
+        } else {
+          nameTypes.add(toBuiltInTypeKind(schema));
+        }
+      } else {
+        nameLiterals.add(ns.value);
+      }
+    }
+
+    const enumTypes = [...nameLiterals].map(l => factory.addType(new StringLiteralType(l)))
+      .concat([...nameTypes].map(t => factory.lookupBuiltInType(t)));
+
+    if (enumTypes.length === 1) {
+      return success(enumTypes[0]);
+    } else if (enumTypes.length > 0) {
+      return success(factory.addType(new UnionType(enumTypes)));
+    }
+
+    return failure('failed to obtain a name value');
+  }
+
   function processResourceBody(fullyQualifiedType: string, definition: ResourceDefinition) {
-    const { descriptor, putRequest, putParameters, putSchema, getSchema, } = definition;
-    const nameSchemaResult = parseNameSchema(
-      putRequest,
-      putParameters,
-      schema => parseType(schema, schema),
-      (name) => factory.addType(new StringLiteralType(name)));
+    const { descriptor, putOperation, getOperation } = definition;
+    const {requestSchema: putSchema} = putOperation || {};
+    const getSchema = getOperation ? getOperation.responseSchema : putSchema;
 
-    if (!nameSchemaResult.success) {
-      logWarning(`Skipping resource type ${fullyQualifiedType} under path '${putRequest.path}': ${nameSchemaResult.error}`);
+    const nameType = getNameType(fullyQualifiedType, definition);
+
+    if (!nameType.success) {
+      logWarning(`Skipping resource type ${fullyQualifiedType} under path '${getResourcePath(definition)}': ${nameType.error}`);
       return
     }
 
-    if (!nameSchemaResult.value) {
-      logWarning(`Skipping resource type ${fullyQualifiedType} under path '${putRequest.path}': failed to obtain a name value`);
-      return
-    }
-
-    const resourceProperties = getStandardizedResourceProperties(descriptor, nameSchemaResult.value);
+    const resourceProperties = getStandardizedResourceProperties(descriptor, nameType.value);
 
     let resourceDefinition: TypeReference;
-    if (putSchema) {
-      resourceDefinition = createObject(getFullyQualifiedType(descriptor), putSchema, resourceProperties);
+    const schema = definition.putOperation ? putSchema : getSchema;
+    if (schema) {
+      resourceDefinition = createObject(getFullyQualifiedType(descriptor), schema, resourceProperties);
     } else {
-      logInfo(`Resource type ${fullyQualifiedType} under path '${putRequest.path}' has no body defined.`);
+      logInfo(`Resource type ${fullyQualifiedType} under path '${getResourcePath(definition)}' has no body defined.`);
       resourceDefinition = factory.addType(new ObjectType(getFullyQualifiedType(descriptor), resourceProperties));
     }
 
@@ -60,7 +119,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       }
     }
 
-    if (putSchema?.discriminator) {
+    if (schema?.discriminator) {
       const discriminatedObjectType = factory.lookupType(resourceDefinition) as DiscriminatedObjectType;
 
       handlePolymorphicType(discriminatedObjectType, putSchema, getSchema);
@@ -73,7 +132,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     if (definitions.length > 1) {
       for (const definition of definitions) {
         if (!definition.descriptor.constantName) {
-          logWarning(`Skipping resource type ${fullyQualifiedType} under path '${definitions[0].putRequest.path}': Found multiple definitions for the same type`);
+          logWarning(`Skipping resource type ${fullyQualifiedType} under path '${getResourcePath(definitions[0])}': Found multiple definitions for the same type`);
           return null;
         }
       }
@@ -129,11 +188,17 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       }
 
       const { descriptor, bodyType } = output;
+      let flags = ResourceFlags.None;
+      if (descriptor.readonlyScopes === descriptor.scopeType) {
+        flags |= ResourceFlags.ReadOnly;
+      }
 
       factory.addType(new ResourceType(
         `${getFullyQualifiedType(descriptor)}@${descriptor.apiVersion}`,
         descriptor.scopeType,
-        bodyType));
+        descriptor.readonlyScopes !== descriptor.scopeType ? descriptor.readonlyScopes : undefined,
+        bodyType,
+        flags));
     }
 
     for (const action of resourceActions) {
@@ -370,20 +435,18 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     return flags;
   }
 
-  function parsePrimaryType(putSchema: PrimitiveSchema | undefined, getSchema: PrimitiveSchema | undefined) {
-    const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
-
-    switch (combinedSchema.type) {
+  function toBuiltInTypeKind(schema: PrimitiveSchema) {
+    switch (schema.type) {
       case SchemaType.Boolean:
-        return factory.lookupBuiltInType(BuiltInTypeKind.Bool);
+        return BuiltInTypeKind.Bool;
       case SchemaType.Integer:
       case SchemaType.Number:
       case SchemaType.UnixTime:
-        return factory.lookupBuiltInType(BuiltInTypeKind.Int);
+        return BuiltInTypeKind.Int;
       case SchemaType.Object:
-        return factory.lookupBuiltInType(BuiltInTypeKind.Any);
+        return BuiltInTypeKind.Any;
       case SchemaType.ByteArray:
-        return factory.lookupBuiltInType(BuiltInTypeKind.Array);
+        return BuiltInTypeKind.Array;
       case SchemaType.Uri:
       case SchemaType.Date:
       case SchemaType.DateTime:
@@ -392,11 +455,16 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       case SchemaType.Uuid:
       case SchemaType.Duration:
       case SchemaType.Credential:
-        return factory.lookupBuiltInType(BuiltInTypeKind.String);
+        return BuiltInTypeKind.String;
       default:
-        logWarning(`Unrecognized known property type: "${combinedSchema.type}"`);
-        return factory.lookupBuiltInType(BuiltInTypeKind.Any);
+        logWarning(`Unrecognized known property type: "${schema.type}"`);
+        return BuiltInTypeKind.Any;
     }
+  }
+
+  function parsePrimaryType(putSchema: PrimitiveSchema | undefined, getSchema: PrimitiveSchema | undefined) {
+    const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
+    return factory.lookupBuiltInType(toBuiltInTypeKind(combinedSchema));
   }
 
   function handlePolymorphicType(discriminatedObjectType: DiscriminatedObjectType, putSchema?: ObjectSchema, getSchema?: ObjectSchema) {
@@ -499,21 +567,32 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     return definition;
   }
 
+  function getValuesForEnum(schema: ChoiceSchema|SealedChoiceSchema) {
+    if (!(schema.choiceType instanceof StringSchema)) {
+      // we can only handle string enums right now
+      return failure('Only string enums can be converted to union types');
+    }
+
+    return success({
+      values: schema.choices.map(c => c.value.toString()),
+      closed: schema instanceof SealedChoiceSchema
+    });
+  }
+
   function parseEnumType(putSchema: ChoiceSchema | SealedChoiceSchema | undefined, getSchema: ChoiceSchema | SealedChoiceSchema | undefined) {
     const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
 
-    if (!(combinedSchema.choiceType instanceof StringSchema)) {
-      // we can only handle string enums right now
+    const enumValues = getValuesForEnum(combinedSchema);
+
+    if (!enumValues.success) {
       return parseType(putSchema?.choiceType, getSchema?.choiceType);
     }
 
-    const enumTypes = [];
-    for (const enumValue of combinedSchema.choices) {
-      const stringLiteralType = factory.addType(new StringLiteralType(enumValue.value.toString()));
-      enumTypes.push(stringLiteralType);
-    }
+    const {values, closed} = enumValues.value;
 
-    if (combinedSchema.type === SchemaType.Choice) {
+    const enumTypes = values.map(s => factory.addType(new StringLiteralType(s)));
+
+    if (!closed) {
       enumTypes.push(factory.lookupBuiltInType(BuiltInTypeKind.String));
     }
 
