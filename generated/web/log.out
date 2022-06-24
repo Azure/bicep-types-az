@@ -1,7 +1,6 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.4)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -359,9 +358,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
-info    | Processing batch task - {"tag":"microsoft.certificateregistration-2021-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -719,12 +715,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 10ms
-info    | Processing batch task - {"tag":"microsoft.domainregistration-2021-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1082,14 +1074,10 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DomainRegistration/domains/{domainName}/transferOut': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DomainRegistration/listDomainRecommendations': Unable to find type segments
-info    | autorest.bicep took 4ms
-info    | Processing batch task - {"tag":"microsoft.web-2021-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1447,8 +1435,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/BinarySchema | 'The schema paths·15r2hnv·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-web-sites-name-containerlogs·post·responses·200·content·application-octet_stream·schema with 'type: file', format: undefined' will be treated as a binary blob for binary media types.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2021-03-01/WebApps.json:2567:11
@@ -1477,13 +1463,8 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourc
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Web/listSitesAssignedToHostName': Unable to find type segments
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | Resource type microsoft.web/sites/extensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/extensions/onedeploy' has no body defined.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
-info    | Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
-info    | autorest.bicep took 42ms
-info    | Processing batch task - {"tag":"microsoft.certificateregistration-2021-02-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1841,12 +1822,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.domainregistration-2021-02-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2204,13 +2181,9 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DomainRegistration/listDomainRecommendations': Unable to find type segments
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.web-2021-02-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2568,8 +2541,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/BinarySchema | 'The schema paths·15r2hnv·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-web-sites-name-containerlogs·post·responses·200·content·application-octet_stream·schema with 'type: file', format: undefined' will be treated as a binary blob for binary media types.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2021-02-01/WebApps.json:2527:11
@@ -2600,10 +2571,6 @@ warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
-info    | Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
-info    | autorest.bicep took 30ms
-info    | Processing batch task - {"tag":"microsoft.certificateregistration-2021-01-15"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2961,12 +2928,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.domainregistration-2021-01-15"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -3324,13 +3287,9 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DomainRegistration/listDomainRecommendations': Unable to find type segments
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.web-2021-01-15"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -3688,8 +3647,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/BinarySchema | 'The schema paths·15r2hnv·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-web-sites-name-containerlogs·post·responses·200·content·application-octet_stream·schema with 'type: file', format: undefined' will be treated as a binary blob for binary media types.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2021-01-15/WebApps.json:2527:11
@@ -3720,10 +3677,6 @@ warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
-info    | Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
-info    | autorest.bicep took 31ms
-info    | Processing batch task - {"tag":"microsoft.certificateregistration-2021-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -4081,8 +4034,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AppServiceCertificateOrder-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.CertificateRegistration/stable/2021-01-01/AppServiceCertificateOrders.json:1019:9
@@ -4101,8 +4052,6 @@ warning | PreCheck/SchemaMissingType | The schema 'DetectorResponse-properties' 
 warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
-info    | Processing batch task - {"tag":"microsoft.domainregistration-2021-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -4460,8 +4409,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Domain-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.DomainRegistration/stable/2021-01-01/Domains.json:808:9
@@ -4476,8 +4423,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an un
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DomainRegistration/listDomainRecommendations': Unable to find type segments
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.web-2021-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -4835,8 +4780,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AddressResponse-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2021-01-01/AppServiceEnvironments.json:2157:9
@@ -5067,10 +5010,6 @@ warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
-info    | Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
-info    | autorest.bicep took 29ms
-info    | Processing batch task - {"tag":"microsoft.certificateregistration-2020-12-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -5428,8 +5367,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AppServiceCertificateOrder-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.CertificateRegistration/stable/2020-12-01/AppServiceCertificateOrders.json:1019:9
@@ -5448,8 +5385,6 @@ warning | PreCheck/SchemaMissingType | The schema 'DetectorResponse-properties' 
 warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
-info    | Processing batch task - {"tag":"microsoft.domainregistration-2020-12-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -5807,8 +5742,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Domain-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.DomainRegistration/stable/2020-12-01/Domains.json:808:9
@@ -5823,8 +5756,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an un
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DomainRegistration/listDomainRecommendations': Unable to find type segments
-info    | autorest.bicep took 3ms
-info    | Processing batch task - {"tag":"microsoft.web-2020-12-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -6182,8 +6113,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Certificate-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2020-12-01/Certificates.json:319:9
@@ -6410,10 +6339,6 @@ warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
-info    | Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
-info    | autorest.bicep took 37ms
-info    | Processing batch task - {"tag":"microsoft.certificateregistration-2020-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -6771,8 +6696,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AppServiceCertificateOrder-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.CertificateRegistration/stable/2020-10-01/AppServiceCertificateOrders.json:1019:9
@@ -6790,8 +6713,6 @@ warning | PreCheck/SchemaMissingType | The schema 'DefaultErrorResponse-error-de
 warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
-info    | Processing batch task - {"tag":"microsoft.domainregistration-2020-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -7149,8 +7070,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Domain-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.DomainRegistration/stable/2020-10-01/Domains.json:808:9
@@ -7165,8 +7084,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an un
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DomainRegistration/listDomainRecommendations': Unable to find type segments
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.web-2020-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -7524,8 +7441,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Certificate-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2020-10-01/Certificates.json:312:9
@@ -7802,11 +7717,6 @@ warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
-info    | Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
-info    | Resource type microsoft.web/staticsites/customdomains under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/customDomains/{domainName}' has no body defined.
-info    | autorest.bicep took 32ms
-info    | Processing batch task - {"tag":"microsoft.certificateregistration-2020-09-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -8164,8 +8074,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AppServiceCertificateOrder-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.CertificateRegistration/stable/2020-09-01/AppServiceCertificateOrders.json:1019:9
@@ -8183,8 +8091,6 @@ warning | PreCheck/SchemaMissingType | The schema 'DefaultErrorResponse-error-de
 warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.domainregistration-2020-09-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -8542,8 +8448,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Domain-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.DomainRegistration/stable/2020-09-01/Domains.json:808:9
@@ -8558,8 +8462,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an un
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DomainRegistration/listDomainRecommendations': Unable to find type segments
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.web-2020-09-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -8917,8 +8819,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Certificate-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2020-09-01/Certificates.json:312:9
@@ -9191,11 +9091,6 @@ warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
-info    | Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
-info    | Resource type microsoft.web/staticsites/customdomains under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/customDomains/{domainName}' has no body defined.
-info    | autorest.bicep took 38ms
-info    | Processing batch task - {"tag":"microsoft.certificateregistration-2020-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -9553,8 +9448,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AppServiceCertificateOrder-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.CertificateRegistration/stable/2020-06-01/AppServiceCertificateOrders.json:1019:9
@@ -9572,8 +9465,6 @@ warning | PreCheck/SchemaMissingType | The schema 'DefaultErrorResponse-error-de
 warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.domainregistration-2020-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -9931,8 +9822,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Domain-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.DomainRegistration/stable/2020-06-01/Domains.json:808:9
@@ -9947,8 +9836,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an un
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DomainRegistration/listDomainRecommendations': Unable to find type segments
-info    | autorest.bicep took 1ms
-info    | Processing batch task - {"tag":"microsoft.web-2020-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -10306,8 +10193,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Certificate-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2020-06-01/Certificates.json:312:9
@@ -10580,11 +10465,6 @@ warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
-info    | Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
-info    | Resource type microsoft.web/staticsites/customdomains under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/customDomains/{domainName}' has no body defined.
-info    | autorest.bicep took 29ms
-info    | Processing batch task - {"tag":"microsoft.certificateregistration-2019-08-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -10942,8 +10822,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AppServiceCertificateOrder-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.CertificateRegistration/stable/2019-08-01/AppServiceCertificateOrders.json:1019:9
@@ -10961,8 +10839,6 @@ warning | PreCheck/SchemaMissingType | The schema 'DefaultErrorResponse-error-de
 warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
-info    | Processing batch task - {"tag":"microsoft.domainregistration-2019-08-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -11320,8 +11196,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Domain-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.DomainRegistration/stable/2019-08-01/Domains.json:808:9
@@ -11336,8 +11210,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an un
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DomainRegistration/listDomainRecommendations': Unable to find type segments
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.web-2019-08-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -11695,8 +11567,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Certificate-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2019-08-01/Certificates.json:312:9
@@ -11905,11 +11775,6 @@ warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
-info    | Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
-info    | Resource type microsoft.web/staticsites/customdomains under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/customDomains/{domainName}' has no body defined.
-info    | autorest.bicep took 37ms
-info    | Processing batch task - {"tag":"microsoft.certificateregistration-2018-02-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -12267,8 +12132,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AppServiceCertificateOrder-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.CertificateRegistration/stable/2018-02-01/AppServiceCertificateOrders.json:971:9
@@ -12286,8 +12149,6 @@ warning | PreCheck/SchemaMissingType | The schema 'DefaultErrorResponse-error-de
 warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.domainregistration-2018-02-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -12645,8 +12506,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Domain-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.DomainRegistration/stable/2018-02-01/Domains.json:791:9
@@ -12661,8 +12520,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an un
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DomainRegistration/listDomainRecommendations': Unable to find type segments
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.web-2018-11-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -13020,8 +12877,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Certificate-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2018-11-01/Certificates.json:306:9
@@ -13147,10 +13002,6 @@ warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
-info    | Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
-info    | autorest.bicep took 14ms
-info    | Processing batch task - {"tag":"microsoft.web-2018-02-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -13508,8 +13359,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AppServicePlan-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2018-02-01/CommonDefinitions.json:277:9
@@ -13694,12 +13543,8 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourc
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Web/listSitesAssignedToHostName': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
-info    | Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 21ms
-info    | Processing batch task - {"tag":"microsoft.certificateregistration-2015-08-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -14057,8 +13902,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AppServiceCertificateOrder-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.CertificateRegistration/stable/2015-08-01/AppServiceCertificateOrders.json:899:9
@@ -14075,8 +13918,6 @@ warning | PreCheck/SchemaMissingType | The schema 'RenewCertificateOrderRequest-
 warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.domainregistration-2015-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -14434,8 +14275,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Domain-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.DomainRegistration/stable/2015-04-01/Domains.json:724:9
@@ -14451,8 +14290,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an un
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DomainRegistration/listDomainRecommendations': Unable to find type segments
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.web-2016-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -14810,8 +14647,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Certificate-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2016-03-01/Certificates.json:276:9
@@ -14883,8 +14718,6 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Web/listSitesAssignedToHostName': Unable to find type segments
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.web-2016-08-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -15242,8 +15075,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'BackupItem-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2016-08-01/WebApps.json:14924:9
@@ -15356,11 +15187,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/migrate': Found mismatch between type segments (2) and name segments (1)
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
-info    | Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 15ms
-info    | Processing batch task - {"tag":"microsoft.web-2016-09-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -15718,8 +15545,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'MetricDefinition-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2016-09-01/AppServiceEnvironments.json:1956:9
@@ -15742,8 +15567,6 @@ warning | PreCheck/SchemaMissingType | The schema 'VnetGateway-properties' with 
 warning | PreCheck/SchemaMissingType | The schema 'VnetInfo-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'VnetRoute-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 3ms
-info    | Processing batch task - {"tag":"microsoft.web-2016-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -16101,8 +15924,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ConnectionGatewayDefinition-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2016-06-01/logicAppsManagementClient.json:1243:9
@@ -16124,8 +15945,6 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.web-2015-08-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -16483,8 +16302,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CertificateOrderCertificate-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2015-08-01/service.json:16555:9
@@ -16594,8 +16411,6 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourc
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DomainRegistration/listDomainRecommendations': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 22ms
-info    | Processing batch task - {"tag":"microsoft.web-2015-08-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -16953,8 +16768,6 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ApiEntity-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/preview/2015-08-01-preview/logicAppsManagementClient.json:456:9
@@ -16996,5 +16809,3 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
-info    | Autorest completed in 298.59s. 82 files generated.
