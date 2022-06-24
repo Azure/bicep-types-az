@@ -20,6 +20,15 @@
 * **properties**: [ApplicationProperties](#applicationproperties) (Required): Detailed properties for Application
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups/applications' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DesktopVirtualization/applicationGroups/desktops@2019-01-23-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-01-23-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DesktopProperties](#desktopproperties) (ReadOnly): Detailed properties for Desktop
+* **type**: 'Microsoft.DesktopVirtualization/applicationGroups/desktops' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DesktopVirtualization/hostPools@2019-01-23-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -30,6 +39,24 @@
 * **properties**: [HostPoolProperties](#hostpoolproperties) (Required): Detailed properties for HostPool
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/hostPools' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DesktopVirtualization/hostPools/sessionHosts@2019-01-23-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-01-23-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SessionHostProperties](#sessionhostproperties) (ReadOnly): Detailed properties for SessionHost
+* **type**: 'Microsoft.DesktopVirtualization/hostPools/sessionHosts' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions@2019-01-23-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-01-23-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [UserSessionProperties](#usersessionproperties) (ReadOnly): Detailed properties for UserSession
+* **type**: 'Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/workspaces@2019-01-23-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -63,6 +90,13 @@
 * **iconPath**: string: Path to icon.
 * **showInPortal**: bool: Specifies whether to show the RemoteApp program in the RD Web Access server.
 
+## DesktopProperties
+### Properties
+* **description**: string: Description of Desktop.
+* **friendlyName**: string: Friendly name of Desktop.
+* **iconContent**: any (ReadOnly): The icon a 64 bit string as a byte array.
+* **iconHash**: string (ReadOnly): Hash of the icon.
+
 ## HostPoolProperties
 ### Properties
 * **applicationGroupReferences**: string[] (ReadOnly): List of applicationGroup links.
@@ -86,10 +120,22 @@
 * **resetToken**: bool: Update registration token.
 * **token**: string: The registration token base64 encoded string.
 
-## TrackedResourceTags
+## SessionHostProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **agentVersion**: string: Version of agent on SessionHost.
+* **allowNewSession**: bool: Allow a new session.
+* **assignedUser**: string: User assigned to SessionHost.
+* **lastHeartBeat**: string: Last heart beat from SessionHost.
+* **lastUpdateTime**: string (ReadOnly): The timestamp of the last update.
+* **osVersion**: string: The version of the OS on the session host.
+* **resourceId**: string (ReadOnly): Resource Id of SessionHost's underlying virtual machine.
+* **sessions**: int: Number of sessions on SessionHost.
+* **status**: 'Available' | 'Disconnected' | 'Shutdown' | 'Unavailable' | 'UpgradeFailed' | 'Upgrading' | string: Status for a SessionHost.
+* **statusTimestamp**: string (ReadOnly): The timestamp of the status.
+* **sxSStackVersion**: string: The version of the side by side stack on the session host.
+* **updateErrorMessage**: string: The error message.
+* **updateState**: 'Failed' | 'Initial' | 'Pending' | 'Started' | 'Succeeded' | string: Update state of a SessionHost.
+* **virtualMachineId**: string (ReadOnly): Virtual Machine Id of SessionHost's underlying virtual machine.
 
 ## TrackedResourceTags
 ### Properties
@@ -100,6 +146,19 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## UserSessionProperties
+### Properties
+* **activeDirectoryUserName**: string: The active directory user name.
+* **applicationType**: 'Desktop' | 'RemoteApp' | string: Application type of application.
+* **createTime**: string: The timestamp of the user session create.
+* **sessionState**: 'Active' | 'Disconnected' | 'LogOff' | 'Pending' | 'Unknown' | 'UserProfileDiskMounted' | string: State of user session.
+* **userPrincipalName**: string: The user principal name.
 
 ## WorkspaceProperties
 ### Properties

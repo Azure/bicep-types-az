@@ -9,6 +9,15 @@
 * **properties**: [QuotaProperties](#quotaproperties): Quota properties for the specified resource, based on the API called, Quotas or Usages.
 * **type**: 'Microsoft.Quota/quotas' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Quota/usages@2021-03-15-preview (ReadOnly)
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2021-03-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [UsagesProperties](#usagesproperties) (ReadOnly): Usage properties for the specified resource.
+* **type**: 'Microsoft.Quota/usages' (ReadOnly, DeployTimeConstant): The resource type
+
 ## LimitJsonObject
 * **Discriminator**: limitObjectType
 
@@ -38,4 +47,23 @@ This parameter is optional because, for some resources like compute, the period 
 ### Properties
 * **localizedValue**: string (ReadOnly): Resource display name.
 * **value**: string: Resource name.
+
+## UsagesObject
+### Properties
+* **usagesType**: 'Combined' | 'Individual' | string: The quota or usages limit types.
+* **value**: int (Required): The usages value.
+
+## UsagesProperties
+### Properties
+* **isQuotaApplicable**: bool (ReadOnly): States if quota can be requested for this resource.
+* **name**: [ResourceName](#resourcename): Resource name provided by the resource provider. Use this property name when requesting quota.
+* **properties**: any: Additional properties for the specific resource provider.
+* **quotaPeriod**: string (ReadOnly): The time period for the summary of the quota usage values. For example:
+*P1D (per one day)
+*PT1M (per one minute)
+*PT1S (per one second).
+This parameter is optional because it is not relevant for all resources such as compute.
+* **resourceType**: string: The name of the resource type.
+* **unit**: string (ReadOnly): The units for the quota usage, such as Count and Bytes. When requesting quota, use the **unit** value returned in the GET response in the request body of your PUT operation.
+* **usages**: [UsagesObject](#usagesobject): The quota limit properties for this resource.
 

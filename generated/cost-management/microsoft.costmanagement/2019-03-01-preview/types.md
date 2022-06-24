@@ -10,8 +10,18 @@
 * **properties**: [ConnectorProperties](#connectorproperties): Connector properties
 * **type**: 'Microsoft.CostManagement/cloudConnectors' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.CostManagement/externalBillingAccounts@2019-03-01-preview (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): ExternalBillingAccount kind (eg aws)
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ExternalBillingAccountProperties](#externalbillingaccountproperties) (ReadOnly): ExternalBillingAccount properties
+* **type**: 'Microsoft.CostManagement/externalBillingAccounts' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.CostManagement/externalSubscriptions@2019-03-01-preview
-* **Valid Scope(s)**: ManagementGroup
+* **Valid Scope(s)**: Tenant (ReadOnly), ManagementGroup
 ### Properties
 * **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -68,6 +78,13 @@
 * **benefits**: 'AHUB' | 'All' | 'None' | 'Reservations' | 'Sum' | string[]: Array of benefits.
 * **markups**: [Markup](#markup)[]: List of markups.
 * **pricesheet**: string
+
+## ExternalBillingAccountProperties
+### Properties
+* **collectionInfo**: [ConnectorCollectionInfo](#connectorcollectioninfo) (ReadOnly): Collection information
+* **connectorId**: string (ReadOnly): Underlying ConnectorId
+* **displayName**: string (ReadOnly): ExternalBillingAccount DisplayName
+* **providerBillingAccountId**: string (ReadOnly): Provider BillingAccountId (eg AWS Consolidated Account number)
 
 ## Markup
 ### Properties

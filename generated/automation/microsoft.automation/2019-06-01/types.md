@@ -111,6 +111,15 @@
 * **tags**: [DscNodeConfigurationCreateOrUpdateParametersTags](#dscnodeconfigurationcreateorupdateparameterstags) (WriteOnly): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Automation/automationAccounts/nodes@2019-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DscNodeProperties](#dscnodeproperties) (ReadOnly): The properties of a DscNode.
+* **type**: 'Microsoft.Automation/automationAccounts/nodes' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Automation/automationAccounts/python2Packages@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -395,6 +404,10 @@
 * **position**: int: Get or sets the position of the parameter.
 * **type**: string: Gets or sets the type of the parameter.
 
+## DscNodeConfigurationAssociationProperty
+### Properties
+* **name**: string: Gets or sets the name of the dsc node configuration.
+
 ## DscNodeConfigurationCreateOrUpdateParametersPropertiesOrDscNodeConfigurationProperties
 ### Properties
 * **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required): Gets or sets the configuration of the node.
@@ -408,6 +421,24 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DscNodeExtensionHandlerAssociationProperty
+### Properties
+* **name**: string: Gets or sets the name of the extension handler.
+* **version**: string: Gets or sets the version of the extension handler.
+
+## DscNodeProperties
+### Properties
+* **accountId**: string: Gets or sets the account id of the node.
+* **etag**: string: Gets or sets the etag of the resource.
+* **extensionHandler**: [DscNodeExtensionHandlerAssociationProperty](#dscnodeextensionhandlerassociationproperty)[]: Gets or sets the list of extensionHandler properties for a Node.
+* **ip**: string: Gets or sets the ip of the node.
+* **lastSeen**: string: Gets or sets the last seen time of the node.
+* **nodeConfiguration**: [DscNodeConfigurationAssociationProperty](#dscnodeconfigurationassociationproperty): Gets or sets the configuration of the node.
+* **nodeId**: string: Gets or sets the node id.
+* **registrationTime**: string: Gets or sets the registration time of the node.
+* **status**: string: Gets or sets the status of the node.
+* **totalCount**: int: Gets the total number of records matching filter criteria.
 
 ## ErrorResponse
 ### Properties

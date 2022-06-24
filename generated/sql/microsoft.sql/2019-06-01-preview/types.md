@@ -11,6 +11,24 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/managedInstances/databases/restoreDetails@2019-06-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
+* **properties**: [ManagedDatabaseRestoreDetailsProperties](#manageddatabaserestoredetailsproperties) (ReadOnly): Resource properties.
+* **type**: 'Microsoft.Sql/managedInstances/databases/restoreDetails' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/managedInstances/operations@2019-06-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ManagedInstanceOperationProperties](#managedinstanceoperationproperties) (ReadOnly): Resource properties.
+* **type**: 'Microsoft.Sql/managedInstances/operations' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/servers@2019-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -183,6 +201,48 @@ When source subscription belongs to a different tenant than target subscription,
 * **storageContainerSasToken**: string (WriteOnly): Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.
 * **storageContainerUri**: string (WriteOnly): Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.
 
+## ManagedDatabaseRestoreDetailsProperties
+### Properties
+* **blockReason**: string (ReadOnly): The reason why restore is in Blocked state.
+* **currentRestoringFileName**: string (ReadOnly): Current restoring file name.
+* **lastRestoredFileName**: string (ReadOnly): Last restored file name.
+* **lastRestoredFileTime**: string (ReadOnly): Last restored file time.
+* **lastUploadedFileName**: string (ReadOnly): Last uploaded file name.
+* **lastUploadedFileTime**: string (ReadOnly): Last uploaded file time.
+* **numberOfFilesDetected**: int (ReadOnly): Number of files detected.
+* **percentCompleted**: int (ReadOnly): Percent completed.
+* **status**: string (ReadOnly): Restore status.
+* **unrestorableFiles**: string[] (ReadOnly): List of unrestorable files.
+
+## ManagedInstanceOperationParametersPair
+### Properties
+* **currentParameters**: [UpsertManagedServerOperationParameters](#upsertmanagedserveroperationparameters) (ReadOnly): The current parameters.
+* **requestedParameters**: [UpsertManagedServerOperationParameters](#upsertmanagedserveroperationparameters) (ReadOnly): The requested parameters.
+
+## ManagedInstanceOperationProperties
+### Properties
+* **description**: string (ReadOnly): The operation description.
+* **errorCode**: int (ReadOnly): The operation error code.
+* **errorDescription**: string (ReadOnly): The operation error description.
+* **errorSeverity**: int (ReadOnly): The operation error severity.
+* **estimatedCompletionTime**: string (ReadOnly): The estimated completion time of the operation.
+* **isCancellable**: bool (ReadOnly): Whether the operation can be cancelled.
+* **isUserError**: bool (ReadOnly): Whether or not the error is a user error.
+* **managedInstanceName**: string (ReadOnly): The name of the managed instance the operation is being performed on.
+* **operation**: string (ReadOnly): The name of operation.
+* **operationFriendlyName**: string (ReadOnly): The friendly name of operation.
+* **operationParameters**: [ManagedInstanceOperationParametersPair](#managedinstanceoperationparameterspair) (ReadOnly): The operation parameters.
+* **operationSteps**: [ManagedInstanceOperationSteps](#managedinstanceoperationsteps) (ReadOnly): The operation steps.
+* **percentComplete**: int (ReadOnly): The percentage of the operation completed.
+* **startTime**: string (ReadOnly): The operation start time.
+* **state**: 'CancelInProgress' | 'Cancelled' | 'Failed' | 'InProgress' | 'Pending' | 'Succeeded' | string (ReadOnly): The operation state.
+
+## ManagedInstanceOperationSteps
+### Properties
+* **currentStep**: int (ReadOnly): The number of current operation steps.
+* **stepsList**: [UpsertManagedServerOperationStep](#upsertmanagedserveroperationstep)[] (ReadOnly): The operation steps list.
+* **totalSteps**: string (ReadOnly): The total number of operation steps.
+
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty): Private endpoint which the connection belongs to.
@@ -287,6 +347,19 @@ When source subscription belongs to a different tenant than target subscription,
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UpsertManagedServerOperationParameters
+### Properties
+* **family**: string
+* **storageSizeInGB**: int
+* **tier**: string
+* **vCores**: int
+
+## UpsertManagedServerOperationStep
+### Properties
+* **name**: string
+* **order**: int
+* **status**: 'Canceled' | 'Completed' | 'Failed' | 'InProgress' | 'NotStarted' | 'SlowedDown' | string
 
 ## WorkloadClassifierProperties
 ### Properties
