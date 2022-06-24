@@ -1,12 +1,6 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.4)
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
-info    | Processing batch task - {"tag":"microsoft.storagesync-2020-09-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'TriggerChangeDetectionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2020-09-01/storagesync.json:3316:5
@@ -32,10 +26,6 @@ warning | PreCheck/SchemaMissingType | The schema 'StorageSyncServiceUpdateParam
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2020-09-01/storagesync.json:4115:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 14ms
-info    | Processing batch task - {"tag":"microsoft.storagesync-2020-03-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'TriggerChangeDetectionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2020-03-01/storagesync.json:3316:5
@@ -61,10 +51,6 @@ warning | PreCheck/SchemaMissingType | The schema 'StorageSyncServiceUpdateParam
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2020-03-01/storagesync.json:4095:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
-info    | Processing batch task - {"tag":"microsoft.storagesync-2019-10-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'TriggerChangeDetectionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2019-10-01/storagesync.json:2845:5
@@ -90,10 +76,6 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Modeler/MissingType | The schema 'StorageSyncServiceCreateParameters-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2019-10-01/storagesync.json#/components/schemas/StorageSyncServiceCreateParameters-properties
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
-info    | Processing batch task - {"tag":"microsoft.storagesync-2019-06-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'TriggerChangeDetectionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2019-06-01/storagesync.json:2845:5
@@ -119,10 +101,6 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Modeler/MissingType | The schema 'StorageSyncServiceCreateParameters-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2019-06-01/storagesync.json#/components/schemas/StorageSyncServiceCreateParameters-properties
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
-info    | Processing batch task - {"tag":"microsoft.storagesync-2019-03-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'TriggerChangeDetectionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2019-03-01/storagesync.json:2845:5
@@ -148,10 +126,6 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Modeler/MissingType | The schema 'StorageSyncServiceCreateParameters-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2019-03-01/storagesync.json#/components/schemas/StorageSyncServiceCreateParameters-properties
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
-info    | Processing batch task - {"tag":"microsoft.storagesync-2019-02-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'RecallActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2019-02-01/storagesync.json:2689:5
@@ -175,10 +149,6 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Modeler/MissingType | The schema 'StorageSyncServiceCreateParameters-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2019-02-01/storagesync.json#/components/schemas/StorageSyncServiceCreateParameters-properties
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
-info    | Processing batch task - {"tag":"microsoft.storagesync-2018-10-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'RecallActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2018-10-01/storagesync.json:2689:5
@@ -202,10 +172,6 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Modeler/MissingType | The schema 'StorageSyncServiceCreateParameters-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2018-10-01/storagesync.json#/components/schemas/StorageSyncServiceCreateParameters-properties
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
-info    | Processing batch task - {"tag":"microsoft.storagesync-2018-07-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'RecallActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2018-07-01/storagesync.json:2689:5
@@ -230,10 +196,6 @@ warning | Modeler/MissingType | The schema 'StorageSyncServiceCreateParameters-p
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2018-07-01/storagesync.json#/components/schemas/StorageSyncServiceCreateParameters-properties
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
-info    | Processing batch task - {"tag":"microsoft.storagesync-2018-04-02"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'RecallActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/stable/2018-04-02/storagesync.json:2542:5
@@ -264,14 +226,8 @@ warning | PreCheck/SchemaMissingType | The schema 'StorageSyncServiceUpdateParam
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.storagesync-2017-06-05-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagesync/resource-manager/Microsoft.StorageSync/preview/2017-06-05-preview/storagesync.json:2387:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 2ms
-info    | Autorest completed in 28.66s. 20 files generated.

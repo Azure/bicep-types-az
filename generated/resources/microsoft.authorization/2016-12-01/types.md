@@ -10,7 +10,7 @@
 * **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/policyDefinitions@2016-12-01
-* **Valid Scope(s)**: ManagementGroup, Subscription
+* **Valid Scope(s)**: Tenant (ReadOnly), ManagementGroup, Subscription
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

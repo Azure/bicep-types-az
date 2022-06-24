@@ -22,6 +22,15 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The private endpoint connection properties.
 * **type**: 'Microsoft.Databricks/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Databricks/workspaces/privateLinkResources@2021-04-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [GroupIdInformationProperties](#groupidinformationproperties) (ReadOnly): The group id properties.
+* **type**: 'Microsoft.Databricks/workspaces/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Databricks/workspaces/virtualNetworkPeerings@2021-04-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -62,6 +71,12 @@
 * **keyName**: string (Required): The name of KeyVault key.
 * **keyVaultUri**: string (Required): The Uri of KeyVault.
 * **keyVersion**: string (Required): The version of KeyVault key.
+
+## GroupIdInformationProperties
+### Properties
+* **groupId**: string: The group id
+* **requiredMembers**: string[]: The required members for a specific group id
+* **requiredZoneNames**: string[]: The required DNS zones for a specific group id
 
 ## ManagedIdentityConfiguration
 ### Properties

@@ -1,20 +1,14 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.4)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
-info    | Processing batch task - {"tag":"microsoft.iotsecurity-2021-02-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/BinarySchema | 'The schema paths·7g9qi2·subscriptions-subscriptionid-providers-microsoft-iotsecurity-defendersettings-default-downloadmanageractivation·post·responses·200·content·application-zip·schema with 'type: object', format: file' will be treated as a binary blob for binary media types.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/iotsecurity/resource-manager/Microsoft.IoTSecurity/preview/2021-02-01-preview/defenderSettings.json:246:11
@@ -29,8 +23,9 @@ warning | PreCheck/BinarySchema | 'The schema paths·g3b0s3·subscriptions-subsc
 warning | PreCheck/BinarySchema | 'The schema paths·44f8uw·subscriptions-subscriptionid-providers-microsoft-iotsecurity-onpremisesensors-onpremisesensorname-downloadresetpassword·post·responses·200·content·application-zip·schema with 'type: object', format: file' will be treated as a binary blob for binary media types.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/iotsecurity/resource-manager/Microsoft.IoTSecurity/preview/2021-02-01-preview/onPremiseSensors.json:272:11
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | Resource type microsoft.iotsecurity/onpremisesensors under path '/subscriptions/{subscriptionId}/providers/Microsoft.IoTSecurity/onPremiseSensors/{onPremiseSensorName}' has no body defined.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 10ms
-info    | Autorest completed in 4.72s. 2 files generated.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.

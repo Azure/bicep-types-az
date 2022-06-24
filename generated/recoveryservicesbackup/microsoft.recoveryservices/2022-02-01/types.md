@@ -24,6 +24,18 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupEncryptionConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.RecoveryServices/vaults/backupEngines@2022-02-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): Optional ETag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [BackupEngineBase](#backupenginebase) (ReadOnly): BackupEngineBaseResource properties
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.RecoveryServices/vaults/backupEngines' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.RecoveryServices/vaults/backupFabrics/backupProtectionIntent@2022-02-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -48,6 +60,18 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/operationResults@2022-02-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): Optional ETag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProtectionContainer](#protectioncontainer) (ReadOnly): ProtectionContainerResource properties
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/operationResults' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems@2022-02-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -60,6 +84,42 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/operationResults@2022-02-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): Optional ETag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProtectedItem](#protecteditem) (ReadOnly): ProtectedItemResource properties
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/operationResults' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints@2022-02-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): Optional ETag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecoveryPoint](#recoverypoint) (ReadOnly): RecoveryPointResource properties
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.RecoveryServices/vaults/backupJobs@2022-02-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): Optional ETag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [Job](#job) (ReadOnly): JobResource properties
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.RecoveryServices/vaults/backupJobs' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.RecoveryServices/vaults/backupPolicies@2022-02-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -71,6 +131,18 @@
 * **properties**: [ProtectionPolicy](#protectionpolicy): ProtectionPolicyResource properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.RecoveryServices/vaults/backupPolicies/operationResults@2022-02-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): Optional ETag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProtectionPolicy](#protectionpolicy) (ReadOnly): ProtectionPolicyResource properties
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/backupResourceGuardProxies@2022-02-01
 * **Valid Scope(s)**: ResourceGroup
@@ -121,11 +193,131 @@
 ### Additional Properties
 * **Additional Properties Type**: [KPIResourceHealthDetails](#kpiresourcehealthdetails)
 
+## AzureIaaSVMErrorInfo
+### Properties
+* **errorCode**: int (ReadOnly): Error code.
+* **errorString**: string (ReadOnly): Localized error string.
+* **errorTitle**: string (ReadOnly): Title: Typically, the entity that the error pertains to.
+* **recommendations**: string[] (ReadOnly): List of localized recommendations for above error code.
+
+## AzureIaaSVMJobExtendedInfo
+### Properties
+* **dynamicErrorMessage**: string: Non localized error message on job execution.
+* **estimatedRemainingDuration**: string: Time remaining for execution of this job.
+* **internalPropertyBag**: [AzureIaaSVMJobExtendedInfoInternalPropertyBag](#azureiaasvmjobextendedinfointernalpropertybag): Job internal properties.
+* **progressPercentage**: int: Indicates progress of the job. Null if it has not started or completed.
+* **propertyBag**: [AzureIaaSVMJobExtendedInfoPropertyBag](#azureiaasvmjobextendedinfopropertybag): Job properties.
+* **tasksList**: [AzureIaaSVMJobTaskDetails](#azureiaasvmjobtaskdetails)[]: List of tasks associated with this job.
+
+## AzureIaaSVMJobExtendedInfoInternalPropertyBag
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## AzureIaaSVMJobExtendedInfoPropertyBag
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## AzureIaaSVMJobTaskDetails
+### Properties
+* **duration**: string: Time elapsed for task.
+* **endTime**: string: The end time.
+* **instanceId**: string: The instanceId.
+* **progressPercentage**: int: Progress of the task.
+* **startTime**: string: The start time.
+* **status**: string: The status.
+* **taskExecutionDetails**: string: Details about execution of the task.
+eg: number of bytes transferred etc
+* **taskId**: string: The task display name.
+
 ## AzureSqlProtectedItemExtendedInfo
 ### Properties
 * **oldestRecoveryPoint**: string: The oldest backup copy available for this item in the service.
 * **policyState**: string: State of the backup policy associated with this backup item.
 * **recoveryPointCount**: int: Number of available backup copies associated with this backup item.
+
+## AzureStorageErrorInfo
+### Properties
+* **errorCode**: int: Error code.
+* **errorString**: string: Localized error string.
+* **recommendations**: string[]: List of localized recommendations for above error code.
+
+## AzureStorageJobExtendedInfo
+### Properties
+* **dynamicErrorMessage**: string: Non localized error message on job execution.
+* **propertyBag**: [AzureStorageJobExtendedInfoPropertyBag](#azurestoragejobextendedinfopropertybag): Job properties.
+* **tasksList**: [AzureStorageJobTaskDetails](#azurestoragejobtaskdetails)[]: List of tasks for this job
+
+## AzureStorageJobExtendedInfoPropertyBag
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## AzureStorageJobTaskDetails
+### Properties
+* **status**: string: The status.
+* **taskId**: string: The task display name.
+
+## AzureWorkloadErrorInfo
+### Properties
+* **additionalDetails**: string: Additional details for above error code.
+* **errorCode**: int: Error code.
+* **errorString**: string: Localized error string.
+* **errorTitle**: string: Title: Typically, the entity that the error pertains to.
+* **recommendations**: string[]: List of localized recommendations for above error code.
+
+## AzureWorkloadJobExtendedInfo
+### Properties
+* **dynamicErrorMessage**: string: Non localized error message on job execution.
+* **propertyBag**: [AzureWorkloadJobExtendedInfoPropertyBag](#azureworkloadjobextendedinfopropertybag): Job properties.
+* **tasksList**: [AzureWorkloadJobTaskDetails](#azureworkloadjobtaskdetails)[]: List of tasks for this job
+
+## AzureWorkloadJobExtendedInfoPropertyBag
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## AzureWorkloadJobTaskDetails
+### Properties
+* **status**: string: The status.
+* **taskId**: string: The task display name.
+
+## BackupEngineBase
+* **Discriminator**: backupEngineType
+
+### Base Properties
+* **azureBackupAgentVersion**: string: Backup agent version
+* **backupEngineId**: string: ID of the backup engine.
+* **backupEngineState**: string: Status of the backup engine with the Recovery Services Vault. = {Active/Deleting/DeleteFailed}
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string: Type of backup management for the backup engine.
+* **canReRegister**: bool: Flag indicating if the backup engine be registered, once already registered.
+* **dpmVersion**: string: Backup engine version
+* **extendedInfo**: [BackupEngineExtendedInfo](#backupengineextendedinfo): Extended info of the backupengine
+* **friendlyName**: string: Friendly name of the backup engine.
+* **healthStatus**: string: Backup status of the backup engine.
+* **isAzureBackupAgentUpgradeAvailable**: bool: To check if backup agent upgrade available
+* **isDpmUpgradeAvailable**: bool: To check if backup engine upgrade available
+* **registrationStatus**: string: Registration status of the backup engine with the Recovery Services Vault.
+### AzureBackupServerEngine
+#### Properties
+* **backupEngineType**: 'AzureBackupServerEngine' (Required): Type of the backup engine.
+
+### DpmBackupEngine
+#### Properties
+* **backupEngineType**: 'DpmBackupEngine' (Required): Type of the backup engine.
+
+
+## BackupEngineExtendedInfo
+### Properties
+* **availableDiskSpace**: int: Disk space currently available in the backup engine.
+* **azureProtectedInstances**: int: Protected instances in the backup engine.
+* **databaseName**: string: Database name of backup engine.
+* **diskCount**: int: Number of disks in the backup engine.
+* **protectedItemsCount**: int: Number of protected items in the backup engine.
+* **protectedServersCount**: int: Number of protected servers in the backup engine.
+* **refreshedAt**: string: Last refresh time in the backup engine.
+* **usedDiskSpace**: int: Disk space used in the backup engine.
 
 ## BackupResourceConfig
 ### Properties
@@ -156,6 +348,12 @@
 * **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type.
 * **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked' | string: Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
 
+## BEKDetails
+### Properties
+* **secretData**: string: BEK data.
+* **secretUrl**: string: Secret is BEK.
+* **secretVaultId**: string: ID of the Key Vault where this Secret is stored.
+
 ## ContainerIdentityInfo
 ### Properties
 * **aadTenantId**: string: Protection container identity - AAD Tenant
@@ -180,6 +378,35 @@
 ### Properties
 * **date**: int: Date of the month
 * **isLast**: bool: Whether Date is last date of month
+
+## DiskInformation
+### Properties
+* **lun**: int
+* **name**: string
+
+## DpmErrorInfo
+### Properties
+* **errorString**: string: Localized error string.
+* **recommendations**: string[]: List of localized recommendations for above error code.
+
+## DpmJobExtendedInfo
+### Properties
+* **dynamicErrorMessage**: string: Non localized error message on job execution.
+* **propertyBag**: [DpmJobExtendedInfoPropertyBag](#dpmjobextendedinfopropertybag): The job properties.
+* **tasksList**: [DpmJobTaskDetails](#dpmjobtaskdetails)[]: List of tasks associated with this job.
+
+## DpmJobExtendedInfoPropertyBag
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DpmJobTaskDetails
+### Properties
+* **duration**: string: Time elapsed for task.
+* **endTime**: string: The end time.
+* **startTime**: string: The start time.
+* **status**: string: The status.
+* **taskId**: string: The task display name.
 
 ## DPMProtectedItemExtendedInfo
 ### Properties
@@ -226,10 +453,111 @@
 * **scheduleWindowDuration**: int: To specify duration of the backup window
 * **scheduleWindowStartTime**: string: To specify start time of the backup window
 
+## IaasVMRecoveryPointMoveReadinessInfo
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [RecoveryPointMoveReadinessInfo](#recoverypointmovereadinessinfo)
+
 ## InstantRPAdditionalDetails
 ### Properties
 * **azureBackupRGNamePrefix**: string
 * **azureBackupRGNameSuffix**: string
+
+## Job
+* **Discriminator**: jobType
+
+### Base Properties
+* **activityId**: string: ActivityId of job.
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string: Backup management type to execute the current job.
+* **endTime**: string: The end time.
+* **entityFriendlyName**: string: Friendly name of the entity on which the current job is executing.
+* **operation**: string: The operation name.
+* **startTime**: string: The start time.
+* **status**: string: Job status.
+### AzureIaaSVMJob
+#### Properties
+* **actionsInfo**: 'Cancellable' | 'Invalid' | 'Retriable'[]: Gets or sets the state/actions applicable on this job like cancel/retry.
+* **containerName**: string: Container name of the entity on which the current job is executing.
+* **duration**: string: Time elapsed during the execution of this job.
+* **errorDetails**: [AzureIaaSVMErrorInfo](#azureiaasvmerrorinfo)[]: Error details on execution of this job.
+* **extendedInfo**: [AzureIaaSVMJobExtendedInfo](#azureiaasvmjobextendedinfo): Additional information for this job.
+* **isUserTriggered**: bool: Indicated that whether the job is adhoc(true) or scheduled(false)
+* **jobType**: 'AzureIaaSVMJob' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **virtualMachineVersion**: string: Specifies whether the backup item is a Classic or an Azure Resource Manager VM.
+
+### AzureIaaSVMJobV2
+#### Properties
+* **actionsInfo**: 'Cancellable' | 'Invalid' | 'Retriable'[]: Gets or sets the state/actions applicable on this job like cancel/retry.
+* **containerName**: string: Container name of the entity on which the current job is executing.
+* **duration**: string: Time elapsed during the execution of this job.
+* **errorDetails**: [AzureIaaSVMErrorInfo](#azureiaasvmerrorinfo)[]: Error details on execution of this job.
+* **extendedInfo**: [AzureIaaSVMJobExtendedInfo](#azureiaasvmjobextendedinfo): Additional information for this job.
+* **jobType**: 'AzureIaaSVMJobV2' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **virtualMachineVersion**: string: Specifies whether the backup item is a Classic or an Azure Resource Manager VM.
+
+### AzureStorageJob
+#### Properties
+* **actionsInfo**: 'Cancellable' | 'Invalid' | 'Retriable'[]: Gets or sets the state/actions applicable on this job like cancel/retry.
+* **duration**: string: Time elapsed during the execution of this job.
+* **errorDetails**: [AzureStorageErrorInfo](#azurestorageerrorinfo)[]: Error details on execution of this job.
+* **extendedInfo**: [AzureStorageJobExtendedInfo](#azurestoragejobextendedinfo): Additional information about the job.
+* **isUserTriggered**: bool: Indicated that whether the job is adhoc(true) or scheduled(false)
+* **jobType**: 'AzureStorageJob' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **storageAccountName**: string: Specifies friendly name of the storage account.
+* **storageAccountVersion**: string: Specifies whether the Storage account is a Classic or an Azure Resource Manager Storage account.
+
+### AzureWorkloadJob
+#### Properties
+* **actionsInfo**: 'Cancellable' | 'Invalid' | 'Retriable'[]: Gets or sets the state/actions applicable on this job like cancel/retry.
+* **duration**: string: Time elapsed during the execution of this job.
+* **errorDetails**: [AzureWorkloadErrorInfo](#azureworkloaderrorinfo)[]: Error details on execution of this job.
+* **extendedInfo**: [AzureWorkloadJobExtendedInfo](#azureworkloadjobextendedinfo): Additional information about the job.
+* **jobType**: 'AzureWorkloadJob' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **workloadType**: string: Workload type of the job
+
+### DpmJob
+#### Properties
+* **actionsInfo**: 'Cancellable' | 'Invalid' | 'Retriable'[]: The state/actions applicable on this job like cancel/retry.
+* **containerName**: string: Name of cluster/server protecting current backup item, if any.
+* **containerType**: string: Type of container.
+* **dpmServerName**: string: DPM server name managing the backup item or backup job.
+* **duration**: string: Time elapsed for job.
+* **errorDetails**: [DpmErrorInfo](#dpmerrorinfo)[]: The errors.
+* **extendedInfo**: [DpmJobExtendedInfo](#dpmjobextendedinfo): Additional information for this job.
+* **jobType**: 'DpmJob' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **workloadType**: string: Type of backup item.
+
+### MabJob
+#### Properties
+* **actionsInfo**: 'Cancellable' | 'Invalid' | 'Retriable'[]: The state/actions applicable on jobs like cancel/retry.
+* **duration**: string: Time taken by job to run.
+* **errorDetails**: [MabErrorInfo](#maberrorinfo)[]: The errors.
+* **extendedInfo**: [MabJobExtendedInfo](#mabjobextendedinfo): Additional information on the job.
+* **jobType**: 'MabJob' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **mabServerName**: string: Name of server protecting the DS.
+* **mabServerType**: 'AzureBackupServerContainer' | 'AzureSqlContainer' | 'Cluster' | 'DPMContainer' | 'GenericContainer' | 'IaasVMContainer' | 'IaasVMServiceContainer' | 'Invalid' | 'MABContainer' | 'SQLAGWorkLoadContainer' | 'StorageContainer' | 'Unknown' | 'VCenter' | 'VMAppContainer' | 'Windows' | string: Server type of MAB container.
+* **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string: Workload type of backup item.
+
+### VaultJob
+#### Properties
+* **actionsInfo**: 'Cancellable' | 'Invalid' | 'Retriable'[]: Gets or sets the state/actions applicable on this job like cancel/retry.
+* **duration**: string: Time elapsed during the execution of this job.
+* **errorDetails**: [VaultJobErrorInfo](#vaultjoberrorinfo)[]: Error details on execution of this job.
+* **extendedInfo**: [VaultJobExtendedInfo](#vaultjobextendedinfo): Additional information about the job.
+* **jobType**: 'VaultJob' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+
+
+## KEKDetails
+### Properties
+* **keyBackupData**: string: KEK data.
+* **keyUrl**: string: Key is KEK.
+* **keyVaultId**: string: Key Vault ID where this Key is stored.
+
+## KeyAndSecretDetails
+### Properties
+* **bekDetails**: [BEKDetails](#bekdetails): BEK is bitlocker encryption key.
+* **encryptionMechanism**: string: Encryption mechanism: None/ SinglePass/ DoublePass
+* **kekDetails**: [KEKDetails](#kekdetails): KEK is encryption key for BEK.
 
 ## KPIResourceHealthDetails
 ### Properties
@@ -251,11 +579,35 @@
 * **recommendations**: string[]: Health Recommended Actions
 * **title**: string: Health Title
 
+## MabErrorInfo
+### Properties
+* **errorString**: string (ReadOnly): Localized error string.
+* **recommendations**: string[] (ReadOnly): List of localized recommendations.
+
 ## MabFileFolderProtectedItemExtendedInfo
 ### Properties
 * **lastRefreshedAt**: string: Last time when the agent data synced to service.
 * **oldestRecoveryPoint**: string: The oldest backup copy available.
 * **recoveryPointCount**: int: Number of backup copies associated with the backup item.
+
+## MabJobExtendedInfo
+### Properties
+* **dynamicErrorMessage**: string: Non localized error message specific to this job.
+* **propertyBag**: [MabJobExtendedInfoPropertyBag](#mabjobextendedinfopropertybag): The job properties.
+* **tasksList**: [MabJobTaskDetails](#mabjobtaskdetails)[]: List of tasks for this job.
+
+## MabJobExtendedInfoPropertyBag
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## MabJobTaskDetails
+### Properties
+* **duration**: string: Time elapsed for task.
+* **endTime**: string: The end time.
+* **startTime**: string: The start time.
+* **status**: string: The status.
+* **taskId**: string: The task display name.
 
 ## MonthlyRetentionSchedule
 ### Properties
@@ -264,6 +616,11 @@
 * **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly' | string: Retention schedule format type for monthly retention policy.
 * **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format for monthly retention policy.
 * **retentionTimes**: string[]: Retention times of retention policy.
+
+## PointInTimeRange
+### Properties
+* **endTime**: string: End time of the time range for log recovery.
+* **startTime**: string: Start time of the time range for log recovery.
 
 ## PrivateEndpoint
 ### Properties
@@ -531,6 +888,82 @@ Backup is VMAppContainer
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Backup schedule of backup policy.
 
 
+## RecoveryPoint
+* **Discriminator**: objectType
+
+### Base Properties
+### AzureFileShareRecoveryPoint
+#### Properties
+* **fileShareSnapshotUri**: string: Contains Url to the snapshot of fileshare, if applicable
+* **objectType**: 'AzureFileShareRecoveryPoint' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **recoveryPointSizeInGB**: int: Contains recovery point size
+* **recoveryPointTime**: string: Time at which this backup copy was created.
+* **recoveryPointType**: string: Type of the backup copy. Specifies whether it is a crash consistent backup or app consistent.
+
+### AzureWorkloadSAPHanaPointInTimeRecoveryPoint
+#### Properties
+* **objectType**: 'AzureWorkloadSAPHanaPointInTimeRecoveryPoint' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+
+### AzureWorkloadSAPHanaRecoveryPoint
+#### Properties
+* **objectType**: 'AzureWorkloadSAPHanaRecoveryPoint' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+
+### AzureWorkloadSQLPointInTimeRecoveryPoint
+#### Properties
+* **objectType**: 'AzureWorkloadSQLPointInTimeRecoveryPoint' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **timeRanges**: [PointInTimeRange](#pointintimerange)[]: List of log ranges
+
+### GenericRecoveryPoint
+#### Properties
+* **friendlyName**: string: Friendly name of the backup copy.
+* **objectType**: 'GenericRecoveryPoint' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **recoveryPointAdditionalInfo**: string: Additional information associated with this backup copy.
+* **recoveryPointTime**: string: Time at which this backup copy was created.
+* **recoveryPointType**: string: Type of the backup copy.
+
+### IaasVMRecoveryPoint
+#### Properties
+* **isInstantIlrSessionActive**: bool: Is the session to recover items from this backup copy still active.
+* **isManagedVirtualMachine**: bool: Whether VM is with Managed Disks
+* **isSourceVMEncrypted**: bool: Identifies whether the VM was encrypted when the backup copy is created.
+* **keyAndSecret**: [KeyAndSecretDetails](#keyandsecretdetails): Required details for recovering an encrypted VM. Applicable only when IsSourceVMEncrypted is true.
+* **objectType**: 'IaasVMRecoveryPoint' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **originalStorageAccountOption**: bool: Original Storage Account Option
+* **osType**: string: OS type
+* **recoveryPointAdditionalInfo**: string: Additional information associated with this backup copy.
+* **recoveryPointDiskConfiguration**: [RecoveryPointDiskConfiguration](#recoverypointdiskconfiguration): Disk configuration
+* **recoveryPointMoveReadinessInfo**: [IaasVMRecoveryPointMoveReadinessInfo](#iaasvmrecoverypointmovereadinessinfo): Eligibility of RP to be moved to another tier
+* **recoveryPointTierDetails**: [RecoveryPointTierInformationV2](#recoverypointtierinformationv2)[]: Recovery point tier information.
+* **recoveryPointTime**: string: Time at which this backup copy was created.
+* **recoveryPointType**: string: Type of the backup copy.
+* **sourceVMStorageType**: string: Storage type of the VM whose backup copy is created.
+* **virtualMachineSize**: string: Virtual Machine Size
+* **zones**: string[]: Identifies the zone of the VM at the time of backup. Applicable only for zone-pinned Vms
+
+
+## RecoveryPointDiskConfiguration
+### Properties
+* **excludedDiskList**: [DiskInformation](#diskinformation)[]: Information of disks excluded from backup
+* **includedDiskList**: [DiskInformation](#diskinformation)[]: Information of disks included in backup
+* **numberOfDisksAttachedToVm**: int: Number of disks attached to the VM
+* **numberOfDisksIncludedInBackup**: int: Number of disks included in backup
+
+## RecoveryPointMoveReadinessInfo
+### Properties
+* **additionalInfo**: string
+* **isReadyForMove**: bool
+
+## RecoveryPointTierInformationExtendedInfo
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RecoveryPointTierInformationV2
+### Properties
+* **extendedInfo**: [RecoveryPointTierInformationExtendedInfo](#recoverypointtierinformationextendedinfo): Recovery point tier status.
+* **status**: 'Deleted' | 'Disabled' | 'Invalid' | 'Rehydrated' | 'Valid': Recovery point tier status.
+* **type**: 'ArchivedRP' | 'HardenedRP' | 'InstantRP' | 'Invalid': Recovery point tier type.
+
 ## ResourceGuardOperationDetail
 ### Properties
 * **defaultResourceRequest**: string
@@ -549,6 +982,36 @@ Backup is VMAppContainer
 * **message**: string (ReadOnly): Health Message
 * **recommendations**: string[] (ReadOnly): Health Recommended Actions
 * **title**: string (ReadOnly): Health Title
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
@@ -662,6 +1125,21 @@ will be deprecated once clients upgrade to consider this flag.
 * **policyType**: 'CopyOnlyFull' | 'Differential' | 'Full' | 'Incremental' | 'Invalid' | 'Log' | string: Type of backup policy type
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Retention policy with the details on backup copy retention ranges.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Backup schedule specified as part of backup policy.
+
+## VaultJobErrorInfo
+### Properties
+* **errorCode**: int: Error code.
+* **errorString**: string: Localized error string.
+* **recommendations**: string[]: List of localized recommendations for above error code.
+
+## VaultJobExtendedInfo
+### Properties
+* **propertyBag**: [VaultJobExtendedInfoPropertyBag](#vaultjobextendedinfopropertybag): Job properties.
+
+## VaultJobExtendedInfoPropertyBag
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## WeeklyRetentionFormat
 ### Properties
