@@ -16,6 +16,16 @@
 * **tags**: [DataBoxEdgeDeviceTags](#databoxedgedevicetags): The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/alerts@2020-09-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AlertProperties](#alertproperties) (ReadOnly): Properties of alert.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Alert generated in the resource
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/alerts' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules@2020-09-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -25,6 +35,15 @@
 * **properties**: [BandwidthScheduleProperties](#bandwidthscheduleproperties) (Required): The properties of the bandwidth schedule.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Bandwidth object related to ASE resource
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/networkSettings@2020-09-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [NetworkSettingsProperties](#networksettingsproperties) (ReadOnly): The properties of network settings of a device.
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/networkSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders@2020-09-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -157,6 +176,15 @@
 * **properties**: [PeriodicTimerProperties](#periodictimerproperties) (Required): Periodic timer trigger properties.
 
 
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/updateSummary@2020-09-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [UpdateSummaryProperties](#updatesummaryproperties) (ReadOnly): The device update information summary.
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/updateSummary' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/users@2020-09-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -181,6 +209,27 @@
 * **country**: string (Required): The country name.
 * **postalCode**: string: The postal code.
 * **state**: string: The state name.
+
+## AlertErrorDetails
+### Properties
+* **errorCode**: string (ReadOnly): Error code.
+* **errorMessage**: string (ReadOnly): Error Message.
+* **occurrences**: int (ReadOnly): Number of occurrences.
+
+## AlertProperties
+### Properties
+* **alertType**: string (ReadOnly): Alert type.
+* **appearedAtDateTime**: string (ReadOnly): UTC time when the alert appeared.
+* **detailedInformation**: [AlertPropertiesDetailedInformation](#alertpropertiesdetailedinformation) (ReadOnly): Alert details.
+* **errorDetails**: [AlertErrorDetails](#alerterrordetails) (ReadOnly): Error details of the alert.
+* **recommendation**: string (ReadOnly): Alert recommendation.
+* **severity**: 'Critical' | 'Informational' | 'Warning' | string (ReadOnly): Severity of the alert.
+* **title**: string (ReadOnly): Alert title.
+
+## AlertPropertiesDetailedInformation
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ArcAddonProperties
 ### Properties
@@ -352,6 +401,18 @@
 * **roleStatus**: 'Disabled' | 'Enabled' | string (Required): Role status.
 * **shareMappings**: [MountPointMap](#mountpointmap)[]: Mount points of shares in role(s).
 
+## Ipv4Config
+### Properties
+* **gateway**: string (ReadOnly): The IPv4 gateway of the network adapter.
+* **ipAddress**: string (ReadOnly): The IPv4 address of the network adapter.
+* **subnet**: string (ReadOnly): The IPv4 subnet of the network adapter.
+
+## Ipv6Config
+### Properties
+* **gateway**: string (ReadOnly): The IPv6 gateway of the network adapter.
+* **ipAddress**: string (ReadOnly): The IPv6 address of the network adapter.
+* **prefixLength**: int (ReadOnly): The IPv6 prefix of the network adapter.
+
 ## KubernetesClusterInfo
 ### Properties
 * **etcdInfo**: [EtcdInfo](#etcdinfo) (ReadOnly): Etcd configuration
@@ -444,6 +505,33 @@
 * **roleId**: string (ReadOnly): ID of the role to which share is mounted.
 * **roleType**: 'ASA' | 'CloudEdgeManagement' | 'Cognitive' | 'Functions' | 'IOT' | 'Kubernetes' | 'MEC' | string (ReadOnly): Role type.
 * **shareId**: string (Required): ID of the share mounted to the role VM.
+
+## NetworkAdapter
+### Properties
+* **adapterId**: string (ReadOnly): Instance ID of network adapter.
+* **adapterPosition**: [NetworkAdapterPosition](#networkadapterposition) (ReadOnly): Hardware position of network adapter.
+* **dhcpStatus**: 'Disabled' | 'Enabled' | string: Value indicating whether this adapter has DHCP enabled.
+* **dnsServers**: string[] (ReadOnly): The list of DNS Servers of the device.
+* **index**: int (ReadOnly): Logical index of the adapter.
+* **ipv4Configuration**: [Ipv4Config](#ipv4config) (ReadOnly): The IPv4 configuration of the network adapter.
+* **ipv6Configuration**: [Ipv6Config](#ipv6config) (ReadOnly): The IPv6 configuration of the network adapter.
+* **ipv6LinkLocalAddress**: string (ReadOnly): The IPv6 local address.
+* **label**: string (ReadOnly): Hardware label for the adapter.
+* **linkSpeed**: int (ReadOnly): Link speed.
+* **macAddress**: string (ReadOnly): MAC address.
+* **networkAdapterName**: string (ReadOnly): Network adapter name.
+* **nodeId**: string (ReadOnly): Node ID of the network adapter.
+* **rdmaStatus**: 'Capable' | 'Incapable' | string: Value indicating whether this adapter is RDMA capable.
+* **status**: 'Active' | 'Inactive' | string (ReadOnly): Value indicating whether this adapter is valid.
+
+## NetworkAdapterPosition
+### Properties
+* **networkGroup**: 'NonRDMA' | 'None' | 'RDMA' | string (ReadOnly): The network group.
+* **port**: int (ReadOnly): The port.
+
+## NetworkSettingsProperties
+### Properties
+* **networkAdapters**: [NetworkAdapter](#networkadapter)[] (ReadOnly): The network adapter list on the device.
 
 ## NodeInfo
 ### Properties
@@ -585,6 +673,26 @@ by the already existing properties
 * **serialNumber**: string: Serial number of the device being tracked.
 * **trackingId**: string: Tracking ID of the shipment.
 * **trackingUrl**: string: Tracking URL of the shipment.
+
+## UpdateSummaryProperties
+### Properties
+* **deviceLastScannedDateTime**: string: The last time when a scan was done on the device.
+* **deviceVersionNumber**: string: The current version of the device in format: 1.2.17312.13.",
+* **friendlyDeviceVersionName**: string: The current version of the device in text format.
+* **inProgressDownloadJobId**: string (ReadOnly): The job ID of the download job in progress.
+* **inProgressDownloadJobStartedDateTime**: string (ReadOnly): The time when the currently running download (if any) started.
+* **inProgressInstallJobId**: string (ReadOnly): The job ID of the install job in progress.
+* **inProgressInstallJobStartedDateTime**: string (ReadOnly): The time when the currently running install (if any) started.
+* **lastCompletedDownloadJobDateTime**: string (ReadOnly): The time when the last Download job was completed (success/cancelled/failed) on the appliance.
+* **lastCompletedInstallJobDateTime**: string (ReadOnly): The time when the last Install job was completed (success/cancelled/failed) on the appliance.
+* **lastCompletedScanJobDateTime**: string: The time when the last scan job was completed (success/cancelled/failed) on the appliance.
+* **ongoingUpdateOperation**: 'Download' | 'Install' | 'None' | 'Scan' | string (ReadOnly): The current update operation.
+* **rebootBehavior**: 'NeverReboots' | 'RequestReboot' | 'RequiresReboot' | string (ReadOnly): Indicates if updates are available and at least one of the updates needs a reboot.
+* **totalNumberOfUpdatesAvailable**: int (ReadOnly): The number of updates available for the current device version as per the last device scan.
+* **totalNumberOfUpdatesPendingDownload**: int (ReadOnly): The total number of items pending download.
+* **totalNumberOfUpdatesPendingInstall**: int (ReadOnly): The total number of items pending install.
+* **totalUpdateSizeInBytes**: int (ReadOnly): The total size of updates available for download in bytes.
+* **updateTitles**: string[] (ReadOnly): The list of updates available for install.
 
 ## UserAccessRight
 ### Properties

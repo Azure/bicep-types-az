@@ -16,6 +16,16 @@
 * **tags**: [DataBoxEdgeDeviceTags](#databoxedgedevicetags): The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/alerts@2022-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AlertProperties](#alertproperties) (ReadOnly): Properties of alert.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of Alert
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/alerts' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules@2022-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -25,6 +35,16 @@
 * **properties**: [BandwidthScheduleProperties](#bandwidthscheduleproperties) (Required): The properties of the bandwidth schedule.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of BandwidthSchedule
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/deviceCapacityInfo@2022-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [DeviceCapacityInfoProperties](#devicecapacityinfoproperties) (ReadOnly): The device capacity properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to device capacity info.
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/deviceCapacityInfo' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/diagnosticProactiveLogCollectionSettings@2022-03-01
 * **Valid Scope(s)**: ResourceGroup
@@ -45,6 +65,16 @@
 * **properties**: [DiagnosticRemoteSupportSettingsProperties](#diagnosticremotesupportsettingsproperties) (Required): Properties of the remote support  settings.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Represents resource creation and updation time
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/diagnosticRemoteSupportSettings' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/networkSettings@2022-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [NetworkSettingsProperties](#networksettingsproperties) (ReadOnly): The properties of network settings of a device.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of NetworkSettings
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/networkSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders@2022-03-01
 * **Valid Scope(s)**: ResourceGroup
@@ -180,6 +210,16 @@
 * **properties**: [PeriodicTimerProperties](#periodictimerproperties) (Required): Periodic timer trigger properties.
 
 
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/updateSummary@2022-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [UpdateSummaryProperties](#updatesummaryproperties) (ReadOnly): The device update information summary.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of UpdateSummary
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/updateSummary' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/users@2022-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -204,6 +244,27 @@
 * **country**: string (Required): The country name.
 * **postalCode**: string: The postal code.
 * **state**: string: The state name.
+
+## AlertErrorDetails
+### Properties
+* **errorCode**: string (ReadOnly): Error code.
+* **errorMessage**: string (ReadOnly): Error Message.
+* **occurrences**: int (ReadOnly): Number of occurrences.
+
+## AlertProperties
+### Properties
+* **alertType**: string (ReadOnly): Alert type.
+* **appearedAtDateTime**: string (ReadOnly): UTC time when the alert appeared.
+* **detailedInformation**: [AlertPropertiesDetailedInformation](#alertpropertiesdetailedinformation) (ReadOnly): Alert details.
+* **errorDetails**: [AlertErrorDetails](#alerterrordetails) (ReadOnly): Error details of the alert.
+* **recommendation**: string (ReadOnly): Alert recommendation.
+* **severity**: 'Critical' | 'Informational' | 'Warning' | string (ReadOnly): Severity of the alert.
+* **title**: string (ReadOnly): Alert title.
+
+## AlertPropertiesDetailedInformation
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ArcAddonProperties
 ### Properties
@@ -249,6 +310,39 @@
 * **edgeProfile**: [EdgeProfile](#edgeprofile) (ReadOnly): Edge Profile of the resource
 * **localManagementStatus**: 'Disabled' | 'Enabled' | string (ReadOnly): Local Edge Management Status
 * **roleStatus**: 'Disabled' | 'Enabled' | string (Required): Role status.
+
+## ClusterCapacityViewData
+### Properties
+* **fqdn**: string: The FQDN of the cluster.
+* **gpuCapacity**: [ClusterGpuCapacity](#clustergpucapacity): The cluster's GPU capacity.
+* **lastRefreshedTime**: string: The last time at which the ClusterCapacityViewData was set.
+* **memoryCapacity**: [ClusterMemoryCapacity](#clustermemorycapacity): The cluster's memory capacity.
+* **totalProvisionedNonHpnCores**: int: The total # of vCPUs provisioned by non-HPN VM per appliance.
+
+## ClusterGpuCapacity
+### Properties
+* **gpuFreeUnitsCount**: int: The free GPU units count in the cluster.
+* **gpuReservedForFailoverUnitsCount**: int: The GPU units count reserved for failover in the cluster.
+* **gpuTotalUnitsCount**: int: The total GPU units count in the cluster.
+* **gpuType**: string: The cluster GPU Type.
+* **gpuUsedUnitsCount**: int: The used GPU units count in the cluster.
+
+## ClusterMemoryCapacity
+### Properties
+* **clusterFailoverMemoryMb**: int: The failover memory in the cluster in MB.
+* **clusterFragmentationMemoryMb**: int: The fragmentation memory in the cluster in MB.
+* **clusterFreeMemoryMb**: int: The free memory in the cluster in MB.
+* **clusterHypervReserveMemoryMb**: int: The memory reserved for Hyper-V in the cluster in MB.
+* **clusterInfraVmMemoryMb**: int: The memory of the Infra VM in the cluster in MB.
+* **clusterMemoryUsedByVmsMb**: int: The memory used by VMs in the cluster in MB.
+* **clusterNonFailoverVmMb**: int: The non-failover memory in the cluster in MB.
+* **clusterTotalMemoryMb**: int: The total memory in the cluster in MB.
+* **clusterUsedMemoryMb**: int: The used memory in the cluster in MB.
+
+## ClusterStorageViewData
+### Properties
+* **clusterFreeStorageMb**: int: The available or free storage on the cluster in MB.
+* **clusterTotalStorageMb**: int: Total storage on the cluster in MB.
 
 ## CniConfig
 ### Properties
@@ -314,6 +408,18 @@
 ### Properties
 * **authCode**: string: DCAccess Code for the Self Managed shipment.
 
+## DeviceCapacityInfoProperties
+### Properties
+* **clusterComputeCapacityInfo**: [ClusterCapacityViewData](#clustercapacityviewdata): Cluster capacity data for compute resources (Memory and GPU).
+* **clusterStorageCapacityInfo**: [ClusterStorageViewData](#clusterstorageviewdata): Cluster capacity data for storage resources (CSV).
+* **nodeCapacityInfos**: [DeviceCapacityInfoPropertiesNodeCapacityInfos](#devicecapacityinfopropertiesnodecapacityinfos): The dictionary of individual node names and node capacities in the cluster.
+* **timeStamp**: string: Timestamp of request in UTC
+
+## DeviceCapacityInfoPropertiesNodeCapacityInfos
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [HostCapacity](#hostcapacity)
+
 ## DiagnosticRemoteSupportSettingsProperties
 ### Properties
 * **remoteSupportSettingsList**: [RemoteSupportSettings](#remotesupportsettings)[]: Remote support settings list according to the RemoteApplicationType
@@ -345,6 +451,20 @@
 * **customContextTag**: string: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
 * **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Role sink info.
 * **sourceInfo**: [FileSourceInfo](#filesourceinfo) (Required): File event source details.
+
+## HostCapacity
+### Properties
+* **availableGpuCount**: int: The available amount of GPUs on the host to use after accounting for GPUS used by reservations on the host.
+* **effectiveAvailableMemoryMbOnHost**: int: The available memory on the host accounting for VM placement size and any host VM reservations.
+* **gpuType**: string: The GPU type of the VM.
+* **hostName**: string: The name of the host.
+* **numaNodesData**: [NumaNodeData](#numanodedata)[]: The numa nodes information for Hpn VMs.
+* **vmUsedMemory**: [HostCapacityVmUsedMemory](#hostcapacityvmusedmemory): The VM used memory per VmId.
+
+## HostCapacityVmUsedMemory
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [VmMemory](#vmmemory)
 
 ## ImageRepositoryCredential
 ### Properties
@@ -384,6 +504,18 @@
 * **ioTEdgeDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): IoT edge device to which the IoT role needs to be configured.
 * **roleStatus**: 'Disabled' | 'Enabled' | string (Required): Role status.
 * **shareMappings**: [MountPointMap](#mountpointmap)[]: Mount points of shares in role(s).
+
+## Ipv4Config
+### Properties
+* **gateway**: string (ReadOnly): The IPv4 gateway of the network adapter.
+* **ipAddress**: string (ReadOnly): The IPv4 address of the network adapter.
+* **subnet**: string (ReadOnly): The IPv4 subnet of the network adapter.
+
+## Ipv6Config
+### Properties
+* **gateway**: string (ReadOnly): The IPv6 gateway of the network adapter.
+* **ipAddress**: string (ReadOnly): The IPv6 address of the network adapter.
+* **prefixLength**: int (ReadOnly): The IPv6 prefix of the network adapter.
 
 ## KubernetesClusterInfo
 ### Properties
@@ -480,11 +612,48 @@
 * **roleType**: 'ASA' | 'CloudEdgeManagement' | 'Cognitive' | 'Functions' | 'IOT' | 'Kubernetes' | 'MEC' | string (ReadOnly): Role type.
 * **shareId**: string (Required): ID of the share mounted to the role VM.
 
+## NetworkAdapter
+### Properties
+* **adapterId**: string (ReadOnly): Instance ID of network adapter.
+* **adapterPosition**: [NetworkAdapterPosition](#networkadapterposition) (ReadOnly): Hardware position of network adapter.
+* **dhcpStatus**: 'Disabled' | 'Enabled' | string: Value indicating whether this adapter has DHCP enabled.
+* **dnsServers**: string[] (ReadOnly): The list of DNS Servers of the device.
+* **index**: int (ReadOnly): Logical index of the adapter.
+* **ipv4Configuration**: [Ipv4Config](#ipv4config) (ReadOnly): The IPv4 configuration of the network adapter.
+* **ipv6Configuration**: [Ipv6Config](#ipv6config) (ReadOnly): The IPv6 configuration of the network adapter.
+* **ipv6LinkLocalAddress**: string (ReadOnly): The IPv6 local address.
+* **label**: string (ReadOnly): Hardware label for the adapter.
+* **linkSpeed**: int (ReadOnly): Link speed.
+* **macAddress**: string (ReadOnly): MAC address.
+* **networkAdapterName**: string (ReadOnly): Network adapter name.
+* **nodeId**: string (ReadOnly): Node ID of the network adapter.
+* **rdmaStatus**: 'Capable' | 'Incapable' | string: Value indicating whether this adapter is RDMA capable.
+* **status**: 'Active' | 'Inactive' | string (ReadOnly): Value indicating whether this adapter is valid.
+
+## NetworkAdapterPosition
+### Properties
+* **networkGroup**: 'NonRDMA' | 'None' | 'RDMA' | string (ReadOnly): The network group.
+* **port**: int (ReadOnly): The port.
+
+## NetworkSettingsProperties
+### Properties
+* **networkAdapters**: [NetworkAdapter](#networkadapter)[] (ReadOnly): The network adapter list on the device.
+
 ## NodeInfo
 ### Properties
 * **ipConfiguration**: [KubernetesIPConfiguration](#kubernetesipconfiguration)[]: IP Configuration of the Kubernetes node.
 * **name**: string (ReadOnly): Node name.
 * **type**: 'Invalid' | 'Master' | 'Worker' | string (ReadOnly): Node type - Master/Worker
+
+## NumaNodeData
+### Properties
+* **effectiveAvailableMemoryInMb**: int: The effective available memory on the NUMA node in MB.
+* **freeVCpuIndexesForHpn**: int[]: The free VCPU indices for the Hpn VMs.
+* **logicalCoreCountPerCore**: int: The logical cores per core count.
+* **numaNodeIndex**: int: The NUMA node index.
+* **totalMemoryInMb**: int: The total memory on the NUMA node.
+* **vCpuIndexesForHpn**: int[]: The VCPU indices for Hpn VMs
+* **vCpuIndexesForRoot**: int[]: The VCPU indices for the root.
 
 ## OrderProperties
 ### Properties
@@ -632,6 +801,46 @@ by the already existing properties
 * **trackingId**: string: Tracking ID of the shipment.
 * **trackingUrl**: string: Tracking URL of the shipment.
 
+## UpdateDetails
+### Properties
+* **estimatedInstallTimeInMins**: int: Estimated Install Time for the update
+* **friendlyVersionNumber**: string: Friendly Version Number
+* **installationImpact**: 'DeviceRebooted' | 'KubernetesWorkloadsDown' | 'None' | string: Impact of Installing an updateType
+* **rebootBehavior**: 'NeverReboots' | 'RequestReboot' | 'RequiresReboot' | string: Indicates if updates are available and at least one of the updates needs a reboot.
+* **status**: 'DownloadCompleted' | 'DownloadPending' | 'DownloadStarted' | 'InstallCompleted' | 'InstallStarted' | string: Status of the update.
+* **targetVersion**: string: Target Version number
+* **updateSize**: int: Size of the update(In Bytes)
+* **updateTitle**: string: Title of the Update
+* **updateType**: 'Firmware' | 'Kubernetes' | 'Software' | string: Type of the Update
+
+## UpdateSummaryProperties
+### Properties
+* **deviceLastScannedDateTime**: string: The last time when a scan was done on the device.
+* **deviceVersionNumber**: string: The current version of the device in format: 1.2.17312.13.",
+* **friendlyDeviceVersionName**: string: The current version of the device in text format.
+* **inProgressDownloadJobId**: string (ReadOnly): The job ID of the download job in progress.
+* **inProgressDownloadJobStartedDateTime**: string (ReadOnly): The time when the currently running download (if any) started.
+* **inProgressInstallJobId**: string (ReadOnly): The job ID of the install job in progress.
+* **inProgressInstallJobStartedDateTime**: string (ReadOnly): The time when the currently running install (if any) started.
+* **lastCompletedDownloadJobDateTime**: string (ReadOnly): The time when the last Download job was completed (success/cancelled/failed) on the appliance.
+* **lastCompletedDownloadJobId**: string (ReadOnly): JobId of the last ran download job.(Can be success/cancelled/failed)
+* **lastCompletedInstallJobDateTime**: string (ReadOnly): The time when the last Install job was completed (success/cancelled/failed) on the appliance.
+* **lastCompletedInstallJobId**: string (ReadOnly): JobId of the last ran install job.(Can be success/cancelled/failed)
+* **lastCompletedScanJobDateTime**: string: The time when the last scan job was completed (success/cancelled/failed) on the appliance.
+* **lastDownloadJobStatus**: 'Canceled' | 'Failed' | 'Invalid' | 'Paused' | 'Running' | 'Scheduled' | 'Succeeded' | string (ReadOnly): JobStatus of the last ran download job.
+* **lastInstallJobStatus**: 'Canceled' | 'Failed' | 'Invalid' | 'Paused' | 'Running' | 'Scheduled' | 'Succeeded' | string (ReadOnly): JobStatus of the last ran install job.
+* **lastSuccessfulInstallJobDateTime**: string: The time when the Last Install job was completed successfully on the appliance
+* **lastSuccessfulScanJobTime**: string: Time when the last scan job is successfully completed.
+* **ongoingUpdateOperation**: 'Download' | 'Install' | 'None' | 'Scan' | string (ReadOnly): The current update operation.
+* **rebootBehavior**: 'NeverReboots' | 'RequestReboot' | 'RequiresReboot' | string (ReadOnly): Indicates if updates are available and at least one of the updates needs a reboot.
+* **totalNumberOfUpdatesAvailable**: int (ReadOnly): The number of updates available for the current device version as per the last device scan.
+* **totalNumberOfUpdatesPendingDownload**: int (ReadOnly): The total number of items pending download.
+* **totalNumberOfUpdatesPendingInstall**: int (ReadOnly): The total number of items pending install.
+* **totalTimeInMinutes**: int (ReadOnly): The total time in Minutes
+* **totalUpdateSizeInBytes**: int (ReadOnly): The total size of updates available for download in bytes.
+* **updates**: [UpdateDetails](#updatedetails)[] (ReadOnly): The list of updates available for install.
+* **updateTitles**: string[] (ReadOnly): The list of updates available for install.
+
 ## UserAccessRight
 ### Properties
 * **accessType**: 'Change' | 'Custom' | 'Read' | string (Required): Type of access to be allowed for the user.
@@ -642,4 +851,9 @@ by the already existing properties
 * **encryptedPassword**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): The password details.
 * **shareAccessRights**: [ShareAccessRight](#shareaccessright)[] (ReadOnly): List of shares that the user has rights on. This field should not be specified during user creation.
 * **userType**: 'ARM' | 'LocalManagement' | 'Share' | string (Required): Type of the user.
+
+## VmMemory
+### Properties
+* **currentMemoryUsageMB**: int: The current memory used by the virtual machine.
+* **startupMemoryMB**: int: The total amount of RAM in the virtual machine, as seen by the guest  operating system. For a virtual machine with dynamic memory enabled, this represents the initial memory available at startup.
 

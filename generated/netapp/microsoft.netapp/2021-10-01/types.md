@@ -1,5 +1,15 @@
 # Microsoft.NetApp @ 2021-10-01
 
+## Resource Microsoft.NetApp/locations/quotaLimits@2021-10-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SubscriptionQuotaItemProperties](#subscriptionquotaitemproperties) (ReadOnly): SubscriptionQuotaItem properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
+* **type**: 'Microsoft.NetApp/locations/quotaLimits' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.NetApp/netAppAccounts@2021-10-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -12,6 +22,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.NetApp/netAppAccounts/accountBackups@2021-10-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [BackupProperties](#backupproperties) (ReadOnly): Backup Properties
+* **type**: 'Microsoft.NetApp/netAppAccounts/accountBackups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/backupPolicies@2021-10-01
 * **Valid Scope(s)**: ResourceGroup
@@ -270,6 +290,11 @@
 * **created**: string (ReadOnly): The creation date of the snapshot
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **snapshotId**: string (ReadOnly): UUID v4 used to identify the Snapshot
+
+## SubscriptionQuotaItemProperties
+### Properties
+* **current**: int (ReadOnly): The current quota value.
+* **default**: int (ReadOnly): The default quota value.
 
 ## SubvolumeProperties
 ### Properties

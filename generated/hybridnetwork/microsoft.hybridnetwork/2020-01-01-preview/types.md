@@ -20,6 +20,15 @@
 * **properties**: [VendorNetworkFunctionPropertiesFormat](#vendornetworkfunctionpropertiesformat): Network function details.
 * **type**: 'Microsoft.HybridNetwork/locations/vendors/networkFunctions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances@2020-01-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RoleInstanceProperties](#roleinstanceproperties) (ReadOnly): The role instance properties.
+* **type**: 'Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.HybridNetwork/networkFunctions@2020-01-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -178,6 +187,10 @@
 * **customData**: string: Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
 * **customDataRequired**: bool: Indicates if custom data is required to deploy this role.
 * **linuxConfiguration**: [LinuxConfiguration](#linuxconfiguration): Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+
+## RoleInstanceProperties
+### Properties
+* **operationalState**: 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Unknown' | string: The operational state of the role instance.
 
 ## SshConfiguration
 ### Properties
