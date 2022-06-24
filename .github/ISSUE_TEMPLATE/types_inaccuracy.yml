@@ -1,0 +1,65 @@
+name: Azure Types Inaccuracy
+description: Report a problem with Bicep types not accurately representing Azure Resource Provider APIs
+title: "[<resource_type>]: <description>"
+labels: ["inaccuracy"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please use this form to report a problem Bicep's Azure type definitions!
+  - type: input
+    id: resourceType
+    attributes:
+      label: Resource Type
+      description: What is the resource type affected?
+      placeholder: ex. Microsoft.Compute/virtualMachines
+    validations:
+      required: true
+  - type: input
+    id: apiVersion
+    attributes:
+      label: Api Version
+      description: What is the api version of the resource type affected?
+      placeholder: ex. 2022-01-01
+    validations:
+      required: true
+  - type: dropdown
+    id: issueType
+    attributes:
+      label: Issue Type
+      description: What type of issue are you running into?
+      options:
+        - Type is unavailable
+        - Missing property(s)
+        - Inaccurate property type(s)
+        - Property(s) inaccurately marked readonly/writeonly
+        - Inaccurate/confusing description(s)
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Other Notes
+      description: Please add any other notes about the issue here.
+    validations:
+      required: false
+  - type: textarea
+    id: repro
+    attributes:
+      label: Bicep Repro
+      description: If you have a Bicep example to share, please paste it here.
+      placeholder: |
+        ```bicep
+        // your bicep repro here
+        ```
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirm
+      description: Please confirm you have searched for similar issues to avoid duplication.
+      options:
+        - label: I have searched this repository and have not found similar issue reports.
+          required: true

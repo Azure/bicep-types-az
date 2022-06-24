@@ -23,14 +23,14 @@ const argsConfig = yargs
   .option('specs-dir', { type: 'string', demandOption: true, desc: 'Path to the azure-rest-api-specs dir' })
   .option('out-dir', { type: 'string', default: defaultOutDir, desc: 'Output path for generated files' })
   .option('single-path', { type: 'string', default: undefined, desc: 'Only regenerate under a specific file path - e.g. "compute"' })
-  .option('verbose', { type: 'boolean', default: false, desc: 'Enable autorest verbose logging' })
+  .option('logging-level', { type: 'string', default: 'warning', choices: ['debug', 'verbose', 'information', 'warning', 'error', 'fatal'] })
   .option('wait-for-debugger', { type: 'boolean', default: false, desc: 'Wait for a C# debugger to be attached before running the Autorest extension' });
 
 executeSynchronous(async () => {
   const args = await argsConfig.parseAsync();
   const inputBaseDir = path.resolve(args['specs-dir']);
   const outputBaseDir = path.resolve(args['out-dir']);
-  const verbose = args['verbose'];
+  const logLevel = args['logging-level'];
   const waitForDebugger = args['wait-for-debugger'];
   const singlePath = args['single-path'];
 
@@ -73,7 +73,7 @@ executeSynchronous(async () => {
     try {
       // autorest readme.bicep.md files are not checked in, so we must generate them before invoking autorest
       await generateAutorestConfig(logger, readmePath, bicepReadmePath, config);
-      await generateSchema(logger, readmePath, tmpOutputDir, verbose, waitForDebugger);
+      await generateSchema(logger, readmePath, tmpOutputDir, logLevel, waitForDebugger);
 
       // remove all previously-generated files and copy over results
       await rm(outputDir, { recursive: true, force: true, });
@@ -96,7 +96,7 @@ ${err}
 
     // clean up temp dirs
     await rm(tmpOutputDir, { recursive: true, force: true, });
-    await clearAutorestTempDir(logger, verbose, waitForDebugger);
+    await clearAutorestTempDir(logger, logLevel, waitForDebugger);
     // clean up autorest readme.bicep.md files
     await rm(bicepReadmePath, { force: true });
   }
@@ -186,12 +186,13 @@ ${yaml.dump({ 'input-file': filesByTag[tag] }, { lineWidth: 1000})}
   await writeFile(bicepReadmePath, generatedContent);
 }
 
-async function generateSchema(logger: ILogger, readme: string, outputBaseDir: string, verbose: boolean, waitForDebugger: boolean) {
+async function generateSchema(logger: ILogger, readme: string, outputBaseDir: string, logLevel: string, waitForDebugger: boolean) {
   let autoRestParams = [
     `--use=@autorest/modelerfour`,
     `--use=${extensionDir}`,
     '--bicep',
     `--output-folder=${outputBaseDir}`,
+    `--level=${logLevel}`,
     `--multiapi`,
     '--title=none',
     // This is necessary to avoid failures such as "ERROR: Semantic violation: Discriminator must be a required property." blocking type generation.
@@ -201,24 +202,19 @@ async function generateSchema(logger: ILogger, readme: string, outputBaseDir: st
     readme,
   ];
 
-  autoRestParams = applyCommonAutoRestParameters(autoRestParams, verbose, waitForDebugger);
+  autoRestParams = applyCommonAutoRestParameters(autoRestParams, logLevel, waitForDebugger);
 
-  return await executeCmd(logger, verbose, __dirname, autorestBinary, autoRestParams);
+  return await executeCmd(logger, isVerboseLoggingLevel(logLevel), __dirname, autorestBinary, autoRestParams);
 }
 
-async function clearAutorestTempDir(logger: ILogger, verbose: boolean, waitForDebugger: boolean) {
-  const autoRestParams = applyCommonAutoRestParameters(['--clear-temp', '--allow-no-input'], verbose, waitForDebugger);
+async function clearAutorestTempDir(logger: ILogger, logLevel: string, waitForDebugger: boolean) {
+  const autoRestParams = applyCommonAutoRestParameters(['--clear-temp', '--allow-no-input'], logLevel, waitForDebugger);
 
-  return await executeCmd(logger, verbose, __dirname, autorestBinary, autoRestParams);
+  return await executeCmd(logger, isVerboseLoggingLevel(logLevel), __dirname, autorestBinary, autoRestParams);
 }
 
-function applyCommonAutoRestParameters(autoRestParams: string[], verbose: boolean, waitForDebugger: boolean) {
-  if (verbose) {
-    autoRestParams = autoRestParams.concat([
-      `--debug`,
-      `--verbose`,
-    ]);
-  }
+function applyCommonAutoRestParameters(autoRestParams: string[], logLevel: string, waitForDebugger: boolean) {
+  autoRestParams = autoRestParams.concat([`--level=${logLevel}`])
 
   if (waitForDebugger) {
     autoRestParams = autoRestParams.concat([
@@ -350,5 +346,15 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
   return {
     Resources: resDictionary,
     Functions: funcDictionary,
+  }
+}
+
+function isVerboseLoggingLevel(logLevel: string) {
+  switch (logLevel.toLowerCase()) {
+    case 'debug':
+    case 'verbose':
+      return true;
+    default:
+      return false;
   }
 }
