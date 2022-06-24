@@ -703,13 +703,29 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
       }
 
       return acc;
-    }, {} as Dictionary<ResourceDefinition[]>)
+    }, {} as Dictionary<ResourceDefinition[]>);
+
+    function hasComparableSchemata(
+      definitions: ResourceDefinition[],
+      schemaExtractor: (r: ResourceDefinition) => ObjectSchema|undefined
+    ) {
+      return chain(definitions)
+        .map(schemaExtractor)
+        .filter()
+        .map(s => s!.language.default.name)
+        .uniq()
+        .value().length < 2;
+    }
 
     for (const path of Object.keys(definitionsByNormalizedPath)) {
       const atPath = definitionsByNormalizedPath[path];
       const parameterized = chain(atPath).map(r => r.descriptor).filter(d => d.constantName === undefined).value();
 
-      if (parameterized.length === 1) {
+      if (
+        parameterized.length === 1 &&
+        hasComparableSchemata(atPath, d => d.putOperation?.requestSchema) &&
+        hasComparableSchemata(atPath, d => d.getOperation?.responseSchema)
+      ) {
         let scopeType = atPath[0].descriptor.scopeType;
         let readonlyScopes = atPath[0].descriptor.readonlyScopes;
         for (let i = 1; i < atPath.length; i++) {
@@ -734,6 +750,9 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
   }
 
   function collapseDefinitions(resources: ResourceDefinition[]) {
+    if (resources.length > 0 && resources[0].descriptor.apiVersion === '2015-03-01-preview') {
+      debugger;
+    }
     const deduplicated = Object.values(groupByType(resources)).flatMap(collapsePartiallyConstantNameResources);
     const collapsedResources = Object.values(groupByType(deduplicated)).flatMap(collapseDefinitionScopes);
 
