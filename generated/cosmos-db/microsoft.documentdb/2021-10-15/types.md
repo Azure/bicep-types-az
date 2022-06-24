@@ -185,6 +185,15 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DocumentDB/databaseAccounts/privateLinkResources@2021-10-15 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-10-15' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Resource properties.
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2021-10-15
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -301,6 +310,15 @@
 * **properties**: [ThroughputSettingsUpdatePropertiesOrThroughputSettingsGetProperties](#throughputsettingsupdatepropertiesorthroughputsettingsgetproperties) (Required): Properties to update Azure Cosmos DB resource throughput.
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DocumentDB/locations@2021-10-15 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-10-15' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [LocationProperties](#locationproperties) (ReadOnly): Cosmos DB location metadata
+* **type**: 'Microsoft.DocumentDB/locations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listConnectionInfo (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2021-10-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
@@ -671,6 +689,12 @@
 * **locationName**: string: The name of the region.
 * **provisioningState**: string (ReadOnly): The status of the Cosmos DB account at the time the operation was called. The status can be one of following. 'Creating' – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. 'Succeeded' – the Cosmos DB account is active for use. 'Updating' – the Cosmos DB account is being updated. 'Deleting' – the Cosmos DB account is being deleted. 'Failed' – the Cosmos DB account failed creation. 'DeletionFailed' – the Cosmos DB account deletion failed.
 
+## LocationProperties
+### Properties
+* **backupStorageRedundancies**: 'Geo' | 'Local' | 'Zone' | string[] (ReadOnly): The properties of available backup storage redundancies.
+* **isResidencyRestricted**: bool (ReadOnly): Flag indicating whether the location is residency sensitive.
+* **supportsAvailabilityZone**: bool (ReadOnly): Flag indicating whether the location supports availability zones or not.
+
 ## ManagedCassandraManagedServiceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The object id of the identity resource.
@@ -768,6 +792,12 @@
 ## PrivateEndpointProperty
 ### Properties
 * **id**: string: Resource id of the private endpoint.
+
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
+* **requiredZoneNames**: string[] (ReadOnly): The private link resource required zone names.
 
 ## PrivateLinkServiceConnectionStateProperty
 ### Properties

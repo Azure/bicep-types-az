@@ -43,6 +43,15 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Event Subscription resource.
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.EventGrid/extensionTopics@2020-10-15-preview (ReadOnly)
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2020-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [ExtensionTopicProperties](#extensiontopicproperties) (ReadOnly): Properties of the extension topic
+* **type**: 'Microsoft.EventGrid/extensionTopics' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.EventGrid/partnerNamespaces@2020-10-15-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -76,6 +85,19 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Partner Registration resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/partnerRegistrations' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.EventGrid/partnerTopics@2020-10-15-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [IdentityInfo](#identityinfo) (ReadOnly): Identity information for the resource.
+* **location**: string (ReadOnly): Location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PartnerTopicProperties](#partnertopicproperties) (ReadOnly): Properties of the partner topic.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Partner Topic resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Tags of the resource.
+* **type**: 'Microsoft.EventGrid/partnerTopics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/partnerTopics/eventSubscriptions@2020-10-15-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -134,6 +156,15 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnection.
 * **type**: 'Microsoft.EventGrid/topics/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.EventGrid/topicTypes@2020-10-15-preview (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2020-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TopicTypeProperties](#topictypeproperties) (ReadOnly): Properties of the topic type info
+* **type**: 'Microsoft.EventGrid/topicTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.EventGrid/domains@2020-10-15-preview)
 * **Resource**: Microsoft.EventGrid/domains
@@ -441,6 +472,11 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 * **name**: string: Fully qualified name of the extended location.
 * **type**: string: Type of the extended location.
 
+## ExtensionTopicProperties
+### Properties
+* **description**: string: Description of the extension topic.
+* **systemTopic**: string: System topic resource id which is mapped to the source.
+
 ## HybridConnectionEventSubscriptionDestinationProperties
 ### Properties
 * **deliveryAttributeMappings**: [DeliveryAttributeMapping](#deliveryattributemapping)[]: Delivery attribute details.
@@ -529,6 +565,16 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
 integration on an event source.
 * **visibilityState**: 'GenerallyAvailable' | 'Hidden' | 'PublicPreview' | string: Visibility state of the partner registration.
 
+## PartnerTopicProperties
+### Properties
+* **activationState**: 'Activated' | 'Deactivated' | 'NeverActivated' | string: Activation state of the partner topic.
+* **expirationTimeIfNotActivatedUtc**: string: Expiration time of the partner topic. If this timer expires while the partner topic is still never activated,
+the partner topic and corresponding event channel are deleted.
+* **partnerTopicFriendlyDescription**: string: Friendly description about the topic. This can be set by the publisher/partner to show custom description for the customer partner topic.
+This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the partner topic.
+* **source**: string: Source associated with this partner topic. This represents a unique partner resource.
+
 ## PrivateEndpoint
 ### Properties
 * **id**: string: The ARM identifier for Private Endpoint.
@@ -614,6 +660,22 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 ### Properties
 * **key1**: string: Shared access key1 for the topic.
 * **key2**: string: Shared access key2 for the topic.
+
+## TopicTypeProperties
+### Properties
+* **description**: string: Description of the topic type.
+* **displayName**: string: Display Name for the topic type.
+* **provider**: string: Namespace of the provider of the topic type.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the topic type
+* **resourceRegionType**: 'GlobalResource' | 'RegionalResource' | string: Region type of the resource.
+* **sourceResourceFormat**: string: Source resource format.
+* **supportedLocations**: string[]: List of locations supported by this topic type.
+* **supportedScopesForSource**: 'AzureSubscription' | 'Resource' | 'ResourceGroup' | string[]: Supported source scopes.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

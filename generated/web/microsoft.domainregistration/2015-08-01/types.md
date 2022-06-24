@@ -12,6 +12,30 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.DomainRegistration/domains' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DomainRegistration/domains/operationresults@2015-08-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DomainProperties](#domainproperties) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.DomainRegistration/domains/operationresults' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DomainRegistration/topLevelDomains@2015-08-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of resource
+* **location**: string (ReadOnly): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TopLevelDomainProperties](#topleveldomainproperties) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.DomainRegistration/topLevelDomains' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listAgreements (Microsoft.DomainRegistration/topLevelDomains@2015-08-01)
 * **Resource**: Microsoft.DomainRegistration/topLevelDomains
 * **ApiVersion**: 2015-08-01
@@ -78,6 +102,16 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## TldLegalAgreement
 ### Properties
 * **agreementKey**: string: Unique identifier for the agreement
@@ -93,4 +127,9 @@
 ## TopLevelDomainAgreementOption
 ### Properties
 * **includePrivacy**: bool: If true then the list of agreements will include agreements for domain privacy as well.
+
+## TopLevelDomainProperties
+### Properties
+* **name**: string: Name of the top level domain
+* **privacy**: bool: If true then the top level domain supports domain privacy
 
