@@ -1,12 +1,6 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.4)
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
-info    | Processing batch task - {"tag":"microsoft.databoxedge-2022-04-01-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ArcAddon' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from ArcAddon
@@ -30,40 +24,6 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'MECRole' has a propert
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-info    | autorest.bicep took 19ms
-info    | Processing batch task - {"tag":"microsoft.databoxedge-2022-03-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'ArcAddon' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from ArcAddon
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'ArcAddon' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from ArcAddon
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'ArcAddon' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from ArcAddon
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'CloudEdgeManagementRole' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from CloudEdgeManagementRole
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'CloudEdgeManagementRole' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from CloudEdgeManagementRole
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'CloudEdgeManagementRole' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from CloudEdgeManagementRole
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'FileEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from FileEventTrigger
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'FileEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from FileEventTrigger
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'FileEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from FileEventTrigger
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'IoTAddon' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from IoTAddon
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'IoTAddon' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from IoTAddon
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'IoTAddon' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from IoTAddon
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'IoTRole' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from IoTRole
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'IoTRole' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from IoTRole
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'IoTRole' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from IoTRole
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'KubernetesRole' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from KubernetesRole
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'KubernetesRole' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from KubernetesRole
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'KubernetesRole' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from KubernetesRole
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'MECRole' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from MECRole
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'MECRole' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from MECRole
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'MECRole' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from MECRole
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-info    | autorest.bicep took 14ms
-info    | Processing batch task - {"tag":"microsoft.databoxedge-2021-06-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ArcAddon' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from ArcAddon
@@ -90,10 +50,6 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'MECRole' has a propert
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-info    | autorest.bicep took 10ms
-info    | Processing batch task - {"tag":"microsoft.databoxedge-2021-06-01-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ArcAddon' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from ArcAddon
@@ -120,10 +76,6 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'MECRole' has a propert
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-info    | autorest.bicep took 15ms
-info    | Processing batch task - {"tag":"microsoft.databoxedge-2021-02-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ArcAddon' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from ArcAddon
@@ -150,10 +102,32 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'MECRole' has a propert
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-info    | autorest.bicep took 10ms
-info    | Processing batch task - {"tag":"microsoft.databoxedge-2021-02-01-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ArcAddon' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from ArcAddon
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ArcAddon' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from ArcAddon
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ArcAddon' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from ArcAddon
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'CloudEdgeManagementRole' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from CloudEdgeManagementRole
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'CloudEdgeManagementRole' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from CloudEdgeManagementRole
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'CloudEdgeManagementRole' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from CloudEdgeManagementRole
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'FileEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from FileEventTrigger
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'FileEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from FileEventTrigger
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'FileEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from FileEventTrigger
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'IoTAddon' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from IoTAddon
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'IoTAddon' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from IoTAddon
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'IoTAddon' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from IoTAddon
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'IoTRole' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from IoTRole
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'IoTRole' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from IoTRole
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'IoTRole' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from IoTRole
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'KubernetesRole' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from KubernetesRole
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'KubernetesRole' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from KubernetesRole
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'KubernetesRole' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from KubernetesRole
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'MECRole' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from MECRole
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'MECRole' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from MECRole
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'MECRole' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from MECRole
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/preview/2021-02-01-preview/databoxedge.json:4388:5
@@ -184,10 +158,6 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'MECRole' has a propert
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-info    | autorest.bicep took 9ms
-info    | Processing batch task - {"tag":"microsoft.databoxedge-2020-12-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/stable/2020-12-01/databoxedge.json:4388:5
@@ -218,10 +188,6 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'MECRole' has a propert
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-info    | autorest.bicep took 33ms
-info    | Processing batch task - {"tag":"microsoft.databoxedge-2020-09-01-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/preview/2020-09-01-preview/databoxedge.json:4388:5
@@ -252,10 +218,6 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'MECRole' has a propert
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-info    | autorest.bicep took 6ms
-info    | Processing batch task - {"tag":"microsoft.databoxedge-2020-09-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/stable/2020-09-01/databoxedge.json:4388:5
@@ -286,10 +248,6 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'MECRole' has a propert
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-info    | autorest.bicep took 17ms
-info    | Processing batch task - {"tag":"microsoft.databoxedge-2020-05-01-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/preview/2020-05-01-preview/databoxedge.json:3561:5
@@ -305,10 +263,6 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'IoTRole' has a propert
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-info    | autorest.bicep took 4ms
-info    | Processing batch task - {"tag":"microsoft.databoxedge-2019-08-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/stable/2019-08-01/databoxedge.json:3522:5
@@ -324,10 +278,6 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'IoTRole' has a propert
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-info    | autorest.bicep took 6ms
-info    | Processing batch task - {"tag":"microsoft.databoxedge-2019-07-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/stable/2019-07-01/databoxedge.json:2944:5
@@ -343,10 +293,6 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'IoTRole' has a propert
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-info    | autorest.bicep took 4ms
-info    | Processing batch task - {"tag":"microsoft.databoxedge-2019-03-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/stable/2019-03-01/databoxedge.json:2895:5
@@ -362,5 +308,3 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'IoTRole' has a propert
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'id' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-info    | autorest.bicep took 4ms
-info    | Autorest completed in 54.46s. 26 files generated.

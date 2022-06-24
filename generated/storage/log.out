@@ -1,7 +1,6 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.4)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -34,9 +33,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
-info    | Processing batch task - {"tag":"microsoft.storage-2021-09-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -69,8 +65,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2021-09-01/storage.json:2187:5
@@ -365,8 +359,6 @@ warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 25ms
-info    | Processing batch task - {"tag":"microsoft.storage-2021-08-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -399,8 +391,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2021-08-01/storage.json:2160:5
@@ -693,9 +683,6 @@ warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | Resource type microsoft.storage/storageaccounts/tableservices/tables under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/tableServices/default/tables/{tableName}' has no body defined.
-info    | autorest.bicep took 14ms
-info    | Processing batch task - {"tag":"microsoft.storage-2021-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -728,8 +715,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2021-06-01/storage.json:1867:5
@@ -1034,9 +1019,6 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'CloudErrorBody' (1 
   - properties.details.$ref: "#/components/schemas/schemas:416" => "#/components/schemas/schemas:489"
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'CloudError' -> 'CloudErrorAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'CloudErrorBody' -> 'CloudErrorBodyAutoGenerated'
-info    | Resource type microsoft.storage/storageaccounts/tableservices/tables under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/tableServices/default/tables/{tableName}' has no body defined.
-info    | autorest.bicep took 17ms
-info    | Processing batch task - {"tag":"microsoft.storage-2021-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1069,8 +1051,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2021-04-01/storage.json:1753:5
@@ -1375,9 +1355,6 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'CloudErrorBody' (1 
   - properties.details.$ref: "#/components/schemas/schemas:406" => "#/components/schemas/schemas:479"
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'CloudError' -> 'CloudErrorAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'CloudErrorBody' -> 'CloudErrorBodyAutoGenerated'
-info    | Resource type microsoft.storage/storageaccounts/tableservices/tables under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/tableServices/default/tables/{tableName}' has no body defined.
-info    | autorest.bicep took 12ms
-info    | Processing batch task - {"tag":"microsoft.storage-2021-02-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1410,8 +1387,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2021-02-01/storage.json:1753:5
@@ -1696,9 +1671,6 @@ warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | Resource type microsoft.storage/storageaccounts/tableservices/tables under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/tableServices/default/tables/{tableName}' has no body defined.
-info    | autorest.bicep took 13ms
-info    | Processing batch task - {"tag":"microsoft.storage-2021-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1731,8 +1703,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2021-01-01/storage.json:1753:5
@@ -2011,9 +1981,6 @@ warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | Resource type microsoft.storage/storageaccounts/tableservices/tables under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/tableServices/default/tables/{tableName}' has no body defined.
-info    | autorest.bicep took 16ms
-info    | Processing batch task - {"tag":"microsoft.storage-2020-08-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2046,8 +2013,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/preview/2020-08-01-preview/storage.json:1741:5
@@ -2322,9 +2287,6 @@ warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | Resource type microsoft.storage/storageaccounts/tableservices/tables under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/tableServices/default/tables/{tableName}' has no body defined.
-info    | autorest.bicep took 14ms
-info    | Processing batch task - {"tag":"microsoft.storage-2019-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2357,8 +2319,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2019-06-01/storage.json:1656:5
@@ -2617,9 +2577,6 @@ warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | Resource type microsoft.storage/storageaccounts/tableservices/tables under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/tableServices/default/tables/{tableName}' has no body defined.
-info    | autorest.bicep took 12ms
-info    | Processing batch task - {"tag":"microsoft.storage-2019-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2652,8 +2609,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2019-04-01/storage.json:794:5
@@ -2820,8 +2775,6 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2019-04-01/file.json:537:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 10ms
-info    | Processing batch task - {"tag":"microsoft.storage-2018-11-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2854,8 +2807,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2018-11-01/storage.json:778:5
@@ -2996,8 +2947,6 @@ warning | PreCheck/SchemaMissingType | The schema 'LeaseContainerRequest' with a
 warning | PreCheck/SchemaMissingType | The schema 'LeaseContainerResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2018-11-01/blob.json:1207:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 4ms
-info    | Processing batch task - {"tag":"microsoft.storage-2018-07-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -3030,8 +2979,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2018-07-01/storage.json:617:5
@@ -3150,8 +3097,6 @@ warning | PreCheck/SchemaMissingType | The schema 'LeaseContainerRequest' with a
 warning | PreCheck/SchemaMissingType | The schema 'LeaseContainerResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2018-07-01/blob.json:1201:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 4ms
-info    | Processing batch task - {"tag":"microsoft.storage-2018-03-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -3184,8 +3129,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccountManagementPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/preview/2018-03-01-preview/managementpolicy.json:143:5
@@ -3309,8 +3252,6 @@ warning | PreCheck/SchemaMissingType | The schema 'LeaseContainerResponse' with 
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/preview/2018-03-01-preview/blob.json:1006:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
-info    | Processing batch task - {"tag":"microsoft.storage-2018-02-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -3343,8 +3284,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2018-02-01/storage.json:644:5
@@ -3451,8 +3390,6 @@ warning | PreCheck/SchemaMissingType | The schema 'LeaseContainerRequest' with a
 warning | PreCheck/SchemaMissingType | The schema 'LeaseContainerResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2018-02-01/blob.json:1006:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 5ms
-info    | Processing batch task - {"tag":"microsoft.storage-2017-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -3485,8 +3422,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2017-10-01/storage.json:608:5
@@ -3569,8 +3504,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ServiceSasParameters' with an
 warning | PreCheck/SchemaMissingType | The schema 'ListServiceSasResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2017-10-01/storage.json:1905:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.storage-2017-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -3603,8 +3536,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2017-06-01/storage.json:608:5
@@ -3687,8 +3618,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ServiceSasParameters' with an
 warning | PreCheck/SchemaMissingType | The schema 'ListServiceSasResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2017-06-01/storage.json:1889:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.storage-2016-12-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -3721,8 +3650,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccountCheckNameAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2016-12-01/storage.json:485:5
@@ -3777,8 +3704,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ServiceSasParameters' with an
 warning | PreCheck/SchemaMissingType | The schema 'ListServiceSasResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2016-12-01/storage.json:1312:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 4ms
-info    | Processing batch task - {"tag":"microsoft.storage-2016-05-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -3811,8 +3736,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccountCheckNameAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2016-05-01/storage.json:482:5
@@ -3867,8 +3790,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ServiceSasParameters' with an
 warning | PreCheck/SchemaMissingType | The schema 'ListServiceSasResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2016-05-01/storage.json:1269:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.storage-2016-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -3901,8 +3822,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccountCheckNameAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2016-01-01/storage.json:419:5
@@ -3949,8 +3868,6 @@ warning | PreCheck/SchemaMissingType | The schema 'UsageListResult' with an unde
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2016-01-01/storage.json:954:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
-info    | Processing batch task - {"tag":"microsoft.storage-2015-06-15"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -3983,8 +3900,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccountCheckNameAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2015-06-15/storage.json:412:5
@@ -4021,8 +3936,6 @@ warning | PreCheck/SchemaMissingType | The schema 'UsageListResult' with an unde
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/stable/2015-06-15/storage.json:780:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
-info    | Processing batch task - {"tag":"microsoft.storage-2015-05-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -4055,8 +3968,6 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccountCheckNameAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/preview/2015-05-01-preview/storage.json:422:5
@@ -4095,5 +4006,3 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/Microsoft.Storage/preview/2015-05-01-preview/storage.json:795:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
-info    | Autorest completed in 73.22s. 40 files generated.

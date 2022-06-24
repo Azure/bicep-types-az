@@ -1,20 +1,10 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.4)
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
-info    | Processing batch task - {"tag":"microsoft.marketplace-2022-03-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'planDetails-requestDate' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/marketplace/resource-manager/Microsoft.Marketplace/stable/2022-03-01/Marketplace.json#/components/schemas/planDetails-requestDate
-info    | autorest.bicep took 11ms
-info    | Processing batch task - {"tag":"microsoft.marketplace-2021-12-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PlanRequesterDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/marketplace/resource-manager/Microsoft.Marketplace/stable/2021-12-01/Marketplace.json:1979:5
@@ -27,10 +17,6 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'planDetails-requestDate' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/marketplace/resource-manager/Microsoft.Marketplace/stable/2021-12-01/Marketplace.json#/components/schemas/planDetails-requestDate
-info    | autorest.bicep took 4ms
-info    | Processing batch task - {"tag":"microsoft.marketplace-2021-06-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PlanRequesterDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/marketplace/resource-manager/Microsoft.Marketplace/stable/2021-06-01/Marketplace.json:1714:5
@@ -45,10 +31,6 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'planDetails-requestDate' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/marketplace/resource-manager/Microsoft.Marketplace/stable/2021-06-01/Marketplace.json#/components/schemas/planDetails-requestDate
-info    | autorest.bicep took 3ms
-info    | Processing batch task - {"tag":"microsoft.marketplace-2020-01-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse-error' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/marketplace/resource-manager/Microsoft.Marketplace/stable/2020-01-01/Marketplace.json:511:9
@@ -59,10 +41,6 @@ warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an 
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/marketplace/resource-manager/Microsoft.Marketplace/stable/2020-01-01/Marketplace.json:812:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.marketplace-2020-12-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse-error' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/marketplace/resource-manager/Microsoft.Marketplace/stable/2020-12-01/Marketplace.json:473:9
@@ -73,5 +51,3 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'planDetails-requestDate' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/marketplace/resource-manager/Microsoft.Marketplace/stable/2020-12-01/Marketplace.json#/components/schemas/planDetails-requestDate
-info    | autorest.bicep took 2ms
-info    | Autorest completed in 10.54s. 10 files generated.

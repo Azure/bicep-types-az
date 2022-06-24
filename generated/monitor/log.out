@@ -1,7 +1,6 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.4)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -29,9 +28,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
-info    | Processing batch task - {"tag":"microsoft.insights-2015-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -59,8 +55,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2015-04-01/autoscale_API.json:305:5
@@ -127,8 +121,6 @@ warning | PreCheck/SchemaMissingType | The schema 'EventData' with an undefined 
 warning | PreCheck/SchemaMissingType | The schema 'EventDataCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2015-04-01/tenantActivityLogs_API.json:307:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 26ms
-info    | Processing batch task - {"tag":"microsoft.insights-2016-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -156,8 +148,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Incident' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-03-01/alertRulesIncidents_API.json:129:5
@@ -202,8 +192,6 @@ warning | PreCheck/SchemaMissingType | The schema 'MetricDefinition' with an und
 warning | PreCheck/SchemaMissingType | The schema 'MetricDefinitionCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-03-01/metricDefinitions_API.json:252:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 4ms
-info    | Processing batch task - {"tag":"microsoft.insights-2017-05-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -231,8 +219,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/diagnosticsSettings_API.json:199:5
@@ -275,8 +261,6 @@ warning | PreCheck/SchemaMissingType | The schema 'MetricValue' with an undefine
 warning | PreCheck/SchemaMissingType | The schema 'MetadataValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/metrics_API.json:240:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.insights-2022-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -304,12 +288,8 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.insights-2018-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -337,16 +317,12 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'LocalizableString' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2018-01-01/metricDefinitions_API.json:86:5
 warning | PreCheck/SchemaMissingType | The schema 'LocalizableString' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2018-01-01/metrics_API.json:112:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 0ms
-info    | Processing batch task - {"tag":"microsoft.insights-2019-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -374,8 +350,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'MetricBaselinesResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2019-03-01/metricBaselines_API.json:123:5
@@ -424,8 +398,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ActionGroupPatchBody-tags' wi
 warning | PreCheck/SchemaMissingType | The schema 'ActionGroupPatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2019-03-01/actionGroups_API.json:829:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.insights-2018-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -453,8 +425,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2018-03-01/metricAlert_API.json:429:5
@@ -522,8 +492,6 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
-info    | Processing batch task - {"tag":"microsoft.insights-2018-04-16"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -551,12 +519,8 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.insights-2017-12-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -584,16 +548,12 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'MetricNamespaceName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-12-01-preview/metricNamespaces_API.json:80:5
 warning | PreCheck/SchemaMissingType | The schema 'MetricNamespaceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-12-01-preview/metricNamespaces_API.json:128:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 0ms
-info    | Processing batch task - {"tag":"microsoft.insights-2018-11-27-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -621,16 +581,12 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-11-27-preview/vmInsightsOnboarding_API.json:95:5
 warning | PreCheck/SchemaMissingType | The schema 'VMInsightsOnboardingStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-11-27-preview/vmInsightsOnboarding_API.json:192:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 0ms
-info    | Processing batch task - {"tag":"microsoft.insights-2019-10-17-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -658,8 +614,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkScopesResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:782:5
@@ -682,8 +636,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorResponseCommon' with an 
 warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:1142:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
-info    | Processing batch task - {"tag":"microsoft.insights-2020-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -711,8 +663,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2020-10-01/activityLogAlerts_API.json:335:5
@@ -731,8 +681,6 @@ warning | PreCheck/SchemaMissingType | The schema 'AlertRulePatchObject-tags' wi
 warning | PreCheck/SchemaMissingType | The schema 'AlertRulePatchProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2020-10-01/activityLogAlerts_API.json:511:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.insights-2021-09-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -760,8 +708,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DataCollectionEndpoint-configurationAccess' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2021-09-01-preview/dataCollectionEndpoints_API.json:374:9
@@ -797,8 +743,6 @@ warning | PreCheck/SchemaMissingType | The schema 'DataCollectionRuleResource-sy
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2021-09-01-preview/dataCollectionRules_API.json:1025:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
-info    | Processing batch task - {"tag":"microsoft.insights-2022-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -826,12 +770,8 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
-info    | Processing batch task - {"tag":"microsoft.insights-2021-05-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -859,12 +799,8 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 3ms
-info    | Processing batch task - {"tag":"microsoft.insights-2021-07-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -892,8 +828,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2021-07-01-preview/privateLinkScopes_API.json:878:5
@@ -906,8 +840,6 @@ warning | PreCheck/SchemaMissingType | The schema 'AzureMonitorPrivateLinkScopeP
 warning | PreCheck/SchemaMissingType | The schema 'AzureMonitorPrivateLinkScopeListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2021-07-01-preview/privateLinkScopes_API.json:993:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.insights-2021-09-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -935,12 +867,8 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.insights-2021-05-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -968,12 +896,8 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 0ms
-info    | Processing batch task - {"tag":"microsoft.insights-2021-08-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1001,12 +925,8 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 4ms
-info    | Processing batch task - {"tag":"microsoft.insights-2021-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1034,8 +954,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DataCollectionEndpoint-configurationAccess' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2021-04-01/dataCollectionEndpoints_API.json:374:9
@@ -1063,8 +981,6 @@ warning | PreCheck/SchemaMissingType | The schema 'DataCollectionRuleResource-sy
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2021-04-01/dataCollectionRules_API.json:793:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
-info    | Processing batch task - {"tag":"microsoft.insights-2019-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1092,8 +1008,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AzureResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2019-06-01/actionGroups_API.json:338:5
@@ -1134,8 +1048,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ActionGroupPatchBody-tags' wi
 warning | PreCheck/SchemaMissingType | The schema 'ActionGroupPatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2019-06-01/actionGroups_API.json:846:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.insights-2017-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1163,8 +1075,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:290:5
@@ -1223,8 +1133,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ActionGroupPatchBody-tags' wi
 warning | PreCheck/SchemaMissingType | The schema 'ActionGroupPatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:673:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.insights-2021-02-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1252,12 +1160,8 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.insights-2020-05-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1285,8 +1189,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ScheduledQueryRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2020-05-01-preview/scheduledQueryRule_API.json:330:5
@@ -1295,8 +1197,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ScheduledQueryRuleResourcePat
 warning | PreCheck/SchemaMissingType | The schema 'ScheduledQueryRuleResourceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2020-05-01-preview/scheduledQueryRule_API.json:470:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.insights-2020-01-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1324,8 +1224,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ManagementGroupProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2020-01-01-preview/managementGroupDiagnosticSettings_API.json:202:5
@@ -1336,8 +1234,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ManagementGroupDiagnosticSett
 warning | PreCheck/SchemaMissingType | The schema 'ManagementGroupDiagnosticSettingsResourceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2020-01-01-preview/managementGroupDiagnosticSettings_API.json:292:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 0ms
-info    | Processing batch task - {"tag":"microsoft.insights-2019-07-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1365,12 +1261,8 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 0ms
-info    | Processing batch task - {"tag":"microsoft.insights-2018-09-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1398,8 +1290,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2018-09-01/actionGroups_API.json:338:5
@@ -1446,8 +1336,6 @@ warning | PreCheck/SchemaMissingType | The schema 'TimeSeriesBaseline' with an u
 warning | PreCheck/SchemaMissingType | The schema 'BaselineMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2018-09-01/metricBaselines_API.json:287:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
-info    | Processing batch task - {"tag":"microsoft.insights-2017-09-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1475,12 +1363,8 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 0ms
-info    | Processing batch task - {"tag":"microsoft.insights-2019-11-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1508,8 +1392,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DataCollectionRuleAssociationProxyOnlyResource-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-11-01-preview/dataCollectionRuleAssociations_API.json:292:9
@@ -1523,8 +1405,6 @@ warning | PreCheck/SchemaMissingType | The schema 'DataCollectionRuleResource-pr
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-11-01-preview/dataCollectionRules_API.json:705:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.insights-2018-06-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1552,8 +1432,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'GuestDiagnosticSettingsAssociationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettingsAssociation_API.json:312:5
@@ -1580,8 +1458,6 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
 warning | PreCheck/SchemaMissingType | The schema 'Resource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettings_API.json:534:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
-info    | Processing batch task - {"tag":"microsoft.insights-2017-03-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1609,8 +1485,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-03-01-preview/activityLogAlerts_API.json:296:5
@@ -1637,8 +1511,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertResourcePatch
 warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertPatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-03-01-preview/activityLogAlerts_API.json:484:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
-info    | Processing batch task - {"tag":"microsoft.insights-2016-09-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1666,8 +1538,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'LocalizableString' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/metrics_API.json:141:5
@@ -1694,8 +1564,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ServiceDiagnosticSettingsReso
 warning | PreCheck/SchemaMissingType | The schema 'ServiceDiagnosticSettingsResourcePatch-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/serviceDiagnosticsSettings_API.json:373:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 0ms
-info    | Processing batch task - {"tag":"microsoft.insights-2016-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1723,12 +1591,8 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 0ms
-info    | Processing batch task - {"tag":"microsoft.insights-2015-07-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1756,8 +1620,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2015-07-01/serviceDiagnosticsSettings_API.json:171:5
@@ -1772,8 +1634,6 @@ warning | PreCheck/SchemaMissingType | The schema 'LogSettings' with an undefine
 warning | PreCheck/SchemaMissingType | The schema 'ServiceDiagnosticSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2015-07-01/serviceDiagnosticsSettings_API.json:269:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.insights-2014-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1801,8 +1661,6 @@ warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.6)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'RuleManagementEventClaimsDataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2014-04-01/alertRules_API.json:375:5
@@ -1857,5 +1715,3 @@ warning | PreCheck/SchemaMissingType | The schema 'AutoscaleSettingResourceColle
 warning | PreCheck/SchemaMissingType | The schema 'ScaleRuleMetricDimension' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2014-04-01/autoscale_API.json:834:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 4ms
-info    | Autorest completed in 64.97s. 56 files generated.
