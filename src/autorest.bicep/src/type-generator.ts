@@ -36,6 +36,12 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       return r.value;
     }
 
+    // In some cases, the one of the PUT or GET operations for a resource is defined with a constant name while the
+    // other defines a parameterized name, or a resource may use an enum to strictly enforce what names may be used to
+    // PUT a resource while reserving itself some flexibility by providing a looser definition of what will be returned
+    // by a GET. Because the resource's name property will be used both when defining the resource and when using the
+    // `existing` keyword, the two definitions of a resource's name need to be reconciled with a different approach than
+    // is used for other resource properties.
     const {putOperation, getOperation} = definition;
     const nameLiterals = new Set<string>();
     const nameTypes = new Set<BuiltInTypeKind>();

@@ -750,9 +750,6 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
   }
 
   function collapseDefinitions(resources: ResourceDefinition[]) {
-    if (resources.length > 0 && resources[0].descriptor.apiVersion === '2015-03-01-preview') {
-      debugger;
-    }
     const deduplicated = Object.values(groupByType(resources)).flatMap(collapsePartiallyConstantNameResources);
     const collapsedResources = Object.values(groupByType(deduplicated)).flatMap(collapseDefinitionScopes);
 
