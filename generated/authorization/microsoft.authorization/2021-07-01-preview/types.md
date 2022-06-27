@@ -21,7 +21,7 @@
 * **type**: 'Microsoft.Authorization/accessReviewScheduleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/accessReviewScheduleDefinitions/instances@2021-07-01-preview
-* **Valid Scope(s)**: Subscription
+* **Valid Scope(s)**: Tenant (ReadOnly), Subscription
 ### Properties
 * **apiVersion**: '2021-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **backupReviewers**: [AccessReviewReviewer](#accessreviewreviewer)[] (WriteOnly): This is the collection of backup reviewers.
@@ -34,6 +34,15 @@
 * **startDateTime**: string (WriteOnly): The DateTime when the review instance is scheduled to be start.
 * **status**: 'Applied' | 'Applying' | 'AutoReviewed' | 'AutoReviewing' | 'Completed' | 'Completing' | 'InProgress' | 'Initializing' | 'NotStarted' | 'Scheduled' | 'Starting' | string (ReadOnly, WriteOnly): This read-only field specifies the status of an access review instance.
 * **type**: 'Microsoft.Authorization/accessReviewScheduleDefinitions/instances' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Authorization/accessReviewScheduleDefinitions/instances/decisions@2021-07-01-preview (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2021-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AccessReviewDecisionProperties](#accessreviewdecisionproperties) (ReadOnly): Access Review Decision properties.
+* **type**: 'Microsoft.Authorization/accessReviewScheduleDefinitions/instances/decisions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/accessReviewScheduleSettings@2021-07-01-preview
 * **Valid Scope(s)**: Subscription
@@ -60,6 +69,43 @@
 * **principalName**: string (ReadOnly): The identity display name
 * **principalType**: 'servicePrincipal' | 'user' | string (ReadOnly): The identity type : user/servicePrincipal
 * **userPrincipalName**: string (ReadOnly): The user principal name(if valid)
+
+## AccessReviewDecisionIdentity
+* **Discriminator**: type
+
+### Base Properties
+* **displayName**: string (ReadOnly): The display name of the user whose access was reviewed.
+* **id**: string (ReadOnly): The id of principal whose access was reviewed.
+### AccessReviewDecisionServicePrincipalIdentity
+#### Properties
+* **appId**: string (ReadOnly): The appId for the service principal entity being reviewed
+* **type**: 'servicePrincipal' (Required): The type of decision target : User/ServicePrincipal
+
+### AccessReviewDecisionUserIdentity
+#### Properties
+* **type**: 'user' (Required): The type of decision target : User/ServicePrincipal
+* **userPrincipalName**: string (ReadOnly): The user principal name of the user whose access was reviewed.
+
+
+## AccessReviewDecisionProperties
+### Properties
+* **appliedBy**: [AccessReviewActorIdentity](#accessreviewactoridentity) (ReadOnly): Details of the approver.
+* **appliedDateTime**: string (ReadOnly): The date and time when the review decision was applied.
+* **applyResult**: 'AppliedSuccessfully' | 'AppliedSuccessfullyButObjectNotFound' | 'AppliedWithUnknownFailure' | 'ApplyNotSupported' | 'Applying' | 'New' | string (ReadOnly): The outcome of applying the decision.
+* **decision**: 'Approve' | 'Deny' | 'DontKnow' | 'NotNotified' | 'NotReviewed' | string: The decision on the approval step. This value is initially set to NotReviewed. Approvers can take action of Approve/Deny
+* **justification**: string: Justification provided by approvers for their action
+* **principal**: [AccessReviewDecisionIdentity](#accessreviewdecisionidentity) (ReadOnly): Principal associated with the decision record. Can be AccessReviewDecisionUserIdentity or AccessReviewDecisionServicePrincipalIdentity
+* **recommendation**: 'Approve' | 'Deny' | 'NoInfoAvailable' | string (ReadOnly): The feature- generated recommendation shown to the reviewer.
+* **resource**: [AccessReviewDecisionResource](#accessreviewdecisionresource) (ReadOnly): Resource associated with this decision record.
+* **reviewedBy**: [AccessReviewActorIdentity](#accessreviewactoridentity) (ReadOnly): Details of the approver.
+* **reviewedDateTime**: string (ReadOnly): Date Time when a decision was taken.
+
+## AccessReviewDecisionResource
+* **Discriminator**: type
+
+### Base Properties
+* **displayName**: string (ReadOnly): The display name of resource associated with a decision record.
+* **id**: string (ReadOnly): The id of resource associated with a decision record.
 
 ## AccessReviewInstance
 ### Properties

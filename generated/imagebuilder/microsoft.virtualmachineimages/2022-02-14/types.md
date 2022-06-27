@@ -13,6 +13,16 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.VirtualMachineImages/imageTemplates' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.VirtualMachineImages/imageTemplates/runOutputs@2022-02-14 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-02-14' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RunOutputProperties](#runoutputproperties) (ReadOnly): The properties of the run output
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.VirtualMachineImages/imageTemplates/runOutputs' (ReadOnly, DeployTimeConstant): The resource type
+
 ## ComponentsVrq145SchemasImagetemplateidentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
 * **clientId**: string (ReadOnly): The client id of user assigned identity.
@@ -195,6 +205,12 @@
 ### Properties
 * **message**: string: Verbose error message about the provisioning failure
 * **provisioningErrorCode**: 'BadCustomizerType' | 'BadDistributeType' | 'BadManagedImageSource' | 'BadPIRSource' | 'BadSharedImageDistribute' | 'BadSharedImageVersionSource' | 'BadSourceType' | 'BadStagingResourceGroup' | 'BadValidatorType' | 'NoCustomizerScript' | 'NoValidatorScript' | 'Other' | 'ServerError' | 'UnsupportedCustomizerType' | 'UnsupportedValidatorType' | string: Error code of the provisioning failure
+
+## RunOutputProperties
+### Properties
+* **artifactId**: string: The resource id of the artifact.
+* **artifactUri**: string: The location URI of the artifact.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource
 
 ## SystemData
 ### Properties

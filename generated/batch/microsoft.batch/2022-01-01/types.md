@@ -42,6 +42,16 @@
 * **properties**: [CertificateCreateOrUpdatePropertiesOrCertificateProperties](#certificatecreateorupdatepropertiesorcertificateproperties): The properties associated with the certificate.
 * **type**: 'Microsoft.Batch/batchAccounts/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Batch/batchAccounts/detectors@2022-01-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DetectorResponseProperties](#detectorresponseproperties) (ReadOnly): The properties associated with the detector.
+* **type**: 'Microsoft.Batch/batchAccounts/detectors' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Batch/batchAccounts/pools@2022-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -52,6 +62,26 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PoolProperties](#poolproperties): The properties associated with the pool.
 * **type**: 'Microsoft.Batch/batchAccounts/pools' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Batch/batchAccounts/privateEndpointConnections@2022-01-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): The properties associated with the private endpoint connection.
+* **type**: 'Microsoft.Batch/batchAccounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Batch/batchAccounts/privateLinkResources@2022-01-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): The properties associated with the private link resource.
+* **type**: 'Microsoft.Batch/batchAccounts/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.Batch/batchAccounts@2022-01-01)
 * **Resource**: Microsoft.Batch/batchAccounts
@@ -254,6 +284,10 @@
 * **cloudServiceConfiguration**: [CloudServiceConfiguration](#cloudserviceconfiguration): This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.
 * **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration): This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.
 
+## DetectorResponseProperties
+### Properties
+* **value**: string: A base64 encoded string that represents the content of a detector.
+
 ## DiffDiskSettings
 ### Properties
 * **placement**: 'CacheDisk': This property can be used by user in the request to choose which location the operating system should be in. e.g., cache disk space for Ephemeral OS disk provisioning. For more information on Ephemeral OS disk size requirements, please refer to Ephemeral OS disk size requirements for Windows VMs at https://docs.microsoft.com/en-us/azure/virtual-machines/windows/ephemeral-os-disks#size-requirements and Linux VMs at https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ephemeral-os-disks#size-requirements.
@@ -404,6 +438,12 @@
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The private endpoint of the private endpoint connection.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): The private link service connection state of the private endpoint connection
 * **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the private endpoint connection.
+
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The group id is used to establish the private link connection.
+* **requiredMembers**: string[] (ReadOnly): The list of required members that are used to establish the private link connection.
+* **requiredZoneNames**: string[] (ReadOnly): The list of required zone names for the private DNS resource name
 
 ## PrivateLinkServiceConnectionState
 ### Properties
