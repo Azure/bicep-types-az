@@ -54,6 +54,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the user resource.
 * **type**: 'Microsoft.LabServices/labs/users' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.LabServices/labs/virtualMachines@2021-10-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties) (ReadOnly): Virtual machine resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): System data of the Lab virtual machine.
+* **type**: 'Microsoft.LabServices/labs/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
+
 ## AutoShutdownProfile
 ### Properties
 * **disconnectDelay**: string: The amount of time a VM will stay running after a user disconnects if this behavior is enabled.
@@ -216,6 +226,16 @@
 ### Properties
 * **installGpuDrivers**: 'Disabled' | 'Enabled': Flag to pre-install dedicated GPU drivers.
 
+## VirtualMachineConnectionProfile
+### Properties
+* **adminUsername**: string (ReadOnly): The username used to log on to the virtual machine as admin.
+* **nonAdminUsername**: string (ReadOnly): The username used to log on to the virtual machine as non-admin, if one exists.
+* **privateIpAddress**: string (ReadOnly): The private IP address of the virtual machine.
+* **rdpAuthority**: string (ReadOnly): Port and host name separated by semicolon for connecting via RDP protocol to the virtual machine.
+* **rdpInBrowserUrl**: string (ReadOnly): URL for connecting via RDP protocol to the virtual machine in browser.
+* **sshAuthority**: string (ReadOnly): Port and host name separated by semicolon for connecting via SSH protocol to the virtual machine.
+* **sshInBrowserUrl**: string (ReadOnly): URL for connecting via SSH protocol to the virtual machine in browser.
+
 ## VirtualMachineProfile
 ### Properties
 * **additionalCapabilities**: [VirtualMachineAdditionalCapabilities](#virtualmachineadditionalcapabilities): Additional VM capabilities.
@@ -227,4 +247,12 @@
 * **sku**: [Sku](#sku) (Required): The SKU for the lab. Defines the type of virtual machines used in the lab.
 * **usageQuota**: string (Required): The initial quota alloted to each lab user. Must be a time span between 0 and 9999 hours.
 * **useSharedPassword**: 'Disabled' | 'Enabled': Enabling this option will use the same password for all user VMs.
+
+## VirtualMachineProperties
+### Properties
+* **claimedByUserId**: string (ReadOnly): The lab user ID (not the PUID!) of who claimed the virtual machine.
+* **connectionProfile**: [VirtualMachineConnectionProfile](#virtualmachineconnectionprofile) (ReadOnly): Profile for information about connecting to the virtual machine.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Locked' | 'Succeeded' | 'Updating' (ReadOnly): Current provisioning state of the virtual machine.
+* **state**: 'Redeploying' | 'Reimaging' | 'ResettingPassword' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The current state of the virtual machine
+* **vmType**: 'Template' | 'User' (ReadOnly): The type of this VM resource
 

@@ -240,6 +240,15 @@
 * **properties**: [IdentityProviderCreateContractPropertiesOrIdentityProviderContractProperties](#identityprovidercreatecontractpropertiesoridentityprovidercontractproperties): Identity Provider contract properties.
 * **type**: 'Microsoft.ApiManagement/service/identityProviders' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.ApiManagement/service/issues@2019-12-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [IssueContractProperties](#issuecontractproperties) (ReadOnly): Properties of the Issue.
+* **type**: 'Microsoft.ApiManagement/service/issues' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.ApiManagement/service/loggers@2019-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties

@@ -14,6 +14,26 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DBforMySQL/flexibleServers/backups@2021-05-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-05-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServerBackupProperties](#serverbackupproperties) (ReadOnly): The properties of a server backup.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
+* **type**: 'Microsoft.DBforMySQL/flexibleServers/backups' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DBforMySQL/flexibleServers/configurations@2021-05-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-05-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ConfigurationProperties](#configurationproperties) (ReadOnly): The properties of a configuration.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
+* **type**: 'Microsoft.DBforMySQL/flexibleServers/configurations' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DBforMySQL/flexibleServers/databases@2021-05-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -39,6 +59,18 @@
 * **backupRetentionDays**: int: Backup retention days for the server.
 * **earliestRestoreDate**: string (ReadOnly): Earliest restore point creation time (ISO8601 format)
 * **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: Whether or not geo redundant backup is enabled.
+
+## ConfigurationProperties
+### Properties
+* **allowedValues**: string (ReadOnly): Allowed values of the configuration.
+* **dataType**: string (ReadOnly): Data type of the configuration.
+* **defaultValue**: string (ReadOnly): Default value of the configuration.
+* **description**: string (ReadOnly): Description of the configuration.
+* **isConfigPendingRestart**: 'False' | 'True' | string (ReadOnly): If is the configuration pending restart or not.
+* **isDynamicConfig**: 'False' | 'True' | string (ReadOnly): If is the configuration dynamic.
+* **isReadOnly**: 'False' | 'True' | string (ReadOnly): If is the configuration read only.
+* **source**: 'system-default' | 'user-override' | string: Source of the configuration.
+* **value**: string: Value of the configuration.
 
 ## DatabaseProperties
 ### Properties
@@ -88,6 +120,12 @@
 * **delegatedSubnetResourceId**: string: Delegated subnet resource id used to setup vnet for a server.
 * **privateDnsZoneResourceId**: string: Private DNS zone resource id.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string (ReadOnly): Whether or not public network access is allowed for this server. Value is 'Disabled' when server has VNet integration.
+
+## ServerBackupProperties
+### Properties
+* **backupType**: string: Backup type.
+* **completedTime**: string: Backup completed time (ISO8601 format).
+* **source**: string: Backup source
 
 ## ServerProperties
 ### Properties

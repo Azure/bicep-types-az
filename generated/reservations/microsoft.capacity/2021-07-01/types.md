@@ -13,6 +13,20 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Capacity/reservationOrders' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Capacity/reservationOrders/reservations@2021-07-01 (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2021-07-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: int (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: 'Microsoft.Compute' (ReadOnly): Resource Provider type to be reserved.
+* **location**: string (ReadOnly): The Azure Region where the reserved resource lives.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ReservationsProperties](#reservationsproperties) (ReadOnly): The properties associated to this reservation
+* **sku**: [SkuName](#skuname) (ReadOnly): The sku information associated to this reservation
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.Capacity/reservationOrders/reservations' (ReadOnly, DeployTimeConstant): The resource type
+
 ## ExtendedStatusInfo
 ### Properties
 * **message**: string: The message giving detailed information about the status code.

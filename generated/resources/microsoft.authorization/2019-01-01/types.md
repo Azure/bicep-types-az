@@ -13,7 +13,7 @@
 * **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/policyDefinitions@2019-01-01
-* **Valid Scope(s)**: ManagementGroup, Subscription
+* **Valid Scope(s)**: Tenant (ReadOnly), ManagementGroup, Subscription
 ### Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,7 +22,7 @@
 * **type**: 'Microsoft.Authorization/policyDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/policySetDefinitions@2019-01-01
-* **Valid Scope(s)**: ManagementGroup, Subscription
+* **Valid Scope(s)**: Tenant (ReadOnly), ManagementGroup, Subscription
 ### Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
