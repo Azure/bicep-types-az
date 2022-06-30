@@ -285,31 +285,31 @@ warning | PreCheck/SchemaMissingType | The schema 'ContentLink' with an undefine
 warning | PreCheck/SchemaMissingType | The schema 'RunbookProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1077:5
 warning | PreCheck/SchemaMissingType | The schema 'Runbook' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1182:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1184:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1201:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1203:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookCreateOrUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1217:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1219:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1266:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1270:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1294:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1298:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1316:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1320:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookDraftUndoEditResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1341:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1345:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookDraft' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1405:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1409:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1443:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1447:5
 warning | PreCheck/SchemaMissingType | The schema 'TestJobCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1465:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1469:5
 warning | PreCheck/SchemaMissingType | The schema 'TestJob' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1481:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1485:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookCreateOrUpdateDraftProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1548:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1552:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookCreateOrUpdateDraftParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1594:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:1600:5
 warning | PreCheck/BinarySchema | 'The schema paths·r1whch·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-automation-automationaccounts-automationaccountname-runbooks-runbookname-draft-content·get·responses·200·content·text-powershell·schema with 'type: file', format: undefined' will be treated as a binary blob for binary media types.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/runbook.json:79:11
 warning | PreCheck/BinarySchema | 'The schema paths·1ayo3t7·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-automation-automationaccounts-automationaccountname-runbooks-runbookname-draft-content·put·requestbody·content·text-powershell·schema with 'type: object', format: file' will be treated as a binary blob for binary media types.
@@ -600,31 +600,31 @@ warning | PreCheck/SchemaMissingType | The schema 'ContentLink' with an undefine
 warning | PreCheck/SchemaMissingType | The schema 'RunbookProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1152:5
 warning | PreCheck/SchemaMissingType | The schema 'Runbook' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1257:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1259:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1276:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1278:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookCreateOrUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1292:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1294:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1341:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1345:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1369:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1373:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1391:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1395:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookDraftUndoEditResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1416:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1420:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookDraft' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1480:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1484:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1518:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1522:5
 warning | PreCheck/SchemaMissingType | The schema 'TestJobCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1540:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1544:5
 warning | PreCheck/SchemaMissingType | The schema 'TestJob' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1556:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1560:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookCreateOrUpdateDraftProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1623:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1627:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookCreateOrUpdateDraftParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1669:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1675:5
 warning | PreCheck/BinarySchema | 'The schema paths·r1whch·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-automation-automationaccounts-automationaccountname-runbooks-runbookname-draft-content·get·responses·200·content·text-powershell·schema with 'type: file', format: undefined' will be treated as a binary blob for binary media types.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:79:11
 warning | PreCheck/BinarySchema | 'The schema paths·1ayo3t7·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-automation-automationaccounts-automationaccountname-runbooks-runbookname-draft-content·put·requestbody·content·text-powershell·schema with 'type: object', format: file' will be treated as a binary blob for binary media types.
@@ -699,31 +699,31 @@ warning | PreCheck/SchemaMissingType | The schema 'ContentLink' with an undefine
 warning | PreCheck/SchemaMissingType | The schema 'RunbookProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1149:5
 warning | PreCheck/SchemaMissingType | The schema 'Runbook' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1254:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1256:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1273:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1275:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookCreateOrUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1289:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1291:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1338:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1342:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1366:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1370:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1388:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1392:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookDraftUndoEditResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1413:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1417:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookDraft' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1477:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1481:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1515:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1519:5
 warning | PreCheck/SchemaMissingType | The schema 'TestJobCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1537:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1541:5
 warning | PreCheck/SchemaMissingType | The schema 'TestJob' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1553:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1557:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookCreateOrUpdateDraftProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1620:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1624:5
 warning | PreCheck/SchemaMissingType | The schema 'RunbookCreateOrUpdateDraftParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1666:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1672:5
 warning | PreCheck/BinarySchema | 'The schema paths·1ayo3t7·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-automation-automationaccounts-automationaccountname-runbooks-runbookname-draft-content·put·requestbody·content·text-powershell·schema with 'type: object', format: file' will be treated as a binary blob for binary media types.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:127:11
 warning | PreCheck/SchemaMissingType | The schema 'ActivityParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'

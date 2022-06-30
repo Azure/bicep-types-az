@@ -1,3 +1,4 @@
+WARNING: Unable to parse swagger path "Microsoft.DBforPostgreSQL/preview/2022-03-08-privatepreview/getCachedServerName.json"
 WARNING: Unable to parse swagger path "Microsoft.DBforPostgreSQL/preview/2021-06-15-privatepreview/Migrations.json"
 WARNING: Unable to parse swagger path "Microsoft.DBforPostgreSQL/preview/2021-06-15-privatepreview/postgresql.json"
 WARNING: Unable to parse swagger path "Microsoft.DBforPostgreSQL/preview/2021-03-31-privatepreview/PrivateDnsZone.json"

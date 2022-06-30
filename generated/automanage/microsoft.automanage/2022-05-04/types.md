@@ -25,6 +25,7 @@
 ### Properties
 * **apiVersion**: '2022-05-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **managedBy**: string (ReadOnly): Azure resource id. Indicates if this resource is managed by another Azure resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationProfileAssignmentProperties](#configurationprofileassignmentproperties): Properties of the configuration profile assignment.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -87,22 +88,15 @@
 * **status**: string (ReadOnly): The status of the configuration profile assignment.
 * **type**: string (ReadOnly): Type of the configuration profile assignment processing (Initial/Consistency).
 
-## ConfigurationProfileAssignmentProfileOverrides
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
 ## ConfigurationProfileAssignmentProperties
 ### Properties
 * **configurationProfile**: string: The Automanage configurationProfile ARM Resource URI.
-* **profileOverrides**: [ConfigurationProfileAssignmentProfileOverrides](#configurationprofileassignmentprofileoverrides): The profileOverrides setting for the configuration profile assignment.
 * **status**: string (ReadOnly): The status of onboarding, which only appears in the response.
 * **targetId**: string (ReadOnly): The target VM resource URI
 
 ## ConfigurationProfileProperties
 ### Properties
 * **configuration**: any: configuration dictionary of the configuration profile.
-* **overrides**: any[]: overrides of the configuration profile.
 
 ## ErrorAdditionalInfo
 ### Properties

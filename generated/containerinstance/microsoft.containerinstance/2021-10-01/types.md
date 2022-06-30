@@ -178,7 +178,7 @@
 * **identityUrl**: string: The identity URL for the private registry.
 * **password**: string: The password for the private registry.
 * **server**: string (Required): The Docker image registry server without a protocol such as "http" and "https".
-* **username**: string (Required): The username for the private registry.
+* **username**: string: The username for the private registry.
 
 ## InitContainerDefinition
 ### Properties

@@ -80,7 +80,7 @@
 * **expirationDate**: string (Required): Default expiration date for each student in this lab
 * **invitationCode**: string (ReadOnly): invitation code for redeemable lab
 * **maxStudentCount**: int (ReadOnly): the total number of students that can be accepted to the lab.
-* **status**: 'Active' | 'Deleted' | string (ReadOnly): The status of this lab
+* **status**: 'Active' | 'Deleted' | 'Pending' | string (ReadOnly): The status of this lab
 * **totalAllocatedBudget**: [Amount](#amount) (ReadOnly): Total allocated budget
 * **totalBudget**: [Amount](#amount) (ReadOnly): Total budget
 

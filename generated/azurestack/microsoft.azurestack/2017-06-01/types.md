@@ -47,6 +47,12 @@
 * **ApiVersion**: 2017-06-01
 * **Output**: [ExtendedProduct](#extendedproduct)
 
+## Function listProducts (Microsoft.AzureStack/registrations/products@2017-06-01)
+* **Resource**: Microsoft.AzureStack/registrations/products
+* **ApiVersion**: 2017-06-01
+* **Input**: [DeviceConfiguration](#deviceconfiguration)
+* **Output**: [ProductList](#productlist)
+
 ## CloudManifestFileDeploymentData
 ### Properties
 * **customCloudVerificationKey**: string: Signing verification public key.
@@ -79,6 +85,11 @@
 * **lun**: int (ReadOnly): The LUN.
 * **sourceBlobSasUri**: string (ReadOnly): SAS key for source blob.
 
+## DeviceConfiguration
+### Properties
+* **deviceVersion**: string (ReadOnly): Version of the device.
+* **identitySystem**: 'ADFS' | 'AzureAD' | string (ReadOnly): Identity system of the device.
+
 ## ExtendedProduct
 ### Properties
 * **galleryPackageBlobSasUri**: string (ReadOnly): The URI to the .azpkg file that provides information required for showing product in the gallery.
@@ -110,10 +121,23 @@
 * **operatingSystem**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): OS operating system type.
 * **sourceBlobSasUri**: string (ReadOnly): SAS key for source blob.
 
+## Product
+### Properties
+* **etag**: string: The entity tag used for optimistic concurrency when modifying the resource.
+* **id**: string (ReadOnly): ID of the resource.
+* **name**: string (ReadOnly): Name of the resource.
+* **properties**: [ProductNestedProperties](#productnestedproperties): Properties of the product resource.
+* **type**: string (ReadOnly): Type of Resource.
+
 ## ProductLink
 ### Properties
 * **displayName**: string: The description of the link.
 * **uri**: string: The URI corresponding to the link.
+
+## ProductList
+### Properties
+* **nextLink**: string: URI to the next page.
+* **value**: [Product](#product)[]: List of products.
 
 ## ProductNestedProperties
 ### Properties

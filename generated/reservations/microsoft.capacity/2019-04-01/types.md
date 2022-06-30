@@ -74,6 +74,7 @@
 ### Properties
 * **appliedScopes**: string[] (WriteOnly): List of the subscriptions that the benefit will be applied. Do not specify if AppliedScopeType is Shared.
 * **appliedScopeType**: 'Shared' | 'Single' | string (WriteOnly): Type of the Applied Scope.
+* **benefitStartTime**: string (ReadOnly): This is the DateTime when the reservation benefit started.
 * **billingPlan**: 'Monthly' | 'Upfront' | string: Represent the billing plans.
 * **billingScopeId**: string (WriteOnly): Subscription that will be charged for purchasing Reservation
 * **createdDateTime**: string (ReadOnly): This is the DateTime when the reservation was created.
@@ -129,6 +130,7 @@
 * **appliedScopes**: string[]: List of the subscriptions that the benefit will be applied. Do not specify if AppliedScopeType is Shared.
 * **appliedScopeType**: 'Shared' | 'Single' | string: Type of the Applied Scope.
 * **archived**: bool: Property to determine if a reservation is archived or not
+* **benefitStartTime**: string: This is the DateTime when the reservation benefit started.
 * **billingPlan**: 'Monthly' | 'Upfront' | string: Represent the billing plans.
 * **billingScopeId**: string: Subscription that will be charged for purchasing Reservation
 * **capabilities**: string: List the Capabilities of a reservation
