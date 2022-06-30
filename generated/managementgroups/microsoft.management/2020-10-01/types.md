@@ -63,19 +63,21 @@
 * **id**: string: The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
 * **name**: string (ReadOnly): The name of the parent management group
 
-## DescendantParentGroupInfo
-### Properties
-* **id**: string: The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
-
 ## ManagementGroupPathElement
 ### Properties
 * **displayName**: string: The friendly name of the group.
 * **name**: string: The name of the group.
 
+## ParentGroupBagInfo
+### Properties
+* **displayName**: string: The friendly name of the parent management group.
+* **id**: string: The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+* **name**: string: The name of the parent management group. For example, 00000000-0000-0000-0000-000000000000
+
 ## SubscriptionUnderManagementGroupProperties
 ### Properties
 * **displayName**: string: The friendly name of the subscription.
-* **parent**: [DescendantParentGroupInfo](#descendantparentgroupinfo): The ID of the parent management group.
+* **parent**: [ParentGroupBagInfo](#parentgroupbaginfo): The ID, name and displayName of the parent management group.
 * **state**: string: The state of the subscription.
 * **tenant**: string: The AAD Tenant ID associated with the subscription. For example, 00000000-0000-0000-0000-000000000000
 

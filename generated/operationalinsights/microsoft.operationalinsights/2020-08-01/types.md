@@ -61,7 +61,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'Alerts' | 'AzureWatson' | 'CustomLogs' | 'Query' (Required, DeployTimeConstant): The resource name
+* **name**: 'Alerts' | 'AzureWatson' | 'CustomLogs' | 'Ingestion' | 'Query' (Required, DeployTimeConstant): The resource name
 * **properties**: [LinkedStorageAccountsProperties](#linkedstorageaccountsproperties) (Required): Linked storage accounts properties.
 * **type**: 'Microsoft.OperationalInsights/workspaces/linkedStorageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -156,7 +156,7 @@
 
 ## LinkedStorageAccountsProperties
 ### Properties
-* **dataSourceType**: 'Alerts' | 'AzureWatson' | 'CustomLogs' | 'Query' (ReadOnly): Linked storage accounts type.
+* **dataSourceType**: 'Alerts' | 'AzureWatson' | 'CustomLogs' | 'Ingestion' | 'Query' (ReadOnly): Linked storage accounts type.
 * **storageAccountIds**: string[]: Linked storage accounts resources ids.
 
 ## PrivateLinkScopedResource

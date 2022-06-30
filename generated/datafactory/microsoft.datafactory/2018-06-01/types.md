@@ -1736,6 +1736,14 @@
 * **query**: any: SAP HANA Sql query. Type: string (or Expression with resultType string).
 * **type**: 'SapHanaSource' (Required): Copy source type.
 
+### SapOdpSource
+#### Properties
+* **extractionMode**: any: The extraction mode. Allowed value include: Full, Delta and Recovery. The default value is Full. Type: string (or Expression with resultType string).
+* **projection**: any: Specifies the columns to be selected from source data. Type: array of objects(projection) (or Expression with resultType array of objects).
+* **selection**: any: Specifies the selection conditions from source data. Type: array of objects(selection) (or Expression with resultType array of objects).
+* **subscriberProcess**: any: The subscriber process to manage the delta process. Type: string (or Expression with resultType string).
+* **type**: 'SapOdpSource' (Required): Copy source type.
+
 ### SapOpenHubSource
 #### Properties
 * **baseRequestId**: any: The ID of request for delta loading. Once it is set, only data with requestId larger than the value of this property will be retrieved. The default value is 0. Type: integer (or Expression with resultType integer ).
@@ -2479,6 +2487,11 @@
 #### Properties
 * **type**: 'SapHanaTable' (Required): Type of dataset.
 * **typeProperties**: [SapHanaTableDatasetTypeProperties](#saphanatabledatasettypeproperties): SAP HANA Table properties.
+
+### SapOdpResourceDataset
+#### Properties
+* **type**: 'SapOdpResource' (Required): Type of dataset.
+* **typeProperties**: [SapOdpResourceDatasetTypeProperties](#sapodpresourcedatasettypeproperties) (Required): SAP ODP Resource properties.
 
 ### SapOpenHubTableDataset
 #### Properties
@@ -3394,7 +3407,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **enableServerCertificateValidation**: any: If true, validate the HTTPS server SSL certificate. Default value is true. Type: boolean (or Expression with resultType boolean).
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase): Password for Basic, Digest, Windows, or ClientCertificate with EmbeddedCertData authentication.
-* **url**: any (Required): The base URL of the HTTP endpoint, e.g. http://www.microsoft.com. Type: string (or Expression with resultType string).
+* **url**: any (Required): The base URL of the HTTP endpoint, e.g. https://www.microsoft.com. Type: string (or Expression with resultType string).
 * **userName**: any: User name for Basic, Digest, or Windows authentication. Type: string (or Expression with resultType string).
 
 ## HubspotLinkedServiceTypeProperties
@@ -4052,6 +4065,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 #### Properties
 * **type**: 'SapHana' (Required): Type of linked service.
 * **typeProperties**: [SapHanaLinkedServiceProperties](#saphanalinkedserviceproperties) (Required): Properties specific to this linked service type.
+
+### SapOdpLinkedService
+#### Properties
+* **type**: 'SapOdp' (Required): Type of linked service.
+* **typeProperties**: [SapOdpLinkedServiceTypeProperties](#sapodplinkedservicetypeproperties) (Required): Properties specific to SAP ODP linked service type.
 
 ### SapOpenHubLinkedService
 #### Properties
@@ -4856,6 +4874,32 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **schema**: any: The schema name of SAP HANA. Type: string (or Expression with resultType string).
 * **table**: any: The table name of SAP HANA. Type: string (or Expression with resultType string).
+
+## SapOdpLinkedServiceTypeProperties
+### Properties
+* **clientId**: any: Client ID of the client on the SAP system where the table is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **language**: any: Language of the SAP system where the table is located. The default value is EN. Type: string (or Expression with resultType string).
+* **logonGroup**: any: The Logon Group for the SAP System. Type: string (or Expression with resultType string).
+* **messageServer**: any: The hostname of the SAP Message Server. Type: string (or Expression with resultType string).
+* **messageServerService**: any: The service name or port number of the Message Server. Type: string (or Expression with resultType string).
+* **password**: [SecretBase](#secretbase): Password to access the SAP server where the table is located.
+* **server**: any: Host name of the SAP instance where the table is located. Type: string (or Expression with resultType string).
+* **sncLibraryPath**: any: External security product's library to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+* **sncMode**: any: SNC activation indicator to access the SAP server where the table is located. Must be either 0 (off) or 1 (on). Type: string (or Expression with resultType string).
+* **sncMyName**: any: Initiator's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+* **sncPartnerName**: any: Communication partner's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+* **sncQop**: any: SNC Quality of Protection. Allowed value include: 1, 2, 3, 8, 9. Type: string (or Expression with resultType string).
+* **subscriberName**: any: The subscriber name. Type: string (or Expression with resultType string).
+* **systemId**: any: SystemID of the SAP system where the table is located. Type: string (or Expression with resultType string).
+* **systemNumber**: any: System number of the SAP system where the table is located. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
+* **userName**: any: Username to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+* **x509CertificatePath**: any: SNC X509 certificate file path. Type: string (or Expression with resultType string).
+
+## SapOdpResourceDatasetTypeProperties
+### Properties
+* **context**: any (Required): The context of the SAP ODP Object. Type: string (or Expression with resultType string).
+* **objectName**: any (Required): The name of the SAP ODP Object. Type: string (or Expression with resultType string).
 
 ## SapOpenHubLinkedServiceTypeProperties
 ### Properties
@@ -5711,7 +5755,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **Discriminator**: authenticationType
 
 ### Base Properties
-* **url**: any (Required): The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+* **url**: any (Required): The URL of the web service endpoint, e.g. https://www.microsoft.com . Type: string (or Expression with resultType string).
 ### WebAnonymousAuthentication
 #### Properties
 * **authenticationType**: 'Anonymous' (Required): Type of authentication used to connect to the web table source.

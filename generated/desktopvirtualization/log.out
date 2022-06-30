@@ -20,6 +20,15 @@ warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-identity' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-sku' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-plan' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/desktopvirtualization/resource-manager/Microsoft.DesktopVirtualization/stable/2021-07-12/desktopvirtualization.json:2450:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'

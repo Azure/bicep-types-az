@@ -63,7 +63,7 @@
 ## LinkerProperties
 ### Properties
 * **authInfo**: [AuthInfoBase](#authinfobase): The authentication type.
-* **clientType**: 'django' | 'dotnet' | 'go' | 'java' | 'nodejs' | 'none' | 'php' | 'python' | 'ruby' | 'springBoot' | string: The application client type
+* **clientType**: 'django' | 'dotnet' | 'go' | 'java' | 'kafka-springBoot' | 'nodejs' | 'none' | 'php' | 'python' | 'ruby' | 'springBoot' | string: The application client type
 * **provisioningState**: string (ReadOnly): The provisioning state.
 * **scope**: string: connection scope in source service.
 * **secretStore**: [SecretStore](#secretstore): An option to store secret value in secure place

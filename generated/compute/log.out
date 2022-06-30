@@ -99,122 +99,26 @@ warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ApiErrorBase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/common.json:38:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-04-04/common.json:38:5
 warning | PreCheck/SchemaMissingType | The schema 'InnerError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/common.json:55:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-04-04/common.json:55:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/common.json:68:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-04-04/common.json:68:5
 warning | PreCheck/SchemaMissingType | The schema 'ApiError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/common.json:77:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-04-04/common.json:77:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/common.json:109:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-04-04/common.json:109:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/common.json:144:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-04-04/common.json:144:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResourceReadOnly' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/common.json:153:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-04-04/common.json:153:5
 warning | PreCheck/SchemaMissingType | The schema 'ExtendedLocation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/common.json:207:5
-warning | PreCheck/SchemaMissingType | The schema 'EncryptionSettingsCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:38:5
-warning | PreCheck/SchemaMissingType | The schema 'EncryptionSettingsElement' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:64:5
-warning | PreCheck/SchemaMissingType | The schema 'KeyVaultAndSecretReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:77:5
-warning | PreCheck/SchemaMissingType | The schema 'KeyVaultAndKeyReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:94:5
-warning | PreCheck/SchemaMissingType | The schema 'SourceVault' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:111:5
-warning | PreCheck/SchemaMissingType | The schema 'Encryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:147:5
-warning | PreCheck/SchemaMissingType | The schema 'CreationData' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:261:5
-warning | PreCheck/SchemaMissingType | The schema 'ImageDiskReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:370:5
-warning | PreCheck/SchemaMissingType | The schema 'PurchasePlan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:392:5
-warning | PreCheck/SchemaMissingType | The schema 'DiskSecurityProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:503:5
-warning | PreCheck/SchemaMissingType | The schema 'GrantAccessData' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:515:5
-warning | PreCheck/SchemaMissingType | The schema 'AccessUri' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:545:5
-warning | PreCheck/SchemaMissingType | The schema 'Disk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/disk.json:458:5
-warning | PreCheck/SchemaMissingType | The schema 'DiskUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/disk.json:499:5
-warning | PreCheck/SchemaMissingType | The schema 'DiskList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/disk.json:518:5
-warning | PreCheck/SchemaMissingType | The schema 'DiskSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/disk.json:537:5
-warning | PreCheck/SchemaMissingType | The schema 'DiskProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/disk.json:594:5
-warning | PreCheck/SchemaMissingType | The schema 'DiskUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/disk.json:751:5
-warning | PreCheck/SchemaMissingType | The schema 'ShareInfoElement' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/disk.json:844:5
-warning | PreCheck/SchemaMissingType | The schema 'PropertyUpdatesInProgress' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/disk.json:853:5
-warning | PreCheck/SchemaMissingType | The schema 'DiskAccessProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:553:5
-warning | PreCheck/SchemaMissingType | The schema 'DiskAccess' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:576:5
-warning | PreCheck/SchemaMissingType | The schema 'DiskAccessList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:594:5
-warning | PreCheck/SchemaMissingType | The schema 'DiskAccessUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:613:5
-warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:625:5
-warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:637:5
-warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:662:5
-warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:687:5
-warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkServiceConnectionState' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:725:5
-warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:742:5
-warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:763:5
-warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:789:5
-warning | PreCheck/SchemaMissingType | The schema 'EncryptionSetProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskEncryptionSet.json:378:5
-warning | PreCheck/SchemaMissingType | The schema 'EncryptionSetIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskEncryptionSet.json:424:5
-warning | PreCheck/SchemaMissingType | The schema 'KeyForDiskEncryptionSet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskEncryptionSet.json:484:5
-warning | PreCheck/SchemaMissingType | The schema 'DiskEncryptionSet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskEncryptionSet.json:500:5
-warning | PreCheck/SchemaMissingType | The schema 'DiskEncryptionSetUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskEncryptionSet.json:517:5
-warning | PreCheck/SchemaMissingType | The schema 'DiskEncryptionSetUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskEncryptionSet.json:536:5
-warning | PreCheck/SchemaMissingType | The schema 'DiskEncryptionSetList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskEncryptionSet.json:555:5
-warning | PreCheck/SchemaMissingType | The schema 'ResourceUriList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskEncryptionSet.json:574:5
-warning | PreCheck/SchemaMissingType | The schema 'DiskRestorePoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRestorePoint.json:254:5
-warning | PreCheck/SchemaMissingType | The schema 'DiskRestorePointList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRestorePoint.json:268:5
-warning | PreCheck/SchemaMissingType | The schema 'DiskRestorePointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRestorePoint.json:287:5
-warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRestorePoint.json:383:5
-warning | PreCheck/SchemaMissingType | The schema 'Snapshot' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/snapshot.json:386:5
-warning | PreCheck/SchemaMissingType | The schema 'SnapshotUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/snapshot.json:412:5
-warning | PreCheck/SchemaMissingType | The schema 'SnapshotList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/snapshot.json:431:5
-warning | PreCheck/SchemaMissingType | The schema 'SnapshotSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/snapshot.json:450:5
-warning | PreCheck/SchemaMissingType | The schema 'SnapshotProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/snapshot.json:487:5
-warning | PreCheck/SchemaMissingType | The schema 'SnapshotUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/snapshot.json:603:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-04-04/common.json:207:5
+warning | PreCheck/BinarySchema | 'The schema paths·1djjsnh·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-compute-cloudservices-cloudservicename-roleinstances-roleinstancename-remotedesktopfile·get·responses·200·content·application-x_rdp·schema with 'type: file', format: binary' will be treated as a binary blob for binary media types.
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-04-04/CloudServiceRP/cloudService.json:511:11
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -337,39 +241,39 @@ warning | PreCheck/SchemaMissingType | The schema 'VaultSecretGroup' with an und
 warning | PreCheck/SchemaMissingType | The schema 'OSProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1352:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkInterfaceReferenceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1399:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1400:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkInterfaceReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1420:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1421:5
 warning | PreCheck/SchemaMissingType | The schema 'PublicIPAddressSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1434:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1435:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1463:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1464:5
 warning | PreCheck/SchemaMissingType | The schema 'BootDiagnostics' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1496:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1497:5
 warning | PreCheck/SchemaMissingType | The schema 'DiagnosticsProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1509:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1510:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1543:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1544:5
 warning | PreCheck/SchemaMissingType | The schema 'DiskInstanceView' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1553:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1554:5
 warning | PreCheck/SchemaMissingType | The schema 'BootDiagnosticsInstanceView' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1580:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1581:5
 warning | PreCheck/SchemaMissingType | The schema 'MaintenanceRedeployStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1600:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1601:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1647:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1648:5
 warning | PreCheck/SchemaMissingType | The schema 'ApiEntityReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1665:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1666:5
 warning | PreCheck/SchemaMissingType | The schema 'RollbackStatusInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1674:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1675:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1718:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1719:5
 warning | PreCheck/SchemaMissingType | The schema 'UpdateResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1739:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1740:5
 warning | PreCheck/SchemaMissingType | The schema 'PatchSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1751:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1752:5
 warning | PreCheck/SchemaMissingType | The schema 'LinuxPatchSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1789:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/computeRPCommon.json:1790:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMExtension' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:3405:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMExtensionUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -391,137 +295,137 @@ warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetIdentit
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetOSProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:3666:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateOSProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:3709:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:3710:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetManagedDiskParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:3736:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:3737:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetOSDisk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:3753:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:3754:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateOSDisk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:3817:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:3818:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetDataDisk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:3854:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:3855:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetStorageProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:3907:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:3908:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateStorageProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:3931:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:3932:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetIPConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:3955:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:3956:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateIPConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4012:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4013:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetIPConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4069:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4070:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateIPConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4090:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4091:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetNetworkConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4108:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4109:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateNetworkConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4159:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4160:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetNetworkConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4207:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4208:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateNetworkConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4228:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4229:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetNetworkConfigurationDnsSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4246:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4247:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4258:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4259:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetIpTag' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4270:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4271:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetPublicIPAddressConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4283:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4284:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdatePublicIPAddressConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4302:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4303:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetPublicIPAddressConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4315:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4316:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdatePublicIPAddressConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4365:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4366:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetNetworkProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4395:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4396:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateNetworkProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4422:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4423:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetExtensionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4449:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4450:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetExtension' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4506:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4507:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetExtensionUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4529:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4530:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetExtensionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4553:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4554:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetExtensionProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4572:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4573:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4588:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4589:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateVMProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4653:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4654:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4698:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4699:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4776:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4777:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4817:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4818:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMReimageParameters' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4854:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4855:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetReimageParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4862:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4863:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4879:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4880:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMInstanceIDs' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4905:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4906:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMInstanceRequiredIDs' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4917:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4918:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineStatusCodeCount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4932:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4933:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetInstanceViewStatusesSummary' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4948:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4949:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMExtensionsSummary' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4962:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4963:5
 warning | PreCheck/SchemaMissingType | The schema 'OrchestrationServiceSummary' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4981:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:4982:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetInstanceView' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5012:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5013:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5052:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5053:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetListWithLinkResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5071:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5072:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetSkuCapacity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5090:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5091:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5126:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5127:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetListSkusResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5146:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5147:5
 warning | PreCheck/SchemaMissingType | The schema 'UpgradeOperationHistoryStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5169:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5170:5
 warning | PreCheck/SchemaMissingType | The schema 'UpgradeOperationHistoricalStatusInfoProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5201:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5202:5
 warning | PreCheck/SchemaMissingType | The schema 'UpgradeOperationHistoricalStatusInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5245:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5246:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetListOSUpgradeHistory' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5265:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5266:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5288:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5289:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVM' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5366:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5367:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMInstanceView' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5414:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5415:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMNetworkProfileConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5488:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5489:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMProtectionPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5500:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5501:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5513:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5514:5
 warning | PreCheck/SchemaMissingType | The schema 'RollingUpgradeStatusInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5532:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5533:5
 warning | PreCheck/SchemaMissingType | The schema 'RollingUpgradeStatusInfoProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5546:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5547:5
 warning | PreCheck/SchemaMissingType | The schema 'RollingUpgradeRunningStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5571:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5572:5
 warning | PreCheck/SchemaMissingType | The schema 'RollingUpgradeProgressInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5616:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5617:5
 warning | PreCheck/SchemaMissingType | The schema 'RecoveryWalkResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5645:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5646:5
 warning | PreCheck/SchemaMissingType | The schema 'VMScaleSetConvertToSinglePlacementGroupInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5660:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5661:5
 warning | PreCheck/SchemaMissingType | The schema 'OrchestrationServiceStateInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5668:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachineScaleSet.json:5669:5
 warning | PreCheck/SchemaMissingType | The schema 'RetrieveBootDiagnosticsDataResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-01/ComputeRP/virtualMachine.json:1860:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineExtensionInstanceView' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -767,6 +671,172 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.37.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'EncryptionSettingsCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:38:5
+warning | PreCheck/SchemaMissingType | The schema 'EncryptionSettingsElement' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:64:5
+warning | PreCheck/SchemaMissingType | The schema 'KeyVaultAndSecretReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:77:5
+warning | PreCheck/SchemaMissingType | The schema 'KeyVaultAndKeyReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:94:5
+warning | PreCheck/SchemaMissingType | The schema 'SourceVault' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:111:5
+warning | PreCheck/SchemaMissingType | The schema 'Encryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:147:5
+warning | PreCheck/SchemaMissingType | The schema 'CreationData' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:261:5
+warning | PreCheck/SchemaMissingType | The schema 'ImageDiskReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:370:5
+warning | PreCheck/SchemaMissingType | The schema 'PurchasePlan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:392:5
+warning | PreCheck/SchemaMissingType | The schema 'DiskSecurityProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:503:5
+warning | PreCheck/SchemaMissingType | The schema 'GrantAccessData' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:515:5
+warning | PreCheck/SchemaMissingType | The schema 'AccessUri' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRPCommon.json:545:5
+warning | PreCheck/SchemaMissingType | The schema 'Disk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/disk.json:458:5
+warning | PreCheck/SchemaMissingType | The schema 'DiskUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/disk.json:499:5
+warning | PreCheck/SchemaMissingType | The schema 'DiskList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/disk.json:518:5
+warning | PreCheck/SchemaMissingType | The schema 'DiskSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/disk.json:537:5
+warning | PreCheck/SchemaMissingType | The schema 'DiskProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/disk.json:594:5
+warning | PreCheck/SchemaMissingType | The schema 'DiskUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/disk.json:751:5
+warning | PreCheck/SchemaMissingType | The schema 'ShareInfoElement' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/disk.json:844:5
+warning | PreCheck/SchemaMissingType | The schema 'PropertyUpdatesInProgress' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/disk.json:853:5
+warning | PreCheck/SchemaMissingType | The schema 'DiskAccessProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:553:5
+warning | PreCheck/SchemaMissingType | The schema 'DiskAccess' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:576:5
+warning | PreCheck/SchemaMissingType | The schema 'DiskAccessList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:594:5
+warning | PreCheck/SchemaMissingType | The schema 'DiskAccessUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:613:5
+warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:625:5
+warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:637:5
+warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:662:5
+warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:687:5
+warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkServiceConnectionState' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:725:5
+warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:742:5
+warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:763:5
+warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskAccess.json:789:5
+warning | PreCheck/SchemaMissingType | The schema 'EncryptionSetProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskEncryptionSet.json:378:5
+warning | PreCheck/SchemaMissingType | The schema 'EncryptionSetIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskEncryptionSet.json:424:5
+warning | PreCheck/SchemaMissingType | The schema 'KeyForDiskEncryptionSet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskEncryptionSet.json:484:5
+warning | PreCheck/SchemaMissingType | The schema 'DiskEncryptionSet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskEncryptionSet.json:500:5
+warning | PreCheck/SchemaMissingType | The schema 'DiskEncryptionSetUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskEncryptionSet.json:517:5
+warning | PreCheck/SchemaMissingType | The schema 'DiskEncryptionSetUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskEncryptionSet.json:536:5
+warning | PreCheck/SchemaMissingType | The schema 'DiskEncryptionSetList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskEncryptionSet.json:555:5
+warning | PreCheck/SchemaMissingType | The schema 'ResourceUriList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskEncryptionSet.json:574:5
+warning | PreCheck/SchemaMissingType | The schema 'DiskRestorePoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRestorePoint.json:254:5
+warning | PreCheck/SchemaMissingType | The schema 'DiskRestorePointList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRestorePoint.json:268:5
+warning | PreCheck/SchemaMissingType | The schema 'DiskRestorePointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRestorePoint.json:287:5
+warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/diskRestorePoint.json:383:5
+warning | PreCheck/SchemaMissingType | The schema 'Snapshot' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/snapshot.json:386:5
+warning | PreCheck/SchemaMissingType | The schema 'SnapshotUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/snapshot.json:412:5
+warning | PreCheck/SchemaMissingType | The schema 'SnapshotList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/snapshot.json:431:5
+warning | PreCheck/SchemaMissingType | The schema 'SnapshotSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/snapshot.json:450:5
+warning | PreCheck/SchemaMissingType | The schema 'SnapshotProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/snapshot.json:487:5
+warning | PreCheck/SchemaMissingType | The schema 'SnapshotUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/DiskRP/snapshot.json:603:5
+warning | PreCheck/SchemaMissingType | The schema 'ApiErrorBase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/common.json:38:5
+warning | PreCheck/SchemaMissingType | The schema 'InnerError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/common.json:55:5
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/common.json:68:5
+warning | PreCheck/SchemaMissingType | The schema 'ApiError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/common.json:77:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/common.json:109:5
+warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/common.json:144:5
+warning | PreCheck/SchemaMissingType | The schema 'SubResourceReadOnly' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/common.json:153:5
+warning | PreCheck/SchemaMissingType | The schema 'ExtendedLocation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-03-02/common.json:207:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2897,269 +2967,269 @@ warning | PreCheck/SchemaMissingType | The schema 'VaultSecretGroup' with an und
 warning | PreCheck/SchemaMissingType | The schema 'OSProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:12998:5
 warning | PreCheck/SchemaMissingType | The schema 'AutomaticRepairsPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13045:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13046:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkInterfaceReferenceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13071:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13072:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkInterfaceReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13092:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13093:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineIpTag' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13106:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13107:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachinePublicIPAddressDnsSettingsConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13119:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13120:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachinePublicIPAddressConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13131:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13132:5
 warning | PreCheck/SchemaMissingType | The schema 'PublicIPAddressSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13193:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13194:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachinePublicIPAddressConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13222:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13223:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineNetworkInterfaceIPConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13241:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13242:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineNetworkInterfaceIPConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13291:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13292:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineNetworkInterfaceDnsSettingsConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13307:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13308:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineNetworkInterfaceConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13319:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13320:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineNetworkInterfaceConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13376:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13377:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13392:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13393:5
 warning | PreCheck/SchemaMissingType | The schema 'BootDiagnostics' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13425:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13426:5
 warning | PreCheck/SchemaMissingType | The schema 'DiagnosticsProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13438:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13439:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13472:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13473:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineExtensionHandlerInstanceView' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13482:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13483:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineAgentInstanceView' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13499:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13500:5
 warning | PreCheck/SchemaMissingType | The schema 'DiskInstanceView' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13524:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13525:5
 warning | PreCheck/SchemaMissingType | The schema 'BootDiagnosticsInstanceView' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13551:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13552:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13571:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13572:5
 warning | PreCheck/SchemaMissingType | The schema 'MaintenanceRedeployStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13620:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13621:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineInstanceView' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13667:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13668:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13765:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13766:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachine' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13880:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13881:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13921:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13922:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13950:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13951:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13969:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13970:5
 warning | PreCheck/SchemaMissingType | The schema 'AutomaticOSUpgradePolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13987:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:13988:5
 warning | PreCheck/SchemaMissingType | The schema 'UpgradePolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14000:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14001:5
 warning | PreCheck/SchemaMissingType | The schema 'RollingUpgradePolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14026:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14027:5
 warning | PreCheck/SchemaMissingType | The schema 'ScaleInPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14064:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14065:5
 warning | PreCheck/SchemaMissingType | The schema 'ImageOSDisk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14115:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14116:5
 warning | PreCheck/SchemaMissingType | The schema 'ImageDataDisk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14163:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14164:5
 warning | PreCheck/SchemaMissingType | The schema 'ImageDisk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14181:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14182:5
 warning | PreCheck/SchemaMissingType | The schema 'ImageStorageProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14224:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14225:5
 warning | PreCheck/SchemaMissingType | The schema 'ImageProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14247:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14248:5
 warning | PreCheck/SchemaMissingType | The schema 'Image' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14269:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14270:5
 warning | PreCheck/SchemaMissingType | The schema 'ImageUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14287:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14288:5
 warning | PreCheck/SchemaMissingType | The schema 'ImageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14301:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14302:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14320:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14321:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetOSProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14369:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14370:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateOSProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14412:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14414:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetManagedDiskParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14439:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14441:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetOSDisk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14456:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14458:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateOSDisk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14516:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14518:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetDataDisk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14549:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14551:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetStorageProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14598:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14600:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateStorageProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14622:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14624:5
 warning | PreCheck/SchemaMissingType | The schema 'ApiEntityReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14646:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14648:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetIPConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14655:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14657:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateIPConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14712:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14714:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetIPConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14769:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14771:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateIPConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14790:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14792:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetNetworkConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14808:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14810:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateNetworkConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14859:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14861:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetNetworkConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14907:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14909:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateNetworkConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14928:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14930:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetNetworkConfigurationDnsSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14946:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14948:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14958:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14960:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetIpTag' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14970:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14972:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetPublicIPAddressConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14983:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:14985:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdatePublicIPAddressConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15002:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15004:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetPublicIPAddressConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15015:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15017:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdatePublicIPAddressConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15065:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15067:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetNetworkProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15095:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15097:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateNetworkProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15122:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15124:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetExtensionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15149:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15151:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetExtension' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15206:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15208:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetExtensionUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15229:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15231:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetExtensionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15253:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15255:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetExtensionProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15272:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15274:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15288:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15290:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateVMProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15353:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15355:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15398:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15400:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15476:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15478:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15517:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15519:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMReimageParameters' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15554:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15556:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetReimageParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15562:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15564:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15579:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15581:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMInstanceIDs' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15605:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15607:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMInstanceRequiredIDs' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15617:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15619:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineStatusCodeCount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15632:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15634:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetInstanceViewStatusesSummary' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15648:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15650:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMExtensionsSummary' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15662:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15664:5
 warning | PreCheck/SchemaMissingType | The schema 'OrchestrationServiceSummary' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15681:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15683:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetInstanceView' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15712:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15714:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15752:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15754:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetListWithLinkResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15771:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15773:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetSkuCapacity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15790:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15792:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15826:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15828:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetListSkusResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15846:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15848:5
 warning | PreCheck/SchemaMissingType | The schema 'RollbackStatusInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15869:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15871:5
 warning | PreCheck/SchemaMissingType | The schema 'UpgradeOperationHistoryStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15891:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15893:5
 warning | PreCheck/SchemaMissingType | The schema 'UpgradeOperationHistoricalStatusInfoProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15923:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15925:5
 warning | PreCheck/SchemaMissingType | The schema 'UpgradeOperationHistoricalStatusInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15967:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15969:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetListOSUpgradeHistory' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15987:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:15989:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16010:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16012:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVM' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16088:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16090:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMInstanceView' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16132:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16134:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMNetworkProfileConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16206:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16208:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMProtectionPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16218:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16220:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineHealthStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16253:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16255:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineScaleSetVMListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16263:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16265:5
 warning | PreCheck/SchemaMissingType | The schema 'RollingUpgradeStatusInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16282:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16284:5
 warning | PreCheck/SchemaMissingType | The schema 'RollingUpgradeStatusInfoProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16296:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16298:5
 warning | PreCheck/SchemaMissingType | The schema 'RollingUpgradeRunningStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16321:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16323:5
 warning | PreCheck/SchemaMissingType | The schema 'RollingUpgradeProgressInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16366:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16368:5
 warning | PreCheck/SchemaMissingType | The schema 'ApiErrorBase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16395:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16397:5
 warning | PreCheck/SchemaMissingType | The schema 'InnerError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16412:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16414:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16425:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16427:5
 warning | PreCheck/SchemaMissingType | The schema 'ApiError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16434:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16436:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16466:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16468:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16487:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16489:5
 warning | PreCheck/SchemaMissingType | The schema 'UpdateResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16522:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16524:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16534:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16536:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResourceReadOnly' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16543:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16545:5
 warning | PreCheck/SchemaMissingType | The schema 'ExtendedLocation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16564:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16566:5
 warning | PreCheck/SchemaMissingType | The schema 'RecoveryWalkResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16577:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16579:5
 warning | PreCheck/SchemaMissingType | The schema 'RequestRateByIntervalInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16592:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16594:5
 warning | PreCheck/SchemaMissingType | The schema 'ThrottledRequestsInput' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16619:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16621:5
 warning | PreCheck/SchemaMissingType | The schema 'LogAnalyticsInputBase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16627:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16629:5
 warning | PreCheck/SchemaMissingType | The schema 'LogAnalyticsOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16671:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16673:5
 warning | PreCheck/SchemaMissingType | The schema 'LogAnalyticsOutput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16681:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16683:5
 warning | PreCheck/SchemaMissingType | The schema 'VMScaleSetConvertToSinglePlacementGroupInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16691:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16693:5
 warning | PreCheck/SchemaMissingType | The schema 'OrchestrationServiceStateInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16699:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16701:5
 warning | PreCheck/SchemaMissingType | The schema 'PatchSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16731:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16733:5
 warning | PreCheck/SchemaMissingType | The schema 'LinuxPatchSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16765:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16767:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachinePatchStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16794:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16796:5
 warning | PreCheck/SchemaMissingType | The schema 'AvailablePatchSummary' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16816:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16818:5
 warning | PreCheck/SchemaMissingType | The schema 'LastPatchInstallationSummary' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16876:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/compute.json:16878:5
 warning | PreCheck/SchemaMissingType | The schema 'RunCommandInputParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-11-01/runCommands.json:927:5
 warning | PreCheck/SchemaMissingType | The schema 'RunCommandInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'

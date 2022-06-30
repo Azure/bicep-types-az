@@ -26,6 +26,12 @@
 * **ApiVersion**: 2016-01-01
 * **Output**: [ExtendedProduct](#extendedproduct)
 
+## Function listProducts (Microsoft.AzureStack/registrations/products@2016-01-01)
+* **Resource**: Microsoft.AzureStack/registrations/products
+* **ApiVersion**: 2016-01-01
+* **Input**: [DeviceConfiguration](#deviceconfiguration)
+* **Output**: [ProductList](#productlist)
+
 ## Compatibility
 ### Properties
 * **description**: string: Full error message if any compatibility issues are found
@@ -37,6 +43,11 @@
 ### Properties
 * **lun**: int (ReadOnly): The LUN.
 * **sourceBlobSasUri**: string (ReadOnly): SAS key for source blob.
+
+## DeviceConfiguration
+### Properties
+* **deviceVersion**: string (ReadOnly): Version of the device.
+* **identitySystem**: 'ADFS' | 'AzureAD' | string (ReadOnly): Identity system of the device.
 
 ## ExtendedProduct
 ### Properties
@@ -69,10 +80,22 @@
 * **operatingSystem**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): OS operating system type.
 * **sourceBlobSasUri**: string (ReadOnly): SAS key for source blob.
 
+## Product
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ProductNestedProperties](#productnestedproperties): Properties of the product resource.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## ProductLink
 ### Properties
 * **displayName**: string: The description of the link.
 * **uri**: string: The URI corresponding to the link.
+
+## ProductList
+### Properties
+* **nextLink**: string: URI to the next page.
+* **value**: [Product](#product)[]: List of products.
 
 ## ProductNestedProperties
 ### Properties

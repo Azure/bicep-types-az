@@ -575,7 +575,7 @@
 * **parameters**: [RunbookPropertiesParameters](#runbookpropertiesparameters) (ReadOnly): Gets or sets the runbook parameters.
 * **provisioningState**: 'Succeeded' (ReadOnly): Gets or sets the provisioning state of the runbook.
 * **publishContentLink**: [ContentLink](#contentlink): Gets or sets the published runbook content link.
-* **runbookType**: 'Graph' | 'GraphPowerShell' | 'GraphPowerShellWorkflow' | 'PowerShell' | 'PowerShellWorkflow' | 'Script' | string (Required): Gets or sets the type of the runbook.
+* **runbookType**: 'Graph' | 'GraphPowerShell' | 'GraphPowerShellWorkflow' | 'PowerShell' | 'PowerShellWorkflow' | 'Python2' | 'Python3' | 'Script' | string (Required): Gets or sets the type of the runbook.
 * **state**: 'Edit' | 'New' | 'Published' | string (ReadOnly): Gets or sets the state of the runbook.
 
 ## RunbookDraft

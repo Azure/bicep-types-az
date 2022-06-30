@@ -45,8 +45,8 @@
 
 ## AuthorizedGroundstation
 ### Properties
-* **expirationDate**: string: Date of authorization expiration
-* **groundStation**: string: Groundstation name
+* **expirationDate**: string: Date of authorization expiration.
+* **groundStation**: string: Groundstation name.
 
 ## AvailableContacts
 ### Properties
@@ -57,19 +57,19 @@
 ## AvailableContactsListResult
 ### Properties
 * **nextLink**: string (ReadOnly): The URL to get the next set of results.
-* **value**: [AvailableContacts](#availablecontacts)[]: A list of available contacts
+* **value**: [AvailableContacts](#availablecontacts)[]: A list of available contacts.
 
 ## AvailableContactsProperties
 ### Properties
 * **endAzimuthDegrees**: int (ReadOnly): Azimuth of the antenna at the end of the contact in decimal degrees.
 * **endElevationDegrees**: int (ReadOnly): Spacecraft elevation above the horizon at contact end.
 * **maximumElevationDegrees**: int (ReadOnly): Maximum elevation of the antenna during the contact in decimal degrees.
-* **rxEndTime**: string (ReadOnly): Time to lost receiving a signal.
-* **rxStartTime**: string (ReadOnly): Earliest time to receive a signal.
+* **rxEndTime**: string (ReadOnly): Time to lost receiving a signal (ISO 8601 UTC standard).
+* **rxStartTime**: string (ReadOnly): Earliest time to receive a signal (ISO 8601 UTC standard).
 * **startAzimuthDegrees**: int (ReadOnly): Azimuth of the antenna at the start of the contact in decimal degrees.
 * **startElevationDegrees**: int (ReadOnly): Spacecraft elevation above the horizon at contact start.
-* **txEndTime**: string (ReadOnly): Time at which antenna transmit will be disabled.
-* **txStartTime**: string (ReadOnly): Time at which antenna transmit will be enabled.
+* **txEndTime**: string (ReadOnly): Time at which antenna transmit will be disabled (ISO 8601 UTC standard).
+* **txStartTime**: string (ReadOnly): Time at which antenna transmit will be enabled (ISO 8601 UTC standard).
 
 ## AvailableContactsSpacecraft
 ### Properties
@@ -78,9 +78,9 @@
 ## ContactParameters
 ### Properties
 * **contactProfile**: [ContactParametersContactProfile](#contactparameterscontactprofile) (Required): The reference to the contact profile resource.
-* **endTime**: string (Required): End time of a contact.
+* **endTime**: string (Required): End time of a contact (ISO 8601 UTC standard).
 * **groundStationName**: string (Required): Name of Azure Ground Station.
-* **startTime**: string (Required): Start time of a contact.
+* **startTime**: string (Required): Start time of a contact (ISO 8601 UTC standard).
 
 ## ContactParametersContactProfile
 ### Properties
@@ -88,37 +88,37 @@
 
 ## ContactProfileLink
 ### Properties
-* **channels**: [ContactProfileLinkChannel](#contactprofilelinkchannel)[] (Required): Contact Profile Link Channel
-* **direction**: 'downlink' | 'uplink' | string (Required): Direction (uplink or downlink)
-* **eirpdBW**: int: Effective Isotropic Radiated Power (EIRP) in dBW.
-* **gainOverTemperature**: int: Gain To Noise Temperature in db/K.
-* **name**: string (Required): Link name
-* **polarization**: 'LHCP' | 'RHCP' | 'linearHorizontal' | 'linearVertical' | string (Required): polarization. eg (RHCP, LHCP)
+* **channels**: [ContactProfileLinkChannel](#contactprofilelinkchannel)[] (Required): Contact Profile Link Channel.
+* **direction**: 'downlink' | 'uplink' | string (Required): Direction (uplink or downlink).
+* **eirpdBW**: int: Effective Isotropic Radiated Power (EIRP) in dBW. It is the required EIRP by the customer. Not used yet.
+* **gainOverTemperature**: int: Gain To Noise Temperature in db/K. It is the required G/T by the customer. Not used yet.
+* **name**: string (Required): Link name.
+* **polarization**: 'LHCP' | 'RHCP' | 'linearHorizontal' | 'linearVertical' | string (Required): Polarization. e.g. (RHCP, LHCP).
 
 ## ContactProfileLinkChannel
 ### Properties
-* **bandwidthMHz**: int (Required): Bandwidth in MHz
-* **centerFrequencyMHz**: int (Required): Center Frequency in MHz
-* **decodingConfiguration**: string: Configuration for decoding
-* **demodulationConfiguration**: string: Configuration for demodulation
-* **encodingConfiguration**: string: Configuration for encoding
+* **bandwidthMHz**: int (Required): Bandwidth in MHz.
+* **centerFrequencyMHz**: int (Required): Center Frequency in MHz.
+* **decodingConfiguration**: string: Currently unused.
+* **demodulationConfiguration**: string: Copy of the modem configuration file such as Kratos QRadio or Kratos QuantumRx. Only valid for downlink directions. If provided, the modem connects to the customer endpoint and sends demodulated data instead of a VITA.49 stream.
+* **encodingConfiguration**: string: Currently unused.
 * **endPoint**: [EndPoint](#endpoint) (Required): Customer End point to store/retrieve data during a contact.
-* **modulationConfiguration**: string: Configuration for modulation
-* **name**: string (Required): Channel name
+* **modulationConfiguration**: string: Copy of the modem configuration file such as Kratos QRadio. Only valid for uplink directions. If provided, the modem connects to the customer endpoint and accepts commands from the customer instead of a VITA.49 stream.
+* **name**: string (Required): Channel name.
 
 ## ContactProfileProperties
 ### Properties
-* **autoTrackingConfiguration**: 'disabled' | 'sBand' | 'xBand': Auto track configuration.
-* **eventHubUri**: string: The URI of the Event Hub used for telemetry
-* **links**: [ContactProfileLink](#contactprofilelink)[] (Required): Links of the Contact Profile
-* **minimumElevationDegrees**: int: Minimum viable elevation for the contact in decimal degrees.
-* **minimumViableContactDuration**: string: Minimum viable contact duration in ISO 8601 format.
+* **autoTrackingConfiguration**: 'disabled' | 'sBand' | 'xBand': Auto-tracking configuration.
+* **eventHubUri**: string: ARM resource identifier of the Event Hub used for telemetry. Requires granting Orbital Resource Provider the rights to send telemetry into the hub.
+* **links**: [ContactProfileLink](#contactprofilelink)[] (Required): Links of the Contact Profile. Describes RF links, modem processing, and IP endpoints.
+* **minimumElevationDegrees**: int: Minimum viable elevation for the contact in decimal degrees. Used for listing the available contacts with a spacecraft at a given ground station.
+* **minimumViableContactDuration**: string: Minimum viable contact duration in ISO 8601 format. Used for listing the available contacts with a spacecraft at a given ground station.
 * **networkConfiguration**: [ContactProfilesPropertiesNetworkConfiguration](#contactprofilespropertiesnetworkconfiguration) (Required): Network configuration of customer virtual network.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The current state of the resource's creation, deletion, or modification
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The current state of the resource's creation, deletion, or modification.
 
 ## ContactProfilesPropertiesNetworkConfiguration
 ### Properties
-* **subnetId**: string (Required): Customer subnet ARM resource identifier.
+* **subnetId**: string (Required): ARM resource identifier of the subnet delegated to the Microsoft.Orbital/orbitalGateways. Needs to be at least a class C subnet, and should not have any IP created in it.
 
 ## ContactsProperties
 ### Properties
@@ -129,16 +129,16 @@
 * **errorMessage**: string (ReadOnly): Any error message while scheduling a contact.
 * **groundStationName**: string (Required): Azure Ground Station name.
 * **maximumElevationDegrees**: int (ReadOnly): Maximum elevation of the antenna during the contact in decimal degrees.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The current state of the resource's creation, deletion, or modification
-* **reservationEndTime**: string (Required): Reservation end time of a contact.
-* **reservationStartTime**: string (Required): Reservation start time of a contact.
-* **rxEndTime**: string (ReadOnly): Receive end time of a contact.
-* **rxStartTime**: string (ReadOnly): Receive start time of a contact.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The current state of the resource's creation, deletion, or modification.
+* **reservationEndTime**: string (Required): Reservation end time of a contact (ISO 8601 UTC standard).
+* **reservationStartTime**: string (Required): Reservation start time of a contact (ISO 8601 UTC standard).
+* **rxEndTime**: string (ReadOnly): Receive end time of a contact (ISO 8601 UTC standard).
+* **rxStartTime**: string (ReadOnly): Receive start time of a contact (ISO 8601 UTC standard).
 * **startAzimuthDegrees**: int (ReadOnly): Azimuth of the antenna at the start of the contact in decimal degrees.
 * **startElevationDegrees**: int (ReadOnly): Spacecraft elevation above the horizon at contact start.
-* **status**: 'Canceled' | 'Failed' | 'Running' | 'Succeeded' | 'cancelled' | 'failed' | 'providerCancelled' | 'scheduled' | 'succeeded' (ReadOnly): Status of a contact.
-* **txEndTime**: string (ReadOnly): Transmit end time of a contact.
-* **txStartTime**: string (ReadOnly): Transmit start time of a contact.
+* **status**: 'cancelled' | 'failed' | 'providerCancelled' | 'scheduled' | 'succeeded' | string (ReadOnly): Status of a contact.
+* **txEndTime**: string (ReadOnly): Transmit end time of a contact (ISO 8601 UTC standard).
+* **txStartTime**: string (ReadOnly): Transmit start time of a contact (ISO 8601 UTC standard).
 
 ## ContactsPropertiesAntennaConfiguration
 ### Properties
@@ -159,20 +159,20 @@
 ## SpacecraftLink
 ### Properties
 * **authorizations**: [AuthorizedGroundstation](#authorizedgroundstation)[] (ReadOnly): Authorized Ground Stations
-* **bandwidthMHz**: int (Required): Bandwidth in MHz
-* **centerFrequencyMHz**: int (Required): Center Frequency in MHz
-* **direction**: 'downlink' | 'uplink' | string (Required): Direction (uplink or downlink)
-* **name**: string (Required): Link name
-* **polarization**: 'LHCP' | 'RHCP' | 'linearHorizontal' | 'linearVertical' | string (Required): polarization. eg (RHCP, LHCP)
+* **bandwidthMHz**: int (Required): Bandwidth in MHz.
+* **centerFrequencyMHz**: int (Required): Center Frequency in MHz.
+* **direction**: 'downlink' | 'uplink' | string (Required): Direction (uplink or downlink).
+* **name**: string (Required): Link name.
+* **polarization**: 'LHCP' | 'RHCP' | 'linearHorizontal' | 'linearVertical' | string (Required): Polarization. e.g. (RHCP, LHCP).
 
 ## SpacecraftsProperties
 ### Properties
-* **links**: [SpacecraftLink](#spacecraftlink)[]: Links of the Spacecraft
+* **links**: [SpacecraftLink](#spacecraftlink)[]: Immutable list of Spacecraft links.
 * **noradId**: string (Required): NORAD ID of the spacecraft.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The current state of the resource's creation, deletion, or modification
-* **titleLine**: string: Title line of Two Line Element (TLE).
-* **tleLine1**: string: Line 1 of Two Line Element (TLE).
-* **tleLine2**: string: Line 2 of Two Line Element (TLE).
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The current state of the resource's creation, deletion, or modification.
+* **titleLine**: string: Title line of the two-line element set (TLE).
+* **tleLine1**: string: Line 1 of the two-line element set (TLE).
+* **tleLine2**: string: Line 2 of the two-line element set (TLE).
 
 ## SystemData
 ### Properties

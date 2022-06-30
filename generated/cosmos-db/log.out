@@ -53,6 +53,339 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6147:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlDatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6174:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlContainerListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6187:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlStoredProcedureListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6200:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlUserDefinedFunctionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6213:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlTriggerListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6226:5
+warning | PreCheck/SchemaMissingType | The schema 'MongoDBDatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6239:5
+warning | PreCheck/SchemaMissingType | The schema 'MongoDBCollectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6252:5
+warning | PreCheck/SchemaMissingType | The schema 'TableListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6265:5
+warning | PreCheck/SchemaMissingType | The schema 'CassandraKeyspaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6278:5
+warning | PreCheck/SchemaMissingType | The schema 'CassandraTableListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6291:5
+warning | PreCheck/SchemaMissingType | The schema 'GremlinDatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6304:5
+warning | PreCheck/SchemaMissingType | The schema 'GremlinGraphListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6317:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6344:5
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6357:5
+warning | PreCheck/SchemaMissingType | The schema 'FailoverPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6366:5
+warning | PreCheck/SchemaMissingType | The schema 'RegionForOnlineOffline' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6402:5
+warning | PreCheck/SchemaMissingType | The schema 'ClientEncryptionKeyGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6548:9
+warning | PreCheck/SchemaMissingType | The schema 'ThroughputSettingsGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6638:9
+warning | PreCheck/SchemaMissingType | The schema 'GraphResourceGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6678:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlDatabaseGetProperties-resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6707:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlDatabaseGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6727:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlContainerGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6756:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlContainerGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6766:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlStoredProcedureGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6795:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlUserDefinedFunctionGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6827:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlTriggerGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6859:9
+warning | PreCheck/SchemaMissingType | The schema 'MongoDBDatabaseGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6891:9
+warning | PreCheck/SchemaMissingType | The schema 'MongoDBDatabaseGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6901:9
+warning | PreCheck/SchemaMissingType | The schema 'MongoDBCollectionGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6930:9
+warning | PreCheck/SchemaMissingType | The schema 'MongoDBCollectionGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6940:9
+warning | PreCheck/SchemaMissingType | The schema 'TableGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6969:9
+warning | PreCheck/SchemaMissingType | The schema 'TableGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6979:9
+warning | PreCheck/SchemaMissingType | The schema 'CassandraKeyspaceGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:7008:9
+warning | PreCheck/SchemaMissingType | The schema 'CassandraKeyspaceGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:7018:9
+warning | PreCheck/SchemaMissingType | The schema 'CassandraTableGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:7047:9
+warning | PreCheck/SchemaMissingType | The schema 'CassandraTableGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:7057:9
+warning | PreCheck/SchemaMissingType | The schema 'GremlinDatabaseGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:7086:9
+warning | PreCheck/SchemaMissingType | The schema 'GremlinDatabaseGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:7096:9
+warning | PreCheck/SchemaMissingType | The schema 'GremlinGraphGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:7125:9
+warning | PreCheck/SchemaMissingType | The schema 'GremlinGraphGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:7135:9
+warning | PreCheck/SchemaMissingType | The schema 'CassandraViewGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:7164:9
+warning | PreCheck/SchemaMissingType | The schema 'CassandraViewGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:7174:9
+warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountListReadOnlyKeysResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:7794:5
+warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountListKeysResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:7809:5
+warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountConnectionString' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:7829:5
+warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountListConnectionStringsResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:7844:5
+warning | PreCheck/SchemaMissingType | The schema 'PhysicalPartitionThroughputInfoResultProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:8676:9
+warning | PreCheck/SchemaMissingType | The schema 'ManagedServiceIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:9544:5
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:9701:9
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:9724:5
+warning | PreCheck/SchemaMissingType | The schema 'UsagesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:9740:5
+warning | PreCheck/SchemaMissingType | The schema 'Usage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:9753:5
+warning | PreCheck/SchemaMissingType | The schema 'PartitionUsagesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:9784:5
+warning | PreCheck/SchemaMissingType | The schema 'PartitionUsage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:9797:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricDefinitionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:9817:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:9830:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:9874:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:9889:5
+warning | PreCheck/SchemaMissingType | The schema 'Metric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:9902:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:9941:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:9956:5
+warning | PreCheck/SchemaMissingType | The schema 'PercentileMetricListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:9997:5
+warning | PreCheck/SchemaMissingType | The schema 'PercentileMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:10010:5
+warning | PreCheck/SchemaMissingType | The schema 'PercentileMetricValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:10049:5
+warning | PreCheck/SchemaMissingType | The schema 'PartitionMetricListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:10101:5
+warning | PreCheck/SchemaMissingType | The schema 'PartitionMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:10114:5
+warning | PreCheck/SchemaMissingType | The schema 'NotebookWorkspaceConnectionInfoResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/notebook.json:417:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlRoleDefinitionResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/rbac.json:401:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlRoleDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/rbac.json:483:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlRoleAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/rbac.json:541:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountGetResults' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountGetResults
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountCreateUpdateParameters' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountCreateUpdateParameters
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5126:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlDatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5139:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlContainerListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5152:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlStoredProcedureListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5165:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlUserDefinedFunctionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5178:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlTriggerListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5191:5
+warning | PreCheck/SchemaMissingType | The schema 'MongoDBDatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5204:5
+warning | PreCheck/SchemaMissingType | The schema 'MongoDBCollectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5217:5
+warning | PreCheck/SchemaMissingType | The schema 'TableListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5230:5
+warning | PreCheck/SchemaMissingType | The schema 'CassandraKeyspaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5243:5
+warning | PreCheck/SchemaMissingType | The schema 'CassandraTableListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5256:5
+warning | PreCheck/SchemaMissingType | The schema 'GremlinDatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5269:5
+warning | PreCheck/SchemaMissingType | The schema 'GremlinGraphListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5282:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5295:5
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5308:5
+warning | PreCheck/SchemaMissingType | The schema 'FailoverPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5317:5
+warning | PreCheck/SchemaMissingType | The schema 'RegionForOnlineOffline' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5353:5
+warning | PreCheck/SchemaMissingType | The schema 'ThroughputSettingsGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5527:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlDatabaseGetProperties-resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5559:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlDatabaseGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5579:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlContainerGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5608:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlContainerGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5618:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlStoredProcedureGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5647:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlUserDefinedFunctionGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5679:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlTriggerGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5711:9
+warning | PreCheck/SchemaMissingType | The schema 'MongoDBDatabaseGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5743:9
+warning | PreCheck/SchemaMissingType | The schema 'MongoDBDatabaseGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5753:9
+warning | PreCheck/SchemaMissingType | The schema 'MongoDBCollectionGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5782:9
+warning | PreCheck/SchemaMissingType | The schema 'MongoDBCollectionGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5792:9
+warning | PreCheck/SchemaMissingType | The schema 'TableGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5821:9
+warning | PreCheck/SchemaMissingType | The schema 'TableGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5831:9
+warning | PreCheck/SchemaMissingType | The schema 'CassandraKeyspaceGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5860:9
+warning | PreCheck/SchemaMissingType | The schema 'CassandraKeyspaceGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5870:9
+warning | PreCheck/SchemaMissingType | The schema 'CassandraTableGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5899:9
+warning | PreCheck/SchemaMissingType | The schema 'CassandraTableGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5909:9
+warning | PreCheck/SchemaMissingType | The schema 'GremlinDatabaseGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5938:9
+warning | PreCheck/SchemaMissingType | The schema 'GremlinDatabaseGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5948:9
+warning | PreCheck/SchemaMissingType | The schema 'GremlinGraphGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5977:9
+warning | PreCheck/SchemaMissingType | The schema 'GremlinGraphGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5987:9
+warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountListReadOnlyKeysResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:6565:5
+warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountListKeysResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:6580:5
+warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountConnectionString' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:6600:5
+warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountListConnectionStringsResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:6615:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedServiceIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:7925:5
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:8029:9
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:8052:5
+warning | PreCheck/SchemaMissingType | The schema 'UsagesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:8068:5
+warning | PreCheck/SchemaMissingType | The schema 'Usage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:8081:5
+warning | PreCheck/SchemaMissingType | The schema 'PartitionUsagesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:8112:5
+warning | PreCheck/SchemaMissingType | The schema 'PartitionUsage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:8125:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricDefinitionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:8145:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:8158:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:8202:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:8217:5
+warning | PreCheck/SchemaMissingType | The schema 'Metric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:8230:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:8269:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:8284:5
+warning | PreCheck/SchemaMissingType | The schema 'PercentileMetricListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:8325:5
+warning | PreCheck/SchemaMissingType | The schema 'PercentileMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:8338:5
+warning | PreCheck/SchemaMissingType | The schema 'PercentileMetricValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:8377:5
+warning | PreCheck/SchemaMissingType | The schema 'PartitionMetricListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:8429:5
+warning | PreCheck/SchemaMissingType | The schema 'PartitionMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:8442:5
+warning | PreCheck/SchemaMissingType | The schema 'NotebookWorkspaceConnectionInfoResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/notebook.json:417:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlRoleDefinitionResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/rbac.json:401:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlRoleDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/rbac.json:483:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlRoleAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/rbac.json:541:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-02-15-preview/cosmos-db.json:6147:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlDatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-02-15-preview/cosmos-db.json:6174:5

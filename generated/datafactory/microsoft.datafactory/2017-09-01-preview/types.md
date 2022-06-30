@@ -1148,7 +1148,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **enableServerCertificateValidation**: any: If true, validate the HTTPS server SSL certificate. Default value is true. Type: boolean (or Expression with resultType boolean).
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase): Password for Basic, Digest, Windows, or ClientCertificate with EmbeddedCertData authentication.
-* **url**: any (Required): The base URL of the HTTP endpoint, e.g. http://www.microsoft.com. Type: string (or Expression with resultType string).
+* **url**: any (Required): The base URL of the HTTP endpoint, e.g. https://www.microsoft.com. Type: string (or Expression with resultType string).
 * **userName**: any: User name for Basic, Digest, or Windows authentication. Type: string (or Expression with resultType string).
 
 ## HubspotLinkedServiceTypeProperties
@@ -2194,7 +2194,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **Discriminator**: authenticationType
 
 ### Base Properties
-* **url**: any (Required): The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+* **url**: any (Required): The URL of the web service endpoint, e.g. https://www.microsoft.com . Type: string (or Expression with resultType string).
 ### WebAnonymousAuthentication
 #### Properties
 * **authenticationType**: 'Anonymous' (Required): Type of authentication used to connect to the web table source.
