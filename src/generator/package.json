@@ -33,7 +33,7 @@
     "@types/node": "^18.0.0",
     "@types/yargs": "^17.0.10",
     "@typescript-eslint/eslint-plugin": "^5.30.0",
-    "@typescript-eslint/parser": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.6",
     "async": "^3.2.4",
     "autorest": "^3.6.1",
     "colors": "^1.4.0",
