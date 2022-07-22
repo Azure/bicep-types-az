@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@autorest/codemodel": "^4.18.2",
-    "@autorest/extension-base": "^3.4.4",
+    "@autorest/extension-base": "^3.5.0",
     "@types/lodash": "^4.14.182",
     "autorest": "^3.6.1",
     "lodash": "^4.17.21"
