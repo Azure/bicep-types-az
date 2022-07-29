@@ -18,6 +18,30 @@
 * **properties**: [SecurityAssessmentPropertiesOrSecurityAssessmentPropertiesResponse](#securityassessmentpropertiesorsecurityassessmentpropertiesresponse): Describes properties of an assessment.
 * **type**: 'Microsoft.Security/assessments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Security/settings@2021-06-01
+* **Valid Scope(s)**: Subscription
+* **Discriminator**: kind
+
+### Base Properties
+* **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'MCAS' | 'Sentinel' | 'WDATP' | string (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.Security/settings' (ReadOnly, DeployTimeConstant): The resource type
+### AlertSyncSettings
+#### Properties
+* **kind**: 'AlertSyncSettings' (Required): the kind of the settings string
+* **properties**: [AlertSyncSettingProperties](#alertsyncsettingproperties): Alert sync setting data
+
+### DataExportSettings
+#### Properties
+* **kind**: 'DataExportSettings' (Required): the kind of the settings string
+* **properties**: [DataExportSettingProperties](#dataexportsettingproperties): Data export setting data
+
+
+## AlertSyncSettingProperties
+### Properties
+* **enabled**: bool (Required): Is the alert sync setting enabled
+
 ## AssessmentLinks
 ### Properties
 * **azurePortalUri**: string (ReadOnly): Link to assessment in Azure Portal
@@ -29,6 +53,10 @@
 * **description**: string: Human readable description of the assessment status
 * **firstEvaluationDate**: string (ReadOnly): The time that the assessment was created and first evaluated. Returned as UTC time in ISO 8601 format
 * **statusChangeDate**: string (ReadOnly): The time that the status of the assessment last changed. Returned as UTC time in ISO 8601 format
+
+## DataExportSettingProperties
+### Properties
+* **enabled**: bool (Required): Is the data export setting enabled
 
 ## ResourceDetails
 * **Discriminator**: source

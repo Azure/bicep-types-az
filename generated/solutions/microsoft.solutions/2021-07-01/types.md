@@ -43,6 +43,21 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Solutions/jitRequests' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listAllowedUpgradePlans (Microsoft.Solutions/applications@2021-07-01)
+* **Resource**: Microsoft.Solutions/applications
+* **ApiVersion**: 2021-07-01
+* **Output**: [AllowedUpgradePlansResult](#allowedupgradeplansresult)
+
+## Function listTokens (Microsoft.Solutions/applications@2021-07-01)
+* **Resource**: Microsoft.Solutions/applications
+* **ApiVersion**: 2021-07-01
+* **Input**: [ListTokenRequest](#listtokenrequest)
+* **Output**: [ManagedIdentityTokenResult](#managedidentitytokenresult)
+
+## AllowedUpgradePlansResult
+### Properties
+* **value**: [Plan](#plan)[]: The array of plans.
+
 ## ApplicationArtifact
 ### Properties
 * **name**: 'Authorizations' | 'CustomRoleDefinition' | 'NotSpecified' | 'ViewDefinition' | string (Required): The managed application artifact name.
@@ -86,7 +101,6 @@
 * **notificationPolicy**: [ApplicationNotificationPolicy](#applicationnotificationpolicy): The managed application notification policy.
 * **packageFileUri**: string: The managed application definition package file Uri. Use this element
 * **policies**: [ApplicationPolicy](#applicationpolicy)[]: The managed application provider policies.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state.
 * **storageAccountId**: string: The storage account id for bring your own storage scenario.
 
 ## ApplicationDeploymentPolicy
@@ -191,6 +205,25 @@
 * **duration**: string (Required): The required duration of the JIT request.
 * **startTime**: string (Required): The start time of the request.
 * **type**: 'NotSpecified' | 'Once' | 'Recurring' | string (Required): The type of JIT schedule.
+
+## ListTokenRequest
+### Properties
+* **authorizationAudience**: string: The authorization audience.
+* **userAssignedIdentities**: string[]: The user assigned identities.
+
+## ManagedIdentityToken
+### Properties
+* **accessToken**: string: The requested access token.
+* **authorizationAudience**: string: The aud (audience) the access token was request for. This is the same as what was provided in the listTokens request.
+* **expiresIn**: string: The number of seconds the access token will be valid.
+* **expiresOn**: string: The timespan when the access token expires. This is represented as the number of seconds from epoch.
+* **notBefore**: string: The timespan when the access token takes effect. This is represented as the number of seconds from epoch.
+* **resourceId**: string: The Azure resource ID for the issued token. This is either the managed application ID or the user-assigned identity ID.
+* **tokenType**: string: The type of the token.
+
+## ManagedIdentityTokenResult
+### Properties
+* **value**: [ManagedIdentityToken](#managedidentitytoken)[]: The array of managed identity tokens.
 
 ## Plan
 ### Properties

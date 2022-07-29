@@ -448,7 +448,7 @@
 
 ## AccountKeyMetadata
 ### Properties
-* **generationTime**: string (ReadOnly): Generation time in UTC of the key in ISO-8601 format. A value of null means that the last key regeneration was triggered before 2022-06-18.
+* **generationTime**: string (ReadOnly): Generation time in UTC of the key in ISO-8601 format. If the value is missing from the object, it means that the last key regeneration was triggered before 2022-06-18.
 
 ## AnalyticalStorageConfiguration
 ### Properties
@@ -901,6 +901,7 @@
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
 * **_ts**: int (ReadOnly): A system generated property that denotes the last updated timestamp of the resource.
+* **analyticalStorageTtl**: int: Analytical TTL.
 * **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy): The conflict resolution policy for the graph.
 * **defaultTtl**: int: Default time to live
 * **id**: string (Required): Name of the Cosmos DB Gremlin graph

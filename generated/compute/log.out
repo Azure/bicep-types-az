@@ -1,4 +1,4 @@
-AutoRest code generation utility [cli version: 3.6.1; node: v16.15.1]
+AutoRest code generation utility [cli version: 3.6.2; node: v16.16.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -1679,81 +1679,81 @@ warning | PreCheck/SchemaMissingType | The schema 'GalleryIdentifier' with an un
 warning | PreCheck/SchemaMissingType | The schema 'SharingProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:1799:5
 warning | PreCheck/SchemaMissingType | The schema 'SharingProfileGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:1832:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:1830:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryApplication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:1957:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:1955:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryApplicationUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:1971:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:1969:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryApplicationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:1985:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:1983:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryApplicationVersion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2026:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2024:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryApplicationVersionUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2040:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2038:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryApplicationVersionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2054:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2052:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryApplicationVersionPublishingProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2073:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2071:5
 warning | PreCheck/SchemaMissingType | The schema 'UserArtifactSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2106:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2104:5
 warning | PreCheck/SchemaMissingType | The schema 'UserArtifactManage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2122:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2120:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2156:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2154:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2170:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2168:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2184:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2182:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageVersion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2280:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2278:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageVersionUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2294:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2292:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageVersionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2308:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2306:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryArtifactPublishingProfileBase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2330:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2328:5
 warning | PreCheck/SchemaMissingType | The schema 'TargetRegion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2401:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2399:5
 warning | PreCheck/SchemaMissingType | The schema 'EncryptionImages' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2491:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2489:5
 warning | PreCheck/SchemaMissingType | The schema 'DataDiskImageEncryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2548:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2546:5
 warning | PreCheck/SchemaMissingType | The schema 'DiskImageEncryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2566:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2564:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryArtifactSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2575:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2573:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedArtifact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2586:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2584:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageVersionPublishingProfile' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2598:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2596:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageVersionStorageProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2606:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2604:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryArtifactVersionSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2627:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2625:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryOSDiskImage' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2640:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2638:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryDataDiskImage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2648:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2646:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryDiskImage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2666:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2664:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2693:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2691:5
 warning | PreCheck/SchemaMissingType | The schema 'RegionalReplicationStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2724:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2722:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2760:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2758:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2779:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2777:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageVersionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2798:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2796:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryApplicationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2817:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2815:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryApplicationVersionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2836:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2834:5
 warning | PreCheck/SchemaMissingType | The schema 'UpdateResourceDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2855:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2853:5
 warning | PreCheck/SchemaMissingType | The schema 'SharingUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2883:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json:2881:5
 warning | PreCheck/SchemaMissingType | The schema 'PirResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/sharedGallery.json:387:5
 warning | PreCheck/SchemaMissingType | The schema 'PirSharedGalleryResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1807,8 +1807,6 @@ warning | PreCheck/SchemaMissingType | The schema 'SubResourceReadOnly' with an 
 warning | PreCheck/SchemaMissingType | The schema 'ExtendedLocation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/common.json:207:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Modeler/MissingType | The schema 'SharingProfile-communityGalleryInfo' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2022-01-03/GalleryRP/gallery.json#/components/schemas/SharingProfile-communityGalleryInfo
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2611,106 +2609,104 @@ warning | PreCheck/SchemaMissingType | The schema 'GalleryIdentifier' with an un
 warning | PreCheck/SchemaMissingType | The schema 'SharingProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:1809:5
 warning | PreCheck/SchemaMissingType | The schema 'SharingProfileGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:1841:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:1839:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryApplication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:1967:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:1965:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryApplicationUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:1981:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:1979:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryApplicationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:1995:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:1993:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryApplicationVersion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2036:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2034:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryApplicationVersionUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2050:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2048:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryApplicationVersionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2064:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2062:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryApplicationVersionPublishingProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2093:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2091:5
 warning | PreCheck/SchemaMissingType | The schema 'UserArtifactSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2116:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2114:5
 warning | PreCheck/SchemaMissingType | The schema 'UserArtifactManage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2132:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2130:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2152:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2150:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2166:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2164:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2180:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2178:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageFeature' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2295:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2293:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageIdentifier' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2308:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2306:5
 warning | PreCheck/SchemaMissingType | The schema 'RecommendedMachineConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2330:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2328:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceRange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2341:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2339:5
 warning | PreCheck/SchemaMissingType | The schema 'Disallowed' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2356:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2354:5
 warning | PreCheck/SchemaMissingType | The schema 'ImagePurchasePlan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2368:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2366:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageVersion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2385:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2383:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageVersionUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2399:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2397:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageVersionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2413:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2411:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryArtifactPublishingProfileBase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2445:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2443:5
 warning | PreCheck/SchemaMissingType | The schema 'TargetRegion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2516:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2514:5
 warning | PreCheck/SchemaMissingType | The schema 'EncryptionImages' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2606:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2604:5
 warning | PreCheck/SchemaMissingType | The schema 'DataDiskImageEncryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2663:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2661:5
 warning | PreCheck/SchemaMissingType | The schema 'DiskImageEncryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2681:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2679:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryArtifactSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2690:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2688:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedArtifact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2701:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2699:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageVersionPublishingProfile' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2713:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2711:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageVersionStorageProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2721:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2719:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryArtifactVersionSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2742:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2740:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryOSDiskImage' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2755:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2753:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryDataDiskImage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2763:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2761:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryDiskImage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2781:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2779:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2808:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2806:5
 warning | PreCheck/SchemaMissingType | The schema 'RegionalReplicationStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2839:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2837:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2875:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2873:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2894:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2892:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryImageVersionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2913:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2911:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryApplicationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2932:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2930:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryApplicationVersionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2951:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2949:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2970:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2968:5
 warning | PreCheck/SchemaMissingType | The schema 'ApiError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2979:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:2977:5
 warning | PreCheck/SchemaMissingType | The schema 'ApiErrorBase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:3011:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:3009:5
 warning | PreCheck/SchemaMissingType | The schema 'InnerError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:3028:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:3026:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:3041:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:3039:5
 warning | PreCheck/SchemaMissingType | The schema 'UpdateResourceDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:3076:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:3074:5
 warning | PreCheck/SchemaMissingType | The schema 'SharingUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:3104:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json:3102:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Modeler/MissingType | The schema 'SharingProfile-communityGalleryInfo' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/compute/resource-manager/Microsoft.Compute/stable/2021-10-01/gallery.json#/components/schemas/SharingProfile-communityGalleryInfo
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.

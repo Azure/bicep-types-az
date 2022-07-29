@@ -164,6 +164,7 @@
 ## BlobOutputDataSourceProperties
 ### Properties
 * **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode.
+* **blobPathPrefix**: string: Blob path prefix.
 * **container**: string: The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.
 * **dateFormat**: string: The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.
 * **pathPattern**: string: The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.
@@ -264,6 +265,10 @@
 * **sharedAccessPolicyKey**: string: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyName**: string: The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
 
+## FileReferenceInputDataSourceProperties
+### Properties
+* **path**: string: The path of the file.
+
 ## Function
 ### Properties
 * **id**: string (ReadOnly): Resource Id
@@ -316,10 +321,18 @@
 * **type**: 'Scalar' (Required): Indicates the type of function.
 
 
+## GatewayMessageBusOutputDataSourceProperties
+### Properties
+* **topic**: string: The name of the Service Bus topic.
+
+## GatewayMessageBusStreamInputDataSourceProperties
+### Properties
+* **topic**: string: The name of the Service Bus topic.
+
 ## Identity
 ### Properties
-* **principalId**: string: The identity principal ID
-* **tenantId**: string: The identity tenantId
+* **principalId**: string (ReadOnly): The identity principal ID
+* **tenantId**: string (ReadOnly): The identity tenantId
 * **type**: string: The identity type
 
 ## Input
@@ -383,6 +396,11 @@
 * **Discriminator**: type
 
 ### Base Properties
+### GatewayMessageBusOutputDataSource
+#### Properties
+* **properties**: [GatewayMessageBusOutputDataSourceProperties](#gatewaymessagebusoutputdatasourceproperties): The properties that are associated with a Gateway Message Bus output. Required on PUT (CreateOrReplace) requests.
+* **type**: 'GatewayMessageBus' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+
 ### AzureFunctionOutputDataSource
 #### Properties
 * **properties**: [AzureFunctionOutputDataSourceProperties](#azurefunctionoutputdatasourceproperties): The properties that are associated with a Azure Function output. Required on PUT (CreateOrReplace) requests.
@@ -490,6 +508,11 @@
 * **Discriminator**: type
 
 ### Base Properties
+### FileReferenceInputDataSource
+#### Properties
+* **properties**: [FileReferenceInputDataSourceProperties](#filereferenceinputdatasourceproperties): The properties that are associated with a file input containing reference data. Required on PUT (CreateOrReplace) requests.
+* **type**: 'File' (Required): Indicates the type of input data source containing reference data. Required on PUT (CreateOrReplace) requests.
+
 ### AzureSqlReferenceInputDataSource
 #### Properties
 * **properties**: [AzureSqlReferenceInputDataSourceProperties](#azuresqlreferenceinputdatasourceproperties): The properties that are associated with SQL DB input containing reference data. Required on PUT (CreateOrReplace) requests.
@@ -590,6 +613,11 @@
 * **Discriminator**: type
 
 ### Base Properties
+### GatewayMessageBusStreamInputDataSource
+#### Properties
+* **properties**: [GatewayMessageBusStreamInputDataSourceProperties](#gatewaymessagebusstreaminputdatasourceproperties): The properties that are associated with a gateway message bus input containing stream data.
+* **type**: 'GatewayMessageBus' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
+
 ### IoTHubStreamInputDataSource
 #### Properties
 * **properties**: [IoTHubStreamInputDataSourceProperties](#iothubstreaminputdatasourceproperties): The properties that are associated with an IoT Hub input containing stream data. Required on PUT (CreateOrReplace) requests.

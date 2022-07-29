@@ -48,6 +48,7 @@
 ## AccountProperties
 ### Properties
 * **description**: string: The description of the account.
+* **systemId**: string (ReadOnly): The internally assigned unique identifier of the resource.
 
 ## EnterprisePolicyIdentity
 ### Properties
@@ -92,6 +93,7 @@
 * **encryption**: [PropertiesEncryption](#propertiesencryption): The encryption settings for a configuration store.
 * **lockbox**: [PropertiesLockbox](#propertieslockbox): Settings concerning lockbox.
 * **networkInjection**: [PropertiesNetworkInjection](#propertiesnetworkinjection): Settings concerning network injection.
+* **systemId**: string (ReadOnly): The internally assigned unique identifier of the resource.
 
 ## PropertiesEncryption
 ### Properties

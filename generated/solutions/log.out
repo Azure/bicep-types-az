@@ -1,10 +1,792 @@
-AutoRest code generation utility [cli version: 3.6.1; node: v16.15.1]
+AutoRest code generation utility [cli version: 3.6.2; node: v16.16.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'UpdateAccessDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2021-07-01/managedapplications.json:2630:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2021-07-01/managedapplications.json:2656:5
+warning | PreCheck/SchemaMissingType | The schema 'ListTokenRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2021-07-01/managedapplications.json:2706:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentityTokenResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2021-07-01/managedapplications.json:2722:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentityToken' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2021-07-01/managedapplications.json:2734:5
+warning | PreCheck/SchemaMissingType | The schema 'AllowedUpgradePlansResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2021-07-01/managedapplications.json:2771:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping path '/{applicationId}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Skipping resource action listAllowedUpgradePlans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Solutions/applications/{applicationName}/listAllowedUpgradePlans': failed to find a response schema
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'UpdateAccessDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2021-02-01-preview/managedapplications.json:2688:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2021-02-01-preview/managedapplications.json:2714:5
+warning | PreCheck/SchemaMissingType | The schema 'ListTokenRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2021-02-01-preview/managedapplications.json:2764:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentityTokenResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2021-02-01-preview/managedapplications.json:2780:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentityToken' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2021-02-01-preview/managedapplications.json:2792:5
+warning | PreCheck/SchemaMissingType | The schema 'AllowedUpgradePlansResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2021-02-01-preview/managedapplications.json:2829:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation' (10 differences):
+  - properties.name.$ref: "#/components/schemas/schemas:141" => "#/components/schemas/schemas:243"
+  - properties.name.description: "Operation name: {provider}/{resource}/{operation}" => "The name of the operation, as per Resource-Based Access Control (RBAC). Examples: \"Microsoft.Compute/virtualMachines/write\", \"Microsoft.Compute/virtualMachines/capture/action\""
+  - properties.name.readOnly: <none> => true
+  - properties.isDataAction.description: "Indicates whether the operation is a data action" => "Whether the operation applies to data-plane. This is \"true\" for data-plane operations and \"false\" for ARM/control-plane operations."
+  - properties.isDataAction.readOnly: <none> => true
+  - properties.display.$ref: "#/components/schemas/schemas:142" => "#/components/schemas/schemas:244"
+  - properties.display.description: "The object that represents the operation." => "Localized display information for this particular operation."
+  - properties.origin: <none> => {"x-ms-enum":{"name":"Origin","modelAsString":true},"$ref":"#/components/schemas/Origin","description":"The intended executor of the operation; as in Resource Based Access Control (RBAC) and audit logs UX. Default value is \"user,system\"","readOnly":true}
+  - properties.actionType: <none> => {"x-ms-enum":{"name":"ActionType","modelAsString":true},"$ref":"#/components/schemas/ActionType","description":"Enum. Indicates the action type. \"Internal\" refers to actions that are for internal only APIs.","readOnly":true}
+  - title: <none> => "REST API Operation"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation-display' (10 differences):
+  - properties.provider.$ref: "#/components/schemas/schemas:143" => "#/components/schemas/schemas:245"
+  - properties.provider.description: "Service provider: Microsoft.Solutions" => "The localized friendly form of the resource provider name, e.g. \"Microsoft Monitoring Insights\" or \"Microsoft Compute\"."
+  - properties.provider.readOnly: <none> => true
+  - properties.resource.$ref: "#/components/schemas/schemas:144" => "#/components/schemas/schemas:246"
+  - properties.resource.description: "Resource on which the operation is performed: Application, JitRequest, etc." => "The localized friendly name of the resource type related to this operation. E.g. \"Virtual Machines\" or \"Job Schedule Collections\"."
+  - properties.resource.readOnly: <none> => true
+  - properties.operation.$ref: "#/components/schemas/schemas:145" => "#/components/schemas/schemas:247"
+  - properties.operation.description: "Operation type: Read, write, delete, etc." => "The concise, localized friendly name for the operation; suitable for dropdowns. E.g. \"Create or Update Virtual Machine\", \"Restart Virtual Machine\"."
+  - properties.operation.readOnly: <none> => true
+  - properties.description.description: "Localized friendly description for the operation" => "The short, localized friendly description of the operation; suitable for tool tips and detailed views."
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'OperationListResult' (7 differences):
+  - properties.value.$ref: "#/components/schemas/schemas:148" => "#/components/schemas/schemas:252"
+  - properties.value.description: "List of Microsoft.Solutions operations." => "List of operations supported by the resource provider"
+  - properties.value.x-ms-identifiers: <none> => ["name"]
+  - properties.value.readOnly: <none> => true
+  - properties.nextLink.$ref: "#/components/schemas/schemas:149" => "#/components/schemas/schemas:253"
+  - properties.nextLink.description: "URL to get the next set of operation list results if there are any." => "URL to get the next set of operation list results (if there are any)."
+  - properties.nextLink.readOnly: <none> => true
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'OperationListResult' -> 'OperationListResultAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Operation' -> 'OperationAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'OperationDisplay' -> 'OperationDisplayAutoGenerated'
+warning | Skipping path '/{applicationId}': Unable to locate "/providers/" segment
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:1735:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:1767:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:1795:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:1813:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPropertiesPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:1895:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:1922:5
+warning | PreCheck/SchemaMissingType | The schema 'Plan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2012:5
+warning | PreCheck/SchemaMissingType | The schema 'PlanPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2043:5
+warning | PreCheck/SchemaMissingType | The schema 'GenericResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2068:5
+warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2086:5
+warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2119:5
+warning | PreCheck/SchemaMissingType | The schema 'userAssignedResourceIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2155:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2170:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2202:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2218:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationArtifact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2311:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionArtifact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2333:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationNotificationPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2355:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationNotificationEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2370:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPackageLockingPolicyDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2382:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDeploymentPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2401:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationManagementPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2413:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2422:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationAuthorization' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2439:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPackageContact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2456:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPackageSupportUrls' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2477:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationBillingDetailsDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2490:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationJitAccessPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2499:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2526:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2541:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2553:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2569:5
+warning | PreCheck/SchemaMissingType | The schema 'JitAuthorizationPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2619:5
+warning | PreCheck/SchemaMissingType | The schema 'JitSchedulingPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2636:5
+warning | PreCheck/SchemaMissingType | The schema 'JitApproverDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2673:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationClientDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2701:5
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2763:9
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2787:5
+warning | PreCheck/SchemaMissingType | The schema 'UpdateAccessDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2829:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2855:5
+warning | PreCheck/SchemaMissingType | The schema 'ListTokenRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2905:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentityTokenResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2921:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentityToken' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2933:5
+warning | PreCheck/SchemaMissingType | The schema 'AllowedUpgradePlansResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:2970:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation' (10 differences):
+  - properties.name.$ref: "#/components/schemas/schemas:141" => "#/components/schemas/schemas:272"
+  - properties.name.description: "Operation name: {provider}/{resource}/{operation}" => "The name of the operation, as per Resource-Based Access Control (RBAC). Examples: \"Microsoft.Compute/virtualMachines/write\", \"Microsoft.Compute/virtualMachines/capture/action\""
+  - properties.name.readOnly: <none> => true
+  - properties.isDataAction.description: "Indicates whether the operation is a data action" => "Whether the operation applies to data-plane. This is \"true\" for data-plane operations and \"false\" for ARM/control-plane operations."
+  - properties.isDataAction.readOnly: <none> => true
+  - properties.display.$ref: "#/components/schemas/schemas:142" => "#/components/schemas/schemas:273"
+  - properties.display.description: "The object that represents the operation." => "Localized display information for this particular operation."
+  - properties.origin: <none> => {"x-ms-enum":{"name":"Origin","modelAsString":true},"$ref":"#/components/schemas/Origin","description":"The intended executor of the operation; as in Resource Based Access Control (RBAC) and audit logs UX. Default value is \"user,system\"","readOnly":true}
+  - properties.actionType: <none> => {"x-ms-enum":{"name":"ActionType","modelAsString":true},"$ref":"#/components/schemas/ActionType","description":"Enum. Indicates the action type. \"Internal\" refers to actions that are for internal only APIs.","readOnly":true}
+  - title: <none> => "REST API Operation"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation-display' (10 differences):
+  - properties.provider.$ref: "#/components/schemas/schemas:143" => "#/components/schemas/schemas:274"
+  - properties.provider.description: "Service provider: Microsoft.Solutions" => "The localized friendly form of the resource provider name, e.g. \"Microsoft Monitoring Insights\" or \"Microsoft Compute\"."
+  - properties.provider.readOnly: <none> => true
+  - properties.resource.$ref: "#/components/schemas/schemas:144" => "#/components/schemas/schemas:275"
+  - properties.resource.description: "Resource on which the operation is performed: Application, JitRequest, etc." => "The localized friendly name of the resource type related to this operation. E.g. \"Virtual Machines\" or \"Job Schedule Collections\"."
+  - properties.resource.readOnly: <none> => true
+  - properties.operation.$ref: "#/components/schemas/schemas:145" => "#/components/schemas/schemas:276"
+  - properties.operation.description: "Operation type: Read, write, delete, etc." => "The concise, localized friendly name for the operation; suitable for dropdowns. E.g. \"Create or Update Virtual Machine\", \"Restart Virtual Machine\"."
+  - properties.operation.readOnly: <none> => true
+  - properties.description.description: "Localized friendly description for the operation" => "The short, localized friendly description of the operation; suitable for tool tips and detailed views."
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'OperationListResult' (7 differences):
+  - properties.value.$ref: "#/components/schemas/schemas:148" => "#/components/schemas/schemas:281"
+  - properties.value.description: "List of Microsoft.Solutions operations." => "List of operations supported by the resource provider"
+  - properties.value.x-ms-identifiers: <none> => ["name"]
+  - properties.value.readOnly: <none> => true
+  - properties.nextLink.$ref: "#/components/schemas/schemas:149" => "#/components/schemas/schemas:282"
+  - properties.nextLink.description: "URL to get the next set of operation list results if there are any." => "URL to get the next set of operation list results (if there are any)."
+  - properties.nextLink.readOnly: <none> => true
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'OperationListResult' -> 'OperationListResultAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Operation' -> 'OperationAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'OperationDisplay' -> 'OperationDisplayAutoGenerated'
+warning | Skipping path '/{applicationId}': Unable to locate "/providers/" segment
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:1739:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:1771:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:1799:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:1817:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPropertiesPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:1899:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:1926:5
+warning | PreCheck/SchemaMissingType | The schema 'Plan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2016:5
+warning | PreCheck/SchemaMissingType | The schema 'PlanPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2047:5
+warning | PreCheck/SchemaMissingType | The schema 'GenericResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2072:5
+warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2090:5
+warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2123:5
+warning | PreCheck/SchemaMissingType | The schema 'userAssignedResourceIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2159:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2174:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2206:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2222:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationArtifact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2315:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionArtifact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2337:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationNotificationPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2359:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationNotificationEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2374:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPackageLockingPolicyDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2386:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDeploymentPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2405:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationManagementPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2417:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2426:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationAuthorization' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2443:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPackageContact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2460:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPackageSupportUrls' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2481:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationBillingDetailsDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2494:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationJitAccessPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2503:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2530:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2545:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2557:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2573:5
+warning | PreCheck/SchemaMissingType | The schema 'JitAuthorizationPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2623:5
+warning | PreCheck/SchemaMissingType | The schema 'JitSchedulingPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2640:5
+warning | PreCheck/SchemaMissingType | The schema 'JitApproverDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2677:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationClientDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2705:5
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2763:9
+warning | PreCheck/SchemaMissingType | The schema 'UpdateAccessDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2808:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2834:5
+warning | PreCheck/SchemaMissingType | The schema 'ListTokenRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2884:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentityTokenResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2900:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentityToken' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2912:5
+warning | PreCheck/SchemaMissingType | The schema 'AllowedUpgradePlansResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:2949:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation' (9 differences):
+  - properties.name.$ref: "#/components/schemas/schemas:141" => "#/components/schemas/schemas:268"
+  - properties.name.description: "Operation name: {provider}/{resource}/{operation}" => "The name of the operation, as per Resource-Based Access Control (RBAC). Examples: \"Microsoft.Compute/virtualMachines/write\", \"Microsoft.Compute/virtualMachines/capture/action\""
+  - properties.name.readOnly: <none> => true
+  - properties.display.$ref: "#/components/schemas/schemas:142" => "#/components/schemas/schemas:269"
+  - properties.display.description: "The object that represents the operation." => "Localized display information for this particular operation."
+  - properties.isDataAction: <none> => {"description":"Whether the operation applies to data-plane. This is \"true\" for data-plane operations and \"false\" for ARM/control-plane operations.","type":"boolean","readOnly":true}
+  - properties.origin: <none> => {"x-ms-enum":{"name":"Origin","modelAsString":true},"$ref":"#/components/schemas/Origin","description":"The intended executor of the operation; as in Resource Based Access Control (RBAC) and audit logs UX. Default value is \"user,system\"","readOnly":true}
+  - properties.actionType: <none> => {"x-ms-enum":{"name":"ActionType","modelAsString":true},"$ref":"#/components/schemas/ActionType","description":"Enum. Indicates the action type. \"Internal\" refers to actions that are for internal only APIs.","readOnly":true}
+  - title: <none> => "REST API Operation"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation-display' (10 differences):
+  - properties.provider.$ref: "#/components/schemas/schemas:143" => "#/components/schemas/schemas:270"
+  - properties.provider.description: "Service provider: Microsoft.Solutions" => "The localized friendly form of the resource provider name, e.g. \"Microsoft Monitoring Insights\" or \"Microsoft Compute\"."
+  - properties.provider.readOnly: <none> => true
+  - properties.resource.$ref: "#/components/schemas/schemas:144" => "#/components/schemas/schemas:271"
+  - properties.resource.description: "Resource on which the operation is performed: Application, JitRequest, etc." => "The localized friendly name of the resource type related to this operation. E.g. \"Virtual Machines\" or \"Job Schedule Collections\"."
+  - properties.resource.readOnly: <none> => true
+  - properties.operation.$ref: "#/components/schemas/schemas:145" => "#/components/schemas/schemas:272"
+  - properties.operation.description: "Operation type: Read, write, delete, etc." => "The concise, localized friendly name for the operation; suitable for dropdowns. E.g. \"Create or Update Virtual Machine\", \"Restart Virtual Machine\"."
+  - properties.operation.readOnly: <none> => true
+  - properties.description: <none> => {"$ref":"#/components/schemas/schemas:273","description":"The short, localized friendly description of the operation; suitable for tool tips and detailed views.","readOnly":true}
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Operation' -> 'OperationAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'OperationDisplay' -> 'OperationDisplayAutoGenerated'
+warning | Skipping path '/{applicationId}': Unable to locate "/providers/" segment
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:1691:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:1723:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:1751:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:1769:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPropertiesPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:1846:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:1873:5
+warning | PreCheck/SchemaMissingType | The schema 'Plan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:1943:5
+warning | PreCheck/SchemaMissingType | The schema 'PlanPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:1974:5
+warning | PreCheck/SchemaMissingType | The schema 'GenericResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:1999:5
+warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2017:5
+warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2050:5
+warning | PreCheck/SchemaMissingType | The schema 'userAssignedResourceIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2086:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2101:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2133:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2149:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationArtifact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2242:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionArtifact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2264:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2286:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationAuthorization' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2303:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPackageContact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2320:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPackageSupportUrls' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2341:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationBillingDetailsDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2354:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationJitAccessPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2363:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2390:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2405:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2417:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2433:5
+warning | PreCheck/SchemaMissingType | The schema 'JitAuthorizationPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2483:5
+warning | PreCheck/SchemaMissingType | The schema 'JitSchedulingPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2500:5
+warning | PreCheck/SchemaMissingType | The schema 'JitApproverDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2537:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationClientDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2565:5
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2623:9
+warning | PreCheck/SchemaMissingType | The schema 'UpdateAccessDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2642:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2668:5
+warning | PreCheck/SchemaMissingType | The schema 'ListTokenRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2718:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentityTokenResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2734:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentityToken' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/preview/2018-09-01-preview/managedapplications.json:2746:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation' (9 differences):
+  - properties.name.$ref: "#/components/schemas/schemas:129" => "#/components/schemas/schemas:251"
+  - properties.name.description: "Operation name: {provider}/{resource}/{operation}" => "The name of the operation, as per Resource-Based Access Control (RBAC). Examples: \"Microsoft.Compute/virtualMachines/write\", \"Microsoft.Compute/virtualMachines/capture/action\""
+  - properties.name.readOnly: <none> => true
+  - properties.display.$ref: "#/components/schemas/schemas:130" => "#/components/schemas/schemas:252"
+  - properties.display.description: "The object that represents the operation." => "Localized display information for this particular operation."
+  - properties.isDataAction: <none> => {"description":"Whether the operation applies to data-plane. This is \"true\" for data-plane operations and \"false\" for ARM/control-plane operations.","type":"boolean","readOnly":true}
+  - properties.origin: <none> => {"x-ms-enum":{"name":"Origin","modelAsString":true},"$ref":"#/components/schemas/Origin","description":"The intended executor of the operation; as in Resource Based Access Control (RBAC) and audit logs UX. Default value is \"user,system\"","readOnly":true}
+  - properties.actionType: <none> => {"x-ms-enum":{"name":"ActionType","modelAsString":true},"$ref":"#/components/schemas/ActionType","description":"Enum. Indicates the action type. \"Internal\" refers to actions that are for internal only APIs.","readOnly":true}
+  - title: <none> => "REST API Operation"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation-display' (10 differences):
+  - properties.provider.$ref: "#/components/schemas/schemas:131" => "#/components/schemas/schemas:253"
+  - properties.provider.description: "Service provider: Microsoft.Solutions" => "The localized friendly form of the resource provider name, e.g. \"Microsoft Monitoring Insights\" or \"Microsoft Compute\"."
+  - properties.provider.readOnly: <none> => true
+  - properties.resource.$ref: "#/components/schemas/schemas:132" => "#/components/schemas/schemas:254"
+  - properties.resource.description: "Resource on which the operation is performed: Application, JitRequest, etc." => "The localized friendly name of the resource type related to this operation. E.g. \"Virtual Machines\" or \"Job Schedule Collections\"."
+  - properties.resource.readOnly: <none> => true
+  - properties.operation.$ref: "#/components/schemas/schemas:133" => "#/components/schemas/schemas:255"
+  - properties.operation.description: "Operation type: Read, write, delete, etc." => "The concise, localized friendly name for the operation; suitable for dropdowns. E.g. \"Create or Update Virtual Machine\", \"Restart Virtual Machine\"."
+  - properties.operation.readOnly: <none> => true
+  - properties.description: <none> => {"$ref":"#/components/schemas/schemas:256","description":"The short, localized friendly description of the operation; suitable for tool tips and detailed views.","readOnly":true}
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Operation' -> 'OperationAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'OperationDisplay' -> 'OperationDisplayAutoGenerated'
+warning | Skipping path '/{applicationId}': Unable to locate "/providers/" segment
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:1691:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:1723:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:1751:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:1769:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPropertiesPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:1850:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:1877:5
+warning | PreCheck/SchemaMissingType | The schema 'Plan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:1947:5
+warning | PreCheck/SchemaMissingType | The schema 'PlanPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:1978:5
+warning | PreCheck/SchemaMissingType | The schema 'GenericResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2003:5
+warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2021:5
+warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2054:5
+warning | PreCheck/SchemaMissingType | The schema 'userAssignedResourceIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2090:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2105:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2137:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2153:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationArtifact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2246:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionArtifact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2268:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationNotificationPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2290:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationNotificationEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2305:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPackageLockingPolicyDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2317:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2336:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationAuthorization' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2353:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPackageContact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2370:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPackageSupportUrls' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2391:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationBillingDetailsDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2404:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationJitAccessPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2413:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2440:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2455:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2467:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2483:5
+warning | PreCheck/SchemaMissingType | The schema 'JitAuthorizationPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2533:5
+warning | PreCheck/SchemaMissingType | The schema 'JitSchedulingPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2550:5
+warning | PreCheck/SchemaMissingType | The schema 'JitApproverDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2587:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationClientDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2615:5
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2673:9
+warning | PreCheck/SchemaMissingType | The schema 'UpdateAccessDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2692:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2718:5
+warning | PreCheck/SchemaMissingType | The schema 'ListTokenRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2768:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentityTokenResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2784:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentityToken' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:2796:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation' (9 differences):
+  - properties.name.$ref: "#/components/schemas/schemas:139" => "#/components/schemas/schemas:261"
+  - properties.name.description: "Operation name: {provider}/{resource}/{operation}" => "The name of the operation, as per Resource-Based Access Control (RBAC). Examples: \"Microsoft.Compute/virtualMachines/write\", \"Microsoft.Compute/virtualMachines/capture/action\""
+  - properties.name.readOnly: <none> => true
+  - properties.display.$ref: "#/components/schemas/schemas:140" => "#/components/schemas/schemas:262"
+  - properties.display.description: "The object that represents the operation." => "Localized display information for this particular operation."
+  - properties.isDataAction: <none> => {"description":"Whether the operation applies to data-plane. This is \"true\" for data-plane operations and \"false\" for ARM/control-plane operations.","type":"boolean","readOnly":true}
+  - properties.origin: <none> => {"x-ms-enum":{"name":"Origin","modelAsString":true},"$ref":"#/components/schemas/Origin","description":"The intended executor of the operation; as in Resource Based Access Control (RBAC) and audit logs UX. Default value is \"user,system\"","readOnly":true}
+  - properties.actionType: <none> => {"x-ms-enum":{"name":"ActionType","modelAsString":true},"$ref":"#/components/schemas/ActionType","description":"Enum. Indicates the action type. \"Internal\" refers to actions that are for internal only APIs.","readOnly":true}
+  - title: <none> => "REST API Operation"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation-display' (10 differences):
+  - properties.provider.$ref: "#/components/schemas/schemas:141" => "#/components/schemas/schemas:263"
+  - properties.provider.description: "Service provider: Microsoft.Solutions" => "The localized friendly form of the resource provider name, e.g. \"Microsoft Monitoring Insights\" or \"Microsoft Compute\"."
+  - properties.provider.readOnly: <none> => true
+  - properties.resource.$ref: "#/components/schemas/schemas:142" => "#/components/schemas/schemas:264"
+  - properties.resource.description: "Resource on which the operation is performed: Application, JitRequest, etc." => "The localized friendly name of the resource type related to this operation. E.g. \"Virtual Machines\" or \"Job Schedule Collections\"."
+  - properties.resource.readOnly: <none> => true
+  - properties.operation.$ref: "#/components/schemas/schemas:143" => "#/components/schemas/schemas:265"
+  - properties.operation.description: "Operation type: Read, write, delete, etc." => "The concise, localized friendly name for the operation; suitable for dropdowns. E.g. \"Create or Update Virtual Machine\", \"Restart Virtual Machine\"."
+  - properties.operation.readOnly: <none> => true
+  - properties.description: <none> => {"$ref":"#/components/schemas/schemas:266","description":"The short, localized friendly description of the operation; suitable for tool tips and detailed views.","readOnly":true}
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Operation' -> 'OperationAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'OperationDisplay' -> 'OperationDisplayAutoGenerated'
+warning | Skipping path '/{applicationId}': Unable to locate "/providers/" segment
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:1691:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:1723:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:1751:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:1769:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPropertiesPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:1850:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:1877:5
+warning | PreCheck/SchemaMissingType | The schema 'Plan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:1947:5
+warning | PreCheck/SchemaMissingType | The schema 'PlanPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:1978:5
+warning | PreCheck/SchemaMissingType | The schema 'GenericResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2003:5
+warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2021:5
+warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2054:5
+warning | PreCheck/SchemaMissingType | The schema 'userAssignedResourceIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2090:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2105:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2137:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2153:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationArtifact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2246:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionArtifact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2268:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2290:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationAuthorization' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2307:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPackageContact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2324:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPackageSupportUrls' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2345:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationBillingDetailsDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2358:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationJitAccessPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2367:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2394:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2409:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2421:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2437:5
+warning | PreCheck/SchemaMissingType | The schema 'JitAuthorizationPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2487:5
+warning | PreCheck/SchemaMissingType | The schema 'JitSchedulingPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2504:5
+warning | PreCheck/SchemaMissingType | The schema 'JitApproverDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2541:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationClientDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2569:5
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2627:9
+warning | PreCheck/SchemaMissingType | The schema 'UpdateAccessDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2672:5
+warning | PreCheck/SchemaMissingType | The schema 'JitRequestMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2698:5
+warning | PreCheck/SchemaMissingType | The schema 'ListTokenRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2748:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentityTokenResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2764:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentityToken' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-03-01/managedapplications.json:2776:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation' (9 differences):
+  - properties.name.$ref: "#/components/schemas/schemas:130" => "#/components/schemas/schemas:254"
+  - properties.name.description: "Operation name: {provider}/{resource}/{operation}" => "The name of the operation, as per Resource-Based Access Control (RBAC). Examples: \"Microsoft.Compute/virtualMachines/write\", \"Microsoft.Compute/virtualMachines/capture/action\""
+  - properties.name.readOnly: <none> => true
+  - properties.display.$ref: "#/components/schemas/schemas:131" => "#/components/schemas/schemas:255"
+  - properties.display.description: "The object that represents the operation." => "Localized display information for this particular operation."
+  - properties.isDataAction: <none> => {"description":"Whether the operation applies to data-plane. This is \"true\" for data-plane operations and \"false\" for ARM/control-plane operations.","type":"boolean","readOnly":true}
+  - properties.origin: <none> => {"x-ms-enum":{"name":"Origin","modelAsString":true},"$ref":"#/components/schemas/Origin","description":"The intended executor of the operation; as in Resource Based Access Control (RBAC) and audit logs UX. Default value is \"user,system\"","readOnly":true}
+  - properties.actionType: <none> => {"x-ms-enum":{"name":"ActionType","modelAsString":true},"$ref":"#/components/schemas/ActionType","description":"Enum. Indicates the action type. \"Internal\" refers to actions that are for internal only APIs.","readOnly":true}
+  - title: <none> => "REST API Operation"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation-display' (10 differences):
+  - properties.provider.$ref: "#/components/schemas/schemas:132" => "#/components/schemas/schemas:256"
+  - properties.provider.description: "Service provider: Microsoft.Solutions" => "The localized friendly form of the resource provider name, e.g. \"Microsoft Monitoring Insights\" or \"Microsoft Compute\"."
+  - properties.provider.readOnly: <none> => true
+  - properties.resource.$ref: "#/components/schemas/schemas:133" => "#/components/schemas/schemas:257"
+  - properties.resource.description: "Resource on which the operation is performed: Application, JitRequest, etc." => "The localized friendly name of the resource type related to this operation. E.g. \"Virtual Machines\" or \"Job Schedule Collections\"."
+  - properties.resource.readOnly: <none> => true
+  - properties.operation.$ref: "#/components/schemas/schemas:134" => "#/components/schemas/schemas:258"
+  - properties.operation.description: "Operation type: Read, write, delete, etc." => "The concise, localized friendly name for the operation; suitable for dropdowns. E.g. \"Create or Update Virtual Machine\", \"Restart Virtual Machine\"."
+  - properties.operation.readOnly: <none> => true
+  - properties.description: <none> => {"$ref":"#/components/schemas/schemas:259","description":"The short, localized friendly description of the operation; suitable for tool tips and detailed views.","readOnly":true}
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Operation' -> 'OperationAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'OperationDisplay' -> 'OperationDisplayAutoGenerated'
+warning | Skipping path '/{applicationId}': Unable to locate "/providers/" segment
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1250:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1282:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1310:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1328:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPropertiesPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1405:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1432:5
+warning | PreCheck/SchemaMissingType | The schema 'Plan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1502:5
+warning | PreCheck/SchemaMissingType | The schema 'PlanPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1533:5
+warning | PreCheck/SchemaMissingType | The schema 'GenericResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1558:5
+warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1576:5
+warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1609:5
+warning | PreCheck/SchemaMissingType | The schema 'userAssignedResourceIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1645:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1660:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1692:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1708:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationArtifact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1801:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionArtifact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1823:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1845:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationAuthorization' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1862:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPackageContact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1879:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPackageSupportUrls' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1900:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationBillingDetailsDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1913:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationClientDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1922:5
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2018-02-01/managedapplications.json:1948:9
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation' (9 differences):
+  - properties.name.$ref: "#/components/schemas/schemas:103" => "#/components/schemas/schemas:193"
+  - properties.name.description: "Operation name: {provider}/{resource}/{operation}" => "The name of the operation, as per Resource-Based Access Control (RBAC). Examples: \"Microsoft.Compute/virtualMachines/write\", \"Microsoft.Compute/virtualMachines/capture/action\""
+  - properties.name.readOnly: <none> => true
+  - properties.display.$ref: "#/components/schemas/schemas:104" => "#/components/schemas/schemas:194"
+  - properties.display.description: "The object that represents the operation." => "Localized display information for this particular operation."
+  - properties.isDataAction: <none> => {"description":"Whether the operation applies to data-plane. This is \"true\" for data-plane operations and \"false\" for ARM/control-plane operations.","type":"boolean","readOnly":true}
+  - properties.origin: <none> => {"x-ms-enum":{"name":"Origin","modelAsString":true},"$ref":"#/components/schemas/Origin","description":"The intended executor of the operation; as in Resource Based Access Control (RBAC) and audit logs UX. Default value is \"user,system\"","readOnly":true}
+  - properties.actionType: <none> => {"x-ms-enum":{"name":"ActionType","modelAsString":true},"$ref":"#/components/schemas/ActionType","description":"Enum. Indicates the action type. \"Internal\" refers to actions that are for internal only APIs.","readOnly":true}
+  - title: <none> => "REST API Operation"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation-display' (10 differences):
+  - properties.provider.$ref: "#/components/schemas/schemas:105" => "#/components/schemas/schemas:195"
+  - properties.provider.description: "Service provider: Microsoft.Solutions" => "The localized friendly form of the resource provider name, e.g. \"Microsoft Monitoring Insights\" or \"Microsoft Compute\"."
+  - properties.provider.readOnly: <none> => true
+  - properties.resource.$ref: "#/components/schemas/schemas:106" => "#/components/schemas/schemas:196"
+  - properties.resource.description: "Resource on which the operation is performed: Application, JitRequest, etc." => "The localized friendly name of the resource type related to this operation. E.g. \"Virtual Machines\" or \"Job Schedule Collections\"."
+  - properties.resource.readOnly: <none> => true
+  - properties.operation.$ref: "#/components/schemas/schemas:107" => "#/components/schemas/schemas:197"
+  - properties.operation.description: "Operation type: Read, write, delete, etc." => "The concise, localized friendly name for the operation; suitable for dropdowns. E.g. \"Create or Update Virtual Machine\", \"Restart Virtual Machine\"."
+  - properties.operation.readOnly: <none> => true
+  - properties.description: <none> => {"$ref":"#/components/schemas/schemas:198","description":"The short, localized friendly description of the operation; suitable for tool tips and detailed views.","readOnly":true}
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Operation' -> 'OperationAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'OperationDisplay' -> 'OperationDisplayAutoGenerated'
+warning | Skipping path '/{applicationId}': Unable to locate "/providers/" segment
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-12-01/managedapplications.json:954:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-12-01/managedapplications.json:982:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-12-01/managedapplications.json:1006:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-12-01/managedapplications.json:1024:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPropertiesPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-12-01/managedapplications.json:1058:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-12-01/managedapplications.json:1089:5
+warning | PreCheck/SchemaMissingType | The schema 'Plan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-12-01/managedapplications.json:1153:5
+warning | PreCheck/SchemaMissingType | The schema 'PlanPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-12-01/managedapplications.json:1184:5
+warning | PreCheck/SchemaMissingType | The schema 'GenericResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-12-01/managedapplications.json:1209:5
+warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-12-01/managedapplications.json:1231:5
+warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-12-01/managedapplications.json:1264:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-12-01/managedapplications.json:1290:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-12-01/managedapplications.json:1322:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-12-01/managedapplications.json:1338:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationArtifact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-12-01/managedapplications.json:1401:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationProviderAuthorization' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-12-01/managedapplications.json:1418:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping path '/{applicationId}': Unable to locate "/providers/" segment
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-09-01/managedapplications.json:961:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-09-01/managedapplications.json:989:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-09-01/managedapplications.json:1013:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-09-01/managedapplications.json:1031:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationPropertiesPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-09-01/managedapplications.json:1065:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-09-01/managedapplications.json:1096:5
+warning | PreCheck/SchemaMissingType | The schema 'Plan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-09-01/managedapplications.json:1160:5
+warning | PreCheck/SchemaMissingType | The schema 'PlanPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-09-01/managedapplications.json:1191:5
+warning | PreCheck/SchemaMissingType | The schema 'GenericResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-09-01/managedapplications.json:1216:5
+warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-09-01/managedapplications.json:1238:5
+warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-09-01/managedapplications.json:1271:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-09-01/managedapplications.json:1297:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-09-01/managedapplications.json:1329:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-09-01/managedapplications.json:1345:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationArtifact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-09-01/managedapplications.json:1408:5
+warning | PreCheck/SchemaMissingType | The schema 'ApplicationProviderAuthorization' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/solutions/resource-manager/Microsoft.Solutions/stable/2017-09-01/managedapplications.json:1425:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping path '/{applicationId}': Unable to locate "/providers/" segment
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.

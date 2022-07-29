@@ -124,7 +124,7 @@
 * **sourceServerResourceId**: string (WriteOnly): The source server resource ID to restore from. It's required when 'createMode' is 'PointInTimeRestore'.
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): A state of a server that is visible to user.
 * **storage**: [Storage](#storage): Storage properties of a server.
-* **version**: '11' | '12' | '13' | string: PostgreSQL Server version.
+* **version**: '11' | '12' | '13' | '14' | string: PostgreSQL Server version.
 
 ## Sku
 ### Properties

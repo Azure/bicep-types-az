@@ -116,7 +116,7 @@
 ### Properties
 * **capacity**: string: The sku capacity
 * **family**: string: The sku family
-* **name**: 'RS0' | 'Standard' | string (Required): The Sku name.
+* **name**: 'RS0' | 'Standard' | string (Required): Name of SKU is RS0 (Recovery Services 0th version) and the tier is standard tier. They do not have affect on backend storage redundancy or any other vault settings. To manage storage redundancy, use the backupstorageconfig
 * **size**: string: The sku size
 * **tier**: string: The Sku tier.
 

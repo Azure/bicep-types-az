@@ -852,6 +852,7 @@ dictionary key references will be ARM resource ids in the form:
 * **httpCorrelationProtocol**: 'Legacy' | 'None' | 'W3C' | string: Sets correlation protocol to use for Application Insights diagnostics.
 * **logClientIp**: bool: Log the ClientIP. Default is false.
 * **loggerId**: string (Required): Resource Id of a target logger.
+* **metrics**: bool: Emit custom metrics via emit-metric policy. Applicable only to Application Insights diagnostic settings.
 * **operationNameFormat**: 'Name' | 'Url' | string: The format of the Operation Name for Application Insights telemetries. Default is Name.
 * **sampling**: [SamplingSettings](#samplingsettings): Sampling settings for Diagnostic.
 * **verbosity**: 'error' | 'information' | 'verbose' | string: The verbosity level applied to traces emitted by trace policies.

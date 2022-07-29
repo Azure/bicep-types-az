@@ -134,7 +134,7 @@
 * **fullSnapshotQuery**: string: This element is associated with the datasource element. This query is used to fetch data from the sql database.
 * **password**: string: This element is associated with the datasource element. This is the password that will be used to connect to the SQL Database instance.
 * **refreshRate**: string: This element is associated with the datasource element. This indicates how frequently the data will be fetched from the database. It is of DateTime format.
-* **refreshType**: 'Blocking' | 'Nonblocking' | 'RefreshPeriodicallyWithDelta' | 'RefreshPeriodicallyWithFull' | 'Static' | string: Indicates the type of data refresh option.
+* **refreshType**: 'RefreshPeriodicallyWithDelta' | 'RefreshPeriodicallyWithFull' | 'Static' | string: Indicates the type of data refresh option.
 * **server**: string: This element is associated with the datasource element. This is the name of the server that contains the database that will be written to.
 * **user**: string: This element is associated with the datasource element. This is the user name that will be used to connect to the SQL Database instance.
 
@@ -278,6 +278,10 @@
 * **refreshConfiguration**: [RefreshConfiguration](#refreshconfiguration): The refresh parameters for any/all updatable user defined functions present in the job config.
 * **storageAccount**: [StorageAccount](#storageaccount): The properties that are associated with an Azure Storage account
 
+## FileReferenceInputDataSourceProperties
+### Properties
+* **path**: string: The path of the file.
+
 ## Function
 ### Properties
 * **id**: string (ReadOnly): Resource Id
@@ -350,8 +354,8 @@
 
 ## Identity
 ### Properties
-* **principalId**: string: The principalId of the identity.
-* **tenantId**: string: The tenantId of the identity.
+* **principalId**: string (ReadOnly): The principalId of the identity.
+* **tenantId**: string (ReadOnly): The tenantId of the identity.
 * **type**: string: The type of identity, can be SystemAssigned or UserAssigned.
 * **userAssignedIdentities**: any: The user assigned identities associated with the streaming job resource.
 
@@ -552,6 +556,11 @@
 * **Discriminator**: type
 
 ### Base Properties
+### FileReferenceInputDataSource
+#### Properties
+* **properties**: [FileReferenceInputDataSourceProperties](#filereferenceinputdatasourceproperties): The properties that are associated with a file input containing reference data. Required on PUT (CreateOrReplace) requests.
+* **type**: 'File' (Required): Indicates the type of input data source containing reference data. Required on PUT (CreateOrReplace) requests.
+
 ### AzureSqlReferenceInputDataSource
 #### Properties
 * **properties**: [AzureSqlReferenceInputDataSourceProperties](#azuresqlreferenceinputdatasourceproperties): The properties that are associated with SQL DB input containing reference data. Required on PUT (CreateOrReplace) requests.
@@ -573,7 +582,7 @@
 * **dateFormat**: string: The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.
 * **pathPattern**: string: The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.
 * **refreshInterval**: string: The refresh interval.
-* **refreshType**: 'Blocking' | 'Nonblocking' | 'RefreshPeriodicallyWithDelta' | 'RefreshPeriodicallyWithFull' | 'Static' | string: This property indicates which data refresh option to use, Blocking or Nonblocking.
+* **refreshType**: 'Blocking' | 'Nonblocking' | string: This property indicates which data refresh option to use, Blocking or Nonblocking.
 * **timeFormat**: string: The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.
 
 ## Serialization

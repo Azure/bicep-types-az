@@ -97,8 +97,10 @@
 
 ## RedisCommonPropertiesRedisConfiguration
 ### Properties
+* **aof-backup-enabled**: string: Specifies whether the aof backup is enabled
 * **aof-storage-connection-string-0**: string: First storage account connection string
 * **aof-storage-connection-string-1**: string: Second storage account connection string
+* **authnotrequired**: string: Specifies whether the authentication is disabled. Setting this property is highly discouraged from security point of view.
 * **maxclients**: string (ReadOnly): The max clients config
 * **maxfragmentationmemory-reserved**: string: Value in megabytes reserved for fragmentation per shard
 * **maxmemory-delta**: string: Value in megabytes reserved for non-cache usage per shard e.g. failover.

@@ -55,6 +55,15 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/galleries/images/versions' (ReadOnly, DeployTimeConstant): The resource type
 
+## CommunityGalleryInfo
+### Properties
+* **communityGalleryEnabled**: bool (ReadOnly): Contains info about whether community gallery sharing is enabled.
+* **eula**: string: Community gallery publisher eula
+* **publicNamePrefix**: string: Community gallery public name prefix
+* **publicNames**: string[] (ReadOnly): Community gallery public name list.
+* **publisherContact**: string: Community gallery publisher contact email
+* **publisherUri**: string: Community gallery publisher uri
+
 ## DataDiskImageEncryption
 ### Properties
 * **diskEncryptionSetId**: string: A relative URI containing the resource ID of the disk encryption set.
@@ -266,7 +275,7 @@
 
 ## SharingProfile
 ### Properties
-* **communityGalleryInfo**: any: Information of community gallery if current gallery is shared to community.
+* **communityGalleryInfo**: [CommunityGalleryInfo](#communitygalleryinfo): Information of community gallery if current gallery is shared to community.
 * **groups**: [SharingProfileGroup](#sharingprofilegroup)[] (ReadOnly): A list of sharing profile groups.
 * **permissions**: 'Groups' | 'Private' | string: This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**
 

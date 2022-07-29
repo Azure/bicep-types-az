@@ -288,14 +288,6 @@
 * **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
 * **typeName**: 'DeliveryRuleCookiesConditionParameters' | string (Required)
 
-## CustomDomain
-### Properties
-* **id**: string (ReadOnly): Resource ID.
-* **name**: string (ReadOnly): Resource name.
-* **properties**: [CustomDomainProperties](#customdomainproperties): The JSON object that contains the properties of the custom domain to create.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
-* **type**: string (ReadOnly): Resource type.
-
 ## CustomDomainHttpsParameters
 * **Discriminator**: certificateSource
 
@@ -312,16 +304,6 @@
 * **certificateSource**: 'Cdn' (Required): Defines the source of the SSL certificate.
 * **certificateSourceParameters**: [CdnCertificateSourceParameters](#cdncertificatesourceparameters) (Required): Defines the certificate source parameters using CDN managed certificate for enabling SSL.
 
-
-## CustomDomainProperties
-### Properties
-* **customHttpsParameters**: [CustomDomainHttpsParameters](#customdomainhttpsparameters): Certificate parameters for securing custom HTTPS
-* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' | string (ReadOnly): Provisioning status of the custom domain.
-* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' | string (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
-* **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
-* **provisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' | string (ReadOnly): Provisioning status of Custom Https of the custom domain.
-* **resourceState**: 'Active' | 'Creating' | 'Deleting' | string (ReadOnly): Resource status of the custom domain.
-* **validationData**: string: Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
 
 ## CustomDomainPropertiesParametersOrCustomDomainProperties
 ### Properties
@@ -344,6 +326,16 @@
 ## CustomRuleList
 ### Properties
 * **rules**: [CustomRule](#customrule)[]: List of rules
+
+## DeepCreatedCustomDomain
+### Properties
+* **name**: string (Required): Custom domain name.
+* **properties**: [DeepCreatedCustomDomainProperties](#deepcreatedcustomdomainproperties): Properties of the custom domain created on the CDN endpoint.
+
+## DeepCreatedCustomDomainProperties
+### Properties
+* **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
+* **validationData**: string: Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
 
 ## DeepCreatedOrigin
 ### Properties
@@ -542,7 +534,7 @@
 ## EndpointProperties
 ### Properties
 * **contentTypesToCompress**: string[]: List of content types on which compression applies. The value should be a valid MIME type.
-* **customDomains**: [CustomDomain](#customdomain)[] (ReadOnly): The custom domains under the endpoint.
+* **customDomains**: [DeepCreatedCustomDomain](#deepcreatedcustomdomain)[] (ReadOnly): The custom domains under the endpoint.
 * **defaultOriginGroup**: [ResourceReference](#resourcereference): A reference to the origin group.
 * **deliveryPolicy**: [EndpointPropertiesUpdateParametersDeliveryPolicy](#endpointpropertiesupdateparametersdeliverypolicy): A policy that specifies the delivery rules to be used for an endpoint.
 * **geoFilters**: [GeoFilter](#geofilter)[]: List of rules defining the user's geo access within a CDN endpoint. Each geo filter defines an access rule to a specified path or content, e.g. block APAC for path /pictures/

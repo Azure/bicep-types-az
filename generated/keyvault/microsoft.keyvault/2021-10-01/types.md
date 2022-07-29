@@ -178,6 +178,8 @@
 
 ## MhsmPrivateEndpointConnectionItem
 ### Properties
+* **etag**: string: Modified whenever there is a change in the state of private endpoint connection.
+* **id**: string: Id of private endpoint connection.
 * **properties**: [MhsmPrivateEndpointConnectionProperties](#mhsmprivateendpointconnectionproperties): Private endpoint connection properties.
 
 ## MhsmPrivateEndpointConnectionProperties
