@@ -81,9 +81,9 @@
 
 ## CollectionProperties
 ### Properties
-* **allItemsApproved**: bool (ReadOnly): Indicating whether all items are approved for this collection (=true) or not (=false).
-* **allItemsApprovedModifiedAt**: string (ReadOnly): Gets the modified date of all items approved.
 * **allSubscriptions**: bool: Indicating whether all subscriptions are selected (=true) or not (=false).
+* **approveAllItems**: bool (ReadOnly): Indicating whether all items are approved for this collection (=true) or not (=false).
+* **approveAllItemsModifiedAt**: string (ReadOnly): Gets the modified date of all items approved.
 * **claim**: string: Gets or sets the association with Commercial's Billing Account.
 * **collectionId**: string (ReadOnly): Gets collection Id.
 * **collectionName**: string: Gets or sets collection name.

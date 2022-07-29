@@ -5,8 +5,6 @@
 ### Properties
 * **apiVersion**: '2022-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: string (ReadOnly): Azure resource identity
-* **kind**: string (ReadOnly): Azure resource kind
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ActionGroup](#actiongroup): The action groups properties of the resource.

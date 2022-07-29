@@ -48,7 +48,7 @@
 
 ## AutoscaleSetting
 ### Properties
-* **enabled**: bool: the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.
+* **enabled**: bool: the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'false'.
 * **name**: string: the name of the autoscale setting.
 * **notifications**: [AutoscaleNotification](#autoscalenotification)[]: the collection of notifications.
 * **predictiveAutoscalePolicy**: [PredictiveAutoscalePolicy](#predictiveautoscalepolicy): the predictive autoscale policy mode.

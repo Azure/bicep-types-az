@@ -1,6 +1,20 @@
-AutoRest code generation utility [cli version: 3.6.1; node: v16.15.1]
+AutoRest code generation utility [cli version: 3.6.2; node: v16.16.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'AttachedDataNetwork' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from AttachedDataNetwork
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DataNetwork' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from DataNetwork
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'MobileNetwork' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from MobileNetwork
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'SimGroup' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from SimGroup
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'Sim' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Sim
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'Site' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Site
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'PacketCoreControlPlane' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PacketCoreControlPlane
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'PacketCoreDataPlane' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PacketCoreDataPlane
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'Service' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Service
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'SimPolicy' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from SimPolicy
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'Slice' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Slice
+warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'AttachedDataNetwork' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from AttachedDataNetwork

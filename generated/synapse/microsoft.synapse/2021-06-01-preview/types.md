@@ -623,6 +623,7 @@
 
 ## ClusterPrincipalProperties
 ### Properties
+* **aadObjectId**: string (ReadOnly): The service principal object id in AAD (Azure active directory)
 * **principalId**: string (Required): The principal ID assigned to the cluster principal. It can be a user email, application ID, or security group name.
 * **principalName**: string (ReadOnly): The principal name
 * **principalType**: 'App' | 'Group' | 'User' | string (Required): Principal type.
@@ -669,6 +670,7 @@
 
 ## DatabasePrincipalProperties
 ### Properties
+* **aadObjectId**: string (ReadOnly): The service principal object id in AAD (Azure active directory)
 * **principalId**: string (Required): The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.
 * **principalName**: string (ReadOnly): The principal name
 * **principalType**: 'App' | 'Group' | 'User' | string (Required): Principal type.

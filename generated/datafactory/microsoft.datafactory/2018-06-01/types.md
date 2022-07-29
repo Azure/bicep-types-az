@@ -280,6 +280,11 @@
 * **type**: 'SetVariable' (Required): Type of activity.
 * **typeProperties**: [SetVariableActivityTypeProperties](#setvariableactivitytypeproperties) (Required): Set Variable activity properties.
 
+### SynapseSparkJobDefinitionActivity
+#### Properties
+* **type**: 'SparkJob' (Required): Type of activity.
+* **typeProperties**: [SynapseSparkJobActivityTypeProperties](#synapsesparkjobactivitytypeproperties) (Required): Execute spark job activity properties.
+
 ### SqlServerStoredProcedureActivity
 #### Properties
 * **type**: 'SqlServerStoredProcedure' (Required): Type of activity.
@@ -289,6 +294,11 @@
 #### Properties
 * **type**: 'Switch' (Required): Type of activity.
 * **typeProperties**: [SwitchActivityTypeProperties](#switchactivitytypeproperties) (Required): Switch activity properties.
+
+### SynapseNotebookActivity
+#### Properties
+* **type**: 'SynapseNotebook' (Required): Type of activity.
+* **typeProperties**: [SynapseNotebookActivityTypeProperties](#synapsenotebookactivitytypeproperties) (Required): Execute Synapse notebook activity properties.
 
 ### UntilActivity
 #### Properties
@@ -847,9 +857,19 @@
 * **sasToken**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of sasToken in sas uri.
 * **sasUri**: any: SAS URI of the Azure Storage resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
 
+## AzureSynapseArtifactsLinkedServiceTypeProperties
+### Properties
+* **authentication**: any: Required to specify MSI, if using system assigned managed identity as authentication method. Type: string (or Expression with resultType string).
+* **endpoint**: any (Required): https://<workspacename>.dev.azuresynapse.net, Azure Synapse Analytics workspace URL. Type: string (or Expression with resultType string).
+
 ## AzureTableDatasetTypeProperties
 ### Properties
 * **tableName**: any (Required): The table name of the Azure Table storage. Type: string (or Expression with resultType string).
+
+## BigDataPoolParametrizationReference
+### Properties
+* **referenceName**: any (Required): Reference big data pool name. Type: string (or Expression with resultType string).
+* **type**: 'BigDataPoolReference' | string (Required): Big data pool reference type.
 
 ## BinaryDatasetTypeProperties
 ### Properties
@@ -3761,6 +3781,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **type**: 'AzureStorage' (Required): Type of linked service.
 * **typeProperties**: [AzureStorageLinkedServiceTypeProperties](#azurestoragelinkedservicetypeproperties) (Required): Azure Storage linked service properties.
 
+### AzureSynapseArtifactsLinkedService
+#### Properties
+* **type**: 'AzureSynapseArtifacts' (Required): Type of linked service.
+* **typeProperties**: [AzureSynapseArtifactsLinkedServiceTypeProperties](#azuresynapseartifactslinkedservicetypeproperties) (Required): Azure Synapse Analytics (Artifacts) linked service properties.
+
 ### AzureTableStorageLinkedService
 #### Properties
 * **type**: 'AzureTableStorage' (Required): Type of linked service.
@@ -4355,6 +4380,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **schema**: any: The schema name of the Netezza. Type: string (or Expression with resultType string).
 * **table**: any: The table name of the Netezza. Type: string (or Expression with resultType string).
 * **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
+
+## NotebookParameter
+### Properties
+* **type**: 'bool' | 'float' | 'int' | 'string' | string: Notebook parameter type.
+* **value**: any: Notebook parameter value. Type: string (or Expression with resultType string).
 
 ## ODataLinkedServiceTypeProperties
 ### Properties
@@ -5565,6 +5595,44 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## SybaseTableDatasetTypeProperties
 ### Properties
 * **tableName**: any: The Sybase table name. Type: string (or Expression with resultType string).
+
+## SynapseNotebookActivityTypeProperties
+### Properties
+* **conf**: any: Spark configuration properties, which will override the 'conf' of the notebook you provide.
+* **driverSize**: any: Number of core and memory to be used for driver allocated in the specified Spark pool for the session, which will be used for overriding 'driverCores' and 'driverMemory' of the notebook you provide. Type: string (or Expression with resultType string).
+* **executorSize**: any: Number of core and memory to be used for executors allocated in the specified Spark pool for the session, which will be used for overriding 'executorCores' and 'executorMemory' of the notebook you provide. Type: string (or Expression with resultType string).
+* **notebook**: [SynapseNotebookReference](#synapsenotebookreference) (Required): Synapse notebook reference.
+* **numExecutors**: int: Number of executors to launch for this session, which will override the 'numExecutors' of the notebook you provide.
+* **parameters**: [SynapseNotebookActivityTypePropertiesParameters](#synapsenotebookactivitytypepropertiesparameters): Notebook parameters.
+* **sparkPool**: [BigDataPoolParametrizationReference](#bigdatapoolparametrizationreference): The name of the big data pool which will be used to execute the notebook.
+
+## SynapseNotebookActivityTypePropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [NotebookParameter](#notebookparameter)
+
+## SynapseNotebookReference
+### Properties
+* **referenceName**: any (Required): Reference notebook name. Type: string (or Expression with resultType string).
+* **type**: 'NotebookReference' | string (Required): Synapse notebook reference type.
+
+## SynapseSparkJobActivityTypeProperties
+### Properties
+* **args**: any[]: User specified arguments to SynapseSparkJobDefinitionActivity.
+* **className**: any: The fully-qualified identifier or the main class that is in the main definition file, which will override the 'className' of the spark job definition you provide. Type: string (or Expression with resultType string).
+* **conf**: any: Spark configuration properties, which will override the 'conf' of the spark job definition you provide.
+* **driverSize**: any: Number of core and memory to be used for driver allocated in the specified Spark pool for the job, which will be used for overriding 'driverCores' and 'driverMemory' of the spark job definition you provide. Type: string (or Expression with resultType string).
+* **executorSize**: any: Number of core and memory to be used for executors allocated in the specified Spark pool for the job, which will be used for overriding 'executorCores' and 'executorMemory' of the spark job definition you provide. Type: string (or Expression with resultType string).
+* **file**: any: The main file used for the job, which will override the 'file' of the spark job definition you provide. Type: string (or Expression with resultType string).
+* **files**: any[]: Additional files used for reference in the main definition file, which will override the 'files' of the spark job definition you provide.
+* **numExecutors**: int: Number of executors to launch for this job, which will override the 'numExecutors' of the spark job definition you provide.
+* **sparkJob**: [SynapseSparkJobReference](#synapsesparkjobreference) (Required): Synapse spark job reference.
+* **targetBigDataPool**: [BigDataPoolParametrizationReference](#bigdatapoolparametrizationreference): The name of the big data pool which will be used to execute the spark batch job, which will override the 'targetBigDataPool' of the spark job definition you provide.
+
+## SynapseSparkJobReference
+### Properties
+* **referenceName**: string (Required): Reference spark job name.
+* **type**: 'SparkJobDefinitionReference' | string (Required): Synapse spark job reference type.
 
 ## TeamDeskLinkedServiceTypeProperties
 ### Properties

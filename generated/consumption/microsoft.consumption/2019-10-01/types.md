@@ -14,11 +14,10 @@
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource etag.
+* **eTag**: string (ReadOnly): eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'balanceSummary' (Required, DeployTimeConstant): The resource name
 * **properties**: [CreditSummaryProperties](#creditsummaryproperties) (ReadOnly): The properties of the credit summary.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.Consumption/credits' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Consumption/pricesheets@2019-10-01 (ReadOnly)
@@ -155,11 +154,6 @@
 ### Properties
 * **resellerDescription**: string (ReadOnly): Reseller Description.
 * **resellerId**: string (ReadOnly): Reseller id.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

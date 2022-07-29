@@ -1,4 +1,4 @@
-AutoRest code generation utility [cli version: 3.6.1; node: v16.15.1]
+AutoRest code generation utility [cli version: 3.6.2; node: v16.16.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -12,4 +12,8 @@ warning | PreCheck/SchemaMissingType | The schema 'CollectorPolicy-systemData' w
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/networkfunction/resource-manager/Microsoft.NetworkFunction/stable/2022-05-01/AzureTrafficCollector.json:770:9
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/networkfunction/resource-manager/Microsoft.NetworkFunction/stable/2022-05-01/AzureTrafficCollector.json:816:9
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'TrackedResource-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/networkfunction/resource-manager/Microsoft.NetworkFunction/stable/2022-08-01/AzureTrafficCollector.json:807:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.

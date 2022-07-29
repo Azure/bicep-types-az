@@ -531,7 +531,7 @@
 ## DataLakeStorageAccountDetails
 ### Properties
 * **accountUrl**: string: Account URL
-* **createManagedPrivateEndpoint**: bool (WriteOnly): Create managed private endpoint to this storage account or not
+* **createManagedPrivateEndpoint**: bool: Create managed private endpoint to this storage account or not
 * **filesystem**: string: Filesystem name
 * **resourceId**: string: ARM resource Id of this storage account
 
@@ -950,8 +950,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## ManagedIdentitySqlControlSettingsModelPropertiesGrantSqlControlToManagedIdentity
 ### Properties
-* **actualState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Unknown' | string (ReadOnly): Actual state
-* **desiredState**: 'Disabled' | 'Enabled' | string: Desired state
+* **actualState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Unknown' (ReadOnly): Actual state
+* **desiredState**: 'Disabled' | 'Enabled': Desired state
 
 ## ManagedIntegrationRuntimeManagedVirtualNetworkReference
 ### Properties
@@ -1342,7 +1342,7 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
 ### Properties
 * **recurringScans**: [VulnerabilityAssessmentRecurringScansProperties](#vulnerabilityassessmentrecurringscansproperties): The recurring scans settings
 * **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the storage account for vulnerability assessment scan results. If 'StorageContainerSasKey' isn't specified, storageAccountAccessKey is required.
-* **storageContainerPath**: string (WriteOnly): A blob storage container path to hold the scan results (e.g. https://myStorage.blob.core.windows.net/VaScans/).  It is required if server level vulnerability assessment policy doesn't set
+* **storageContainerPath**: string: A blob storage container path to hold the scan results (e.g. https://myStorage.blob.core.windows.net/VaScans/).  It is required if server level vulnerability assessment policy doesn't set
 * **storageContainerSasKey**: string (WriteOnly): A shared access signature (SAS Key) that has write access to the blob container specified in 'storageContainerPath' parameter. If 'storageAccountAccessKey' isn't specified, StorageContainerSasKey is required.
 
 ## SqlPoolVulnerabilityAssessmentRuleBaselineItem

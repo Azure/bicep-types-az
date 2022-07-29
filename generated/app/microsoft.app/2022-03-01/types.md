@@ -322,14 +322,6 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 
 ## CustomHostnameAnalysisResult
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-* **name**: string (ReadOnly): The name of the resource
-* **properties**: [CustomHostnameAnalysisResultProperties](#customhostnameanalysisresultproperties): CustomHostnameAnalysisResult resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-
-## CustomHostnameAnalysisResultProperties
-### Properties
 * **alternateCNameRecords**: string[]: Alternate CName records visible for this hostname.
 * **alternateTxtRecords**: string[]: Alternate TXT records visible for this hostname.
 * **aRecords**: string[]: A records visible for this hostname.
