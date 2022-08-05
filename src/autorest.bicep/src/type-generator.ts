@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { AnySchema, ArraySchema, ChoiceSchema, ConstantSchema, DictionarySchema, ObjectSchema, PrimitiveSchema, Property, Schema, SchemaType, SealedChoiceSchema, StringSchema } from "@autorest/codemodel";
+import { AnySchema, ArraySchema, ByteArraySchema, ChoiceSchema, ConstantSchema, DictionarySchema, ObjectSchema, PrimitiveSchema, Property, Schema, SchemaType, SealedChoiceSchema, StringSchema } from "@autorest/codemodel";
 import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
 import { ArrayType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceFlags, ResourceFunctionType, ResourceType, StringLiteralType, TypeFactory, TypeReference, UnionType } from "./types";
 import { uniq, keys, keyBy, Dictionary, flatMap } from 'lodash';
@@ -379,8 +379,9 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       return parseArrayType(putSchema as ArraySchema, getSchema as ArraySchema);
     }
 
-    // A schema that matches simple values, such as { "type": "number" }
-    if (combinedSchema instanceof PrimitiveSchema) {
+    // A schema that matches simple values (or that is serialized to simple values), such
+    // as { "type": "number" } or { "type": "string", "format": "base64url" }
+    if (combinedSchema instanceof PrimitiveSchema || combinedSchema instanceof ByteArraySchema) {
       return parsePrimaryType(putSchema as PrimitiveSchema, getSchema as PrimitiveSchema);
     }
 
@@ -446,7 +447,9 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       case SchemaType.Object:
         return BuiltInTypeKind.Any;
       case SchemaType.ByteArray:
-        return BuiltInTypeKind.Array;
+        return (schema as ByteArraySchema).format === 'base64url'
+          ? BuiltInTypeKind.String
+          : BuiltInTypeKind.Array;
       case SchemaType.Uri:
       case SchemaType.Date:
       case SchemaType.DateTime:
