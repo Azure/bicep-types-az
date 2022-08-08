@@ -589,7 +589,7 @@
 * **encryptionAlgorithm**: string: Encryption algorithm that will be used along with this client encryption key to encrypt/decrypt data.
 * **id**: string: Name of the ClientEncryptionKey
 * **keyWrapMetadata**: [KeyWrapMetadata](#keywrapmetadata): Metadata for the wrapping provider that can be used to unwrap the wrapped client encryption key.
-* **wrappedDataEncryptionKey**: array: Wrapped (encrypted) form of the key represented as a byte array.
+* **wrappedDataEncryptionKey**: any: Wrapped (encrypted) form of the key represented as a byte array.
 
 ## ClientEncryptionPolicy
 ### Properties

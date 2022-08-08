@@ -197,6 +197,7 @@ warning | PreCheck/SchemaMissingType | The schema 'SqlRoleAssignmentListResult' 
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountGetResults' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountGetResults
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountCreateUpdateParameters' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountCreateUpdateParameters
+warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -529,6 +530,7 @@ warning | PreCheck/SchemaMissingType | The schema 'SqlRoleAssignmentListResult' 
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountGetResults' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountGetResults
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountCreateUpdateParameters' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountCreateUpdateParameters
+warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -699,6 +701,7 @@ warning | PreCheck/SchemaMissingType | The schema 'SqlRoleAssignmentListResult' 
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountGetResults' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountGetResults
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountCreateUpdateParameters' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountCreateUpdateParameters
+warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1028,6 +1031,7 @@ warning | PreCheck/SchemaMissingType | The schema 'SqlRoleAssignmentListResult' 
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountGetResults' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountGetResults
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountCreateUpdateParameters' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountCreateUpdateParameters
+warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.

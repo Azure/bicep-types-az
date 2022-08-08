@@ -307,7 +307,7 @@
 ### ContentKeyPolicyFairPlayConfiguration
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration' (Required): The discriminator for derived types.
-* **ask**: array (Required): The key that must be used as FairPlay Application Secret key.
+* **ask**: any (Required): The key that must be used as FairPlay Application Secret key.
 * **fairPlayPfx**: string (Required): The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
 * **fairPlayPfxPassword**: string (Required): The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
 * **offlineRentalConfiguration**: [ContentKeyPolicyFairPlayOfflineRentalConfiguration](#contentkeypolicyfairplayofflinerentalconfiguration): Offline rental policy
@@ -429,18 +429,18 @@
 ### ContentKeyPolicyRsaTokenKey
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyRsaTokenKey' (Required): The discriminator for derived types.
-* **exponent**: array (Required): The RSA Parameter exponent
-* **modulus**: array (Required): The RSA Parameter modulus
+* **exponent**: any (Required): The RSA Parameter exponent
+* **modulus**: any (Required): The RSA Parameter modulus
 
 ### ContentKeyPolicySymmetricTokenKey
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey' (Required): The discriminator for derived types.
-* **keyValue**: array (Required): The key value of the key
+* **keyValue**: any (Required): The key value of the key
 
 ### ContentKeyPolicyX509CertificateTokenKey
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey' (Required): The discriminator for derived types.
-* **rawBody**: array (Required): The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
+* **rawBody**: any (Required): The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
 
 
 ## ContentKeyPolicyTokenClaim
