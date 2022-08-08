@@ -128,7 +128,7 @@
 
 ## AccessProfile
 ### Properties
-* **kubeConfig**: any: Base64-encoded Kubernetes configuration file.
+* **kubeConfig**: array: Base64-encoded Kubernetes configuration file.
 
 ## AgentPoolUpgradeSettings
 ### Properties
@@ -179,7 +179,7 @@
 ## CredentialResult
 ### Properties
 * **name**: string (ReadOnly): The name of the credential.
-* **value**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
+* **value**: array (ReadOnly): Base64-encoded Kubernetes configuration file.
 
 ## CredentialResults
 ### Properties
@@ -201,7 +201,7 @@
 ## FleetCredentialResult
 ### Properties
 * **name**: string (ReadOnly): The name of the credential.
-* **value**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
+* **value**: array (ReadOnly): Base64-encoded Kubernetes configuration file.
 
 ## FleetCredentialResults
 ### Properties

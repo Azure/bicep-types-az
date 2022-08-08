@@ -284,7 +284,7 @@ Basic apps are not used for capacity allocation.
 
 ## VnetInfoProperties
 ### Properties
-* **certBlob**: any: A certificate file (.cer) blob containing the public key of the private key used to authenticate a 
+* **certBlob**: array: A certificate file (.cer) blob containing the public key of the private key used to authenticate a 
 Point-To-Site VPN connection.
 * **certThumbprint**: string (ReadOnly): The client certificate thumbprint.
 * **dnsServers**: string: DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.

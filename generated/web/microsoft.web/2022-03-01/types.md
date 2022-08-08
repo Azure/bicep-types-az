@@ -2054,7 +2054,7 @@ Remove blobs older than X days.
 ## CertificateProperties
 ### Properties
 * **canonicalName**: string: CNAME of the certificate to be issued via free certificate
-* **cerBlob**: any (ReadOnly): Raw bytes of .cer file
+* **cerBlob**: array (ReadOnly): Raw bytes of .cer file
 * **domainValidationMethod**: string: Method of domain validation for free cert
 * **expirationDate**: string (ReadOnly): Certificate expiration date.
 * **friendlyName**: string (ReadOnly): Friendly name of the certificate.
@@ -2066,7 +2066,7 @@ Remove blobs older than X days.
 * **keyVaultSecretName**: string: Key Vault secret name.
 * **keyVaultSecretStatus**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'ExternalPrivateKey' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder' (ReadOnly): Status of the Key Vault secret.
 * **password**: string (WriteOnly): Certificate password.
-* **pfxBlob**: any: Pfx blob.
+* **pfxBlob**: array: Pfx blob.
 * **publicKeyHash**: string (ReadOnly): Public key hash.
 * **selfLink**: string (ReadOnly): Self link.
 * **serverFarmId**: string: Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
@@ -3117,7 +3117,7 @@ Setting is <code>false</code> by default.
 
 ## PublicCertificateProperties
 ### Properties
-* **blob**: any: Public Certificate byte array
+* **blob**: array: Public Certificate byte array
 * **publicCertificateLocation**: 'CurrentUserMy' | 'LocalMachineMy' | 'Unknown': Public Certificate Location
 * **thumbprint**: string (ReadOnly): Certificate Thumbprint
 

@@ -225,7 +225,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **subjectName**: string (ReadOnly): Subject name of the certificate.
 * **thumbprint**: string (ReadOnly): Certificate thumbprint.
 * **valid**: bool (ReadOnly): Is the certificate valid?.
-* **value**: any (WriteOnly): PFX or PEM blob
+* **value**: array (WriteOnly): PFX or PEM blob
 
 ## ClientRegistration
 ### Properties

@@ -29,7 +29,7 @@
 
 ## AccessProfile
 ### Properties
-* **kubeConfig**: any: Base64-encoded Kubernetes configuration file.
+* **kubeConfig**: array: Base64-encoded Kubernetes configuration file.
 
 ## ContainerServiceAgentPoolProfile
 ### Properties

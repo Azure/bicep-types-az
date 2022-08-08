@@ -1340,7 +1340,7 @@ Setting is <code>false</code> by default.
 
 ## PublicCertificateProperties
 ### Properties
-* **blob**: any: Public Certificate byte array
+* **blob**: array: Public Certificate byte array
 * **publicCertificateLocation**: 'CurrentUserMy' | 'LocalMachineMy' | 'Unknown': Public Certificate Location
 * **thumbprint**: string (ReadOnly): Certificate Thumbprint
 
@@ -1812,7 +1812,7 @@ This setting is only necessary when RecoverConfiguration is enabled.
 
 ## VnetInfoProperties
 ### Properties
-* **certBlob**: any: A certificate file (.cer) blob containing the public key of the private key used to authenticate a 
+* **certBlob**: array: A certificate file (.cer) blob containing the public key of the private key used to authenticate a 
 Point-To-Site VPN connection.
 * **certThumbprint**: string (ReadOnly): The client certificate thumbprint.
 * **dnsServers**: string: DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.

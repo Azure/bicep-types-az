@@ -161,7 +161,7 @@
 * **description**: string: Description of Application.
 * **filePath**: string: Specifies a path for the executable file for the application.
 * **friendlyName**: string: Friendly name of Application.
-* **iconContent**: any (ReadOnly): the icon a 64 bit string as a byte array.
+* **iconContent**: array (ReadOnly): the icon a 64 bit string as a byte array.
 * **iconHash**: string (ReadOnly): Hash of the icon.
 * **iconIndex**: int: Index of the icon.
 * **iconPath**: string: Path to icon.
@@ -174,7 +174,7 @@
 ### Properties
 * **description**: string: Description of Desktop.
 * **friendlyName**: string: Friendly name of Desktop.
-* **iconContent**: any (ReadOnly): The icon a 64 bit string as a byte array.
+* **iconContent**: array (ReadOnly): The icon a 64 bit string as a byte array.
 * **iconHash**: string (ReadOnly): Hash of the icon.
 * **objectId**: string (ReadOnly): ObjectId of Desktop. (internal use)
 
@@ -215,8 +215,8 @@
 * **description**: string: Description of Package Application.
 * **friendlyName**: string: User friendly name.
 * **iconImageName**: string: User friendly name.
-* **rawIcon**: any: the icon a 64 bit string as a byte array.
-* **rawPng**: any: the icon a 64 bit string as a byte array.
+* **rawIcon**: array: the icon a 64 bit string as a byte array.
+* **rawPng**: array: the icon a 64 bit string as a byte array.
 
 ## MsixPackageDependencies
 ### Properties

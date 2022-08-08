@@ -110,7 +110,7 @@
 ## RawCertificateData
 ### Properties
 * **authType**: 'AAD' | 'ACS' | 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid' | string: Specifies the authentication type.
-* **certificate**: any: The base64 encoded certificate raw data string
+* **certificate**: array: The base64 encoded certificate raw data string
 
 ## Sku
 ### Properties
