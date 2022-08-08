@@ -381,7 +381,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
 
     // A schema that matches simple values (or that is serialized to simple values), such
     // as { "type": "number" } or { "type": "string", "format": "base64url" }
-    if (combinedSchema instanceof PrimitiveSchema || combinedSchema instanceof ByteArraySchema) {
+    if (combinedSchema instanceof PrimitiveSchema || (combinedSchema instanceof ByteArraySchema && combinedSchema.format !== 'byte')) {
       return parsePrimaryType(putSchema as PrimitiveSchema, getSchema as PrimitiveSchema);
     }
 
