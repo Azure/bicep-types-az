@@ -112,7 +112,9 @@
 
 ## TestType1CreateOrUpdatePropertiesOrTestType1Properties
 ### Properties
+* **base64EncodedBytes**: string (ReadOnly)
 * **basicString**: string: Description for a basic string property.
+* **binaryBuffer**: any (ReadOnly)
 * **encryptionProperties**: [EncryptionProperties](#encryptionproperties): TestType1 encryption properties
 * **locationData**: [LocationData](#locationdata) (ReadOnly): Metadata pertaining to the geographic location of the resource.
 * **skuTier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
@@ -120,7 +122,9 @@
 
 ## TestType1Properties
 ### Properties
+* **base64EncodedBytes**: string
 * **basicString**: string: Description for a basic string property.
+* **binaryBuffer**: any
 * **encryptionProperties**: [EncryptionProperties](#encryptionproperties): TestType1 encryption properties
 * **locationData**: [LocationData](#locationdata): Metadata pertaining to the geographic location of the resource.
 * **skuTier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.

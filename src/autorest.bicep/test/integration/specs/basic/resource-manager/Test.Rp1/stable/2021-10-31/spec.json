@@ -104,6 +104,14 @@
       "properties": {
         "locationData": {
           "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/locationData"
+        },
+        "base64EncodedBytes": {
+          "type": "string",
+          "format": "base64url"
+        },
+        "binaryBuffer": {
+          "type": "string",
+          "format": "byte"
         }
       }
     },
