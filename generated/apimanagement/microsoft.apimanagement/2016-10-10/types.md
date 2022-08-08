@@ -18,7 +18,7 @@
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant): The resource api version
 * **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (WriteOnly): Collection of authentication settings included into this API.
-* **content**: any (ReadOnly): Response content bytes.
+* **content**: array (ReadOnly): Response content bytes.
 * **description**: string (WriteOnly): Description of the API. May include HTML formatting tags.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
