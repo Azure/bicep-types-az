@@ -149,7 +149,7 @@
 
 ## CertificateProperties
 ### Properties
-* **cerBlob**: array (ReadOnly): Raw bytes of .cer file
+* **cerBlob**: any (ReadOnly): Raw bytes of .cer file
 * **expirationDate**: string (ReadOnly): Certificate expiration date.
 * **friendlyName**: string (ReadOnly): Friendly name of the certificate.
 * **geoRegion**: string (ReadOnly): Region of the certificate.
@@ -161,7 +161,7 @@
 * **keyVaultSecretName**: string: Key Vault secret name.
 * **keyVaultSecretStatus**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'ExternalPrivateKey' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder' (ReadOnly): Status of the Key Vault secret.
 * **password**: string (Required, WriteOnly): Certificate password.
-* **pfxBlob**: array: Pfx blob.
+* **pfxBlob**: any: Pfx blob.
 * **publicKeyHash**: string (ReadOnly): Public key hash.
 * **selfLink**: string (ReadOnly): Self link.
 * **serverFarmId**: string: Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".

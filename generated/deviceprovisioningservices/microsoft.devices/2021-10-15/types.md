@@ -49,7 +49,7 @@
 
 ## CertificateProperties
 ### Properties
-* **certificate**: array (ReadOnly): base-64 representation of X509 certificate .cer file or just .pem file content.
+* **certificate**: any (ReadOnly): base-64 representation of X509 certificate .cer file or just .pem file content.
 * **created**: string (ReadOnly): The certificate's creation date and time.
 * **expiry**: string (ReadOnly): The certificate's expiration date and time.
 * **isVerified**: bool (ReadOnly): Determines whether certificate has been verified.

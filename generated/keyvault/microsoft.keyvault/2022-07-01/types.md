@@ -139,7 +139,7 @@
 ## KeyReleasePolicy
 ### Properties
 * **contentType**: string: Content type and version of key release policy
-* **data**: string: Blob encoding the policy rules under which the key can be released.
+* **data**: any: Blob encoding the policy rules under which the key can be released.
 
 ## KeyRotationPolicyAttributes
 ### Properties

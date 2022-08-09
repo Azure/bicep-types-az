@@ -58,7 +58,7 @@
 ## CredentialResult
 ### Properties
 * **name**: string (ReadOnly): The name of the credential.
-* **value**: array (ReadOnly): Base64-encoded Kubernetes configuration file.
+* **value**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
 
 ## CredentialResults
 ### Properties

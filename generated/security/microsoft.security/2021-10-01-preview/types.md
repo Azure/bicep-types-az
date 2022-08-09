@@ -11,6 +11,6 @@
 
 ## MdeOnboardingDataProperties
 ### Properties
-* **onboardingPackageLinux**: array: The onboarding package used to onboard Linux machines to MDE, coded in base64. This can also be used for onboarding using the dedicated VM Extension
-* **onboardingPackageWindows**: array: The onboarding package used to onboard Windows machines to MDE, coded in base64. This can also be used for onboarding using the dedicated VM Extension
+* **onboardingPackageLinux**: any: The onboarding package used to onboard Linux machines to MDE, coded in base64. This can also be used for onboarding using the dedicated VM Extension
+* **onboardingPackageWindows**: any: The onboarding package used to onboard Windows machines to MDE, coded in base64. This can also be used for onboarding using the dedicated VM Extension
 
