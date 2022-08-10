@@ -55,9 +55,9 @@
       },
       "Nerdbank.GitVersioning": {
         "type": "Direct",
-        "requested": "[3.5.108, )",
-        "resolved": "3.5.108",
-        "contentHash": "+1Zn/jrrbBS1MVK20W8d8g4nEREPuZ6IHDTmtqlJiNeGXN45Iou0IPe5hykbLAVyWfnoN3bPCDBIVjeAfoMsWQ=="
+        "requested": "[3.5.109, )",
+        "resolved": "3.5.109",
+        "contentHash": "tKA1XJ5U2Ytk+u2/5sGNa04Pw6z9noYmqbpmHpjvbwJTtIalqsQjnwT4RQKSDTTIznHBbKxzv3HVh8QD28Qk+g=="
       },
       "Microsoft.Build.Tasks.Git": {
         "type": "Transitive",
@@ -1229,13 +1229,13 @@
       "Azure.Bicep.Types": {
         "type": "Project",
         "dependencies": {
-          "System.Text.Json": "6.0.5"
+          "System.Text.Json": "[6.0.5, )"
         }
       },
       "Azure.Bicep.Types.Az": {
         "type": "Project",
         "dependencies": {
-          "Azure.Bicep.Types": "1.0.0"
+          "Azure.Bicep.Types": "[1.0.0, )"
         }
       }
     }
