@@ -170,6 +170,8 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
           writeTypeProperty(types, propertyName, discriminatedObjectType.BaseProperties[propertyName]);
         }
 
+        writeNewLine();
+
         for (const key of sortedKeys(discriminatedObjectType.Elements)) {
           const element = discriminatedObjectType.Elements[key];
           writeComplexType(types, types[element.Index], nesting + 1, true);
