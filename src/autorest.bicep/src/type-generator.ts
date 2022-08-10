@@ -1,10 +1,10 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { AnySchema, ArmIdSchema, ArraySchema, ByteArraySchema, ChoiceSchema, ConstantSchema, DictionarySchema, ObjectSchema, PrimitiveSchema, Property, Schema, SchemaType, SealedChoiceSchema, StringSchema } from "@autorest/codemodel";
+import { AnySchema, ArraySchema, ByteArraySchema, ChoiceSchema, ComplexSchema, ConstantSchema, DictionarySchema, ObjectSchema, PrimitiveSchema, Property, Schema, SchemaType, SealedChoiceSchema, StringSchema } from "@autorest/codemodel";
 import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
 import { ArrayType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceFlags, ResourceFunctionType, ResourceType, StringLiteralType, TypeFactory, TypeReference, UnionType } from "./types";
-import { uniq, keys, keyBy, Dictionary, flatMap } from 'lodash';
+import { uniq, keys, Dictionary, chain } from 'lodash';
 import { getFullyQualifiedType, getNameSchema, getSerializedName, ProviderDefinition, ResourceDefinition, ResourceDescriptor, ResourceOperationDefintion } from "./resources";
 import { failure, success } from "./utils";
 
@@ -106,7 +106,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       resourceDefinition = factory.addType(new ObjectType(getFullyQualifiedType(descriptor), resourceProperties));
     }
 
-    for (const { propertyName, putProperty, getProperty } of getObjectTypeProperties(putSchema, getSchema, true)) {
+    for (const { propertyName, putProperty, getProperty } of getObjectTypeProperties(putSchema, getSchema)) {
       if (resourceProperties[propertyName]) {
         continue;
       }
@@ -265,22 +265,20 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     return output;
   }
 
-  function getSchemaProperties(schema: ObjectSchema, includeBaseProperties: boolean): Dictionary<Property> {
+  function getSchemaProperties(schema: ObjectSchema, ancestorsToExclude?: Set<ComplexSchema>): Dictionary<Property> {
     const objects = [schema];
-    if (includeBaseProperties) {
-      for (const parent of schema.parents?.all || []) {
-        if (parent instanceof ObjectSchema) {
-          objects.push(parent);
-        }
+    for (const parent of schema.parents?.all || []) {
+      if (parent instanceof ObjectSchema) {
+        objects.push(parent);
       }
     }
 
-    return keyBy(flatMap(objects, o => o.properties || []), p => p.serializedName);
+    return chain(objects).filter(o => !(ancestorsToExclude?.has(o))).flatMap(o => o.properties || []).keyBy(p => p.serializedName).value();
   }
 
-  function* getObjectTypeProperties(putSchema: ObjectSchema | undefined, getSchema: ObjectSchema | undefined, includeBaseProperties: boolean) {
-    const putProperties = putSchema ? getSchemaProperties(putSchema, includeBaseProperties) : {};
-    const getProperties = getSchema ? getSchemaProperties(getSchema, includeBaseProperties) : {};
+  function* getObjectTypeProperties(putSchema: ObjectSchema | undefined, getSchema: ObjectSchema | undefined, ancestorsToExclude?: Set<ComplexSchema>) {
+    const putProperties = putSchema ? getSchemaProperties(putSchema, ancestorsToExclude) : {};
+    const getProperties = getSchema ? getSchemaProperties(getSchema, ancestorsToExclude) : {};
 
     for (const propertyName of uniq([...keys(putProperties), ...keys(getProperties)])) {
       if ((putSchema?.discriminator?.property && putSchema.discriminator.property === putProperties[propertyName]) ||
@@ -352,7 +350,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     // A schema that matches a JSON object with specific properties, such as
     // { "name": { "type": "string" }, "age": { "type": "number" } }
     if (combinedSchema instanceof ObjectSchema) {
-      return parseObjectType(putSchema as ObjectSchema, getSchema as ObjectSchema, true);
+      return parseObjectType(putSchema as ObjectSchema, getSchema as ObjectSchema);
     }
 
     // A schema that matches a "dictionary" JSON object, such as
@@ -472,6 +470,14 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
   }
 
   function handlePolymorphicType(discriminatedObjectType: DiscriminatedObjectType, putSchema?: ObjectSchema, getSchema?: ObjectSchema) {
+    const ancestorsToExclude: Set<ComplexSchema> = new Set([...(putSchema?.parents?.all || []), ...(getSchema?.parents?.all || [])]);
+    if (putSchema) {
+      ancestorsToExclude.add(putSchema);
+    }
+    if (getSchema) {
+      ancestorsToExclude.add(getSchema);
+    }
+
     for (const { putSubType, getSubType } of getDiscriminatedSubTypes(putSchema, getSchema)) {
       const combinedSubType = combineAndThrowIfNull(putSubType, getSubType);
 
@@ -479,7 +485,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
         continue;
       }
 
-      const objectTypeRef = parseObjectType(putSubType, getSubType, false);
+      const objectTypeRef = parseObjectType(putSubType, getSubType, ancestorsToExclude);
       const objectType = factory.lookupType(objectTypeRef);
       if (!(objectType instanceof ObjectType)) {
         logWarning(`Found unexpected element of discriminated type '${discriminatedObjectType.Name}'`)
@@ -516,29 +522,37 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     return {syntheticObject: false, definitionName: getName};
   }
 
-  function parseObjectType(putSchema: ObjectSchema | undefined, getSchema: ObjectSchema | undefined, includeBaseProperties: boolean) {
+  function parseObjectType(putSchema: ObjectSchema | undefined, getSchema: ObjectSchema | undefined, ancestorsToExclude?: Set<ComplexSchema>) {
     const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
     const {syntheticObject, definitionName} = getObjectName(putSchema, getSchema);
 
-    if (includeBaseProperties && namedDefinitions[definitionName]) {
+    if (!ancestorsToExclude && namedDefinitions[definitionName]) {
       // if we're building a discriminated subtype, we're going to be missing the base properties
       // so construct the type on-the-fly, and don't cache it globally
       return namedDefinitions[definitionName];
     }
 
-    let additionalProperties: TypeReference | undefined;
-    if (includeBaseProperties) {
-      const putParentDictionary = (putSchema?.parents?.all || []).filter(x => x instanceof DictionarySchema).map(x => x as DictionarySchema)[0];
-      const getParentDictionary = (getSchema?.parents?.all || []).filter(x => x instanceof DictionarySchema).map(x => x as DictionarySchema)[0];
+    const lookupParentDictionary = (s: ObjectSchema | undefined) => chain(s?.parents?.all || [])
+      .filter(s => {
+        if (ancestorsToExclude && ancestorsToExclude.has(s)) {
+          return false;
+        }
 
-      if (putParentDictionary || getParentDictionary) {
-        additionalProperties = parseType(putParentDictionary?.elementType, getParentDictionary?.elementType);
-      }
-    }
+        return s instanceof DictionarySchema;
+      })
+      .map(s => s as DictionarySchema)
+      .first()
+      .value();
+
+    const putParentDictionary = lookupParentDictionary(putSchema);
+    const getParentDictionary = lookupParentDictionary(getSchema);
+    const additionalProperties = putParentDictionary || getParentDictionary
+      ? parseType(putParentDictionary?.elementType, getParentDictionary?.elementType)
+      : undefined;
 
     const definitionProperties: Dictionary<ObjectProperty> = {};
     const definition = createObject(definitionName, combinedSchema, definitionProperties, additionalProperties);
-    if (includeBaseProperties) {
+    if (!ancestorsToExclude) {
       // cache the definition so that it can be re-used
       namedDefinitions[definitionName] = definition;
     }
@@ -551,9 +565,9 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     // For discriminated subtypes, Bicep's type system does not have a great way to communicate which variants are available on read vs write, but this
     // can be communicated on variant properties. NB: `putSchema` and `getSchema` will only be different in a discriminated subtype if the discriminated
     // object was synthetic.
-    const [schemaForPut, schemaForGet] = syntheticObject || !includeBaseProperties ? [putSchema, getSchema] : [combinedSchema, combinedSchema];
+    const [schemaForPut, schemaForGet] = syntheticObject || ancestorsToExclude ? [putSchema, getSchema] : [combinedSchema, combinedSchema];
 
-    for (const { propertyName, putProperty, getProperty } of getObjectTypeProperties(schemaForPut, schemaForGet, includeBaseProperties)) {
+    for (const { propertyName, putProperty, getProperty } of getObjectTypeProperties(schemaForPut, schemaForGet, ancestorsToExclude)) {
       const propertyDefinition = parseType(putProperty?.schema, getProperty?.schema);
       if (propertyDefinition) {
         const description = getPropertyDescription(putProperty, getProperty);

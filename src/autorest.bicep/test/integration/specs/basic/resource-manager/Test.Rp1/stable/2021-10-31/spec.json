@@ -171,6 +171,97 @@
       "items": {
         "$ref": "#/definitions/FoosResponse"
       }
+    },
+    "DiscriminatedUnionTestType": {
+      "allOf": [
+        {"$ref": "#/definitions/DiscriminatedUnionTestTypeAncestor"}
+      ],
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The variant of this type",
+          "enum": [
+            "inherited",
+            "inline",
+            "override"
+          ]
+        },
+        "bar": {
+          "type": "string",
+          "description": "The bar property"
+        }
+      },
+      "discriminator": "type"
+    },
+    "DiscriminatedUnionTestTypeAncestor": {
+      "type": "object",
+      "properties": {
+        "foo": {
+          "type": "string",
+          "description": "The foo property"
+        }
+      }
+    },
+    "DiscriminatedUnionTestTypeBranchWithInheritedProps": {
+      "allOf": [
+        {"$ref": "#/definitions/DiscriminatedUnionTestType"},
+        {"$ref": "#/definitions/DiscriminatedUnionTestTypeBranchWithInheritedPropsAncestor" }
+      ],
+      "type": "object",
+      "properties": {
+        "quux": {
+          "type": "string",
+          "description": "A property defined inline"
+        }
+      },
+      "x-ms-discriminator-value": "inherited"
+    },
+    "DiscriminatedUnionTestTypeBranchWithInheritedPropsAncestor": {
+      "type": "object",
+      "properties": {
+        "baz": {
+          "type": "string",
+          "description": "The baz property"
+        }
+      }
+    },
+    "DiscriminatedUnionTestTypeBranchWithAllInlineProps": {
+      "allOf": [
+        {"$ref": "#/definitions/DiscriminatedUnionTestType"}
+      ],
+      "type": "object",
+      "properties": {
+        "fizz": {
+          "type": "string",
+          "description": "The fizz property"
+        },
+        "buzz": {
+          "type": "string",
+          "description": "The buzz property"
+        },
+        "pop": {
+          "type": "string",
+          "description": "The pop property"
+        }
+      },
+      "x-ms-discriminator-value": "inline"
+    },
+    "DiscriminatedUnionTestTypeBranchWithOverride": {
+      "allOf": [
+        {"$ref": "#/definitions/DiscriminatedUnionTestType"}
+      ],
+      "type": "object",
+      "properties": {
+        "foo": {
+          "type": "integer",
+          "description": "The overridden foo property"
+        }
+      },
+      "x-ms-discriminator-value": "override"
     }
   },
   "paths": {
@@ -600,6 +691,91 @@
             "required": true,
             "type": "string",
             "description": "The partlyReadonlyType resource name."
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          }
+        ]
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Test.Rp1/discriminatedUnionTestType/{typeName}": {
+      "get": {
+        "summary": "Get a discriminatedUnionTestType resource",
+        "description": "Get a discriminatedUnionTestType resource",
+        "operationId": "DiscriminatedUnionTestType_Get",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/DiscriminatedUnionTestType"
+            }
+          },
+          "default": {
+            "description": "Detailed error information.",
+            "schema": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "name": "typeName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The discriminatedUnionTestType resource name."
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Create or update a discriminatedUnionTestType resource",
+        "description": "Create or update a discriminatedUnionTestType resource",
+        "operationId": "DiscriminatedUnionTestType_CreateOrUpdate",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/DiscriminatedUnionTestType"
+            }
+          },
+          "default": {
+            "description": "Detailed error information.",
+            "schema": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "name": "typeName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The discriminatedUnionTestType resource name."
+          },
+          {
+            "name": "parameters",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DiscriminatedUnionTestType"
+            },
+            "description": "The request parameters"
           },
           {
             "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
