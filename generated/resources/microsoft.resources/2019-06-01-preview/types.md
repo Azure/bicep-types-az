@@ -38,6 +38,7 @@
 
 ### Base Properties
 * **path**: string (Required): A filesystem safe relative path of the artifact.
+
 ### TemplateSpecTemplateArtifact
 #### Properties
 * **kind**: 'template' (Required): The kind of artifact.

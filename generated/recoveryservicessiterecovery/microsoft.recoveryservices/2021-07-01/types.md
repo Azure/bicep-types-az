@@ -417,13 +417,21 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### ReplicationGroupDetails
 #### Properties
 * **instanceType**: 'ReplicationGroupDetails' (Required): Gets the class type. Overridden in derived classes.
 
 ### VmmVirtualMachineDetails
 #### Properties
+* **diskDetails**: [DiskDetails](#diskdetails)[]: The Last successful failover time.
+* **generation**: string: The id of the object in fabric.
+* **hasFibreChannelAdapter**: 'NotPresent' | 'Present' | 'Unknown' | string: A value indicating whether the VM has a fibre channel adapter attached. String value of SrsDataContract.PresenceStatus enum.
+* **hasPhysicalDisk**: 'NotPresent' | 'Present' | 'Unknown' | string: A value indicating whether the VM has a physical disk attached. String value of SrsDataContract.PresenceStatus enum.
+* **hasSharedVhd**: 'NotPresent' | 'Present' | 'Unknown' | string: A value indicating whether the VM has a shared VHD attached. String value of SrsDataContract.PresenceStatus enum.
 * **instanceType**: 'VmmVirtualMachine' (Required): Gets the class type. Overridden in derived classes.
+* **osDetails**: [OSDetails](#osdetails): The Last replication time.
+* **sourceItemId**: string: The source id of the object.
 
 ### VMwareVirtualMachineDetails
 #### Properties
@@ -505,6 +513,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### A2ACreateProtectionIntentInputOrA2AReplicationIntentDetails
 #### Properties
 * **autoProtectionOfDataDisk**: 'Disabled' | 'Enabled' | string: A value indicating whether the auto protection is enabled.
@@ -630,6 +639,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### VMwareCbtEnableMigrationInputOrVMwareCbtMigrationDetails
 #### Properties
 * **dataMoverRunAsAccountId**: string (Required): The data mover run as account Id.
@@ -706,6 +716,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### A2AEnableProtectionInputOrA2AReplicationDetails
 #### Properties
 * **agentCertificateExpiryDate**: string (ReadOnly): Agent certificate expiry date.
@@ -1115,6 +1126,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### A2AEventDetails
 #### Properties
 * **fabricLocation**: string: The fabric location.
@@ -1198,6 +1210,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### JobStatusEventDetails
 #### Properties
 * **affectedObjectType**: string: AffectedObjectType for the event.
@@ -1222,6 +1235,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### AzureToAzureCreateNetworkMappingInput
 #### Properties
 * **instanceType**: 'AzureToAzure' (Required): The instance type.
@@ -1240,6 +1254,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### AzureFabricCreationInputOrAzureFabricSpecificDetails
 #### Properties
 * **containerIds**: string[] (ReadOnly): The container Ids for the Azure fabric.
@@ -1342,6 +1357,7 @@
 
 ### Base Properties
 * **childTasks**: [ASRTask](#asrtask)[]: The child tasks.
+
 ### InlineWorkflowTaskDetails
 #### Properties
 * **instanceType**: 'InlineWorkflowTaskDetails' (Required): The type of task details.
@@ -1349,7 +1365,10 @@
 
 ### RecoveryPlanShutdownGroupTaskDetails
 #### Properties
+* **groupId**: string: The group identifier.
 * **instanceType**: 'RecoveryPlanShutdownGroupTaskDetails' (Required): The type of task details.
+* **name**: string: The name.
+* **rpGroupType**: string: The group type.
 
 
 ## HealthError
@@ -1787,6 +1806,7 @@
 
 ### Base Properties
 * **affectedObjectDetails**: [JobDetailsAffectedObjectDetails](#jobdetailsaffectedobjectdetails): The affected object properties like source server, source cloud, target server, target cloud etc. based on the workflow object details.
+
 ### AsrJobDetails
 #### Properties
 * **instanceType**: 'AsrJobDetails' (Required): Gets the type of job details (see JobDetailsTypes enum for possible values).
@@ -1822,6 +1842,15 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## JobEntity
+### Properties
+* **jobFriendlyName**: string: The job display name.
+* **jobId**: string: The job id.
+* **jobScenarioName**: string: The job name. Enum type ScenarioName.
+* **targetInstanceType**: string: The workflow affected object type.
+* **targetObjectId**: string: The object id.
+* **targetObjectName**: string: The object name.
 
 ## JobErrorDetails
 ### Properties
@@ -1908,6 +1937,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### AzureToAzureNetworkMappingSettings
 #### Properties
 * **instanceType**: 'AzureToAzure' (Required): Gets the Instance type.
@@ -1949,6 +1979,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### A2APolicyDetails
 #### Properties
 * **appConsistentFrequencyInMinutes**: int: The app consistent snapshot frequency in minutes.
@@ -2062,6 +2093,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### A2APolicyCreationInput
 #### Properties
 * **appConsistentFrequencyInMinutes**: int: The app consistent snapshot frequency (in minutes).
@@ -2076,8 +2108,18 @@
 
 ### HyperVReplicaBluePolicyInput
 #### Properties
+* **allowedAuthenticationType**: int: A value indicating the authentication type.
+* **applicationConsistentSnapshotFrequencyInHours**: int: A value indicating the application consistent frequency.
+* **compression**: string: A value indicating whether compression has to be enabled.
+* **initialReplicationMethod**: string: A value indicating whether IR is online.
 * **instanceType**: 'HyperVReplica2012R2' (Required): The class type.
+* **offlineReplicationExportPath**: string: A value indicating the offline IR export path.
+* **offlineReplicationImportPath**: string: A value indicating the offline IR import path.
+* **onlineReplicationStartTime**: string: A value indicating the online IR start time.
+* **recoveryPoints**: int: A value indicating the number of recovery points.
+* **replicaDeletion**: string: A value indicating whether the VM has to be auto deleted.
 * **replicationFrequencyInSeconds**: int: A value indicating the replication interval.
+* **replicationPort**: int: A value indicating the recovery HTTPS port.
 
 ### HyperVReplicaAzurePolicyInput
 #### Properties
@@ -2216,6 +2258,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### A2AProtectionContainerMappingDetails
 #### Properties
 * **agentAutoUpdateStatus**: 'Disabled' | 'Enabled' | string: A value indicating whether the auto update is enabled.
@@ -2244,6 +2287,7 @@
 * **Discriminator**: resourceType
 
 ### Base Properties
+
 ### ExistingProtectionProfile
 #### Properties
 * **protectionProfileId**: string (Required): The protection profile Arm Id. Throw error, if resource does not exists.
@@ -2271,6 +2315,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### A2ARecoveryPointDetails
 #### Properties
 * **disks**: string[]: List of disk ids representing a recovery point.
@@ -2317,6 +2362,7 @@
 * **Discriminator**: resourceType
 
 ### Base Properties
+
 ### ExistingRecoveryAvailabilitySet
 #### Properties
 * **recoveryAvailabilitySetId**: string: The recovery availability set Id. Will throw error, if resource does not exist.
@@ -2334,6 +2380,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### RecoveryPlanAutomationRunbookActionDetails
 #### Properties
 * **fabricLocation**: 'Primary' | 'Recovery' | string (Required): The fabric location.
@@ -2370,6 +2417,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### RecoveryPlanA2ADetails
 #### Properties
 * **instanceType**: 'A2A' (Required): Gets the Instance type.
@@ -2381,6 +2429,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### RecoveryPlanA2AInput
 #### Properties
 * **instanceType**: 'A2A' (Required): Gets the Instance type.
@@ -2398,6 +2447,7 @@
 * **Discriminator**: resourceType
 
 ### Base Properties
+
 ### ExistingRecoveryProximityPlacementGroup
 #### Properties
 * **recoveryProximityPlacementGroupId**: string: The recovery proximity placement group Id. Will throw error, if resource does not exist.
@@ -2408,6 +2458,7 @@
 * **Discriminator**: resourceType
 
 ### Base Properties
+
 ### ExistingRecoveryResourceGroup
 #### Properties
 * **recoveryResourceGroupId**: string: The recovery resource group Id. Valid for V2 scenarios.
@@ -2418,6 +2469,7 @@
 * **Discriminator**: resourceType
 
 ### Base Properties
+
 ### ExistingRecoveryVirtualNetwork
 #### Properties
 * **recoverySubnetName**: string: The recovery subnet name.
@@ -2447,6 +2499,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### A2AContainerCreationInput
 #### Properties
 * **instanceType**: 'A2A' (Required): The class type.
@@ -2464,6 +2517,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### A2AContainerMappingInput
 #### Properties
 * **agentAutoUpdateStatus**: 'Disabled' | 'Enabled' | string: A value indicating whether the auto update is enabled.
@@ -2521,6 +2575,7 @@
 * **Discriminator**: resourceType
 
 ### Base Properties
+
 ### ExistingStorageAccount
 #### Properties
 * **azureStorageAccountId**: string (Required): The storage account Arm Id. Throw error, if resource does not exists.
@@ -2545,6 +2600,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### AutomationRunbookTaskDetails
 #### Properties
 * **accountName**: string: The automation account name of the runbook.
@@ -2566,6 +2622,7 @@
 ### FabricReplicationGroupTaskDetails
 #### Properties
 * **instanceType**: 'FabricReplicationGroupTaskDetails' (Required): The type of task details.
+* **jobTask**: [JobEntity](#jobentity): The job entity.
 * **skippedReason**: string: The skipped reason.
 * **skippedReasonString**: string: The skipped reason string.
 
@@ -2587,6 +2644,7 @@
 ### VirtualMachineTaskDetails
 #### Properties
 * **instanceType**: 'VirtualMachineTaskDetails' (Required): The type of task details.
+* **jobTask**: [JobEntity](#jobentity): The job entity.
 * **skippedReason**: string: The skipped reason.
 * **skippedReasonString**: string: The skipped reason string.
 

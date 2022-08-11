@@ -180,6 +180,7 @@ rule, specifies where network traffic originates from.
 
 ### Base Properties
 * **targetResourceName**: string (Required): Gets or sets the target Resource name.
+
 ### AvailabilitySetResourceSettings
 #### Properties
 * **faultDomain**: int: Gets or sets the target fault domain.

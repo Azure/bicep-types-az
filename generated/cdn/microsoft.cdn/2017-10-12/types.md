@@ -80,6 +80,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### DeliveryRuleCacheExpirationAction
 #### Properties
 * **name**: 'CacheExpiration' (Required): The name of the action for the delivery rule.
@@ -90,6 +91,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### DeliveryRuleUrlFileExtensionCondition
 #### Properties
 * **name**: 'UrlFileExtension' (Required): The name of the condition for the delivery rule.

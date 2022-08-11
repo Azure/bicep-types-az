@@ -105,6 +105,7 @@
 
 ### Base Properties
 * **description**: string: User readable description of the volume.
+
 ### ApplicationScopedVolumeCreationParametersServiceFabricVolumeDisk
 #### Properties
 * **kind**: 'ServiceFabricVolumeDisk' (Required): Specifies the application-scoped volume kind.
@@ -115,6 +116,7 @@
 * **Discriminator**: kind
 
 ### Base Properties
+
 ### AddRemoveReplicaScalingMechanism
 #### Properties
 * **kind**: 'AddRemoveReplica' (Required): The type of auto scaling mechanism.
@@ -127,6 +129,7 @@
 * **Discriminator**: kind
 
 ### Base Properties
+
 ### AutoScalingResourceMetric
 #### Properties
 * **kind**: 'Resource' (Required): The type of auto scaling metric
@@ -143,6 +146,7 @@
 * **Discriminator**: kind
 
 ### Base Properties
+
 ### AverageLoadScalingTrigger
 #### Properties
 * **kind**: 'AverageLoad' (Required): The type of auto scaling trigger
@@ -216,6 +220,7 @@
 ### Base Properties
 * **description**: string: A description of the sink.
 * **name**: string: Name of the sink. This value is referenced by DiagnosticsReferenceDescription
+
 ### AzureInternalMonitoringPipelineSinkDescription
 #### Properties
 * **accountName**: string: Azure Internal monitoring pipeline account.
@@ -311,6 +316,7 @@
 * **provisioningState**: string (ReadOnly): State of the resource.
 * **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' | string (ReadOnly): Status of the network.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the network.
+
 ### LocalNetworkResourceProperties
 #### Properties
 * **kind**: 'Local' (Required): The type of a Service Fabric container network.
@@ -346,6 +352,7 @@
 * **provisioningState**: string (ReadOnly): State of the resource.
 * **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' | string (ReadOnly): Status of the resource.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the secret.
+
 ### InlinedValueSecretResourceProperties
 #### Properties
 * **kind**: 'inlinedValue' (Required): Describes the kind of secret.

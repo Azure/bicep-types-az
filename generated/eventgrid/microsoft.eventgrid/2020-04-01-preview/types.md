@@ -179,6 +179,7 @@
 
 ### Base Properties
 * **key**: string: The field/property in the event based on which you want to filter.
+
 ### BoolEqualsAdvancedFilter
 #### Properties
 * **operatorType**: 'BoolEquals' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
@@ -256,6 +257,7 @@
 * **Discriminator**: endpointType
 
 ### Base Properties
+
 ### StorageBlobDeadLetterDestination
 #### Properties
 * **endpointType**: 'StorageBlob' (Required): Type of the endpoint for the dead letter destination
@@ -332,6 +334,7 @@ This represents a unique resource in the partner's resource model.
 * **Discriminator**: endpointType
 
 ### Base Properties
+
 ### AzureFunctionEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'AzureFunction' (Required): Type of the endpoint for the event subscription destination.
@@ -435,6 +438,7 @@ This property is currently not used and reserved for future usage.
 * **Discriminator**: inputSchemaMappingType
 
 ### Base Properties
+
 ### JsonInputSchemaMapping
 #### Properties
 * **inputSchemaMappingType**: 'Json' (Required): Type of the custom mapping

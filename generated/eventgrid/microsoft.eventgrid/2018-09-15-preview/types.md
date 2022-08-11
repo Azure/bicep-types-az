@@ -63,6 +63,7 @@
 
 ### Base Properties
 * **key**: string: The filter key. Represents an event property with up to two levels of nesting.
+
 ### BoolEqualsAdvancedFilter
 #### Properties
 * **operatorType**: 'BoolEquals' (Required): Represents the filter operator
@@ -128,6 +129,7 @@
 * **Discriminator**: endpointType
 
 ### Base Properties
+
 ### StorageBlobDeadLetterDestination
 #### Properties
 * **endpointType**: 'StorageBlob' (Required): Type of the endpoint for the dead letter destination
@@ -154,6 +156,7 @@
 * **Discriminator**: endpointType
 
 ### Base Properties
+
 ### EventHubEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'EventHub' (Required): Type of the endpoint for the event subscription destination
@@ -208,6 +211,7 @@ Wildcard characters are not supported in this path.
 * **Discriminator**: inputSchemaMappingType
 
 ### Base Properties
+
 ### JsonInputSchemaMapping
 #### Properties
 * **inputSchemaMappingType**: 'Json' (Required): Type of the custom mapping

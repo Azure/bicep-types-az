@@ -172,6 +172,7 @@
 ### Base Properties
 * **priority**: int: Describes priority of the rule
 * **version**: int: defines version of the rule set
+
 ### AzureManagedRuleSet
 #### Properties
 * **ruleGroupOverrides**: [AzureManagedOverrideRuleGroup](#azuremanagedoverriderulegroup)[]: List of azure managed provider override configuration (optional)

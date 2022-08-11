@@ -33,6 +33,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Kusto/clusters/databases/dataConnections' (ReadOnly, DeployTimeConstant): The resource type
+
 ### EventGridDataConnection
 #### Properties
 * **kind**: 'EventGrid' (Required): Kind of the endpoint for the data connection

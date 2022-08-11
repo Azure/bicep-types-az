@@ -84,6 +84,7 @@
 * **Discriminator**: channelName
 
 ### Base Properties
+
 ### DirectLineChannel
 #### Properties
 * **channelName**: 'DirectLineChannel' (Required): The channel name

@@ -162,6 +162,7 @@
 * **provisioningErrors**: [ErrorResponse](#errorresponse)[] (ReadOnly): Errors during provisioning
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
 * **resourceId**: string: ARM resource id of the underlying compute
+
 ### AKS
 #### Properties
 * **computeType**: 'AKS' (Required): The type of compute
@@ -199,6 +200,7 @@
 ### Kubernetes
 #### Properties
 * **computeType**: 'Kubernetes' (Required): The type of compute
+* **properties**: [KubernetesProperties](#kubernetesproperties): Properties of Kubernetes
 
 ### SynapseSpark
 #### Properties
@@ -265,13 +267,18 @@
 * **Discriminator**: computeType
 
 ### Base Properties
+
 ### AksComputeSecrets
 #### Properties
+* **adminKubeConfig**: string: Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
 * **computeType**: 'AKS' (Required): The type of compute
+* **imagePullSecretName**: string: Image registry pull secret.
+* **userKubeConfig**: string: Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
 
 ### DatabricksComputeSecrets
 #### Properties
 * **computeType**: 'Databricks' (Required): The type of compute
+* **databricksAccessToken**: string: access token for databricks account.
 
 ### VirtualMachineSecrets
 #### Properties
@@ -332,11 +339,52 @@
 ### Properties
 * **userAssignedIdentity**: string: The ArmId of the user assigned identity that will be used to access the customer managed key vault
 
+## InstanceResourceSchema
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## InstanceResourceSchema
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## InstanceTypeSchema
+### Properties
+* **nodeSelector**: [InstanceTypeSchemaNodeSelector](#instancetypeschemanodeselector): Node Selector
+* **resources**: [InstanceTypeSchemaResources](#instancetypeschemaresources): Resource requests/limits for this instance type
+
+## InstanceTypeSchemaNodeSelector
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## InstanceTypeSchemaResources
+### Properties
+* **limits**: [InstanceResourceSchema](#instanceresourceschema): Resource limits for this instance type
+* **requests**: [InstanceResourceSchema](#instanceresourceschema): Resource requests for this instance type
+
 ## KeyVaultProperties
 ### Properties
 * **identityClientId**: string: For future use - The client id of the identity which will be used to access key vault.
 * **keyIdentifier**: string (Required): Key vault uri to access the encryption key.
 * **keyVaultArmId**: string (Required): The ArmId of the keyVault where the customer owned encryption key is present.
+
+## KubernetesProperties
+### Properties
+* **defaultInstanceType**: string: Default instance type
+* **extensionInstanceReleaseTrain**: string: Extension instance release train.
+* **extensionPrincipalId**: string: Extension principal-id.
+* **instanceTypes**: [KubernetesPropertiesInstanceTypes](#kubernetespropertiesinstancetypes): Instance Type Schema
+* **namespace**: string: Compute namespace
+* **relayConnectionString**: string: Relay connection string.
+* **serviceBusConnectionString**: string: ServiceBus connection string.
+* **vcName**: string: VC name.
+
+## KubernetesPropertiesInstanceTypes
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [InstanceTypeSchema](#instancetypeschema)
 
 ## ListNotebookKeysResult
 ### Properties

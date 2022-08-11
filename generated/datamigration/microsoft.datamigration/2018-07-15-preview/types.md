@@ -99,6 +99,7 @@
 ### Base Properties
 * **errors**: [ODataError](#odataerror)[] (ReadOnly): Array of errors. This is ignored if submitted.
 * **state**: 'Accepted' | 'Failed' | 'Running' | 'Succeeded' | 'Unknown' | string (ReadOnly): The state of the command. This is ignored if submitted.
+
 ### MongoDbCancelCommand
 #### Properties
 * **commandType**: 'cancel' (Required): Command type.
@@ -133,6 +134,7 @@
 ### Base Properties
 * **password**: string: Password credential.
 * **userName**: string: User name
+
 ### MiSqlConnectionInfo
 #### Properties
 * **managedInstanceResourceId**: string (Required): Resource id for Azure SQL database Managed instance
@@ -226,6 +228,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### ConnectToSourceSqlServerTaskOutputAgentJobLevel
 #### Properties
 * **isEnabled**: bool (ReadOnly): The state of the original Agent Job.
@@ -510,6 +513,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseError
 #### Properties
 * **errorMessage**: string: Error message
@@ -610,6 +614,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateOracleAzureDbPostgreSqlSyncTaskOutputDatabaseError
 #### Properties
 * **errorMessage**: string: Error message
@@ -707,6 +712,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseError
 #### Properties
 * **errorMessage**: string: Error message
@@ -785,6 +791,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateSchemaSqlServerSqlDbTaskOutputDatabaseLevel
 #### Properties
 * **databaseErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying errors for this database
@@ -877,6 +884,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateSqlServerSqlDbSyncTaskOutputDatabaseError
 #### Properties
 * **errorMessage**: string: Error message
@@ -950,6 +958,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateSqlServerSqlDbTaskOutputDatabaseLevel
 #### Properties
 * **databaseName**: string (ReadOnly): Name of the item
@@ -1027,6 +1036,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateSqlServerSqlMISyncTaskOutputDatabaseLevel
 #### Properties
 * **activeBackupSets**: [BackupSetInfo](#backupsetinfo)[] (ReadOnly): Backup sets that are currently active (Either being uploaded or getting restored)
@@ -1080,6 +1090,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateSqlServerSqlMITaskOutputAgentJobLevel
 #### Properties
 * **endedOn**: string (ReadOnly): Migration end time
@@ -1150,6 +1161,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateSsisTaskOutputMigrationLevel
 #### Properties
 * **endedOn**: string (ReadOnly): Migration end time
@@ -1407,6 +1419,7 @@
 * **state**: 'Canceled' | 'Complete' | 'Copying' | 'Failed' | 'Finalizing' | 'InitialReplay' | 'Initializing' | 'NotStarted' | 'Replaying' | 'Restarting' | 'ValidatingInput' | string (Required)
 * **totalBytes**: int (Required): The total number of document bytes on the source at the beginning of the Copying stage, or -1 if the total size was unknown
 * **totalDocuments**: int (Required): The total number of documents on the source at the beginning of the Copying stage, or -1 if the total count was unknown
+
 ### MongoDbCollectionProgress
 #### Properties
 * **resultType**: 'Collection' (Required): The type of progress object
@@ -1535,6 +1548,7 @@
 * **commands**: [CommandProperties](#commandproperties)[] (ReadOnly): Array of command properties.
 * **errors**: [ODataError](#odataerror)[] (ReadOnly): Array of errors. This is ignored if submitted.
 * **state**: 'Canceled' | 'Failed' | 'FailedInputValidation' | 'Faulted' | 'Queued' | 'Running' | 'Succeeded' | 'Unknown' | string (ReadOnly): The state of the task. This is ignored if submitted.
+
 ### ConnectToMongoDbTaskProperties
 #### Properties
 * **input**: [MongoDbConnectionInfo](#mongodbconnectioninfo): Describes a connection to a MongoDB data source

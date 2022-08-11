@@ -151,6 +151,7 @@
 * **Discriminator**: @odata.type
 
 ### Base Properties
+
 ### ForwardingConfiguration
 #### Properties
 * **@odata.type**: '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration' (Required)

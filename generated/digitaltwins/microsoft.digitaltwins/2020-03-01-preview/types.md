@@ -28,6 +28,7 @@
 * **createdTime**: string (ReadOnly): Time when the Endpoint was added to DigitalTwinsInstance.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state.
 * **tags**: [DigitalTwinsEndpointResourcePropertiesTags](#digitaltwinsendpointresourcepropertiestags): The resource tags.
+
 ### EventGrid
 #### Properties
 * **accessKey1**: string (Required): EventGrid secondary accesskey. Will be obfuscated during read

@@ -282,6 +282,25 @@
 * **key**: string: Storage account key.
 * **secretsType**: 'AccountKey' | 'Certificate' | 'KerberosKeytab' | 'KerberosPassword' | 'Sas' | 'ServicePrincipal' | string (Required): [Required] Credential type used to authentication with storage.
 
+## AksNetworkingConfiguration
+### Properties
+* **dnsServiceIP**: string: An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+* **dockerBridgeCidr**: string: A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+* **serviceCidr**: string: A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+* **subnetId**: string: Virtual network subnet resource ID the compute nodes belong to
+
+## AKSSchemaProperties
+### Properties
+* **agentCount**: int: Number of agents
+* **agentVmSize**: string: Agent virtual machine size
+* **aksNetworkingConfiguration**: [AksNetworkingConfiguration](#aksnetworkingconfiguration): AKS networking configuration for vnet
+* **clusterFqdn**: string: Cluster full qualified domain name
+* **clusterPurpose**: 'DenseProd' | 'DevTest' | 'FastProd' | string: Intended usage of the cluster
+* **loadBalancerSubnet**: string: Load Balancer Subnet
+* **loadBalancerType**: 'InternalLoadBalancer' | 'PublicIp' | string: Load Balancer Type
+* **sslConfiguration**: [SslConfiguration](#sslconfiguration): SSL configuration
+* **systemServices**: [SystemService](#systemservice)[] (ReadOnly): System services
+
 ## AmlComputeNodeInformation
 ### Properties
 * **nodeId**: string (ReadOnly): ID of the compute node.
@@ -296,10 +315,36 @@
 * **nextLink**: string (ReadOnly): The continuation token.
 * **nodes**: [AmlComputeNodeInformation](#amlcomputenodeinformation)[] (ReadOnly): The collection of returned AmlCompute nodes details.
 
+## AmlComputeProperties
+### Properties
+* **allocationState**: 'Resizing' | 'Steady' | string (ReadOnly): Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
+* **allocationStateTransitionTime**: string (ReadOnly): The time at which the compute entered its current allocation state.
+* **currentNodeCount**: int (ReadOnly): The number of compute nodes currently assigned to the compute.
+* **enableNodePublicIp**: bool: Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
+* **errors**: [ErrorResponse](#errorresponse)[] (ReadOnly): Collection of errors encountered by various compute nodes during node setup.
+* **isolatedNetwork**: bool: Network is isolated or not
+* **nodeStateCounts**: [NodeStateCounts](#nodestatecounts) (ReadOnly): Counts of various node states on the compute.
+* **osType**: 'Linux' | 'Windows' | string: Compute OS Type
+* **propertyBag**: [AmlComputePropertiesPropertyBag](#amlcomputepropertiespropertybag): A property bag containing additional properties.
+* **remoteLoginPortPublicAccess**: 'Disabled' | 'Enabled' | 'NotSpecified' | string: State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
+* **scaleSettings**: [ScaleSettings](#scalesettings): Scale settings for AML Compute
+* **subnet**: [ResourceId](#resourceid): Virtual network subnet resource ID the compute nodes belong to.
+* **targetNodeCount**: int (ReadOnly): The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
+* **userAccountCredentials**: [UserAccountCredentials](#useraccountcredentials): Credentials for an administrator user account that will be created on each compute node.
+* **virtualMachineImage**: [VirtualMachineImage](#virtualmachineimage): Virtual Machine image for AML Compute - windows only
+* **vmPriority**: 'Dedicated' | 'LowPriority' | string: Virtual Machine priority
+* **vmSize**: string: Virtual Machine Size
+
+## AmlComputePropertiesPropertyBag
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
 ## AssetReferenceBase
 * **Discriminator**: referenceType
 
 ### Base Properties
+
 ### DataPathAssetReference
 #### Properties
 * **datastoreId**: string: ARM resource ID of the datastore where the asset is located.
@@ -318,6 +363,11 @@
 * **referenceType**: 'OutputPath' (Required): [Required] Specifies the type of asset reference.
 
 
+## AssignedUser
+### Properties
+* **objectId**: string (Required): User’s AAD Object Id.
+* **tenantId**: string (Required): User’s AAD Tenant Id.
+
 ## AutoMLJobEnvironmentVariables
 ### Properties
 ### Additional Properties
@@ -333,61 +383,103 @@
 
 ### Base Properties
 * **logVerbosity**: 'Critical' | 'Debug' | 'Error' | 'Info' | 'NotSet' | 'Warning' | string: Log verbosity for the job.
+
 ### Classification
 #### Properties
 * **allowedModels**: 'BernoulliNaiveBayes' | 'DecisionTree' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LightGBM' | 'LinearSVM' | 'LogisticRegression' | 'MultinomialNaiveBayes' | 'RandomForest' | 'SGD' | 'SVM' | 'XGBoostClassifier' | string[]: Allowed models for classification task.
 * **blockedModels**: 'BernoulliNaiveBayes' | 'DecisionTree' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LightGBM' | 'LinearSVM' | 'LogisticRegression' | 'MultinomialNaiveBayes' | 'RandomForest' | 'SGD' | 'SVM' | 'XGBoostClassifier' | string[]: Blocked models for classification task.
+* **dataSettings**: [TableVerticalDataSettings](#tableverticaldatasettings): Data inputs for AutoMLJob.
+* **featurizationSettings**: [TableVerticalFeaturizationSettings](#tableverticalfeaturizationsettings): Featurization inputs needed for AutoML job.
+* **limitSettings**: [TableVerticalLimitSettings](#tableverticallimitsettings): Execution constraints for AutoMLJob.
 * **primaryMetric**: 'AUCWeighted' | 'Accuracy' | 'AveragePrecisionScoreWeighted' | 'NormMacroRecall' | 'PrecisionScoreWeighted' | string: Primary metric for the task.
 * **taskType**: 'Classification' (Required): [Required] Task type for AutoMLJob.
+* **trainingSettings**: [TrainingSettings](#trainingsettings): Inputs for training phase for an AutoML Job.
 
 ### Forecasting
 #### Properties
 * **allowedModels**: 'Arimax' | 'AutoArima' | 'Average' | 'DecisionTree' | 'ElasticNet' | 'ExponentialSmoothing' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'Naive' | 'Prophet' | 'RandomForest' | 'SGD' | 'SeasonalAverage' | 'SeasonalNaive' | 'TCNForecaster' | 'XGBoostRegressor' | string[]: Allowed models for forecasting task.
 * **blockedModels**: 'Arimax' | 'AutoArima' | 'Average' | 'DecisionTree' | 'ElasticNet' | 'ExponentialSmoothing' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'Naive' | 'Prophet' | 'RandomForest' | 'SGD' | 'SeasonalAverage' | 'SeasonalNaive' | 'TCNForecaster' | 'XGBoostRegressor' | string[]: Blocked models for forecasting task.
+* **dataSettings**: [TableVerticalDataSettings](#tableverticaldatasettings): Data inputs for AutoMLJob.
+* **featurizationSettings**: [TableVerticalFeaturizationSettings](#tableverticalfeaturizationsettings): Featurization inputs needed for AutoML job.
 * **forecastingSettings**: [ForecastingSettings](#forecastingsettings): Forecasting task specific inputs.
+* **limitSettings**: [TableVerticalLimitSettings](#tableverticallimitsettings): Execution constraints for AutoMLJob.
 * **primaryMetric**: 'NormalizedMeanAbsoluteError' | 'NormalizedRootMeanSquaredError' | 'R2Score' | 'SpearmanCorrelation' | string: Primary metric for forecasting task.
 * **taskType**: 'Forecasting' (Required): [Required] Task type for AutoMLJob.
+* **trainingSettings**: [TrainingSettings](#trainingsettings): Inputs for training phase for an AutoML Job.
 
 ### ImageClassification
 #### Properties
+* **dataSettings**: [ImageVerticalDataSettings](#imageverticaldatasettings) (Required): [Required] Collection of registered Tabular Dataset Ids and other data settings required for training and validating models.
+* **limitSettings**: [ImageLimitSettings](#imagelimitsettings) (Required): [Required] Limit settings for the AutoML job.
+* **modelSettings**: [ImageModelSettingsClassification](#imagemodelsettingsclassification): Settings used for training the model.
 * **primaryMetric**: 'AUCWeighted' | 'Accuracy' | 'AveragePrecisionScoreWeighted' | 'NormMacroRecall' | 'PrecisionScoreWeighted' | string: Primary metric to optimize for this task.
+* **searchSpace**: [ImageModelDistributionSettingsClassification](#imagemodeldistributionsettingsclassification)[]: Search space for sampling different combinations of models and their hyperparameters.
+* **sweepSettings**: [ImageSweepSettings](#imagesweepsettings): Model sweeping and hyperparameter sweeping related settings.
 * **taskType**: 'ImageClassification' (Required): [Required] Task type for AutoMLJob.
 
 ### ImageClassificationMultilabel
 #### Properties
+* **dataSettings**: [ImageVerticalDataSettings](#imageverticaldatasettings) (Required): [Required] Collection of registered Tabular Dataset Ids and other data settings required for training and validating models.
+* **limitSettings**: [ImageLimitSettings](#imagelimitsettings) (Required): [Required] Limit settings for the AutoML job.
+* **modelSettings**: [ImageModelSettingsClassification](#imagemodelsettingsclassification): Settings used for training the model.
 * **primaryMetric**: 'AUCWeighted' | 'Accuracy' | 'AveragePrecisionScoreWeighted' | 'IOU' | 'NormMacroRecall' | 'PrecisionScoreWeighted' | string: Primary metric to optimize for this task.
+* **searchSpace**: [ImageModelDistributionSettingsClassification](#imagemodeldistributionsettingsclassification)[]: Search space for sampling different combinations of models and their hyperparameters.
+* **sweepSettings**: [ImageSweepSettings](#imagesweepsettings): Model sweeping and hyperparameter sweeping related settings.
 * **taskType**: 'ImageClassificationMultilabel' (Required): [Required] Task type for AutoMLJob.
 
 ### ImageInstanceSegmentation
 #### Properties
+* **dataSettings**: [ImageVerticalDataSettings](#imageverticaldatasettings) (Required): [Required] Collection of registered Tabular Dataset Ids and other data settings required for training and validating models.
+* **limitSettings**: [ImageLimitSettings](#imagelimitsettings) (Required): [Required] Limit settings for the AutoML job.
+* **modelSettings**: [ImageModelSettingsObjectDetection](#imagemodelsettingsobjectdetection): Settings used for training the model.
 * **primaryMetric**: 'MeanAveragePrecision' | string: Primary metric to optimize for this task.
+* **searchSpace**: [ImageModelDistributionSettingsObjectDetection](#imagemodeldistributionsettingsobjectdetection)[]: Search space for sampling different combinations of models and their hyperparameters.
+* **sweepSettings**: [ImageSweepSettings](#imagesweepsettings): Model sweeping and hyperparameter sweeping related settings.
 * **taskType**: 'ImageInstanceSegmentation' (Required): [Required] Task type for AutoMLJob.
 
 ### ImageObjectDetection
 #### Properties
+* **dataSettings**: [ImageVerticalDataSettings](#imageverticaldatasettings) (Required): [Required] Collection of registered Tabular Dataset Ids and other data settings required for training and validating models.
+* **limitSettings**: [ImageLimitSettings](#imagelimitsettings) (Required): [Required] Limit settings for the AutoML job.
+* **modelSettings**: [ImageModelSettingsObjectDetection](#imagemodelsettingsobjectdetection): Settings used for training the model.
 * **primaryMetric**: 'MeanAveragePrecision' | string: Primary metric to optimize for this task.
+* **searchSpace**: [ImageModelDistributionSettingsObjectDetection](#imagemodeldistributionsettingsobjectdetection)[]: Search space for sampling different combinations of models and their hyperparameters.
+* **sweepSettings**: [ImageSweepSettings](#imagesweepsettings): Model sweeping and hyperparameter sweeping related settings.
 * **taskType**: 'ImageObjectDetection' (Required): [Required] Task type for AutoMLJob.
 
 ### Regression
 #### Properties
 * **allowedModels**: 'DecisionTree' | 'ElasticNet' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'RandomForest' | 'SGD' | 'XGBoostRegressor' | string[]: Allowed models for regression task.
 * **blockedModels**: 'DecisionTree' | 'ElasticNet' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'RandomForest' | 'SGD' | 'XGBoostRegressor' | string[]: Blocked models for regression task.
+* **dataSettings**: [TableVerticalDataSettings](#tableverticaldatasettings): Data inputs for AutoMLJob.
+* **featurizationSettings**: [TableVerticalFeaturizationSettings](#tableverticalfeaturizationsettings): Featurization inputs needed for AutoML job.
+* **limitSettings**: [TableVerticalLimitSettings](#tableverticallimitsettings): Execution constraints for AutoMLJob.
 * **primaryMetric**: 'NormalizedMeanAbsoluteError' | 'NormalizedRootMeanSquaredError' | 'R2Score' | 'SpearmanCorrelation' | string: Primary metric for regression task.
 * **taskType**: 'Regression' (Required): [Required] Task type for AutoMLJob.
+* **trainingSettings**: [TrainingSettings](#trainingsettings): Inputs for training phase for an AutoML Job.
 
 ### TextClassification
 #### Properties
+* **dataSettings**: [NlpVerticalDataSettings](#nlpverticaldatasettings): Data inputs for AutoMLJob.
+* **featurizationSettings**: [NlpVerticalFeaturizationSettings](#nlpverticalfeaturizationsettings): Featurization inputs needed for AutoML job.
+* **limitSettings**: [NlpVerticalLimitSettings](#nlpverticallimitsettings): Execution constraints for AutoMLJob.
 * **primaryMetric**: 'AUCWeighted' | 'Accuracy' | 'AveragePrecisionScoreWeighted' | 'NormMacroRecall' | 'PrecisionScoreWeighted' | string: Primary metric for Text-Classification task.
 * **taskType**: 'TextClassification' (Required): [Required] Task type for AutoMLJob.
 
 ### TextClassificationMultilabel
 #### Properties
+* **dataSettings**: [NlpVerticalDataSettings](#nlpverticaldatasettings): Data inputs for AutoMLJob.
+* **featurizationSettings**: [NlpVerticalFeaturizationSettings](#nlpverticalfeaturizationsettings): Featurization inputs needed for AutoML job.
+* **limitSettings**: [NlpVerticalLimitSettings](#nlpverticallimitsettings): Execution constraints for AutoMLJob.
 * **primaryMetric**: 'AUCWeighted' | 'Accuracy' | 'AveragePrecisionScoreWeighted' | 'IOU' | 'NormMacroRecall' | 'PrecisionScoreWeighted' | string (ReadOnly): Primary metric for Text-Classification-Multilabel task.
 Currently only Accuracy is supported as primary metric, hence user need not set it explicitly.
 * **taskType**: 'TextClassificationMultilabel' (Required): [Required] Task type for AutoMLJob.
 
 ### TextNer
 #### Properties
+* **dataSettings**: [NlpVerticalDataSettings](#nlpverticaldatasettings): Data inputs for AutoMLJob.
+* **featurizationSettings**: [NlpVerticalFeaturizationSettings](#nlpverticalfeaturizationsettings): Featurization inputs needed for AutoML job.
+* **limitSettings**: [NlpVerticalLimitSettings](#nlpverticallimitsettings): Execution constraints for AutoMLJob.
 * **primaryMetric**: 'AUCWeighted' | 'Accuracy' | 'AveragePrecisionScoreWeighted' | 'NormMacroRecall' | 'PrecisionScoreWeighted' | string (ReadOnly): Primary metric for Text-NER task.
 Only 'Accuracy' is supported for Text-NER, so user need not set this explicitly.
 * **taskType**: 'TextNER' (Required): [Required] Task type for AutoMLJob.
@@ -488,6 +580,12 @@ This property will always be returned as null. AuthKey values must be retrieved 
 * **properties**: [ResourceBaseProperties](#resourcebaseproperties): The asset property dictionary.
 * **tags**: [ResourceBaseTags](#resourcebasetags): Tag dictionary. Tags can be added, removed, and updated.
 
+## ColumnTransformer
+### Properties
+* **fields**: string[]: Fields to apply transformer logic on.
+* **parameters**: any: Different properties to be passed to transformer.
+Input expected is dictionary of key,value pairs in JSON format.
+
 ## CommandJobEnvironmentVariables
 ### Properties
 ### Additional Properties
@@ -540,21 +638,26 @@ This property will always be returned as null. AuthKey values must be retrieved 
 * **provisioningErrors**: [ErrorResponse](#errorresponse)[] (ReadOnly): Errors during provisioning
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
 * **resourceId**: string: ARM resource id of the underlying compute
+
 ### AKS
 #### Properties
 * **computeType**: 'AKS' (Required): The type of compute
+* **properties**: [AKSSchemaProperties](#aksschemaproperties): AKS properties
 
 ### AmlCompute
 #### Properties
 * **computeType**: 'AmlCompute' (Required): The type of compute
+* **properties**: [AmlComputeProperties](#amlcomputeproperties): Properties of AmlCompute
 
 ### ComputeInstance
 #### Properties
 * **computeType**: 'ComputeInstance' (Required): The type of compute
+* **properties**: [ComputeInstanceProperties](#computeinstanceproperties): Properties of ComputeInstance
 
 ### Databricks
 #### Properties
 * **computeType**: 'Databricks' (Required): The type of compute
+* **properties**: [DatabricksProperties](#databricksproperties): Properties of Databricks
 
 ### DataFactory
 #### Properties
@@ -563,14 +666,17 @@ This property will always be returned as null. AuthKey values must be retrieved 
 ### DataLakeAnalytics
 #### Properties
 * **computeType**: 'DataLakeAnalytics' (Required): The type of compute
+* **properties**: [DataLakeAnalyticsSchemaProperties](#datalakeanalyticsschemaproperties)
 
 ### HDInsight
 #### Properties
 * **computeType**: 'HDInsight' (Required): The type of compute
+* **properties**: [HDInsightProperties](#hdinsightproperties): HDInsight compute properties
 
 ### Kubernetes
 #### Properties
 * **computeType**: 'Kubernetes' (Required): The type of compute
+* **properties**: [KubernetesProperties](#kubernetesproperties): Properties of Kubernetes
 
 ### SynapseSpark
 #### Properties
@@ -580,29 +686,136 @@ This property will always be returned as null. AuthKey values must be retrieved 
 ### VirtualMachine
 #### Properties
 * **computeType**: 'VirtualMachine' (Required): The type of compute
+* **properties**: [VirtualMachineSchemaProperties](#virtualmachineschemaproperties)
 
+
+## ComputeInstanceApplication
+### Properties
+* **displayName**: string: Name of the ComputeInstance application.
+* **endpointUri**: string: Application' endpoint URI.
+
+## ComputeInstanceConnectivityEndpoints
+### Properties
+* **privateIpAddress**: string (ReadOnly): Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).
+* **publicIpAddress**: string (ReadOnly): Public IP Address of this ComputeInstance.
+
+## ComputeInstanceContainer
+### Properties
+* **autosave**: 'Local' | 'None' | 'Remote' | string: Auto save settings.
+* **environment**: [ComputeInstanceEnvironmentInfo](#computeinstanceenvironmentinfo): Environment information of this container.
+* **gpu**: string: Information of GPU.
+* **name**: string: Name of the ComputeInstance container.
+* **network**: 'Bridge' | 'Host' | string: network of this container.
+* **services**: any[] (ReadOnly): services of this containers.
+
+## ComputeInstanceCreatedBy
+### Properties
+* **userId**: string (ReadOnly): Uniquely identifies the user within his/her organization.
+* **userName**: string (ReadOnly): Name of the user.
+* **userOrgId**: string (ReadOnly): Uniquely identifies user' Azure Active Directory organization.
+
+## ComputeInstanceDataDisk
+### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite' | string: Caching type of Data Disk.
+* **diskSizeGB**: int: The initial disk size in gigabytes.
+* **lun**: int: The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun.
+* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | string: type of this storage account.
+
+## ComputeInstanceDataMount
+### Properties
+* **createdBy**: string: who this data mount created by.
+* **error**: string: Error of this data mount.
+* **mountAction**: 'Mount' | 'Unmount' | string: Mount Action.
+* **mountedOn**: string: The time when the disk mounted.
+* **mountName**: string: name of the ComputeInstance data mount.
+* **mountPath**: string: Path of this data mount.
+* **mountState**: 'MountFailed' | 'MountRequested' | 'Mounted' | 'UnmountFailed' | 'UnmountRequested' | 'Unmounted' | string: Mount state.
+* **source**: string: Source of the ComputeInstance data mount.
+* **sourceType**: 'Dataset' | 'Datastore' | 'URI' | string: Data source type.
+
+## ComputeInstanceEnvironmentInfo
+### Properties
+* **name**: string: name of environment.
+* **version**: string: version of environment.
+
+## ComputeInstanceLastOperation
+### Properties
+* **operationName**: 'Create' | 'Delete' | 'Reimage' | 'Restart' | 'Start' | 'Stop' | string: Name of the last operation.
+* **operationStatus**: 'CreateFailed' | 'DeleteFailed' | 'InProgress' | 'ReimageFailed' | 'RestartFailed' | 'StartFailed' | 'StopFailed' | 'Succeeded' | string: Operation status.
+* **operationTime**: string: Time of the last operation.
+* **operationTrigger**: 'IdleShutdown' | 'Schedule' | 'User' | string: Trigger of operation.
+
+## ComputeInstanceProperties
+### Properties
+* **applications**: [ComputeInstanceApplication](#computeinstanceapplication)[] (ReadOnly): Describes available applications and their endpoints on this ComputeInstance.
+* **applicationSharingPolicy**: 'Personal' | 'Shared' | string: Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
+* **computeInstanceAuthorizationType**: 'personal' | string: The Compute Instance Authorization type. Available values are personal (default).
+* **connectivityEndpoints**: [ComputeInstanceConnectivityEndpoints](#computeinstanceconnectivityendpoints) (ReadOnly): Describes all connectivity endpoints available for this ComputeInstance.
+* **containers**: [ComputeInstanceContainer](#computeinstancecontainer)[] (ReadOnly): Describes informations of containers on this ComputeInstance.
+* **createdBy**: [ComputeInstanceCreatedBy](#computeinstancecreatedby) (ReadOnly): Describes information on user who created this ComputeInstance.
+* **dataDisks**: [ComputeInstanceDataDisk](#computeinstancedatadisk)[] (ReadOnly): Describes informations of dataDisks on this ComputeInstance.
+* **dataMounts**: [ComputeInstanceDataMount](#computeinstancedatamount)[] (ReadOnly): Describes informations of dataMounts on this ComputeInstance.
+* **enableNodePublicIp**: bool: Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
+* **errors**: [ErrorResponse](#errorresponse)[] (ReadOnly): Collection of errors encountered on this ComputeInstance.
+* **lastOperation**: [ComputeInstanceLastOperation](#computeinstancelastoperation) (ReadOnly): The last operation on ComputeInstance.
+* **personalComputeInstanceSettings**: [PersonalComputeInstanceSettings](#personalcomputeinstancesettings): Settings for a personal compute instance.
+* **schedules**: [ComputeSchedules](#computeschedules) (ReadOnly): The list of schedules to be applied on the computes.
+* **setupScripts**: [SetupScripts](#setupscripts): Details of customized scripts to execute for setting up the cluster.
+* **sshSettings**: [ComputeInstanceSshSettings](#computeinstancesshsettings): Specifies policy and settings for SSH access.
+* **state**: 'CreateFailed' | 'Creating' | 'Deleting' | 'JobRunning' | 'Restarting' | 'Running' | 'SettingUp' | 'SetupFailed' | 'Starting' | 'Stopped' | 'Stopping' | 'Unknown' | 'Unusable' | 'UserSettingUp' | 'UserSetupFailed' | string (ReadOnly): The current state of this ComputeInstance.
+* **subnet**: [ResourceId](#resourceid): Virtual network subnet resource ID the compute nodes belong to.
+* **versions**: [ComputeInstanceVersion](#computeinstanceversion) (ReadOnly): ComputeInstance version.
+* **vmSize**: string: Virtual Machine Size
+
+## ComputeInstanceSshSettings
+### Properties
+* **adminPublicKey**: string: Specifies the SSH rsa public key file as a string. Use "ssh-keygen -t rsa -b 2048" to generate your SSH key pairs.
+* **adminUserName**: string (ReadOnly): Describes the admin user name.
+* **sshPort**: int (ReadOnly): Describes the port for connecting through SSH.
+* **sshPublicAccess**: 'Disabled' | 'Enabled' | string: State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
+
+## ComputeInstanceVersion
+### Properties
+* **runtime**: string: Runtime of compute instance.
 
 ## ComputeResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ComputeSchedules
+### Properties
+* **computeStartStop**: [ComputeStartStopSchedule](#computestartstopschedule)[]: The list of compute start stop schedules to be applied.
+
 ## ComputeSecrets
 * **Discriminator**: computeType
 
 ### Base Properties
+
 ### AksComputeSecrets
 #### Properties
+* **adminKubeConfig**: string: Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
 * **computeType**: 'AKS' (Required): The type of compute
+* **imagePullSecretName**: string: Image registry pull secret.
+* **userKubeConfig**: string: Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
 
 ### DatabricksComputeSecrets
 #### Properties
 * **computeType**: 'Databricks' (Required): The type of compute
+* **databricksAccessToken**: string: access token for databricks account.
 
 ### VirtualMachineSecrets
 #### Properties
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine.
 * **computeType**: 'VirtualMachine' (Required): The type of compute
 
+
+## ComputeStartStopSchedule
+### Properties
+* **action**: 'Start' | 'Stop' | string: The compute power action.
+* **id**: string (ReadOnly): Schedule id.
+* **provisioningStatus**: 'Completed' | 'Failed' | 'Provisioning' | string (ReadOnly): The current deployment state of schedule.
+* **schedule**: [ScheduleBase](#schedulebase): Base definition of a schedule
 
 ## ContainerResourceRequirements
 ### Properties
@@ -622,6 +835,11 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ### Properties
 * **collectionsThroughput**: int: The throughput of the collections in cosmosdb database
 
+## DatabricksProperties
+### Properties
+* **databricksAccessToken**: string: Databricks access token
+* **workspaceUrl**: string: Workspace Url
+
 ## DataContainerDetails
 ### Properties
 * **dataType**: 'MLTable' | 'UriFile' | 'UriFolder' | string (Required): [Required] Specifies the type of data.
@@ -632,10 +850,15 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **properties**: [ResourceBaseProperties](#resourcebaseproperties): The asset property dictionary.
 * **tags**: [ResourceBaseTags](#resourcebasetags): Tag dictionary. Tags can be added, removed, and updated.
 
+## DataLakeAnalyticsSchemaProperties
+### Properties
+* **dataLakeStoreAccountName**: string: DataLake Store Account Name
+
 ## DatastoreCredentials
 * **Discriminator**: credentialsType
 
 ### Base Properties
+
 ### AccountKeyDatastoreCredentials
 #### Properties
 * **credentialsType**: 'AccountKey' (Required): [Required] Credential type used to authentication with storage.
@@ -654,11 +877,17 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ### KerberosKeytabCredentials
 #### Properties
 * **credentialsType**: 'KerberosKeytab' (Required): [Required] Credential type used to authentication with storage.
+* **kerberosKdcAddress**: string (Required): [Required] IP Address or DNS HostName.
+* **kerberosPrincipal**: string (Required): [Required] Kerberos Username
+* **kerberosRealm**: string (Required): [Required] Domain over which a Kerberos authentication server has the authority to authenticate a user, host or service.
 * **secrets**: [KerberosKeytabSecrets](#kerberoskeytabsecrets) (Required, WriteOnly): [Required] Keytab secrets.
 
 ### KerberosPasswordCredentials
 #### Properties
 * **credentialsType**: 'KerberosPassword' (Required): [Required] Credential type used to authentication with storage.
+* **kerberosKdcAddress**: string (Required): [Required] IP Address or DNS HostName.
+* **kerberosPrincipal**: string (Required): [Required] Kerberos Username
+* **kerberosRealm**: string (Required): [Required] Domain over which a Kerberos authentication server has the authority to authenticate a user, host or service.
 * **secrets**: [KerberosPasswordSecrets](#kerberospasswordsecrets) (Required, WriteOnly): [Required] Kerberos password secrets.
 
 ### NoneDatastoreCredentials
@@ -689,6 +918,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **isDefault**: bool (ReadOnly): Readonly property to indicate if datastore is the workspace default datastore
 * **properties**: [ResourceBaseProperties](#resourcebaseproperties): The asset property dictionary.
 * **tags**: [ResourceBaseTags](#resourcebasetags): Tag dictionary. Tags can be added, removed, and updated.
+
 ### AzureBlobDatastore
 #### Properties
 * **accountName**: string: Storage account name.
@@ -734,6 +964,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **Discriminator**: secretsType
 
 ### Base Properties
+
 ### AccountKeyDatastoreSecrets
 #### Properties
 * **key**: string: Storage account key.
@@ -775,6 +1006,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **isArchived**: bool: Is the asset archived?
 * **properties**: [ResourceBaseProperties](#resourcebaseproperties): The asset property dictionary.
 * **tags**: [ResourceBaseTags](#resourcebasetags): Tag dictionary. Tags can be added, removed, and updated.
+
 ### MLTableData
 #### Properties
 * **dataType**: 'MLTable' (Required): [Required] Specifies the type of data.
@@ -793,6 +1025,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **Discriminator**: distributionType
 
 ### Base Properties
+
 ### Mpi
 #### Properties
 * **distributionType**: 'Mpi' (Required): [Required] Specifies the type of distribution framework.
@@ -816,6 +1049,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ### Base Properties
 * **delayEvaluation**: int: Number of intervals by which to delay the first evaluation.
 * **evaluationInterval**: int: Interval (number of runs) between policy evaluations.
+
 ### BanditPolicy
 #### Properties
 * **policyType**: 'Bandit' (Required): [Required] Name of policy configuration
@@ -945,6 +1179,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **Discriminator**: mode
 
 ### Base Properties
+
 ### AutoForecastHorizon
 #### Properties
 * **mode**: 'Auto' (Required): [Required] Set forecast horizon value selection mode.
@@ -977,10 +1212,17 @@ If the TargetAggregateFunction is set i.e. not 'None', but the freq parameter is
 If grain is not defined, the data set is assumed to be one time-series. This parameter is used with task type forecasting.
 * **useStl**: 'None' | 'Season' | 'SeasonTrend' | string: Configure STL Decomposition of the time-series target column.
 
+## HDInsightProperties
+### Properties
+* **address**: string: Public IP address of the master node of the cluster.
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for master node of the cluster
+* **sshPort**: int: Port open for ssh connections on the master node of the cluster.
+
 ## IdentityConfiguration
 * **Discriminator**: identityType
 
 ### Base Properties
+
 ### AmlToken
 #### Properties
 * **identityType**: 'AMLToken' (Required): [Required] Specifies the type of identity framework.
@@ -1001,11 +1243,321 @@ If grain is not defined, the data set is assumed to be one time-series. This par
 ### Properties
 * **userAssignedIdentity**: string: The ArmId of the user assigned identity that will be used to access the customer managed key vault
 
+## ImageLimitSettings
+### Properties
+* **maxConcurrentTrials**: int: Maximum number of concurrent AutoML iterations.
+* **maxTrials**: int: Maximum number of AutoML iterations.
+* **timeout**: string: AutoML job timeout.
+
+## ImageModelDistributionSettingsClassification
+### Properties
+* **amsGradient**: string: Enable AMSGrad when optimizer is 'adam' or 'adamw'.
+* **augmentations**: string: Settings for using Augmentations.
+* **beta1**: string: Value of 'beta1' when optimizer is 'adam' or 'adamw'. Must be a float in the range [0, 1].
+* **beta2**: string: Value of 'beta2' when optimizer is 'adam' or 'adamw'. Must be a float in the range [0, 1].
+* **distributed**: string: Whether to use distributer training.
+* **earlyStopping**: string: Enable early stopping logic during training.
+* **earlyStoppingDelay**: string: Minimum number of epochs or validation evaluations to wait before primary metric improvement
+is tracked for early stopping. Must be a positive integer.
+* **earlyStoppingPatience**: string: Minimum number of epochs or validation evaluations with no primary metric improvement before
+the run is stopped. Must be a positive integer.
+* **enableOnnxNormalization**: string: Enable normalization when exporting ONNX model.
+* **evaluationFrequency**: string: Frequency to evaluate validation dataset to get metric scores. Must be a positive integer.
+* **gradientAccumulationStep**: string: Gradient accumulation means running a configured number of "GradAccumulationStep" steps without
+updating the model weights while accumulating the gradients of those steps, and then using
+the accumulated gradients to compute the weight updates. Must be a positive integer.
+* **layersToFreeze**: string: Number of layers to freeze for the model. Must be a positive integer.
+For instance, passing 2 as value for 'seresnext' means
+freezing layer0 and layer1. For a full list of models supported and details on layer freeze, please
+see: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-auto-train-image-models.
+* **learningRate**: string: Initial learning rate. Must be a float in the range [0, 1].
+* **learningRateScheduler**: string: Type of learning rate scheduler. Must be 'warmup_cosine' or 'step'.
+* **modelName**: string: Name of the model to use for training.
+For more information on the available models please visit the official documentation:
+https://docs.microsoft.com/en-us/azure/machine-learning/how-to-auto-train-image-models.
+* **momentum**: string: Value of momentum when optimizer is 'sgd'. Must be a float in the range [0, 1].
+* **nesterov**: string: Enable nesterov when optimizer is 'sgd'.
+* **numberOfEpochs**: string: Number of training epochs. Must be a positive integer.
+* **numberOfWorkers**: string: Number of data loader workers. Must be a non-negative integer.
+* **optimizer**: string: Type of optimizer. Must be either 'sgd', 'adam', or 'adamw'.
+* **randomSeed**: string: Random seed to be used when using deterministic training.
+* **splitRatio**: string: If validation data is not defined, this specifies the split ratio for splitting
+train data into random train and validation subsets. Must be a float in the range [0, 1].
+* **stepLRGamma**: string: Value of gamma when learning rate scheduler is 'step'. Must be a float in the range [0, 1].
+* **stepLRStepSize**: string: Value of step size when learning rate scheduler is 'step'. Must be a positive integer.
+* **trainingBatchSize**: string: Training batch size. Must be a positive integer.
+* **trainingCropSize**: string: Image crop size that is input to the neural network for the training dataset. Must be a positive integer.
+* **validationBatchSize**: string: Validation batch size. Must be a positive integer.
+* **validationCropSize**: string: Image crop size that is input to the neural network for the validation dataset. Must be a positive integer.
+* **validationResizeSize**: string: Image size to which to resize before cropping for validation dataset. Must be a positive integer.
+* **warmupCosineLRCycles**: string: Value of cosine cycle when learning rate scheduler is 'warmup_cosine'. Must be a float in the range [0, 1].
+* **warmupCosineLRWarmupEpochs**: string: Value of warmup epochs when learning rate scheduler is 'warmup_cosine'. Must be a positive integer.
+* **weightDecay**: string: Value of weight decay when optimizer is 'sgd', 'adam', or 'adamw'. Must be a float in the range[0, 1].
+* **weightedLoss**: string: Weighted loss. The accepted values are 0 for no weighted loss.
+1 for weighted loss with sqrt.(class_weights). 2 for weighted loss with class_weights. Must be 0 or 1 or 2.
+
+## ImageModelDistributionSettingsObjectDetection
+### Properties
+* **amsGradient**: string: Enable AMSGrad when optimizer is 'adam' or 'adamw'.
+* **augmentations**: string: Settings for using Augmentations.
+* **beta1**: string: Value of 'beta1' when optimizer is 'adam' or 'adamw'. Must be a float in the range [0, 1].
+* **beta2**: string: Value of 'beta2' when optimizer is 'adam' or 'adamw'. Must be a float in the range [0, 1].
+* **boxDetectionsPerImage**: string: Maximum number of detections per image, for all classes. Must be a positive integer.
+Note: This settings is not supported for the 'yolov5' algorithm.
+* **boxScoreThreshold**: string: During inference, only return proposals with a classification score greater than
+BoxScoreThreshold. Must be a float in the range[0, 1].
+* **distributed**: string: Whether to use distributer training.
+* **earlyStopping**: string: Enable early stopping logic during training.
+* **earlyStoppingDelay**: string: Minimum number of epochs or validation evaluations to wait before primary metric improvement
+is tracked for early stopping. Must be a positive integer.
+* **earlyStoppingPatience**: string: Minimum number of epochs or validation evaluations with no primary metric improvement before
+the run is stopped. Must be a positive integer.
+* **enableOnnxNormalization**: string: Enable normalization when exporting ONNX model.
+* **evaluationFrequency**: string: Frequency to evaluate validation dataset to get metric scores. Must be a positive integer.
+* **gradientAccumulationStep**: string: Gradient accumulation means running a configured number of "GradAccumulationStep" steps without
+updating the model weights while accumulating the gradients of those steps, and then using
+the accumulated gradients to compute the weight updates. Must be a positive integer.
+* **imageSize**: string: Image size for train and validation. Must be a positive integer.
+Note: The training run may get into CUDA OOM if the size is too big.
+Note: This settings is only supported for the 'yolov5' algorithm.
+* **layersToFreeze**: string: Number of layers to freeze for the model. Must be a positive integer.
+For instance, passing 2 as value for 'seresnext' means
+freezing layer0 and layer1. For a full list of models supported and details on layer freeze, please
+see: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-auto-train-image-models.
+* **learningRate**: string: Initial learning rate. Must be a float in the range [0, 1].
+* **learningRateScheduler**: string: Type of learning rate scheduler. Must be 'warmup_cosine' or 'step'.
+* **maxSize**: string: Maximum size of the image to be rescaled before feeding it to the backbone.
+Must be a positive integer. Note: training run may get into CUDA OOM if the size is too big.
+Note: This settings is not supported for the 'yolov5' algorithm.
+* **minSize**: string: Minimum size of the image to be rescaled before feeding it to the backbone.
+Must be a positive integer. Note: training run may get into CUDA OOM if the size is too big.
+Note: This settings is not supported for the 'yolov5' algorithm.
+* **modelName**: string: Name of the model to use for training.
+For more information on the available models please visit the official documentation:
+https://docs.microsoft.com/en-us/azure/machine-learning/how-to-auto-train-image-models.
+* **modelSize**: string: Model size. Must be 'small', 'medium', 'large', or 'xlarge'.
+Note: training run may get into CUDA OOM if the model size is too big.
+Note: This settings is only supported for the 'yolov5' algorithm.
+* **momentum**: string: Value of momentum when optimizer is 'sgd'. Must be a float in the range [0, 1].
+* **multiScale**: string: Enable multi-scale image by varying image size by +/- 50%.
+Note: training run may get into CUDA OOM if no sufficient GPU memory.
+Note: This settings is only supported for the 'yolov5' algorithm.
+* **nesterov**: string: Enable nesterov when optimizer is 'sgd'.
+* **nmsIouThreshold**: string: IOU threshold used during inference in NMS post processing. Must be float in the range [0, 1].
+* **numberOfEpochs**: string: Number of training epochs. Must be a positive integer.
+* **numberOfWorkers**: string: Number of data loader workers. Must be a non-negative integer.
+* **optimizer**: string: Type of optimizer. Must be either 'sgd', 'adam', or 'adamw'.
+* **randomSeed**: string: Random seed to be used when using deterministic training.
+* **splitRatio**: string: If validation data is not defined, this specifies the split ratio for splitting
+train data into random train and validation subsets. Must be a float in the range [0, 1].
+* **stepLRGamma**: string: Value of gamma when learning rate scheduler is 'step'. Must be a float in the range [0, 1].
+* **stepLRStepSize**: string: Value of step size when learning rate scheduler is 'step'. Must be a positive integer.
+* **tileGridSize**: string: The grid size to use for tiling each image. Note: TileGridSize must not be
+None to enable small object detection logic. A string containing two integers in mxn format.
+Note: This settings is not supported for the 'yolov5' algorithm.
+* **tileOverlapRatio**: string: Overlap ratio between adjacent tiles in each dimension. Must be float in the range [0, 1).
+Note: This settings is not supported for the 'yolov5' algorithm.
+* **tilePredictionsNmsThreshold**: string: The IOU threshold to use to perform NMS while merging predictions from tiles and image.
+Used in validation/ inference. Must be float in the range [0, 1].
+Note: This settings is not supported for the 'yolov5' algorithm.
+NMS: Non-maximum suppression
+* **trainingBatchSize**: string: Training batch size. Must be a positive integer.
+* **validationBatchSize**: string: Validation batch size. Must be a positive integer.
+* **validationIouThreshold**: string: IOU threshold to use when computing validation metric. Must be float in the range [0, 1].
+* **validationMetricType**: string: Metric computation method to use for validation metrics. Must be 'none', 'coco', 'voc', or 'coco_voc'.
+* **warmupCosineLRCycles**: string: Value of cosine cycle when learning rate scheduler is 'warmup_cosine'. Must be a float in the range [0, 1].
+* **warmupCosineLRWarmupEpochs**: string: Value of warmup epochs when learning rate scheduler is 'warmup_cosine'. Must be a positive integer.
+* **weightDecay**: string: Value of weight decay when optimizer is 'sgd', 'adam', or 'adamw'. Must be a float in the range[0, 1].
+
+## ImageModelSettingsClassification
+### Properties
+* **advancedSettings**: string: Settings for advanced scenarios.
+* **amsGradient**: bool: Enable AMSGrad when optimizer is 'adam' or 'adamw'.
+* **augmentations**: string: Settings for using Augmentations.
+* **beta1**: int: Value of 'beta1' when optimizer is 'adam' or 'adamw'. Must be a float in the range [0, 1].
+* **beta2**: int: Value of 'beta2' when optimizer is 'adam' or 'adamw'. Must be a float in the range [0, 1].
+* **checkpointDatasetId**: string: FileDataset id for pretrained checkpoint(s) for incremental training.
+Make sure to pass CheckpointFilename along with CheckpointDatasetId.
+* **checkpointFilename**: string: The pretrained checkpoint filename in FileDataset for incremental training.
+Make sure to pass CheckpointDatasetId along with CheckpointFilename.
+* **checkpointFrequency**: int: Frequency to store model checkpoints. Must be a positive integer.
+* **checkpointRunId**: string: The id of a previous run that has a pretrained checkpoint for incremental training.
+* **distributed**: bool: Whether to use distributed training.
+* **earlyStopping**: bool: Enable early stopping logic during training.
+* **earlyStoppingDelay**: int: Minimum number of epochs or validation evaluations to wait before primary metric improvement
+is tracked for early stopping. Must be a positive integer.
+* **earlyStoppingPatience**: int: Minimum number of epochs or validation evaluations with no primary metric improvement before
+the run is stopped. Must be a positive integer.
+* **enableOnnxNormalization**: bool: Enable normalization when exporting ONNX model.
+* **evaluationFrequency**: int: Frequency to evaluate validation dataset to get metric scores. Must be a positive integer.
+* **gradientAccumulationStep**: int: Gradient accumulation means running a configured number of "GradAccumulationStep" steps without
+updating the model weights while accumulating the gradients of those steps, and then using
+the accumulated gradients to compute the weight updates. Must be a positive integer.
+* **layersToFreeze**: int: Number of layers to freeze for the model. Must be a positive integer.
+For instance, passing 2 as value for 'seresnext' means
+freezing layer0 and layer1. For a full list of models supported and details on layer freeze, please
+see: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-auto-train-image-models.
+* **learningRate**: int: Initial learning rate. Must be a float in the range [0, 1].
+* **learningRateScheduler**: 'None' | 'Step' | 'WarmupCosine' | string: Type of learning rate scheduler. Must be 'warmup_cosine' or 'step'.
+* **modelName**: string: Name of the model to use for training.
+For more information on the available models please visit the official documentation:
+https://docs.microsoft.com/en-us/azure/machine-learning/how-to-auto-train-image-models.
+* **momentum**: int: Value of momentum when optimizer is 'sgd'. Must be a float in the range [0, 1].
+* **nesterov**: bool: Enable nesterov when optimizer is 'sgd'.
+* **numberOfEpochs**: int: Number of training epochs. Must be a positive integer.
+* **numberOfWorkers**: int: Number of data loader workers. Must be a non-negative integer.
+* **optimizer**: 'Adam' | 'Adamw' | 'None' | 'Sgd' | string: Type of optimizer.
+* **randomSeed**: int: Random seed to be used when using deterministic training.
+* **splitRatio**: int: If validation data is not defined, this specifies the split ratio for splitting
+train data into random train and validation subsets. Must be a float in the range [0, 1].
+* **stepLRGamma**: int: Value of gamma when learning rate scheduler is 'step'. Must be a float in the range [0, 1].
+* **stepLRStepSize**: int: Value of step size when learning rate scheduler is 'step'. Must be a positive integer.
+* **trainingBatchSize**: int: Training batch size. Must be a positive integer.
+* **trainingCropSize**: int: Image crop size that is input to the neural network for the training dataset. Must be a positive integer.
+* **validationBatchSize**: int: Validation batch size. Must be a positive integer.
+* **validationCropSize**: int: Image crop size that is input to the neural network for the validation dataset. Must be a positive integer.
+* **validationResizeSize**: int: Image size to which to resize before cropping for validation dataset. Must be a positive integer.
+* **warmupCosineLRCycles**: int: Value of cosine cycle when learning rate scheduler is 'warmup_cosine'. Must be a float in the range [0, 1].
+* **warmupCosineLRWarmupEpochs**: int: Value of warmup epochs when learning rate scheduler is 'warmup_cosine'. Must be a positive integer.
+* **weightDecay**: int: Value of weight decay when optimizer is 'sgd', 'adam', or 'adamw'. Must be a float in the range[0, 1].
+* **weightedLoss**: int: Weighted loss. The accepted values are 0 for no weighted loss.
+1 for weighted loss with sqrt.(class_weights). 2 for weighted loss with class_weights. Must be 0 or 1 or 2.
+
+## ImageModelSettingsObjectDetection
+### Properties
+* **advancedSettings**: string: Settings for advanced scenarios.
+* **amsGradient**: bool: Enable AMSGrad when optimizer is 'adam' or 'adamw'.
+* **augmentations**: string: Settings for using Augmentations.
+* **beta1**: int: Value of 'beta1' when optimizer is 'adam' or 'adamw'. Must be a float in the range [0, 1].
+* **beta2**: int: Value of 'beta2' when optimizer is 'adam' or 'adamw'. Must be a float in the range [0, 1].
+* **boxDetectionsPerImage**: int: Maximum number of detections per image, for all classes. Must be a positive integer.
+Note: This settings is not supported for the 'yolov5' algorithm.
+* **boxScoreThreshold**: int: During inference, only return proposals with a classification score greater than
+BoxScoreThreshold. Must be a float in the range[0, 1].
+* **checkpointDatasetId**: string: FileDataset id for pretrained checkpoint(s) for incremental training.
+Make sure to pass CheckpointFilename along with CheckpointDatasetId.
+* **checkpointFilename**: string: The pretrained checkpoint filename in FileDataset for incremental training.
+Make sure to pass CheckpointDatasetId along with CheckpointFilename.
+* **checkpointFrequency**: int: Frequency to store model checkpoints. Must be a positive integer.
+* **checkpointRunId**: string: The id of a previous run that has a pretrained checkpoint for incremental training.
+* **distributed**: bool: Whether to use distributed training.
+* **earlyStopping**: bool: Enable early stopping logic during training.
+* **earlyStoppingDelay**: int: Minimum number of epochs or validation evaluations to wait before primary metric improvement
+is tracked for early stopping. Must be a positive integer.
+* **earlyStoppingPatience**: int: Minimum number of epochs or validation evaluations with no primary metric improvement before
+the run is stopped. Must be a positive integer.
+* **enableOnnxNormalization**: bool: Enable normalization when exporting ONNX model.
+* **evaluationFrequency**: int: Frequency to evaluate validation dataset to get metric scores. Must be a positive integer.
+* **gradientAccumulationStep**: int: Gradient accumulation means running a configured number of "GradAccumulationStep" steps without
+updating the model weights while accumulating the gradients of those steps, and then using
+the accumulated gradients to compute the weight updates. Must be a positive integer.
+* **imageSize**: int: Image size for train and validation. Must be a positive integer.
+Note: The training run may get into CUDA OOM if the size is too big.
+Note: This settings is only supported for the 'yolov5' algorithm.
+* **layersToFreeze**: int: Number of layers to freeze for the model. Must be a positive integer.
+For instance, passing 2 as value for 'seresnext' means
+freezing layer0 and layer1. For a full list of models supported and details on layer freeze, please
+see: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-auto-train-image-models.
+* **learningRate**: int: Initial learning rate. Must be a float in the range [0, 1].
+* **learningRateScheduler**: 'None' | 'Step' | 'WarmupCosine' | string: Type of learning rate scheduler. Must be 'warmup_cosine' or 'step'.
+* **maxSize**: int: Maximum size of the image to be rescaled before feeding it to the backbone.
+Must be a positive integer. Note: training run may get into CUDA OOM if the size is too big.
+Note: This settings is not supported for the 'yolov5' algorithm.
+* **minSize**: int: Minimum size of the image to be rescaled before feeding it to the backbone.
+Must be a positive integer. Note: training run may get into CUDA OOM if the size is too big.
+Note: This settings is not supported for the 'yolov5' algorithm.
+* **modelName**: string: Name of the model to use for training.
+For more information on the available models please visit the official documentation:
+https://docs.microsoft.com/en-us/azure/machine-learning/how-to-auto-train-image-models.
+* **modelSize**: 'ExtraLarge' | 'Large' | 'Medium' | 'None' | 'Small' | string: Model size. Must be 'small', 'medium', 'large', or 'xlarge'.
+Note: training run may get into CUDA OOM if the model size is too big.
+Note: This settings is only supported for the 'yolov5' algorithm.
+* **momentum**: int: Value of momentum when optimizer is 'sgd'. Must be a float in the range [0, 1].
+* **multiScale**: bool: Enable multi-scale image by varying image size by +/- 50%.
+Note: training run may get into CUDA OOM if no sufficient GPU memory.
+Note: This settings is only supported for the 'yolov5' algorithm.
+* **nesterov**: bool: Enable nesterov when optimizer is 'sgd'.
+* **nmsIouThreshold**: int: IOU threshold used during inference in NMS post processing. Must be a float in the range [0, 1].
+* **numberOfEpochs**: int: Number of training epochs. Must be a positive integer.
+* **numberOfWorkers**: int: Number of data loader workers. Must be a non-negative integer.
+* **optimizer**: 'Adam' | 'Adamw' | 'None' | 'Sgd' | string: Type of optimizer.
+* **randomSeed**: int: Random seed to be used when using deterministic training.
+* **splitRatio**: int: If validation data is not defined, this specifies the split ratio for splitting
+train data into random train and validation subsets. Must be a float in the range [0, 1].
+* **stepLRGamma**: int: Value of gamma when learning rate scheduler is 'step'. Must be a float in the range [0, 1].
+* **stepLRStepSize**: int: Value of step size when learning rate scheduler is 'step'. Must be a positive integer.
+* **tileGridSize**: string: The grid size to use for tiling each image. Note: TileGridSize must not be
+None to enable small object detection logic. A string containing two integers in mxn format.
+Note: This settings is not supported for the 'yolov5' algorithm.
+* **tileOverlapRatio**: int: Overlap ratio between adjacent tiles in each dimension. Must be float in the range [0, 1).
+Note: This settings is not supported for the 'yolov5' algorithm.
+* **tilePredictionsNmsThreshold**: int: The IOU threshold to use to perform NMS while merging predictions from tiles and image.
+Used in validation/ inference. Must be float in the range [0, 1].
+Note: This settings is not supported for the 'yolov5' algorithm.
+* **trainingBatchSize**: int: Training batch size. Must be a positive integer.
+* **validationBatchSize**: int: Validation batch size. Must be a positive integer.
+* **validationIouThreshold**: int: IOU threshold to use when computing validation metric. Must be float in the range [0, 1].
+* **validationMetricType**: 'Coco' | 'CocoVoc' | 'None' | 'Voc' | string: Metric computation method to use for validation metrics.
+* **warmupCosineLRCycles**: int: Value of cosine cycle when learning rate scheduler is 'warmup_cosine'. Must be a float in the range [0, 1].
+* **warmupCosineLRWarmupEpochs**: int: Value of warmup epochs when learning rate scheduler is 'warmup_cosine'. Must be a positive integer.
+* **weightDecay**: int: Value of weight decay when optimizer is 'sgd', 'adam', or 'adamw'. Must be a float in the range[0, 1].
+
+## ImageSweepLimitSettings
+### Properties
+* **maxConcurrentTrials**: int: Maximum number of concurrent iterations for the underlying Sweep job.
+* **maxTrials**: int: Maximum number of iterations for the underlying Sweep job.
+
+## ImageSweepSettings
+### Properties
+* **earlyTermination**: [EarlyTerminationPolicy](#earlyterminationpolicy): Type of early termination policy.
+* **limits**: [ImageSweepLimitSettings](#imagesweeplimitsettings) (Required): [Required] Limit settings for model sweeping and hyperparameter sweeping.
+* **samplingAlgorithm**: 'Bayesian' | 'Grid' | 'Random' | string (Required): [Required] Type of the hyperparameter sampling algorithms.
+
+## ImageVerticalDataSettings
+### Properties
+* **targetColumnName**: string (Required): [Required] Target column name: This is prediction values column.
+Also known as label column name in context of classification tasks.
+* **testData**: [TestDataSettings](#testdatasettings): Test data input.
+* **trainingData**: [TrainingDataSettings](#trainingdatasettings) (Required): [Required] Training data input.
+* **validationData**: [ImageVerticalValidationDataSettings](#imageverticalvalidationdatasettings): Settings for the validation dataset.
+
+## ImageVerticalValidationDataSettings
+### Properties
+* **data**: [MLTableJobInput](#mltablejobinput): Validation data MLTable.
+* **validationDataSize**: int: The fraction of training dataset that needs to be set aside for validation purpose.
+Values between (0.0 , 1.0)
+Applied when validation dataset is not provided.
+
 ## InferenceContainerProperties
 ### Properties
 * **livenessRoute**: [Route](#route): The route to check the liveness of the inference server container.
 * **readinessRoute**: [Route](#route): The route to check the readiness of the inference server container.
 * **scoringRoute**: [Route](#route): The port to send the scoring requests to, within the inference server container.
+
+## InstanceResourceSchema
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## InstanceResourceSchema
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## InstanceTypeSchema
+### Properties
+* **nodeSelector**: [InstanceTypeSchemaNodeSelector](#instancetypeschemanodeselector): Node Selector
+* **resources**: [InstanceTypeSchemaResources](#instancetypeschemaresources): Resource requests/limits for this instance type
+
+## InstanceTypeSchemaNodeSelector
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## InstanceTypeSchemaResources
+### Properties
+* **limits**: [InstanceResourceSchema](#instanceresourceschema): Resource limits for this instance type
+* **requests**: [InstanceResourceSchema](#instanceresourceschema): Resource requests for this instance type
 
 ## JobBaseDetails
 * **Discriminator**: jobType
@@ -1025,6 +1577,7 @@ If no schedule is provided, the job is run once and immediately after submission
 For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 * **status**: 'CancelRequested' | 'Canceled' | 'Completed' | 'Failed' | 'Finalizing' | 'NotResponding' | 'NotStarted' | 'Paused' | 'Preparing' | 'Provisioning' | 'Queued' | 'Running' | 'Scheduled' | 'Starting' | 'Unknown' | string (ReadOnly): Status of the job.
 * **tags**: [ResourceBaseTags](#resourcebasetags): Tag dictionary. Tags can be added, removed, and updated.
+
 ### AutoMLJob
 #### Properties
 * **environmentId**: string: The ARM resource ID of the Environment specification for the job.
@@ -1080,9 +1633,12 @@ This is optional value to provide, if not provided, AutoML will default this to 
 
 ### Base Properties
 * **description**: string: Description for the input.
+
 ### CustomModelJobInput
 #### Properties
 * **jobInputType**: 'CustomModel' (Required): [Required] Specifies the type of job.
+* **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
+* **uri**: string (Required): [Required] Input Asset URI.
 
 ### LiteralJobInput
 #### Properties
@@ -1092,22 +1648,32 @@ This is optional value to provide, if not provided, AutoML will default this to 
 ### MLFlowModelJobInput
 #### Properties
 * **jobInputType**: 'MLFlowModel' (Required): [Required] Specifies the type of job.
+* **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
+* **uri**: string (Required): [Required] Input Asset URI.
 
 ### MLTableJobInput
 #### Properties
 * **jobInputType**: 'MLTable' (Required): [Required] Specifies the type of job.
+* **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
+* **uri**: string (Required): [Required] Input Asset URI.
 
 ### TritonModelJobInput
 #### Properties
 * **jobInputType**: 'TritonModel' (Required): [Required] Specifies the type of job.
+* **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
+* **uri**: string (Required): [Required] Input Asset URI.
 
 ### UriFileJobInput
 #### Properties
 * **jobInputType**: 'UriFile' (Required): [Required] Specifies the type of job.
+* **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
+* **uri**: string (Required): [Required] Input Asset URI.
 
 ### UriFolderJobInput
 #### Properties
 * **jobInputType**: 'UriFolder' (Required): [Required] Specifies the type of job.
+* **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
+* **uri**: string (Required): [Required] Input Asset URI.
 
 
 ## JobOutput
@@ -1115,29 +1681,42 @@ This is optional value to provide, if not provided, AutoML will default this to 
 
 ### Base Properties
 * **description**: string: Description for the output.
+
 ### CustomModelJobOutput
 #### Properties
 * **jobOutputType**: 'CustomModel' (Required): [Required] Specifies the type of job.
+* **mode**: 'ReadWriteMount' | 'Upload' | string: Output Asset Delivery Mode.
+* **uri**: string: Output Asset URI.
 
 ### MLFlowModelJobOutput
 #### Properties
 * **jobOutputType**: 'MLFlowModel' (Required): [Required] Specifies the type of job.
+* **mode**: 'ReadWriteMount' | 'Upload' | string: Output Asset Delivery Mode.
+* **uri**: string: Output Asset URI.
 
 ### MLTableJobOutput
 #### Properties
 * **jobOutputType**: 'MLTable' (Required): [Required] Specifies the type of job.
+* **mode**: 'ReadWriteMount' | 'Upload' | string: Output Asset Delivery Mode.
+* **uri**: string: Output Asset URI.
 
 ### TritonModelJobOutput
 #### Properties
 * **jobOutputType**: 'TritonModel' (Required): [Required] Specifies the type of job.
+* **mode**: 'ReadWriteMount' | 'Upload' | string: Output Asset Delivery Mode.
+* **uri**: string: Output Asset URI.
 
 ### UriFileJobOutput
 #### Properties
 * **jobOutputType**: 'UriFile' (Required): [Required] Specifies the type of job.
+* **mode**: 'ReadWriteMount' | 'Upload' | string: Output Asset Delivery Mode.
+* **uri**: string: Output Asset URI.
 
 ### UriFolderJobOutput
 #### Properties
 * **jobOutputType**: 'UriFolder' (Required): [Required] Specifies the type of job.
+* **mode**: 'ReadWriteMount' | 'Upload' | string: Output Asset Delivery Mode.
+* **uri**: string: Output Asset URI.
 
 
 ## JobService
@@ -1163,6 +1742,22 @@ This is optional value to provide, if not provided, AutoML will default this to 
 ### Properties
 * **kerberosPassword**: string: Kerberos password secret.
 * **secretsType**: 'AccountKey' | 'Certificate' | 'KerberosKeytab' | 'KerberosPassword' | 'Sas' | 'ServicePrincipal' | string (Required): [Required] Credential type used to authentication with storage.
+
+## KubernetesProperties
+### Properties
+* **defaultInstanceType**: string: Default instance type
+* **extensionInstanceReleaseTrain**: string: Extension instance release train.
+* **extensionPrincipalId**: string: Extension principal-id.
+* **instanceTypes**: [KubernetesPropertiesInstanceTypes](#kubernetespropertiesinstancetypes): Instance Type Schema
+* **namespace**: string: Compute namespace
+* **relayConnectionString**: string: Relay connection string.
+* **serviceBusConnectionString**: string: ServiceBus connection string.
+* **vcName**: string: VC name.
+
+## KubernetesPropertiesInstanceTypes
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [InstanceTypeSchema](#instancetypeschema)
 
 ## ListNotebookKeysResult
 ### Properties
@@ -1193,6 +1788,13 @@ This is optional value to provide, if not provided, AutoML will default this to 
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
+## MLTableJobInput
+### Properties
+* **description**: string: Description for the input.
+* **jobInputType**: 'CustomModel' | 'Literal' | 'MLFlowModel' | 'MLTable' | 'TritonModel' | 'UriFile' | 'UriFolder' | string (Required): [Required] Specifies the type of job.
+* **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
+* **uri**: string (Required): [Required] Input Asset URI.
+
 ## ModelContainerDetails
 ### Properties
 * **description**: string: The asset description text.
@@ -1218,6 +1820,55 @@ This is optional value to provide, if not provided, AutoML will default this to 
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [FlavorData](#flavordata)
+
+## NCrossValidations
+* **Discriminator**: mode
+
+### Base Properties
+
+### AutoNCrossValidations
+#### Properties
+* **mode**: 'Auto' (Required): [Required] Mode for determining N-Cross validations.
+
+### CustomNCrossValidations
+#### Properties
+* **mode**: 'Custom' (Required): [Required] Mode for determining N-Cross validations.
+* **value**: int (Required): [Required] N-Cross validations value.
+
+
+## NlpVerticalDataSettings
+### Properties
+* **targetColumnName**: string (Required): [Required] Target column name: This is prediction values column.
+Also known as label column name in context of classification tasks.
+* **testData**: [TestDataSettings](#testdatasettings): Test data input.
+* **trainingData**: [TrainingDataSettings](#trainingdatasettings) (Required): [Required] Training data input.
+* **validationData**: [NlpVerticalValidationDataSettings](#nlpverticalvalidationdatasettings): Validation data inputs.
+
+## NlpVerticalFeaturizationSettings
+### Properties
+* **datasetLanguage**: string: Dataset language, useful for the text data.
+
+## NlpVerticalLimitSettings
+### Properties
+* **maxConcurrentTrials**: int: Maximum Concurrent AutoML iterations.
+* **maxTrials**: int: Number of AutoML iterations.
+* **timeout**: string: AutoML job timeout.
+
+## NlpVerticalValidationDataSettings
+### Properties
+* **data**: [MLTableJobInput](#mltablejobinput): Validation data MLTable.
+* **validationDataSize**: int: The fraction of training dataset that needs to be set aside for validation purpose.
+Values between (0.0 , 1.0)
+Applied when validation dataset is not provided.
+
+## NodeStateCounts
+### Properties
+* **idleNodeCount**: int (ReadOnly): Number of compute nodes in idle state.
+* **leavingNodeCount**: int (ReadOnly): Number of compute nodes which are leaving the amlCompute.
+* **preemptedNodeCount**: int (ReadOnly): Number of compute nodes which are in preempted state.
+* **preparingNodeCount**: int (ReadOnly): Number of compute nodes which are being prepared.
+* **runningNodeCount**: int (ReadOnly): Number of compute nodes which are running jobs.
+* **unusableNodeCount**: int (ReadOnly): Number of compute nodes which are in unusable state.
 
 ## NotebookAccessTokenResult
 ### Properties
@@ -1270,6 +1921,7 @@ DEPRECATED for future API versions. Use EgressPublicNetworkAccess.
 If it is null or not provided,
 it defaults to TargetUtilizationScaleSettings for KubernetesOnlineDeployment
 and to DefaultScaleSettings for ManagedOnlineDeployment.
+
 ### KubernetesOnlineDeployment
 #### Properties
 * **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements): The resource requirements for the container (cpu and memory).
@@ -1318,6 +1970,7 @@ Defaults to 5000ms.
 * **Discriminator**: scaleType
 
 ### Base Properties
+
 ### DefaultScaleSettings
 #### Properties
 * **scaleType**: 'Default' (Required): [Required] Type of deployment scaling algorithm
@@ -1335,6 +1988,10 @@ Defaults to 5000ms.
 ### Properties
 * **name**: string (ReadOnly)
 * **value**: string (ReadOnly)
+
+## PersonalComputeInstanceSettings
+### Properties
+* **assignedUser**: [AssignedUser](#assigneduser): A user explicitly assigned to a personal compute instance.
 
 ## PipelineJobInputs
 ### Properties
@@ -1541,6 +2198,10 @@ Defaults to 5000ms.
 ### Additional Properties
 * **Additional Properties Type**: any
 
+## ResourceId
+### Properties
+* **id**: string (Required): The ID of the resource
+
 ## Route
 ### Properties
 * **path**: string (Required): [Required] The path for the route.
@@ -1550,6 +2211,7 @@ Defaults to 5000ms.
 * **Discriminator**: samplingAlgorithmType
 
 ### Base Properties
+
 ### BayesianSamplingAlgorithm
 #### Properties
 * **samplingAlgorithmType**: 'Bayesian' (Required): [Required] The algorithm used for generating hyperparameter values, along with configuration properties
@@ -1570,6 +2232,12 @@ Defaults to 5000ms.
 * **sasToken**: string: Storage container SAS token.
 * **secretsType**: 'AccountKey' | 'Certificate' | 'KerberosKeytab' | 'KerberosPassword' | 'Sas' | 'ServicePrincipal' | string (Required): [Required] Credential type used to authentication with storage.
 
+## ScaleSettings
+### Properties
+* **maxNodeCount**: int (Required): Max number of nodes to use
+* **minNodeCount**: int: Min number of nodes to use
+* **nodeIdleTimeBeforeScaleDown**: string: Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.
+
 ## ScheduleBase
 * **Discriminator**: scheduleType
 
@@ -1580,6 +2248,7 @@ If not present, the schedule will run indefinitely
 * **startTime**: string: Specifies start time of schedule in ISO 8601 format.
 * **timeZone**: string: Specifies time zone in which the schedule runs.
 TimeZone should follow Windows time zone format.
+
 ### CronSchedule
 #### Properties
 * **expression**: string (Required): [Required] Specifies cron expression of schedule.
@@ -1594,10 +2263,23 @@ The expression should follow NCronTab format.
 * **scheduleType**: 'Recurrence' (Required): [Required] Specifies the schedule type
 
 
+## ScriptReference
+### Properties
+* **scriptArguments**: string: Optional command line arguments passed to the script to run.
+* **scriptData**: string: The location of scripts in the mounted volume.
+* **scriptSource**: string: The storage source of the script: inline, workspace.
+* **timeout**: string: Optional time period passed to timeout command.
+
+## ScriptsToExecute
+### Properties
+* **creationScript**: [ScriptReference](#scriptreference): Script that's run only once during provision of the compute.
+* **startupScript**: [ScriptReference](#scriptreference): Script that's run every time the machine starts.
+
 ## Seasonality
 * **Discriminator**: mode
 
 ### Base Properties
+
 ### AutoSeasonality
 #### Properties
 * **mode**: 'Auto' (Required): [Required] Seasonality mode.
@@ -1616,6 +2298,10 @@ The expression should follow NCronTab format.
 ### Properties
 * **clientSecret**: string: Service principal secret.
 * **secretsType**: 'AccountKey' | 'Certificate' | 'KerberosKeytab' | 'KerberosPassword' | 'Sas' | 'ServicePrincipal' | string (Required): [Required] Credential type used to authentication with storage.
+
+## SetupScripts
+### Properties
+* **scripts**: [ScriptsToExecute](#scriptstoexecute): Customized setup scripts
 
 ## SharedPrivateLinkResource
 ### Properties
@@ -1636,6 +2322,21 @@ The expression should follow NCronTab format.
 * **name**: string (Required): The name of the SKU. Ex - P3. It is typically a letter+number code
 * **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
 * **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
+
+## SslConfiguration
+### Properties
+* **cert**: string: Cert data
+* **cname**: string: CNAME of the cert
+* **key**: string: Key data
+* **leafDomainLabel**: string: Leaf domain label of public endpoint
+* **overwriteExistingDomain**: bool: Indicates whether to overwrite existing domain label.
+* **status**: 'Auto' | 'Disabled' | 'Enabled' | string: Enable or disable ssl for scoring
+
+## StackEnsembleSettings
+### Properties
+* **stackMetaLearnerKWargs**: any: Optional parameters to pass to the initializer of the meta-learner.
+* **stackMetaLearnerTrainPercentage**: int: Specifies the proportion of the training set (when choosing train and validation type of training) to be reserved for training the meta-learner. Default value is 0.2.
+* **stackMetaLearnerType**: 'ElasticNet' | 'ElasticNetCV' | 'LightGBMClassifier' | 'LightGBMRegressor' | 'LinearRegression' | 'LogisticRegression' | 'LogisticRegressionCV' | 'None' | string: The meta-learner is a model trained on the output of the individual heterogeneous models.
 
 ## SweepJobInputs
 ### Properties
@@ -1677,10 +2378,68 @@ The expression should follow NCronTab format.
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
+## SystemService
+### Properties
+* **publicIpAddress**: string (ReadOnly): Public IP address
+* **systemServiceType**: string (ReadOnly): The type of this system service.
+* **version**: string (ReadOnly): The version for this type.
+
+## TableVerticalDataSettings
+### Properties
+* **targetColumnName**: string (Required): [Required] Target column name: This is prediction values column.
+Also known as label column name in context of classification tasks.
+* **testData**: [TestDataSettings](#testdatasettings): Test data input.
+* **trainingData**: [TrainingDataSettings](#trainingdatasettings) (Required): [Required] Training data input.
+* **validationData**: [TableVerticalValidationDataSettings](#tableverticalvalidationdatasettings): Validation data inputs.
+* **weightColumnName**: string: The name of the sample weight column. Automated ML supports a weighted column as an input, causing rows in the data to be weighted up or down.
+
+## TableVerticalFeaturizationSettings
+### Properties
+* **blockedTransformers**: string[]: These transformers shall not be used in featurization.
+* **columnNameAndTypes**: [TableVerticalFeaturizationSettingsColumnNameAndTypes](#tableverticalfeaturizationsettingscolumnnameandtypes): Dictionary of column name and its type (int, float, string, datetime etc).
+* **datasetLanguage**: string: Dataset language, useful for the text data.
+* **dropColumns**: string[]: Columns to be dropped from data during featurization.
+* **enableDnnFeaturization**: bool: Determines whether to use Dnn based featurizers for data featurization.
+* **mode**: 'Auto' | 'Custom' | 'Off' | string: Featurization mode - User can keep the default 'Auto' mode and AutoML will take care of necessary transformation of the data in featurization phase.
+If 'Off' is selected then no featurization is done.
+If 'Custom' is selected then user can specify additional inputs to customize how featurization is done.
+* **transformerParams**: [TableVerticalFeaturizationSettingsTransformerParams](#tableverticalfeaturizationsettingstransformerparams): User can specify additional transformers to be used along with the columns to which it would be applied and parameters for the transformer constructor.
+
+## TableVerticalFeaturizationSettingsColumnNameAndTypes
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TableVerticalFeaturizationSettingsTransformerParams
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ColumnTransformer](#columntransformer)[]
+
+## TableVerticalLimitSettings
+### Properties
+* **enableEarlyTermination**: bool: Enable early termination, determines whether or not if AutoMLJob will terminate early if there is no score improvement in last 20 iterations.
+* **exitScore**: int: Exit score for the AutoML job.
+* **maxConcurrentTrials**: int: Maximum Concurrent iterations.
+* **maxCoresPerTrial**: int: Max cores per iteration.
+* **maxTrials**: int: Number of iterations.
+* **timeout**: string: AutoML job timeout.
+* **trialTimeout**: string: Iteration timeout.
+
+## TableVerticalValidationDataSettings
+### Properties
+* **cvSplitColumnNames**: string[]: Columns to use for CVSplit data.
+* **data**: [MLTableJobInput](#mltablejobinput): Validation data MLTable.
+* **nCrossValidations**: [NCrossValidations](#ncrossvalidations): Number of cross validation folds to be applied on training dataset
+when validation dataset is not provided.
+* **validationDataSize**: int: The fraction of training dataset that needs to be set aside for validation purpose.
+Values between (0.0 , 1.0)
+Applied when validation dataset is not provided.
+
 ## TargetLags
 * **Discriminator**: mode
 
 ### Base Properties
+
 ### AutoTargetLags
 #### Properties
 * **mode**: 'Auto' (Required): [Required] Set target lags mode - Auto/Custom
@@ -1695,6 +2454,7 @@ The expression should follow NCronTab format.
 * **Discriminator**: mode
 
 ### Base Properties
+
 ### AutoTargetRollingWindowSize
 #### Properties
 * **mode**: 'Auto' (Required): [Required] TargetRollingWindowSiz detection mode.
@@ -1705,10 +2465,12 @@ The expression should follow NCronTab format.
 * **value**: int (Required): [Required] TargetRollingWindowSize value.
 
 
-## TrackedResourceTags
+## TestDataSettings
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **data**: [MLTableJobInput](#mltablejobinput): Test data MLTable.
+* **testDataSize**: int: The fraction of test dataset that needs to be set aside for validation purpose.
+Values between (0.0 , 1.0)
+Applied when validation dataset is not provided.
 
 ## TrackedResourceTags
 ### Properties
@@ -1724,6 +2486,26 @@ The expression should follow NCronTab format.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrainingDataSettings
+### Properties
+* **data**: [MLTableJobInput](#mltablejobinput) (Required): [Required] Training data MLTable.
+
+## TrainingSettings
+### Properties
+* **enableDnnTraining**: bool: Enable recommendation of DNN models.
+* **enableModelExplainability**: bool: Flag to turn on explainability on best model.
+* **enableOnnxCompatibleModels**: bool: Flag for enabling onnx compatible models.
+* **enableStackEnsemble**: bool: Enable stack ensemble run.
+* **enableVoteEnsemble**: bool: Enable voting ensemble run.
+* **ensembleModelDownloadTimeout**: string: During VotingEnsemble and StackEnsemble model generation, multiple fitted models from the previous child runs are downloaded.
+Configure this parameter with a higher value than 300 secs, if more time is needed.
+* **stackEnsembleSettings**: [StackEnsembleSettings](#stackensemblesettings): Stack ensemble settings for stack ensemble run.
 
 ## TrialComponent
 ### Properties
@@ -1739,6 +2521,12 @@ The expression should follow NCronTab format.
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## UserAccountCredentials
+### Properties
+* **adminUserName**: string (Required): Name of the administrator user account which can be used to SSH to nodes.
+* **adminUserPassword**: string: Password of the administrator user account.
+* **adminUserSshPublicKey**: string: SSH public key of the administrator user account.
+
 ## UserAssignedIdentities
 ### Properties
 ### Additional Properties
@@ -1748,6 +2536,26 @@ The expression should follow NCronTab format.
 ### Properties
 * **clientId**: string (ReadOnly): The client ID of the assigned identity.
 * **principalId**: string (ReadOnly): The principal ID of the assigned identity.
+
+## VirtualMachineImage
+### Properties
+* **id**: string (Required): Virtual Machine image path
+
+## VirtualMachineSchemaProperties
+### Properties
+* **address**: string: Public IP address of the virtual machine.
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
+* **isNotebookInstanceCompute**: bool: Indicates whether this compute will be used for running notebooks.
+* **notebookServerPort**: int: Notebook server port open for ssh connections.
+* **sshPort**: int: Port open for ssh connections.
+* **virtualMachineSize**: string: Virtual Machine size
+
+## VirtualMachineSshCredentials
+### Properties
+* **password**: string: Password of admin account
+* **privateKeyData**: string: Private key data
+* **publicKeyData**: string: Public key data
+* **username**: string: Username of admin account
 
 ## WorkspaceConnectionProps
 ### Properties

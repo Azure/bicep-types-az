@@ -109,6 +109,7 @@
 * **Discriminator**: objectType
 
 ### Base Properties
+
 ### AzureBackupDiscreteRecoveryPoint
 #### Properties
 * **friendlyName**: string
@@ -127,6 +128,7 @@
 * **Discriminator**: objectType
 
 ### Base Properties
+
 ### ScheduleBasedBackupCriteria
 #### Properties
 * **absoluteCriteria**: 'AllBackup' | 'FirstOfDay' | 'FirstOfMonth' | 'FirstOfWeek' | 'FirstOfYear' | string[]: it contains absolute values like "AllBackup" / "FirstOfDay" / "FirstOfWeek" / "FirstOfMonth"
@@ -155,6 +157,7 @@ and should be part of AbsoluteMarker enum
 * **Discriminator**: objectType
 
 ### Base Properties
+
 ### AzureBackupParams
 #### Properties
 * **backupType**: string (Required): BackupType ; Full/Incremental etc
@@ -175,6 +178,7 @@ and should be part of AbsoluteMarker enum
 
 ### Base Properties
 * **datasourceTypes**: string[] (Required): Type of datasource for the backup management
+
 ### BackupPolicy
 #### Properties
 * **objectType**: 'BackupPolicy' (Required)
@@ -186,6 +190,7 @@ and should be part of AbsoluteMarker enum
 
 ### Base Properties
 * **name**: string (Required)
+
 ### AzureBackupRule
 #### Properties
 * **backupParameters**: [BackupParameters](#backupparameters): BackupParameters base
@@ -204,6 +209,7 @@ and should be part of AbsoluteMarker enum
 * **Discriminator**: objectType
 
 ### Base Properties
+
 ### CopyOnExpiryOption
 #### Properties
 * **objectType**: 'CopyOnExpiryOption' (Required): Type of the specific object - used for deserializing
@@ -248,6 +254,7 @@ and should be part of AbsoluteMarker enum
 
 ### Base Properties
 * **dataStoreType**: 'ArchiveStore' | 'OperationalStore' | 'VaultStore' | string (Required): type of datastore; Operational/Vault/Archive
+
 ### AzureOperationalStoreParameters
 #### Properties
 * **objectType**: 'AzureOperationalStoreParameters' (Required): Type of the specific object - used for deserializing
@@ -264,6 +271,7 @@ and should be part of AbsoluteMarker enum
 
 ### Base Properties
 * **duration**: string (Required): Duration of deletion after given timespan
+
 ### AbsoluteDeleteOption
 #### Properties
 * **objectType**: 'AbsoluteDeleteOption' (Required): Type of the specific object - used for deserializing
@@ -398,6 +406,7 @@ and should be part of AbsoluteMarker enum
 * **Discriminator**: objectType
 
 ### Base Properties
+
 ### AdhocBasedTriggerContext
 #### Properties
 * **objectType**: 'AdhocBasedTriggerContext' (Required): Type of the specific object - used for deserializing

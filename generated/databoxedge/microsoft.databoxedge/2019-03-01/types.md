@@ -58,6 +58,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles' (ReadOnly, DeployTimeConstant): The resource type
+
 ### IoTRole
 #### Properties
 * **kind**: 'IOT' (Required): Role type.
@@ -91,6 +92,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers' (ReadOnly, DeployTimeConstant): The resource type
+
 ### FileEventTrigger
 #### Properties
 * **kind**: 'FileEvent' (Required): Trigger Kind.

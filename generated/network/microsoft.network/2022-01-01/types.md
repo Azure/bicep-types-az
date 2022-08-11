@@ -599,6 +599,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata related to this resource.
 * **type**: 'Microsoft.Network/networkManagers/securityAdminConfigurations/ruleCollections/rules' (ReadOnly, DeployTimeConstant): The resource type
+
 ### AdminRule
 #### Properties
 * **kind**: 'Custom' (Required): Whether the rule is custom or default.
@@ -1233,6 +1234,7 @@
 * **ruleCollectionAppliesToGroups**: [NetworkManagerSecurityGroupItem](#networkmanagersecuritygroupitem)[]: Groups for rule collection
 * **ruleCollectionDescription**: string: A description of the rule collection.
 * **ruleGroups**: [ConfigurationGroup](#configurationgroup)[]: Effective configuration groups.
+
 ### ActiveSecurityAdminRule
 #### Properties
 * **kind**: 'Custom' (Required): Whether the rule is custom or default.
@@ -2402,6 +2404,7 @@
 * **ruleCollectionAppliesToGroups**: [NetworkManagerSecurityGroupItem](#networkmanagersecuritygroupitem)[]: Groups for rule collection
 * **ruleCollectionDescription**: string: A description of the rule collection.
 * **ruleGroups**: [ConfigurationGroup](#configurationgroup)[]: Effective configuration groups.
+
 ### EffectiveSecurityAdminRule
 #### Properties
 * **kind**: 'Custom' (Required): Whether the rule is custom or default.
@@ -2787,6 +2790,7 @@
 ### Base Properties
 * **description**: string: Description of the rule.
 * **name**: string: Name of the rule.
+
 ### ApplicationRule
 #### Properties
 * **destinationAddresses**: string[]: List of destination IP addresses or Service Tags.
@@ -2835,6 +2839,7 @@
 ### Base Properties
 * **name**: string: The name of the rule collection.
 * **priority**: int: Priority of the Firewall Policy Rule Collection resource.
+
 ### FirewallPolicyFilterRuleCollection
 #### Properties
 * **action**: [FirewallPolicyFilterRuleCollectionAction](#firewallpolicyfilterrulecollectionaction): The action type of a Filter rule collection.

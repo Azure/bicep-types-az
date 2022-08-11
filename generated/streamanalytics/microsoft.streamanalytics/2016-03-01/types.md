@@ -176,6 +176,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### AzureMachineLearningWebServiceFunctionBinding
 #### Properties
 * **properties**: [AzureMachineLearningWebServiceFunctionBindingProperties](#azuremachinelearningwebservicefunctionbindingproperties): The binding properties associated with an Azure Machine learning web service.
@@ -201,6 +202,7 @@
 
 ### Base Properties
 * **etag**: string (ReadOnly): The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
+
 ### ScalarFunctionProperties
 #### Properties
 * **properties**: [ScalarFunctionConfiguration](#scalarfunctionconfiguration): Describes the configuration of the scalar function.
@@ -221,6 +223,7 @@
 * **diagnostics**: [Diagnostics](#diagnostics) (ReadOnly): Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
 * **etag**: string (ReadOnly): The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
 * **serialization**: [Serialization](#serialization): Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
+
 ### ReferenceInputProperties
 #### Properties
 * **datasource**: [ReferenceInputDataSource](#referenceinputdatasource): Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.
@@ -260,6 +263,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### AzureDataLakeStoreOutputDataSource
 #### Properties
 * **properties**: [AzureDataLakeStoreOutputDataSourceProperties](#azuredatalakestoreoutputdatasourceproperties): The properties that are associated with an Azure Data Lake Store output. Required on PUT (CreateOrReplace) requests.
@@ -327,6 +331,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### BlobReferenceInputDataSource
 #### Properties
 * **properties**: [BlobReferenceInputDataSourceProperties](#blobreferenceinputdatasourceproperties): The properties that are associated with a blob input containing reference data. Required on PUT (CreateOrReplace) requests.
@@ -343,6 +348,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### AvroSerialization
 #### Properties
 * **properties**: any: The properties that are associated with the Avro serialization type. Required on PUT (CreateOrReplace) requests.
@@ -410,6 +416,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### IoTHubStreamInputDataSource
 #### Properties
 * **properties**: [IoTHubStreamInputDataSourceProperties](#iothubstreaminputdatasourceproperties): The properties that are associated with an IoT Hub input containing stream data. Required on PUT (CreateOrReplace) requests.

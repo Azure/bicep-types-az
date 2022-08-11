@@ -9,6 +9,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'MCAS' | 'Sentinel' | 'WDATP' | 'WDATP_EXCLUDE_LINUX_PUBLIC_PREVIEW' | string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Security/settings' (ReadOnly, DeployTimeConstant): The resource type
+
 ### AlertSyncSettings
 #### Properties
 * **kind**: 'AlertSyncSettings' (Required): the kind of the settings string

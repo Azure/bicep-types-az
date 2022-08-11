@@ -187,6 +187,7 @@
 
 ### Base Properties
 * **name**: string (Required): The Name of this policy
+
 ### ThrottlingPolicy
 #### Properties
 * **metricId**: 'IncomingBytes' | 'IncomingMessages' | 'OutgoingBytes' | 'OutgoingMessages' | string (Required): Metric Id on which the throttle limit should be set, MetricId can be discovered by hovering over Metric in the Metrics section of Event Hub Namespace inside Azure Portal

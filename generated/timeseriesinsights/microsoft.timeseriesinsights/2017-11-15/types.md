@@ -32,6 +32,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **tags**: [CreateOrUpdateTrackedResourcePropertiesTags](#createorupdatetrackedresourcepropertiestags): Key-value pairs of additional properties for the resource.
 * **type**: 'Microsoft.TimeSeriesInsights/environments/eventSources' (ReadOnly, DeployTimeConstant): The resource type
+
 ### EventHubEventSourceCreateOrUpdateParametersOrEventHubEventSourceResource
 #### Properties
 * **kind**: 'Microsoft.EventHub' (Required): The kind of the event source.

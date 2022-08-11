@@ -64,6 +64,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Role configured on ASE resource
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles' (ReadOnly, DeployTimeConstant): The resource type
+
 ### CloudEdgeManagementRole
 #### Properties
 * **kind**: 'CloudEdgeManagement' (Required): Role type.
@@ -95,6 +96,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Addon type
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles/addons' (ReadOnly, DeployTimeConstant): The resource type
+
 ### ArcAddon
 #### Properties
 * **kind**: 'ArcForKubernetes' (Required): Addon type.
@@ -165,6 +167,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Trigger in DataBoxEdge Resource
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers' (ReadOnly, DeployTimeConstant): The resource type
+
 ### FileEventTrigger
 #### Properties
 * **kind**: 'FileEvent' (Required): Trigger Kind.

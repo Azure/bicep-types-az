@@ -78,6 +78,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### ServicePrincipalDecisionTarget
 #### Properties
 * **appId**: string (ReadOnly): The appId for the service principal entity being reviewed

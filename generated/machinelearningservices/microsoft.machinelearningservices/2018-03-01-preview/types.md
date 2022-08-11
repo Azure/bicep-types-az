@@ -59,6 +59,7 @@
 * **provisioningErrors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Errors during provisioning
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
 * **resourceId**: string: ARM resource id of the compute
+
 ### AKS
 #### Properties
 * **computeType**: 'AKS' (Required): The type of compute
@@ -88,6 +89,7 @@
 * **Discriminator**: computeType
 
 ### Base Properties
+
 ### AksComputeSecrets
 #### Properties
 * **adminKubeConfig**: string: Content of kubeconfig file that can be used to connect to the Kubernetes cluster.

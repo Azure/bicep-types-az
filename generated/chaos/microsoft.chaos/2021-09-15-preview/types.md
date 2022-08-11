@@ -61,6 +61,7 @@
 
 ### Base Properties
 * **name**: string (Required): String that represents a Capability URN.
+
 ### ContinuousAction
 #### Properties
 * **duration**: string (Required): ISO8601 formatted string that represents a duration.

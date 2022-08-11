@@ -222,6 +222,7 @@
 * **storageAccount**: [StorageAccount](#storageaccount): Specifies the storage account that Azure Machine Learning uses to store information about the web service. Only the name of the storage account is returned from calls to GET operations. When updating the storage account information, you must ensure that all necessary assets are available in the new storage account or calls to your web service will fail.
 * **swaggerLocation**: string (ReadOnly): Read Only: Contains the URI of the swagger spec associated with this web service.
 * **title**: string: The title of the web service.
+
 ### WebServicePropertiesForGraph
 #### Properties
 * **package**: [GraphPackage](#graphpackage): The definition of the graph package making up this web service.

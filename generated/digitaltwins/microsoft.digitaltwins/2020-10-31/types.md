@@ -27,6 +27,7 @@
 * **createdTime**: string (ReadOnly): Time when the Endpoint was added to DigitalTwinsInstance.
 * **deadLetterSecret**: string: Dead letter storage secret. Will be obfuscated during read.
 * **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Disabled' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Warning' | string (ReadOnly): The provisioning state.
+
 ### EventGrid
 #### Properties
 * **accessKey1**: string (Required): EventGrid secondary accesskey. Will be obfuscated during read.

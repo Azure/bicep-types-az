@@ -22,6 +22,7 @@
 * **Discriminator**: limitObjectType
 
 ### Base Properties
+
 ### LimitObject
 #### Properties
 * **limitObjectType**: 'LimitValue' (Required): The limit object type.

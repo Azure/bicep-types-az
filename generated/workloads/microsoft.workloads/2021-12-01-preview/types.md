@@ -236,6 +236,7 @@
 
 ### Base Properties
 * **appResourceGroup**: string (Required): The application resource group where SAP system resources will be deployed.
+
 ### SingleServerConfiguration
 #### Properties
 * **databaseType**: 'DB2' | 'HANA' | string: The database type.
@@ -317,6 +318,7 @@
 * **Discriminator**: osType
 
 ### Base Properties
+
 ### LinuxConfiguration
 #### Properties
 * **disablePasswordAuthentication**: bool: Specifies whether password authentication should be disabled.
@@ -391,6 +393,7 @@
 * **Discriminator**: providerType
 
 ### Base Properties
+
 ### DB2ProviderInstanceProperties
 #### Properties
 * **dbName**: string: Gets or sets the db2 database name.
@@ -490,6 +493,7 @@
 * **Discriminator**: configurationType
 
 ### Base Properties
+
 ### DeploymentConfiguration
 #### Properties
 * **appLocation**: string: The geo-location where the SAP system is to be created.
@@ -565,6 +569,7 @@
 * **Discriminator**: softwareInstallationType
 
 ### Base Properties
+
 ### SAPInstallWithoutOSConfigSoftwareConfiguration
 #### Properties
 * **bomUrl**: string (Required): The URL to the SAP Build of Materials(BOM) file.

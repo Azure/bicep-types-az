@@ -70,6 +70,7 @@
 * **Discriminator**: @type
 
 ### Base Properties
+
 ### JwtAuthentication
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.JwtAuthentication' (Required): The discriminator for derived types.
@@ -131,6 +132,7 @@
 
 ### Base Properties
 * **kid**: string (Required): JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
+
 ### EccTokenKey
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.EccTokenKey' (Required): The discriminator for derived types.

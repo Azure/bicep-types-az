@@ -281,6 +281,7 @@
 * **moName**: string: Gets or sets the vCenter Managed Object name for the inventory item.
 * **moRefId**: string: Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
 * **provisioningState**: string (ReadOnly): Gets or sets the provisioning state.
+
 ### ClusterInventoryItem
 #### Properties
 * **inventoryType**: 'Cluster' (Required): They inventory type.

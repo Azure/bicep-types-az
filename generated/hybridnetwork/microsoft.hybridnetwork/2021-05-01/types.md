@@ -97,6 +97,7 @@
 * **networkFunctions**: [SubResource](#subresource)[] (ReadOnly): The list of network functions deployed on the device.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The provisioning state of the device resource.
 * **status**: 'Deleted' | 'NotRegistered' | 'Registered' | 'Unknown' | string (ReadOnly): The current device status.
+
 ### AzureStackEdgeFormat
 #### Properties
 * **azureStackEdge**: [SubResource](#subresource) (Required): The reference to the Azure stack edge device.

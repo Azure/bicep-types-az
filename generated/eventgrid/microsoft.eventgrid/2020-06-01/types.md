@@ -86,6 +86,7 @@
 
 ### Base Properties
 * **key**: string: The field/property in the event based on which you want to filter.
+
 ### BoolEqualsAdvancedFilter
 #### Properties
 * **operatorType**: 'BoolEquals' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
@@ -163,6 +164,7 @@
 * **Discriminator**: endpointType
 
 ### Base Properties
+
 ### StorageBlobDeadLetterDestination
 #### Properties
 * **endpointType**: 'StorageBlob' (Required): Type of the endpoint for the dead letter destination
@@ -198,6 +200,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 * **Discriminator**: endpointType
 
 ### Base Properties
+
 ### AzureFunctionEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'AzureFunction' (Required): Type of the endpoint for the event subscription destination.
@@ -271,6 +274,7 @@ Wildcard characters are not supported in this path.
 * **Discriminator**: inputSchemaMappingType
 
 ### Base Properties
+
 ### JsonInputSchemaMapping
 #### Properties
 * **inputSchemaMappingType**: 'Json' (Required): Type of the custom mapping

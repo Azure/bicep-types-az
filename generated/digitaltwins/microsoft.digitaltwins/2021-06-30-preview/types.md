@@ -65,6 +65,7 @@
 * **deadLetterSecret**: string: Dead letter storage secret for key-based authentication. Will be obfuscated during read.
 * **deadLetterUri**: string: Dead letter storage URL for identity-based authentication.
 * **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Disabled' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Warning' | string (ReadOnly): The provisioning state.
+
 ### EventGrid
 #### Properties
 * **accessKey1**: string (Required): EventGrid secondary accesskey. Will be obfuscated during read.
@@ -135,6 +136,7 @@
 
 ### Base Properties
 * **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Disabled' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Warning' | string (ReadOnly): The provisioning state.
+
 ### AzureDataExplorerConnectionProperties
 #### Properties
 * **adxDatabaseName**: string (Required): The name of the Azure Data Explorer database.

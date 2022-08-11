@@ -17,6 +17,7 @@
 * **Discriminator**: odata.type
 
 ### Base Properties
+
 ### AlertingAction
 #### Properties
 * **aznsAction**: [AzNsActionGroup](#aznsactiongroup): Azure action group reference.

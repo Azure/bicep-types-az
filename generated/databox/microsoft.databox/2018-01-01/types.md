@@ -41,6 +41,7 @@
 * **Discriminator**: copyLogDetailsType
 
 ### Base Properties
+
 ### DataBoxAccountCopyLogDetails
 #### Properties
 * **accountName**: string (ReadOnly): Destination account name.
@@ -108,6 +109,7 @@
 
 ### Base Properties
 * **accountId**: string: Arm Id of the destination where the data has to be moved.
+
 ### DestinationManagedDiskDetails
 #### Properties
 * **dataDestinationType**: 'ManagedDisk' (Required): Data Destination Type.
@@ -146,6 +148,7 @@
 * **returnPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly): Return package shipping details.
 * **reverseShipmentLabelSasKey**: string (ReadOnly): Shared access key to download the return shipment label
 * **shippingAddress**: [ShippingAddress](#shippingaddress) (Required): Shipping address of the customer.
+
 ### DataBoxJobDetails
 #### Properties
 * **copyProgress**: [CopyProgress](#copyprogress)[] (ReadOnly): Copy progress per storage account.
@@ -187,6 +190,7 @@
 * **Discriminator**: jobSecretsType
 
 ### Base Properties
+
 ### DataboxJobSecrets
 #### Properties
 * **jobSecretsType**: 'DataBox' (Required): Used to indicate what type of job secrets object.

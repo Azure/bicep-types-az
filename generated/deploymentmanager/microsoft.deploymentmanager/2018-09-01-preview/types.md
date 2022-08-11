@@ -77,6 +77,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### SasAuthentication
 #### Properties
 * **properties**: [SasProperties](#sasproperties): The SAS properties
@@ -203,6 +204,7 @@
 * **Discriminator**: stepType
 
 ### Base Properties
+
 ### WaitStepProperties
 #### Properties
 * **attributes**: [WaitStepAttributes](#waitstepattributes): The Wait attributes

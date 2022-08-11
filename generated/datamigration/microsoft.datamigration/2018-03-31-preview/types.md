@@ -45,6 +45,7 @@
 ### Base Properties
 * **password**: string: Password credential.
 * **userName**: string: User name
+
 ### SqlConnectionInfo
 #### Properties
 * **additionalSettings**: string: Additional connection settings
@@ -67,6 +68,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### ConnectToSourceSqlServerTaskOutputAgentJobLevel
 #### Properties
 * **isEnabled**: bool (ReadOnly): The state of the original AgentJob.
@@ -193,6 +195,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateSqlServerSqlDbTaskOutputDatabaseLevel
 #### Properties
 * **databaseName**: string (ReadOnly): Name of the item
@@ -269,6 +272,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateSqlServerSqlMITaskOutputAgentJobLevel
 #### Properties
 * **endedOn**: string (ReadOnly): Migration end time
@@ -366,6 +370,7 @@
 ### Base Properties
 * **errors**: [ODataError](#odataerror)[] (ReadOnly): Array of errors. This is ignored if submitted.
 * **state**: 'Canceled' | 'Failed' | 'FailedInputValidation' | 'Faulted' | 'Queued' | 'Running' | 'Succeeded' | 'Unknown' | string (ReadOnly): The state of the task. This is ignored if submitted.
+
 ### ConnectToSourceSqlServerTaskProperties
 #### Properties
 * **input**: [ConnectToSourceSqlServerTaskInput](#connecttosourcesqlservertaskinput): Task input

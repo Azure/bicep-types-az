@@ -512,6 +512,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### CmdkeySetup
 #### Properties
 * **type**: 'CmdkeySetup' (Required): The type of custom setup.
@@ -784,6 +785,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ### Base Properties
 * **description**: string: Integration runtime description.
+
 ### ManagedIntegrationRuntime
 #### Properties
 * **managedVirtualNetwork**: [ManagedIntegrationRuntimeManagedVirtualNetworkReference](#managedintegrationruntimemanagedvirtualnetworkreference): Managed integration runtime managed virtual network.
@@ -906,6 +908,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **Discriminator**: authorizationType
 
 ### Base Properties
+
 ### LinkedIntegrationRuntimeKeyAuthorization
 #### Properties
 * **authorizationType**: 'Key' (Required): The authorization type for integration runtime sharing.
@@ -1061,6 +1064,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **Discriminator**: type
 
 ### Base Properties
+
 ### SecureString
 #### Properties
 * **type**: 'SecureString' (Required): Type of the secret.

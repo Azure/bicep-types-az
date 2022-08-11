@@ -16,6 +16,7 @@
 
 ### Base Properties
 * **name**: string: Friendly Name to provide context on what this customization step does
+
 ### ImageTemplateShellCustomizer
 #### Properties
 * **script**: string: The shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
@@ -28,6 +29,7 @@
 ### Base Properties
 * **artifactTags**: [ImageTemplateDistributorArtifactTags](#imagetemplatedistributorartifacttags): Tags that will be applied to the artifact once it has been created/updated by the distributor.
 * **runOutputName**: string (Required): The name to be used for the associated RunOutput.
+
 ### ImageTemplateManagedImageDistributor
 #### Properties
 * **imageId**: string (Required): Resource Id of the Managed Disk Image
@@ -67,6 +69,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### ImageTemplateIsoSource
 #### Properties
 * **sha256Checksum**: string (Required): SHA256 Checksum of the ISO image.

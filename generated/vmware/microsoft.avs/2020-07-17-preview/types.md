@@ -241,6 +241,7 @@
 * **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state
 * **revision**: int: NSX revision number.
 * **segments**: string[] (ReadOnly): NSX Segments consuming DHCP.
+
 ### WorkloadNetworkDhcpRelay
 #### Properties
 * **dhcpType**: 'RELAY' (Required): Type of DHCP: SERVER or RELAY.

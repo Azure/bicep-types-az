@@ -33,6 +33,7 @@
 
 ### Base Properties
 * **name**: string: Friendly Name to provide context on what this customization step does
+
 ### ImageTemplateFileCustomizer
 #### Properties
 * **destination**: string: The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM
@@ -78,6 +79,7 @@
 ### Base Properties
 * **artifactTags**: [ImageTemplateDistributorArtifactTags](#imagetemplatedistributorartifacttags): Tags that will be applied to the artifact once it has been created/updated by the distributor.
 * **runOutputName**: string (Required): The name to be used for the associated RunOutput.
+
 ### ImageTemplateManagedImageDistributor
 #### Properties
 * **imageId**: string (Required): Resource Id of the Managed Disk Image
@@ -117,6 +119,7 @@
 
 ### Base Properties
 * **name**: string: Friendly Name to provide context on what this validation step does
+
 ### ImageTemplatePowerShellValidator
 #### Properties
 * **inline**: string[]: Array of PowerShell commands to execute
@@ -167,6 +170,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### ImageTemplateManagedImageSource
 #### Properties
 * **imageId**: string (Required): ARM resource id of the managed image in customer subscription
