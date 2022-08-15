@@ -119,6 +119,7 @@
 * **locationData**: [LocationData](#locationdata) (ReadOnly): Metadata pertaining to the geographic location of the resource.
 * **skuTier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
 * **stringEnum**: 'Bar' | 'Foo' | string: Description for a basic enum property.
+* **subnetId**: string (ReadOnly): A fully-qualified resource ID
 
 ## TestType1Properties
 ### Properties
@@ -129,6 +130,7 @@
 * **locationData**: [LocationData](#locationdata): Metadata pertaining to the geographic location of the resource.
 * **skuTier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
 * **stringEnum**: 'Bar' | 'Foo' | string: Description for a basic enum property.
+* **subnetId**: string: A fully-qualified resource ID
 
 ## TrackedResourceTags
 ### Properties

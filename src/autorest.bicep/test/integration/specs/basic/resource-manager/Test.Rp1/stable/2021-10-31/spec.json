@@ -112,6 +112,18 @@
         "binaryBuffer": {
           "type": "string",
           "format": "byte"
+        },
+        "subnetId": {
+          "type": "string",
+          "description": "A fully-qualified resource ID",
+          "format": "arm-id",
+          "x-ms-arm-id-details": {
+            "allowedResources": [
+              {
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+              }
+            ]
+          }
         }
       }
     },
