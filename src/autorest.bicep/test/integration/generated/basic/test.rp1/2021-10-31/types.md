@@ -1,5 +1,36 @@
 # Test.Rp1 @ 2021-10-31
 
+## Resource Test.Rp1/discriminatedUnionTestType@2021-10-31
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: type
+
+### Base Properties
+* **apiVersion**: '2021-10-31' (ReadOnly, DeployTimeConstant): The resource api version
+* **bar**: string: The bar property
+* **foo**: string: The foo property
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **type**: 'Test.Rp1/discriminatedUnionTestType' (ReadOnly, DeployTimeConstant): The resource type
+
+### DiscriminatedUnionTestTypeBranchWithInheritedProps
+#### Properties
+* **baz**: string: The baz property
+* **quux**: string: A property defined inline
+* **type**: 'inherited' (Required): The variant of this type
+
+### DiscriminatedUnionTestTypeBranchWithAllInlineProps
+#### Properties
+* **buzz**: string: The buzz property
+* **fizz**: string: The fizz property
+* **pop**: string: The pop property
+* **type**: 'inline' (Required): The variant of this type
+
+### DiscriminatedUnionTestTypeBranchWithOverride
+#### Properties
+* **foo**: int: The overridden foo property
+* **type**: 'override' (Required): The variant of this type
+
+
 ## Resource Test.Rp1/partlyReadonlyType@2021-10-31
 * **Valid Scope(s)**: Tenant (ReadOnly), ResourceGroup
 ### Properties
