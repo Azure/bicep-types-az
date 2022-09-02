@@ -2078,6 +2078,7 @@
 ### Base Properties
 * **description**: string: Description of the rule.
 * **name**: string: Name of the rule.
+
 ### ApplicationRule
 #### Properties
 * **destinationAddresses**: string[]: List of destination IP addresses or Service Tags.
@@ -2122,6 +2123,7 @@
 ### Base Properties
 * **name**: string: The name of the rule collection.
 * **priority**: int: Priority of the Firewall Policy Rule Collection resource.
+
 ### FirewallPolicyFilterRuleCollection
 #### Properties
 * **action**: [FirewallPolicyFilterRuleCollectionAction](#firewallpolicyfilterrulecollectionaction): The action type of a Filter rule collection.

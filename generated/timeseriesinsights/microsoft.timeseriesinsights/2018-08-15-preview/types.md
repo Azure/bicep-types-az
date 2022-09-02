@@ -12,6 +12,7 @@
 * **sku**: [Sku](#sku) (Required): The sku determines the type of environment, either standard (S1 or S2) or long-term (L1). For standard environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
 * **tags**: [CreateOrUpdateTrackedResourcePropertiesTags](#createorupdatetrackedresourcepropertiestags): Key-value pairs of additional properties for the resource.
 * **type**: 'Microsoft.TimeSeriesInsights/environments' (ReadOnly, DeployTimeConstant): The resource type
+
 ### LongTermEnvironmentCreateOrUpdateParametersOrLongTermEnvironmentResource
 #### Properties
 * **kind**: 'LongTerm' (Required): The kind of the environment.
@@ -44,6 +45,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **tags**: [CreateOrUpdateTrackedResourcePropertiesTags](#createorupdatetrackedresourcepropertiestags): Key-value pairs of additional properties for the resource.
 * **type**: 'Microsoft.TimeSeriesInsights/environments/eventSources' (ReadOnly, DeployTimeConstant): The resource type
+
 ### EventHubEventSourceCreateOrUpdateParametersOrEventHubEventSourceResource
 #### Properties
 * **kind**: 'Microsoft.EventHub' (Required): The kind of the event source.

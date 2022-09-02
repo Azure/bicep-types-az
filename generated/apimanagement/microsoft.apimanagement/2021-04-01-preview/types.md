@@ -363,6 +363,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.ApiManagement/service/portalsettings
 #### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

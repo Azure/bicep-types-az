@@ -242,6 +242,7 @@ This name must be the full Arm Resource ID for the referenced application type v
 * **Discriminator**: partitionScheme
 
 ### Base Properties
+
 ### NamedPartitionScheme
 #### Properties
 * **names**: string[] (Required): Array for the names of the partitions.
@@ -299,6 +300,7 @@ should be split between the partition ‘Count’
 * **Discriminator**: kind
 
 ### Base Properties
+
 ### AddRemoveIncrementalNamedPartitionScalingMechanism
 #### Properties
 * **kind**: 'AddRemoveIncrementalNamedPartition' (Required): Specifies the mechanism associated with this scaling policy.
@@ -323,6 +325,7 @@ should be split between the partition ‘Count’
 * **Discriminator**: kind
 
 ### Base Properties
+
 ### AveragePartitionLoadScalingTrigger
 #### Properties
 * **kind**: 'AveragePartitionLoadTrigger' (Required): Specifies the trigger associated with this scaling policy.
@@ -358,6 +361,7 @@ should be split between the partition ‘Count’
 * **Discriminator**: type
 
 ### Base Properties
+
 ### ServicePlacementInvalidDomainPolicy
 #### Properties
 * **domainName**: string (Required): The name of the domain that should not be used for placement.
@@ -397,6 +401,7 @@ should be split between the partition ‘Count’
 * **servicePackageActivationMode**: 'ExclusiveProcess' | 'SharedProcess' | string: The activation Mode of the service package
 * **servicePlacementPolicies**: [ServicePlacementPolicy](#serviceplacementpolicy)[]: A list that describes the correlation of the service with other services.
 * **serviceTypeName**: string (Required): The name of the service type
+
 ### StatefulServiceProperties
 #### Properties
 * **hasPersistedState**: bool: A flag indicating whether this is a persistent service which stores states on the local disk. If it is then the value of this property is true, if not it is false.

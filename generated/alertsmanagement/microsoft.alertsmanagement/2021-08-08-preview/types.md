@@ -16,6 +16,7 @@
 * **Discriminator**: actionType
 
 ### Base Properties
+
 ### AddActionGroups
 #### Properties
 * **actionGroupIds**: string[] (Required): List of action group Ids to add to alert processing rule.
@@ -52,6 +53,7 @@
 ### Base Properties
 * **endTime**: string: End time for recurrence.
 * **startTime**: string: Start time for recurrence.
+
 ### DailyRecurrence
 #### Properties
 * **recurrenceType**: 'Daily' (Required): Specifies when the recurrence should be applied.

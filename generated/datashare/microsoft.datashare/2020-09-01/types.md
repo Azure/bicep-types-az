@@ -33,6 +33,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System Data of the Azure resource.
 * **type**: 'Microsoft.DataShare/accounts/shares/dataSets' (ReadOnly, DeployTimeConstant): The resource type
+
 ### AdlsGen1FileDataSet
 #### Properties
 * **kind**: 'AdlsGen1File' (Required): Kind of data set.
@@ -129,6 +130,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System Data of the Azure resource.
 * **type**: 'Microsoft.DataShare/accounts/shares/synchronizationSettings' (ReadOnly, DeployTimeConstant): The resource type
+
 ### ScheduledSynchronizationSetting
 #### Properties
 * **kind**: 'ScheduleBased' (Required): Kind of synchronization setting.
@@ -155,6 +157,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System Data of the Azure resource.
 * **type**: 'Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings' (ReadOnly, DeployTimeConstant): The resource type
+
 ### AdlsGen2FileDataSetMapping
 #### Properties
 * **kind**: 'AdlsGen2File' (Required): Kind of data set mapping.
@@ -221,6 +224,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System Data of the Azure resource.
 * **type**: 'Microsoft.DataShare/accounts/shareSubscriptions/triggers' (ReadOnly, DeployTimeConstant): The resource type
+
 ### ScheduledTrigger
 #### Properties
 * **kind**: 'ScheduleBased' (Required): Kind of synchronization on trigger.
@@ -581,6 +585,7 @@ invitations to specific users or applications in an AD tenant.
 * **Discriminator**: kind
 
 ### Base Properties
+
 ### ScheduledSourceSynchronizationSetting
 #### Properties
 * **kind**: 'ScheduleBased' (Required): Kind of synchronization setting on share.

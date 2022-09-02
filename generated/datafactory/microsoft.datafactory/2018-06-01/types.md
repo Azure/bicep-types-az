@@ -126,6 +126,7 @@
 * **description**: string: Activity description.
 * **name**: string (Required): Activity name.
 * **userProperties**: [UserProperty](#userproperty)[]: Activity user properties.
+
 ### AppendVariableActivity
 #### Properties
 * **type**: 'AppendVariable' (Required): Type of activity.
@@ -133,68 +134,94 @@
 
 ### AzureDataExplorerCommandActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'AzureDataExplorerCommand' (Required): Type of activity.
 * **typeProperties**: [AzureDataExplorerCommandActivityTypeProperties](#azuredataexplorercommandactivitytypeproperties) (Required): Azure Data Explorer command activity properties.
 
 ### AzureFunctionActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'AzureFunctionActivity' (Required): Type of activity.
 * **typeProperties**: [AzureFunctionActivityTypeProperties](#azurefunctionactivitytypeproperties) (Required): Azure Function activity properties.
 
 ### AzureMLBatchExecutionActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'AzureMLBatchExecution' (Required): Type of activity.
 * **typeProperties**: [AzureMLBatchExecutionActivityTypeProperties](#azuremlbatchexecutionactivitytypeproperties) (Required): Azure ML Batch Execution activity properties.
 
 ### AzureMLExecutePipelineActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'AzureMLExecutePipeline' (Required): Type of activity.
 * **typeProperties**: [AzureMLExecutePipelineActivityTypeProperties](#azuremlexecutepipelineactivitytypeproperties) (Required): Azure ML Execute Pipeline activity properties.
 
 ### AzureMLUpdateResourceActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'AzureMLUpdateResource' (Required): Type of activity.
 * **typeProperties**: [AzureMLUpdateResourceActivityTypeProperties](#azuremlupdateresourceactivitytypeproperties) (Required): Azure ML Update Resource management activity properties.
 
 ### CopyActivity
 #### Properties
 * **inputs**: [DatasetReference](#datasetreference)[]: List of inputs for the activity.
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
 * **outputs**: [DatasetReference](#datasetreference)[]: List of outputs for the activity.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'Copy' (Required): Type of activity.
 * **typeProperties**: [CopyActivityTypeProperties](#copyactivitytypeproperties) (Required): Copy activity properties.
 
 ### CustomActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'Custom' (Required): Type of activity.
 * **typeProperties**: [CustomActivityTypeProperties](#customactivitytypeproperties) (Required): Custom activity properties.
 
 ### DatabricksNotebookActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'DatabricksNotebook' (Required): Type of activity.
 * **typeProperties**: [DatabricksNotebookActivityTypeProperties](#databricksnotebookactivitytypeproperties) (Required): Databricks Notebook activity properties.
 
 ### DatabricksSparkJarActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'DatabricksSparkJar' (Required): Type of activity.
 * **typeProperties**: [DatabricksSparkJarActivityTypeProperties](#databrickssparkjaractivitytypeproperties) (Required): Databricks SparkJar activity properties.
 
 ### DatabricksSparkPythonActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'DatabricksSparkPython' (Required): Type of activity.
 * **typeProperties**: [DatabricksSparkPythonActivityTypeProperties](#databrickssparkpythonactivitytypeproperties) (Required): Databricks SparkPython activity properties.
 
 ### DataLakeAnalyticsUsqlActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'DataLakeAnalyticsU-SQL' (Required): Type of activity.
 * **typeProperties**: [DataLakeAnalyticsUsqlActivityTypeProperties](#datalakeanalyticsusqlactivitytypeproperties) (Required): Data Lake Analytics U-SQL activity properties.
 
 ### DeleteActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'Delete' (Required): Type of activity.
 * **typeProperties**: [DeleteActivityTypeProperties](#deleteactivitytypeproperties) (Required): Delete activity properties.
 
 ### ExecuteDataFlowActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'ExecuteDataFlow' (Required): Type of activity.
 * **typeProperties**: [ExecuteDataFlowActivityTypeProperties](#executedataflowactivitytypeproperties) (Required): Execute data flow activity properties.
 
@@ -206,6 +233,8 @@
 
 ### ExecuteSsisPackageActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'ExecuteSSISPackage' (Required): Type of activity.
 * **typeProperties**: [ExecuteSsisPackageActivityTypeProperties](#executessispackageactivitytypeproperties) (Required): Execute SSIS package activity properties.
 
@@ -232,31 +261,43 @@
 
 ### GetMetadataActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'GetMetadata' (Required): Type of activity.
 * **typeProperties**: [GetMetadataActivityTypeProperties](#getmetadataactivitytypeproperties) (Required): GetMetadata activity properties.
 
 ### HDInsightHiveActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'HDInsightHive' (Required): Type of activity.
 * **typeProperties**: [HDInsightHiveActivityTypeProperties](#hdinsighthiveactivitytypeproperties) (Required): HDInsight Hive activity properties.
 
 ### HDInsightMapReduceActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'HDInsightMapReduce' (Required): Type of activity.
 * **typeProperties**: [HDInsightMapReduceActivityTypeProperties](#hdinsightmapreduceactivitytypeproperties) (Required): HDInsight MapReduce activity properties.
 
 ### HDInsightPigActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'HDInsightPig' (Required): Type of activity.
 * **typeProperties**: [HDInsightPigActivityTypeProperties](#hdinsightpigactivitytypeproperties) (Required): HDInsight Pig activity properties.
 
 ### HDInsightSparkActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'HDInsightSpark' (Required): Type of activity.
 * **typeProperties**: [HDInsightSparkActivityTypeProperties](#hdinsightsparkactivitytypeproperties) (Required): HDInsight spark activity properties.
 
 ### HDInsightStreamingActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'HDInsightStreaming' (Required): Type of activity.
 * **typeProperties**: [HDInsightStreamingActivityTypeProperties](#hdinsightstreamingactivitytypeproperties) (Required): HDInsight streaming activity properties.
 
@@ -267,11 +308,15 @@
 
 ### LookupActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'Lookup' (Required): Type of activity.
 * **typeProperties**: [LookupActivityTypeProperties](#lookupactivitytypeproperties) (Required): Lookup activity properties.
 
 ### ScriptActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'Script' (Required): Type of activity.
 * **typeProperties**: [ScriptActivityTypeProperties](#scriptactivitytypeproperties) (Required): Script activity properties.
 
@@ -282,11 +327,15 @@
 
 ### SynapseSparkJobDefinitionActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'SparkJob' (Required): Type of activity.
 * **typeProperties**: [SynapseSparkJobActivityTypeProperties](#synapsesparkjobactivitytypeproperties) (Required): Execute spark job activity properties.
 
 ### SqlServerStoredProcedureActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'SqlServerStoredProcedure' (Required): Type of activity.
 * **typeProperties**: [SqlServerStoredProcedureActivityTypeProperties](#sqlserverstoredprocedureactivitytypeproperties) (Required): SQL stored procedure activity properties.
 
@@ -297,6 +346,8 @@
 
 ### SynapseNotebookActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'SynapseNotebook' (Required): Type of activity.
 * **typeProperties**: [SynapseNotebookActivityTypeProperties](#synapsenotebookactivitytypeproperties) (Required): Execute Synapse notebook activity properties.
 
@@ -317,6 +368,8 @@
 
 ### WebActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'WebActivity' (Required): Type of activity.
 * **typeProperties**: [WebActivityTypeProperties](#webactivitytypeproperties) (Required): Web activity properties.
 
@@ -949,6 +1002,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### TarGZipReadSettings
 #### Properties
 * **preserveCompressionFileNameAsFolder**: any: Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
@@ -1015,6 +1069,7 @@
 * **sinkRetryWait**: any: Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **writeBatchSize**: any: Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
 * **writeBatchTimeout**: any: Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+
 ### AvroSink
 #### Properties
 * **formatSettings**: [AvroWriteSettings](#avrowritesettings): Avro format settings.
@@ -1292,9 +1347,12 @@
 * **maxConcurrentConnections**: any: The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
 * **sourceRetryCount**: any: Source retry count. Type: integer (or Expression with resultType integer).
 * **sourceRetryWait**: any: Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+
 ### AmazonMWSSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'AmazonMWSSource' (Required): Copy source type.
 
 ### AmazonRdsForOracleSource
@@ -1308,9 +1366,11 @@
 
 ### AmazonRdsForSqlServerSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **produceAdditionalTypes**: any: Which additional types to produce.
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **sqlReaderQuery**: any: SQL reader query. Type: string (or Expression with resultType string).
 * **sqlReaderStoredProcedureName**: any: Name of the stored procedure for a SQL Database source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
 * **storedProcedureParameters**: [AmazonRdsForSqlServerSourceStoredProcedureParameters](#amazonrdsforsqlserversourcestoredprocedureparameters): Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
@@ -1318,7 +1378,9 @@
 
 ### AmazonRedshiftSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: Database query. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **redshiftUnloadSettings**: [RedshiftUnloadSettings](#redshiftunloadsettings): The Amazon S3 settings needed for the interim Amazon S3 when copying from Amazon Redshift with unload. With this, data from Amazon Redshift source will be unloaded into S3 first and then copied into the targeted sink from the interim S3.
 * **type**: 'AmazonRedshiftSource' (Required): Copy source type.
 
@@ -1356,24 +1418,32 @@
 
 ### AzureMariaDBSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'AzureMariaDBSource' (Required): Copy source type.
 
 ### AzureMySqlSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: Database query. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'AzureMySqlSource' (Required): Copy source type.
 
 ### AzurePostgreSqlSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'AzurePostgreSqlSource' (Required): Copy source type.
 
 ### AzureSqlSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **produceAdditionalTypes**: any: Which additional types to produce.
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **sqlReaderQuery**: any: SQL reader query. Type: string (or Expression with resultType string).
 * **sqlReaderStoredProcedureName**: any: Name of the stored procedure for a SQL Database source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
 * **storedProcedureParameters**: [AzureSqlSourceStoredProcedureParameters](#azuresqlsourcestoredprocedureparameters): Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
@@ -1381,8 +1451,10 @@
 
 ### AzureTableSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **azureTableSourceIgnoreTableNotFound**: any: Azure Table source ignore table not found. Type: boolean (or Expression with resultType boolean).
 * **azureTableSourceQuery**: any: Azure Table source query. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'AzureTableSource' (Required): Copy source type.
 
 ### BinarySource
@@ -1400,8 +1472,10 @@
 
 ### CassandraSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **consistencyLevel**: 'ALL' | 'EACH_QUORUM' | 'LOCAL_ONE' | 'LOCAL_QUORUM' | 'LOCAL_SERIAL' | 'ONE' | 'QUORUM' | 'SERIAL' | 'THREE' | 'TWO' | string: The consistency level specifies how many Cassandra servers must respond to a read request before returning data to the client application. Cassandra checks the specified number of Cassandra servers for data to satisfy the read request. Must be one of cassandraSourceReadConsistencyLevels. The default value is 'ONE'. It is case-insensitive.
 * **query**: any: Database query. Should be a SQL-92 query expression or Cassandra Query Language (CQL) command. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'CassandraSource' (Required): Copy source type.
 
 ### CommonDataServiceForAppsSource
@@ -1412,7 +1486,9 @@
 
 ### ConcurSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'ConcurSource' (Required): Copy source type.
 
 ### CosmosDbMongoDbApiSource
@@ -1435,12 +1511,16 @@
 
 ### CouchbaseSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'CouchbaseSource' (Required): Copy source type.
 
 ### Db2Source
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: Database query. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'Db2Source' (Required): Copy source type.
 
 ### DelimitedTextSource
@@ -1460,13 +1540,17 @@
 
 ### DrillSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'DrillSource' (Required): Copy source type.
 
 ### DynamicsAXSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **httpRequestTimeout**: any: The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:05:00. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'DynamicsAXSource' (Required): Copy source type.
 
 ### DynamicsCrmSource
@@ -1483,7 +1567,9 @@
 
 ### EloquaSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'EloquaSource' (Required): Copy source type.
 
 ### ExcelSource
@@ -1500,22 +1586,30 @@
 
 ### GoogleAdWordsSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'GoogleAdWordsSource' (Required): Copy source type.
 
 ### GoogleBigQuerySource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'GoogleBigQuerySource' (Required): Copy source type.
 
 ### GreenplumSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'GreenplumSource' (Required): Copy source type.
 
 ### HBaseSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'HBaseSource' (Required): Copy source type.
 
 ### HdfsSource
@@ -1526,7 +1620,9 @@
 
 ### HiveSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'HiveSource' (Required): Copy source type.
 
 ### HttpSource
@@ -1536,22 +1632,30 @@
 
 ### HubspotSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'HubspotSource' (Required): Copy source type.
 
 ### ImpalaSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'ImpalaSource' (Required): Copy source type.
 
 ### InformixSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: Database query. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'InformixSource' (Required): Copy source type.
 
 ### JiraSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'JiraSource' (Required): Copy source type.
 
 ### JsonSource
@@ -1563,17 +1667,23 @@
 
 ### MagentoSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'MagentoSource' (Required): Copy source type.
 
 ### MariaDBSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'MariaDBSource' (Required): Copy source type.
 
 ### MarketoSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'MarketoSource' (Required): Copy source type.
 
 ### MicrosoftAccessSource
@@ -1608,14 +1718,18 @@
 
 ### MySqlSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: Database query. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'MySqlSource' (Required): Copy source type.
 
 ### NetezzaSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **partitionOption**: any: The partition mechanism that will be used for Netezza read in parallel. Possible values include: "None", "DataSlice", "DynamicRange".
 * **partitionSettings**: [NetezzaPartitionSettings](#netezzapartitionsettings): The settings that will be leveraged for Netezza source partitioning.
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'NetezzaSource' (Required): Copy source type.
 
 ### ODataSource
@@ -1627,7 +1741,9 @@
 
 ### OdbcSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: Database query. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'OdbcSource' (Required): Copy source type.
 
 ### Office365Source
@@ -1642,7 +1758,9 @@
 
 ### OracleServiceCloudSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'OracleServiceCloudSource' (Required): Copy source type.
 
 ### OracleSource
@@ -1668,27 +1786,37 @@
 
 ### PaypalSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'PaypalSource' (Required): Copy source type.
 
 ### PhoenixSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'PhoenixSource' (Required): Copy source type.
 
 ### PostgreSqlSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: Database query. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'PostgreSqlSource' (Required): Copy source type.
 
 ### PrestoSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'PrestoSource' (Required): Copy source type.
 
 ### QuickBooksSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'QuickBooksSource' (Required): Copy source type.
 
 ### RelationalSource
@@ -1699,7 +1827,9 @@
 
 ### ResponsysSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'ResponsysSource' (Required): Copy source type.
 
 ### RestSource
@@ -1715,7 +1845,9 @@
 
 ### SalesforceMarketingCloudSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'SalesforceMarketingCloudSource' (Required): Copy source type.
 
 ### SalesforceServiceCloudSource
@@ -1727,57 +1859,73 @@
 
 ### SalesforceSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: Database query. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **readBehavior**: 'Query' | 'QueryAll' | string: The read behavior for the operation. Default is Query.
 * **type**: 'SalesforceSource' (Required): Copy source type.
 
 ### SapBwSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: MDX query. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'SapBwSource' (Required): Copy source type.
 
 ### SapCloudForCustomerSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **httpRequestTimeout**: any: The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:05:00. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **query**: any: SAP Cloud for Customer OData query. For example, "$top=1". Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'SapCloudForCustomerSource' (Required): Copy source type.
 
 ### SapEccSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **httpRequestTimeout**: any: The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:05:00. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **query**: any: SAP ECC OData query. For example, "$top=1". Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'SapEccSource' (Required): Copy source type.
 
 ### SapHanaSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **packetSize**: any: The packet size of data read from SAP HANA. Type: integer(or Expression with resultType integer).
 * **partitionOption**: any: The partition mechanism that will be used for SAP HANA read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "SapHanaDynamicRange".
 * **partitionSettings**: [SapHanaPartitionSettings](#saphanapartitionsettings): The settings that will be leveraged for SAP HANA source partitioning.
 * **query**: any: SAP HANA Sql query. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'SapHanaSource' (Required): Copy source type.
 
 ### SapOdpSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **extractionMode**: any: The extraction mode. Allowed value include: Full, Delta and Recovery. The default value is Full. Type: string (or Expression with resultType string).
 * **projection**: any: Specifies the columns to be selected from source data. Type: array of objects(projection) (or Expression with resultType array of objects).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **selection**: any: Specifies the selection conditions from source data. Type: array of objects(selection) (or Expression with resultType array of objects).
 * **subscriberProcess**: any: The subscriber process to manage the delta process. Type: string (or Expression with resultType string).
 * **type**: 'SapOdpSource' (Required): Copy source type.
 
 ### SapOpenHubSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **baseRequestId**: any: The ID of request for delta loading. Once it is set, only data with requestId larger than the value of this property will be retrieved. The default value is 0. Type: integer (or Expression with resultType integer ).
 * **customRfcReadTableFunctionModule**: any: Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).
 * **excludeLastRequest**: any: Whether to exclude the records of the last request. The default value is true. Type: boolean (or Expression with resultType boolean).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **sapDataColumnDelimiter**: any: The single character that will be used as delimiter passed to SAP RFC as well as splitting the output data retrieved. Type: string (or Expression with resultType string).
 * **type**: 'SapOpenHubSource' (Required): Copy source type.
 
 ### SapTableSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **batchSize**: any: Specifies the maximum number of rows that will be retrieved at a time when retrieving data from SAP Table. Type: integer (or Expression with resultType integer).
 * **customRfcReadTableFunctionModule**: any: Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).
 * **partitionOption**: any: The partition mechanism that will be used for SAP table read in parallel. Possible values include: "None", "PartitionOnInt", "PartitionOnCalendarYear", "PartitionOnCalendarMonth", "PartitionOnCalendarDate", "PartitionOnTime".
 * **partitionSettings**: [SapTablePartitionSettings](#saptablepartitionsettings): The settings that will be leveraged for SAP table source partitioning.
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **rfcTableFields**: any: The fields of the SAP table that will be retrieved. For example, column0, column1. Type: string (or Expression with resultType string).
 * **rfcTableOptions**: any: The options for the filtering of the SAP Table. For example, COLUMN0 EQ SOME VALUE. Type: string (or Expression with resultType string).
 * **rowCount**: any: The number of rows to be retrieved. Type: integer(or Expression with resultType integer).
@@ -1787,7 +1935,9 @@
 
 ### ServiceNowSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'ServiceNowSource' (Required): Copy source type.
 
 ### SharePointOnlineListSource
@@ -1798,7 +1948,9 @@
 
 ### ShopifySource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'ShopifySource' (Required): Copy source type.
 
 ### SnowflakeSource
@@ -1809,13 +1961,17 @@
 
 ### SparkSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'SparkSource' (Required): Copy source type.
 
 ### SqlDWSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **sqlReaderQuery**: any: SQL Data Warehouse reader query. Type: string (or Expression with resultType string).
 * **sqlReaderStoredProcedureName**: any: Name of the stored procedure for a SQL Data Warehouse source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
 * **storedProcedureParameters**: any: Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}". Type: object (or Expression with resultType object), itemType: StoredProcedureParameter.
@@ -1823,9 +1979,11 @@
 
 ### SqlMISource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **produceAdditionalTypes**: any: Which additional types to produce.
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **sqlReaderQuery**: any: SQL reader query. Type: string (or Expression with resultType string).
 * **sqlReaderStoredProcedureName**: any: Name of the stored procedure for a Azure SQL Managed Instance source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
 * **storedProcedureParameters**: [SqlMISourceStoredProcedureParameters](#sqlmisourcestoredprocedureparameters): Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
@@ -1833,9 +1991,11 @@
 
 ### SqlServerSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **produceAdditionalTypes**: any: Which additional types to produce.
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **sqlReaderQuery**: any: SQL reader query. Type: string (or Expression with resultType string).
 * **sqlReaderStoredProcedureName**: any: Name of the stored procedure for a SQL Database source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
 * **storedProcedureParameters**: [SqlServerSourceStoredProcedureParameters](#sqlserversourcestoredprocedureparameters): Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
@@ -1843,9 +2003,11 @@
 
 ### SqlSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **sqlReaderQuery**: any: SQL reader query. Type: string (or Expression with resultType string).
 * **sqlReaderStoredProcedureName**: any: Name of the stored procedure for a SQL Database source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
 * **storedProcedureParameters**: [SqlSourceStoredProcedureParameters](#sqlsourcestoredprocedureparameters): Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
@@ -1853,24 +2015,32 @@
 
 ### SquareSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'SquareSource' (Required): Copy source type.
 
 ### SybaseSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: Database query. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'SybaseSource' (Required): Copy source type.
 
 ### TeradataSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **partitionOption**: any: The partition mechanism that will be used for teradata read in parallel. Possible values include: "None", "Hash", "DynamicRange".
 * **partitionSettings**: [TeradataPartitionSettings](#teradatapartitionsettings): The settings that will be leveraged for teradata source partitioning.
 * **query**: any: Teradata query. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'TeradataSource' (Required): Copy source type.
 
 ### VerticaSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'VerticaSource' (Required): Copy source type.
 
 ### WebSource
@@ -1880,7 +2050,9 @@
 
 ### XeroSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'XeroSource' (Required): Copy source type.
 
 ### XmlSource
@@ -1892,7 +2064,9 @@
 
 ### ZohoSource
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'ZohoSource' (Required): Copy source type.
 
 
@@ -1969,6 +2143,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### AzPowerShellSetup
 #### Properties
 * **type**: 'AzPowerShellSetup' (Required): The type of custom setup.
@@ -2035,6 +2210,7 @@
 * **annotations**: any[]: List of tags that can be used for describing the data flow.
 * **description**: string: The description of the data flow.
 * **folder**: [DataFlowFolder](#dataflowfolder): The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+
 ### Flowlet
 #### Properties
 * **type**: 'Flowlet' (Required): Type of data flow.
@@ -2114,6 +2290,7 @@
 * **parameters**: [ParameterDefinitionSpecification](#parameterdefinitionspecification): Parameters for dataset.
 * **schema**: any: Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
 * **structure**: any: Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+
 ### AmazonMWSObjectDataset
 #### Properties
 * **type**: 'AmazonMWSObject' (Required): Type of dataset.
@@ -2611,6 +2788,7 @@
 ### Base Properties
 * **fileName**: any: Specify the file name of dataset. Type: string (or Expression with resultType string).
 * **folderPath**: any: Specify the folder path of dataset. Type: string (or Expression with resultType string)
+
 ### AmazonS3CompatibleLocation
 #### Properties
 * **bucketName**: any: Specify the bucketName of Amazon S3 Compatible. Type: string (or Expression with resultType string)
@@ -2687,6 +2865,7 @@
 ### Base Properties
 * **deserializer**: any: Deserializer. Type: string (or Expression with resultType string).
 * **serializer**: any: Serializer. Type: string (or Expression with resultType string).
+
 ### AvroFormat
 #### Properties
 * **type**: 'AvroFormat' (Required): Type of dataset storage format.
@@ -2789,6 +2968,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### SelfDependencyTumblingWindowTriggerReference
 #### Properties
 * **offset**: string (Required): Timespan applied to the start time of a tumbling window when evaluating dependency.
@@ -2798,6 +2978,7 @@
 ### TumblingWindowTriggerDependencyReference
 #### Properties
 * **offset**: string: Timespan applied to the start time of a tumbling window when evaluating dependency.
+* **referenceTrigger**: [TriggerReference](#triggerreference) (Required): Referenced trigger.
 * **size**: string: The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
 * **type**: 'TumblingWindowTriggerDependencyReference' (Required): The type of dependency reference.
 
@@ -3046,6 +3227,7 @@
 * **lastCommitId**: string: Last commit id.
 * **repositoryName**: string (Required): Repository name.
 * **rootFolder**: string (Required): Root folder.
+
 ### FactoryGitHubConfiguration
 #### Properties
 * **clientId**: string: GitHub bring your own app client id.
@@ -3106,6 +3288,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### BinaryReadSettings
 #### Properties
 * **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression settings.
@@ -3216,6 +3399,11 @@
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **secretAccessKey**: [SecretBase](#secretbase): The secret access key of the Google Cloud Storage Identity and Access Management (IAM) user.
 * **serviceUrl**: any: This value specifies the endpoint to access with the Google Cloud Storage Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).
+
+## GoogleSheetsLinkedServiceTypeProperties
+### Properties
+* **apiToken**: [SecretBase](#secretbase) (Required): The api token for the GoogleSheets source.
+* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 
 ## GreenplumDatasetTypeProperties
 ### Properties
@@ -3485,6 +3673,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ### Base Properties
 * **description**: string: Integration runtime description.
+
 ### ManagedIntegrationRuntime
 #### Properties
 * **managedVirtualNetwork**: [ManagedVirtualNetworkReference](#managedvirtualnetworkreference): Managed Virtual Network reference.
@@ -3616,6 +3805,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **Discriminator**: authorizationType
 
 ### Base Properties
+
 ### LinkedIntegrationRuntimeKeyAuthorization
 #### Properties
 * **authorizationType**: 'Key' (Required): The authorization type for integration runtime sharing.
@@ -3636,6 +3826,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **connectVia**: [IntegrationRuntimeReference](#integrationruntimereference): The integration runtime reference.
 * **description**: string: Linked service description.
 * **parameters**: [ParameterDefinitionSpecification](#parameterdefinitionspecification): Parameters for linked service.
+
 ### AmazonMWSLinkedService
 #### Properties
 * **type**: 'AmazonMWS' (Required): Type of linked service.
@@ -3885,6 +4076,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 #### Properties
 * **type**: 'GoogleCloudStorage' (Required): Type of linked service.
 * **typeProperties**: [GoogleCloudStorageLinkedServiceTypeProperties](#googlecloudstoragelinkedservicetypeproperties) (Required): Google Cloud Storage linked service properties.
+
+### GoogleSheetsLinkedService
+#### Properties
+* **type**: 'GoogleSheets' (Required): Type of linked service.
+* **typeProperties**: [GoogleSheetsLinkedServiceTypeProperties](#googlesheetslinkedservicetypeproperties) (Required): GoogleSheets linked service properties.
 
 ### GreenplumLinkedService
 #### Properties
@@ -5031,6 +5227,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **Discriminator**: type
 
 ### Base Properties
+
 ### AzureKeyVaultSecretReference
 #### Properties
 * **secretName**: any (Required): The name of the secret in Azure Key Vault. Type: string (or Expression with resultType string).
@@ -5356,6 +5553,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Base Properties
 * **disableMetricsCollection**: any: If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
 * **maxConcurrentConnections**: any: The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+
 ### AmazonS3CompatibleReadSettings
 #### Properties
 * **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
@@ -5541,6 +5739,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **copyBehavior**: any: The type of copy behavior for copy sink.
 * **disableMetricsCollection**: any: If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
 * **maxConcurrentConnections**: any: The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+
 ### AzureBlobFSWriteSettings
 #### Properties
 * **blockSizeInMB**: any: Indicates the block size(MB) when writing data to blob. Type: integer (or Expression with resultType integer).
@@ -5678,13 +5877,16 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **annotations**: any[]: List of tags that can be used for describing the trigger.
 * **description**: string: Trigger description.
 * **runtimeState**: 'Disabled' | 'Started' | 'Stopped' | string (ReadOnly): Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+
 ### BlobEventsTrigger
 #### Properties
+* **pipelines**: [TriggerPipelineReference](#triggerpipelinereference)[]: Pipelines that need to be started.
 * **type**: 'BlobEventsTrigger' (Required): Trigger type.
 * **typeProperties**: [BlobEventsTriggerTypeProperties](#blobeventstriggertypeproperties) (Required): Blob Events Trigger properties.
 
 ### BlobTrigger
 #### Properties
+* **pipelines**: [TriggerPipelineReference](#triggerpipelinereference)[]: Pipelines that need to be started.
 * **type**: 'BlobTrigger' (Required): Trigger type.
 * **typeProperties**: [BlobTriggerTypeProperties](#blobtriggertypeproperties) (Required): Blob Trigger properties.
 
@@ -5696,6 +5898,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ### CustomEventsTrigger
 #### Properties
+* **pipelines**: [TriggerPipelineReference](#triggerpipelinereference)[]: Pipelines that need to be started.
 * **type**: 'CustomEventsTrigger' (Required): Trigger type.
 * **typeProperties**: [CustomEventsTriggerTypeProperties](#customeventstriggertypeproperties) (Required): Custom Events Trigger properties.
 
@@ -5706,6 +5909,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ### ScheduleTrigger
 #### Properties
+* **pipelines**: [TriggerPipelineReference](#triggerpipelinereference)[]: Pipelines that need to be started.
 * **type**: 'ScheduleTrigger' (Required): Trigger type.
 * **typeProperties**: [ScheduleTriggerTypeProperties](#scheduletriggertypeproperties) (Required): Schedule Trigger properties.
 
@@ -5720,6 +5924,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **parameters**: [ParameterValueSpecification](#parametervaluespecification): Pipeline parameters.
 * **pipelineReference**: [PipelineReference](#pipelinereference): Pipeline reference.
+
+## TriggerReference
+### Properties
+* **referenceName**: string (Required): Reference trigger name.
+* **type**: 'TriggerReference' | string (Required): Trigger reference type.
 
 ## TumblingWindowTriggerTypeProperties
 ### Properties
@@ -5824,6 +6033,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ### Base Properties
 * **url**: any (Required): The URL of the web service endpoint, e.g. https://www.microsoft.com . Type: string (or Expression with resultType string).
+
 ### WebAnonymousAuthentication
 #### Properties
 * **authenticationType**: 'Anonymous' (Required): Type of authentication used to connect to the web table source.

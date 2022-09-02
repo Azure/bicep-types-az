@@ -480,6 +480,7 @@
 * **customLibraries**: [LibraryInfo](#libraryinfo)[]: List of custom libraries/packages associated with the spark pool.
 * **defaultSparkLogFolder**: string: The default folder where Spark logs will be written.
 * **dynamicExecutorAllocation**: [DynamicExecutorAllocation](#dynamicexecutorallocation): Dynamic Executor Allocation
+* **isAutotuneEnabled**: bool: Whether autotune is required or not.
 * **isComputeIsolationEnabled**: bool: Whether compute isolation is required or not.
 * **lastSucceededTimestamp**: string (ReadOnly): The time when the Big Data pool was updated successfully.
 * **libraryRequirements**: [LibraryRequirements](#libraryrequirements): Library version requirements
@@ -512,6 +513,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### CmdkeySetup
 #### Properties
 * **type**: 'CmdkeySetup' (Required): The type of custom setup.
@@ -784,6 +786,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ### Base Properties
 * **description**: string: Integration runtime description.
+
 ### ManagedIntegrationRuntime
 #### Properties
 * **managedVirtualNetwork**: [ManagedIntegrationRuntimeManagedVirtualNetworkReference](#managedintegrationruntimemanagedvirtualnetworkreference): Managed integration runtime managed virtual network.
@@ -889,7 +892,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **path**: string: Storage blob path of library.
 * **provisioningStatus**: string (ReadOnly): Provisioning status of the library/package.
 * **type**: string: Type of the library.
-* **uploadedTimestamp**: string (ReadOnly): The last update time of the library.
+* **uploadedTimestamp**: string: The last update time of the library.
 
 ## LibraryRequirements
 ### Properties
@@ -906,6 +909,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **Discriminator**: authorizationType
 
 ### Base Properties
+
 ### LinkedIntegrationRuntimeKeyAuthorization
 #### Properties
 * **authorizationType**: 'Key' (Required): The authorization type for integration runtime sharing.
@@ -1061,6 +1065,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **Discriminator**: type
 
 ### Base Properties
+
 ### SecureString
 #### Properties
 * **type**: 'SecureString' (Required): Type of the secret.

@@ -139,6 +139,7 @@
 * **issuer**: string (ReadOnly): The issuer of certificate.
 * **subjectName**: string (ReadOnly): The subject name of certificate.
 * **thumbprint**: string (ReadOnly): The thumbprint of certificate.
+
 ### ContentCertificateProperties
 #### Properties
 * **content**: string (WriteOnly): The content of uploaded certificate.
@@ -205,6 +206,7 @@
 * **mountOptions**: string[]: These are the mount options for a persistent disk.
 * **mountPath**: string (Required): The mount path of the persistent disk.
 * **readOnly**: bool: Indicates whether the persistent disk is a readOnly one.
+
 ### AzureFileVolume
 #### Properties
 * **shareName**: string (Required): The share name of the Azure File share.
@@ -342,6 +344,7 @@
 * **Discriminator**: storageType
 
 ### Base Properties
+
 ### StorageAccount
 #### Properties
 * **accountKey**: string (Required, WriteOnly): The account key of the Azure Storage Account.

@@ -79,9 +79,9 @@
 
 ## DataEncryption
 ### Properties
-* **geoBackupKeyUri**: string: Geo backup key uri as key vault can't cross region, need cmk in same region as geo backup
+* **geoBackupKeyURI**: string: Geo backup key uri as key vault can't cross region, need cmk in same region as geo backup
 * **geoBackupUserAssignedIdentityId**: string: Geo backup user identity resource id as identity can't cross region, need identity in same region as geo backup
-* **primaryKeyUri**: string: Primary key uri
+* **primaryKeyURI**: string: Primary key uri
 * **primaryUserAssignedIdentityId**: string: Primary user identity resource id
 * **type**: 'AzureKeyVault' | 'SystemManaged': The key type, AzureKeyVault for enable cmk, SystemManaged for disable cmk.
 

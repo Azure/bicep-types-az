@@ -95,6 +95,7 @@
 ### Base Properties
 * **displayName**: string (ReadOnly): The display name of the user whose access was reviewed.
 * **id**: string (ReadOnly): The id of principal whose access was reviewed.
+
 ### AccessReviewDecisionServicePrincipalIdentity
 #### Properties
 * **appId**: string (ReadOnly): The appId for the service principal entity being reviewed
@@ -125,6 +126,7 @@
 ### Base Properties
 * **displayName**: string (ReadOnly): The display name of resource associated with a decision record.
 * **id**: string (ReadOnly): The id of resource associated with a decision record.
+
 ### AccessReviewDecisionResourceAzureRole
 #### Properties
 * **type**: 'azureRole' (Required): The type of resource: azureRole

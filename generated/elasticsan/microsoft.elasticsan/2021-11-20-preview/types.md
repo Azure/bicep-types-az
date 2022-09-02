@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The geo-location where the resource lives.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ElasticSanProperties](#elasticsanproperties): Properties of ElasticSan.
+* **properties**: [ElasticSanProperties](#elasticsanproperties) (Required): Properties of ElasticSan.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Resource metadata required by ARM RPC
 * **tags**: [ResourceTags](#resourcetags): Azure resource tags.
 * **type**: 'Microsoft.ElasticSan/elasticSans' (ReadOnly, DeployTimeConstant): The resource type
@@ -36,11 +36,11 @@
 
 ## ElasticSanProperties
 ### Properties
-* **availabilityZones**: string[] (Required): Logical zone for Elastic San resource; example: ["1"].
+* **availabilityZones**: string[]: Logical zone for Elastic San resource; example: ["1"].
 * **baseSizeTiB**: int (Required): Base size of the Elastic San appliance in TiB.
 * **extendedCapacitySizeTiB**: int (Required): Extended size of the Elastic San appliance in TiB.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the operation on the resource.
-* **sku**: [Sku](#sku): resource sku
+* **sku**: [Sku](#sku) (Required): resource sku
 * **totalIops**: int (ReadOnly): Total Provisioned IOPS of the Elastic San appliance.
 * **totalMBps**: int (ReadOnly): Total Provisioned MBps Elastic San appliance.
 * **totalSizeTiB**: int (ReadOnly): Total size of the Elastic San appliance in TB.
@@ -76,12 +76,12 @@
 
 ## Sku
 ### Properties
-* **name**: 'Premium_LRS' | 'Premium_ZRS' | string: The sku name.
+* **name**: 'Premium_LRS' | 'Premium_ZRS' | string (Required): The sku name.
 * **tier**: 'Premium' | string: The sku tier.
 
 ## SourceCreationData
 ### Properties
-* **createSource**: 'None' (Required): This enumerates the possible sources of a volume creation.
+* **createSource**: 'None': This enumerates the possible sources of a volume creation.
 * **sourceUri**: string: If createOption is Copy, this is the ARM id of the source snapshot or disk. If createOption is Restore, this is the ARM-like id of the source disk restore point.
 
 ## SystemData
@@ -101,9 +101,9 @@
 
 ## VolumeGroupProperties
 ### Properties
-* **encryption**: 'EncryptionAtRestWithPlatformKey' | string (Required): Type of encryption
+* **encryption**: 'EncryptionAtRestWithPlatformKey' | string: Type of encryption
 * **networkAcls**: [NetworkRuleSet](#networkruleset): A collection of rules governing the accessibility from specific network locations.
-* **protocolType**: 'Iscsi' | 'None' | string (Required): Type of storage target
+* **protocolType**: 'Iscsi' | 'None' | string: Type of storage target
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the operation on the resource.
 
 ## VolumeProperties

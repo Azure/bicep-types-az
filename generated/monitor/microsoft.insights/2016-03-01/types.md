@@ -66,6 +66,7 @@
 * **Discriminator**: odata.type
 
 ### Base Properties
+
 ### RuleEmailAction
 #### Properties
 * **customEmails**: string[]: the list of administrator's custom email addresses to notify of the activation of the alert.
@@ -84,6 +85,7 @@
 
 ### Base Properties
 * **dataSource**: [RuleDataSource](#ruledatasource): the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
+
 ### LocationThresholdRuleCondition
 #### Properties
 * **failedLocationCount**: int (Required): the number of locations that must fail to activate the alert.
@@ -112,6 +114,7 @@
 * **metricNamespace**: string: the namespace of the metric.
 * **resourceLocation**: string: the location of the resource.
 * **resourceUri**: string: the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+
 ### RuleManagementEventDataSource
 #### Properties
 * **claims**: [RuleManagementEventClaimsDataSource](#rulemanagementeventclaimsdatasource): the claims.

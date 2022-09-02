@@ -229,6 +229,7 @@
 
 ### Base Properties
 * **order**: int (Required): The order of execution of the automation rule action
+
 ### AutomationRuleModifyPropertiesAction
 #### Properties
 * **actionConfiguration**: [AutomationRuleModifyPropertiesActionConfiguration](#automationrulemodifypropertiesactionconfiguration) (Required): The configuration of the modify properties automation rule action
@@ -244,6 +245,7 @@
 * **Discriminator**: conditionType
 
 ### Base Properties
+
 ### AutomationRulePropertyValuesCondition
 #### Properties
 * **conditionProperties**: [AutomationRulePropertyValuesConditionProperties](#automationrulepropertyvaluesconditionproperties) (Required): The configuration of the automation rule condition

@@ -131,6 +131,7 @@
 
 ### Base Properties
 * **grade**: 'Fail' | 'None' | 'NotAvailable' | 'Pass' | string: The grade of the test.
+
 ### CPURegressionResultSingletonResourceProperties
 #### Properties
 * **analysisResultType**: 'CPURegression' (Required): Type of the Analysis Result.

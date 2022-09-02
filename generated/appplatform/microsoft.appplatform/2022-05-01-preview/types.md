@@ -438,6 +438,7 @@ The default value is 2Gi, this should not exceed build service agent pool memory
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Certificate
 * **subjectName**: string (ReadOnly): The subject name of certificate.
 * **thumbprint**: string (ReadOnly): The thumbprint of certificate.
+
 ### ContentCertificateProperties
 #### Properties
 * **content**: string (WriteOnly): The content of uploaded certificate.
@@ -554,6 +555,7 @@ The default value is 2Gi, this should not exceed build service agent pool memory
 * **mountOptions**: string[]: These are the mount options for a persistent disk.
 * **mountPath**: string (Required): The mount path of the persistent disk.
 * **readOnly**: bool: Indicates whether the persistent disk is a readOnly one.
+
 ### AzureFileVolume
 #### Properties
 * **shareName**: string (Required): The share name of the Azure File share.
@@ -772,6 +774,7 @@ The default value is 2Gi, this should not exceed build service agent pool memory
 * **Discriminator**: type
 
 ### Base Properties
+
 ### ExecAction
 #### Properties
 * **command**: string[]: Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.
@@ -848,6 +851,7 @@ Possible enum values:
 * **Discriminator**: storageType
 
 ### Base Properties
+
 ### StorageAccount
 #### Properties
 * **accountKey**: string (Required, WriteOnly): The account key of the Azure Storage Account.
@@ -910,6 +914,7 @@ Possible enum values:
 
 ### Base Properties
 * **version**: string: Version of the source
+
 ### BuildResultUserSourceInfo
 #### Properties
 * **buildResultId**: string: Resource id of an existing succeeded build result under the same Spring instance.
@@ -923,12 +928,14 @@ Possible enum values:
 ### JarUploadedUserSourceInfo
 #### Properties
 * **jvmOptions**: string: JVM parameter
+* **relativePath**: string: Relative path of the storage which stores the source
 * **runtimeVersion**: string: Runtime version of the Jar file
 * **type**: 'Jar' (Required): Type of the source uploaded
 
 ### NetCoreZipUploadedUserSourceInfo
 #### Properties
 * **netCoreMainEntryPath**: string: The path to the .NET executable relative to zip root
+* **relativePath**: string: Relative path of the storage which stores the source
 * **runtimeVersion**: string: Runtime version of the .Net file
 * **type**: 'NetCoreZip' (Required): Type of the source uploaded
 
@@ -936,6 +943,7 @@ Possible enum values:
 #### Properties
 * **artifactSelector**: string: Selector for the artifact to be used for the deployment for multi-module projects. This should be
 the relative path to the target module/project.
+* **relativePath**: string: Relative path of the storage which stores the source
 * **runtimeVersion**: string: Runtime version of the source file
 * **type**: 'Source' (Required): Type of the source uploaded
 

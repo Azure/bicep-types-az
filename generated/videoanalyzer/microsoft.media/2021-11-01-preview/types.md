@@ -146,6 +146,7 @@
 
 ### Base Properties
 * **bitrateKbps**: string: Bitrate, in kilobits per second or Kbps, at which audio should be encoded (2-channel stereo audio at a sampling rate of 48 kHz). Allowed values are 96, 112, 128, 160, 192, 224, and 256. If omitted, the bitrate of the input audio is used.
+
 ### AudioEncoderAac
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.AudioEncoderAac' (Required): The discriminator for derived types.
@@ -155,6 +156,7 @@
 * **Discriminator**: @type
 
 ### Base Properties
+
 ### JwtAuthentication
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.JwtAuthentication' (Required): The discriminator for derived types.
@@ -168,6 +170,7 @@
 * **Discriminator**: @type
 
 ### Base Properties
+
 ### PemCertificateList
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.PemCertificateList' (Required): The discriminator for derived types.
@@ -178,6 +181,7 @@
 * **Discriminator**: @type
 
 ### Base Properties
+
 ### UsernamePasswordCredentials
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.UsernamePasswordCredentials' (Required): The discriminator for derived types.
@@ -198,6 +202,7 @@
 * **Discriminator**: @type
 
 ### Base Properties
+
 ### EncoderCustomPreset
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.EncoderCustomPreset' (Required): The discriminator for derived types.
@@ -222,6 +227,7 @@
 * **credentials**: [CredentialsBase](#credentialsbase) (Required): Credentials to be presented to the endpoint.
 * **tunnel**: [TunnelBase](#tunnelbase): Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
 * **url**: string (Required): The endpoint URL for Video Analyzer to connect to.
+
 ### TlsEndpoint
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.TlsEndpoint' (Required): The discriminator for derived types.
@@ -340,6 +346,7 @@
 ### Base Properties
 * **inputs**: [NodeInput](#nodeinput)[] (Required): An array of upstream node references within the topology to be used as inputs for this node.
 * **name**: string (Required): Node name. Must be unique within the topology.
+
 ### EncoderProcessor
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.EncoderProcessor' (Required): The discriminator for derived types.
@@ -356,6 +363,7 @@
 ### Base Properties
 * **inputs**: [NodeInput](#nodeinput)[] (Required): An array of upstream node references within the topology to be used as inputs for this node.
 * **name**: string (Required): Node name. Must be unique within the topology.
+
 ### VideoSink
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.VideoSink' (Required): The discriminator for derived types.
@@ -374,6 +382,7 @@
 
 ### Base Properties
 * **name**: string (Required): Node name. Must be unique within the topology.
+
 ### RtspSource
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.RtspSource' (Required): The discriminator for derived types.
@@ -406,6 +415,7 @@
 * **Discriminator**: @type
 
 ### Base Properties
+
 ### VideoSequenceAbsoluteTimeMarkers
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.VideoSequenceAbsoluteTimeMarkers' (Required): The discriminator for derived types.
@@ -427,6 +437,7 @@
 
 ### Base Properties
 * **kid**: string (Required): JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
+
 ### EccTokenKey
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.EccTokenKey' (Required): The discriminator for derived types.
@@ -456,6 +467,7 @@
 * **Discriminator**: @type
 
 ### Base Properties
+
 ### SecureIotDeviceRemoteTunnel
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel' (Required): The discriminator for derived types.
@@ -525,6 +537,7 @@
 * **bitrateKbps**: string: The maximum bitrate, in kilobits per second or Kbps, at which video should be encoded. If omitted, encoder sets it automatically to try and match the quality of the input video.
 * **frameRate**: string: The frame rate (in frames per second) of the encoded video. The value must be greater than zero, and less than or equal to 300. If omitted, the encoder uses the average frame rate of the input video.
 * **scale**: [VideoScale](#videoscale): Describes the resolution of the encoded video. If omitted, the encoder uses the resolution of the input video.
+
 ### VideoEncoderH264
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.VideoEncoderH264' (Required): The discriminator for derived types.

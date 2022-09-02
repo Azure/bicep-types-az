@@ -487,6 +487,7 @@
 
 ### Base Properties
 * **migrationState**: [BackupPolicyMigrationState](#backuppolicymigrationstate): The object representing the state of the migration between the backup policies.
+
 ### ContinuousModeBackupPolicy
 #### Properties
 * **continuousModeProperties**: [ContinuousModeProperties](#continuousmodeproperties): Configuration values for continuous mode backup
@@ -815,6 +816,7 @@
 * **Discriminator**: component
 
 ### Base Properties
+
 ### AzureBlobDataTransferDataSourceSink
 #### Properties
 * **component**: 'AzureBlobStorage' (Required)

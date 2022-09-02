@@ -599,6 +599,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata related to this resource.
 * **type**: 'Microsoft.Network/networkManagers/securityAdminConfigurations/ruleCollections/rules' (ReadOnly, DeployTimeConstant): The resource type
+
 ### AdminRule
 #### Properties
 * **kind**: 'Custom' (Required): Whether the rule is custom or default.
@@ -1233,6 +1234,7 @@
 * **ruleCollectionAppliesToGroups**: [NetworkManagerSecurityGroupItem](#networkmanagersecuritygroupitem)[]: Groups for rule collection
 * **ruleCollectionDescription**: string: A description of the rule collection.
 * **ruleGroups**: [ConfigurationGroup](#configurationgroup)[]: Effective configuration groups.
+
 ### ActiveSecurityAdminRule
 #### Properties
 * **kind**: 'Custom' (Required): Whether the rule is custom or default.
@@ -2402,6 +2404,7 @@
 * **ruleCollectionAppliesToGroups**: [NetworkManagerSecurityGroupItem](#networkmanagersecuritygroupitem)[]: Groups for rule collection
 * **ruleCollectionDescription**: string: A description of the rule collection.
 * **ruleGroups**: [ConfigurationGroup](#configurationgroup)[]: Effective configuration groups.
+
 ### EffectiveSecurityAdminRule
 #### Properties
 * **kind**: 'Custom' (Required): Whether the rule is custom or default.
@@ -2787,6 +2790,7 @@
 ### Base Properties
 * **description**: string: Description of the rule.
 * **name**: string: Name of the rule.
+
 ### ApplicationRule
 #### Properties
 * **destinationAddresses**: string[]: List of destination IP addresses or Service Tags.
@@ -2835,6 +2839,7 @@
 ### Base Properties
 * **name**: string: The name of the rule collection.
 * **priority**: int: Priority of the Firewall Policy Rule Collection resource.
+
 ### FirewallPolicyFilterRuleCollection
 #### Properties
 * **action**: [FirewallPolicyFilterRuleCollectionAction](#firewallpolicyfilterrulecollectionaction): The action type of a Filter rule collection.
@@ -3159,8 +3164,8 @@
 ### Properties
 * **backendAddressPools**: [BackendAddressPool](#backendaddresspool)[]: Collection of backend address pools used by a load balancer.
 * **frontendIPConfigurations**: [FrontendIPConfiguration](#frontendipconfiguration)[]: Object representing the frontend IPs to be used for the load balancer.
-* **inboundNatPools**: [InboundNatPool](#inboundnatpool)[]: Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound NAT rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.
-* **inboundNatRules**: [InboundNatRule](#inboundnatrule)[]: Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.
+* **inboundNatPools**: [InboundNatPool](#inboundnatpool)[]: Defines an port range to be used by inbound NAT Pools. Inbound NAT pools are used to define a range of NAT ports to be used by a VMSS cluster. After the creation of an inbound NAT pool, individual inbound NAT rules are automatically created for every VM in a VMSS cluster.  Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are associated with VMSS, while inbound NAT rules are associated with individual VMs.
+* **inboundNatRules**: [InboundNatRule](#inboundnatrule)[]: collection of inbound NAT Rules used by a load balancer. An inbound NAT rule is used to forward traffic from a load balancer frontend to one or more instances in the backend pool. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are associated with VMSS, while inbound NAT rules are associated with individual VMs.
 * **loadBalancingRules**: [LoadBalancingRule](#loadbalancingrule)[]: Object collection representing the load balancing rules Gets the provisioning.
 * **outboundRules**: [OutboundRule](#outboundrule)[]: The outbound rules.
 * **probes**: [Probe](#probe)[]: Collection of probe objects used in the load balancer.

@@ -77,6 +77,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### SasAuthentication
 #### Properties
 * **properties**: [SasProperties](#sasproperties): The SAS properties
@@ -97,6 +98,7 @@
 * **healthyStateDuration**: string (Required): The duration in ISO 8601 format for which the resource is expected to be continuously healthy. If maxElasticDuration is specified, healthy state duration is enforced after the detection of first healthy signal.
 * **maxElasticDuration**: string: The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn't. Health check starts to enforce healthyStateDuration once resource becomes healthy.
 * **waitDuration**: string: The duration in ISO 8601 format for which health check waits idly without any checks.
+
 ### RestHealthCheckStepAttributes
 #### Properties
 * **properties**: [RestParameters](#restparameters): The REST health check parameters.
@@ -146,6 +148,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### ApiKeyAuthentication
 #### Properties
 * **in**: 'Header' | 'Query' (Required): The location of the authentication key/value pair in the request.
@@ -258,6 +261,7 @@
 * **Discriminator**: stepType
 
 ### Base Properties
+
 ### HealthCheckStepProperties
 #### Properties
 * **attributes**: [HealthCheckStepAttributes](#healthcheckstepattributes) (Required): The health check step attributes

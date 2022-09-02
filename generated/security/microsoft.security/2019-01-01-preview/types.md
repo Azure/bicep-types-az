@@ -80,6 +80,7 @@
 * **Discriminator**: assessedResourceType
 
 ### Base Properties
+
 ### ContainerRegistryVulnerabilityProperties
 #### Properties
 * **assessedResourceType**: 'ContainerRegistryVulnerability' (Required): Sub-assessment resource type
@@ -134,6 +135,7 @@
 * **Discriminator**: actionType
 
 ### Base Properties
+
 ### AutomationActionEventHub
 #### Properties
 * **actionType**: 'EventHub' (Required): The type of the action that will be triggered by the Automation
@@ -227,6 +229,7 @@
 * **Discriminator**: source
 
 ### Base Properties
+
 ### AzureResourceDetails
 #### Properties
 * **id**: string (ReadOnly): Azure resource Id of the assessed resource
@@ -235,8 +238,12 @@
 ### OnPremiseSqlResourceDetails
 #### Properties
 * **databaseName**: string (Required): The Sql database name installed on the machine
+* **machineName**: string (Required): The name of the machine
 * **serverName**: string (Required): The Sql server name installed on the machine
 * **source**: 'OnPremiseSql' (Required): The platform where the assessed resource resides
+* **sourceComputerId**: string (Required): The oms agent Id installed on the machine
+* **vmuuid**: string (Required): The unique Id of the machine
+* **workspaceId**: string (Required): Azure resource Id of the workspace the machine is attached to
 
 
 ## ScopeElement

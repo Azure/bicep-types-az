@@ -34,6 +34,7 @@
 * **Discriminator**: kind
 
 ### Base Properties
+
 ### OpenShiftManagedClusterAADIdentityProvider
 #### Properties
 * **clientId**: string: The clientId password associated with the provider.

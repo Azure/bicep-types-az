@@ -154,6 +154,7 @@
 * **storageProfile**: [StorageProfile](#storageprofile): Storage profile of a server.
 * **userVisibleState**: 'Disabled' | 'Dropping' | 'Inaccessible' | 'Ready' | string (ReadOnly): A state of a server that is visible to user.
 * **version**: '10' | '10.0' | '10.2' | '11' | '9.5' | '9.6' | string: Server version.
+
 ### ServerPropertiesForDefaultCreate
 #### Properties
 * **administratorLogin**: string (Required, WriteOnly): The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).

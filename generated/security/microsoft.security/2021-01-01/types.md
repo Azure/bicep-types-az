@@ -55,6 +55,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### AzureResourceIdentifier
 #### Properties
 * **azureResourceId**: string (ReadOnly): ARM resource identifier for the cloud resource being alerted on

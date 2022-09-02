@@ -39,6 +39,7 @@
 
 ### Base Properties
 * **description**: string (ReadOnly): The offering description.
+
 ### CspmMonitorAwsOffering
 #### Properties
 * **nativeCloudConnection**: [CspmMonitorAwsOfferingNativeCloudConnection](#cspmmonitorawsofferingnativecloudconnection): The native cloud connection configuration

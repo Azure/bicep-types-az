@@ -204,6 +204,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Web/sites/basicPublishingCredentialsPolicies
 #### Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -230,6 +231,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Web/sites/config
 #### Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -701,6 +703,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Web/sites/slots/config
 #### Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version

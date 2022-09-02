@@ -329,6 +329,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 * **Discriminator**: partitionScheme
 
 ### Base Properties
+
 ### NamedPartitionSchemeDescription
 #### Properties
 * **Count**: int (Required): The number of partitions.
@@ -402,6 +403,7 @@ should be split between the partition ‘Count’
 
 ### Base Properties
 
+
 ## ServiceResourceProperties
 * **Discriminator**: serviceKind
 
@@ -415,6 +417,7 @@ should be split between the partition ‘Count’
 * **servicePackageActivationMode**: 'ExclusiveProcess' | 'SharedProcess' | string: The activation Mode of the service package
 * **servicePlacementPolicies**: [ServicePlacementPolicyDescription](#serviceplacementpolicydescription)[]: A list that describes the correlation of the service with other services.
 * **serviceTypeName**: string: The name of the service type
+
 ### StatefulServiceProperties
 #### Properties
 * **hasPersistedState**: bool: A flag indicating whether this is a persistent service which stores states on the local disk. If it is then the value of this property is true, if not it is false.

@@ -43,6 +43,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### KubernetesConnectionDetails
 #### Properties
 * **instanceType**: 'Kubernetes' (Required): Gets the Instance type.

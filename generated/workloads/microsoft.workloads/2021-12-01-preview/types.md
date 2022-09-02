@@ -57,7 +57,7 @@
 * **identity**: [UserAssignedServiceIdentity](#userassignedserviceidentity): Managed service identity (user assigned identities)
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SAPVirtualInstanceProperties](#sapvirtualinstanceproperties) (Required): Defines the Virtual Instance for SAP properties.
+* **properties**: [SAPVirtualInstanceProperties](#sapvirtualinstanceproperties) (Required): Defines the Virtual Instance for SAP solutions resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Workloads/sapVirtualInstances' (ReadOnly, DeployTimeConstant): The resource type
@@ -69,7 +69,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SAPApplicationServerProperties](#sapapplicationserverproperties): Defines the SAP Application Server properties.
+* **properties**: [SAPApplicationServerProperties](#sapapplicationserverproperties): Defines the SAP Application Server instance properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Workloads/sapVirtualInstances/applicationInstances' (ReadOnly, DeployTimeConstant): The resource type
@@ -81,7 +81,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SAPCentralServerProperties](#sapcentralserverproperties): Defines the SAP Central Server properties.
+* **properties**: [SAPCentralServerProperties](#sapcentralserverproperties): Defines the SAP Central Services Instance properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Workloads/sapVirtualInstances/centralInstances' (ReadOnly, DeployTimeConstant): The resource type
@@ -93,7 +93,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SAPDatabaseProperties](#sapdatabaseproperties): Defines the SAP Database properties.
+* **properties**: [SAPDatabaseProperties](#sapdatabaseproperties): Defines the Database properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Workloads/sapVirtualInstances/databaseInstances' (ReadOnly, DeployTimeConstant): The resource type
@@ -168,19 +168,19 @@
 ## EnqueueReplicationServerProperties
 ### Properties
 * **ersVersion**: 'EnqueueReplicator1' | 'EnqueueReplicator2' | string (ReadOnly): Defines the type of Enqueue Replication Server.
-* **health**: 'Degraded' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (ReadOnly): Defines the SAP Instance health.
-* **hostname**: string (ReadOnly): The ERS server SAP host name.
-* **instanceNo**: string (ReadOnly): The ERS server instance id.
-* **ipAddress**: string (ReadOnly): The ERS server SAP IP Address.
-* **kernelPatch**: string (ReadOnly): The ERS server SAP kernel patch.
-* **kernelVersion**: string (ReadOnly): The ERS server SAP kernel version.
+* **health**: 'Degraded' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (ReadOnly): Defines the health of SAP Instances.
+* **hostname**: string (ReadOnly): ERS SAP Hostname.
+* **instanceNo**: string (ReadOnly): ERS Instance Number.
+* **ipAddress**: string (ReadOnly): ERS SAP IP Address.
+* **kernelPatch**: string (ReadOnly): ERS SAP Kernel Patch level.
+* **kernelVersion**: string (ReadOnly): ERS SAP Kernel Version.
 
 ## EnqueueServerProperties
 ### Properties
-* **health**: 'Degraded' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (ReadOnly): Defines the SAP Instance health.
-* **hostname**: string (ReadOnly): The enqueue server SAP host name.
-* **ipAddress**: string (ReadOnly): The enqueue server SAP IP Address.
-* **port**: int (ReadOnly): The enqueue server Port.
+* **health**: 'Degraded' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (ReadOnly): Defines the health of SAP Instances.
+* **hostname**: string (ReadOnly): Enqueue Server SAP Hostname.
+* **ipAddress**: string (ReadOnly): Enqueue Server SAP IP Address.
+* **port**: int (ReadOnly): Enqueue Server Port.
 
 ## Error
 ### Properties
@@ -210,8 +210,8 @@
 
 ## GatewayServerProperties
 ### Properties
-* **health**: 'Degraded' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (ReadOnly): Defines the SAP Instance health.
-* **port**: int (ReadOnly): The gateway Port.
+* **health**: 'Degraded' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (ReadOnly): Defines the health of SAP Instances.
+* **port**: int (ReadOnly): Gateway Port.
 
 ## HighAvailabilityConfiguration
 ### Properties
@@ -236,10 +236,11 @@
 
 ### Base Properties
 * **appResourceGroup**: string (Required): The application resource group where SAP system resources will be deployed.
+
 ### SingleServerConfiguration
 #### Properties
 * **databaseType**: 'DB2' | 'HANA' | string: The database type.
-* **deploymentType**: 'SingleServer' (Required): The deployment Type.
+* **deploymentType**: 'SingleServer' (Required): The type of SAP deployment, single server or Three tier.
 * **networkConfiguration**: [NetworkConfiguration](#networkconfiguration): Network configuration for the server
 * **subnetId**: string (Required): The subnet id.
 * **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration) (Required): Gets or sets the virtual machine configuration.
@@ -249,7 +250,7 @@
 * **applicationServer**: [ApplicationServerConfiguration](#applicationserverconfiguration) (Required): The application server configuration.
 * **centralServer**: [CentralServerConfiguration](#centralserverconfiguration) (Required): The central server configuration.
 * **databaseServer**: [DatabaseConfiguration](#databaseconfiguration) (Required): The database configuration.
-* **deploymentType**: 'ThreeTier' (Required): The deployment Type.
+* **deploymentType**: 'ThreeTier' (Required): The type of SAP deployment, single server or Three tier.
 * **highAvailabilityConfig**: [HighAvailabilityConfiguration](#highavailabilityconfiguration): The high availability configuration.
 * **networkConfiguration**: [NetworkConfiguration](#networkconfiguration): Network configuration common to all servers
 
@@ -260,13 +261,13 @@
 
 ## MessageServerProperties
 ### Properties
-* **health**: 'Degraded' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (ReadOnly): Defines the SAP Instance health.
-* **hostname**: string (ReadOnly): The message server SAP host name.
-* **httpPort**: int (ReadOnly): The message server http port.
-* **httpsPort**: int (ReadOnly): The message server https port.
-* **internalMsPort**: int (ReadOnly): The message server internal MS port.
-* **ipAddress**: string (ReadOnly): The message server IP Address.
-* **msPort**: int (ReadOnly): The message server port.
+* **health**: 'Degraded' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (ReadOnly): Defines the health of SAP Instances.
+* **hostname**: string (ReadOnly): Message Server SAP Hostname.
+* **httpPort**: int (ReadOnly): Message Server HTTP Port.
+* **httpsPort**: int (ReadOnly): Message Server HTTPS Port.
+* **internalMsPort**: int (ReadOnly): Message Server internal MS port.
+* **ipAddress**: string (ReadOnly): Message server IP Address.
+* **msPort**: int (ReadOnly): Message Server port.
 
 ## MonitorProperties
 ### Properties
@@ -278,6 +279,7 @@
 * **msiArmId**: string (ReadOnly): The ARM ID of the MSI used for SAP monitoring.
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' | string (ReadOnly): State of provisioning of the SAP monitor.
 * **routingPreference**: 'Default' | 'RouteAll' | string: Sets the routing preference of the SAP monitor. By default only RFC1918 traffic is routed to the customer VNET.
+* **zoneRedundancyPreference**: string: Sets the preference for zone redundancy on resources created for the SAP monitor. By default resources will be created which do not support zone redundancy.
 
 ## MonitorPropertiesErrors
 ### Properties
@@ -289,7 +291,7 @@
 
 ## NetworkConfiguration
 ### Properties
-* **isSecondaryIpEnabled**: bool: Specifies whether a secondary IP address should be added to the network interface on all VMs
+* **isSecondaryIpEnabled**: bool: Specifies whether a secondary IP address should be added to the network interface on all VMs of the SAP system being deployed
 
 ## NetworkProfile
 ### Properties
@@ -317,6 +319,7 @@
 * **Discriminator**: osType
 
 ### Base Properties
+
 ### LinuxConfiguration
 #### Properties
 * **disablePasswordAuthentication**: bool: Specifies whether password authentication should be disabled.
@@ -391,6 +394,7 @@
 * **Discriminator**: providerType
 
 ### Base Properties
+
 ### DB2ProviderInstanceProperties
 #### Properties
 * **dbName**: string: Gets or sets the db2 database name.
@@ -456,40 +460,41 @@
 ## SAPApplicationServerProperties
 ### Properties
 * **errors**: [SAPVirtualInstanceError](#sapvirtualinstanceerror) (ReadOnly): Defines the Application Instance errors.
-* **gatewayPort**: int (ReadOnly): The application server gateway Port.
-* **health**: 'Degraded' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (ReadOnly): Defines the SAP Instance health.
-* **hostname**: string (ReadOnly): The application server SAP host name.
-* **icmHttpPort**: int (ReadOnly): The application server ICM HTTP Port.
-* **icmHttpsPort**: int (ReadOnly): The application server ICM HTTPS Port.
-* **instanceNo**: string (ReadOnly): The application server instance id.
-* **ipAddress**: string (ReadOnly): The application server SAP IP Address.
-* **kernelPatch**: string (ReadOnly): The application server SAP kernel patch.
-* **kernelVersion**: string (ReadOnly): The application server SAP kernel version.
+* **gatewayPort**: int (ReadOnly): Application server instance gateway Port.
+* **health**: 'Degraded' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (ReadOnly): Defines the health of SAP Instances.
+* **hostname**: string (ReadOnly): Application server instance SAP hostname.
+* **icmHttpPort**: int (ReadOnly): Application server instance ICM HTTP Port.
+* **icmHttpsPort**: int (ReadOnly): Application server instance ICM HTTPS Port.
+* **instanceNo**: string (ReadOnly): Application server Instance Number.
+* **ipAddress**: string (ReadOnly): Application server instance SAP IP Address.
+* **kernelPatch**: string (ReadOnly): Application server instance SAP Kernel Patch level.
+* **kernelVersion**: string (ReadOnly): Application server instance SAP Kernel Version.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Defines the provisioning states.
 * **status**: 'Offline' | 'PartiallyRunning' | 'Running' | 'Starting' | 'Stopping' | 'Unavailable' | string (ReadOnly): Defines the SAP Instance status.
-* **subnet**: string (ReadOnly): The application server subnet.
+* **subnet**: string (ReadOnly): Application server Subnet.
 * **virtualMachineId**: string (ReadOnly): The virtual machine.
 
 ## SAPCentralServerProperties
 ### Properties
-* **enqueueReplicationServerProperties**: [EnqueueReplicationServerProperties](#enqueuereplicationserverproperties): Defines the SAP ERS Server properties.
-* **enqueueServerProperties**: [EnqueueServerProperties](#enqueueserverproperties): Defines the SAP enqueue server properties.
-* **errors**: [SAPVirtualInstanceError](#sapvirtualinstanceerror) (ReadOnly): Defines the Central Instance errors.
+* **enqueueReplicationServerProperties**: [EnqueueReplicationServerProperties](#enqueuereplicationserverproperties): Defines the SAP Enqueue Replication Server (ERS) properties.
+* **enqueueServerProperties**: [EnqueueServerProperties](#enqueueserverproperties): Defines the SAP Enqueue Server properties.
+* **errors**: [SAPVirtualInstanceError](#sapvirtualinstanceerror) (ReadOnly): Defines the errors related to SAP Central Services Instance resource.
 * **gatewayServerProperties**: [GatewayServerProperties](#gatewayserverproperties): Defines the SAP Gateway Server properties.
-* **health**: 'Degraded' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (ReadOnly): Defines the SAP Instance health.
-* **instanceNo**: string (ReadOnly): The central server instance id.
-* **kernelPatch**: string (ReadOnly): The central server kernel patch.
-* **kernelVersion**: string (ReadOnly): The central server kernel version.
-* **messageServerProperties**: [MessageServerProperties](#messageserverproperties): Defines the SAP message server properties.
+* **health**: 'Degraded' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (ReadOnly): Defines the health of SAP Instances.
+* **instanceNo**: string (ReadOnly): The central services instance number.
+* **kernelPatch**: string (ReadOnly): The central services instance Kernel Patch level.
+* **kernelVersion**: string (ReadOnly): The central services instance Kernel Version.
+* **messageServerProperties**: [MessageServerProperties](#messageserverproperties): Defines the SAP Message Server properties.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Defines the provisioning states.
 * **status**: 'Offline' | 'PartiallyRunning' | 'Running' | 'Starting' | 'Stopping' | 'Unavailable' | string (ReadOnly): Defines the SAP Instance status.
-* **subnet**: string (ReadOnly): The central server subnet.
-* **vmDetails**: [CentralServerVmDetails](#centralservervmdetails)[] (ReadOnly): The list of virtual machines.
+* **subnet**: string (ReadOnly): The central services instance subnet.
+* **vmDetails**: [CentralServerVmDetails](#centralservervmdetails)[] (ReadOnly): The list of virtual machines corresponding to the Central Services instance.
 
 ## SAPConfiguration
 * **Discriminator**: configurationType
 
 ### Base Properties
+
 ### DeploymentConfiguration
 #### Properties
 * **appLocation**: string: The geo-location where the SAP system is to be created.
@@ -514,14 +519,14 @@
 
 ## SAPDatabaseProperties
 ### Properties
-* **databaseSid**: string (ReadOnly): The database SID.
-* **databaseType**: string (ReadOnly): The SAP database type.
-* **errors**: [SAPVirtualInstanceError](#sapvirtualinstanceerror) (ReadOnly): Defines the Database Instance errors.
-* **ipAddress**: string (ReadOnly): The database IP Address.
+* **databaseSid**: string (ReadOnly): Database SID name.
+* **databaseType**: string (ReadOnly): Database type, that is if the DB is HANA, DB2, Oracle, SAP ASE, Max DB or MS SQL Server.
+* **errors**: [SAPVirtualInstanceError](#sapvirtualinstanceerror) (ReadOnly): Defines the errors related to Database resource.
+* **ipAddress**: string (ReadOnly): Database IP Address.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Defines the provisioning states.
 * **status**: 'Offline' | 'PartiallyRunning' | 'Running' | 'Starting' | 'Stopping' | 'Unavailable' | string (ReadOnly): Defines the SAP Instance status.
-* **subnet**: string (ReadOnly): The database subnet.
-* **vmDetails**: [DatabaseVmDetails](#databasevmdetails)[] (ReadOnly): The list of virtual machines.
+* **subnet**: string (ReadOnly): Database subnet.
+* **vmDetails**: [DatabaseVmDetails](#databasevmdetails)[] (ReadOnly): The list of virtual machines corresponding to the Database resource.
 
 ## SAPVirtualInstanceError
 ### Properties
@@ -529,10 +534,10 @@
 
 ## SAPVirtualInstanceProperties
 ### Properties
-* **configuration**: [SAPConfiguration](#sapconfiguration) (Required): Defines if an existing SAP system is being registered or a new SAP system is being created
+* **configuration**: [SAPConfiguration](#sapconfiguration) (Required): Defines if the SAP system is being created using Azure Center for SAP solutions (ACSS) or if an existing SAP system is being registered with ACSS
 * **environment**: 'NonProd' | 'Prod' | string (Required): Defines the environment type - Production/Non Production.
-* **errors**: [SAPVirtualInstanceError](#sapvirtualinstanceerror) (ReadOnly): Defines the Virtual Instance for SAP errors.
-* **health**: 'Degraded' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (ReadOnly): Defines the SAP Instance health.
+* **errors**: [SAPVirtualInstanceError](#sapvirtualinstanceerror) (ReadOnly): Indicates any errors on the Virtual Instance for SAP solutions resource.
+* **health**: 'Degraded' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (ReadOnly): Defines the health of SAP Instances.
 * **managedResourceGroupConfiguration**: [ManagedRGConfiguration](#managedrgconfiguration): Managed resource group configuration
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Defines the provisioning states.
 * **sapProduct**: 'ECC' | 'Other' | 'S4HANA' | string (Required): Defines the SAP Product type.
@@ -565,6 +570,7 @@
 * **Discriminator**: softwareInstallationType
 
 ### Base Properties
+
 ### SAPInstallWithoutOSConfigSoftwareConfiguration
 #### Properties
 * **bomUrl**: string (Required): The URL to the SAP Build of Materials(BOM) file.

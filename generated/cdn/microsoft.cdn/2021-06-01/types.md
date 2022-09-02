@@ -294,6 +294,7 @@
 ### Base Properties
 * **minimumTlsVersion**: 'None' | 'TLS10' | 'TLS12': TLS protocol version that will be used for Https
 * **protocolType**: 'IPBased' | 'ServerNameIndication' | string (Required): Defines the TLS extension protocol that is used for secure delivery.
+
 ### UserManagedHttpsParameters
 #### Properties
 * **certificateSource**: 'AzureKeyVault' (Required): Defines the source of the SSL certificate.
@@ -380,6 +381,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### DeliveryRuleCacheExpirationAction
 #### Properties
 * **name**: 'CacheExpiration' (Required): The name of the action for the delivery rule.
@@ -430,6 +432,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### DeliveryRuleClientPortCondition
 #### Properties
 * **name**: 'ClientPort' (Required): The name of the condition for the delivery rule.
@@ -853,6 +856,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### AzureFirstPartyManagedCertificateParameters
 #### Properties
 * **type**: 'AzureFirstPartyManagedCertificate' (Required): The type of the secret resource.
@@ -901,6 +905,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### SecurityPolicyWebApplicationFirewallParameters
 #### Properties
 * **associations**: [SecurityPolicyWebApplicationFirewallAssociation](#securitypolicywebapplicationfirewallassociation)[]: Waf associations

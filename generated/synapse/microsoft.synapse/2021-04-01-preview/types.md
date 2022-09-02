@@ -134,6 +134,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Synapse/workspaces/kustoPools/databases' (ReadOnly, DeployTimeConstant): The resource type
+
 ### ReadWriteDatabase
 #### Properties
 * **kind**: 'ReadWrite' (Required): Kind of the database
@@ -151,6 +152,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Synapse/workspaces/kustoPools/databases/dataConnections' (ReadOnly, DeployTimeConstant): The resource type
+
 ### EventGridDataConnection
 #### Properties
 * **kind**: 'EventGrid' (Required): Kind of the endpoint for the data connection
@@ -576,6 +578,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### CmdkeySetup
 #### Properties
 * **type**: 'CmdkeySetup' (Required): The type of custom setup.
@@ -867,6 +870,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ### Base Properties
 * **description**: string: Integration runtime description.
+
 ### ManagedIntegrationRuntime
 #### Properties
 * **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): Integration runtime state, only valid for managed dedicated integration runtime.
@@ -999,6 +1003,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **Discriminator**: authorizationType
 
 ### Base Properties
+
 ### LinkedIntegrationRuntimeKeyAuthorization
 #### Properties
 * **authorizationType**: 'Key' (Required): The authorization type for integration runtime sharing.
@@ -1154,6 +1159,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **Discriminator**: type
 
 ### Base Properties
+
 ### SecureString
 #### Properties
 * **type**: 'SecureString' (Required): Type of the secret.

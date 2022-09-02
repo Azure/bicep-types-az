@@ -48,6 +48,12 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupstorageconfig' (ReadOnly, DeployTimeConstant): The resource type
 
+## AzureWorkloadContainerExtendedInfo
+### Properties
+* **hostServerName**: string: Host Os Name in case of Stand Alone and Cluster Name in case of distributed container.
+* **inquiryInfo**: [InquiryInfo](#inquiryinfo): Inquiry Status for the container.
+* **nodesList**: [DistributedNodesInfo](#distributednodesinfo)[]: List of the nodes in case of distributed container.
+
 ## BackupEngineBase
 * **Discriminator**: backupEngineType
 
@@ -64,6 +70,7 @@
 * **isAzureBackupAgentUpgradeAvailable**: bool: To check if backup agent upgrade available
 * **isDpmUpgradeAvailable**: bool: To check if backup engine upgrade available
 * **registrationStatus**: string: Registration status of the backup engine with the Recovery Services Vault.
+
 ### AzureBackupServerEngine
 #### Properties
 * **backupEngineType**: 'AzureBackupServerEngine' (Required): Type of the backup engine.
@@ -97,6 +104,23 @@
 * **servicePrincipalClientId**: string: Protection container identity - AAD Service Principal
 * **uniqueName**: string: Unique name of the container
 
+## DistributedNodesInfo
+### Properties
+* **errorDetail**: [ErrorDetail](#errordetail): Error Details if the Status is non-success.
+* **nodeName**: string: Name of the node under a distributed container.
+* **status**: string: Status of this Node.
+Failed | Succeeded
+
+## DPMContainerExtendedInfo
+### Properties
+* **lastRefreshedAt**: string: Last refresh time of the DPMContainer.
+
+## ErrorDetail
+### Properties
+* **code**: string (ReadOnly): Error code.
+* **message**: string (ReadOnly): Error Message related to the Code.
+* **recommendations**: string[] (ReadOnly): List of recommendation strings.
+
 ## GenericContainerExtendedInfo
 ### Properties
 * **containerIdentityInfo**: [ContainerIdentityInfo](#containeridentityinfo): Container identity information
@@ -107,6 +131,20 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## InquiryInfo
+### Properties
+* **errorDetail**: [ErrorDetail](#errordetail): Error Details if the Status is non-success.
+* **inquiryDetails**: [WorkloadInquiryDetails](#workloadinquirydetails)[]: Inquiry Details which will have workload specific details.
+For e.g. - For SQL and oracle this will contain different details.
+* **status**: string: Inquiry Status for this container such as
+InProgress | Failed | Succeeded
+
+## InquiryValidation
+### Properties
+* **additionalDetail**: string (ReadOnly): Error Additional Detail in case the status is non-success.
+* **errorDetail**: [ErrorDetail](#errordetail): Error Detail in case the status is non-success.
+* **status**: string: Status for the Inquiry Validation.
 
 ## MabContainerExtendedInfo
 ### Properties
@@ -131,12 +169,21 @@
 * **friendlyName**: string: Friendly name of the container.
 * **healthStatus**: string: Status of health of the container.
 * **registrationStatus**: string: Status of registration of the container with the Recovery Services Vault.
+
 ### AzureBackupServerContainer
 #### Properties
+* **canReRegister**: bool: Specifies whether the container is re-registrable.
+* **containerId**: string: ID of container.
 * **containerType**: 'AzureBackupServerContainer' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
 Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
 Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
 Backup is VMAppContainer
+* **dpmAgentVersion**: string: Backup engine Agent version
+* **dpmServers**: string[]: List of BackupEngines protecting the container
+* **extendedInfo**: [DPMContainerExtendedInfo](#dpmcontainerextendedinfo): Extended Info of the container.
+* **protectedItemCount**: int: Number of protected items in the BackupEngine
+* **protectionStatus**: string: Protection status of the container.
+* **upgradeAvailable**: bool: To check if upgrade available
 
 ### AzureSqlContainer
 #### Properties
@@ -160,6 +207,9 @@ Backup is VMAppContainer
 Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
 Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
 Backup is VMAppContainer
+* **resourceGroup**: string: Resource group name of Recovery Services Vault.
+* **virtualMachineId**: string: Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.
+* **virtualMachineVersion**: string: Specifies whether the container represents a Classic or an Azure Resource Manager VM.
 
 ### AzureIaaSComputeVMContainer
 #### Properties
@@ -167,6 +217,9 @@ Backup is VMAppContainer
 Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
 Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
 Backup is VMAppContainer
+* **resourceGroup**: string: Resource group name of Recovery Services Vault.
+* **virtualMachineId**: string: Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.
+* **virtualMachineVersion**: string: Specifies whether the container represents a Classic or an Azure Resource Manager VM.
 
 ### AzureSqlagWorkloadContainerProtectionContainer
 #### Properties
@@ -174,6 +227,11 @@ Backup is VMAppContainer
 Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
 Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
 Backup is VMAppContainer
+* **extendedInfo**: [AzureWorkloadContainerExtendedInfo](#azureworkloadcontainerextendedinfo): Additional details of a workload container.
+* **lastUpdatedTime**: string: Time stamp when this container was updated.
+* **operationType**: 'Invalid' | 'Register' | 'Reregister' | string: Re-Do Operation
+* **sourceResourceId**: string: ARM ID of the virtual machine represented by this Azure Workload Container
+* **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string: Workload type for which registration was sent.
 
 ### AzureStorageContainer
 #### Properties
@@ -192,6 +250,11 @@ Backup is VMAppContainer
 Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
 Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
 Backup is VMAppContainer
+* **extendedInfo**: [AzureWorkloadContainerExtendedInfo](#azureworkloadcontainerextendedinfo): Additional details of a workload container.
+* **lastUpdatedTime**: string: Time stamp when this container was updated.
+* **operationType**: 'Invalid' | 'Register' | 'Reregister' | string: Re-Do Operation
+* **sourceResourceId**: string: ARM ID of the virtual machine represented by this Azure Workload Container
+* **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string: Workload type for which registration was sent.
 
 ### MabContainer
 #### Properties
@@ -227,4 +290,10 @@ Backup is VMAppContainer
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## WorkloadInquiryDetails
+### Properties
+* **inquiryValidation**: [InquiryValidation](#inquiryvalidation): Inquiry validation such as permissions and other backup validations.
+* **itemCount**: int: Contains the protectable item Count inside this Container.
+* **type**: string: Type of the Workload such as SQL, Oracle etc.
 

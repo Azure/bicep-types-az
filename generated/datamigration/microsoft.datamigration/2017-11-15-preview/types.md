@@ -41,6 +41,7 @@
 ### Base Properties
 * **password**: string: Password credential.
 * **userName**: string: User name
+
 ### SqlConnectionInfo
 #### Properties
 * **additionalSettings**: string: Additional connection settings
@@ -61,6 +62,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### ConnectToSourceSqlServerTaskOutputDatabaseLevel
 #### Properties
 * **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): SQL Server compatibility level of database
@@ -147,6 +149,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateSqlServerSqlDbTaskOutputDatabaseLevel
 #### Properties
 * **databaseName**: string (ReadOnly): Name of the item
@@ -235,6 +238,7 @@
 ### Base Properties
 * **errors**: [ODataError](#odataerror)[] (ReadOnly): Array of errors. This is ignored if submitted.
 * **state**: 'Canceled' | 'Failed' | 'FailedInputValidation' | 'Faulted' | 'Queued' | 'Running' | 'Succeeded' | 'Unknown' (ReadOnly): The state of the task. This is ignored if submitted.
+
 ### ConnectToSourceSqlServerTaskProperties
 #### Properties
 * **input**: [ConnectToSourceSqlServerTaskInput](#connecttosourcesqlservertaskinput): Task input

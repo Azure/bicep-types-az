@@ -97,6 +97,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of Role
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles' (ReadOnly, DeployTimeConstant): The resource type
+
 ### CloudEdgeManagementRole
 #### Properties
 * **kind**: 'CloudEdgeManagement' (Required): Role type.
@@ -128,6 +129,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of Addon
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles/addons' (ReadOnly, DeployTimeConstant): The resource type
+
 ### ArcAddon
 #### Properties
 * **kind**: 'ArcForKubernetes' (Required): Addon type.
@@ -199,6 +201,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of Trigger
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers' (ReadOnly, DeployTimeConstant): The resource type
+
 ### FileEventTrigger
 #### Properties
 * **kind**: 'FileEvent' (Required): Trigger Kind.

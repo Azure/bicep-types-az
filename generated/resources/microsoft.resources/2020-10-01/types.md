@@ -24,6 +24,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata related to this resource.
 * **tags**: [DeploymentScriptTags](#deploymentscripttags): Resource tags.
 * **type**: 'Microsoft.Resources/deploymentScripts' (ReadOnly, DeployTimeConstant): The resource type
+
 ### AzureCliScript
 #### Properties
 * **kind**: 'AzureCLI' (Required): Type of the script.

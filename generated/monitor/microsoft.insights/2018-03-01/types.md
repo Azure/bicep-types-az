@@ -96,6 +96,7 @@
 * **Discriminator**: odata.type
 
 ### Base Properties
+
 ### MetricAlertMultipleResourceMultipleMetricCriteria
 #### Properties
 * **allOf**: [MultiMetricCriteria](#multimetriccriteria)[]: the list of multiple metric criteria for this 'all of' operation.
@@ -160,6 +161,7 @@
 * **name**: string (Required): Name of the criteria.
 * **skipMetricValidation**: bool: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
 * **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' | string (Required): the criteria time aggregation types.
+
 ### DynamicMetricCriteria
 #### Properties
 * **alertSensitivity**: 'High' | 'Low' | 'Medium' | string (Required): The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.

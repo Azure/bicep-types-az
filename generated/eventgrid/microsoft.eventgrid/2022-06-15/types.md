@@ -244,6 +244,7 @@
 
 ### Base Properties
 * **key**: string: The field/property in the event based on which you want to filter.
+
 ### BoolEqualsAdvancedFilter
 #### Properties
 * **operatorType**: 'BoolEquals' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
@@ -365,6 +366,7 @@ the channel and corresponding partner topic are deleted.
 * **Discriminator**: endpointType
 
 ### Base Properties
+
 ### StorageBlobDeadLetterDestination
 #### Properties
 * **endpointType**: 'StorageBlob' (Required): Type of the endpoint for the dead letter destination
@@ -382,6 +384,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 
 ### Base Properties
 * **name**: string: Name of the delivery attribute or header.
+
 ### DynamicDeliveryAttributeMapping
 #### Properties
 * **properties**: [DynamicDeliveryAttributeMappingProperties](#dynamicdeliveryattributemappingproperties): Properties of dynamic delivery attribute mapping.
@@ -449,6 +452,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 * **Discriminator**: endpointType
 
 ### Base Properties
+
 ### AzureFunctionEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'AzureFunction' (Required): Type of the endpoint for the event subscription destination.
@@ -573,6 +577,7 @@ This property is currently not used and reserved for future usage.
 * **Discriminator**: inputSchemaMappingType
 
 ### Base Properties
+
 ### JsonInputSchemaMapping
 #### Properties
 * **inputSchemaMappingType**: 'Json' (Required): Type of the custom mapping

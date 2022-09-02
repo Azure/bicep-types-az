@@ -19,6 +19,7 @@
 * **Discriminator**: authType
 
 ### Base Properties
+
 ### SecretAuthInfo
 #### Properties
 * **authType**: 'secret' (Required): The authentication type.
@@ -54,6 +55,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### AzureKeyVaultProperties
 #### Properties
 * **connectAsKubernetesCsiDriver**: bool: True if connect via Kubernetes CSI Driver.
@@ -74,6 +76,7 @@
 * **Discriminator**: secretType
 
 ### Base Properties
+
 ### KeyVaultSecretReferenceSecretInfo
 #### Properties
 * **name**: string: Name of the Key Vault secret.
@@ -117,6 +120,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### AzureResource
 #### Properties
 * **id**: string: The Id of azure resource.

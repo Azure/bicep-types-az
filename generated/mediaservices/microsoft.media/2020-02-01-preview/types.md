@@ -13,6 +13,7 @@
 * **Discriminator**: @odata.type
 
 ### Base Properties
+
 ### MediaGraphPemCertificateList
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphPemCertificateList' (Required): The discriminator for derived types.
@@ -23,6 +24,7 @@
 * **Discriminator**: @odata.type
 
 ### Base Properties
+
 ### MediaGraphUsernamePasswordCredentials
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphUsernamePasswordCredentials' (Required): The discriminator for derived types.
@@ -36,6 +38,7 @@
 ### Base Properties
 * **credentials**: [MediaGraphCredentials](#mediagraphcredentials): Polymorphic credentials to present to the endpoint.
 * **url**: string (Required): Url for the endpoint.
+
 ### MediaGraphClearEndpoint
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphClearEndpoint' (Required): The discriminator for derived types.
@@ -62,6 +65,7 @@
 ### Base Properties
 * **inputs**: string[] (Required): Sink inputs.
 * **name**: string (Required): Sink name.
+
 ### MediaGraphAssetSink
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphAssetSink' (Required): The discriminator for derived types.
@@ -73,6 +77,7 @@
 
 ### Base Properties
 * **name**: string (Required): Source name.
+
 ### MediaGraphRtspSource
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required): The discriminator for derived types.

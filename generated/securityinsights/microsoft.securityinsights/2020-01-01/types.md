@@ -10,6 +10,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.SecurityInsights/alertRules' (ReadOnly, DeployTimeConstant): The resource type
+
 ### FusionAlertRule
 #### Properties
 * **kind**: 'Fusion' (Required): The alert rule kind
@@ -45,6 +46,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.SecurityInsights/alertRuleTemplates' (ReadOnly, DeployTimeConstant): The resource type
+
 ### FusionAlertRuleTemplate
 #### Properties
 * **kind**: 'Fusion' (Required): The alert rule kind
@@ -81,6 +83,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.SecurityInsights/dataConnectors' (ReadOnly, DeployTimeConstant): The resource type
+
 ### AwsCloudTrailDataConnector
 #### Properties
 * **kind**: 'AmazonWebServicesCloudTrail' (Required): The data connector kind

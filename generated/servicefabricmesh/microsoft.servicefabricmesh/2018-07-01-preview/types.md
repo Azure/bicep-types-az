@@ -123,6 +123,7 @@
 ### Base Properties
 * **description**: string: A description of the sink.
 * **name**: string: Name of the sink. This value is referenced by DiagnosticsReferenceDescription
+
 ### AzureInternalMonitoringPipelineSinkDescription
 #### Properties
 * **accountName**: string: Azure Internal monitoring pipeline account.

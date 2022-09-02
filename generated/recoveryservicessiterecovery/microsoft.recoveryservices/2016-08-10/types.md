@@ -316,6 +316,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### HyperVVirtualMachineDetails
 #### Properties
 * **diskDetails**: [DiskDetails](#diskdetails)[]: The Last successful failover time.
@@ -474,6 +475,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### A2AEnableProtectionInputOrA2AReplicationDetails
 #### Properties
 * **agentVersion**: string (ReadOnly): The agent version.
@@ -718,6 +720,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### A2AEventDetails
 #### Properties
 * **fabricLocation**: string: The fabric location.
@@ -775,6 +778,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### JobStatusEventDetails
 #### Properties
 * **affectedObjectType**: string: AffectedObjectType for the event.
@@ -799,6 +803,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### AzureToAzureCreateNetworkMappingInput
 #### Properties
 * **instanceType**: 'AzureToAzure' (Required): The instance type.
@@ -817,6 +822,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### AzureFabricCreationInputOrAzureFabricSpecificDetails
 #### Properties
 * **containerIds**: string[] (ReadOnly): The container Ids for the Azure fabric.
@@ -889,6 +895,7 @@
 
 ### Base Properties
 * **childTasks**: [ASRTask](#asrtask)[]: The child tasks.
+
 ### InlineWorkflowTaskDetails
 #### Properties
 * **instanceType**: 'InlineWorkflowTaskDetails' (Required): The type of task details.
@@ -1027,6 +1034,7 @@
 
 ### Base Properties
 * **affectedObjectDetails**: [JobDetailsAffectedObjectDetails](#jobdetailsaffectedobjectdetails): The affected object properties like source server, source cloud, target server, target cloud etc. based on the workflow object details.
+
 ### AsrJobDetails
 #### Properties
 * **instanceType**: 'AsrJobDetails' (Required): Gets the type of job details (see JobDetailsTypes enum for possible values).
@@ -1135,6 +1143,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### AzureToAzureNetworkMappingSettings
 #### Properties
 * **instanceType**: 'AzureToAzure' (Required): Gets the Instance type.
@@ -1176,6 +1185,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### A2APolicyDetails
 #### Properties
 * **appConsistentFrequencyInMinutes**: int: The app consistent snapshot frequency in minutes.
@@ -1285,6 +1295,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### A2APolicyCreationInput
 #### Properties
 * **appConsistentFrequencyInMinutes**: int: The app consistent snapshot frequency (in minutes).
@@ -1426,6 +1437,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### RecoveryPlanAutomationRunbookActionDetails
 #### Properties
 * **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location.
@@ -1485,6 +1497,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### A2AContainerCreationInput
 #### Properties
 * **instanceType**: 'A2A' (Required): The class type.
@@ -1540,6 +1553,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### AutomationRunbookTaskDetails
 #### Properties
 * **accountName**: string: The automation account name of the runbook.

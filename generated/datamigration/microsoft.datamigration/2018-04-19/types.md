@@ -70,6 +70,7 @@
 ### Base Properties
 * **errors**: [ODataError](#odataerror)[] (ReadOnly): Array of errors. This is ignored if submitted.
 * **state**: 'Accepted' | 'Failed' | 'Running' | 'Succeeded' | 'Unknown' | string (ReadOnly): The state of the command. This is ignored if submitted.
+
 ### MigrateMISyncCompleteCommandProperties
 #### Properties
 * **commandType**: 'Migrate.SqlServer.AzureDbSqlMi.Complete' (Required): Command type.
@@ -89,6 +90,7 @@
 ### Base Properties
 * **password**: string: Password credential.
 * **userName**: string: User name
+
 ### MiSqlConnectionInfo
 #### Properties
 * **managedInstanceResourceId**: string (Required): Resource id for Azure SQL database Managed instance
@@ -156,6 +158,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### ConnectToSourceSqlServerTaskOutputAgentJobLevel
 #### Properties
 * **isEnabled**: bool (ReadOnly): The state of the original AgentJob.
@@ -400,6 +403,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseError
 #### Properties
 * **errorMessage**: string: Error message
@@ -492,6 +496,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseError
 #### Properties
 * **errorMessage**: string: Error message
@@ -605,6 +610,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateSqlServerSqlDbSyncTaskOutputDatabaseError
 #### Properties
 * **errorMessage**: string: Error message
@@ -678,6 +684,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateSqlServerSqlDbTaskOutputDatabaseLevel
 #### Properties
 * **databaseName**: string (ReadOnly): Name of the item
@@ -779,6 +786,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateSqlServerSqlMISyncTaskOutputDatabaseLevel
 #### Properties
 * **activeBackupSets**: [BackupSetInfo](#backupsetinfo)[] (ReadOnly): Backup sets that are currently active (Either being uploaded or getting restored)
@@ -831,6 +839,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateSqlServerSqlMITaskOutputAgentJobLevel
 #### Properties
 * **endedOn**: string (ReadOnly): Migration end time
@@ -978,6 +987,7 @@
 * **commands**: [CommandProperties](#commandproperties)[] (ReadOnly): Array of command properties.
 * **errors**: [ODataError](#odataerror)[] (ReadOnly): Array of errors. This is ignored if submitted.
 * **state**: 'Canceled' | 'Failed' | 'FailedInputValidation' | 'Faulted' | 'Queued' | 'Running' | 'Succeeded' | 'Unknown' | string (ReadOnly): The state of the task. This is ignored if submitted.
+
 ### ConnectToSourceMySqlTaskProperties
 #### Properties
 * **input**: [ConnectToSourceMySqlTaskInput](#connecttosourcemysqltaskinput): Task input

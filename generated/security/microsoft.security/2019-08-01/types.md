@@ -101,6 +101,7 @@
 * **displayName**: string (ReadOnly): The display name of the custom alert.
 * **isEnabled**: bool (Required): Status of the custom alert.
 * **valueType**: 'IpCidr' | 'String' | string (ReadOnly): The value type of the items in the list.
+
 ### ConnectionFromIpNotAllowed
 #### Properties
 * **ruleType**: 'ConnectionFromIpNotAllowed' (Required): The type of the custom alert rule.
@@ -300,69 +301,86 @@
 * **isEnabled**: bool (Required): Status of the custom alert.
 * **maxThreshold**: int (Required): The maximum threshold.
 * **minThreshold**: int (Required): The minimum threshold.
+
 ### ActiveConnectionsNotInAllowedRange
 #### Properties
 * **ruleType**: 'ActiveConnectionsNotInAllowedRange' (Required): The type of the custom alert rule.
+* **timeWindowSize**: string (Required): The time window size in iso8601 format.
 
 ### AmqpC2DMessagesNotInAllowedRange
 #### Properties
 * **ruleType**: 'AmqpC2DMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+* **timeWindowSize**: string (Required): The time window size in iso8601 format.
 
 ### AmqpC2DRejectedMessagesNotInAllowedRange
 #### Properties
 * **ruleType**: 'AmqpC2DRejectedMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+* **timeWindowSize**: string (Required): The time window size in iso8601 format.
 
 ### AmqpD2CMessagesNotInAllowedRange
 #### Properties
 * **ruleType**: 'AmqpD2CMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+* **timeWindowSize**: string (Required): The time window size in iso8601 format.
 
 ### DirectMethodInvokesNotInAllowedRange
 #### Properties
 * **ruleType**: 'DirectMethodInvokesNotInAllowedRange' (Required): The type of the custom alert rule.
+* **timeWindowSize**: string (Required): The time window size in iso8601 format.
 
 ### FailedLocalLoginsNotInAllowedRange
 #### Properties
 * **ruleType**: 'FailedLocalLoginsNotInAllowedRange' (Required): The type of the custom alert rule.
+* **timeWindowSize**: string (Required): The time window size in iso8601 format.
 
 ### FileUploadsNotInAllowedRange
 #### Properties
 * **ruleType**: 'FileUploadsNotInAllowedRange' (Required): The type of the custom alert rule.
+* **timeWindowSize**: string (Required): The time window size in iso8601 format.
 
 ### HttpC2DMessagesNotInAllowedRange
 #### Properties
 * **ruleType**: 'HttpC2DMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+* **timeWindowSize**: string (Required): The time window size in iso8601 format.
 
 ### HttpC2DRejectedMessagesNotInAllowedRange
 #### Properties
 * **ruleType**: 'HttpC2DRejectedMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+* **timeWindowSize**: string (Required): The time window size in iso8601 format.
 
 ### HttpD2CMessagesNotInAllowedRange
 #### Properties
 * **ruleType**: 'HttpD2CMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+* **timeWindowSize**: string (Required): The time window size in iso8601 format.
 
 ### MqttC2DMessagesNotInAllowedRange
 #### Properties
 * **ruleType**: 'MqttC2DMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+* **timeWindowSize**: string (Required): The time window size in iso8601 format.
 
 ### MqttC2DRejectedMessagesNotInAllowedRange
 #### Properties
 * **ruleType**: 'MqttC2DRejectedMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+* **timeWindowSize**: string (Required): The time window size in iso8601 format.
 
 ### MqttD2CMessagesNotInAllowedRange
 #### Properties
 * **ruleType**: 'MqttD2CMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+* **timeWindowSize**: string (Required): The time window size in iso8601 format.
 
 ### QueuePurgesNotInAllowedRange
 #### Properties
 * **ruleType**: 'QueuePurgesNotInAllowedRange' (Required): The type of the custom alert rule.
+* **timeWindowSize**: string (Required): The time window size in iso8601 format.
 
 ### TwinUpdatesNotInAllowedRange
 #### Properties
 * **ruleType**: 'TwinUpdatesNotInAllowedRange' (Required): The type of the custom alert rule.
+* **timeWindowSize**: string (Required): The time window size in iso8601 format.
 
 ### UnauthorizedOperationsNotInAllowedRange
 #### Properties
 * **ruleType**: 'UnauthorizedOperationsNotInAllowedRange' (Required): The type of the custom alert rule.
+* **timeWindowSize**: string (Required): The time window size in iso8601 format.
 
 
 ## TimeWindowCustomAlertRule
@@ -375,6 +393,7 @@
 * **maxThreshold**: int (Required): The maximum threshold.
 * **minThreshold**: int (Required): The minimum threshold.
 * **timeWindowSize**: string (Required): The time window size in iso8601 format.
+
 ### ActiveConnectionsNotInAllowedRange
 #### Properties
 * **ruleType**: 'ActiveConnectionsNotInAllowedRange' (Required): The type of the custom alert rule.

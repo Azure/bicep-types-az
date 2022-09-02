@@ -240,6 +240,7 @@ the source registry during the run.
 * **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly): List of base image dependencies for a step.
 * **contextAccessToken**: string: The token (git PAT or SAS token of storage account blob) associated with the context for a step.
 * **contextPath**: string: The URL(absolute or relative) of the source context for the task step.
+
 ### DockerBuildStep
 #### Properties
 * **arguments**: [Argument](#argument)[]: The collection of override arguments to be used when executing this build step.

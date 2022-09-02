@@ -29,6 +29,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Blueprint/blueprints/artifacts' (ReadOnly, DeployTimeConstant): The resource type
+
 ### PolicyAssignmentArtifact
 #### Properties
 * **kind**: 'policyAssignment' (Required): Specifies the kind of Blueprint artifact.
@@ -63,6 +64,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Blueprint/blueprints/versions/artifacts' (ReadOnly, DeployTimeConstant): The resource type
+
 ### PolicyAssignmentArtifact
 #### Properties
 * **kind**: 'policyAssignment' (Required): Specifies the kind of Blueprint artifact.

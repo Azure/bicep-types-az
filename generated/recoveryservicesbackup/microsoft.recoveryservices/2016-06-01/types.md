@@ -125,6 +125,12 @@
 * **status**: string: The status.
 * **taskId**: string: The task display name.
 
+## AzureIaaSVMProtectedItemExtendedInfo
+### Properties
+* **oldestRecoveryPoint**: string: The oldest backup copy available for this backup item.
+* **policyInconsistent**: bool: Specifies if the backup policy associated with the backup item is inconsistent.
+* **recoveryPointCount**: int: The number of backup copies available for this backup item.
+
 ## AzureSqlProtectedItemExtendedInfo
 ### Properties
 * **oldestRecoveryPoint**: string: The oldest backup copy available for this item in the service.
@@ -186,6 +192,7 @@
 * **operation**: string: The operation name.
 * **startTime**: string: The start time.
 * **status**: string: The job status.
+
 ### AzureIaaSVMJob
 #### Properties
 * **actionsInfo**: 'Cancellable' | 'Invalid' | 'Retriable'[]: Gets or sets the state, or actions, applicable on this job. Examples of the actions are: Cancel or Retry.
@@ -285,6 +292,7 @@
 * **policyId**: string: The ID of the backup policy associated with this backup item.
 * **sourceResourceId**: string: The ID of the resource to be backed up.
 * **workloadType**: 'AzureSqlDb' | 'DPMUnknown' | 'Exchange' | 'FileFolder' | 'Invalid' | 'SQLDB' | 'Sharepoint' | 'VM': The workload type for this item.
+
 ### MabFileFolderProtectedItem
 #### Properties
 * **computerName**: string: The name of the computer associated with this backup item.
@@ -297,11 +305,25 @@
 
 ### AzureIaaSClassicComputeVMProtectedItem
 #### Properties
+* **extendedInfo**: [AzureIaaSVMProtectedItemExtendedInfo](#azureiaasvmprotecteditemextendedinfo): Additional information for this backup item.
+* **friendlyName**: string: The friendly name of the VM represented by this backup item.
+* **lastBackupStatus**: string: The last backup operation status. The possible values are: Healthy or Unhealthy.
+* **lastBackupTime**: string: The timestamp of the last backup operation for this backup item.
 * **protectedItemType**: 'Microsoft.ClassicCompute/virtualMachines' (Required): The backup item type.
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': The backup state of this backup item.
+* **protectionStatus**: string: The backup status of this backup item.
+* **virtualMachineId**: string: The fully qualified Resource Manager ID of the virtual machine represented by this item.
 
 ### AzureIaaSComputeVMProtectedItem
 #### Properties
+* **extendedInfo**: [AzureIaaSVMProtectedItemExtendedInfo](#azureiaasvmprotecteditemextendedinfo): Additional information for this backup item.
+* **friendlyName**: string: The friendly name of the VM represented by this backup item.
+* **lastBackupStatus**: string: The last backup operation status. The possible values are: Healthy or Unhealthy.
+* **lastBackupTime**: string: The timestamp of the last backup operation for this backup item.
 * **protectedItemType**: 'Microsoft.Compute/virtualMachines' (Required): The backup item type.
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': The backup state of this backup item.
+* **protectionStatus**: string: The backup status of this backup item.
+* **virtualMachineId**: string: The fully qualified Resource Manager ID of the virtual machine represented by this item.
 
 ### AzureSqlProtectedItem
 #### Properties
@@ -320,6 +342,7 @@
 * **friendlyName**: string: Friendly name of the container.
 * **healthStatus**: string: The status of the container's health.
 * **registrationStatus**: string: The container's registration status with the Recovery Services vault.
+
 ### AzureSqlContainer
 #### Properties
 * **protectableObjectType**: 'AzureSqlContainer' (Required): The protectable object type associated with the container.
@@ -336,10 +359,16 @@
 ### AzureIaaSClassicComputeVMContainer
 #### Properties
 * **protectableObjectType**: 'Microsoft.ClassicCompute/virtualMachines' (Required): The protectable object type associated with the container.
+* **resourceGroup**: string: The resource group name associated with the Recovery Services vault.
+* **virtualMachineId**: string: The fully qualified Resource Manager URL of the virtual machine represented by this Azure IaaS VM container.
+* **virtualMachineVersion**: string: Specifies whether the container represents a classic or a Resource Manager-deployed virtual machine.
 
 ### AzureIaaSComputeVMContainer
 #### Properties
 * **protectableObjectType**: 'Microsoft.Compute/virtualMachines' (Required): The protectable object type associated with the container.
+* **resourceGroup**: string: The resource group name associated with the Recovery Services vault.
+* **virtualMachineId**: string: The fully qualified Resource Manager URL of the virtual machine represented by this Azure IaaS VM container.
+* **virtualMachineVersion**: string: Specifies whether the container represents a classic or a Resource Manager-deployed virtual machine.
 
 
 ## ProtectionPolicy
@@ -347,6 +376,7 @@
 
 ### Base Properties
 * **protectedItemsCount**: int: The number of items associated with this policy.
+
 ### AzureIaaSVMProtectionPolicy
 #### Properties
 * **backupManagementType**: 'AzureIaasVM' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
@@ -369,6 +399,7 @@
 * **Discriminator**: objectType
 
 ### Base Properties
+
 ### GenericRecoveryPoint
 #### Properties
 * **friendlyName**: string: Friendly name of the backup copy.
@@ -439,6 +470,7 @@
 * **Discriminator**: retentionPolicyType
 
 ### Base Properties
+
 ### LongTermRetentionPolicy
 #### Properties
 * **dailySchedule**: [DailyRetentionSchedule](#dailyretentionschedule): Daily retention schedule of the backup policy.
@@ -457,6 +489,7 @@
 * **Discriminator**: schedulePolicyType
 
 ### Base Properties
+
 ### LongTermSchedulePolicy
 #### Properties
 * **schedulePolicyType**: 'LongTermSchedulePolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.

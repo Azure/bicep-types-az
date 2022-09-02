@@ -41,6 +41,7 @@
 * **lastModifiedBy**: string (ReadOnly): Last modified by user name.
 * **scope**: [Scope](#scope): scope on which action rule will apply
 * **status**: 'Disabled' | 'Enabled' | string: Indicates if the given action rule is enabled or disabled
+
 ### ActionGroup
 #### Properties
 * **actionGroupId**: string (Required): Action group to trigger if action rule matches
@@ -75,6 +76,7 @@
 ### Properties
 * **alertContext**: [Condition](#condition): filter alerts by alert context (payload)
 * **alertRuleId**: [Condition](#condition): filter alerts by alert rule id
+* **alertRuleName**: [Condition](#condition): filter alerts by alert rule name
 * **description**: [Condition](#condition): filter alerts by alert rule description
 * **monitorCondition**: [Condition](#condition): filter alerts by monitor condition
 * **monitorService**: [Condition](#condition): filter alerts by monitor service

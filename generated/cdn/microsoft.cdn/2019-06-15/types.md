@@ -103,6 +103,7 @@
 ### Base Properties
 * **minimumTlsVersion**: 'None' | 'TLS10' | 'TLS12': TLS protocol version that will be used for Https
 * **protocolType**: 'IPBased' | 'ServerNameIndication' | string (Required): Defines the TLS extension protocol that is used for secure delivery.
+
 ### UserManagedHttpsParameters
 #### Properties
 * **certificateSource**: 'AzureKeyVault' (Required): Defines the source of the SSL certificate.
@@ -158,6 +159,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### DeliveryRuleCacheExpirationAction
 #### Properties
 * **name**: 'CacheExpiration' (Required): The name of the action for the delivery rule.
@@ -193,6 +195,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### DeliveryRuleCookiesCondition
 #### Properties
 * **name**: 'Cookies' (Required): The name of the condition for the delivery rule.

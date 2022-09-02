@@ -300,6 +300,7 @@
 * **Discriminator**: source
 
 ### Base Properties
+
 ### AzureResourceDetails
 #### Properties
 * **id**: string (ReadOnly): Azure resource Id of the assessed resource
@@ -308,14 +309,19 @@
 ### OnPremiseSqlResourceDetails
 #### Properties
 * **databaseName**: string (Required): The Sql database name installed on the machine
+* **machineName**: string (Required): The name of the machine
 * **serverName**: string (Required): The Sql server name installed on the machine
 * **source**: 'OnPremiseSql' (Required): The platform where the assessed resource resides
+* **sourceComputerId**: string (Required): The oms agent Id installed on the machine
+* **vmuuid**: string (Required): The unique Id of the machine
+* **workspaceId**: string (Required): Azure resource Id of the workspace the machine is attached to
 
 
 ## ResourceIdentifier
 * **Discriminator**: type
 
 ### Base Properties
+
 ### AzureResourceIdentifier
 #### Properties
 * **azureResourceId**: string (ReadOnly): ARM resource identifier for the cloud resource being alerted on

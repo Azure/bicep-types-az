@@ -14,6 +14,16 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DBforMySQL/flexibleServers/administrators@2021-12-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'ActiveDirectory' | string (Required, DeployTimeConstant): The resource name
+* **properties**: [AdministratorProperties](#administratorproperties): The properties of an administrator.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
+* **type**: 'Microsoft.DBforMySQL/flexibleServers/administrators' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DBforMySQL/flexibleServers/backups@2021-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -54,6 +64,14 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## AdministratorProperties
+### Properties
+* **administratorType**: 'ActiveDirectory' | string: Type of the sever administrator.
+* **identityResourceId**: string: The resource id of the identity used for AAD Authentication.
+* **login**: string: Login name of the server administrator.
+* **sid**: string: SID (object ID) of the server administrator.
+* **tenantId**: string: Tenant ID of the administrator.
+
 ## Backup
 ### Properties
 * **backupRetentionDays**: int: Backup retention days for the server.
@@ -79,9 +97,9 @@
 
 ## DataEncryption
 ### Properties
-* **geoBackupKeyUri**: string: Geo backup key uri as key vault can't cross region, need cmk in same region as geo backup
+* **geoBackupKeyURI**: string: Geo backup key uri as key vault can't cross region, need cmk in same region as geo backup
 * **geoBackupUserAssignedIdentityId**: string: Geo backup user identity resource id as identity can't cross region, need identity in same region as geo backup
-* **primaryKeyUri**: string: Primary key uri
+* **primaryKeyURI**: string: Primary key uri
 * **primaryUserAssignedIdentityId**: string: Primary user identity resource id
 * **type**: 'AzureKeyVault' | 'SystemManaged': The key type, AzureKeyVault for enable cmk, SystemManaged for disable cmk.
 

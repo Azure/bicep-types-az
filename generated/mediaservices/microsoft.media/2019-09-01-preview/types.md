@@ -24,6 +24,7 @@
 ### Base Properties
 * **inputs**: string[] (Required): Sink inputs
 * **name**: string (Required): Sink name
+
 ### MediaGraphAssetSink
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphAssetSink' (Required): The discriminator for derived types.
@@ -35,6 +36,7 @@
 
 ### Base Properties
 * **name**: string (Required): Source name
+
 ### MediaGraphRtspSource
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required): The discriminator for derived types.

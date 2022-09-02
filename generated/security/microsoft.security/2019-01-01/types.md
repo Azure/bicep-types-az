@@ -27,6 +27,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'MCAS' | 'WDATP' | string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Security/settings' (ReadOnly, DeployTimeConstant): The resource type
+
 ### DataExportSettings
 #### Properties
 * **kind**: 'DataExportSettings' (Required): the kind of the settings string (DataExportSettings)
