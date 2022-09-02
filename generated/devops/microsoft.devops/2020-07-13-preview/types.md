@@ -51,6 +51,7 @@
 ### Base Properties
 * **bootstrapConfiguration**: [BootstrapConfiguration](#bootstrapconfiguration) (Required): Configuration used to bootstrap the Pipeline.
 * **pipelineId**: int (ReadOnly): Unique identifier of the Pipeline
+
 ### AzurePipelineProperties
 #### Properties
 * **organization**: [OrganizationReference](#organizationreference) (Required): Reference to the Azure DevOps Organization containing the Pipeline. Required for 'azurePipeline' pipeline type.

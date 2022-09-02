@@ -19,6 +19,7 @@
 * **Discriminator**: authType
 
 ### Base Properties
+
 ### SecretAuthInfo
 #### Properties
 * **authType**: 'secret' (Required): The authentication type.

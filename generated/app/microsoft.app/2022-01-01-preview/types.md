@@ -290,7 +290,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **latestRevisionName**: string (ReadOnly): Name of the latest revision of the Container App.
 * **managedEnvironmentId**: string: Resource ID of the Container App's environment.
 * **outboundIPAddresses**: string[] (ReadOnly): Outbound IP Addresses for container app.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the Container App.
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the Container App.
 * **template**: [Template](#template): Container App versioned application definition.
 
 ## ContainerAppSecret
@@ -322,12 +322,25 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **aRecords**: string[]: A records visible for this hostname.
 * **cNameRecords**: string[]: CName records visible for this hostname.
 * **conflictingContainerAppResourceId**: string (ReadOnly): Name of the conflicting Container App on the Managed Environment if it's within the same subscription.
-* **customDomainVerificationFailureInfo**: [DefaultErrorResponse](#defaulterrorresponse) (ReadOnly): Raw failure information if DNS verification fails.
+* **customDomainVerificationFailureInfo**: [CustomHostnameAnalysisResultCustomDomainVerificationFailureInfo](#customhostnameanalysisresultcustomdomainverificationfailureinfo) (ReadOnly): Raw failure information if DNS verification fails.
 * **customDomainVerificationTest**: 'Failed' | 'Passed' | 'Skipped' (ReadOnly): DNS verification test result.
 * **hasConflictOnManagedEnvironment**: bool (ReadOnly): <code>true</code> if there is a conflict on the Container App's managed environment; otherwise, <code>false</code>.
 * **hostName**: string (ReadOnly): Host name that was analyzed
 * **isHostnameAlreadyVerified**: bool (ReadOnly): <code>true</code> if hostname is already verified; otherwise, <code>false</code>.
 * **txtRecords**: string[]: TXT records visible for this hostname.
+
+## CustomHostnameAnalysisResultCustomDomainVerificationFailureInfo
+### Properties
+* **code**: string (ReadOnly): Standardized string to programmatically identify the error.
+* **details**: [CustomHostnameAnalysisResultCustomDomainVerificationFailureInfoDetailsItem](#customhostnameanalysisresultcustomdomainverificationfailureinfodetailsitem)[]: Details or the error
+* **message**: string (ReadOnly): Detailed error description and debugging information.
+* **target**: string (ReadOnly): Detailed error description and debugging information.
+
+## CustomHostnameAnalysisResultCustomDomainVerificationFailureInfoDetailsItem
+### Properties
+* **code**: string (ReadOnly): Standardized string to programmatically identify the error.
+* **message**: string (ReadOnly): Detailed error description and debugging information.
+* **target**: string (ReadOnly): Detailed error description and debugging information.
 
 ## CustomOpenIdConnectProvider
 ### Properties
@@ -374,24 +387,6 @@ eg: azure-servicebus, redis etc.
 ### Properties
 * **allowedApplications**: string[]: The configuration settings of the Azure Active Directory allowed applications.
 * **allowedPrincipals**: [AllowedPrincipals](#allowedprincipals): The configuration settings of the Azure Active Directory allowed principals.
-
-## DefaultErrorResponse
-### Properties
-* **error**: [DefaultErrorResponseError](#defaulterrorresponseerror) (ReadOnly): Error model.
-
-## DefaultErrorResponseError
-### Properties
-* **code**: string (ReadOnly): Standardized string to programmatically identify the error.
-* **details**: [DefaultErrorResponseErrorDetailsItem](#defaulterrorresponseerrordetailsitem)[]: Details or the error
-* **innererror**: string (ReadOnly): More information to debug error.
-* **message**: string (ReadOnly): Detailed error description and debugging information.
-* **target**: string (ReadOnly): Detailed error description and debugging information.
-
-## DefaultErrorResponseErrorDetailsItem
-### Properties
-* **code**: string (ReadOnly): Standardized string to programmatically identify the error.
-* **message**: string (ReadOnly): Detailed error description and debugging information.
-* **target**: string (ReadOnly): Detailed error description and debugging information.
 
 ## EnvironmentVar
 ### Properties

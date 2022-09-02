@@ -232,6 +232,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Web/sites/basicPublishingCredentialsPolicies
 #### Properties
 * **apiVersion**: '2021-01-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -256,6 +257,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Web/sites/config
 #### Properties
 * **apiVersion**: '2021-01-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -706,6 +708,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Web/sites/slots/basicPublishingCredentialsPolicies
 #### Properties
 * **apiVersion**: '2021-01-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -730,6 +733,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Web/sites/slots/config
 #### Properties
 * **apiVersion**: '2021-01-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -1291,6 +1295,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Web/staticSites/builds/config
 #### Properties
 * **apiVersion**: '2021-01-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -1325,6 +1330,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Web/staticSites/config
 #### Properties
 * **apiVersion**: '2021-01-15' (ReadOnly, DeployTimeConstant): The resource api version

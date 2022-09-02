@@ -164,6 +164,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Synapse/workspaces/kustoPools/databases' (ReadOnly, DeployTimeConstant): The resource type
+
 ### ReadOnlyFollowingDatabase
 #### Properties
 * **kind**: 'ReadOnlyFollowing' (Required): Kind of the database
@@ -186,6 +187,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Synapse/workspaces/kustoPools/databases/dataConnections' (ReadOnly, DeployTimeConstant): The resource type
+
 ### EventGridDataConnection
 #### Properties
 * **kind**: 'EventGrid' (Required): Kind of the endpoint for the data connection
@@ -537,6 +539,14 @@
 * **properties**: [WorkloadClassifierProperties](#workloadclassifierproperties): Resource properties.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/workloadGroups/workloadClassifiers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Synapse/workspaces/trustedServiceByPassConfiguration@2021-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.Synapse/workspaces/trustedServiceByPassConfiguration' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Synapse/workspaces/vulnerabilityAssessments@2021-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -609,6 +619,7 @@
 * **customLibraries**: [LibraryInfo](#libraryinfo)[]: List of custom libraries/packages associated with the spark pool.
 * **defaultSparkLogFolder**: string: The default folder where Spark logs will be written.
 * **dynamicExecutorAllocation**: [DynamicExecutorAllocation](#dynamicexecutorallocation): Dynamic Executor Allocation
+* **isAutotuneEnabled**: bool: Whether autotune is required or not.
 * **isComputeIsolationEnabled**: bool: Whether compute isolation is required or not.
 * **lastSucceededTimestamp**: string (ReadOnly): The time when the Big Data pool was updated successfully.
 * **libraryRequirements**: [LibraryRequirements](#libraryrequirements): Library version requirements
@@ -652,6 +663,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### CmdkeySetup
 #### Properties
 * **type**: 'CmdkeySetup' (Required): The type of custom setup.
@@ -963,6 +975,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ### Base Properties
 * **description**: string: Integration runtime description.
+
 ### ManagedIntegrationRuntime
 #### Properties
 * **managedVirtualNetwork**: [ManagedIntegrationRuntimeManagedVirtualNetworkReference](#managedintegrationruntimemanagedvirtualnetworkreference): Managed integration runtime managed virtual network.
@@ -1118,6 +1131,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **Discriminator**: authorizationType
 
 ### Base Properties
+
 ### LinkedIntegrationRuntimeKeyAuthorization
 #### Properties
 * **authorizationType**: 'Key' (Required): The authorization type for integration runtime sharing.
@@ -1297,6 +1311,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **Discriminator**: type
 
 ### Base Properties
+
 ### SecureString
 #### Properties
 * **type**: 'SecureString' (Required): Type of the secret.
@@ -1405,6 +1420,16 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 
 For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
 or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
+* **isDevopsAuditEnabled**: bool: Specifies the state of devops audit. If state is Enabled, devops logs will be sent to Azure Monitor.
+In order to send the events to Azure Monitor, specify 'State' as 'Enabled', 'IsAzureMonitorTargetEnabled' as true and 'IsDevopsAuditEnabled' as true
+
+When using REST API to configure auditing, Diagnostic Settings with 'DevOpsOperationsAudit' diagnostic logs category on the master database should also be created.
+
+Diagnostic Settings URI format:
+PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/master/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview
+
+For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
+or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
 * **isStorageSecondaryKeyInUse**: bool: Specifies whether storageAccountAccessKey value is the storage's secondary key.
 * **queueDelayMs**: int: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
@@ -1453,11 +1478,17 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## SparkConfigurationInfo
 ### Properties
 * **annotations**: string[]: Annotations for SparkConfiguration.
+* **configMergeRule**: [SparkConfigurationInfoConfigMergeRule](#sparkconfigurationinfoconfigmergerule): SparkConfiguration merge configs.
 * **configs**: [SparkConfigurationInfoConfigs](#sparkconfigurationinfoconfigs) (Required): SparkConfiguration configs.
 * **created**: string: The timestamp of resource creation.
 * **createdBy**: string: The identity that created the resource.
 * **description**: string: Description about the SparkConfiguration.
 * **notes**: string: additional Notes.
+
+## SparkConfigurationInfoConfigMergeRule
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## SparkConfigurationInfoConfigs
 ### Properties

@@ -143,6 +143,7 @@
 ### Base Properties
 * **errors**: [ODataError](#odataerror)[] (ReadOnly): Array of errors. This is ignored if submitted.
 * **state**: 'Accepted' | 'Failed' | 'Running' | 'Succeeded' | 'Unknown' | string (ReadOnly): The state of the command. This is ignored if submitted.
+
 ### MongoDbCancelCommand
 #### Properties
 * **commandType**: 'cancel' (Required): Command type.
@@ -178,6 +179,7 @@
 ### Base Properties
 * **password**: string: Password credential.
 * **userName**: string: User name
+
 ### MiSqlConnectionInfo
 #### Properties
 * **managedInstanceResourceId**: string (Required): Resource id for Azure SQL database Managed instance
@@ -301,6 +303,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### ConnectToSourceSqlServerTaskOutputAgentJobLevel
 #### Properties
 * **isEnabled**: bool (ReadOnly): The state of the original Agent Job.
@@ -495,6 +498,16 @@
 * **hasRows**: bool (ReadOnly): Indicates whether table is empty or not
 * **name**: string (ReadOnly): Schema-qualified name of the table
 
+## DataIntegrityValidationResult
+### Properties
+* **failedObjects**: [DataIntegrityValidationResultFailedObjects](#dataintegrityvalidationresultfailedobjects): List of failed table names of source and target pair
+* **validationErrors**: [ValidationError](#validationerror): List of errors that happened while performing data integrity validation
+
+## DataIntegrityValidationResultFailedObjects
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## DataMigrationServiceProperties
 ### Properties
 * **autoStopDelay**: string: The time delay before the service is auto-stopped when idle.
@@ -508,6 +521,20 @@
 ### Properties
 * **code**: string (ReadOnly): Error code.
 * **message**: string (ReadOnly): Error message.
+
+## ExecutionStatistics
+### Properties
+* **cpuTimeMs**: int: CPU Time in millisecond(s) for the query execution
+* **elapsedTimeMs**: int: Time taken in millisecond(s) for executing the query
+* **executionCount**: int: No. of query executions
+* **hasErrors**: bool: Indicates whether the query resulted in an error
+* **sqlErrors**: string[]: List of sql Errors
+* **waitStats**: [ExecutionStatisticsWaitStats](#executionstatisticswaitstats): Dictionary of sql query execution wait types and the respective statistics
+
+## ExecutionStatisticsWaitStats
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [WaitStatistics](#waitstatistics)
 
 ## FileShare
 ### Properties
@@ -637,6 +664,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateMySqlAzureDbForMySqlOfflineTaskOutputDatabaseLevel
 #### Properties
 * **databaseName**: string (ReadOnly): Name of the database
@@ -735,6 +763,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseError
 #### Properties
 * **errorMessage**: string: Error message
@@ -835,6 +864,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateOracleAzureDbPostgreSqlSyncTaskOutputDatabaseError
 #### Properties
 * **errorMessage**: string: Error message
@@ -935,6 +965,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseError
 #### Properties
 * **errorMessage**: string: Error message
@@ -1018,6 +1049,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateSchemaSqlServerSqlDbTaskOutputDatabaseLevel
 #### Properties
 * **databaseErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying errors for this database
@@ -1112,6 +1144,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateSqlServerSqlDbSyncTaskOutputDatabaseError
 #### Properties
 * **errorMessage**: string: Error message
@@ -1187,6 +1220,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateSqlServerSqlDbTaskOutputDatabaseLevel
 #### Properties
 * **databaseName**: string (ReadOnly): Name of the item
@@ -1212,7 +1246,17 @@
 
 ### MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResult
 #### Properties
+* **dataIntegrityValidationResult**: [DataIntegrityValidationResult](#dataintegrityvalidationresult) (ReadOnly): Provides data integrity validation result between the source and target tables that are migrated.
+* **endedOn**: string (ReadOnly): Validation end time
+* **id**: string (ReadOnly): Result identifier
+* **migrationId**: string (ReadOnly): Migration Identifier
+* **queryAnalysisValidationResult**: [QueryAnalysisValidationResult](#queryanalysisvalidationresult) (ReadOnly): Results of some of the query execution result between source and target database
 * **resultType**: 'MigrationDatabaseLevelValidationOutput' (Required): Result type
+* **schemaValidationResult**: [SchemaComparisonValidationResult](#schemacomparisonvalidationresult) (ReadOnly): Provides schema comparison result between source and target database
+* **sourceDatabaseName**: string (ReadOnly): Name of the source database
+* **startedOn**: string (ReadOnly): Validation start time
+* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'InProgress' | 'Initialized' | 'NotStarted' | 'Stopped' | string (ReadOnly): Current status of validation at the database level
+* **targetDatabaseName**: string (ReadOnly): Name of the target database
 
 ### MigrateSqlServerSqlDbTaskOutputMigrationLevel
 #### Properties
@@ -1235,7 +1279,11 @@
 
 ### MigrateSqlServerSqlDbTaskOutputValidationResult
 #### Properties
+* **id**: string (ReadOnly): Migration validation result identifier
+* **migrationId**: string (ReadOnly): Migration Identifier
 * **resultType**: 'MigrationValidationOutput' (Required): Result type
+* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'InProgress' | 'Initialized' | 'NotStarted' | 'Stopped' | string (ReadOnly): Current status of validation at the migration level. Status from the database validation result status will be aggregated here.
+* **summaryResults**: [MigrationValidationResultSummaryResults](#migrationvalidationresultsummaryresults): Validation summary results for each database
 
 ### MigrateSqlServerSqlDbTaskOutputTableLevel
 #### Properties
@@ -1274,6 +1322,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateSqlServerSqlMISyncTaskOutputDatabaseLevel
 #### Properties
 * **activeBackupSets**: [BackupSetInfo](#backupsetinfo)[] (ReadOnly): Backup sets that are currently active (Either being uploaded or getting restored)
@@ -1329,6 +1378,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateSqlServerSqlMITaskOutputAgentJobLevel
 #### Properties
 * **endedOn**: string (ReadOnly): Migration end time
@@ -1399,6 +1449,7 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+
 ### MigrateSsisTaskOutputMigrationLevel
 #### Properties
 * **endedOn**: string (ReadOnly): Migration end time
@@ -1468,6 +1519,11 @@
 * **migrationId**: string (ReadOnly): Migration Identifier
 * **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'InProgress' | 'Initialized' | 'NotStarted' | 'Stopped' | string (ReadOnly): Current status of validation at the migration level. Status from the database validation result status will be aggregated here.
 * **summaryResults**: [MigrationValidationResultSummaryResults](#migrationvalidationresultsummaryresults): Validation summary results for each database
+
+## MigrationValidationResultSummaryResults
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [MigrationValidationDatabaseSummaryResult](#migrationvalidationdatabasesummaryresult)
 
 ## MigrationValidationResultSummaryResults
 ### Properties
@@ -1666,6 +1722,7 @@
 * **state**: 'Canceled' | 'Complete' | 'Copying' | 'Failed' | 'Finalizing' | 'InitialReplay' | 'Initializing' | 'NotStarted' | 'Replaying' | 'Restarting' | 'ValidatingInput' | string (Required)
 * **totalBytes**: int (Required): The total number of document bytes on the source at the beginning of the Copying stage, or -1 if the total size was unknown
 * **totalDocuments**: int (Required): The total number of documents on the source at the beginning of the Copying stage, or -1 if the total count was unknown
+
 ### MongoDbCollectionProgress
 #### Properties
 * **resultType**: 'Collection' (Required): The type of progress object
@@ -1825,6 +1882,7 @@
 * **commands**: [CommandProperties](#commandproperties)[] (ReadOnly): Array of command properties.
 * **errors**: [ODataError](#odataerror)[] (ReadOnly): Array of errors. This is ignored if submitted.
 * **state**: 'Canceled' | 'Failed' | 'FailedInputValidation' | 'Faulted' | 'Queued' | 'Running' | 'Succeeded' | 'Unknown' | string (ReadOnly): The state of the task. This is ignored if submitted.
+
 ### ConnectToMongoDbTaskProperties
 #### Properties
 * **input**: [MongoDbConnectionInfo](#mongodbconnectioninfo): Describes a connection to a MongoDB data source
@@ -2078,6 +2136,18 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## QueryAnalysisValidationResult
+### Properties
+* **queryResults**: [QueryExecutionResult](#queryexecutionresult): List of queries executed and it's execution results in source and target
+* **validationErrors**: [ValidationError](#validationerror): Errors that are part of the execution
+
+## QueryExecutionResult
+### Properties
+* **queryText**: string: Query text retrieved from the source server
+* **sourceResult**: [ExecutionStatistics](#executionstatistics): Query analysis result from the source
+* **statementsInBatch**: int: Total no. of statements in the batch
+* **targetResult**: [ExecutionStatistics](#executionstatistics): Query analysis result from the target
+
 ## ReportableException
 ### Properties
 * **actionableMessage**: string: Actionable steps for this exception
@@ -2086,6 +2156,29 @@
 * **lineNumber**: string: The line number where exception occurred
 * **message**: string: Error message
 * **stackTrace**: string: Stack trace
+
+## SchemaComparisonValidationResult
+### Properties
+* **schemaDifferences**: [SchemaComparisonValidationResultType](#schemacomparisonvalidationresulttype): List of schema differences between the source and target databases
+* **sourceDatabaseObjectCount**: [SchemaComparisonValidationResultSourceDatabaseObjectCount](#schemacomparisonvalidationresultsourcedatabaseobjectcount): Count of source database objects
+* **targetDatabaseObjectCount**: [SchemaComparisonValidationResultTargetDatabaseObjectCount](#schemacomparisonvalidationresulttargetdatabaseobjectcount): Count of target database objects
+* **validationErrors**: [ValidationError](#validationerror): List of errors that happened while performing schema compare validation
+
+## SchemaComparisonValidationResultSourceDatabaseObjectCount
+### Properties
+### Additional Properties
+* **Additional Properties Type**: int
+
+## SchemaComparisonValidationResultTargetDatabaseObjectCount
+### Properties
+### Additional Properties
+* **Additional Properties Type**: int
+
+## SchemaComparisonValidationResultType
+### Properties
+* **objectName**: string: Name of the object that has the difference
+* **objectType**: 'Function' | 'StoredProcedures' | 'Table' | 'User' | 'View' | string: Type of the object that has the difference. e.g (Table/View/StoredProcedure)
+* **updateAction**: 'AddedOnTarget' | 'ChangedOnTarget' | 'DeletedOnTarget' | string: Update action type with respect to target
 
 ## SchemaMigrationSetting
 ### Properties
@@ -2252,4 +2345,15 @@
 * **id**: string (ReadOnly): Database identifier
 * **name**: string (ReadOnly): Name of database
 * **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Errors associated with a selected database object
+
+## ValidationError
+### Properties
+* **severity**: 'Error' | 'Message' | 'Warning' | string: Severity of the error
+* **text**: string: Error Text
+
+## WaitStatistics
+### Properties
+* **waitCount**: int: Total no. of waits
+* **waitTimeMs**: int: Total wait time in millisecond(s)
+* **waitType**: string: Type of the Wait
 

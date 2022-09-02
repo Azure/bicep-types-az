@@ -396,6 +396,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### ContinuousModeBackupPolicy
 #### Properties
 * **type**: 'Continuous' (Required): Describes the mode of backups.
@@ -609,6 +610,7 @@
 * **restoreParameters**: [RestoreParameters](#restoreparameters) (ReadOnly): Parameters to indicate the information about the restore.
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: List of Virtual Network ACL rules configured for the Cosmos DB account.
 * **writeLocations**: [Location](#location)[] (ReadOnly): An array that contains the write location for the Cosmos DB account.
+
 ### DefaultRequestDatabaseAccountCreateUpdateProperties
 #### Properties
 * **createMode**: 'Default' (Required): Enum to indicate the mode of account creation.

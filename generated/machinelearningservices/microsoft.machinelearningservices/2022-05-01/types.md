@@ -282,6 +282,25 @@
 * **key**: string: Storage account key.
 * **secretsType**: 'AccountKey' | 'Certificate' | 'Sas' | 'ServicePrincipal' | string (Required): [Required] Credential type used to authentication with storage.
 
+## AksNetworkingConfiguration
+### Properties
+* **dnsServiceIP**: string: An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+* **dockerBridgeCidr**: string: A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+* **serviceCidr**: string: A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+* **subnetId**: string: Virtual network subnet resource ID the compute nodes belong to
+
+## AKSSchemaProperties
+### Properties
+* **agentCount**: int: Number of agents
+* **agentVmSize**: string: Agent virtual machine size
+* **aksNetworkingConfiguration**: [AksNetworkingConfiguration](#aksnetworkingconfiguration): AKS networking configuration for vnet
+* **clusterFqdn**: string: Cluster full qualified domain name
+* **clusterPurpose**: 'DenseProd' | 'DevTest' | 'FastProd' | string: Intended usage of the cluster
+* **loadBalancerSubnet**: string: Load Balancer Subnet
+* **loadBalancerType**: 'InternalLoadBalancer' | 'PublicIp' | string: Load Balancer Type
+* **sslConfiguration**: [SslConfiguration](#sslconfiguration): SSL configuration
+* **systemServices**: [SystemService](#systemservice)[] (ReadOnly): System services
+
 ## AmlComputeNodeInformation
 ### Properties
 * **nodeId**: string (ReadOnly): ID of the compute node.
@@ -296,10 +315,31 @@
 * **nextLink**: string (ReadOnly): The continuation token.
 * **nodes**: [AmlComputeNodeInformation](#amlcomputenodeinformation)[] (ReadOnly): The collection of returned AmlCompute nodes details.
 
+## AmlComputeProperties
+### Properties
+* **allocationState**: 'Resizing' | 'Steady' | string (ReadOnly): Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
+* **allocationStateTransitionTime**: string (ReadOnly): The time at which the compute entered its current allocation state.
+* **currentNodeCount**: int (ReadOnly): The number of compute nodes currently assigned to the compute.
+* **enableNodePublicIp**: bool: Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
+* **errors**: [ErrorResponse](#errorresponse)[] (ReadOnly): Collection of errors encountered by various compute nodes during node setup.
+* **isolatedNetwork**: bool: Network is isolated or not
+* **nodeStateCounts**: [NodeStateCounts](#nodestatecounts) (ReadOnly): Counts of various node states on the compute.
+* **osType**: 'Linux' | 'Windows' | string: Compute OS Type
+* **propertyBag**: any: A property bag containing additional properties.
+* **remoteLoginPortPublicAccess**: 'Disabled' | 'Enabled' | 'NotSpecified' | string: State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
+* **scaleSettings**: [ScaleSettings](#scalesettings): Scale settings for AML Compute
+* **subnet**: [ResourceId](#resourceid): Virtual network subnet resource ID the compute nodes belong to.
+* **targetNodeCount**: int (ReadOnly): The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
+* **userAccountCredentials**: [UserAccountCredentials](#useraccountcredentials): Credentials for an administrator user account that will be created on each compute node.
+* **virtualMachineImage**: [VirtualMachineImage](#virtualmachineimage): Virtual Machine image for AML Compute - windows only
+* **vmPriority**: 'Dedicated' | 'LowPriority' | string: Virtual Machine priority
+* **vmSize**: string: Virtual Machine Size
+
 ## AssetReferenceBase
 * **Discriminator**: referenceType
 
 ### Base Properties
+
 ### DataPathAssetReference
 #### Properties
 * **datastoreId**: string: ARM resource ID of the datastore where the asset is located.
@@ -317,6 +357,11 @@
 * **path**: string: The path of the file/directory in the job output.
 * **referenceType**: 'OutputPath' (Required): [Required] Specifies the type of asset reference.
 
+
+## AssignedUser
+### Properties
+* **objectId**: string (Required): User’s AAD Object Id.
+* **tenantId**: string (Required): User’s AAD Tenant Id.
 
 ## AutoPauseProperties
 ### Properties
@@ -459,27 +504,32 @@ This property will always be returned as null. AuthKey values must be retrieved 
 * **computeLocation**: string (ReadOnly): Location for the underlying compute
 * **createdOn**: string (ReadOnly): The time at which the compute was created.
 * **description**: string: The description of the Machine Learning compute.
-* **disableLocalAuth**: bool: Opt-out of local authentication and ensure customers can use only MSI and AAD exclusively for authentication.
+* **disableLocalAuth**: bool (ReadOnly): Opt-out of local authentication and ensure customers can use only MSI and AAD exclusively for authentication.
 * **isAttachedCompute**: bool (ReadOnly): Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
 * **modifiedOn**: string (ReadOnly): The time at which the compute was last modified.
 * **provisioningErrors**: [ErrorResponse](#errorresponse)[] (ReadOnly): Errors during provisioning
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
 * **resourceId**: string: ARM resource id of the underlying compute
+
 ### AKS
 #### Properties
 * **computeType**: 'AKS' (Required): The type of compute
+* **properties**: [AKSSchemaProperties](#aksschemaproperties): AKS properties
 
 ### AmlCompute
 #### Properties
 * **computeType**: 'AmlCompute' (Required): The type of compute
+* **properties**: [AmlComputeProperties](#amlcomputeproperties): Properties of AmlCompute
 
 ### ComputeInstance
 #### Properties
 * **computeType**: 'ComputeInstance' (Required): The type of compute
+* **properties**: [ComputeInstanceProperties](#computeinstanceproperties): Properties of ComputeInstance
 
 ### Databricks
 #### Properties
 * **computeType**: 'Databricks' (Required): The type of compute
+* **properties**: [DatabricksProperties](#databricksproperties): Properties of Databricks
 
 ### DataFactory
 #### Properties
@@ -488,14 +538,17 @@ This property will always be returned as null. AuthKey values must be retrieved 
 ### DataLakeAnalytics
 #### Properties
 * **computeType**: 'DataLakeAnalytics' (Required): The type of compute
+* **properties**: [DataLakeAnalyticsSchemaProperties](#datalakeanalyticsschemaproperties)
 
 ### HDInsight
 #### Properties
 * **computeType**: 'HDInsight' (Required): The type of compute
+* **properties**: [HDInsightProperties](#hdinsightproperties): HDInsight compute properties
 
 ### Kubernetes
 #### Properties
 * **computeType**: 'Kubernetes' (Required): The type of compute
+* **properties**: [KubernetesProperties](#kubernetesproperties): Properties of Kubernetes
 
 ### SynapseSpark
 #### Properties
@@ -505,29 +558,136 @@ This property will always be returned as null. AuthKey values must be retrieved 
 ### VirtualMachine
 #### Properties
 * **computeType**: 'VirtualMachine' (Required): The type of compute
+* **properties**: [VirtualMachineSchemaProperties](#virtualmachineschemaproperties)
 
+
+## ComputeInstanceApplication
+### Properties
+* **displayName**: string: Name of the ComputeInstance application.
+* **endpointUri**: string: Application' endpoint URI.
+
+## ComputeInstanceConnectivityEndpoints
+### Properties
+* **privateIpAddress**: string (ReadOnly): Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).
+* **publicIpAddress**: string (ReadOnly): Public IP Address of this ComputeInstance.
+
+## ComputeInstanceContainer
+### Properties
+* **autosave**: 'Local' | 'None' | 'Remote' | string: Auto save settings.
+* **environment**: [ComputeInstanceEnvironmentInfo](#computeinstanceenvironmentinfo): Environment information of this container.
+* **gpu**: string: Information of GPU.
+* **name**: string: Name of the ComputeInstance container.
+* **network**: 'Bridge' | 'Host' | string: network of this container.
+* **services**: any[] (ReadOnly): services of this containers.
+
+## ComputeInstanceCreatedBy
+### Properties
+* **userId**: string (ReadOnly): Uniquely identifies the user within his/her organization.
+* **userName**: string (ReadOnly): Name of the user.
+* **userOrgId**: string (ReadOnly): Uniquely identifies user' Azure Active Directory organization.
+
+## ComputeInstanceDataDisk
+### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite' | string: Caching type of Data Disk.
+* **diskSizeGB**: int: The initial disk size in gigabytes.
+* **lun**: int: The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun.
+* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | string: type of this storage account.
+
+## ComputeInstanceDataMount
+### Properties
+* **createdBy**: string: who this data mount created by.
+* **error**: string: Error of this data mount.
+* **mountAction**: 'Mount' | 'Unmount' | string: Mount Action.
+* **mountedOn**: string: The time when the disk mounted.
+* **mountName**: string: name of the ComputeInstance data mount.
+* **mountPath**: string: Path of this data mount.
+* **mountState**: 'MountFailed' | 'MountRequested' | 'Mounted' | 'UnmountFailed' | 'UnmountRequested' | 'Unmounted' | string: Mount state.
+* **source**: string: Source of the ComputeInstance data mount.
+* **sourceType**: 'Dataset' | 'Datastore' | 'URI' | string: Data source type.
+
+## ComputeInstanceEnvironmentInfo
+### Properties
+* **name**: string: name of environment.
+* **version**: string: version of environment.
+
+## ComputeInstanceLastOperation
+### Properties
+* **operationName**: 'Create' | 'Delete' | 'Reimage' | 'Restart' | 'Start' | 'Stop' | string: Name of the last operation.
+* **operationStatus**: 'CreateFailed' | 'DeleteFailed' | 'InProgress' | 'ReimageFailed' | 'RestartFailed' | 'StartFailed' | 'StopFailed' | 'Succeeded' | string: Operation status.
+* **operationTime**: string: Time of the last operation.
+* **operationTrigger**: 'IdleShutdown' | 'Schedule' | 'User' | string: Trigger of operation.
+
+## ComputeInstanceProperties
+### Properties
+* **applications**: [ComputeInstanceApplication](#computeinstanceapplication)[] (ReadOnly): Describes available applications and their endpoints on this ComputeInstance.
+* **applicationSharingPolicy**: 'Personal' | 'Shared' | string: Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
+* **computeInstanceAuthorizationType**: 'personal' | string: The Compute Instance Authorization type. Available values are personal (default).
+* **connectivityEndpoints**: [ComputeInstanceConnectivityEndpoints](#computeinstanceconnectivityendpoints) (ReadOnly): Describes all connectivity endpoints available for this ComputeInstance.
+* **containers**: [ComputeInstanceContainer](#computeinstancecontainer)[] (ReadOnly): Describes informations of containers on this ComputeInstance.
+* **createdBy**: [ComputeInstanceCreatedBy](#computeinstancecreatedby) (ReadOnly): Describes information on user who created this ComputeInstance.
+* **dataDisks**: [ComputeInstanceDataDisk](#computeinstancedatadisk)[] (ReadOnly): Describes informations of dataDisks on this ComputeInstance.
+* **dataMounts**: [ComputeInstanceDataMount](#computeinstancedatamount)[] (ReadOnly): Describes informations of dataMounts on this ComputeInstance.
+* **enableNodePublicIp**: bool: Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
+* **errors**: [ErrorResponse](#errorresponse)[] (ReadOnly): Collection of errors encountered on this ComputeInstance.
+* **lastOperation**: [ComputeInstanceLastOperation](#computeinstancelastoperation) (ReadOnly): The last operation on ComputeInstance.
+* **personalComputeInstanceSettings**: [PersonalComputeInstanceSettings](#personalcomputeinstancesettings): Settings for a personal compute instance.
+* **schedules**: [ComputeSchedules](#computeschedules) (ReadOnly): The list of schedules to be applied on the computes.
+* **setupScripts**: [SetupScripts](#setupscripts): Details of customized scripts to execute for setting up the cluster.
+* **sshSettings**: [ComputeInstanceSshSettings](#computeinstancesshsettings): Specifies policy and settings for SSH access.
+* **state**: 'CreateFailed' | 'Creating' | 'Deleting' | 'JobRunning' | 'Restarting' | 'Running' | 'SettingUp' | 'SetupFailed' | 'Starting' | 'Stopped' | 'Stopping' | 'Unknown' | 'Unusable' | 'UserSettingUp' | 'UserSetupFailed' | string (ReadOnly): The current state of this ComputeInstance.
+* **subnet**: [ResourceId](#resourceid): Virtual network subnet resource ID the compute nodes belong to.
+* **versions**: [ComputeInstanceVersion](#computeinstanceversion) (ReadOnly): ComputeInstance version.
+* **vmSize**: string: Virtual Machine Size
+
+## ComputeInstanceSshSettings
+### Properties
+* **adminPublicKey**: string: Specifies the SSH rsa public key file as a string. Use "ssh-keygen -t rsa -b 2048" to generate your SSH key pairs.
+* **adminUserName**: string (ReadOnly): Describes the admin user name.
+* **sshPort**: int (ReadOnly): Describes the port for connecting through SSH.
+* **sshPublicAccess**: 'Disabled' | 'Enabled' | string: State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
+
+## ComputeInstanceVersion
+### Properties
+* **runtime**: string: Runtime of compute instance.
 
 ## ComputeResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ComputeSchedules
+### Properties
+* **computeStartStop**: [ComputeStartStopSchedule](#computestartstopschedule)[]: The list of compute start stop schedules to be applied.
+
 ## ComputeSecrets
 * **Discriminator**: computeType
 
 ### Base Properties
+
 ### AksComputeSecrets
 #### Properties
+* **adminKubeConfig**: string: Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
 * **computeType**: 'AKS' (Required): The type of compute
+* **imagePullSecretName**: string: Image registry pull secret.
+* **userKubeConfig**: string: Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
 
 ### DatabricksComputeSecrets
 #### Properties
 * **computeType**: 'Databricks' (Required): The type of compute
+* **databricksAccessToken**: string: access token for databricks account.
 
 ### VirtualMachineSecrets
 #### Properties
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine.
 * **computeType**: 'VirtualMachine' (Required): The type of compute
 
+
+## ComputeStartStopSchedule
+### Properties
+* **action**: 'Start' | 'Stop' | string: The compute power action.
+* **id**: string (ReadOnly): Schedule id.
+* **provisioningStatus**: 'Completed' | 'Failed' | 'Provisioning' | string (ReadOnly): The current deployment state of schedule.
+* **schedule**: [ScheduleBase](#schedulebase)
 
 ## ContainerResourceRequirements
 ### Properties
@@ -547,6 +707,11 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ### Properties
 * **collectionsThroughput**: int: The throughput of the collections in cosmosdb database
 
+## DatabricksProperties
+### Properties
+* **databricksAccessToken**: string: Databricks access token
+* **workspaceUrl**: string: Workspace Url
+
 ## DataContainerProperties
 ### Properties
 * **dataType**: 'mltable' | 'uri_file' | 'uri_folder' | string (Required): [Required] Specifies the type of data.
@@ -557,10 +722,15 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **properties**: [ResourceBaseProperties](#resourcebaseproperties): The asset property dictionary.
 * **tags**: [ResourceBaseTags](#resourcebasetags): Tag dictionary. Tags can be added, removed, and updated.
 
+## DataLakeAnalyticsSchemaProperties
+### Properties
+* **dataLakeStoreAccountName**: string: DataLake Store Account Name
+
 ## DatastoreCredentials
 * **Discriminator**: credentialsType
 
 ### Base Properties
+
 ### AccountKeyDatastoreCredentials
 #### Properties
 * **credentialsType**: 'AccountKey' (Required): [Required] Credential type used to authentication with storage.
@@ -604,6 +774,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **isDefault**: bool (ReadOnly): Readonly property to indicate if datastore is the workspace default datastore
 * **properties**: [ResourceBaseProperties](#resourcebaseproperties): The asset property dictionary.
 * **tags**: [ResourceBaseTags](#resourcebasetags): Tag dictionary. Tags can be added, removed, and updated.
+
 ### AzureBlobDatastore
 #### Properties
 * **accountName**: string: Storage account name.
@@ -642,6 +813,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **Discriminator**: secretsType
 
 ### Base Properties
+
 ### AccountKeyDatastoreSecrets
 #### Properties
 * **key**: string: Storage account key.
@@ -673,6 +845,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **isArchived**: bool: Is the asset archived?
 * **properties**: [ResourceBaseProperties](#resourcebaseproperties): The asset property dictionary.
 * **tags**: [ResourceBaseTags](#resourcebasetags): Tag dictionary. Tags can be added, removed, and updated.
+
 ### MLTableData
 #### Properties
 * **dataType**: 'mltable' (Required): [Required] Specifies the type of data.
@@ -691,6 +864,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **Discriminator**: distributionType
 
 ### Base Properties
+
 ### Mpi
 #### Properties
 * **distributionType**: 'Mpi' (Required): [Required] Specifies the type of distribution framework.
@@ -714,6 +888,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ### Base Properties
 * **delayEvaluation**: int: Number of intervals by which to delay the first evaluation.
 * **evaluationInterval**: int: Interval (number of runs) between policy evaluations.
+
 ### BanditPolicy
 #### Properties
 * **policyType**: 'Bandit' (Required): [Required] Name of policy configuration
@@ -839,10 +1014,17 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## HDInsightProperties
+### Properties
+* **address**: string: Public IP address of the master node of the cluster.
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for master node of the cluster
+* **sshPort**: int: Port open for ssh connections on the master node of the cluster.
+
 ## IdentityConfiguration
 * **Discriminator**: identityType
 
 ### Base Properties
+
 ### AmlToken
 #### Properties
 * **identityType**: 'AMLToken' (Required): [Required] Specifies the type of identity framework.
@@ -869,6 +1051,31 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **readinessRoute**: [Route](#route): The route to check the readiness of the inference server container.
 * **scoringRoute**: [Route](#route): The port to send the scoring requests to, within the inference server container.
 
+## InstanceResourceSchema
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## InstanceResourceSchema
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## InstanceTypeSchema
+### Properties
+* **nodeSelector**: [InstanceTypeSchemaNodeSelector](#instancetypeschemanodeselector): Node Selector
+* **resources**: [InstanceTypeSchemaResources](#instancetypeschemaresources): Resource requests/limits for this instance type
+
+## InstanceTypeSchemaNodeSelector
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## InstanceTypeSchemaResources
+### Properties
+* **limits**: [InstanceResourceSchema](#instanceresourceschema): Resource limits for this instance type
+* **requests**: [InstanceResourceSchema](#instanceresourceschema): Resource requests for this instance type
+
 ## JobBaseProperties
 * **Discriminator**: jobType
 
@@ -885,6 +1092,7 @@ Defaults to AmlToken if null.
 For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 * **status**: 'CancelRequested' | 'Canceled' | 'Completed' | 'Failed' | 'Finalizing' | 'NotResponding' | 'NotStarted' | 'Paused' | 'Preparing' | 'Provisioning' | 'Queued' | 'Running' | 'Starting' | 'Unknown' | string (ReadOnly): Status of the job.
 * **tags**: [ResourceBaseTags](#resourcebasetags): Tag dictionary. Tags can be added, removed, and updated.
+
 ### CommandJob
 #### Properties
 * **codeId**: string: ARM resource ID of the code asset.
@@ -930,9 +1138,12 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 
 ### Base Properties
 * **description**: string: Description for the input.
+
 ### CustomModelJobInput
 #### Properties
 * **jobInputType**: 'custom_model' (Required): [Required] Specifies the type of job.
+* **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
+* **uri**: string (Required): [Required] Input Asset URI.
 
 ### LiteralJobInput
 #### Properties
@@ -942,22 +1153,32 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 ### MLFlowModelJobInput
 #### Properties
 * **jobInputType**: 'mlflow_model' (Required): [Required] Specifies the type of job.
+* **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
+* **uri**: string (Required): [Required] Input Asset URI.
 
 ### MLTableJobInput
 #### Properties
 * **jobInputType**: 'mltable' (Required): [Required] Specifies the type of job.
+* **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
+* **uri**: string (Required): [Required] Input Asset URI.
 
 ### TritonModelJobInput
 #### Properties
 * **jobInputType**: 'triton_model' (Required): [Required] Specifies the type of job.
+* **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
+* **uri**: string (Required): [Required] Input Asset URI.
 
 ### UriFileJobInput
 #### Properties
 * **jobInputType**: 'uri_file' (Required): [Required] Specifies the type of job.
+* **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
+* **uri**: string (Required): [Required] Input Asset URI.
 
 ### UriFolderJobInput
 #### Properties
 * **jobInputType**: 'uri_folder' (Required): [Required] Specifies the type of job.
+* **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
+* **uri**: string (Required): [Required] Input Asset URI.
 
 
 ## JobOutput
@@ -965,29 +1186,42 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 
 ### Base Properties
 * **description**: string: Description for the output.
+
 ### CustomModelJobOutput
 #### Properties
 * **jobOutputType**: 'custom_model' (Required): [Required] Specifies the type of job.
+* **mode**: 'ReadWriteMount' | 'Upload' | string: Output Asset Delivery Mode.
+* **uri**: string: Output Asset URI.
 
 ### MLFlowModelJobOutput
 #### Properties
 * **jobOutputType**: 'mlflow_model' (Required): [Required] Specifies the type of job.
+* **mode**: 'ReadWriteMount' | 'Upload' | string: Output Asset Delivery Mode.
+* **uri**: string: Output Asset URI.
 
 ### MLTableJobOutput
 #### Properties
 * **jobOutputType**: 'mltable' (Required): [Required] Specifies the type of job.
+* **mode**: 'ReadWriteMount' | 'Upload' | string: Output Asset Delivery Mode.
+* **uri**: string: Output Asset URI.
 
 ### TritonModelJobOutput
 #### Properties
 * **jobOutputType**: 'triton_model' (Required): [Required] Specifies the type of job.
+* **mode**: 'ReadWriteMount' | 'Upload' | string: Output Asset Delivery Mode.
+* **uri**: string: Output Asset URI.
 
 ### UriFileJobOutput
 #### Properties
 * **jobOutputType**: 'uri_file' (Required): [Required] Specifies the type of job.
+* **mode**: 'ReadWriteMount' | 'Upload' | string: Output Asset Delivery Mode.
+* **uri**: string: Output Asset URI.
 
 ### UriFolderJobOutput
 #### Properties
 * **jobOutputType**: 'uri_folder' (Required): [Required] Specifies the type of job.
+* **mode**: 'ReadWriteMount' | 'Upload' | string: Output Asset Delivery Mode.
+* **uri**: string: Output Asset URI.
 
 
 ## JobService
@@ -1003,6 +1237,22 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## KubernetesProperties
+### Properties
+* **defaultInstanceType**: string: Default instance type
+* **extensionInstanceReleaseTrain**: string: Extension instance release train.
+* **extensionPrincipalId**: string: Extension principal-id.
+* **instanceTypes**: [KubernetesPropertiesInstanceTypes](#kubernetespropertiesinstancetypes): Instance Type Schema
+* **namespace**: string: Compute namespace
+* **relayConnectionString**: string: Relay connection string.
+* **serviceBusConnectionString**: string: ServiceBus connection string.
+* **vcName**: string: VC name.
+
+## KubernetesPropertiesInstanceTypes
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [InstanceTypeSchema](#instancetypeschema)
 
 ## ListNotebookKeysResult
 ### Properties
@@ -1059,6 +1309,15 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 * **properties**: [ResourceBaseProperties](#resourcebaseproperties): The asset property dictionary.
 * **tags**: [ResourceBaseTags](#resourcebasetags): Tag dictionary. Tags can be added, removed, and updated.
 
+## NodeStateCounts
+### Properties
+* **idleNodeCount**: int (ReadOnly): Number of compute nodes in idle state.
+* **leavingNodeCount**: int (ReadOnly): Number of compute nodes which are leaving the amlCompute.
+* **preemptedNodeCount**: int (ReadOnly): Number of compute nodes which are in preempted state.
+* **preparingNodeCount**: int (ReadOnly): Number of compute nodes which are being prepared.
+* **runningNodeCount**: int (ReadOnly): Number of compute nodes which are running jobs.
+* **unusableNodeCount**: int (ReadOnly): Number of compute nodes which are in unusable state.
+
 ## NotebookAccessTokenResult
 ### Properties
 * **accessToken**: string (ReadOnly)
@@ -1107,6 +1366,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 If it is null or not provided,
 it defaults to TargetUtilizationScaleSettings for KubernetesOnlineDeployment
 and to DefaultScaleSettings for ManagedOnlineDeployment.
+
 ### KubernetesOnlineDeployment
 #### Properties
 * **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements): The resource requirements for the container (cpu and memory).
@@ -1148,6 +1408,7 @@ Defaults to 5000ms.
 * **Discriminator**: scaleType
 
 ### Base Properties
+
 ### DefaultScaleSettings
 #### Properties
 * **scaleType**: 'Default' (Required): [Required] Type of deployment scaling algorithm
@@ -1165,6 +1426,10 @@ Defaults to 5000ms.
 ### Properties
 * **name**: string (ReadOnly)
 * **value**: string (ReadOnly)
+
+## PersonalComputeInstanceSettings
+### Properties
+* **assignedUser**: [AssignedUser](#assigneduser): A user explicitly assigned to a personal compute instance.
 
 ## PipelineJobInputs
 ### Properties
@@ -1365,6 +1630,10 @@ Defaults to 5000ms.
 ### Additional Properties
 * **Additional Properties Type**: any
 
+## ResourceId
+### Properties
+* **id**: string (Required): The ID of the resource
+
 ## Route
 ### Properties
 * **path**: string (Required): [Required] The path for the route.
@@ -1374,6 +1643,7 @@ Defaults to 5000ms.
 * **Discriminator**: samplingAlgorithmType
 
 ### Base Properties
+
 ### BayesianSamplingAlgorithm
 #### Properties
 * **samplingAlgorithmType**: 'Bayesian' (Required): [Required] The algorithm used for generating hyperparameter values, along with configuration properties
@@ -1394,6 +1664,30 @@ Defaults to 5000ms.
 * **sasToken**: string: Storage container SAS token.
 * **secretsType**: 'AccountKey' | 'Certificate' | 'Sas' | 'ServicePrincipal' | string (Required): [Required] Credential type used to authentication with storage.
 
+## ScaleSettings
+### Properties
+* **maxNodeCount**: int (Required): Max number of nodes to use
+* **minNodeCount**: int: Min number of nodes to use
+* **nodeIdleTimeBeforeScaleDown**: string: Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.
+
+## ScheduleBase
+### Properties
+* **id**: string
+* **provisioningStatus**: 'Completed' | 'Failed' | 'Provisioning' | string
+* **status**: 'Disabled' | 'Enabled' | string
+
+## ScriptReference
+### Properties
+* **scriptArguments**: string: Optional command line arguments passed to the script to run.
+* **scriptData**: string: The location of scripts in the mounted volume.
+* **scriptSource**: string: The storage source of the script: inline, workspace.
+* **timeout**: string: Optional time period passed to timeout command.
+
+## ScriptsToExecute
+### Properties
+* **creationScript**: [ScriptReference](#scriptreference): Script that's run only once during provision of the compute.
+* **startupScript**: [ScriptReference](#scriptreference): Script that's run every time the machine starts.
+
 ## ServiceManagedResourcesSettings
 ### Properties
 * **cosmosDb**: [CosmosDbSettings](#cosmosdbsettings): The settings for the service managed cosmosdb account.
@@ -1402,6 +1696,10 @@ Defaults to 5000ms.
 ### Properties
 * **clientSecret**: string: Service principal secret.
 * **secretsType**: 'AccountKey' | 'Certificate' | 'Sas' | 'ServicePrincipal' | string (Required): [Required] Credential type used to authentication with storage.
+
+## SetupScripts
+### Properties
+* **scripts**: [ScriptsToExecute](#scriptstoexecute): Customized setup scripts
 
 ## SharedPrivateLinkResource
 ### Properties
@@ -1422,6 +1720,15 @@ Defaults to 5000ms.
 * **name**: string (Required): The name of the SKU. Ex - P3. It is typically a letter+number code
 * **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
 * **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
+
+## SslConfiguration
+### Properties
+* **cert**: string: Cert data
+* **cname**: string: CNAME of the cert
+* **key**: string: Key data
+* **leafDomainLabel**: string: Leaf domain label of public endpoint
+* **overwriteExistingDomain**: bool: Indicates whether to overwrite existing domain label.
+* **status**: 'Auto' | 'Disabled' | 'Enabled' | string: Enable or disable ssl for scoring
 
 ## SweepJobInputs
 ### Properties
@@ -1463,6 +1770,12 @@ Defaults to 5000ms.
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
+## SystemService
+### Properties
+* **publicIpAddress**: string (ReadOnly): Public IP address
+* **systemServiceType**: string (ReadOnly): The type of this system service.
+* **version**: string (ReadOnly): The version for this type.
+
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
@@ -1497,6 +1810,12 @@ Defaults to 5000ms.
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## UserAccountCredentials
+### Properties
+* **adminUserName**: string (Required): Name of the administrator user account which can be used to SSH to nodes.
+* **adminUserPassword**: string: Password of the administrator user account.
+* **adminUserSshPublicKey**: string: SSH public key of the administrator user account.
+
 ## UserAssignedIdentities
 ### Properties
 ### Additional Properties
@@ -1506,6 +1825,26 @@ Defaults to 5000ms.
 ### Properties
 * **clientId**: string (ReadOnly): The client ID of the assigned identity.
 * **principalId**: string (ReadOnly): The principal ID of the assigned identity.
+
+## VirtualMachineImage
+### Properties
+* **id**: string (Required): Virtual Machine image path
+
+## VirtualMachineSchemaProperties
+### Properties
+* **address**: string: Public IP address of the virtual machine.
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
+* **isNotebookInstanceCompute**: bool: Indicates whether this compute will be used for running notebooks.
+* **notebookServerPort**: int: Notebook server port open for ssh connections.
+* **sshPort**: int: Port open for ssh connections.
+* **virtualMachineSize**: string: Virtual Machine size
+
+## VirtualMachineSshCredentials
+### Properties
+* **password**: string: Password of admin account
+* **privateKeyData**: string: Private key data
+* **publicKeyData**: string: Public key data
+* **username**: string: Username of admin account
 
 ## WorkspaceConnectionManagedIdentity
 ### Properties
@@ -1524,6 +1863,7 @@ Defaults to 5000ms.
 * **target**: string
 * **value**: string: Value details of the workspace connection.
 * **valueFormat**: 'JSON' | string: format for the workspace connection value
+
 ### ManagedIdentityAuthTypeWorkspaceConnectionProperties
 #### Properties
 * **authType**: 'ManagedIdentity' (Required): Authentication type of the connection target

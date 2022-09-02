@@ -70,6 +70,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/services' (ReadOnly, DeployTimeConstant): The resource type
+
 ### ACIServiceCreateRequest
 #### Properties
 * **appInsightsEnabled**: bool (WriteOnly): Whether or not Application Insights is enabled.
@@ -95,12 +96,15 @@
 * **computeType**: 'AKS' (Required): The compute environment type for the service.
 * **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): The container resource requirements.
 * **dataCollection**: [AKSServiceCreateRequestDataCollection](#aksservicecreaterequestdatacollection) (WriteOnly): Details of the data collection options specified.
+* **isDefault**: bool (WriteOnly): Is this the default variant.
 * **livenessProbeRequirements**: [AKSServiceCreateRequestLivenessProbeRequirements](#aksservicecreaterequestlivenessproberequirements) (WriteOnly): The liveness probe requirements.
 * **maxConcurrentRequestsPerContainer**: int (WriteOnly): The maximum number of concurrent requests per container.
 * **maxQueueWaitMs**: int (WriteOnly): Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable)
 * **namespace**: string (WriteOnly): Kubernetes namespace for the service.
 * **numReplicas**: int (WriteOnly): The number of replicas on the cluster.
 * **scoringTimeoutMs**: int (WriteOnly): The scoring timeout in milliseconds.
+* **trafficPercentile**: int (WriteOnly): The amount of traffic variant receives.
+* **type**: 'Control' | 'Treatment' | string (WriteOnly): The type of the variant.
 
 
 ## Function listKeys (Microsoft.MachineLearningServices/workspaces@2021-04-01)
@@ -228,6 +232,17 @@
 * **objectId**: string (Required): User’s AAD Object Id.
 * **tenantId**: string (Required): User’s AAD Tenant Id.
 
+## AutoPauseProperties
+### Properties
+* **delayInMinutes**: int
+* **enabled**: bool
+
+## AutoScaleProperties
+### Properties
+* **enabled**: bool
+* **maxNodeCount**: int
+* **minNodeCount**: int
+
 ## Compute
 * **Discriminator**: computeType
 
@@ -241,6 +256,7 @@
 * **provisioningErrors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Errors during provisioning
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
 * **resourceId**: string: ARM resource id of the underlying compute
+
 ### AKS
 #### Properties
 * **computeType**: 'AKS' (Required): The type of compute
@@ -278,6 +294,7 @@
 ### SynapseSpark
 #### Properties
 * **computeType**: 'SynapseSpark' (Required): The type of compute
+* **properties**: [SynapseSparkPoolPropertiesProperties](#synapsesparkpoolpropertiesproperties): AKS properties
 
 ### VirtualMachine
 #### Properties
@@ -334,6 +351,7 @@
 * **Discriminator**: computeType
 
 ### Base Properties
+
 ### AksComputeSecrets
 #### Properties
 * **adminKubeConfig**: string: Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
@@ -744,6 +762,19 @@ The path specified gets used to call the user script.
 * **leafDomainLabel**: string: Leaf domain label of public endpoint
 * **overwriteExistingDomain**: bool: Indicates whether to overwrite existing domain label.
 * **status**: 'Auto' | 'Disabled' | 'Enabled' | string: Enable or disable ssl for scoring
+
+## SynapseSparkPoolPropertiesProperties
+### Properties
+* **autoPauseProperties**: [AutoPauseProperties](#autopauseproperties): Auto pause properties.
+* **autoScaleProperties**: [AutoScaleProperties](#autoscaleproperties): Auto scale properties.
+* **nodeCount**: int: The number of compute nodes currently assigned to the compute.
+* **nodeSize**: string: Node size.
+* **nodeSizeFamily**: string: Node size family.
+* **poolName**: string: Pool name.
+* **resourceGroup**: string: Name of the resource group in which workspace is located.
+* **sparkVersion**: string: Spark version.
+* **subscriptionId**: string: Azure subscription identifier.
+* **workspaceName**: string: Name of Azure Machine Learning workspace.
 
 ## SystemData
 ### Properties

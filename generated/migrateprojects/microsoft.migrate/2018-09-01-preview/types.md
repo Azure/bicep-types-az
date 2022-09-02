@@ -46,6 +46,7 @@
 * **extendedSummary**: [ProjectSummaryExtendedSummary](#projectsummaryextendedsummary): Gets or sets the extended summary.
 * **lastSummaryRefreshedTime**: string: Gets or sets the time when summary was last refreshed.
 * **refreshSummaryState**: 'Completed' | 'Failed' | 'InProgress' | 'Started' | string: Gets or sets the state of refresh summary.
+
 ### DatabaseProjectSummary
 #### Properties
 * **instanceType**: 'Databases' (Required): Gets the Instance type.
@@ -90,6 +91,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
+
 ### DatabasesSolutionSummary
 #### Properties
 * **databaseInstancesAssessedCount**: int: Gets or sets the count of database instances assessed.

@@ -262,6 +262,11 @@
 * **provisioningState**: 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the asset track.
 * **track**: [TrackBase](#trackbase): Detailed information about a track in the asset.
 
+## AudioAnalyzerPresetExperimentalOptions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## CbcsDrmConfiguration
 ### Properties
 * **fairPlay**: [StreamingPolicyFairPlayConfiguration](#streamingpolicyfairplayconfiguration): FairPlay configurations
@@ -277,6 +282,7 @@
 * **Discriminator**: @odata.type
 
 ### Base Properties
+
 ### AbsoluteClipTime
 #### Properties
 * **@odata.type**: '#Microsoft.Media.AbsoluteClipTime' (Required): The discriminator for derived types.
@@ -293,10 +299,14 @@
 
 ### Base Properties
 * **label**: string: An optional label for the codec. The label can be used to control muxing behavior.
+
 ### AacAudio
 #### Properties
 * **@odata.type**: '#Microsoft.Media.AacAudio' (Required): The discriminator for derived types.
+* **bitrate**: int: The bitrate, in bits per second, of the output encoded audio.
+* **channels**: int: The number of channels in the audio.
 * **profile**: 'AacLc' | 'HeAacV1' | 'HeAacV2' | string: The encoding profile to be used when encoding audio with AAC.
+* **samplingRate**: int: The sampling rate to use for encoding in hertz.
 
 ### CopyAudio
 #### Properties
@@ -310,27 +320,45 @@
 #### Properties
 * **@odata.type**: '#Microsoft.Media.H264Video' (Required): The discriminator for derived types.
 * **complexity**: 'Balanced' | 'Quality' | 'Speed' | string: Tells the encoder how to choose its encoding settings. The default value is Balanced.
+* **keyFrameInterval**: string: The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
 * **layers**: [H264Layer](#h264layer)[]: The collection of output H.264 layers to be produced by the encoder.
 * **rateControlMode**: 'ABR' | 'CBR' | 'CRF' | string: The video rate control mode
 * **sceneChangeDetection**: bool: Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.
+* **stretchMode**: 'AutoFit' | 'AutoSize' | 'None' | string: The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
+* **syncMode**: 'Auto' | 'Cfr' | 'Passthrough' | 'Vfr' | string: The Video Sync Mode
 
 ### H265Video
 #### Properties
 * **@odata.type**: '#Microsoft.Media.H265Video' (Required): The discriminator for derived types.
 * **complexity**: 'Balanced' | 'Quality' | 'Speed' | string: Tells the encoder how to choose its encoding settings.  Quality will provide for a higher compression ratio but at a higher cost and longer compute time.  Speed will produce a relatively larger file but is faster and more economical. The default value is Balanced.
+* **keyFrameInterval**: string: The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
 * **layers**: [H265Layer](#h265layer)[]: The collection of output H.265 layers to be produced by the encoder.
 * **sceneChangeDetection**: bool: Specifies whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.
+* **stretchMode**: 'AutoFit' | 'AutoSize' | 'None' | string: The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
+* **syncMode**: 'Auto' | 'Cfr' | 'Passthrough' | 'Vfr' | string: The Video Sync Mode
 
 ### JpgImage
 #### Properties
 * **@odata.type**: '#Microsoft.Media.JpgImage' (Required): The discriminator for derived types.
+* **keyFrameInterval**: string: The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
 * **layers**: [JpgLayer](#jpglayer)[]: A collection of output JPEG image layers to be produced by the encoder.
+* **range**: string: The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.
 * **spriteColumn**: int: Sets the number of columns used in thumbnail sprite image.  The number of rows are automatically calculated and a VTT file is generated with the coordinate mappings for each thumbnail in the sprite. Note: this value should be a positive integer and a proper value is recommended so that the output image resolution will not go beyond JPEG maximum pixel resolution limit 65535x65535.
+* **start**: string (Required): The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.
+* **step**: string: The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.
+* **stretchMode**: 'AutoFit' | 'AutoSize' | 'None' | string: The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
+* **syncMode**: 'Auto' | 'Cfr' | 'Passthrough' | 'Vfr' | string: The Video Sync Mode
 
 ### PngImage
 #### Properties
 * **@odata.type**: '#Microsoft.Media.PngImage' (Required): The discriminator for derived types.
+* **keyFrameInterval**: string: The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
 * **layers**: [PngLayer](#pnglayer)[]: A collection of output PNG image layers to be produced by the encoder.
+* **range**: string: The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.
+* **start**: string (Required): The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.
+* **step**: string: The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.
+* **stretchMode**: 'AutoFit' | 'AutoSize' | 'None' | string: The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
+* **syncMode**: 'Auto' | 'Cfr' | 'Passthrough' | 'Vfr' | string: The Video Sync Mode
 
 
 ## CommonEncryptionCbcs
@@ -351,6 +379,7 @@
 * **Discriminator**: @odata.type
 
 ### Base Properties
+
 ### ContentKeyPolicyClearKeyConfiguration
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration' (Required): The discriminator for derived types.
@@ -397,6 +426,7 @@
 * **Discriminator**: @odata.type
 
 ### Base Properties
+
 ### ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader' (Required): The discriminator for derived types.
@@ -453,6 +483,7 @@
 * **Discriminator**: @odata.type
 
 ### Base Properties
+
 ### ContentKeyPolicyOpenRestriction
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyOpenRestriction' (Required): The discriminator for derived types.
@@ -477,6 +508,7 @@
 * **Discriminator**: @odata.type
 
 ### Base Properties
+
 ### ContentKeyPolicyRsaTokenKey
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyRsaTokenKey' (Required): The discriminator for derived types.
@@ -576,6 +608,7 @@
 
 ### Base Properties
 * **filenamePattern**: string (Required): The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.
+
 ### JpgFormat
 #### Properties
 * **@odata.type**: '#Microsoft.Media.JpgFormat' (Required): The discriminator for derived types.
@@ -583,6 +616,7 @@
 ### Mp4Format
 #### Properties
 * **@odata.type**: '#Microsoft.Media.Mp4Format' (Required): The discriminator for derived types.
+* **outputFiles**: [OutputFile](#outputfile)[]: The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .
 
 ### PngFormat
 #### Properties
@@ -591,6 +625,7 @@
 ### TransportStreamFormat
 #### Properties
 * **@odata.type**: '#Microsoft.Media.TransportStreamFormat' (Required): The discriminator for derived types.
+* **outputFiles**: [OutputFile](#outputfile)[]: The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .
 
 
 ## H264Layer
@@ -643,6 +678,7 @@
 
 ### Base Properties
 * **includedTracks**: [TrackDescriptor](#trackdescriptor)[]: The list of TrackDescriptors which define the metadata and selection of tracks in the input.
+
 ### FromAllInputFile
 #### Properties
 * **@odata.type**: '#Microsoft.Media.FromAllInputFile' (Required): The discriminator for derived types.
@@ -684,15 +720,26 @@
 * **Discriminator**: @odata.type
 
 ### Base Properties
+
 ### JobInputAsset
 #### Properties
 * **@odata.type**: '#Microsoft.Media.JobInputAsset' (Required): The discriminator for derived types.
 * **assetName**: string (Required): The name of the input Asset.
+* **end**: [ClipTime](#cliptime): Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.
+* **files**: string[]: List of files. Required for JobInputHttp. Maximum of 4000 characters each. Query strings will not be returned in service responses to prevent sensitive data exposure.
+* **inputDefinitions**: [InputDefinition](#inputdefinition)[]: Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.
+* **label**: string: A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.
+* **start**: [ClipTime](#cliptime): Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.
 
 ### JobInputHttp
 #### Properties
 * **@odata.type**: '#Microsoft.Media.JobInputHttp' (Required): The discriminator for derived types.
 * **baseUri**: string: Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters. The query strings will not be returned in service responses to prevent sensitive data exposure.
+* **end**: [ClipTime](#cliptime): Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.
+* **files**: string[]: List of files. Required for JobInputHttp. Maximum of 4000 characters each. Query strings will not be returned in service responses to prevent sensitive data exposure.
+* **inputDefinitions**: [InputDefinition](#inputdefinition)[]: Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.
+* **label**: string: A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.
+* **start**: [ClipTime](#cliptime): Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.
 
 ### JobInputs
 #### Properties
@@ -714,6 +761,7 @@
 * **inputDefinitions**: [InputDefinition](#inputdefinition)[]: Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.
 * **label**: string: A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.
 * **start**: [ClipTime](#cliptime): Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.
+
 ### JobInputAsset
 #### Properties
 * **@odata.type**: '#Microsoft.Media.JobInputAsset' (Required): The discriminator for derived types.
@@ -736,6 +784,7 @@
 * **progress**: int (ReadOnly): If the JobOutput is in a Processing state, this contains the Job completion percentage. The value is an estimate and not intended to be used to predict Job completion times. To determine if the JobOutput is complete, use the State property.
 * **startTime**: string (ReadOnly): The UTC date and time at which this Job Output began processing.
 * **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' | string (ReadOnly): Describes the state of the JobOutput.
+
 ### JobOutputAsset
 #### Properties
 * **@odata.type**: '#Microsoft.Media.JobOutputAsset' (Required): The discriminator for derived types.
@@ -907,6 +956,10 @@
 ### Properties
 * **enabledProtocols**: [EnabledProtocols](#enabledprotocols): Representing supported protocols
 
+## OutputFile
+### Properties
+* **labels**: string[] (Required): The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like '[v1, a1]' tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.
+
 ## Overlay
 * **Discriminator**: @odata.type
 
@@ -917,6 +970,7 @@
 * **fadeOutDuration**: string: The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).
 * **inputLabel**: string (Required): The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.
 * **start**: string: The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.
+
 ### AudioOverlay
 #### Properties
 * **@odata.type**: '#Microsoft.Media.AudioOverlay' (Required): The discriminator for derived types.
@@ -948,6 +1002,7 @@
 * **Discriminator**: @odata.type
 
 ### Base Properties
+
 ### BuiltInStandardEncoderPreset
 #### Properties
 * **@odata.type**: '#Microsoft.Media.BuiltInStandardEncoderPreset' (Required): The discriminator for derived types.
@@ -972,7 +1027,10 @@
 ### VideoAnalyzerPreset
 #### Properties
 * **@odata.type**: '#Microsoft.Media.VideoAnalyzerPreset' (Required): The discriminator for derived types.
+* **audioLanguage**: string: The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463
+* **experimentalOptions**: [AudioAnalyzerPresetExperimentalOptions](#audioanalyzerpresetexperimentaloptions): Dictionary containing key value pairs for parameters not exposed in the preset itself
 * **insightsToExtract**: 'AllInsights' | 'AudioInsightsOnly' | 'VideoInsightsOnly' | string: Defines the type of insights that you want the service to generate. The allowed values are 'AudioInsightsOnly', 'VideoInsightsOnly', and 'AllInsights'. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.
+* **mode**: 'Basic' | 'Standard' | string: Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.
 
 
 ## PresetConfigurations
@@ -1133,6 +1191,7 @@
 * **Discriminator**: @odata.type
 
 ### Base Properties
+
 ### AudioTrack
 #### Properties
 * **@odata.type**: '#Microsoft.Media.AudioTrack' (Required): The discriminator for derived types.
@@ -1155,16 +1214,19 @@
 * **Discriminator**: @odata.type
 
 ### Base Properties
+
 ### SelectAudioTrackByAttribute
 #### Properties
 * **@odata.type**: '#Microsoft.Media.SelectAudioTrackByAttribute' (Required): The discriminator for derived types.
 * **attribute**: 'Bitrate' | 'Language' | string (Required): The TrackAttribute to filter the tracks by.
+* **channelMapping**: 'BackLeft' | 'BackRight' | 'Center' | 'FrontLeft' | 'FrontRight' | 'LowFrequencyEffects' | 'StereoLeft' | 'StereoRight' | string: Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
 * **filter**: 'All' | 'Bottom' | 'Top' | 'ValueEquals' | string (Required): The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
 * **filterValue**: string: The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.
 
 ### SelectAudioTrackById
 #### Properties
 * **@odata.type**: '#Microsoft.Media.SelectAudioTrackById' (Required): The discriminator for derived types.
+* **channelMapping**: 'BackLeft' | 'BackRight' | 'Center' | 'FrontLeft' | 'FrontRight' | 'LowFrequencyEffects' | 'StereoLeft' | 'StereoRight' | string: Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
 * **trackId**: int (Required): Track identifier to select
 
 ### SelectVideoTrackByAttribute

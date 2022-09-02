@@ -39,6 +39,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### MarkdownPartMetadata
 #### Properties
 * **inputs**: any[]: Input to dashboard part.

@@ -148,6 +148,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Automation/automationAccounts/runbooks/draft
 #### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version

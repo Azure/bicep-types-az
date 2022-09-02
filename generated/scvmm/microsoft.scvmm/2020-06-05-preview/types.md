@@ -161,6 +161,7 @@
 * **managedResourceId**: string (ReadOnly): Gets the tracked resource id corresponding to the inventory resource.
 * **provisioningState**: string (ReadOnly): Gets the provisioning state.
 * **uuid**: string (ReadOnly): Gets the UUID (which is assigned by VMM) for the inventory item.
+
 ### CloudInventoryItem
 #### Properties
 * **inventoryType**: 'Cloud' (Required): They inventory type.

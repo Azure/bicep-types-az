@@ -73,8 +73,8 @@
 
 ## AppServiceListResponse
 ### Properties
-* **nextLink**: string (Required): The link to the next page of items
-* **value**: [AppServiceInfo](#appserviceinfo)[] (Required): The items on this page
+* **nextLink**: string: The link to the next page of items
+* **value**: [AppServiceInfo](#appserviceinfo)[]: The items on this page
 
 ## DynatraceEnvironmentProperties
 ### Properties
@@ -155,8 +155,8 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 
 ## MonitoredResourceListResponse
 ### Properties
-* **nextLink**: string (Required): The link to the next page of items
-* **value**: [MonitoredResource](#monitoredresource)[] (Required): The items on this page
+* **nextLink**: string: The link to the next page of items
+* **value**: [MonitoredResource](#monitoredresource)[]: The items on this page
 
 ## MonitoringTagRulesProperties
 ### Properties
@@ -211,8 +211,8 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 
 ## VMHostsListResponse
 ### Properties
-* **nextLink**: string (Required): The link to the next page of items
-* **value**: [VMInfo](#vminfo)[] (Required): The items on this page
+* **nextLink**: string: The link to the next page of items
+* **value**: [VMInfo](#vminfo)[]: The items on this page
 
 ## VMInfo
 ### Properties

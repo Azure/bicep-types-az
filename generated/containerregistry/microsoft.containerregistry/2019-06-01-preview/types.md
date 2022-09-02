@@ -245,6 +245,7 @@ executing a build step.
 * **agentPoolName**: string: The dedicated agent pool for the run.
 * **isArchiveEnabled**: bool: The value that indicates whether archiving is enabled for the run or not.
 * **logTemplate**: string: The template that describes the repository and tag information for run log artifact.
+
 ### DockerBuildRequest
 #### Properties
 * **agentConfiguration**: [AgentProperties](#agentproperties): The machine configuration of the run agent.
@@ -403,6 +404,7 @@ the source registry during the run.
 * **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly): List of base image dependencies for a step.
 * **contextAccessToken**: string: The token (git PAT or SAS token of storage account blob) associated with the context for a step.
 * **contextPath**: string: The URL(absolute or relative) of the source context for the task step.
+
 ### DockerBuildStep
 #### Properties
 * **arguments**: [Argument](#argument)[]: The collection of override arguments to be used when executing this build step.

@@ -8,7 +8,7 @@
 * **identity**: [ContainerGroupIdentity](#containergroupidentity): The identity of the container group, if configured.
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ContainerGroupProperties](#containergroupproperties) (Required): The container group properties
+* **properties**: [ContainerGroupPropertiesProperties](#containergrouppropertiesproperties) (Required): The container group properties
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The zones for the container group.
@@ -19,11 +19,6 @@
 * **shareName**: string (Required): The name of the Azure File share to be mounted as a volume.
 * **storageAccountKey**: string: The storage account access key used to access the Azure File share.
 * **storageAccountName**: string (Required): The name of the storage account that contains the Azure File share.
-
-## Components10Wh5UdSchemasContainergroupidentityPropertiesUserassignedidentitiesAdditionalproperties
-### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
 
 ## Container
 ### Properties
@@ -43,14 +38,19 @@
 * **principalId**: string (ReadOnly): The principal id of the container group identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id associated with the container group. This property will only be provided for a system assigned identity.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group.
-* **userAssignedIdentities**: [ContainerGroupIdentityUserAssignedIdentities](#containergroupidentityuserassignedidentities): The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **userAssignedIdentities**: [ContainerGroupIdentityUserAssignedIdentities](#containergroupidentityuserassignedidentities): The list of user identities associated with the container group.
 
 ## ContainerGroupIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [Components10Wh5UdSchemasContainergroupidentityPropertiesUserassignedidentitiesAdditionalproperties](#components10wh5udschemascontainergroupidentitypropertiesuserassignedidentitiesadditionalproperties)
+* **Additional Properties Type**: [UserAssignedIdentities](#userassignedidentities)
 
-## ContainerGroupProperties
+## ContainerGroupPropertiesInstanceView
+### Properties
+* **events**: [Event](#event)[] (ReadOnly): The events of this container group.
+* **state**: string (ReadOnly): The state of the container group. Only valid in response.
+
+## ContainerGroupPropertiesProperties
 ### Properties
 * **containers**: [Container](#container)[] (Required): The containers within the container group.
 * **diagnostics**: [ContainerGroupDiagnostics](#containergroupdiagnostics): The diagnostic information for a container group.
@@ -69,11 +69,6 @@
 * **sku**: 'Dedicated' | 'Standard' | string: The SKU for a container group.
 * **subnetIds**: [ContainerGroupSubnetId](#containergroupsubnetid)[]: The subnet resource IDs for a container group.
 * **volumes**: [Volume](#volume)[]: The list of volumes that can be mounted by containers in this container group.
-
-## ContainerGroupPropertiesInstanceView
-### Properties
-* **events**: [Event](#event)[] (ReadOnly): The events of this container group.
-* **state**: string (ReadOnly): The state of the container group. Only valid in response.
 
 ## ContainerGroupSubnetId
 ### Properties
@@ -178,7 +173,7 @@
 * **identityUrl**: string: The identity URL for the private registry.
 * **password**: string: The password for the private registry.
 * **server**: string (Required): The Docker image registry server without a protocol such as "http" and "https".
-* **username**: string (Required): The username for the private registry.
+* **username**: string: The username for the private registry.
 
 ## InitContainerDefinition
 ### Properties
@@ -252,6 +247,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UserAssignedIdentities
+### Properties
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
 
 ## Volume
 ### Properties

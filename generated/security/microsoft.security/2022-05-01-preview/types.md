@@ -18,6 +18,7 @@
 * **Discriminator**: organizationMembershipType
 
 ### Base Properties
+
 ### AwsOrganizationalDataMember
 #### Properties
 * **organizationMembershipType**: 'Member' (Required): The multi cloud account's membership type in the organization
@@ -35,6 +36,7 @@
 
 ### Base Properties
 * **description**: string (ReadOnly): The offering description.
+
 ### CspmMonitorAwsOffering
 #### Properties
 * **nativeCloudConnection**: [CspmMonitorAwsOfferingNativeCloudConnection](#cspmmonitorawsofferingnativecloudconnection): The native cloud connection configuration
@@ -264,6 +266,7 @@
 * **Discriminator**: environmentType
 
 ### Base Properties
+
 ### AWSEnvironmentData
 #### Properties
 * **environmentType**: 'AwsAccount' (Required): The type of the environment data.
@@ -288,6 +291,7 @@
 * **Discriminator**: organizationMembershipType
 
 ### Base Properties
+
 ### GcpOrganizationalDataMember
 #### Properties
 * **managementProjectNumber**: string: The GCP management project number from organizational onboarding

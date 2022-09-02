@@ -40,6 +40,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Web/sites/config
 #### Properties
 * **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -391,6 +392,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Web/sites/slots/config
 #### Properties
 * **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version

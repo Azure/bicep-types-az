@@ -95,6 +95,7 @@
 ### Base Properties
 * **displayName**: string (ReadOnly): The display name of the user whose access was reviewed.
 * **id**: string (ReadOnly): The id of principal whose access was reviewed.
+
 ### AccessReviewDecisionServicePrincipalIdentity
 #### Properties
 * **appId**: string (ReadOnly): The appId for the service principal entity being reviewed
@@ -118,6 +119,7 @@
 
 ### Base Properties
 * **insightCreatedDateTime**: any (ReadOnly): Date Time when the insight was created.
+
 ### AccessReviewDecisionUserSignInInsightProperties
 #### Properties
 * **lastSignInDateTime**: any (ReadOnly): Date Time when the user signed into the tenant.

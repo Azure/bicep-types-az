@@ -1,4 +1,4 @@
-AutoRest code generation utility [cli version: 3.6.2; node: v16.16.0]
+AutoRest code generation utility [cli version: 3.6.2; node: v16.17.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -169,6 +169,66 @@ warning | PreCheck/SchemaMissingType | The schema 'VirtualNetworkPeeringProperti
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-04-01-preview/vnetpeering.json:379:9
 warning | PreCheck/SchemaMissingType | The schema 'AddressSpace' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-04-01-preview/vnetpeering.json:432:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'GroupIdInformation' has a property 'id' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from GroupIdInformation
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'GroupIdInformation' has a property 'name' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from GroupIdInformation
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'GroupIdInformation' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from GroupIdInformation
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Workspace' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:701:5
+warning | PreCheck/SchemaMissingType | The schema 'WorkspaceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:729:5
+warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:833:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:866:5
+warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:887:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentityConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:940:5
+warning | PreCheck/SchemaMissingType | The schema 'WorkspaceCustomBooleanParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:976:5
+warning | PreCheck/SchemaMissingType | The schema 'WorkspaceCustomObjectParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:992:5
+warning | PreCheck/SchemaMissingType | The schema 'WorkspaceCustomStringParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:1008:5
+warning | PreCheck/SchemaMissingType | The schema 'WorkspaceCustomParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:1024:5
+warning | PreCheck/SchemaMissingType | The schema 'CreatedBy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:1100:5
+warning | PreCheck/SchemaMissingType | The schema 'WorkspaceEncryptionParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:1122:5
+warning | PreCheck/SchemaMissingType | The schema 'Encryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:1135:5
+warning | PreCheck/SchemaMissingType | The schema 'EncryptionEntitiesDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:1167:5
+warning | PreCheck/SchemaMissingType | The schema 'EncryptionV2' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:1177:5
+warning | PreCheck/SchemaMissingType | The schema 'EncryptionV2-keyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:1190:9
+warning | PreCheck/SchemaMissingType | The schema 'WorkspaceProviderAuthorization' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:1218:5
+warning | PreCheck/SchemaMissingType | The schema 'WorkspaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:1315:5
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:1339:9
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/databricks.json:1358:5
+warning | PreCheck/SchemaMissingType | The schema 'VirtualNetworkPeeringList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/vnetpeering.json:303:5
+warning | PreCheck/SchemaMissingType | The schema 'VirtualNetworkPeering' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/vnetpeering.json:319:5
+warning | PreCheck/SchemaMissingType | The schema 'VirtualNetworkPeeringPropertiesFormat' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/vnetpeering.json:348:5
+warning | PreCheck/SchemaMissingType | The schema 'VirtualNetworkPeeringPropertiesFormat-databricksVirtualNetwork' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/vnetpeering.json:366:9
+warning | PreCheck/SchemaMissingType | The schema 'VirtualNetworkPeeringPropertiesFormat-remoteVirtualNetwork' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/vnetpeering.json:379:9
+warning | PreCheck/SchemaMissingType | The schema 'AddressSpace' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/databricks/resource-manager/Microsoft.Databricks/preview/2022-10-01-preview/vnetpeering.json:432:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'GroupIdInformation' has a property 'id' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from GroupIdInformation
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'GroupIdInformation' has a property 'name' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from GroupIdInformation

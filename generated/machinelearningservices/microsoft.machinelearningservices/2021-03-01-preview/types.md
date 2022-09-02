@@ -324,6 +324,7 @@
 * **Discriminator**: referenceType
 
 ### Base Properties
+
 ### DataPathAssetReference
 #### Properties
 * **datastoreId**: string: ARM resource ID of the datastore where the asset is located.
@@ -346,6 +347,17 @@
 ### Properties
 * **objectId**: string (Required): User’s AAD Object Id.
 * **tenantId**: string (Required): User’s AAD Tenant Id.
+
+## AutoPauseProperties
+### Properties
+* **delayInMinutes**: int
+* **enabled**: bool
+
+## AutoScaleProperties
+### Properties
+* **enabled**: bool
+* **maxNodeCount**: int
+* **minNodeCount**: int
 
 ## BatchDeployment
 ### Properties
@@ -488,6 +500,7 @@ This property will always be returned as null. AuthKey values must be retrieved 
 * **provisioningErrors**: [ErrorResponse](#errorresponse)[] (ReadOnly): Errors during provisioning
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
 * **resourceId**: string: ARM resource id of the underlying compute
+
 ### AKS
 #### Properties
 * **computeType**: 'AKS' (Required): The type of compute
@@ -525,6 +538,7 @@ This property will always be returned as null. AuthKey values must be retrieved 
 ### SynapseSpark
 #### Properties
 * **computeType**: 'SynapseSpark' (Required): The type of compute
+* **properties**: [SynapseSparkPoolPropertiesProperties](#synapsesparkpoolpropertiesproperties): AKS properties
 
 ### VirtualMachine
 #### Properties
@@ -606,6 +620,7 @@ This property will always be returned as null. AuthKey values must be retrieved 
 * **Discriminator**: computeType
 
 ### Base Properties
+
 ### AksComputeSecrets
 #### Properties
 * **adminKubeConfig**: string: Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
@@ -686,6 +701,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **Discriminator**: contentsType
 
 ### Base Properties
+
 ### AzureBlobContents
 #### Properties
 * **accountName**: string (Required): [Required] Storage account name.
@@ -749,6 +765,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **Discriminator**: credentialsType
 
 ### Base Properties
+
 ### AccountKeyDatastoreCredentials
 #### Properties
 * **credentialsType**: 'AccountKey' (Required): [Required] Credential type used to authentication with storage.
@@ -814,6 +831,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **Discriminator**: secretsType
 
 ### Base Properties
+
 ### AccountKeyDatastoreSecrets
 #### Properties
 * **key**: string: Storage account key.
@@ -868,6 +886,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **Discriminator**: distributionType
 
 ### Base Properties
+
 ### Mpi
 #### Properties
 * **distributionType**: 'Mpi' (Required): [Required] Specifies the type of distribution framework.
@@ -894,6 +913,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 
 ### Base Properties
 * **platform**: [DockerImagePlatform](#dockerimageplatform): The platform information of the docker image.
+
 ### DockerBuild
 #### Properties
 * **context**: string: Path to a snapshot of the Docker Context. This property is only valid if Dockerfile is specified.
@@ -916,6 +936,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 ### Base Properties
 * **delayEvaluation**: int: Number of intervals by which to delay the first evaluation.
 * **evaluationInterval**: int: Interval (number of runs) between policy evaluations.
+
 ### BanditPolicy
 #### Properties
 * **policyType**: 'Bandit' (Required): [Required] Name of policy configuration
@@ -1035,6 +1056,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 * **Discriminator**: identityType
 
 ### Base Properties
+
 ### AmlToken
 #### Properties
 * **identityType**: 'AMLToken' (Required): [Required] Specifies the type of identity framework.
@@ -1073,6 +1095,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 * **properties**: [JobBaseProperties](#jobbaseproperties): The asset property dictionary.
 * **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Specifies the job provisioning state.
 * **tags**: [JobBaseTags](#jobbasetags): Tag dictionary. Tags can be added, removed, and updated.
+
 ### CommandJob
 #### Properties
 * **codeId**: string: ARM resource ID of the code asset.
@@ -1218,6 +1241,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 * **Discriminator**: mediaType
 
 ### Base Properties
+
 ### LabelingJobImageProperties
 #### Properties
 * **annotationType**: 'BoundingBox' | 'Classification' | 'InstanceSegmentation' | string: Annotation type of image labeling job.
@@ -1369,6 +1393,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Scaling' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state for the endpoint deployment.
 * **requestSettings**: [OnlineRequestSettings](#onlinerequestsettings): Online deployment scoring requests configuration.
 * **scaleSettings**: [OnlineScaleSettings](#onlinescalesettings): Online deployment scaling configuration.
+
 ### K8SOnlineDeployment
 #### Properties
 * **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements): Resource requirements for each container instance within an online deployment.
@@ -1427,6 +1452,7 @@ optional
 ### Base Properties
 * **maxInstances**: int: Maximum number of instances for this deployment.
 * **minInstances**: int: Minimum number of instances for this deployment.
+
 ### AutoScaleSettings
 #### Properties
 * **pollingInterval**: string: The polling interval in ISO 8691 format. Only supports duration with precision as low as Seconds.
@@ -1628,6 +1654,19 @@ optional
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## SynapseSparkPoolPropertiesProperties
+### Properties
+* **autoPauseProperties**: [AutoPauseProperties](#autopauseproperties): Auto pause properties.
+* **autoScaleProperties**: [AutoScaleProperties](#autoscaleproperties): Auto scale properties.
+* **nodeCount**: int: The number of compute nodes currently assigned to the compute.
+* **nodeSize**: string: Node size.
+* **nodeSizeFamily**: string: Node size family.
+* **poolName**: string: Pool name.
+* **resourceGroup**: string: Name of the resource group in which workspace is located.
+* **sparkVersion**: string: Spark version.
+* **subscriptionId**: string: Azure subscription identifier.
+* **workspaceName**: string: Name of Azure Machine Learning workspace.
 
 ## SystemData
 ### Properties

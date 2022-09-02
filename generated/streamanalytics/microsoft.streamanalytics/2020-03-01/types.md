@@ -280,6 +280,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### AzureMachineLearningWebServiceFunctionBinding
 #### Properties
 * **properties**: [AzureMachineLearningWebServiceFunctionBindingProperties](#azuremachinelearningwebservicefunctionbindingproperties): The binding properties associated with an Azure Machine learning web service.
@@ -312,6 +313,7 @@
 ### Base Properties
 * **etag**: string (ReadOnly): The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
 * **properties**: [FunctionConfiguration](#functionconfiguration)
+
 ### AggregateFunctionProperties
 #### Properties
 * **type**: 'Aggregate' (Required): Indicates the type of function.
@@ -351,6 +353,7 @@
 * **etag**: string (ReadOnly): The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
 * **partitionKey**: string: partitionKey Describes a key in the input data which is used for partitioning the input data
 * **serialization**: [Serialization](#serialization): Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
+
 ### ReferenceInputProperties
 #### Properties
 * **datasource**: [ReferenceInputDataSource](#referenceinputdatasource): Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.
@@ -396,6 +399,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### GatewayMessageBusOutputDataSource
 #### Properties
 * **properties**: [GatewayMessageBusOutputDataSourceProperties](#gatewaymessagebusoutputdatasourceproperties): The properties that are associated with a Gateway Message Bus output. Required on PUT (CreateOrReplace) requests.
@@ -508,6 +512,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### FileReferenceInputDataSource
 #### Properties
 * **properties**: [FileReferenceInputDataSourceProperties](#filereferenceinputdatasourceproperties): The properties that are associated with a file input containing reference data. Required on PUT (CreateOrReplace) requests.
@@ -528,6 +533,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### AvroSerialization
 #### Properties
 * **properties**: any: The properties that are associated with the Avro serialization type. Required on PUT (CreateOrReplace) requests.
@@ -613,6 +619,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### GatewayMessageBusStreamInputDataSource
 #### Properties
 * **properties**: [GatewayMessageBusStreamInputDataSourceProperties](#gatewaymessagebusstreaminputdatasourceproperties): The properties that are associated with a gateway message bus input containing stream data.

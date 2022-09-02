@@ -108,6 +108,7 @@
 * **scopes**: [Scope](#scope)[]: List of authorized assigned scopes.
 * **status**: 'Active' | 'NotActive' | string: The current status of the showback rule.
 * **version**: int (ReadOnly): The current version of showback rule.
+
 ### CostAllocationDetailsKind
 #### Properties
 * **details**: [CostAllocationDetails](#costallocationdetails): The CostAllocation properties to validate.

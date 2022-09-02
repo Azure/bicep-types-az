@@ -1,4 +1,4 @@
-AutoRest code generation utility [cli version: 3.6.2; node: v16.16.0]
+AutoRest code generation utility [cli version: 3.6.2; node: v16.17.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -57,187 +57,187 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AutoStorageBaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2240:5
 warning | PreCheck/SchemaMissingType | The schema 'BatchAccountUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2252:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2260:5
 warning | PreCheck/SchemaMissingType | The schema 'BatchAccountCreateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2266:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2274:5
 warning | PreCheck/SchemaMissingType | The schema 'BatchAccountCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2294:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2302:5
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2322:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2330:5
 warning | PreCheck/SchemaMissingType | The schema 'AutoStorageProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2339:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2355:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineFamilyCoreQuota' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2357:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2373:5
 warning | PreCheck/SchemaMissingType | The schema 'BatchAccountIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2375:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2391:5
 warning | PreCheck/SchemaMissingType | The schema 'BatchAccountProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2439:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2455:5
 warning | PreCheck/SchemaMissingType | The schema 'BatchAccount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2577:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2593:5
 warning | PreCheck/SchemaMissingType | The schema 'BatchAccountUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2596:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2612:5
 warning | PreCheck/SchemaMissingType | The schema 'BatchAccountListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2617:5
-warning | PreCheck/SchemaMissingType | The schema 'EncryptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2633:5
+warning | PreCheck/SchemaMissingType | The schema 'EncryptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2649:5
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2664:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2680:5
 warning | PreCheck/SchemaMissingType | The schema 'BatchAccountRegenerateKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2673:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2689:5
 warning | PreCheck/SchemaMissingType | The schema 'BatchAccountKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2703:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2719:5
 warning | PreCheck/SchemaMissingType | The schema 'ActivateApplicationPackageParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2723:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2739:5
 warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2735:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2751:5
 warning | PreCheck/SchemaMissingType | The schema 'ApplicationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2750:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2766:5
 warning | PreCheck/SchemaMissingType | The schema 'ApplicationPackage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2767:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2783:5
 warning | PreCheck/SchemaMissingType | The schema 'ApplicationPackageProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2782:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2798:5
 warning | PreCheck/SchemaMissingType | The schema 'ListApplicationsResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2832:5
-warning | PreCheck/SchemaMissingType | The schema 'ListApplicationPackagesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2848:5
-warning | PreCheck/SchemaMissingType | The schema 'BatchLocationQuota' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ListApplicationPackagesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2864:5
+warning | PreCheck/SchemaMissingType | The schema 'BatchLocationQuota' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2880:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2875:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2891:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2909:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2925:5
 warning | PreCheck/SchemaMissingType | The schema 'CertificateBaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2980:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:2996:5
 warning | PreCheck/SchemaMissingType | The schema 'CertificateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3017:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3033:5
 warning | PreCheck/SchemaMissingType | The schema 'CertificateCreateOrUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3108:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3124:5
 warning | PreCheck/SchemaMissingType | The schema 'Certificate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3131:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3147:5
 warning | PreCheck/SchemaMissingType | The schema 'CertificateCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3146:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3162:5
 warning | PreCheck/SchemaMissingType | The schema 'ListCertificatesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3161:5
-warning | PreCheck/SchemaMissingType | The schema 'DeleteCertificateError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3177:5
+warning | PreCheck/SchemaMissingType | The schema 'DeleteCertificateError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3193:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3205:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3221:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3220:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3236:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3247:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3263:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3262:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3278:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3304:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3320:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkServiceConnectionState' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3314:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3330:5
 warning | PreCheck/SchemaMissingType | The schema 'Pool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3367:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3383:5
 warning | PreCheck/SchemaMissingType | The schema 'PoolProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3387:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3403:5
 warning | PreCheck/SchemaMissingType | The schema 'BatchPoolIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3600:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3616:5
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3649:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3665:5
 warning | PreCheck/SchemaMissingType | The schema 'ScaleSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3664:5
-warning | PreCheck/SchemaMissingType | The schema 'AutoScaleSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3680:5
+warning | PreCheck/SchemaMissingType | The schema 'AutoScaleSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3696:5
 warning | PreCheck/SchemaMissingType | The schema 'FixedScaleSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3702:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3718:5
 warning | PreCheck/SchemaMissingType | The schema 'CertificateReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3762:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3778:5
 warning | PreCheck/SchemaMissingType | The schema 'ApplicationPackageReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3833:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3849:5
 warning | PreCheck/SchemaMissingType | The schema 'ResizeError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3850:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3866:5
 warning | PreCheck/SchemaMissingType | The schema 'AutoScaleRunError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3874:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3890:5
 warning | PreCheck/SchemaMissingType | The schema 'AutoScaleRun' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3898:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3914:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3920:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3936:5
 warning | PreCheck/SchemaMissingType | The schema 'ContainerRegistry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3979:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:3995:5
 warning | PreCheck/SchemaMissingType | The schema 'DiskEncryptionConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4002:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4018:5
 warning | PreCheck/SchemaMissingType | The schema 'ContainerConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4038:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4054:5
 warning | PreCheck/SchemaMissingType | The schema 'NodePlacementConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4103:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4119:5
 warning | PreCheck/SchemaMissingType | The schema 'VMExtension' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4114:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4130:5
 warning | PreCheck/SchemaMissingType | The schema 'WindowsConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4161:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4177:5
 warning | PreCheck/SchemaMissingType | The schema 'ImageReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4171:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4187:5
 warning | PreCheck/SchemaMissingType | The schema 'DataDisk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4201:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4217:5
 warning | PreCheck/SchemaMissingType | The schema 'TaskSchedulingPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4231:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4247:5
 warning | PreCheck/SchemaMissingType | The schema 'LinuxUserConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4261:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4277:5
 warning | PreCheck/SchemaMissingType | The schema 'WindowsUserConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4283:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4299:5
 warning | PreCheck/SchemaMissingType | The schema 'UserAccount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4311:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4327:5
 warning | PreCheck/SchemaMissingType | The schema 'StartTask' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4343:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4359:5
 warning | PreCheck/SchemaMissingType | The schema 'TaskContainerSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4389:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4405:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceFile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4434:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4450:5
 warning | PreCheck/SchemaMissingType | The schema 'EnvironmentSetting' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4469:5
-warning | PreCheck/SchemaMissingType | The schema 'UserIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4485:5
-warning | PreCheck/SchemaMissingType | The schema 'AutoUserSpecification' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'UserIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4501:5
+warning | PreCheck/SchemaMissingType | The schema 'AutoUserSpecification' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4517:5
 warning | PreCheck/SchemaMissingType | The schema 'PublicIPAddressConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4632:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4648:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4650:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4666:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudServiceConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4674:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4690:5
 warning | PreCheck/SchemaMissingType | The schema 'MetadataItem' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4692:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4708:5
 warning | PreCheck/SchemaMissingType | The schema 'ResizeOperationStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4710:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4726:5
 warning | PreCheck/SchemaMissingType | The schema 'PoolEndpointConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4750:5
-warning | PreCheck/SchemaMissingType | The schema 'InboundNatPool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4766:5
+warning | PreCheck/SchemaMissingType | The schema 'InboundNatPool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4782:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkSecurityGroupRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4831:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4847:5
 warning | PreCheck/SchemaMissingType | The schema 'ListPrivateLinkResourcesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4882:5
-warning | PreCheck/SchemaMissingType | The schema 'ListPrivateEndpointConnectionsResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4898:5
-warning | PreCheck/SchemaMissingType | The schema 'ListPoolsResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ListPrivateEndpointConnectionsResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4914:5
-warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ListPoolsResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4930:5
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4946:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4939:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4955:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4973:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:4989:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:5005:5
-warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:5021:5
+warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:5037:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:5052:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:5068:5
 warning | PreCheck/SchemaMissingType | The schema 'MountConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:5090:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:5106:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureBlobFileSystemConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:5115:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:5131:5
 warning | PreCheck/SchemaMissingType | The schema 'NFSMountConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:5153:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:5169:5
 warning | PreCheck/SchemaMissingType | The schema 'CIFSMountConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:5176:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:5192:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureFileShareConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:5209:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json:5225:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.

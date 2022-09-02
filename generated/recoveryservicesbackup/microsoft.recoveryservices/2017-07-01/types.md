@@ -21,6 +21,7 @@
 * **policyId**: string: ID of the backup policy with which this item is backed up.
 * **protectionState**: 'Invalid' | 'NotProtected' | 'Protected' | 'Protecting' | 'ProtectionFailed' | string: Backup state of this backup item.
 * **sourceResourceId**: string: ARM ID of the resource to be backed up.
+
 ### AzureResourceProtectionIntent
 #### Properties
 * **friendlyName**: string: Friendly name of the VM represented by this backup item.

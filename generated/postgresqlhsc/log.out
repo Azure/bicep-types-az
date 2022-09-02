@@ -1,4 +1,4 @@
 WARNING: Unable to parse swagger path "Microsoft.DBforPostgreSQL/preview/2020-10-05-privatepreview/postgresqlhsc.json"
-AutoRest code generation utility [cli version: 3.6.2; node: v16.16.0]
+AutoRest code generation utility [cli version: 3.6.2; node: v16.17.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest

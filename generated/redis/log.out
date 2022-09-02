@@ -1,4 +1,4 @@
-AutoRest code generation utility [cli version: 3.6.2; node: v16.16.0]
+AutoRest code generation utility [cli version: 3.6.2; node: v16.17.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -17,78 +17,164 @@ warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:1850:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisCommonProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:1890:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisCreateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2027:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2059:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2074:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2157:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2197:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisAccessKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2218:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisFirewallRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2233:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisFirewallRuleCreateParameters' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2251:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisFirewallRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2259:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisFirewallRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2276:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2293:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisInstanceDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2322:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2360:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisRegenerateKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2377:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisRebootParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2397:5
+warning | PreCheck/SchemaMissingType | The schema 'ExportRDBParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2427:5
+warning | PreCheck/SchemaMissingType | The schema 'ImportRDBParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2452:5
+warning | PreCheck/SchemaMissingType | The schema 'ScheduleEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2475:5
+warning | PreCheck/SchemaMissingType | The schema 'ScheduleEntries' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2513:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisPatchSchedule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2530:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisPatchScheduleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2553:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisForceRebootResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2570:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServer' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2580:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerWithProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2590:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2605:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerWithPropertiesList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2620:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerCreateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2637:5
+warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2671:5
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2692:9
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2715:5
+warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2735:5
+warning | PreCheck/SchemaMissingType | The schema 'UpgradeNotification' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2752:5
+warning | PreCheck/SchemaMissingType | The schema 'NotificationListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2776:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
+  - properties.details.$ref: "#/components/schemas/schemas:249" => "#/components/schemas/schemas:461"
+warning | Modeler/MissingType | The schema 'components·jb1v7t·schemas·rediscommonproperties·properties·redisconfiguration·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json#/components/schemas/components·jb1v7t·schemas·rediscommonproperties·properties·redisconfiguration·additionalproperties
+warning | Modeler/MissingType | The schema 'components·pgz285·schemas·operationstatus·properties·properties·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json#/components/schemas/components·pgz285·schemas·operationstatus·properties·properties·additionalproperties
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorDetail' -> 'ErrorDetailAutoGenerated'
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:1836:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisCommonProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:1876:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisCreateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2014:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2046:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2057:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2061:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2072:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2144:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2155:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2184:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2195:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisAccessKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2205:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2216:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisFirewallRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2220:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2231:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisFirewallRuleCreateParameters' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2238:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2249:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisFirewallRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2246:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2257:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisFirewallRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2263:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2274:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2280:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2291:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisInstanceDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2309:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2320:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2347:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2358:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisRegenerateKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2364:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2375:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisRebootParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2384:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2395:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportRDBParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2414:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2425:5
 warning | PreCheck/SchemaMissingType | The schema 'ImportRDBParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2435:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2446:5
 warning | PreCheck/SchemaMissingType | The schema 'ScheduleEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2454:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2465:5
 warning | PreCheck/SchemaMissingType | The schema 'ScheduleEntries' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2492:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2503:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisPatchSchedule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2509:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2520:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisPatchScheduleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2532:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2543:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisForceRebootResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2549:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2560:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServer' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2559:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2570:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerWithProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2569:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2580:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2584:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2595:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerWithPropertiesList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2599:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2610:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerCreateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2616:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2627:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2650:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2669:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2671:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2690:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2694:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2713:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2714:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2733:5
 warning | PreCheck/SchemaMissingType | The schema 'UpgradeNotification' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2731:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2750:5
 warning | PreCheck/SchemaMissingType | The schema 'NotificationListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2755:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2774:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:247" => "#/components/schemas/schemas:453"
+  - properties.details.$ref: "#/components/schemas/schemas:247" => "#/components/schemas/schemas:459"
 warning | Modeler/MissingType | The schema 'components·jb1v7t·schemas·rediscommonproperties·properties·redisconfiguration·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json#/components/schemas/components·jb1v7t·schemas·rediscommonproperties·properties·redisconfiguration·additionalproperties
 warning | Modeler/MissingType | The schema 'components·pgz285·schemas·operationstatus·properties·properties·additionalproperties' has no type or format information whatsoever. Location:
@@ -109,69 +195,69 @@ warning | PreCheck/SchemaMissingType | The schema 'RedisCommonProperties' with a
 warning | PreCheck/SchemaMissingType | The schema 'RedisCreateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:1959:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:1991:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2002:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2006:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2017:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2086:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2097:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2122:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2133:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisAccessKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2139:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2150:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisFirewallRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2154:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2165:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisFirewallRuleCreateParameters' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2172:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2183:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisFirewallRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2180:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2191:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisFirewallRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2197:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2208:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2214:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2225:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisInstanceDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2239:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2250:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2277:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2288:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisRegenerateKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2294:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2305:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisRebootParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2314:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2325:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportRDBParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2344:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2355:5
 warning | PreCheck/SchemaMissingType | The schema 'ImportRDBParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2365:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2376:5
 warning | PreCheck/SchemaMissingType | The schema 'ScheduleEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2384:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2395:5
 warning | PreCheck/SchemaMissingType | The schema 'ScheduleEntries' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2423:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2434:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisPatchSchedule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2439:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2450:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisPatchScheduleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2462:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2473:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisForceRebootResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2479:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2490:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServer' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2489:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2500:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerWithProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2499:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2510:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2514:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2525:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerWithPropertiesList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2529:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2540:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerCreateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2546:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2557:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2580:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2599:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2601:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2620:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2624:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2643:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2641:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2660:5
 warning | PreCheck/SchemaMissingType | The schema 'UpgradeNotification' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2658:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2677:5
 warning | PreCheck/SchemaMissingType | The schema 'NotificationListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2682:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json:2701:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -182,81 +268,81 @@ warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:1781:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:1786:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisCommonProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:1821:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:1826:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisCreateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:1929:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:1934:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:1961:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:1966:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:1976:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:1981:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2061:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2066:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2082:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2087:5
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2090:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2095:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2123:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2128:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2159:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2164:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisAccessKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2176:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2181:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisFirewallRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2191:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2196:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisFirewallRuleCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2209:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2214:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisFirewallRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2222:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2227:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisFirewallRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2239:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2244:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2256:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2261:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisInstanceDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2281:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2286:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2314:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2319:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisRegenerateKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2331:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2336:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisRebootParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2351:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2356:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportRDBParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2381:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2386:5
 warning | PreCheck/SchemaMissingType | The schema 'ImportRDBParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2402:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2407:5
 warning | PreCheck/SchemaMissingType | The schema 'ScheduleEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2421:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2426:5
 warning | PreCheck/SchemaMissingType | The schema 'ScheduleEntries' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2459:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2464:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisPatchSchedule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2475:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2480:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisPatchScheduleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2493:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2498:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisForceRebootResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2510:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2515:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServer' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2520:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2525:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerWithProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2530:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2535:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2545:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2550:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerWithPropertiesList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2560:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2565:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerCreateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2577:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2582:5
 warning | PreCheck/SchemaMissingType | The schema 'RedisLinkedServerCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2611:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2616:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2632:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2637:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2655:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2660:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2672:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2677:5
 warning | PreCheck/SchemaMissingType | The schema 'UpgradeNotification' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2689:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2694:5
 warning | PreCheck/SchemaMissingType | The schema 'NotificationListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2713:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2020-06-01/redis.json:2718:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (4 differences):
   - properties.id.description: "Resource ID." => "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"

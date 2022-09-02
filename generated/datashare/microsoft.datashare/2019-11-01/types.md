@@ -30,6 +30,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.DataShare/accounts/shares/dataSets' (ReadOnly, DeployTimeConstant): The resource type
+
 ### AdlsGen1FileDataSet
 #### Properties
 * **kind**: 'AdlsGen1File' (Required): Kind of data set.
@@ -118,6 +119,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.DataShare/accounts/shares/synchronizationSettings' (ReadOnly, DeployTimeConstant): The resource type
+
 ### ScheduledSynchronizationSetting
 #### Properties
 * **kind**: 'ScheduleBased' (Required): Kind of synchronization setting.
@@ -142,6 +144,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings' (ReadOnly, DeployTimeConstant): The resource type
+
 ### AdlsGen2FileDataSetMapping
 #### Properties
 * **kind**: 'AdlsGen2File' (Required): Kind of data set mapping.
@@ -202,6 +205,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.DataShare/accounts/shareSubscriptions/triggers' (ReadOnly, DeployTimeConstant): The resource type
+
 ### ScheduledTrigger
 #### Properties
 * **kind**: 'ScheduleBased' (Required): Kind of synchronization on trigger.
@@ -557,6 +561,7 @@ invitations to specific users or applications in an AD tenant.
 * **Discriminator**: kind
 
 ### Base Properties
+
 ### ScheduledSourceSynchronizationSetting
 #### Properties
 * **kind**: 'ScheduleBased' (Required): Kind of synchronization setting on share.

@@ -93,6 +93,7 @@
 * **Discriminator**: channelName
 
 ### Base Properties
+
 ### AlexaChannel
 #### Properties
 * **channelName**: 'AlexaChannel' (Required): The channel name

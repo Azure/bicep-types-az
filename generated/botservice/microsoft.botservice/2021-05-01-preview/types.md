@@ -125,6 +125,7 @@
 * **etag**: string: Entity Tag of the resource
 * **location**: string: Specifies the location of the resource.
 * **provisioningState**: string (ReadOnly): Provisioning state of the resource
+
 ### AlexaChannel
 #### Properties
 * **channelName**: 'AlexaChannel' (Required): The channel name

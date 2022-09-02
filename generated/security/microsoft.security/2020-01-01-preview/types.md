@@ -24,6 +24,7 @@
 ### Base Properties
 * **authenticationProvisioningState**: 'Expired' | 'IncorrectPolicy' | 'Invalid' | 'Valid' | string (ReadOnly): State of the multi-cloud connector
 * **grantedPermissions**: 'AWS::AWSSecurityHubReadOnlyAccess' | 'AWS::AmazonSSMAutomationRole' | 'AWS::SecurityAudit' | 'GCP::Security Center Admin Viewer' | string[] (ReadOnly): The permissions detected in the cloud account.
+
 ### AwAssumeRoleAuthenticationDetailsProperties
 #### Properties
 * **accountId**: string (ReadOnly): The ID of the cloud account

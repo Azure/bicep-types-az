@@ -24,6 +24,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### OAuthAuthentication
 #### Properties
 * **audience**: string: Gets or sets the audience.

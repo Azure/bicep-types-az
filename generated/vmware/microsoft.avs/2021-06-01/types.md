@@ -194,6 +194,7 @@
 
 ### Base Properties
 * **provisioningState**: 'Building' | 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The state of the addon provisioning
+
 ### AddonHcxProperties
 #### Properties
 * **addonType**: 'HCX' (Required): The type of private cloud addon
@@ -332,6 +333,7 @@
 
 ### Base Properties
 * **name**: string (Required): The parameter name
+
 ### PSCredentialExecutionParameter
 #### Properties
 * **password**: string: password for login
@@ -397,6 +399,7 @@
 * **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state
 * **revision**: int: NSX revision number.
 * **segments**: string[] (ReadOnly): NSX Segments consuming DHCP.
+
 ### WorkloadNetworkDhcpRelay
 #### Properties
 * **dhcpType**: 'RELAY' (Required): Type of DHCP: SERVER or RELAY.

@@ -187,6 +187,7 @@
 ### Base Properties
 * **id**: string: The id of the rule.
 * **target**: [RoleManagementPolicyRuleTarget](#rolemanagementpolicyruletarget): The target of the current rule.
+
 ### RoleManagementPolicyApprovalRule
 #### Properties
 * **ruleType**: 'RoleManagementPolicyApprovalRule' (Required): The type of rule

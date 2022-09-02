@@ -73,6 +73,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Web/hostingEnvironments/configurations
 #### Properties
 * **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -270,6 +271,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Web/sites/basicPublishingCredentialsPolicies
 #### Properties
 * **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -294,6 +296,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Web/sites/config
 #### Properties
 * **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -509,6 +512,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Web/sites/extensions
 #### Properties
 * **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -846,6 +850,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Web/sites/slots/basicPublishingCredentialsPolicies
 #### Properties
 * **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -870,6 +875,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Web/sites/slots/config
 #### Properties
 * **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -1441,6 +1447,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Web/staticSites/builds/config
 #### Properties
 * **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -1485,6 +1492,7 @@
 * **Discriminator**: name
 
 ### Base Properties
+
 ### Microsoft.Web/staticSites/config
 #### Properties
 * **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version

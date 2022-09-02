@@ -88,6 +88,7 @@
 ### Base Properties
 * **description**: string: A description for the Endpoint.
 * **provisioningState**: 'Succeeded' | string (ReadOnly): The provisioning state of this resource.
+
 ### AzureStorageBlobContainerEndpointProperties
 #### Properties
 * **blobContainerName**: string (Required): The name of the Storage blob container that is the target destination.

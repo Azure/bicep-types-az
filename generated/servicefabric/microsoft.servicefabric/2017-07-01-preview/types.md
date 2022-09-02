@@ -277,6 +277,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 * **Discriminator**: PartitionScheme
 
 ### Base Properties
+
 ### NamedPartitionSchemeDescription
 #### Properties
 * **Count**: int (Required): The number of partitions.
@@ -320,6 +321,7 @@ should be split between the partition ‘Count’
 
 ### Base Properties
 
+
 ## ServiceResourceProperties
 * **Discriminator**: serviceKind
 
@@ -332,6 +334,7 @@ should be split between the partition ‘Count’
 * **serviceLoadMetrics**: [ServiceLoadMetricDescription](#serviceloadmetricdescription)[]: The service load metrics is given as an array of ServiceLoadMetricDescription objects.
 * **servicePlacementPolicies**: [ServicePlacementPolicyDescription](#serviceplacementpolicydescription)[]: A list that describes the correlation of the service with other services.
 * **serviceTypeName**: string: The name of the service type
+
 ### StatefulServiceProperties
 #### Properties
 * **hasPersistedState**: bool: A flag indicating whether this is a persistent service which stores states on the local disk. If it is then the value of this property is true, if not it is false.

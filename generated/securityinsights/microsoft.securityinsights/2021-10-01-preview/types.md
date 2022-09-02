@@ -11,6 +11,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/alertRules' (ReadOnly, DeployTimeConstant): The resource type
+
 ### FusionAlertRule
 #### Properties
 * **kind**: 'Fusion' (Required): The kind of the alert rule
@@ -63,6 +64,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/alertRuleTemplates' (ReadOnly, DeployTimeConstant): The resource type
+
 ### FusionAlertRuleTemplate
 #### Properties
 * **kind**: 'Fusion' (Required): The kind of the alert rule
@@ -138,6 +140,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/dataConnectors' (ReadOnly, DeployTimeConstant): The resource type
+
 ### AwsCloudTrailDataConnector
 #### Properties
 * **kind**: 'AmazonWebServicesCloudTrail' (Required): The data connector kind
@@ -244,6 +247,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/entities' (ReadOnly, DeployTimeConstant): The resource type
+
 ### AccountEntity
 #### Properties
 * **kind**: 'Account' (Required): The kind of the entity.
@@ -372,6 +376,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/entityQueries' (ReadOnly, DeployTimeConstant): The resource type
+
 ### ActivityCustomEntityQueryOrActivityEntityQuery
 #### Properties
 * **kind**: 'Activity' (Required): the entity query kind
@@ -393,6 +398,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/entityQueryTemplates' (ReadOnly, DeployTimeConstant): The resource type
+
 ### ActivityEntityQueryTemplate
 #### Properties
 * **kind**: 'Activity' (Required): the entity query template kind
@@ -475,6 +481,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/settings' (ReadOnly, DeployTimeConstant): The resource type
+
 ### Anomalies
 #### Properties
 * **kind**: 'Anomalies' (Required): The kind of the setting
@@ -652,6 +659,7 @@
 
 ### Base Properties
 * **order**: int (Required)
+
 ### AutomationRuleModifyPropertiesAction
 #### Properties
 * **actionConfiguration**: [IncidentPropertiesAction](#incidentpropertiesaction)
@@ -667,6 +675,7 @@
 * **Discriminator**: conditionType
 
 ### Base Properties
+
 ### PropertyConditionProperties
 #### Properties
 * **conditionProperties**: [AutomationRulePropertyValuesCondition](#automationrulepropertyvaluescondition)

@@ -176,6 +176,13 @@
 * **errorTitle**: string (ReadOnly): Title: Typically, the entity that the error pertains to.
 * **recommendations**: string[] (ReadOnly): List of localized recommendations for above error code.
 
+## AzureIaaSVMHealthDetails
+### Properties
+* **code**: int (ReadOnly): Health Code
+* **message**: string (ReadOnly): Health Message
+* **recommendations**: string[] (ReadOnly): Health Recommended Actions
+* **title**: string (ReadOnly): Health Title
+
 ## AzureIaaSVMJobExtendedInfo
 ### Properties
 * **dynamicErrorMessage**: string: Non localized error message on job execution.
@@ -207,6 +214,22 @@
 eg: number of bytes transferred etc
 * **taskId**: string: The task display name.
 
+## AzureIaaSVMProtectedItemExtendedInfo
+### Properties
+* **oldestRecoveryPoint**: string: The oldest backup copy available for this backup item.
+* **policyInconsistent**: bool: Specifies if backup policy associated with the backup item is inconsistent.
+* **recoveryPointCount**: int: Number of backup copies available for this backup item.
+
+## AzureIaaSVMProtectedItemKpisHealths
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [KPIResourceHealthDetails](#kpiresourcehealthdetails)
+
+## AzureIaaSVMProtectedItemKpisHealths
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [KPIResourceHealthDetails](#kpiresourcehealthdetails)
+
 ## AzureSqlProtectedItemExtendedInfo
 ### Properties
 * **oldestRecoveryPoint**: string: The oldest backup copy available for this item in the service.
@@ -235,6 +258,33 @@ eg: number of bytes transferred etc
 * **status**: string: The status.
 * **taskId**: string: The task display name.
 
+## AzureVmWorkloadProtectedItemExtendedInfo
+### Properties
+* **oldestRecoveryPoint**: string: The oldest backup copy available for this backup item.
+* **policyState**: string: Indicates consistency of policy object and policy applied to this backup item.
+* **recoveryPointCount**: int: Number of backup copies available for this backup item.
+
+## AzureVmWorkloadProtectedItemKpisHealths
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [KPIResourceHealthDetails](#kpiresourcehealthdetails)
+
+## AzureVmWorkloadProtectedItemKpisHealths
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [KPIResourceHealthDetails](#kpiresourcehealthdetails)
+
+## AzureVmWorkloadProtectedItemKpisHealths
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [KPIResourceHealthDetails](#kpiresourcehealthdetails)
+
+## AzureWorkloadContainerExtendedInfo
+### Properties
+* **hostServerName**: string: Host Os Name in case of Stand Alone and Cluster Name in case of distributed container.
+* **inquiryInfo**: [InquiryInfo](#inquiryinfo): Inquiry Status for the container.
+* **nodesList**: [DistributedNodesInfo](#distributednodesinfo)[]: List of the nodes in case of distributed container.
+
 ## AzureWorkloadErrorInfo
 ### Properties
 * **additionalDetails**: string: Additional details for above error code.
@@ -259,6 +309,26 @@ eg: number of bytes transferred etc
 * **status**: string: The status.
 * **taskId**: string: The task display name.
 
+## AzureWorkloadRecoveryPointMoveReadinessInfo
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [RecoveryPointMoveReadinessInfo](#recoverypointmovereadinessinfo)
+
+## AzureWorkloadRecoveryPointMoveReadinessInfo
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [RecoveryPointMoveReadinessInfo](#recoverypointmovereadinessinfo)
+
+## AzureWorkloadRecoveryPointMoveReadinessInfo
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [RecoveryPointMoveReadinessInfo](#recoverypointmovereadinessinfo)
+
+## AzureWorkloadSQLRecoveryPointExtendedInfo
+### Properties
+* **dataDirectoryPaths**: [SQLDataDirectory](#sqldatadirectory)[]: List of data directory paths during restore operation.
+* **dataDirectoryTimeInUTC**: string: UTC time at which data directory info was captured
+
 ## BackupEngineBase
 * **Discriminator**: backupEngineType
 
@@ -275,6 +345,7 @@ eg: number of bytes transferred etc
 * **isAzureBackupAgentUpgradeAvailable**: bool: To check if backup agent upgrade available
 * **isDpmUpgradeAvailable**: bool: To check if backup engine upgrade available
 * **registrationStatus**: string: Registration status of the backup engine with the Recovery Services Vault.
+
 ### AzureBackupServerEngine
 #### Properties
 * **backupEngineType**: 'AzureBackupServerEngine' (Required): Type of the backup engine.
@@ -340,10 +411,26 @@ eg: number of bytes transferred etc
 * **date**: int: Date of the month
 * **isLast**: bool: Whether Date is last date of month
 
+## DiskExclusionProperties
+### Properties
+* **diskLunList**: int[]: List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.
+* **isInclusionList**: bool: Flag to indicate whether DiskLunList is to be included/ excluded from backup.
+
 ## DiskInformation
 ### Properties
 * **lun**: int
 * **name**: string
+
+## DistributedNodesInfo
+### Properties
+* **errorDetail**: [ErrorDetail](#errordetail): Error Details if the Status is non-success.
+* **nodeName**: string: Name of the node under a distributed container.
+* **status**: string: Status of this Node.
+Failed | Succeeded
+
+## DPMContainerExtendedInfo
+### Properties
+* **lastRefreshedAt**: string: Last refresh time of the DPMContainer.
 
 ## DpmErrorInfo
 ### Properties
@@ -391,6 +478,16 @@ eg: number of bytes transferred etc
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ErrorDetail
+### Properties
+* **code**: string (ReadOnly): Error code.
+* **message**: string (ReadOnly): Error Message related to the Code.
+* **recommendations**: string[] (ReadOnly): List of recommendation strings.
+
+## ExtendedProperties
+### Properties
+* **diskExclusionProperties**: [DiskExclusionProperties](#diskexclusionproperties): Extended Properties for Disk Exclusion.
+
 ## GenericContainerExtendedInfo
 ### Properties
 * **containerIdentityInfo**: [ContainerIdentityInfo](#containeridentityinfo): Container identity information
@@ -412,6 +509,20 @@ eg: number of bytes transferred etc
 ### Additional Properties
 * **Additional Properties Type**: [RecoveryPointMoveReadinessInfo](#recoverypointmovereadinessinfo)
 
+## InquiryInfo
+### Properties
+* **errorDetail**: [ErrorDetail](#errordetail): Error Details if the Status is non-success.
+* **inquiryDetails**: [WorkloadInquiryDetails](#workloadinquirydetails)[]: Inquiry Details which will have workload specific details.
+For e.g. - For SQL and oracle this will contain different details.
+* **status**: string: Inquiry Status for this container such as
+InProgress | Failed | Succeeded
+
+## InquiryValidation
+### Properties
+* **additionalDetail**: string (ReadOnly): Error Additional Detail in case the status is non-success.
+* **errorDetail**: [ErrorDetail](#errordetail): Error Detail in case the status is non-success.
+* **status**: string: Status for the Inquiry Validation.
+
 ## InstantRPAdditionalDetails
 ### Properties
 * **azureBackupRGNamePrefix**: string
@@ -428,6 +539,7 @@ eg: number of bytes transferred etc
 * **operation**: string: The operation name.
 * **startTime**: string: The start time.
 * **status**: string: Job status.
+
 ### AzureIaaSVMJob
 #### Properties
 * **actionsInfo**: 'Cancellable' | 'Invalid' | 'Retriable'[]: Gets or sets the state/actions applicable on this job like cancel/retry.
@@ -596,6 +708,7 @@ eg: number of bytes transferred etc
 * **policyId**: string: ID of the backup policy with which this item is backed up.
 * **sourceResourceId**: string: ARM ID of the resource to be backed up.
 * **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string: Type of workload this item represents.
+
 ### AzureFileshareProtectedItem
 #### Properties
 * **extendedInfo**: [AzureFileshareProtectedItemExtendedInfo](#azurefileshareprotecteditemextendedinfo): Additional information with this backup item.
@@ -609,15 +722,54 @@ eg: number of bytes transferred etc
 
 ### AzureVmWorkloadSAPAseDatabaseProtectedItem
 #### Properties
+* **extendedInfo**: [AzureVmWorkloadProtectedItemExtendedInfo](#azurevmworkloadprotecteditemextendedinfo): Additional information for this backup item.
+* **friendlyName**: string: Friendly name of the DB represented by this backup item.
+* **kpisHealths**: [AzureVmWorkloadProtectedItemKpisHealths](#azurevmworkloadprotecteditemkpishealths): Health details of different KPIs
+* **lastBackupErrorDetail**: [ErrorDetail](#errordetail): Error details in last backup
+* **lastBackupStatus**: 'Healthy' | 'IRPending' | 'Invalid' | 'Unhealthy' | string: Last backup operation status. Possible values: Healthy, Unhealthy.
+* **lastBackupTime**: string: Timestamp of the last backup operation on this backup item.
+* **parentName**: string: Parent name of the DB such as Instance or Availability Group.
+* **parentType**: string: Parent type of protected item, example: for a DB, standalone server or distributed
+* **protectedItemDataSourceId**: string: Data ID of the protected item.
+* **protectedItemHealthStatus**: 'Healthy' | 'IRPending' | 'Invalid' | 'NotReachable' | 'Unhealthy' | string: Health status of the backup item, evaluated based on last heartbeat received
 * **protectedItemType**: 'AzureVmWorkloadSAPAseDatabase' (Required): backup item type.
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped' | string: Backup state of this backup item.
+* **protectionStatus**: string: Backup status of this backup item.
+* **serverName**: string: Host/Cluster Name for instance or AG
 
 ### AzureVmWorkloadSAPHanaDatabaseProtectedItem
 #### Properties
+* **extendedInfo**: [AzureVmWorkloadProtectedItemExtendedInfo](#azurevmworkloadprotecteditemextendedinfo): Additional information for this backup item.
+* **friendlyName**: string: Friendly name of the DB represented by this backup item.
+* **kpisHealths**: [AzureVmWorkloadProtectedItemKpisHealths](#azurevmworkloadprotecteditemkpishealths): Health details of different KPIs
+* **lastBackupErrorDetail**: [ErrorDetail](#errordetail): Error details in last backup
+* **lastBackupStatus**: 'Healthy' | 'IRPending' | 'Invalid' | 'Unhealthy' | string: Last backup operation status. Possible values: Healthy, Unhealthy.
+* **lastBackupTime**: string: Timestamp of the last backup operation on this backup item.
+* **parentName**: string: Parent name of the DB such as Instance or Availability Group.
+* **parentType**: string: Parent type of protected item, example: for a DB, standalone server or distributed
+* **protectedItemDataSourceId**: string: Data ID of the protected item.
+* **protectedItemHealthStatus**: 'Healthy' | 'IRPending' | 'Invalid' | 'NotReachable' | 'Unhealthy' | string: Health status of the backup item, evaluated based on last heartbeat received
 * **protectedItemType**: 'AzureVmWorkloadSAPHanaDatabase' (Required): backup item type.
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped' | string: Backup state of this backup item.
+* **protectionStatus**: string: Backup status of this backup item.
+* **serverName**: string: Host/Cluster Name for instance or AG
 
 ### AzureVmWorkloadSQLDatabaseProtectedItem
 #### Properties
+* **extendedInfo**: [AzureVmWorkloadProtectedItemExtendedInfo](#azurevmworkloadprotecteditemextendedinfo): Additional information for this backup item.
+* **friendlyName**: string: Friendly name of the DB represented by this backup item.
+* **kpisHealths**: [AzureVmWorkloadProtectedItemKpisHealths](#azurevmworkloadprotecteditemkpishealths): Health details of different KPIs
+* **lastBackupErrorDetail**: [ErrorDetail](#errordetail): Error details in last backup
+* **lastBackupStatus**: 'Healthy' | 'IRPending' | 'Invalid' | 'Unhealthy' | string: Last backup operation status. Possible values: Healthy, Unhealthy.
+* **lastBackupTime**: string: Timestamp of the last backup operation on this backup item.
+* **parentName**: string: Parent name of the DB such as Instance or Availability Group.
+* **parentType**: string: Parent type of protected item, example: for a DB, standalone server or distributed
+* **protectedItemDataSourceId**: string: Data ID of the protected item.
+* **protectedItemHealthStatus**: 'Healthy' | 'IRPending' | 'Invalid' | 'NotReachable' | 'Unhealthy' | string: Health status of the backup item, evaluated based on last heartbeat received
 * **protectedItemType**: 'AzureVmWorkloadSQLDatabase' (Required): backup item type.
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped' | string: Backup state of this backup item.
+* **protectionStatus**: string: Backup status of this backup item.
+* **serverName**: string: Host/Cluster Name for instance or AG
 
 ### DPMProtectedItem
 #### Properties
@@ -650,11 +802,35 @@ eg: number of bytes transferred etc
 
 ### AzureIaaSClassicComputeVMProtectedItem
 #### Properties
+* **extendedInfo**: [AzureIaaSVMProtectedItemExtendedInfo](#azureiaasvmprotecteditemextendedinfo): Additional information for this backup item.
+* **extendedProperties**: [ExtendedProperties](#extendedproperties): Extended Properties for Azure IaasVM Backup.
+* **friendlyName**: string: Friendly name of the VM represented by this backup item.
+* **healthDetails**: [AzureIaaSVMHealthDetails](#azureiaasvmhealthdetails)[]: Health details on this backup item.
+* **healthStatus**: 'ActionRequired' | 'ActionSuggested' | 'Invalid' | 'Passed' | string: Health status of protected item.
+* **kpisHealths**: [AzureIaaSVMProtectedItemKpisHealths](#azureiaasvmprotecteditemkpishealths): Health details of different KPIs
+* **lastBackupStatus**: string: Last backup operation status.
+* **lastBackupTime**: string: Timestamp of the last backup operation on this backup item.
+* **protectedItemDataId**: string: Data ID of the protected item.
 * **protectedItemType**: 'Microsoft.ClassicCompute/virtualMachines' (Required): backup item type.
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped' | string: Backup state of this backup item.
+* **protectionStatus**: string: Backup status of this backup item.
+* **virtualMachineId**: string: Fully qualified ARM ID of the virtual machine represented by this item.
 
 ### AzureIaaSComputeVMProtectedItem
 #### Properties
+* **extendedInfo**: [AzureIaaSVMProtectedItemExtendedInfo](#azureiaasvmprotecteditemextendedinfo): Additional information for this backup item.
+* **extendedProperties**: [ExtendedProperties](#extendedproperties): Extended Properties for Azure IaasVM Backup.
+* **friendlyName**: string: Friendly name of the VM represented by this backup item.
+* **healthDetails**: [AzureIaaSVMHealthDetails](#azureiaasvmhealthdetails)[]: Health details on this backup item.
+* **healthStatus**: 'ActionRequired' | 'ActionSuggested' | 'Invalid' | 'Passed' | string: Health status of protected item.
+* **kpisHealths**: [AzureIaaSVMProtectedItemKpisHealths](#azureiaasvmprotecteditemkpishealths): Health details of different KPIs
+* **lastBackupStatus**: string: Last backup operation status.
+* **lastBackupTime**: string: Timestamp of the last backup operation on this backup item.
+* **protectedItemDataId**: string: Data ID of the protected item.
 * **protectedItemType**: 'Microsoft.Compute/virtualMachines' (Required): backup item type.
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped' | string: Backup state of this backup item.
+* **protectionStatus**: string: Backup status of this backup item.
+* **virtualMachineId**: string: Fully qualified ARM ID of the virtual machine represented by this item.
 
 ### AzureSqlProtectedItem
 #### Properties
@@ -672,12 +848,21 @@ eg: number of bytes transferred etc
 * **friendlyName**: string: Friendly name of the container.
 * **healthStatus**: string: Status of health of the container.
 * **registrationStatus**: string: Status of registration of the container with the Recovery Services Vault.
+
 ### AzureBackupServerContainer
 #### Properties
+* **canReRegister**: bool: Specifies whether the container is re-registrable.
+* **containerId**: string: ID of container.
 * **containerType**: 'AzureBackupServerContainer' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
 Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
 Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
 Backup is VMAppContainer
+* **dpmAgentVersion**: string: Backup engine Agent version
+* **dpmServers**: string[]: List of BackupEngines protecting the container
+* **extendedInfo**: [DPMContainerExtendedInfo](#dpmcontainerextendedinfo): Extended Info of the container.
+* **protectedItemCount**: int: Number of protected items in the BackupEngine
+* **protectionStatus**: string: Protection status of the container.
+* **upgradeAvailable**: bool: To check if upgrade available
 
 ### AzureSqlContainer
 #### Properties
@@ -701,6 +886,9 @@ Backup is VMAppContainer
 Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
 Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
 Backup is VMAppContainer
+* **resourceGroup**: string: Resource group name of Recovery Services Vault.
+* **virtualMachineId**: string: Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.
+* **virtualMachineVersion**: string: Specifies whether the container represents a Classic or an Azure Resource Manager VM.
 
 ### AzureIaaSComputeVMContainer
 #### Properties
@@ -708,6 +896,9 @@ Backup is VMAppContainer
 Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
 Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
 Backup is VMAppContainer
+* **resourceGroup**: string: Resource group name of Recovery Services Vault.
+* **virtualMachineId**: string: Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.
+* **virtualMachineVersion**: string: Specifies whether the container represents a Classic or an Azure Resource Manager VM.
 
 ### AzureSqlagWorkloadContainerProtectionContainer
 #### Properties
@@ -715,6 +906,11 @@ Backup is VMAppContainer
 Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
 Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
 Backup is VMAppContainer
+* **extendedInfo**: [AzureWorkloadContainerExtendedInfo](#azureworkloadcontainerextendedinfo): Additional details of a workload container.
+* **lastUpdatedTime**: string: Time stamp when this container was updated.
+* **operationType**: 'Invalid' | 'Register' | 'Reregister' | string: Re-Do Operation
+* **sourceResourceId**: string: ARM ID of the virtual machine represented by this Azure Workload Container
+* **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string: Workload type for which registration was sent.
 
 ### AzureStorageContainer
 #### Properties
@@ -733,6 +929,11 @@ Backup is VMAppContainer
 Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
 Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
 Backup is VMAppContainer
+* **extendedInfo**: [AzureWorkloadContainerExtendedInfo](#azureworkloadcontainerextendedinfo): Additional details of a workload container.
+* **lastUpdatedTime**: string: Time stamp when this container was updated.
+* **operationType**: 'Invalid' | 'Register' | 'Reregister' | string: Re-Do Operation
+* **sourceResourceId**: string: ARM ID of the virtual machine represented by this Azure Workload Container
+* **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string: Workload type for which registration was sent.
 
 ### MabContainer
 #### Properties
@@ -758,6 +959,7 @@ Backup is VMAppContainer
 * **policyId**: string: ID of the backup policy with which this item is backed up.
 * **protectionState**: 'Invalid' | 'NotProtected' | 'Protected' | 'Protecting' | 'ProtectionFailed' | string: Backup state of this backup item.
 * **sourceResourceId**: string: ARM ID of the resource to be backed up.
+
 ### AzureResourceProtectionIntent
 #### Properties
 * **friendlyName**: string: Friendly name of the VM represented by this backup item.
@@ -774,6 +976,7 @@ Backup is VMAppContainer
 
 ### Base Properties
 * **protectedItemsCount**: int: Number of items associated with this policy.
+
 ### AzureIaaSVMProtectionPolicy
 #### Properties
 * **backupManagementType**: 'AzureIaasVM' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
@@ -822,6 +1025,7 @@ Backup is VMAppContainer
 * **Discriminator**: objectType
 
 ### Base Properties
+
 ### AzureFileShareRecoveryPoint
 #### Properties
 * **fileShareSnapshotUri**: string: Contains Url to the snapshot of fileshare, if applicable
@@ -833,15 +1037,31 @@ Backup is VMAppContainer
 ### AzureWorkloadSAPHanaPointInTimeRecoveryPoint
 #### Properties
 * **objectType**: 'AzureWorkloadSAPHanaPointInTimeRecoveryPoint' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **recoveryPointMoveReadinessInfo**: [AzureWorkloadRecoveryPointMoveReadinessInfo](#azureworkloadrecoverypointmovereadinessinfo): Eligibility of RP to be moved to another tier
+* **recoveryPointTierDetails**: [RecoveryPointTierInformation](#recoverypointtierinformation)[]: Recovery point tier information.
+* **recoveryPointTimeInUTC**: string: UTC time at which recovery point was created
+* **timeRanges**: [PointInTimeRange](#pointintimerange)[]: List of log ranges
+* **type**: 'Differential' | 'Full' | 'Incremental' | 'Invalid' | 'Log' | string: Type of restore point
 
 ### AzureWorkloadSAPHanaRecoveryPoint
 #### Properties
 * **objectType**: 'AzureWorkloadSAPHanaRecoveryPoint' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **recoveryPointMoveReadinessInfo**: [AzureWorkloadRecoveryPointMoveReadinessInfo](#azureworkloadrecoverypointmovereadinessinfo): Eligibility of RP to be moved to another tier
+* **recoveryPointTierDetails**: [RecoveryPointTierInformation](#recoverypointtierinformation)[]: Recovery point tier information.
+* **recoveryPointTimeInUTC**: string: UTC time at which recovery point was created
+* **type**: 'Differential' | 'Full' | 'Incremental' | 'Invalid' | 'Log' | string: Type of restore point
 
 ### AzureWorkloadSQLPointInTimeRecoveryPoint
 #### Properties
+* **extendedInfo**: [AzureWorkloadSQLRecoveryPointExtendedInfo](#azureworkloadsqlrecoverypointextendedinfo): Extended Info that provides data directory details. Will be populated in two cases:
+When a specific recovery point is accessed using GetRecoveryPoint
+Or when ListRecoveryPoints is called for Log RP only with ExtendedInfo query filter
 * **objectType**: 'AzureWorkloadSQLPointInTimeRecoveryPoint' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **recoveryPointMoveReadinessInfo**: [AzureWorkloadRecoveryPointMoveReadinessInfo](#azureworkloadrecoverypointmovereadinessinfo): Eligibility of RP to be moved to another tier
+* **recoveryPointTierDetails**: [RecoveryPointTierInformation](#recoverypointtierinformation)[]: Recovery point tier information.
+* **recoveryPointTimeInUTC**: string: UTC time at which recovery point was created
 * **timeRanges**: [PointInTimeRange](#pointintimerange)[]: List of log ranges
+* **type**: 'Differential' | 'Full' | 'Incremental' | 'Invalid' | 'Log' | string: Type of restore point
 
 ### GenericRecoveryPoint
 #### Properties
@@ -976,6 +1196,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 * **Discriminator**: retentionPolicyType
 
 ### Base Properties
+
 ### LongTermRetentionPolicy
 #### Properties
 * **dailySchedule**: [DailyRetentionSchedule](#dailyretentionschedule): Daily retention schedule of the protection policy.
@@ -994,6 +1215,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 * **Discriminator**: schedulePolicyType
 
 ### Base Properties
+
 ### LogSchedulePolicy
 #### Properties
 * **scheduleFrequencyInMins**: int: Frequency of the log schedule operation of this policy in minutes.
@@ -1018,6 +1240,12 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 will be deprecated once clients upgrade to consider this flag.
 * **issqlcompression**: bool: SQL compression flag
 * **timeZone**: string: TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
+
+## SQLDataDirectory
+### Properties
+* **logicalName**: string: Logical name of the file
+* **path**: string: File path
+* **type**: 'Data' | 'Invalid' | 'Log' | string: Type of data directory mapping
 
 ## SubProtectionPolicy
 ### Properties
@@ -1050,6 +1278,12 @@ will be deprecated once clients upgrade to consider this flag.
 * **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of days of week for weekly retention policy.
 * **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration of retention Policy.
 * **retentionTimes**: string[]: Retention times of retention policy.
+
+## WorkloadInquiryDetails
+### Properties
+* **inquiryValidation**: [InquiryValidation](#inquiryvalidation): Inquiry validation such as permissions and other backup validations.
+* **itemCount**: int: Contains the protectable item Count inside this Container.
+* **type**: string: Type of the Workload such as SQL, Oracle etc.
 
 ## YearlyRetentionSchedule
 ### Properties

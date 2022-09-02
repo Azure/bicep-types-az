@@ -437,6 +437,7 @@
 
 ### Base Properties
 * **migrationState**: [BackupPolicyMigrationState](#backuppolicymigrationstate): The object representing the state of the migration between the backup policies.
+
 ### ContinuousModeBackupPolicy
 #### Properties
 * **type**: 'Continuous' (Required): Describes the mode of backups.

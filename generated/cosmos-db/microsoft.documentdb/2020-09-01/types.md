@@ -289,6 +289,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### ContinuousModeBackupPolicy
 #### Properties
 * **type**: 'Continuous' (Required): Describes the mode of backups.

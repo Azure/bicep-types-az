@@ -38,6 +38,7 @@
 * **Discriminator**: endpointType
 
 ### Base Properties
+
 ### StorageBlobDeadLetterDestination
 #### Properties
 * **endpointType**: 'StorageBlob' (Required): Type of the endpoint for the dead letter destination
@@ -52,6 +53,7 @@
 * **Discriminator**: endpointType
 
 ### Base Properties
+
 ### EventHubEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'EventHub' (Required): Type of the endpoint for the event subscription destination
@@ -104,6 +106,7 @@ Wildcard characters are not supported in this path.
 * **Discriminator**: inputSchemaMappingType
 
 ### Base Properties
+
 ### JsonInputSchemaMapping
 #### Properties
 * **inputSchemaMappingType**: 'Json' (Required): Type of the custom mapping

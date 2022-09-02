@@ -334,6 +334,7 @@
 * **issuer**: string (ReadOnly): The issuer of certificate.
 * **subjectName**: string (ReadOnly): The subject name of certificate.
 * **thumbprint**: string (ReadOnly): The thumbprint of certificate.
+
 ### ContentCertificateProperties
 #### Properties
 * **content**: string (WriteOnly): The content of uploaded certificate.
@@ -605,6 +606,7 @@
 
 ### Base Properties
 * **version**: string: Version of the source
+
 ### BuildResultUserSourceInfo
 #### Properties
 * **buildResultId**: string: Resource id of an existing succeeded build result under the same Spring instance.
@@ -613,12 +615,14 @@
 ### JarUploadedUserSourceInfo
 #### Properties
 * **jvmOptions**: string: JVM parameter
+* **relativePath**: string: Relative path of the storage which stores the source
 * **runtimeVersion**: string: Runtime version of the Jar file
 * **type**: 'Jar' (Required): Type of the source uploaded
 
 ### NetCoreZipUploadedUserSourceInfo
 #### Properties
 * **netCoreMainEntryPath**: string: The path to the .NET executable relative to zip root
+* **relativePath**: string: Relative path of the storage which stores the source
 * **runtimeVersion**: string: Runtime version of the .Net file
 * **type**: 'NetCoreZip' (Required): Type of the source uploaded
 
@@ -626,6 +630,7 @@
 #### Properties
 * **artifactSelector**: string: Selector for the artifact to be used for the deployment for multi-module projects. This should be
 the relative path to the target module/project.
+* **relativePath**: string: Relative path of the storage which stores the source
 * **runtimeVersion**: string: Runtime version of the source file
 * **type**: 'Source' (Required): Type of the source uploaded
 

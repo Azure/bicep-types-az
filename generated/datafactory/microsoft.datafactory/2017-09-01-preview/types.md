@@ -74,35 +74,48 @@
 * **dependsOn**: [ActivityDependency](#activitydependency)[]: Activity depends on condition.
 * **description**: string: Activity description.
 * **name**: string (Required): Activity name.
+
 ### AzureMLBatchExecutionActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'AzureMLBatchExecution' (Required): Type of activity.
 * **typeProperties**: [AzureMLBatchExecutionActivityTypeProperties](#azuremlbatchexecutionactivitytypeproperties) (Required): Azure ML Batch Execution activity properties.
 
 ### AzureMLUpdateResourceActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'AzureMLUpdateResource' (Required): Type of activity.
 * **typeProperties**: [AzureMLUpdateResourceActivityTypeProperties](#azuremlupdateresourceactivitytypeproperties) (Required): Azure ML Update Resource management activity properties.
 
 ### CopyActivity
 #### Properties
 * **inputs**: [DatasetReference](#datasetreference)[]: List of inputs for the activity.
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
 * **outputs**: [DatasetReference](#datasetreference)[]: List of outputs for the activity.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'Copy' (Required): Type of activity.
 * **typeProperties**: [CopyActivityTypeProperties](#copyactivitytypeproperties) (Required): Copy activity properties.
 
 ### CustomActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'Custom' (Required): Type of activity.
 * **typeProperties**: [CustomActivityTypeProperties](#customactivitytypeproperties) (Required): Custom activity properties.
 
 ### DatabricksNotebookActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'DatabricksNotebook' (Required): Type of activity.
 * **typeProperties**: [DatabricksNotebookActivityTypeProperties](#databricksnotebookactivitytypeproperties) (Required): Databricks Notebook activity properties.
 
 ### DataLakeAnalyticsUsqlActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'DataLakeAnalyticsU-SQL' (Required): Type of activity.
 * **typeProperties**: [DataLakeAnalyticsUsqlActivityTypeProperties](#datalakeanalyticsusqlactivitytypeproperties) (Required): Data Lake Analytics U-SQL activity properties.
 
@@ -113,6 +126,8 @@
 
 ### ExecuteSsisPackageActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'ExecuteSSISPackage' (Required): Type of activity.
 * **typeProperties**: [ExecuteSsisPackageActivityTypeProperties](#executessispackageactivitytypeproperties) (Required): Execute SSIS package activity properties.
 
@@ -128,31 +143,43 @@
 
 ### GetMetadataActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'GetMetadata' (Required): Type of activity.
 * **typeProperties**: [GetMetadataActivityTypeProperties](#getmetadataactivitytypeproperties) (Required): GetMetadata activity properties.
 
 ### HDInsightHiveActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'HDInsightHive' (Required): Type of activity.
 * **typeProperties**: [HDInsightHiveActivityTypeProperties](#hdinsighthiveactivitytypeproperties) (Required): HDInsight Hive activity properties.
 
 ### HDInsightMapReduceActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'HDInsightMapReduce' (Required): Type of activity.
 * **typeProperties**: [HDInsightMapReduceActivityTypeProperties](#hdinsightmapreduceactivitytypeproperties) (Required): HDInsight MapReduce activity properties.
 
 ### HDInsightPigActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'HDInsightPig' (Required): Type of activity.
 * **typeProperties**: [HDInsightPigActivityTypeProperties](#hdinsightpigactivitytypeproperties) (Required): HDInsight Pig activity properties.
 
 ### HDInsightSparkActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'HDInsightSpark' (Required): Type of activity.
 * **typeProperties**: [HDInsightSparkActivityTypeProperties](#hdinsightsparkactivitytypeproperties) (Required): HDInsight spark activity properties.
 
 ### HDInsightStreamingActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'HDInsightStreaming' (Required): Type of activity.
 * **typeProperties**: [HDInsightStreamingActivityTypeProperties](#hdinsightstreamingactivitytypeproperties) (Required): HDInsight streaming activity properties.
 
@@ -163,11 +190,15 @@
 
 ### LookupActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'Lookup' (Required): Type of activity.
 * **typeProperties**: [LookupActivityTypeProperties](#lookupactivitytypeproperties) (Required): Lookup activity properties.
 
 ### SqlServerStoredProcedureActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'SqlServerStoredProcedure' (Required): Type of activity.
 * **typeProperties**: [SqlServerStoredProcedureActivityTypeProperties](#sqlserverstoredprocedureactivitytypeproperties) (Required): SQL stored procedure activity properties.
 
@@ -183,6 +214,8 @@
 
 ### WebActivity
 #### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
 * **type**: 'WebActivity' (Required): Type of activity.
 * **typeProperties**: [WebActivityTypeProperties](#webactivitytypeproperties) (Required): Web activity properties.
 
@@ -191,6 +224,15 @@
 ### Properties
 * **activity**: string (Required): Activity name.
 * **dependencyConditions**: 'Completed' | 'Failed' | 'Skipped' | 'Succeeded' | string[] (Required): Match-Condition for the dependency.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ActivityPolicy
+### Properties
+* **retry**: any: Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
+* **retryIntervalInSeconds**: int: Interval between each retry attempt (in seconds). The default is 30 sec.
+* **secureOutput**: bool: When set to true, Output from activity is considered as secure and will not be logged to monitoring.
+* **timeout**: any: Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -442,12 +484,14 @@
 * **writeBatchSize**: any: Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
 * **writeBatchTimeout**: any: Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 
+
 ## CopySource
 * **Discriminator**: type
 
 ### Base Properties
 * **sourceRetryCount**: any: Source retry count. Type: integer (or Expression with resultType integer).
 * **sourceRetryWait**: any: Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+
 
 ## CosmosDbLinkedServiceTypeProperties
 ### Properties
@@ -511,6 +555,7 @@
 * **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference.
 * **parameters**: [ParameterDefinitionSpecification](#parameterdefinitionspecification): Parameters for dataset.
 * **structure**: any: Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+
 ### AmazonMWSObjectDataset
 #### Properties
 * **type**: 'AmazonMWSObject' (Required): Type of dataset.
@@ -746,6 +791,7 @@
 * **Discriminator**: type
 
 ### Base Properties
+
 ### DatasetBZip2Compression
 #### Properties
 * **type**: 'BZip2' (Required): Type of dataset compression.
@@ -778,6 +824,7 @@
 ### Base Properties
 * **deserializer**: any: Deserializer. Type: string (or Expression with resultType string).
 * **serializer**: any: Serializer. Type: string (or Expression with resultType string).
+
 
 ## Db2LinkedServiceTypeProperties
 ### Properties
@@ -1187,6 +1234,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ### Base Properties
 * **description**: string: Integration runtime description.
+
 ### ManagedIntegrationRuntime
 #### Properties
 * **state**: 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): Integration runtime state, only valid for managed dedicated integration runtime.
@@ -1272,6 +1320,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **Discriminator**: authorizationType
 
 ### Base Properties
+
 ### LinkedIntegrationRuntimeKey
 #### Properties
 * **authorizationType**: 'Key' (Required): Type of the secret.
@@ -1295,6 +1344,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **connectVia**: [IntegrationRuntimeReference](#integrationruntimereference): The integration runtime reference.
 * **description**: string: Linked service description.
 * **parameters**: [ParameterDefinitionSpecification](#parameterdefinitionspecification): Parameters for linked service.
+
 ### AmazonMWSLinkedService
 #### Properties
 * **type**: 'AmazonMWS' (Required): Type of linked service.
@@ -1951,6 +2001,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **Discriminator**: type
 
 ### Base Properties
+
 ### AzureKeyVaultSecretReference
 #### Properties
 * **secretName**: any (Required): The name of the secret in Azure Key Vault. Type: string (or Expression with resultType string).
@@ -2145,6 +2196,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Base Properties
 * **description**: string: Trigger description.
 * **runtimeState**: 'Disabled' | 'Started' | 'Stopped' | string (ReadOnly): Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+
 ### MultiplePipelineTrigger
 #### Properties
 * **pipelines**: [TriggerPipelineReference](#triggerpipelinereference)[]: Pipelines that need to be started.
@@ -2195,6 +2247,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ### Base Properties
 * **url**: any (Required): The URL of the web service endpoint, e.g. https://www.microsoft.com . Type: string (or Expression with resultType string).
+
 ### WebAnonymousAuthentication
 #### Properties
 * **authenticationType**: 'Anonymous' (Required): Type of authentication used to connect to the web table source.

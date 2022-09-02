@@ -1907,6 +1907,7 @@
 ### Base Properties
 * **name**: string: The name of the rule.
 * **priority**: int: Priority of the Firewall Policy Rule resource.
+
 ### FirewallPolicyFilterRule
 #### Properties
 * **action**: [FirewallPolicyFilterRuleAction](#firewallpolicyfilterruleaction): The action type of a Filter rule.
@@ -1928,6 +1929,7 @@
 ### Base Properties
 * **description**: string: Description of the rule condition.
 * **name**: string: Name of the rule condition.
+
 ### ApplicationRuleCondition
 #### Properties
 * **destinationAddresses**: string[]: List of destination IP addresses or Service Tags.

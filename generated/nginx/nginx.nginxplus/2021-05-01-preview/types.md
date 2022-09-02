@@ -75,6 +75,7 @@
 ### Properties
 * **files**: [NginxConfigurationFile](#nginxconfigurationfile)[]
 * **package**: [NginxConfigurationPackage](#nginxconfigurationpackage)
+* **protectedFiles**: [NginxConfigurationFile](#nginxconfigurationfile)[]
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string
 * **rootFile**: string
 
@@ -87,6 +88,7 @@
 ### Properties
 * **enableDiagnosticsSupport**: bool
 * **ipAddress**: string (ReadOnly): The IP address of the deployment.
+* **logging**: [NginxLogging](#nginxlogging)
 * **managedResourceGroup**: string: The managed resource group to deploy VNet injection related network resources.
 * **networkProfile**: [NginxNetworkProfile](#nginxnetworkprofile)
 * **nginxVersion**: string (ReadOnly)
@@ -101,6 +103,10 @@
 ### Properties
 * **privateIPAddresses**: [NginxPrivateIPAddress](#nginxprivateipaddress)[]
 * **publicIPAddresses**: [NginxPublicIPAddress](#nginxpublicipaddress)[]
+
+## NginxLogging
+### Properties
+* **storageAccount**: [NginxStorageAccount](#nginxstorageaccount)
 
 ## NginxNetworkInterfaceConfiguration
 ### Properties
@@ -120,6 +126,11 @@
 ## NginxPublicIPAddress
 ### Properties
 * **id**: string
+
+## NginxStorageAccount
+### Properties
+* **accountName**: string
+* **containerName**: string
 
 ## ResourceSku
 ### Properties

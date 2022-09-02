@@ -69,6 +69,7 @@
 * **Discriminator**: copyLogDetailsType
 
 ### Base Properties
+
 ### DataBoxAccountCopyLogDetails
 #### Properties
 * **accountName**: string (ReadOnly): Account name.
@@ -115,6 +116,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 
 ### Base Properties
 * **sharePassword**: string (WriteOnly): Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+
 ### ManagedDiskDetails
 #### Properties
 * **dataAccountType**: 'ManagedDisk' (Required): Account Type of the data to be transferred.
@@ -217,6 +219,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 * **returnPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly): Return package shipping details.
 * **reverseShipmentLabelSasKey**: string (ReadOnly): Shared access key to download the return shipment label
 * **shippingAddress**: [ShippingAddress](#shippingaddress): Shipping address of the customer.
+
 ### DataBoxJobDetails
 #### Properties
 * **copyProgress**: [CopyProgress](#copyprogress)[] (ReadOnly): Copy progress per storage account.
@@ -260,6 +263,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 ### Base Properties
 * **dcAccessSecurityCode**: [DcAccessSecurityCode](#dcaccesssecuritycode) (ReadOnly): Dc Access Security Code for Customer Managed Shipping
 * **error**: [CloudError](#clouderror) (ReadOnly): Error while fetching the secrets.
+
 ### DataboxJobSecrets
 #### Properties
 * **jobSecretsType**: 'DataBox' (Required): Used to indicate what type of job secrets object.

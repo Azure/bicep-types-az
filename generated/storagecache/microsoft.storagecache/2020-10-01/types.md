@@ -164,6 +164,7 @@
 * **nfs3**: [Nfs3Target](#nfs3target): Properties when targetType is nfs3.
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
 * **unknown**: [UnknownTarget](#unknowntarget): Properties when targetType is unknown.
+
 ### ClfsTargetProperties
 #### Properties
 * **targetType**: 'clfs' (Required): Type of the Storage Target.

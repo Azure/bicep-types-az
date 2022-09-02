@@ -270,6 +270,7 @@
 
 ### Base Properties
 * **key**: string: The field/property in the event based on which you want to filter.
+
 ### BoolEqualsAdvancedFilter
 #### Properties
 * **operatorType**: 'BoolEquals' (Required): The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
@@ -397,6 +398,7 @@ the channel and corresponding partner topic are deleted.
 * **Discriminator**: endpointType
 
 ### Base Properties
+
 ### StorageBlobDeadLetterDestination
 #### Properties
 * **endpointType**: 'StorageBlob' (Required): Type of the endpoint for the dead letter destination
@@ -414,6 +416,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 
 ### Base Properties
 * **name**: string: Name of the delivery attribute or header.
+
 ### DynamicDeliveryAttributeMapping
 #### Properties
 * **properties**: [DynamicDeliveryAttributeMappingProperties](#dynamicdeliveryattributemappingproperties): Properties of dynamic delivery attribute mapping.
@@ -511,6 +514,7 @@ This represents a unique resource in the partner's resource model.
 * **Discriminator**: endpointType
 
 ### Base Properties
+
 ### AzureFunctionEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'AzureFunction' (Required): Type of the endpoint for the event subscription destination.
@@ -644,6 +648,7 @@ This property is currently not used and reserved for future usage.
 * **Discriminator**: inputSchemaMappingType
 
 ### Base Properties
+
 ### JsonInputSchemaMapping
 #### Properties
 * **inputSchemaMappingType**: 'Json' (Required): Type of the custom mapping
@@ -686,6 +691,7 @@ not specified, the default is 7 days. Otherwise, allowed values are between 1 an
 * **Discriminator**: clientAuthenticationType
 
 ### Base Properties
+
 ### AzureADPartnerClientAuthentication
 #### Properties
 * **clientAuthenticationType**: 'AzureAD' (Required): Type of client authentication
@@ -713,6 +719,7 @@ created under this Azure subscription.
 * **resourceGroupName**: string: Azure Resource Group of the subscriber. The partner destination associated with the channel will be
 created under this resource group.
 * **resourceMoveChangeHistory**: [ResourceMoveChangeHistory](#resourcemovechangehistory)[]: Change history of the resource move.
+
 ### WebhookPartnerDestinationInfo
 #### Properties
 * **endpointType**: 'WebHook' (Required): Type of the endpoint for the partner destination
