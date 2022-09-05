@@ -30,7 +30,7 @@
     "@types/async": "^3.2.15",
     "@types/js-yaml": "^4.0.5",
     "@types/lodash": "^4.14.184",
-    "@types/node": "^18.7.14",
+    "@types/node": "^18.7.15",
     "@types/yargs": "^17.0.12",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
