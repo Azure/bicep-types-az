@@ -111,10 +111,10 @@ function normalizeJsonPath(jsonPath: string) {
 }
 
 async function generateAutorestConfig(logger: ILogger, readmePath: string, bicepReadmePath: string, config: GeneratorConfig) {
-  // We expect a path format convention of <provider>/(preview|stable)/<yyyy>-<mm>-<dd>(|-preview)/<filename>.json
+  // We expect a path format convention of <provider>/(any/number/of/intervening/folders)/<yyyy>-<mm>-<dd>(|-preview)/<filename>.json
   // This information is used to generate individual tags in the generated autorest configuration
   // eslint-disable-next-line no-useless-escape
-  const pathRegex = /^(\$\(this-folder\)\/|)([^\/]+)\/[^\/]+\/(\d{4}-\d{2}-\d{2}(|-preview))\/.*\.json$/i;
+  const pathRegex = /^(\$\(this-folder\)\/|)([^\/]+)(?:\/[^\/]+)+\/(\d{4}-\d{2}-\d{2}(|-preview))\/.*\.json$/i;
 
   const readmeContents = await readFile(readmePath, { encoding: 'utf8' });
   const readmeMarkdown = markdown.parse(readmeContents);
