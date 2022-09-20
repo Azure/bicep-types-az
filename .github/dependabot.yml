@@ -8,16 +8,20 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "sunday"
   - package-ecosystem: "npm"
     directory: "/src/generator"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "sunday"
   - package-ecosystem: "npm"
     directory: "/src/autorest.bicep"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "sunday"
   - package-ecosystem: "nuget"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "sunday"

@@ -1,78 +1,137 @@
-[
-  {
-    "taskType": "trigger",
-    "capabilityId": "AutoMerge",
-    "subCapability": "AutoMerge",
-    "version": "1.0",
-    "config": {
-      "label": "AutoMerge",
-      "minMinutesOpen": "5",
-      "taskName": "Automatically merge PRs with AutoMerge label",
-      "mergeType": "squash",
-      "deleteBranches": true,
-      "enforceDMPAsStatus": true,
-      "removeLabelOnPush": true,
-      "usePrDescriptionAsCommitMessage": true
-    }
-  },
-  {
-    "taskType": "trigger",
-    "capabilityId": "IssueResponder",
-    "subCapability": "PullRequestResponder",
-    "version": "1.0",
-    "config": {
-      "conditions": {
-        "operator": "and",
-        "operands": [
+{
+  "version": "1.0",
+  "tasks": [
+    {
+      "taskType": "trigger",
+      "capabilityId": "AutoMerge",
+      "subCapability": "AutoMerge",
+      "version": "1.0",
+      "config": {
+        "taskName": "Auto merge PRs",
+        "label": "auto-merge",
+        "minMinutesOpen": "5",
+        "mergeType": "squash",
+        "deleteBranches": true,
+        "allowAutoMergeInstructionsWithoutLabel": false
+      }
+    },
+    {
+      "taskType": "trigger",
+      "capabilityId": "IssueResponder",
+      "subCapability": "PullRequestResponder",
+      "version": "1.0",
+      "config": {
+        "conditions": {
+          "operator": "and",
+          "operands": [
+            {
+              "name": "isAction",
+              "parameters": {
+                "action": "opened"
+              }
+            },
+            {
+              "name": "isActivitySender",
+              "parameters": {
+                "user": "github-actions[bot]"
+              }
+            },
+            {
+              "name": "titleContains",
+              "parameters": {
+                "titlePattern": "Update Generated Types"
+              }
+            }
+          ]
+        },
+        "eventType": "pull_request",
+        "eventNames": [
+          "pull_request",
+          "issues",
+          "project_card"
+        ],
+        "taskName": "Automatically approve type generation PRs sent by github-actions[bot]",
+        "actions": [
           {
-            "name": "isAction",
+            "name": "closeIssue",
+            "parameters": {}
+          },
+          {
+            "name": "reopenIssue",
+            "parameters": {}
+          },
+          {
+            "name": "addLabel",
             "parameters": {
-              "action": "opened"
+              "label": "AutoMerge"
             }
           },
           {
-            "name": "isActivitySender",
+            "name": "approvePullRequest",
             "parameters": {
-              "user": "github-actions[bot]"
-            }
-          },
-          {
-            "name": "titleContains",
-            "parameters": {
-              "titlePattern": "Update Generated Types"
+              "comment": "Automatically approving type generation pull request sent by @github-actions[bot]."
             }
           }
         ]
-      },
-      "eventType": "pull_request",
-      "eventNames": [
-        "pull_request",
-        "issues",
-        "project_card"
-      ],
-      "taskName": "Automatically approve type generation PRs sent by github-actions[bot]",
-      "actions": [
-        {
-          "name": "closeIssue",
-          "parameters": {}
+      }
+    },
+    {
+      "taskType": "trigger",
+      "capabilityId": "IssueResponder",
+      "subCapability": "PullRequestResponder",
+      "version": "1.0",
+      "config": {
+        "conditions": {
+          "operator": "and",
+          "operands": [
+            {
+              "name": "hasLabel",
+              "parameters": {
+                "label": "dependencies"
+              }
+            },
+            {
+              "operator": "not",
+              "operands": [
+                {
+                  "name": "hasLabel",
+                  "parameters": {
+                    "label": "auto-merge"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "isActivitySender",
+              "parameters": {
+                "user": "dependabot[bot]"
+              }
+            }
+          ]
         },
-        {
-          "name": "reopenIssue",
-          "parameters": {}
-        },
-        {
-          "name": "addLabel",
-          "parameters": {
-            "label": "AutoMerge"
+        "eventType": "pull_request",
+        "eventNames": [
+          "pull_request",
+          "issues",
+          "project_card"
+        ],
+        "taskName": "Approve and apply \"auto-merge\" label to dependabot PRs",
+        "actions": [
+          {
+            "name": "approvePullRequest",
+            "parameters": {
+              "comment": ":shipit:"
+            }
+          },
+          {
+            "name": "addLabel",
+            "parameters": {
+              "label": "auto-merge"
+            }
           }
-        },
-        {
-          "name": "approvePullRequest",
-          "parameters": {
-            "comment": "Automatically approving type generation pull request sent by @github-actions[bot]."
-          }
-        }
-      ]
+        ]
+      }
     }
-  }
-]
+  ],
+  "userGroups": []
+}
