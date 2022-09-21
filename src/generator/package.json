@@ -32,7 +32,7 @@
     "@types/lodash": "^4.14.185",
     "@types/node": "^18.7.17",
     "@types/yargs": "^17.0.12",
-    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
     "@typescript-eslint/parser": "^5.38.0",
     "async": "^3.2.4",
     "autorest": "^3.6.2",
