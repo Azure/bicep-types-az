@@ -55,6 +55,14 @@
         "resolved": "3.5.113",
         "contentHash": "4fBSMkqhi410qlkjPm+Mxfk8iO3C7dmgdVS7ljsfVO21WEzZCHP1VCOqB6rlOPfPidR/oxX+/Do/I7meCAz+Jg=="
       },
+      "Azure.Bicep.Types": {
+        "type": "Transitive",
+        "resolved": "0.3.1",
+        "contentHash": "P/HUHAxPEQFP9hUohoPuy48eUyowL0dzNXFtKKIE+/EqQKObMATcQ7RjAcQrXaOIsYZ/Vk4gVreweJ3rkbYYJw==",
+        "dependencies": {
+          "System.Text.Json": "6.0.6"
+        }
+      },
       "Microsoft.Build.Tasks.Git": {
         "type": "Transitive",
         "resolved": "1.1.1",
@@ -138,16 +146,10 @@
           "System.Text.Encodings.Web": "6.0.0"
         }
       },
-      "Azure.Bicep.Types": {
-        "type": "Project",
-        "dependencies": {
-          "System.Text.Json": "[6.0.6, )"
-        }
-      },
       "Azure.Bicep.Types.Az": {
         "type": "Project",
         "dependencies": {
-          "Azure.Bicep.Types": "[1.0.0, )"
+          "Azure.Bicep.Types": "[0.3.1, )"
         }
       }
     }
