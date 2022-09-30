@@ -327,6 +327,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **aRecords**: string[]: A records visible for this hostname.
 * **cNameRecords**: string[]: CName records visible for this hostname.
 * **conflictingContainerAppResourceId**: string (ReadOnly): Name of the conflicting Container App on the Managed Environment if it's within the same subscription.
+* **conflictWithEnvironmentCustomDomain**: bool (ReadOnly): <code>true</code> if there is a conflict on the Container App's managed environment level custom domain; otherwise, <code>false</code>.
 * **customDomainVerificationFailureInfo**: [CustomHostnameAnalysisResultCustomDomainVerificationFailureInfo](#customhostnameanalysisresultcustomdomainverificationfailureinfo) (ReadOnly): Raw failure information if DNS verification fails.
 * **customDomainVerificationTest**: 'Failed' | 'Passed' | 'Skipped' (ReadOnly): DNS verification test result.
 * **hasConflictOnManagedEnvironment**: bool (ReadOnly): <code>true</code> if there is a conflict on the Container App's managed environment; otherwise, <code>false</code>.
@@ -388,9 +389,14 @@ eg: azure-servicebus, redis etc.
 * **secretRef**: string: Name of the Dapr Component secret from which to pull the metadata property value.
 * **value**: string: Metadata property value.
 
+## DaprSecret
+### Properties
+* **name**: string (ReadOnly): Secret Name.
+* **value**: string (ReadOnly): Secret Value.
+
 ## DaprSecretsCollection
 ### Properties
-* **value**: [Secret](#secret)[] (Required): Collection of secrets used by a Dapr component
+* **value**: [DaprSecret](#daprsecret)[] (Required): Collection of secrets for ListSecrets Action
 
 ## DefaultAuthorizationPolicy
 ### Properties

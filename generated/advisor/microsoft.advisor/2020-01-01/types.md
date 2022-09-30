@@ -60,7 +60,6 @@
 * **recommendationTypeId**: string: The recommendation-type GUID.
 * **remediation**: [RecommendationPropertiesRemediation](#recommendationpropertiesremediation): The automated way to apply recommendation.
 * **resourceMetadata**: [ResourceMetadata](#resourcemetadata): Metadata of resource that was assessed
-* **risk**: 'Error' | 'None' | 'Warning' | string: The potential risk of not implementing the recommendation.
 * **shortDescription**: [ShortDescription](#shortdescription): A summary of the recommendation.
 * **suppressionIds**: string[]: The list of snoozed and dismissed rules for the recommendation.
 
@@ -104,8 +103,8 @@
 
 ## ShortDescription
 ### Properties
-* **problem**: string: The issue or opportunity identified by the recommendation.
-* **solution**: string: The remediation action suggested by the recommendation.
+* **problem**: string: The issue or opportunity identified by the recommendation and proposed solution.
+* **solution**: string: The issue or opportunity identified by the recommendation and proposed solution.
 
 ## SuppressionProperties
 ### Properties

@@ -435,11 +435,6 @@
 * **password**: [SecretBase](#secretbase): The on-premises Windows authentication password.
 * **userName**: any: The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
 
-## AmazonRdsForSqlServerSourceStoredProcedureParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [StoredProcedureParameter](#storedprocedureparameter)
-
 ## AmazonRdsForSqlServerTableDatasetTypeProperties
 ### Properties
 * **schema**: any: The schema name of the SQL Server dataset. Type: string (or Expression with resultType string).
@@ -886,16 +881,6 @@
 * **table**: any: The table name of the Azure SQL Managed Instance dataset. Type: string (or Expression with resultType string).
 * **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
 
-## AzureSqlSinkStoredProcedureParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [StoredProcedureParameter](#storedprocedureparameter)
-
-## AzureSqlSourceStoredProcedureParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [StoredProcedureParameter](#storedprocedureparameter)
-
 ## AzureSqlTableDatasetTypeProperties
 ### Properties
 * **schema**: any: The schema name of the Azure SQL database. Type: string (or Expression with resultType string).
@@ -1126,7 +1111,7 @@
 * **sqlWriterStoredProcedureName**: any: SQL writer stored procedure name. Type: string (or Expression with resultType string).
 * **sqlWriterTableType**: any: SQL writer table type. Type: string (or Expression with resultType string).
 * **sqlWriterUseTableLock**: any: Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
-* **storedProcedureParameters**: [AzureSqlSinkStoredProcedureParameters](#azuresqlsinkstoredprocedureparameters): SQL stored procedure parameters.
+* **storedProcedureParameters**: any: SQL stored procedure parameters.
 * **storedProcedureTableTypeParameterName**: any: The stored procedure parameter name of the table type. Type: string (or Expression with resultType string).
 * **tableOption**: any: The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
 * **type**: 'AzureSqlSink' (Required): Copy sink type.
@@ -1305,7 +1290,7 @@
 * **sqlWriterStoredProcedureName**: any: SQL writer stored procedure name. Type: string (or Expression with resultType string).
 * **sqlWriterTableType**: any: SQL writer table type. Type: string (or Expression with resultType string).
 * **sqlWriterUseTableLock**: any: Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
-* **storedProcedureParameters**: [SqlMISinkStoredProcedureParameters](#sqlmisinkstoredprocedureparameters): SQL stored procedure parameters.
+* **storedProcedureParameters**: any: SQL stored procedure parameters.
 * **storedProcedureTableTypeParameterName**: any: The stored procedure parameter name of the table type. Type: string (or Expression with resultType string).
 * **tableOption**: any: The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
 * **type**: 'SqlMISink' (Required): Copy sink type.
@@ -1318,7 +1303,7 @@
 * **sqlWriterStoredProcedureName**: any: SQL writer stored procedure name. Type: string (or Expression with resultType string).
 * **sqlWriterTableType**: any: SQL writer table type. Type: string (or Expression with resultType string).
 * **sqlWriterUseTableLock**: any: Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
-* **storedProcedureParameters**: [SqlServerSinkStoredProcedureParameters](#sqlserversinkstoredprocedureparameters): SQL stored procedure parameters.
+* **storedProcedureParameters**: any: SQL stored procedure parameters.
 * **storedProcedureTableTypeParameterName**: any: The stored procedure parameter name of the table type. Type: string (or Expression with resultType string).
 * **tableOption**: any: The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
 * **type**: 'SqlServerSink' (Required): Copy sink type.
@@ -1331,7 +1316,7 @@
 * **sqlWriterStoredProcedureName**: any: SQL writer stored procedure name. Type: string (or Expression with resultType string).
 * **sqlWriterTableType**: any: SQL writer table type. Type: string (or Expression with resultType string).
 * **sqlWriterUseTableLock**: any: Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
-* **storedProcedureParameters**: [SqlSinkStoredProcedureParameters](#sqlsinkstoredprocedureparameters): SQL stored procedure parameters.
+* **storedProcedureParameters**: any: SQL stored procedure parameters.
 * **storedProcedureTableTypeParameterName**: any: The stored procedure parameter name of the table type. Type: string (or Expression with resultType string).
 * **tableOption**: any: The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
 * **type**: 'SqlSink' (Required): Copy sink type.
@@ -1373,7 +1358,7 @@
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **sqlReaderQuery**: any: SQL reader query. Type: string (or Expression with resultType string).
 * **sqlReaderStoredProcedureName**: any: Name of the stored procedure for a SQL Database source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
-* **storedProcedureParameters**: [AmazonRdsForSqlServerSourceStoredProcedureParameters](#amazonrdsforsqlserversourcestoredprocedureparameters): Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
+* **storedProcedureParameters**: any: Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
 * **type**: 'AmazonRdsForSqlServerSource' (Required): Copy source type.
 
 ### AmazonRedshiftSource
@@ -1446,7 +1431,7 @@
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **sqlReaderQuery**: any: SQL reader query. Type: string (or Expression with resultType string).
 * **sqlReaderStoredProcedureName**: any: Name of the stored procedure for a SQL Database source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
-* **storedProcedureParameters**: [AzureSqlSourceStoredProcedureParameters](#azuresqlsourcestoredprocedureparameters): Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
+* **storedProcedureParameters**: any: Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
 * **type**: 'AzureSqlSource' (Required): Copy source type.
 
 ### AzureTableSource
@@ -1986,7 +1971,7 @@
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **sqlReaderQuery**: any: SQL reader query. Type: string (or Expression with resultType string).
 * **sqlReaderStoredProcedureName**: any: Name of the stored procedure for a Azure SQL Managed Instance source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
-* **storedProcedureParameters**: [SqlMISourceStoredProcedureParameters](#sqlmisourcestoredprocedureparameters): Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
+* **storedProcedureParameters**: any: Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
 * **type**: 'SqlMISource' (Required): Copy source type.
 
 ### SqlServerSource
@@ -1998,7 +1983,7 @@
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **sqlReaderQuery**: any: SQL reader query. Type: string (or Expression with resultType string).
 * **sqlReaderStoredProcedureName**: any: Name of the stored procedure for a SQL Database source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
-* **storedProcedureParameters**: [SqlServerSourceStoredProcedureParameters](#sqlserversourcestoredprocedureparameters): Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
+* **storedProcedureParameters**: any: Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
 * **type**: 'SqlServerSource' (Required): Copy source type.
 
 ### SqlSource
@@ -2010,7 +1995,7 @@
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **sqlReaderQuery**: any: SQL reader query. Type: string (or Expression with resultType string).
 * **sqlReaderStoredProcedureName**: any: Name of the stored procedure for a SQL Database source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
-* **storedProcedureParameters**: [SqlSourceStoredProcedureParameters](#sqlsourcestoredprocedureparameters): Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
+* **storedProcedureParameters**: any: Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
 * **type**: 'SqlSource' (Required): Copy source type.
 
 ### SquareSource
@@ -5395,16 +5380,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **interimSchemaName**: any: Schema name for interim table. Type: string (or Expression with resultType string).
 * **keys**: any: Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
 
-## SqlMISinkStoredProcedureParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [StoredProcedureParameter](#storedprocedureparameter)
-
-## SqlMISourceStoredProcedureParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [StoredProcedureParameter](#storedprocedureparameter)
-
 ## SqlPartitionSettings
 ### Properties
 * **partitionColumnName**: any: The name of the column in integer or datetime type that will be used for proceeding partitioning. If not specified, the primary key of the table is auto-detected and used as the partition column. Type: string (or Expression with resultType string).
@@ -5419,16 +5394,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **password**: [SecretBase](#secretbase): The on-premises Windows authentication password.
 * **userName**: any: The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
 
-## SqlServerSinkStoredProcedureParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [StoredProcedureParameter](#storedprocedureparameter)
-
-## SqlServerSourceStoredProcedureParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [StoredProcedureParameter](#storedprocedureparameter)
-
 ## SqlServerStoredProcedureActivityTypeProperties
 ### Properties
 * **storedProcedureName**: any (Required): Stored procedure name. Type: string (or Expression with resultType string).
@@ -5439,16 +5404,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **schema**: any: The schema name of the SQL Server dataset. Type: string (or Expression with resultType string).
 * **table**: any: The table name of the SQL Server dataset. Type: string (or Expression with resultType string).
 * **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
-
-## SqlSinkStoredProcedureParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [StoredProcedureParameter](#storedprocedureparameter)
-
-## SqlSourceStoredProcedureParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [StoredProcedureParameter](#storedprocedureparameter)
 
 ## SqlUpsertSettings
 ### Properties
@@ -5541,11 +5496,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **path**: any: The path to storage for storing the interim data. Type: string (or Expression with resultType string).
 ### Additional Properties
 * **Additional Properties Type**: any
-
-## StoredProcedureParameter
-### Properties
-* **type**: 'Boolean' | 'Date' | 'Decimal' | 'Guid' | 'Int' | 'Int64' | 'String' | string: Stored procedure parameter type.
-* **value**: any: Stored procedure parameter value. Type: string (or Expression with resultType string).
 
 ## StoreReadSettings
 * **Discriminator**: type

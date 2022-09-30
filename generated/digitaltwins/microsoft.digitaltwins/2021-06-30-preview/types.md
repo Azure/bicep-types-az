@@ -142,7 +142,7 @@
 * **adxDatabaseName**: string (Required): The name of the Azure Data Explorer database.
 * **adxEndpointUri**: string (Required): The URI of the Azure Data Explorer endpoint.
 * **adxResourceId**: string (Required): The resource ID of the Azure Data Explorer cluster.
-* **adxTableName**: string: The name of the Azure Data Explorer table.
+* **adxTableName**: string: The name of the Azure Data Explorer table. Defaults to AdtPropertyEvents.
 * **connectionType**: 'AzureDataExplorer' (Required): The type of time series connection resource.
 * **eventHubConsumerGroup**: string: The EventHub consumer group to use when ADX reads from EventHub. Defaults to $Default.
 * **eventHubEndpointUri**: string (Required): The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://

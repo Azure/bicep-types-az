@@ -174,6 +174,14 @@ Until this is true, the TotalBytesToProcess may not be valid.
 * **serialNumber**: string (ReadOnly): The serial number of the disk
 * **status**: 'Completed' | 'CompletedWithErrors' | 'DeviceFormatted' | 'DeviceMetadataModified' | 'DriveCorrupted' | 'DriveNotDetected' | 'DriveNotReceived' | 'Failed' | 'HardwareError' | 'InProgress' | 'MetadataFilesModifiedOrRemoved' | 'NotReturned' | 'NotStarted' | 'OtherServiceError' | 'OtherUserError' | 'StorageAccountNotAccessible' | 'UnsupportedData' | 'UnsupportedDrive' | string (ReadOnly): The Status of the copy
 
+## DataBoxDiskGranularCopyLogDetails
+### Properties
+* **accountName**: string (ReadOnly): Account name.
+* **copyLogDetailsType**: 'DataBox' | 'DataBoxCustomerDisk' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): Indicates the type of job details.
+* **errorLogLink**: string (ReadOnly): Link for copy error logs.
+* **serialNumber**: string (ReadOnly): Disk Serial Number.
+* **verboseLogLink**: string (ReadOnly): Link for copy verbose logs.
+
 ## DataBoxDiskGranularCopyProgress
 ### Properties
 * **accountId**: string (ReadOnly): Id of the account where the data needs to be uploaded.
@@ -351,6 +359,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 #### Properties
 * **copyProgress**: [DataBoxDiskCopyProgress](#databoxdiskcopyprogress)[] (ReadOnly): Copy progress per disk.
 * **disksAndSizeDetails**: [DataBoxDiskJobDetailsDisksAndSizeDetails](#databoxdiskjobdetailsdisksandsizedetails) (ReadOnly): Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.
+* **granularCopyLogDetails**: [DataBoxDiskGranularCopyLogDetails](#databoxdiskgranularcopylogdetails)[] (ReadOnly): Copy progress per disk.
 * **granularCopyProgress**: [DataBoxDiskGranularCopyProgress](#databoxdiskgranularcopyprogress)[] (ReadOnly): Copy progress per disk.
 * **jobDetailsType**: 'DataBoxDisk' (Required): Indicates the type of job details.
 * **passkey**: string: User entered passkey for DataBox Disk job.
