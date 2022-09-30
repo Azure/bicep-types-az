@@ -22,17 +22,17 @@ warning | Modeler/MissingType | The schema 'components·11psznm·schemas·eventh
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/iothub/resource-manager/Microsoft.Devices/stable/2021-07-02/iothub.json:3307:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/iothub/resource-manager/Microsoft.Devices/stable/2021-07-02/iothub.json:3326:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/iothub/resource-manager/Microsoft.Devices/stable/2021-07-02/iothub.json:3361:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/iothub/resource-manager/Microsoft.Devices/stable/2021-07-02/iothub.json:3383:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/iothub/resource-manager/Microsoft.Devices/stable/2021-07-02/iothub.json:3388:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/iothub/resource-manager/Microsoft.Devices/stable/2021-07-02/iothub.json:3411:9
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/iothub/resource-manager/Microsoft.Devices/stable/2021-07-02/iothub.json:3586:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/iothub/resource-manager/Microsoft.Devices/stable/2021-07-02/iothub.json:3612:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/iothub/resource-manager/Microsoft.Devices/stable/2021-07-02/iothub.json:3588:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/iothub/resource-manager/Microsoft.Devices/stable/2021-07-02/iothub.json:3614:9
 warning | PreCheck/SchemaMissingType | The schema 'RoutingTwin-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/iothub/resource-manager/Microsoft.Devices/stable/2021-07-02/iothub.json:3988:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/iothub/resource-manager/Microsoft.Devices/stable/2021-07-02/iothub.json:4015:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'components·11psznm·schemas·eventhubconsumergroupinfo·properties·properties·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/iothub/resource-manager/Microsoft.Devices/stable/2021-07-02/iothub.json#/components/schemas/components·11psznm·schemas·eventhubconsumergroupinfo·properties·properties·additionalproperties

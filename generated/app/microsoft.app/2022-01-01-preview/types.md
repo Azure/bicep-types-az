@@ -322,6 +322,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **aRecords**: string[]: A records visible for this hostname.
 * **cNameRecords**: string[]: CName records visible for this hostname.
 * **conflictingContainerAppResourceId**: string (ReadOnly): Name of the conflicting Container App on the Managed Environment if it's within the same subscription.
+* **conflictWithEnvironmentCustomDomain**: bool (ReadOnly): <code>true</code> if there is a conflict on the Container App's managed environment level custom domain; otherwise, <code>false</code>.
 * **customDomainVerificationFailureInfo**: [CustomHostnameAnalysisResultCustomDomainVerificationFailureInfo](#customhostnameanalysisresultcustomdomainverificationfailureinfo) (ReadOnly): Raw failure information if DNS verification fails.
 * **customDomainVerificationTest**: 'Failed' | 'Passed' | 'Skipped' (ReadOnly): DNS verification test result.
 * **hasConflictOnManagedEnvironment**: bool (ReadOnly): <code>true</code> if there is a conflict on the Container App's managed environment; otherwise, <code>false</code>.

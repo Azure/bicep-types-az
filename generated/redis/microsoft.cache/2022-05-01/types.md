@@ -109,7 +109,7 @@
 * **preferred-data-archive-auth-method**: string (ReadOnly): Preferred auth method to communicate to storage account used for data archive, specify SAS or ManagedIdentity, default value is SAS
 * **preferred-data-persistence-auth-method**: string: Preferred auth method to communicate to storage account used for data persistence, specify SAS or ManagedIdentity, default value is SAS
 * **rdb-backup-enabled**: string: Specifies whether the rdb backup is enabled
-* **rdb-backup-frequency**: string: Specifies the frequency for creating rdb backup
+* **rdb-backup-frequency**: string: Specifies the frequency for creating rdb backup in minutes. Valid values: (15, 30, 60, 360, 720, 1440)
 * **rdb-backup-max-snapshot-count**: string: Specifies the maximum number of snapshots for rdb backup
 * **rdb-storage-connection-string**: string: The storage account connection string for storing rdb file
 * **zonal-configuration**: string (ReadOnly): Zonal Configuration

@@ -158,17 +158,6 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkSecurityPerimeters/profiles/accessRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkSecurityPerimeters/resourceAssociationProxies@2021-02-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [NspAssociationProperties](#nspassociationproperties): Properties of the NSP resource association.
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
-* **type**: 'Microsoft.Network/networkSecurityPerimeters/resourceAssociationProxies' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Network/networkSecurityPerimeters/resourceAssociations@2021-02-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -503,7 +492,7 @@
 
 ## NetworkSecurityPerimeterProperties
 ### Properties
-* **perimeterGuid**: string: perimeter guid of the network security perimeter.
+* **perimeterGuid**: string (ReadOnly): perimeter guid of the network security perimeter.
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the scope assignment resource.
 
 ## NspAccessRuleProperties
@@ -513,7 +502,7 @@
 * **fullyQualifiedDomainNames**: string[]: Outbound rules fully qualified domain name format.
 * **networkSecurityPerimeters**: [PerimeterBasedAccessRule](#perimeterbasedaccessrule)[]: Inbound rule specified by the perimeter id.
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the scope assignment resource.
-* **subscriptions**: string[]: Subscription id in the ARM id format.
+* **subscriptions**: [SubscriptionId](#subscriptionid)[]: List of subscription ids
 
 ## NspAssociationProperties
 ### Properties
@@ -526,6 +515,7 @@
 ## NspProfileProperties
 ### Properties
 * **accessRulesVersion**: string (ReadOnly): Version number that increases with every update to access rules within the profile.
+* **diagnosticSettingsVersion**: string (ReadOnly): Version number that increases with every update to diagnostic settings within the profile.
 
 ## PerimeterBasedAccessRule
 ### Properties
@@ -570,11 +560,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## RuleCollectionPropertiesFormat
 ### Properties
 * **appliesToGroups**: [NetworkManagerSecurityGroupItem](#networkmanagersecuritygroupitem)[]: Groups for configuration
@@ -593,6 +578,10 @@
 ## SubResource
 ### Properties
 * **id**: string: Resource ID.
+
+## SubscriptionId
+### Properties
+* **id**: string: Subscription id in the ARM id format.
 
 ## SystemData
 ### Properties

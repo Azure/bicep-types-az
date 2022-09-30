@@ -16,8 +16,12 @@
 ### Properties
 * **applicationId**: string (ReadOnly): The ID of the application.
 * **displayName**: string: The display name of the application.
+* **geography**: string (ReadOnly): The geography the application is in.
+* **state**: 'created' | 'suspended' | string (ReadOnly): The current state of the application.
 * **subdomain**: string: The subdomain of the application.
 * **template**: string: The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
+* **tenant**: string (ReadOnly): The tenant ID the application belongs to.
+* **thumbnailUrl**: string (ReadOnly): The URI for the thumbnail image used in the application.
 
 ## AppSkuInfo
 ### Properties

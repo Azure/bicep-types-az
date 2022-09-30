@@ -214,6 +214,7 @@ and should be part of AbsoluteMarker enum
 
 ## BackupVault
 ### Properties
+* **isVaultProtectedByResourceGuard**: bool: Is vault protected by resource guard
 * **monitoringSettings**: [MonitoringSettings](#monitoringsettings): Monitoring Settings
 * **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the BackupVault resource
 * **resourceMoveDetails**: [ResourceMoveDetails](#resourcemovedetails) (ReadOnly): Resource move details for backup vault

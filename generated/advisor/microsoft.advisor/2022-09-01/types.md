@@ -105,8 +105,8 @@
 
 ## ShortDescription
 ### Properties
-* **problem**: string: The issue or opportunity identified by the recommendation.
-* **solution**: string: The remediation action suggested by the recommendation.
+* **problem**: string: The issue or opportunity identified by the recommendation and proposed solution.
+* **solution**: string: The issue or opportunity identified by the recommendation and proposed solution.
 
 ## SuppressionProperties
 ### Properties
