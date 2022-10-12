@@ -19,7 +19,7 @@ const defaultOutDir = path.resolve(`${rootDir}/generated`);
 
 const argsConfig = yargs
   .strict()
-  .option('specs-dir', { type: 'string', demandOption: true, desc: 'Path to the azure-rest-api-specs dir' })
+  .option('specs-dir', { type: 'string', demandOption: true, desc: 'Path to the specs dir' })
   .option('out-dir', { type: 'string', default: defaultOutDir, desc: 'Output path for generated files' })
   .option('single-path', { type: 'string', default: undefined, desc: 'Only regenerate under a specific file path - e.g. "compute"' })
   .option('logging-level', { type: 'string', default: 'warning', choices: ['debug', 'verbose', 'information', 'warning', 'error', 'fatal'] })
@@ -37,11 +37,11 @@ executeSynchronous(async () => {
     throw `Unable to find ${extensionDir}/dist. Did you forget to run 'npm run build'?`;
   }
 
-  // find all readme paths in the azure-rest-api-specs repo
+  // find all readme paths in the specs path
   const specsPath = path.join(inputBaseDir, 'specification');
   const readmePaths = await findReadmePaths(specsPath);
   if (readmePaths.length === 0) {
-    throw `Unable to find rest-api-specs in folder ${inputBaseDir}`;
+    throw `Unable to find specs in folder ${inputBaseDir}`;
   }
 
   const tmpOutputPath = `${os.tmpdir()}/_bcp_${new Date().getTime()}`;
@@ -226,7 +226,7 @@ function applyCommonAutoRestParameters(autoRestParams: string[], logLevel: strin
 
 async function findReadmePaths(specsPath: string) {
   return await findRecursive(specsPath, filePath => {
-    if (path.basename(filePath) !== 'readme.md') {
+    if (path.basename(filePath).toLowerCase() !== 'readme.md') {
       return false;
     }
 
@@ -241,15 +241,15 @@ async function buildTypeIndex(logger: ILogger, baseDir: string) {
     return path.basename(filePath) === 'types.json';
   });
 
-  let typeFiles: TypeFile[] = [];
-  for (const relativePath of typesPaths) {
-    const content = await readFile(relativePath, { encoding: 'utf8' });
+  const typeFiles: TypeFile[] = [];
+  for (const typePath of typesPaths) {
+    const content = await readFile(typePath, { encoding: 'utf8' });
     typeFiles.push({
-      relativePath,
-      types: JSON.parse(content) as TypeBase[],
+      relativePath: path.relative(baseDir, typePath),
+      types: readJson(content),
     });
   }
-  const indexContent = await buildIndex(typeFiles,  log => logOut(logger, log));
+  const indexContent = await buildIndex(typeFiles,  (log) => logOut(logger, log));
 
   await writeFile(`${baseDir}/index.json`, writeIndexJson(indexContent));
   await writeFile(`${baseDir}/index.md`, writeIndexMarkdown(indexContent));
@@ -263,4 +263,19 @@ function isVerboseLoggingLevel(logLevel: string) {
     default:
       return false;
   }
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function readJson(content: string) {
+  const data = JSON.parse(content) as any[];
+  const output: TypeBase[] = [];
+  for (const entry of data) {
+    for (const key of Object.keys(entry)) {
+      const intVal = parseInt(key);
+      entry[key].Type = intVal;
+      output.push(entry[key]);
+    }
+  }
+
+  return output;
 }
