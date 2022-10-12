@@ -247,7 +247,7 @@
 * **edition**: 'Developer' | 'Enterprise' | 'Evaluation' | 'Express' | 'Standard' | 'Web' | string: SQL Server edition.
 * **hostType**: 'AWS Virtual Machine' | 'GCP Virtual Machine' | 'Other' | 'Physical Server' | 'Virtual Machine' | string: Type of host for Azure Arc SQL Server
 * **instanceName**: string: SQL Server instance name.
-* **licenseType**: 'Free' | 'HADR' | 'Paid' | 'Undefined' | string: SQL Server license type.
+* **licenseType**: 'Free' | 'HADR' | 'Paid' | 'Payg' | 'Undefined' | string: SQL Server license type.
 * **patchLevel**: string: SQL Server update level.
 * **productId**: string: SQL Server product ID.
 * **provisioningState**: string (ReadOnly): The provisioning state of the Arc-enabled SQL Server resource.

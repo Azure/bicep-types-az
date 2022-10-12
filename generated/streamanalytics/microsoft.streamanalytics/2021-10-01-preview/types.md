@@ -9,6 +9,7 @@
 * **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [StreamingJobProperties](#streamingjobproperties): The properties that are associated with a streaming job.  Required on PUT (CreateOrReplace) requests.
+* **sku**: [Sku](#sku): Describes the SKU of the streaming job. Required on PUT (CreateOrReplace) requests.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.StreamAnalytics/streamingjobs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -648,6 +649,7 @@
 
 ## Sku
 ### Properties
+* **capacity**: int: The capacity of the SKU.
 * **name**: 'Standard' | string: The name of the SKU. Required on PUT (CreateOrReplace) requests.
 
 ## StorageAccount

@@ -18,7 +18,7 @@
 * **apiVersion**: '2020-10-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [EnterprisePolicyIdentity](#enterprisepolicyidentity): The identity of the EnterprisePolicy.
-* **kind**: 'Encryption' | 'Lockbox' | 'NetworkInjection' | 'PrivateEndpoint' | string (Required): The kind (type) of Enterprise Policy.
+* **kind**: 'Encryption' | 'Identity' | 'Lockbox' | 'NetworkInjection' | 'PrivateEndpoint' | string (Required): The kind (type) of Enterprise Policy.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [Properties](#properties): The properties that define configuration for the enterprise policy

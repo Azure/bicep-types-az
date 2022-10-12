@@ -58,7 +58,7 @@
 * **lastWorkflowRun**: [WorkflowRun](#workflowrun)
 * **namespace**: string: Kubernetes namespace the application is deployed to.
 * **oidcCredentials**: [GitHubWorkflowProfileOidcCredentials](#githubworkflowprofileoidccredentials): The fields needed for OIDC with GitHub.
-* **prStatus**: 'merged' | 'merged' | 'submitted' | 'unknown' | string (ReadOnly): The status of the Pull Request submitted against the users repository.
+* **prStatus**: 'merged' | 'removed' | 'submitted' | 'unknown' | string (ReadOnly): The status of the Pull Request submitted against the users repository.
 * **prURL**: string (ReadOnly): The URL to the Pull Request submitted against the users repository.
 * **pullNumber**: int (ReadOnly): The number associated with the submitted pull request.
 * **repositoryName**: string: Repository Name

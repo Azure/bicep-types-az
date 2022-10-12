@@ -17,11 +17,12 @@ namespace Azure.Bicep.Types.Az
 
         private TypeBase LoadType(TypeLocation typeLocation)
         {
-            var content = GetContentAtPath(typeLocation.RelativePath);
+            using (var contentStream = GetContentStreamAtPath(typeLocation.RelativePath))
+            {
+                var types = TypeSerializer.Deserialize(contentStream);
 
-            var types = TypeSerializer.Deserialize(content);
-
-            return types[typeLocation.Index];
+                return types[typeLocation.Index];
+            }
         }
 
         public ResourceType LoadResourceType(TypeLocation typeLocation)
@@ -47,15 +48,7 @@ namespace Azure.Bicep.Types.Az
         public string GetContentAtPath(string? path)
         {
             _ = path ?? throw new ArgumentNullException(nameof(path));
-
-            var fileStream = typeof(TypeLoader).Assembly.GetManifestResourceStream($"{path}.deflated");
-            if (fileStream is null)
-            {
-                throw new ArgumentException($"Unable to locate manifest resource at path {path}", nameof(path));
-            }
-
-            using (fileStream)
-            using (var decompressStream = new DeflateStream(fileStream, CompressionMode.Decompress))
+            using (var decompressStream = GetContentStreamAtPath(path))
             using (var streamReader = new StreamReader(decompressStream))
             {
                 return streamReader.ReadToEnd();
@@ -64,9 +57,23 @@ namespace Azure.Bicep.Types.Az
 
         public TypeIndex GetIndexedTypes()
         {
-            var content = GetContentAtPath(TypeIndexResourceName);
+            using (var contentStream = GetContentStreamAtPath(TypeIndexResourceName))
+            {
+                return TypeIndexer.DeserializeIndex(contentStream);
+            }
+        }
 
-            return TypeIndexer.DeserializeIndex(content);
+        private Stream GetContentStreamAtPath(string? path)
+        {
+            _ = path ?? throw new ArgumentNullException(nameof(path));
+
+            var fileStream = typeof(TypeLoader).Assembly.GetManifestResourceStream($"{path}.deflated");
+            if (fileStream is null)
+            {
+                throw new ArgumentException($"Unable to locate manifest resource at path {path}", nameof(path));
+            }
+
+            return new DeflateStream(fileStream, CompressionMode.Decompress);
         }
     }
 }
