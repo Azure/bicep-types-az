@@ -5,7 +5,7 @@ import path from 'path';
 import { existsSync } from 'fs';
 import { mkdir, rm, writeFile, readFile } from 'fs/promises';
 import yargs from 'yargs';
-import { TypeBase, TypeFile, buildIndex, writeIndexJson, writeIndexMarkdown } from "bicep-types";
+import { TypeFile, buildIndex, writeIndexJson, writeIndexMarkdown, readJson } from "bicep-types";
 import { GeneratorConfig, getConfig } from '../config';
 import * as markdown from '@ts-common/commonmark-to-markdown'
 import * as yaml from 'js-yaml'
@@ -263,19 +263,4 @@ function isVerboseLoggingLevel(logLevel: string) {
     default:
       return false;
   }
-}
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function readJson(content: string) {
-  const data = JSON.parse(content) as any[];
-  const output: TypeBase[] = [];
-  for (const entry of data) {
-    for (const key of Object.keys(entry)) {
-      const intVal = parseInt(key);
-      entry[key].Type = intVal;
-      output.push(entry[key]);
-    }
-  }
-
-  return output;
 }
