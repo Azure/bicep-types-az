@@ -8,20 +8,20 @@ using System.Linq;
 namespace Azure.Bicep.Types.Az.UnitTests
 {
     [TestClass]
-    public class TypeLoaderTests
+    public class AzTypeLoaderTests
     {
         [TestMethod]
-        public void TypeLoader_can_load_all_types_without_throwing()
+        public void AzTypeLoader_can_load_all_types_without_throwing()
         {
-            var typeLoader = new TypeLoader();
-            var indexedTypes = typeLoader.GetIndexedTypes();
+            var typeLoader = new AzTypeLoader();
+            var index = typeLoader.LoadTypeIndex();
 
-            foreach (var kvp in indexedTypes.Resources)
+            foreach (var kvp in index.Resources)
             {
                 var resourceType = typeLoader.LoadResourceType(kvp.Value);
             }
 
-            foreach (var (resourceType, functionsByApiVersion) in indexedTypes.Functions)
+            foreach (var (resourceType, functionsByApiVersion) in index.Functions)
             {
                 foreach (var (apiVersion, functions) in functionsByApiVersion)
                 {
@@ -36,12 +36,12 @@ namespace Azure.Bicep.Types.Az.UnitTests
         [TestMethod]
         public void TypeLoader_type_keys_are_insensitively_unique()
         {
-            var typeLoader = new TypeLoader();
-            var indexedTypes = typeLoader.GetIndexedTypes();
+            var typeLoader = new AzTypeLoader();
+            var index = typeLoader.LoadTypeIndex();
 
-            indexedTypes.Resources.Keys.Select(x => x.ToLowerInvariant()).Should().OnlyHaveUniqueItems();
-            indexedTypes.Functions.Keys.Select(x => x.ToLowerInvariant()).Should().OnlyHaveUniqueItems();
-            foreach (var functionsByApiVersion in indexedTypes.Functions.Values)
+            index.Resources.Keys.Select(x => x.ToLowerInvariant()).Should().OnlyHaveUniqueItems();
+            index.Functions.Keys.Select(x => x.ToLowerInvariant()).Should().OnlyHaveUniqueItems();
+            foreach (var functionsByApiVersion in index.Functions.Values)
             {
                 functionsByApiVersion.Keys.Select(x => x.ToLowerInvariant()).Should().OnlyHaveUniqueItems();
             }
