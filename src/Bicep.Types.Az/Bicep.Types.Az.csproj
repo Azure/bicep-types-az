@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Bicep.Types" Version="0.3.4" />
+    <ProjectReference Include="../../bicep-types/src/Bicep.Types/Bicep.Types.csproj" />
   </ItemGroup>
 
   <ItemGroup>
