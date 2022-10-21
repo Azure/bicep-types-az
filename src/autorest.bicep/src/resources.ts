@@ -230,6 +230,11 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     }
 
     operations.forEach(operation => {
+      if ((operation.parameters?.filter(p => p.required && p.protocol.http?.in === "query" && p.language.default.name.toLowerCase() !== "apiversion")?.length ?? 0) > 0) {
+        logWarning(`Skipping ${operation.operationId} due to required querystring parameter`);
+        return;
+      }
+
       const requests = getHttpRequests(operation.requests);
       const getRequest = requests.filter(r => r.method === HttpMethod.Get)[0];
       if (getRequest) {
