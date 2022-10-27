@@ -19,12 +19,12 @@
       },
       "Microsoft.NET.Test.Sdk": {
         "type": "Direct",
-        "requested": "[17.4.0-preview-20220726-02, )",
-        "resolved": "17.4.0-preview-20220726-02",
-        "contentHash": "Zm7fx9ZPrJmzv+5zJIJvFeiwD4mXak/uAaDqGqWs7Hq9ZfmZ3I2h+spYqhbqVLuOyjc+kzLh36bCzvMHe3UTiw==",
+        "requested": "[17.4.0-preview-20221003-03, )",
+        "resolved": "17.4.0-preview-20221003-03",
+        "contentHash": "tanImT5UigMr1SP0BIovOMlVQHqNuF7NJBWYtvN9giXysXzENFyg98X9IF1mCRg/GyHlq4YvDocvPk2HVDhpGg==",
         "dependencies": {
-          "Microsoft.CodeCoverage": "17.4.0-preview-20220726-02",
-          "Microsoft.TestPlatform.TestHost": "17.4.0-preview-20220726-02"
+          "Microsoft.CodeCoverage": "17.4.0-preview-20221003-03",
+          "Microsoft.TestPlatform.TestHost": "17.4.0-preview-20221003-03"
         }
       },
       "Microsoft.SourceLink.GitHub": {
@@ -70,8 +70,8 @@
       },
       "Microsoft.CodeCoverage": {
         "type": "Transitive",
-        "resolved": "17.4.0-preview-20220726-02",
-        "contentHash": "F75ToG4Do7HF5vuJ3DvVZP9y0PCS61GZAw2wvS/vTkBiyIm2myTip3O/kZ/hulrM7/oNsbarNMOe45Q6P1U/Ng=="
+        "resolved": "17.4.0-preview-20221003-03",
+        "contentHash": "Sw18cOz3jhz93IAmF9nnJt83ALku5qh/JWI7wavuu17kmBSwitKfRKiUCsY3A9Kp/+kL+BftN8EvqT+M/8qqKA=="
       },
       "Microsoft.SourceLink.Common": {
         "type": "Transitive",
@@ -80,8 +80,8 @@
       },
       "Microsoft.TestPlatform.ObjectModel": {
         "type": "Transitive",
-        "resolved": "17.4.0-preview-20220726-02",
-        "contentHash": "AVnD8aHInSQXZkqP0lDec/Eex+FeplsQfd2DHiR3kc3BVKBKMTiWyLIENbgmYU+RQbkuJnMEWrRTGFyqNVusWw==",
+        "resolved": "17.4.0-preview-20221003-03",
+        "contentHash": "OA75Fb9GUZZUA+8WCtHah3Y9OitKwiRCzw+QzVrlz4DmkqVtg0Nwtf1O/dreAPsTgLxcI+1sO0wZEFdR9XXrWg==",
         "dependencies": {
           "NuGet.Frameworks": "5.11.0",
           "System.Reflection.Metadata": "1.6.0"
@@ -89,10 +89,10 @@
       },
       "Microsoft.TestPlatform.TestHost": {
         "type": "Transitive",
-        "resolved": "17.4.0-preview-20220726-02",
-        "contentHash": "anO5rBpVzL5XmcEA80Tn5UC224dH296DzG+b5wEi8SJrBD9qTpVsCl2SF1+mlFFFp81LCqxMK0KHqrbJz3DhWQ==",
+        "resolved": "17.4.0-preview-20221003-03",
+        "contentHash": "UlBCPSk+hCN3GIFl8/F4PVb/QHqo+PDa0Jql3mmGamey6potbkibBmqq2Ns/C+SrAAectqU23geZAhGeMrwUZg==",
         "dependencies": {
-          "Microsoft.TestPlatform.ObjectModel": "17.4.0-preview-20220726-02",
+          "Microsoft.TestPlatform.ObjectModel": "17.4.0-preview-20221003-03",
           "Newtonsoft.Json": "13.0.1"
         }
       },
