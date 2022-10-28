@@ -1895,9 +1895,6 @@
 * **Link**: [2019-10-01-preview](billing/microsoft.billing/2019-10-01-preview/types.md#resource-microsoftbillingbillingaccountsbillingprofilespolicies2019-10-01-preview)
 * **Link**: [2020-05-01](billing/microsoft.billing/2020-05-01/types.md#resource-microsoftbillingbillingaccountsbillingprofilespolicies2020-05-01)
 
-### microsoft.billing/billingaccounts/billingprofiles/transactions
-* **Link**: [2019-10-01-preview](billing/microsoft.billing/2019-10-01-preview/types.md#resource-microsoftbillingbillingaccountsbillingprofilestransactions2019-10-01-preview)
-
 ### microsoft.billing/billingaccounts/billingroleassignments
 * **Link**: [2019-10-01-preview](billing/microsoft.billing/2019-10-01-preview/types.md#resource-microsoftbillingbillingaccountsbillingroleassignments2019-10-01-preview)
 * **Link**: [2020-05-01](billing/microsoft.billing/2020-05-01/types.md#resource-microsoftbillingbillingaccountsbillingroleassignments2020-05-01)
@@ -4725,9 +4722,6 @@
 * **Link**: [2022-09-01-preview](devcenter/microsoft.devcenter/2022-09-01-preview/types.md#resource-microsoftdevcenterprojectspoolsschedules2022-09-01-preview)
 
 ## microsoft.devhub
-### microsoft.devhub/locations/githuboauth
-* **Link**: [2022-04-01-preview](developerhub/microsoft.devhub/2022-04-01-preview/types.md#resource-microsoftdevhublocationsgithuboauth2022-04-01-preview)
-
 ### microsoft.devhub/workflows
 * **Link**: [2022-04-01-preview](developerhub/microsoft.devhub/2022-04-01-preview/types.md#resource-microsoftdevhubworkflows2022-04-01-preview)
 
@@ -7675,10 +7669,6 @@
 * **Link**: [2021-06-01](marketplace/microsoft.marketplace/2021-06-01/types.md#resource-microsoftmarketplaceprivatestoresrequestapprovals2021-06-01)
 * **Link**: [2021-12-01](marketplace/microsoft.marketplace/2021-12-01/types.md#resource-microsoftmarketplaceprivatestoresrequestapprovals2021-12-01)
 * **Link**: [2022-03-01](marketplace/microsoft.marketplace/2022-03-01/types.md#resource-microsoftmarketplaceprivatestoresrequestapprovals2022-03-01)
-
-## microsoft.marketplacenotifications
-### microsoft.marketplacenotifications/reviewsnotification
-* **Link**: [2021-03-03](marketplacenotifications/microsoft.marketplacenotifications/2021-03-03/types.md#resource-microsoftmarketplacenotificationsreviewsnotification2021-03-03)
 
 ## microsoft.marketplaceordering
 ### microsoft.marketplaceordering/agreements/offers/plans
@@ -12778,15 +12768,6 @@
 ### microsoft.security/softwareinventories
 * **Link**: [2021-05-01-preview](security/microsoft.security/2021-05-01-preview/types.md#resource-microsoftsecuritysoftwareinventories2021-05-01-preview)
 
-### microsoft.security/sqlvulnerabilityassessments/baselinerules
-* **Link**: [2020-07-01-preview](security/microsoft.security/2020-07-01-preview/types.md#resource-microsoftsecuritysqlvulnerabilityassessmentsbaselinerules2020-07-01-preview)
-
-### microsoft.security/sqlvulnerabilityassessments/scans
-* **Link**: [2020-07-01-preview](security/microsoft.security/2020-07-01-preview/types.md#resource-microsoftsecuritysqlvulnerabilityassessmentsscans2020-07-01-preview)
-
-### microsoft.security/sqlvulnerabilityassessments/scans/scanresults
-* **Link**: [2020-07-01-preview](security/microsoft.security/2020-07-01-preview/types.md#resource-microsoftsecuritysqlvulnerabilityassessmentsscansscanresults2020-07-01-preview)
-
 ### microsoft.security/standards
 * **Link**: [2021-08-01-preview](security/microsoft.security/2021-08-01-preview/types.md#resource-microsoftsecuritystandards2021-08-01-preview)
 
@@ -14374,30 +14355,6 @@
 * **Link**: [2022-02-01-preview](sql/microsoft.sql/2022-02-01-preview/types.md#resource-microsoftsqlserversdatabasesledgerdigestuploads2022-02-01-preview)
 * **Link**: [2022-05-01-preview](sql/microsoft.sql/2022-05-01-preview/types.md#resource-microsoftsqlserversdatabasesledgerdigestuploads2022-05-01-preview)
 
-### microsoft.sql/servers/databases/maintenancewindowoptions
-* **Link**: [2020-02-02-preview](sql/microsoft.sql/2020-02-02-preview/types.md#resource-microsoftsqlserversdatabasesmaintenancewindowoptions2020-02-02-preview)
-* **Link**: [2020-08-01-preview](sql/microsoft.sql/2020-08-01-preview/types.md#resource-microsoftsqlserversdatabasesmaintenancewindowoptions2020-08-01-preview)
-* **Link**: [2020-11-01-preview](sql/microsoft.sql/2020-11-01-preview/types.md#resource-microsoftsqlserversdatabasesmaintenancewindowoptions2020-11-01-preview)
-* **Link**: [2021-02-01-preview](sql/microsoft.sql/2021-02-01-preview/types.md#resource-microsoftsqlserversdatabasesmaintenancewindowoptions2021-02-01-preview)
-* **Link**: [2021-05-01-preview](sql/microsoft.sql/2021-05-01-preview/types.md#resource-microsoftsqlserversdatabasesmaintenancewindowoptions2021-05-01-preview)
-* **Link**: [2021-08-01-preview](sql/microsoft.sql/2021-08-01-preview/types.md#resource-microsoftsqlserversdatabasesmaintenancewindowoptions2021-08-01-preview)
-* **Link**: [2021-11-01](sql/microsoft.sql/2021-11-01/types.md#resource-microsoftsqlserversdatabasesmaintenancewindowoptions2021-11-01)
-* **Link**: [2021-11-01-preview](sql/microsoft.sql/2021-11-01-preview/types.md#resource-microsoftsqlserversdatabasesmaintenancewindowoptions2021-11-01-preview)
-* **Link**: [2022-02-01-preview](sql/microsoft.sql/2022-02-01-preview/types.md#resource-microsoftsqlserversdatabasesmaintenancewindowoptions2022-02-01-preview)
-* **Link**: [2022-05-01-preview](sql/microsoft.sql/2022-05-01-preview/types.md#resource-microsoftsqlserversdatabasesmaintenancewindowoptions2022-05-01-preview)
-
-### microsoft.sql/servers/databases/maintenancewindows
-* **Link**: [2020-02-02-preview](sql/microsoft.sql/2020-02-02-preview/types.md#resource-microsoftsqlserversdatabasesmaintenancewindows2020-02-02-preview)
-* **Link**: [2020-08-01-preview](sql/microsoft.sql/2020-08-01-preview/types.md#resource-microsoftsqlserversdatabasesmaintenancewindows2020-08-01-preview)
-* **Link**: [2020-11-01-preview](sql/microsoft.sql/2020-11-01-preview/types.md#resource-microsoftsqlserversdatabasesmaintenancewindows2020-11-01-preview)
-* **Link**: [2021-02-01-preview](sql/microsoft.sql/2021-02-01-preview/types.md#resource-microsoftsqlserversdatabasesmaintenancewindows2021-02-01-preview)
-* **Link**: [2021-05-01-preview](sql/microsoft.sql/2021-05-01-preview/types.md#resource-microsoftsqlserversdatabasesmaintenancewindows2021-05-01-preview)
-* **Link**: [2021-08-01-preview](sql/microsoft.sql/2021-08-01-preview/types.md#resource-microsoftsqlserversdatabasesmaintenancewindows2021-08-01-preview)
-* **Link**: [2021-11-01](sql/microsoft.sql/2021-11-01/types.md#resource-microsoftsqlserversdatabasesmaintenancewindows2021-11-01)
-* **Link**: [2021-11-01-preview](sql/microsoft.sql/2021-11-01-preview/types.md#resource-microsoftsqlserversdatabasesmaintenancewindows2021-11-01-preview)
-* **Link**: [2022-02-01-preview](sql/microsoft.sql/2022-02-01-preview/types.md#resource-microsoftsqlserversdatabasesmaintenancewindows2022-02-01-preview)
-* **Link**: [2022-05-01-preview](sql/microsoft.sql/2022-05-01-preview/types.md#resource-microsoftsqlserversdatabasesmaintenancewindows2022-05-01-preview)
-
 ### microsoft.sql/servers/databases/replicationlinks
 * **Link**: [2014-04-01](sql/microsoft.sql/2014-04-01/types.md#resource-microsoftsqlserversdatabasesreplicationlinks2014-04-01)
 * **Link**: [2020-02-02-preview](sql/microsoft.sql/2020-02-02-preview/types.md#resource-microsoftsqlserversdatabasesreplicationlinks2020-02-02-preview)
@@ -14943,22 +14900,6 @@
 ### microsoft.sql/servers/sqlvulnerabilityassessments
 * **Link**: [2022-02-01-preview](sql/microsoft.sql/2022-02-01-preview/types.md#resource-microsoftsqlserverssqlvulnerabilityassessments2022-02-01-preview)
 * **Link**: [2022-05-01-preview](sql/microsoft.sql/2022-05-01-preview/types.md#resource-microsoftsqlserverssqlvulnerabilityassessments2022-05-01-preview)
-
-### microsoft.sql/servers/sqlvulnerabilityassessments/baselines
-* **Link**: [2022-02-01-preview](sql/microsoft.sql/2022-02-01-preview/types.md#resource-microsoftsqlserverssqlvulnerabilityassessmentsbaselines2022-02-01-preview)
-* **Link**: [2022-05-01-preview](sql/microsoft.sql/2022-05-01-preview/types.md#resource-microsoftsqlserverssqlvulnerabilityassessmentsbaselines2022-05-01-preview)
-
-### microsoft.sql/servers/sqlvulnerabilityassessments/baselines/rules
-* **Link**: [2022-02-01-preview](sql/microsoft.sql/2022-02-01-preview/types.md#resource-microsoftsqlserverssqlvulnerabilityassessmentsbaselinesrules2022-02-01-preview)
-* **Link**: [2022-05-01-preview](sql/microsoft.sql/2022-05-01-preview/types.md#resource-microsoftsqlserverssqlvulnerabilityassessmentsbaselinesrules2022-05-01-preview)
-
-### microsoft.sql/servers/sqlvulnerabilityassessments/scans
-* **Link**: [2022-02-01-preview](sql/microsoft.sql/2022-02-01-preview/types.md#resource-microsoftsqlserverssqlvulnerabilityassessmentsscans2022-02-01-preview)
-* **Link**: [2022-05-01-preview](sql/microsoft.sql/2022-05-01-preview/types.md#resource-microsoftsqlserverssqlvulnerabilityassessmentsscans2022-05-01-preview)
-
-### microsoft.sql/servers/sqlvulnerabilityassessments/scans/scanresults
-* **Link**: [2022-02-01-preview](sql/microsoft.sql/2022-02-01-preview/types.md#resource-microsoftsqlserverssqlvulnerabilityassessmentsscansscanresults2022-02-01-preview)
-* **Link**: [2022-05-01-preview](sql/microsoft.sql/2022-05-01-preview/types.md#resource-microsoftsqlserverssqlvulnerabilityassessmentsscansscanresults2022-05-01-preview)
 
 ### microsoft.sql/servers/syncagents
 * **Link**: [2015-05-01-preview](sql/microsoft.sql/2015-05-01-preview/types.md#resource-microsoftsqlserverssyncagents2015-05-01-preview)
@@ -15787,24 +15728,6 @@
 * **Link**: [2021-05-01](synapse/microsoft.synapse/2021-05-01/types.md#resource-microsoftsynapseworkspacessqlpoolsgeobackuppolicies2021-05-01)
 * **Link**: [2021-06-01](synapse/microsoft.synapse/2021-06-01/types.md#resource-microsoftsynapseworkspacessqlpoolsgeobackuppolicies2021-06-01)
 * **Link**: [2021-06-01-preview](synapse/microsoft.synapse/2021-06-01-preview/types.md#resource-microsoftsynapseworkspacessqlpoolsgeobackuppolicies2021-06-01-preview)
-
-### microsoft.synapse/workspaces/sqlpools/maintenancewindowoptions
-* **Link**: [2019-06-01-preview](synapse/microsoft.synapse/2019-06-01-preview/types.md#resource-microsoftsynapseworkspacessqlpoolsmaintenancewindowoptions2019-06-01-preview)
-* **Link**: [2020-12-01](synapse/microsoft.synapse/2020-12-01/types.md#resource-microsoftsynapseworkspacessqlpoolsmaintenancewindowoptions2020-12-01)
-* **Link**: [2021-03-01](synapse/microsoft.synapse/2021-03-01/types.md#resource-microsoftsynapseworkspacessqlpoolsmaintenancewindowoptions2021-03-01)
-* **Link**: [2021-04-01-preview](synapse/microsoft.synapse/2021-04-01-preview/types.md#resource-microsoftsynapseworkspacessqlpoolsmaintenancewindowoptions2021-04-01-preview)
-* **Link**: [2021-05-01](synapse/microsoft.synapse/2021-05-01/types.md#resource-microsoftsynapseworkspacessqlpoolsmaintenancewindowoptions2021-05-01)
-* **Link**: [2021-06-01](synapse/microsoft.synapse/2021-06-01/types.md#resource-microsoftsynapseworkspacessqlpoolsmaintenancewindowoptions2021-06-01)
-* **Link**: [2021-06-01-preview](synapse/microsoft.synapse/2021-06-01-preview/types.md#resource-microsoftsynapseworkspacessqlpoolsmaintenancewindowoptions2021-06-01-preview)
-
-### microsoft.synapse/workspaces/sqlpools/maintenancewindows
-* **Link**: [2019-06-01-preview](synapse/microsoft.synapse/2019-06-01-preview/types.md#resource-microsoftsynapseworkspacessqlpoolsmaintenancewindows2019-06-01-preview)
-* **Link**: [2020-12-01](synapse/microsoft.synapse/2020-12-01/types.md#resource-microsoftsynapseworkspacessqlpoolsmaintenancewindows2020-12-01)
-* **Link**: [2021-03-01](synapse/microsoft.synapse/2021-03-01/types.md#resource-microsoftsynapseworkspacessqlpoolsmaintenancewindows2021-03-01)
-* **Link**: [2021-04-01-preview](synapse/microsoft.synapse/2021-04-01-preview/types.md#resource-microsoftsynapseworkspacessqlpoolsmaintenancewindows2021-04-01-preview)
-* **Link**: [2021-05-01](synapse/microsoft.synapse/2021-05-01/types.md#resource-microsoftsynapseworkspacessqlpoolsmaintenancewindows2021-05-01)
-* **Link**: [2021-06-01](synapse/microsoft.synapse/2021-06-01/types.md#resource-microsoftsynapseworkspacessqlpoolsmaintenancewindows2021-06-01)
-* **Link**: [2021-06-01-preview](synapse/microsoft.synapse/2021-06-01-preview/types.md#resource-microsoftsynapseworkspacessqlpoolsmaintenancewindows2021-06-01-preview)
 
 ### microsoft.synapse/workspaces/sqlpools/metadatasync
 * **Link**: [2019-06-01-preview](synapse/microsoft.synapse/2019-06-01-preview/types.md#resource-microsoftsynapseworkspacessqlpoolsmetadatasync2019-06-01-preview)

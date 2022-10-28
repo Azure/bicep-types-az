@@ -1,15 +1,15 @@
 # Microsoft.VMwareCloudSimple @ 2019-04-01
 
-## Resource Microsoft.VMwareCloudSimple/dedicatedCloudNodes@2019-04-01
+## Resource Microsoft.VMwareCloudSimple/dedicatedCloudNodes@2019-04-01 (ReadOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Azure region
+* **location**: string (ReadOnly): Azure region
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DedicatedCloudNodeProperties](#dedicatedcloudnodeproperties): Dedicated Cloud Nodes properties
-* **sku**: [Sku](#sku): Dedicated Cloud Nodes SKU
-* **tags**: [Tags](#tags): Dedicated Cloud Nodes tags
+* **properties**: [DedicatedCloudNodeProperties](#dedicatedcloudnodeproperties) (ReadOnly): Dedicated Cloud Nodes properties
+* **sku**: [Sku](#sku) (ReadOnly): Dedicated Cloud Nodes SKU
+* **tags**: [Tags](#tags) (ReadOnly): Dedicated Cloud Nodes tags
 * **type**: 'Microsoft.VMwareCloudSimple/dedicatedCloudNodes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.VMwareCloudSimple/dedicatedCloudServices@2019-04-01
@@ -23,15 +23,15 @@
 * **tags**: [Tags](#tags): The list of tags
 * **type**: 'Microsoft.VMwareCloudSimple/dedicatedCloudServices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.VMwareCloudSimple/virtualMachines@2019-04-01
+## Resource Microsoft.VMwareCloudSimple/virtualMachines@2019-04-01 (ReadOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Azure region
+* **location**: string (ReadOnly): Azure region
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualMachineProperties](#virtualmachineproperties): Virtual machine properties
-* **tags**: [Tags](#tags): The list of tags
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties) (ReadOnly): Virtual machine properties
+* **tags**: [Tags](#tags) (ReadOnly): The list of tags
 * **type**: 'Microsoft.VMwareCloudSimple/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DedicatedCloudNodeProperties

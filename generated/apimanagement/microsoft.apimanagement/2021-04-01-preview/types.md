@@ -30,12 +30,10 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **format**: 'openapi-link' | 'swagger-link-json' | 'wadl-link-json' | 'wsdl-link+xml' | string (ReadOnly): Format in which the API Details are exported to the Storage Blob with Sas Key valid for 5 minutes.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApiCreateOrUpdateProperties](#apicreateorupdateproperties) (WriteOnly): API entity create of update properties.
+* **properties**: [ApiCreateOrUpdatePropertiesOrApiContractProperties](#apicreateorupdatepropertiesorapicontractproperties): API entity create of update properties.
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant): The resource type
-* **value**: [ApiExportResultValue](#apiexportresultvalue) (ReadOnly): The object defining the schema of the exported API Detail
 
 ## Resource Microsoft.ApiManagement/service/apis/diagnostics@2021-04-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -597,11 +595,11 @@
 * **name**: string: The identifying name of the contact person/organization
 * **url**: string: The URL pointing to the contact information. MUST be in the format of a URL
 
-## ApiCreateOrUpdateProperties
+## ApiCreateOrUpdatePropertiesOrApiContractProperties
 ### Properties
 * **apiRevision**: string: Describes the revision of the API. If no value is provided, default revision 1 is created
 * **apiRevisionDescription**: string: Description of the API Revision.
-* **apiType**: 'graphql' | 'http' | 'soap' | 'websocket' | string: Type of API to create. 
+* **apiType**: 'graphql' | 'http' | 'soap' | 'websocket' | string (WriteOnly): Type of API to create. 
  * `http` creates a REST API 
  * `soap` creates a SOAP pass-through API  
  * `websocket` creates websocket API 
@@ -614,7 +612,7 @@
 * **contact**: [ApiContactInformation](#apicontactinformation): Contact information for the API.
 * **description**: string: Description of the API. May include HTML formatting tags.
 * **displayName**: string: API name. Must be 1 to 300 characters long.
-* **format**: 'graphql-link' | 'openapi' | 'openapi+json' | 'openapi+json-link' | 'openapi-link' | 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' | string: Format of the Content in which the API is getting imported.
+* **format**: 'graphql-link' | 'openapi' | 'openapi+json' | 'openapi+json-link' | 'openapi-link' | 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' | string (WriteOnly): Format of the Content in which the API is getting imported.
 * **isCurrent**: bool: Indicates if API revision is current api revision.
 * **isOnline**: bool (ReadOnly): Indicates if API revision is accessible via the gateway.
 * **license**: [ApiLicenseInformation](#apilicenseinformation): License information for the API.
@@ -626,17 +624,13 @@
 * **subscriptionRequired**: bool: Specifies whether an API or Product subscription is required for accessing the API.
 * **termsOfServiceUrl**: string: A URL to the Terms of Service for the API. MUST be in the format of a URL.
 * **type**: 'graphql' | 'http' | 'soap' | 'websocket' | string: Type of API.
-* **value**: string: Content value when Importing an API.
-* **wsdlSelector**: [ApiCreateOrUpdatePropertiesWsdlSelector](#apicreateorupdatepropertieswsdlselector): Criteria to limit import of WSDL to a subset of the document.
+* **value**: string (WriteOnly): Content value when Importing an API.
+* **wsdlSelector**: [ApiCreateOrUpdatePropertiesWsdlSelector](#apicreateorupdatepropertieswsdlselector) (WriteOnly): Criteria to limit import of WSDL to a subset of the document.
 
 ## ApiCreateOrUpdatePropertiesWsdlSelector
 ### Properties
 * **wsdlEndpointName**: string: Name of endpoint(port) to import from WSDL
 * **wsdlServiceName**: string: Name of service to import from WSDL
-
-## ApiExportResultValue
-### Properties
-* **link**: string: Link to the Storage Blob containing the result of the export operation. The Blob Uri is only valid for 5 minutes.
 
 ## ApiLicenseInformation
 ### Properties

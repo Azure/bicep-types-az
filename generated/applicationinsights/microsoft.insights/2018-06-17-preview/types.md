@@ -1,15 +1,15 @@
 # microsoft.insights @ 2018-06-17-preview
 
-## Resource microsoft.insights/workbooks@2018-06-17-preview
+## Resource microsoft.insights/workbooks@2018-06-17-preview (ReadOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'shared' | 'user' | string: The kind of workbook. Choices are user and shared.
-* **location**: string (Required): Resource location
+* **kind**: 'shared' | 'user' | string (ReadOnly): The kind of workbook. Choices are user and shared.
+* **location**: string (ReadOnly): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkbookProperties](#workbookproperties): Metadata describing a workbook for an Azure resource.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **properties**: [WorkbookProperties](#workbookproperties) (ReadOnly): Metadata describing a workbook for an Azure resource.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: 'microsoft.insights/workbooks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ResourceTags

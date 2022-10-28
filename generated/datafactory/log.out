@@ -2221,6 +2221,10 @@ warning | PreCheck/SchemaMissingType | The schema 'AzureDataLakeAnalyticsLinkedS
 warning | PreCheck/SchemaMissingType | The schema 'AzureDatabricksLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ResponsysLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping ActivityRuns_ListByPipelineRun due to required query parameter "startTime"
+warning | Skipping ActivityRuns_ListByPipelineRun due to required query parameter "endTime"
+warning | Skipping Triggers_ListRuns due to required query parameter "startTime"
+warning | Skipping Triggers_ListRuns due to required query parameter "endTime"
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.

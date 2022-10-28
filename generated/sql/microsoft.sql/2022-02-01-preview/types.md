@@ -648,24 +648,6 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **properties**: [LedgerDigestUploadsProperties](#ledgerdigestuploadsproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/ledgerDigestUploads' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/maintenanceWindowOptions@2022-02-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2022-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'current' (Required, DeployTimeConstant): The resource name
-* **properties**: [MaintenanceWindowOptionsProperties](#maintenancewindowoptionsproperties) (ReadOnly): Resource properties.
-* **type**: 'Microsoft.Sql/servers/databases/maintenanceWindowOptions' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Sql/servers/databases/maintenanceWindows@2022-02-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2022-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'current' (Required, DeployTimeConstant): The resource name
-* **properties**: [MaintenanceWindowsProperties](#maintenancewindowsproperties): Resource properties.
-* **type**: 'Microsoft.Sql/servers/databases/maintenanceWindows' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Sql/servers/databases/replicationLinks@2022-02-01-preview (ReadOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -1111,46 +1093,6 @@ az sql elastic-pool list-editions -l <location> -o table
 * **properties**: [SqlVulnerabilityAssessmentPolicyProperties](#sqlvulnerabilityassessmentpolicyproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of SqlVulnerabilityAssessmentResource.
 * **type**: 'Microsoft.Sql/servers/sqlVulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Sql/servers/sqlVulnerabilityAssessments/baselines@2022-02-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2022-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabaseSqlVulnerabilityAssessmentRuleBaselineListInputPropertiesOrDatabaseSqlVulnerabilityAssessmentBaselineSetProperties](#databasesqlvulnerabilityassessmentrulebaselinelistinputpropertiesordatabasesqlvulnerabilityassessmentbaselinesetproperties): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of DatabaseSqlVulnerabilityAssessmentRuleBaselineListInputResource.
-* **type**: 'Microsoft.Sql/servers/sqlVulnerabilityAssessments/baselines' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Sql/servers/sqlVulnerabilityAssessments/baselines/rules@2022-02-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2022-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabaseSqlVulnerabilityAssessmentRuleBaselineInputPropertiesOrDatabaseSqlVulnerabilityAssessmentRuleBaselineProperties](#databasesqlvulnerabilityassessmentrulebaselineinputpropertiesordatabasesqlvulnerabilityassessmentrulebaselineproperties): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of DatabaseSqlVulnerabilityAssessmentRuleBaselineInputResource.
-* **type**: 'Microsoft.Sql/servers/sqlVulnerabilityAssessments/baselines/rules' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Sql/servers/sqlVulnerabilityAssessments/scans@2022-02-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2022-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SqlVulnerabilityAssessmentScanRecordProperties](#sqlvulnerabilityassessmentscanrecordproperties) (ReadOnly): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of SqlVulnerabilityAssessmentScanRecordResource.
-* **type**: 'Microsoft.Sql/servers/sqlVulnerabilityAssessments/scans' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Sql/servers/sqlVulnerabilityAssessments/scans/scanResults@2022-02-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2022-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SqlVulnerabilityAssessmentScanResultProperties](#sqlvulnerabilityassessmentscanresultproperties) (ReadOnly): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of AdvancedThreatProtectionResource.
-* **type**: 'Microsoft.Sql/servers/sqlVulnerabilityAssessments/scans/scanResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/syncAgents@2022-02-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -1944,26 +1886,6 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **requestedBackupStorageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone' | string (WriteOnly): The storage redundancy type of the backup
 * **serverCreateTime**: string (ReadOnly): The create time of the server.
 * **serverName**: string (ReadOnly): The server name that the backup database belong to.
-
-## MaintenanceWindowOptionsProperties
-### Properties
-* **allowMultipleMaintenanceWindowsPerCycle**: bool: Whether we allow multiple maintenance windows per cycle.
-* **defaultDurationInMinutes**: int: Default duration for maintenance window.
-* **isEnabled**: bool: Whether maintenance windows are enabled for the database.
-* **maintenanceWindowCycles**: [MaintenanceWindowTimeRange](#maintenancewindowtimerange)[]: Available maintenance cycles e.g. {Saturday, 0, 48*60}, {Wednesday, 0, 24*60}.
-* **minCycles**: int: Minimum number of maintenance windows cycles to be set on the database.
-* **minDurationInMinutes**: int: Minimum duration of maintenance window.
-* **timeGranularityInMinutes**: int: Time granularity in minutes for maintenance windows.
-
-## MaintenanceWindowsProperties
-### Properties
-* **timeRanges**: [MaintenanceWindowTimeRange](#maintenancewindowtimerange)[]
-
-## MaintenanceWindowTimeRange
-### Properties
-* **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string: Day of maintenance window.
-* **duration**: string: Duration of maintenance window in minutes.
-* **startTime**: string: Start time minutes offset from 12am.
 
 ## ManagedBackupShortTermRetentionPolicyProperties
 ### Properties

@@ -3,3 +3,5 @@ AutoRest code generation utility [cli version: 3.6.2; node: v16.17.1]
 https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping GitHubOAuthCallback due to required query parameter "Code"
+warning | Skipping GitHubOAuthCallback due to required query parameter "State"
