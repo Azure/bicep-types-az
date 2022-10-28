@@ -783,5 +783,62 @@
         ]
       }
     }
+  },
+  "x-ms-paths": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Test.Rp1/testType1/{typeName}?export=true": {
+      "get": {
+        "summary": "Get a testType1 resource",
+        "description": "Get a testType1 resource",
+        "operationId": "TestType1_Export",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "prop": {"type": "string"}
+              }
+            }
+          },
+          "default": {
+            "description": "Detailed error information.",
+            "schema": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "export",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "enum": [
+              "true"
+            ],
+            "x-ms-enum": {
+              "name": "ExportApi"
+            },
+            "description": "A description is required to be a `signatureParameter`"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "name": "typeName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The testType1 resource name."
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          }
+        ]
+      }
+    }
   }
 }
