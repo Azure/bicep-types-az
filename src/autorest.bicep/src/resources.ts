@@ -86,7 +86,8 @@ export function isRootType(descriptor: ResourceDescriptor) {
 }
 
 function getHttpRequests(requests: Request[] | undefined) {
-  return requests?.map(x => x.protocol.http as HttpRequest).filter(x => !!x) ?? [];
+  return requests?.map(request => ({request, httpRequest: request.protocol.http as HttpRequest}))
+    .filter(x => !!x.httpRequest) ?? [];
 }
 
 function hasStatusCode(response: Response, statusCode: string) {
@@ -169,6 +170,26 @@ export function parseNameSchema<T>(request: HttpRequest, parameters: Parameter[]
   return success(createConstantName(value.value));
 }
 
+const alwaysAllowedParameterLocations = new Set([
+  ParameterLocation.Path,
+  ParameterLocation.Body,
+  ParameterLocation.Uri,
+  ParameterLocation.Virtual,
+  ParameterLocation.None,
+]);
+
+const allowedRequiredParametersByLocation: Dictionary<Set<string>> = {
+  [ParameterLocation.Header]: new Set([
+    'content-type',
+    'accept',
+    'if-match',
+    'if-none-match',
+  ]),
+  [ParameterLocation.Query]: new Set([
+    'api-version'
+  ])
+};
+
 export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExtensionHost): ProviderDefinition[] {
   function logWarning(message: string) {
     host.Message({
@@ -209,6 +230,41 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     return schema && getExtensions(schema)['x-ms-azure-resource'];
   }
 
+  function* gatherParameterWarnings(parameterBearer: string, parameters: Iterable<Parameter>): Iterable<string> {
+    for (const parameter of parameters) {
+      // if the parameter is optional or part of the URL, don't generate a warning
+      const {
+        required,
+        language: {
+          default: {
+            name: parameterDisplayName,
+            serializedName = parameterDisplayName
+          }
+        },
+        protocol: {
+          http: {
+            in: location
+          } = { in: ParameterLocation.None }
+        }
+      } = parameter;
+
+      if (!required || alwaysAllowedParameterLocations.has(location)) {
+        continue;
+      }
+
+      const allowedRequiredParameters = allowedRequiredParametersByLocation[location];
+
+      // there are some required headers and qs params that are part of the ARM RPC contract, such as
+      // `api-version` in the querystring or the `Content-Type` header. If the parameter is one of those,
+      // don't generate a warning
+      if (allowedRequiredParameters.has(serializedName.toLowerCase())) {
+        continue;
+      }
+
+      yield `Skipping ${parameterBearer} due to required ${location} parameter "${parameterDisplayName}"`;
+    }
+  }
+
   function getProviderDefinitionsForApiVersion(apiVersion: string) {
     const providerDefinitions: Dictionary<ProviderDefinition> = {};
     const operations = codeModel.operationGroups.flatMap(x => x.operations);
@@ -230,36 +286,70 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     }
 
     operations.forEach(operation => {
-      if ((operation.parameters?.filter(p => p.required && p.protocol.http?.in === "query" && p.language.default.name.toLowerCase() !== "apiversion")?.length ?? 0) > 0) {
-        logWarning(`Skipping ${operation.operationId} due to required querystring parameter`);
-        return;
+      const operationId = operation.operationId ?? operation.language.default.name;
+      const requests = getHttpRequests(operation.requests);
+      const getRequest = requests.filter(r => r.httpRequest.method === HttpMethod.Get)[0];
+      if (getRequest) {
+        const getPath = getRequest.httpRequest.path.toLowerCase();
+        const parameterWarnings = [
+          ...gatherParameterWarnings(operationId, operation.parameters ?? []),
+          ...gatherParameterWarnings(`${getPath}::GET`, getRequest.request.parameters ?? []),
+        ];
+        if (parameterWarnings.length > 0) {
+          for (const warningText of parameterWarnings) {
+            logWarning(warningText);
+          }
+        } else {
+          getOperationsByPath[getPath] = operation;
+        }
       }
 
-      const requests = getHttpRequests(operation.requests);
-      const getRequest = requests.filter(r => r.method === HttpMethod.Get)[0];
-      if (getRequest) {
-        getOperationsByPath[getRequest.path.toLowerCase()] = operation;
-      }
-      const putRequest = requests.filter(r => r.method === HttpMethod.Put)[0];
+      const putRequest = requests.filter(r => r.httpRequest.method === HttpMethod.Put)[0];
       if (putRequest) {
-        putOperationsByPath[putRequest.path.toLowerCase()] = operation;
+        const putPath = putRequest.httpRequest.path.toLowerCase();
+        const parameterWarnings = [
+          ...gatherParameterWarnings(operationId, operation.parameters ?? []),
+          ...gatherParameterWarnings(`${putPath}::PUT`, putRequest.request.parameters ?? []),
+        ];
+        if (parameterWarnings.length > 0) {
+          for (const warningText of parameterWarnings) {
+            logWarning(warningText);
+          }
+        } else {
+          putOperationsByPath[putPath] = operation;
+        }
       }
+
       const postListRequest = requests.filter(r => {
-        if (r.method !== HttpMethod.Post) {
+        if (r.httpRequest.method !== HttpMethod.Post) {
           return false;
         }
 
-        const parseResult = parseResourceScopes(r.path);
+        const parseResult = parseResourceScopes(r.httpRequest.path);
         if (!parseResult.success) {
           return false;
         }
 
         const { routingScope: actionRoutingScope } = parseResult.value;
         const actionName = actionRoutingScope.substr(actionRoutingScope.lastIndexOf('/') + 1);
-        return actionName.toLowerCase().startsWith('list');
+        if (!actionName.toLowerCase().startsWith('list'))
+        {
+          return false;
+        }
+
+        const parameterWarnings = [
+          ...gatherParameterWarnings(operationId, operation.parameters ?? []),
+          ...gatherParameterWarnings(`${r.httpRequest.path.toLowerCase()}::POST`, r.request.parameters ?? []),
+        ];
+
+        for (const warningText of parameterWarnings) {
+          logWarning(warningText);
+        }
+
+        return parameterWarnings.length === 0;
       })[0];
       if (postListRequest) {
-        postListOperationsByPath[postListRequest.path.toLowerCase()] = operation;
+        postListOperationsByPath[postListRequest.httpRequest.path.toLowerCase()] = operation;
       }
     });
 
