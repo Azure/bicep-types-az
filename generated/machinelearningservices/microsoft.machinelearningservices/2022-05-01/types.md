@@ -501,10 +501,10 @@ This property will always be returned as null. AuthKey values must be retrieved 
 * **Discriminator**: computeType
 
 ### Base Properties
-* **computeLocation**: string (ReadOnly): Location for the underlying compute
+* **computeLocation**: string: Location for the underlying compute
 * **createdOn**: string (ReadOnly): The time at which the compute was created.
 * **description**: string: The description of the Machine Learning compute.
-* **disableLocalAuth**: bool (ReadOnly): Opt-out of local authentication and ensure customers can use only MSI and AAD exclusively for authentication.
+* **disableLocalAuth**: bool: Opt-out of local authentication and ensure customers can use only MSI and AAD exclusively for authentication.
 * **isAttachedCompute**: bool (ReadOnly): Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
 * **modifiedOn**: string (ReadOnly): The time at which the compute was last modified.
 * **provisioningErrors**: [ErrorResponse](#errorresponse)[] (ReadOnly): Errors during provisioning

@@ -218,6 +218,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | ? | Operation 'TopQueryStatistics/ListByServer' really should not have a media type (because there should be no body)
 warning | ? | Operation 'WaitStatistics/ListByServer' really should not have a media type (because there should be no body)
+warning | Skipping QueryTexts_ListByServer due to required query parameter "queryIds"
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.

@@ -294,7 +294,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **latestRevisionFqdn**: string (ReadOnly): Fully Qualified Domain Name of the latest revision of the Container App.
 * **latestRevisionName**: string (ReadOnly): Name of the latest revision of the Container App.
 * **managedEnvironmentId**: string: Resource ID of the Container App's environment.
-* **outboundIPAddresses**: string[] (ReadOnly): Outbound IP Addresses for container app.
+* **outboundIpAddresses**: string[] (ReadOnly): Outbound IP Addresses for container app.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the Container App.
 * **template**: [Template](#template): Container App versioned application definition.
 
@@ -605,6 +605,8 @@ supported
 ## ReplicaContainer
 ### Properties
 * **containerId**: string: The Id of the Container
+* **execEndpoint**: string (ReadOnly): Container exec endpoint
+* **logStreamEndpoint**: string (ReadOnly): Log Stream endpoint
 * **name**: string: The Name of the Container
 * **ready**: bool: The container ready status
 * **restartCount**: int: The container restart count

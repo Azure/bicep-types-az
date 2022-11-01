@@ -289,7 +289,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **latestRevisionFqdn**: string (ReadOnly): Fully Qualified Domain Name of the latest revision of the Container App.
 * **latestRevisionName**: string (ReadOnly): Name of the latest revision of the Container App.
 * **managedEnvironmentId**: string: Resource ID of the Container App's environment.
-* **outboundIPAddresses**: string[] (ReadOnly): Outbound IP Addresses for container app.
+* **outboundIpAddresses**: string[] (ReadOnly): Outbound IP Addresses for container app.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the Container App.
 * **template**: [Template](#template): Container App versioned application definition.
 

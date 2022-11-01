@@ -27,6 +27,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Capacity/reservationOrders/reservations' (ReadOnly, DeployTimeConstant): The resource type
 
+## AppliedScopeProperties
+### Properties
+* **displayName**: string: Management group display name
+* **managementGroupId**: string: Management group ID of the format /providers/Microsoft.Management/managementGroups/{managementGroupId}
+* **tenantId**: string: Tenant ID of the applied scope type
+
 ## ExtendedStatusInfo
 ### Properties
 * **message**: string: The message giving detailed information about the status code.
@@ -138,6 +144,7 @@
 
 ## ReservationsProperties
 ### Properties
+* **appliedScopeProperties**: [AppliedScopeProperties](#appliedscopeproperties)
 * **appliedScopes**: string[]: The list of applied scopes
 * **appliedScopeType**: 'Shared' | 'Single' | string: The applied scope type
 * **archived**: bool: Indicates if the reservation is archived
@@ -164,6 +171,7 @@
 * **reservedResourceType**: 'AVS' | 'AppService' | 'AzureDataExplorer' | 'AzureFiles' | 'BlockBlob' | 'CosmosDb' | 'DataFactory' | 'Databricks' | 'DedicatedHost' | 'ManagedDisk' | 'MariaDb' | 'MySql' | 'NetAppStorage' | 'PostgreSql' | 'RedHat' | 'RedHatOsa' | 'RedisCache' | 'SapHana' | 'SqlAzureHybridBenefit' | 'SqlDataWarehouse' | 'SqlDatabases' | 'SqlEdge' | 'SuseLinux' | 'VMwareCloudSimple' | 'VirtualMachineSoftware' | 'VirtualMachines' | string: The type of the resource that is being reserved.
 * **skuDescription**: string: Description of the SKU in english.
 * **splitProperties**: [ReservationSplitProperties](#reservationsplitproperties)
+* **swapProperties**: [ReservationSwapProperties](#reservationswapproperties)
 * **term**: 'P1Y' | 'P3Y' | 'P5Y' | string: Represent the term of Reservation.
 * **userFriendlyAppliedScopeType**: string (ReadOnly): The applied scope type of the reservation for display, e.g. Shared
 * **userFriendlyRenewState**: string (ReadOnly): The renew state of the reservation for display, e.g. On
@@ -173,6 +181,11 @@
 ### Properties
 * **aggregates**: [ReservationUtilizationAggregates](#reservationutilizationaggregates)[]: The array of aggregates of a reservation's utilization
 * **trend**: string (ReadOnly): The number of days trend for a reservation
+
+## ReservationSwapProperties
+### Properties
+* **swapDestination**: string: Reservation Resource Id that the original resource gets swapped to. Format of the resource Id is /providers/microsoft.capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
+* **swapSource**: string: Resource Id of the Source Reservation that gets swapped. Format of the resource Id is /providers/microsoft.capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
 
 ## ReservationUtilizationAggregates
 ### Properties

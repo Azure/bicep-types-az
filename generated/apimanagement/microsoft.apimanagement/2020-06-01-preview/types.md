@@ -29,12 +29,10 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **format**: 'openapi-link' | 'swagger-link-json' | 'wadl-link-json' | 'wsdl-link+xml' | string (ReadOnly): Format in which the Api Details are exported to the Storage Blob with Sas Key valid for 5 minutes.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApiCreateOrUpdateProperties](#apicreateorupdateproperties) (WriteOnly): Api entity create of update properties.
+* **properties**: [ApiCreateOrUpdatePropertiesOrApiContractProperties](#apicreateorupdatepropertiesorapicontractproperties): Api entity create of update properties.
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant): The resource type
-* **value**: [ApiExportResultValue](#apiexportresultvalue) (ReadOnly): The object defining the schema of the exported Api Detail
 
 ## Resource Microsoft.ApiManagement/service/apis/diagnostics@2020-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -560,11 +558,11 @@
 * **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Virtual network configuration for the location.
 * **zones**: string[]: A list of availability zones denoting where the resource needs to come from.
 
-## ApiCreateOrUpdateProperties
+## ApiCreateOrUpdatePropertiesOrApiContractProperties
 ### Properties
 * **apiRevision**: string: Describes the Revision of the Api. If no value is provided, default revision 1 is created
 * **apiRevisionDescription**: string: Description of the Api Revision.
-* **apiType**: 'http' | 'soap' | string: Type of Api to create. 
+* **apiType**: 'http' | 'soap' | string (WriteOnly): Type of Api to create. 
  * `http` creates a SOAP to REST API 
  * `soap` creates a SOAP pass-through API .
 * **apiVersion**: string: Indicates the Version identifier of the API if the API is versioned
@@ -574,7 +572,7 @@
 * **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract): Collection of authentication settings included into this API.
 * **description**: string: Description of the API. May include HTML formatting tags.
 * **displayName**: string: API name. Must be 1 to 300 characters long.
-* **format**: 'openapi' | 'openapi+json' | 'openapi+json-link' | 'openapi-link' | 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' | string: Format of the Content in which the API is getting imported.
+* **format**: 'openapi' | 'openapi+json' | 'openapi+json-link' | 'openapi-link' | 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' | string (WriteOnly): Format of the Content in which the API is getting imported.
 * **isCurrent**: bool: Indicates if API revision is current api revision.
 * **isOnline**: bool (ReadOnly): Indicates if API revision is accessible via the gateway.
 * **path**: string (Required): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
@@ -584,17 +582,13 @@
 * **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract): Protocols over which API is made available.
 * **subscriptionRequired**: bool: Specifies whether an API or Product subscription is required for accessing the API.
 * **type**: 'http' | 'soap' | string: Type of API.
-* **value**: string: Content value when Importing an API.
-* **wsdlSelector**: [ApiCreateOrUpdatePropertiesWsdlSelector](#apicreateorupdatepropertieswsdlselector): Criteria to limit import of WSDL to a subset of the document.
+* **value**: string (WriteOnly): Content value when Importing an API.
+* **wsdlSelector**: [ApiCreateOrUpdatePropertiesWsdlSelector](#apicreateorupdatepropertieswsdlselector) (WriteOnly): Criteria to limit import of WSDL to a subset of the document.
 
 ## ApiCreateOrUpdatePropertiesWsdlSelector
 ### Properties
 * **wsdlEndpointName**: string: Name of endpoint(port) to import from WSDL
 * **wsdlServiceName**: string: Name of service to import from WSDL
-
-## ApiExportResultValue
-### Properties
-* **link**: string: Link to the Storage Blob containing the result of the export operation. The Blob Uri is only valid for 5 minutes.
 
 ## ApiManagementServiceBasePropertiesCustomProperties
 ### Properties

@@ -132,15 +132,6 @@
 * **properties**: [PolicyProperties](#policyproperties): The properties of a policy.
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/policies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/transactions@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
-### Properties
-* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TransactionProperties](#transactionproperties) (ReadOnly): The properties of a transaction.
-* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/transactions' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Billing/billingAccounts/billingRoleAssignments@2019-10-01-preview
 * **Valid Scope(s)**: Tenant
 ### Properties
@@ -603,41 +594,4 @@
 ### Properties
 * **description**: string (ReadOnly): The name of the reseller.
 * **resellerId**: string (ReadOnly): The MPN ID of the reseller.
-
-## TransactionProperties
-### Properties
-* **azureCreditApplied**: [Amount](#amount) (ReadOnly): The amount of any Azure credits automatically applied to this transaction.
-* **billingCurrency**: string (ReadOnly): The ISO 4217 code for the currency in which this transaction is billed.
-* **billingProfileDisplayName**: string (ReadOnly): The name of the billing profile which will be billed for the transaction.
-* **billingProfileId**: string (ReadOnly): The ID of the billing profile which will be billed for the transaction.
-* **customerDisplayName**: string (ReadOnly): The name of the customer for which the transaction took place. The field is applicable only for Microsoft Partner Agreement billing account.
-* **customerId**: string (ReadOnly): The ID of the customer for which the transaction took place. The field is applicable only for Microsoft Partner Agreement billing account.
-* **date**: string (ReadOnly): The date of transaction.
-* **discount**: int (ReadOnly): The percentage discount, if any, applied to this transaction.
-* **effectivePrice**: [Amount](#amount) (ReadOnly): The price of the product after applying any discounts.
-* **exchangeRate**: int (ReadOnly): The exchange rate used to convert charged amount to billing currency, if applicable.
-* **invoice**: string (ReadOnly): Invoice on which the transaction was billed or 'pending' if the transaction is not billed.
-* **invoiceSectionDisplayName**: string (ReadOnly): The name of the invoice section which will be billed for the transaction.
-* **invoiceSectionId**: string (ReadOnly): The ID of the invoice section which will be billed for the transaction.
-* **kind**: 'all' | 'reservation' | string: The kind of transaction. Options are all or reservation.
-* **marketPrice**: [Amount](#amount) (ReadOnly): The retail price of the product.
-* **orderId**: string (ReadOnly): The order ID of the reservation. The field is only applicable for transaction of kind reservation.
-* **orderName**: string (ReadOnly): The name of the reservation order. The field is only applicable for transactions of kind reservation.
-* **pricingCurrency**: string (ReadOnly): The ISO 4217 code for the currency in which the product is priced.
-* **productDescription**: string (ReadOnly): The description of the product for which the transaction took place.
-* **productFamily**: string (ReadOnly): The family of the product for which the transaction took place.
-* **productType**: string (ReadOnly): The type of the product for which the transaction took place.
-* **productTypeId**: string (ReadOnly): The ID of the product type for which the transaction took place.
-* **quantity**: int (ReadOnly): The quantity purchased in the transaction.
-* **servicePeriodEndDate**: string (ReadOnly): The end date of the product term, or the end date of the month in which usage ended.
-* **servicePeriodStartDate**: string (ReadOnly): The date of the purchase of the product, or the start date of the month in which usage started.
-* **subscriptionId**: string (ReadOnly): The ID of the subscription that was used for the transaction. The field is only applicable for transaction of kind reservation.
-* **subscriptionName**: string (ReadOnly): The name of the subscription that was used for the transaction. The field is only applicable for transaction of kind reservation.
-* **subTotal**: [Amount](#amount) (ReadOnly): The pre-tax charged amount for the transaction.
-* **tax**: [Amount](#amount) (ReadOnly): The tax amount applied to the transaction.
-* **transactionAmount**: [Amount](#amount) (ReadOnly): The charge associated with the transaction.
-* **transactionType**: 'Purchase' | 'Usage Charge' | string: The type of transaction.
-* **unitOfMeasure**: string (ReadOnly): The unit of measure used to bill for the product. For example, compute services are billed per hour.
-* **units**: int (ReadOnly): The number of units used for a given product.
-* **unitType**: string (ReadOnly): The description for the unit of measure for a given product.
 

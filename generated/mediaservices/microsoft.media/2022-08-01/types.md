@@ -258,7 +258,7 @@
 ### ContentKeyPolicyFairPlayConfiguration
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration' (Required): The discriminator for derived types.
-* **ask**: any (Required): The key that must be used as FairPlay Application Secret key.
+* **ask**: any (Required): The key that must be used as FairPlay Application Secret key. This needs to be base64 encoded.
 * **fairPlayPfx**: string (Required): The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
 * **fairPlayPfxPassword**: string (Required): The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
 * **offlineRentalConfiguration**: [ContentKeyPolicyFairPlayOfflineRentalConfiguration](#contentkeypolicyfairplayofflinerentalconfiguration): Offline rental policy

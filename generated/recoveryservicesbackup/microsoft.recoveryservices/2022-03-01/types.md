@@ -1053,7 +1053,7 @@ Backup is VMAppContainer
 * **backupManagementType**: 'AzureIaasVM' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
 * **instantRPDetails**: [InstantRPAdditionalDetails](#instantrpadditionaldetails)
 * **instantRpRetentionRangeInDays**: int: Instant RP retention policy range in days
-* **policyType**: 'Invalid' | 'V1' | 'V2' | string
+* **policyType**: 'Invalid' | 'V1' | 'V2' | string: Type of backup policy type
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Retention policy with the details on backup copy retention ranges.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Backup schedule specified as part of backup policy.
 * **timeZone**: string: TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".

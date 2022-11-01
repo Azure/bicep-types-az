@@ -93,7 +93,7 @@
 
 ### DataBoxHeavyAccountCopyLogDetails
 #### Properties
-* **accountName**: string (ReadOnly): Account name.
+* **accountName**: string (ReadOnly): Account id.
 * **copyLogDetailsType**: 'DataBoxHeavy' (Required): Indicates the type of job details.
 * **copyLogLink**: string[] (ReadOnly): Link for copy logs.
 * **copyVerboseLogLink**: string[] (ReadOnly): Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.

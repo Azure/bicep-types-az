@@ -393,24 +393,6 @@
 * **properties**: [GeoBackupPolicyProperties](#geobackuppolicyproperties) (Required): The properties of the geo backup policy.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/geoBackupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/sqlPools/maintenanceWindowOptions@2021-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'current' (Required, DeployTimeConstant): The resource name
-* **properties**: [MaintenanceWindowOptionsProperties](#maintenancewindowoptionsproperties) (ReadOnly): Resource properties.
-* **type**: 'Microsoft.Synapse/workspaces/sqlPools/maintenanceWindowOptions' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Synapse/workspaces/sqlPools/maintenancewindows@2021-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'current' (Required, DeployTimeConstant): The resource name
-* **properties**: [MaintenanceWindowsProperties](#maintenancewindowsproperties): Resource properties.
-* **type**: 'Microsoft.Synapse/workspaces/sqlPools/maintenancewindows' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Synapse/workspaces/sqlPools/metadataSync@2021-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -419,6 +401,18 @@
 * **name**: 'config' (Required, DeployTimeConstant): The resource name
 * **properties**: [MetadataSyncConfigProperties](#metadatasyncconfigproperties): Metadata Sync Config properties
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/metadataSync' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Synapse/workspaces/sqlPools/operationResults@2021-06-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SqlPoolResourceProperties](#sqlpoolresourceproperties) (ReadOnly): SQL pool properties
+* **sku**: [Sku](#sku) (ReadOnly): SQL pool SKU
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/replicationLinks@2021-06-01-preview (ReadOnly)
 * **Valid Scope(s)**: ResourceGroup
@@ -735,8 +729,8 @@
 ## DynamicExecutorAllocation
 ### Properties
 * **enabled**: bool: Indicates whether Dynamic Executor Allocation is enabled or not.
-* **maxExecutors**: int: The maximum number of executors alloted
-* **minExecutors**: int: The minimum number of executors alloted
+* **maxExecutors**: int (WriteOnly): The maximum number of executors alloted
+* **minExecutors**: int (WriteOnly): The minimum number of executors alloted
 
 ## EncryptionDetails
 ### Properties
@@ -1142,26 +1136,6 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **authorizationType**: 'RBAC' (Required): The authorization type for integration runtime sharing.
 * **resourceId**: string (Required): The resource identifier of the integration runtime to be shared.
 
-
-## MaintenanceWindowOptionsProperties
-### Properties
-* **allowMultipleMaintenanceWindowsPerCycle**: bool: Whether we allow multiple maintenance windows per cycle.
-* **defaultDurationInMinutes**: int: Default duration for maintenance window.
-* **isEnabled**: bool: Whether maintenance windows are enabled for the database.
-* **maintenanceWindowCycles**: [MaintenanceWindowTimeRange](#maintenancewindowtimerange)[]: Available maintenance cycles e.g. {Saturday, 0, 48*60}, {Wednesday, 0, 24*60}.
-* **minCycles**: int: Minimum number of maintenance windows cycles to be set on the database.
-* **minDurationInMinutes**: int: Minimum duration of maintenance window.
-* **timeGranularityInMinutes**: int: Time granularity in minutes for maintenance windows.
-
-## MaintenanceWindowsProperties
-### Properties
-* **timeRanges**: [MaintenanceWindowTimeRange](#maintenancewindowtimerange)[]
-
-## MaintenanceWindowTimeRange
-### Properties
-* **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string: Day of maintenance window.
-* **duration**: string: Duration of maintenance window in minutes.
-* **startTime**: string: Start time minutes offset from 12am.
 
 ## ManagedIdentity
 ### Properties
@@ -1667,6 +1641,11 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## TransparentDataEncryptionProperties
 ### Properties
 * **status**: 'Disabled' | 'Enabled': The status of the database transparent data encryption.
@@ -1734,7 +1713,7 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
 ### Properties
 * **adlaResourceId**: string (ReadOnly): The ADLA resource ID.
 * **azureADOnlyAuthentication**: bool: Enable or Disable AzureADOnlyAuthentication on All Workspace subresource
-* **connectivityEndpoints**: [WorkspacePropertiesConnectivityEndpoints](#workspacepropertiesconnectivityendpoints): Connectivity endpoints
+* **connectivityEndpoints**: [WorkspacePropertiesConnectivityEndpoints](#workspacepropertiesconnectivityendpoints) (ReadOnly): Connectivity endpoints
 * **cspWorkspaceAdminProperties**: [CspWorkspaceAdminProperties](#cspworkspaceadminproperties): Initial workspace AAD admin properties for a CSP subscription
 * **defaultDataLakeStorage**: [DataLakeStorageAccountDetails](#datalakestorageaccountdetails): Workspace default data lake storage account details
 * **encryption**: [EncryptionDetails](#encryptiondetails): The encryption details of the workspace
