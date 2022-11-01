@@ -176,7 +176,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 
 ## DataBoxDiskGranularCopyLogDetails
 ### Properties
-* **accountName**: string (ReadOnly): Account name.
+* **accountId**: string (ReadOnly): Account id.
 * **copyLogDetailsType**: 'DataBox' | 'DataBoxCustomerDisk' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): Indicates the type of job details.
 * **errorLogLink**: string (ReadOnly): Link for copy error logs.
 * **serialNumber**: string (ReadOnly): Disk Serial Number.

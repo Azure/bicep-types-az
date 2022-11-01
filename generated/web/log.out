@@ -1772,8 +1772,8 @@ warning | Modeler/MissingType | The schema 'Expression-value' has no type or for
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2022-03-01/WebApps.json#/components/schemas/Expression-value
 warning | Modeler/MissingType | The schema 'OperationResultProperties-error' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2022-03-01/WebApps.json#/components/schemas/OperationResultProperties-error
+warning | Skipping WebApps_MigrateStorage due to required query parameter "subscriptionName"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/migrate': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/analyzeCustomHostname': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/config/authsettingsV2/list': Found mismatch between type segments (3) and name segments (2)
@@ -3153,8 +3153,8 @@ warning | PreCheck/BinarySchema | 'The schema paths·43fep2·subscriptions-subsc
 warning | PreCheck/BinarySchema | 'The schema paths·tix4l6·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-web-sites-name-slots-slot-publishxml·post·responses·200·content·application-xml·schema with 'type: file', format: undefined' will be treated as a binary blob for binary media types.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2021-03-01/WebApps.json:17385:11
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping WebApps_MigrateStorage due to required query parameter "subscriptionName"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/migrate': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/analyzeCustomHostname': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/config/authsettingsV2/list': Found mismatch between type segments (3) and name segments (2)
@@ -4513,8 +4513,8 @@ warning | PreCheck/BinarySchema | 'The schema paths·43fep2·subscriptions-subsc
 warning | PreCheck/BinarySchema | 'The schema paths·tix4l6·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-web-sites-name-slots-slot-publishxml·post·responses·200·content·application-xml·schema with 'type: file', format: undefined' will be treated as a binary blob for binary media types.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2021-02-01/WebApps.json:17217:11
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping WebApps_MigrateStorage due to required query parameter "subscriptionName"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/migrate': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/analyzeCustomHostname': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/config/authsettingsV2/list': Found mismatch between type segments (3) and name segments (2)
@@ -5873,8 +5873,8 @@ warning | PreCheck/BinarySchema | 'The schema paths·43fep2·subscriptions-subsc
 warning | PreCheck/BinarySchema | 'The schema paths·tix4l6·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-web-sites-name-slots-slot-publishxml·post·responses·200·content·application-xml·schema with 'type: file', format: undefined' will be treated as a binary blob for binary media types.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2021-01-15/WebApps.json:17217:11
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping WebApps_MigrateStorage due to required query parameter "subscriptionName"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/migrate': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/analyzeCustomHostname': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/config/authsettingsV2/list': Found mismatch between type segments (3) and name segments (2)
@@ -7460,8 +7460,8 @@ warning | PreCheck/SchemaMissingType | The schema 'KubeEnvironment-properties' w
 warning | PreCheck/SchemaMissingType | The schema 'KubeEnvironmentPatchResource-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2021-01-01/KubeEnvironments.json:518:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping WebApps_MigrateStorage due to required query parameter "subscriptionName"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/migrate': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/analyzeCustomHostname': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/basicPublishingCredentialsPolicies': Found mismatch between type segments (2) and name segments (1)
@@ -9045,8 +9045,8 @@ warning | PreCheck/SchemaMissingType | The schema 'HybridConnectionLimits-proper
 warning | PreCheck/SchemaMissingType | The schema 'ResourceHealthMetadata-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2020-12-01/ResourceHealthMetadata.json:320:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping WebApps_MigrateStorage due to required query parameter "subscriptionName"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/migrate': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/analyzeCustomHostname': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/basicPublishingCredentialsPolicies': Found mismatch between type segments (2) and name segments (1)
@@ -10678,8 +10678,8 @@ warning | PreCheck/SchemaMissingType | The schema 'HybridConnectionLimits-proper
 warning | PreCheck/SchemaMissingType | The schema 'ResourceHealthMetadata-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2020-10-01/ResourceHealthMetadata.json:320:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping WebApps_MigrateStorage due to required query parameter "subscriptionName"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/migrate': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/analyzeCustomHostname': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/basicPublishingCredentialsPolicies': Found mismatch between type segments (2) and name segments (1)
@@ -12305,8 +12305,8 @@ warning | PreCheck/SchemaMissingType | The schema 'HybridConnectionLimits-proper
 warning | PreCheck/SchemaMissingType | The schema 'ResourceHealthMetadata-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2020-09-01/ResourceHealthMetadata.json:320:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping WebApps_MigrateStorage due to required query parameter "subscriptionName"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/migrate': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/analyzeCustomHostname': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/basicPublishingCredentialsPolicies': Found mismatch between type segments (2) and name segments (1)
@@ -13932,8 +13932,8 @@ warning | PreCheck/SchemaMissingType | The schema 'HybridConnectionLimits-proper
 warning | PreCheck/SchemaMissingType | The schema 'ResourceHealthMetadata-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2020-06-01/ResourceHealthMetadata.json:320:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping WebApps_MigrateStorage due to required query parameter "subscriptionName"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/migrate': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/analyzeCustomHostname': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/basicPublishingCredentialsPolicies': Found mismatch between type segments (2) and name segments (1)
@@ -15495,8 +15495,8 @@ warning | PreCheck/SchemaMissingType | The schema 'HybridConnectionLimits-proper
 warning | PreCheck/SchemaMissingType | The schema 'ResourceHealthMetadata-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2019-08-01/ResourceHealthMetadata.json:320:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping WebApps_MigrateStorage due to required query parameter "subscriptionName"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/migrate': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/analyzeCustomHostname': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/basicPublishingCredentialsPolicies': Found mismatch between type segments (2) and name segments (1)
@@ -16977,7 +16977,7 @@ warning | PreCheck/SchemaMissingType | The schema 'VnetGateway-properties' with 
 warning | PreCheck/SchemaMissingType | The schema 'VnetInfo-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'VnetRoute-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/migrate': Found mismatch between type segments (2) and name segments (1)
+warning | Skipping WebApps_MigrateStorage due to required query parameter "subscriptionName"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/analyzeCustomHostname': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/deployments/{id}/log': Found mismatch between type segments (3) and name segments (2)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/extensions/MSDeploy/log': Found mismatch between type segments (3) and name segments (2)
@@ -17613,8 +17613,8 @@ warning | PreCheck/SchemaMissingType | The schema 'Certificate-properties' with 
 warning | PreCheck/SchemaMissingType | The schema 'CertificatePatchResource-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2018-02-01/Certificates.json:463:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping WebApps_MigrateStorage due to required query parameter "subscriptionName"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/migrate': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/hostingEnvironments/{name}/metricdefinitions': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/analyzeCustomHostname': Found mismatch between type segments (2) and name segments (1)
@@ -19588,7 +19588,7 @@ warning | PreCheck/SchemaMissingType | The schema 'VnetGateway-properties' with 
 warning | PreCheck/SchemaMissingType | The schema 'VnetInfo-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'VnetRoute-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/migrate': Found mismatch between type segments (2) and name segments (1)
+warning | Skipping WebApps_MigrateStorage due to required query parameter "subscriptionName"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/analyzeCustomHostname': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/deployments/{id}/log': Found mismatch between type segments (3) and name segments (2)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/extensions/MSDeploy/log': Found mismatch between type segments (3) and name segments (2)
@@ -21063,6 +21063,9 @@ warning | PreCheck/BinarySchema | 'The schema paths·rxd8d5·subscriptions-subsc
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/web/resource-manager/Microsoft.Web/stable/2015-08-01/service.json:14649:11
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'SiteProperties' -> 'SitePropertiesAutoGenerated'
+warning | Skipping Global_IsHostingEnvironmentNameAvailable due to required query parameter "name"
+warning | Skipping Usage_GetUsage due to required query parameter "lastId"
+warning | Skipping Usage_GetUsage due to required query parameter "batchSize"
 warning | Skipping path '/subscriptions/{subscriptionId}/providers/Microsoft.Web/publishingCredentials': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/snapshots': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/snapshots': Found mismatch between type segments (3) and name segments (2)

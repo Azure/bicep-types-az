@@ -125,6 +125,12 @@ warning | PreCheck/SchemaMissingType | The schema 'ReservationSkuProperty' with 
 warning | PreCheck/SchemaMissingType | The schema 'ReservationProperty' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:6494:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping Invoices_ListByBillingAccount due to required query parameter "periodStartDate"
+warning | Skipping Invoices_ListByBillingAccount due to required query parameter "periodEndDate"
+warning | Skipping Invoices_ListByBillingProfile due to required query parameter "periodStartDate"
+warning | Skipping Invoices_ListByBillingProfile due to required query parameter "periodEndDate"
+warning | Skipping Invoices_ListByBillingSubscription due to required query parameter "periodStartDate"
+warning | Skipping Invoices_ListByBillingSubscription due to required query parameter "periodEndDate"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -312,6 +318,22 @@ warning | PreCheck/SchemaMissingType | The schema 'Participants' with an undefin
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The enum schema 'BillingProfileStatusReasonCode' with an undefined type and enum values is ambiguous. This has been auto-corrected to 'type:string'
 warning | Modeler/MissingType | The enum schema 'BillingProfileSpendingLimit' with an undefined type and enum values is ambiguous. This has been auto-corrected to 'type:string'
+warning | Skipping Transactions_ListByCustomer due to required query parameter "periodStartDate"
+warning | Skipping Transactions_ListByCustomer due to required query parameter "periodEndDate"
+warning | Skipping Transactions_ListByBillingAccount due to required query parameter "periodStartDate"
+warning | Skipping Transactions_ListByBillingAccount due to required query parameter "periodEndDate"
+warning | Skipping Transactions_ListByBillingProfile due to required query parameter "periodStartDate"
+warning | Skipping Transactions_ListByBillingProfile due to required query parameter "periodEndDate"
+warning | Skipping Transactions_ListByInvoiceSection due to required query parameter "periodStartDate"
+warning | Skipping Transactions_ListByInvoiceSection due to required query parameter "periodEndDate"
+warning | Skipping Transactions_Get due to required query parameter "periodStartDate"
+warning | Skipping Transactions_Get due to required query parameter "periodEndDate"
+warning | Skipping Invoices_ListByBillingAccount due to required query parameter "periodStartDate"
+warning | Skipping Invoices_ListByBillingAccount due to required query parameter "periodEndDate"
+warning | Skipping Invoices_ListByBillingProfile due to required query parameter "periodStartDate"
+warning | Skipping Invoices_ListByBillingProfile due to required query parameter "periodEndDate"
+warning | Skipping Invoices_ListByBillingSubscription due to required query parameter "periodStartDate"
+warning | Skipping Invoices_ListByBillingSubscription due to required query parameter "periodEndDate"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -430,6 +452,18 @@ warning | PreCheck/SchemaMissingType | The schema 'Participants' with an undefin
 warning | PreCheck/SchemaMissingType | The schema 'LineOfCreditProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:6401:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping Invoices_ListByBillingAccountName due to required query parameter "periodStartDate"
+warning | Skipping Invoices_ListByBillingAccountName due to required query parameter "periodEndDate"
+warning | Skipping Invoices_ListByBillingProfile due to required query parameter "periodStartDate"
+warning | Skipping Invoices_ListByBillingProfile due to required query parameter "periodEndDate"
+warning | Skipping Transactions_ListByBillingAccountName due to required query parameter "startDate"
+warning | Skipping Transactions_ListByBillingAccountName due to required query parameter "endDate"
+warning | Skipping Transactions_ListByBillingProfileName due to required query parameter "startDate"
+warning | Skipping Transactions_ListByBillingProfileName due to required query parameter "endDate"
+warning | Skipping Transactions_ListByCustomerName due to required query parameter "startDate"
+warning | Skipping Transactions_ListByCustomerName due to required query parameter "endDate"
+warning | Skipping Transactions_ListByInvoiceSectionName due to required query parameter "startDate"
+warning | Skipping Transactions_ListByInvoiceSectionName due to required query parameter "endDate"
 warning | Skipping path '/subscriptions/{subscriptionId}/providers/Microsoft.Billing/billingProperty': Found mismatch between type segments (1) and name segments (0)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.

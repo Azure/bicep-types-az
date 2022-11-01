@@ -1,15 +1,5 @@
 # Microsoft.DevHub @ 2022-04-01-preview
 
-## Resource Microsoft.DevHub/locations/githuboauth@2022-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
-### Properties
-* **apiVersion**: '2022-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [GitHubOAuthProperties](#githuboauthproperties) (ReadOnly): Properties of a workflow.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.DevHub/locations/githuboauth' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.DevHub/workflows@2022-04-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -42,15 +32,11 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## GitHubOAuthProperties
-### Properties
-* **username**: string: user making request
-
 ## GitHubWorkflowProfile
 ### Properties
 * **acr**: [ACR](#acr): Information on the azure container registry
 * **aksResourceId**: string: The Azure Kubernetes Cluster Resource the application will be deployed to.
-* **authStatus**: 'helm' | 'kube' | string: Determines the type of manifests within the repository.
+* **authStatus**: 'Authorized' | 'Error' | 'NotFound' | string (ReadOnly): Determines the authorization status of requests.
 * **branchName**: string: Repository Branch Name
 * **deploymentProperties**: [DeploymentProperties](#deploymentproperties)
 * **dockerBuildContext**: string: Path to Dockerfile Build Context within the repository.

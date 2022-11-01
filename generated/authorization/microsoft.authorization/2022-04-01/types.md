@@ -43,8 +43,12 @@
 ## RoleDefinitionProperties
 ### Properties
 * **assignableScopes**: string[]: Role definition assignable scopes.
+* **createdBy**: string (ReadOnly): Id of the user who created the assignment
+* **createdOn**: string (ReadOnly): Time it was created
 * **description**: string: The role definition description.
 * **permissions**: [Permission](#permission)[]: Role definition permissions.
 * **roleName**: string: The role name.
 * **type**: string: The role type.
+* **updatedBy**: string (ReadOnly): Id of the user who updated the assignment
+* **updatedOn**: string (ReadOnly): Time it was updated
 

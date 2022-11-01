@@ -541,7 +541,7 @@
 * **managedResourceGroupConfiguration**: [ManagedRGConfiguration](#managedrgconfiguration): Managed resource group configuration
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Defines the provisioning states.
 * **sapProduct**: 'ECC' | 'Other' | 'S4HANA' | string (Required): Defines the SAP Product type.
-* **state**: 'DiscoveryFailed' | 'DiscoveryInProgress' | 'DiscoveryPending' | 'InfrastructureDeploymentFailed' | 'InfrastructureDeploymentInProgress' | 'InfrastructureDeploymentPending' | 'RegistrationComplete' | 'SoftwareInstallationFailed' | 'SoftwareInstallationInProgress' | 'SoftwareInstallationPending' | string (ReadOnly): Defines the Virtual Instance for SAP state.
+* **state**: 'DiscoveryFailed' | 'DiscoveryInProgress' | 'DiscoveryPending' | 'InfrastructureDeploymentFailed' | 'InfrastructureDeploymentInProgress' | 'InfrastructureDeploymentPending' | 'RegistrationComplete' | 'SoftwareDetectionFailed' | 'SoftwareDetectionInProgress' | 'SoftwareInstallationFailed' | 'SoftwareInstallationInProgress' | 'SoftwareInstallationPending' | string (ReadOnly): Defines the Virtual Instance for SAP state.
 * **status**: 'Offline' | 'PartiallyRunning' | 'Running' | 'Starting' | 'Stopping' | 'Unavailable' | string (ReadOnly): Defines the SAP Instance status.
 
 ## SearchProfile
@@ -570,6 +570,11 @@
 * **Discriminator**: softwareInstallationType
 
 ### Base Properties
+
+### ExternalInstallationSoftwareConfiguration
+#### Properties
+* **centralServerVmId**: string: The resource ID of the virtual machine containing the central server instance.
+* **softwareInstallationType**: 'External' (Required): The SAP software installation Type.
 
 ### SAPInstallWithoutOSConfigSoftwareConfiguration
 #### Properties

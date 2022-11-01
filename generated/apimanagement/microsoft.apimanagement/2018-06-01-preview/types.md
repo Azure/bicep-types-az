@@ -28,9 +28,8 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **link**: string (ReadOnly): Link to the Storage Blob containing the result of the export operation. The Blob Uri is only valid for 5 minutes.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApiCreateOrUpdateProperties](#apicreateorupdateproperties) (WriteOnly): Api entity create of update properties.
+* **properties**: [ApiCreateOrUpdatePropertiesOrApiContractProperties](#apicreateorupdatepropertiesorapicontractproperties): Api entity create of update properties.
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/diagnostics@2018-06-01-preview
@@ -401,11 +400,11 @@
 * **sku**: [ApiManagementServiceSkuProperties](#apimanagementserviceskuproperties) (Required): SKU properties of the API Management service.
 * **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Virtual network configuration for the location.
 
-## ApiCreateOrUpdateProperties
+## ApiCreateOrUpdatePropertiesOrApiContractProperties
 ### Properties
 * **apiRevision**: string: Describes the Revision of the Api. If no value is provided, default revision 1 is created
 * **apiRevisionDescription**: string: Description of the Api Revision.
-* **apiType**: 'http' | 'soap' | string: Type of Api to create. 
+* **apiType**: 'http' | 'soap' | string (WriteOnly): Type of Api to create. 
  * `http` creates a SOAP to REST API 
  * `soap` creates a SOAP pass-through API .
 * **apiVersion**: string: Indicates the Version identifier of the API if the API is versioned
@@ -413,8 +412,8 @@
 * **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails): An API Version Set contains the common configuration for a set of API Versions relating
 * **apiVersionSetId**: string: A resource identifier for the related ApiVersionSet.
 * **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract): Collection of authentication settings included into this API.
-* **contentFormat**: 'openapi' | 'openapi+json' | 'openapi-link' | 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' | string: Format of the Content in which the API is getting imported.
-* **contentValue**: string: Content value when Importing an API.
+* **contentFormat**: 'openapi' | 'openapi+json' | 'openapi-link' | 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' | string (WriteOnly): Format of the Content in which the API is getting imported.
+* **contentValue**: string (WriteOnly): Content value when Importing an API.
 * **description**: string: Description of the API. May include HTML formatting tags.
 * **displayName**: string: API name.
 * **isCurrent**: bool (ReadOnly): Indicates if API revision is current api revision.
@@ -425,7 +424,7 @@
 * **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract): Protocols over which API is made available.
 * **subscriptionRequired**: bool: Specifies whether an API or Product subscription is required for accessing the API.
 * **type**: 'http' | 'soap' | string: Type of API.
-* **wsdlSelector**: [ApiCreateOrUpdatePropertiesWsdlSelector](#apicreateorupdatepropertieswsdlselector): Criteria to limit import of WSDL to a subset of the document.
+* **wsdlSelector**: [ApiCreateOrUpdatePropertiesWsdlSelector](#apicreateorupdatepropertieswsdlselector) (WriteOnly): Criteria to limit import of WSDL to a subset of the document.
 
 ## ApiCreateOrUpdatePropertiesWsdlSelector
 ### Properties

@@ -899,6 +899,7 @@
 ### Properties
 * **authentication**: any: Required to specify MSI, if using system assigned managed identity as authentication method. Type: string (or Expression with resultType string).
 * **endpoint**: any (Required): https://<workspacename>.dev.azuresynapse.net, Azure Synapse Analytics workspace URL. Type: string (or Expression with resultType string).
+* **workspaceResourceId**: any: The resource ID of the Synapse workspace. The format should be: /subscriptions/{subscriptionID}/resourceGroups/{resourceGroup}/providers/Microsoft.Synapse/workspaces/{workspaceName}. Type: string (or Expression with resultType string).
 
 ## AzureTableDatasetTypeProperties
 ### Properties
@@ -3209,6 +3210,7 @@
 ### Base Properties
 * **accountName**: string (Required): Account name.
 * **collaborationBranch**: string (Required): Collaboration branch.
+* **disablePublish**: bool: Disable manual publish operation in ADF studio to favor automated publish.
 * **lastCommitId**: string: Last commit id.
 * **repositoryName**: string (Required): Repository name.
 * **rootFolder**: string (Required): Root folder.
@@ -5201,6 +5203,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## ScriptActivityTypeProperties
 ### Properties
 * **logSettings**: [ScriptActivityTypePropertiesLogSettings](#scriptactivitytypepropertieslogsettings): Log settings of script activity.
+* **scriptBlockExecutionTimeout**: any: ScriptBlock execution timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **scripts**: [ScriptActivityScriptBlock](#scriptactivityscriptblock)[]: Array of script blocks. Type: array.
 
 ## ScriptActivityTypePropertiesLogSettings
@@ -5773,14 +5776,16 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **driverSize**: any: Number of core and memory to be used for driver allocated in the specified Spark pool for the job, which will be used for overriding 'driverCores' and 'driverMemory' of the spark job definition you provide. Type: string (or Expression with resultType string).
 * **executorSize**: any: Number of core and memory to be used for executors allocated in the specified Spark pool for the job, which will be used for overriding 'executorCores' and 'executorMemory' of the spark job definition you provide. Type: string (or Expression with resultType string).
 * **file**: any: The main file used for the job, which will override the 'file' of the spark job definition you provide. Type: string (or Expression with resultType string).
-* **files**: any[]: Additional files used for reference in the main definition file, which will override the 'files' of the spark job definition you provide.
+* **files**: any[]: (Deprecated. Please use pythonCodeReference and filesV2) Additional files used for reference in the main definition file, which will override the 'files' of the spark job definition you provide.
+* **filesV2**: any[]: Additional files used for reference in the main definition file, which will override the 'jars' and 'files' of the spark job definition you provide.
 * **numExecutors**: int: Number of executors to launch for this job, which will override the 'numExecutors' of the spark job definition you provide.
+* **pythonCodeReference**: any[]: Additional python code files used for reference in the main definition file, which will override the 'pyFiles' of the spark job definition you provide.
 * **sparkJob**: [SynapseSparkJobReference](#synapsesparkjobreference) (Required): Synapse spark job reference.
 * **targetBigDataPool**: [BigDataPoolParametrizationReference](#bigdatapoolparametrizationreference): The name of the big data pool which will be used to execute the spark batch job, which will override the 'targetBigDataPool' of the spark job definition you provide.
 
 ## SynapseSparkJobReference
 ### Properties
-* **referenceName**: string (Required): Reference spark job name.
+* **referenceName**: any (Required): Reference spark job name. Expression with resultType string.
 * **type**: 'SparkJobDefinitionReference' | string (Required): Synapse spark job reference type.
 
 ## TeamDeskLinkedServiceTypeProperties

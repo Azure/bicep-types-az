@@ -1048,7 +1048,7 @@
 * **forceUpdateTag**: string: How the extension handler should be forced to update even if the extension configuration has not changed.
 * **instanceView**: [VirtualMachineExtensionInstanceView](#virtualmachineextensioninstanceview): The virtual machine extension instance view.
 * **protectedSettings**: any: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
-* **protectedSettingsFromKeyVault**: any: The extensions protected settings that are passed by reference, and consumed from key vault
+* **protectedSettingsFromKeyVault**: [KeyVaultSecretReference](#keyvaultsecretreference): The extensions protected settings that are passed by reference, and consumed from key vault
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
 * **publisher**: string: The name of the extension handler publisher.
 * **settings**: any: Json formatted public settings for the extension.
@@ -1270,7 +1270,7 @@
 * **enableAutomaticUpgrade**: bool: Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
 * **forceUpdateTag**: string: If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.
 * **protectedSettings**: any: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
-* **protectedSettingsFromKeyVault**: any: The extensions protected settings that are passed by reference, and consumed from key vault
+* **protectedSettingsFromKeyVault**: [KeyVaultSecretReference](#keyvaultsecretreference): The extensions protected settings that are passed by reference, and consumed from key vault
 * **provisionAfterExtensions**: string[]: Collection of extension names after which this extension needs to be provisioned.
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
 * **publisher**: string: The name of the extension handler publisher.
