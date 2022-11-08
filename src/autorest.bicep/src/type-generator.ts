@@ -3,7 +3,7 @@
 
 import { AnySchema, ArraySchema, ByteArraySchema, ChoiceSchema, ComplexSchema, ConstantSchema, DictionarySchema, ObjectSchema, PrimitiveSchema, Property, Schema, SchemaType, SealedChoiceSchema, StringSchema } from "@autorest/codemodel";
 import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
-import { BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ResourceFlags, TypeBaseKind, TypeFactory, TypeReference } from "bicep-types";
+import { BuiltInTypeKind, DiscriminatedObjectType, ObjectTypeProperty, ObjectTypePropertyFlags, ResourceFlags, TypeBaseKind, TypeFactory, TypeReference } from "bicep-types";
 import { uniq, keys, Dictionary, chain } from 'lodash';
 import { getFullyQualifiedType, getNameSchema, getSerializedName, ProviderDefinition, ResourceDefinition, ResourceDescriptor, ResourceOperationDefintion } from "./resources";
 import { failure, success } from "./utils";
@@ -115,7 +115,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       if (propertyDefinition !== undefined) {
         const description = getPropertyDescription(putProperty, getProperty);
         const flags = parsePropertyFlags(putProperty, getProperty);
-        resourceProperties[propertyName] = createObjectProperty(propertyDefinition, flags, description);
+        resourceProperties[propertyName] = createObjectTypeProperty(propertyDefinition, flags, description);
       }
     }
 
@@ -233,18 +233,18 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     return factory.types;
   }
 
-  function getStandardizedResourceProperties(descriptor: ResourceDescriptor, resourceName: TypeReference): Dictionary<ObjectProperty> {
+  function getStandardizedResourceProperties(descriptor: ResourceDescriptor, resourceName: TypeReference): Dictionary<ObjectTypeProperty> {
     const type = factory.addStringLiteralType(getFullyQualifiedType(descriptor));
 
     return {
-      id: createObjectProperty(factory.lookupBuiltInType(BuiltInTypeKind.String), ObjectPropertyFlags.ReadOnly | ObjectPropertyFlags.DeployTimeConstant, 'The resource id'),
-      name: createObjectProperty(resourceName, ObjectPropertyFlags.Required | ObjectPropertyFlags.DeployTimeConstant, 'The resource name'),
-      type: createObjectProperty(type, ObjectPropertyFlags.ReadOnly | ObjectPropertyFlags.DeployTimeConstant, 'The resource type'),
-      apiVersion: createObjectProperty(factory.addStringLiteralType(descriptor.apiVersion), ObjectPropertyFlags.ReadOnly | ObjectPropertyFlags.DeployTimeConstant, 'The resource api version'),
+      id: createObjectTypeProperty(factory.lookupBuiltInType(BuiltInTypeKind.String), ObjectTypePropertyFlags.ReadOnly | ObjectTypePropertyFlags.DeployTimeConstant, 'The resource id'),
+      name: createObjectTypeProperty(resourceName, ObjectTypePropertyFlags.Required | ObjectTypePropertyFlags.DeployTimeConstant, 'The resource name'),
+      type: createObjectTypeProperty(type, ObjectTypePropertyFlags.ReadOnly | ObjectTypePropertyFlags.DeployTimeConstant, 'The resource type'),
+      apiVersion: createObjectTypeProperty(factory.addStringLiteralType(descriptor.apiVersion), ObjectTypePropertyFlags.ReadOnly | ObjectTypePropertyFlags.DeployTimeConstant, 'The resource api version'),
     };
   }
 
-  function createObject(definitionName: string, schema: ObjectSchema, properties: Dictionary<ObjectProperty>, additionalProperties?: TypeReference) {
+  function createObject(definitionName: string, schema: ObjectSchema, properties: Dictionary<ObjectTypeProperty>, additionalProperties?: TypeReference) {
     if (schema.discriminator) {
       return factory.addDiscriminatedObjectType(
         definitionName,
@@ -395,28 +395,28 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
   function getMutabilityFlags(property: Property | undefined) {
     const mutability = property?.extensions?.["x-ms-mutability"] as string[];
     if (!mutability) {
-      return ObjectPropertyFlags.None;
+      return ObjectTypePropertyFlags.None;
     }
 
     const writable = mutability.includes('create') || mutability.includes('update');
     const readable = mutability.includes('read');
 
     if (writable && !readable) {
-      return ObjectPropertyFlags.WriteOnly;
+      return ObjectTypePropertyFlags.WriteOnly;
     }
 
     if (readable && !writable) {
-      return ObjectPropertyFlags.ReadOnly;
+      return ObjectTypePropertyFlags.ReadOnly;
     }
 
-    return ObjectPropertyFlags.None;
+    return ObjectTypePropertyFlags.None;
   }
 
   function parsePropertyFlags(putProperty: Property | undefined, getProperty: Property | undefined) {
-    let flags = ObjectPropertyFlags.None;
+    let flags = ObjectTypePropertyFlags.None;
 
     if (putProperty && putProperty.required) {
-      flags |= ObjectPropertyFlags.Required;
+      flags |= ObjectTypePropertyFlags.Required;
     }
 
     if (putProperty && getProperty) {
@@ -424,11 +424,11 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     }
 
     if (!putProperty || putProperty.readOnly) {
-      flags |= ObjectPropertyFlags.ReadOnly;
+      flags |= ObjectTypePropertyFlags.ReadOnly;
     }
 
     if (!getProperty) {
-      flags |= ObjectPropertyFlags.WriteOnly;
+      flags |= ObjectTypePropertyFlags.WriteOnly;
     }
 
     return flags;
@@ -495,9 +495,9 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       discriminatedObjectType.Elements[combinedSubType.discriminatorValue] = objectTypeRef;
 
       const description = (putSchema ?? getSchema)?.discriminator?.property.language.default.description;
-      objectType.Properties[discriminatedObjectType.Discriminator] = createObjectProperty(
+      objectType.Properties[discriminatedObjectType.Discriminator] = createObjectTypeProperty(
         factory.addStringLiteralType(combinedSubType.discriminatorValue),
-        ObjectPropertyFlags.Required,
+        ObjectTypePropertyFlags.Required,
         description);
     }
   }
@@ -550,7 +550,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       ? parseType(putParentDictionary?.elementType, getParentDictionary?.elementType)
       : undefined;
 
-    const definitionProperties: Dictionary<ObjectProperty> = {};
+    const definitionProperties: Dictionary<ObjectTypeProperty> = {};
     const definition = createObject(definitionName, combinedSchema, definitionProperties, additionalProperties);
     if (!ancestorsToExclude) {
       // cache the definition so that it can be re-used
@@ -572,7 +572,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       if (propertyDefinition !== undefined) {
         const description = getPropertyDescription(putProperty, getProperty);
         const flags = parsePropertyFlags(putProperty, getProperty);
-        definitionProperties[propertyName] = createObjectProperty(propertyDefinition, flags, description);
+        definitionProperties[propertyName] = createObjectTypeProperty(propertyDefinition, flags, description);
       }
     }
 
@@ -644,7 +644,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     return factory.addArrayType(itemType);
   }
 
-  function createObjectProperty(type: TypeReference, flags: ObjectPropertyFlags, description?: string): ObjectProperty {
+  function createObjectTypeProperty(type: TypeReference, flags: ObjectTypePropertyFlags, description?: string): ObjectTypeProperty {
     return { Type: type, Flags: flags, Description: description?.trim() || undefined };
   }
 
