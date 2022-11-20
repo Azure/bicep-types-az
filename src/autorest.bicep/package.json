@@ -21,7 +21,7 @@
     "@types/jest": "^27.4.1",
     "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.42.1",
-    "@typescript-eslint/parser": "^5.42.1",
+    "@typescript-eslint/parser": "^5.43.0",
     "colors": "^1.4.0",
     "dir-compare": "^4.0.0",
     "eslint": "^8.27.0",
