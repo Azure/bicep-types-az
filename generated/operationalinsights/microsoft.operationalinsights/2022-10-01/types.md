@@ -106,11 +106,11 @@
 * **restoredLogs**: [RestoredLogs](#restoredlogs): Parameters of the restore operation that initiated this table.
 * **resultStatistics**: [ResultStatistics](#resultstatistics) (ReadOnly): Search job execution statistics.
 * **retentionInDays**: int: The table retention in days, between 4 and 730. Setting this property to -1 will default to the workspace retention.
-* **retentionInDaysAsDefault**: 'False' | 'True' | string (ReadOnly): True - Value originates from workspace retention in days, False - Customer specific.
+* **retentionInDaysAsDefault**: bool (ReadOnly): True - Value originates from workspace retention in days, False - Customer specific.
 * **schema**: [Schema](#schema): Table schema.
 * **searchResults**: [SearchResults](#searchresults): Parameters of the search job that initiated this table.
 * **totalRetentionInDays**: int: The table total retention in days, between 4 and 2555. Setting this property to -1 will default to table retention.
-* **totalRetentionInDaysAsDefault**: 'False' | 'True' | string (ReadOnly): True - Value originates from retention in days, False - Customer specific.
+* **totalRetentionInDaysAsDefault**: bool (ReadOnly): True - Value originates from retention in days, False - Customer specific.
 
 ## TrackedResourceTags
 ### Properties

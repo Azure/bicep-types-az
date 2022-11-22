@@ -66,6 +66,26 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DataProtection/backupVaults/backupResourceGuardProxies@2022-10-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ResourceGuardProxyBase](#resourceguardproxybase): ResourceGuardProxyBaseResource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.DataProtection/backupVaults/backupResourceGuardProxies' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DataProtection/backupVaults/deletedBackupInstances@2022-10-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DeletedBackupInstance](#deletedbackupinstance) (ReadOnly): DeletedBackupInstanceResource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.DataProtection/backupVaults/deletedBackupInstances' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DataProtection/backupVaults/operationResults@2022-10-01-preview (ReadOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -231,11 +251,12 @@ and should be part of AbsoluteMarker enum
 
 ## BackupVault
 ### Properties
-* **isVaultProtectedByResourceGuard**: bool: Is vault protected by resource guard
+* **isVaultProtectedByResourceGuard**: bool (ReadOnly): Is vault protected by resource guard
 * **monitoringSettings**: [MonitoringSettings](#monitoringsettings): Monitoring Settings
 * **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the BackupVault resource
 * **resourceMoveDetails**: [ResourceMoveDetails](#resourcemovedetails) (ReadOnly): Resource move details for backup vault
 * **resourceMoveState**: 'CommitFailed' | 'CommitTimedout' | 'CriticalFailure' | 'Failed' | 'InProgress' | 'MoveSucceeded' | 'PartialSuccess' | 'PrepareFailed' | 'PrepareTimedout' | 'Unknown' | string (ReadOnly): Resource move state for backup vault
+* **securitySettings**: [SecuritySettings](#securitysettings): Security Settings
 * **storageSettings**: [StorageSetting](#storagesetting)[] (Required): Storage Settings
 
 ## BaseBackupPolicy
@@ -331,6 +352,21 @@ and should be part of AbsoluteMarker enum
 * **date**: int: Date of the month
 * **isLast**: bool: Whether Date is last date of month
 
+## DeletedBackupInstance
+### Properties
+* **currentProtectionState**: 'BackupSchedulesSuspended' | 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'Invalid' | 'NotProtected' | 'ProtectionConfigured' | 'ProtectionError' | 'ProtectionStopped' | 'RetentionSchedulesSuspended' | 'SoftDeleted' | 'SoftDeleting' | 'UpdatingProtection' | string (ReadOnly): Specifies the current protection state of the resource
+* **datasourceAuthCredentials**: [AuthCredentials](#authcredentials): Credentials to use to authenticate with data source provider.
+* **dataSourceInfo**: [Datasource](#datasource) (Required): Gets or sets the data source information.
+* **dataSourceSetInfo**: [DatasourceSet](#datasourceset): Gets or sets the data source set information.
+* **deletionInfo**: [DeletionInfo](#deletioninfo) (ReadOnly): Deletion info of Backup Instance
+* **friendlyName**: string: Gets or sets the Backup Instance friendly name.
+* **objectType**: string (Required)
+* **policyInfo**: [PolicyInfo](#policyinfo) (Required): Gets or sets the policy information.
+* **protectionErrorDetails**: [UserFacingError](#userfacingerror) (ReadOnly): Specifies the protection error of the resource
+* **protectionStatus**: [ProtectionStatusDetails](#protectionstatusdetails) (ReadOnly): Specifies the protection status of the resource
+* **provisioningState**: string (ReadOnly): Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed
+* **validationType**: 'DeepValidation' | 'ShallowValidation' | string: Specifies the type of validation. In case of DeepValidation, all validations from /validateForBackup API will run again.
+
 ## DeleteOption
 * **Discriminator**: objectType
 
@@ -341,6 +377,13 @@ and should be part of AbsoluteMarker enum
 #### Properties
 * **objectType**: 'AbsoluteDeleteOption' (Required): Type of the specific object - used for deserializing
 
+
+## DeletionInfo
+### Properties
+* **billingEndDate**: string (ReadOnly): Specifies billing end date
+* **deleteActivityID**: string (ReadOnly): Delete activity ID for troubleshooting purpose
+* **deletionTime**: string (ReadOnly): Specifies time of deletion
+* **scheduledPurgeTime**: string (ReadOnly): Specifies purge time
 
 ## DppIdentityDetails
 ### Properties
@@ -372,6 +415,10 @@ and should be part of AbsoluteMarker enum
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ImmutabilitySettings
+### Properties
+* **state**: 'Disabled' | 'Locked' | 'Unlocked' | string: Immutability state
 
 ## InnerError
 ### Properties
@@ -457,6 +504,18 @@ and should be part of AbsoluteMarker enum
 * **requestResourceType**: string (ReadOnly): Type of resource request.
 * **vaultCriticalOperation**: string (ReadOnly): Name of the critical operation.
 
+## ResourceGuardOperationDetail
+### Properties
+* **defaultResourceRequest**: string
+* **vaultCriticalOperation**: string
+
+## ResourceGuardProxyBase
+### Properties
+* **description**: string
+* **lastUpdatedTime**: string
+* **resourceGuardOperationDetails**: [ResourceGuardOperationDetail](#resourceguardoperationdetail)[]
+* **resourceGuardResourceId**: string
+
 ## ResourceMoveDetails
 ### Properties
 * **completionTimeUtc**: string: Completion time in UTC of latest ResourceMove operation attempted. ISO 8601 format.
@@ -481,6 +540,16 @@ and should be part of AbsoluteMarker enum
 * **secretStoreType**: 'AzureKeyVault' | 'Invalid' | string (Required): Gets or sets the type of secret store
 * **uri**: string: Uri to get to the resource
 * **value**: string: Gets or sets value stored in secret store resource
+
+## SecuritySettings
+### Properties
+* **immutabilitySettings**: [ImmutabilitySettings](#immutabilitysettings): Immutability Settings at vault level
+* **softDeleteSettings**: [SoftDeleteSettings](#softdeletesettings): Soft delete related settings
+
+## SoftDeleteSettings
+### Properties
+* **retentionDurationInDays**: int: Soft delete retention duration
+* **state**: 'AlwaysOn' | 'Off' | 'On' | string: State of soft delete
 
 ## SourceLifeCycle
 ### Properties

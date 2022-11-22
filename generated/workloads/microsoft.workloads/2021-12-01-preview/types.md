@@ -279,6 +279,7 @@
 * **msiArmId**: string (ReadOnly): The ARM ID of the MSI used for SAP monitoring.
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' | string (ReadOnly): State of provisioning of the SAP monitor.
 * **routingPreference**: 'Default' | 'RouteAll' | string: Sets the routing preference of the SAP monitor. By default only RFC1918 traffic is routed to the customer VNET.
+* **storageAccountArmId**: string (ReadOnly): The ARM ID of the Storage account used for SAP monitoring.
 * **zoneRedundancyPreference**: string: Sets the preference for zone redundancy on resources created for the SAP monitor. By default resources will be created which do not support zone redundancy.
 
 ## MonitorPropertiesErrors
@@ -405,6 +406,8 @@
 * **hostname**: string: Gets or sets the target virtual machine name.
 * **providerType**: 'Db2' (Required): The provider type. For example, the value can be SapHana.
 * **sapSid**: string: Gets or sets the SAP System Identifier
+* **sslCertificateUri**: string: Gets or sets the blob URI to SSL certificate for the DB2 Database.
+* **sslPreference**: 'Disabled' | 'RootCertificate' | 'ServerCertificate' | string: Gets or sets certificate preference if secure communication is enabled.
 
 ### MsSqlServerProviderInstanceProperties
 #### Properties
@@ -415,6 +418,8 @@
 * **hostname**: string: Gets or sets the SQL server host name.
 * **providerType**: 'MsSqlServer' (Required): The provider type. For example, the value can be SapHana.
 * **sapSid**: string: Gets or sets the SAP System Identifier
+* **sslCertificateUri**: string: Gets or sets the blob URI to SSL certificate for the SQL Database.
+* **sslPreference**: 'Disabled' | 'RootCertificate' | 'ServerCertificate' | string: Gets or sets certificate preference if secure communication is enabled.
 
 ### PrometheusHaClusterProviderInstanceProperties
 #### Properties
@@ -423,11 +428,15 @@
 * **prometheusUrl**: string: URL of the Node Exporter endpoint.
 * **providerType**: 'PrometheusHaCluster' (Required): The provider type. For example, the value can be SapHana.
 * **sid**: string: Gets or sets the cluster sid.
+* **sslCertificateUri**: string: Gets or sets the blob URI to SSL certificate for the HA cluster exporter.
+* **sslPreference**: 'Disabled' | 'RootCertificate' | 'ServerCertificate' | string: Gets or sets certificate preference if secure communication is enabled.
 
 ### PrometheusOSProviderInstanceProperties
 #### Properties
 * **prometheusUrl**: string: URL of the Node Exporter endpoint
 * **providerType**: 'PrometheusOS' (Required): The provider type. For example, the value can be SapHana.
+* **sslCertificateUri**: string: Gets or sets the blob URI to SSL certificate for the prometheus node exporter.
+* **sslPreference**: 'Disabled' | 'RootCertificate' | 'ServerCertificate' | string: Gets or sets certificate preference if secure communication is enabled.
 
 ### HanaDbProviderInstanceProperties
 #### Properties
@@ -440,7 +449,9 @@
 * **instanceNumber**: string: Gets or sets the database instance number.
 * **providerType**: 'SapHana' (Required): The provider type. For example, the value can be SapHana.
 * **sqlPort**: string: Gets or sets the database sql port.
+* **sslCertificateUri**: string: Gets or sets the blob URI to SSL certificate for the DB.
 * **sslHostNameInCertificate**: string: Gets or sets the hostname(s) in the SSL certificate.
+* **sslPreference**: 'Disabled' | 'RootCertificate' | 'ServerCertificate' | string: Gets or sets certificate preference if secure communication is enabled.
 
 ### SapNetWeaverProviderInstanceProperties
 #### Properties
@@ -455,6 +466,8 @@
 * **sapSid**: string: Gets or sets the SAP System Identifier
 * **sapSslCertificateUri**: string: Gets or sets the blob URI to SSL certificate for the SAP system.
 * **sapUsername**: string: Gets or sets the SAP user name.
+* **sslCertificateUri**: string: Gets or sets the blob URI to SSL certificate for the SAP system.
+* **sslPreference**: 'Disabled' | 'RootCertificate' | 'ServerCertificate' | string: Gets or sets certificate preference if secure communication is enabled.
 
 
 ## SAPApplicationServerProperties

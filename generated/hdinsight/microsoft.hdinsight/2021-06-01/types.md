@@ -342,7 +342,7 @@
 ### Properties
 * **applicationName**: string (ReadOnly): The application name of the script action, if any.
 * **name**: string (Required): The name of the script action.
-* **parameters**: string (WriteOnly): The parameters for the script
+* **parameters**: string: The parameters for the script
 * **roles**: string[] (Required): The list of roles where script will be executed.
 * **uri**: string (Required): The URI to the script.
 

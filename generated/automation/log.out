@@ -1,4 +1,4 @@
-AutoRest code generation utility [cli version: 3.6.2; node: v16.17.1]
+AutoRest code generation utility [cli version: 3.6.2; node: v16.18.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -45,6 +45,7 @@ warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -89,6 +90,7 @@ warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AutomationAccount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/account.json:500:5
@@ -490,6 +492,7 @@ warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'softwareUpdateConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/preview/2017-05-15-preview/softwareUpdateConfiguration.json:310:5
@@ -623,6 +626,7 @@ warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DscNodeReportListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-01-15/dscNode.json:581:5
@@ -741,6 +745,7 @@ warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'JobStream' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2018-06-30/runbook.json:1040:5
@@ -871,6 +876,7 @@ warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'JobStream' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/runbook.json:1037:5
@@ -1361,6 +1367,7 @@ warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ActivityParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/preview/2020-01-13-preview/python2package.json:312:5
@@ -1758,6 +1765,7 @@ warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AutomationAccount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2021-06-22/account.json:469:5
@@ -1855,6 +1863,7 @@ warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -1901,6 +1910,7 @@ warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'RunAsCredentialAssociationProperty' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-02-22/hybridRunbookWorkerGroup.json:314:5
@@ -1953,6 +1963,7 @@ warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AutomationAccount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/account.json:469:5
@@ -2132,46 +2143,14 @@ warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an 
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/operations.json:131:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/operations.json:154:9
-warning | PreCheck/SchemaMissingType | The schema 'JobStream' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:1037:5
-warning | PreCheck/SchemaMissingType | The schema 'JobStreamProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:1051:5
-warning | PreCheck/SchemaMissingType | The schema 'JobStreamListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:1099:5
-warning | PreCheck/SchemaMissingType | The schema 'RunbookProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:1151:5
-warning | PreCheck/SchemaMissingType | The schema 'Runbook' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:1258:5
-warning | PreCheck/SchemaMissingType | The schema 'RunbookListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:1277:5
-warning | PreCheck/SchemaMissingType | The schema 'RunbookCreateOrUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:1293:5
-warning | PreCheck/SchemaMissingType | The schema 'RunbookCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:1344:5
-warning | PreCheck/SchemaMissingType | The schema 'RunbookUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:1372:5
-warning | PreCheck/SchemaMissingType | The schema 'RunbookUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:1394:5
-warning | PreCheck/SchemaMissingType | The schema 'RunbookDraftUndoEditResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:1419:5
-warning | PreCheck/SchemaMissingType | The schema 'RunbookDraft' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:1483:5
-warning | PreCheck/SchemaMissingType | The schema 'RunbookParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:1521:5
-warning | PreCheck/SchemaMissingType | The schema 'TestJobCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:1543:5
-warning | PreCheck/SchemaMissingType | The schema 'TestJob' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:1559:5
-warning | PreCheck/SchemaMissingType | The schema 'RunbookCreateOrUpdateDraftProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:1626:5
-warning | PreCheck/SchemaMissingType | The schema 'RunbookCreateOrUpdateDraftParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:1674:5
 warning | PreCheck/BinarySchema | 'The schema paths·r1whch·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-automation-automationaccounts-automationaccountname-runbooks-runbookname-draft-content·get·responses·200·content·text-powershell·schema with 'type: file', format: undefined' will be treated as a binary blob for binary media types.
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:79:11
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:80:11
 warning | PreCheck/BinarySchema | 'The schema paths·1ayo3t7·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-automation-automationaccounts-automationaccountname-runbooks-runbookname-draft-content·put·requestbody·content·text-powershell·schema with 'type: object', format: file' will be treated as a binary blob for binary media types.
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:127:11
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:129:11
+warning | PreCheck/BinarySchema | 'The schema paths·1xgsew3·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-automation-automationaccounts-automationaccountname-runbooks-runbookname-draft-content·put·responses·200·content·application-json·schema with 'type: file', format: undefined' will be treated as a binary blob for binary media types.
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:144:11
 warning | PreCheck/BinarySchema | 'The schema paths·1tf2s8z·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-automation-automationaccounts-automationaccountname-runbooks-runbookname-content·get·responses·200·content·text-powershell·schema with 'type: file', format: undefined' will be treated as a binary blob for binary media types.
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:364:11
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/runbook.json:376:11
 warning | PreCheck/SchemaMissingType | The schema 'AdvancedSchedule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2022-08-08/schedule.json:318:5
 warning | PreCheck/SchemaMissingType | The schema 'AdvancedScheduleMonthlyOccurrence' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
