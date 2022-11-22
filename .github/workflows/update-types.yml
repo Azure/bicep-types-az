@@ -1,6 +1,8 @@
 name: Update Types
 
 on:
+  schedule:
+    - cron '5 45 * * SUN'
   workflow_dispatch:
     inputs:
       api_specs_ref:
@@ -32,26 +34,26 @@ jobs:
         with:
           repository: Azure/azure-rest-api-specs
           path: workflow-temp/azure-rest-api-specs
-          ref: ${{ github.event.inputs.api_specs_ref }}
-      
+          ref: ${{ github.event.inputs.api_specs_ref || 'main' }}
+
       - name: Build bicep-types dependency
         run: |
           npm ci
           npm run build
         working-directory: bicep-types/src/bicep-types
-      
+
       - name: Install autorest.bicep npm packages
         run: npm ci
         working-directory: src/autorest.bicep
-      
+
       - name: Build autorest.bicep
         run: npm run build
         working-directory: src/autorest.bicep
-      
+
       - name: Install generator npm packages
         run: npm ci
         working-directory: src/generator
-      
+
       - id: generate
         name: Run generator
         run: |
