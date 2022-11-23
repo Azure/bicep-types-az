@@ -64,10 +64,10 @@
 
 ## InputPatchConfiguration
 ### Properties
-* **linuxParameters**: [InputLinuxParameters](#inputlinuxparameters): Input parameters specific to patching Linux machine. For Windows machines, do not pass this property.
-* **rebootSetting**: 'Always' | 'IfRequired' | 'Never' | string: Possible reboot preference as defined by the user based on which it would be decided to reboot the machine or not after the patch operation is completed.
-* **tasks**: [SoftwareUpdateConfigurationTasks](#softwareupdateconfigurationtasks): Tasks information for the Software update configuration.
-* **windowsParameters**: [InputWindowsParameters](#inputwindowsparameters): Input parameters specific to patching a Windows machine. For Linux machines, do not pass this property.
+* **linuxParameters**: [InputLinuxParameters](#inputlinuxparameters): Input parameters specific to patching Linux machine. For Windows machines, do not pass this property. This property only applies to Guest (InGuestPatch) scope.
+* **rebootSetting**: 'Always' | 'IfRequired' | 'Never' | string: Possible reboot preference as defined by the user based on which it would be decided to reboot the machine or not after the patch operation is completed. This property only applies to Guest (InGuestPatch) scope.
+* **tasks**: [SoftwareUpdateConfigurationTasks](#softwareupdateconfigurationtasks): [Not supported] Tasks information for the Software update configuration.
+* **windowsParameters**: [InputWindowsParameters](#inputwindowsparameters): Input parameters specific to patching a Windows machine. For Linux machines, do not pass this property. This property only applies to Guest (InGuestPatch) scope.
 
 ## InputWindowsParameters
 ### Properties
@@ -79,7 +79,7 @@
 ## MaintenanceConfigurationProperties
 ### Properties
 * **extensionProperties**: [MaintenanceConfigurationPropertiesExtensionProperties](#maintenanceconfigurationpropertiesextensionproperties): Gets or sets extensionProperties of the maintenanceConfiguration
-* **installPatches**: [InputPatchConfiguration](#inputpatchconfiguration): The input parameters to be passed to the patch run operation.
+* **installPatches**: [InputPatchConfiguration](#inputpatchconfiguration): The input parameters to be passed to the patch run operation. This property only applies to Guest (InGuestPatch) scope.
 * **maintenanceScope**: 'Extension' | 'Host' | 'InGuestPatch' | 'OSImage' | 'Resource' | 'SQLDB' | 'SQLManagedInstance' | string: Gets or sets maintenanceScope of the configuration
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Definition of a MaintenanceWindow
 * **namespace**: string: Gets or sets namespace of the resource
@@ -110,8 +110,8 @@
 
 ## SoftwareUpdateConfigurationTasks
 ### Properties
-* **postTasks**: [TaskProperties](#taskproperties)[]: List of post tasks. e.g. [{'source' :'runbook', 'taskScope': 'Resource', 'parameters': { 'arg1': 'value1'}}]
-* **preTasks**: [TaskProperties](#taskproperties)[]: List of pre tasks. e.g. [{'source' :'runbook', 'taskScope': 'Global', 'parameters': { 'arg1': 'value1'}}]
+* **postTasks**: [TaskProperties](#taskproperties)[]: [Not supported] List of post tasks. e.g. [{'source' :'runbook', 'taskScope': 'Resource', 'parameters': { 'arg1': 'value1'}}]
+* **preTasks**: [TaskProperties](#taskproperties)[]: [Not supported] List of pre tasks. e.g. [{'source' :'runbook', 'taskScope': 'Global', 'parameters': { 'arg1': 'value1'}}]
 
 ## SystemData
 ### Properties
@@ -124,9 +124,9 @@
 
 ## TaskProperties
 ### Properties
-* **parameters**: [TaskPropertiesParameters](#taskpropertiesparameters): Gets or sets the parameters of the task.
-* **source**: string: Gets or sets the name of the runbook.
-* **taskScope**: 'Global' | 'Resource' | string: Global Task execute once when schedule trigger. Resource task execute for each VM.
+* **parameters**: [TaskPropertiesParameters](#taskpropertiesparameters): [Not supported] Gets or sets the parameters of the task.
+* **source**: string: [Not supported] Gets or sets the name of the runbook.
+* **taskScope**: 'Global' | 'Resource' | string: [Not supported] Global Task execute once when schedule trigger. Resource task execute for each VM.
 
 ## TaskPropertiesParameters
 ### Properties

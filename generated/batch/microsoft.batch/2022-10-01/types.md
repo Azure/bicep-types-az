@@ -148,7 +148,7 @@
 
 ## AzureFileShareConfiguration
 ### Properties
-* **accountKey**: string: The Azure Storage account key.
+* **accountKey**: string (Required): The Azure Storage account key.
 * **accountName**: string (Required): The Azure Storage account name.
 * **azureFileUrl**: string (Required): This is of the form 'https://{account}.file.core.windows.net/'.
 * **mountOptions**: string: These are 'net use' options in Windows and 'mount' options in Linux.
@@ -234,7 +234,7 @@
 * **password**: string (Required): The password to use for authentication against the CIFS file system.
 * **relativeMountPath**: string (Required): All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
 * **source**: string (Required): The URI of the file system to mount.
-* **userName**: string: The user to use for authentication against the CIFS file system.
+* **userName**: string (Required): The user to use for authentication against the CIFS file system.
 
 ## CloudServiceConfiguration
 ### Properties

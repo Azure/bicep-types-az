@@ -173,6 +173,7 @@
 ## Storage
 ### Properties
 * **autoGrow**: 'Disabled' | 'Enabled' | string: Enable Storage Auto Grow or not.
+* **autoIoScaling**: 'Disabled' | 'Enabled' | string: Enable IO Auto Scaling or not.
 * **iops**: int: Storage IOPS for a server.
 * **storageSizeGB**: int: Max storage size allowed for a server.
 * **storageSku**: string (ReadOnly): The sku name of the server storage.

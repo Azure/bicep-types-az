@@ -16,8 +16,10 @@
 ## Resource Microsoft.AgFoodPlatform/farmBeats/extensions@2021-09-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
+* **additionalApiProperties**: [ExtensionInstallationRequestAdditionalApiProperties](#extensioninstallationrequestadditionalapiproperties) (WriteOnly): Additional Api Properties.
 * **apiVersion**: '2021-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): The ETag value to implement optimistic concurrency.
+* **extensionVersion**: string (WriteOnly): Extension Version.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExtensionProperties](#extensionproperties) (ReadOnly): Extension resource properties.
@@ -54,6 +56,10 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AgFoodPlatform/farmBeatsExtensionDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
+## ApiProperties
+### Properties
+* **apiFreshnessWindowInMinutes**: int: Interval in minutes for which the weather data for the api needs to be refreshed.
+
 ## DetailedInformation
 ### Properties
 * **apiInputParameters**: string[]: List of apiInputParameters.
@@ -79,13 +85,24 @@
 ### Properties
 * **error**: [ErrorDetail](#errordetail): The error object.
 
+## ExtensionInstallationRequestAdditionalApiProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ApiProperties](#apiproperties)
+
 ## ExtensionProperties
 ### Properties
+* **additionalApiProperties**: [ExtensionPropertiesAdditionalApiProperties](#extensionpropertiesadditionalapiproperties) (ReadOnly): Additional api properties.
 * **extensionApiDocsLink**: string (ReadOnly): Extension api docs link.
 * **extensionAuthLink**: string (ReadOnly): Extension auth link.
 * **extensionCategory**: string (ReadOnly): Extension category. e.g. weather/sensor/satellite.
 * **extensionId**: string (ReadOnly): Extension Id.
 * **installedExtensionVersion**: string (ReadOnly): Installed extension version.
+
+## ExtensionPropertiesAdditionalApiProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ApiProperties](#apiproperties)
 
 ## FarmBeatsExtensionProperties
 ### Properties
@@ -106,24 +123,24 @@ customParameters, PlatformParameters and Units supported.
 ## FarmBeatsProperties
 ### Properties
 * **instanceUri**: string (ReadOnly): Uri of the FarmBeats instance.
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection) (ReadOnly): The Private Endpoint Connection resource.
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection) (ReadOnly): The private endpoint connection resource.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): FarmBeats instance provisioning state.
 * **publicNetworkAccess**: 'Enabled' | 'Hybrid' | string: Property to allow or block public traffic for an Azure FarmBeats resource.
 * **sensorIntegration**: [SensorIntegration](#sensorintegration): Sensor integration request model.
 
 ## Identity
 ### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **principalId**: string (ReadOnly): The principal ID of resource identity. The value must be an UUID.
+* **tenantId**: string (ReadOnly): The tenant ID of resource. The value must be an UUID.
 * **type**: 'SystemAssigned': The identity type.
 
 ## PrivateEndpoint
 ### Properties
-* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
+* **id**: string (ReadOnly): The ARM identifier for private endpoint.
 
 ## PrivateEndpointConnection
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
 * **name**: string (ReadOnly): The name of the resource
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -131,7 +148,8 @@ customParameters, PlatformParameters and Units supported.
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The resource of private end point.
+* **groupIds**: string[] (ReadOnly): The group ids for the private endpoint resource.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The private endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the private endpoint connection resource.
 
@@ -139,7 +157,7 @@ customParameters, PlatformParameters and Units supported.
 ### Properties
 * **groupId**: string (ReadOnly): The private link resource group id.
 * **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
-* **requiredZoneNames**: string[]: The private link resource Private link DNS zone name.
+* **requiredZoneNames**: string[]: The private link resource private link DNS zone name.
 
 ## PrivateLinkServiceConnectionState
 ### Properties

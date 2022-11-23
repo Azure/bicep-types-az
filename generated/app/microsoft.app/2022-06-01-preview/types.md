@@ -449,7 +449,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 
 ## CustomDomainConfiguration
 ### Properties
-* **certificatePassword**: any: Certificate password
+* **certificatePassword**: string: Certificate password
 * **certificateValue**: any: PFX or PEM blob
 * **customDomainVerificationId**: string (ReadOnly): Id used to verify domain name ownership
 * **dnsSuffix**: string: Dns suffix for the environment domain
@@ -531,13 +531,18 @@ eg: azure-servicebus, redis etc.
 * **secretRef**: string: Name of the Dapr Component secret from which to pull the metadata property value.
 * **value**: string: Metadata property value.
 
-## DaprSecretsCollection
+## DaprSecret
 ### Properties
-* **value**: [Secret](#secret)[] (Required): Collection of secrets used by a Dapr component
+* **name**: string (ReadOnly): Secret Name.
+* **value**: string (ReadOnly): Secret Value.
 
 ## DaprSecretsCollection
 ### Properties
-* **value**: [Secret](#secret)[] (Required): Collection of secrets used by a Dapr component
+* **value**: [DaprSecret](#daprsecret)[] (Required): Collection of secrets used by a Dapr component
+
+## DaprSecretsCollection
+### Properties
+* **value**: [DaprSecret](#daprsecret)[] (Required): Collection of secrets used by a Dapr component
 
 ## DefaultAuthorizationPolicy
 ### Properties

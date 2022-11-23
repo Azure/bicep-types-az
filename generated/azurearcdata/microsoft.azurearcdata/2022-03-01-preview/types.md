@@ -245,7 +245,7 @@
 * **createTime**: string (ReadOnly): The time when the resource was created.
 * **currentVersion**: string: SQL Server current version.
 * **edition**: 'Developer' | 'Enterprise' | 'Evaluation' | 'Express' | 'Standard' | 'Web' | string: SQL Server edition.
-* **hostType**: 'AWS Virtual Machine' | 'GCP Virtual Machine' | 'Other' | 'Physical Server' | 'Virtual Machine' | string: Type of host for Azure Arc SQL Server
+* **hostType**: 'AWS Kubernetes Service' | 'AWS VMWare Virtual Machine' | 'AWS Virtual Machine' | 'Azure Kubernetes Service' | 'Azure VMWare Virtual Machine' | 'Azure Virtual Machine' | 'Container' | 'GCP Kubernetes Service' | 'GCP VMWare Virtual Machine' | 'GCP Virtual Machine' | 'Other' | 'Physical Server' | 'Virtual Machine' | string: Type of host for Azure Arc SQL Server
 * **instanceName**: string: SQL Server instance name.
 * **licenseType**: 'Free' | 'HADR' | 'LicenseOnly' | 'PAYG' | 'Paid' | 'ServerCAL' | 'Undefined' | string: SQL Server license type.
 * **patchLevel**: string: SQL Server update level.

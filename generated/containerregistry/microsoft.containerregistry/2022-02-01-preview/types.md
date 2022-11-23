@@ -393,7 +393,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
 ## RegistryProperties
 ### Properties
 * **adminUserEnabled**: bool: The value that indicates whether the admin user is enabled.
-* **anonymousPullEnabled**: bool: Enables registry-wide pull from unauthenticated clients.
+* **anonymousPullEnabled**: bool: Enables registry-wide pull from unauthenticated clients. It's in preview and available in the Standard and Premium service tiers.
 * **creationDate**: string (ReadOnly): The creation date of the container registry in ISO8601 format.
 * **dataEndpointEnabled**: bool: Enable a single data endpoint per region for serving data.
 * **dataEndpointHostNames**: string[] (ReadOnly): List of host names that will serve data when dataEndpointEnabled is true.

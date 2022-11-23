@@ -9,7 +9,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerProperties](#serverproperties): Properties of the server.
-* **sku**: [PostgreSqlSku](#postgresqlsku): The SKU (pricing tier) of the server.
+* **sku**: [Sku](#sku): The SKU (pricing tier) of the server.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
@@ -132,11 +132,6 @@
 * **privateDnsZoneArmResourceId**: string: private dns zone arm resource id.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string (ReadOnly): public network access is enabled or not
 
-## PostgreSqlSku
-### Properties
-* **name**: string (Required): The name of the sku, typically, tier + family + cores, e.g. Standard_D4s_v3.
-* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' | string (Required): The tier of the particular SKU, e.g. Burstable.
-
 ## ServerBackupProperties
 ### Properties
 * **backupType**: 'Full' | string: Backup type.
@@ -159,11 +154,16 @@
 * **network**: [Network](#network): Network properties of a server.
 * **pointInTimeUTC**: string (WriteOnly): Restore point creation time (ISO8601 format), specifying the time to restore from. It's required when 'createMode' is 'PointInTimeRestore' or 'GeoRestore'.
 * **replicaCapacity**: int: Replicas allowed for a server.
-* **replicationRole**: 'AsyncReplica' | 'GeoAsyncReplica' | 'GeoSyncReplica' | 'Primary' | 'Secondary' | 'SyncReplica' | 'WalReplica' | string: Replication role of the server
+* **replicationRole**: 'AsyncReplica' | 'GeoAsyncReplica' | 'GeoSyncReplica' | 'None' | 'Primary' | 'Secondary' | 'SyncReplica' | 'WalReplica' | string: Replication role of the server
 * **sourceServerResourceId**: string (WriteOnly): The source server resource ID to restore from. It's required when 'createMode' is 'PointInTimeRestore' or 'GeoRestore' or 'Replica'.
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): A state of a server that is visible to user.
 * **storage**: [Storage](#storage): Storage properties of a server.
 * **version**: '11' | '12' | '13' | '14' | string: PostgreSQL Server version.
+
+## Sku
+### Properties
+* **name**: string (Required): The name of the sku, typically, tier + family + cores, e.g. Standard_D4s_v3.
+* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' | string (Required): The tier of the particular SKU, e.g. Burstable.
 
 ## Storage
 ### Properties

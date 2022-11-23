@@ -149,6 +149,7 @@
 ### Properties
 * **defaultAction**: 'Allow' | 'Deny' | string: Default Action for Network Rule Set
 * **ipRules**: [NWRuleSetIpRules](#nwrulesetiprules)[]: List of IpRules
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'SecuredByPerimeter' | string: This determines if traffic is allowed over public network. By default it is enabled
 
 ## NWRuleSetIpRules
 ### Properties

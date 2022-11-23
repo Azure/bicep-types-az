@@ -13,6 +13,16 @@
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.DataFactory/factories' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DataFactory/factories/credentials@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Etag identifies change in the resource.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ManagedIdentityCredential](#managedidentitycredential) (Required): Managed Identity Credential properties.
+* **type**: 'Microsoft.DataFactory/factories/credentials' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DataFactory/factories/dataflows@2018-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -1941,7 +1951,7 @@
 
 ### SnowflakeSource
 #### Properties
-* **exportSettings**: [SnowflakeExportCopyCommand](#snowflakeexportcopycommand): Snowflake export settings.
+* **exportSettings**: [SnowflakeExportCopyCommand](#snowflakeexportcopycommand) (Required): Snowflake export settings.
 * **query**: any: Snowflake Sql query. Type: string (or Expression with resultType string).
 * **type**: 'SnowflakeSource' (Required): Copy source type.
 
@@ -4420,6 +4430,19 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
 * **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
 * **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+
+## ManagedIdentityCredential
+### Properties
+* **annotations**: any[]: List of tags that can be used for describing the Credential.
+* **description**: string: Credential description.
+* **type**: string (Required): Type of credential.
+* **typeProperties**: [ManagedIdentityTypeProperties](#managedidentitytypeproperties): Managed identity credential properties.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ManagedIdentityTypeProperties
+### Properties
+* **resourceId**: string: The resource id of user assigned managed identity
 
 ## ManagedIntegrationRuntimeTypeProperties
 ### Properties

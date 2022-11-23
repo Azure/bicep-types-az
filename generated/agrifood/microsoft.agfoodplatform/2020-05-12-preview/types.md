@@ -8,6 +8,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [FarmBeatsProperties](#farmbeatsproperties): FarmBeats ARM Resource properties.
+* **sku**: [Sku](#sku): The resource model definition representing SKU
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AgFoodPlatform/farmBeats' (ReadOnly, DeployTimeConstant): The resource type
@@ -69,6 +70,14 @@ customParameters, PlatformParameters and Units supported.
 ### Properties
 * **instanceUri**: string (ReadOnly): Uri of the FarmBeats instance.
 * **provisioningState**: 'Failed' | 'Succeeded' | string (ReadOnly): FarmBeats instance provisioning state.
+
+## Sku
+### Properties
+* **capacity**: int: If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
+* **family**: string: If the service has different generations of hardware, for the same SKU, then that can be captured here.
+* **name**: string (Required): The name of the SKU. Ex - P3. It is typically a letter+number code
+* **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
 
 ## SystemData
 ### Properties
