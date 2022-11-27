@@ -12,7 +12,7 @@
   "dependencies": {
     "@autorest/codemodel": "^4.19.2",
     "@autorest/extension-base": "^3.5.0",
-    "@types/lodash": "^4.14.189",
+    "@types/lodash": "^4.14.190",
     "autorest": "^3.6.2",
     "bicep-types": "file:../../bicep-types/src/bicep-types",
     "lodash": "^4.17.21"
