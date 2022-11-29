@@ -2,7 +2,7 @@ name: Update Types
 
 on:
   schedule:
-    - cron '5 45 * * SUN'
+    - cron: '45 5 * * SUN'
   workflow_dispatch:
     inputs:
       api_specs_ref:
