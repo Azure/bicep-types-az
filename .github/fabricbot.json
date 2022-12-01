@@ -63,7 +63,7 @@
           {
             "name": "addLabel",
             "parameters": {
-              "label": "AutoMerge"
+              "label": "auto-merge"
             }
           },
           {
