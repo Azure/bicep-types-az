@@ -3288,50 +3288,62 @@
 ### microsoft.connectedvmwarevsphere/clusters
 * **Link**: [2020-10-01-preview](connectedvmware/microsoft.connectedvmwarevsphere/2020-10-01-preview/types.md#resource-microsoftconnectedvmwarevsphereclusters2020-10-01-preview)
 * **Link**: [2022-01-10-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-01-10-preview/types.md#resource-microsoftconnectedvmwarevsphereclusters2022-01-10-preview)
+* **Link**: [2022-07-15-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-07-15-preview/types.md#resource-microsoftconnectedvmwarevsphereclusters2022-07-15-preview)
 
 ### microsoft.connectedvmwarevsphere/datastores
 * **Link**: [2020-10-01-preview](connectedvmware/microsoft.connectedvmwarevsphere/2020-10-01-preview/types.md#resource-microsoftconnectedvmwarevspheredatastores2020-10-01-preview)
 * **Link**: [2022-01-10-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-01-10-preview/types.md#resource-microsoftconnectedvmwarevspheredatastores2022-01-10-preview)
+* **Link**: [2022-07-15-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-07-15-preview/types.md#resource-microsoftconnectedvmwarevspheredatastores2022-07-15-preview)
 
 ### microsoft.connectedvmwarevsphere/hosts
 * **Link**: [2020-10-01-preview](connectedvmware/microsoft.connectedvmwarevsphere/2020-10-01-preview/types.md#resource-microsoftconnectedvmwarevspherehosts2020-10-01-preview)
 * **Link**: [2022-01-10-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-01-10-preview/types.md#resource-microsoftconnectedvmwarevspherehosts2022-01-10-preview)
+* **Link**: [2022-07-15-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-07-15-preview/types.md#resource-microsoftconnectedvmwarevspherehosts2022-07-15-preview)
 
 ### microsoft.connectedvmwarevsphere/resourcepools
 * **Link**: [2020-10-01-preview](connectedvmware/microsoft.connectedvmwarevsphere/2020-10-01-preview/types.md#resource-microsoftconnectedvmwarevsphereresourcepools2020-10-01-preview)
 * **Link**: [2022-01-10-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-01-10-preview/types.md#resource-microsoftconnectedvmwarevsphereresourcepools2022-01-10-preview)
+* **Link**: [2022-07-15-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-07-15-preview/types.md#resource-microsoftconnectedvmwarevsphereresourcepools2022-07-15-preview)
 
 ### microsoft.connectedvmwarevsphere/vcenters
 * **Link**: [2020-10-01-preview](connectedvmware/microsoft.connectedvmwarevsphere/2020-10-01-preview/types.md#resource-microsoftconnectedvmwarevspherevcenters2020-10-01-preview)
 * **Link**: [2022-01-10-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-01-10-preview/types.md#resource-microsoftconnectedvmwarevspherevcenters2022-01-10-preview)
+* **Link**: [2022-07-15-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-07-15-preview/types.md#resource-microsoftconnectedvmwarevspherevcenters2022-07-15-preview)
 
 ### microsoft.connectedvmwarevsphere/vcenters/inventoryitems
 * **Link**: [2020-10-01-preview](connectedvmware/microsoft.connectedvmwarevsphere/2020-10-01-preview/types.md#resource-microsoftconnectedvmwarevspherevcentersinventoryitems2020-10-01-preview)
 * **Link**: [2022-01-10-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-01-10-preview/types.md#resource-microsoftconnectedvmwarevspherevcentersinventoryitems2022-01-10-preview)
+* **Link**: [2022-07-15-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-07-15-preview/types.md#resource-microsoftconnectedvmwarevspherevcentersinventoryitems2022-07-15-preview)
 
 ### microsoft.connectedvmwarevsphere/virtualmachines
 * **Link**: [2020-10-01-preview](connectedvmware/microsoft.connectedvmwarevsphere/2020-10-01-preview/types.md#resource-microsoftconnectedvmwarevspherevirtualmachines2020-10-01-preview)
 * **Link**: [2022-01-10-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-01-10-preview/types.md#resource-microsoftconnectedvmwarevspherevirtualmachines2022-01-10-preview)
+* **Link**: [2022-07-15-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-07-15-preview/types.md#resource-microsoftconnectedvmwarevspherevirtualmachines2022-07-15-preview)
 
 ### microsoft.connectedvmwarevsphere/virtualmachines/extensions
 * **Link**: [2020-10-01-preview](connectedvmware/microsoft.connectedvmwarevsphere/2020-10-01-preview/types.md#resource-microsoftconnectedvmwarevspherevirtualmachinesextensions2020-10-01-preview)
 * **Link**: [2022-01-10-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-01-10-preview/types.md#resource-microsoftconnectedvmwarevspherevirtualmachinesextensions2022-01-10-preview)
+* **Link**: [2022-07-15-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-07-15-preview/types.md#resource-microsoftconnectedvmwarevspherevirtualmachinesextensions2022-07-15-preview)
 
 ### microsoft.connectedvmwarevsphere/virtualmachines/guestagents
 * **Link**: [2020-10-01-preview](connectedvmware/microsoft.connectedvmwarevsphere/2020-10-01-preview/types.md#resource-microsoftconnectedvmwarevspherevirtualmachinesguestagents2020-10-01-preview)
 * **Link**: [2022-01-10-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-01-10-preview/types.md#resource-microsoftconnectedvmwarevspherevirtualmachinesguestagents2022-01-10-preview)
+* **Link**: [2022-07-15-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-07-15-preview/types.md#resource-microsoftconnectedvmwarevspherevirtualmachinesguestagents2022-07-15-preview)
 
 ### microsoft.connectedvmwarevsphere/virtualmachines/hybrididentitymetadata
 * **Link**: [2020-10-01-preview](connectedvmware/microsoft.connectedvmwarevsphere/2020-10-01-preview/types.md#resource-microsoftconnectedvmwarevspherevirtualmachineshybrididentitymetadata2020-10-01-preview)
 * **Link**: [2022-01-10-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-01-10-preview/types.md#resource-microsoftconnectedvmwarevspherevirtualmachineshybrididentitymetadata2022-01-10-preview)
+* **Link**: [2022-07-15-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-07-15-preview/types.md#resource-microsoftconnectedvmwarevspherevirtualmachineshybrididentitymetadata2022-07-15-preview)
 
 ### microsoft.connectedvmwarevsphere/virtualmachinetemplates
 * **Link**: [2020-10-01-preview](connectedvmware/microsoft.connectedvmwarevsphere/2020-10-01-preview/types.md#resource-microsoftconnectedvmwarevspherevirtualmachinetemplates2020-10-01-preview)
 * **Link**: [2022-01-10-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-01-10-preview/types.md#resource-microsoftconnectedvmwarevspherevirtualmachinetemplates2022-01-10-preview)
+* **Link**: [2022-07-15-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-07-15-preview/types.md#resource-microsoftconnectedvmwarevspherevirtualmachinetemplates2022-07-15-preview)
 
 ### microsoft.connectedvmwarevsphere/virtualnetworks
 * **Link**: [2020-10-01-preview](connectedvmware/microsoft.connectedvmwarevsphere/2020-10-01-preview/types.md#resource-microsoftconnectedvmwarevspherevirtualnetworks2020-10-01-preview)
 * **Link**: [2022-01-10-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-01-10-preview/types.md#resource-microsoftconnectedvmwarevspherevirtualnetworks2022-01-10-preview)
+* **Link**: [2022-07-15-preview](connectedvmware/microsoft.connectedvmwarevsphere/2022-07-15-preview/types.md#resource-microsoftconnectedvmwarevspherevirtualnetworks2022-07-15-preview)
 
 ## microsoft.consumption
 ### microsoft.consumption/budgets
@@ -3575,6 +3587,7 @@
 * **Link**: [2022-08-03-preview](containerservice/microsoft.containerservice/2022-08-03-preview/types.md#resource-microsoftcontainerservicemanagedclusters2022-08-03-preview)
 * **Link**: [2022-09-01](containerservice/microsoft.containerservice/2022-09-01/types.md#resource-microsoftcontainerservicemanagedclusters2022-09-01)
 * **Link**: [2022-09-02-preview](containerservice/microsoft.containerservice/2022-09-02-preview/types.md#resource-microsoftcontainerservicemanagedclusters2022-09-02-preview)
+* **Link**: [2022-10-02-preview](containerservice/microsoft.containerservice/2022-10-02-preview/types.md#resource-microsoftcontainerservicemanagedclusters2022-10-02-preview)
 
 ### microsoft.containerservice/managedclusters/accessprofiles
 * **Link**: [2017-08-31](containerservice/microsoft.containerservice/2017-08-31/types.md#resource-microsoftcontainerservicemanagedclustersaccessprofiles2017-08-31)
@@ -3620,6 +3633,7 @@
 * **Link**: [2022-08-03-preview](containerservice/microsoft.containerservice/2022-08-03-preview/types.md#resource-microsoftcontainerservicemanagedclustersagentpools2022-08-03-preview)
 * **Link**: [2022-09-01](containerservice/microsoft.containerservice/2022-09-01/types.md#resource-microsoftcontainerservicemanagedclustersagentpools2022-09-01)
 * **Link**: [2022-09-02-preview](containerservice/microsoft.containerservice/2022-09-02-preview/types.md#resource-microsoftcontainerservicemanagedclustersagentpools2022-09-02-preview)
+* **Link**: [2022-10-02-preview](containerservice/microsoft.containerservice/2022-10-02-preview/types.md#resource-microsoftcontainerservicemanagedclustersagentpools2022-10-02-preview)
 
 ### microsoft.containerservice/managedclusters/maintenanceconfigurations
 * **Link**: [2020-12-01](containerservice/microsoft.containerservice/2020-12-01/types.md#resource-microsoftcontainerservicemanagedclustersmaintenanceconfigurations2020-12-01)
@@ -3648,6 +3662,7 @@
 * **Link**: [2022-08-03-preview](containerservice/microsoft.containerservice/2022-08-03-preview/types.md#resource-microsoftcontainerservicemanagedclustersmaintenanceconfigurations2022-08-03-preview)
 * **Link**: [2022-09-01](containerservice/microsoft.containerservice/2022-09-01/types.md#resource-microsoftcontainerservicemanagedclustersmaintenanceconfigurations2022-09-01)
 * **Link**: [2022-09-02-preview](containerservice/microsoft.containerservice/2022-09-02-preview/types.md#resource-microsoftcontainerservicemanagedclustersmaintenanceconfigurations2022-09-02-preview)
+* **Link**: [2022-10-02-preview](containerservice/microsoft.containerservice/2022-10-02-preview/types.md#resource-microsoftcontainerservicemanagedclustersmaintenanceconfigurations2022-10-02-preview)
 
 ### microsoft.containerservice/managedclusters/privateendpointconnections
 * **Link**: [2020-06-01](containerservice/microsoft.containerservice/2020-06-01/types.md#resource-microsoftcontainerservicemanagedclustersprivateendpointconnections2020-06-01)
@@ -3680,6 +3695,7 @@
 * **Link**: [2022-08-03-preview](containerservice/microsoft.containerservice/2022-08-03-preview/types.md#resource-microsoftcontainerservicemanagedclustersprivateendpointconnections2022-08-03-preview)
 * **Link**: [2022-09-01](containerservice/microsoft.containerservice/2022-09-01/types.md#resource-microsoftcontainerservicemanagedclustersprivateendpointconnections2022-09-01)
 * **Link**: [2022-09-02-preview](containerservice/microsoft.containerservice/2022-09-02-preview/types.md#resource-microsoftcontainerservicemanagedclustersprivateendpointconnections2022-09-02-preview)
+* **Link**: [2022-10-02-preview](containerservice/microsoft.containerservice/2022-10-02-preview/types.md#resource-microsoftcontainerservicemanagedclustersprivateendpointconnections2022-10-02-preview)
 
 ### microsoft.containerservice/managedclusters/trustedaccessrolebindings
 * **Link**: [2022-04-02-preview](containerservice/microsoft.containerservice/2022-04-02-preview/types.md#resource-microsoftcontainerservicemanagedclusterstrustedaccessrolebindings2022-04-02-preview)
@@ -3689,6 +3705,7 @@
 * **Link**: [2022-08-02-preview](containerservice/microsoft.containerservice/2022-08-02-preview/types.md#resource-microsoftcontainerservicemanagedclusterstrustedaccessrolebindings2022-08-02-preview)
 * **Link**: [2022-08-03-preview](containerservice/microsoft.containerservice/2022-08-03-preview/types.md#resource-microsoftcontainerservicemanagedclusterstrustedaccessrolebindings2022-08-03-preview)
 * **Link**: [2022-09-02-preview](containerservice/microsoft.containerservice/2022-09-02-preview/types.md#resource-microsoftcontainerservicemanagedclusterstrustedaccessrolebindings2022-09-02-preview)
+* **Link**: [2022-10-02-preview](containerservice/microsoft.containerservice/2022-10-02-preview/types.md#resource-microsoftcontainerservicemanagedclusterstrustedaccessrolebindings2022-10-02-preview)
 
 ### microsoft.containerservice/managedclustersnapshots
 * **Link**: [2022-02-02-preview](containerservice/microsoft.containerservice/2022-02-02-preview/types.md#resource-microsoftcontainerservicemanagedclustersnapshots2022-02-02-preview)
@@ -3700,6 +3717,7 @@
 * **Link**: [2022-08-02-preview](containerservice/microsoft.containerservice/2022-08-02-preview/types.md#resource-microsoftcontainerservicemanagedclustersnapshots2022-08-02-preview)
 * **Link**: [2022-08-03-preview](containerservice/microsoft.containerservice/2022-08-03-preview/types.md#resource-microsoftcontainerservicemanagedclustersnapshots2022-08-03-preview)
 * **Link**: [2022-09-02-preview](containerservice/microsoft.containerservice/2022-09-02-preview/types.md#resource-microsoftcontainerservicemanagedclustersnapshots2022-09-02-preview)
+* **Link**: [2022-10-02-preview](containerservice/microsoft.containerservice/2022-10-02-preview/types.md#resource-microsoftcontainerservicemanagedclustersnapshots2022-10-02-preview)
 
 ### microsoft.containerservice/openshiftmanagedclusters
 * **Link**: [2018-09-30-preview](containerservice/microsoft.containerservice/2018-09-30-preview/types.md#resource-microsoftcontainerserviceopenshiftmanagedclusters2018-09-30-preview)
@@ -3729,6 +3747,7 @@
 * **Link**: [2022-08-03-preview](containerservice/microsoft.containerservice/2022-08-03-preview/types.md#resource-microsoftcontainerservicesnapshots2022-08-03-preview)
 * **Link**: [2022-09-01](containerservice/microsoft.containerservice/2022-09-01/types.md#resource-microsoftcontainerservicesnapshots2022-09-01)
 * **Link**: [2022-09-02-preview](containerservice/microsoft.containerservice/2022-09-02-preview/types.md#resource-microsoftcontainerservicesnapshots2022-09-02-preview)
+* **Link**: [2022-10-02-preview](containerservice/microsoft.containerservice/2022-10-02-preview/types.md#resource-microsoftcontainerservicesnapshots2022-10-02-preview)
 
 ## microsoft.costmanagement
 ### microsoft.costmanagement/alerts
@@ -12165,6 +12184,7 @@
 * **Link**: [2022-08-01](recoveryservices/microsoft.recoveryservices/2022-08-01/types.md#resource-microsoftrecoveryservicesvaults2022-08-01)
 * **Link**: [2022-09-10](recoveryservices/microsoft.recoveryservices/2022-09-10/types.md#resource-microsoftrecoveryservicesvaults2022-09-10)
 * **Link**: [2022-09-30-preview](recoveryservices/microsoft.recoveryservices/2022-09-30-preview/types.md#resource-microsoftrecoveryservicesvaults2022-09-30-preview)
+* **Link**: [2022-10-01](recoveryservices/microsoft.recoveryservices/2022-10-01/types.md#resource-microsoftrecoveryservicesvaults2022-10-01)
 
 ### microsoft.recoveryservices/vaults/backupconfig
 * **Link**: [2019-05-13](recoveryservicesbackup/microsoft.recoveryservices/2019-05-13/types.md#resource-microsoftrecoveryservicesvaultsbackupconfig2019-05-13)
@@ -12492,6 +12512,7 @@
 * **Link**: [2022-08-01](recoveryservices/microsoft.recoveryservices/2022-08-01/types.md#resource-microsoftrecoveryservicesvaultscertificates2022-08-01)
 * **Link**: [2022-09-10](recoveryservices/microsoft.recoveryservices/2022-09-10/types.md#resource-microsoftrecoveryservicesvaultscertificates2022-09-10)
 * **Link**: [2022-09-30-preview](recoveryservices/microsoft.recoveryservices/2022-09-30-preview/types.md#resource-microsoftrecoveryservicesvaultscertificates2022-09-30-preview)
+* **Link**: [2022-10-01](recoveryservices/microsoft.recoveryservices/2022-10-01/types.md#resource-microsoftrecoveryservicesvaultscertificates2022-10-01)
 
 ### microsoft.recoveryservices/vaults/extendedinformation
 * **Link**: [2016-06-01](recoveryservices/microsoft.recoveryservices/2016-06-01/types.md#resource-microsoftrecoveryservicesvaultsextendedinformation2016-06-01)
@@ -12515,6 +12536,7 @@
 * **Link**: [2022-08-01](recoveryservices/microsoft.recoveryservices/2022-08-01/types.md#resource-microsoftrecoveryservicesvaultsextendedinformation2022-08-01)
 * **Link**: [2022-09-10](recoveryservices/microsoft.recoveryservices/2022-09-10/types.md#resource-microsoftrecoveryservicesvaultsextendedinformation2022-09-10)
 * **Link**: [2022-09-30-preview](recoveryservices/microsoft.recoveryservices/2022-09-30-preview/types.md#resource-microsoftrecoveryservicesvaultsextendedinformation2022-09-30-preview)
+* **Link**: [2022-10-01](recoveryservices/microsoft.recoveryservices/2022-10-01/types.md#resource-microsoftrecoveryservicesvaultsextendedinformation2022-10-01)
 
 ### microsoft.recoveryservices/vaults/operationresults
 * **Link**: [2020-02-02](recoveryservices/microsoft.recoveryservices/2020-02-02/types.md#resource-microsoftrecoveryservicesvaultsoperationresults2020-02-02)
@@ -12537,6 +12559,7 @@
 * **Link**: [2022-08-01](recoveryservices/microsoft.recoveryservices/2022-08-01/types.md#resource-microsoftrecoveryservicesvaultsoperationresults2022-08-01)
 * **Link**: [2022-09-10](recoveryservices/microsoft.recoveryservices/2022-09-10/types.md#resource-microsoftrecoveryservicesvaultsoperationresults2022-09-10)
 * **Link**: [2022-09-30-preview](recoveryservices/microsoft.recoveryservices/2022-09-30-preview/types.md#resource-microsoftrecoveryservicesvaultsoperationresults2022-09-30-preview)
+* **Link**: [2022-10-01](recoveryservices/microsoft.recoveryservices/2022-10-01/types.md#resource-microsoftrecoveryservicesvaultsoperationresults2022-10-01)
 
 ### microsoft.recoveryservices/vaults/privateendpointconnections
 * **Link**: [2020-02-02](recoveryservicesbackup/microsoft.recoveryservices/2020-02-02/types.md#resource-microsoftrecoveryservicesvaultsprivateendpointconnections2020-02-02)
@@ -14209,6 +14232,16 @@
 
 ### microsoft.servicelinker/locations/dryruns
 * **Link**: [2022-11-01-preview](servicelinker/microsoft.servicelinker/2022-11-01-preview/types.md#resource-microsoftservicelinkerlocationsdryruns2022-11-01-preview)
+
+## microsoft.servicenetworking
+### microsoft.servicenetworking/trafficcontrollers
+* **Link**: [2022-10-01-preview](servicenetworking/microsoft.servicenetworking/2022-10-01-preview/types.md#resource-microsoftservicenetworkingtrafficcontrollers2022-10-01-preview)
+
+### microsoft.servicenetworking/trafficcontrollers/associations
+* **Link**: [2022-10-01-preview](servicenetworking/microsoft.servicenetworking/2022-10-01-preview/types.md#resource-microsoftservicenetworkingtrafficcontrollersassociations2022-10-01-preview)
+
+### microsoft.servicenetworking/trafficcontrollers/frontends
+* **Link**: [2022-10-01-preview](servicenetworking/microsoft.servicenetworking/2022-10-01-preview/types.md#resource-microsoftservicenetworkingtrafficcontrollersfrontends2022-10-01-preview)
 
 ## microsoft.signalrservice
 ### microsoft.signalrservice/signalr
