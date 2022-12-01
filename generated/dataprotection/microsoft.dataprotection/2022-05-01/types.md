@@ -472,7 +472,7 @@ and should be part of AbsoluteMarker enum
 
 ## StorageSetting
 ### Properties
-* **datastoreType**: 'ArchiveStore' | 'SnapshotStore' | 'VaultStore' | string: Gets or sets the type of the datastore.
+* **datastoreType**: 'ArchiveStore' | 'OperationalStore' | 'VaultStore' | string: Gets or sets the type of the datastore.
 * **type**: 'GeoRedundant' | 'LocallyRedundant' | 'ZoneRedundant' | string: Gets or sets the type.
 
 ## SystemData

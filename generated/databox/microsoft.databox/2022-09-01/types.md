@@ -500,10 +500,10 @@ possibility is that mitigation might happen by customer or service or by ops
 
 ## ReverseShippingDetails
 ### Properties
-* **contactDetails**: [ContactInfo](#contactinfo) (Required): Contact Info.
+* **contactDetails**: [ContactInfo](#contactinfo): Contact Info.
 * **isUpdated**: bool (ReadOnly): A flag to indicate whether Reverse Shipping details are updated or not after device has been prepared.
 Read only field
-* **shippingAddress**: [ShippingAddress](#shippingaddress) (Required): Shipping address where customer wishes to receive the device.
+* **shippingAddress**: [ShippingAddress](#shippingaddress): Shipping address where customer wishes to receive the device.
 
 ## ShareCredentialDetails
 ### Properties
