@@ -6717,6 +6717,7 @@
 * **Link**: [2022-01-31-preview](healthcareapis/microsoft.healthcareapis/2022-01-31-preview/types.md#resource-microsofthealthcareapisservices2022-01-31-preview)
 * **Link**: [2022-05-15](healthcareapis/microsoft.healthcareapis/2022-05-15/types.md#resource-microsofthealthcareapisservices2022-05-15)
 * **Link**: [2022-06-01](healthcareapis/microsoft.healthcareapis/2022-06-01/types.md#resource-microsofthealthcareapisservices2022-06-01)
+* **Link**: [2022-10-01-preview](healthcareapis/microsoft.healthcareapis/2022-10-01-preview/types.md#resource-microsofthealthcareapisservices2022-10-01-preview)
 
 ### microsoft.healthcareapis/services/privateendpointconnections
 * **Link**: [2020-03-30](healthcareapis/microsoft.healthcareapis/2020-03-30/types.md#resource-microsofthealthcareapisservicesprivateendpointconnections2020-03-30)
@@ -6726,6 +6727,7 @@
 * **Link**: [2022-01-31-preview](healthcareapis/microsoft.healthcareapis/2022-01-31-preview/types.md#resource-microsofthealthcareapisservicesprivateendpointconnections2022-01-31-preview)
 * **Link**: [2022-05-15](healthcareapis/microsoft.healthcareapis/2022-05-15/types.md#resource-microsofthealthcareapisservicesprivateendpointconnections2022-05-15)
 * **Link**: [2022-06-01](healthcareapis/microsoft.healthcareapis/2022-06-01/types.md#resource-microsofthealthcareapisservicesprivateendpointconnections2022-06-01)
+* **Link**: [2022-10-01-preview](healthcareapis/microsoft.healthcareapis/2022-10-01-preview/types.md#resource-microsofthealthcareapisservicesprivateendpointconnections2022-10-01-preview)
 
 ### microsoft.healthcareapis/services/privatelinkresources
 * **Link**: [2020-03-30](healthcareapis/microsoft.healthcareapis/2020-03-30/types.md#resource-microsofthealthcareapisservicesprivatelinkresources2020-03-30)
@@ -6735,6 +6737,7 @@
 * **Link**: [2022-01-31-preview](healthcareapis/microsoft.healthcareapis/2022-01-31-preview/types.md#resource-microsofthealthcareapisservicesprivatelinkresources2022-01-31-preview)
 * **Link**: [2022-05-15](healthcareapis/microsoft.healthcareapis/2022-05-15/types.md#resource-microsofthealthcareapisservicesprivatelinkresources2022-05-15)
 * **Link**: [2022-06-01](healthcareapis/microsoft.healthcareapis/2022-06-01/types.md#resource-microsofthealthcareapisservicesprivatelinkresources2022-06-01)
+* **Link**: [2022-10-01-preview](healthcareapis/microsoft.healthcareapis/2022-10-01-preview/types.md#resource-microsofthealthcareapisservicesprivatelinkresources2022-10-01-preview)
 
 ### microsoft.healthcareapis/workspaces
 * **Link**: [2021-06-01-preview](healthcareapis/microsoft.healthcareapis/2021-06-01-preview/types.md#resource-microsofthealthcareapisworkspaces2021-06-01-preview)
@@ -6742,6 +6745,10 @@
 * **Link**: [2022-01-31-preview](healthcareapis/microsoft.healthcareapis/2022-01-31-preview/types.md#resource-microsofthealthcareapisworkspaces2022-01-31-preview)
 * **Link**: [2022-05-15](healthcareapis/microsoft.healthcareapis/2022-05-15/types.md#resource-microsofthealthcareapisworkspaces2022-05-15)
 * **Link**: [2022-06-01](healthcareapis/microsoft.healthcareapis/2022-06-01/types.md#resource-microsofthealthcareapisworkspaces2022-06-01)
+* **Link**: [2022-10-01-preview](healthcareapis/microsoft.healthcareapis/2022-10-01-preview/types.md#resource-microsofthealthcareapisworkspaces2022-10-01-preview)
+
+### microsoft.healthcareapis/workspaces/analyticsconnectors
+* **Link**: [2022-10-01-preview](healthcareapis/microsoft.healthcareapis/2022-10-01-preview/types.md#resource-microsofthealthcareapisworkspacesanalyticsconnectors2022-10-01-preview)
 
 ### microsoft.healthcareapis/workspaces/dicomservices
 * **Link**: [2021-06-01-preview](healthcareapis/microsoft.healthcareapis/2021-06-01-preview/types.md#resource-microsofthealthcareapisworkspacesdicomservices2021-06-01-preview)
@@ -6749,6 +6756,7 @@
 * **Link**: [2022-01-31-preview](healthcareapis/microsoft.healthcareapis/2022-01-31-preview/types.md#resource-microsofthealthcareapisworkspacesdicomservices2022-01-31-preview)
 * **Link**: [2022-05-15](healthcareapis/microsoft.healthcareapis/2022-05-15/types.md#resource-microsofthealthcareapisworkspacesdicomservices2022-05-15)
 * **Link**: [2022-06-01](healthcareapis/microsoft.healthcareapis/2022-06-01/types.md#resource-microsofthealthcareapisworkspacesdicomservices2022-06-01)
+* **Link**: [2022-10-01-preview](healthcareapis/microsoft.healthcareapis/2022-10-01-preview/types.md#resource-microsofthealthcareapisworkspacesdicomservices2022-10-01-preview)
 
 ### microsoft.healthcareapis/workspaces/fhirservices
 * **Link**: [2021-06-01-preview](healthcareapis/microsoft.healthcareapis/2021-06-01-preview/types.md#resource-microsofthealthcareapisworkspacesfhirservices2021-06-01-preview)
@@ -6756,6 +6764,7 @@
 * **Link**: [2022-01-31-preview](healthcareapis/microsoft.healthcareapis/2022-01-31-preview/types.md#resource-microsofthealthcareapisworkspacesfhirservices2022-01-31-preview)
 * **Link**: [2022-05-15](healthcareapis/microsoft.healthcareapis/2022-05-15/types.md#resource-microsofthealthcareapisworkspacesfhirservices2022-05-15)
 * **Link**: [2022-06-01](healthcareapis/microsoft.healthcareapis/2022-06-01/types.md#resource-microsofthealthcareapisworkspacesfhirservices2022-06-01)
+* **Link**: [2022-10-01-preview](healthcareapis/microsoft.healthcareapis/2022-10-01-preview/types.md#resource-microsofthealthcareapisworkspacesfhirservices2022-10-01-preview)
 
 ### microsoft.healthcareapis/workspaces/iotconnectors
 * **Link**: [2021-06-01-preview](healthcareapis/microsoft.healthcareapis/2021-06-01-preview/types.md#resource-microsofthealthcareapisworkspacesiotconnectors2021-06-01-preview)
@@ -6763,6 +6772,7 @@
 * **Link**: [2022-01-31-preview](healthcareapis/microsoft.healthcareapis/2022-01-31-preview/types.md#resource-microsofthealthcareapisworkspacesiotconnectors2022-01-31-preview)
 * **Link**: [2022-05-15](healthcareapis/microsoft.healthcareapis/2022-05-15/types.md#resource-microsofthealthcareapisworkspacesiotconnectors2022-05-15)
 * **Link**: [2022-06-01](healthcareapis/microsoft.healthcareapis/2022-06-01/types.md#resource-microsofthealthcareapisworkspacesiotconnectors2022-06-01)
+* **Link**: [2022-10-01-preview](healthcareapis/microsoft.healthcareapis/2022-10-01-preview/types.md#resource-microsofthealthcareapisworkspacesiotconnectors2022-10-01-preview)
 
 ### microsoft.healthcareapis/workspaces/iotconnectors/fhirdestinations
 * **Link**: [2021-06-01-preview](healthcareapis/microsoft.healthcareapis/2021-06-01-preview/types.md#resource-microsofthealthcareapisworkspacesiotconnectorsfhirdestinations2021-06-01-preview)
@@ -6770,18 +6780,21 @@
 * **Link**: [2022-01-31-preview](healthcareapis/microsoft.healthcareapis/2022-01-31-preview/types.md#resource-microsofthealthcareapisworkspacesiotconnectorsfhirdestinations2022-01-31-preview)
 * **Link**: [2022-05-15](healthcareapis/microsoft.healthcareapis/2022-05-15/types.md#resource-microsofthealthcareapisworkspacesiotconnectorsfhirdestinations2022-05-15)
 * **Link**: [2022-06-01](healthcareapis/microsoft.healthcareapis/2022-06-01/types.md#resource-microsofthealthcareapisworkspacesiotconnectorsfhirdestinations2022-06-01)
+* **Link**: [2022-10-01-preview](healthcareapis/microsoft.healthcareapis/2022-10-01-preview/types.md#resource-microsofthealthcareapisworkspacesiotconnectorsfhirdestinations2022-10-01-preview)
 
 ### microsoft.healthcareapis/workspaces/privateendpointconnections
 * **Link**: [2021-11-01](healthcareapis/microsoft.healthcareapis/2021-11-01/types.md#resource-microsofthealthcareapisworkspacesprivateendpointconnections2021-11-01)
 * **Link**: [2022-01-31-preview](healthcareapis/microsoft.healthcareapis/2022-01-31-preview/types.md#resource-microsofthealthcareapisworkspacesprivateendpointconnections2022-01-31-preview)
 * **Link**: [2022-05-15](healthcareapis/microsoft.healthcareapis/2022-05-15/types.md#resource-microsofthealthcareapisworkspacesprivateendpointconnections2022-05-15)
 * **Link**: [2022-06-01](healthcareapis/microsoft.healthcareapis/2022-06-01/types.md#resource-microsofthealthcareapisworkspacesprivateendpointconnections2022-06-01)
+* **Link**: [2022-10-01-preview](healthcareapis/microsoft.healthcareapis/2022-10-01-preview/types.md#resource-microsofthealthcareapisworkspacesprivateendpointconnections2022-10-01-preview)
 
 ### microsoft.healthcareapis/workspaces/privatelinkresources
 * **Link**: [2021-11-01](healthcareapis/microsoft.healthcareapis/2021-11-01/types.md#resource-microsofthealthcareapisworkspacesprivatelinkresources2021-11-01)
 * **Link**: [2022-01-31-preview](healthcareapis/microsoft.healthcareapis/2022-01-31-preview/types.md#resource-microsofthealthcareapisworkspacesprivatelinkresources2022-01-31-preview)
 * **Link**: [2022-05-15](healthcareapis/microsoft.healthcareapis/2022-05-15/types.md#resource-microsofthealthcareapisworkspacesprivatelinkresources2022-05-15)
 * **Link**: [2022-06-01](healthcareapis/microsoft.healthcareapis/2022-06-01/types.md#resource-microsofthealthcareapisworkspacesprivatelinkresources2022-06-01)
+* **Link**: [2022-10-01-preview](healthcareapis/microsoft.healthcareapis/2022-10-01-preview/types.md#resource-microsofthealthcareapisworkspacesprivatelinkresources2022-10-01-preview)
 
 ## microsoft.hybridcompute
 ### microsoft.hybridcompute/locations/publishers/extensiontypes/versions
