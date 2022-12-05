@@ -57,8 +57,8 @@
       },
       "Azure.Bicep.Types": {
         "type": "Transitive",
-        "resolved": "0.3.41",
-        "contentHash": "JmR88aLGPZbDJ6VompJfoxECoSTR6VtRTaOtkZWrOpKg9kJITv+NjWZVHNrV2pj011OrlCHEP8oAiG2WsLyyIg==",
+        "resolved": "0.3.61",
+        "contentHash": "R1YBWo0mkOObzfOoqgUk+RDYjtiq2+lnfIN38ckYI254rfxC8nbyzZoafq1kV2DNRScTSHaFXyOloHR9wwDR7Q==",
         "dependencies": {
           "System.Text.Json": "6.0.6"
         }
@@ -149,7 +149,7 @@
       "Azure.Bicep.Types.Az": {
         "type": "Project",
         "dependencies": {
-          "Azure.Bicep.Types": "[0.3.41, )"
+          "Azure.Bicep.Types": "[0.3.61, )"
         }
       }
     }
