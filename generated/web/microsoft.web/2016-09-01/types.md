@@ -135,7 +135,7 @@
 * **suspended**: bool: <code>true</code> if the App Service Environment is suspended; otherwise, <code>false</code>. The environment can be suspended, e.g. when the management endpoint is no longer available
  (most likely because NSG blocked the incoming traffic).
 * **upgradeDomains**: int (ReadOnly): Number of upgrade domains of the App Service Environment.
-* **userWhitelistedIpRanges**: string[]: User added ip ranges to whitelist on ASE db
+* **userWhitelistedIpRanges**: string[]: User added list of IP Ranges allowed on ASE db
 * **vipMappings**: [VirtualIPMapping](#virtualipmapping)[] (ReadOnly): Description of IP SSL mapping for the App Service Environment.
 * **virtualNetwork**: [VirtualNetworkProfile](#virtualnetworkprofile) (Required): Description of the Virtual Network.
 * **vnetName**: string: Name of the Virtual Network for the App Service Environment.

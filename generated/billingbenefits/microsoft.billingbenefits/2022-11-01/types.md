@@ -104,6 +104,10 @@
 * **renew**: bool: Setting this to true will automatically purchase a new benefit on the expiration date time.
 * **term**: 'P1Y' | 'P3Y' | 'P5Y' | string: Represent benefit term in ISO 8601 format.
 
+## RenewProperties
+### Properties
+* **purchaseProperties**: [PurchaseRequest](#purchaserequest)
+
 ## ReservationOrderAliasRequestPropertiesOrReservationOrderAliasResponseProperties
 ### Properties
 * **appliedScopeProperties**: [AppliedScopeProperties](#appliedscopeproperties): Properties specific to applied scope type. Not required if not applicable.
@@ -143,14 +147,12 @@
 * **provisioningState**: 'Cancelled' | 'ConfirmedBilling' | 'Created' | 'Creating' | 'Expired' | 'Failed' | 'PendingBilling' | 'Succeeded' | string (ReadOnly): Provisioning state
 * **purchaseDateTime**: string (ReadOnly): Date time when the savings plan was purchased
 * **renew**: bool: Setting this to true will automatically purchase a new benefit on the expiration date time.
-* **renewProperties**: [SavingsPlanModelPropertiesRenewProperties](#savingsplanmodelpropertiesrenewproperties)
+* **renewDestination**: string: SavingsPlan Id of the SavingsPlan which is purchased because of renew.
+* **renewProperties**: [RenewProperties](#renewproperties)
+* **renewSource**: string: SavingsPlan Id of the SavingsPlan from which this SavingsPlan is renewed.
 * **term**: 'P1Y' | 'P3Y' | 'P5Y' | string: Represent benefit term in ISO 8601 format.
 * **userFriendlyAppliedScopeType**: string (ReadOnly): The applied scope type of the savings plan for display, e.g. Shared
 * **utilization**: [Utilization](#utilization) (ReadOnly): Savings plan utilization
-
-## SavingsPlanModelPropertiesRenewProperties
-### Properties
-* **purchaseProperties**: [PurchaseRequest](#purchaserequest)
 
 ## SavingsPlanOrderAliasProperties
 ### Properties

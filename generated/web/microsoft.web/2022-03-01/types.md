@@ -1771,7 +1771,7 @@
  (most likely because NSG blocked the incoming traffic).
 * **upgradeAvailability**: 'None' | 'Ready' | string (ReadOnly): Whether an upgrade is available for this App Service Environment.
 * **upgradePreference**: 'Early' | 'Late' | 'Manual' | 'None' | string: Upgrade Preference
-* **userWhitelistedIpRanges**: string[]: User added ip ranges to whitelist on ASE db
+* **userWhitelistedIpRanges**: string[]: User added list of IP Ranges allowed on ASE db
 * **virtualNetwork**: [VirtualNetworkProfile](#virtualnetworkprofile) (Required): Description of the Virtual Network.
 * **zoneRedundant**: bool: Whether or not this App Service Environment is zone-redundant.
 
@@ -3145,7 +3145,7 @@ Setting is <code>false</code> by default.
 Tags can consist of alphanumeric characters and the following:
 '_', '@', '#', '.', ':', '-'. 
 Validation should be performed at the PushRequestHandler.
-* **tagWhitelistJson**: string: Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
+* **tagWhitelistJson**: string: Gets or sets a JSON string containing a list of tags that are in the allowed list for use by the push registration endpoint.
 
 ## QueryUtterancesResult
 ### Properties

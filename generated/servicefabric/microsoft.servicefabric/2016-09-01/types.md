@@ -44,7 +44,7 @@
 * **availableClusterVersions**: [ClusterVersionDetails](#clusterversiondetails)[] (ReadOnly): The available cluster code version which the cluster can upgrade to, note that you must choose upgradeMode to manual to upgrade to
 * **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory): The settings to enable AAD authentication on the cluster
 * **certificate**: [CertificateDescription](#certificatedescription): This primary certificate will be used as cluster node to node security, SSL certificate for cluster management endpoint and default admin client
-* **clientCertificateCommonNames**: [ClientCertificateCommonName](#clientcertificatecommonname)[]: List of client certificates to whitelist based on common names
+* **clientCertificateCommonNames**: [ClientCertificateCommonName](#clientcertificatecommonname)[]: List of client certificates to trust based on common names
 * **clientCertificateThumbprints**: [ClientCertificateThumbprint](#clientcertificatethumbprint)[]: The client thumbprint details ,it is used for client access for cluster operation
 * **clusterCodeVersion**: string: The ServiceFabric code version running in your cluster
 * **clusterEndpoint**: string (ReadOnly): The endpoint for the cluster connecting to servicefabric resource provider

@@ -1570,7 +1570,7 @@
 * **status**: 'Deleting' | 'Preparing' | 'Ready' | 'Scaling' (ReadOnly): Current status of the App Service Environment.
 * **suspended**: bool (ReadOnly): <code>true</code> if the App Service Environment is suspended; otherwise, <code>false</code>. The environment can be suspended, e.g. when the management endpoint is no longer available
  (most likely because NSG blocked the incoming traffic).
-* **userWhitelistedIpRanges**: string[]: User added ip ranges to whitelist on ASE db
+* **userWhitelistedIpRanges**: string[]: User added list of IP Ranges allowed on ASE db
 * **virtualNetwork**: [VirtualNetworkProfile](#virtualnetworkprofile) (Required): Description of the Virtual Network.
 
 ## AppServicePlanProperties
@@ -2685,7 +2685,7 @@ Setting is <code>false</code> by default.
 Tags can consist of alphanumeric characters and the following:
 '_', '@', '#', '.', ':', '-'. 
 Validation should be performed at the PushRequestHandler.
-* **tagWhitelistJson**: string: Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
+* **tagWhitelistJson**: string: Gets or sets a JSON string containing a list of tags that are in the allowed list for use by the push registration endpoint.
 
 ## QueryUtterancesResult
 ### Properties

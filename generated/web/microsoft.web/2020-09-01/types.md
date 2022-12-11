@@ -1496,7 +1496,7 @@
 * **suspended**: bool: <code>true</code> if the App Service Environment is suspended; otherwise, <code>false</code>. The environment can be suspended, e.g. when the management endpoint is no longer available
  (most likely because NSG blocked the incoming traffic).
 * **upgradeDomains**: int (ReadOnly): Number of upgrade domains of the App Service Environment.
-* **userWhitelistedIpRanges**: string[]: User added ip ranges to whitelist on ASE db
+* **userWhitelistedIpRanges**: string[]: User added list of IP Ranges allowed on ASE db
 * **vipMappings**: [VirtualIPMapping](#virtualipmapping)[] (ReadOnly): Description of IP SSL mapping for the App Service Environment.
 * **virtualNetwork**: [VirtualNetworkProfile](#virtualnetworkprofile) (Required): Description of the Virtual Network.
 * **vnetName**: string: Name of the Virtual Network for the App Service Environment.
@@ -2725,7 +2725,7 @@ Setting is <code>false</code> by default.
 Tags can consist of alphanumeric characters and the following:
 '_', '@', '#', '.', ':', '-'. 
 Validation should be performed at the PushRequestHandler.
-* **tagWhitelistJson**: string: Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
+* **tagWhitelistJson**: string: Gets or sets a JSON string containing a list of tags that are in the allowed list for use by the push registration endpoint.
 
 ## RampUpRule
 ### Properties
