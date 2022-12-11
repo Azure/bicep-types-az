@@ -1362,7 +1362,7 @@ Setting is <code>false</code> by default.
 Tags can consist of alphanumeric characters and the following:
 '_', '@', '#', '.', ':', '-'. 
 Validation should be performed at the PushRequestHandler.
-* **tagWhitelistJson**: string: Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
+* **tagWhitelistJson**: string: Gets or sets a JSON string containing a list of tags that are in the allowed list for use by the push registration endpoint.
 
 ## RampUpRule
 ### Properties

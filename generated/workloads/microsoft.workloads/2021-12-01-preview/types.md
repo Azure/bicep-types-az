@@ -125,12 +125,14 @@
 
 ## CentralServerVmDetails
 ### Properties
+* **storageDetails**: [StorageInformation](#storageinformation)[] (ReadOnly): Storage details of all the Storage Accounts attached to the ASCS Virtual Machine. For e.g. NFS on AFS Shared Storage.
 * **type**: 'ASCS' | 'ERS' | 'ERSInactive' | 'Primary' | 'Secondary' | 'Standby' | 'Unknown' | string (ReadOnly): Defines the type of central server VM.
 * **virtualMachineId**: string (ReadOnly)
 
 ## DatabaseConfiguration
 ### Properties
 * **databaseType**: 'DB2' | 'HANA' | string: The database type.
+* **diskConfiguration**: [DiskConfiguration](#diskconfiguration): Gets or sets the disk configuration.
 * **instanceCount**: int (Required): The number of database VMs.
 * **subnetId**: string (Required): The subnet id.
 * **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration) (Required): Gets or sets the virtual machine configuration.
@@ -153,6 +155,7 @@
 ## DatabaseVmDetails
 ### Properties
 * **status**: 'Offline' | 'PartiallyRunning' | 'Running' | 'Starting' | 'Stopping' | 'Unavailable' | string (ReadOnly): Defines the SAP Instance status.
+* **storageDetails**: [StorageInformation](#storageinformation)[] (ReadOnly): Storage details of all the Storage Accounts attached to the Database Virtual Machine. For e.g. NFS on AFS Shared Storage.
 * **virtualMachineId**: string (ReadOnly)
 
 ## DeployerVmPackages
@@ -160,10 +163,29 @@
 * **storageAccountId**: string: The deployer VM packages storage account id
 * **url**: string: The URL to the deployer VM packages file.
 
+## DiskConfiguration
+### Properties
+* **diskVolumeConfigurations**: [DiskConfigurationDiskVolumeConfigurations](#diskconfigurationdiskvolumeconfigurations): The disk configuration for the db volume. For HANA, Required volumes are: ['hana/data', 'hana/log', hana/shared', 'usr/sap', 'os'], Optional volume : ['backup'].
+
+## DiskConfigurationDiskVolumeConfigurations
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [DiskVolumeConfiguration](#diskvolumeconfiguration)
+
 ## DiskInfo
 ### Properties
 * **sizeInGB**: int: Disk size in GB
 * **storageType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' (Required): Storage type
+
+## DiskSku
+### Properties
+* **name**: 'PremiumV2_LRS' | 'Premium_LRS' | 'Premium_ZRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'Standard_LRS' | 'UltraSSD_LRS' | string: Defines the disk sku name.
+
+## DiskVolumeConfiguration
+### Properties
+* **count**: int: The total number of disks required for the concerned volume.
+* **sizeGB**: int: The disk size in GB.
+* **sku**: [DiskSku](#disksku): The disk SKU details.
 
 ## EnqueueReplicationServerProperties
 ### Properties
@@ -199,6 +221,28 @@
 ## ErrorInnerError
 ### Properties
 * **innerError**: [Error](#error): Standard error object.
+
+## FileShareConfiguration
+* **Discriminator**: configurationType
+
+### Base Properties
+
+### CreateAndMountFileShareConfiguration
+#### Properties
+* **configurationType**: 'CreateAndMount' (Required): The type of file share config.
+* **resourceGroup**: string: The name of file share resource group. The app rg is used in case of missing input.
+* **storageAccountName**: string: The name of file share storage account name . A custom name is used in case of missing input.
+
+### MountFileShareConfiguration
+#### Properties
+* **configurationType**: 'Mount' (Required): The type of file share config.
+* **id**: string (Required): The fileshare resource ID
+* **privateEndpointId**: string (Required): The private endpoint resource ID
+
+### SkipFileShareConfiguration
+#### Properties
+* **configurationType**: 'Skip' (Required): The type of file share config.
+
 
 ## FileshareProfile
 ### Properties
@@ -240,6 +284,7 @@
 ### SingleServerConfiguration
 #### Properties
 * **databaseType**: 'DB2' | 'HANA' | string: The database type.
+* **dbDiskConfiguration**: [DiskConfiguration](#diskconfiguration): Gets or sets the disk configuration.
 * **deploymentType**: 'SingleServer' (Required): The type of SAP deployment, single server or Three tier.
 * **networkConfiguration**: [NetworkConfiguration](#networkconfiguration): Network configuration for the server
 * **subnetId**: string (Required): The subnet id.
@@ -253,7 +298,12 @@
 * **deploymentType**: 'ThreeTier' (Required): The type of SAP deployment, single server or Three tier.
 * **highAvailabilityConfig**: [HighAvailabilityConfiguration](#highavailabilityconfiguration): The high availability configuration.
 * **networkConfiguration**: [NetworkConfiguration](#networkconfiguration): Network configuration common to all servers
+* **storageConfiguration**: [StorageConfiguration](#storageconfiguration): The storage configuration.
 
+
+## LoadBalancerDetails
+### Properties
+* **id**: string (ReadOnly)
 
 ## ManagedRGConfiguration
 ### Properties
@@ -484,6 +534,7 @@
 * **kernelVersion**: string (ReadOnly): Application server instance SAP Kernel Version.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Defines the provisioning states.
 * **status**: 'Offline' | 'PartiallyRunning' | 'Running' | 'Starting' | 'Stopping' | 'Unavailable' | string (ReadOnly): Defines the SAP Instance status.
+* **storageDetails**: [StorageInformation](#storageinformation)[] (ReadOnly): Storage details of all the Storage Accounts attached to the App Virtual Machine. For e.g. NFS on AFS Shared Storage.
 * **subnet**: string (ReadOnly): Application server Subnet.
 * **virtualMachineId**: string (ReadOnly): The virtual machine.
 
@@ -497,6 +548,7 @@
 * **instanceNo**: string (ReadOnly): The central services instance number.
 * **kernelPatch**: string (ReadOnly): The central services instance Kernel Patch level.
 * **kernelVersion**: string (ReadOnly): The central services instance Kernel Version.
+* **loadBalancerDetails**: [LoadBalancerDetails](#loadbalancerdetails) (ReadOnly): The Load Balancer details such as LoadBalancer ID attached to ASCS Virtual Machines
 * **messageServerProperties**: [MessageServerProperties](#messageserverproperties): Defines the SAP Message Server properties.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Defines the provisioning states.
 * **status**: 'Offline' | 'PartiallyRunning' | 'Running' | 'Starting' | 'Stopping' | 'Unavailable' | string (ReadOnly): Defines the SAP Instance status.
@@ -536,6 +588,7 @@
 * **databaseType**: string (ReadOnly): Database type, that is if the DB is HANA, DB2, Oracle, SAP ASE, Max DB or MS SQL Server.
 * **errors**: [SAPVirtualInstanceError](#sapvirtualinstanceerror) (ReadOnly): Defines the errors related to Database resource.
 * **ipAddress**: string (ReadOnly): Database IP Address.
+* **loadBalancerDetails**: [LoadBalancerDetails](#loadbalancerdetails) (ReadOnly): The Load Balancer details such as LoadBalancer ID attached to Database Virtual Machines
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Defines the provisioning states.
 * **status**: 'Offline' | 'PartiallyRunning' | 'Running' | 'Starting' | 'Stopping' | 'Unavailable' | string (ReadOnly): Defines the SAP Instance status.
 * **subnet**: string (ReadOnly): Database subnet.
@@ -620,6 +673,14 @@
 ## SshPublicKey
 ### Properties
 * **keyData**: string: SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/linux/create-ssh-keys-detailed).
+
+## StorageConfiguration
+### Properties
+* **transportFileShareConfiguration**: [FileShareConfiguration](#fileshareconfiguration): The properties of the transport directory attached to the VIS. The default for transportFileShareConfiguration is the createAndMount flow if storage configuration is missing.
+
+## StorageInformation
+### Properties
+* **id**: string (ReadOnly)
 
 ## SystemData
 ### Properties

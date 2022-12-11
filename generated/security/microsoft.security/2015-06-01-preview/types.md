@@ -242,7 +242,7 @@
 * **common**: bool: Whether the path is commonly run on the machine
 * **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' | string: The configuration status of the VM/server group or machine or rule on the machine
 * **fileType**: 'Dll' | 'Exe' | 'Executable' | 'Msi' | 'Script' | 'Unknown' | string: The type of the file (for Linux files - Executable is used)
-* **path**: string: The full path to whitelist
+* **path**: string: The full path to the application to allow
 * **publisherInfo**: [PublisherInfo](#publisherinfo): Represents the publisher information of a process/rule
 * **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature' | string: The type of the rule to be allowed
 * **usernames**: [UserRecommendation](#userrecommendation)[]

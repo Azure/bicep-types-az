@@ -6,23 +6,23 @@
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GovernanceAssignmentProperties](#governanceassignmentproperties): Properties of a security governanceAssignment
+* **properties**: [GovernanceAssignmentProperties](#governanceassignmentproperties): The properties of a governance assignment
 * **type**: 'Microsoft.Security/assessments/governanceAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/governanceRules@2022-01-01-preview
-* **Valid Scope(s)**: Subscription, Extension
+* **Valid Scope(s)**: ManagementGroup, Subscription, Extension
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GovernanceRuleProperties](#governanceruleproperties): Properties of a security governanceRule
+* **properties**: [GovernanceRuleProperties](#governanceruleproperties): Properties of a governance rule
 * **type**: 'Microsoft.Security/governanceRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## GovernanceAssignmentAdditionalData
 ### Properties
-* **ticketLink**: string: Ticket link associated with this GovernanceAssignment - for example: https://snow.com
-* **ticketNumber**: int: Ticket number associated with this GovernanceAssignment
-* **ticketStatus**: string: The ticket status associated with this GovernanceAssignment - for example: Active
+* **ticketLink**: string: Ticket link associated with this governance assignment - for example: https://snow.com
+* **ticketNumber**: int: Ticket number associated with this governance assignment
+* **ticketStatus**: string: The ticket status associated with this governance assignment - for example: Active
 
 ## GovernanceAssignmentProperties
 ### Properties
@@ -40,8 +40,15 @@
 
 ## GovernanceRuleEmailNotification
 ### Properties
-* **disableManagerEmailNotification**: bool: Defines whether manager email notifications are disabled.
-* **disableOwnerEmailNotification**: bool: Defines whether owner email notifications are disabled.
+* **disableManagerEmailNotification**: bool: Defines whether manager email notifications are disabled
+* **disableOwnerEmailNotification**: bool: Defines whether owner email notifications are disabled
+
+## GovernanceRuleMetadata
+### Properties
+* **createdBy**: string (ReadOnly): Governance rule Created by object id (GUID)
+* **createdOn**: string (ReadOnly): Governance rule creation date
+* **updatedBy**: string (ReadOnly): Governance rule last updated by object id (GUID)
+* **updatedOn**: string (ReadOnly): Governance rule last update date
 
 ## GovernanceRuleOwnerSource
 ### Properties
@@ -51,16 +58,20 @@
 ## GovernanceRuleProperties
 ### Properties
 * **conditionSets**: any[] (Required): The governance rule conditionSets - see examples
-* **description**: string: description of the governanceRule
-* **displayName**: string (Required): display name of the governanceRule
+* **description**: string: Description of the governance rule
+* **displayName**: string (Required): Display name of the governance rule
+* **excludedScopes**: string[]: Excluded scopes, filter out the descendants of the scope (on management scopes)
 * **governanceEmailNotification**: [GovernanceRuleEmailNotification](#governanceruleemailnotification): The email notifications settings for the governance rule, states whether to disable notifications for mangers and owners
+* **includeMemberScopes**: bool: Defines whether the rule is management scope rule (master connector as a single scope or management scope)
 * **isDisabled**: bool: Defines whether the rule is active/inactive
 * **isGracePeriod**: bool: Defines whether there is a grace period on the governance rule
-* **ownerSource**: [GovernanceRuleOwnerSource](#governanceruleownersource) (Required): The Owner source for the governance rule - e.g. Manually by user@contoso.com - see example
+* **metadata**: [GovernanceRuleMetadata](#governancerulemetadata): The governance rule metadata
+* **ownerSource**: [GovernanceRuleOwnerSource](#governanceruleownersource) (Required): The owner source for the governance rule - e.g. Manually by user@contoso.com - see example
 * **remediationTimeframe**: string: Governance rule remediation timeframe - this is the time that will affect on the grace-period duration e.g. 7.00:00:00 - means 7 days
 * **rulePriority**: int (Required): The governance rule priority, priority to the lower number. Rules with the same priority on the same subscription will not be allowed
 * **ruleType**: 'Integrated' | 'ServiceNow' | string (Required): The rule type of the governance rule, defines the source of the rule e.g. Integrated
 * **sourceResourceType**: 'Assessments' | string (Required): The governance rule source, what the rule affects, e.g. Assessments
+* **tenantId**: string (ReadOnly): The tenantId (GUID)
 
 ## RemediationEta
 ### Properties
