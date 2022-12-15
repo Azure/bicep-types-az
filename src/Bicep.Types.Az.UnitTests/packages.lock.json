@@ -39,15 +39,15 @@
       },
       "MSTest.TestAdapter": {
         "type": "Direct",
-        "requested": "[2.3.0-preview-20220810-02, )",
-        "resolved": "2.3.0-preview-20220810-02",
-        "contentHash": "G8xdwi86UsOZJnTVwil5jbaaRGOsJdRwq33l4NZyeD9Mdc0HiVZJx6w4GdTocFrtrzlrsxPYjfJgdPUlhzNL9Q=="
+        "requested": "[3.0.0, )",
+        "resolved": "3.0.0",
+        "contentHash": "hJwxnOXLHitQbLzju7BfbRGeybjuVpkTd0qq8pKT7xLFPmc86Eqx0s9TYY6iAYh0+y4/73r3t/365N8RLGucbw=="
       },
       "MSTest.TestFramework": {
         "type": "Direct",
-        "requested": "[2.2.10, )",
-        "resolved": "2.2.10",
-        "contentHash": "JZRVXKq19uRhkj8MuzsU8zJhPV2JV3ZToFPAIg+BU53L1L9mNDfm9jXerdRfbrE4HBcf2M54Ij80zPOdlha3+Q=="
+        "requested": "[3.0.0, )",
+        "resolved": "3.0.0",
+        "contentHash": "/19FTytX0JOH6/ub3D2wF7WHQefCTOCzHVEoWd8LVQeU0d+rnubZkBIwZTwv/uqCuy6D+DxCab+2UsmhbHoWFw=="
       },
       "Nerdbank.GitVersioning": {
         "type": "Direct",
