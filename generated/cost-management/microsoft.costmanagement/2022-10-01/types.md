@@ -249,7 +249,7 @@
 ## ReportConfigGrouping
 ### Properties
 * **name**: string (Required): The name of the column to group. This version supports subscription lowest possible grain.
-* **type**: 'Dimension' | 'Tag' | string (Required): Has type of the column to group.
+* **type**: 'Dimension' | 'TagKey' | string (Required): Has type of the column to group.
 
 ## ReportConfigSorting
 ### Properties

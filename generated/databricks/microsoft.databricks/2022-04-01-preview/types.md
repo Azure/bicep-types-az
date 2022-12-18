@@ -9,6 +9,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AccessConnectorProperties](#accessconnectorproperties): Azure Databricks accessConnector properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Databricks/accessConnectors' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -132,13 +133,14 @@
 
 ## PrivateEndpointConnectionProperties
 ### Properties
+* **groupIds**: string[]: GroupIds from the private link service resource.
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): Private endpoint connection state
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the private endpoint connection.
 
 ## PrivateLinkServiceConnectionState
 ### Properties
-* **actionRequired**: string: Actions required for a private endpoint connection
+* **actionsRequired**: string: Actions required for a private endpoint connection
 * **description**: string: The description for the current state of a private endpoint connection
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (Required): The status of a private endpoint connection
 
@@ -231,7 +233,7 @@
 * **authorizations**: [WorkspaceProviderAuthorization](#workspaceproviderauthorization)[]: The workspace provider authorizations.
 * **createdBy**: [CreatedBy](#createdby): Indicates the Object ID, PUID and Application ID of entity that created the workspace.
 * **createdDateTime**: string (ReadOnly): Specifies the date and time when the workspace is created.
-* **diskEncryptionSetId**: string: The resource Id of the managed disk encryption set.
+* **diskEncryptionSetId**: string (ReadOnly): The resource Id of the managed disk encryption set.
 * **encryption**: [WorkspacePropertiesEncryption](#workspacepropertiesencryption): Encryption properties for databricks workspace
 * **managedDiskIdentity**: [ManagedIdentityConfiguration](#managedidentityconfiguration): The details of Managed Identity of Disk Encryption Set used for Managed Disk Encryption
 * **managedResourceGroupId**: string (Required): The managed resource group Id.
