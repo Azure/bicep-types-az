@@ -154,7 +154,7 @@
 
 ## ManagedHsmProperties
 ### Properties
-* **createMode**: 'default' | 'recover': The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.
+* **createMode**: 'default' | 'recover' (WriteOnly): The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.
 * **enablePurgeProtection**: bool: Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.
 * **enableSoftDelete**: bool: Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.
 * **hsmUri**: string (ReadOnly): The URI of the managed hsm pool for performing operations on keys.
@@ -164,6 +164,7 @@
 * **provisioningState**: 'Activated' | 'Deleting' | 'Failed' | 'Provisioning' | 'Restoring' | 'SecurityDomainRestore' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Control permission for data plane traffic coming from public networks while private endpoint is enabled.
 * **scheduledPurgeDate**: string (ReadOnly): The scheduled purge date in UTC.
+* **securityDomainProperties**: [ManagedHSMSecurityDomainProperties](#managedhsmsecuritydomainproperties) (ReadOnly): Managed HSM security domain properties.
 * **softDeleteRetentionInDays**: int: softDelete data retention days. It accepts >=7 and <=90.
 * **statusMessage**: string (ReadOnly): Resource Status Message.
 * **tenantId**: string: The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.
@@ -177,6 +178,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ManagedHSMSecurityDomainProperties
+### Properties
+* **activationStatus**: 'Active' | 'Failed' | 'NotActivated' | 'Unknown' | string (ReadOnly): Activation Status
+* **activationStatusMessage**: string (ReadOnly): Activation Status Message.
 
 ## ManagedHsmSku
 ### Properties
