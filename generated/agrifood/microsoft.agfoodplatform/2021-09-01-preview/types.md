@@ -153,6 +153,7 @@ customParameters, PlatformParameters and Units supported.
 ### Properties
 * **accessFBApplicationId**: string (ReadOnly): Application id of the multi tenant application to be used by partner to access FarmBeats data.
 * **accessFBApplicationName**: string (ReadOnly): Application name of the multi tenant application to be used by partner to access FarmBeatsData.
+* **actionIds**: string[] (ReadOnly): List of ActionIds needed to make the SaaS multi tenant application access relevant fb data.
 * **dataAccessScopes**: string[] (ReadOnly): Gets scope of the FarmBeats data access that's required for processing solution request to partner.
 Example: For gdd they might need weatherScope and satelliteScope.
 * **evaluatedOutputsDictionary**: [FarmBeatsSolutionPropertiesEvaluatedOutputsDictionary](#farmbeatssolutionpropertiesevaluatedoutputsdictionary) (ReadOnly): Gets example name: insight sample response Dictionary to capture all variations of computed results ingested by partner.
@@ -165,6 +166,7 @@ For working with WeatherScope we need FarmHierarchy info implies 'farmerId', 're
 * **partnerTenantId**: string (ReadOnly): Solution Partner Tenant Id.
 * **roleId**: string (ReadOnly): Role Id of the SaaS multi tenant application to access relevant fb data.
 * **roleName**: string (ReadOnly): Role Name of the SaaS multi tenant application to access relevant fb data.
+* **saaSApplicationId**: string (ReadOnly): Application id of the SaaS multi tenant application.
 
 ## FarmBeatsSolutionPropertiesEvaluatedOutputsDictionary
 ### Properties
