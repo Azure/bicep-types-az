@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@autorest/codemodel": "^4.19.3",
-    "@autorest/extension-base": "^3.5.0",
+    "@autorest/extension-base": "^3.5.1",
     "@types/lodash": "^4.14.191",
     "autorest": "^3.6.3",
     "bicep-types": "file:../../bicep-types/src/bicep-types",
