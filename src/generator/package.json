@@ -34,7 +34,7 @@
     "@typescript-eslint/eslint-plugin": "^5.47.1",
     "@typescript-eslint/parser": "^5.48.0",
     "async": "^3.2.4",
-    "autorest": "^3.6.2",
+    "autorest": "^3.6.3",
     "bicep-types": "file:../../bicep-types/src/bicep-types",
     "colors": "^1.4.0",
     "eslint": "^8.31.0",
