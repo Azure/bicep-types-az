@@ -194,7 +194,7 @@
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ContentTypeContractProperties](#contenttypecontractproperties) (ReadOnly): Properties of the content type.
+* **properties**: [ContentTypeContractProperties](#contenttypecontractproperties): Properties of the content type.
 * **type**: 'Microsoft.ApiManagement/service/contentTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/contentTypes/contentItems@2021-08-01
@@ -203,7 +203,7 @@
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ContentItemContractProperties](#contentitemcontractproperties) (ReadOnly): Properties of the content item.
+* **properties**: [ContentItemContractProperties](#contentitemcontractproperties): Properties of the content item.
 * **type**: 'Microsoft.ApiManagement/service/contentTypes/contentItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/diagnostics@2021-08-01

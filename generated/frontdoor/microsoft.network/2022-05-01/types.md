@@ -15,7 +15,7 @@
 
 ## CustomRule
 ### Properties
-* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' | string (Required): Describes what action to be applied when rule matches.
+* **action**: 'Allow' | 'AnomalyScoring' | 'Block' | 'Log' | 'Redirect' | string (Required): Describes what action to be applied when rule matches.
 * **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
 * **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions.
 * **name**: string: Describes the name of the rule.
@@ -46,7 +46,7 @@
 
 ## ManagedRuleOverride
 ### Properties
-* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' | string: Describes the override action to be applied when rule matches.
+* **action**: 'Allow' | 'AnomalyScoring' | 'Block' | 'Log' | 'Redirect' | string: Describes the override action to be applied when rule matches.
 * **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
 * **exclusions**: [ManagedRuleExclusion](#managedruleexclusion)[]: Describes the exclusions that are applied to this specific rule.
 * **ruleId**: string (Required): Identifier for the managed rule.

@@ -5371,6 +5371,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
+## SparkConfigurationParametrizationReference
+### Properties
+* **referenceName**: any (Required): Reference spark configuration name. Type: string (or Expression with resultType string).
+* **type**: 'SparkConfigurationReference' | string (Required): Spark configuration reference type.
+
 ## SparkDatasetTypeProperties
 ### Properties
 * **schema**: any: The schema name of the Spark. Type: string (or Expression with resultType string).
@@ -5796,15 +5801,24 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **args**: any[]: User specified arguments to SynapseSparkJobDefinitionActivity.
 * **className**: any: The fully-qualified identifier or the main class that is in the main definition file, which will override the 'className' of the spark job definition you provide. Type: string (or Expression with resultType string).
 * **conf**: any: Spark configuration properties, which will override the 'conf' of the spark job definition you provide.
+* **configurationType**: 'Artifact' | 'Customized' | 'Default' | string: The type of the spark config.
 * **driverSize**: any: Number of core and memory to be used for driver allocated in the specified Spark pool for the job, which will be used for overriding 'driverCores' and 'driverMemory' of the spark job definition you provide. Type: string (or Expression with resultType string).
 * **executorSize**: any: Number of core and memory to be used for executors allocated in the specified Spark pool for the job, which will be used for overriding 'executorCores' and 'executorMemory' of the spark job definition you provide. Type: string (or Expression with resultType string).
 * **file**: any: The main file used for the job, which will override the 'file' of the spark job definition you provide. Type: string (or Expression with resultType string).
 * **files**: any[]: (Deprecated. Please use pythonCodeReference and filesV2) Additional files used for reference in the main definition file, which will override the 'files' of the spark job definition you provide.
 * **filesV2**: any[]: Additional files used for reference in the main definition file, which will override the 'jars' and 'files' of the spark job definition you provide.
-* **numExecutors**: int: Number of executors to launch for this job, which will override the 'numExecutors' of the spark job definition you provide.
+* **numExecutors**: any: Number of executors to launch for this job, which will override the 'numExecutors' of the spark job definition you provide. Type: integer (or Expression with resultType integer).
 * **pythonCodeReference**: any[]: Additional python code files used for reference in the main definition file, which will override the 'pyFiles' of the spark job definition you provide.
+* **scanFolder**: any: Scanning subfolders from the root folder of the main definition file, these files will be added as reference files. The folders named 'jars', 'pyFiles', 'files' or 'archives' will be scanned, and the folders name are case sensitive. Type: boolean (or Expression with resultType boolean).
+* **sparkConfig**: [SynapseSparkJobActivityTypePropertiesSparkConfig](#synapsesparkjobactivitytypepropertiessparkconfig): Spark configuration property.
 * **sparkJob**: [SynapseSparkJobReference](#synapsesparkjobreference) (Required): Synapse spark job reference.
 * **targetBigDataPool**: [BigDataPoolParametrizationReference](#bigdatapoolparametrizationreference): The name of the big data pool which will be used to execute the spark batch job, which will override the 'targetBigDataPool' of the spark job definition you provide.
+* **targetSparkConfiguration**: [SparkConfigurationParametrizationReference](#sparkconfigurationparametrizationreference): The spark configuration of the spark job.
+
+## SynapseSparkJobActivityTypePropertiesSparkConfig
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## SynapseSparkJobReference
 ### Properties
