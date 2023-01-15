@@ -116,7 +116,7 @@
 ## ClusterNode
 ### Properties
 * **coreCount**: int (ReadOnly): Number of physical cores on the cluster node.
-* **EhcResourceId**: string (ReadOnly): Edge Hardware Center Resource Id
+* **ehcResourceId**: string (ReadOnly): Edge Hardware Center Resource Id
 * **id**: int (ReadOnly): Id of the node in the cluster.
 * **manufacturer**: string (ReadOnly): Manufacturer of the cluster node hardware.
 * **memoryInGiB**: int (ReadOnly): Total available memory on the cluster node (in GiB).
