@@ -8227,6 +8227,7 @@
 * **Link**: [2021-05-01](maintenance/microsoft.maintenance/2021-05-01/types.md#resource-microsoftmaintenanceapplyupdates2021-05-01)
 * **Link**: [2021-09-01-preview](maintenance/microsoft.maintenance/2021-09-01-preview/types.md#resource-microsoftmaintenanceapplyupdates2021-09-01-preview)
 * **Link**: [2022-07-01-preview](maintenance/microsoft.maintenance/2022-07-01-preview/types.md#resource-microsoftmaintenanceapplyupdates2022-07-01-preview)
+* **Link**: [2022-11-01-preview](maintenance/microsoft.maintenance/2022-11-01-preview/types.md#resource-microsoftmaintenanceapplyupdates2022-11-01-preview)
 
 ### microsoft.maintenance/configurationassignments
 * **Link**: [2018-06-01-preview](maintenance/microsoft.maintenance/2018-06-01-preview/types.md#resource-microsoftmaintenanceconfigurationassignments2018-06-01-preview)
@@ -8236,6 +8237,7 @@
 * **Link**: [2021-05-01](maintenance/microsoft.maintenance/2021-05-01/types.md#resource-microsoftmaintenanceconfigurationassignments2021-05-01)
 * **Link**: [2021-09-01-preview](maintenance/microsoft.maintenance/2021-09-01-preview/types.md#resource-microsoftmaintenanceconfigurationassignments2021-09-01-preview)
 * **Link**: [2022-07-01-preview](maintenance/microsoft.maintenance/2022-07-01-preview/types.md#resource-microsoftmaintenanceconfigurationassignments2022-07-01-preview)
+* **Link**: [2022-11-01-preview](maintenance/microsoft.maintenance/2022-11-01-preview/types.md#resource-microsoftmaintenanceconfigurationassignments2022-11-01-preview)
 
 ### microsoft.maintenance/maintenanceconfigurations
 * **Link**: [2018-06-01-preview](maintenance/microsoft.maintenance/2018-06-01-preview/types.md#resource-microsoftmaintenancemaintenanceconfigurations2018-06-01-preview)
@@ -8245,6 +8247,7 @@
 * **Link**: [2021-05-01](maintenance/microsoft.maintenance/2021-05-01/types.md#resource-microsoftmaintenancemaintenanceconfigurations2021-05-01)
 * **Link**: [2021-09-01-preview](maintenance/microsoft.maintenance/2021-09-01-preview/types.md#resource-microsoftmaintenancemaintenanceconfigurations2021-09-01-preview)
 * **Link**: [2022-07-01-preview](maintenance/microsoft.maintenance/2022-07-01-preview/types.md#resource-microsoftmaintenancemaintenanceconfigurations2022-07-01-preview)
+* **Link**: [2022-11-01-preview](maintenance/microsoft.maintenance/2022-11-01-preview/types.md#resource-microsoftmaintenancemaintenanceconfigurations2022-11-01-preview)
 
 ### microsoft.maintenance/publicmaintenanceconfigurations
 * **Link**: [2020-07-01-preview](maintenance/microsoft.maintenance/2020-07-01-preview/types.md#resource-microsoftmaintenancepublicmaintenanceconfigurations2020-07-01-preview)
@@ -8252,6 +8255,7 @@
 * **Link**: [2021-05-01](maintenance/microsoft.maintenance/2021-05-01/types.md#resource-microsoftmaintenancepublicmaintenanceconfigurations2021-05-01)
 * **Link**: [2021-09-01-preview](maintenance/microsoft.maintenance/2021-09-01-preview/types.md#resource-microsoftmaintenancepublicmaintenanceconfigurations2021-09-01-preview)
 * **Link**: [2022-07-01-preview](maintenance/microsoft.maintenance/2022-07-01-preview/types.md#resource-microsoftmaintenancepublicmaintenanceconfigurations2022-07-01-preview)
+* **Link**: [2022-11-01-preview](maintenance/microsoft.maintenance/2022-11-01-preview/types.md#resource-microsoftmaintenancepublicmaintenanceconfigurations2022-11-01-preview)
 
 ## microsoft.managedidentity
 ### microsoft.managedidentity/identities
@@ -12510,6 +12514,7 @@
 * **Link**: [2022-06-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-06-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupconfig2022-06-01-preview)
 * **Link**: [2022-09-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-09-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupconfig2022-09-01-preview)
 * **Link**: [2022-10-01](recoveryservicesbackup/microsoft.recoveryservices/2022-10-01/types.md#resource-microsoftrecoveryservicesvaultsbackupconfig2022-10-01)
+* **Link**: [2023-01-01](recoveryservicesbackup/microsoft.recoveryservices/2023-01-01/types.md#resource-microsoftrecoveryservicesvaultsbackupconfig2023-01-01)
 
 ### microsoft.recoveryservices/vaults/backupencryptionconfigs
 * **Link**: [2020-10-01](recoveryservicesbackup/microsoft.recoveryservices/2020-10-01/types.md#resource-microsoftrecoveryservicesvaultsbackupencryptionconfigs2020-10-01)
@@ -12532,6 +12537,7 @@
 * **Link**: [2022-06-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-06-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupencryptionconfigs2022-06-01-preview)
 * **Link**: [2022-09-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-09-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupencryptionconfigs2022-09-01-preview)
 * **Link**: [2022-10-01](recoveryservicesbackup/microsoft.recoveryservices/2022-10-01/types.md#resource-microsoftrecoveryservicesvaultsbackupencryptionconfigs2022-10-01)
+* **Link**: [2023-01-01](recoveryservicesbackup/microsoft.recoveryservices/2023-01-01/types.md#resource-microsoftrecoveryservicesvaultsbackupencryptionconfigs2023-01-01)
 
 ### microsoft.recoveryservices/vaults/backupengines
 * **Link**: [2016-12-01](recoveryservicesbackup/microsoft.recoveryservices/2016-12-01/types.md#resource-microsoftrecoveryservicesvaultsbackupengines2016-12-01)
@@ -12555,6 +12561,7 @@
 * **Link**: [2022-06-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-06-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupengines2022-06-01-preview)
 * **Link**: [2022-09-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-09-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupengines2022-09-01-preview)
 * **Link**: [2022-10-01](recoveryservicesbackup/microsoft.recoveryservices/2022-10-01/types.md#resource-microsoftrecoveryservicesvaultsbackupengines2022-10-01)
+* **Link**: [2023-01-01](recoveryservicesbackup/microsoft.recoveryservices/2023-01-01/types.md#resource-microsoftrecoveryservicesvaultsbackupengines2023-01-01)
 
 ### microsoft.recoveryservices/vaults/backupfabrics/backupprotectionintent
 * **Link**: [2017-07-01](recoveryservicesbackup/microsoft.recoveryservices/2017-07-01/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsbackupprotectionintent2017-07-01)
@@ -12575,6 +12582,7 @@
 * **Link**: [2022-06-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-06-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsbackupprotectionintent2022-06-01-preview)
 * **Link**: [2022-09-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-09-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsbackupprotectionintent2022-09-01-preview)
 * **Link**: [2022-10-01](recoveryservicesbackup/microsoft.recoveryservices/2022-10-01/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsbackupprotectionintent2022-10-01)
+* **Link**: [2023-01-01](recoveryservicesbackup/microsoft.recoveryservices/2023-01-01/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsbackupprotectionintent2023-01-01)
 
 ### microsoft.recoveryservices/vaults/backupfabrics/protectioncontainers
 * **Link**: [2016-06-01](recoveryservicesbackup/microsoft.recoveryservices/2016-06-01/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainers2016-06-01)
@@ -12599,6 +12607,7 @@
 * **Link**: [2022-06-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-06-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainers2022-06-01-preview)
 * **Link**: [2022-09-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-09-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainers2022-09-01-preview)
 * **Link**: [2022-10-01](recoveryservicesbackup/microsoft.recoveryservices/2022-10-01/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainers2022-10-01)
+* **Link**: [2023-01-01](recoveryservicesbackup/microsoft.recoveryservices/2023-01-01/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainers2023-01-01)
 
 ### microsoft.recoveryservices/vaults/backupfabrics/protectioncontainers/operationresults
 * **Link**: [2016-06-01](recoveryservicesbackup/microsoft.recoveryservices/2016-06-01/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersoperationresults2016-06-01)
@@ -12623,6 +12632,7 @@
 * **Link**: [2022-06-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-06-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersoperationresults2022-06-01-preview)
 * **Link**: [2022-09-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-09-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersoperationresults2022-09-01-preview)
 * **Link**: [2022-10-01](recoveryservicesbackup/microsoft.recoveryservices/2022-10-01/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersoperationresults2022-10-01)
+* **Link**: [2023-01-01](recoveryservicesbackup/microsoft.recoveryservices/2023-01-01/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersoperationresults2023-01-01)
 
 ### microsoft.recoveryservices/vaults/backupfabrics/protectioncontainers/protecteditems
 * **Link**: [2016-06-01](recoveryservicesbackup/microsoft.recoveryservices/2016-06-01/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersprotecteditems2016-06-01)
@@ -12648,6 +12658,7 @@
 * **Link**: [2022-06-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-06-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersprotecteditems2022-06-01-preview)
 * **Link**: [2022-09-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-09-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersprotecteditems2022-09-01-preview)
 * **Link**: [2022-10-01](recoveryservicesbackup/microsoft.recoveryservices/2022-10-01/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersprotecteditems2022-10-01)
+* **Link**: [2023-01-01](recoveryservicesbackup/microsoft.recoveryservices/2023-01-01/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersprotecteditems2023-01-01)
 
 ### microsoft.recoveryservices/vaults/backupfabrics/protectioncontainers/protecteditems/operationresults
 * **Link**: [2016-06-01](recoveryservicesbackup/microsoft.recoveryservices/2016-06-01/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersprotecteditemsoperationresults2016-06-01)
@@ -12673,6 +12684,7 @@
 * **Link**: [2022-06-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-06-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersprotecteditemsoperationresults2022-06-01-preview)
 * **Link**: [2022-09-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-09-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersprotecteditemsoperationresults2022-09-01-preview)
 * **Link**: [2022-10-01](recoveryservicesbackup/microsoft.recoveryservices/2022-10-01/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersprotecteditemsoperationresults2022-10-01)
+* **Link**: [2023-01-01](recoveryservicesbackup/microsoft.recoveryservices/2023-01-01/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersprotecteditemsoperationresults2023-01-01)
 
 ### microsoft.recoveryservices/vaults/backupfabrics/protectioncontainers/protecteditems/recoverypoints
 * **Link**: [2016-06-01](recoveryservicesbackup/microsoft.recoveryservices/2016-06-01/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersprotecteditemsrecoverypoints2016-06-01)
@@ -12698,6 +12710,7 @@
 * **Link**: [2022-06-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-06-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersprotecteditemsrecoverypoints2022-06-01-preview)
 * **Link**: [2022-09-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-09-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersprotecteditemsrecoverypoints2022-09-01-preview)
 * **Link**: [2022-10-01](recoveryservicesbackup/microsoft.recoveryservices/2022-10-01/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersprotecteditemsrecoverypoints2022-10-01)
+* **Link**: [2023-01-01](recoveryservicesbackup/microsoft.recoveryservices/2023-01-01/types.md#resource-microsoftrecoveryservicesvaultsbackupfabricsprotectioncontainersprotecteditemsrecoverypoints2023-01-01)
 
 ### microsoft.recoveryservices/vaults/backupjobs
 * **Link**: [2016-06-01](recoveryservicesbackup/microsoft.recoveryservices/2016-06-01/types.md#resource-microsoftrecoveryservicesvaultsbackupjobs2016-06-01)
@@ -12723,6 +12736,7 @@
 * **Link**: [2022-06-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-06-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupjobs2022-06-01-preview)
 * **Link**: [2022-09-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-09-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupjobs2022-09-01-preview)
 * **Link**: [2022-10-01](recoveryservicesbackup/microsoft.recoveryservices/2022-10-01/types.md#resource-microsoftrecoveryservicesvaultsbackupjobs2022-10-01)
+* **Link**: [2023-01-01](recoveryservicesbackup/microsoft.recoveryservices/2023-01-01/types.md#resource-microsoftrecoveryservicesvaultsbackupjobs2023-01-01)
 
 ### microsoft.recoveryservices/vaults/backuppolicies
 * **Link**: [2016-06-01](recoveryservicesbackup/microsoft.recoveryservices/2016-06-01/types.md#resource-microsoftrecoveryservicesvaultsbackuppolicies2016-06-01)
@@ -12748,6 +12762,7 @@
 * **Link**: [2022-06-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-06-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackuppolicies2022-06-01-preview)
 * **Link**: [2022-09-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-09-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackuppolicies2022-09-01-preview)
 * **Link**: [2022-10-01](recoveryservicesbackup/microsoft.recoveryservices/2022-10-01/types.md#resource-microsoftrecoveryservicesvaultsbackuppolicies2022-10-01)
+* **Link**: [2023-01-01](recoveryservicesbackup/microsoft.recoveryservices/2023-01-01/types.md#resource-microsoftrecoveryservicesvaultsbackuppolicies2023-01-01)
 
 ### microsoft.recoveryservices/vaults/backuppolicies/operationresults
 * **Link**: [2016-06-01](recoveryservicesbackup/microsoft.recoveryservices/2016-06-01/types.md#resource-microsoftrecoveryservicesvaultsbackuppoliciesoperationresults2016-06-01)
@@ -12773,6 +12788,7 @@
 * **Link**: [2022-06-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-06-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackuppoliciesoperationresults2022-06-01-preview)
 * **Link**: [2022-09-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-09-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackuppoliciesoperationresults2022-09-01-preview)
 * **Link**: [2022-10-01](recoveryservicesbackup/microsoft.recoveryservices/2022-10-01/types.md#resource-microsoftrecoveryservicesvaultsbackuppoliciesoperationresults2022-10-01)
+* **Link**: [2023-01-01](recoveryservicesbackup/microsoft.recoveryservices/2023-01-01/types.md#resource-microsoftrecoveryservicesvaultsbackuppoliciesoperationresults2023-01-01)
 
 ### microsoft.recoveryservices/vaults/backupresourceguardproxies
 * **Link**: [2021-02-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2021-02-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupresourceguardproxies2021-02-01-preview)
@@ -12787,6 +12803,7 @@
 * **Link**: [2022-06-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-06-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupresourceguardproxies2022-06-01-preview)
 * **Link**: [2022-09-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-09-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupresourceguardproxies2022-09-01-preview)
 * **Link**: [2022-10-01](recoveryservicesbackup/microsoft.recoveryservices/2022-10-01/types.md#resource-microsoftrecoveryservicesvaultsbackupresourceguardproxies2022-10-01)
+* **Link**: [2023-01-01](recoveryservicesbackup/microsoft.recoveryservices/2023-01-01/types.md#resource-microsoftrecoveryservicesvaultsbackupresourceguardproxies2023-01-01)
 
 ### microsoft.recoveryservices/vaults/backupstorageconfig
 * **Link**: [2016-12-01](recoveryservicesbackup/microsoft.recoveryservices/2016-12-01/types.md#resource-microsoftrecoveryservicesvaultsbackupstorageconfig2016-12-01)
@@ -12804,6 +12821,7 @@
 * **Link**: [2022-06-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-06-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupstorageconfig2022-06-01-preview)
 * **Link**: [2022-09-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-09-01-preview/types.md#resource-microsoftrecoveryservicesvaultsbackupstorageconfig2022-09-01-preview)
 * **Link**: [2022-10-01](recoveryservicesbackup/microsoft.recoveryservices/2022-10-01/types.md#resource-microsoftrecoveryservicesvaultsbackupstorageconfig2022-10-01)
+* **Link**: [2023-01-01](recoveryservicesbackup/microsoft.recoveryservices/2023-01-01/types.md#resource-microsoftrecoveryservicesvaultsbackupstorageconfig2023-01-01)
 
 ### microsoft.recoveryservices/vaults/certificates
 * **Link**: [2016-06-01](recoveryservices/microsoft.recoveryservices/2016-06-01/types.md#resource-microsoftrecoveryservicesvaultscertificates2016-06-01)
@@ -12898,6 +12916,7 @@
 * **Link**: [2022-06-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-06-01-preview/types.md#resource-microsoftrecoveryservicesvaultsprivateendpointconnections2022-06-01-preview)
 * **Link**: [2022-09-01-preview](recoveryservicesbackup/microsoft.recoveryservices/2022-09-01-preview/types.md#resource-microsoftrecoveryservicesvaultsprivateendpointconnections2022-09-01-preview)
 * **Link**: [2022-10-01](recoveryservicesbackup/microsoft.recoveryservices/2022-10-01/types.md#resource-microsoftrecoveryservicesvaultsprivateendpointconnections2022-10-01)
+* **Link**: [2023-01-01](recoveryservicesbackup/microsoft.recoveryservices/2023-01-01/types.md#resource-microsoftrecoveryservicesvaultsprivateendpointconnections2023-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationalertsettings
 * **Link**: [2016-08-10](recoveryservicessiterecovery/microsoft.recoveryservices/2016-08-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationalertsettings2016-08-10)
@@ -13591,6 +13610,7 @@
 * **Link**: [2020-08-01](search/microsoft.search/2020-08-01/types.md#resource-microsoftsearchsearchservices2020-08-01)
 * **Link**: [2020-08-01-preview](search/microsoft.search/2020-08-01-preview/types.md#resource-microsoftsearchsearchservices2020-08-01-preview)
 * **Link**: [2021-04-01-preview](search/microsoft.search/2021-04-01-preview/types.md#resource-microsoftsearchsearchservices2021-04-01-preview)
+* **Link**: [2022-09-01](search/microsoft.search/2022-09-01/types.md#resource-microsoftsearchsearchservices2022-09-01)
 
 ### microsoft.search/searchservices/privateendpointconnections
 * **Link**: [2019-10-01-preview](search/microsoft.search/2019-10-01-preview/types.md#resource-microsoftsearchsearchservicesprivateendpointconnections2019-10-01-preview)
@@ -13598,11 +13618,13 @@
 * **Link**: [2020-08-01](search/microsoft.search/2020-08-01/types.md#resource-microsoftsearchsearchservicesprivateendpointconnections2020-08-01)
 * **Link**: [2020-08-01-preview](search/microsoft.search/2020-08-01-preview/types.md#resource-microsoftsearchsearchservicesprivateendpointconnections2020-08-01-preview)
 * **Link**: [2021-04-01-preview](search/microsoft.search/2021-04-01-preview/types.md#resource-microsoftsearchsearchservicesprivateendpointconnections2021-04-01-preview)
+* **Link**: [2022-09-01](search/microsoft.search/2022-09-01/types.md#resource-microsoftsearchsearchservicesprivateendpointconnections2022-09-01)
 
 ### microsoft.search/searchservices/sharedprivatelinkresources
 * **Link**: [2020-08-01](search/microsoft.search/2020-08-01/types.md#resource-microsoftsearchsearchservicessharedprivatelinkresources2020-08-01)
 * **Link**: [2020-08-01-preview](search/microsoft.search/2020-08-01-preview/types.md#resource-microsoftsearchsearchservicessharedprivatelinkresources2020-08-01-preview)
 * **Link**: [2021-04-01-preview](search/microsoft.search/2021-04-01-preview/types.md#resource-microsoftsearchsearchservicessharedprivatelinkresources2021-04-01-preview)
+* **Link**: [2022-09-01](search/microsoft.search/2022-09-01/types.md#resource-microsoftsearchsearchservicessharedprivatelinkresources2022-09-01)
 
 ## microsoft.security
 ### microsoft.security/adaptivenetworkhardenings
@@ -17179,12 +17201,14 @@
 ## microsoft.voiceservices
 ### microsoft.voiceservices/communicationsgateways
 * **Link**: [2022-12-01-preview](voiceservices/microsoft.voiceservices/2022-12-01-preview/types.md#resource-microsoftvoiceservicescommunicationsgateways2022-12-01-preview)
+* **Link**: [2023-01-31](voiceservices/microsoft.voiceservices/2023-01-31/types.md#resource-microsoftvoiceservicescommunicationsgateways2023-01-31)
 
 ### microsoft.voiceservices/communicationsgateways/contacts
 * **Link**: [2022-12-01-preview](voiceservices/microsoft.voiceservices/2022-12-01-preview/types.md#resource-microsoftvoiceservicescommunicationsgatewayscontacts2022-12-01-preview)
 
 ### microsoft.voiceservices/communicationsgateways/testlines
 * **Link**: [2022-12-01-preview](voiceservices/microsoft.voiceservices/2022-12-01-preview/types.md#resource-microsoftvoiceservicescommunicationsgatewaystestlines2022-12-01-preview)
+* **Link**: [2023-01-31](voiceservices/microsoft.voiceservices/2023-01-31/types.md#resource-microsoftvoiceservicescommunicationsgatewaystestlines2023-01-31)
 
 ## microsoft.web
 ### microsoft.web/certificates

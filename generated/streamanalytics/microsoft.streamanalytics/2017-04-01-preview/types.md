@@ -207,6 +207,11 @@
 * **serializationClassName**: string: The serialization class name.
 * **serializationDllPath**: string: The serialization library path.
 
+## DeltaSerializationProperties
+### Properties
+* **deltaTablePath**: string (Required): Specifies the path of the Delta Lake table that the output will be written to.
+* **partitionColumns**: string[]: Specifies the names of the columns for which the Delta Lake table will be partitioned. We are only supporting 1 partition column, but keeping it as an array for extensibility.
+
 ## DiagnosticCondition
 ### Properties
 * **code**: string (ReadOnly): The opaque diagnostic code.
@@ -519,6 +524,11 @@
 #### Properties
 * **properties**: [CustomClrSerializationProperties](#customclrserializationproperties): The properties that are associated with the CustomClr serialization type. Required on PUT (CreateOrReplace) requests.
 * **type**: 'CustomClr' (Required): Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
+
+### DeltaSerialization
+#### Properties
+* **properties**: [DeltaSerializationProperties](#deltaserializationproperties): The properties that are associated with the Delta Lake serialization type. Required on PUT (CreateOrReplace) requests.
+* **type**: 'Delta' (Required): Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
 
 ### JsonSerialization
 #### Properties
