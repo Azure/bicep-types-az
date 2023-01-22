@@ -15,20 +15,20 @@
 
 ## MonitoringAccountDefaultIngestionSettings
 ### Properties
-* **dataCollectionEndpointResourceId**: string (ReadOnly): The Azure resource Id of the default data collection endpoint for this monitoring account.
-* **dataCollectionRuleResourceId**: string (ReadOnly): The Azure resource Id of the default data collection rule for this monitoring account.
+* **dataCollectionEndpointResourceId**: string (ReadOnly): The Azure resource Id of the default data collection endpoint for this workspace.
+* **dataCollectionRuleResourceId**: string (ReadOnly): The Azure resource Id of the default data collection rule for this workspace.
 
 ## MonitoringAccountMetrics
 ### Properties
 * **internalId**: string (ReadOnly): An internal identifier for the metrics container. Only to be used by the system
-* **prometheusQueryEndpoint**: string (ReadOnly): The Prometheus query endpoint for the monitoring account
+* **prometheusQueryEndpoint**: string (ReadOnly): The Prometheus query endpoint for the workspace
 
 ## MonitoringAccountResourceProperties
 ### Properties
-* **accountId**: string (ReadOnly): The immutable ID of the monitoring account. This property is read-only.
+* **accountId**: string (ReadOnly): The immutable ID of the Azure Monitor workspace. This property is read-only.
 * **defaultIngestionSettings**: [MonitoringAccountDefaultIngestionSettings](#monitoringaccountdefaultingestionsettings) (ReadOnly): The Data Collection Rule and Endpoint used for ingestion by default.
-* **metrics**: [MonitoringAccountMetrics](#monitoringaccountmetrics) (ReadOnly): Information about metrics for the monitoring account
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the monitoring account. Set to Succeeded if everything is healthy.
+* **metrics**: [MonitoringAccountMetrics](#monitoringaccountmetrics) (ReadOnly): Information about metrics for the Azure Monitor workspace
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the Azure Monitor workspace. Set to Succeeded if everything is healthy.
 
 ## SystemData
 ### Properties

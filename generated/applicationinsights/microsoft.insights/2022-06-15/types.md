@@ -54,7 +54,7 @@
 ### Properties
 * **ContentValidation**: [WebTestPropertiesValidationRulesContentValidation](#webtestpropertiesvalidationrulescontentvalidation): The collection of content validation properties
 * **ExpectedHttpStatusCode**: int: Validate that the WebTest returns the http status code provided.
-* **IgnoreHttpsStatusCode**: bool: When set, validation will ignore the status code.
+* **IgnoreHttpStatusCode**: bool: When set, validation will ignore the status code.
 * **SSLCertRemainingLifetimeCheck**: int: A number of days to check still remain before the the existing SSL cert expires.  Value must be positive and the SSLCheck must be set to true.
 * **SSLCheck**: bool: Checks to see if the SSL cert is still valid.
 
