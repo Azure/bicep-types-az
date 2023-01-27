@@ -21,9 +21,10 @@ See [/generated/index.md](./generated/index.md) for a searchable list of all the
     ```
 1. Build the `bicep-types` dependency:
     ```sh
-    cd bicep-types/src/bicep-types
+    pushd bicep-types/src/bicep-types
     npm ci
     npm run build
+    popd
     ```
 1. Ensure you have a copy of the [azure-rest-api-specs](https://github.com/Azure/azure-rest-api-specs) repo checked out locally.
 1. Build the autorest extension code:
