@@ -14,6 +14,18 @@ See [/generated/index.md](./generated/index.md) for a searchable list of all the
 
 ## Running generation locally
 ### Initial setup
+1. Clone this repo
+1. Check out submodules:
+    ```sh
+    git submodule update --init --recursive
+    ```
+1. Build the `bicep-types` dependency:
+    ```sh
+    pushd bicep-types/src/bicep-types
+    npm ci
+    npm run build
+    popd
+    ```
 1. Ensure you have a copy of the [azure-rest-api-specs](https://github.com/Azure/azure-rest-api-specs) repo checked out locally.
 1. Build the autorest extension code:
     ```sh
