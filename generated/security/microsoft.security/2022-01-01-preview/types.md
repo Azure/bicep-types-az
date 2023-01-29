@@ -10,7 +10,7 @@
 * **type**: 'Microsoft.Security/assessments/governanceAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/governanceRules@2022-01-01-preview
-* **Valid Scope(s)**: ManagementGroup, Subscription, Extension
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -68,7 +68,7 @@
 * **metadata**: [GovernanceRuleMetadata](#governancerulemetadata): The governance rule metadata
 * **ownerSource**: [GovernanceRuleOwnerSource](#governanceruleownersource) (Required): The owner source for the governance rule - e.g. Manually by user@contoso.com - see example
 * **remediationTimeframe**: string: Governance rule remediation timeframe - this is the time that will affect on the grace-period duration e.g. 7.00:00:00 - means 7 days
-* **rulePriority**: int (Required): The governance rule priority, priority to the lower number. Rules with the same priority on the same subscription will not be allowed
+* **rulePriority**: int (Required): The governance rule priority, priority to the lower number. Rules with the same priority on the same scope will not be allowed
 * **ruleType**: 'Integrated' | 'ServiceNow' | string (Required): The rule type of the governance rule, defines the source of the rule e.g. Integrated
 * **sourceResourceType**: 'Assessments' | string (Required): The governance rule source, what the rule affects, e.g. Assessments
 * **tenantId**: string (ReadOnly): The tenantId (GUID)
