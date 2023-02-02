@@ -32,8 +32,13 @@ body:
         - Type is unavailable
         - Missing property(s)
         - Inaccurate property type(s)
-        - Property(s) inaccurately marked readonly/writeonly
+        - Property(s) inaccurately marked read-only/write-only
+        - Property(s) should be marked as read-only/write-only
+        - Property(s) missing validation for enum values
         - Inaccurate/confusing description(s)
+        - Resource fails to deploy
+        - Confusing error message on deployment
+        - Property(s) do not have expected effect on deployment
         - Other
     validations:
       required: true
