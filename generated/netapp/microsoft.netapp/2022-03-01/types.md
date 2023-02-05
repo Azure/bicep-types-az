@@ -176,7 +176,7 @@
 * **smbServerName**: string: NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
 * **status**: 'Created' | 'Deleted' | 'Error' | 'InUse' | 'Updating' | string (ReadOnly): Status of the Active Directory
 * **statusDetails**: string (ReadOnly): Any details in regards to the Status of the Active Directory
-* **username**: string: Username of Active Directory domain administrator
+* **username**: string: A domain user account with permission to create machine accounts
 
 ## BackupPolicyProperties
 ### Properties
@@ -399,7 +399,7 @@
 ## VolumeProperties
 ### Properties
 * **avsDataStore**: 'Disabled' | 'Enabled' | string: Specifies whether the volume is enabled for Azure VMware Solution (AVS) datastore purpose
-* **backupId**: string (WriteOnly): UUID v4 or resource identifier used to identify the Backup.
+* **backupId**: string: UUID v4 or resource identifier used to identify the Backup.
 * **baremetalTenantId**: string (ReadOnly): Unique Baremetal Tenant Identifier.
 * **capacityPoolResourceId**: string: Pool Resource Id used in case of creating a volume through volume group
 * **cloneProgress**: int (ReadOnly): When a volume is being restored from another volume's snapshot, will show the percentage completion of this cloning process. When this value is empty/null there is no cloning process currently happening on this volume. This value will update every 5 minutes during cloning.
@@ -432,13 +432,13 @@
 * **smbContinuouslyAvailable**: bool: Enables continuously available share property for smb volume. Only applicable for SMB volume
 * **smbEncryption**: bool: Enables encryption for in-flight smb3 data. Only applicable for SMB/DualProtocol volume. To be used with swagger version 2020-08-01 or later
 * **snapshotDirectoryVisible**: bool: If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).
-* **snapshotId**: string (WriteOnly): UUID v4 or resource identifier used to identify the Snapshot.
+* **snapshotId**: string: UUID v4 or resource identifier used to identify the Snapshot.
 * **storageToNetworkProximity**: 'Default' | 'T1' | 'T2' | string (ReadOnly): Provides storage to network proximity information for the volume.
 * **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
 * **t2Network**: string (ReadOnly): T2 network information
 * **throughputMibps**: int: Maximum throughput in MiB/s that can be achieved by this volume and this will be accepted as input only for manual qosType volume
 * **unixPermissions**: string: UNIX permissions for NFS volume accepted in octal 4 digit format. First digit selects the set user ID(4), set group ID (2) and sticky (1) attributes. Second digit selects permission for the owner of the file: read (4), write (2) and execute (1). Third selects permissions for other users in the same group. the fourth for other users not in the group. 0755 - gives read/write/execute permissions to owner and read/execute to group and other users.
-* **usageThreshold**: int (Required): Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 500 GiB, 500 GiB for large volumes. Upper limit is 100TiB. Specified in bytes.
+* **usageThreshold**: int (Required): Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB, 500Tib for LargeVolume. Specified in bytes.
 * **volumeGroupName**: string (ReadOnly): Volume Group Name
 * **volumeSpecName**: string: Volume spec name is the application specific designation or identifier for the particular volume in a volume group for e.g. data, log
 * **volumeType**: string: What type of volume is this. For destination volumes in Cross Region Replication, set type to DataProtection

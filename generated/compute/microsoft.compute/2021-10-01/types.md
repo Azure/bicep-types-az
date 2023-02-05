@@ -103,7 +103,7 @@
 * **replicaCount**: int: The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
 * **replicationMode**: 'Full' | 'Shallow' | string: Optional parameter which specifies the mode to be used for replication. This property is not updatable.
 * **source**: [UserArtifactSource](#userartifactsource) (Required): The source image from which the Image Version is going to be created.
-* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: Specifies the storage account type to be used to store the image. This property is not updatable.
+* **storageAccountType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: Specifies the storage account type to be used to store the image. This property is not updatable.
 * **targetExtendedLocations**: [GalleryTargetExtendedLocation](#gallerytargetextendedlocation)[]: The target extended locations where the Image Version is going to be replicated to. This property is updatable.
 * **targetRegions**: [TargetRegion](#targetregion)[]: The target regions where the Image Version is going to be replicated to. This property is updatable.
 
@@ -171,7 +171,7 @@
 * **publishedDate**: string (ReadOnly): The timestamp for when the gallery image version is published.
 * **replicaCount**: int: The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
 * **replicationMode**: 'Full' | 'Shallow' | string: Optional parameter which specifies the mode to be used for replication. This property is not updatable.
-* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: Specifies the storage account type to be used to store the image. This property is not updatable.
+* **storageAccountType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: Specifies the storage account type to be used to store the image. This property is not updatable.
 * **targetExtendedLocations**: [GalleryTargetExtendedLocation](#gallerytargetextendedlocation)[]: The target extended locations where the Image Version is going to be replicated to. This property is updatable.
 * **targetRegions**: [TargetRegion](#targetregion)[]: The target regions where the Image Version is going to be replicated to. This property is updatable.
 
@@ -202,7 +202,7 @@
 * **extendedLocation**: [GalleryExtendedLocation](#galleryextendedlocation): The name of the extended location.
 * **extendedLocationReplicaCount**: int: The number of replicas of the Image Version to be created per extended location. This property is updatable.
 * **name**: string: The name of the region.
-* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: Specifies the storage account type to be used to store the image. This property is not updatable.
+* **storageAccountType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: Specifies the storage account type to be used to store the image. This property is not updatable.
 
 ## ImagePurchasePlan
 ### Properties
@@ -298,7 +298,7 @@
 * **encryption**: [EncryptionImages](#encryptionimages): Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.
 * **name**: string (Required): The name of the region.
 * **regionalReplicaCount**: int: The number of replicas of the Image Version to be created per region. This property is updatable.
-* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: Specifies the storage account type to be used to store the image. This property is not updatable.
+* **storageAccountType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: Specifies the storage account type to be used to store the image. This property is not updatable.
 
 ## UserArtifactManage
 ### Properties

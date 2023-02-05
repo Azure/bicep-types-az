@@ -608,7 +608,7 @@
 ### Properties
 * **autoPause**: [AutoPauseProperties](#autopauseproperties): Auto-pausing properties
 * **autoScale**: [AutoScaleProperties](#autoscaleproperties): Auto-scaling properties
-* **cacheSize**: int: The cache size
+* **cacheSize**: int (ReadOnly): The cache size
 * **creationDate**: string (ReadOnly): The time when the Big Data pool was created.
 * **customLibraries**: [LibraryInfo](#libraryinfo)[]: List of custom libraries/packages associated with the spark pool.
 * **defaultSparkLogFolder**: string: The default folder where Spark logs will be written.
@@ -729,8 +729,8 @@
 ## DynamicExecutorAllocation
 ### Properties
 * **enabled**: bool: Indicates whether Dynamic Executor Allocation is enabled or not.
-* **maxExecutors**: int (WriteOnly): The maximum number of executors alloted
-* **minExecutors**: int (WriteOnly): The minimum number of executors alloted
+* **maxExecutors**: int: The maximum number of executors alloted
+* **minExecutors**: int: The minimum number of executors alloted
 
 ## EncryptionDetails
 ### Properties
@@ -1108,7 +1108,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **path**: string: Storage blob path of library.
 * **provisioningStatus**: string (ReadOnly): Provisioning status of the library/package.
 * **type**: string: Type of the library.
-* **uploadedTimestamp**: string: The last update time of the library.
+* **uploadedTimestamp**: string (ReadOnly): The last update time of the library.
 
 ## LibraryRequirements
 ### Properties
@@ -1717,7 +1717,7 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
 * **cspWorkspaceAdminProperties**: [CspWorkspaceAdminProperties](#cspworkspaceadminproperties): Initial workspace AAD admin properties for a CSP subscription
 * **defaultDataLakeStorage**: [DataLakeStorageAccountDetails](#datalakestorageaccountdetails): Workspace default data lake storage account details
 * **encryption**: [EncryptionDetails](#encryptiondetails): The encryption details of the workspace
-* **extraProperties**: [WorkspacePropertiesExtraProperties](#workspacepropertiesextraproperties) (ReadOnly): Workspace level configs and feature flags
+* **extraProperties**: any (ReadOnly): Workspace level configs and feature flags
 * **managedResourceGroupName**: string: Workspace managed resource group. The resource group name uniquely identifies the resource group within the user subscriptionId. The resource group name must be no longer than 90 characters long, and must be alphanumeric characters (Char.IsLetterOrDigit()) and '-', '_', '(', ')' and'.'. Note that the name cannot end with '.'
 * **managedVirtualNetwork**: string: Setting this to 'default' will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.
 * **managedVirtualNetworkSettings**: [ManagedVirtualNetworkSettings](#managedvirtualnetworksettings): Managed Virtual Network Settings
@@ -1737,11 +1737,6 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## WorkspacePropertiesExtraProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## WorkspacePropertiesSettings
 ### Properties

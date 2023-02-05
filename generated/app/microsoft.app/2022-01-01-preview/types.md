@@ -312,7 +312,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 ## CustomDomain
 ### Properties
 * **bindingType**: 'Disabled' | 'SniEnabled' | string: Custom Domain binding type.
-* **certificateId**: string (Required): Resource Id of the Certificate to be bound to this hostname. Must exist in the Managed Environment.
+* **certificateId**: string: Resource Id of the Certificate to be bound to this hostname.
 * **name**: string (Required): Hostname.
 
 ## CustomHostnameAnalysisResult
