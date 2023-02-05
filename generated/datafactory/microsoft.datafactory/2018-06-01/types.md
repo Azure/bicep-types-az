@@ -573,8 +573,10 @@
 ### Properties
 * **accountKey**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of accountKey in connection string.
 * **accountKind**: string: Specify the kind of your storage account. Allowed values are: Storage (general purpose v1), StorageV2 (general purpose v2), BlobStorage, or BlockBlobStorage. Type: string (or Expression with resultType string).
+* **authenticationType**: 'AccountKey' | 'Anonymous' | 'Msi' | 'SasUri' | 'ServicePrincipal' | string: The type used for authentication. Type: string.
 * **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
 * **connectionString**: any: The connection string. It is mutually exclusive with sasUri, serviceEndpoint property. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **containerUri**: any: Container uri of the Azure Blob Storage resource only support for anonymous access. Type: string (or Expression with resultType string).
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **sasToken**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of sasToken in sas uri.
@@ -1054,6 +1056,13 @@
 * **stagingSettings**: [StagingSettings](#stagingsettings): Specifies interim staging settings when EnableStaging is true.
 * **translator**: any: Copy activity translator. If not specified, tabular translator is used.
 * **validateDataConsistency**: any: Whether to enable Data Consistency validation. Type: boolean (or Expression with resultType boolean).
+
+## CopyComputeScaleProperties
+### Properties
+* **dataIntegrationUnit**: int: DIU number setting reserved for copy activity execution. Supported values are multiples of 4 in range 4-256.
+* **timeToLive**: int: Time to live (in minutes) setting of integration runtime which will execute copy activity.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## CopySink
 * **Discriminator**: type
@@ -3691,11 +3700,13 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## IntegrationRuntimeComputeProperties
 ### Properties
+* **copyComputeScaleProperties**: [CopyComputeScaleProperties](#copycomputescaleproperties): CopyComputeScale properties for managed integration runtime.
 * **dataFlowProperties**: [IntegrationRuntimeDataFlowProperties](#integrationruntimedataflowproperties): Data flow properties for managed integration runtime.
 * **location**: string: The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities
 * **maxParallelExecutionsPerNode**: int: Maximum parallel executions count per node for managed integration runtime.
 * **nodeSize**: string: The node size requirement to managed integration runtime.
 * **numberOfNodes**: int: The required number of nodes for managed integration runtime.
+* **pipelineExternalComputeScaleProperties**: [PipelineExternalComputeScaleProperties](#pipelineexternalcomputescaleproperties): PipelineExternalComputeScale properties for managed integration runtime.
 * **vNetProperties**: [IntegrationRuntimeVNetProperties](#integrationruntimevnetproperties): VNet properties for managed integration runtime.
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -4802,6 +4813,12 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## PipelineElapsedTimeMetricPolicy
 ### Properties
 * **duration**: any: TimeSpan value, after which an Azure Monitoring Metric is fired.
+
+## PipelineExternalComputeScaleProperties
+### Properties
+* **timeToLive**: int: Time to live (in minutes) setting of integration runtime which will execute pipeline and external activity.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## PipelineFolder
 ### Properties

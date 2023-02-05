@@ -132,7 +132,7 @@
 * **smbServerName**: string: NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
 * **status**: 'Created' | 'Deleted' | 'Error' | 'InUse' | 'Updating' | string (ReadOnly): Status of the Active Directory
 * **statusDetails**: string (ReadOnly): Any details in regards to the Status of the Active Directory
-* **username**: string: Username of Active Directory domain administrator
+* **username**: string: A domain user account with permission to create machine accounts
 
 ## BackupPolicyProperties
 ### Properties

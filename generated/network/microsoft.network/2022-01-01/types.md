@@ -3498,7 +3498,7 @@
 ## NetworkWatcherPropertiesFormat
 ### Properties
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the network watcher resource.
-* **runningOperationIds**: int[]: List of running operation IDs.
+* **runningOperationIds**: string[]: List of running operation GUIDs.
 
 ## O365BreakOutCategoryPolicies
 ### Properties
