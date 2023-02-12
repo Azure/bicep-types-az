@@ -408,7 +408,7 @@
 
 ## ConnectToTargetSqlMISyncTaskInput
 ### Properties
-* **azureApp**: [AzureActiveDirectoryApp](#azureactivedirectoryapp) (Required): Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
+* **azureApp**: [AzureActiveDirectoryApp](#azureactivedirectoryapp) (Required): Azure Active Directory Application the DMS (classic) instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
 * **targetConnectionInfo**: [MiSqlConnectionInfo](#misqlconnectioninfo) (Required): Connection information for Azure SQL Database Managed Instance
 
 ## ConnectToTargetSqlMISyncTaskOutput
@@ -1309,7 +1309,7 @@
 
 ## MigrateSqlServerSqlMISyncTaskInput
 ### Properties
-* **azureApp**: [AzureActiveDirectoryApp](#azureactivedirectoryapp) (Required): Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
+* **azureApp**: [AzureActiveDirectoryApp](#azureactivedirectoryapp) (Required): Azure Active Directory Application the DMS (classic) instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
 * **backupFileShare**: [FileShare](#fileshare): Backup file share information for all selected databases.
 * **numberOfParallelDatabaseMigrations**: int: Number of database migrations to start in parallel
 * **selectedDatabases**: [MigrateSqlServerSqlMIDatabaseInput](#migratesqlserversqlmidatabaseinput)[] (Required): Databases to migrate
@@ -2253,7 +2253,7 @@
 ### Properties
 * **environmentOverwriteOption**: 'Ignore' | 'Overwrite' | string: The overwrite option for the SSIS environment migration
 * **projectOverwriteOption**: 'Ignore' | 'Overwrite' | string: The overwrite option for the SSIS project migration
-* **ssisStoreType**: 'SsisCatalog' | string: The SSIS store type of source, only SSIS catalog is supported now in DMS
+* **ssisStoreType**: 'SsisCatalog' | string: The SSIS store type of source, only SSIS catalog is supported now in DMS (classic)
 
 ## SyncMigrationDatabaseErrorEvent
 ### Properties
@@ -2296,7 +2296,7 @@
 
 ## ValidateMigrationInputSqlServerSqlMISyncTaskInput
 ### Properties
-* **azureApp**: [AzureActiveDirectoryApp](#azureactivedirectoryapp) (Required): Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
+* **azureApp**: [AzureActiveDirectoryApp](#azureactivedirectoryapp) (Required): Azure Active Directory Application the DMS (classic) instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
 * **backupFileShare**: [FileShare](#fileshare): Backup file share information for all selected databases.
 * **selectedDatabases**: [MigrateSqlServerSqlMIDatabaseInput](#migratesqlserversqlmidatabaseinput)[] (Required): Databases to migrate
 * **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Connection information for source SQL Server

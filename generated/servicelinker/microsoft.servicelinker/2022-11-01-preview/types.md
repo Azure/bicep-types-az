@@ -121,6 +121,7 @@
 * **action**: 'Internal' | 'enable' | 'optOut' | string: Optional, indicate whether to apply configurations on source application. If enable, generate configurations and applied to the source application. Default is enable. If optOut, no configuration change will be made on source.
 * **additionalConfigurations**: [ConfigurationInfoAdditionalConfigurations](#configurationinfoadditionalconfigurations): A dictionary of additional configurations to be added. Service will auto generate a set of basic configurations and this property is to full fill more customized configurations
 * **customizedKeys**: [ConfigurationInfoCustomizedKeys](#configurationinfocustomizedkeys): Optional. A dictionary of default key name and customized key name mapping. If not specified, default key name will be used for generate configurations
+* **daprProperties**: [DaprProperties](#daprproperties): Indicates some additional properties for dapr client type
 * **deleteOrUpdateBehavior**: 'Default' | 'ForcedCleanup' | string: Indicates whether to clean up previous operation when Linker is updating or deleting
 
 ## ConfigurationInfoAdditionalConfigurations
@@ -136,6 +137,20 @@
 ## ConfigurationResult
 ### Properties
 * **configurations**: [SourceConfiguration](#sourceconfiguration)[]: The configuration properties for source resource.
+
+## DaprMetadata
+### Properties
+* **name**: string: Metadata property name.
+* **secretRef**: string: The secret name where dapr could get value
+* **value**: string: Metadata property value.
+
+## DaprProperties
+### Properties
+* **componentType**: string: The dapr component type
+* **metadata**: [DaprMetadata](#daprmetadata)[]: Additional dapr metadata
+* **scopes**: string[]: The dapr component scopes
+* **secretStoreComponent**: string: The name of a secret store dapr to retrieve secret
+* **version**: string: The dapr component version
 
 ## DryrunOperationPreview
 ### Properties
@@ -154,7 +169,7 @@
 #### Properties
 * **actionName**: 'createOrUpdate' (Required): The name of action for you dryrun job.
 * **authInfo**: [AuthInfoBase](#authinfobase): The authentication type.
-* **clientType**: 'django' | 'dotnet' | 'go' | 'java' | 'kafka-springBoot' | 'nodejs' | 'none' | 'php' | 'python' | 'ruby' | 'springBoot' | string: The application client type
+* **clientType**: 'dapr' | 'django' | 'dotnet' | 'go' | 'java' | 'kafka-springBoot' | 'nodejs' | 'none' | 'php' | 'python' | 'ruby' | 'springBoot' | string: The application client type
 * **configurationInfo**: [ConfigurationInfo](#configurationinfo): The connection information consumed by applications, including secrets, connection strings.
 * **provisioningState**: string (ReadOnly): The provisioning state.
 * **publicNetworkSolution**: [PublicNetworkSolution](#publicnetworksolution): The network solution.
@@ -199,7 +214,7 @@
 ## LinkerProperties
 ### Properties
 * **authInfo**: [AuthInfoBase](#authinfobase): The authentication type.
-* **clientType**: 'django' | 'dotnet' | 'go' | 'java' | 'kafka-springBoot' | 'nodejs' | 'none' | 'php' | 'python' | 'ruby' | 'springBoot' | string: The application client type
+* **clientType**: 'dapr' | 'django' | 'dotnet' | 'go' | 'java' | 'kafka-springBoot' | 'nodejs' | 'none' | 'php' | 'python' | 'ruby' | 'springBoot' | string: The application client type
 * **configurationInfo**: [ConfigurationInfo](#configurationinfo): The connection information consumed by applications, including secrets, connection strings.
 * **provisioningState**: string (ReadOnly): The provisioning state.
 * **publicNetworkSolution**: [PublicNetworkSolution](#publicnetworksolution): The network solution.

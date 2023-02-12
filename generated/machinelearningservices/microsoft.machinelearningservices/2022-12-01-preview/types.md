@@ -101,6 +101,7 @@
 * **apiVersion**: '2022-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): The identity of the resource.
+* **kind**: string
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkspaceProperties](#workspaceproperties): The properties of the machine learning workspace.
@@ -1002,6 +1003,10 @@ Input expected is dictionary of key,value pairs in JSON format.
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ComputeRuntimeDto
+### Properties
+* **sparkRuntimeVersion**: string
+
 ## ComputeSchedules
 ### Properties
 * **computeStartStop**: [ComputeStartStopSchedule](#computestartstopschedule)[]: The list of compute start stop schedules to be applied.
@@ -1454,6 +1459,13 @@ TimeZone should follow Windows time zone format. Refer: https://docs.microsoft.c
 ## ErrorResponse
 ### Properties
 * **error**: [ErrorDetail](#errordetail): The error object.
+
+## FeatureStoreSettings
+### Properties
+* **allowRoleAssignmentsOnResourceGroupLevel**: bool
+* **computeRuntime**: [ComputeRuntimeDto](#computeruntimedto)
+* **offlineStoreConnectionName**: string
+* **onlineStoreConnectionName**: string
 
 ## FlavorData
 ### Properties
@@ -3280,7 +3292,7 @@ The expression should follow NCronTab format.
 * **Discriminator**: authType
 
 ### Base Properties
-* **category**: 'AzureSqlDb' | 'AzureSynapseAnalytics' | 'ContainerRegistry' | 'FeatureStore' | 'Git' | 'PythonFeed' | 'S3' | 'Snowflake' | string: Category of the connection
+* **category**: 'AzureDataLakeGen2' | 'AzureMySqlDb' | 'AzurePostgresDb' | 'AzureSqlDb' | 'AzureSynapseAnalytics' | 'ContainerRegistry' | 'FeatureStore' | 'Git' | 'PythonFeed' | 'Redis' | 'S3' | 'Snowflake' | string: Category of the connection
 * **target**: string
 * **value**: string: Value details of the workspace connection.
 * **valueFormat**: 'JSON' | string: format for the workspace connection value
@@ -3343,6 +3355,7 @@ The expression should follow NCronTab format.
 * **description**: string: The description of this workspace.
 * **discoveryUrl**: string: Url for the discovery service to identify regional endpoints for machine learning experimentation services
 * **encryption**: [EncryptionProperty](#encryptionproperty): The encryption settings of Azure ML workspace.
+* **featureStoreSettings**: [FeatureStoreSettings](#featurestoresettings): Settings for feature store type workspace.
 * **friendlyName**: string: The friendly name for this workspace. This name in mutable
 * **hbiWorkspace**: bool: The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
 * **imageBuildCompute**: string: The compute name for image build
