@@ -176,7 +176,9 @@ Until this is true, the TotalBytesToProcess may not be valid.
 
 ## DataBoxDiskCopyProgress
 ### Properties
+* **actions**: 'MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume'[] (ReadOnly): Available actions on the job.
 * **bytesCopied**: int (ReadOnly): Bytes copied during the copy of disk.
+* **error**: [CloudError](#clouderror) (ReadOnly): Error, if any, in the stage
 * **percentComplete**: int (ReadOnly): Indicates the percentage completed for the copy of the disk.
 * **serialNumber**: string (ReadOnly): The serial number of the disk
 * **status**: 'Completed' | 'CompletedWithErrors' | 'DeviceFormatted' | 'DeviceMetadataModified' | 'DriveCorrupted' | 'DriveNotDetected' | 'DriveNotReceived' | 'Failed' | 'HardwareError' | 'InProgress' | 'MetadataFilesModifiedOrRemoved' | 'NotReturned' | 'NotStarted' | 'OtherServiceError' | 'OtherUserError' | 'StorageAccountNotAccessible' | 'UnsupportedData' | 'UnsupportedDrive' | string (ReadOnly): The Status of the copy
@@ -192,10 +194,12 @@ Until this is true, the TotalBytesToProcess may not be valid.
 ## DataBoxDiskGranularCopyProgress
 ### Properties
 * **accountId**: string (ReadOnly): Id of the account where the data needs to be uploaded.
+* **actions**: 'MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume'[] (ReadOnly): Available actions on the job.
 * **bytesProcessed**: int (ReadOnly): To indicate bytes transferred.
 * **copyStatus**: 'Completed' | 'CompletedWithErrors' | 'DeviceFormatted' | 'DeviceMetadataModified' | 'DriveCorrupted' | 'DriveNotDetected' | 'DriveNotReceived' | 'Failed' | 'HardwareError' | 'InProgress' | 'MetadataFilesModifiedOrRemoved' | 'NotReturned' | 'NotStarted' | 'OtherServiceError' | 'OtherUserError' | 'StorageAccountNotAccessible' | 'UnsupportedData' | 'UnsupportedDrive' | string (ReadOnly): The Status of the copy
 * **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (ReadOnly): Data Account Type.
 * **directoriesErroredOut**: int (ReadOnly): To indicate directories errored out in the job.
+* **error**: [CloudError](#clouderror) (ReadOnly): Error, if any, in the stage
 * **filesErroredOut**: int (ReadOnly): Number of files which could not be copied
 * **filesProcessed**: int (ReadOnly): Number of files processed
 * **invalidDirectoriesProcessed**: int (ReadOnly): To indicate directories renamed

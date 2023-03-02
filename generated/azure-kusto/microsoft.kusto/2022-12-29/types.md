@@ -335,7 +335,7 @@
 
 ## LanguageExtension
 ### Properties
-* **languageExtensionImageName**: 'Python3_10_8' | 'Python3_6_5' | 'Python3_9_12' | 'Python3_9_12IncludeDeepLearning' | 'R' | string: The language extension image name.
+* **languageExtensionImageName**: 'Python3_10_8' | 'Python3_6_5' | 'R' | string: The language extension image name.
 * **languageExtensionName**: 'PYTHON' | 'R' | string: The language extension name.
 
 ## LanguageExtensionsList

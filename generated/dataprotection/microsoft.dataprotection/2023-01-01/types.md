@@ -66,6 +66,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DataProtection/backupVaults/backupResourceGuardProxies@2023-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2023-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ResourceGuardProxyBase](#resourceguardproxybase): ResourceGuardProxyBaseResource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.DataProtection/backupVaults/backupResourceGuardProxies' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DataProtection/backupVaults/deletedBackupInstances@2023-01-01 (ReadOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -507,6 +517,18 @@ and should be part of AbsoluteMarker enum
 ### Properties
 * **requestResourceType**: string (ReadOnly): Type of resource request.
 * **vaultCriticalOperation**: string (ReadOnly): Name of the critical operation.
+
+## ResourceGuardOperationDetail
+### Properties
+* **defaultResourceRequest**: string
+* **vaultCriticalOperation**: string
+
+## ResourceGuardProxyBase
+### Properties
+* **description**: string
+* **lastUpdatedTime**: string
+* **resourceGuardOperationDetails**: [ResourceGuardOperationDetail](#resourceguardoperationdetail)[]
+* **resourceGuardResourceId**: string
 
 ## ResourceMoveDetails
 ### Properties

@@ -41,7 +41,7 @@
 * **isIncident**: bool (ReadOnly): This field determines whether the alert is an incident (a compound grouping of several alerts) or a single alert.
 * **processingEndTimeUtc**: string (ReadOnly): The UTC processing end time of the alert in ISO8601 format.
 * **productComponentName**: string (ReadOnly): The name of Azure Security Center pricing tier which powering this alert. Learn more: https://docs.microsoft.com/en-us/azure/security-center/security-center-pricing
-* **productName**: string (ReadOnly): The name of the product which published this alert (Azure Security Center, Azure ATP, Microsoft Defender ATP, O365 ATP, MCAS, and so on).
+* **productName**: string (ReadOnly): The name of the product which published this alert (Microsoft Sentinel, Microsoft Defender for Identity, Microsoft Defender for Endpoint, Microsoft Defender for Office, Microsoft Defender for Cloud Apps, and so on).
 * **remediationSteps**: string[] (ReadOnly): Manual action items to take to remediate the alert.
 * **resourceIdentifiers**: [ResourceIdentifier](#resourceidentifier)[] (ReadOnly): The resource identifiers that can be used to direct the alert to the right product exposure group (tenant, workspace, subscription etc.). There can be multiple identifiers of different type per alert.
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (ReadOnly): The risk level of the threat that was detected. Learn more: https://docs.microsoft.com/en-us/azure/security-center/security-center-alerts-overview#how-are-alerts-classified.
