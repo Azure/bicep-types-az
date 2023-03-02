@@ -1792,8 +1792,8 @@
 ## ApplicationGatewaySku
 ### Properties
 * **capacity**: int: Capacity (instance count) of an application gateway.
-* **name**: 'Standard_Basic' | 'Standard_Large' | 'Standard_Medium' | 'Standard_Small' | 'Standard_v2' | 'WAF_Large' | 'WAF_Medium' | 'WAF_v2' | string: Name of an application gateway SKU.
-* **tier**: 'Standard' | 'Standard_Basic' | 'Standard_v2' | 'WAF' | 'WAF_v2' | string: Tier of an application gateway.
+* **name**: 'Standard_Large' | 'Standard_Medium' | 'Standard_Small' | 'Standard_v2' | 'WAF_Large' | 'WAF_Medium' | 'WAF_v2' | string: Name of an application gateway SKU.
+* **tier**: 'Standard' | 'Standard_v2' | 'WAF' | 'WAF_v2' | string: Tier of an application gateway.
 
 ## ApplicationGatewaySslCertificate
 ### Properties

@@ -79,7 +79,7 @@
 
 ## ApiProperties
 ### Properties
-* **apiFreshnessWindowInMinutes**: int: Interval in minutes for which the weather data for the api needs to be refreshed.
+* **apiFreshnessTimeInMinutes**: int: Interval in minutes for which the weather data for the api needs to be refreshed.
 
 ## DetailedInformation
 ### Properties

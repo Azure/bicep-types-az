@@ -45,10 +45,10 @@
 
 ## AgReplica
 ### Properties
-* **commit**: 'ASYNCHRONOUS_COMMIT' | 'SYNCHRONOUS_COMMIT' | string: Replica commit mode in availability group.
-* **failover**: 'AUTOMATIC' | 'MANUAL' | string: Replica failover mode in availability group.
-* **readableSecondary**: 'ALL' | 'NO' | 'READ_ONLY' | string: Replica readable secondary mode in availability group.
-* **role**: 'PRIMARY' | 'SECONDARY' | string: Replica Role in availability group.
+* **commit**: 'Asynchronous_Commit' | 'Synchronous_Commit' | string: Replica commit mode in availability group.
+* **failover**: 'Automatic' | 'Manual' | string: Replica failover mode in availability group.
+* **readableSecondary**: 'All' | 'No' | 'Read_Only' | string: Replica readable secondary mode in availability group.
+* **role**: 'Primary' | 'Secondary' | string: Replica Role in availability group.
 * **sqlVirtualMachineInstanceId**: string: Sql VirtualMachine Instance Id.
 
 ## AssessmentSettings

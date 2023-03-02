@@ -258,16 +258,6 @@
 * **ApiVersion**: 2022-12-01
 * **Output**: [DeploymentList](#deploymentlist)
 
-## AddonProfile
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## AddonProfile
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
 ## ApiPortalCustomDomainProperties
 ### Properties
 * **thumbprint**: string: The thumbprint of bound certificate.
@@ -317,7 +307,7 @@
 ## AppResourcePropertiesAddonConfigs
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [AddonProfile](#addonprofile)
+* **Additional Properties Type**: any
 
 ## AppVNetAddons
 ### Properties
@@ -338,7 +328,7 @@
 ## BindingResourcePropertiesBindingParameters
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: any
+* **Additional Properties Type**: string
 
 ## BuilderProperties
 ### Properties
@@ -608,7 +598,7 @@ The default value is 2Gi, this should not exceed build service agent pool memory
 ## DeploymentSettingsAddonConfigs
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [AddonProfile](#addonprofile)
+* **Additional Properties Type**: any
 
 ## DeploymentSettingsEnvironmentVariables
 ### Properties
