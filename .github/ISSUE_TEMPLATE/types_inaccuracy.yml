@@ -59,7 +59,7 @@ body:
     id: confirm
     attributes:
       label: Confirm
-      description: Please confirm you have searched for similar issues to avoid duplication.
+      description: Please confirm you have read the [troubleshooting guide](https://github.com/Azure/bicep-types-az/blob/main/docs/troubleshooting.md) and searched for similar issues to avoid duplication.
       options:
-        - label: I have searched this repository and have not found similar issue reports.
+        - label: I have read the troubleshooting guide and looked for duplicates.
           required: true
