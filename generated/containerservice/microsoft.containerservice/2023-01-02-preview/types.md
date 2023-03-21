@@ -1,9 +1,9 @@
-# Microsoft.ContainerService @ 2022-10-02-preview
+# Microsoft.ContainerService @ 2023-01-02-preview
 
-## Resource Microsoft.ContainerService/managedClusters@2022-10-02-preview
+## Resource Microsoft.ContainerService/managedClusters@2023-01-02-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-01-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location of the Virtual Machine.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedClusterIdentity](#managedclusteridentity): The identity of the managed cluster, if configured.
@@ -15,48 +15,48 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerService/managedClusters/agentPools@2022-10-02-preview
+## Resource Microsoft.ContainerService/managedClusters/agentPools@2023-01-02-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-01-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedClusterAgentPoolProfileProperties](#managedclusteragentpoolprofileproperties): Properties of an agent pool.
 * **type**: 'Microsoft.ContainerService/managedClusters/agentPools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerService/managedClusters/maintenanceConfigurations@2022-10-02-preview
+## Resource Microsoft.ContainerService/managedClusters/maintenanceConfigurations@2023-01-02-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-01-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MaintenanceConfigurationProperties](#maintenanceconfigurationproperties): Properties of a default maintenance configuration.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.ContainerService/managedClusters/maintenanceConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerService/managedClusters/privateEndpointConnections@2022-10-02-preview
+## Resource Microsoft.ContainerService/managedClusters/privateEndpointConnections@2023-01-02-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-01-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The properties of a private endpoint connection.
 * **type**: 'Microsoft.ContainerService/managedClusters/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerService/managedClusters/trustedAccessRoleBindings@2022-10-02-preview
+## Resource Microsoft.ContainerService/managedClusters/trustedAccessRoleBindings@2023-01-02-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-01-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TrustedAccessRoleBindingProperties](#trustedaccessrolebindingproperties) (Required): Properties for trusted access role binding
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerService/managedClusters/trustedAccessRoleBindings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerService/managedclustersnapshots@2022-10-02-preview
+## Resource Microsoft.ContainerService/managedclustersnapshots@2023-01-02-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-01-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -65,10 +65,10 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ContainerService/managedclustersnapshots' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerService/snapshots@2022-10-02-preview
+## Resource Microsoft.ContainerService/snapshots@2023-01-02-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-10-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-01-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -77,24 +77,24 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ContainerService/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
-## Function listClusterAdminCredential (Microsoft.ContainerService/managedClusters@2022-10-02-preview)
+## Function listClusterAdminCredential (Microsoft.ContainerService/managedClusters@2023-01-02-preview)
 * **Resource**: Microsoft.ContainerService/managedClusters
-* **ApiVersion**: 2022-10-02-preview
+* **ApiVersion**: 2023-01-02-preview
 * **Output**: [CredentialResults](#credentialresults)
 
-## Function listClusterMonitoringUserCredential (Microsoft.ContainerService/managedClusters@2022-10-02-preview)
+## Function listClusterMonitoringUserCredential (Microsoft.ContainerService/managedClusters@2023-01-02-preview)
 * **Resource**: Microsoft.ContainerService/managedClusters
-* **ApiVersion**: 2022-10-02-preview
+* **ApiVersion**: 2023-01-02-preview
 * **Output**: [CredentialResults](#credentialresults)
 
-## Function listClusterUserCredential (Microsoft.ContainerService/managedClusters@2022-10-02-preview)
+## Function listClusterUserCredential (Microsoft.ContainerService/managedClusters@2023-01-02-preview)
 * **Resource**: Microsoft.ContainerService/managedClusters
-* **ApiVersion**: 2022-10-02-preview
+* **ApiVersion**: 2023-01-02-preview
 * **Output**: [CredentialResults](#credentialresults)
 
-## Function listCredential (Microsoft.ContainerService/managedClusters/accessProfiles@2022-10-02-preview)
+## Function listCredential (Microsoft.ContainerService/managedClusters/accessProfiles@2023-01-02-preview)
 * **Resource**: Microsoft.ContainerService/managedClusters/accessProfiles
-* **ApiVersion**: 2022-10-02-preview
+* **ApiVersion**: 2023-01-02-preview
 * **Output**: [ManagedClusterAccessProfile](#managedclusteraccessprofile)
 
 ## AbsoluteMonthlySchedule
@@ -126,6 +126,10 @@
 * **keyId**: string: Identifier of Azure Key Vault key. See [key identifier format](https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates#vault-name-and-object-name) for more details. When Azure Key Vault key management service is enabled, this field is required and must be a valid key identifier. When Azure Key Vault key management service is disabled, leave the field empty.
 * **keyVaultNetworkAccess**: 'Private' | 'Public' | string: Network access of key vault. The possible values are `Public` and `Private`. `Public` means the key vault allows public access from all networks. `Private` means the key vault disables public access and enables private link. The default value is `Public`.
 * **keyVaultResourceId**: string: Resource ID of key vault. When keyVaultNetworkAccess is `Private`, this field is required and must be a valid resource ID. When keyVaultNetworkAccess is `Public`, leave the field empty.
+
+## ClusterUpgradeSettings
+### Properties
+* **overrideSettings**: [UpgradeOverrideSettings](#upgradeoverridesettings): Settings for overrides.
 
 ## ContainerServiceLinuxProfile
 ### Properties
@@ -259,11 +263,11 @@
 ## ManagedClusterAADProfile
 ### Properties
 * **adminGroupObjectIDs**: string[]: The list of AAD group object IDs that will have admin role of the cluster.
-* **clientAppID**: string: The client AAD application ID.
+* **clientAppID**: string: (DEPRECATED) The client AAD application ID. Learn more at https://aka.ms/aks/aad-legacy.
 * **enableAzureRBAC**: bool: Whether to enable Azure RBAC for Kubernetes authorization.
 * **managed**: bool: Whether to enable managed AAD.
-* **serverAppID**: string: The server AAD application ID.
-* **serverAppSecret**: string: The server AAD application secret.
+* **serverAppID**: string: (DEPRECATED) The server AAD application ID. Learn more at https://aka.ms/aks/aad-legacy.
+* **serverAppSecret**: string: (DEPRECATED) The server AAD application secret. Learn more at https://aka.ms/aks/aad-legacy.
 * **tenantID**: string: The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.
 
 ## ManagedClusterAccessProfile
@@ -341,7 +345,7 @@
 * **vmSize**: string: VM size availability varies by region. If a node contains insufficient compute resources (memory, cpu, etc) pods might fail to run correctly. For more details on restricted VM sizes, see: https://docs.microsoft.com/azure/aks/quotas-skus-regions
 * **vnetSubnetID**: string: If this is not specified, a VNET and subnet will be generated and used. If no podSubnetID is specified, this applies to nodes and pods, otherwise it applies to just nodes. This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}
 * **windowsProfile**: [AgentPoolWindowsProfile](#agentpoolwindowsprofile): The Windows agent pool's specific profile.
-* **workloadRuntime**: 'OCIContainer' | 'WasmWasi' | string: Determines the type of workload a node can run.
+* **workloadRuntime**: 'KataMshvVmIsolation' | 'OCIContainer' | 'WasmWasi' | string: Determines the type of workload a node can run.
 
 ## ManagedClusterAgentPoolProfileProperties
 ### Properties
@@ -390,7 +394,7 @@
 * **vmSize**: string: VM size availability varies by region. If a node contains insufficient compute resources (memory, cpu, etc) pods might fail to run correctly. For more details on restricted VM sizes, see: https://docs.microsoft.com/azure/aks/quotas-skus-regions
 * **vnetSubnetID**: string: If this is not specified, a VNET and subnet will be generated and used. If no podSubnetID is specified, this applies to nodes and pods, otherwise it applies to just nodes. This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}
 * **windowsProfile**: [AgentPoolWindowsProfile](#agentpoolwindowsprofile): The Windows agent pool's specific profile.
-* **workloadRuntime**: 'OCIContainer' | 'WasmWasi' | string: Determines the type of workload a node can run.
+* **workloadRuntime**: 'KataMshvVmIsolation' | 'OCIContainer' | 'WasmWasi' | string: Determines the type of workload a node can run.
 
 ## ManagedClusterAgentPoolProfilePropertiesNodeLabels
 ### Properties
@@ -504,6 +508,10 @@
 * **idleTimeoutInMinutes**: int: Desired outbound flow idle timeout in minutes. Allowed values are in the range of 4 to 120 (inclusive). The default value is 4 minutes.
 * **managedOutboundIPProfile**: [ManagedClusterManagedOutboundIPProfile](#managedclustermanagedoutboundipprofile): Profile of the managed outbound IP resources of the cluster NAT gateway.
 
+## ManagedClusterNodeResourceGroupProfile
+### Properties
+* **restrictionLevel**: 'ReadOnly' | 'Unrestricted' | string: The restriction level applied to the cluster's node resource group
+
 ## ManagedClusterOidcIssuerProfile
 ### Properties
 * **enabled**: bool: Whether the OIDC issuer is enabled.
@@ -567,7 +575,7 @@
 * **diskEncryptionSetID**: string: This is of the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{encryptionSetName}'
 * **dnsPrefix**: string: This cannot be updated once the Managed Cluster has been created.
 * **enableNamespaceResources**: bool: The default value is false. It can be enabled/disabled on creation and updating of the managed cluster. See [https://aka.ms/NamespaceARMResource](https://aka.ms/NamespaceARMResource) for more details on Namespace as a ARM Resource.
-* **enablePodSecurityPolicy**: bool: (DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.
+* **enablePodSecurityPolicy**: bool: (DEPRECATED) Whether to enable Kubernetes pod security policy (preview). PodSecurityPolicy was deprecated in Kubernetes v1.21, and removed from Kubernetes in v1.25. Learn more at https://aka.ms/k8s/psp and https://aka.ms/aks/psp.
 * **enableRBAC**: bool: Whether to enable Kubernetes Role-Based Access Control.
 * **fqdn**: string (ReadOnly): The FQDN of the master pool.
 * **fqdnSubdomain**: string: This cannot be updated once the Managed Cluster has been created.
@@ -580,6 +588,7 @@
 * **maxAgentPools**: int (ReadOnly): The max number of agent pools for the managed cluster.
 * **networkProfile**: [ContainerServiceNetworkProfile](#containerservicenetworkprofile): The network configuration profile.
 * **nodeResourceGroup**: string: The name of the resource group containing agent pool nodes.
+* **nodeResourceGroupProfile**: [ManagedClusterNodeResourceGroupProfile](#managedclusternoderesourcegroupprofile): The node resource group configuration profile.
 * **oidcIssuerProfile**: [ManagedClusterOidcIssuerProfile](#managedclusteroidcissuerprofile): The OIDC issuer profile of the Managed Cluster.
 * **podIdentityProfile**: [ManagedClusterPodIdentityProfile](#managedclusterpodidentityprofile): See [use AAD pod identity](https://docs.microsoft.com/azure/aks/use-azure-ad-pod-identity) for more details on AAD pod identity integration.
 * **powerState**: [PowerState](#powerstate) (ReadOnly): The Power State of the cluster.
@@ -590,8 +599,9 @@
 * **securityProfile**: [ManagedClusterSecurityProfile](#managedclustersecurityprofile): Security profile for the managed cluster.
 * **servicePrincipalProfile**: [ManagedClusterServicePrincipalProfile](#managedclusterserviceprincipalprofile): Information about a service principal identity for the cluster to use for manipulating Azure APIs.
 * **storageProfile**: [ManagedClusterStorageProfile](#managedclusterstorageprofile): Storage profile for the managed cluster.
+* **upgradeSettings**: [ClusterUpgradeSettings](#clusterupgradesettings): Settings for upgrading a cluster.
 * **windowsProfile**: [ManagedClusterWindowsProfile](#managedclusterwindowsprofile): The profile for Windows VMs in the Managed Cluster.
-* **workloadAutoScalerProfile**: [ManagedClusterWorkloadAutoScalerProfile](#managedclusterworkloadautoscalerprofile): Workload Auto-scaler profile for the container service cluster.
+* **workloadAutoScalerProfile**: [ManagedClusterWorkloadAutoScalerProfile](#managedclusterworkloadautoscalerprofile): Workload Auto-scaler profile for the managed cluster.
 
 ## ManagedClusterPropertiesAddonProfiles
 ### Properties
@@ -668,8 +678,8 @@
 
 ## ManagedClusterSKU
 ### Properties
-* **name**: 'Basic' | string: The name of a managed cluster SKU.
-* **tier**: 'Free' | 'Paid' | string: If not specified, the default is 'Free'. See [uptime SLA](https://docs.microsoft.com/azure/aks/uptime-sla) for more details.
+* **name**: 'Base' | 'Basic' | string: The name of a managed cluster SKU.
+* **tier**: 'Free' | 'Paid' | 'Standard' | string: If not specified, the default is 'Free'. See [AKS Pricing Tier](https://learn.microsoft.com/azure/aks/free-standard-pricing-tiers) for more details.
 
 ## ManagedClusterSnapshotProperties
 ### Properties
@@ -874,6 +884,11 @@
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of trusted access role binding.
 * **roles**: string[] (Required): A list of roles to bind, each item is a resource type qualified role name. For example: 'Microsoft.MachineLearningServices/workspaces/reader'.
 * **sourceResourceId**: string (Required): The ARM resource ID of source resource that trusted access is configured for.
+
+## UpgradeOverrideSettings
+### Properties
+* **controlPlaneOverrides**: 'IgnoreKubernetesDeprecations' | string[]: List of upgrade overrides when upgrading a cluster's control plane.
+* **until**: string: Until when the overrides are effective. Note that this only matches the start time of an upgrade, and the effectiveness won't change once an upgrade starts even if the `until` expires as upgrade proceeds. This field is not set by default. It must be set for the overrides to take effect.
 
 ## UserAssignedIdentity
 ### Properties
