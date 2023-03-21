@@ -276,7 +276,7 @@ If not specified and NAPT is enabled, this range defaults to 1,024 - 49,999.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The provisioning state of the packet core control plane resource.
 * **rollbackVersion**: string (ReadOnly): The previous version of the packet core software that was deployed. Used when performing the rollback action.
 * **sites**: [SiteResourceId](#siteresourceid)[] (Required): Site(s) under which this packet core control plane should be deployed. The sites must be in the same location as the packet core control plane.
-* **sku**: 'G0' | 'G1' | 'G10' | 'G2' | 'G3' | 'G4' | 'G5' | string (Required): The SKU defining the throughput and SIM allowances for this packet core control plane deployment.
+* **sku**: 'G0' | 'G1' | 'G10' | 'G2' | 'G5' | string (Required): The SKU defining the throughput and SIM allowances for this packet core control plane deployment.
 * **ueMtu**: int: The MTU (in bytes) signaled to the UE. The same MTU is set on the user plane data links for all data networks. The MTU set on the user plane access link is calculated to be 60 bytes greater than this value to allow for GTP encapsulation.
 * **version**: string: The version of the packet core software that is deployed.
 

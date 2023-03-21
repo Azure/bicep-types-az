@@ -62,11 +62,11 @@
 ## ClusterPropertiesEncryptionCustomerManagedKeyEncryption
 ### Properties
 * **keyEncryptionKeyIdentity**: [ClusterPropertiesEncryptionCustomerManagedKeyEncryptionKeyIdentity](#clusterpropertiesencryptioncustomermanagedkeyencryptionkeyidentity): All identity configuration for Customer-managed key settings defining which identity should be used to auth to Key Vault.
-* **keyEncryptionKeyUrl**: string: Key encryption key Url, versioned or unversioned. Ex: https://contosovault.vault.azure.net/keys/contosokek/562a4bb76b524a1493a6afe8e536ee78 or https://contosovault.vault.azure.net/keys/contosokek.
+* **keyEncryptionKeyUrl**: string: Key encryption key Url, versioned only. Ex: https://contosovault.vault.azure.net/keys/contosokek/562a4bb76b524a1493a6afe8e536ee78
 
 ## ClusterPropertiesEncryptionCustomerManagedKeyEncryptionKeyIdentity
 ### Properties
-* **identityType**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | 'systemAssignedIdentity' | 'userAssignedIdentity' | string: Only userAssignedIdentity is supported in this API version; other types may be supported in the future
+* **identityType**: 'systemAssignedIdentity' | 'userAssignedIdentity' | string: Only userAssignedIdentity is supported in this API version; other types may be supported in the future
 * **userAssignedIdentityResourceId**: string: User assigned identity to use for accessing key encryption key Url. Ex: /subscriptions/<sub uuid>/resourceGroups/<resource group>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myId.
 
 ## DatabaseProperties
@@ -95,7 +95,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | 'systemAssignedIdentity' | 'userAssignedIdentity' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
 ## Module

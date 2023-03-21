@@ -106,7 +106,7 @@
 ### Properties
 * **primaryKeyURI**: string: URI for the key for data encryption for primary server.
 * **primaryUserAssignedIdentityId**: string: Resource Id for the User assigned identity to be used for data encryption for primary server.
-* **type**: 'AzureKeyVault' | 'SystemAssigned' | string: Data encryption type to depict if it is System assigned vs Azure Key vault.
+* **type**: 'AzureKeyVault' | 'SystemManaged' | string: Data encryption type to depict if it is System Managed vs Azure Key vault.
 
 ## FirewallRuleProperties
 ### Properties

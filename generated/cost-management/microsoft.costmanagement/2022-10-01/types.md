@@ -24,7 +24,7 @@
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **eTag**: string (ReadOnly): Resource Etag. For update calls, eTag is mandatory. Fetch the resource's eTag by doing a 'GET' call first and then including the latest eTag as part of the request body or 'If-Match' header while performing the update. For create calls, eTag is not required.
+* **eTag**: string (ReadOnly): Resource Etag. For update calls, eTag is optional and can be specified to achieve optimistic concurrency. Fetch the resource's eTag by doing a 'GET' call first and then including the latest eTag as part of the request body or 'If-Match' header while performing the update. For create calls, eTag is not required.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'Email' | 'InsightAlert' | string: Kind of the scheduled action.
 * **name**: string (Required, DeployTimeConstant): The resource name

@@ -102,7 +102,7 @@
 * **archiveRetentionInDays**: int (ReadOnly): The table data archive retention in days. Calculated as (totalRetentionInDays-retentionInDays)
 * **lastPlanModifiedDate**: string (ReadOnly): The timestamp that table plan was last modified (UTC).
 * **plan**: 'Analytics' | 'Basic' | string: Instruct the system how to handle and charge the logs ingested to this table.
-* **provisioningState**: 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): Table's current provisioning state. If set to 'updating', indicates a resource lock due to ongoing operation, forbidding any update to the table until the ongoing operation is concluded.
+* **provisioningState**: 'Deleting' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): Table's current provisioning state. If set to 'updating', indicates a resource lock due to ongoing operation, forbidding any update to the table until the ongoing operation is concluded.
 * **restoredLogs**: [RestoredLogs](#restoredlogs): Parameters of the restore operation that initiated this table.
 * **resultStatistics**: [ResultStatistics](#resultstatistics) (ReadOnly): Search job execution statistics.
 * **retentionInDays**: int: The table retention in days, between 4 and 730. Setting this property to -1 will default to the workspace retention.

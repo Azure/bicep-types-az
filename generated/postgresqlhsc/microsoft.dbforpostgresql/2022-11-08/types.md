@@ -96,28 +96,28 @@
 ### Properties
 * **administratorLogin**: string (ReadOnly): The administrator's login name of the servers in the cluster.
 * **administratorLoginPassword**: string (WriteOnly): The password of the administrator login. Required for creation.
-* **citusVersion**: string: The Citus version of cluster.
-* **coordinatorEnablePublicIpAccess**: bool: If public IP is requested or not for a server.
+* **citusVersion**: string: The Citus extension version on all cluster servers.
+* **coordinatorEnablePublicIpAccess**: bool: If public access is enabled on coordinator.
 * **coordinatorServerEdition**: string: The edition of a coordinator server (default: GeneralPurpose). Required for creation.
-* **coordinatorStorageQuotaInMb**: int: The storage of a server in MB. Required for creation.
-* **coordinatorVCores**: int: The vCores count of a server (max: 64). Required for creation.
+* **coordinatorStorageQuotaInMb**: int: The storage of a server in MB. Required for creation. See https://learn.microsoft.com/azure/cosmos-db/postgresql/resources-compute for more information.
+* **coordinatorVCores**: int: The vCores count of a server (max: 96). Required for creation. See https://learn.microsoft.com/azure/cosmos-db/postgresql/resources-compute for more information.
 * **earliestRestoreTime**: string (ReadOnly): The earliest restore point time (ISO8601 format) for the cluster.
-* **enableHa**: bool: If high availability is enabled or not for the server.
+* **enableHa**: bool: If high availability (HA) is enabled or not for the cluster.
 * **enableShardsOnCoordinator**: bool: If shards on coordinator is enabled or not for the cluster.
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window of a cluster.
-* **nodeCount**: int: Worker node count of the cluster. When node count is 0, it represents a coordinator with the ability to create distributed tables on that node. Node count value can not be 1. Required for creation.
-* **nodeEnablePublicIpAccess**: bool: If public IP is requested or not for a server.
+* **nodeCount**: int: Worker node count of the cluster. When node count is 0, it represents a single node configuration with the ability to create distributed tables on that node. 2 or more worker nodes represent multi-node configuration. Node count value cannot be 1. Required for creation.
+* **nodeEnablePublicIpAccess**: bool: If public access is enabled on worker nodes.
 * **nodeServerEdition**: string: The edition of a node server (default: MemoryOptimized).
-* **nodeStorageQuotaInMb**: int: The storage of a server in MB.
-* **nodeVCores**: int: The vCores count of a server (max: 64).
-* **pointInTimeUTC**: string: Restore point creation time (ISO8601 format), specifying the time to restore from.
-* **postgresqlVersion**: string: The PostgreSQL version of cluster.
-* **preferredPrimaryZone**: string: Preferred primary zone for the cluster
+* **nodeStorageQuotaInMb**: int: The storage in MB on each worker node. See https://learn.microsoft.com/azure/cosmos-db/postgresql/resources-compute for more information.
+* **nodeVCores**: int: The compute in vCores on each worker node (max: 104). See https://learn.microsoft.com/azure/cosmos-db/postgresql/resources-compute for more information.
+* **pointInTimeUTC**: string: Date and time in UTC (ISO8601 format) for cluster restore.
+* **postgresqlVersion**: string: The major PostgreSQL version on all cluster servers.
+* **preferredPrimaryZone**: string: Preferred primary availability zone (AZ) for all cluster servers.
 * **privateEndpointConnections**: [SimplePrivateEndpointConnection](#simpleprivateendpointconnection)[] (ReadOnly): The private endpoint connections for a cluster.
 * **provisioningState**: string (ReadOnly): Provisioning state of the cluster
 * **readReplicas**: string[] (ReadOnly): The array of read replica clusters.
 * **serverNames**: [ServerNameItem](#servernameitem)[] (ReadOnly): The list of server names in the cluster
-* **sourceLocation**: string: The location of source cluster for read replica clusters.
+* **sourceLocation**: string: The Azure region of source cluster for read replica clusters.
 * **sourceResourceId**: string: The resource id of source cluster for read replica clusters.
 * **state**: string (ReadOnly): A state of a cluster/server that is visible to user.
 
@@ -125,18 +125,18 @@
 ### Properties
 * **administratorLogin**: string (ReadOnly): The administrator's login name of the servers in the cluster.
 * **availabilityZone**: string: Availability Zone information of the server.
-* **citusVersion**: string: The Citus version of server.
-* **enableHa**: bool: If high availability is enabled or not for the server.
-* **enablePublicIpAccess**: bool (ReadOnly): If public IP is requested or not for a server.
+* **citusVersion**: string: The Citus extension version of server.
+* **enableHa**: bool: If high availability (HA) is enabled or not for the server.
+* **enablePublicIpAccess**: bool (ReadOnly): If public access is enabled on server.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
 * **haState**: string (ReadOnly): A state of HA feature for the cluster.
 * **isReadOnly**: bool (ReadOnly): If server database is set to read-only by system maintenance depending on high disk space usage.
-* **postgresqlVersion**: string: The PostgreSQL version of server.
+* **postgresqlVersion**: string: The major PostgreSQL version of server.
 * **role**: 'Coordinator' | 'Worker' | string: The role of server in the cluster.
-* **serverEdition**: string: The edition of a server
+* **serverEdition**: string: The edition of a server.
 * **state**: string (ReadOnly): A state of a cluster/server that is visible to user.
 * **storageQuotaInMb**: int: The storage of a server in MB.
-* **vCores**: int: The vCores count of a server (max: 64).
+* **vCores**: int: The vCores count of a server.
 
 ## ConfigurationProperties
 ### Properties
@@ -155,10 +155,10 @@
 
 ## MaintenanceWindow
 ### Properties
-* **customWindow**: string: indicates whether custom window is enabled or disabled
-* **dayOfWeek**: int: day of week for maintenance window
-* **startHour**: int: start hour for maintenance window
-* **startMinute**: int: start minute for maintenance window
+* **customWindow**: string: Indicates whether custom maintenance window is enabled or not.
+* **dayOfWeek**: int: Preferred day of the week for maintenance window.
+* **startHour**: int: Start hour within preferred day of the week for maintenance window.
+* **startMinute**: int: Start minute within the start hour for maintenance window.
 
 ## PrivateEndpoint
 ### Properties

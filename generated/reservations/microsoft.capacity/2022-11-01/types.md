@@ -64,7 +64,7 @@
 ## PurchaseRequestProperties
 ### Properties
 * **appliedScopeProperties**: [AppliedScopeProperties](#appliedscopeproperties): Properties specific to applied scope type. Not required if not applicable. Required and need to provide tenantId and managementGroupId if AppliedScopeType is ManagementGroup
-* **appliedScopes**: string[]: List of the subscriptions that the benefit will be applied. Do not specify if AppliedScopeType is Shared.
+* **appliedScopes**: string[]: List of the subscriptions that the benefit will be applied. Do not specify if AppliedScopeType is Shared. This property will be deprecated and replaced by appliedScopeProperties instead for Single AppliedScopeType.
 * **appliedScopeType**: 'ManagementGroup' | 'Shared' | 'Single' | string: Type of the Applied Scope.
 * **billingPlan**: 'Monthly' | 'Upfront' | string: Represent the billing plans.
 * **billingScopeId**: string: Subscription that will be charged for purchasing reservation or savings plan
@@ -79,7 +79,7 @@
 ## PurchaseRequestPropertiesOrReservationOrderProperties
 ### Properties
 * **appliedScopeProperties**: [AppliedScopeProperties](#appliedscopeproperties) (WriteOnly): Properties specific to applied scope type. Not required if not applicable. Required and need to provide tenantId and managementGroupId if AppliedScopeType is ManagementGroup
-* **appliedScopes**: string[] (WriteOnly): List of the subscriptions that the benefit will be applied. Do not specify if AppliedScopeType is Shared.
+* **appliedScopes**: string[] (WriteOnly): List of the subscriptions that the benefit will be applied. Do not specify if AppliedScopeType is Shared. This property will be deprecated and replaced by appliedScopeProperties instead for Single AppliedScopeType.
 * **appliedScopeType**: 'ManagementGroup' | 'Shared' | 'Single' | string (WriteOnly): Type of the Applied Scope.
 * **benefitStartTime**: string (ReadOnly): This is the DateTime when the reservation benefit started.
 * **billingPlan**: 'Monthly' | 'Upfront' | string: Represent the billing plans.

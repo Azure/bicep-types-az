@@ -133,16 +133,6 @@
 ### Properties
 * **keytabInformation**: [KeytabInformation](#keytabinformation): Keytab information that is used for the Sql Managed Instance when Active Directory authentication is used.
 
-## AGReplicas
-### Properties
-* **availabilityMode**: string: The availability mode of the replica.
-* **connectedState**: string: The connected state of the replica.
-* **healthState**: string: The health state of the replica.
-* **replicaName**: string: The replica name.
-* **role**: string: The role of the replica.
-* **secondaryRoleAllowConnections**: string: The secondary role allowed connections.
-* **synchronizationState**: string: The synchronization state of the availability group replicas.
-
 ## BasicLoginInformation
 ### Properties
 * **password**: string (WriteOnly): Login password.
@@ -174,7 +164,7 @@
 * **partnerManagedInstanceId**: string (Required): The resource ID of the partner SQL managed instance.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the failover group resource.
 * **spec**: [FailoverGroupSpec](#failovergroupspec) (Required): The specifications of the failover group resource.
-* **status**: [FailoverGroupStatus](#failovergroupstatus): The status of the failover group custom resource.
+* **status**: any: The status of the failover group custom resource.
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -187,17 +177,6 @@
 * **role**: 'force-primary-allow-data-loss' | 'force-secondary' | 'primary' | 'secondary' | string (Required): The role of the SQL managed instance in this failover group.
 * **sharedName**: string: The shared name of the failover group for this SQL managed instance. Both SQL managed instance and its partner have to use the same shared name.
 * **sourceMI**: string: The name of the SQL managed instance with this failover group role.
-### Additional Properties
-* **Additional Properties Type**: any
-
-## FailoverGroupStatus
-### Properties
-* **lastUpdateTime**: string: The time that the custom resource was last updated.
-* **observedGeneration**: int: The version of the replicaSet associated with the failover group custom resource.
-* **replicas**: [AGReplicas](#agreplicas)[]: A list of failover group replicas.
-* **results**: string: The message in case of a failure in the failover group.
-* **role**: 'force-primary-allow-data-loss' | 'force-secondary' | 'primary' | 'secondary' | string: The role of the managed instance in the failover group.
-* **state**: 'Failed' | 'Succeeded' | 'Waiting' | string: The state of the failover group custom resource.
 ### Additional Properties
 * **Additional Properties Type**: any
 

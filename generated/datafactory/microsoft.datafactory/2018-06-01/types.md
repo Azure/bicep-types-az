@@ -3727,9 +3727,15 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **cleanup**: bool: Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.
 * **computeType**: 'ComputeOptimized' | 'General' | 'MemoryOptimized' | string: Compute type of the cluster which will execute data flow job.
 * **coreCount**: int: Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
+* **customProperties**: [IntegrationRuntimeDataFlowPropertiesCustomPropertiesItem](#integrationruntimedataflowpropertiescustompropertiesitem)[]: Custom properties are used to tune the data flow runtime performance.
 * **timeToLive**: int: Time to live (in minutes) setting of the cluster which will execute data flow job.
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## IntegrationRuntimeDataFlowPropertiesCustomPropertiesItem
+### Properties
+* **name**: string: Name of custom property.
+* **value**: string: Value of custom property.
 
 ## IntegrationRuntimeDataProxyProperties
 ### Properties
