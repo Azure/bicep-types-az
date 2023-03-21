@@ -59,7 +59,7 @@
 * **parallelDeployments**: int: Determines how many resources to remediate at any given time. Can be used to increase or reduce the pace of the remediation. If not provided, the default parallel deployments value is used.
 * **policyAssignmentId**: string: The resource ID of the policy assignment that should be remediated.
 * **policyDefinitionReferenceId**: string: The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
-* **provisioningState**: string (ReadOnly): The status of the remediation.
+* **provisioningState**: string (ReadOnly): The status of the remediation. This refers to the entire remediation task, not individual deployments. Allowed values are Evaluating, Canceled, Cancelling, Failed, Complete, or Succeeded.
 * **resourceCount**: int: Determines the max number of resources that can be remediated by the remediation job. If not provided, the default resource count is used.
 * **resourceDiscoveryMode**: 'ExistingNonCompliant' | 'ReEvaluateCompliance' | string: The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
 * **statusMessage**: string (ReadOnly): The remediation status message. Provides additional details regarding the state of the remediation.

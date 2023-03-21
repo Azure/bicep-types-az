@@ -820,7 +820,7 @@ Input expected is dictionary of key,value pairs in JSON format.
 * **errors**: [ErrorResponse](#errorresponse)[] (ReadOnly): Collection of errors encountered on this ComputeInstance.
 * **lastOperation**: [ComputeInstanceLastOperation](#computeinstancelastoperation) (ReadOnly): The last operation on ComputeInstance.
 * **personalComputeInstanceSettings**: [PersonalComputeInstanceSettings](#personalcomputeinstancesettings): Settings for a personal compute instance.
-* **schedules**: [ComputeSchedules](#computeschedules) (ReadOnly): The list of schedules to be applied on the computes.
+* **schedules**: [ComputeSchedules](#computeschedules): The list of schedules to be applied on the computes.
 * **setupScripts**: [SetupScripts](#setupscripts): Details of customized scripts to execute for setting up the cluster.
 * **sshSettings**: [ComputeInstanceSshSettings](#computeinstancesshsettings): Specifies policy and settings for SSH access.
 * **state**: 'CreateFailed' | 'Creating' | 'Deleting' | 'JobRunning' | 'Restarting' | 'Running' | 'SettingUp' | 'SetupFailed' | 'Starting' | 'Stopped' | 'Stopping' | 'Unknown' | 'Unusable' | 'UserSettingUp' | 'UserSetupFailed' | string (ReadOnly): The current state of this ComputeInstance.
@@ -874,10 +874,10 @@ Input expected is dictionary of key,value pairs in JSON format.
 ## ComputeStartStopSchedule
 ### Properties
 * **action**: 'Start' | 'Stop' | string: [Required] The compute power action.
-* **cron**: [CronTrigger](#crontrigger): Required if triggerType is Cron.
+* **cron**: [Cron](#cron): Required if triggerType is Cron.
 * **id**: string (ReadOnly): A system assigned id for the schedule.
 * **provisioningStatus**: 'Completed' | 'Failed' | 'Provisioning' | string (ReadOnly): The current deployment state of schedule.
-* **recurrence**: [RecurrenceTrigger](#recurrencetrigger): Required if triggerType is Recurrence.
+* **recurrence**: [Recurrence](#recurrence): Required if triggerType is Recurrence.
 * **schedule**: [ScheduleBase](#schedulebase): [Deprecated] Not used any more.
 * **status**: 'Disabled' | 'Enabled' | string: Is the schedule enabled or disabled?
 * **triggerType**: 'Cron' | 'Recurrence' | string: [Required] The schedule trigger type.
@@ -900,17 +900,13 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ### Properties
 * **collectionsThroughput**: int: The throughput of the collections in cosmosdb database
 
-## CronTrigger
+## Cron
 ### Properties
-* **endTime**: string: Specifies end time of schedule in ISO 8601, but without a UTC offset. Refer https://en.wikipedia.org/wiki/ISO_8601.
-Recommented format would be "2022-06-01T00:00:01"
-If not present, the schedule will run indefinitely
-* **expression**: string (Required): [Required] Specifies cron expression of schedule.
+* **expression**: string: [Required] Specifies cron expression of schedule.
 The expression should follow NCronTab format.
-* **startTime**: string: Specifies start time of schedule in ISO 8601 format, but without a UTC offset.
+* **startTime**: string: The start time in yyyy-MM-ddTHH:mm:ss format.
 * **timeZone**: string: Specifies time zone in which the schedule runs.
 TimeZone should follow Windows time zone format. Refer: https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-time-zones?view=windows-11
-* **triggerType**: 'Cron' | 'Recurrence' | string (Required): [Required]
 
 ## DatabricksProperties
 ### Properties
@@ -2066,25 +2062,21 @@ Defaults to 5000ms.
 * **successThreshold**: int: The number of successful probes before returning a healthy status.
 * **timeout**: string: The probe timeout in ISO 8601 format.
 
+## Recurrence
+### Properties
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week' | string: [Required] The frequency to trigger schedule.
+* **interval**: int: [Required] Specifies schedule interval in conjunction with frequency
+* **schedule**: [RecurrenceSchedule](#recurrenceschedule): [Required] The recurrence schedule.
+* **startTime**: string: The start time in yyyy-MM-ddTHH:mm:ss format.
+* **timeZone**: string: Specifies time zone in which the schedule runs.
+TimeZone should follow Windows time zone format. Refer: https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-time-zones?view=windows-11
+
 ## RecurrenceSchedule
 ### Properties
 * **hours**: int[] (Required): [Required] List of hours for the schedule.
 * **minutes**: int[] (Required): [Required] List of minutes for the schedule.
 * **monthDays**: int[]: List of month days for the schedule
 * **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[]: List of days for the schedule.
-
-## RecurrenceTrigger
-### Properties
-* **endTime**: string: Specifies end time of schedule in ISO 8601, but without a UTC offset. Refer https://en.wikipedia.org/wiki/ISO_8601.
-Recommented format would be "2022-06-01T00:00:01"
-If not present, the schedule will run indefinitely
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week' | string (Required): [Required] The frequency to trigger schedule.
-* **interval**: int (Required): [Required] Specifies schedule interval in conjunction with frequency
-* **schedule**: [RecurrenceSchedule](#recurrenceschedule): The recurrence schedule.
-* **startTime**: string: Specifies start time of schedule in ISO 8601 format, but without a UTC offset.
-* **timeZone**: string: Specifies time zone in which the schedule runs.
-TimeZone should follow Windows time zone format. Refer: https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-time-zones?view=windows-11
-* **triggerType**: 'Cron' | 'Recurrence' | string (Required): [Required]
 
 ## RegistryListCredentialsResult
 ### Properties

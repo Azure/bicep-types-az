@@ -736,7 +736,7 @@
 * **destinationPortRange**: string: The destination port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
 * **destinationPortRanges**: string[]: The destination port ranges.
 * **direction**: 'Inbound' | 'Outbound' | string (Required): The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
-* **priority**: int: The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
+* **priority**: int (Required): The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
 * **protocol**: '*' | 'Ah' | 'Esp' | 'Icmp' | 'Tcp' | 'Udp' | string (Required): Network protocol this rule applies to.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the security rule resource.
 * **sourceAddressPrefix**: string: The CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
@@ -820,7 +820,7 @@
 ### Properties
 * **addressPrefix**: string: The address prefix for the subnet.
 * **addressPrefixes**: string[]: List of address prefixes for the subnet.
-* **applicationGatewayIpConfigurations**: [ApplicationGatewayIPConfiguration](#applicationgatewayipconfiguration)[]: Application gateway IP configurations of virtual network resource.
+* **applicationGatewayIPConfigurations**: [ApplicationGatewayIPConfiguration](#applicationgatewayipconfiguration)[]: Application gateway IP configurations of virtual network resource.
 * **delegations**: [Delegation](#delegation)[]: An array of references to the delegations on the subnet.
 * **ipAllocations**: [SubResource](#subresource)[]: Array of IpAllocation which reference this subnet.
 * **ipConfigurationProfiles**: [IPConfigurationProfile](#ipconfigurationprofile)[] (ReadOnly): Array of IP configuration profiles which reference this subnet.
