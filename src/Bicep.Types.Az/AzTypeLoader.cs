@@ -1,12 +1,8 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
-using Azure.Bicep.Types;
-using Azure.Bicep.Types.Concrete;
 
 namespace Azure.Bicep.Types.Az;
 

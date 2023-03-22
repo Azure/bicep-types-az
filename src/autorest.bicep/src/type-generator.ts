@@ -52,7 +52,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
 
       if (ns.type === 'parameterized') {
         const {schema} = ns;
-        if (schema instanceof ConstantSchema && toBuiltInTypeKind(schema.valueType) === BuiltInTypeKind.String) {
+        if (schema instanceof ConstantSchema && isStringSchema(schema.valueType)) {
           nameLiterals.add(schema.value.value);
         } else if (schema instanceof ChoiceSchema || schema instanceof SealedChoiceSchema) {
           const enumValues = getValuesForEnum(schema);
@@ -60,11 +60,11 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
             const {values, closed} = enumValues.value;
             values.forEach(v => nameLiterals.add(v));
             if (!closed) {
-              nameTypes.add(BuiltInTypeKind.String);
+              nameTypes.add(factory.addStringType());
             }
           }
         } else {
-          nameTypes.add(toBuiltInTypeKind(schema));
+          nameTypes.add(toBuiltInType(schema));
         }
       } else {
         nameLiterals.add(ns.value);
@@ -72,7 +72,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     }
 
     const enumTypes = [...nameLiterals].map(l => factory.addStringLiteralType(l))
-      .concat([...nameTypes].map(t => factory.lookupBuiltInType(t)));
+      .concat([...nameTypes]);
 
     if (enumTypes.length === 1) {
       return success(enumTypes[0]);
@@ -237,7 +237,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     const type = factory.addStringLiteralType(getFullyQualifiedType(descriptor));
 
     return {
-      id: createObjectTypeProperty(factory.lookupBuiltInType(BuiltInTypeKind.String), ObjectTypePropertyFlags.ReadOnly | ObjectTypePropertyFlags.DeployTimeConstant, 'The resource id'),
+      id: createObjectTypeProperty(factory.addStringType(), ObjectTypePropertyFlags.ReadOnly | ObjectTypePropertyFlags.DeployTimeConstant, 'The resource id'),
       name: createObjectTypeProperty(resourceName, ObjectTypePropertyFlags.Required | ObjectTypePropertyFlags.DeployTimeConstant, 'The resource name'),
       type: createObjectTypeProperty(type, ObjectTypePropertyFlags.ReadOnly | ObjectTypePropertyFlags.DeployTimeConstant, 'The resource type'),
       apiVersion: createObjectTypeProperty(factory.addStringLiteralType(descriptor.apiVersion), ObjectTypePropertyFlags.ReadOnly | ObjectTypePropertyFlags.DeployTimeConstant, 'The resource api version'),
@@ -385,11 +385,11 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
 
     // The 'any' type
     if (combinedSchema instanceof AnySchema) {
-      return factory.lookupBuiltInType(BuiltInTypeKind.Any);
+      return factory.addAnyType();
     }
 
     logWarning(`Unrecognized property type: ${combinedSchema.type}. Returning 'any'.`);
-    return factory.lookupBuiltInType(BuiltInTypeKind.Any);
+    return factory.addAnyType();
   }
 
   function getMutabilityFlags(property: Property | undefined) {
@@ -434,20 +434,20 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     return flags;
   }
 
-  function toBuiltInTypeKind(schema: PrimitiveSchema) {
+  function toBuiltInType(schema: PrimitiveSchema): number {
     switch (schema.type) {
       case SchemaType.Boolean:
-        return BuiltInTypeKind.Bool;
+        return factory.addBooleanType();
       case SchemaType.Integer:
       case SchemaType.Number:
       case SchemaType.UnixTime:
-        return BuiltInTypeKind.Int;
+        return factory.addIntegerType();
       case SchemaType.Object:
-        return BuiltInTypeKind.Any;
+        return factory.addAnyType();
       case SchemaType.ByteArray:
         return (schema as ByteArraySchema).format === 'base64url'
-          ? BuiltInTypeKind.String
-          : BuiltInTypeKind.Array;
+          ? factory.addStringType()
+          : factory.addArrayType(factory.addAnyType());
       case SchemaType.Uri:
       case SchemaType.Date:
       case SchemaType.DateTime:
@@ -457,16 +457,35 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       case SchemaType.Duration:
       case SchemaType.Credential:
       case SchemaType.ArmId:
-        return BuiltInTypeKind.String;
+        return factory.addStringType();
       default:
         logWarning(`Unrecognized known property type: "${schema.type}"`);
-        return BuiltInTypeKind.Any;
+        return factory.addAnyType();
     }
+  }
+
+  function isStringSchema(schema: PrimitiveSchema): boolean
+  {
+    switch (schema.type)
+    {
+      case SchemaType.Uri:
+      case SchemaType.Date:
+      case SchemaType.DateTime:
+      case SchemaType.Time:
+      case SchemaType.String:
+      case SchemaType.Uuid:
+      case SchemaType.Duration:
+      case SchemaType.Credential:
+      case SchemaType.ArmId:
+        return true;
+    }
+
+    return false;
   }
 
   function parsePrimaryType(putSchema: PrimitiveSchema | undefined, getSchema: PrimitiveSchema | undefined) {
     const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
-    return factory.lookupBuiltInType(toBuiltInTypeKind(combinedSchema));
+    return toBuiltInType(combinedSchema);
   }
 
   function handlePolymorphicType(discriminatedObjectType: DiscriminatedObjectType, putSchema?: ObjectSchema, getSchema?: ObjectSchema) {
@@ -611,7 +630,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     const enumTypes = values.map(s => factory.addStringLiteralType(s));
 
     if (!closed) {
-      enumTypes.push(factory.lookupBuiltInType(BuiltInTypeKind.String));
+      enumTypes.push(factory.addStringType());
     }
 
     if (enumTypes.length === 1) {
@@ -638,7 +657,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
   function parseArrayType(putSchema: ArraySchema | undefined, getSchema: ArraySchema | undefined) {
     const itemType = parseType(putSchema?.elementType, getSchema?.elementType);
     if (itemType === undefined) {
-      return factory.lookupBuiltInType(BuiltInTypeKind.Array);
+      return factory.addArrayType(factory.addAnyType());
     }
 
     return factory.addArrayType(itemType);
