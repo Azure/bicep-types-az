@@ -23,7 +23,7 @@
 * **clusterFqdn**: string (ReadOnly): The FQDN of the cluster.
 * **orchestratorProperties**: [KubernetesClusterProperties](#kubernetesclusterproperties) (Required): Orchestrator specific properties
 * **orchestratorType**: 'Kubernetes' | string (Required): Type of orchestrator. It cannot be changed once the cluster is created.
-* **systemServices**: 'Batch' | 'Scoring' | string[]: The system services deployed to the cluster
+* **systemServices**: ('Batch' | 'Scoring' | string)[]: The system services deployed to the cluster
 
 ## AppInsightsCredentials
 ### Properties

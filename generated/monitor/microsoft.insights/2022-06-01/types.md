@@ -262,7 +262,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 * **builtInTransform**: string: The builtIn transform to transform stream data
 * **destinations**: string[]: List of destinations for this data flow.
 * **outputStream**: string: The output stream of the transform. Only required if the transform changes data to a different stream.
-* **streams**: 'Microsoft-Event' | 'Microsoft-InsightsMetrics' | 'Microsoft-Perf' | 'Microsoft-Syslog' | 'Microsoft-WindowsEvent' | string[]: List of streams for this data flow.
+* **streams**: ('Microsoft-Event' | 'Microsoft-InsightsMetrics' | 'Microsoft-Perf' | 'Microsoft-Syslog' | 'Microsoft-WindowsEvent' | string)[]: List of streams for this data flow.
 * **transformKql**: string: The KQL query to transform stream data.
 
 ## DataImportSourcesEventHub
@@ -316,7 +316,7 @@ This name should be unique across all destinations (regardless of type) within t
 * **inputDataSources**: string[]: The list of data sources this extension needs data from.
 * **name**: string: A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.
-* **streams**: 'Microsoft-Event' | 'Microsoft-InsightsMetrics' | 'Microsoft-Perf' | 'Microsoft-Syslog' | 'Microsoft-WindowsEvent' | string[]: List of streams that this data source will be sent to.
+* **streams**: ('Microsoft-Event' | 'Microsoft-InsightsMetrics' | 'Microsoft-Perf' | 'Microsoft-Syslog' | 'Microsoft-WindowsEvent' | string)[]: List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
 
 ## IisLogsDataSource
@@ -386,7 +386,7 @@ To get a list of performance counters on Windows, run the command 'typeperf'.
 * **name**: string: A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.
 * **samplingFrequencyInSeconds**: int: The number of seconds between consecutive counter measurements (samples).
-* **streams**: 'Microsoft-InsightsMetrics' | 'Microsoft-Perf' | string[]: List of streams that this data source will be sent to.
+* **streams**: ('Microsoft-InsightsMetrics' | 'Microsoft-Perf' | string)[]: List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
 
 ## PlatformTelemetryDataSource
@@ -407,7 +407,7 @@ Currently only one label is supported: 'microsoft_metrics_include_label'.
 Label values are matched case-insensitively.
 * **name**: string: A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.
-* **streams**: 'Microsoft-PrometheusMetrics' | string[]: List of streams that this data source will be sent to.
+* **streams**: ('Microsoft-PrometheusMetrics' | string)[]: List of streams that this data source will be sent to.
 
 ## PrometheusForwarderDataSourceLabelIncludeFilter
 ### Properties
@@ -441,11 +441,11 @@ This name should be unique across all destinations (regardless of type) within t
 
 ## SyslogDataSource
 ### Properties
-* **facilityNames**: '*' | 'auth' | 'authpriv' | 'cron' | 'daemon' | 'kern' | 'local0' | 'local1' | 'local2' | 'local3' | 'local4' | 'local5' | 'local6' | 'local7' | 'lpr' | 'mail' | 'mark' | 'news' | 'syslog' | 'user' | 'uucp' | string[]: The list of facility names.
-* **logLevels**: '*' | 'Alert' | 'Critical' | 'Debug' | 'Emergency' | 'Error' | 'Info' | 'Notice' | 'Warning' | string[]: The log levels to collect.
+* **facilityNames**: ('*' | 'auth' | 'authpriv' | 'cron' | 'daemon' | 'kern' | 'local0' | 'local1' | 'local2' | 'local3' | 'local4' | 'local5' | 'local6' | 'local7' | 'lpr' | 'mail' | 'mark' | 'news' | 'syslog' | 'user' | 'uucp' | string)[]: The list of facility names.
+* **logLevels**: ('*' | 'Alert' | 'Critical' | 'Debug' | 'Emergency' | 'Error' | 'Info' | 'Notice' | 'Warning' | string)[]: The log levels to collect.
 * **name**: string: A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.
-* **streams**: 'Microsoft-Syslog' | string[]: List of streams that this data source will be sent to.
+* **streams**: ('Microsoft-Syslog' | string)[]: List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
 
 ## UserAssignedIdentities
@@ -483,7 +483,7 @@ A stream indicates what schema will be used for this data and usually what table
 ### Properties
 * **name**: string: A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.
-* **streams**: 'Microsoft-Event' | 'Microsoft-WindowsEvent' | string[]: List of streams that this data source will be sent to.
+* **streams**: ('Microsoft-Event' | 'Microsoft-WindowsEvent' | string)[]: List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
 * **xPathQueries**: string[]: A list of Windows Event Log queries in XPATH format.
 

@@ -162,7 +162,7 @@
 
 ## AuthorizationRuleProperties
 ### Properties
-* **rights**: 'Listen' | 'Manage' | 'Send' | string[] (Required): The rights associated with the rule.
+* **rights**: ('Listen' | 'Manage' | 'Send' | string)[] (Required): The rights associated with the rule.
 
 ## CaptureDescription
 ### Properties

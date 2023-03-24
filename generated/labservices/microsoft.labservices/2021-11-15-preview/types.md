@@ -153,7 +153,7 @@
 * **expirationDate**: string (Required): When the recurrence will expire. This date is inclusive.
 * **frequency**: 'Daily' | 'Weekly' (Required): The frequency of the recurrence.
 * **interval**: int: The interval to invoke the schedule on. For example, interval = 2 and RecurrenceFrequency.Daily will run every 2 days. When no interval is supplied, an interval of 1 is used.
-* **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: The week days the schedule runs. Used for when the Frequency is set to Weekly.
+* **weekDays**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: The week days the schedule runs. Used for when the Frequency is set to Weekly.
 
 ## RosterProfile
 ### Properties

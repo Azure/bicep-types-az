@@ -709,7 +709,7 @@ managedIdentity.
 
 ## WorkloadDeploymentModelProperties
 ### Properties
-* **allowedOperations**: 'BuildContainerImage' | 'CompleteMigration' | 'DisableReplication' | 'EnableReplication' | 'Migrate' | 'TestMigrate' | 'TestMigrateCleanup' | 'UpdateProperties' | string[] (ReadOnly): Gets or sets the allowed scenarios on the workload deployment.
+* **allowedOperations**: ('BuildContainerImage' | 'CompleteMigration' | 'DisableReplication' | 'EnableReplication' | 'Migrate' | 'TestMigrate' | 'TestMigrateCleanup' | 'UpdateProperties' | string)[] (ReadOnly): Gets or sets the allowed scenarios on the workload deployment.
 * **correlationId**: string (ReadOnly): Gets or sets the workload deployment correlation Id.
 * **currentJob**: [WorkloadDeploymentModelPropertiesCurrentJob](#workloaddeploymentmodelpropertiescurrentjob) (ReadOnly)
 * **customProperties**: [WorkloadDeploymentModelCustomProperties](#workloaddeploymentmodelcustomproperties): Workload deployment model custom properties.

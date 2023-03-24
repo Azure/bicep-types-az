@@ -288,7 +288,7 @@
 
 ## BandwidthScheduleProperties
 ### Properties
-* **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[] (Required): The days of the week when this schedule is applicable.
+* **days**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[] (Required): The days of the week when this schedule is applicable.
 * **rateInMbps**: int (Required): The bandwidth rate in Mbps.
 * **start**: string (Required): The start time of the schedule in UTC.
 * **stop**: string (Required): The stop time of the schedule in UTC.
@@ -332,7 +332,7 @@
 
 ## DataBoxEdgeDeviceProperties
 ### Properties
-* **configuredRoleTypes**: 'ASA' | 'CloudEdgeManagement' | 'Cognitive' | 'Functions' | 'IOT' | 'Kubernetes' | 'MEC' | string[] (ReadOnly): Type of compute roles configured.
+* **configuredRoleTypes**: ('ASA' | 'CloudEdgeManagement' | 'Cognitive' | 'Functions' | 'IOT' | 'Kubernetes' | 'MEC' | string)[] (ReadOnly): Type of compute roles configured.
 * **culture**: string (ReadOnly): The Data Box Edge/Gateway device culture.
 * **dataBoxEdgeDeviceStatus**: 'Disconnected' | 'Maintenance' | 'NeedsAttention' | 'Offline' | 'Online' | 'PartiallyDisconnected' | 'ReadyToSetup' | string (ReadOnly): The status of the Data Box Edge/Gateway device.
 * **dataResidency**: [DataResidency](#dataresidency): The details of data-residency related properties for this resource

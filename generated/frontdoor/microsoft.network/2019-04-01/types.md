@@ -176,7 +176,7 @@
 
 ## RoutingRuleProperties
 ### Properties
-* **acceptedProtocols**: 'Http' | 'Https' | string[]: Protocol schemes to match for this rule
+* **acceptedProtocols**: ('Http' | 'Https' | string)[]: Protocol schemes to match for this rule
 * **enabledState**: 'Disabled' | 'Enabled' | string: Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
 * **frontendEndpoints**: [SubResource](#subresource)[]: Frontend endpoints associated with this rule
 * **patternsToMatch**: string[]: The route patterns of the rule.

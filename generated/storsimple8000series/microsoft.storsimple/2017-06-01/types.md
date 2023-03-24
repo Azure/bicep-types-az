@@ -178,7 +178,7 @@
 
 ## BandwidthSchedule
 ### Properties
-* **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[] (Required): The days of the week when this schedule is applicable.
+* **days**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[] (Required): The days of the week when this schedule is applicable.
 * **rateInMbps**: int (Required): The rate in Mbps.
 * **start**: [Time](#time) (Required): The start time of the schedule.
 * **stop**: [Time](#time) (Required): The stop time of the schedule.
@@ -255,7 +255,7 @@
 ### Properties
 * **recurrenceType**: 'Daily' | 'Hourly' | 'Minutes' | 'Weekly' (Required): The recurrence type.
 * **recurrenceValue**: int (Required): The recurrence value.
-* **weeklyDaysList**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: The week days list. Applicable only for schedules of recurrence type 'weekly'.
+* **weeklyDaysList**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: The week days list. Applicable only for schedules of recurrence type 'weekly'.
 
 ## StorageAccountCredentialProperties
 ### Properties

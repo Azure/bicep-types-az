@@ -42,7 +42,7 @@
 
 ## AppServiceCertificateOrderProperties
 ### Properties
-* **appServiceCertificateNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive' | string[] (ReadOnly): Reasons why App Service Certificate is not renewable at the current moment.
+* **appServiceCertificateNotRenewableReasons**: ('ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive' | string)[] (ReadOnly): Reasons why App Service Certificate is not renewable at the current moment.
 * **autoRenew**: bool: <code>true</code> if the certificate should be automatically renewed when it expires; otherwise, <code>false</code>.
 * **certificates**: [AppServiceCertificateOrderPropertiesCertificates](#appservicecertificateorderpropertiescertificates): State of the Key Vault secret.
 * **contact**: [CertificateOrderContact](#certificateordercontact) (ReadOnly): Contact info

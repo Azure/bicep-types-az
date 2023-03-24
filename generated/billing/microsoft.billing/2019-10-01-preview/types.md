@@ -349,7 +349,7 @@
 * **spendingLimit**: 'Off' | 'On' | string (ReadOnly): The billing profile spending limit.
 * **status**: 'Active' | 'Disabled' | 'Warned' | string (ReadOnly): The status of the billing profile.
 * **statusReasonCode**: 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' | string (ReadOnly): Reason for the specified billing profile status.
-* **targetClouds**: 'USGov' | 'USNat' | 'USSec' | string[] (ReadOnly): Identifies the cloud environments that are associated with a billing profile. This is a system managed optional field and gets updated as the billing profile gets associated with accounts in various clouds.
+* **targetClouds**: ('USGov' | 'USNat' | 'USSec' | string)[] (ReadOnly): Identifies the cloud environments that are associated with a billing profile. This is a system managed optional field and gets updated as the billing profile gets associated with accounts in various clouds.
 
 ## BillingPropertyProperties
 ### Properties

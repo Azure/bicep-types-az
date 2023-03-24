@@ -465,7 +465,7 @@
 
 ## NetworkManagerDeploymentStatusParameter
 ### Properties
-* **deploymentTypes**: 'Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string[]: List of deployment types.
+* **deploymentTypes**: ('Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string)[]: List of deployment types.
 * **regions**: string[]: List of locations.
 * **skipToken**: string: Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
 
@@ -483,7 +483,7 @@
 ### Properties
 * **description**: string: A description of the network manager.
 * **displayName**: string: A friendly name for the network manager.
-* **networkManagerScopeAccesses**: 'Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string[] (Required): Scope Access.
+* **networkManagerScopeAccesses**: ('Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string)[] (Required): Scope Access.
 * **networkManagerScopes**: [NetworkManagerPropertiesNetworkManagerScopes](#networkmanagerpropertiesnetworkmanagerscopes) (Required): Scope of Network Manager.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the scope assignment resource.
 
@@ -530,7 +530,7 @@
 
 ## SecurityConfigurationPropertiesFormat
 ### Properties
-* **applyOnNetworkIntentPolicyBasedServices**: 'All' | 'None' | string[]: Enum list of network intent policy based services.
+* **applyOnNetworkIntentPolicyBasedServices**: ('All' | 'None' | string)[]: Enum list of network intent policy based services.
 * **deleteExistingNSGs**: 'False' | 'True' | string: Flag if need to delete existing network security groups.
 * **description**: string: A description of the security configuration.
 * **displayName**: string: A display name of the security configuration.

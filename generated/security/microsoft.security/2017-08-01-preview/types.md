@@ -301,9 +301,9 @@
 ## IoTSecuritySolutionProperties
 ### Properties
 * **autoDiscoveredResources**: string[] (ReadOnly): List of resources that were automatically discovered as relevant to the security solution.
-* **disabledDataSources**: 'TwinData' | string[]: Disabled data sources. Disabling these data sources compromises the system.
+* **disabledDataSources**: ('TwinData' | string)[]: Disabled data sources. Disabling these data sources compromises the system.
 * **displayName**: string (Required): Resource display name.
-* **export**: 'RawEvents' | string[]: List of additional export to workspace data options
+* **export**: ('RawEvents' | string)[]: List of additional export to workspace data options
 * **iotHubs**: string[] (Required): IoT Hub resource IDs
 * **recommendationsConfiguration**: [RecommendationConfigurationProperties](#recommendationconfigurationproperties)[]: List of recommendation configuration
 * **status**: 'Disabled' | 'Enabled' | string: Security solution status

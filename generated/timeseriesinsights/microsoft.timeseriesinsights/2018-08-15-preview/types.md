@@ -72,7 +72,7 @@
 ### Properties
 * **description**: string: An description of the access policy.
 * **principalObjectId**: string: The objectId of the principal in Azure Active Directory.
-* **roles**: 'Contributor' | 'Reader' | string[]: The list of roles the principal is assigned on the environment.
+* **roles**: ('Contributor' | 'Reader' | string)[]: The list of roles the principal is assigned on the environment.
 
 ## CreateOrUpdateTrackedResourcePropertiesTags
 ### Properties

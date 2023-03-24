@@ -6,7 +6,7 @@
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **createdBy**: [AccessReviewActorIdentity](#accessreviewactoridentity) (ReadOnly, WriteOnly): The user or other identity who created this history definition.
 * **createdDateTime**: string (ReadOnly, WriteOnly): Date time when history definition was created
-* **decisions**: 'Approve' | 'Deny' | 'DontKnow' | 'NotNotified' | 'NotReviewed' | string[] (WriteOnly): Collection of review decisions which the history data should be filtered on. For example if Approve and Deny are supplied the data will only contain review results in which the decision maker approved or denied a review request.
+* **decisions**: ('Approve' | 'Deny' | 'DontKnow' | 'NotNotified' | 'NotReviewed' | string)[] (WriteOnly): Collection of review decisions which the history data should be filtered on. For example if Approve and Deny are supplied the data will only contain review results in which the decision maker approved or denied a review request.
 * **displayName**: string (WriteOnly): The display name for the history definition.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **instances**: [AccessReviewHistoryInstance](#accessreviewhistoryinstance)[] (WriteOnly): Set of access review history instances for this history definition.
@@ -128,7 +128,7 @@
 
 ## AccessReviewDecisionPrincipalResourceMembership
 ### Properties
-* **membershipTypes**: 'direct' | 'indirect' | string[]: Every decision item in an access review represents a principal's membership to a resource. This property represents details of the membership. Examples of this detail might be whether the principal has direct access or indirect access
+* **membershipTypes**: ('direct' | 'indirect' | string)[]: Every decision item in an access review represents a principal's membership to a resource. This property represents details of the membership. Examples of this detail might be whether the principal has direct access or indirect access
 
 ## AccessReviewDecisionProperties
 ### Properties
@@ -155,7 +155,7 @@
 ### Properties
 * **createdBy**: [AccessReviewActorIdentity](#accessreviewactoridentity) (ReadOnly): The user or other identity who created this history definition.
 * **createdDateTime**: string (ReadOnly): Date time when history definition was created
-* **decisions**: 'Approve' | 'Deny' | 'DontKnow' | 'NotNotified' | 'NotReviewed' | string[]: Collection of review decisions which the history data should be filtered on. For example if Approve and Deny are supplied the data will only contain review results in which the decision maker approved or denied a review request.
+* **decisions**: ('Approve' | 'Deny' | 'DontKnow' | 'NotNotified' | 'NotReviewed' | string)[]: Collection of review decisions which the history data should be filtered on. For example if Approve and Deny are supplied the data will only contain review results in which the decision maker approved or denied a review request.
 * **displayName**: string: The display name for the history definition.
 * **instances**: [AccessReviewHistoryInstance](#accessreviewhistoryinstance)[]: Set of access review history instances for this history definition.
 * **reviewHistoryPeriodEndDateTime**: string (ReadOnly): Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.

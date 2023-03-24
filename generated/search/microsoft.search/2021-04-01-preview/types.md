@@ -111,7 +111,7 @@
 ## SearchServiceProperties
 ### Properties
 * **authOptions**: [DataPlaneAuthOptions](#dataplaneauthoptions): Defines the options for how the data plane API of a search service authenticates requests. This cannot be set if 'disableLocalAuth' is set to true.
-* **disabledDataExfiltrationOptions**: 'All' | string[]: A list of data exfiltration scenarios that are explicitly disallowed for the search service. Currently, the only supported value is 'All' to disable all possible data export scenarios with more fine grained controls planned for the future.
+* **disabledDataExfiltrationOptions**: ('All' | string)[]: A list of data exfiltration scenarios that are explicitly disallowed for the search service. Currently, the only supported value is 'All' to disable all possible data export scenarios with more fine grained controls planned for the future.
 * **disableLocalAuth**: bool: When set to true, calls to the search service will not be permitted to utilize API keys for authentication. This cannot be set to true if 'dataPlaneAuthOptions' are defined.
 * **encryptionWithCmk**: [EncryptionWithCmk](#encryptionwithcmk): Specifies any policy regarding encryption of resources (such as indexes) using customer manager keys within a search service.
 * **eTag**: string (ReadOnly): A system generated property representing the service's etag that can be for optimistic concurrency control during updates.

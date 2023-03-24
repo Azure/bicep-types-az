@@ -670,7 +670,7 @@
 * **preview**: [LiveEventPreview](#liveeventpreview): The Live Event preview.
 * **provisioningState**: string (ReadOnly): The provisioning state of the Live Event.
 * **resourceState**: 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): The resource state of the Live Event.
-* **streamOptions**: 'Default' | 'LowLatency' | string[]: The options to use for the LiveEvent.  This value is specified at creation time and cannot be updated.
+* **streamOptions**: ('Default' | 'LowLatency' | string)[]: The options to use for the LiveEvent.  This value is specified at creation time and cannot be updated.
 * **transcriptions**: [LiveEventTranscription](#liveeventtranscription)[]: The Live Event transcription.
 * **vanityUrl**: bool: Specifies whether to use a vanity url with the Live Event.  This value is specified at creation time and cannot be updated.
 

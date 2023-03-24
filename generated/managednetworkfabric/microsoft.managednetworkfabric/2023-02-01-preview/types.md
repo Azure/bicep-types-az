@@ -419,7 +419,7 @@
 * **manufacturer**: string: Manufacturer of the network device.
 * **model**: string (Required): Model of the network device.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Gets the provisioning state of the resource.
-* **supportedRoleTypes**: 'CE' | 'Management' | 'NPB' | 'TS' | 'ToR' | string[]: Available roles for the network device.
+* **supportedRoleTypes**: ('CE' | 'Management' | 'NPB' | 'TS' | 'ToR' | string)[]: Available roles for the network device.
 * **supportedVersions**: [NetworkDeviceSkuPropertiesSupportedVersionsItem](#networkdeviceskupropertiessupportedversionsitem)[]: List of network device interfaces.
 
 ## NetworkDeviceSkuPropertiesInterfacesItem

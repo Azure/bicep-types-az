@@ -2238,7 +2238,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## ServerTrustGroupProperties
 ### Properties
 * **groupMembers**: [ServerInfo](#serverinfo)[] (Required): Group members information for the server trust group.
-* **trustScopes**: 'GlobalTransactions' | 'ServiceBroker' | string[] (Required): Trust scope of the server trust group.
+* **trustScopes**: ('GlobalTransactions' | 'ServiceBroker' | string)[] (Required): Trust scope of the server trust group.
 
 ## ServerVulnerabilityAssessmentProperties
 ### Properties

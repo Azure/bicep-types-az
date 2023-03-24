@@ -675,7 +675,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 * **resourceRegionType**: 'GlobalResource' | 'RegionalResource' | string: Region type of the resource.
 * **sourceResourceFormat**: string: Source resource format.
 * **supportedLocations**: string[]: List of locations supported by this topic type.
-* **supportedScopesForSource**: 'AzureSubscription' | 'Resource' | 'ResourceGroup' | string[]: Supported source scopes.
+* **supportedScopesForSource**: ('AzureSubscription' | 'Resource' | 'ResourceGroup' | string)[]: Supported source scopes.
 
 ## TrackedResourceTags
 ### Properties

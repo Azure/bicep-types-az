@@ -88,7 +88,7 @@
 
 ## AdditionalWorkspacesProperties
 ### Properties
-* **dataTypes**: 'Alerts' | 'RawEvents' | string[]: List of data types sent to workspace
+* **dataTypes**: ('Alerts' | 'RawEvents' | string)[]: List of data types sent to workspace
 * **type**: 'Sentinel' | string: Workspace type.
 * **workspace**: string: Workspace resource id
 
@@ -246,9 +246,9 @@
 ### Properties
 * **additionalWorkspaces**: [AdditionalWorkspacesProperties](#additionalworkspacesproperties)[]: List of additional workspaces
 * **autoDiscoveredResources**: string[] (ReadOnly): List of resources that were automatically discovered as relevant to the security solution.
-* **disabledDataSources**: 'TwinData' | string[]: Disabled data sources. Disabling these data sources compromises the system.
+* **disabledDataSources**: ('TwinData' | string)[]: Disabled data sources. Disabling these data sources compromises the system.
 * **displayName**: string (Required): Resource display name.
-* **export**: 'RawEvents' | string[]: List of additional options for exporting to workspace data.
+* **export**: ('RawEvents' | string)[]: List of additional options for exporting to workspace data.
 * **iotHubs**: string[] (Required): IoT Hub resource IDs
 * **recommendationsConfiguration**: [RecommendationConfigurationProperties](#recommendationconfigurationproperties)[]: List of the configuration status for each recommendation type.
 * **status**: 'Disabled' | 'Enabled' | string: Status of the IoT Security solution.

@@ -111,7 +111,7 @@
 
 ## SharedAccessAuthorizationRuleProperties
 ### Properties
-* **rights**: 'Listen' | 'Manage' | 'Send'[] (Required): The rights associated with the rule.
+* **rights**: ('Listen' | 'Manage' | 'Send')[] (Required): The rights associated with the rule.
 
 ## Sku
 ### Properties

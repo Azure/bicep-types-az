@@ -795,7 +795,7 @@
 
 ## LocationProperties
 ### Properties
-* **backupStorageRedundancies**: 'Geo' | 'Local' | 'Zone' | string[] (ReadOnly): The properties of available backup storage redundancies.
+* **backupStorageRedundancies**: ('Geo' | 'Local' | 'Zone' | string)[] (ReadOnly): The properties of available backup storage redundancies.
 * **isResidencyRestricted**: bool (ReadOnly): Flag indicating whether the location is residency sensitive.
 * **status**: string (ReadOnly): The current status of location in Azure.
 * **supportsAvailabilityZone**: bool (ReadOnly): Flag indicating whether the location supports availability zones or not.
@@ -932,7 +932,7 @@
 ## SpatialSpec
 ### Properties
 * **path**: string: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
-* **types**: 'LineString' | 'MultiPolygon' | 'Point' | 'Polygon' | string[]: List of path's spatial type
+* **types**: ('LineString' | 'MultiPolygon' | 'Point' | 'Polygon' | string)[]: List of path's spatial type
 
 ## SqlContainerCreateUpdatePropertiesOrSqlContainerGetProperties
 ### Properties

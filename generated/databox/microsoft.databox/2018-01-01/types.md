@@ -243,7 +243,7 @@
 * **password**: string (ReadOnly): Password for the share.
 * **shareName**: string (ReadOnly): Name of the share.
 * **shareType**: 'AzureFile' | 'BlockBlob' | 'HCS' | 'ManagedDisk' | 'PageBlob' | 'UnknownType' (ReadOnly): Type of the share.
-* **supportedAccessProtocols**: 'NFS' | 'SMB'[] (ReadOnly): Access protocols supported on the device.
+* **supportedAccessProtocols**: ('NFS' | 'SMB')[] (ReadOnly): Access protocols supported on the device.
 * **userName**: string (ReadOnly): User name for the share.
 
 ## ShippingAddress

@@ -277,7 +277,7 @@
 * **statusReasonCode**: 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' | string (ReadOnly): Reason for the specified billing profile status.
 * **systemId**: string (ReadOnly): The system generated unique identifier for a billing profile.
 * **tags**: [BillingProfilePropertiesTags](#billingprofilepropertiestags): Tags of billing profiles.
-* **targetClouds**: 'USGov' | 'USNat' | 'USSec' | string[] (ReadOnly): Identifies the cloud environments that are associated with a billing profile. This is a system managed optional field and gets updated as the billing profile gets associated with accounts in various clouds.
+* **targetClouds**: ('USGov' | 'USNat' | 'USSec' | string)[] (ReadOnly): Identifies the cloud environments that are associated with a billing profile. This is a system managed optional field and gets updated as the billing profile gets associated with accounts in various clouds.
 
 ## BillingProfilePropertiesTags
 ### Properties
