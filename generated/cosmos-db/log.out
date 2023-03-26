@@ -232,16 +232,16 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (4 differences):
   - properties.code: {"$ref":"#/components/schemas/schemas:33","description":"Error code."} => <none>
   - properties.message: {"$ref":"#/components/schemas/schemas:34","description":"Error message indicating why the operation failed."} => <none>
-  - properties.error: <none> => {"description":"The error object.","$ref":"#/components/schemas/schemas:1460"}
+  - properties.error: <none> => {"description":"The error object.","$ref":"#/components/schemas/schemas:1463"}
   - title: <none> => "Error response"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProvisioningState' (2 differences):
   - enum: <none> => ["Succeeded","Failed","Canceled","InProgress","Updating","Dropping"]
   - x-ms-enum: <none> => {"name":"ProvisioningState","modelAsString":true}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (2 differences):
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
-  - properties.systemData: <none> => {"readOnly":true,"type":"object","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","$ref":"#/components/schemas/schemas:1221"}
+  - properties.systemData: <none> => {"readOnly":true,"type":"object","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","$ref":"#/components/schemas/schemas:1224"}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:1155" => "#/components/schemas/schemas:1426"
+  - allOf.0.$ref: "#/components/schemas/schemas:1158" => "#/components/schemas/schemas:1429"
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountGetResults' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountGetResults
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountCreateUpdateParameters' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountCreateUpdateParameters
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RestoreParameters' has a property 'restoreSource' that is already declared the parent schema 'RestoreParametersBase' but isn't significantly different. The property has been removed from RestoreParameters

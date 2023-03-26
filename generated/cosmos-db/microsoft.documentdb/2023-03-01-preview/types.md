@@ -864,6 +864,12 @@
 * **keyspaceName**: string (Required)
 * **tableName**: string (Required)
 
+### CosmosMongoDataTransferDataSourceSink
+#### Properties
+* **collectionName**: string (Required)
+* **component**: 'CosmosDBMongo' (Required)
+* **databaseName**: string (Required)
+
 ### CosmosSqlDataTransferDataSourceSink
 #### Properties
 * **component**: 'CosmosDBSql' (Required)
