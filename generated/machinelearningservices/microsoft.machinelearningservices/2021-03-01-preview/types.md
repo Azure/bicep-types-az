@@ -1547,7 +1547,7 @@ optional
 ### Properties
 * **hours**: int[]: The hours.
 * **minutes**: int[]: The minutes.
-* **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: The days of the week.
+* **weekDays**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: The days of the week.
 
 ## RegistryListCredentialsResult
 ### Properties

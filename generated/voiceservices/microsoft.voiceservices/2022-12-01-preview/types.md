@@ -39,10 +39,10 @@
 ## CommunicationsGatewayProperties
 ### Properties
 * **apiBridge**: any: Details of API bridge functionality, if required
-* **codecs**: 'G722' | 'G722_2' | 'PCMA' | 'PCMU' | 'SILK_16' | 'SILK_8' | string[] (Required): Voice codecs to support
+* **codecs**: ('G722' | 'G722_2' | 'PCMA' | 'PCMU' | 'SILK_16' | 'SILK_8' | string)[] (Required): Voice codecs to support
 * **connectivity**: 'PublicAddress' | string (Required): How to connect back to the operator network, e.g. MAPS
 * **e911Type**: 'DirectToEsrp' | 'Standard' | string (Required): How to handle 911 calls
-* **platforms**: 'OperatorConnect' | 'TeamsPhoneMobile' | string[] (Required): What platforms to support
+* **platforms**: ('OperatorConnect' | 'TeamsPhoneMobile' | string)[] (Required): What platforms to support
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Resource provisioning state.
 * **serviceLocations**: [ServiceRegionProperties](#serviceregionproperties)[] (Required): The regions in which to deploy the resources needed for Teams Calling
 * **status**: 'ChangePending' | 'Complete' (ReadOnly): The current status of the deployment.

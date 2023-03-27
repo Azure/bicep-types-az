@@ -65,7 +65,7 @@
 ### Properties
 * **backupScheduleType**: 'Automated' | 'Manual' | string: Backup schedule type.
 * **backupSystemDbs**: bool: Include or exclude system databases from auto backup.
-* **daysOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[]: Days of the week for the backups when FullBackupFrequency is set to Weekly.
+* **daysOfWeek**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: Days of the week for the backups when FullBackupFrequency is set to Weekly.
 * **enable**: bool: Enable or disable autobackup on SQL virtual machine.
 * **enableEncryption**: bool: Enable or disable encryption for backup on SQL virtual machine.
 * **fullBackupFrequency**: 'Daily' | 'Weekly' | string: Frequency of full backups. In both cases, full backups begin during the next scheduled time window.

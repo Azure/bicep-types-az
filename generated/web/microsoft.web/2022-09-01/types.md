@@ -3256,7 +3256,7 @@ If such an object doesn't exist, it is set to null.
 * **minutes**: int[]: The minutes.
 * **monthDays**: int[]: The month days.
 * **monthlyOccurrences**: [RecurrenceScheduleOccurrence](#recurrencescheduleoccurrence)[]: The monthly occurrences.
-* **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: The days of the week.
+* **weekDays**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: The days of the week.
 
 ## RecurrenceScheduleOccurrence
 ### Properties

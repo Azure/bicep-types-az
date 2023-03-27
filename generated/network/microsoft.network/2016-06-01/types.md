@@ -388,7 +388,7 @@
 
 ## ApplicationGatewaySslPolicy
 ### Properties
-* **disabledSslProtocols**: 'TLSv1_0' | 'TLSv1_1' | 'TLSv1_2' | string[]: SSL protocols to be disabled on Application Gateway
+* **disabledSslProtocols**: ('TLSv1_0' | 'TLSv1_1' | 'TLSv1_2' | string)[]: SSL protocols to be disabled on Application Gateway
 
 ## ApplicationGatewayUrlPathMap
 ### Properties

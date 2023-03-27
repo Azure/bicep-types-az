@@ -51,7 +51,7 @@
 
 ## ManagedClusterProperties
 ### Properties
-* **addonFeatures**: 'BackupRestoreService' | 'DnsService' | 'ResourceMonitorService' | string[]: client certificates for the cluster.
+* **addonFeatures**: ('BackupRestoreService' | 'DnsService' | 'ResourceMonitorService' | string)[]: client certificates for the cluster.
 * **adminPassword**: string: vm admin user password.
 * **adminUserName**: string (Required): vm admin user name.
 * **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory): Azure active directory.

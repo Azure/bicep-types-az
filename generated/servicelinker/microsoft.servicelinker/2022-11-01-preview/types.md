@@ -53,7 +53,7 @@
 ### AccessKeyInfoBase
 #### Properties
 * **authType**: 'accessKey' (Required): The authentication type.
-* **permissions**: 'Listen' | 'Manage' | 'Read' | 'Send' | 'Write' | string[]: Permissions of the accessKey. `Read` and `Write` are for Azure Cosmos DB and Azure App Configuration, `Listen`, `Send` and `Manage` are for Azure Event Hub and Azure Service Bus.
+* **permissions**: ('Listen' | 'Manage' | 'Read' | 'Send' | 'Write' | string)[]: Permissions of the accessKey. `Read` and `Write` are for Azure Cosmos DB and Azure App Configuration, `Listen`, `Send` and `Manage` are for Azure Event Hub and Azure Service Bus.
 
 ### SecretAuthInfo
 #### Properties

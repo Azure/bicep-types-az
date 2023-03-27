@@ -35,7 +35,7 @@
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Gets the private endpoint connections.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'NotSpecified' | string: Gets or sets the state of public network access.
 * **refreshSummaryState**: 'Completed' | 'Failed' | 'InProgress' | 'Started' | string (ReadOnly): Refresh summary state.
-* **registeredTools**: 'AppServiceMigrationAssistant' | 'Carbonite' | 'CloudSphere' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'Device42' | 'Flexera' | 'JetStream' | 'Lakeside' | 'Movere' | 'RackWare' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerDiscovery_Import' | 'ServerMigration' | 'ServerMigration_Replication' | 'Turbonomic' | 'UnifyCloud' | 'Unknown' | 'Zerto' | string[] (ReadOnly): Register tools inside project.
+* **registeredTools**: ('AppServiceMigrationAssistant' | 'Carbonite' | 'CloudSphere' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'Device42' | 'Flexera' | 'JetStream' | 'Lakeside' | 'Movere' | 'RackWare' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerDiscovery_Import' | 'ServerMigration' | 'ServerMigration_Replication' | 'Turbonomic' | 'UnifyCloud' | 'Unknown' | 'Zerto' | string)[] (ReadOnly): Register tools inside project.
 * **serviceEndpoint**: string: Service endpoint.
 * **summary**: [MigrateProjectPropertiesSummary](#migrateprojectpropertiessummary) (ReadOnly): Project summary.
 * **utilityStorageAccountId**: string: Utility storage account id.

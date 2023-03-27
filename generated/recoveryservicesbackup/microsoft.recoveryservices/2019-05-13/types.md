@@ -319,7 +319,7 @@ eg: number of bytes transferred etc
 
 ### AzureIaaSVMJob
 #### Properties
-* **actionsInfo**: 'Cancellable' | 'Invalid' | 'Retriable'[]: Gets or sets the state/actions applicable on this job like cancel/retry.
+* **actionsInfo**: ('Cancellable' | 'Invalid' | 'Retriable')[]: Gets or sets the state/actions applicable on this job like cancel/retry.
 * **duration**: string: Time elapsed during the execution of this job.
 * **errorDetails**: [AzureIaaSVMErrorInfo](#azureiaasvmerrorinfo)[]: Error details on execution of this job.
 * **extendedInfo**: [AzureIaaSVMJobExtendedInfo](#azureiaasvmjobextendedinfo): Additional information for this job.
@@ -328,7 +328,7 @@ eg: number of bytes transferred etc
 
 ### AzureStorageJob
 #### Properties
-* **actionsInfo**: 'Cancellable' | 'Invalid' | 'Retriable'[]: Gets or sets the state/actions applicable on this job like cancel/retry.
+* **actionsInfo**: ('Cancellable' | 'Invalid' | 'Retriable')[]: Gets or sets the state/actions applicable on this job like cancel/retry.
 * **duration**: string: Time elapsed during the execution of this job.
 * **errorDetails**: [AzureStorageErrorInfo](#azurestorageerrorinfo)[]: Error details on execution of this job.
 * **extendedInfo**: [AzureStorageJobExtendedInfo](#azurestoragejobextendedinfo): Additional information about the job.
@@ -338,7 +338,7 @@ eg: number of bytes transferred etc
 
 ### AzureWorkloadJob
 #### Properties
-* **actionsInfo**: 'Cancellable' | 'Invalid' | 'Retriable'[]: Gets or sets the state/actions applicable on this job like cancel/retry.
+* **actionsInfo**: ('Cancellable' | 'Invalid' | 'Retriable')[]: Gets or sets the state/actions applicable on this job like cancel/retry.
 * **duration**: string: Time elapsed during the execution of this job.
 * **errorDetails**: [AzureWorkloadErrorInfo](#azureworkloaderrorinfo)[]: Error details on execution of this job.
 * **extendedInfo**: [AzureWorkloadJobExtendedInfo](#azureworkloadjobextendedinfo): Additional information about the job.
@@ -347,7 +347,7 @@ eg: number of bytes transferred etc
 
 ### DpmJob
 #### Properties
-* **actionsInfo**: 'Cancellable' | 'Invalid' | 'Retriable'[]: The state/actions applicable on this job like cancel/retry.
+* **actionsInfo**: ('Cancellable' | 'Invalid' | 'Retriable')[]: The state/actions applicable on this job like cancel/retry.
 * **containerName**: string: Name of cluster/server protecting current backup item, if any.
 * **containerType**: string: Type of container.
 * **dpmServerName**: string: DPM server name managing the backup item or backup job.
@@ -359,7 +359,7 @@ eg: number of bytes transferred etc
 
 ### MabJob
 #### Properties
-* **actionsInfo**: 'Cancellable' | 'Invalid' | 'Retriable'[]: The state/actions applicable on jobs like cancel/retry.
+* **actionsInfo**: ('Cancellable' | 'Invalid' | 'Retriable')[]: The state/actions applicable on jobs like cancel/retry.
 * **duration**: string: Time taken by job to run.
 * **errorDetails**: [MabErrorInfo](#maberrorinfo)[]: The errors.
 * **extendedInfo**: [MabJobExtendedInfo](#mabjobextendedinfo): Additional information on the job.
@@ -768,7 +768,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 ### SimpleSchedulePolicy
 #### Properties
 * **schedulePolicyType**: 'SimpleSchedulePolicy' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **scheduleRunDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of days of week this schedule has to be run.
+* **scheduleRunDays**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: List of days of week this schedule has to be run.
 * **scheduleRunFrequency**: 'Daily' | 'Invalid' | 'Weekly' | string: Frequency of the schedule operation of this policy.
 * **scheduleRunTimes**: string[]: List of times of day this schedule has to be run.
 * **scheduleWeeklyFrequency**: int: At every number weeks this schedule has to be run.
@@ -795,18 +795,18 @@ will be deprecated once clients upgrade to consider this flag.
 
 ## WeeklyRetentionFormat
 ### Properties
-* **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of days of the week.
-* **weeksOfTheMonth**: 'First' | 'Fourth' | 'Invalid' | 'Last' | 'Second' | 'Third'[]: List of weeks of month.
+* **daysOfTheWeek**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: List of days of the week.
+* **weeksOfTheMonth**: ('First' | 'Fourth' | 'Invalid' | 'Last' | 'Second' | 'Third')[]: List of weeks of month.
 
 ## WeeklyRetentionSchedule
 ### Properties
-* **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of days of week for weekly retention policy.
+* **daysOfTheWeek**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: List of days of week for weekly retention policy.
 * **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration of retention Policy.
 * **retentionTimes**: string[]: Retention times of retention policy.
 
 ## YearlyRetentionSchedule
 ### Properties
-* **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'Invalid' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September'[]: List of months of year of yearly retention policy.
+* **monthsOfYear**: ('April' | 'August' | 'December' | 'February' | 'Invalid' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September')[]: List of months of year of yearly retention policy.
 * **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration of retention Policy.
 * **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format for yearly retention policy.
 * **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly' | string: Retention schedule format for yearly retention policy.

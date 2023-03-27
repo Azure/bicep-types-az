@@ -341,7 +341,7 @@
 
 ## ScalingSchedule
 ### Properties
-* **daysOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[]: Set of days of the week on which this schedule is active.
+* **daysOfWeek**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: Set of days of the week on which this schedule is active.
 * **name**: string: Name of the scaling schedule.
 * **offPeakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for off-peak period.
 * **offPeakStartTime**: [Time](#time): Starting time for off-peak period.

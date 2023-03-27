@@ -32,7 +32,7 @@
 
 ### Base Properties
 * **authenticationProvisioningState**: 'Expired' | 'IncorrectPolicy' | 'Invalid' | 'Valid' | string (ReadOnly): State of the multi-cloud connector
-* **grantedPermissions**: 'AWS::AWSSecurityHubReadOnlyAccess' | 'AWS::AmazonSSMAutomationRole' | 'AWS::SecurityAudit' | 'GCP::Security Center Admin Viewer' | string[] (ReadOnly): The permissions detected in the cloud account.
+* **grantedPermissions**: ('AWS::AWSSecurityHubReadOnlyAccess' | 'AWS::AmazonSSMAutomationRole' | 'AWS::SecurityAudit' | 'GCP::Security Center Admin Viewer' | string)[] (ReadOnly): The permissions detected in the cloud account.
 
 ### AwAssumeRoleAuthenticationDetailsProperties
 #### Properties
@@ -109,7 +109,7 @@
 
 ## SecurityContactPropertiesNotificationsByRole
 ### Properties
-* **roles**: 'AccountAdmin' | 'Contributor' | 'Owner' | 'ServiceAdmin' | string[]: Defines which RBAC roles will get email notifications from Microsoft Defender for Cloud. List of allowed RBAC roles:
+* **roles**: ('AccountAdmin' | 'Contributor' | 'Owner' | 'ServiceAdmin' | string)[]: Defines which RBAC roles will get email notifications from Microsoft Defender for Cloud. List of allowed RBAC roles:
 * **state**: 'Off' | 'On' | string: Defines whether to send email notifications from AMicrosoft Defender for Cloud to persons with specific RBAC roles on the subscription.
 
 ## ServicePrincipalProperties

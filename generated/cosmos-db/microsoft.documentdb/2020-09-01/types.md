@@ -633,7 +633,7 @@
 ## SpatialSpec
 ### Properties
 * **path**: string: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
-* **types**: 'LineString' | 'MultiPolygon' | 'Point' | 'Polygon' | string[]: List of path's spatial type
+* **types**: ('LineString' | 'MultiPolygon' | 'Point' | 'Polygon' | string)[]: List of path's spatial type
 
 ## SqlContainerCreateUpdatePropertiesOrSqlContainerGetProperties
 ### Properties

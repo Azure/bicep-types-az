@@ -862,7 +862,7 @@ The default value is 2Gi, this should not exceed build service agent pool memory
 ## GatewayProperties
 ### Properties
 * **apiMetadataProperties**: [GatewayApiMetadataProperties](#gatewayapimetadataproperties): API metadata property for Spring Cloud Gateway
-* **apmTypes**: 'AppDynamics' | 'ApplicationInsights' | 'Dynatrace' | 'ElasticAPM' | 'NewRelic' | string[]: Collection of APM type used in Spring Cloud Gateway
+* **apmTypes**: ('AppDynamics' | 'ApplicationInsights' | 'Dynatrace' | 'ElasticAPM' | 'NewRelic' | string)[]: Collection of APM type used in Spring Cloud Gateway
 * **corsProperties**: [GatewayCorsProperties](#gatewaycorsproperties): Cross-Origin Resource Sharing property
 * **environmentVariables**: [GatewayPropertiesEnvironmentVariables](#gatewaypropertiesenvironmentvariables): Environment variables of Spring Cloud Gateway
 * **httpsOnly**: bool: Indicate if only https is allowed.

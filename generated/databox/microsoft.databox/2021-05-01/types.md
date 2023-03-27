@@ -204,7 +204,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 * **Discriminator**: jobDetailsType
 
 ### Base Properties
-* **actions**: 'MoveToCleanUpDevice' | 'None' | 'Resume'[] (ReadOnly): Available actions on the job.
+* **actions**: ('MoveToCleanUpDevice' | 'None' | 'Resume')[] (ReadOnly): Available actions on the job.
 * **chainOfCustodySasKey**: string (ReadOnly): Shared access key to download the chain of custody logs
 * **contactDetails**: [ContactDetails](#contactdetails) (Required): Contact details for notification and shipping.
 * **copyLogDetails**: [CopyLogDetails](#copylogdetails)[] (ReadOnly): List of copy log details.
@@ -343,7 +343,7 @@ possibility is that mitigation might happen by customer or service or by ops
 * **password**: string (ReadOnly): Password for the share.
 * **shareName**: string (ReadOnly): Name of the share.
 * **shareType**: 'AzureFile' | 'BlockBlob' | 'HCS' | 'ManagedDisk' | 'PageBlob' | 'UnknownType' (ReadOnly): Type of the share.
-* **supportedAccessProtocols**: 'NFS' | 'SMB'[] (ReadOnly): Access protocols supported on the device.
+* **supportedAccessProtocols**: ('NFS' | 'SMB')[] (ReadOnly): Access protocols supported on the device.
 * **userName**: string (ReadOnly): User name for the share.
 
 ## ShippingAddress

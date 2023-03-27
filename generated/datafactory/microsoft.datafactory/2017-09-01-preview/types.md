@@ -223,7 +223,7 @@
 ## ActivityDependency
 ### Properties
 * **activity**: string (Required): Activity name.
-* **dependencyConditions**: 'Completed' | 'Failed' | 'Skipped' | 'Succeeded' | string[] (Required): Match-Condition for the dependency.
+* **dependencyConditions**: ('Completed' | 'Failed' | 'Skipped' | 'Succeeded' | string)[] (Required): Match-Condition for the dependency.
 ### Additional Properties
 * **Additional Properties Type**: any
 

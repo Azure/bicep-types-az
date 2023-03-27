@@ -169,7 +169,7 @@ This name must be the full Arm Resource ID for the referenced application type v
 
 ## ManagedClusterProperties
 ### Properties
-* **addonFeatures**: 'BackupRestoreService' | 'DnsService' | 'ResourceMonitorService' | string[]: List of add-on features to enable on the cluster.
+* **addonFeatures**: ('BackupRestoreService' | 'DnsService' | 'ResourceMonitorService' | string)[]: List of add-on features to enable on the cluster.
 * **adminPassword**: string: VM admin user password.
 * **adminUserName**: string (Required): VM admin user name.
 * **allowRdpAccess**: bool: Setting this to true enables RDP access to the VM. The default NSG rule opens RDP port to Internet which can be overridden with custom Network Security Rules. The default value for this setting is false.
@@ -269,7 +269,7 @@ This name must be the full Arm Resource ID for the referenced application type v
 * **vmInstanceCount**: int (Required): The number of nodes in the node type. <br /><br />**Values:** <br />-1 - Use when auto scale rules are configured or sku.capacity is defined <br /> 0 - Not supported <br /> >0 - Use for manual scale.
 * **vmManagedIdentity**: [VmManagedIdentity](#vmmanagedidentity): Identities to assign to the virtual machine scale set under the node type.
 * **vmSecrets**: [VaultSecretGroup](#vaultsecretgroup)[]: The secrets to install in the virtual machines.
-* **vmSetupActions**: 'EnableContainers' | 'EnableHyperV' | string[]: Specifies the actions to be performed on the vms before bootstrapping the service fabric runtime.
+* **vmSetupActions**: ('EnableContainers' | 'EnableHyperV' | string)[]: Specifies the actions to be performed on the vms before bootstrapping the service fabric runtime.
 * **vmSize**: string: The size of virtual machines in the pool. All virtual machines in a pool are the same size. For example, Standard_D3.
 * **zones**: string[]: Specifies the availability zones where the node type would span across. If the cluster is not spanning across availability zones, initiates az migration for the cluster.
 

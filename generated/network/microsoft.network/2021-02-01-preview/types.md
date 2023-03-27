@@ -479,7 +479,7 @@
 
 ## NetworkManagerDeploymentStatusParameter
 ### Properties
-* **deploymentTypes**: 'Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string[]: List of deployment types.
+* **deploymentTypes**: ('Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string)[]: List of deployment types.
 * **regions**: string[]: List of locations.
 * **skipToken**: string: Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
 
@@ -497,7 +497,7 @@
 ### Properties
 * **description**: string: A description of the network manager.
 * **displayName**: string: A friendly name for the network manager.
-* **networkManagerScopeAccesses**: 'Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string[]: Scope Access.
+* **networkManagerScopeAccesses**: ('Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string)[]: Scope Access.
 * **networkManagerScopes**: [NetworkManagerPropertiesNetworkManagerScopes](#networkmanagerpropertiesnetworkmanagerscopes): Scope of Network Manager.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the scope assignment resource.
 

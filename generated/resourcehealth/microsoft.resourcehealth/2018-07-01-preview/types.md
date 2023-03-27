@@ -37,7 +37,7 @@
 
 ## MetadataEntityProperties
 ### Properties
-* **applicableScenarios**: 'Alerts' | string[]: The list of scenarios applicable to this metadata entity.
+* **applicableScenarios**: ('Alerts' | string)[]: The list of scenarios applicable to this metadata entity.
 * **dependsOn**: string[]: The list of keys on which this entity depends on.
 * **displayName**: string: The display name.
 * **supportedValues**: [MetadataSupportedValueDetail](#metadatasupportedvaluedetail)[]: The list of supported values.

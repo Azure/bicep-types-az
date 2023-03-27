@@ -181,7 +181,7 @@
 
 ## FileDestination
 ### Properties
-* **fileFormats**: 'Csv' | string[]: Destination of the view data. Currently only CSV format is supported.
+* **fileFormats**: ('Csv' | string)[]: Destination of the view data. Currently only CSV format is supported.
 
 ## KpiProperties
 ### Properties
@@ -275,12 +275,12 @@
 ## ScheduleProperties
 ### Properties
 * **dayOfMonth**: int: UTC day on which cost analysis data will be emailed. Must be between 1 and 31. This property is applicable when frequency is Monthly and overrides weeksOfMonth or daysOfWeek.
-* **daysOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[]: Day names in english on which cost analysis data will be emailed. This property is applicable when frequency is Weekly or Monthly.
+* **daysOfWeek**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: Day names in english on which cost analysis data will be emailed. This property is applicable when frequency is Weekly or Monthly.
 * **endDate**: string (Required): The end date and time of the scheduled action (UTC).
 * **frequency**: 'Daily' | 'Monthly' | 'Weekly' | string (Required): Frequency of the schedule.
 * **hourOfDay**: int: UTC time at which cost analysis data will be emailed.
 * **startDate**: string (Required): The start date and time of the scheduled action (UTC).
-* **weeksOfMonth**: 'First' | 'Fourth' | 'Last' | 'Second' | 'Third' | string[]: Weeks in which cost analysis data will be emailed. This property is applicable when frequency is Monthly and used in combination with daysOfWeek.
+* **weeksOfMonth**: ('First' | 'Fourth' | 'Last' | 'Second' | 'Third' | string)[]: Weeks in which cost analysis data will be emailed. This property is applicable when frequency is Monthly and used in combination with daysOfWeek.
 
 ## SystemData
 ### Properties

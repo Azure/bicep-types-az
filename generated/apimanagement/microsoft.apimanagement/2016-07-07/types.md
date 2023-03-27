@@ -23,7 +23,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **path**: string (Required, WriteOnly): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
-* **protocols**: 'Http' | 'Https'[] (Required, WriteOnly): Describes on which protocols the operations in this API can be invoked.
+* **protocols**: ('Http' | 'Https')[] (Required, WriteOnly): Describes on which protocols the operations in this API can be invoked.
 * **requestId**: string (ReadOnly)
 * **serviceUrl**: string (Required, WriteOnly): Absolute URL of the backend service implementing this API.
 * **statusCode**: 'Accepted' | 'Conflict' | 'Continue' | 'Created' | 'NotFound' | 'OK' (ReadOnly)
@@ -49,15 +49,15 @@
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **authorizationEndpoint**: string (Required): OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.
-* **authorizationMethods**: 'DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'PATCH' | 'POST' | 'PUT' | 'TRACE'[]: HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.
-* **bearerTokenSendingMethods**: 'authorizationHeader' | 'query'[]: Specifies the mechanism by which access token is passed to the API.
-* **clientAuthenticationMethod**: 'Basic' | 'Body'[]: Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.
+* **authorizationMethods**: ('DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'PATCH' | 'POST' | 'PUT' | 'TRACE')[]: HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.
+* **bearerTokenSendingMethods**: ('authorizationHeader' | 'query')[]: Specifies the mechanism by which access token is passed to the API.
+* **clientAuthenticationMethod**: ('Basic' | 'Body')[]: Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.
 * **clientId**: string (Required): Client or app id registered with this authorization server.
 * **clientRegistrationEndpoint**: string (Required): Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.
 * **clientSecret**: string: Client or app secret registered with this authorization server.
 * **defaultScope**: string: Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.
 * **description**: string: Description of the authorization server. Can contain HTML formatting tags.
-* **grantTypes**: 'authorizationCode' | 'clientCredentials' | 'implicit' | 'resourceOwnerPassword'[] (Required): Form of an authorization grant, which the client uses to request the access token.
+* **grantTypes**: ('authorizationCode' | 'clientCredentials' | 'implicit' | 'resourceOwnerPassword')[] (Required): Form of an authorization grant, which the client uses to request the access token.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **resourceOwnerPassword**: string: Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.

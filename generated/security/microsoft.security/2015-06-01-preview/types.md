@@ -268,7 +268,7 @@
 * **direction**: 'Inbound' | 'Outbound' | string: The rule's direction
 * **ipAddresses**: string[]: The remote IP addresses that should be able to communicate with the Azure resource on the rule's destination port and protocol
 * **name**: string: The name of the rule
-* **protocols**: 'TCP' | 'UDP' | string[]: The rule's transport protocols
+* **protocols**: ('TCP' | 'UDP' | string)[]: The rule's transport protocols
 
 ## SecurityTaskParameters
 ### Properties

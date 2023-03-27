@@ -167,7 +167,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 
 ## ClusterProperties
 ### Properties
-* **addOnFeatures**: 'BackupRestoreService' | 'DnsService' | 'RepairManager' | string[]: The list of add-on features to enable in the cluster.
+* **addOnFeatures**: ('BackupRestoreService' | 'DnsService' | 'RepairManager' | string)[]: The list of add-on features to enable in the cluster.
 * **availableClusterVersions**: [ClusterVersionDetails](#clusterversiondetails)[]: The Service Fabric runtime versions available for this cluster.
 * **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory): The AAD authentication settings of the cluster.
 * **certificate**: [CertificateDescription](#certificatedescription): The certificate to use for securing the cluster. The certificate provided will be used for  node to node security within the cluster, SSL certificate for cluster management endpoint and default  admin client.

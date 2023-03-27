@@ -386,8 +386,8 @@
 
 ### Classification
 #### Properties
-* **allowedModels**: 'BernoulliNaiveBayes' | 'DecisionTree' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LightGBM' | 'LinearSVM' | 'LogisticRegression' | 'MultinomialNaiveBayes' | 'RandomForest' | 'SGD' | 'SVM' | 'XGBoostClassifier' | string[]: Allowed models for classification task.
-* **blockedModels**: 'BernoulliNaiveBayes' | 'DecisionTree' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LightGBM' | 'LinearSVM' | 'LogisticRegression' | 'MultinomialNaiveBayes' | 'RandomForest' | 'SGD' | 'SVM' | 'XGBoostClassifier' | string[]: Blocked models for classification task.
+* **allowedModels**: ('BernoulliNaiveBayes' | 'DecisionTree' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LightGBM' | 'LinearSVM' | 'LogisticRegression' | 'MultinomialNaiveBayes' | 'RandomForest' | 'SGD' | 'SVM' | 'XGBoostClassifier' | string)[]: Allowed models for classification task.
+* **blockedModels**: ('BernoulliNaiveBayes' | 'DecisionTree' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LightGBM' | 'LinearSVM' | 'LogisticRegression' | 'MultinomialNaiveBayes' | 'RandomForest' | 'SGD' | 'SVM' | 'XGBoostClassifier' | string)[]: Blocked models for classification task.
 * **dataSettings**: [TableVerticalDataSettings](#tableverticaldatasettings): Data inputs for AutoMLJob.
 * **featurizationSettings**: [TableVerticalFeaturizationSettings](#tableverticalfeaturizationsettings): Featurization inputs needed for AutoML job.
 * **limitSettings**: [TableVerticalLimitSettings](#tableverticallimitsettings): Execution constraints for AutoMLJob.
@@ -397,8 +397,8 @@
 
 ### Forecasting
 #### Properties
-* **allowedModels**: 'Arimax' | 'AutoArima' | 'Average' | 'DecisionTree' | 'ElasticNet' | 'ExponentialSmoothing' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'Naive' | 'Prophet' | 'RandomForest' | 'SGD' | 'SeasonalAverage' | 'SeasonalNaive' | 'TCNForecaster' | 'XGBoostRegressor' | string[]: Allowed models for forecasting task.
-* **blockedModels**: 'Arimax' | 'AutoArima' | 'Average' | 'DecisionTree' | 'ElasticNet' | 'ExponentialSmoothing' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'Naive' | 'Prophet' | 'RandomForest' | 'SGD' | 'SeasonalAverage' | 'SeasonalNaive' | 'TCNForecaster' | 'XGBoostRegressor' | string[]: Blocked models for forecasting task.
+* **allowedModels**: ('Arimax' | 'AutoArima' | 'Average' | 'DecisionTree' | 'ElasticNet' | 'ExponentialSmoothing' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'Naive' | 'Prophet' | 'RandomForest' | 'SGD' | 'SeasonalAverage' | 'SeasonalNaive' | 'TCNForecaster' | 'XGBoostRegressor' | string)[]: Allowed models for forecasting task.
+* **blockedModels**: ('Arimax' | 'AutoArima' | 'Average' | 'DecisionTree' | 'ElasticNet' | 'ExponentialSmoothing' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'Naive' | 'Prophet' | 'RandomForest' | 'SGD' | 'SeasonalAverage' | 'SeasonalNaive' | 'TCNForecaster' | 'XGBoostRegressor' | string)[]: Blocked models for forecasting task.
 * **dataSettings**: [TableVerticalDataSettings](#tableverticaldatasettings): Data inputs for AutoMLJob.
 * **featurizationSettings**: [TableVerticalFeaturizationSettings](#tableverticalfeaturizationsettings): Featurization inputs needed for AutoML job.
 * **forecastingSettings**: [ForecastingSettings](#forecastingsettings): Forecasting task specific inputs.
@@ -449,8 +449,8 @@
 
 ### Regression
 #### Properties
-* **allowedModels**: 'DecisionTree' | 'ElasticNet' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'RandomForest' | 'SGD' | 'XGBoostRegressor' | string[]: Allowed models for regression task.
-* **blockedModels**: 'DecisionTree' | 'ElasticNet' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'RandomForest' | 'SGD' | 'XGBoostRegressor' | string[]: Blocked models for regression task.
+* **allowedModels**: ('DecisionTree' | 'ElasticNet' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'RandomForest' | 'SGD' | 'XGBoostRegressor' | string)[]: Allowed models for regression task.
+* **blockedModels**: ('DecisionTree' | 'ElasticNet' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'RandomForest' | 'SGD' | 'XGBoostRegressor' | string)[]: Blocked models for regression task.
 * **dataSettings**: [TableVerticalDataSettings](#tableverticaldatasettings): Data inputs for AutoMLJob.
 * **featurizationSettings**: [TableVerticalFeaturizationSettings](#tableverticalfeaturizationsettings): Featurization inputs needed for AutoML job.
 * **limitSettings**: [TableVerticalLimitSettings](#tableverticallimitsettings): Execution constraints for AutoMLJob.
@@ -2059,7 +2059,7 @@ Defaults to 5000ms.
 ### Properties
 * **hours**: int[] (Required): [Required] List of hours for recurrence schedule pattern
 * **minutes**: int[] (Required): [Required] List of minutes for recurrence schedule pattern
-* **weekdays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[]: List of weekdays for recurrence schedule pattern
+* **weekdays**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: List of weekdays for recurrence schedule pattern
 
 ## RegistryListCredentialsResult
 ### Properties

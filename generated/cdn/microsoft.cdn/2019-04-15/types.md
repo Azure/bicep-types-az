@@ -68,7 +68,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string (Required): Describes operator to be matched
 * **selector**: string: Name of Cookies to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 
 ## CustomDomainHttpsParameters
 * **Discriminator**: certificateSource
@@ -274,10 +274,10 @@
 ## IsDeviceMatchConditionParameters
 ### Properties
 * **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleIsDeviceConditionParameters' | string (Required)
-* **matchValues**: 'Desktop' | 'Mobile' | string[]: The match value for the condition of the delivery rule
+* **matchValues**: ('Desktop' | 'Mobile' | string)[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Equal' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 
 ## KeyVaultCertificateSourceParameters
 ### Properties
@@ -305,7 +305,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string (Required): Describes operator to be matched
 * **selector**: string: Name of PostArg to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 
 ## ProfileProperties
 ### Properties
@@ -318,7 +318,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 
 ## RemoteAddressMatchConditionParameters
 ### Properties
@@ -326,7 +326,7 @@
 * **matchValues**: string[]: Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'GeoMatch' | 'IPMatch' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 
 ## RequestBodyMatchConditionParameters
 ### Properties
@@ -334,7 +334,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 
 ## RequestHeaderMatchConditionParameters
 ### Properties
@@ -343,19 +343,19 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string (Required): Describes operator to be matched
 * **selector**: string: Name of Header to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 
 ## RequestMethodMatchConditionParameters
 ### Properties
 * **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestMethodConditionParameters' | string (Required)
-* **matchValues**: 'DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'POST' | 'PUT' | 'TRACE' | string[]: The match value for the condition of the delivery rule
+* **matchValues**: ('DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'POST' | 'PUT' | 'TRACE' | string)[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Equal' | string (Required): Describes operator to be matched
 
 ## RequestSchemeMatchConditionParameters
 ### Properties
 * **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestSchemeConditionParameters' | string (Required)
-* **matchValues**: 'HTTP' | 'HTTPS' | string[]: The match value for the condition of the delivery rule
+* **matchValues**: ('HTTP' | 'HTTPS' | string)[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Equal' | string (Required): Describes operator to be matched
 
@@ -365,7 +365,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 
 ## Sku
 ### Properties
@@ -392,7 +392,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 
 ## UrlFileNameMatchConditionParameters
 ### Properties
@@ -400,7 +400,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 
 ## UrlPathMatchConditionParameters
 ### Properties
@@ -408,7 +408,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'Wildcard' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 
 ## UrlRedirectActionParameters
 ### Properties

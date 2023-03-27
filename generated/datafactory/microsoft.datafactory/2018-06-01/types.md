@@ -392,7 +392,7 @@
 ## ActivityDependency
 ### Properties
 * **activity**: string (Required): Activity name.
-* **dependencyConditions**: 'Completed' | 'Failed' | 'Skipped' | 'Succeeded' | string[] (Required): Match-Condition for the dependency.
+* **dependencyConditions**: ('Completed' | 'Failed' | 'Skipped' | 'Succeeded' | string)[] (Required): Match-Condition for the dependency.
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -940,7 +940,7 @@
 ### Properties
 * **blobPathBeginsWith**: string: The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
 * **blobPathEndsWith**: string: The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
-* **events**: 'Microsoft.Storage.BlobCreated' | 'Microsoft.Storage.BlobDeleted' | string[] (Required): The type of events that cause this trigger to fire.
+* **events**: ('Microsoft.Storage.BlobCreated' | 'Microsoft.Storage.BlobDeleted' | string)[] (Required): The type of events that cause this trigger to fire.
 * **ignoreEmptyBlobs**: bool: If set to true, blobs with zero bytes will be ignored.
 * **scope**: string (Required): The ARM resource ID of the Storage Account.
 
@@ -4967,7 +4967,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **minutes**: int[]: The minutes.
 * **monthDays**: int[]: The month days.
 * **monthlyOccurrences**: [RecurrenceScheduleOccurrence](#recurrencescheduleoccurrence)[]: The monthly occurrences.
-* **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: The days of the week.
+* **weekDays**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: The days of the week.
 ### Additional Properties
 * **Additional Properties Type**: any
 

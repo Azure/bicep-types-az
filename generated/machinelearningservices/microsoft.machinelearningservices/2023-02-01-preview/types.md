@@ -846,8 +846,8 @@ This property will always be returned as null. AuthKey values must be retrieved 
 
 ## ClassificationTrainingSettings
 ### Properties
-* **allowedTrainingAlgorithms**: 'BernoulliNaiveBayes' | 'DecisionTree' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LightGBM' | 'LinearSVM' | 'LogisticRegression' | 'MultinomialNaiveBayes' | 'RandomForest' | 'SGD' | 'SVM' | 'XGBoostClassifier' | string[]: Allowed models for classification task.
-* **blockedTrainingAlgorithms**: 'BernoulliNaiveBayes' | 'DecisionTree' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LightGBM' | 'LinearSVM' | 'LogisticRegression' | 'MultinomialNaiveBayes' | 'RandomForest' | 'SGD' | 'SVM' | 'XGBoostClassifier' | string[]: Blocked models for classification task.
+* **allowedTrainingAlgorithms**: ('BernoulliNaiveBayes' | 'DecisionTree' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LightGBM' | 'LinearSVM' | 'LogisticRegression' | 'MultinomialNaiveBayes' | 'RandomForest' | 'SGD' | 'SVM' | 'XGBoostClassifier' | string)[]: Allowed models for classification task.
+* **blockedTrainingAlgorithms**: ('BernoulliNaiveBayes' | 'DecisionTree' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LightGBM' | 'LinearSVM' | 'LogisticRegression' | 'MultinomialNaiveBayes' | 'RandomForest' | 'SGD' | 'SVM' | 'XGBoostClassifier' | string)[]: Blocked models for classification task.
 * **enableDnnTraining**: bool: Enable recommendation of DNN models.
 * **enableModelExplainability**: bool: Flag to turn on explainability on best model.
 * **enableOnnxCompatibleModels**: bool: Flag for enabling onnx compatible models.
@@ -1701,8 +1701,8 @@ If grain is not defined, the data set is assumed to be one time-series. This par
 
 ## ForecastingTrainingSettings
 ### Properties
-* **allowedTrainingAlgorithms**: 'Arimax' | 'AutoArima' | 'Average' | 'DecisionTree' | 'ElasticNet' | 'ExponentialSmoothing' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'Naive' | 'Prophet' | 'RandomForest' | 'SGD' | 'SeasonalAverage' | 'SeasonalNaive' | 'TCNForecaster' | 'XGBoostRegressor' | string[]: Allowed models for forecasting task.
-* **blockedTrainingAlgorithms**: 'Arimax' | 'AutoArima' | 'Average' | 'DecisionTree' | 'ElasticNet' | 'ExponentialSmoothing' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'Naive' | 'Prophet' | 'RandomForest' | 'SGD' | 'SeasonalAverage' | 'SeasonalNaive' | 'TCNForecaster' | 'XGBoostRegressor' | string[]: Blocked models for forecasting task.
+* **allowedTrainingAlgorithms**: ('Arimax' | 'AutoArima' | 'Average' | 'DecisionTree' | 'ElasticNet' | 'ExponentialSmoothing' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'Naive' | 'Prophet' | 'RandomForest' | 'SGD' | 'SeasonalAverage' | 'SeasonalNaive' | 'TCNForecaster' | 'XGBoostRegressor' | string)[]: Allowed models for forecasting task.
+* **blockedTrainingAlgorithms**: ('Arimax' | 'AutoArima' | 'Average' | 'DecisionTree' | 'ElasticNet' | 'ExponentialSmoothing' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'Naive' | 'Prophet' | 'RandomForest' | 'SGD' | 'SeasonalAverage' | 'SeasonalNaive' | 'TCNForecaster' | 'XGBoostRegressor' | string)[]: Blocked models for forecasting task.
 * **enableDnnTraining**: bool: Enable recommendation of DNN models.
 * **enableModelExplainability**: bool: Flag to turn on explainability on best model.
 * **enableOnnxCompatibleModels**: bool: Flag for enabling onnx compatible models.
@@ -2601,7 +2601,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 
 ## NotificationSetting
 ### Properties
-* **emailOn**: 'JobCancelled' | 'JobCompleted' | 'JobFailed' | string[]: Send email notification to user on specified notification type
+* **emailOn**: ('JobCancelled' | 'JobCompleted' | 'JobFailed' | string)[]: Send email notification to user on specified notification type
 * **emails**: string[]: This is the email recipient list which has a limitation of 499 characters in total concat with comma separator
 
 ## Objective
@@ -2782,7 +2782,7 @@ Defaults to 5000ms.
 * **hours**: int[] (Required): [Required] List of hours for the schedule.
 * **minutes**: int[] (Required): [Required] List of minutes for the schedule.
 * **monthDays**: int[]: List of month days for the schedule
-* **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[]: List of days for the schedule.
+* **weekDays**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: List of days for the schedule.
 
 ## RecurrenceTrigger
 ### Properties
@@ -2830,8 +2830,8 @@ TimeZone should follow Windows time zone format. Refer: https://docs.microsoft.c
 
 ## RegressionTrainingSettings
 ### Properties
-* **allowedTrainingAlgorithms**: 'DecisionTree' | 'ElasticNet' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'RandomForest' | 'SGD' | 'XGBoostRegressor' | string[]: Allowed models for regression task.
-* **blockedTrainingAlgorithms**: 'DecisionTree' | 'ElasticNet' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'RandomForest' | 'SGD' | 'XGBoostRegressor' | string[]: Blocked models for regression task.
+* **allowedTrainingAlgorithms**: ('DecisionTree' | 'ElasticNet' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'RandomForest' | 'SGD' | 'XGBoostRegressor' | string)[]: Allowed models for regression task.
+* **blockedTrainingAlgorithms**: ('DecisionTree' | 'ElasticNet' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'RandomForest' | 'SGD' | 'XGBoostRegressor' | string)[]: Blocked models for regression task.
 * **enableDnnTraining**: bool: Enable recommendation of DNN models.
 * **enableModelExplainability**: bool: Flag to turn on explainability on best model.
 * **enableOnnxCompatibleModels**: bool: Flag for enabling onnx compatible models.
@@ -3361,7 +3361,7 @@ If 'NonDistributed' then only non distributed algorithms are chosen.
 
 ## TableVerticalFeaturizationSettings
 ### Properties
-* **blockedTransformers**: 'CatTargetEncoder' | 'CountVectorizer' | 'HashOneHotEncoder' | 'LabelEncoder' | 'NaiveBayes' | 'OneHotEncoder' | 'TextTargetEncoder' | 'TfIdf' | 'WoETargetEncoder' | 'WordEmbedding' | string[]: These transformers shall not be used in featurization.
+* **blockedTransformers**: ('CatTargetEncoder' | 'CountVectorizer' | 'HashOneHotEncoder' | 'LabelEncoder' | 'NaiveBayes' | 'OneHotEncoder' | 'TextTargetEncoder' | 'TfIdf' | 'WoETargetEncoder' | 'WordEmbedding' | string)[]: These transformers shall not be used in featurization.
 * **columnNameAndTypes**: [TableVerticalFeaturizationSettingsColumnNameAndTypes](#tableverticalfeaturizationsettingscolumnnameandtypes): Dictionary of column name and its type (int, float, string, datetime etc).
 * **datasetLanguage**: string: Dataset language, useful for the text data.
 * **enableDnnFeaturization**: bool: Determines whether to use Dnn based featurizers for data featurization.

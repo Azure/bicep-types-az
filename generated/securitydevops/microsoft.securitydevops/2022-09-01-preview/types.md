@@ -77,7 +77,7 @@
 ## ActionableRemediation
 ### Properties
 * **branchConfiguration**: [TargetBranchConfiguration](#targetbranchconfiguration): Branch onboarding info.
-* **categories**: 'Artifacts' | 'Code' | 'Containers' | 'Dependencies' | 'IaC' | 'Secrets' | string[]
+* **categories**: ('Artifacts' | 'Code' | 'Containers' | 'Dependencies' | 'IaC' | 'Secrets' | string)[]
 * **severityLevels**: string[]
 * **state**: 'Disabled' | 'Enabled' | 'None' | string: ActionableRemediation Setting.
 None - the setting was never set.

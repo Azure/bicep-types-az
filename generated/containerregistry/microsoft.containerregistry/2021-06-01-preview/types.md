@@ -198,7 +198,7 @@
 
 ## ExportPipelineProperties
 ### Properties
-* **options**: 'ContinueOnErrors' | 'DeleteSourceBlobOnSuccess' | 'OverwriteBlobs' | 'OverwriteTags' | string[]: The list of all options configured for the pipeline.
+* **options**: ('ContinueOnErrors' | 'DeleteSourceBlobOnSuccess' | 'OverwriteBlobs' | 'OverwriteTags' | string)[]: The list of all options configured for the pipeline.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the pipeline at the time the operation was called.
 * **target**: [ExportPipelineTargetProperties](#exportpipelinetargetproperties) (Required): The target properties of the export pipeline.
 
@@ -231,7 +231,7 @@ dictionary key references will be ARM resource ids in the form:
 
 ## ImportPipelineProperties
 ### Properties
-* **options**: 'ContinueOnErrors' | 'DeleteSourceBlobOnSuccess' | 'OverwriteBlobs' | 'OverwriteTags' | string[]: The list of all options configured for the pipeline.
+* **options**: ('ContinueOnErrors' | 'DeleteSourceBlobOnSuccess' | 'OverwriteBlobs' | 'OverwriteTags' | string)[]: The list of all options configured for the pipeline.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the pipeline at the time the operation was called.
 * **source**: [ImportPipelineSourceProperties](#importpipelinesourceproperties) (Required): The source properties of the import pipeline.
 * **trigger**: [PipelineTriggerProperties](#pipelinetriggerproperties): The properties that describe the trigger of the import pipeline.
@@ -561,7 +561,7 @@ repositories/repository-name/metadata/write
 
 ## WebhookPropertiesCreateParametersOrWebhookProperties
 ### Properties
-* **actions**: 'chart_delete' | 'chart_push' | 'delete' | 'push' | 'quarantine' | string[] (Required): The list of actions that trigger the webhook to post notifications.
+* **actions**: ('chart_delete' | 'chart_push' | 'delete' | 'push' | 'quarantine' | string)[] (Required): The list of actions that trigger the webhook to post notifications.
 * **customHeaders**: [WebhookPropertiesCreateParametersCustomHeaders](#webhookpropertiescreateparameterscustomheaders) (WriteOnly): Custom headers that will be added to the webhook notifications.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the webhook at the time the operation was called.
 * **scope**: string: The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means all events.

@@ -193,7 +193,7 @@ At least one of userEquipmentAddressPoolPrefix and userEquipmentStaticAddressPoo
 ## DataNetworkConfiguration
 ### Properties
 * **5qi**: int: Default 5G QoS Flow Indicator value. The 5QI identifies a specific QoS forwarding treatment to be provided to a flow. See 3GPP TS23.501 section 5.7.2.1 for a full description of the 5QI parameter, and table 5.7.4-1 for the definition the 5QI values.
-* **additionalAllowedSessionTypes**: 'IPv4' | 'IPv6' | string[]: Allowed session types in addition to the default session type. Must not duplicate the default session type.
+* **additionalAllowedSessionTypes**: ('IPv4' | 'IPv6' | string)[]: Allowed session types in addition to the default session type. Must not duplicate the default session type.
 * **allocationAndRetentionPriorityLevel**: int: Default QoS Flow allocation and retention priority (ARP) level. Flows with higher priority preempt flows with lower priority, if the settings of `preemptionCapability` and `preemptionVulnerability` allow it. 1 is the highest level of priority. If this field is not specified then `5qi` is used to derive the ARP value. See 3GPP TS23.501 section 5.7.2.2 for a full description of the ARP parameters.
 * **allowedServices**: [ServiceResourceId](#serviceresourceid)[] (Required): List of services that can be used as part of this SIM policy. The list must not contain duplicate items and must contain at least one item. The services must be in the same location as the SIM policy.
 * **dataNetwork**: [DataNetworkResourceId](#datanetworkresourceid) (Required): A reference to the data network that these settings apply to. The data network must be in the same location as the SIM policy.

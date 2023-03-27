@@ -193,7 +193,7 @@ the source registry during the run.
 ### Properties
 * **name**: string (Required): The name of the trigger.
 * **sourceRepository**: [SourceProperties](#sourceproperties) (Required): The properties that describes the source(code) for the task.
-* **sourceTriggerEvents**: 'commit' | 'pullrequest' | string[] (Required): The source event corresponding to the trigger.
+* **sourceTriggerEvents**: ('commit' | 'pullrequest' | string)[] (Required): The source event corresponding to the trigger.
 * **status**: 'Disabled' | 'Enabled' | string: The current status of trigger.
 
 ## SourceTriggerDescriptor

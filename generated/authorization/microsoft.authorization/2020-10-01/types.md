@@ -201,7 +201,7 @@
 
 ### RoleManagementPolicyEnablementRule
 #### Properties
-* **enabledRules**: 'Justification' | 'MultiFactorAuthentication' | 'Ticketing' | string[]: The list of enabled rules.
+* **enabledRules**: ('Justification' | 'MultiFactorAuthentication' | 'Ticketing' | string)[]: The list of enabled rules.
 * **ruleType**: 'RoleManagementPolicyEnablementRule' (Required): The type of rule
 
 ### RoleManagementPolicyExpirationRule

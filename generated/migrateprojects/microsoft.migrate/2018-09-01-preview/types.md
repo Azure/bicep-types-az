@@ -27,7 +27,7 @@
 * **lastSummaryRefreshedTime**: string (ReadOnly): Gets the last time the project summary was refreshed.
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string: Provisioning state of the migrate project.
 * **refreshSummaryState**: 'Completed' | 'Failed' | 'InProgress' | 'Started' | string (ReadOnly): Gets the refresh summary state.
-* **registeredTools**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration' | 'ServerMigration_Replication' | 'Turbonomic' | 'Zerto' | string[]: Gets or sets the list of tools registered with the migrate project.
+* **registeredTools**: ('Carbonite' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration' | 'ServerMigration_Replication' | 'Turbonomic' | 'Zerto' | string)[]: Gets or sets the list of tools registered with the migrate project.
 * **summary**: [MigrateProjectPropertiesSummary](#migrateprojectpropertiessummary) (ReadOnly): Gets the summary of the migrate project.
 
 ## MigrateProjectPropertiesSummary

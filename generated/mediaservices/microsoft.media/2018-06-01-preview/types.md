@@ -586,7 +586,7 @@
 * **preview**: [LiveEventPreview](#liveeventpreview): The Live Event preview.
 * **provisioningState**: string (ReadOnly): The provisioning state of the Live Event.
 * **resourceState**: 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The resource state of the Live Event.
-* **streamOptions**: 'Default' | 'LowLatency'[]: The stream options.
+* **streamOptions**: ('Default' | 'LowLatency')[]: The stream options.
 * **vanityUrl**: bool: The Live Event vanity URL flag.
 
 ## LiveOutputProperties

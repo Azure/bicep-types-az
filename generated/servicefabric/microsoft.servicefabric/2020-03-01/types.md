@@ -222,7 +222,7 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 
 ## ClusterProperties
 ### Properties
-* **addOnFeatures**: 'BackupRestoreService' | 'DnsService' | 'RepairManager' | 'ResourceMonitorService' | string[]: The list of add-on features to enable in the cluster.
+* **addOnFeatures**: ('BackupRestoreService' | 'DnsService' | 'RepairManager' | 'ResourceMonitorService' | string)[]: The list of add-on features to enable in the cluster.
 * **applicationTypeVersionsCleanupPolicy**: [ApplicationTypeVersionsCleanupPolicy](#applicationtypeversionscleanuppolicy): The policy used to clean up unused versions.
 * **availableClusterVersions**: [ClusterVersionDetails](#clusterversiondetails)[] (ReadOnly): The Service Fabric runtime versions available for this cluster.
 * **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory): The AAD authentication settings of the cluster.

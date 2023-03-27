@@ -141,7 +141,7 @@
 
 ## AuthorizationPolicy
 ### Properties
-* **permissions**: 'Manage' | 'Read' | 'Write'[] (Required): The permissions associated with the policy.
+* **permissions**: ('Manage' | 'Read' | 'Write')[] (Required): The permissions associated with the policy.
 * **policyName**: string (ReadOnly): Name of the policy.
 * **primaryKey**: string: Primary key associated with the policy.
 * **secondaryKey**: string: Secondary key associated with the policy.

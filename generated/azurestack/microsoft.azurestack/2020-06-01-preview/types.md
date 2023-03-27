@@ -85,7 +85,7 @@
 ### Properties
 * **description**: string: Full error message if any compatibility issues are found
 * **isCompatible**: bool: Tells if product is compatible with current device
-* **issues**: 'ADFSIdentitySystemRequired' | 'AzureADIdentitySystemRequired' | 'CapacityBillingModelRequired' | 'ConnectionToAzureRequired' | 'ConnectionToInternetRequired' | 'DevelopmentBillingModelRequired' | 'DisconnectedEnvironmentRequired' | 'HigherDeviceVersionRequired' | 'LowerDeviceVersionRequired' | 'PayAsYouGoBillingModelRequired' | string[]: List of all issues found
+* **issues**: ('ADFSIdentitySystemRequired' | 'AzureADIdentitySystemRequired' | 'CapacityBillingModelRequired' | 'ConnectionToAzureRequired' | 'ConnectionToInternetRequired' | 'DevelopmentBillingModelRequired' | 'DisconnectedEnvironmentRequired' | 'HigherDeviceVersionRequired' | 'LowerDeviceVersionRequired' | 'PayAsYouGoBillingModelRequired' | string)[]: List of all issues found
 * **message**: string: Short error message if any compatibility issues are found
 
 ## CustomerSubscriptionProperties

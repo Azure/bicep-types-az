@@ -83,7 +83,7 @@
 * **rateLimitDurationInMinutes**: int: Defines rate limit duration. Default - 1 minute
 * **rateLimitThreshold**: int: Defines rate limit threshold
 * **ruleType**: 'MatchRule' | 'RateLimitRule' | string (Required): Describes type of rule
-* **transforms**: 'HtmlEntityDecode' | 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('HtmlEntityDecode' | 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 
 ## CustomRules
 ### Properties
@@ -215,7 +215,7 @@
 
 ## RoutingRuleProperties
 ### Properties
-* **acceptedProtocols**: 'Http' | 'Https' | string[]: Protocol schemes to match for this rule
+* **acceptedProtocols**: ('Http' | 'Https' | string)[]: Protocol schemes to match for this rule
 * **backendPool**: [SubResource](#subresource): A reference to the BackendPool which this rule routes to.
 * **cacheConfiguration**: [CacheConfiguration](#cacheconfiguration): The caching configuration associated with this rule.
 * **customForwardingPath**: string: A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.

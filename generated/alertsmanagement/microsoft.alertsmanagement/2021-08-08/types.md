@@ -65,7 +65,7 @@
 
 ### WeeklyRecurrence
 #### Properties
-* **daysOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[] (Required): Specifies the values for weekly recurrence pattern.
+* **daysOfWeek**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[] (Required): Specifies the values for weekly recurrence pattern.
 * **recurrenceType**: 'Weekly' (Required): Specifies when the recurrence should be applied.
 
 

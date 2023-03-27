@@ -146,7 +146,7 @@
 
 ## ProfileProperties
 ### Properties
-* **allowedEndpointRecordTypes**: 'Any' | 'DomainName' | 'IPv4Address' | 'IPv6Address' | string[]: The list of allowed endpoint record types.
+* **allowedEndpointRecordTypes**: ('Any' | 'DomainName' | 'IPv4Address' | 'IPv6Address' | string)[]: The list of allowed endpoint record types.
 * **dnsConfig**: [DnsConfig](#dnsconfig): The DNS settings of the Traffic Manager profile.
 * **endpoints**: [Endpoint](#endpoint)[]: The list of endpoints in the Traffic Manager profile.
 * **maxReturn**: int: Maximum number of endpoints to be returned for MultiValue routing type.

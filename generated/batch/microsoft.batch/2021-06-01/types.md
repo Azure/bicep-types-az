@@ -153,7 +153,7 @@
 ### Properties
 * **accountEndpoint**: string (ReadOnly): The account endpoint used to interact with the Batch service.
 * **activeJobAndJobScheduleQuota**: int (ReadOnly): The active job and job schedule quota for the Batch account.
-* **allowedAuthenticationModes**: 'AAD' | 'SharedKey' | 'TaskAuthenticationToken'[]: List of allowed authentication modes for the Batch account that can be used to authenticate with the data plane. This does not affect authentication with the control plane.
+* **allowedAuthenticationModes**: ('AAD' | 'SharedKey' | 'TaskAuthenticationToken')[]: List of allowed authentication modes for the Batch account that can be used to authenticate with the data plane. This does not affect authentication with the control plane.
 * **autoStorage**: [AutoStorageBasePropertiesOrAutoStorageProperties](#autostoragebasepropertiesorautostorageproperties): The properties related to the auto-storage account.
 * **dedicatedCoreQuota**: int (ReadOnly): For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
 * **dedicatedCoreQuotaPerVMFamily**: [VirtualMachineFamilyCoreQuota](#virtualmachinefamilycorequota)[] (ReadOnly): A list of the dedicated core quota per Virtual Machine family for the Batch account. For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
@@ -214,7 +214,7 @@
 * **id**: string (Required): The fully qualified ID of the certificate to install on the pool. This must be inside the same batch account as the pool.
 * **storeLocation**: 'CurrentUser' | 'LocalMachine': The default value is currentUser. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
 * **storeName**: string: This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). Common store names include: My, Root, CA, Trust, Disallowed, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, but any custom store name can also be used. The default value is My.
-* **visibility**: 'RemoteUser' | 'StartTask' | 'Task'[]: Which user accounts on the compute node should have access to the private data of the certificate.
+* **visibility**: ('RemoteUser' | 'StartTask' | 'Task')[]: Which user accounts on the compute node should have access to the private data of the certificate.
 
 ## CifsMountConfiguration
 ### Properties
@@ -280,7 +280,7 @@
 
 ## DiskEncryptionConfiguration
 ### Properties
-* **targets**: 'OsDisk' | 'TemporaryDisk'[]: On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.
+* **targets**: ('OsDisk' | 'TemporaryDisk')[]: On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.
 
 ## EncryptionProperties
 ### Properties

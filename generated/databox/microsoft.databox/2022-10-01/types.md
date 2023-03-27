@@ -176,7 +176,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 
 ## DataBoxDiskCopyProgress
 ### Properties
-* **actions**: 'MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume'[] (ReadOnly): Available actions on the job.
+* **actions**: ('MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume')[] (ReadOnly): Available actions on the job.
 * **bytesCopied**: int (ReadOnly): Bytes copied during the copy of disk.
 * **error**: [CloudError](#clouderror) (ReadOnly): Error, if any, in the stage
 * **percentComplete**: int (ReadOnly): Indicates the percentage completed for the copy of the disk.
@@ -194,7 +194,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 ## DataBoxDiskGranularCopyProgress
 ### Properties
 * **accountId**: string (ReadOnly): Id of the account where the data needs to be uploaded.
-* **actions**: 'MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume'[] (ReadOnly): Available actions on the job.
+* **actions**: ('MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume')[] (ReadOnly): Available actions on the job.
 * **bytesProcessed**: int (ReadOnly): To indicate bytes transferred.
 * **copyStatus**: 'Completed' | 'CompletedWithErrors' | 'DeviceFormatted' | 'DeviceMetadataModified' | 'DriveCorrupted' | 'DriveNotDetected' | 'DriveNotReceived' | 'Failed' | 'HardwareError' | 'InProgress' | 'MetadataFilesModifiedOrRemoved' | 'NotReturned' | 'NotStarted' | 'OtherServiceError' | 'OtherUserError' | 'StorageAccountNotAccessible' | 'UnsupportedData' | 'UnsupportedDrive' | string (ReadOnly): The Status of the copy
 * **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (ReadOnly): Data Account Type.
@@ -331,7 +331,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 * **Discriminator**: jobDetailsType
 
 ### Base Properties
-* **actions**: 'MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume'[] (ReadOnly): Available actions on the job.
+* **actions**: ('MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume')[] (ReadOnly): Available actions on the job.
 * **chainOfCustodySasKey**: string (ReadOnly): Shared access key to download the chain of custody logs
 * **contactDetails**: [ContactDetails](#contactdetails) (Required): Contact details for notification and shipping.
 * **copyLogDetails**: [CopyLogDetails](#copylogdetails)[] (ReadOnly): List of copy log details.
@@ -514,7 +514,7 @@ Read only field
 * **password**: string (ReadOnly): Password for the share.
 * **shareName**: string (ReadOnly): Name of the share.
 * **shareType**: 'AzureFile' | 'BlockBlob' | 'HCS' | 'ManagedDisk' | 'PageBlob' | 'UnknownType' (ReadOnly): Type of the share.
-* **supportedAccessProtocols**: 'NFS' | 'SMB'[] (ReadOnly): Access protocols supported on the device.
+* **supportedAccessProtocols**: ('NFS' | 'SMB')[] (ReadOnly): Access protocols supported on the device.
 * **userName**: string (ReadOnly): User name for the share.
 
 ## ShippingAddress

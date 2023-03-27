@@ -204,7 +204,7 @@
 
 ## RoutingRuleProperties
 ### Properties
-* **acceptedProtocols**: 'Http' | 'Https' | string[]: Protocol schemes to match for this rule
+* **acceptedProtocols**: ('Http' | 'Https' | string)[]: Protocol schemes to match for this rule
 * **enabledState**: 'Disabled' | 'Enabled' | string: Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
 * **frontendEndpoints**: [SubResource](#subresource)[]: Frontend endpoints associated with this rule
 * **patternsToMatch**: string[]: The route patterns of the rule.
@@ -237,7 +237,7 @@
 * **rulesEngineMatchVariable**: 'IsMobile' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestFilename' | 'RequestFilenameExtension' | 'RequestHeader' | 'RequestMethod' | 'RequestPath' | 'RequestScheme' | 'RequestUri' | string (Required): Match Variable
 * **rulesEngineOperator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | string (Required): Describes operator to apply to the match condition.
 * **selector**: string: Name of selector in RequestHeader or RequestBody to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 
 ## RulesEngineProperties
 ### Properties
